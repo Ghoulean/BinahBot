@@ -7,7 +7,8 @@
   "scripts": {
     "build": "tsc",
     "clean": "tsc --build --clean",
-    "format": "npx eslint .",
+    "lint": "eslint --ext .ts .",
+    "lint:fix": "eslint --fix --ext .ts .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

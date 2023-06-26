@@ -1,0 +1,1 @@
+https://gemisis.medium.com/building-a-serverless-discord-bot-on-aws-5dc7d972c9c6

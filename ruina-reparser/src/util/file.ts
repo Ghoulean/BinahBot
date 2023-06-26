@@ -21,8 +21,8 @@ export function renameFileExtension(filePath: string, newExt: string) {
 }
 
 export function convertToJson(inputPath: string, outputPath: string) {
-    let xml = fs.readFileSync(inputPath, 'utf8');
-    let result = xmljs.xml2json(xml, CONVERT_JSON_OPTIONS);
+    const xml = fs.readFileSync(inputPath, 'utf8');
+    const result = xmljs.xml2json(xml, CONVERT_JSON_OPTIONS);
     fs.mkdirSync(path.dirname(outputPath), { recursive: true });
     try {
         fs.writeFileSync(outputPath, result, { "flag": "wx" });
@@ -31,11 +31,11 @@ export function convertToJson(inputPath: string, outputPath: string) {
     }
 }
 
-export function readFile(inputPath: string): any {
+export function readFile(inputPath: string): unknown {
     return JSON.parse(fs.readFileSync(inputPath, 'utf8'));
 }
 
-export function writeDataFile(outputFile: string, data: any) {
+export function writeDataFile(outputFile: string, data: unknown) {
     const outputPath = path.resolve(DATA_DIR, outputFile);
     try {
         fs.mkdirSync(path.dirname(outputPath));
@@ -45,7 +45,7 @@ export function writeDataFile(outputFile: string, data: any) {
     fs.writeFileSync(outputPath, JSON.stringify(data));
 }
 
-export function* walkSync(dir: string): Generator<string, any, unknown> {
+export function* walkSync(dir: string): Generator<string, unknown, unknown> {
     const files = fs.readdirSync(dir, { withFileTypes: true });
     for (const file of files) {
         if (file.isDirectory()) {

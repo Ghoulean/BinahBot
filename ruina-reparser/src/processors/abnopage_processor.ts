@@ -1,8 +1,11 @@
+/* eslint-disable  @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable  @typescript-eslint/no-unsafe-member-access */
+
 import { AbnoPage, AbnoPageSelectType, Chapter, Floor, abnoPageSelectTypeFromStringValue } from '@ghoulean/ruina-common';
 import { ABNO_DIR } from '../util/constants';
-import { readFile, walkSync, writeDataFile } from '../util/file';
+import { readFile, walkSync } from '../util/file';
 
-const ABNO_OUTPUT_FILE_NAME = "abno.json";
+export const ABNO_OUTPUT_FILE_NAME = "abno.json";
 
 const ABNO_TO_CHAPTER_MAP: { [key: string]: Chapter } = {
     // Enemy
@@ -68,37 +71,34 @@ const ABNO_TO_CHAPTER_MAP: { [key: string]: Chapter } = {
 }
 
 export class AbnoPageProcessor {
-    public static process() {
+    public static process(): AbnoPage[] {
         const data: AbnoPage[] = [];
         for (const filePath of walkSync(ABNO_DIR)) {
+            // eslint-disable-next-line  @typescript-eslint/no-explicit-any
             const json: any = readFile(filePath);
             for (const card of json['EmotionCardXmlRoot']['EmotionCard']) {
-
-                let emotionRate: number | undefined = card['EmotionRate']?.['_text'];
-                if (emotionRate === undefined) {
-                    emotionRate = 0;
-                } else if (emotionRate === 0 && card['State']['_text'] === 'Negative') {
+                let emotionRate: number = card['EmotionRate']?.['_text'] ?? 0;
+                if (emotionRate === 0 && card['State']?.['_text'] === 'Negative') {
                     emotionRate = -0;
                 }
-                let emotionLevel: number | undefined = card['EmotionLevel']?.['_text'];
-                if (emotionLevel === undefined) {
-                    emotionLevel = 0;
-                }
-                const abnoName: string = card['Name']['_text'];
+                const emotionLevel: number = card['EmotionLevel']?.['_text'] ?? 0;
+                const abnoName: string = card['Name']?.['_text'] ?? '';
+                const floorStr: string = (card['Sephirah']?.['_text'] as string ?? Floor.NONE.toString()).toUpperCase();
+                const targetTypeStr: string = card['TargetType']?.['_text'] ?? '';
 
                 const abnoPage: AbnoPage = {
                     nameId: abnoName,
-                    floor: Floor[card['Sephirah']['_text'].toUpperCase() as keyof typeof Floor],
+                    floor: Floor[floorStr as keyof typeof Floor],
                     chapter: this.determineChapter(abnoName),
-                    emoLevel: emotionLevel!,
-                    emotionRate: emotionRate!,
-                    targetType: abnoPageSelectTypeFromStringValue(card['TargetType']['_text'])!,
-                    scriptId: card['Script']['_text']
+                    emoLevel: emotionLevel,
+                    emotionRate: emotionRate,
+                    targetType: abnoPageSelectTypeFromStringValue(targetTypeStr) ?? AbnoPageSelectType.SELECT_ONE,
+                    scriptId: card['Script']?.['_text'] ?? ''
                 }
                 data.push(abnoPage);
             }
         }
-        writeDataFile(ABNO_OUTPUT_FILE_NAME, data);
+        return data;
     }
 
     private static determineChapter(abnoPageName: string): Chapter {
