@@ -5,10 +5,12 @@
     "main": "src/index.js",
     "scripts": {
         "build": "tsc",
-        "clean": "tsc --build --clean",
+        "bundle": "./node_modules/.bin/esbuild ./src --bundle --platform=node --target=node18 --outdir=./build",
+        "clean": "tsc --build --clean && rm -rf build && rm ruina-discord-bot.zip",
         "lint": "eslint --ext .ts .",
         "lint:fix": "eslint --fix --ext .ts .",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "zip": "zip -r ruina-discord-bot.zip ./build"
     },
     "author": "",
     "license": "ISC",
@@ -18,10 +20,22 @@
         "@ghoulean/ruina-common": "file:../ruina-common",
         "@types/aws-lambda": "^8.10.119",
         "@types/node": "^20.3.1",
+        "axios": "^1.4.0",
+        "discord-bot-cdk-construct": "file:../discord-bot-cdk-construct"
+    },
+    "bundleDependencies": [
+        "@aws-sdk/client-lambda",
+        "@aws-sdk/client-secrets-manager",
+        "@ghoulean/ruina-common",
+        "@types/aws-lambda",
+        "@types/node",
+        "axios",
+        "discord-bot-cdk-construct"
+    ],
+    "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^5.60.0",
         "@typescript-eslint/parser": "^5.60.0",
-        "axios": "^1.4.0",
-        "discord-bot-cdk-construct": "file:../discord-bot-cdk-construct",
+        "esbuild": "0.18.10",
         "eslint": "^8.43.0",
         "typescript": "^5.1.3"
     }

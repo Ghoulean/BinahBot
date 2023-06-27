@@ -1,5 +1,6 @@
 import { Stack, StackProps } from "aws-cdk-lib";
-import { Function } from "aws-cdk-lib/aws-lambda";
+import { Code, Function, Runtime } from "aws-cdk-lib/aws-lambda";
+import { NodejsFunction } from "aws-cdk-lib/aws-lambda-nodejs";
 import { Construct } from "constructs";
 import { DiscordBotConstruct } from "discord-bot-cdk-construct";
 
@@ -14,7 +15,11 @@ export class DiscordStack extends Stack {
     }
 
     private createCommandLambda(): Function {
-        throw new Error();
+        return new Function(this, "DiscordBotFunction", {
+            runtime: Runtime.NODEJS_18_X,
+            handler: "build/src.handler",
+            code: Code.fromAsset("../ruina-discord-bot/ruina-discord-bot.zip"),
+        });
     }
 
     private createDiscordBotConstruct(): DiscordBotConstruct {
