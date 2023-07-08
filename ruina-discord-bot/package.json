@@ -6,6 +6,7 @@
     "scripts": {
         "build": "tsc",
         "bundle": "./node_modules/.bin/esbuild ./src --bundle --platform=node --target=node18 --outdir=./build",
+        "fullbuild": "npm run clean && npm run build && npm run bundle && npm run zip",
         "clean": "tsc --build --clean && rm -rf build && rm ruina-discord-bot.zip",
         "lint": "eslint --ext .ts .",
         "lint:fix": "eslint --fix --ext .ts .",
