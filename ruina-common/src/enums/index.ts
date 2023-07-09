@@ -5,6 +5,7 @@ export * from './die_types';
 export * from './ego';
 export * from './floor';
 export * from './localization';
+export * from './page_types';
 export * from './range';
 export * from './rarity';
 export * from './resistance';

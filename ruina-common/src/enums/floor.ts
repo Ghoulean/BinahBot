@@ -1,14 +1,14 @@
 export enum Floor {
-    NONE,
-    KETER,
-    MALKUTH,
-    YESOD,
-    NETZACH,
-    HOD,
-    TIPHERETH,
-    GEBURA,
-    CHESED,
-    BINAH,
-    HOKMA,
-    ANGELA
+    NONE = "None",
+    KETER = "Keter",
+    MALKUTH = "Malkuth",
+    YESOD = "Yesod",
+    HOD = "Hod",
+    NETZACH = "Netzach",
+    TIPHERETH = "Tiphereth",
+    GEBURA = "Gebura",
+    CHESED = "Chesed",
+    BINAH = "Binah",
+    HOKMA = "Hokma",
+    ANGELA = "Angela"
 }

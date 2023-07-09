@@ -32,7 +32,7 @@ export function convertToJson(inputPath: string, outputPath: string) {
 }
 
 export function readFile(inputPath: string): unknown {
-    return JSON.parse(fs.readFileSync(inputPath, 'utf8'));
+    return JSON.parse(fs.readFileSync(inputPath, 'utf8'), negZeroReviver);
 }
 
 export function writeDataFile(outputFile: string, data: unknown) {
@@ -42,10 +42,10 @@ export function writeDataFile(outputFile: string, data: unknown) {
     } catch (e) {
         // do nothing
     }
-    fs.writeFileSync(outputPath, JSON.stringify(data));
+    fs.writeFileSync(outputPath, JSON.stringify(data, negZeroReplacer));
 }
 
-export function* walkSync(dir: string): Generator<string, unknown, unknown> {
+export function* walkSync(dir: string): Generator<string, any, unknown> {
     const files = fs.readdirSync(dir, { withFileTypes: true });
     for (const file of files) {
         if (file.isDirectory()) {
@@ -79,4 +79,16 @@ export function setupJsonFiles() {
             convertToJson(filePath, path.resolve(OUTPUT_DIR, outputPath));
         }
     }
+}
+
+function negZeroReplacer(_key: string, value: unknown) {
+    if (value === 0 && 1 / value < 0) 
+        return "__NEGATIVE_ZERO";
+    return value;
+}
+
+function negZeroReviver(_key: string, value: unknown) {
+    if (value === "__NEGATIVE_ZERO")
+        return -0;
+    return value;
 }
