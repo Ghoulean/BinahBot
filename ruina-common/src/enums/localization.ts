@@ -1,3 +1,7 @@
+/**
+ * These localizations use the encoding internally specified by
+ * Library of Ruina, which does not adhere to ISO 639-1 standard.
+ */
 export enum Localization {
     KOREAN = "kr",
     JAPANESE = "jp",

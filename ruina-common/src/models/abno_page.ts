@@ -5,7 +5,8 @@ export interface AbnoPage {
     floor: Floor;
     chapter: Chapter;
     emoLevel: number;
-    emotionRate: number; // Negative are breakdown pages. -0 is valid and distinct from +0.
+    emotionSign: -1 | 1; // -1 for breakdown, 1 for awakening
+    emotionRate: number; // Negative are breakdown pages. -0 is encoded as 0
     targetType: AbnoPageSelectType;
     scriptId: string;
 }

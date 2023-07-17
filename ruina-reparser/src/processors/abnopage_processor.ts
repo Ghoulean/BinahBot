@@ -54,6 +54,7 @@ const ABNO_TO_CHAPTER_MAP: { [key: string]: Chapter } = {
     "NothingThere": Chapter.STAR_OF_THE_CITY,    
     // Chesed
     "ScareCrow": Chapter.URBAN_NIGHTMARE,
+    "Scarecrow": Chapter.URBAN_NIGHTMARE, // sic
     "LumberJack": Chapter.URBAN_NIGHTMARE,
     "House": Chapter.STAR_OF_THE_CITY,
     "Ozma": Chapter.STAR_OF_THE_CITY,
@@ -61,6 +62,7 @@ const ABNO_TO_CHAPTER_MAP: { [key: string]: Chapter } = {
     // Binah
     "Bigbird": Chapter.STAR_OF_THE_CITY,
     "SmallBird": Chapter.STAR_OF_THE_CITY,
+    "Smallbird": Chapter.STAR_OF_THE_CITY, // sic
     "LongBird": Chapter.STAR_OF_THE_CITY,
     "ApocalypseBird": Chapter.STAR_OF_THE_CITY,
     // Hokma
@@ -77,11 +79,9 @@ export class AbnoPageProcessor {
             // eslint-disable-next-line  @typescript-eslint/no-explicit-any
             const json: any = readFile(filePath);
             for (const card of json['EmotionCardXmlRoot']['EmotionCard']) {
-                let emotionRate: number = card['EmotionRate']?.['_text'] ?? 0;
-                if (emotionRate === 0 && card['State']?.['_text'] === 'Negative') {
-                    emotionRate = -0;
-                }
-                const emotionLevel: number = card['EmotionLevel']?.['_text'] ?? 0;
+                const emotionRate: number = Number(card['EmotionRate']?.['_text']) ?? 0;
+                const emotionSign: -1 | 1 = card['State']?.['_text'] === 'Negative' ? -1 : 1;
+                const emotionLevel: number = Number(card['EmotionLevel']?.['_text']) ?? 0;
                 const abnoName: string = card['Name']?.['_text'] ?? '';
                 const floorStr: string = (card['Sephirah']?.['_text'] as string ?? Floor.NONE.toString()).toUpperCase();
                 const targetTypeStr: string = card['TargetType']?.['_text'] ?? '';
@@ -91,6 +91,7 @@ export class AbnoPageProcessor {
                     floor: Floor[floorStr as keyof typeof Floor],
                     chapter: this.determineChapter(abnoName),
                     emoLevel: emotionLevel,
+                    emotionSign: emotionSign,
                     emotionRate: emotionRate,
                     targetType: abnoPageSelectTypeFromStringValue(targetTypeStr) ?? AbnoPageSelectType.SELECT_ONE,
                     scriptId: card['Script']?.['_text'] ?? ''
@@ -102,6 +103,10 @@ export class AbnoPageProcessor {
     }
 
     private static determineChapter(abnoPageName: string): Chapter {
-        return ABNO_TO_CHAPTER_MAP[abnoPageName.split('_')[0]];
+        const chapter: Chapter = ABNO_TO_CHAPTER_MAP[abnoPageName.split('_')[0]];
+        if (!chapter) {
+            throw new Error(`No chapter found for ${abnoPageName}`);
+        }
+        return chapter;
     }
 }

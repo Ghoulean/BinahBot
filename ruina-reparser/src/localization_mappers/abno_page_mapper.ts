@@ -41,8 +41,7 @@ export class AbnoPageMapper {
                 name: rawData["CardName"]["_text"],
                 description: rawData["AbilityDesc"]["_text"],
                 flavorText: rawData["FlaborText"]["_text"], // sic
-                // TODO
-                imagePath: ""
+                imagePath: `/${id}.png`
             }
             retVal[id] = decoratedAbnoPage;
         }

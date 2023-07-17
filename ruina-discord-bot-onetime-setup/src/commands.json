@@ -7,16 +7,51 @@
             "type": 1,
             "descriptions": {
                 "en-US": "Search for information about combat pages[wip], key pages[wip], abno pages[wip], and passives[wip]."
-            }
-        },
-        {
-            "names": {
-                "en-US": "ping"
             },
-            "type": 1,
-            "descriptions": {
-                "en-US": "Returns pings with pongs."
-            }
+            "options": [
+                {
+                    "required": true,
+                    "type": 3,
+                    "names": {
+                        "en-US": "query"
+                    },
+                    "descriptions": {
+                        "en-US": "What you want to search for"
+                    }
+                },
+                {
+                    "required": false,
+                    "type": 3,
+                    "names": {
+                        "en-US": "locale"
+                    },
+                    "descriptions": {
+                        "en-US": "Force locale to use"
+                    },
+                    "choices": [
+                        {
+                            "name": "en",
+                            "value": "en"
+                        },
+                        {
+                            "name": "kr",
+                            "value": "kr"
+                        },
+                        {
+                            "name": "jp",
+                            "value": "jp"
+                        },
+                        {
+                            "name": "cn",
+                            "value": "cn"
+                        },
+                        {
+                            "name": "trcn",
+                            "value": "trcn"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
