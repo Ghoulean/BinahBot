@@ -56,8 +56,7 @@ export class LorCommand {
                             locale
                         );
                     const embed: any = this.abnoToEmbedTransformer.transform(
-                        decoratedAbnoPage,
-                        lookupResult.locale
+                        decoratedAbnoPage
                     );
                     await this.discordAccessor.writeResponse(
                         request.interactionToken,

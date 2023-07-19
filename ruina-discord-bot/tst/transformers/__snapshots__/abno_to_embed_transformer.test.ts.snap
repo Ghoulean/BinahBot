@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should transform negative decorated abno page to Discord embed 1`] = `
+{
+  "color": 13713729,
+  "fields": [
+    {
+      "inline": true,
+      "name": "Flavor text",
+      "value": "TestFlavorText",
+    },
+    {
+      "inline": true,
+      "name": "Effect",
+      "value": "TestDescription",
+    },
+    {
+      "inline": true,
+      "name": "Bias",
+      "value": "-1",
+    },
+    {
+      "inline": true,
+      "name": "Type",
+      "value": "Breakdown",
+    },
+    {
+      "inline": true,
+      "name": "Emotion level",
+      "value": "1",
+    },
+    {
+      "inline": true,
+      "name": "Floor",
+      "value": "None",
+    },
+  ],
+  "image": {
+    "url": "https://s3bucketname.s3.amazonaws.comtest.png",
+  },
+  "title": "TestAbnoPage",
+}
+`;
+
+exports[`should transform postive decorated abno page to Discord embed 1`] = `
+{
+  "color": 4247160,
+  "fields": [
+    {
+      "inline": true,
+      "name": "Flavor text",
+      "value": "TestFlavorText",
+    },
+    {
+      "inline": true,
+      "name": "Effect",
+      "value": "TestDescription",
+    },
+    {
+      "inline": true,
+      "name": "Bias",
+      "value": "1",
+    },
+    {
+      "inline": true,
+      "name": "Type",
+      "value": "Awakening",
+    },
+    {
+      "inline": true,
+      "name": "Emotion level",
+      "value": "1",
+    },
+    {
+      "inline": true,
+      "name": "Floor",
+      "value": "None",
+    },
+  ],
+  "image": {
+    "url": "https://s3bucketname.s3.amazonaws.comtest.png",
+  },
+  "title": "TestAbnoPage",
+}
+`;

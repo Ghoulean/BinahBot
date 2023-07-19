@@ -1,6 +1,7 @@
 import { DecoratedAbnoPage, Localization } from "@ghoulean/ruina-common";
+import { DiscordEmbedColors } from "../util/constants";
+import { DiscordEmbed } from "../model/discord/discord_embed";
 
-// TODO: implement
 export class AbnoToEmbedTransformer {
     private readonly s3BucketName: string;
 
@@ -9,13 +10,13 @@ export class AbnoToEmbedTransformer {
     }
 
     // TODO: strongly type embeds
-    // TODO: localize
-    public transform(abno: DecoratedAbnoPage, locale: Localization): any {
+    // TODO: localize via abno.locale
+    public transform(abno: DecoratedAbnoPage): DiscordEmbed {
+        const embedColor: number = abno.emotionSign > 0 ? DiscordEmbedColors.AWAKENING_ABNO_PAGE : DiscordEmbedColors.BREAKDOWN_ABNO_PAGE;
+        const abnoType: string = abno.emotionSign > 0 ? "Awakening" : "Breakdown";
         return {
-            type: "rich",
             title: abno.name,
-            description: "",
-            color: 0x380046,
+            color: embedColor,
             image: {
                 // TODO: less scuffed way to construct URL.
                 // TODO: imagePath is currently prefixed with `/`. Revisit
@@ -34,17 +35,17 @@ export class AbnoToEmbedTransformer {
                 },
                 {
                     name: "Bias",
-                    value: abno.emotionRate,
+                    value: String(abno.emotionRate),
                     inline: true,
                 },
                 {
                     name: "Type",
-                    value: abno.emotionSign > 0 ? "Awakening" : "Breakdown",
+                    value: abnoType,
                     inline: true,
                 },
                 {
                     name: "Emotion level",
-                    value: abno.emoLevel,
+                    value: String(abno.emoLevel),
                     inline: true,
                 },
                 {
