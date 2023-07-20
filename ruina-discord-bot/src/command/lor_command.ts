@@ -9,6 +9,7 @@ import { DiscordAccessor } from "../accessor/discord_accessor";
 import { CommandResult } from "../model/command_result";
 import { Request } from "../model/request";
 import { AbnoToEmbedTransformer } from "../transformers/abno_to_embed_transformer";
+import { DiscordEmbed } from "../model/discord/discord_embed";
 
 const QUERY_COMMAND_ARG = "query";
 const LOCALE_COMMAND_ARG = "locale";
@@ -44,38 +45,49 @@ export class LorCommand {
             locale
         );
 
-        console.log(`LorCommand: Received LookupResult=${lookupResult}`);
+        console.log(
+            `LorCommand: Received LookupResult=${JSON.stringify(lookupResult)}`
+        );
 
         const pageType: PageType = lookupResult.pageType;
+        let embed: DiscordEmbed;
         switch (pageType) {
             case PageType.ABNO_PAGE:
+                let decoratedAbnoPage: DecoratedAbnoPage;
                 try {
-                    const decoratedAbnoPage: DecoratedAbnoPage =
-                        this.dataAccessor.getDecoratedAbnoPage(
-                            lookupResult.pageId,
-                            locale
-                        );
-                    const embed: any = this.abnoToEmbedTransformer.transform(
-                        decoratedAbnoPage
+                    decoratedAbnoPage = this.dataAccessor.getDecoratedAbnoPage(
+                        lookupResult.pageId,
+                        locale
                     );
-                    await this.discordAccessor.writeResponse(
-                        request.interactionToken,
-                        embed
-                    );
-                    return {
-                        success: true,
-                    };
                 } catch (e: unknown) {
                     return {
                         success: false,
-                        error: `Error occurred while calling discord write response: ${e}`,
+                        error: `Error occurred while calling getDecoratedAbnoPage: ${e}`,
                     };
                 }
+                embed =
+                    this.abnoToEmbedTransformer.transform(decoratedAbnoPage);
+                break;
             default:
                 return {
                     success: false,
                     error: `Page type ${pageType} not yet supported`,
                 };
+        }
+
+        try {
+            await this.discordAccessor.writeResponse(
+                request.interactionToken,
+                embed
+            );
+            return {
+                success: true,
+            };
+        } catch (e: unknown) {
+            return {
+                success: false,
+                error: `Error occurred while calling discord write response: ${e}`,
+            };
         }
     }
 }
