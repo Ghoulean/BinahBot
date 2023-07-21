@@ -5,8 +5,9 @@ import {
     DiscordInteractionOptions,
 } from "../model/discord/discord_interaction";
 import { Request, RequestCommandArgs } from "../model/request";
-import { TransformerUtil } from "./transformer_util";
+import { Util } from "../util/util";
 
+// TODO: consider spoiler config accessor?
 const SPOILER_CONFIG = __SPOILER_CONFIG as { [key: string]: Chapter };
 
 const DEFAULT_DISCORD_LOCALE = "en-US";
@@ -26,7 +27,7 @@ export class InteractionToRequestTransformer {
             command: interaction.data!.name,
             commandArgs: commandArgs,
             interactionToken: interaction.token,
-            locale: TransformerUtil.deserializeDiscordLocale(locale),
+            locale: Util.deserializeDiscordLocale(locale),
             chapter: this.getChapter(interaction.channel_id),
         };
     }

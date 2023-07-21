@@ -67,11 +67,15 @@ const mockAbnoToEmbedTransformer = new (<new () => AbnoToEmbedTransformer>(
     AbnoToEmbedTransformer
 ))() as jest.Mocked<AbnoToEmbedTransformer>;
 
-const lorCommand: LorCommand = new LorCommand(
-    mockDataAccessor,
-    mockDiscordAccessor,
-    mockAbnoToEmbedTransformer
-);
+let lorCommand: LorCommand;
+
+beforeEach(() => {
+    lorCommand = new LorCommand(
+        mockDataAccessor,
+        mockDiscordAccessor,
+        mockAbnoToEmbedTransformer
+    );
+});
 
 test("should send abno page embed to Discord on invocation with abno page", () => {
     mockDataAccessor.lookup = jest.fn();

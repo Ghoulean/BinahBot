@@ -33,8 +33,11 @@ const NEGATIVE_DECORATED_ABNO_PAGE: DecoratedAbnoPage = {
 
 const S3_BUCKET_NAME: string = "s3bucketname";
 
-const abnoToEmbedTransformer: AbnoToEmbedTransformer =
-    new AbnoToEmbedTransformer(S3_BUCKET_NAME);
+let abnoToEmbedTransformer: AbnoToEmbedTransformer;
+
+beforeEach(() => {
+    abnoToEmbedTransformer = new AbnoToEmbedTransformer(S3_BUCKET_NAME);
+});
 
 test("should transform postive decorated abno page to Discord embed", () => {
     const discordEmbed: DiscordEmbed = abnoToEmbedTransformer.transform(

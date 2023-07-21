@@ -32,6 +32,7 @@ export class LorCommand {
 
     public async invoke(request: Request): Promise<CommandResult> {
         const query: string = request.commandArgs[QUERY_COMMAND_ARG] as string;
+        // TODO: what class should be responsible for this potentially helper method
         const locale: Localization =
             (request.commandArgs[LOCALE_COMMAND_ARG] as Localization) ??
             request.locale;

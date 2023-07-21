@@ -11,6 +11,7 @@ export class CommandManager {
 
     public async routeRequest(request: Request): Promise<CommandResult> {
         switch (request.command) {
+            // TODO: consider moving to enum
             case "lor":
                 console.log(`CommandManager: Routing request to LOR`);
                 return await this.lorCommand.invoke(request);

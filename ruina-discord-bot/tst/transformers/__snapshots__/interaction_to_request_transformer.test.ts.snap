@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should prioritize locale correctly 1`] = `
+{
+  "chapter": 7,
+  "command": "",
+  "commandArgs": {},
+  "interactionToken": "",
+  "locale": "kr",
+}
+`;
+
+exports[`should prioritize locale correctly 2`] = `
+{
+  "chapter": 7,
+  "command": "",
+  "commandArgs": {},
+  "interactionToken": "",
+  "locale": "jp",
+}
+`;
+
+exports[`should set chapter level from spoiler config 1`] = `
+{
+  "chapter": 7,
+  "command": "",
+  "commandArgs": {},
+  "interactionToken": "",
+  "locale": "en",
+}
+`;
+
+exports[`should transform interaction options to command args 1`] = `
+{
+  "chapter": 7,
+  "command": "",
+  "commandArgs": {
+    "name": "value",
+  },
+  "interactionToken": "",
+  "locale": "en",
+}
+`;
+
+exports[`should transform interaction to request 1`] = `
+{
+  "chapter": 7,
+  "command": "",
+  "commandArgs": {},
+  "interactionToken": "",
+  "locale": "en",
+}
+`;
