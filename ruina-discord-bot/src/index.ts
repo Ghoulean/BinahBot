@@ -39,6 +39,7 @@ const lorCommand: LorCommand = new LorCommand(
 );
 const commandManager: CommandManager = new CommandManager(lorCommand);
 
+// TODO: testing strategy
 export async function handler(
     event: APIGatewayProxyEvent,
     _context: Context,
