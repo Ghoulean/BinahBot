@@ -4,6 +4,7 @@ import {
 } from "@aws-sdk/client-secrets-manager";
 import axios from "axios";
 import { EnvVarRetriever } from "../util/env_var_retriever";
+import { DiscordEmbed } from "../model/discord/discord_embed";
 
 const BASE_DISCORD_URL: string = "https://discord.com/api/v10";
 // TODO: reconsider where this value goes
@@ -33,12 +34,13 @@ export class DiscordAccessor {
     public async writeResponse(
         interactionToken: string,
         // TODO: strongly typed embed
-        embed: any
+        embed: DiscordEmbed
     ): Promise<void> {
         console.log(`Retrieving secrets (if not done so already)`);
         await this.retrieveSecrets();
         console.log(`Got secrets`);
         try {
+            // TODO: type
             const discordPayload: any = {
                 embeds: [embed],
             };
@@ -62,9 +64,11 @@ export class DiscordAccessor {
             );
             if (status === 204) {
                 console.log("Successfully returned Discord response");
+            } else {
+                console.log(`Returned with status ${status}`);
             }
-        } catch (e) {
-            throw e;
+        } catch (e: unknown) {
+            throw e
         }
     }
 
@@ -84,6 +88,8 @@ export class DiscordAccessor {
             ) as DiscordSecretsValues;
             this.applicationId = secrets.applicationId;
             this.botAuthToken = secrets.authToken;
+        } else {
+            throw new Error(`Could not retrieve Discord bot secrets. Secret value status code: ${getSecretValueCommandOutput.$metadata.httpStatusCode}`);
         }
     }
 }

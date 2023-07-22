@@ -69,9 +69,8 @@ export class DataAccessor {
     constructor() {}
 
     public lookup(query: string, locale: Localization): LookupResult {
-        const lookupResults: { [key: string]: LookupResult } =
-            this.getLocaledLookupResults(locale);
-        const lookupResult: LookupResult = lookupResults[query];
+        const lookupResult: LookupResult | undefined =
+            this.getLocaledLookupResults(locale)[query];
         if (!lookupResult) {
             throw new Error(
                 `Couldn't identify query result for ${query} in ${locale} locale`
@@ -84,7 +83,7 @@ export class DataAccessor {
         pageId: string,
         locale: Localization
     ): DecoratedAbnoPage {
-        const decoratedAbnoPage: DecoratedAbnoPage =
+        const decoratedAbnoPage: DecoratedAbnoPage | undefined =
             this.getLocaledAbnoMapping(locale)[pageId];
         if (!decoratedAbnoPage) {
             throw new Error(`${pageId} not found in ${locale} locale`);
@@ -93,18 +92,12 @@ export class DataAccessor {
     }
 
     private getLocaledLookupResults(locale: Localization): QueryToLookupResult {
-        return (
-            LOCALIZATION_TO_LOOKUP_RESULTS[locale] ??
-            LOCALIZATION_TO_LOOKUP_RESULTS[Localization.ENGLISH]
-        );
+        return LOCALIZATION_TO_LOOKUP_RESULTS[locale];
     }
 
     private getLocaledAbnoMapping(
         locale: Localization
     ): QueryToDecoratedAbnopage {
-        return (
-            LOCALIZATION_TO_DECORATED_ABNO_PAGE[locale] ??
-            LOCALIZATION_TO_DECORATED_ABNO_PAGE[Localization.ENGLISH]
-        );
+        return LOCALIZATION_TO_DECORATED_ABNO_PAGE[locale];
     }
 }
