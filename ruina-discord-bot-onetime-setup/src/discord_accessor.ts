@@ -19,6 +19,7 @@ interface DiscordCommandOption {
     names: { [key: string]: string };
     descriptions: { [key: string]: string };
     choices?: DiscordCommandOptionChoice[];
+    autocomplete?: boolean;
 }
 
 // Represents command to-be-created
@@ -158,6 +159,7 @@ export class DiscordAccessor {
             description: option.descriptions["en-US"],
             description_localizations: option.descriptions,
             choices: option.choices,
+            autocomplete: option.autocomplete
         };
     }
 
@@ -192,6 +194,7 @@ export class DiscordAccessor {
                 ...blob.description_localizations,
             },
             choices: blob.choices,
+            autocomplete: !!blob.autocomplete ?? false
         };
     }
 }
