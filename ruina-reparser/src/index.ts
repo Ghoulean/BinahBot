@@ -28,6 +28,7 @@ for (const locale of ALL_LOCALIZATIONS) {
     // Query mapper
     const lookupResults = QueryMapper.map(queryMapperProps[locale]!);
     writeDataFile(`${locale}/queryLookupResults.json`, lookupResults);
+    writeDataFile(`autocomplete/${locale}Autocomplete.json`, Object.keys(lookupResults));
 }
 
 console.log("Done");
