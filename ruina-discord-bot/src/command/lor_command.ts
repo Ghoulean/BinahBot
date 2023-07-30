@@ -28,7 +28,6 @@ export class LorCommand {
 
     public invoke(request: Request): CommandResult {
         const query: string = request.commandArgs[QUERY_COMMAND_ARG] as string;
-        // TODO: what class should be responsible for this potentially helper method
         const cardLocale: Localization =
             (request.commandArgs[LOCALE_COMMAND_ARG] as Localization) ??
             request.locale;
@@ -37,10 +36,18 @@ export class LorCommand {
             `LorCommand: Received query ${query} with cardLocale ${cardLocale.toString()}`
         );
 
-        const lookupResult: LookupResult = this.dataAccessor.lookup(
-            query,
-            cardLocale
-        );
+        let lookupResult: LookupResult;
+        try {
+            lookupResult = this.dataAccessor.lookup(query, cardLocale);
+        } catch (e: unknown) {
+            return {
+                success: true,
+                payload: this.embedTransformer.noResultsFoundEmbed(
+                    query,
+                    request.locale
+                ),
+            };
+        }
 
         console.log(
             `LorCommand: Received LookupResult=${JSON.stringify(lookupResult)}`
@@ -59,7 +66,9 @@ export class LorCommand {
                 } catch (e: unknown) {
                     return {
                         success: false,
-                        error: `Error occurred while calling getDecoratedAbnoPage: ${JSON.stringify(e)}`,
+                        error: `Error occurred while calling getDecoratedAbnoPage: ${JSON.stringify(
+                            e
+                        )}`,
                     };
                 }
                 embed = this.embedTransformer.transformAbnoPage(

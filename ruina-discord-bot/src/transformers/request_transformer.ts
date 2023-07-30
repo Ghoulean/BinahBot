@@ -5,8 +5,8 @@ import {
     DiscordInteractionOptions,
 } from "../model/discord/discord_interaction";
 import { Request, RequestCommandArgs } from "../model/request";
-import { Util } from "../util/util";
 import { DiscordInteractionTypes } from "../util/constants";
+import { Util } from "../util/util";
 
 // TODO: consider spoiler config accessor?
 const SPOILER_CONFIG = __SPOILER_CONFIG as { [key: string]: Chapter };
@@ -23,16 +23,21 @@ export class RequestTransformer {
             interaction.locale ??
             interaction.guild_locale ??
             DEFAULT_DISCORD_LOCALE;
-        const commandArgs: RequestCommandArgs = interaction.data!.options
-            ? this.transformArgs(interaction.data!.options)
+        if (!interaction.data) {
+            throw new Error("Interaction data not found");
+        }
+        const commandArgs: RequestCommandArgs = interaction.data.options
+            ? this.transformArgs(interaction.data.options)
             : {};
         return {
-            command: interaction.data!.name,
+            command: interaction.data.name,
             commandArgs: commandArgs,
             interactionToken: interaction.token,
             locale: Util.deserializeDiscordLocale(locale),
             chapter: this.getChapter(interaction.channel_id),
-            autocomplete: (interaction.type == DiscordInteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE)
+            autocomplete:
+                interaction.type ==
+                DiscordInteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE,
         };
     }
 

@@ -17,7 +17,7 @@ const PING_RESPONSE: DiscordInteractionResponse = {
 export class InteractionResponseBuilder {
     public buildResponse(
         requestType: number,
-        data: any
+        data: unknown
     ): DiscordInteractionResponse {
         switch (requestType) {
             case DiscordInteractionTypes.PING:

@@ -12,6 +12,7 @@ import { LorCommand } from "../../src/command/lor_command";
 import { DiscordEmbed } from "../../src/model/discord/discord_embed";
 import { Request } from "../../src/model/request";
 import { EmbedTransformer } from "../../src/transformers/embed_transformer";
+import { CommandResult } from "../../src/model/command_result";
 
 const COMMAND_QUERY: string = "commandQuery";
 const COMMAND_ABNO_PAGE_ID: string = "commandAbnoPageId";
@@ -86,6 +87,21 @@ test("should send abno page embed to Discord on invocation with abno page", () =
         DECORATED_ABNO_PAGE
     );
     embedTransformer.transformAbnoPage.mockReturnValueOnce(DISCORD_EMBED);
+
+    expect(lorCommand.invoke(REQUEST_WITH_LOCALE)).toEqual({
+        success: true,
+        payload: DISCORD_EMBED,
+    });
+});
+
+test("should return no page found when lookup returns no page", () => {
+    mockDataAccessor.lookup = jest.fn();
+    embedTransformer.noResultsFoundEmbed = jest.fn();
+
+    mockDataAccessor.lookup.mockImplementationOnce(()=> {
+        throw new Error();   
+    });
+    embedTransformer.noResultsFoundEmbed.mockReturnValueOnce(DISCORD_EMBED);
 
     expect(lorCommand.invoke(REQUEST_WITH_LOCALE)).toEqual({
         success: true,

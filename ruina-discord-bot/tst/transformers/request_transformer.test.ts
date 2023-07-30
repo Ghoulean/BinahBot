@@ -71,3 +71,13 @@ test("should set chapter level from spoiler config", () => {
         requestTransformer.transformInteractionToRequest(interaction)
     ).toMatchSnapshot();
 });
+
+test("should throw error if interaction has no data", () => {
+    const interaction: DiscordInteraction = {
+        ...BASE_INTERACTION,
+        data: undefined,
+    };
+    expect(() => {
+        requestTransformer.transformInteractionToRequest(interaction);
+    }).toThrow();
+});

@@ -7,7 +7,7 @@ import { DiscordEmbed } from "./discord_embed";
  */
 export type DiscordInteraction = {
     id: string;
-    type: number; // TODO: enum?
+    type: number;
     token: string;
     application_id: string;
     locale?: string;
@@ -33,7 +33,7 @@ export type DiscordInteractionMetadata = {
 }
 
 export type DiscordInteractionResponse = {
-    type: number; // TODO: enum?
+    type: number;
     data?: DiscordInteractionResponseMessage | DiscordInteractionResponseAutocomplete;
 };
 

@@ -33,6 +33,8 @@ const NEGATIVE_DECORATED_ABNO_PAGE: DecoratedAbnoPage = {
     emotionRate: -1,
 };
 
+const NO_RESULTS_FOUND_QUERY: string = "query";
+
 const S3_BUCKET_NAME: string = "s3bucketname";
 
 let embedTransformer: EmbedTransformer;
@@ -57,4 +59,13 @@ test("should transform negative decorated abno page to Discord embed", () => {
     );
     expect(discordEmbed.color).toBe(DiscordEmbedColors.BREAKDOWN_ABNO_PAGE);
     expect(discordEmbed).toMatchSnapshot();
+});
+
+test("should return no results found embed", () => {
+    expect(
+        embedTransformer.noResultsFoundEmbed(
+            NO_RESULTS_FOUND_QUERY,
+            DEFAULT_REQUEST_LOCALE
+        )
+    ).toMatchSnapshot();
 });

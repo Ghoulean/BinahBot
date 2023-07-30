@@ -9,7 +9,6 @@ export class EmbedTransformer {
         this.s3BucketName = s3BucketName;
     }
 
-    // TODO: strongly type embeds
     // TODO: localize via _requestLocale
     public transformAbnoPage(abno: DecoratedAbnoPage, _requestLocale: Localization): DiscordEmbed {
         const embedColor: number = abno.emotionSign > 0 ? DiscordEmbedColors.AWAKENING_ABNO_PAGE : DiscordEmbedColors.BREAKDOWN_ABNO_PAGE;
@@ -55,5 +54,13 @@ export class EmbedTransformer {
                 },
             ],
         };
+    }
+
+    // TODO: localize via _requestLocale
+    public noResultsFoundEmbed(query: string, _requestLocale: Localization): DiscordEmbed {
+        return {
+            description: `*No results found for \`${query}\`.*`,
+            fields: []
+        }
     }
 }

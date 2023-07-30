@@ -4,6 +4,7 @@ import { DiscordInteraction } from "../model/discord/discord_interaction";
 const TIMESTAMP_HEADER = "x-signature-timestamp";
 const SIGNATURE_HEADER = "x-signature-ed25519";
 
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 export class ApiTransformer {
     constructor() {}
 
@@ -20,7 +21,7 @@ export class ApiTransformer {
         };
     }
 
-    public transformDataBlobToApiResponse(blob: any): APIGatewayProxyResult {
+    public transformDataBlobToApiResponse(blob: unknown): APIGatewayProxyResult {
         return {
             statusCode: 200,
             headers: {

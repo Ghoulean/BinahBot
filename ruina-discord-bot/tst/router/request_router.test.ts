@@ -5,13 +5,6 @@ import { CommandResult } from "../../src/model/command_result";
 import { Request } from "../../src/model/request";
 import { RequestRouter } from "../../src/router/request_router";
 
-const mockLorCommand = new (<new () => LorCommand>(
-    LorCommand
-))() as jest.Mocked<LorCommand>;
-const mockLorAutocomplete = new (<new () => LorAutocomplete>(
-    LorAutocomplete
-))() as jest.Mocked<LorAutocomplete>;
-
 const BASE_REQUEST: Request = {
     command: "",
     commandArgs: {},
@@ -23,6 +16,13 @@ const BASE_REQUEST: Request = {
 const COMMAND_RESULT: CommandResult = {
     success: true,
 };
+
+const mockLorCommand = new (<new () => LorCommand>(
+    LorCommand
+))() as jest.Mocked<LorCommand>;
+const mockLorAutocomplete = new (<new () => LorAutocomplete>(
+    LorAutocomplete
+))() as jest.Mocked<LorAutocomplete>;
 
 let requestRouter: RequestRouter;
 
