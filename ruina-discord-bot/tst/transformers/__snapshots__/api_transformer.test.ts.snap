@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should transform apigw event into interaction payload 1`] = `
+{
+  "metadata": {
+    "jsonBody": "{}",
+    "signature": "signature",
+    "timestamp": "timestamp",
+  },
+}
+`;
+
+exports[`should transform response into apigw response 1`] = `
+{
+  "body": "{"type":1}",
+  "headers": {
+    "Content-Type": "application/json",
+  },
+  "statusCode": 200,
+}
+`;

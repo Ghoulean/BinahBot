@@ -1,4 +1,5 @@
 export type CommandResult = {
     success: boolean;
-    error?: string; 
+    error?: string;
+    payload?: any;
 };

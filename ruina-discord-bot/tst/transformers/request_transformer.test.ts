@@ -1,10 +1,11 @@
 import { DiscordInteraction } from "../../src/model/discord/discord_interaction";
-import { InteractionToRequestTransformer } from "../../src/transformers/interaction_to_request_transformer";
+import { RequestTransformer } from "../../src/transformers/request_transformer";
 
-// TODO: reconsider testing strategy for spoiler channels
+// TODO: reconsider testing strategy for spoiler channels.
+// Possibly add abstraction layer over this
 const DEBUG_SPOILER_CHANNEL = "270097753177194498";
 
-const INTERACTION: DiscordInteraction = {
+const BASE_INTERACTION: DiscordInteraction = {
     id: "",
     token: "",
     application_id: "",
@@ -12,25 +13,25 @@ const INTERACTION: DiscordInteraction = {
         id: "",
         name: "",
     },
+    type: 1,
+    metadata: {
+        timestamp: "",
+        signature: "",
+        jsonBody: "",
+    },
 };
 
-let interactionToRequestTransformer: InteractionToRequestTransformer;
+let requestTransformer: RequestTransformer;
 
 beforeEach(() => {
-    interactionToRequestTransformer = new InteractionToRequestTransformer();
+    requestTransformer = new RequestTransformer();
 });
 
-test("should transform interaction to request", () => {
-    expect(
-        interactionToRequestTransformer.transform(INTERACTION)
-    ).toMatchSnapshot();
-});
-
-test("should transform interaction options to command args", () => {
+test("should transform interaction into request", () => {
     const optionsInteraction: DiscordInteraction = {
-        ...INTERACTION,
+        ...BASE_INTERACTION,
         data: {
-            ...INTERACTION.data!,
+            ...BASE_INTERACTION.data!,
             options: [
                 {
                     name: "name",
@@ -40,13 +41,13 @@ test("should transform interaction options to command args", () => {
         },
     };
     expect(
-        interactionToRequestTransformer.transform(optionsInteraction)
+        requestTransformer.transformInteractionToRequest(optionsInteraction)
     ).toMatchSnapshot();
 });
 
 test("should prioritize locale correctly", () => {
     const guildLocaleInteraction: DiscordInteraction = {
-        ...INTERACTION,
+        ...BASE_INTERACTION,
         guild_locale: "ko",
     };
     const localeInteraction: DiscordInteraction = {
@@ -54,19 +55,19 @@ test("should prioritize locale correctly", () => {
         locale: "ja",
     };
     expect(
-        interactionToRequestTransformer.transform(guildLocaleInteraction)
+        requestTransformer.transformInteractionToRequest(guildLocaleInteraction)
     ).toMatchSnapshot();
     expect(
-        interactionToRequestTransformer.transform(localeInteraction)
+        requestTransformer.transformInteractionToRequest(localeInteraction)
     ).toMatchSnapshot();
 });
 
 test("should set chapter level from spoiler config", () => {
     const interaction: DiscordInteraction = {
-        ...INTERACTION,
-        channel_id: DEBUG_SPOILER_CHANNEL
+        ...BASE_INTERACTION,
+        channel_id: DEBUG_SPOILER_CHANNEL,
     };
     expect(
-        interactionToRequestTransformer.transform(interaction)
+        requestTransformer.transformInteractionToRequest(interaction)
     ).toMatchSnapshot();
 });

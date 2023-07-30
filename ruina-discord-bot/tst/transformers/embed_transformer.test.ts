@@ -6,8 +6,10 @@ import {
     Localization,
 } from "@ghoulean/ruina-common";
 import { DiscordEmbed } from "../../src/model/discord/discord_embed";
-import { AbnoToEmbedTransformer } from "../../src/transformers/abno_to_embed_transformer";
+import { EmbedTransformer } from "../../src/transformers/embed_transformer";
 import { DiscordEmbedColors } from "../../src/util/constants";
+
+const DEFAULT_REQUEST_LOCALE: Localization = Localization.ENGLISH;
 
 const POSITIVE_DECORATED_ABNO_PAGE: DecoratedAbnoPage = {
     locale: Localization.ENGLISH,
@@ -33,23 +35,25 @@ const NEGATIVE_DECORATED_ABNO_PAGE: DecoratedAbnoPage = {
 
 const S3_BUCKET_NAME: string = "s3bucketname";
 
-let abnoToEmbedTransformer: AbnoToEmbedTransformer;
+let embedTransformer: EmbedTransformer;
 
 beforeEach(() => {
-    abnoToEmbedTransformer = new AbnoToEmbedTransformer(S3_BUCKET_NAME);
+    embedTransformer = new EmbedTransformer(S3_BUCKET_NAME);
 });
 
 test("should transform postive decorated abno page to Discord embed", () => {
-    const discordEmbed: DiscordEmbed = abnoToEmbedTransformer.transform(
-        POSITIVE_DECORATED_ABNO_PAGE
+    const discordEmbed: DiscordEmbed = embedTransformer.transformAbnoPage(
+        POSITIVE_DECORATED_ABNO_PAGE,
+        DEFAULT_REQUEST_LOCALE
     );
     expect(discordEmbed.color).toBe(DiscordEmbedColors.AWAKENING_ABNO_PAGE);
     expect(discordEmbed).toMatchSnapshot();
 });
 
 test("should transform negative decorated abno page to Discord embed", () => {
-    const discordEmbed: DiscordEmbed = abnoToEmbedTransformer.transform(
-        NEGATIVE_DECORATED_ABNO_PAGE
+    const discordEmbed: DiscordEmbed = embedTransformer.transformAbnoPage(
+        NEGATIVE_DECORATED_ABNO_PAGE,
+        DEFAULT_REQUEST_LOCALE
     );
     expect(discordEmbed.color).toBe(DiscordEmbedColors.BREAKDOWN_ABNO_PAGE);
     expect(discordEmbed).toMatchSnapshot();

@@ -35,7 +35,7 @@ export class AbnoPageMapper {
             }
 
             const id: string = abnoPage.nameId;
-            let rawData: any = this.findRawData(localInfo, floor, id);
+            const rawData: any = this.findRawData(localInfo, floor, id);
             const decoratedAbnoPage: DecoratedAbnoPage = {
                 ...abnoPage,
                 locale: locale,

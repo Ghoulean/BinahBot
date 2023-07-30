@@ -8,12 +8,10 @@ import {
     PageType,
 } from "@ghoulean/ruina-common";
 import { DataAccessor } from "../../src/accessor/data_accessor";
-import { DiscordAccessor } from "../../src/accessor/discord_accessor";
 import { LorCommand } from "../../src/command/lor_command";
-import { CommandResult } from "../../src/model/command_result";
 import { DiscordEmbed } from "../../src/model/discord/discord_embed";
 import { Request } from "../../src/model/request";
-import { AbnoToEmbedTransformer } from "../../src/transformers/abno_to_embed_transformer";
+import { EmbedTransformer } from "../../src/transformers/embed_transformer";
 
 const COMMAND_QUERY: string = "commandQuery";
 const COMMAND_ABNO_PAGE_ID: string = "commandAbnoPageId";
@@ -27,6 +25,14 @@ const REQUEST: Request = {
     interactionToken: INTERACTION_TOKEN,
     locale: Localization.ENGLISH,
     chapter: Chapter.IMPURITAS_CIVITATIS,
+};
+
+const REQUEST_WITH_LOCALE: Request = {
+    ...REQUEST,
+    commandArgs: {
+        query: COMMAND_QUERY,
+        locale: "en",
+    },
 };
 
 const ABNO_LOOKUP_RESULT: LookupResult = {
@@ -60,44 +66,34 @@ const DISCORD_EMBED: DiscordEmbed = {
 const mockDataAccessor = new (<new () => DataAccessor>(
     DataAccessor
 ))() as jest.Mocked<DataAccessor>;
-const mockDiscordAccessor = new (<new () => DiscordAccessor>(
-    DiscordAccessor
-))() as jest.Mocked<DiscordAccessor>;
-const mockAbnoToEmbedTransformer = new (<new () => AbnoToEmbedTransformer>(
-    AbnoToEmbedTransformer
-))() as jest.Mocked<AbnoToEmbedTransformer>;
+const embedTransformer = new (<new () => EmbedTransformer>(
+    EmbedTransformer
+))() as jest.Mocked<EmbedTransformer>;
 
 let lorCommand: LorCommand;
 
 beforeEach(() => {
-    lorCommand = new LorCommand(
-        mockDataAccessor,
-        mockDiscordAccessor,
-        mockAbnoToEmbedTransformer
-    );
+    lorCommand = new LorCommand(mockDataAccessor, embedTransformer);
 });
 
 test("should send abno page embed to Discord on invocation with abno page", () => {
     mockDataAccessor.lookup = jest.fn();
     mockDataAccessor.getDecoratedAbnoPage = jest.fn();
-    mockAbnoToEmbedTransformer.transform = jest.fn();
-    mockDiscordAccessor.writeResponse = jest.fn();
+    embedTransformer.transformAbnoPage = jest.fn();
 
     mockDataAccessor.lookup.mockReturnValueOnce(ABNO_LOOKUP_RESULT);
     mockDataAccessor.getDecoratedAbnoPage.mockReturnValueOnce(
         DECORATED_ABNO_PAGE
     );
-    mockAbnoToEmbedTransformer.transform.mockReturnValueOnce(DISCORD_EMBED);
-    mockDiscordAccessor.writeResponse.mockReturnValueOnce(Promise.resolve());
+    embedTransformer.transformAbnoPage.mockReturnValueOnce(DISCORD_EMBED);
 
-    lorCommand.invoke(REQUEST).then((response: CommandResult) => {
-        expect(response).toEqual({
-            success: true,
-        });
+    expect(lorCommand.invoke(REQUEST_WITH_LOCALE)).toEqual({
+        success: true,
+        payload: DISCORD_EMBED,
     });
 });
 
-test("should fail when abno page can't be found", () => {
+test("should fail when lookup returns abno page but abno page can't be found", () => {
     mockDataAccessor.lookup = jest.fn();
     mockDataAccessor.getDecoratedAbnoPage = jest.fn();
 
@@ -106,29 +102,7 @@ test("should fail when abno page can't be found", () => {
         throw new Error();
     });
 
-    lorCommand.invoke(REQUEST).then((response: CommandResult) => {
-        expect(response.success).toBe(false);
-    });
-});
-
-test("should fail when discord fails sending embed", () => {
-    mockDataAccessor.lookup = jest.fn();
-    mockDataAccessor.getDecoratedAbnoPage = jest.fn();
-    mockAbnoToEmbedTransformer.transform = jest.fn();
-    mockDiscordAccessor.writeResponse = jest.fn();
-
-    mockDataAccessor.lookup.mockReturnValueOnce(ABNO_LOOKUP_RESULT);
-    mockDataAccessor.getDecoratedAbnoPage.mockReturnValueOnce(
-        DECORATED_ABNO_PAGE
-    );
-    mockAbnoToEmbedTransformer.transform.mockReturnValueOnce(DISCORD_EMBED);
-    mockDiscordAccessor.writeResponse.mockImplementationOnce(() => {
-        throw new Error();
-    });
-
-    lorCommand.invoke(REQUEST).then((response: CommandResult) => {
-        expect(response.success).toBe(false);
-    });
+    expect(lorCommand.invoke(REQUEST).success).toBe(false);
 });
 
 test("should fail when receive unsupported page type", () => {
@@ -142,7 +116,5 @@ test("should fail when receive unsupported page type", () => {
         DECORATED_ABNO_PAGE
     );
 
-    lorCommand.invoke(REQUEST).then((response: CommandResult) => {
-        expect(response.success).toBe(false);
-    });
+    expect(lorCommand.invoke(REQUEST).success).toBe(false);
 });

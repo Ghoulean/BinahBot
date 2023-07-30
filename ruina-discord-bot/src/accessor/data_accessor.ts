@@ -3,6 +3,7 @@ import {
     Localization,
     LookupResult,
 } from "@ghoulean/ruina-common";
+import * as __AUTOCOMPLETE from "../data/autocomplete.json";
 import * as __CN_ABNO from "../data/cn/abno.json";
 import * as __CN_LOOKUP_RESULTS from "../data/cn/queryLookupResults.json";
 import * as __EN_ABNO from "../data/en/abno.json";
@@ -65,6 +66,8 @@ const LOCALIZATION_TO_DECORATED_ABNO_PAGE: LocalizationToQueryDecoratedAbnopage 
         [Localization.KOREAN]: KR_ABNO,
     };
 
+const AUTOCOMPLETE: string[] = __AUTOCOMPLETE.data ;
+
 export class DataAccessor {
     constructor() {}
 
@@ -91,6 +94,19 @@ export class DataAccessor {
         return decoratedAbnoPage;
     }
 
+    public autocomplete(query: string): string[] {
+        const retVal: string[] = [];
+        const cleanQuery = this.cleanQuery(query);
+        for (const q of AUTOCOMPLETE) {
+            if (this.cleanQuery(q).startsWith(cleanQuery)) {
+                retVal.push(q);
+            }
+        }
+        return retVal.sort((a, b) => {
+            return a.length - b.length || a.localeCompare(b);
+        });
+    }
+
     private getLocaledLookupResults(locale: Localization): QueryToLookupResult {
         return LOCALIZATION_TO_LOOKUP_RESULTS[locale];
     }
@@ -99,5 +115,9 @@ export class DataAccessor {
         locale: Localization
     ): QueryToDecoratedAbnopage {
         return LOCALIZATION_TO_DECORATED_ABNO_PAGE[locale];
+    }
+
+    private cleanQuery(s: string): string {
+        return s.trim().toLowerCase();
     }
 }

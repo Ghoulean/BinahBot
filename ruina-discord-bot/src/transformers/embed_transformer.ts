@@ -2,7 +2,7 @@ import { DecoratedAbnoPage, Localization } from "@ghoulean/ruina-common";
 import { DiscordEmbedColors } from "../util/constants";
 import { DiscordEmbed } from "../model/discord/discord_embed";
 
-export class AbnoToEmbedTransformer {
+export class EmbedTransformer {
     private readonly s3BucketName: string;
 
     constructor(s3BucketName: string) {
@@ -10,8 +10,8 @@ export class AbnoToEmbedTransformer {
     }
 
     // TODO: strongly type embeds
-    // TODO: localize via abno.locale
-    public transform(abno: DecoratedAbnoPage): DiscordEmbed {
+    // TODO: localize via _requestLocale
+    public transformAbnoPage(abno: DecoratedAbnoPage, _requestLocale: Localization): DiscordEmbed {
         const embedColor: number = abno.emotionSign > 0 ? DiscordEmbedColors.AWAKENING_ABNO_PAGE : DiscordEmbedColors.BREAKDOWN_ABNO_PAGE;
         const abnoType: string = abno.emotionSign > 0 ? "Awakening" : "Breakdown";
         return {

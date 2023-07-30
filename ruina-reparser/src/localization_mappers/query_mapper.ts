@@ -1,4 +1,4 @@
-import { ALL_LOCALIZATIONS, DecoratedAbnoPage, Localization, LookupResult, PageType } from "@ghoulean/ruina-common";
+import { DecoratedAbnoPage, Localization, LookupResult, PageType } from "@ghoulean/ruina-common";
 
 export type QueryMapperPropType = {
     locale: Localization,
@@ -19,13 +19,13 @@ export class QueryMapper {
         if (!props.abnoPages) {
             throw new Error(`Abno pages not found for locale:${props.locale}`);
         }
-        for (const abnoPageId of Object.keys(props.abnoPages!)) {
-            const abnoPage: DecoratedAbnoPage = props.abnoPages![abnoPageId];
+        for (const abnoPageId of Object.keys(props.abnoPages)) {
+            const abnoPage: DecoratedAbnoPage = props.abnoPages[abnoPageId];
             // Use this helper method to inject disambiguators of different types
             const abnoPageName: string = this.transformName(abnoPage.name);
             if (retVal[abnoPageName]) {
                 const otherId: string = retVal[abnoPageName]!.pageId;
-                console.log(Object.keys(props.abnoPages!));
+                console.log(Object.keys(props.abnoPages));
                 console.log(retVal[abnoPageName]!);
                 throw new Error(`Overlapping name ${abnoPageName} discovered for id:${abnoPageId} and id:${otherId}`);
             } else {

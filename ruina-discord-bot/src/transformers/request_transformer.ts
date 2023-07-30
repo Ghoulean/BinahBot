@@ -6,16 +6,19 @@ import {
 } from "../model/discord/discord_interaction";
 import { Request, RequestCommandArgs } from "../model/request";
 import { Util } from "../util/util";
+import { DiscordInteractionTypes } from "../util/constants";
 
 // TODO: consider spoiler config accessor?
 const SPOILER_CONFIG = __SPOILER_CONFIG as { [key: string]: Chapter };
 
 const DEFAULT_DISCORD_LOCALE = "en-US";
 
-export class InteractionToRequestTransformer {
+export class RequestTransformer {
     constructor() {}
 
-    public transform(interaction: DiscordInteraction): Request {
+    public transformInteractionToRequest(
+        interaction: DiscordInteraction
+    ): Request {
         const locale: string =
             interaction.locale ??
             interaction.guild_locale ??
@@ -29,6 +32,7 @@ export class InteractionToRequestTransformer {
             interactionToken: interaction.token,
             locale: Util.deserializeDiscordLocale(locale),
             chapter: this.getChapter(interaction.channel_id),
+            autocomplete: (interaction.type == DiscordInteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE)
         };
     }
 

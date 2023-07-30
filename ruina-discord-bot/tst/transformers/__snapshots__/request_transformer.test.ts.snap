@@ -2,6 +2,7 @@
 
 exports[`should prioritize locale correctly 1`] = `
 {
+  "autocomplete": false,
   "chapter": 7,
   "command": "",
   "commandArgs": {},
@@ -12,6 +13,7 @@ exports[`should prioritize locale correctly 1`] = `
 
 exports[`should prioritize locale correctly 2`] = `
 {
+  "autocomplete": false,
   "chapter": 7,
   "command": "",
   "commandArgs": {},
@@ -22,6 +24,7 @@ exports[`should prioritize locale correctly 2`] = `
 
 exports[`should set chapter level from spoiler config 1`] = `
 {
+  "autocomplete": false,
   "chapter": 7,
   "command": "",
   "commandArgs": {},
@@ -30,23 +33,14 @@ exports[`should set chapter level from spoiler config 1`] = `
 }
 `;
 
-exports[`should transform interaction options to command args 1`] = `
+exports[`should transform interaction into request 1`] = `
 {
+  "autocomplete": false,
   "chapter": 7,
   "command": "",
   "commandArgs": {
     "name": "value",
   },
-  "interactionToken": "",
-  "locale": "en",
-}
-`;
-
-exports[`should transform interaction to request 1`] = `
-{
-  "chapter": 7,
-  "command": "",
-  "commandArgs": {},
   "interactionToken": "",
   "locale": "en",
 }

@@ -3,6 +3,9 @@ import { DataAccessor } from "../../src/accessor/data_accessor";
 
 const WEIGHT_OF_SIN_EN_PAGE_NAME = "The Weight of Sin";
 const WEIGHT_OF_SIN_PAGE_ID = "LongBird_Sin";
+
+const AUTOCOMPLETE_QUERY = "The ";
+
 const BAD_PAGE_NAME = "PageNameThatDoesNotExist";
 const BAD_PAGE_ID = "PageIdThatDoesNotExist";
 
@@ -37,4 +40,10 @@ test("should throw error when given bad decorated abno page request", () => {
     expect(() => {
         dataAccessor.getDecoratedAbnoPage(BAD_PAGE_ID, Localization.ENGLISH);
     }).toThrow();
+});
+
+test("should return autocomplete result when given query", () => {
+    expect(
+        dataAccessor.autocomplete(AUTOCOMPLETE_QUERY)
+    ).toMatchSnapshot();
 });

@@ -6,6 +6,7 @@ export type Request = {
     interactionToken: string;
     locale: Localization;
     chapter: Chapter;
+    autocomplete?: boolean;
 };
 
 export type RequestCommandArgs = {
