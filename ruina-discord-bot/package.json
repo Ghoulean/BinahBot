@@ -21,14 +21,15 @@
     "@ghoulean/ruina-common": "file:../ruina-common",
     "@types/aws-lambda": "^8.10.119",
     "@types/node": "^20.4.5",
+    "fastest-levenshtein": "^1.0.16",
     "tweetnacl": "^1.0.3"
   },
   "bundleDependencies": [
-    "@aws-sdk/client-lambda",
     "@aws-sdk/client-secrets-manager",
     "@ghoulean/ruina-common",
     "@types/aws-lambda",
     "@types/node",
+    "fastest-levenshtein",
     "tweetnacl"
   ],
   "devDependencies": {

@@ -2,6 +2,7 @@ import { Localization } from "@ghoulean/ruina-common";
 import { DataAccessor } from "../../src/accessor/data_accessor";
 
 const WEIGHT_OF_SIN_EN_PAGE_NAME = "The Weight of Sin";
+const WEIGHT_OF_SIN_EN_PAGE_NAME_TYPO = "theweightofsin";
 const WEIGHT_OF_SIN_PAGE_ID = "LongBird_Sin";
 
 const GOODBYE_KR_NAME = "Good Bye";
@@ -23,6 +24,15 @@ test("should return lookup result when given page name and locale", () => {
     ).toMatchSnapshot();
     expect(
         dataAccessor.lookup(GOODBYE_KR_NAME, Localization.KOREAN)
+    ).toMatchSnapshot();
+});
+
+test("should fuzzy match results if query is close", () => {
+    expect(
+        dataAccessor.lookup(
+            WEIGHT_OF_SIN_EN_PAGE_NAME_TYPO,
+            Localization.ENGLISH
+        )
     ).toMatchSnapshot();
 });
 
