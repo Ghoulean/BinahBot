@@ -5,22 +5,14 @@ import {
 } from "@ghoulean/ruina-common";
 import * as __AUTOCOMPLETE from "../data/autocomplete.json";
 import * as __CN_ABNO from "../data/cn/abno.json";
-import * as __CN_LOOKUP_RESULTS from "../data/cn/queryLookupResults.json";
 import * as __EN_ABNO from "../data/en/abno.json";
-import * as __EN_LOOKUP_RESULTS from "../data/en/queryLookupResults.json";
 import * as __JP_ABNO from "../data/jp/abno.json";
-import * as __JP_LOOKUP_RESULTS from "../data/jp/queryLookupResults.json";
 import * as __KR_ABNO from "../data/kr/abno.json";
-import * as __KR_LOOKUP_RESULTS from "../data/kr/queryLookupResults.json";
+import * as __LOOKUP_RESULTS from "../data/queryLookupResults.json";
 import * as __TRCN_ABNO from "../data/trcn/abno.json";
-import * as __TRCN_LOOKUP_RESULTS from "../data/trcn/queryLookupResults.json";
 
 type QueryToLookupResult = {
-    [key: string]: LookupResult;
-};
-
-type LocalizationToQueryLookupResult = {
-    [key in Localization]: QueryToLookupResult;
+    [key: string]: LookupResult[];
 };
 
 type QueryToDecoratedAbnopage = {
@@ -31,24 +23,8 @@ type LocalizationToQueryDecoratedAbnopage = {
     [key in Localization]: QueryToDecoratedAbnopage;
 };
 
-const CN_LOOKUP_RESULTS: QueryToLookupResult =
-    __CN_LOOKUP_RESULTS as QueryToLookupResult;
-const EN_LOOKUP_RESULTS: QueryToLookupResult =
-    __EN_LOOKUP_RESULTS as QueryToLookupResult;
-const JP_LOOKUP_RESULTS: QueryToLookupResult =
-    __JP_LOOKUP_RESULTS as QueryToLookupResult;
-const KR_LOOKUP_RESULTS: QueryToLookupResult =
-    __KR_LOOKUP_RESULTS as QueryToLookupResult;
-const TRCN_LOOKUP_RESULTS: QueryToLookupResult =
-    __TRCN_LOOKUP_RESULTS as QueryToLookupResult;
-
-const LOCALIZATION_TO_LOOKUP_RESULTS: LocalizationToQueryLookupResult = {
-    [Localization.CHINESE_SIMPLIFIED]: CN_LOOKUP_RESULTS,
-    [Localization.CHINESE_TRADITIONAL]: TRCN_LOOKUP_RESULTS,
-    [Localization.ENGLISH]: EN_LOOKUP_RESULTS,
-    [Localization.JAPANESE]: JP_LOOKUP_RESULTS,
-    [Localization.KOREAN]: KR_LOOKUP_RESULTS,
-};
+const LOOKUP_RESULTS: QueryToLookupResult =
+    __LOOKUP_RESULTS as QueryToLookupResult;
 
 const CN_ABNO: QueryToDecoratedAbnopage = __CN_ABNO as QueryToDecoratedAbnopage;
 const EN_ABNO: QueryToDecoratedAbnopage = __EN_ABNO as QueryToDecoratedAbnopage;
@@ -66,20 +42,22 @@ const LOCALIZATION_TO_DECORATED_ABNO_PAGE: LocalizationToQueryDecoratedAbnopage 
         [Localization.KOREAN]: KR_ABNO,
     };
 
-const AUTOCOMPLETE: string[] = __AUTOCOMPLETE.data ;
+const AUTOCOMPLETE: string[] = __AUTOCOMPLETE.data;
 
 export class DataAccessor {
     constructor() {}
 
-    public lookup(query: string, locale: Localization): LookupResult {
-        const lookupResult: LookupResult | undefined =
-            this.getLocaledLookupResults(locale)[query];
-        if (!lookupResult) {
-            throw new Error(
-                `Couldn't identify query result for ${query} in ${locale} locale`
-            );
+    public lookup(query: string, preferredLocale: Localization): LookupResult {
+        const lookupResults: LookupResult[] | undefined = LOOKUP_RESULTS[query];
+        if (!lookupResults) {
+            throw new Error(`Couldn't identify query result for ${query}.`);
         }
-        return lookupResult;
+        for (const lookupResult of lookupResults) {
+            if (lookupResult.locale == preferredLocale) {
+                return lookupResult;
+            }
+        }
+        return lookupResults[0];
     }
 
     public getDecoratedAbnoPage(
@@ -105,10 +83,6 @@ export class DataAccessor {
         return retVal.sort((a, b) => {
             return a.length - b.length || a.localeCompare(b);
         });
-    }
-
-    private getLocaledLookupResults(locale: Localization): QueryToLookupResult {
-        return LOCALIZATION_TO_LOOKUP_RESULTS[locale];
     }
 
     private getLocaledAbnoMapping(

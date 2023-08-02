@@ -4,6 +4,8 @@ import { DataAccessor } from "../../src/accessor/data_accessor";
 const WEIGHT_OF_SIN_EN_PAGE_NAME = "The Weight of Sin";
 const WEIGHT_OF_SIN_PAGE_ID = "LongBird_Sin";
 
+const GOODBYE_KR_NAME = "Good Bye";
+
 const AUTOCOMPLETE_QUERY = "The ";
 
 const BAD_PAGE_NAME = "PageNameThatDoesNotExist";
@@ -18,6 +20,15 @@ beforeEach(() => {
 test("should return lookup result when given page name and locale", () => {
     expect(
         dataAccessor.lookup(WEIGHT_OF_SIN_EN_PAGE_NAME, Localization.ENGLISH)
+    ).toMatchSnapshot();
+    expect(
+        dataAccessor.lookup(GOODBYE_KR_NAME, Localization.KOREAN)
+    ).toMatchSnapshot();
+});
+
+test("should return lookup result even if preferred locale is not available", () => {
+    expect(
+        dataAccessor.lookup(WEIGHT_OF_SIN_EN_PAGE_NAME, Localization.KOREAN)
     ).toMatchSnapshot();
 });
 
@@ -43,7 +54,5 @@ test("should throw error when given bad decorated abno page request", () => {
 });
 
 test("should return autocomplete result when given query", () => {
-    expect(
-        dataAccessor.autocomplete(AUTOCOMPLETE_QUERY)
-    ).toMatchSnapshot();
+    expect(dataAccessor.autocomplete(AUTOCOMPLETE_QUERY)).toMatchSnapshot();
 });

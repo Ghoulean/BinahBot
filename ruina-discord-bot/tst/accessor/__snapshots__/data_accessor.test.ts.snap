@@ -31,6 +31,16 @@ Whenever a die this librarian plays rolls the minimum value, take 2-7 damage and
 }
 `;
 
+exports[`should return lookup result even if preferred locale is not available 1`] = `
+{
+  "chapter": 6,
+  "locale": "en",
+  "pageId": "LongBird_Sin",
+  "pageType": 0,
+  "query": "The Weight of Sin",
+}
+`;
+
 exports[`should return lookup result when given page name and locale 1`] = `
 {
   "chapter": 6,
@@ -38,5 +48,15 @@ exports[`should return lookup result when given page name and locale 1`] = `
   "pageId": "LongBird_Sin",
   "pageType": 0,
   "query": "The Weight of Sin",
+}
+`;
+
+exports[`should return lookup result when given page name and locale 2`] = `
+{
+  "chapter": 6,
+  "locale": "kr",
+  "pageId": "NothingThere_Goodbye",
+  "pageType": 0,
+  "query": "Good Bye",
 }
 `;
