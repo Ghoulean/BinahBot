@@ -12,3 +12,16 @@ export enum Floor {
     HOKMA = "Hokma",
     ANGELA = "Angela"
 }
+
+export const ALL_FLOORS = [
+    Floor.KETER,
+    Floor.MALKUTH,
+    Floor.YESOD,
+    Floor.HOD,
+    Floor.NETZACH,
+    Floor.TIPHERETH,
+    Floor.GEBURA,
+    Floor.CHESED,
+    Floor.BINAH,
+    Floor.HOKMA
+]

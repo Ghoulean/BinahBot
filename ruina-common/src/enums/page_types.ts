@@ -2,7 +2,8 @@ export enum PageType {
     ABNO_PAGE,
     COMBAT_PAGE,
     KEY_PAGE,
-    PASSIVE
+    PASSIVE,
+    DISAMBIGUATION
 }
 
 export const QUERYABLE_PAGE_TYPES = [

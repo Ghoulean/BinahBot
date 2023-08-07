@@ -1,4 +1,4 @@
-import { Chapter, Ego, Floor, Rarity } from "../enums";
+import { Chapter, Ego, Floor, Localization, Range, Rarity } from "../enums";
 import { Die } from "./die";
 
 export interface CombatPage {
@@ -9,4 +9,14 @@ export interface CombatPage {
     rarity: Rarity;
     dice: Die[];
     chapter: Chapter;
+    cost: number;
+    range: Range;
+    imagePath: string;
+}
+
+export interface DecoratedCombatPage extends CombatPage {
+    locale: Localization;
+    name: string;
+    description: string;
+    diceDescriptions: string[];
 }

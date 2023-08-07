@@ -16,5 +16,6 @@ export interface DecoratedAbnoPage extends AbnoPage {
     name: string;
     description: string;
     flavorText: string;
+    // TODO: move this to AbnoPage
     imagePath: string;
 }

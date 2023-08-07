@@ -4,5 +4,5 @@ export interface Die {
     type: DieType;
     min: number;
     max: number;
-    scriptId: number;
+    scriptId: string;
 }
