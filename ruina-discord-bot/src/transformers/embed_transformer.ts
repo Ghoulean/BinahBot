@@ -1,10 +1,13 @@
 import {
     DecoratedAbnoPage,
     DecoratedCombatPage,
+    Die,
+    DieType,
     Localization,
     LookupResult,
     PageType,
     Rarity,
+    dieTypeToShortString,
 } from "@ghoulean/ruina-common";
 import { DataAccessor } from "../accessor/data_accessor";
 import { DisambiguationResults } from "../model/disambiguation_result";
@@ -75,7 +78,7 @@ export class EmbedTransformer {
     // TODO: localize via _requestLocale
     public transformCombatPage(
         combat: DecoratedCombatPage,
-        _requestLocale: Localization
+        requestLocale: Localization
     ): DiscordEmbed {
         const embedColor: number = this.rarityToColor(combat.rarity);
         return {
@@ -103,15 +106,14 @@ export class EmbedTransformer {
                     inline: true,
                 },
                 {
-                    name: "Description",
+                    name: "Page Description",
                     value: combat.description,
                     inline: true,
                 },
                 {
                     name: "Dice",
-                    // TODO: implement
-                    value: combat.description,
-                    inline: true,
+                    value: this.mapDie(combat.dice, combat.diceDescriptions, requestLocale),
+                    inline: false,
                 },
             ],
         };
@@ -126,14 +128,10 @@ export class EmbedTransformer {
             fields: [
                 {
                     name: `**${disambiguation.query}** may refer to:`,
-                    value: disambiguation.lookupResults
+                    value: this.mapToIndentedList(disambiguation.lookupResults
                         .map((lookupResult: LookupResult) => {
                             return lookupResult.query;
-                        })
-                        .map((str: string) => {
-                            return ` > - ${str}`;
-                        })
-                        .join("\n"),
+                        })),
                     inline: true,
                 },
             ],
@@ -162,5 +160,18 @@ export class EmbedTransformer {
             case Rarity.OBJET_D_ART:
                 return DiscordEmbedColors.OBJET_D_ART_RARITY;
         }
+    }
+
+    private mapDie(dice: Die[], diceDescriptions: string[], locale: Localization): string {
+        return this.mapToIndentedList(dice.map((die: Die, index: number) => {
+            return `${dieTypeToShortString(die.type, locale)} ${die.min}-${die.max} ${diceDescriptions[index]}`
+        }))
+    }
+
+    private mapToIndentedList(arr: string[]): string {
+        return arr.map((str: string) => {
+            return ` > - ${str}`;
+        })
+        .join("\n")
     }
 }

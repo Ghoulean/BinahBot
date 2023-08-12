@@ -1,12 +1,13 @@
 import {
     CombatPage,
     DecoratedCombatPage,
+    Die,
     Localization,
 } from "@ghoulean/ruina-common";
 import { LOCALIZE_DIR } from "../util/constants";
 import { readFile, walkSync } from "../util/file";
-import path = require("path");
 import { Util } from "../util/util";
+import path = require("path");
 
 export class CombatPageMapper {
     public static map(
@@ -14,13 +15,17 @@ export class CombatPageMapper {
         locale: Localization
     ): { [key: string]: DecoratedCombatPage } {
         const retVal: { [key: string]: DecoratedCombatPage } = {};
-        const cardDict: any = this.buildLocalInfo(locale);
+        const cardDict: any = this.buildBattleCardLocalInfo(locale);
+        const cardAbilityDict: any =
+            this.buildBattleCardAbilityLocalInfo(locale);
 
         for (const page of combatPages) {
             const id: string = page.id;
             const localeInfo: any = cardDict[id];
             if (!localeInfo) {
-                console.log(`No localization found for combat page id=${id}; skipping`);
+                console.log(
+                    `No localization found for combat page id=${id}; skipping`
+                );
                 continue;
             }
             const diceDescriptions: string[] = new Array(page.dice.length).fill(
@@ -41,12 +46,32 @@ export class CombatPageMapper {
                 const str: string = rawDieBlob["_text"] ?? "";
                 diceDescriptions[index] = Util.cleanString(str);
             });
+            page.dice.forEach((die: Die, index: number) => {
+                const scriptId: string = die.scriptId;
+                const scriptDesc: string | undefined =
+                    cardAbilityDict[scriptId];
+                if (scriptDesc) {
+                    diceDescriptions[index] = Util.cleanString(scriptDesc);
+                }
+            });
+
+            let cardDesc: string | undefined = localeInfo["Ability"]?.["_text"];
+            if (!cardDesc) {
+                const scriptId: string = page.scriptId ?? "";
+                const scriptDesc: string | undefined =
+                    cardAbilityDict[scriptId];
+                if (scriptDesc) {
+                    cardDesc = Util.cleanString(scriptDesc);
+                }
+            }
 
             const decoratedCombatPage: DecoratedCombatPage = {
                 ...page,
                 locale: locale,
-                name: Util.cleanString(localeInfo["LocalizedName"]?.["_text"] ?? ""),
-                description: Util.cleanString(localeInfo["Ability"]?.["_text"] ?? ""),
+                name: Util.cleanString(
+                    localeInfo["LocalizedName"]?.["_text"] ?? ""
+                ),
+                description: cardDesc ?? "",
                 diceDescriptions: diceDescriptions,
             };
             retVal[id] = decoratedCombatPage;
@@ -55,7 +80,7 @@ export class CombatPageMapper {
         return retVal;
     }
 
-    private static buildLocalInfo(locale: Localization): any {
+    private static buildBattleCardLocalInfo(locale: Localization): any {
         const cardBlobs: any = {};
 
         const localizedCardDir = path.resolve(
@@ -70,6 +95,40 @@ export class CombatPageMapper {
                 "BattleCardDesc"
             ]) {
                 cardBlobs[blob["_attributes"]["ID"]] = blob;
+            }
+        }
+
+        return cardBlobs;
+    }
+
+    private static buildBattleCardAbilityLocalInfo(locale: Localization): any {
+        const cardBlobs: any = {};
+
+        const localizedCardDir = path.resolve(
+            LOCALIZE_DIR,
+            locale.toString(),
+            "BattleCardAbilities"
+        );
+
+        for (const filePath of walkSync(localizedCardDir)) {
+            const json: any = readFile(filePath);
+            for (const blob of json["BattleCardAbilityDescRoot"][
+                "BattleCardAbility"
+            ]) {
+                let desc: any = blob["Desc"];
+                if (!desc) {
+                    continue;
+                }
+                if (!Array.isArray(desc)) {
+                    desc = [desc];
+                }
+                desc = desc
+                    .map((descBlob: any) => {
+                        return descBlob["_text"];
+                    })
+                    .join("\n");
+
+                cardBlobs[blob["_attributes"]["ID"]] = desc;
             }
         }
 

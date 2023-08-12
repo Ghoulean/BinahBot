@@ -1,12 +1,8 @@
 import {
-    Chapter,
     DecoratedAbnoPage,
     Localization,
-    PageType,
     Rarity,
 } from "@ghoulean/ruina-common";
-import { DataAccessor } from "../../src/accessor/data_accessor";
-import { DisambiguationResults } from "../../src/model/disambiguation_result";
 import { DiscordEmbed } from "../../src/model/discord/discord_embed";
 import { EmbedTransformer } from "../../src/transformers/embed_transformer";
 import { DiscordEmbedColors } from "../../src/util/constants";
@@ -104,10 +100,11 @@ test.each([
 );
 
 test("should transform disambiguation page to Discord embed", () => {
-    const discordEmbed: DiscordEmbed = embedTransformer.transformDisambiguationPage(
-        DISAMBIGUATION_RESULTS,
-        DEFAULT_REQUEST_LOCALE
-    );
+    const discordEmbed: DiscordEmbed =
+        embedTransformer.transformDisambiguationPage(
+            DISAMBIGUATION_RESULTS,
+            DEFAULT_REQUEST_LOCALE
+        );
     expect(discordEmbed).toMatchSnapshot();
 });
 
