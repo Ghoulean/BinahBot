@@ -34,14 +34,10 @@ const NO_RESULTS_FOUND_QUERY: string = "query";
 
 const S3_BUCKET_NAME: string = "s3bucketname";
 
-const mockDataAccessor = new (<new () => DataAccessor>(
-    DataAccessor
-))() as jest.Mocked<DataAccessor>;
-
 let embedTransformer: EmbedTransformer;
 
 beforeEach(() => {
-    embedTransformer = new EmbedTransformer(S3_BUCKET_NAME, mockDataAccessor);
+    embedTransformer = new EmbedTransformer(S3_BUCKET_NAME);
 });
 
 test("should transform postive decorated abno page to Discord embed", () => {
@@ -108,16 +104,6 @@ test.each([
 );
 
 test("should transform disambiguation page to Discord embed", () => {
-    mockDataAccessor.getDecoratedAbnoPage = jest.fn();
-    mockDataAccessor.getDecoratedCombatPage = jest.fn();
-
-    mockDataAccessor.getDecoratedAbnoPage.mockReturnValueOnce(
-        DECORATED_ABNO_PAGE
-    );
-    mockDataAccessor.getDecoratedCombatPage.mockReturnValueOnce(
-        BASE_DECORATED_COMBAT_PAGE
-    );
-
     const discordEmbed: DiscordEmbed = embedTransformer.transformDisambiguationPage(
         DISAMBIGUATION_RESULTS,
         DEFAULT_REQUEST_LOCALE

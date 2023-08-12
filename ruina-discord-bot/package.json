@@ -5,14 +5,15 @@
   "main": "src/index.js",
   "scripts": {
     "build": "tsc",
-    "build:full": "npm run clean; npm run build && npm run bundle && npm run zip",
+    "build:full": "npm run clean; npm run build && npm run bundle && npm run esbuildworkaround && npm run zip",
     "bundle": "./node_modules/.bin/esbuild ./src --bundle --platform=node --target=node18 --outdir=./build",
     "copy:data": "rm -r ./src/data; cp -r ../ruina-reparser/out/Data ./src/data",
     "clean": "tsc --build --clean; rm -r build; rm ruina-discord-bot.zip",
     "lint": "eslint --ext .ts .",
     "lint:fix": "eslint --fix --ext .ts .",
     "test": "jest",
-    "zip": "zip -r ruina-discord-bot.zip ./build"
+    "zip": "zip -r ruina-discord-bot.zip ./build",
+    "esbuildworkaround": "sed -i 's.\\\\u30FB.TEMPU30FBTEMP.g' ./build/src.js"
   },
   "author": "",
   "license": "ISC",

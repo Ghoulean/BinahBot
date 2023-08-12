@@ -58,6 +58,18 @@ const lookupResults: QueryMapperLookupTable = QueryMapper.map(queryMapperProps);
 // Disambiguate
 const ambiguousResults: AmbiguousResults[] =
     AmbiguityResolver.detect(lookupResults);
+
+// Remap with disambiguator
+// Side effects: this modifies both lookupResults and ambiguousResults in place
+QueryMapper.remap(
+    lookupResults,
+    ambiguousResults
+);
+
+// Write query map
+writeDataFile(`queryLookupResults.json`, lookupResults);
+
+// Write disambiguation data
 writeDataFile(
     `ambiguousResults.json`,
     Object.fromEntries(
@@ -67,18 +79,9 @@ writeDataFile(
     )
 );
 
-// Remap with disambiguator
-const disambiguatedLookupResults: QueryMapperLookupTable = QueryMapper.remap(
-    lookupResults,
-    ambiguousResults
-);
-
-// Write query map
-writeDataFile(`queryLookupResults.json`, disambiguatedLookupResults);
-
 // Autocomplete
 writeDataFile(`autocomplete.json`, {
-    data: Object.keys(disambiguatedLookupResults),
+    data: Object.keys(lookupResults),
 });
 
 console.log("Done");

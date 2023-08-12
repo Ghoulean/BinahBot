@@ -81,22 +81,21 @@ export class QueryMapper {
     }
 
     // This OOP is getting really murky now
+    // Modifies queryMapperLookupTable and ambiguousResults in-place
     public static remap(
         queryMapperLookupTable: QueryMapperLookupTable,
         ambiguousResults: AmbiguousResults[]
-    ): QueryMapperLookupTable {
+    ) {
         for (const result of ambiguousResults) {
             const query: string = result.query;
             const disambiguateLookupResult: LookupResult =
                 this.constructDisambiguateLookupResult(result);
-            queryMapperLookupTable = AmbiguityResolver.disambiguate(
+            AmbiguityResolver.disambiguate(
                 queryMapperLookupTable,
                 result
             );
             queryMapperLookupTable[query].push(disambiguateLookupResult);
         }
-
-        return queryMapperLookupTable;
     }
 
     private static constructAbnoLookupResult(

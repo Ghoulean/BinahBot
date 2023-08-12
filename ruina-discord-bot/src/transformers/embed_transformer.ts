@@ -6,18 +6,16 @@ import {
     PageType,
     Rarity,
 } from "@ghoulean/ruina-common";
+import { DataAccessor } from "../accessor/data_accessor";
 import { DisambiguationResults } from "../model/disambiguation_result";
 import { DiscordEmbed } from "../model/discord/discord_embed";
 import { DiscordEmbedColors } from "../util/constants";
-import { DataAccessor } from "../accessor/data_accessor";
 
 export class EmbedTransformer {
     private readonly s3BucketName: string;
-    private readonly dataAccessor: DataAccessor;
 
-    constructor(s3BucketName: string, dataAccessor: DataAccessor) {
+    constructor(s3BucketName: string) {
         this.s3BucketName = s3BucketName;
-        this.dataAccessor = dataAccessor;
     }
 
     // TODO: localize via _requestLocale
@@ -130,11 +128,7 @@ export class EmbedTransformer {
                     name: `**${disambiguation.query}** may refer to:`,
                     value: disambiguation.lookupResults
                         .map((lookupResult: LookupResult) => {
-                            return this.getLocaledName(
-                                lookupResult.pageId,
-                                lookupResult.pageType,
-                                lookupResult.locale
-                            );
+                            return lookupResult.query;
                         })
                         .map((str: string) => {
                             return ` > - ${str}`;
@@ -167,26 +161,6 @@ export class EmbedTransformer {
                 return DiscordEmbedColors.LIMITED_RARITY;
             case Rarity.OBJET_D_ART:
                 return DiscordEmbedColors.OBJET_D_ART_RARITY;
-        }
-    }
-
-    private getLocaledName(
-        pageId: string,
-        pageType: PageType,
-        locale: Localization
-    ): string {
-        switch (pageType) {
-            case PageType.ABNO_PAGE:
-                return this.dataAccessor.getDecoratedAbnoPage(pageId, locale)
-                    .name;
-            case PageType.COMBAT_PAGE:
-                return this.dataAccessor.getDecoratedCombatPage(pageId, locale)
-                    .name;
-            case PageType.KEY_PAGE:
-            case PageType.PASSIVE:
-                throw new Error("not implemented");
-            case PageType.DISAMBIGUATION:
-                throw new Error("unreachable statement");
         }
     }
 }
