@@ -7,6 +7,167 @@ exports[`should return no results found embed 1`] = `
 }
 `;
 
+exports[`should transform decorated combat page to Discord embed (rarity: $rarity) 1`] = `
+{
+  "color": 8115825,
+  "fields": [
+    {
+      "inline": true,
+      "name": "Cost",
+      "value": "0",
+    },
+    {
+      "inline": true,
+      "name": "Range",
+      "value": "Near",
+    },
+    {
+      "inline": true,
+      "name": "Rarity",
+      "value": "Common",
+    },
+    {
+      "inline": true,
+      "name": "Description",
+      "value": "description",
+    },
+    {
+      "inline": true,
+      "name": "Dice",
+      "value": "description",
+    },
+  ],
+  "image": {
+    "url": "https://s3bucketname.s3.amazonaws.comimage.png",
+  },
+  "title": "name",
+}
+`;
+
+exports[`should transform decorated combat page to Discord embed (rarity: $rarity) 2`] = `
+{
+  "color": 3170234,
+  "fields": [
+    {
+      "inline": true,
+      "name": "Cost",
+      "value": "0",
+    },
+    {
+      "inline": true,
+      "name": "Range",
+      "value": "Near",
+    },
+    {
+      "inline": true,
+      "name": "Rarity",
+      "value": "Uncommon",
+    },
+    {
+      "inline": true,
+      "name": "Description",
+      "value": "description",
+    },
+    {
+      "inline": true,
+      "name": "Dice",
+      "value": "description",
+    },
+  ],
+  "image": {
+    "url": "https://s3bucketname.s3.amazonaws.comimage.png",
+  },
+  "title": "name",
+}
+`;
+
+exports[`should transform decorated combat page to Discord embed (rarity: $rarity) 3`] = `
+{
+  "color": 7022271,
+  "fields": [
+    {
+      "inline": true,
+      "name": "Cost",
+      "value": "0",
+    },
+    {
+      "inline": true,
+      "name": "Range",
+      "value": "Near",
+    },
+    {
+      "inline": true,
+      "name": "Rarity",
+      "value": "Rare",
+    },
+    {
+      "inline": true,
+      "name": "Description",
+      "value": "description",
+    },
+    {
+      "inline": true,
+      "name": "Dice",
+      "value": "description",
+    },
+  ],
+  "image": {
+    "url": "https://s3bucketname.s3.amazonaws.comimage.png",
+  },
+  "title": "name",
+}
+`;
+
+exports[`should transform decorated combat page to Discord embed (rarity: $rarity) 4`] = `
+{
+  "color": 15449600,
+  "fields": [
+    {
+      "inline": true,
+      "name": "Cost",
+      "value": "0",
+    },
+    {
+      "inline": true,
+      "name": "Range",
+      "value": "Near",
+    },
+    {
+      "inline": true,
+      "name": "Rarity",
+      "value": "Unique",
+    },
+    {
+      "inline": true,
+      "name": "Description",
+      "value": "description",
+    },
+    {
+      "inline": true,
+      "name": "Dice",
+      "value": "description",
+    },
+  ],
+  "image": {
+    "url": "https://s3bucketname.s3.amazonaws.comimage.png",
+  },
+  "title": "name",
+}
+`;
+
+exports[`should transform disambiguation page to Discord embed 1`] = `
+{
+  "fields": [
+    {
+      "inline": true,
+      "name": "**disambiguation** may refer to:",
+      "value": " > - TestAbnoPage
+ > - name",
+    },
+  ],
+}
+`;
+
 exports[`should transform negative decorated abno page to Discord embed 1`] = `
 {
   "color": 13713729,

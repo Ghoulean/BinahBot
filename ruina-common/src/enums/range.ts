@@ -3,7 +3,7 @@ export enum Range {
     RANGE = "Far",
     MASS_INDIVIDUAL = "FarAreaEach",
     MASS_SUMMATION = "FarArea",
-    ON_PLAY = "Immediate",
+    ON_PLAY = "Instance",
     SPECIAL = "Special"
 }
 

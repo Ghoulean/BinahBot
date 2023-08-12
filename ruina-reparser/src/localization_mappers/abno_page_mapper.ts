@@ -42,7 +42,6 @@ export class AbnoPageMapper {
                 name: Util.cleanString(rawData["CardName"]["_text"]),
                 description: Util.cleanString(rawData["AbilityDesc"]["_text"]),
                 flavorText: Util.cleanString(rawData["FlaborText"]["_text"]), // sic
-                imagePath: `/${id}.png`
             }
             retVal[id] = decoratedAbnoPage;
         }

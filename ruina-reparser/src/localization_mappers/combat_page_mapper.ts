@@ -6,6 +6,7 @@ import {
 import { LOCALIZE_DIR } from "../util/constants";
 import { readFile, walkSync } from "../util/file";
 import path = require("path");
+import { Util } from "../util/util";
 
 export class CombatPageMapper {
     public static map(
@@ -33,16 +34,19 @@ export class CombatPageMapper {
                 rawDiceArray = [rawDiceArray];
             }
             (rawDiceArray as any[]).forEach((rawDieBlob: any) => {
-                const index: number = rawDieBlob["_attributes"]["ID"];
-                const str: string = rawDieBlob["_text"];
-                diceDescriptions[index] = str;
+                const index: number = Number(rawDieBlob["_attributes"]["ID"]);
+                if (Number.isNaN(index)) {
+                    return;
+                }
+                const str: string = rawDieBlob["_text"] ?? "";
+                diceDescriptions[index] = Util.cleanString(str);
             });
 
             const decoratedCombatPage: DecoratedCombatPage = {
                 ...page,
                 locale: locale,
-                name: localeInfo["LocalizedName"]?.["_text"] ?? "",
-                description: localeInfo["Ability"]?.["_text"] ?? "",
+                name: Util.cleanString(localeInfo["LocalizedName"]?.["_text"] ?? ""),
+                description: Util.cleanString(localeInfo["Ability"]?.["_text"] ?? ""),
                 diceDescriptions: diceDescriptions,
             };
             retVal[id] = decoratedCombatPage;

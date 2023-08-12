@@ -9,6 +9,7 @@ export interface AbnoPage {
     emotionRate: number; // Negative are breakdown pages. -0 is encoded as 0
     targetType: AbnoPageSelectType;
     scriptId: string;
+    imagePath: string;
 }
 
 export interface DecoratedAbnoPage extends AbnoPage {
@@ -16,6 +17,4 @@ export interface DecoratedAbnoPage extends AbnoPage {
     name: string;
     description: string;
     flavorText: string;
-    // TODO: move this to AbnoPage
-    imagePath: string;
 }

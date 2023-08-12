@@ -1,27 +1,30 @@
 import {
-    AbnoPageSelectType,
     Chapter,
-    DecoratedAbnoPage,
-    Floor,
     Localization,
-    LookupResult,
-    PageType,
+    PageType
 } from "@ghoulean/ruina-common";
 import { DataAccessor } from "../../src/accessor/data_accessor";
 import { LorCommand } from "../../src/command/lor_command";
+import { DisambiguationResults } from "../../src/model/disambiguation_result";
 import { DiscordEmbed } from "../../src/model/discord/discord_embed";
 import { Request } from "../../src/model/request";
 import { EmbedTransformer } from "../../src/transformers/embed_transformer";
-import { CommandResult } from "../../src/model/command_result";
+import {
+    DECORATED_ABNO_PAGE,
+    BASE_DECORATED_COMBAT_PAGE,
+} from "../resources/decorated_pages";
+import {
+    ABNO_LOOKUP_RESULT,
+    COMBAT_LOOKUP_RESULT,
+    DISAMBIGUATION_LOOKUP_RESULT,
+} from "../resources/lookup_results";
 
-const COMMAND_QUERY: string = "commandQuery";
-const COMMAND_ABNO_PAGE_ID: string = "commandAbnoPageId";
 const INTERACTION_TOKEN: string = "interactionToken";
 
 const REQUEST: Request = {
     command: "lor",
     commandArgs: {
-        query: COMMAND_QUERY,
+        query: "query",
     },
     interactionToken: INTERACTION_TOKEN,
     locale: Localization.ENGLISH,
@@ -31,33 +34,16 @@ const REQUEST: Request = {
 const REQUEST_WITH_LOCALE: Request = {
     ...REQUEST,
     commandArgs: {
-        query: COMMAND_QUERY,
+        query: "query",
         locale: "en",
     },
 };
 
-const ABNO_LOOKUP_RESULT: LookupResult = {
-    query: COMMAND_QUERY,
-    chapter: Chapter.LIBRARY_OF_RUINA,
-    locale: Localization.ENGLISH,
-    pageType: PageType.ABNO_PAGE,
-    pageId: COMMAND_ABNO_PAGE_ID,
-};
-
-const DECORATED_ABNO_PAGE: DecoratedAbnoPage = {
-    locale: Localization.ENGLISH,
-    name: "",
-    description: "",
-    flavorText: "",
-    imagePath: "",
-    nameId: "",
-    floor: Floor.NONE,
-    chapter: Chapter.LIBRARY_OF_RUINA,
-    emoLevel: 0,
-    emotionSign: 0,
-    emotionRate: 0,
-    targetType: AbnoPageSelectType.SELECT_ONE,
-    scriptId: "",
+const DISAMBIGUATION_RESULT: DisambiguationResults = {
+    id: "",
+    locale: Localization.KOREAN,
+    query: "",
+    lookupResults: [],
 };
 
 const DISCORD_EMBED: DiscordEmbed = {
@@ -94,12 +80,48 @@ test("should send abno page embed to Discord on invocation with abno page", () =
     });
 });
 
+test("should send combat page embed to Discord on invocation with combat page", () => {
+    mockDataAccessor.lookup = jest.fn();
+    mockDataAccessor.getDecoratedCombatPage = jest.fn();
+    embedTransformer.transformCombatPage = jest.fn();
+
+    mockDataAccessor.lookup.mockReturnValueOnce(COMBAT_LOOKUP_RESULT);
+    mockDataAccessor.getDecoratedCombatPage.mockReturnValueOnce(
+        BASE_DECORATED_COMBAT_PAGE
+    );
+    embedTransformer.transformCombatPage.mockReturnValueOnce(DISCORD_EMBED);
+
+    expect(lorCommand.invoke(REQUEST_WITH_LOCALE)).toEqual({
+        success: true,
+        payload: DISCORD_EMBED,
+    });
+});
+
+test("should send disambiguation page embed to Discord on invocation with page that requires disambiguation", () => {
+    mockDataAccessor.lookup = jest.fn();
+    mockDataAccessor.getDisambiguationResult = jest.fn();
+    embedTransformer.transformDisambiguationPage = jest.fn();
+
+    mockDataAccessor.lookup.mockReturnValueOnce(DISAMBIGUATION_LOOKUP_RESULT);
+    mockDataAccessor.getDisambiguationResult.mockReturnValueOnce(
+        DISAMBIGUATION_RESULT
+    );
+    embedTransformer.transformDisambiguationPage.mockReturnValueOnce(
+        DISCORD_EMBED
+    );
+
+    expect(lorCommand.invoke(REQUEST_WITH_LOCALE)).toEqual({
+        success: true,
+        payload: DISCORD_EMBED,
+    });
+});
+
 test("should return no page found when lookup returns no page", () => {
     mockDataAccessor.lookup = jest.fn();
     embedTransformer.noResultsFoundEmbed = jest.fn();
 
-    mockDataAccessor.lookup.mockImplementationOnce(()=> {
-        throw new Error();   
+    mockDataAccessor.lookup.mockImplementationOnce(() => {
+        throw new Error();
     });
     embedTransformer.noResultsFoundEmbed.mockReturnValueOnce(DISCORD_EMBED);
 
@@ -115,6 +137,30 @@ test("should fail when lookup returns abno page but abno page can't be found", (
 
     mockDataAccessor.lookup.mockReturnValueOnce(ABNO_LOOKUP_RESULT);
     mockDataAccessor.getDecoratedAbnoPage.mockImplementationOnce(() => {
+        throw new Error();
+    });
+
+    expect(lorCommand.invoke(REQUEST).success).toBe(false);
+});
+
+test("should fail when lookup returns combat page but combat page can't be found", () => {
+    mockDataAccessor.lookup = jest.fn();
+    mockDataAccessor.getDecoratedCombatPage = jest.fn();
+
+    mockDataAccessor.lookup.mockReturnValueOnce(COMBAT_LOOKUP_RESULT);
+    mockDataAccessor.getDecoratedCombatPage.mockImplementationOnce(() => {
+        throw new Error();
+    });
+
+    expect(lorCommand.invoke(REQUEST).success).toBe(false);
+});
+
+test("should fail when lookup returns disambiguation page but disambiguation page can't be found", () => {
+    mockDataAccessor.lookup = jest.fn();
+    mockDataAccessor.getDisambiguationResult = jest.fn();
+
+    mockDataAccessor.lookup.mockReturnValueOnce(DISAMBIGUATION_LOOKUP_RESULT);
+    mockDataAccessor.getDisambiguationResult.mockImplementationOnce(() => {
         throw new Error();
     });
 

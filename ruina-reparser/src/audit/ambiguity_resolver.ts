@@ -3,7 +3,7 @@ import {
     Localization,
     LookupResult,
     PageType,
-    QUERYABLE_PAGE_TYPES
+    QUERYABLE_PAGE_TYPES,
 } from "@ghoulean/ruina-common";
 import { QueryMapperLookupTable } from "../localization_mappers/query_mapper";
 import { CARD_LOCALIZATIONS } from "../util/localize_constants";
@@ -51,7 +51,7 @@ export class AmbiguityResolver {
      *
      * Disambigution strategy:
      * 1. Check if some cards can be differentiated by card type. If yes, do so
-     * 2. Give up and append some random ID
+     * 2. Give up and append some arbitrary ID
      */
     public static disambiguate(
         queryMapperLookupTable: QueryMapperLookupTable,
@@ -75,30 +75,63 @@ export class AmbiguityResolver {
             }
             const disambiguatedLookupResult: LookupResult =
                 lookupResultsByPageType[0];
-            ambiguousResults.lookupResults = this.removeLookupResult(
-                ambiguousResults.lookupResults,
-                disambiguatedLookupResult
-            );
-            disambiguatedLookupResult.query = this.appendDisambiguator(
+            const disambiguatedName: string = this.appendDisambiguator(
                 disambiguatedLookupResult.query,
-                CARD_LOCALIZATIONS[pageType][ambiguousResults.locale]
+                CARD_LOCALIZATIONS[disambiguatedLookupResult.pageType][
+                    disambiguatedLookupResult.locale
+                ]
             );
-            queryMapperLookupTable[disambiguatedLookupResult.query] = [
+            this.disambiguateEntry(
+                queryMapperLookupTable,
+                ambiguousResults,
                 disambiguatedLookupResult,
-            ];
+                disambiguatedName
+            );
         }
-        if (ambiguousResults.lookupResults.length > 0) {
-            // throw new Error()
+        while (ambiguousResults.lookupResults.length > 0) {
+            const disambiguatedLookupResult: LookupResult =
+                ambiguousResults.lookupResults[
+                    ambiguousResults.lookupResults.length - 1
+                ];
             console.log(
-                `Could not fully disambiguate ${
-                    ambiguousResults.query
-                }; remaining: ${ambiguousResults.lookupResults.map((lr) => {
-                    return JSON.stringify(lr);
-                })}`
+                `Appending arbitrary identifier to ${ambiguousResults.query} with pageId=${disambiguatedLookupResult.pageId}`
+            );
+            const randomDisambiguatedName: string = this.appendDisambiguator(
+                disambiguatedLookupResult.query,
+                disambiguatedLookupResult.pageId
+            );
+            this.disambiguateEntry(
+                queryMapperLookupTable,
+                ambiguousResults,
+                disambiguatedLookupResult,
+                randomDisambiguatedName
             );
         }
 
+        // Map original query to only disambiguation entry
+        queryMapperLookupTable[ambiguousResults.query] = queryMapperLookupTable[
+            ambiguousResults.query
+        ].filter((lookupResult) => {
+            return lookupResult.pageType == PageType.DISAMBIGUATION;
+        });
+
         return queryMapperLookupTable;
+    }
+
+    // In-place modification
+    private static disambiguateEntry(
+        queryMapperLookupTable: QueryMapperLookupTable,
+        ambiguousResults: AmbiguousResults,
+        disambiguatedLookupResult: LookupResult,
+        disambiguatedName: string
+    ) {
+        ambiguousResults.lookupResults = this.removeLookupResult(
+            ambiguousResults.lookupResults,
+            disambiguatedLookupResult
+        );
+        queryMapperLookupTable[disambiguatedName] = [
+            disambiguatedLookupResult,
+        ];
     }
 
     private static appendDisambiguator(

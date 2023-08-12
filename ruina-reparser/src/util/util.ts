@@ -7,6 +7,9 @@ export abstract class Util {
     }
 
     public static areEqualShallow(a: any, b: any): boolean {
+        if (a == b) {
+            return true;
+        }
         if (a == undefined || b == undefined) {
             return false;
         }

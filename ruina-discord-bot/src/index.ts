@@ -30,7 +30,8 @@ const secretsAccessor: SecretsAccessor = new SecretsAccessor(
 
 const apiTransformer: ApiTransformer = new ApiTransformer();
 const embedTransformer: EmbedTransformer = new EmbedTransformer(
-    envVarRetriever.getRequired(S3_BUCKET_NAME_ENV_KEY)
+    envVarRetriever.getRequired(S3_BUCKET_NAME_ENV_KEY),
+    dataAccessor
 );
 const interactionResponseBuilder: InteractionResponseBuilder =
     new InteractionResponseBuilder();

@@ -77,22 +77,6 @@ export class QueryMapper {
             // TODO: Passives
         }
 
-        // overlap detection
-        /*
-        for (const query in retVal) {
-            const lookupResults: LookupResult[] = retVal[query];
-            const pageTypes: PageType[] = this.getPageTypes(lookupResults);
-            if (pageTypes.length != 1) {
-                console.error(
-                    `Query "${query}" has mixed page types: ${pageTypes.map(
-                        (p) => {
-                            return PageType[p];
-                        }
-                    )}`
-                );
-            }
-        }*/
-
         return retVal;
     }
 
@@ -102,13 +86,14 @@ export class QueryMapper {
         ambiguousResults: AmbiguousResults[]
     ): QueryMapperLookupTable {
         for (const result of ambiguousResults) {
-            queryMapperLookupTable[result.query].push(
-                this.constructDisambiguateLookupResult(result)
-            );
+            const query: string = result.query;
+            const disambiguateLookupResult: LookupResult =
+                this.constructDisambiguateLookupResult(result);
             queryMapperLookupTable = AmbiguityResolver.disambiguate(
                 queryMapperLookupTable,
                 result
             );
+            queryMapperLookupTable[query].push(disambiguateLookupResult);
         }
 
         return queryMapperLookupTable;
@@ -143,8 +128,8 @@ export class QueryMapper {
     private static constructDisambiguateLookupResult(
         results: AmbiguousResults
     ) {
-        // Get the second-soonest chapter in results
-        const chapter: Chapter = [
+        // Get the second-soonest chapter in results, if nonnull
+        const sortedChapters: Chapter[] = [
             ...new Set(
                 results.lookupResults.map((lr: LookupResult) => {
                     return lr.chapter;
@@ -152,8 +137,11 @@ export class QueryMapper {
             ),
         ].sort((a: number, b: number) => {
             return a - b;
-        })[1];
-
+        });
+        const chapter: Chapter =
+            (sortedChapters.length >= 2 ? sortedChapters[1] : null) ??
+            sortedChapters[0] ??
+            Chapter.LIBRARY_OF_RUINA;
         return {
             query: results.query,
             chapter: chapter,
@@ -161,15 +149,5 @@ export class QueryMapper {
             pageType: PageType.DISAMBIGUATION,
             pageId: results.id,
         };
-    }
-
-    private static getPageTypes(lookupResults: LookupResult[]): PageType[] {
-        const set: { [key in PageType]?: 1 } = {};
-        for (const lookupResult of lookupResults) {
-            set[lookupResult.pageType] = 1;
-        }
-        return Object.keys(set).map((str) => {
-            return Number(str);
-        }) as PageType[];
     }
 }

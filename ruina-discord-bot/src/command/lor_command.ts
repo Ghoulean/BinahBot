@@ -1,5 +1,6 @@
 import {
     DecoratedAbnoPage,
+    DecoratedCombatPage,
     Localization,
     LookupResult,
     PageType,
@@ -9,6 +10,7 @@ import { CommandResult } from "../model/command_result";
 import { DiscordEmbed } from "../model/discord/discord_embed";
 import { Request } from "../model/request";
 import { EmbedTransformer } from "../transformers/embed_transformer";
+import { DisambiguationResults } from "../model/disambiguation_result";
 
 const QUERY_COMMAND_ARG = "query";
 const LOCALE_COMMAND_ARG = "locale";
@@ -73,6 +75,47 @@ export class LorCommand {
                 }
                 embed = this.embedTransformer.transformAbnoPage(
                     decoratedAbnoPage,
+                    request.locale
+                );
+                break;
+            }
+            case PageType.COMBAT_PAGE: {
+                let decoratedCombatPage: DecoratedCombatPage;
+                try {
+                    decoratedCombatPage = this.dataAccessor.getDecoratedCombatPage(
+                        lookupResult.pageId,
+                        cardLocale
+                    );
+                } catch (e: unknown) {
+                    return {
+                        success: false,
+                        error: `Error occurred while calling getDecoratedCombatPage: ${JSON.stringify(
+                            e
+                        )}`,
+                    };
+                }
+                embed = this.embedTransformer.transformCombatPage(
+                    decoratedCombatPage,
+                    request.locale
+                );
+                break;
+            }
+            case PageType.DISAMBIGUATION: {
+                let disambiguation: DisambiguationResults;
+                try {
+                    disambiguation = this.dataAccessor.getDisambiguationResult(
+                        lookupResult.pageId
+                    );
+                } catch (e: unknown) {
+                    return {
+                        success: false,
+                        error: `Error occurred while calling getDisambiguationResult: ${JSON.stringify(
+                            e
+                        )}`,
+                    };
+                }
+                embed = this.embedTransformer.transformDisambiguationPage(
+                    disambiguation,
                     request.locale
                 );
                 break;

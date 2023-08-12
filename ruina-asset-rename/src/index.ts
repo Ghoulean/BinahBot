@@ -1,8 +1,11 @@
+import { LookupResult, PageType } from "@ghoulean/ruina-common";
 import * as fs from "fs";
 import * as path from "path";
+import * as _ambiguousResults from "./ambiguousResults.json";
 import * as _queryLookupResults from "./queryLookupResults.json";
 
-const queryLookupResults = _queryLookupResults as {[key: string]: any};
+const queryLookupResults = _queryLookupResults as { [key: string]: any };
+const ambiguousResults = _ambiguousResults as { [key: string]: any };
 
 function* walkSync(dir: string): Generator<string, any, unknown> {
     const files = fs.readdirSync(dir, { withFileTypes: true });
@@ -116,8 +119,11 @@ function levenshtein(s: string, t: string): number {
 
 const usedNames: { [key: string]: string } = {};
 
+// Works for abno pages only
+// Combat pages need additional work, since multiple cards with the same name
+// may map to different images (e.g. Howl)
 for (const filePath of walkSync("./Pages")) {
-    // Ignore non-abno pages for now -- generate mapping later
+    // Ignore non-abno and non-combat pages for now -- generate mapping later
     if (filePath.includes("EGO Pages") || filePath.includes("Combat Pages")) {
         continue;
     }
@@ -126,28 +132,61 @@ for (const filePath of walkSync("./Pages")) {
         continue;
     }
 
+    let pageType: PageType;
+    if (filePath.includes("Abnormality Pages")) {
+        pageType = PageType.ABNO_PAGE;
+    } else if (filePath.includes("Combat Pages")) {
+        pageType = PageType.COMBAT_PAGE;
+    } else {
+        throw new Error(`Bad filepath: ${filePath}`);
+    }
+
     const baseName: string = path.basename(filePath, ".png");
-    let bestResult: string;
+    let bestResult: string = "STARTER VALUE";
+    let bestResultId: string = "";
     let bestScore = 9999;
-    for (const queryLookup of Object.keys(queryLookupResults)) {
-        const score = levenshtein(baseName, queryLookup);
-        if (score < bestScore) {
-            bestResult = queryLookup;
-            bestScore = score;
+    for (const queryLookup in queryLookupResults) {
+        const results: LookupResult[] = queryLookupResults[queryLookup];
+        let additionalDisambiguation: LookupResult[] = [];
+        for (const result of results) {
+            if (result.pageType == PageType.DISAMBIGUATION) {
+                additionalDisambiguation.push(
+                    ...ambiguousResults[result.pageId].lookupResults
+                );
+            }
+            if (result.pageType != pageType) {
+                continue;
+            }
+
+            const score = levenshtein(baseName, result.query);
+            if (score < bestScore) {
+                bestResult = queryLookup;
+                bestResultId = result.pageId
+                bestScore = score;
+            }
+        }
+        for (const additionalResults of additionalDisambiguation) {
+            if (additionalResults.pageType != pageType) {
+                continue;
+            }
+            const score = levenshtein(baseName, additionalResults.query);
+            if (score < bestScore) {
+                bestResult = queryLookup;
+                bestResultId = additionalResults.pageId
+                bestScore = score;
+            }
         }
     }
     if (bestScore >= 3) {
-        console.log(`Rejecting ${filePath} due to poor scoring`);
+        console.log(
+            `Rejecting ${filePath} due to poor scoring; best result=${bestResult}; best score=${bestScore}`
+        );
         continue;
     }
 
-    const bestResultId: string = queryLookupResults[bestResult!]!.pageId!;
-
     if (usedNames[bestResultId]) {
         console.log(
-            `Duplicate spotted: (new filename) ${bestResultId}.png already used by (old filename) ${
-                usedNames[bestResultId]
-            }.png`
+            `Duplicate spotted: (new filename) ${bestResultId}.png already used by (old filename) ${usedNames[bestResultId]}.png`
         );
     }
     // console.log(`Mapping (old filename) ${baseName}.png to (new filename) ${bestResultId}.png`);
@@ -157,7 +196,6 @@ for (const filePath of walkSync("./Pages")) {
         );
     }
     usedNames[bestResultId] = baseName;
-
 
     fs.copyFileSync(
         path.resolve(__dirname, "../", filePath),

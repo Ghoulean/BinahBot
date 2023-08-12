@@ -94,7 +94,8 @@ export class AbnoPageProcessor {
                     emotionSign: emotionSign,
                     emotionRate: emotionRate,
                     targetType: abnoPageSelectTypeFromStringValue(targetTypeStr) ?? AbnoPageSelectType.SELECT_ONE,
-                    scriptId: card['Script']?.['_text'] ?? ''
+                    scriptId: card['Script']?.['_text'] ?? '',
+                    imagePath: `/${abnoName}.png`
                 }
                 data.push(abnoPage);
             }

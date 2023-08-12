@@ -16,7 +16,10 @@ import {
 import { AbnoPageProcessor } from "./processors/abnopage_processor";
 import { CombatPageProcessor } from "./processors/combatpage_processor";
 import { fileSanityCheck, setupJsonFiles, writeDataFile } from "./util/file";
-import { AmbiguousResults, AmbiguityResolver } from "./audit/ambiguity_resolver";
+import {
+    AmbiguousResults,
+    AmbiguityResolver,
+} from "./audit/ambiguity_resolver";
 
 fileSanityCheck();
 setupJsonFiles();
@@ -53,11 +56,22 @@ for (const locale of ALL_LOCALIZATIONS) {
 const lookupResults: QueryMapperLookupTable = QueryMapper.map(queryMapperProps);
 
 // Disambiguate
-const ambiguousResults: AmbiguousResults[] = AmbiguityResolver.detect(lookupResults);
-writeDataFile(`ambiguousResults.json`, ambiguousResults);
+const ambiguousResults: AmbiguousResults[] =
+    AmbiguityResolver.detect(lookupResults);
+writeDataFile(
+    `ambiguousResults.json`,
+    Object.fromEntries(
+        ambiguousResults.map((ambiguousResults) => {
+            return [ambiguousResults.id, ambiguousResults];
+        })
+    )
+);
 
 // Remap with disambiguator
-const disambiguatedLookupResults: QueryMapperLookupTable = QueryMapper.remap(lookupResults, ambiguousResults);
+const disambiguatedLookupResults: QueryMapperLookupTable = QueryMapper.remap(
+    lookupResults,
+    ambiguousResults
+);
 
 // Write query map
 writeDataFile(`queryLookupResults.json`, disambiguatedLookupResults);

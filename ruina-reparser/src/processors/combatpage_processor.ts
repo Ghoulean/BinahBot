@@ -9,7 +9,7 @@ import {
     rangeFromStringValue,
     rarityFromStringValue,
 } from "@ghoulean/ruina-common";
-import { COMBAT_PAGE_DIR, NO_IMAGE_IMAGE_PATH } from "../util/constants";
+import { COMBAT_PAGE_DIR } from "../util/constants";
 import { readFile, walkSync } from "../util/file";
 import path = require("path");
 
@@ -20,6 +20,12 @@ export class CombatPageProcessor {
             const json: any = readFile(filePath);
             for (const card of json["DiceCardXmlRoot"]["Card"]) {
                 const id: string = card["_attributes"]["ID"];
+                const imageId: string | undefined = card["Artwork"]?.["_text"];
+                if (!imageId) {
+                    console.log(
+                        `No image found for combat page ${id}; skipping`
+                    );
+                }
                 const ego: Ego = this.determineEgo(card);
 
                 let rawDiceArray: unknown = card["BehaviourList"]["Behaviour"];
@@ -43,15 +49,15 @@ export class CombatPageProcessor {
                         ego == Ego.ABNO_EGO
                             ? this.determineEgoFloor(Number(id))
                             : Floor.NONE,
-                    scriptId: card["Script"]["_text"],
+                    scriptId: card["Script"]["_text"] ?? "",
                     rarity: rarityFromStringValue(card["Rarity"]["_text"])!,
                     dice: dice,
                     chapter: chapter,
-                    cost: Number(card["Spec"]["_attributes"]["Cost"]),
+                    cost: Number(card["Spec"]["_attributes"]["Cost"]) || 0,
                     range: rangeFromStringValue(
                         card["Spec"]["_attributes"]["Range"]
                     )!,
-                    imagePath: card["Artwork"]?.["_text"] ?? NO_IMAGE_IMAGE_PATH
+                    imagePath: `/${imageId}.png`,
                 };
                 data.push(combatPage);
             }
@@ -62,14 +68,18 @@ export class CombatPageProcessor {
     private static parseDie(blob: any): Die {
         return {
             type: dieTypeFromStrings(blob["Type"], blob["Detail"])!,
-            min: blob["Min"],
-            max: blob["Dice"],
+            min: Number(blob["Min"]) || -1,
+            max: Number(blob["Dice"]) || -1,
             scriptId: blob["Script"],
         };
     }
 
     private static determineChapter(filePath: string, card: any): Chapter {
-        return Number(card["Chapter"]?.["_text"]) ?? Number(path.basename(filePath).replace(/[^0-9]/gi, ''))
+        return (
+            Number(card["Chapter"]?.["_text"]) ||
+            Number(path.basename(filePath).replace(/[^0-9]/gi, "")) ||
+            Chapter.LIBRARY_OF_RUINA
+        );
     }
 
     private static determineEgo(blob: any): Ego {

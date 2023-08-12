@@ -8,7 +8,11 @@ export enum DiscordInteractionTypes {
 
 export enum DiscordEmbedColors {
     AWAKENING_ABNO_PAGE = 0x40ce78,
-    BREAKDOWN_ABNO_PAGE = 0xd14141
+    BREAKDOWN_ABNO_PAGE = 0xd14141,
+    PAPERBACK_RARITY = 0x7bd671,
+    HARDCOVER_RARITY = 0x305fba,
+    LIMITED_RARITY = 0x6b26bf,
+    OBJET_D_ART_RARITY = 0xebbe00,
 }
 
 export const S3_BUCKET_NAME_ENV_KEY = "S3_BUCKET_NAME";
