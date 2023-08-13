@@ -5,19 +5,19 @@ import {
     LookupResult,
 } from "@ghoulean/ruina-common";
 import * as fastestLevenshtein from "fastest-levenshtein";
-import * as __DISAMBIGUATION_RESULTS from "../data/ambiguousResults.json";
-import * as __AUTOCOMPLETE from "../data/autocomplete.json";
-import * as __CN_ABNO from "../data/cn/abno.json";
-import * as __CN_COMBAT from "../data/cn/combat.json";
-import * as __EN_ABNO from "../data/en/abno.json";
-import * as __EN_COMBAT from "../data/en/combat.json";
-import * as __JP_ABNO from "../data/jp/abno.json";
-import * as __JP_COMBAT from "../data/jp/combat.json";
-import * as __KR_ABNO from "../data/kr/abno.json";
-import * as __KR_COMBAT from "../data/kr/combat.json";
-import * as __LOOKUP_RESULTS from "../data/queryLookupResults.json";
-import * as __TRCN_ABNO from "../data/trcn/abno.json";
-import * as __TRCN_COMBAT from "../data/trcn/combat.json";
+import { default as __DISAMBIGUATION_RESULTS } from "../data/ambiguousResults.json";
+import { default as __AUTOCOMPLETE } from "../data/autocomplete.json";
+import { default as __CN_ABNO } from "../data/cn/abno.json";
+import { default as __CN_COMBAT } from "../data/cn/combat.json";
+import { default as __EN_ABNO } from "../data/en/abno.json";
+import { default as __EN_COMBAT } from "../data/en/combat.json";
+import { default as __JP_ABNO } from "../data/jp/abno.json";
+import { default as __JP_COMBAT } from "../data/jp/combat.json";
+import { default as __KR_ABNO } from "../data/kr/abno.json";
+import { default as __KR_COMBAT } from "../data/kr/combat.json";
+import { default as __LOOKUP_RESULTS } from "../data/queryLookupResults.json";
+import { default as __TRCN_ABNO } from "../data/trcn/abno.json";
+import { default as __TRCN_COMBAT } from "../data/trcn/combat.json";
 import { DisambiguationResults } from "../model/disambiguation_result";
 
 type QueryToLookupResult = {

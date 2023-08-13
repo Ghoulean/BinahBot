@@ -2,16 +2,16 @@ import {
     DecoratedAbnoPage,
     DecoratedCombatPage,
     Die,
-    DieType,
     Localization,
     LookupResult,
-    PageType,
     Rarity,
-    dieTypeToShortString,
+    dieTypeToShortString
 } from "@ghoulean/ruina-common";
-import { DataAccessor } from "../accessor/data_accessor";
 import { DisambiguationResults } from "../model/disambiguation_result";
-import { DiscordEmbed } from "../model/discord/discord_embed";
+import {
+    DiscordEmbed,
+    DiscordEmbedFields,
+} from "../model/discord/discord_embed";
 import { DiscordEmbedColors } from "../util/constants";
 
 export class EmbedTransformer {
@@ -81,6 +81,40 @@ export class EmbedTransformer {
         requestLocale: Localization
     ): DiscordEmbed {
         const embedColor: number = this.rarityToColor(combat.rarity);
+        const fields: DiscordEmbedFields[] = [
+            {
+                name: "Cost",
+                value: String(combat.cost),
+                inline: true,
+            },
+            {
+                name: "Range",
+                value: combat.range,
+                inline: true,
+            },
+            {
+                name: "Rarity",
+                value: combat.rarity,
+                inline: true,
+            },
+        ];
+        if (combat.description) {
+            fields.push({
+                name: "Page Description",
+                value: combat.description,
+                inline: true,
+            });
+        }
+
+        fields.push({
+            name: "Dice",
+            value: this.mapDie(
+                combat.dice,
+                combat.diceDescriptions,
+                requestLocale
+            ),
+            inline: false,
+        });
         return {
             title: combat.name,
             color: embedColor,
@@ -89,33 +123,7 @@ export class EmbedTransformer {
                 // TODO: imagePath is currently prefixed with `/`. Revisit
                 url: `https://${this.s3BucketName}.s3.amazonaws.com${combat.imagePath}`,
             },
-            fields: [
-                {
-                    name: "Cost",
-                    value: String(combat.cost),
-                    inline: true,
-                },
-                {
-                    name: "Range",
-                    value: combat.range,
-                    inline: true,
-                },
-                {
-                    name: "Rarity",
-                    value: combat.rarity,
-                    inline: true,
-                },
-                {
-                    name: "Page Description",
-                    value: combat.description,
-                    inline: true,
-                },
-                {
-                    name: "Dice",
-                    value: this.mapDie(combat.dice, combat.diceDescriptions, requestLocale),
-                    inline: false,
-                },
-            ],
+            fields: fields,
         };
     }
 
@@ -128,10 +136,13 @@ export class EmbedTransformer {
             fields: [
                 {
                     name: `**${disambiguation.query}** may refer to:`,
-                    value: this.mapToIndentedList(disambiguation.lookupResults
-                        .map((lookupResult: LookupResult) => {
-                            return lookupResult.query;
-                        })),
+                    value: this.mapToIndentedList(
+                        disambiguation.lookupResults.map(
+                            (lookupResult: LookupResult) => {
+                                return lookupResult.query;
+                            }
+                        )
+                    ),
                     inline: true,
                 },
             ],
@@ -162,16 +173,25 @@ export class EmbedTransformer {
         }
     }
 
-    private mapDie(dice: Die[], diceDescriptions: string[], locale: Localization): string {
-        return this.mapToIndentedList(dice.map((die: Die, index: number) => {
-            return `${dieTypeToShortString(die.type, locale)} ${die.min}-${die.max} ${diceDescriptions[index]}`
-        }))
+    private mapDie(
+        dice: Die[],
+        diceDescriptions: string[],
+        locale: Localization
+    ): string {
+        return this.mapToIndentedList(
+            dice.map((die: Die, index: number) => {
+                return `${dieTypeToShortString(die.type, locale)} ${die.min}-${
+                    die.max
+                } ${diceDescriptions[index]}`;
+            })
+        );
     }
 
     private mapToIndentedList(arr: string[]): string {
-        return arr.map((str: string) => {
-            return ` > - ${str}`;
-        })
-        .join("\n")
+        return arr
+            .map((str: string) => {
+                return ` > - ${str}`;
+            })
+            .join("\n");
     }
 }

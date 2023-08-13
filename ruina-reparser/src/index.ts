@@ -6,6 +6,10 @@ import {
     DecoratedCombatPage,
     Localization,
 } from "@ghoulean/ruina-common";
+import {
+    AmbiguityResolver,
+    AmbiguousResults,
+} from "./audit/ambiguity_resolver";
 import { AbnoPageMapper } from "./localization_mappers/abno_page_mapper";
 import { CombatPageMapper } from "./localization_mappers/combat_page_mapper";
 import {
@@ -16,10 +20,6 @@ import {
 import { AbnoPageProcessor } from "./processors/abnopage_processor";
 import { CombatPageProcessor } from "./processors/combatpage_processor";
 import { fileSanityCheck, setupJsonFiles, writeDataFile } from "./util/file";
-import {
-    AmbiguousResults,
-    AmbiguityResolver,
-} from "./audit/ambiguity_resolver";
 
 fileSanityCheck();
 setupJsonFiles();
@@ -61,23 +61,18 @@ const ambiguousResults: AmbiguousResults[] =
 
 // Remap with disambiguator
 // Side effects: this modifies both lookupResults and ambiguousResults in place
-QueryMapper.remap(
-    lookupResults,
-    ambiguousResults
-);
+QueryMapper.remap(lookupResults, ambiguousResults);
 
 // Write query map
 writeDataFile(`queryLookupResults.json`, lookupResults);
 
 // Write disambiguation data
-writeDataFile(
-    `ambiguousResults.json`,
-    Object.fromEntries(
-        ambiguousResults.map((ambiguousResults) => {
-            return [ambiguousResults.id, ambiguousResults];
-        })
-    )
+const ambiguousResultsDataBlob = Object.fromEntries(
+    ambiguousResults.map((ambiguousResults) => {
+        return [ambiguousResults.id, ambiguousResults];
+    })
 );
+writeDataFile(`ambiguousResults.json`, ambiguousResultsDataBlob);
 
 // Autocomplete
 writeDataFile(`autocomplete.json`, {
