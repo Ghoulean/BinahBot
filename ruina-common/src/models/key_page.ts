@@ -4,13 +4,23 @@ export interface KeyPage {
     id: string;
     hp: number;
     stagger: number;
-    hpResistances: { [key in DieType]? : Resistance };
-    staggerResistances: { [key in DieType]? : Resistance };
+    hpResistances: KeyPageResistance;
+    staggerResistances: KeyPageResistance;
     minBaseSpeed: number;
     maxBaseSpeed: number;
     baseLight: number;
-    baseSpeedDieSlots: number;
     defaultPassiveIds: string[];
     exclusiveCardsIds: string[];
     chapter: Chapter;
+}
+
+export interface KeyPageResistance {
+    [DieType.SLASH]: Resistance;
+    [DieType.PIERCE]: Resistance;
+    [DieType.BLUNT]: Resistance;
+}
+
+export interface DecoratedKeyPage extends KeyPage {
+    name: string;
+    passiveNames: string[];
 }

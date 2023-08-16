@@ -4,7 +4,11 @@ import {
     CombatPage,
     DecoratedAbnoPage,
     DecoratedCombatPage,
+    DecoratedKeyPage,
+    DecoratedPassive,
+    KeyPage,
     Localization,
+    Passive,
 } from "@ghoulean/ruina-common";
 import {
     AmbiguityResolver,
@@ -12,6 +16,8 @@ import {
 } from "./audit/ambiguity_resolver";
 import { AbnoPageMapper } from "./localization_mappers/abno_page_mapper";
 import { CombatPageMapper } from "./localization_mappers/combat_page_mapper";
+import { KeyPageMapper } from "./localization_mappers/keypage_mapper";
+import { PassiveMapper } from "./localization_mappers/passive_mapper";
 import {
     QueryMapper,
     QueryMapperLookupTable,
@@ -19,6 +25,8 @@ import {
 } from "./localization_mappers/query_mapper";
 import { AbnoPageProcessor } from "./processors/abnopage_processor";
 import { CombatPageProcessor } from "./processors/combatpage_processor";
+import { KeyPageProcessor } from "./processors/keypage_processor";
+import { PassiveProcessor } from "./processors/passive_processor";
 import { fileSanityCheck, setupJsonFiles, writeDataFile } from "./util/file";
 
 fileSanityCheck();
@@ -34,6 +42,8 @@ const queryMapperProps: QueryMapperPropType = {
 
 const abnoPages: AbnoPage[] = AbnoPageProcessor.process();
 const combatPages: CombatPage[] = CombatPageProcessor.process();
+const keyPages: KeyPage[] = KeyPageProcessor.process();
+const passives: Passive[] = PassiveProcessor.process();
 
 for (const locale of ALL_LOCALIZATIONS) {
     // Abno
@@ -42,14 +52,23 @@ for (const locale of ALL_LOCALIZATIONS) {
     queryMapperProps[locale].abnoPages = decoratedAbnoPages;
     writeDataFile(`${locale}/abno.json`, decoratedAbnoPages);
 
-    // TODO: Combat pages
+    // Combat pages
     const decoratedCombatPages: { [key: string]: DecoratedCombatPage } =
         CombatPageMapper.map(combatPages, locale);
     queryMapperProps[locale].combatPages = decoratedCombatPages;
     writeDataFile(`${locale}/combat.json`, decoratedCombatPages);
 
-    // TODO: Key pages
-    // TODO: Passives
+    // Passives
+    const decoratedPassives: { [key: string]: DecoratedPassive } =
+        PassiveMapper.map(passives, locale);
+    queryMapperProps[locale].passives = decoratedPassives;
+    writeDataFile(`${locale}/passive.json`, decoratedPassives);
+
+    // Key pages
+    const decoratedKeyPages: { [key: string]: DecoratedKeyPage } =
+        KeyPageMapper.map(keyPages, decoratedPassives, locale);
+    queryMapperProps[locale].keyPages = decoratedKeyPages;
+    writeDataFile(`${locale}/keypages.json`, decoratedKeyPages);
 }
 
 // Query mapper

@@ -1,9 +1,21 @@
+const FIND_REPLACE_CHARS: { [key: string] : string } = {
+    "\r\n": "\n",
+    "’": "'",
+    "Ⅰ": "I",
+    "Ⅱ": "II",
+    "Ⅲ": "III",
+}
+
 export abstract class Util {
     /**
-     * Remove and replace special characters.
+     * Find and replace special characters.
      */
     public static cleanString(s: string): string {
-        return s.replace("\r\n", "\n").replace("’", "'").trim();
+        for (const k in FIND_REPLACE_CHARS) {
+            const v = FIND_REPLACE_CHARS[k]
+            s = s.replace(k, v);
+        }
+        return s.trim();
     }
 
     public static areEqualShallow(a: any, b: any): boolean {

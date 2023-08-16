@@ -3,6 +3,8 @@ import {
     Chapter,
     DecoratedAbnoPage,
     DecoratedCombatPage,
+    DecoratedKeyPage,
+    DecoratedPassive,
     Localization,
     LookupResult,
     PageType,
@@ -18,6 +20,12 @@ type QueryMapperLocaleResults = {
     };
     combatPages?: {
         [key: string]: DecoratedCombatPage;
+    };
+    passives?: {
+        [key: string]: DecoratedPassive;
+    };
+    keyPages?: {
+        [key: string]: DecoratedKeyPage;
     };
 };
 
@@ -90,10 +98,7 @@ export class QueryMapper {
             const query: string = result.query;
             const disambiguateLookupResult: LookupResult =
                 this.constructDisambiguateLookupResult(result);
-            AmbiguityResolver.disambiguate(
-                queryMapperLookupTable,
-                result
-            );
+            AmbiguityResolver.disambiguate(queryMapperLookupTable, result);
             queryMapperLookupTable[query].push(disambiguateLookupResult);
         }
     }

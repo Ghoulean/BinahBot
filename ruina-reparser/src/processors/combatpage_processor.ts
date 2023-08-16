@@ -3,6 +3,7 @@ import {
     Chapter,
     CombatPage,
     Die,
+    DieType,
     Ego,
     Floor,
     dieTypeFromStrings,
@@ -67,7 +68,9 @@ export class CombatPageProcessor {
 
     private static parseDie(blob: any): Die {
         return {
-            type: dieTypeFromStrings(blob["Type"], blob["Detail"])!,
+            // Some cards, like Crescendo (both of them) and Deluge of Brachial Quietuses
+            // have typo'd "Detail" as "Detil". This causes the die type to default to SLASH
+            type: dieTypeFromStrings(blob["Type"], blob["Detail"]) ?? DieType.SLASH,
             min: Number(blob["Min"]) || -1,
             max: Number(blob["Dice"]) || -1,
             scriptId: blob["Script"],
