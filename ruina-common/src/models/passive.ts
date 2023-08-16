@@ -1,4 +1,4 @@
-import { Rarity } from "../enums";
+import { Localization, Rarity } from "../enums";
 
 export interface Passive {
     id: string;
@@ -10,4 +10,5 @@ export interface Passive {
 export interface DecoratedPassive extends Passive {
     name: string;
     description: string;
+    locale: Localization;
 }

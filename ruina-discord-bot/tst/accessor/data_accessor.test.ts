@@ -1,14 +1,17 @@
 import { Localization, LookupResult } from "@ghoulean/ruina-common";
 import { DataAccessor } from "../../src/accessor/data_accessor";
 
-const WEIGHT_OF_SIN_EN_PAGE_NAME = "The Weight of Sin";
-const WEIGHT_OF_SIN_EN_PAGE_NAME_TYPO = "theweightofsin";
-const WEIGHT_OF_SIN_PAGE_ID = "LongBird_Sin";
+const PEACE_EN_PAGE_NAME = "Peace";
+const PEACE_EN_PAGE_NAME_TYPO = "Peacc";
+const PEACE_PAGE_ID = "ApocalypseBird_Atk";
 const JUDGEMENT_PAGE_ID = "980311";
+const BAMBOO_HATTED_KIM_PAGE_ID = "243003";
+const INCOMPLETE_ARBITER_PASSIVE_ID = "10011";
+
 
 const GOODBYE_KR_NAME = "Good Bye";
 
-const AUTOCOMPLETE_QUERY = "The ";
+const AUTOCOMPLETE_QUERY = "The Bea";
 
 const BAD_PAGE_NAME = "PageNameThatDoesNotExist";
 const BAD_PAGE_ID = "PageIdThatDoesNotExist";
@@ -21,7 +24,7 @@ beforeEach(() => {
 
 test("should return lookup result when given page name and locale", () => {
     expect(
-        dataAccessor.lookup(WEIGHT_OF_SIN_EN_PAGE_NAME, Localization.ENGLISH)
+        dataAccessor.lookup(PEACE_EN_PAGE_NAME, Localization.ENGLISH)
     ).toMatchSnapshot();
     expect(
         dataAccessor.lookup(GOODBYE_KR_NAME, Localization.KOREAN)
@@ -31,7 +34,7 @@ test("should return lookup result when given page name and locale", () => {
 test("should fuzzy match results if query is close", () => {
     expect(
         dataAccessor.lookup(
-            WEIGHT_OF_SIN_EN_PAGE_NAME_TYPO,
+            PEACE_EN_PAGE_NAME_TYPO,
             Localization.ENGLISH
         )
     ).toMatchSnapshot();
@@ -39,7 +42,7 @@ test("should fuzzy match results if query is close", () => {
 
 test("should return lookup result even if preferred locale is not available", () => {
     expect(
-        dataAccessor.lookup(WEIGHT_OF_SIN_EN_PAGE_NAME, Localization.KOREAN)
+        dataAccessor.lookup(PEACE_EN_PAGE_NAME, Localization.KOREAN)
     ).toMatchSnapshot();
 });
 
@@ -52,7 +55,7 @@ test("should throw error when given bad lookup request", () => {
 test("should return decorated abno page result when given page id and locale", () => {
     expect(
         dataAccessor.getDecoratedAbnoPage(
-            WEIGHT_OF_SIN_PAGE_ID,
+            PEACE_PAGE_ID,
             Localization.ENGLISH
         )
     ).toMatchSnapshot();
@@ -76,6 +79,37 @@ test("should return decorated combat page result when given page id and locale",
 test("should throw error when given bad decorated combat page request", () => {
     expect(() => {
         dataAccessor.getDecoratedCombatPage(BAD_PAGE_ID, Localization.ENGLISH);
+    }).toThrow();
+});
+
+test("should return decorated key page result when given page id and locale", () => {
+    expect(
+        dataAccessor.getDecoratedKeyPage(
+            BAMBOO_HATTED_KIM_PAGE_ID,
+            Localization.ENGLISH
+        )
+    ).toMatchSnapshot();
+});
+
+test("should throw error when given bad decorated key page request", () => {
+    expect(() => {
+        dataAccessor.getDecoratedKeyPage(BAD_PAGE_ID, Localization.ENGLISH);
+    }).toThrow();
+});
+
+
+test("should return decorated passive result when given page id and locale", () => {
+    expect(
+        dataAccessor.getDecoratedPassive(
+            INCOMPLETE_ARBITER_PASSIVE_ID,
+            Localization.ENGLISH
+        )
+    ).toMatchSnapshot();
+});
+
+test("should throw error when given bad decorated passive request", () => {
+    expect(() => {
+        dataAccessor.getDecoratedPassive(BAD_PAGE_ID, Localization.ENGLISH);
     }).toThrow();
 });
 

@@ -81,8 +81,33 @@ export class QueryMapper {
                 }
             }
 
-            // TODO: Key pages
-            // TODO: Passives
+            // Key pages
+            for (const keyPageId in localedResults.keyPages) {
+                const keyPage: DecoratedKeyPage =
+                    localedResults.keyPages[keyPageId];
+                const query: string = keyPage.name;
+                const keypageLookupResult: LookupResult =
+                    this.constructKeyPageLookupResult(keyPage, query);
+                if (retVal[query]) {
+                    retVal[query].push(keypageLookupResult);
+                } else {
+                    retVal[query] = [keypageLookupResult];
+                }
+            }
+
+            // Passives
+            for (const passiveId in localedResults.passives) {
+                const passive: DecoratedPassive =
+                    localedResults.passives[passiveId];
+                const query: string = passive.name;
+                const passiveLookupResult: LookupResult =
+                    this.constructPassiveLookupResult(passive, query);
+                if (retVal[query]) {
+                    retVal[query].push(passiveLookupResult);
+                } else {
+                    retVal[query] = [passiveLookupResult];
+                }
+            }
         }
 
         return retVal;
@@ -126,6 +151,32 @@ export class QueryMapper {
             locale: decoratedCombatPage.locale,
             pageType: PageType.COMBAT_PAGE,
             pageId: decoratedCombatPage.id,
+        };
+    }
+
+    private static constructKeyPageLookupResult(
+        decoratedKeyPage: DecoratedKeyPage,
+        query: string
+    ): LookupResult {
+        return {
+            query: query,
+            chapter: decoratedKeyPage.chapter,
+            locale: decoratedKeyPage.locale,
+            pageType: PageType.KEY_PAGE,
+            pageId: decoratedKeyPage.id,
+        };
+    }
+
+    private static constructPassiveLookupResult(
+        decoratedPassive: DecoratedPassive,
+        query: string
+    ): LookupResult {
+        return {
+            query: query,
+            chapter: Chapter.CANARD, // TODO: possibly calculate this based on keypage chapters?
+            locale: decoratedPassive.locale,
+            pageType: PageType.PASSIVE,
+            pageId: decoratedPassive.id,
         };
     }
 

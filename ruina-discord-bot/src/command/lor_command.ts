@@ -1,16 +1,18 @@
 import {
     DecoratedAbnoPage,
     DecoratedCombatPage,
+    DecoratedKeyPage,
+    DecoratedPassive,
     Localization,
     LookupResult,
     PageType,
 } from "@ghoulean/ruina-common";
 import { DataAccessor } from "../accessor/data_accessor";
 import { CommandResult } from "../model/command_result";
+import { DisambiguationResults } from "../model/disambiguation_result";
 import { DiscordEmbed } from "../model/discord/discord_embed";
 import { Request } from "../model/request";
 import { EmbedTransformer } from "../transformers/embed_transformer";
-import { DisambiguationResults } from "../model/disambiguation_result";
 
 const QUERY_COMMAND_ARG = "query";
 const LOCALE_COMMAND_ARG = "locale";
@@ -82,10 +84,11 @@ export class LorCommand {
             case PageType.COMBAT_PAGE: {
                 let decoratedCombatPage: DecoratedCombatPage;
                 try {
-                    decoratedCombatPage = this.dataAccessor.getDecoratedCombatPage(
-                        lookupResult.pageId,
-                        cardLocale
-                    );
+                    decoratedCombatPage =
+                        this.dataAccessor.getDecoratedCombatPage(
+                            lookupResult.pageId,
+                            cardLocale
+                        );
                 } catch (e: unknown) {
                     return {
                         success: false,
@@ -96,6 +99,48 @@ export class LorCommand {
                 }
                 embed = this.embedTransformer.transformCombatPage(
                     decoratedCombatPage,
+                    request.locale
+                );
+                break;
+            }
+            case PageType.KEY_PAGE: {
+                let decoratedKeyPage: DecoratedKeyPage;
+                try {
+                    decoratedKeyPage = this.dataAccessor.getDecoratedKeyPage(
+                        lookupResult.pageId,
+                        cardLocale
+                    );
+                } catch (e: unknown) {
+                    return {
+                        success: false,
+                        error: `Error occurred while calling getDecoratedKeyPage: ${JSON.stringify(
+                            e
+                        )}`,
+                    };
+                }
+                embed = this.embedTransformer.transformKeyPage(
+                    decoratedKeyPage,
+                    request.locale
+                );
+                break;
+            }
+            case PageType.PASSIVE: {
+                let decoratedPassive: DecoratedPassive;
+                try {
+                    decoratedPassive = this.dataAccessor.getDecoratedPassive(
+                        lookupResult.pageId,
+                        cardLocale
+                    );
+                } catch (e: unknown) {
+                    return {
+                        success: false,
+                        error: `Error occurred while calling getDecoratedPassive: ${JSON.stringify(
+                            e
+                        )}`,
+                    };
+                }
+                embed = this.embedTransformer.transformPassive(
+                    decoratedPassive,
                     request.locale
                 );
                 break;
@@ -119,12 +164,6 @@ export class LorCommand {
                     request.locale
                 );
                 break;
-            }
-            default: {
-                return {
-                    success: false,
-                    error: `Page type ${pageType} not yet supported`,
-                };
             }
         }
 

@@ -7,6 +7,7 @@ import {
 import { LOCALIZE_DIR } from "../util/constants";
 import { readFile, walkSync } from "../util/file";
 import path = require("path");
+import { Util } from "../util/util";
 
 export class KeyPageMapper {
     public static map(
@@ -30,13 +31,14 @@ export class KeyPageMapper {
 
             const remappedPassiveNames: string[] =
                 keyPage.defaultPassiveIds.map((passiveId: string) => {
-                    return decoratedPassives[passiveId].name;
+                    return decoratedPassives[passiveId]?.name ?? "";
                 });
 
             const decoratedKeyPage: DecoratedKeyPage = {
                 ...keyPage,
-                name: bookName,
+                name: Util.cleanString(bookName),
                 passiveNames: remappedPassiveNames,
+                locale: locale
             };
             retVal[id] = decoratedKeyPage;
         }
@@ -58,7 +60,7 @@ export class KeyPageMapper {
             for (const blob of json["BookDescRoot"]["bookDescList"][
                 "BookDesc"
             ]) {
-                cardBlobs[blob["_attributes"]["ID"]] = blob;
+                cardBlobs[blob["_attributes"]["BookID"]] = blob;
             }
         }
 

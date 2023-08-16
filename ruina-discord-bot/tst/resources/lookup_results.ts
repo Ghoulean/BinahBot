@@ -19,6 +19,16 @@ export const COMBAT_LOOKUP_RESULT: LookupResult = {
     pageType: PageType.COMBAT_PAGE,
 };
 
+export const KEYPAGE_LOOKUP_RESULT: LookupResult = {
+    ...ABNO_LOOKUP_RESULT,
+    pageType: PageType.KEY_PAGE,
+};
+
+export const PASSIVE_LOOKUP_RESULT: LookupResult = {
+    ...ABNO_LOOKUP_RESULT,
+    pageType: PageType.PASSIVE,
+};
+
 export const DISAMBIGUATION_LOOKUP_RESULT: LookupResult = {
     ...ABNO_LOOKUP_RESULT,
     pageType: PageType.DISAMBIGUATION,

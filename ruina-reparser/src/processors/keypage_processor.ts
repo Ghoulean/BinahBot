@@ -3,6 +3,7 @@ import {
     DieType,
     KeyPage,
     KeyPageResistance,
+    rarityFromStringValue,
     resistanceFromString,
 } from "@ghoulean/ruina-common";
 import { KEY_PAGE_DIR } from "../util/constants";
@@ -119,6 +120,7 @@ export class KeyPageProcessor {
                         keypage["Chapter"]?.["_text"] ??
                             Chapter.LIBRARY_OF_RUINA
                     ),
+                    rarity: rarityFromStringValue(keypage["Rarity"]["_text"])!,
                 };
                 data.push(keyPage);
             }

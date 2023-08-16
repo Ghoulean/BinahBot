@@ -1,4 +1,4 @@
-import { Chapter, DieType, Resistance } from "../enums";
+import { Chapter, DieType, Localization, Rarity, Resistance } from "../enums";
 
 export interface KeyPage {
     id: string;
@@ -12,6 +12,7 @@ export interface KeyPage {
     defaultPassiveIds: string[];
     exclusiveCardsIds: string[];
     chapter: Chapter;
+    rarity: Rarity;
 }
 
 export interface KeyPageResistance {
@@ -23,4 +24,5 @@ export interface KeyPageResistance {
 export interface DecoratedKeyPage extends KeyPage {
     name: string;
     passiveNames: string[];
+    locale: Localization;
 }

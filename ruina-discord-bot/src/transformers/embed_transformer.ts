@@ -1,11 +1,13 @@
 import {
     DecoratedAbnoPage,
     DecoratedCombatPage,
+    DecoratedKeyPage,
+    DecoratedPassive,
     Die,
     Localization,
     LookupResult,
     Rarity,
-    dieTypeToShortString
+    dieTypeToShortString,
 } from "@ghoulean/ruina-common";
 import { DisambiguationResults } from "../model/disambiguation_result";
 import {
@@ -124,6 +126,50 @@ export class EmbedTransformer {
                 url: `https://${this.s3BucketName}.s3.amazonaws.com${combat.imagePath}`,
             },
             fields: fields,
+        };
+    }
+    // TODO: localize via _requestLocale
+    public transformKeyPage(
+        keyPage: DecoratedKeyPage,
+        requestLocale: Localization
+    ): DiscordEmbed {
+        const embedColor: number = this.rarityToColor(keyPage.rarity);
+
+        return {
+            title: keyPage.name,
+            color: embedColor,
+            fields: [
+                {
+                    name: "Rarity",
+                    value: keyPage.rarity,
+                    inline: true,
+                },
+            ],
+        };
+    }
+
+    // TODO: localize via _requestLocale
+    public transformPassive(
+        passive: DecoratedPassive,
+        requestLocale: Localization
+    ): DiscordEmbed {
+        const embedColor: number = this.rarityToColor(passive.rarity);
+
+        return {
+            title: passive.name,
+            color: embedColor,
+            fields: [
+                {
+                    name: "Cost",
+                    value: String(passive.cost),
+                    inline: true,
+                },
+                {
+                    name: "Rarity",
+                    value: passive.rarity,
+                    inline: true,
+                },
+            ],
         };
     }
 

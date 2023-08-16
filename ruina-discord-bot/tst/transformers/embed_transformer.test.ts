@@ -8,6 +8,8 @@ import { EmbedTransformer } from "../../src/transformers/embed_transformer";
 import { DiscordEmbedColors } from "../../src/util/constants";
 import {
     BASE_DECORATED_COMBAT_PAGE,
+    BASE_DECORATED_KEY_PAGE,
+    BASE_DECORATED_PASSIVE,
     DECORATED_ABNO_PAGE,
 } from "../resources/decorated_pages";
 import { DISAMBIGUATION_RESULTS } from "../resources/lookup_results";
@@ -98,6 +100,22 @@ test.each([
         expect(discordEmbed).toMatchSnapshot();
     }
 );
+
+test("should transform key page to Discord embed", () => {
+    const discordEmbed: DiscordEmbed = embedTransformer.transformKeyPage(
+        BASE_DECORATED_KEY_PAGE,
+        DEFAULT_REQUEST_LOCALE
+    );
+    expect(discordEmbed).toMatchSnapshot();
+});
+
+test("should transform passive page to Discord embed", () => {
+    const discordEmbed: DiscordEmbed = embedTransformer.transformPassive(
+        BASE_DECORATED_PASSIVE,
+        DEFAULT_REQUEST_LOCALE
+    );
+    expect(discordEmbed).toMatchSnapshot();
+});
 
 test("should transform disambiguation page to Discord embed", () => {
     const discordEmbed: DiscordEmbed =

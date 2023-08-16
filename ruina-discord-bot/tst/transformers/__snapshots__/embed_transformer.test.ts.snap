@@ -168,6 +168,20 @@ exports[`should transform disambiguation page to Discord embed 1`] = `
 }
 `;
 
+exports[`should transform key page to Discord embed 1`] = `
+{
+  "color": 8115825,
+  "fields": [
+    {
+      "inline": true,
+      "name": "Rarity",
+      "value": "Common",
+    },
+  ],
+  "title": "Keypage Name",
+}
+`;
+
 exports[`should transform negative decorated abno page to Discord embed 1`] = `
 {
   "color": 13713729,
@@ -207,6 +221,25 @@ exports[`should transform negative decorated abno page to Discord embed 1`] = `
     "url": "https://s3bucketname.s3.amazonaws.comtest.png",
   },
   "title": "TestAbnoPage",
+}
+`;
+
+exports[`should transform passive page to Discord embed 1`] = `
+{
+  "color": 8115825,
+  "fields": [
+    {
+      "inline": true,
+      "name": "Cost",
+      "value": "2",
+    },
+    {
+      "inline": true,
+      "name": "Rarity",
+      "value": "Common",
+    },
+  ],
+  "title": "Passive Name",
 }
 `;
 
