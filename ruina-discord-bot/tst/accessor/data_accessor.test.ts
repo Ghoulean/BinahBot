@@ -8,10 +8,10 @@ const JUDGEMENT_PAGE_ID = "980311";
 const BAMBOO_HATTED_KIM_PAGE_ID = "243003";
 const INCOMPLETE_ARBITER_PASSIVE_ID = "10011";
 
-
 const GOODBYE_KR_NAME = "Good Bye";
 
 const AUTOCOMPLETE_QUERY = "The Bea";
+const JIN_NI_AUTOCOMPLETE_QUERY = "JIN_NI";
 
 const BAD_PAGE_NAME = "PageNameThatDoesNotExist";
 const BAD_PAGE_ID = "PageIdThatDoesNotExist";
@@ -135,4 +135,5 @@ test("should throw error when given bad disambiguation page request", () => {
 
 test("should return autocomplete result when given query", () => {
     expect(dataAccessor.autocomplete(AUTOCOMPLETE_QUERY)).toMatchSnapshot();
+    expect(dataAccessor.autocomplete(JIN_NI_AUTOCOMPLETE_QUERY)).toMatchSnapshot();
 });

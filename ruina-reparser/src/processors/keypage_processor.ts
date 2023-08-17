@@ -52,6 +52,7 @@ export class KeyPageProcessor {
             const json: any = readFile(filePath);
             for (const keypage of json["BookXmlRoot"]["Book"]) {
                 const id: string = keypage["_attributes"]["ID"];
+                const textId: string = keypage["TextId"]?.["_text"] ?? id;
                 const equipEffect: EquipEffect = keypage[
                     "EquipEffect"
                 ] as EquipEffect;
@@ -101,6 +102,7 @@ export class KeyPageProcessor {
 
                 const keyPage: KeyPage = {
                     id: id,
+                    textId: textId,
                     hp: Number(equipEffect.HP["_text"]),
                     stagger: Number(equipEffect.Break["_text"]),
                     hpResistances: hpResistances,

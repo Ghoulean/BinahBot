@@ -7,7 +7,6 @@ import {
 import { LOCALIZE_DIR } from "../util/constants";
 import { readFile, walkSync } from "../util/file";
 import path = require("path");
-import { Util } from "../util/util";
 
 export class KeyPageMapper {
     public static map(
@@ -20,11 +19,12 @@ export class KeyPageMapper {
 
         for (const keyPage of keyPages) {
             const id: string = keyPage.id;
+            const textId: string = keyPage.textId;
             const bookName: string | undefined =
-                keyPageOwnerDict[id]?.["BookName"]?.["_text"];
+                keyPageOwnerDict[textId]?.["BookName"]?.["_text"];
             if (!bookName) {
                 console.log(
-                    `Keypage ${id} with locale ${locale} has no localization found; skipping`
+                    `Keypage ${id} (textId: ${textId}) with locale ${locale} has no localization found; skipping`
                 );
                 continue;
             }
@@ -36,9 +36,9 @@ export class KeyPageMapper {
 
             const decoratedKeyPage: DecoratedKeyPage = {
                 ...keyPage,
-                name: Util.cleanString(bookName),
+                name: bookName,
                 passiveNames: remappedPassiveNames,
-                locale: locale
+                locale: locale,
             };
             retVal[id] = decoratedKeyPage;
         }

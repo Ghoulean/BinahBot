@@ -6,7 +6,6 @@ import {
 import { LOCALIZE_DIR } from "../util/constants";
 import { readFile, walkSync } from "../util/file";
 import path = require("path");
-import { Util } from "../util/util";
 
 export class PassiveMapper {
     public static map(
@@ -28,9 +27,9 @@ export class PassiveMapper {
 
             const decoratedPassive: DecoratedPassive = {
                 ...passive,
-                name: Util.cleanString(localedInfo["Name"]["_text"]),
-                description: Util.cleanString(localedInfo["Desc"]["_text"] ?? ""),
-                locale: locale
+                name: localedInfo["Name"]["_text"],
+                description: localedInfo["Desc"]["_text"] ?? "",
+                locale: locale,
             };
             retVal[id] = decoratedPassive;
         }

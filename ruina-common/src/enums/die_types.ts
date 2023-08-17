@@ -13,14 +13,18 @@ export enum DieType {
     EVADE_COUNTER = "Standby, Evasion",
 }
 
+export function dieTypeFromString(value: string): DieType | undefined {
+    return (Object.values(DieType) as unknown as string[]).includes(value)
+        ? (value as unknown as DieType)
+        : undefined;
+}
+
 export function dieTypeFromStrings(
     type: string,
     detail: string
 ): DieType | undefined {
     const value: string = `${type}, ${detail}`;
-    return (Object.values(DieType) as unknown as string[]).includes(value)
-        ? (value as unknown as DieType)
-        : undefined;
+    return dieTypeFromString(value);
 }
 
 export const COUNTER_DIE: DieType[] = [

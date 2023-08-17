@@ -2,6 +2,7 @@ import { Chapter, DieType, Localization, Rarity, Resistance } from "../enums";
 
 export interface KeyPage {
     id: string;
+    textId: string;
     hp: number;
     stagger: number;
     hpResistances: KeyPageResistance;

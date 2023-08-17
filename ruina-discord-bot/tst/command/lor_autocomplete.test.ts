@@ -3,6 +3,7 @@ import { DataAccessor } from "../../src/accessor/data_accessor";
 import { LorAutocomplete } from "../../src/command/lor_autocomplete";
 import { CommandResult } from "../../src/model/command_result";
 import { Request } from "../../src/model/request";
+import { ABNO_LOOKUP_RESULT } from "../resources/lookup_results";
 
 const REQUEST: Request = {
     command: "lor",
@@ -32,8 +33,13 @@ beforeEach(() => {
 
 test("should return autocomplete results", () => {
     mockDataAccessor.autocomplete = jest.fn();
+    mockDataAccessor.lookup = jest.fn();
 
     mockDataAccessor.autocomplete.mockReturnValueOnce(AUTOCOMPLETE_RESULT);
+    mockDataAccessor.lookup.mockReturnValueOnce({
+        ...ABNO_LOOKUP_RESULT,
+        displayQuery: "displayQuery"
+    }).mockReturnValue(ABNO_LOOKUP_RESULT);
 
     const commandResult: CommandResult = lorAutocomplete.autocomplete(REQUEST);
 

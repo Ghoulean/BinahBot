@@ -68,9 +68,7 @@ export class CombatPageMapper {
             const decoratedCombatPage: DecoratedCombatPage = {
                 ...page,
                 locale: locale,
-                name: Util.cleanString(
-                    localeInfo["LocalizedName"]?.["_text"] ?? ""
-                ),
+                name: localeInfo["LocalizedName"]?.["_text"] ?? "",
                 description: cardDesc ?? "",
                 diceDescriptions: diceDescriptions,
             };

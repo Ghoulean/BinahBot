@@ -68,13 +68,18 @@ export class AmbiguityResolver {
                 console.log(
                     `Disambiguating "${ambiguousResults.query}" in locale ${ambiguousResults.locale} using pageType ${disambiguatedLookupResult.pageType}`
                 );
-                const disambiguatedName: string = this.appendDisambiguator(
-                    disambiguatedLookupResult.query,
+                const disambiguator: string =
                     CARD_LOCALIZATIONS[disambiguatedLookupResult.pageType][
                         disambiguatedLookupResult.locale
-                    ]
+                    ];
+                const disambiguatedName: string = this.appendDisambiguatorStr(
+                    disambiguatedLookupResult.query,
+                    disambiguator
                 );
-                disambiguatedLookupResult.query = disambiguatedName;
+                this.appendDisambiguator(
+                    disambiguatedLookupResult,
+                    disambiguator
+                );
                 queryMapperLookupTable[disambiguatedName] = [
                     disambiguatedLookupResult,
                 ];
@@ -85,10 +90,12 @@ export class AmbiguityResolver {
             console.log(
                 `Ran out of options; appending arbitrary identifier to ${ambiguousResults.query} with pageId=${disambiguatedLookupResult.pageId}`
             );
-            const randomDisambiguatedName: string = this.appendDisambiguator(
+            const disambiguator: string = disambiguatedLookupResult.pageId;
+            const randomDisambiguatedName: string = this.appendDisambiguatorStr(
                 disambiguatedLookupResult.query,
-                disambiguatedLookupResult.pageId
+                disambiguator
             );
+            this.appendDisambiguator(disambiguatedLookupResult, disambiguator);
             disambiguatedLookupResult.query = randomDisambiguatedName;
             queryMapperLookupTable[randomDisambiguatedName] = [
                 disambiguatedLookupResult,
@@ -99,11 +106,27 @@ export class AmbiguityResolver {
         queryMapperLookupTable[ambiguousResults.query] = [];
     }
 
-    private static appendDisambiguator(
+    private static appendDisambiguatorStr(
         query: string,
         disambiguator: string
     ): string {
         return `${query} (${disambiguator})`;
+    }
+
+    private static appendDisambiguator(
+        lookupResult: LookupResult,
+        disambiguator: string
+    ) {
+        lookupResult.query = this.appendDisambiguatorStr(
+            lookupResult.query,
+            disambiguator
+        );
+        if (lookupResult.displayQuery) {
+            lookupResult.displayQuery = this.appendDisambiguatorStr(
+                lookupResult.displayQuery,
+                disambiguator
+            );
+        }
     }
 
     private static getLookupResultByPageType(

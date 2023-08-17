@@ -155,6 +155,136 @@ exports[`should transform decorated combat page to Discord embed (rarity: $rarit
 }
 `;
 
+exports[`should transform decorated key page to Discord embed (base light: $baselight) 1`] = `
+{
+  "color": 8115825,
+  "fields": [
+    {
+      "inline": true,
+      "name": "HP",
+      "value": "1",
+    },
+    {
+      "inline": true,
+      "name": "Stagger",
+      "value": "2",
+    },
+    {
+      "inline": true,
+      "name": "Speed",
+      "value": "1-2",
+    },
+    {
+      "inline": true,
+      "name": "HP Resist",
+      "value": " > - **Slash**: 2
+ > - **Pierce**: 1.5
+ > - **Blunt**: 1",
+    },
+    {
+      "inline": true,
+      "name": "Stagger Resist",
+      "value": " > - **Slash**: 0.5
+ > - **Pierce**: 0.25
+ > - **Blunt**: 0",
+    },
+    {
+      "inline": true,
+      "name": "Rarity",
+      "value": "Common",
+    },
+    {
+      "inline": true,
+      "name": "Passives",
+      "value": " > - passiveName1",
+    },
+  ],
+  "title": "Keypage Name",
+}
+`;
+
+exports[`should transform decorated key page to Discord embed (base light: $baselight) 2`] = `
+{
+  "color": 8115825,
+  "fields": [
+    {
+      "inline": true,
+      "name": "HP",
+      "value": "1",
+    },
+    {
+      "inline": true,
+      "name": "Stagger",
+      "value": "2",
+    },
+    {
+      "inline": true,
+      "name": "Speed",
+      "value": "1-2",
+    },
+    {
+      "inline": true,
+      "name": "HP Resist",
+      "value": " > - **Slash**: 2
+ > - **Pierce**: 1.5
+ > - **Blunt**: 1",
+    },
+    {
+      "inline": true,
+      "name": "Stagger Resist",
+      "value": " > - **Slash**: 0.5
+ > - **Pierce**: 0.25
+ > - **Blunt**: 0",
+    },
+    {
+      "inline": true,
+      "name": "Rarity",
+      "value": "Common",
+    },
+    {
+      "inline": true,
+      "name": "Base Light",
+      "value": "4",
+    },
+    {
+      "inline": true,
+      "name": "Passives",
+      "value": " > - passiveName1",
+    },
+  ],
+  "title": "Keypage Name",
+}
+`;
+
+exports[`should transform decorated passive to Discord embed 1`] = `
+{
+  "color": 8115825,
+  "fields": [
+    {
+      "inline": true,
+      "name": "Cost",
+      "value": "2",
+    },
+    {
+      "inline": true,
+      "name": "Rarity",
+      "value": "Common",
+    },
+    {
+      "inline": false,
+      "name": "Description",
+      "value": "Description of passive",
+    },
+    {
+      "inline": false,
+      "name": "Transferable",
+      "value": "false",
+    },
+  ],
+  "title": "Passive Name",
+}
+`;
+
 exports[`should transform disambiguation page to Discord embed 1`] = `
 {
   "fields": [
@@ -165,20 +295,6 @@ exports[`should transform disambiguation page to Discord embed 1`] = `
  > - query",
     },
   ],
-}
-`;
-
-exports[`should transform key page to Discord embed 1`] = `
-{
-  "color": 8115825,
-  "fields": [
-    {
-      "inline": true,
-      "name": "Rarity",
-      "value": "Common",
-    },
-  ],
-  "title": "Keypage Name",
 }
 `;
 
@@ -221,25 +337,6 @@ exports[`should transform negative decorated abno page to Discord embed 1`] = `
     "url": "https://s3bucketname.s3.amazonaws.comtest.png",
   },
   "title": "TestAbnoPage",
-}
-`;
-
-exports[`should transform passive page to Discord embed 1`] = `
-{
-  "color": 8115825,
-  "fields": [
-    {
-      "inline": true,
-      "name": "Cost",
-      "value": "2",
-    },
-    {
-      "inline": true,
-      "name": "Rarity",
-      "value": "Common",
-    },
-  ],
-  "title": "Passive Name",
 }
 `;
 

@@ -1,13 +1,12 @@
-import * as path from "path";
 import {
     AbnoPage,
     DecoratedAbnoPage,
     Floor,
     Localization,
 } from "@ghoulean/ruina-common";
-import { readFile } from "../util/file";
+import * as path from "path";
 import { LOCALIZE_DIR } from "../util/constants";
-import { Util } from "../util/util";
+import { readFile } from "../util/file";
 
 /**
  * Generates localized maps from id to decorated abno pages
@@ -39,10 +38,10 @@ export class AbnoPageMapper {
             const decoratedAbnoPage: DecoratedAbnoPage = {
                 ...abnoPage,
                 locale: locale,
-                name: Util.cleanString(rawData["CardName"]["_text"]),
-                description: Util.cleanString(rawData["AbilityDesc"]["_text"]),
-                flavorText: Util.cleanString(rawData["FlaborText"]["_text"]), // sic
-            }
+                name: rawData["CardName"]["_text"],
+                description: rawData["AbilityDesc"]["_text"],
+                flavorText: rawData["FlaborText"]["_text"], // sic
+            };
             retVal[id] = decoratedAbnoPage;
         }
         return retVal;

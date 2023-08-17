@@ -4,6 +4,8 @@ import {
     DecoratedKeyPage,
     DecoratedPassive,
     Die,
+    DieType,
+    KeyPageResistance,
     Localization,
     LookupResult,
     Rarity,
@@ -134,42 +136,101 @@ export class EmbedTransformer {
         requestLocale: Localization
     ): DiscordEmbed {
         const embedColor: number = this.rarityToColor(keyPage.rarity);
+        const fields: DiscordEmbedFields[] = [
+            {
+                name: "HP",
+                value: String(keyPage.hp),
+                inline: true,
+            },
+            {
+                name: "Stagger",
+                value: String(keyPage.stagger),
+                inline: true,
+            },
+            {
+                name: "Speed",
+                value: `${keyPage.minBaseSpeed}-${keyPage.maxBaseSpeed}`,
+                inline: true,
+            },
+            {
+                name: "HP Resist",
+                value: this.mapResists(keyPage.hpResistances, requestLocale),
+                inline: true,
+            },
+            {
+                name: "Stagger Resist",
+                value: this.mapResists(
+                    keyPage.staggerResistances,
+                    requestLocale
+                ),
+                inline: true,
+            },
+            {
+                name: "Rarity",
+                value: keyPage.rarity,
+                inline: true,
+            },
+        ];
+
+        if (keyPage.baseLight != 3) {
+            fields.push({
+                name: "Base Light",
+                value: String(keyPage.baseLight),
+                inline: true,
+            });
+        }
+
+        if (keyPage.passiveNames.length > 0) {
+            fields.push({
+                name: "Passives",
+                value: this.mapToIndentedList(keyPage.passiveNames),
+                inline: true,
+            });
+        }
 
         return {
             title: keyPage.name,
             color: embedColor,
-            fields: [
-                {
-                    name: "Rarity",
-                    value: keyPage.rarity,
-                    inline: true,
-                },
-            ],
+            fields: fields,
         };
     }
 
     // TODO: localize via _requestLocale
     public transformPassive(
         passive: DecoratedPassive,
-        requestLocale: Localization
+        _requestLocale: Localization
     ): DiscordEmbed {
         const embedColor: number = this.rarityToColor(passive.rarity);
+        const fields: DiscordEmbedFields[] = [
+            {
+                name: "Cost",
+                value: String(passive.cost),
+                inline: true,
+            },
+            {
+                name: "Rarity",
+                value: passive.rarity,
+                inline: true,
+            },
+            {
+                name: "Description",
+                value: passive.description,
+                inline: false,
+            },
+        ];
+
+        if (!passive.canGivePassive) {
+            fields.push({
+                name: "Transferable",
+                value: "false",
+                inline: false,
+            });
+        }
 
         return {
             title: passive.name,
             color: embedColor,
-            fields: [
-                {
-                    name: "Cost",
-                    value: String(passive.cost),
-                    inline: true,
-                },
-                {
-                    name: "Rarity",
-                    value: passive.rarity,
-                    inline: true,
-                },
-            ],
+            fields: fields,
         };
     }
 
@@ -231,6 +292,23 @@ export class EmbedTransformer {
                 } ${diceDescriptions[index]}`;
             })
         );
+    }
+
+    private mapResists(
+        resists: KeyPageResistance,
+        locale: Localization
+    ): string {
+        return this.mapToIndentedList([
+            `**${dieTypeToShortString(DieType.SLASH, locale)}**: ${
+                resists[DieType.SLASH]
+            }`,
+            `**${dieTypeToShortString(DieType.PIERCE, locale)}**: ${
+                resists[DieType.PIERCE]
+            }`,
+            `**${dieTypeToShortString(DieType.BLUNT, locale)}**: ${
+                resists[DieType.BLUNT]
+            }`,
+        ]);
     }
 
     private mapToIndentedList(arr: string[]): string {

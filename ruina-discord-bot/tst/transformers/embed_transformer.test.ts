@@ -101,15 +101,33 @@ test.each([
     }
 );
 
-test("should transform key page to Discord embed", () => {
-    const discordEmbed: DiscordEmbed = embedTransformer.transformKeyPage(
-        BASE_DECORATED_KEY_PAGE,
-        DEFAULT_REQUEST_LOCALE
-    );
-    expect(discordEmbed).toMatchSnapshot();
-});
+test.each([
+    {
+        descriptor: "baselight",
+        keyPage: {
+            ...BASE_DECORATED_KEY_PAGE,
+            baseLight: 3,
+        },
+    },
+    {
+        descriptor: "baselight",
+        keyPage: {
+            ...BASE_DECORATED_KEY_PAGE,
+            baseLight: 4,
+        },
+    },
+])(
+    "should transform decorated key page to Discord embed (base light: $baselight)",
+    ({ keyPage }) => {
+        const discordEmbed: DiscordEmbed = embedTransformer.transformKeyPage(
+            keyPage,
+            DEFAULT_REQUEST_LOCALE
+        );
+        expect(discordEmbed).toMatchSnapshot();
+    }
+);
 
-test("should transform passive page to Discord embed", () => {
+test("should transform decorated passive to Discord embed", () => {
     const discordEmbed: DiscordEmbed = embedTransformer.transformPassive(
         BASE_DECORATED_PASSIVE,
         DEFAULT_REQUEST_LOCALE

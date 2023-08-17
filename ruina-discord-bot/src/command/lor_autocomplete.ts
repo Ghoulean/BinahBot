@@ -1,3 +1,4 @@
+import { LookupResult } from "@ghoulean/ruina-common";
 import { DataAccessor } from "../accessor/data_accessor";
 import { CommandResult } from "../model/command_result";
 import { Request } from "../model/request";
@@ -18,7 +19,13 @@ export class LorAutocomplete {
         const query: string = request.commandArgs[QUERY_COMMAND_ARG] as string;
         const autocompleteResults: string[] = this.dataAccessor
             .autocomplete(query)
-            .slice(0, AUTOCOMPLETE_LIMIT);
+            .slice(0, AUTOCOMPLETE_LIMIT)
+            .map((str: string) => {
+                return this.dataAccessor.lookup(str, request.locale);
+            })
+            .map((lookupResult: LookupResult) => {
+                return lookupResult.displayQuery ?? lookupResult.query;
+            });
 
         return {
             success: true,

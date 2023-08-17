@@ -4,6 +4,8 @@ const FIND_REPLACE_CHARS: { [key: string] : string } = {
     "Ⅰ": "I",
     "Ⅱ": "II",
     "Ⅲ": "III",
+    "Ⅳ": "IV",
+    "Ⅴ": "V"
 }
 
 export abstract class Util {
@@ -11,6 +13,8 @@ export abstract class Util {
      * Find and replace special characters.
      */
     public static cleanString(s: string): string {
+        // Remove diacritics
+        s = s.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         for (const k in FIND_REPLACE_CHARS) {
             const v = FIND_REPLACE_CHARS[k]
             s = s.replace(k, v);

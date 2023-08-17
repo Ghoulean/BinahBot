@@ -13,6 +13,7 @@ import {
     AmbiguityResolver,
     AmbiguousResults,
 } from "../audit/ambiguity_resolver";
+import { Util } from "../util/util";
 
 type QueryMapperLocaleResults = {
     abnoPages?: {
@@ -46,20 +47,14 @@ export class QueryMapper {
 
         for (const locale of ALL_LOCALIZATIONS) {
             const localedResults: QueryMapperLocaleResults = props[locale];
-            if (!localedResults.abnoPages) {
-                throw new Error(`Abno pages not found for locale:${locale}`);
-            }
-            if (!localedResults.combatPages) {
-                throw new Error(`Combat pages not found for locale:${locale}`);
-            }
 
             // Abno
             for (const abnoPageId in localedResults.abnoPages) {
                 const abnoPage: DecoratedAbnoPage =
                     localedResults.abnoPages[abnoPageId];
-                const query: string = abnoPage.name;
+                const query: string = Util.cleanString(abnoPage.name);
                 const abnoLookupResult: LookupResult =
-                    this.constructAbnoLookupResult(abnoPage, query);
+                    this.constructAbnoLookupResult(abnoPage);
                 if (retVal[query]) {
                     retVal[query].push(abnoLookupResult);
                 } else {
@@ -71,9 +66,9 @@ export class QueryMapper {
             for (const combatPageId in localedResults.combatPages) {
                 const combatPage: DecoratedCombatPage =
                     localedResults.combatPages[combatPageId];
-                const query: string = combatPage.name;
+                const query: string = Util.cleanString(combatPage.name);
                 const combatLookupResult: LookupResult =
-                    this.constructCombatLookupResult(combatPage, query);
+                    this.constructCombatLookupResult(combatPage);
                 if (retVal[query]) {
                     retVal[query].push(combatLookupResult);
                 } else {
@@ -85,9 +80,9 @@ export class QueryMapper {
             for (const keyPageId in localedResults.keyPages) {
                 const keyPage: DecoratedKeyPage =
                     localedResults.keyPages[keyPageId];
-                const query: string = keyPage.name;
+                const query: string = Util.cleanString(keyPage.name);
                 const keypageLookupResult: LookupResult =
-                    this.constructKeyPageLookupResult(keyPage, query);
+                    this.constructKeyPageLookupResult(keyPage);
                 if (retVal[query]) {
                     retVal[query].push(keypageLookupResult);
                 } else {
@@ -99,9 +94,9 @@ export class QueryMapper {
             for (const passiveId in localedResults.passives) {
                 const passive: DecoratedPassive =
                     localedResults.passives[passiveId];
-                const query: string = passive.name;
+                const query: string = Util.cleanString(passive.name);
                 const passiveLookupResult: LookupResult =
-                    this.constructPassiveLookupResult(passive, query);
+                    this.constructPassiveLookupResult(passive);
                 if (retVal[query]) {
                     retVal[query].push(passiveLookupResult);
                 } else {
@@ -129,11 +124,10 @@ export class QueryMapper {
     }
 
     private static constructAbnoLookupResult(
-        decoratedAbnoPage: DecoratedAbnoPage,
-        query: string
+        decoratedAbnoPage: DecoratedAbnoPage
     ): LookupResult {
         return {
-            query: query,
+            ...this.resolveDisplayQuery(decoratedAbnoPage.name),
             chapter: decoratedAbnoPage.chapter,
             locale: decoratedAbnoPage.locale,
             pageType: PageType.ABNO_PAGE,
@@ -142,11 +136,10 @@ export class QueryMapper {
     }
 
     private static constructCombatLookupResult(
-        decoratedCombatPage: DecoratedCombatPage,
-        query: string
+        decoratedCombatPage: DecoratedCombatPage
     ): LookupResult {
         return {
-            query: query,
+            ...this.resolveDisplayQuery(decoratedCombatPage.name),
             chapter: decoratedCombatPage.chapter,
             locale: decoratedCombatPage.locale,
             pageType: PageType.COMBAT_PAGE,
@@ -155,11 +148,10 @@ export class QueryMapper {
     }
 
     private static constructKeyPageLookupResult(
-        decoratedKeyPage: DecoratedKeyPage,
-        query: string
+        decoratedKeyPage: DecoratedKeyPage
     ): LookupResult {
         return {
-            query: query,
+            ...this.resolveDisplayQuery(decoratedKeyPage.name),
             chapter: decoratedKeyPage.chapter,
             locale: decoratedKeyPage.locale,
             pageType: PageType.KEY_PAGE,
@@ -168,11 +160,10 @@ export class QueryMapper {
     }
 
     private static constructPassiveLookupResult(
-        decoratedPassive: DecoratedPassive,
-        query: string
+        decoratedPassive: DecoratedPassive
     ): LookupResult {
         return {
-            query: query,
+            ...this.resolveDisplayQuery(decoratedPassive.name),
             chapter: Chapter.CANARD, // TODO: possibly calculate this based on keypage chapters?
             locale: decoratedPassive.locale,
             pageType: PageType.PASSIVE,
@@ -203,6 +194,17 @@ export class QueryMapper {
             locale: results.locale,
             pageType: PageType.DISAMBIGUATION,
             pageId: results.id,
+        };
+    }
+
+    private static resolveDisplayQuery(name: string): {
+        query: string;
+        displayQuery?: string;
+    } {
+        const cleanedQuery: string = Util.cleanString(name);
+        return {
+            query: cleanedQuery,
+            displayQuery: cleanedQuery == name ? undefined : name,
         };
     }
 }
