@@ -17,3 +17,4 @@ export enum DiscordEmbedColors {
 
 export const S3_BUCKET_NAME_ENV_KEY = "S3_BUCKET_NAME";
 export const SECRETS_ID_ENV_KEY = "SECRETS_ID";
+export const CLIENT_ID_ENV_KEY = "CLIENT_ID";

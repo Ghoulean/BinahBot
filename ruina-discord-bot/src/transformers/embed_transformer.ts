@@ -176,7 +176,7 @@ export class EmbedTransformer {
             fields.push({
                 name: "Base Light",
                 value: String(keyPage.baseLight),
-                inline: true,
+                inline: false,
             });
         }
 

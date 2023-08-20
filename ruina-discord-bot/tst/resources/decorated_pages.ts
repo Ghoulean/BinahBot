@@ -59,6 +59,7 @@ export const BASE_DECORATED_KEY_PAGE: DecoratedKeyPage = {
     passiveNames: ["passiveName1"],
     locale: Localization.ENGLISH,
     id: "pageId",
+    textId: "textId",
     hp: 1,
     stagger: 2,
     hpResistances: {

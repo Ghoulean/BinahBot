@@ -10,13 +10,17 @@ import { BlockPublicAccess, Bucket } from "aws-cdk-lib/aws-s3";
 import { Secret } from "aws-cdk-lib/aws-secretsmanager";
 import { Construct } from "constructs";
 
+export interface DiscordStackProps extends StackProps {
+    clientId: string;
+}
+
 export class DiscordStack extends Stack {
     private readonly discordBotLambda: Function;
     private readonly discordAPISecrets: Secret;
     private readonly apigw: RestApi;
     private readonly imageHostBucket: Bucket;
 
-    constructor(scope: Construct, id: string, props: StackProps) {
+    constructor(scope: Construct, id: string, props: DiscordStackProps) {
         super(scope, id);
         this.discordBotLambda = this.createDiscordBotLambda();
         this.discordAPISecrets = this.createSecret();
@@ -32,6 +36,7 @@ export class DiscordStack extends Stack {
             "SECRETS_ID",
             this.discordAPISecrets.secretName
         );
+        this.discordBotLambda.addEnvironment("CLIENT_ID", props.clientId);
     }
 
     private createSecret(): Secret {

@@ -1,8 +1,4 @@
-import {
-    Chapter,
-    Localization,
-    PageType
-} from "@ghoulean/ruina-common";
+import { Chapter, Localization } from "@ghoulean/ruina-common";
 import { DataAccessor } from "../../src/accessor/data_accessor";
 import { LorCommand } from "../../src/command/lor_command";
 import { DisambiguationResults } from "../../src/model/disambiguation_result";
@@ -10,10 +6,10 @@ import { DiscordEmbed } from "../../src/model/discord/discord_embed";
 import { Request } from "../../src/model/request";
 import { EmbedTransformer } from "../../src/transformers/embed_transformer";
 import {
-    DECORATED_ABNO_PAGE,
     BASE_DECORATED_COMBAT_PAGE,
     BASE_DECORATED_KEY_PAGE,
     BASE_DECORATED_PASSIVE,
+    DECORATED_ABNO_PAGE,
 } from "../resources/decorated_pages";
 import {
     ABNO_LOOKUP_RESULT,

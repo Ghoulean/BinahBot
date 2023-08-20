@@ -7,6 +7,7 @@ import {
 } from "aws-lambda";
 import { DataAccessor } from "./accessor/data_accessor";
 import { SecretsAccessor } from "./accessor/secrets_accessor";
+import { BinahBotCommand } from "./command/binahbot_command";
 import { LorAutocomplete } from "./command/lor_autocomplete";
 import { LorCommand } from "./command/lor_command";
 import { IndexHandler } from "./index_handler";
@@ -16,7 +17,11 @@ import { ApiTransformer } from "./transformers/api_transformer";
 import { EmbedTransformer } from "./transformers/embed_transformer";
 import { InteractionResponseBuilder } from "./transformers/interaction_response_builder";
 import { RequestTransformer } from "./transformers/request_transformer";
-import { S3_BUCKET_NAME_ENV_KEY, SECRETS_ID_ENV_KEY } from "./util/constants";
+import {
+    CLIENT_ID_ENV_KEY,
+    S3_BUCKET_NAME_ENV_KEY,
+    SECRETS_ID_ENV_KEY,
+} from "./util/constants";
 import { EnvVarRetriever } from "./util/env_var_retriever";
 
 const envVarRetriever: EnvVarRetriever = new EnvVarRetriever();
@@ -38,11 +43,16 @@ const requestTransformer: RequestTransformer = new RequestTransformer();
 
 const lorCommand: LorCommand = new LorCommand(dataAccessor, embedTransformer);
 const lorAutocomplete: LorAutocomplete = new LorAutocomplete(dataAccessor);
+const binahBotCommand: BinahBotCommand = new BinahBotCommand(
+    envVarRetriever.getRequired(CLIENT_ID_ENV_KEY)
+);
 
 const requestRouter: RequestRouter = new RequestRouter(
     lorCommand,
-    lorAutocomplete
+    lorAutocomplete,
+    binahBotCommand
 );
+
 const interactionPayloadRouter: InteractionPayloadRouter =
     new InteractionPayloadRouter(
         interactionResponseBuilder,

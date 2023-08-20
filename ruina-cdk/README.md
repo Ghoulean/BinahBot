@@ -1,1 +1,7 @@
-https://gemisis.medium.com/building-a-serverless-discord-bot-on-aws-5dc7d972c9c6
+# ruina-cdk
+
+Deploys BinahBot to AWS
+
+Prerequisites: <todo>
+
+Populate `.env` with `CLIENT_ID="<Discord application id>"`

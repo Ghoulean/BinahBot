@@ -1,4 +1,5 @@
 import { Chapter, Localization } from "@ghoulean/ruina-common";
+import { BinahBotCommand } from "../../src/command/binahbot_command";
 import { LorAutocomplete } from "../../src/command/lor_autocomplete";
 import { LorCommand } from "../../src/command/lor_command";
 import { CommandResult } from "../../src/model/command_result";
@@ -23,11 +24,18 @@ const mockLorCommand = new (<new () => LorCommand>(
 const mockLorAutocomplete = new (<new () => LorAutocomplete>(
     LorAutocomplete
 ))() as jest.Mocked<LorAutocomplete>;
+const mockBinahBotCommand = new (<new () => BinahBotCommand>(
+    BinahBotCommand
+))() as jest.Mocked<BinahBotCommand>;
 
 let requestRouter: RequestRouter;
 
 beforeEach(() => {
-    requestRouter = new RequestRouter(mockLorCommand, mockLorAutocomplete);
+    requestRouter = new RequestRouter(
+        mockLorCommand,
+        mockLorAutocomplete,
+        mockBinahBotCommand
+    );
 });
 
 test("should route lor commands to lor command and bubble result", () => {
@@ -53,6 +61,19 @@ test("should route lor autocomplete to lor autocomplete and bubble result", () =
     };
 
     mockLorAutocomplete.autocomplete.mockReturnValueOnce(COMMAND_RESULT);
+
+    expect(requestRouter.routeRequest(request)).toBe(COMMAND_RESULT);
+});
+
+test("should route binahbot commands to binahbot command and bubble result", () => {
+    mockBinahBotCommand.invoke = jest.fn();
+
+    const request: Request = {
+        ...BASE_REQUEST,
+        command: "binahbot",
+    };
+
+    mockBinahBotCommand.invoke.mockReturnValueOnce(COMMAND_RESULT);
 
     expect(requestRouter.routeRequest(request)).toBe(COMMAND_RESULT);
 });
