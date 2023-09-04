@@ -18,6 +18,7 @@ import {
     KEYPAGE_LOOKUP_RESULT,
     PASSIVE_LOOKUP_RESULT,
 } from "../resources/lookup_results";
+import { CommandResult } from "../../src/model/command_result";
 
 const INTERACTION_TOKEN: string = "interactionToken";
 
@@ -50,6 +51,11 @@ const DISCORD_EMBED: DiscordEmbed = {
     fields: [],
 };
 
+const SUCCESS_COMMAND_RESULT: CommandResult = {
+    success: true,
+    embed: DISCORD_EMBED
+}
+
 const mockDataAccessor = new (<new () => DataAccessor>(
     DataAccessor
 ))() as jest.Mocked<DataAccessor>;
@@ -74,10 +80,7 @@ test("should send abno page embed to Discord on invocation with abno page", () =
     );
     embedTransformer.transformAbnoPage.mockReturnValueOnce(DISCORD_EMBED);
 
-    expect(lorCommand.invoke(REQUEST_WITH_LOCALE)).toEqual({
-        success: true,
-        payload: DISCORD_EMBED,
-    });
+    expect(lorCommand.invoke(REQUEST_WITH_LOCALE)).toEqual(SUCCESS_COMMAND_RESULT);
 });
 
 test("should send combat page embed to Discord on invocation with combat page", () => {
@@ -91,10 +94,7 @@ test("should send combat page embed to Discord on invocation with combat page", 
     );
     embedTransformer.transformCombatPage.mockReturnValueOnce(DISCORD_EMBED);
 
-    expect(lorCommand.invoke(REQUEST_WITH_LOCALE)).toEqual({
-        success: true,
-        payload: DISCORD_EMBED,
-    });
+    expect(lorCommand.invoke(REQUEST_WITH_LOCALE)).toEqual(SUCCESS_COMMAND_RESULT);
 });
 
 test("should send key page embed to Discord on invocation with key page", () => {
@@ -108,10 +108,7 @@ test("should send key page embed to Discord on invocation with key page", () => 
     );
     embedTransformer.transformKeyPage.mockReturnValueOnce(DISCORD_EMBED);
 
-    expect(lorCommand.invoke(REQUEST_WITH_LOCALE)).toEqual({
-        success: true,
-        payload: DISCORD_EMBED,
-    });
+    expect(lorCommand.invoke(REQUEST_WITH_LOCALE)).toEqual(SUCCESS_COMMAND_RESULT);
 });
 
 test("should send passive embed to Discord on invocation with passive page", () => {
@@ -125,10 +122,7 @@ test("should send passive embed to Discord on invocation with passive page", () 
     );
     embedTransformer.transformPassive.mockReturnValueOnce(DISCORD_EMBED);
 
-    expect(lorCommand.invoke(REQUEST_WITH_LOCALE)).toEqual({
-        success: true,
-        payload: DISCORD_EMBED,
-    });
+    expect(lorCommand.invoke(REQUEST_WITH_LOCALE)).toEqual(SUCCESS_COMMAND_RESULT);
 });
 
 test("should send disambiguation page embed to Discord on invocation with page that requires disambiguation", () => {
@@ -144,10 +138,7 @@ test("should send disambiguation page embed to Discord on invocation with page t
         DISCORD_EMBED
     );
 
-    expect(lorCommand.invoke(REQUEST_WITH_LOCALE)).toEqual({
-        success: true,
-        payload: DISCORD_EMBED,
-    });
+    expect(lorCommand.invoke(REQUEST_WITH_LOCALE)).toEqual(SUCCESS_COMMAND_RESULT);
 });
 
 test("should return no page found when lookup returns no page", () => {
@@ -159,10 +150,7 @@ test("should return no page found when lookup returns no page", () => {
     });
     embedTransformer.noResultsFoundEmbed.mockReturnValueOnce(DISCORD_EMBED);
 
-    expect(lorCommand.invoke(REQUEST_WITH_LOCALE)).toEqual({
-        success: true,
-        payload: DISCORD_EMBED,
-    });
+    expect(lorCommand.invoke(REQUEST_WITH_LOCALE)).toEqual(SUCCESS_COMMAND_RESULT);
 });
 
 test("should fail when lookup returns abno page but abno page can't be found", () => {

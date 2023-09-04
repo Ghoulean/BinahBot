@@ -11,8 +11,9 @@ import { BinahBotCommand } from "./command/binahbot_command";
 import { LorAutocomplete } from "./command/lor_autocomplete";
 import { LorCommand } from "./command/lor_command";
 import { IndexHandler } from "./index_handler";
+import { AutocompleteRouter } from "./router/autocomplete_router";
+import { CommandRouter } from "./router/command_router";
 import { InteractionPayloadRouter } from "./router/interaction_payload_router";
-import { RequestRouter } from "./router/request_router";
 import { ApiTransformer } from "./transformers/api_transformer";
 import { EmbedTransformer } from "./transformers/embed_transformer";
 import { InteractionResponseBuilder } from "./transformers/interaction_response_builder";
@@ -47,17 +48,20 @@ const binahBotCommand: BinahBotCommand = new BinahBotCommand(
     envVarRetriever.getRequired(CLIENT_ID_ENV_KEY)
 );
 
-const requestRouter: RequestRouter = new RequestRouter(
+const commandRouter: CommandRouter = new CommandRouter(
     lorCommand,
-    lorAutocomplete,
     binahBotCommand
+);
+const autocompleteRouter: AutocompleteRouter = new AutocompleteRouter(
+    lorAutocomplete
 );
 
 const interactionPayloadRouter: InteractionPayloadRouter =
     new InteractionPayloadRouter(
         interactionResponseBuilder,
         requestTransformer,
-        requestRouter,
+        commandRouter,
+        autocompleteRouter,
         secretsAccessor
     );
 

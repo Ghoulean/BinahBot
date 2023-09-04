@@ -36,7 +36,7 @@ export class BinahBotCommand {
     public invoke(_request: Request): CommandResult {
         return {
             success: true,
-            payload: this.discordEmbed,
+            embed: this.discordEmbed,
         };
     }
 

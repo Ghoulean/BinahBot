@@ -1,7 +1,9 @@
+import {
+    AutocompleteResult,
+    CommandResult,
+} from "../../src/model/command_result";
 import { DiscordEmbed } from "../../src/model/discord/discord_embed";
-import { DiscordInteractionOptions } from "../../src/model/discord/discord_interaction";
 import { InteractionResponseBuilder } from "../../src/transformers/interaction_response_builder";
-import { DiscordInteractionTypes } from "../../src/util/constants";
 
 const DISCORD_EMBED: DiscordEmbed = {
     fields: [],
@@ -9,11 +11,19 @@ const DISCORD_EMBED: DiscordEmbed = {
 
 const DISCORD_AUTOCOMPLETE_LENGTH: number = 3;
 
-const DISCORD_AUTOCOMPLETE: DiscordInteractionOptions[] = Array(
-    DISCORD_AUTOCOMPLETE_LENGTH
-).fill({ name: "Name", value: "value" });
+const DISCORD_AUTOCOMPLETE: string[] = Array(DISCORD_AUTOCOMPLETE_LENGTH).fill(
+    "autocomplete option"
+);
 
-const BAD_REQUEST_TYPE: number = 9999;
+const COMMAND_RESULT: CommandResult = {
+    success: true,
+    embed: DISCORD_EMBED,
+};
+
+const AUTOCOMPLETE_RESULT: AutocompleteResult = {
+    success: true,
+    choices: DISCORD_AUTOCOMPLETE,
+};
 
 let interactionResponseBuilder: InteractionResponseBuilder;
 
@@ -22,34 +32,21 @@ beforeEach(() => {
 });
 
 test("should built response for pings", () => {
-    expect(
-        interactionResponseBuilder.buildResponse(
-            DiscordInteractionTypes.PING,
-            null
-        )
-    ).toMatchSnapshot();
+    expect(interactionResponseBuilder.buildPingResponse()).toMatchSnapshot();
 });
 
 test("should built response for commands", () => {
     expect(
-        interactionResponseBuilder.buildResponse(
-            DiscordInteractionTypes.APPLICATION_COMMAND,
-            DISCORD_EMBED
+        interactionResponseBuilder.buildApplicationCommandResponse(
+            COMMAND_RESULT
         )
     ).toMatchSnapshot();
 });
 
 test("should built response for autocomplete", () => {
     expect(
-        interactionResponseBuilder.buildResponse(
-            DiscordInteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE,
-            DISCORD_AUTOCOMPLETE
+        interactionResponseBuilder.buildAutocompleteResponse(
+            AUTOCOMPLETE_RESULT
         )
     ).toMatchSnapshot();
-});
-
-test("should error on bad request type", () => {
-    expect(() => {
-        interactionResponseBuilder.buildResponse(BAD_REQUEST_TYPE, null);
-    }).toThrow();
 });

@@ -1,32 +1,36 @@
 import { sign } from "tweetnacl";
 import { SecretsAccessor } from "../accessor/secrets_accessor";
-import { CommandResult } from "../model/command_result";
+import { AutocompleteResult, CommandResult } from "../model/command_result";
 import {
     DiscordInteraction,
     DiscordInteractionResponse,
 } from "../model/discord/discord_interaction";
 import { DiscordSecrets } from "../model/discord/discord_secrets";
 import { Request } from "../model/request";
-import { RequestRouter } from "../router/request_router";
 import { InteractionResponseBuilder } from "../transformers/interaction_response_builder";
 import { RequestTransformer } from "../transformers/request_transformer";
 import { DiscordInteractionTypes } from "../util/constants";
+import { AutocompleteRouter } from "./autocomplete_router";
+import { CommandRouter } from "./command_router";
 
 export class InteractionPayloadRouter {
     private readonly interactionResponseBuilder: InteractionResponseBuilder;
     private readonly requestTransformer: RequestTransformer;
-    private readonly requestRouter: RequestRouter;
+    private readonly commandRouter: CommandRouter;
+    private readonly autocompleteRouter: AutocompleteRouter;
     private readonly secretsAccessor: SecretsAccessor;
 
     constructor(
         interactionResponseBuilder: InteractionResponseBuilder,
         requestTransformer: RequestTransformer,
-        requestRouter: RequestRouter,
+        commandRouter: CommandRouter,
+        autocompleteRouter: AutocompleteRouter,
         secretsAccessor: SecretsAccessor
     ) {
         this.interactionResponseBuilder = interactionResponseBuilder;
         this.requestTransformer = requestTransformer;
-        this.requestRouter = requestRouter;
+        this.commandRouter = commandRouter;
+        this.autocompleteRouter = autocompleteRouter;
         this.secretsAccessor = secretsAccessor;
     }
 
@@ -39,25 +43,29 @@ export class InteractionPayloadRouter {
         }
         switch (interaction.type) {
             case DiscordInteractionTypes.PING: {
-                return this.interactionResponseBuilder.buildResponse(
-                    interaction.type,
-                    null
-                );
+                return this.interactionResponseBuilder.buildPingResponse();
             }
-            case DiscordInteractionTypes.APPLICATION_COMMAND:
-            case DiscordInteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE: {
+            case DiscordInteractionTypes.APPLICATION_COMMAND: {
                 const request: Request =
                     this.requestTransformer.transformInteractionToRequest(
                         interaction
                     );
                 const commandResult: CommandResult =
-                    this.requestRouter.routeRequest(request);
-                if (commandResult.success) {
-                    return this.interactionResponseBuilder.buildResponse(
-                        interaction.type,
-                        commandResult.payload
+                    this.commandRouter.routeRequest(request);
+                return this.interactionResponseBuilder.buildApplicationCommandResponse(
+                    commandResult
+                );
+            }
+            case DiscordInteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE: {
+                const request: Request =
+                    this.requestTransformer.transformInteractionToRequest(
+                        interaction
                     );
-                }
+                const commandResult: AutocompleteResult =
+                    this.autocompleteRouter.routeRequest(request);
+                return this.interactionResponseBuilder.buildAutocompleteResponse(
+                    commandResult
+                );
             }
         }
         throw new Error("Bad request");

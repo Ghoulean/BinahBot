@@ -1,6 +1,6 @@
 import { LookupResult } from "@ghoulean/ruina-common";
 import { DataAccessor } from "../accessor/data_accessor";
-import { CommandResult } from "../model/command_result";
+import { AutocompleteResult, CommandResult } from "../model/command_result";
 import { Request } from "../model/request";
 
 // TODO: think about where these constants go
@@ -15,7 +15,7 @@ export class LorAutocomplete {
         this.dataAccessor = dataAccessor;
     }
 
-    public autocomplete(request: Request): CommandResult {
+    public autocomplete(request: Request): AutocompleteResult {
         const query: string = request.commandArgs[QUERY_COMMAND_ARG] as string;
         const autocompleteResults: string[] = this.dataAccessor
             .autocomplete(query)
@@ -29,7 +29,7 @@ export class LorAutocomplete {
 
         return {
             success: true,
-            payload: autocompleteResults,
+            choices: autocompleteResults,
         };
     }
 }

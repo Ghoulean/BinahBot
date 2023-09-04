@@ -1,7 +1,7 @@
 import { Chapter, Localization } from "@ghoulean/ruina-common";
 import { sign } from "tweetnacl";
 import { SecretsAccessor } from "../../src/accessor/secrets_accessor";
-import { CommandResult } from "../../src/model/command_result";
+import { AutocompleteResult, CommandResult } from "../../src/model/command_result";
 import {
     DiscordInteraction,
     DiscordInteractionResponse,
@@ -13,6 +13,8 @@ import { RequestRouter } from "../../src/router/request_router";
 import { InteractionResponseBuilder } from "../../src/transformers/interaction_response_builder";
 import { RequestTransformer } from "../../src/transformers/request_transformer";
 import { DiscordInteractionTypes } from "../../src/util/constants";
+import { CommandRouter } from "../../src/router/command_router";
+import { AutocompleteRouter } from "../../src/router/autocomplete_router";
 
 jest.mock("tweetnacl");
 
@@ -47,6 +49,9 @@ const REQUEST: Request = {
 const COMMAND_RESULT: CommandResult = {
     success: true,
 };
+const AUTOCOMPLETE_RESULT: AutocompleteResult = {
+    success: true,
+};
 
 const DISCORD_INTERACTION_RESPONSE: DiscordInteractionResponse = {
     type: 0,
@@ -58,9 +63,12 @@ const mockInteractionResponseBuilder = new (<
 const mockRequestTransformer = new (<new () => RequestTransformer>(
     RequestTransformer
 ))() as jest.Mocked<RequestTransformer>;
-const mockRequestRouter = new (<new () => RequestRouter>(
-    RequestRouter
-))() as jest.Mocked<RequestRouter>;
+const mockCommandRouter = new (<new () => CommandRouter>(
+    CommandRouter
+))() as jest.Mocked<CommandRouter>;
+const mockAutocompleteRouter = new (<new () => AutocompleteRouter>(
+    AutocompleteRouter
+))() as jest.Mocked<AutocompleteRouter>;
 const mockSecretsAccessor = new (<new () => SecretsAccessor>(
     SecretsAccessor
 ))() as jest.Mocked<SecretsAccessor>;
@@ -72,7 +80,8 @@ beforeEach(() => {
     interactionPayloadRouter = new InteractionPayloadRouter(
         mockInteractionResponseBuilder,
         mockRequestTransformer,
-        mockRequestRouter,
+        mockCommandRouter,
+        mockAutocompleteRouter,
         mockSecretsAccessor
     );
 });
@@ -84,9 +93,9 @@ test("should fast return on ping interactions", () => {
     };
 
     setupVerifyMocks();
-    mockInteractionResponseBuilder.buildResponse = jest.fn();
+    mockInteractionResponseBuilder.buildPingResponse = jest.fn();
 
-    mockInteractionResponseBuilder.buildResponse.mockReturnValueOnce(
+    mockInteractionResponseBuilder.buildPingResponse.mockReturnValueOnce(
         DISCORD_INTERACTION_RESPONSE
     );
 
@@ -98,10 +107,7 @@ test("should fast return on ping interactions", () => {
 test.each([
     {
         descriptor: "command",
-        interaction: {
-            ...BASE_INTERACTION,
-            type: DiscordInteractionTypes.APPLICATION_COMMAND,
-        },
+        
     },
     {
         descriptor: "autocomplete",
@@ -110,22 +116,27 @@ test.each([
             type: DiscordInteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE,
         },
     },
-])(
-    "should route $descriptor interactions to request router",
-    async ({ interaction }) => {
+])
+
+test("should route command interactions to command router",
+    async () => {
         setupVerifyMocks();
         mockRequestTransformer.transformInteractionToRequest = jest.fn();
-        mockRequestRouter.routeRequest = jest.fn();
-        mockInteractionResponseBuilder.buildResponse = jest.fn();
+        mockCommandRouter.routeRequest = jest.fn();
+        mockInteractionResponseBuilder.buildApplicationCommandResponse = jest.fn();
 
         mockRequestTransformer.transformInteractionToRequest.mockReturnValueOnce(
             REQUEST
         );
-        mockRequestRouter.routeRequest.mockReturnValueOnce(COMMAND_RESULT);
-        mockInteractionResponseBuilder.buildResponse.mockReturnValueOnce(
+        mockCommandRouter.routeRequest.mockReturnValueOnce(COMMAND_RESULT);
+        mockInteractionResponseBuilder.buildApplicationCommandResponse.mockReturnValueOnce(
             DISCORD_INTERACTION_RESPONSE
         );
 
+        const interaction: DiscordInteraction = {
+            ...BASE_INTERACTION,
+            type: DiscordInteractionTypes.APPLICATION_COMMAND,
+        };
         const interactionResponse: DiscordInteractionResponse =
             await interactionPayloadRouter.routeInteractionPayload(interaction);
 
@@ -143,23 +154,74 @@ test.each([
             mockRequestTransformer.transformInteractionToRequest.mock
                 .calls[0][0]
         ).toEqual(interaction);
-        expect(mockRequestRouter.routeRequest.mock.calls.length).toBe(1);
-        expect(mockRequestRouter.routeRequest.mock.calls[0].length).toBe(1);
-        expect(mockRequestRouter.routeRequest.mock.calls[0][0]).toEqual(
+        expect(mockCommandRouter.routeRequest.mock.calls.length).toBe(1);
+        expect(mockCommandRouter.routeRequest.mock.calls[0].length).toBe(1);
+        expect(mockCommandRouter.routeRequest.mock.calls[0][0]).toEqual(
             REQUEST
         );
         expect(
-            mockInteractionResponseBuilder.buildResponse.mock.calls.length
+            mockInteractionResponseBuilder.buildApplicationCommandResponse.mock.calls.length
         ).toBe(1);
         expect(
-            mockInteractionResponseBuilder.buildResponse.mock.calls[0].length
-        ).toBe(2);
+            mockInteractionResponseBuilder.buildApplicationCommandResponse.mock.calls[0].length
+        ).toBe(1);
         expect(
-            mockInteractionResponseBuilder.buildResponse.mock.calls[0][0]
-        ).toEqual(interaction.type);
+            mockInteractionResponseBuilder.buildApplicationCommandResponse.mock.calls[0][0]
+        ).toEqual(COMMAND_RESULT);
+    }
+);
+
+
+test("should route autocomplete interactions to autocomplete router",
+    async () => {
+        setupVerifyMocks();
+        mockRequestTransformer.transformInteractionToRequest = jest.fn();
+        mockAutocompleteRouter.routeRequest = jest.fn();
+        mockInteractionResponseBuilder.buildAutocompleteResponse = jest.fn();
+
+        mockRequestTransformer.transformInteractionToRequest.mockReturnValueOnce(
+            REQUEST
+        );
+        mockAutocompleteRouter.routeRequest.mockReturnValueOnce(AUTOCOMPLETE_RESULT);
+        mockInteractionResponseBuilder.buildAutocompleteResponse.mockReturnValueOnce(
+            DISCORD_INTERACTION_RESPONSE
+        );
+
+        const interaction: DiscordInteraction = {
+            ...BASE_INTERACTION,
+            type: DiscordInteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE,
+        };
+        const interactionResponse: DiscordInteractionResponse =
+            await interactionPayloadRouter.routeInteractionPayload(interaction);
+
+        expect(interactionResponse).toEqual(DISCORD_INTERACTION_RESPONSE);
+
         expect(
-            mockInteractionResponseBuilder.buildResponse.mock.calls[0][1]
-        ).toEqual(COMMAND_RESULT.payload);
+            mockRequestTransformer.transformInteractionToRequest.mock.calls
+                .length
+        ).toBe(1);
+        expect(
+            mockRequestTransformer.transformInteractionToRequest.mock.calls[0]
+                .length
+        ).toBe(1);
+        expect(
+            mockRequestTransformer.transformInteractionToRequest.mock
+                .calls[0][0]
+        ).toEqual(interaction);
+        expect(mockAutocompleteRouter.routeRequest.mock.calls.length).toBe(1);
+        expect(mockAutocompleteRouter.routeRequest.mock.calls[0].length).toBe(1);
+        expect(mockAutocompleteRouter.routeRequest.mock.calls[0][0]).toEqual(
+            REQUEST
+        );
+        expect(
+            mockInteractionResponseBuilder.buildAutocompleteResponse.mock.calls.length
+        ).toBe(1);
+        expect(
+            mockInteractionResponseBuilder.buildAutocompleteResponse.mock.calls[0].length
+        ).toBe(1);
+        expect(
+            mockInteractionResponseBuilder.buildAutocompleteResponse.mock.calls[0][0]
+        ).toEqual(AUTOCOMPLETE_RESULT);
     }
 );
 

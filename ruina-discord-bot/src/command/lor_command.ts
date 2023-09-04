@@ -46,7 +46,7 @@ export class LorCommand {
         } catch (e: unknown) {
             return {
                 success: true,
-                payload: this.embedTransformer.noResultsFoundEmbed(
+                embed: this.embedTransformer.noResultsFoundEmbed(
                     query,
                     request.locale
                 ),
@@ -169,7 +169,7 @@ export class LorCommand {
 
         return {
             success: true,
-            payload: embed,
+            embed: embed,
         };
     }
 }

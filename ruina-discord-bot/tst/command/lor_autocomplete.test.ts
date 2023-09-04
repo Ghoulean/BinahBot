@@ -1,7 +1,7 @@
 import { Chapter, Localization } from "@ghoulean/ruina-common";
 import { DataAccessor } from "../../src/accessor/data_accessor";
 import { LorAutocomplete } from "../../src/command/lor_autocomplete";
-import { CommandResult } from "../../src/model/command_result";
+import { AutocompleteResult, CommandResult } from "../../src/model/command_result";
 import { Request } from "../../src/model/request";
 import { ABNO_LOOKUP_RESULT } from "../resources/lookup_results";
 
@@ -41,11 +41,11 @@ test("should return autocomplete results", () => {
         displayQuery: "displayQuery"
     }).mockReturnValue(ABNO_LOOKUP_RESULT);
 
-    const commandResult: CommandResult = lorAutocomplete.autocomplete(REQUEST);
+    const autocompleteResult: AutocompleteResult = lorAutocomplete.autocomplete(REQUEST);
 
-    expect(commandResult.success).toBe(true);
-    expect((commandResult.payload as string[]).length).toBeLessThan(
+    expect(autocompleteResult.success).toBe(true);
+    expect(autocompleteResult.choices?.length).toBeLessThan(
         LARGE_AUTOCOMPLETE_SEARCH
     );
-    expect(commandResult).toMatchSnapshot();
+    expect(autocompleteResult).toMatchSnapshot();
 });

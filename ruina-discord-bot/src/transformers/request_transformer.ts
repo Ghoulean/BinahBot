@@ -34,10 +34,7 @@ export class RequestTransformer {
             commandArgs: commandArgs,
             interactionToken: interaction.token,
             locale: Util.deserializeDiscordLocale(locale),
-            chapter: this.getChapter(interaction.channel_id),
-            autocomplete:
-                interaction.type ==
-                DiscordInteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE,
+            chapter: this.getChapter(interaction.channel_id)
         };
     }
 

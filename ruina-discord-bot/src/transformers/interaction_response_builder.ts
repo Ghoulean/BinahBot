@@ -1,3 +1,4 @@
+import { AutocompleteResult, CommandResult } from "../model/command_result";
 import { DiscordEmbed } from "../model/discord/discord_embed";
 import {
     DiscordInteractionResponse,
@@ -15,29 +16,16 @@ const PING_RESPONSE: DiscordInteractionResponse = {
 };
 
 export class InteractionResponseBuilder {
-    public buildResponse(
-        requestType: number,
-        data: unknown
-    ): DiscordInteractionResponse {
-        switch (requestType) {
-            case DiscordInteractionTypes.PING:
-                return PING_RESPONSE;
-            case DiscordInteractionTypes.APPLICATION_COMMAND:
-                return this.buildCommandResponse(data as DiscordEmbed);
-            case DiscordInteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE:
-                return this.buildAutocompleteResponse(data as string[]);
-            default:
-                throw new Error(
-                    `Unrecognized or unsupported request type ${requestType}`
-                );
-        }
+    public buildPingResponse(): DiscordInteractionResponse {
+        return PING_RESPONSE;
     }
 
-    private buildCommandResponse(
-        embed: DiscordEmbed
+    public buildApplicationCommandResponse(
+        commandResult: CommandResult
     ): DiscordInteractionResponse {
+        // TODO: handle success/fail here
         const discordPayload: DiscordInteractionResponseMessage = {
-            embeds: [embed],
+            embeds: [commandResult.embed!],
         };
         return {
             type: MESSAGE_DISCORD_INTERACTION_TYPE,
@@ -45,11 +33,12 @@ export class InteractionResponseBuilder {
         };
     }
 
-    private buildAutocompleteResponse(
-        choices: string[]
+    public buildAutocompleteResponse(
+        autocompleteResult: AutocompleteResult
     ): DiscordInteractionResponse {
+        // TODO: handle success/fail here
         const discordPayload: DiscordInteractionResponseAutocomplete = {
-            choices: choices.map((s: string) => {
+            choices: autocompleteResult.choices!.map((s: string) => {
                 return {
                     name: s,
                     value: s,
