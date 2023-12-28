@@ -1,0 +1,17 @@
+[package]
+name = "ruina_reparser"
+version = "1.0.0"
+edition = "2021"
+build = "build/main.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+phf = { version = "0.11.2", default-features = false }
+ruina_common = { path = "../ruina_common", version = "1.0.0" }
+
+[build-dependencies]
+phf = { version = "0.11.2", default-features = false }
+phf_codegen = "0.11.2"
+roxmltree = "0.19.0"
+ruina_common = { path = "../ruina_common", version = "1.0.0" }
