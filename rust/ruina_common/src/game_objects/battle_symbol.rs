@@ -1,4 +1,4 @@
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, strum_macros::Display)]
 pub enum BattleSymbolSlot {
     Eye,
     Nose,
@@ -12,9 +12,11 @@ pub enum BattleSymbolSlot {
     None,
 }
 
+#[derive(Debug)]
 pub struct BattleSymbol<'a> {
     pub id: &'a str,
     pub internal_name: &'a str,
+    // TODO: change resource to Option<&str>
     pub resource: &'a str,
     pub slot: BattleSymbolSlot,
     pub hidden: bool,

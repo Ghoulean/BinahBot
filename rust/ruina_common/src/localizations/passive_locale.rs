@@ -1,3 +1,4 @@
+#[derive(Debug)]
 pub struct PassiveLocale<'a> {
     pub id: &'a str,
     pub name: &'a str,

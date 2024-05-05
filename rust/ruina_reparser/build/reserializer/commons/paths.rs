@@ -11,7 +11,7 @@ pub fn game_obj_path() -> &'static PathBuf {
     GAME_OBJ_PATH.get_or_init(|| PathBuf::from("./BaseMod/StaticInfo"))
 }
 
-// todo: hashmap not a vec of entries wtf
+// todo: hashmap not a vec of entries
 pub fn localize_paths() -> &'static Vec<(Locale, PathBuf)> {
     static LOCALIZE_PATHS: OnceLock<Vec<(Locale, PathBuf)>> = OnceLock::new();
     LOCALIZE_PATHS.get_or_init(||
@@ -23,12 +23,6 @@ pub fn localize_paths() -> &'static Vec<(Locale, PathBuf)> {
             (Locale::TraditionalChinese, PathBuf::from("./BaseMod/Localize/trcn"))
         ]
     )
-}
-
-// TODO: env var this
-pub fn _outfile_path() -> &'static PathBuf {
-    static OUTFILE_PATH: OnceLock<PathBuf> = OnceLock::new();
-    OUTFILE_PATH.get_or_init(|| PathBuf::from("./build/out.rs"))
 }
 
 pub fn read_xml_files_in_dir(dir: &PathBuf) -> Vec<(PathBuf, String)> {

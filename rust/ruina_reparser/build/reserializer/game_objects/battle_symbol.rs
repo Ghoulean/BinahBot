@@ -17,19 +17,25 @@ fn battle_symbol_path() -> &'static PathBuf {
 }
 
 pub fn reserialize_battle_symbols() -> String {
-    let battle_symbols: Vec<String> = read_xml_files_in_dir(battle_symbol_path())
+    let battle_symbols: Vec<(String, String)> = read_xml_files_in_dir(battle_symbol_path())
         .into_iter()
         .map(|path_and_document_string| path_and_document_string.1)
         .flat_map(|document_string| process_battle_symbol_file(document_string.as_str()))
         .collect();
+
+    let mut builder = phf_codegen::Map::new();
+    for (id, battle_symbol_entry) in battle_symbols {
+        builder.entry(
+            id.clone(), &battle_symbol_entry
+        );
+    }
     format!(
-        "pub const BATTLE_SYMBOLS: [BattleSymbol; {}] = [{}];",
-        battle_symbols.len(),
-        battle_symbols.join(",")
+        "static BATTLE_SYMBOLS: phf::Map<&'static str, BattleSymbol> = {};",
+        builder.build()
     )
 }
 
-fn process_battle_symbol_file(document_string: &str) -> Vec<String> {
+fn process_battle_symbol_file(document_string: &str) -> Vec<(String, String)> {
     let doc: Box<Document> = Box::new(Document::parse(document_string).unwrap());
     let xml_root_node = get_unique_node(doc.root(), "GiftXmlRoot").unwrap();
     let battle_symbol_node_list = get_nodes(xml_root_node, "Gift");
@@ -40,10 +46,13 @@ fn process_battle_symbol_file(document_string: &str) -> Vec<String> {
         .collect()
 }
 
-fn parse_battle_symbol(battle_symbol_node: Node) -> String {
+fn parse_battle_symbol(battle_symbol_node: Node) -> (String, String) {
     let id = battle_symbol_node.attribute("ID").unwrap();
-    // Unsure why empty string results in exclusion from the XML tree, possibly limitation with XML library
+    // Unsure why empty string results in exclusion from the generated XML tree,
+    // possibly a limitation with XML library
     let internal_name = get_unique_node_text(battle_symbol_node, "Name").unwrap_or("");
+
+    // TODO - change this to optional
     let resource = get_unique_node_text(battle_symbol_node, "Resource").unwrap_or("");
     let slot = get_battle_symbol_slot_from_str(
         get_unique_node_text(battle_symbol_node, "Position").unwrap(),
@@ -53,7 +62,7 @@ fn parse_battle_symbol(battle_symbol_node: Node) -> String {
         .unwrap_or(false);
     let count = serialize_option(get_unique_node_text(battle_symbol_node, "Count"));
 
-    format!(
+    (internal_name.to_string(), format!(
         "BattleSymbol {{
         id: \"{id}\",
         internal_name: \"{internal_name}\",
@@ -62,7 +71,7 @@ fn parse_battle_symbol(battle_symbol_node: Node) -> String {
         hidden: {hidden},
         count: {count}
     }}"
-    )
+    ))
 }
 
 fn get_battle_symbol_slot_from_str(str: &str) -> BattleSymbolSlot {

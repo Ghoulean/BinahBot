@@ -74,16 +74,16 @@ fn process_key_page_locale_file(document_string: &str) -> HashMap<String, String
 }
 
 fn parse_key_page_locale(node: Node) -> (String, String) {
-    let id = node.attribute("BookID").unwrap();
+    let text_id = node.attribute("BookID").unwrap();
     let name = get_unique_node_text(node, "BookName").unwrap_or("");
     let text_list = get_unique_node(node, "TextList").unwrap();
     let description = serialize_str_vector(get_nodes_text(text_list, "Desc"));
 
     (
-        String::from(id),
+        String::from(text_id),
         format!(
             "KeyPageLocale {{
-            id: \"{id}\",
+            text_id: \"{text_id}\",
             name: r#\"{name}\"#,
             description: {description},
         }}"

@@ -1,0 +1,27 @@
+[package]
+name = "binah_bot"
+version = "1.0.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+aws-config = { version = "1.1.7", features = ["behavior-version-latest"] }
+aws-sdk-secretsmanager = "1.22.0"
+ed25519-dalek = "2.1.1"
+futures = "0.3"
+hex = "0.4"
+http = "1.1.0"
+lambda_http = "0.11.1"
+phf = { version = "0.11.2", default-features = false }
+ruina_common = { path = "../ruina_common", version = "1.0.0" }
+ruina_index = { path = "../ruina_index", version = "1.0.0" }
+ruina_reparser = { path = "../ruina_reparser", version = "1.0.0" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_repr = "0.1"
+strum = { version = "0.26", features = ["derive"] }
+strum_macros = "0.26"
+tokio = { version = "1", features = ["macros"] }
+tracing = { version = "0.1.38" }
+tracing-subscriber = "0.3"

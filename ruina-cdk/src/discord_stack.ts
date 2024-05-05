@@ -5,10 +5,17 @@ import {
     RequestValidator,
     RestApi,
 } from "aws-cdk-lib/aws-apigateway";
-import { Code, Function, Runtime } from "aws-cdk-lib/aws-lambda";
+import { Architecture, Code, Function, Runtime } from "aws-cdk-lib/aws-lambda";
 import { BlockPublicAccess, Bucket } from "aws-cdk-lib/aws-s3";
 import { Secret } from "aws-cdk-lib/aws-secretsmanager";
 import { Construct } from "constructs";
+
+// todo: move to (more) sane location with npm script
+const BOOTSTRAP_LOCATION = `../rust/target/lambda/binah_bot/bootstrap.zip`;
+
+// The handler value syntax is `{cargo-package-name}.{bin-name}`.
+// source: https://github.com/codetalkio/patterns-serverless-rust-minimal/blob/bb36e3dc1a28d709511c4252f7bf880c363fccdb/deployment/lib/lambda-stack.ts#L23C25-L23C90
+const FUNCTION_HANDLER = "binah_bot.bootstrap";
 
 export interface DiscordStackProps extends StackProps {
     clientId: string;
@@ -45,11 +52,12 @@ export class DiscordStack extends Stack {
 
     private createDiscordBotLambda(): Function {
         return new Function(this, "DiscordBotFunction", {
-            runtime: Runtime.NODEJS_18_X,
-            handler: "build/src.handler",
-            code: Code.fromAsset("../ruina-discord-bot/ruina-discord-bot.zip"),
+            runtime: Runtime.PROVIDED_AL2023,
+            handler: FUNCTION_HANDLER,
+            code: Code.fromAsset(BOOTSTRAP_LOCATION),
             timeout: Duration.seconds(30),
             memorySize: 512,
+            architecture: Architecture.ARM_64
         });
     }
 

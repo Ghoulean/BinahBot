@@ -5,6 +5,8 @@ use std::fs::File;
 use std::io::Write;
 use std::path::PathBuf;
 
+use crate::reserializer::commons::paths::game_obj_path;
+use crate::reserializer::commons::paths::localize_paths;
 use crate::reserializer::game_objects::abno_page::reserialize_abno_pages;
 use crate::reserializer::game_objects::battle_symbol::reserialize_battle_symbols;
 use crate::reserializer::game_objects::combat_page::reserialize_combat_pages;
@@ -21,11 +23,27 @@ fn main() {
     let out_file_path = PathBuf::from(env::var("OUT_DIR").unwrap()).join(PathBuf::from("out.rs"));
     if out_file_path.exists() {
         dbg!(
-            "artifacts already exist at {}; not rebuilding",
+            "[reparser] artifacts already exist at {}; not rebuilding",
             out_file_path.to_str().unwrap()
         );
         return;
     }
+
+    if !game_obj_path().exists() {
+        panic!(
+            "[reparser] cannot find BaseMod StaticInfo dir; see README"
+        );
+    }
+
+    localize_paths().into_iter().for_each(|(locale, path)| {
+        if !path.exists() {
+            panic!(
+                "[reparser] cannot find BaseMod locale dir for {}; see README", locale
+            )
+        }
+    });
+
+    let mut out_file = File::create(out_file_path).unwrap();
 
     let abno_pages = reserialize_abno_pages();
     let battle_symbols = reserialize_battle_symbols();
@@ -55,7 +73,6 @@ fn main() {
     ]
     .join("\n");
 
-    let mut out_file = File::create(out_file_path).unwrap();
     out_file.write_all(output.as_bytes()).unwrap();
-    dbg!("wrote artifacts");
+    dbg!("[reparser] wrote artifacts");
 }

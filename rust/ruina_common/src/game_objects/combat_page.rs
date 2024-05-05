@@ -1,7 +1,7 @@
 use crate::game_objects::common::Chapter;
 use crate::game_objects::common::Rarity;
 
-#[derive(Debug, PartialEq)]
+#[derive(Debug, Clone, PartialEq, strum_macros::Display)]
 pub enum DieType {
     Slash,
     Pierce,
@@ -15,6 +15,7 @@ pub enum DieType {
     CEvade,
 }
 
+#[derive(Clone, Debug)]
 pub struct Die<'a> {
     pub min: u16,
     pub max: u16,
@@ -25,7 +26,7 @@ pub struct Die<'a> {
     pub effect_res: Option<&'a str>,
 }
 
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, strum_macros::Display)]
 pub enum CombatRange {
     Melee,
     Ranged,
@@ -35,6 +36,7 @@ pub enum CombatRange {
     MassSummation,
 }
 
+#[derive(Debug)]
 pub struct CombatPage<'a> {
     pub id: &'a str,
     pub artwork: Option<&'a str>,

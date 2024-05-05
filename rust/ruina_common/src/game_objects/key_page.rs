@@ -1,14 +1,14 @@
 use crate::game_objects::common::Chapter;
 use crate::game_objects::common::Rarity;
 
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, strum_macros::Display)]
 pub enum KeyPageRange {
     Melee,
     Ranged,
     Hybrid,
 }
 
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, strum_macros::Display)]
 pub enum Resistance {
     Fatal,
     Weak,
@@ -18,6 +18,7 @@ pub enum Resistance {
     Immune,
 }
 
+#[derive(Debug)]
 pub struct KeyPageResists {
     pub hp_slash: Resistance,
     pub hp_pierce: Resistance,
@@ -27,8 +28,10 @@ pub struct KeyPageResists {
     pub stagger_blunt: Resistance,
 }
 
+#[derive(Debug)]
 pub struct KeyPage<'a> {
     pub id: &'a str,
+    pub text_id: Option<&'a str>,
     pub skin: Option<&'a str>,
     pub book_icon: Option<&'a str>, // todo: enum-ify
     pub hp: u16,

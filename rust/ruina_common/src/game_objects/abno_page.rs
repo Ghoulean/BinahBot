@@ -81,6 +81,7 @@ pub enum Abno {
     None,
 }
 
+#[derive(Debug)]
 pub struct AbnoPage<'a> {
     pub id: &'a str,
     pub internal_name: &'a str,

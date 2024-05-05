@@ -1,3 +1,4 @@
+#[derive(Debug)]
 pub struct CombatPageLocale<'a> {
     pub id: &'a str,
     pub name: &'a str,

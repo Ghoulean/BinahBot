@@ -1,5 +1,6 @@
 use crate::game_objects::common::Chapter;
 
+#[derive(Debug)]
 pub struct Book<'a> {
     pub id: &'a str,
     pub text_id: &'a str,

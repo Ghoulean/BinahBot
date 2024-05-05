@@ -17,19 +17,25 @@ fn passive_path() -> &'static PathBuf {
 }
 
 pub fn reserialize_passives() -> String {
-    let passives: Vec<String> = read_xml_files_in_dir(passive_path())
+    let passives: Vec<(String, String)> = read_xml_files_in_dir(passive_path())
         .into_iter()
         .map(|path_and_document_string| path_and_document_string.1)
         .flat_map(|document_string| process_passive_file(document_string.as_str()))
         .collect();
+
+    let mut builder = phf_codegen::Map::new();
+    for (id, passive_entry) in passives {
+        builder.entry(
+            id.clone(), &passive_entry
+        );
+    }
     format!(
-        "pub const PASSIVES: [Passive; {}] = [{}];",
-        passives.len(),
-        passives.join(",")
+        "static PASSIVES: phf::Map<&'static str, Passive> = {};",
+        builder.build()
     )
 }
 
-fn process_passive_file(document_string: &str) -> Vec<String> {
+fn process_passive_file(document_string: &str) -> Vec<(String, String)> {
     let doc: Box<Document> = Box::new(Document::parse(document_string).unwrap());
     let xml_root_node = get_unique_node(doc.root(), "PassiveXmlRoot").unwrap();
     let passive_node_list = get_nodes(xml_root_node, "Passive");
@@ -40,7 +46,7 @@ fn process_passive_file(document_string: &str) -> Vec<String> {
         .collect()
 }
 
-fn parse_passive(passive_node: Node) -> String {
+fn parse_passive(passive_node: Node) -> (String, String) {
     let id = passive_node.attribute("ID").unwrap();
     let cost = serialize_option(get_unique_node_text(passive_node, "Cost"));
     let rarity = serialize_option_debug(
@@ -53,7 +59,7 @@ fn parse_passive(passive_node: Node) -> String {
         serialize_option(get_unique_node_text(passive_node, "CanGivePassive").map(|x| x == "true"));
     let inner_type = serialize_option(get_unique_node_text(passive_node, "InnerType"));
 
-    format!(
+    (id.to_string(), format!(
         "Passive {{
         id: \"{id}\",
         cost: {cost},
@@ -62,5 +68,5 @@ fn parse_passive(passive_node: Node) -> String {
         transferable: {transferable},
         inner_type: {inner_type}
     }}"
-    )
+    ))
 }

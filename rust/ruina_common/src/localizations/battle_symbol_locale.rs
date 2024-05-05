@@ -1,3 +1,4 @@
+#[derive(Debug)]
 pub struct BattleSymbolLocale<'a> {
     pub internal_name: &'a str,
     pub prefix: &'a str,

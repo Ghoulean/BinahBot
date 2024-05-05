@@ -1,4 +1,4 @@
-Put BaseMod in this directory or else
+Put BaseMod in root directoy of this package (so it is on the same level as `./build` and `./.cargo`)
 
 There are a few differences between raw XML and the results of this serialization (that I know of/remember):
 1. Due to limitations with the XML library, a missing element cannot be differentiated with an empty element (e.g. `<Desc></Desc>`, `</Desc>`, and `(empty)` are not differentiated among each other)
@@ -21,4 +21,13 @@ There are a few differences between raw XML and the results of this serializatio
 
 While I did these without thinking at first, I believe I may later reconsider this decision of whether to reparse by XML only, if I should encode game assumptions also, or some "reasonable" combination of both approaches.
 
-# TODO: This package works, but there's a ton of copy paste and crap. Refactor until it's right
+## TODO: This package works, but there's a ton of copy paste and crap. Refactor until it's right
+
+# How to BaseMod:
+
+1. Install Library of Ruina on Steam (Windows)
+2. Install BaseMod Nightly from Steam Workshop. Do **not** confuse this with regular BaseMod as regular BaseMod has known issues.
+3. Open Library of Ruina, launch with mods, and enable BaseMod
+4. Load your save file in your preferred locale, then quit back to menu
+5. Repeat step 4 with every locale
+6. BaseMod folder should be generated in mods directory in steam folder: <todo: get folder path>

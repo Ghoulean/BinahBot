@@ -22,19 +22,25 @@ fn combat_page_path() -> &'static PathBuf {
 }
 
 pub fn reserialize_combat_pages() -> String {
-    let combat_pages: Vec<String> = read_xml_files_in_dir(combat_page_path())
+    let combat_pages: Vec<(String, String)> = read_xml_files_in_dir(combat_page_path())
         .into_iter()
         .map(|path_and_document_string| path_and_document_string.1)
         .flat_map(|document_string| process_combat_page_file(document_string.as_str()))
         .collect();
+
+    let mut builder = phf_codegen::Map::new();
+    for (id, combat_page_entry) in combat_pages {
+        builder.entry(
+            id.clone(), &combat_page_entry
+        );
+    }
     format!(
-        "pub const COMBAT_PAGES: [CombatPage; {}] = [{}];",
-        combat_pages.len(),
-        combat_pages.join(",")
+        "static COMBAT_PAGES: phf::Map<&'static str, CombatPage> = {};",
+        builder.build()
     )
 }
 
-fn process_combat_page_file(document_string: &str) -> Vec<String> {
+fn process_combat_page_file(document_string: &str) -> Vec<(String, String)> {
     let doc: Box<Document> = Box::new(Document::parse(document_string).unwrap());
     let xml_root_node = get_unique_node(doc.root(), "DiceCardXmlRoot").unwrap();
     let combat_node_list = get_nodes(xml_root_node, "Card");
@@ -45,7 +51,7 @@ fn process_combat_page_file(document_string: &str) -> Vec<String> {
         .collect()
 }
 
-fn parse_combat_page(combat_node: Node) -> String {
+fn parse_combat_page(combat_node: Node) -> (String, String) {
     let id = combat_node.attribute("ID").unwrap();
     let artwork = serialize_option_str(get_unique_node_text(combat_node, "Artwork"));
     let cost = get_unique_node(combat_node, "Spec")
@@ -72,7 +78,7 @@ fn parse_combat_page(combat_node: Node) -> String {
     );
     let priority = serialize_option(get_unique_node_text(combat_node, "Priority"));
 
-    format!(
+    (id.to_string(), format!(
         "CombatPage {{
         id: \"{id}\",
         artwork: {artwork},
@@ -88,7 +94,7 @@ fn parse_combat_page(combat_node: Node) -> String {
         priority: {priority},
         dice: {dice}
     }}"
-    )
+    ))
 }
 
 fn parse_dice(dice_node: Node) -> String {

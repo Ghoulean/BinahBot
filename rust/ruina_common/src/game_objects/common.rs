@@ -1,4 +1,4 @@
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, strum_macros::Display)]
 pub enum Rarity {
     Paperback,
     Hardcover,
@@ -6,7 +6,7 @@ pub enum Rarity {
     ObjetDArt,
 }
 
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, strum_macros::Display)]
 pub enum Floor {
     Malkuth,
     Yesod,
@@ -21,7 +21,7 @@ pub enum Floor {
     None,
 }
 
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, strum_macros::Display)]
 pub enum Chapter {
     Canard,
     UrbanMyth,

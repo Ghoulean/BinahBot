@@ -18,19 +18,25 @@ fn abno_path() -> &'static PathBuf {
 }
 
 pub fn reserialize_abno_pages() -> String {
-    let abnos: Vec<String> = read_xml_files_in_dir(abno_path())
+    let abnos: Vec<(String, String)> = read_xml_files_in_dir(abno_path())
         .into_iter()
         .map(|path_and_document_string| path_and_document_string.1)
         .flat_map(|document_string| process_abno_page_file(document_string.as_str()))
         .collect();
+
+    let mut builder = phf_codegen::Map::new();
+    for (id, abno_entry) in abnos {
+        builder.entry(
+            id.clone(), &abno_entry
+        );
+    }
     format!(
-        "pub const ABNO_PAGES: [AbnoPage; {}] = [{}];",
-        abnos.len(),
-        abnos.join(",")
+        "static ABNO_PAGES: phf::Map<&'static str, AbnoPage> = {};",
+        builder.build()
     )
 }
 
-fn process_abno_page_file(document_string: &str) -> Vec<String> {
+fn process_abno_page_file(document_string: &str) -> Vec<(String, String)> {
     let doc: Box<Document> = Box::new(Document::parse(document_string).unwrap());
     let xml_root_node = get_unique_node(doc.root(), "EmotionCardXmlRoot").unwrap();
     let abno_node_list = get_nodes(xml_root_node, "EmotionCard");
@@ -41,7 +47,7 @@ fn process_abno_page_file(document_string: &str) -> Vec<String> {
         .collect()
 }
 
-fn parse_abno_page(abno_node: Node) -> String {
+fn parse_abno_page(abno_node: Node) -> (String, String) {
     let id = abno_node.attribute("ID").unwrap();
     let internal_name = get_unique_node_text(abno_node, "Name").unwrap();
     let script_id = get_unique_node_text(abno_node, "Script").unwrap();
@@ -58,7 +64,7 @@ fn parse_abno_page(abno_node: Node) -> String {
     let targetting =
         get_abno_targetting_from_str(get_unique_node_text(abno_node, "TargetType").unwrap());
 
-    format!(
+    (internal_name.to_string(), format!(
         "AbnoPage {{
         id: \"{id}\",
         internal_name: \"{internal_name}\",
@@ -71,7 +77,7 @@ fn parse_abno_page(abno_node: Node) -> String {
         is_positive: {is_positive},
         targetting: AbnoTargetting::{targetting:?}
     }}"
-    )
+    ))
 }
 
 fn get_floor_from_str(str: &str) -> Floor {

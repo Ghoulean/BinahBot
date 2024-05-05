@@ -1,5 +1,6 @@
 use crate::game_objects::common::Rarity;
 
+#[derive(Debug)]
 pub struct Passive<'a> {
     pub id: &'a str,
     pub cost: Option<u8>,

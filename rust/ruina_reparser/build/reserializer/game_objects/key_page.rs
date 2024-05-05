@@ -22,19 +22,25 @@ fn key_page_path() -> &'static PathBuf {
 }
 
 pub fn reserialize_key_pages() -> String {
-    let key_pages: Vec<String> = read_xml_files_in_dir(key_page_path())
+    let key_pages: Vec<(String, String)> = read_xml_files_in_dir(key_page_path())
         .into_iter()
         .map(|path_and_document_string| path_and_document_string.1)
         .flat_map(|document_string| process_key_page_file(document_string.as_str()))
         .collect();
+
+    let mut builder = phf_codegen::Map::new();
+    for (id, key_page_entry) in key_pages {
+        builder.entry(
+            id.clone(), &key_page_entry
+        );
+    }
     format!(
-        "pub const KEY_PAGES: [KeyPage; {}] = [{}];",
-        key_pages.len(),
-        key_pages.join(",")
+        "static KEY_PAGES: phf::Map<&'static str, KeyPage> = {};",
+        builder.build()
     )
 }
 
-fn process_key_page_file(document_string: &str) -> Vec<String> {
+fn process_key_page_file(document_string: &str) -> Vec<(String, String)> {
     let doc: Box<Document> = Box::new(Document::parse(document_string).unwrap());
     let xml_root_node = get_unique_node(doc.root(), "BookXmlRoot").unwrap();
     let key_page_node_list = get_nodes(xml_root_node, "Book");
@@ -45,8 +51,9 @@ fn process_key_page_file(document_string: &str) -> Vec<String> {
         .collect()
 }
 
-fn parse_key_page(key_node: Node) -> String {
+fn parse_key_page(key_node: Node) -> (String, String) {
     let id = key_node.attribute("ID").unwrap();
+    let text_id = serialize_option_str(get_unique_node_text(key_node, "TextId"));
     let equip_effect_node = get_unique_node(key_node, "EquipEffect").unwrap();
     let skin = serialize_option_str(get_unique_node_text(key_node, "CharacterSkin"));
     let hp = get_unique_node_text(equip_effect_node, "HP").unwrap();
@@ -89,8 +96,9 @@ fn parse_key_page(key_node: Node) -> String {
         get_unique_node_text(equip_effect_node, "HBResist").unwrap_or("Normal"),
     );
 
-    format!(
+    (id.to_string(), format!(
         "KeyPage {{
+        text_id: {text_id},
         id: \"{id}\",
         skin: {skin},
         book_icon: {book_icon},
@@ -118,7 +126,7 @@ fn parse_key_page(key_node: Node) -> String {
         category: {category},
         only_card_ids: {only_card_ids}
     }}"
-    )
+    ))
 }
 
 fn get_key_page_range_from_str(str: &str) -> KeyPageRange {
