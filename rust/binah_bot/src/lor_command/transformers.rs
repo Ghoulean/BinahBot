@@ -16,8 +16,10 @@ use ruina_common::localizations::common::Locale;
 use ruina_reparser::get_card_effect_locales_by_id;
 use ruina_reparser::get_passive_locales_by_id;
 
+use crate::models::binahbot::get_dietype_emoji;
 use crate::models::binahbot::BinahBotLocale;
 use crate::models::binahbot::DiscordEmbedColors;
+use crate::models::binahbot::Emojis;
 use crate::models::discord::DiscordEmbed;
 use crate::models::discord::DiscordEmbedFields;
 use crate::models::discord::DiscordEmbedImage;
@@ -150,6 +152,7 @@ pub fn transform_combat_page(
     page: &CombatPage,
     locale_page: &CombatPageLocale,
     s3_bucket_name: &String,
+    emojis: &Emojis,
     card_locale: &Locale,
     _request_locale: &BinahBotLocale
 ) -> DiscordEmbed {
@@ -186,7 +189,7 @@ pub fn transform_combat_page(
     let dice_vec = page.dice.to_vec();
     fields.push(DiscordEmbedFields {
         name: "Dice".to_string(),
-        value: format_dice(&dice_vec, &card_locale),
+        value: format_dice(&dice_vec, &card_locale, &emojis),
         inline: Some(false)
     });
 
@@ -208,19 +211,20 @@ pub fn transform_combat_page(
 pub fn transform_key_page(
     page: &KeyPage,
     locale_page: Option<&KeyPageLocale>,
+    emojis: &Emojis,
     card_locale: &Locale,
     _request_locale: &BinahBotLocale
 ) -> DiscordEmbed {
     let embed_color = DiscordEmbedColors::from(&page.rarity);
     let hp_resists = format_to_indented_list(&vec!(
-        format!("{}: {}", DieType::Slash, page.resists.hp_slash),
-        format!("{}: {}", DieType::Pierce, page.resists.hp_pierce),
-        format!("{}: {}", DieType::Blunt, page.resists.hp_blunt),
+        format!("{}: {}", get_dietype_emoji(&emojis, &DieType::Slash, &DieType::Slash.to_string()), page.resists.hp_slash),
+        format!("{}: {}", get_dietype_emoji(&emojis, &DieType::Pierce, &DieType::Pierce.to_string()), page.resists.hp_pierce),
+        format!("{}: {}", get_dietype_emoji(&emojis, &DieType::Blunt, &DieType::Blunt.to_string()), page.resists.hp_blunt),
     ));
     let stagger_resists = format_to_indented_list(&vec!(
-        format!("{}: {}", DieType::Slash, page.resists.stagger_slash),
-        format!("{}: {}", DieType::Pierce, page.resists.stagger_pierce),
-        format!("{}: {}", DieType::Blunt, page.resists.stagger_blunt),
+        format!("{}: {}", get_dietype_emoji(&emojis, &DieType::CSlash, &DieType::CSlash.to_string()), page.resists.stagger_slash),
+        format!("{}: {}", get_dietype_emoji(&emojis, &DieType::CPierce, &DieType::CPierce.to_string()), page.resists.stagger_pierce),
+        format!("{}: {}", get_dietype_emoji(&emojis, &DieType::CBlunt, &DieType::CBlunt.to_string()), page.resists.stagger_blunt),
     ));
 
     let mut fields = vec!(DiscordEmbedFields {
@@ -329,7 +333,8 @@ pub fn transform_passive(
 
 fn format_dice(
     dice: &Vec<Die>,
-    locale: &Locale
+    locale: &Locale,
+    emojis: &Emojis
 ) -> String {
     let formatted_die = dice.into_iter().map(|die| {
         let desc = die.script
@@ -337,7 +342,7 @@ fn format_dice(
             .map(|x| x.get(locale).unwrap().desc)
             .unwrap_or(&[])
             .join("\n");
-        format!("{} {}-{} {}", die.die_type, die.min, die.max, desc)
+        format!("{} {}-{} {}", get_dietype_emoji(&emojis, &die.die_type, &die.die_type.to_string()), die.min, die.max, desc)
     }).collect::<Vec<_>>();
     format_to_indented_list(&formatted_die)
 }

@@ -19,6 +19,9 @@ const FUNCTION_HANDLER = "binah_bot.bootstrap";
 
 export interface DiscordStackProps extends StackProps {
     clientId: string;
+    emojis: {
+        [key: string]: string | undefined
+    }
 }
 
 export class DiscordStack extends Stack {
@@ -35,6 +38,12 @@ export class DiscordStack extends Stack {
         this.imageHostBucket = this.createImageHostBucket();
 
         this.discordAPISecrets.grantRead(this.discordBotLambda);
+
+        for (const [key, val] of Object.entries(props.emojis)) {
+            if (val) {
+                this.discordBotLambda.addEnvironment(key, val);
+            }
+        }
         this.discordBotLambda.addEnvironment(
             "S3_BUCKET_NAME",
             this.imageHostBucket.bucketName
@@ -44,6 +53,7 @@ export class DiscordStack extends Stack {
             this.discordAPISecrets.secretName
         );
         this.discordBotLambda.addEnvironment("CLIENT_ID", props.clientId);
+
     }
 
     private createSecret(): Secret {

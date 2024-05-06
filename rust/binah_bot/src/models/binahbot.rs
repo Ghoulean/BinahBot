@@ -3,6 +3,7 @@ use serde::Serialize;
 
 use ruina_common::localizations::common::Locale;
 use ruina_common::game_objects::common::Rarity;
+use ruina_common::game_objects::combat_page::DieType;
 
 #[derive(Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
@@ -12,10 +13,24 @@ pub struct DiscordSecrets {
     pub public_key: String
 }
 
+pub struct Emojis {
+    pub slash_emoji_id: Option<String>,
+    pub pierce_emoji_id: Option<String>,
+    pub blunt_emoji_id: Option<String>,
+    pub block_emoji_id: Option<String>,
+    pub evade_emoji_id: Option<String>,
+    pub c_slash_emoji_id: Option<String>,
+    pub c_pierce_emoji_id: Option<String>,
+    pub c_blunt_emoji_id: Option<String>,
+    pub c_block_emoji_id: Option<String>,
+    pub c_evade_emoji_id: Option<String>,
+}
+
 pub struct BinahBotEnvironment {
     pub discord_secrets: DiscordSecrets,
     pub discord_client_id: String,
     pub s3_bucket_name: String,
+    pub emojis: Emojis
 }
 
 #[derive(Clone, Debug, strum::Display, strum_macros::EnumString)]
@@ -78,5 +93,20 @@ impl From<&Rarity> for DiscordEmbedColors {
             Rarity::Limited => DiscordEmbedColors::LimitedRarity,
             Rarity::ObjetDArt => DiscordEmbedColors::ObjetDArtRarity
         }
+    }
+}
+
+pub fn get_dietype_emoji<'a>(emojis: &'a Emojis, die_type: &'a DieType, die_type_str: &'a String) -> &'a String {
+    match die_type {
+        DieType::Slash => emojis.slash_emoji_id.as_ref().unwrap_or(die_type_str),
+        DieType::Pierce => emojis.pierce_emoji_id.as_ref().unwrap_or(die_type_str),
+        DieType::Blunt => emojis.blunt_emoji_id.as_ref().unwrap_or(die_type_str),
+        DieType::Block => emojis.block_emoji_id.as_ref().unwrap_or(die_type_str),
+        DieType::Evade => emojis.evade_emoji_id.as_ref().unwrap_or(die_type_str),
+        DieType::CSlash => emojis.c_slash_emoji_id.as_ref().unwrap_or(die_type_str),
+        DieType::CPierce => emojis.c_pierce_emoji_id.as_ref().unwrap_or(die_type_str),
+        DieType::CBlunt => emojis.c_blunt_emoji_id.as_ref().unwrap_or(die_type_str),
+        DieType::CBlock => emojis.c_block_emoji_id.as_ref().unwrap_or(die_type_str),
+        DieType::CEvade => emojis.c_evade_emoji_id.as_ref().unwrap_or(die_type_str),
     }
 }

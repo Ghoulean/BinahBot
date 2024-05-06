@@ -16,6 +16,7 @@ use tracing_subscriber;
 use hex::FromHex;
 
 use crate::models::binahbot::DiscordSecrets;
+use crate::models::binahbot::Emojis;
 use crate::models::discord::DiscordInteractionMetadata;
 
 static TIMESTAMP_HEADER: &str = "x-signature-timestamp";
@@ -77,7 +78,19 @@ async fn main() -> Result<(), lambda_http::Error> {
     let binahbot_env = BinahBotEnvironment {
         discord_secrets: discord_secrets,
         discord_client_id: env::var("CLIENT_ID").unwrap(),
-        s3_bucket_name: env::var("S3_BUCKET_NAME").unwrap()
+        s3_bucket_name: env::var("S3_BUCKET_NAME").unwrap(),
+        emojis: Emojis {
+            slash_emoji_id: env::var("SLASH_EMOJI_ID").ok(),
+            pierce_emoji_id: env::var("PIERCE_EMOJI_ID").ok(),
+            blunt_emoji_id: env::var("BLUNT_EMOJI_ID").ok(),
+            block_emoji_id: env::var("BLOCK_EMOJI_ID").ok(),
+            evade_emoji_id: env::var("EVADE_EMOJI_ID").ok(),
+            c_slash_emoji_id: env::var("C_SLASH_EMOJI_ID").ok(),
+            c_pierce_emoji_id: env::var("C_PIERCE_EMOJI_ID").ok(),
+            c_blunt_emoji_id: env::var("C_BLUNT_EMOJI_ID").ok(),
+            c_block_emoji_id: env::var("C_BLOCK_EMOJI_ID").ok(),
+            c_evade_emoji_id: env::var("C_EVADE_EMOJI_ID").ok()
+        }
     };
     let binahbot_env_ref = &binahbot_env;
 

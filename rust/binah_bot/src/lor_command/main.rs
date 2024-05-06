@@ -72,12 +72,12 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
             let combat_page = get_combat_page_by_id(&typed_id.1).unwrap();
             let combat_page_locales = get_combat_page_locales_by_id(&typed_id.1);
             let combat_page_locale = combat_page_locales.get(&locale).unwrap();
-            transform_combat_page(combat_page, combat_page_locale, &env.s3_bucket_name, &locale, &binah_locale)
+            transform_combat_page(combat_page, combat_page_locale, &env.s3_bucket_name, &env.emojis, &locale, &binah_locale)
         },
         PageType::KeyPageId => {
             let key_page = get_key_page_by_id(&typed_id.1).unwrap();
             let key_page_locale = key_page.text_id.map(|x| *get_key_page_locales_by_text_id(x).get(&locale).unwrap());
-            transform_key_page(key_page, key_page_locale, &locale, &binah_locale)
+            transform_key_page(key_page, key_page_locale, &env.emojis, &locale, &binah_locale)
         },
         PageType::PassiveId => {
             let passive = get_passive_by_id(&typed_id.1).unwrap();
@@ -108,6 +108,7 @@ mod tests {
     use crate::models::discord::DiscordInteractionType;
     use crate::models::discord::DiscordInteractionData;
     use crate::models::binahbot::DiscordSecrets;
+    use crate::models::binahbot::Emojis;
 
     #[test]
     fn get_query_option_sanity() {
@@ -179,10 +180,22 @@ mod tests {
             discord_secrets: DiscordSecrets {
                 application_id: "app_id".to_string(),
                 auth_token: "auth_token".to_string(),
-                public_key: "pub_key".to_string()
+                public_key: "pub_key".to_string(),
             },
             discord_client_id: "id".to_string(),
             s3_bucket_name: "bucket_name".to_string(),
+            emojis: Emojis {
+                slash_emoji_id: None,
+                pierce_emoji_id: None,
+                blunt_emoji_id: None,
+                block_emoji_id: None,
+                evade_emoji_id: None,
+                c_slash_emoji_id: None,
+                c_pierce_emoji_id: None,
+                c_blunt_emoji_id: None,
+                c_block_emoji_id: None,
+                c_evade_emoji_id: None,
+            }
         }
     }
 }
