@@ -1,43 +1,22 @@
 use std::collections::HashMap;
-use std::fs;
-use std::path::PathBuf;
-use std::sync::OnceLock;
 
 use roxmltree::{Document, Node};
 use ruina_common::localizations::common::Locale;
 
-use crate::reserializer::commons::paths::{localize_paths, read_xml_files_in_dir};
-use crate::reserializer::commons::xml::{get_nodes, get_unique_node, get_unique_node_text};
+use crate::xml::{get_nodes, get_unique_node, get_unique_node_text};
 
-fn passive_locale_paths() -> &'static Vec<(Locale, PathBuf)> {
-    static PASSIVE_LOCALE_PATHS: OnceLock<Vec<(Locale, PathBuf)>> = OnceLock::new();
-    PASSIVE_LOCALE_PATHS.get_or_init(|| {
-        localize_paths()
-            .clone()
-            .iter()
-            .map(|x| {
-                (
-                    x.0.clone(),
-                    fs::canonicalize(x.1.as_path().join(PathBuf::from("PassiveDesc"))).unwrap(),
-                )
-            })
-            .collect()
-    })
-}
+type PassiveLocaleKey = String;
+type PassiveLocaleValue = String;
 
-pub fn reserialize_passive_locales() -> String {
-    let passives: HashMap<Locale, HashMap<String, String>> = passive_locale_paths()
+pub fn reserialize_passive_locales(document_strings: &HashMap<Locale, Vec<String>>) -> String {
+    let passives: HashMap<Locale, HashMap<PassiveLocaleKey, PassiveLocaleValue>> = document_strings
         .iter()
-        .map(|x| {
+        .map(|(x, y)| {
             (
-                x.0.clone(),
-                read_xml_files_in_dir(&x.1)
-                    .into_iter()
-                    .map(|path_and_document_string| path_and_document_string.1)
-                    .flat_map(|document_string| {
-                        process_passive_locale_file(document_string.as_str())
-                    })
-                    .collect(),
+                x.clone(),
+                y.into_iter()
+                    .flat_map(|document_string| process_passive_locale_file(document_string.as_str()))
+                    .collect::<HashMap<_, _>>(),
             )
         })
         .collect();
@@ -61,7 +40,7 @@ pub fn reserialize_passive_locales() -> String {
     )
 }
 
-fn process_passive_locale_file(document_string: &str) -> HashMap<String, String> {
+fn process_passive_locale_file(document_string: &str) -> HashMap<PassiveLocaleKey, PassiveLocaleValue> {
     let doc: Box<Document> = Box::new(Document::parse(document_string).unwrap());
     let xml_root_node = get_unique_node(doc.root(), "PassiveDescRoot").unwrap();
     let passives = get_nodes(xml_root_node, "PassiveDesc");
@@ -69,7 +48,7 @@ fn process_passive_locale_file(document_string: &str) -> HashMap<String, String>
     passives.into_iter().map(parse_passive_locale).collect()
 }
 
-fn parse_passive_locale(node: Node) -> (String, String) {
+fn parse_passive_locale(node: Node) -> (PassiveLocaleKey, PassiveLocaleValue) {
     let id = node.attribute("ID").unwrap();
     let name = get_unique_node_text(node, "Name").unwrap();
     let description = get_unique_node_text(node, "Desc").unwrap_or("");

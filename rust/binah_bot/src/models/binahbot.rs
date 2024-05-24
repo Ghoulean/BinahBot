@@ -1,16 +1,16 @@
 use serde::Deserialize;
 use serde::Serialize;
 
-use ruina_common::localizations::common::Locale;
-use ruina_common::game_objects::common::Rarity;
 use ruina_common::game_objects::combat_page::DieType;
+use ruina_common::game_objects::common::Rarity;
+use ruina_common::localizations::common::Locale;
 
 #[derive(Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct DiscordSecrets {
     pub application_id: String,
     pub auth_token: String,
-    pub public_key: String
+    pub public_key: String,
 }
 
 pub struct Emojis {
@@ -30,7 +30,7 @@ pub struct BinahBotEnvironment {
     pub discord_secrets: DiscordSecrets,
     pub discord_client_id: String,
     pub s3_bucket_name: String,
-    pub emojis: Emojis
+    pub emojis: Emojis,
 }
 
 #[derive(Clone, Debug, strum::Display, strum_macros::EnumString)]
@@ -45,7 +45,7 @@ pub enum BinahBotLocale {
     ChineseChina,
     #[strum(serialize = "zh-TW")]
     ChineseTaiwan,
-    Other
+    Other,
 }
 
 #[derive(Clone, Debug)]
@@ -80,7 +80,7 @@ impl From<BinahBotLocale> for Locale {
             BinahBotLocale::Japanese => Locale::Japanese,
             BinahBotLocale::ChineseChina => Locale::Chinese,
             BinahBotLocale::ChineseTaiwan => Locale::TraditionalChinese,
-            _ => Locale::English
+            _ => Locale::English,
         }
     }
 }
@@ -91,12 +91,16 @@ impl From<&Rarity> for DiscordEmbedColors {
             Rarity::Paperback => DiscordEmbedColors::PaperbackRarity,
             Rarity::Hardcover => DiscordEmbedColors::HardcoverRarity,
             Rarity::Limited => DiscordEmbedColors::LimitedRarity,
-            Rarity::ObjetDArt => DiscordEmbedColors::ObjetDArtRarity
+            Rarity::ObjetDArt => DiscordEmbedColors::ObjetDArtRarity,
         }
     }
 }
 
-pub fn get_dietype_emoji<'a>(emojis: &'a Emojis, die_type: &'a DieType, die_type_str: &'a String) -> &'a String {
+pub fn get_dietype_emoji<'a>(
+    emojis: &'a Emojis,
+    die_type: &'a DieType,
+    die_type_str: &'a String,
+) -> &'a String {
     match die_type {
         DieType::Slash => emojis.slash_emoji_id.as_ref().unwrap_or(die_type_str),
         DieType::Pierce => emojis.pierce_emoji_id.as_ref().unwrap_or(die_type_str),

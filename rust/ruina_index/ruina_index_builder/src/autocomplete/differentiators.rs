@@ -1,4 +1,3 @@
-
 use crate::taggers::tagger::TypedId;
 
 use super::models::DisambiguationDisplay;

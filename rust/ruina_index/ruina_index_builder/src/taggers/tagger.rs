@@ -31,7 +31,7 @@ impl fmt::Display for PageType {
             PageType::BattleSymbolId => write!(f, "b#"),
             PageType::CombatPageId => write!(f, "c#"),
             PageType::KeyPageId => write!(f, "k#"),
-            PageType::PassiveId => write!(f, "p#")
+            PageType::PassiveId => write!(f, "p#"),
         }
     }
 }

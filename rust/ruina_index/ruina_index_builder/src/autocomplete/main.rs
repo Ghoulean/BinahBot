@@ -1,9 +1,9 @@
 use ruina_common::localizations::common::Locale;
 
-use crate::autocomplete::models::DisambiguationDisplay;
-use crate::autocomplete::models::IncompleteAutocompleteMap;
 use crate::autocomplete::autocomplete::generate_naive_autocomplete_map;
 use crate::autocomplete::disambiguate::disambiguate;
+use crate::autocomplete::models::DisambiguationDisplay;
+use crate::autocomplete::models::IncompleteAutocompleteMap;
 
 pub fn generate_serialized_autocomplete_objs(locale: &Locale) -> String {
     let naive_map = generate_naive_autocomplete_map(locale);
@@ -12,18 +12,25 @@ pub fn generate_serialized_autocomplete_objs(locale: &Locale) -> String {
     let disambiguated_map = disambiguate(&naive_map);
 
     let serialized_disambiguation_map = serialized_disambiguation_map(&disambiguated_map, locale);
-    
+
     [
         serialized_disambiguation_pages,
-        serialized_disambiguation_map
-    ].join("\n")
+        serialized_disambiguation_map,
+    ]
+    .join("\n")
 }
 
-fn serialize_disambiguation_page_array(naive_map: &IncompleteAutocompleteMap, locale: &Locale) -> String {
+fn serialize_disambiguation_page_array(
+    naive_map: &IncompleteAutocompleteMap,
+    locale: &Locale,
+) -> String {
     let mut builder = phf_codegen::Map::new();
     for (ambiguous_autocomplete, ambiguous_autocomplete_map) in &(naive_map.0) {
         if ambiguous_autocomplete_map.0.len() <= 1 {
-            dbg!("autocomplete entry does not need disambiguation:", ambiguous_autocomplete);
+            dbg!(
+                "autocomplete entry does not need disambiguation:",
+                ambiguous_autocomplete
+            );
             continue;
         }
 
@@ -56,25 +63,36 @@ fn serialize_disambiguation_page_array(naive_map: &IncompleteAutocompleteMap, lo
     )
 }
 
-fn serialized_disambiguation_map(disambiguated_map: &IncompleteAutocompleteMap, locale: &Locale) -> String {
+fn serialized_disambiguation_map(
+    disambiguated_map: &IncompleteAutocompleteMap,
+    locale: &Locale,
+) -> String {
     let mut builder = phf_codegen::Map::new();
 
-    disambiguated_map.0.values().into_iter().for_each(|inverse_map| {
-        inverse_map.0.clone().into_iter().for_each(|(typed_id, disambiguated_autocomplete)| {
-            let base = disambiguated_autocomplete.0.0;
-            let disambiguator = serialize_option(disambiguated_autocomplete.1);
+    disambiguated_map
+        .0
+        .values()
+        .into_iter()
+        .for_each(|inverse_map| {
+            inverse_map
+                .0
+                .clone()
+                .into_iter()
+                .for_each(|(typed_id, disambiguated_autocomplete)| {
+                    let base = disambiguated_autocomplete.0 .0;
+                    let disambiguator = serialize_option(disambiguated_autocomplete.1);
 
-            builder.entry(
-                format!("{}", typed_id), 
-                &format!(
-                    "Autocomplete {{
+                    builder.entry(
+                        format!("{}", typed_id),
+                        &format!(
+                            "Autocomplete {{
                         base: r#\"{base}\"#,
                         disambiguator: {disambiguator},
                     }}"
-                )
-            );
+                        ),
+                    );
+                });
         });
-    });
 
     format!(
         "static DISAMBIGUATION_MAP_{}: phf::Map<&'static str, Autocomplete> = {};",

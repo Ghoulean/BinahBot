@@ -1,34 +1,24 @@
-use std::fs;
-use std::path::PathBuf;
-use std::sync::OnceLock;
+use std::collections::HashMap;
 
 use roxmltree::{Document, Node};
 use ruina_common::game_objects::abno_page::{Abno, AbnoTargetting};
 use ruina_common::game_objects::common::Floor;
 
-use crate::reserializer::commons::paths::{game_obj_path, read_xml_files_in_dir};
-use crate::reserializer::commons::serde::serialize_option;
-use crate::reserializer::commons::xml::{get_nodes, get_unique_node, get_unique_node_text};
+use crate::serde::{display_serializer, serialize_option_2};
+use crate::xml::{get_nodes, get_unique_node, get_unique_node_text};
 
-fn abno_path() -> &'static PathBuf {
-    static ABNO_PATH: OnceLock<PathBuf> = OnceLock::new();
-    ABNO_PATH.get_or_init(|| {
-        fs::canonicalize(game_obj_path().as_path().join(PathBuf::from("EmotionCard"))).unwrap()
-    })
-}
+type AbnoKey = String;
+type AbnoValue = String;
 
-pub fn reserialize_abno_pages() -> String {
-    let abnos: Vec<(String, String)> = read_xml_files_in_dir(abno_path())
-        .into_iter()
-        .map(|path_and_document_string| path_and_document_string.1)
-        .flat_map(|document_string| process_abno_page_file(document_string.as_str()))
+pub fn reserialize_abno_pages(document_strings: &[String]) -> String {
+    let abnos: HashMap<_, _> = document_strings
+        .iter()
+        .flat_map(|x| process_abno_page_file(x))
         .collect();
 
     let mut builder = phf_codegen::Map::new();
-    for (id, abno_entry) in abnos {
-        builder.entry(
-            id.clone(), &abno_entry
-        );
+    for abno_entry in abnos {
+        builder.entry(abno_entry.0.clone(), &abno_entry.1);
     }
     format!(
         "static ABNO_PAGES: phf::Map<&'static str, AbnoPage> = {};",
@@ -36,7 +26,7 @@ pub fn reserialize_abno_pages() -> String {
     )
 }
 
-fn process_abno_page_file(document_string: &str) -> Vec<(String, String)> {
+fn process_abno_page_file(document_string: &str) -> HashMap<AbnoKey, AbnoValue> {
     let doc: Box<Document> = Box::new(Document::parse(document_string).unwrap());
     let xml_root_node = get_unique_node(doc.root(), "EmotionCardXmlRoot").unwrap();
     let abno_node_list = get_nodes(xml_root_node, "EmotionCard");
@@ -47,16 +37,18 @@ fn process_abno_page_file(document_string: &str) -> Vec<(String, String)> {
         .collect()
 }
 
-fn parse_abno_page(abno_node: Node) -> (String, String) {
+fn parse_abno_page(abno_node: Node) -> (AbnoKey, AbnoValue) {
     let id = abno_node.attribute("ID").unwrap();
     let internal_name = get_unique_node_text(abno_node, "Name").unwrap();
     let script_id = get_unique_node_text(abno_node, "Script").unwrap();
     let artwork = internal_name;
-    let tier = serialize_option(
+    let tier = serialize_option_2(
         get_unique_node_text(abno_node, "EmotionLevel").map(|x| x.parse::<u8>().unwrap()),
+        display_serializer
     );
-    let bias = serialize_option(
+    let bias = serialize_option_2(
         get_unique_node_text(abno_node, "EmotionRate").map(|x| x.parse::<i8>().unwrap()),
+        display_serializer
     );
     let sephirah = get_floor_from_str(get_unique_node_text(abno_node, "Sephirah").unwrap());
     let abno = get_abno_from_str(internal_name);
@@ -64,11 +56,13 @@ fn parse_abno_page(abno_node: Node) -> (String, String) {
     let targetting =
         get_abno_targetting_from_str(get_unique_node_text(abno_node, "TargetType").unwrap());
 
-    (internal_name.to_string(), format!(
-        "AbnoPage {{
+    (
+        internal_name.to_string(),
+        format!(
+    "AbnoPage {{
         id: \"{id}\",
         internal_name: \"{internal_name}\",
-        script_id: \"{script_id}\",
+        script_id: \"{script_id }\",
         artwork: \"{artwork}\",
         tier: {tier},
         bias: {bias},
@@ -77,7 +71,8 @@ fn parse_abno_page(abno_node: Node) -> (String, String) {
         is_positive: {is_positive},
         targetting: AbnoTargetting::{targetting:?}
     }}"
-    ))
+        ),
+    )
 }
 
 fn get_floor_from_str(str: &str) -> Floor {

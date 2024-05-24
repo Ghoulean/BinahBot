@@ -30,5 +30,5 @@ pub enum Chapter {
     UrbanNightmare,
     StarOfTheCity,
     ImpuritasCivitatis,
-    None
+    None,
 }

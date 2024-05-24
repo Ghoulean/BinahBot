@@ -1,19 +1,19 @@
-mod lor_command;
 mod lor_autocomplete;
+mod lor_command;
 mod models;
 mod router;
 mod secrets_accessor;
 
 use ed25519_dalek::{Signature, Verifier, VerifyingKey};
-use models::{binahbot::BinahBotEnvironment, discord::DiscordInteraction};
-use router::get_response;
-use secrets_accessor::{get_discord_secrets};
-use std::ops::Deref;
-use std::env;
+use hex::FromHex;
 use http::HeaderMap;
 use lambda_http::{run, service_fn, tracing, Body, Request, Response};
+use models::{binahbot::BinahBotEnvironment, discord::DiscordInteraction};
+use router::get_response;
+use secrets_accessor::get_discord_secrets;
+use std::env;
+use std::ops::Deref;
 use tracing_subscriber;
-use hex::FromHex;
 
 use crate::models::binahbot::DiscordSecrets;
 use crate::models::binahbot::Emojis;
@@ -23,8 +23,8 @@ static TIMESTAMP_HEADER: &str = "x-signature-timestamp";
 static SIGNATURE_HEADER: &str = "x-signature-ed25519";
 
 async fn function_handler(
-    event: Request, 
-    binahbot_env: &BinahBotEnvironment
+    event: Request,
+    binahbot_env: &BinahBotEnvironment,
 ) -> Result<Response<Body>, lambda_http::Error> {
     tracing::debug!("Rust function invoked");
 
@@ -34,7 +34,7 @@ async fn function_handler(
     let event_metadata = DiscordInteractionMetadata {
         timestamp: get_header(request_headers, TIMESTAMP_HEADER),
         signature: get_header(request_headers, SIGNATURE_HEADER),
-        json_body: request_body.clone()
+        json_body: request_body.clone(),
     };
 
     let validate_headers_result = validate_headers(&binahbot_env.discord_secrets, &event_metadata);
@@ -63,7 +63,8 @@ async fn function_handler(
 
 #[tokio::main]
 async fn main() -> Result<(), lambda_http::Error> {
-    tracing_subscriber::fmt().json()
+    tracing_subscriber::fmt()
+        .json()
         .with_max_level(tracing::Level::INFO)
         .with_current_span(false)
         .with_ansi(false)
@@ -89,8 +90,8 @@ async fn main() -> Result<(), lambda_http::Error> {
             c_pierce_emoji_id: env::var("C_PIERCE_EMOJI_ID").ok(),
             c_blunt_emoji_id: env::var("C_BLUNT_EMOJI_ID").ok(),
             c_block_emoji_id: env::var("C_BLOCK_EMOJI_ID").ok(),
-            c_evade_emoji_id: env::var("C_EVADE_EMOJI_ID").ok()
-        }
+            c_evade_emoji_id: env::var("C_EVADE_EMOJI_ID").ok(),
+        },
     };
     let binahbot_env_ref = &binahbot_env;
 
@@ -98,16 +99,21 @@ async fn main() -> Result<(), lambda_http::Error> {
 
     run(service_fn(move |event: Request| {
         function_handler(event, binahbot_env_ref)
-    })).await
+    }))
+    .await
 }
 
 fn get_header(header_map: &HeaderMap, header_key: &str) -> String {
-    header_map.get(header_key).and_then(|x| x.to_str().ok()).unwrap_or("").to_owned()
+    header_map
+        .get(header_key)
+        .and_then(|x| x.to_str().ok())
+        .unwrap_or("")
+        .to_owned()
 }
 
 fn validate_headers(
     discord_secrets: &DiscordSecrets,
-    metadata: &DiscordInteractionMetadata
+    metadata: &DiscordInteractionMetadata,
 ) -> Result<(), Box<dyn std::error::Error>> {
     let public_key_bytes = <[u8; 32]>::from_hex(&discord_secrets.public_key)?;
     let public_key = VerifyingKey::from_bytes(&public_key_bytes)?;
@@ -117,6 +123,6 @@ fn validate_headers(
 
     Ok(public_key.verify(
         concatenated.as_bytes(),
-        &Signature::from_slice(&signature_bytes)?
+        &Signature::from_slice(&signature_bytes)?,
     )?)
 }

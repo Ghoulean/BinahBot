@@ -1502,10 +1502,23 @@ name = "ruina_reparser"
 version = "1.0.0"
 dependencies = [
  "phf",
+ "ruina_common",
+ "ruina_reparser_build",
+ "strum 0.25.0",
+]
+
+[[package]]
+name = "ruina_reparser_build"
+version = "1.0.0"
+dependencies = [
+ "phf",
  "phf_codegen",
  "roxmltree",
  "ruina_common",
+ "rust-stemmers",
+ "serde",
  "strum 0.25.0",
+ "strum_macros 0.25.3",
 ]
 
 [[package]]

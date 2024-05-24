@@ -1,38 +1,26 @@
-use std::fs;
-use std::path::PathBuf;
-use std::sync::OnceLock;
+use std::collections::HashMap;
 
 use roxmltree::{Document, Node};
 use ruina_common::game_objects::key_page::{KeyPageRange, Resistance};
 
-use crate::reserializer::commons::paths::{game_obj_path, read_xml_files_in_dir};
-use crate::reserializer::commons::serde::{
-    get_chapter_from_str, get_rarity_from_str, serialize_option_debug, serialize_option_str,
-    serialize_str_vector,
+use crate::serde::{
+    chapter_enum_serializer, get_chapter_from_str, get_rarity_from_str, serialize_option_2, str_array_serializer, string_literal_serializer
 };
-use crate::reserializer::commons::xml::{
-    get_nodes, get_nodes_text, get_unique_node, get_unique_node_text,
-};
+use crate::xml::get_nodes_text;
+use crate::xml::{get_nodes, get_unique_node, get_unique_node_text};
 
-fn key_page_path() -> &'static PathBuf {
-    static KEY_PAGE_PATH: OnceLock<PathBuf> = OnceLock::new();
-    KEY_PAGE_PATH.get_or_init(|| {
-        fs::canonicalize(game_obj_path().as_path().join(PathBuf::from("EquipPage"))).unwrap()
-    })
-}
+type KeyPageKey = String;
+type KeyPageValue = String;
 
-pub fn reserialize_key_pages() -> String {
-    let key_pages: Vec<(String, String)> = read_xml_files_in_dir(key_page_path())
-        .into_iter()
-        .map(|path_and_document_string| path_and_document_string.1)
+pub fn reserialize_key_pages(document_strings: &[String]) -> String {
+    let key_pages: HashMap<_, _> = document_strings
+        .iter()
         .flat_map(|document_string| process_key_page_file(document_string.as_str()))
         .collect();
 
     let mut builder = phf_codegen::Map::new();
     for (id, key_page_entry) in key_pages {
-        builder.entry(
-            id.clone(), &key_page_entry
-        );
+        builder.entry(id.clone(), &key_page_entry);
     }
     format!(
         "static KEY_PAGES: phf::Map<&'static str, KeyPage> = {};",
@@ -40,7 +28,7 @@ pub fn reserialize_key_pages() -> String {
     )
 }
 
-fn process_key_page_file(document_string: &str) -> Vec<(String, String)> {
+fn process_key_page_file(document_string: &str) -> HashMap<KeyPageKey, KeyPageValue> {
     let doc: Box<Document> = Box::new(Document::parse(document_string).unwrap());
     let xml_root_node = get_unique_node(doc.root(), "BookXmlRoot").unwrap();
     let key_page_node_list = get_nodes(xml_root_node, "Book");
@@ -51,31 +39,31 @@ fn process_key_page_file(document_string: &str) -> Vec<(String, String)> {
         .collect()
 }
 
-fn parse_key_page(key_node: Node) -> (String, String) {
+fn parse_key_page(key_node: Node) -> (KeyPageKey, KeyPageValue) {
     let id = key_node.attribute("ID").unwrap();
-    let text_id = serialize_option_str(get_unique_node_text(key_node, "TextId"));
+    let text_id = serialize_option_2(get_unique_node_text(key_node, "TextId"), string_literal_serializer);
     let equip_effect_node = get_unique_node(key_node, "EquipEffect").unwrap();
-    let skin = serialize_option_str(get_unique_node_text(key_node, "CharacterSkin"));
+    let skin = serialize_option_2(get_unique_node_text(key_node, "CharacterSkin"), string_literal_serializer);
     let hp = get_unique_node_text(equip_effect_node, "HP").unwrap();
     let stagger = get_unique_node_text(equip_effect_node, "Break").unwrap();
     let min_speed = get_unique_node_text(equip_effect_node, "SpeedMin").unwrap();
     let max_speed = get_unique_node_text(equip_effect_node, "Speed").unwrap();
-    let book_icon = serialize_option_str(get_unique_node_text(key_node, "BookIcon"));
+    let book_icon = serialize_option_2(get_unique_node_text(key_node, "BookIcon"), string_literal_serializer);
     let rarity = get_rarity_from_str(get_unique_node_text(key_node, "Rarity").unwrap());
     let base_speed_die = get_unique_node_text(key_node, "SpeedDiceNum").unwrap_or("1");
     let starting_light = get_unique_node_text(key_node, "StartPlayPoint").unwrap_or("3");
     let base_light = get_unique_node_text(key_node, "MaxPlayPoint").unwrap_or("3");
     let range =
         get_key_page_range_from_str(get_unique_node_text(key_node, "RangeType").unwrap_or("Melee"));
-    let episode_id = serialize_option_str(get_unique_node_text(key_node, "Episode"));
-    let passive_ids = serialize_str_vector(get_nodes_text(equip_effect_node, "Passive"));
-    let options = serialize_str_vector(get_nodes_text(key_node, "Option"));
-    let chapter = serialize_option_debug(
-        "Chapter",
+    let episode_id = serialize_option_2(get_unique_node_text(key_node, "Episode"), string_literal_serializer);
+    let passive_ids = str_array_serializer(&get_nodes_text(equip_effect_node, "Passive"));
+    let options = str_array_serializer(&get_nodes_text(key_node, "Option"));
+    let chapter = serialize_option_2(
         get_unique_node_text(key_node, "Chapter").map(get_chapter_from_str),
+        chapter_enum_serializer
     );
-    let category = serialize_option_str(get_unique_node_text(key_node, "Category"));
-    let only_card_ids = serialize_str_vector(get_nodes_text(equip_effect_node, "OnlyCard"));
+    let category = serialize_option_2(get_unique_node_text(key_node, "Category"), string_literal_serializer);
+    let only_card_ids = str_array_serializer(&get_nodes_text(equip_effect_node, "OnlyCard"));
 
     let hp_slash_resist = get_resistance_from_str(
         get_unique_node_text(equip_effect_node, "SResist").unwrap_or("Normal"),
@@ -96,8 +84,10 @@ fn parse_key_page(key_node: Node) -> (String, String) {
         get_unique_node_text(equip_effect_node, "HBResist").unwrap_or("Normal"),
     );
 
-    (id.to_string(), format!(
-        "KeyPage {{
+    (
+        id.to_string(),
+        format!(
+            "KeyPage {{
         text_id: {text_id},
         id: \"{id}\",
         skin: {skin},
@@ -126,7 +116,8 @@ fn parse_key_page(key_node: Node) -> (String, String) {
         category: {category},
         only_card_ids: {only_card_ids}
     }}"
-    ))
+        ),
+    )
 }
 
 fn get_key_page_range_from_str(str: &str) -> KeyPageRange {

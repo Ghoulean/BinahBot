@@ -1,38 +1,36 @@
 use std::collections::HashMap;
 
 use phf::Map;
-use ruina_common::game_objects::common::Chapter;
-use ruina_common::game_objects::key_page::Resistance;
-use ruina_common::game_objects::key_page::KeyPageRange;
-use ruina_common::game_objects::abno_page::AbnoTargetting;
-use ruina_common::game_objects::abno_page::AbnoPage;
-use ruina_common::game_objects::battle_symbol::BattleSymbol;
-use ruina_common::game_objects::combat_page::CombatPage;
-use ruina_common::game_objects::key_page::KeyPage;
-use ruina_common::game_objects::combat_page::Die;
 use ruina_common::game_objects::abno_page::Abno;
-use ruina_common::game_objects::combat_page::DieType;
+use ruina_common::game_objects::abno_page::AbnoPage;
+use ruina_common::game_objects::abno_page::AbnoTargetting;
+use ruina_common::game_objects::battle_symbol::BattleSymbol;
 use ruina_common::game_objects::battle_symbol::BattleSymbolSlot;
-use ruina_common::game_objects::passive::Passive;
+use ruina_common::game_objects::combat_page::CombatPage;
 use ruina_common::game_objects::combat_page::CombatRange;
+use ruina_common::game_objects::combat_page::Die;
+use ruina_common::game_objects::combat_page::DieType;
+use ruina_common::game_objects::common::Chapter;
+use ruina_common::game_objects::common::Floor;
+use ruina_common::game_objects::common::Rarity;
+use ruina_common::game_objects::key_page::KeyPage;
+use ruina_common::game_objects::key_page::KeyPageRange;
+use ruina_common::game_objects::key_page::KeyPageResists;
+use ruina_common::game_objects::key_page::Resistance;
+use ruina_common::game_objects::passive::Passive;
 use ruina_common::localizations::abno_page_locale::AbnoPageLocale;
 use ruina_common::localizations::battle_symbol_locale::BattleSymbolLocale;
 use ruina_common::localizations::card_effect_locale::CardEffectLocale;
 use ruina_common::localizations::combat_page_locale::CombatPageLocale;
 use ruina_common::localizations::common::Locale;
-use ruina_common::game_objects::common::Floor;
 use ruina_common::localizations::key_page_locale::KeyPageLocale;
 use ruina_common::localizations::passive_locale::PassiveLocale;
-use ruina_common::game_objects::common::Rarity;
-use ruina_common::game_objects::key_page::KeyPageResists;
 use strum::IntoEnumIterator;
 
 include!(concat!(env!("OUT_DIR"), "/out.rs"));
 
 #[inline(always)]
-pub fn get_abno_page_by_internal_name(
-    internal_name: &str,
-) -> Option<&'static AbnoPage<'static>> {
+pub fn get_abno_page_by_internal_name(internal_name: &str) -> Option<&'static AbnoPage<'static>> {
     ABNO_PAGES.get(internal_name)
 }
 
@@ -54,9 +52,7 @@ pub fn get_all_battle_symbols() -> Vec<&'static BattleSymbol<'static>> {
 }
 
 #[inline(always)]
-pub fn get_combat_page_by_id(
-    id: &str,
-) -> Option<&'static CombatPage<'static>> {
+pub fn get_combat_page_by_id(id: &str) -> Option<&'static CombatPage<'static>> {
     COMBAT_PAGES.get(id)
 }
 
@@ -66,9 +62,7 @@ pub fn get_all_combat_pages() -> Vec<&'static CombatPage<'static>> {
 }
 
 #[inline(always)]
-pub fn get_key_page_by_id(
-    id: &str,
-) -> Option<&'static KeyPage<'static>> {
+pub fn get_key_page_by_id(id: &str) -> Option<&'static KeyPage<'static>> {
     KEY_PAGES.get(id)
 }
 
@@ -78,9 +72,7 @@ pub fn get_all_key_pages() -> Vec<&'static KeyPage<'static>> {
 }
 
 #[inline(always)]
-pub fn get_passive_by_id(
-    id: &str,
-) -> Option<&'static Passive<'static>> {
+pub fn get_passive_by_id(id: &str) -> Option<&'static Passive<'static>> {
     PASSIVES.get(id)
 }
 
@@ -242,27 +234,30 @@ mod tests {
     fn key_page_locales_map_sanity_check() {
         // None of the units in Keter realization have a CN nor TRCN localization
         let exceptions = HashMap::from([
-            ("9100511", 3),  // Wrist Cutter
-            ("9100521", 3),  // Aspiration
-            ("9100522", 3),  // Lung of Craving
-            ("9100531", 3),  // Marionette
-            ("9100532", 3),  // Pinnochio
-            ("9100541", 3),  // Frost Splinter
-            ("9100542", 3),  // Prison of Ice
-            ("9100551", 3),  // Remorse
-            ("9100552", 3),  // Nail
-            ("9100553", 3),  // Hammer
+            ("9100511", 3), // Wrist Cutter
+            ("9100521", 3), // Aspiration
+            ("9100522", 3), // Lung of Craving
+            ("9100531", 3), // Marionette
+            ("9100532", 3), // Pinnochio
+            ("9100541", 3), // Frost Splinter
+            ("9100542", 3), // Prison of Ice
+            ("9100551", 3), // Remorse
+            ("9100552", 3), // Nail
+            ("9100553", 3), // Hammer
         ]);
-    
-        KEY_PAGES.values().filter(|x| x.text_id.is_some()).for_each(|key_page| {
-            let locales = get_key_page_locales_by_text_id(key_page.text_id.unwrap());
-            let locale_count = locales.values().len();
-            if let Some(exception_count) = exceptions.get(key_page.id) {
-                assert_eq!(exception_count.clone(), locale_count);
-            } else {
-                assert!(locale_count == NUM_LOCALES || locale_count == 0);
-            }
-        });
+
+        KEY_PAGES
+            .values()
+            .filter(|x| x.text_id.is_some())
+            .for_each(|key_page| {
+                let locales = get_key_page_locales_by_text_id(key_page.text_id.unwrap());
+                let locale_count = locales.values().len();
+                if let Some(exception_count) = exceptions.get(key_page.id) {
+                    assert_eq!(exception_count.clone(), locale_count);
+                } else {
+                    assert!(locale_count == NUM_LOCALES || locale_count == 0);
+                }
+            });
     }
 
     #[test]
@@ -270,9 +265,9 @@ mod tests {
         let exceptions = HashMap::from([
             ("240010", 4),  // Acrobatic (Noah) has no TRCN localization
             ("180001", 4),  // An Arbiter (Zena) has no TRCN localization
-            ("180002", 4),  // A Claw (Barel) has no TRCN 
-            ("402013", 4),  // Parting Tears (Child of the Galaxy's slime from Netz 2) has no TRCN localization
-            ("1005416", 1),  // Used but empty passive from Frost Splinter (Keter realization)
+            ("180002", 4),  // A Claw (Barel) has no TRCN
+            ("402013", 4), // Parting Tears (Child of the Galaxy's slime from Netz 2) has no TRCN localization
+            ("1005416", 1), // Used but empty passive from Frost Splinter (Keter realization)
         ]);
 
         PASSIVES.values().for_each(|passive| {

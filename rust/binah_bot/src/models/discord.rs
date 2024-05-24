@@ -6,7 +6,7 @@ use std::collections::HashMap;
 
 /**
  * Object holding embed data.
- * 
+ *
  * See also: https://discord.com/developers/docs/resources/channel#embed-object
  */
 #[derive(Serialize, Deserialize, Debug)]
@@ -22,27 +22,27 @@ pub struct DiscordEmbed {
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct DiscordEmbedImage {
-    pub url: String
+    pub url: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct DiscordEmbedFooter {
     pub text: String,
-    pub icon_url: Option<String>
+    pub icon_url: Option<String>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct DiscordEmbedAuthor {
     pub name: String,
     pub url: Option<String>,
-    pub icon_url: Option<String>
+    pub icon_url: Option<String>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct DiscordEmbedFields {
     pub name: String,
     pub value: String,
-    pub inline: Option<bool>
+    pub inline: Option<bool>,
 }
 
 /**
@@ -59,7 +59,7 @@ pub struct DiscordInteraction {
     pub channel_id: Option<String>,
     pub token: String,
     pub locale: Option<String>,
-    pub guild_locale: Option<String>
+    pub guild_locale: Option<String>,
 }
 
 #[derive(Serialize_repr, Deserialize_repr, PartialEq, Debug)]
@@ -69,7 +69,7 @@ pub enum DiscordInteractionType {
     ApplicationCommand = 2,
     MessageComponent = 3,
     ApplicationCommandAutocomplete = 4,
-    ModalSubmit = 5
+    ModalSubmit = 5,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -83,7 +83,7 @@ pub struct DiscordInteractionData {
 pub struct DiscordInteractionOptions {
     pub name: String,
     pub name_localizations: Option<HashMap<String, String>>,
-    pub value: String
+    pub value: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -99,19 +99,19 @@ pub struct DiscordInteractionMetadata {
 pub enum DiscordInteractionResponse {
     MessageResponse(MessageResponse),
     AutocompleteResponse(AutocompleteResponse),
-    PingResponse(PingResponse)
+    PingResponse(PingResponse),
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct MessageResponse {
     pub r#type: DiscordInteractionResponseType,
-    pub data: Option<DiscordInteractionResponseMessage>
+    pub data: Option<DiscordInteractionResponseMessage>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct AutocompleteResponse {
     pub r#type: DiscordInteractionResponseType,
-    pub data: Option<DiscordInteractionResponseAutocomplete>
+    pub data: Option<DiscordInteractionResponseAutocomplete>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -121,12 +121,12 @@ pub struct PingResponse {
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct DiscordInteractionResponseMessage {
-    pub embeds: Option<Vec<DiscordEmbed>>
+    pub embeds: Option<Vec<DiscordEmbed>>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct DiscordInteractionResponseAutocomplete {
-    pub choices: Option<Vec<DiscordInteractionOptions>>
+    pub choices: Option<Vec<DiscordInteractionOptions>>,
 }
 
 #[derive(Serialize_repr, Deserialize_repr, PartialEq, Debug)]
@@ -142,18 +142,15 @@ pub enum DiscordInteractionResponseType {
     PremiumRequired = 10,
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;
 
     #[test]
     fn sanity_discord_response_deser() {
-        let ping_response = DiscordInteractionResponse::PingResponse(
-            PingResponse {
-                r#type: DiscordInteractionResponseType::Pong
-            }
-        );
+        let ping_response = DiscordInteractionResponse::PingResponse(PingResponse {
+            r#type: DiscordInteractionResponseType::Pong,
+        });
         assert_eq!(
             serde_json::to_string(&ping_response).expect("serialize failed"),
             "{\"type\":1}"
