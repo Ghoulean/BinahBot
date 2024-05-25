@@ -185,14 +185,14 @@ pub fn transform_combat_page(
     if page.script_id.is_some() {
         let page_desc = get_card_effect_locales_by_id(&page.script_id.unwrap())
             .get(card_locale)
-            .unwrap()
-            .desc
-            .join("\n");
-        fields.push(DiscordEmbedFields {
-            name: "Page Description".to_string(),
-            value: page_desc.to_string(),
-            inline: Some(true),
-        })
+            .map(|x| x.desc.join("\n"));
+        if page_desc.is_some() {
+            fields.push(DiscordEmbedFields {
+                name: "Page Description".to_string(),
+                value: page_desc.unwrap().to_string(),
+                inline: Some(true),
+            })
+        }
     }
 
     let dice_vec = page.dice.to_vec();
@@ -225,34 +225,34 @@ pub fn transform_key_page(
     let hp_resists = format_to_indented_list(&vec![
         format!(
             "{}: {}",
-            get_dietype_emoji(&emojis, &DieType::Slash, &DieType::Slash.to_string()),
+            get_dietype_emoji(&emojis, &DieType::Slash),
             page.resists.hp_slash
         ),
         format!(
             "{}: {}",
-            get_dietype_emoji(&emojis, &DieType::Pierce, &DieType::Pierce.to_string()),
+            get_dietype_emoji(&emojis, &DieType::Pierce),
             page.resists.hp_pierce
         ),
         format!(
             "{}: {}",
-            get_dietype_emoji(&emojis, &DieType::Blunt, &DieType::Blunt.to_string()),
+            get_dietype_emoji(&emojis, &DieType::Blunt),
             page.resists.hp_blunt
         ),
     ]);
     let stagger_resists = format_to_indented_list(&vec![
         format!(
             "{}: {}",
-            get_dietype_emoji(&emojis, &DieType::CSlash, &DieType::CSlash.to_string()),
+            get_dietype_emoji(&emojis, &DieType::CSlash),
             page.resists.stagger_slash
         ),
         format!(
             "{}: {}",
-            get_dietype_emoji(&emojis, &DieType::CPierce, &DieType::CPierce.to_string()),
+            get_dietype_emoji(&emojis, &DieType::CPierce),
             page.resists.stagger_pierce
         ),
         format!(
             "{}: {}",
-            get_dietype_emoji(&emojis, &DieType::CBlunt, &DieType::CBlunt.to_string()),
+            get_dietype_emoji(&emojis, &DieType::CBlunt),
             page.resists.stagger_blunt
         ),
     ]);
@@ -387,12 +387,13 @@ fn format_dice(dice: &Vec<Die>, locale: &Locale, emojis: &Emojis) -> String {
             let desc = die
                 .script
                 .map(get_card_effect_locales_by_id)
-                .map(|x| x.get(locale).unwrap().desc)
+                .map(|x| x.get(locale).map(|y| y.desc))
+                .flatten()
                 .unwrap_or(&[])
                 .join("\n");
             format!(
                 "{} {}-{} {}",
-                get_dietype_emoji(&emojis, &die.die_type, &die.die_type.to_string()),
+                get_dietype_emoji(&emojis, &die.die_type),
                 die.min,
                 die.max,
                 desc

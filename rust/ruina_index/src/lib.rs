@@ -27,11 +27,11 @@ pub fn get_disambiguation_page<'a>(
     locale: &'a Locale,
 ) -> Option<&'a DisambiguationPage<'static>> {
     match locale {
-        Locale::Korean => DISAMBIGUATION_PAGES_KOREAN.get(display_name),
-        Locale::English => DISAMBIGUATION_PAGES_ENGLISH.get(display_name),
-        Locale::Japanese => DISAMBIGUATION_PAGES_JAPANESE.get(display_name),
-        Locale::Chinese => DISAMBIGUATION_PAGES_CHINESE.get(display_name),
-        Locale::TraditionalChinese => DISAMBIGUATION_PAGES_TRADITIONALCHINESE.get(display_name),
+        Locale::Korean => DISAMBIGUATION_PAGES_KR.get(display_name),
+        Locale::English => DISAMBIGUATION_PAGES_EN.get(display_name),
+        Locale::Japanese => DISAMBIGUATION_PAGES_JP.get(display_name),
+        Locale::Chinese => DISAMBIGUATION_PAGES_CN.get(display_name),
+        Locale::TraditionalChinese => DISAMBIGUATION_PAGES_TRCN.get(display_name),
     }
 }
 
@@ -41,13 +41,11 @@ pub fn get_autocomplete_entry<'a>(
 ) -> Option<&'a Autocomplete<'static>> {
     let serialized_typed_id = format!("{}", typed_id);
     match locale {
-        Locale::Korean => DISAMBIGUATION_MAP_KOREAN.get(&serialized_typed_id),
-        Locale::English => DISAMBIGUATION_MAP_ENGLISH.get(&serialized_typed_id),
-        Locale::Japanese => DISAMBIGUATION_MAP_JAPANESE.get(&serialized_typed_id),
-        Locale::Chinese => DISAMBIGUATION_MAP_CHINESE.get(&serialized_typed_id),
-        Locale::TraditionalChinese => {
-            DISAMBIGUATION_MAP_TRADITIONALCHINESE.get(&serialized_typed_id)
-        }
+        Locale::Korean => DISAMBIGUATION_MAP_KR.get(&serialized_typed_id),
+        Locale::English => DISAMBIGUATION_MAP_EN.get(&serialized_typed_id),
+        Locale::Japanese => DISAMBIGUATION_MAP_JP.get(&serialized_typed_id),
+        Locale::Chinese => DISAMBIGUATION_MAP_CN.get(&serialized_typed_id),
+        Locale::TraditionalChinese => DISAMBIGUATION_MAP_TRCN.get(&serialized_typed_id)
     }
 }
 

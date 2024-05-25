@@ -280,4 +280,13 @@ mod tests {
             }
         });
     }
+
+    #[test]
+    fn test_get_script_without_locale() {
+        let script_id = "final_scorchedgirl_fourthfire";
+        let result = get_card_effect_locales_by_id(script_id);
+
+        assert_eq!(result.values().len(), 0);
+    }
+
 }

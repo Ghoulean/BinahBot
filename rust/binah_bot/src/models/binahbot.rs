@@ -99,18 +99,18 @@ impl From<&Rarity> for DiscordEmbedColors {
 pub fn get_dietype_emoji<'a>(
     emojis: &'a Emojis,
     die_type: &'a DieType,
-    die_type_str: &'a String,
-) -> &'a String {
-    match die_type {
-        DieType::Slash => emojis.slash_emoji_id.as_ref().unwrap_or(die_type_str),
-        DieType::Pierce => emojis.pierce_emoji_id.as_ref().unwrap_or(die_type_str),
-        DieType::Blunt => emojis.blunt_emoji_id.as_ref().unwrap_or(die_type_str),
-        DieType::Block => emojis.block_emoji_id.as_ref().unwrap_or(die_type_str),
-        DieType::Evade => emojis.evade_emoji_id.as_ref().unwrap_or(die_type_str),
-        DieType::CSlash => emojis.c_slash_emoji_id.as_ref().unwrap_or(die_type_str),
-        DieType::CPierce => emojis.c_pierce_emoji_id.as_ref().unwrap_or(die_type_str),
-        DieType::CBlunt => emojis.c_blunt_emoji_id.as_ref().unwrap_or(die_type_str),
-        DieType::CBlock => emojis.c_block_emoji_id.as_ref().unwrap_or(die_type_str),
-        DieType::CEvade => emojis.c_evade_emoji_id.as_ref().unwrap_or(die_type_str),
-    }
+) -> String {
+    let emoji_match = match die_type {
+        DieType::Slash => emojis.slash_emoji_id.as_ref(),
+        DieType::Pierce => emojis.pierce_emoji_id.as_ref(),
+        DieType::Blunt => emojis.blunt_emoji_id.as_ref(),
+        DieType::Block => emojis.block_emoji_id.as_ref(),
+        DieType::Evade => emojis.evade_emoji_id.as_ref(),
+        DieType::CSlash => emojis.c_slash_emoji_id.as_ref(),
+        DieType::CPierce => emojis.c_pierce_emoji_id.as_ref(),
+        DieType::CBlunt => emojis.c_blunt_emoji_id.as_ref(),
+        DieType::CBlock => emojis.c_block_emoji_id.as_ref(),
+        DieType::CEvade => emojis.c_evade_emoji_id.as_ref(),
+    };
+    emoji_match.unwrap_or(&die_type.to_string()).to_string()
 }

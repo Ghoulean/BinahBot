@@ -45,8 +45,7 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
         .flatten()
         .unwrap_or(BinahBotLocale::EnglishUS);
 
-    // todo: override through args
-    let locale: Locale = Locale::from(binah_locale.clone());
+    let locale: Locale = get_locale_option(command_args).map(|x| Locale::from_str(x.as_str()).ok()).flatten().unwrap_or(Locale::from(binah_locale.clone()));
 
     let embed: DiscordEmbed = match typed_id.0 {
         PageType::AbnoPageId => {
@@ -121,6 +120,12 @@ fn get_query_option(vec: &Vec<DiscordInteractionOptions>) -> String {
         .unwrap()
 }
 
+fn get_locale_option(vec: &Vec<DiscordInteractionOptions>) -> Option<String> {
+    vec.into_iter()
+        .find(|x| x.name == "locale")
+        .map(|x| x.value.clone())
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -132,7 +137,7 @@ mod tests {
     #[test]
     fn get_query_option_sanity() {
         let query_value = "value";
-        let interaction = build_discord_interaction(query_value.to_string());
+        let interaction = build_discord_interaction(query_value.to_string(), Locale::English);
         let options = interaction.data.unwrap().options;
         assert_eq!(get_query_option(&options), query_value)
     }
@@ -140,7 +145,40 @@ mod tests {
     #[test]
     fn sanity_weight_of_sin() {
         let weight_of_sin_id = "a#LongBird_Sin";
-        let interaction = build_discord_interaction(weight_of_sin_id.to_string());
+        let interaction = build_discord_interaction(weight_of_sin_id.to_string(), Locale::English);
+        let interaction_kr = build_discord_interaction(weight_of_sin_id.to_string(), Locale::Korean);
+        let env = build_binahbot_env();
+
+        let response = lor_command(&interaction, &env);
+        let response_kr = lor_command(&interaction_kr, &env);
+        assert_eq!(
+            response
+                .data.as_ref()
+                .expect("no data field found")
+                .embeds.as_ref()
+                .expect("no embeds found")
+                .len(),
+            1
+        );
+        assert_eq!(
+            response_kr
+                .data.as_ref()
+                .expect("no data field found")
+                .embeds.as_ref()
+                .expect("no embeds found")
+                .len(),
+            1
+        );
+        assert_ne!(
+            response.data.as_ref().unwrap().embeds.as_ref().unwrap().first().unwrap().title.as_ref().unwrap().clone(),
+            response_kr.data.as_ref().unwrap().embeds.as_ref().unwrap().first().unwrap().title.as_ref().unwrap().clone()
+        );
+    }
+
+    #[test]
+    fn sanity_degraded_pillar() {
+        let degraded_pillar_id = "c#607204";
+        let interaction = build_discord_interaction(degraded_pillar_id.to_string(), Locale::English);
         let env = build_binahbot_env();
 
         let response = lor_command(&interaction, &env);
@@ -156,9 +194,11 @@ mod tests {
     }
 
     #[test]
-    fn sanity_degraded_pillar() {
-        let degraded_pillar_id = "c#607204";
-        let interaction = build_discord_interaction(degraded_pillar_id.to_string());
+    fn card_script_without_locale() {
+        // Enemy-only FMF contains a card script and a die script that doesn't have
+        // an associated locale with it.
+        let enemy_fourth_match_flame = "c#9901101";
+        let interaction = build_discord_interaction(enemy_fourth_match_flame.to_string(), Locale::English);
         let env = build_binahbot_env();
 
         let response = lor_command(&interaction, &env);
@@ -173,7 +213,7 @@ mod tests {
         );
     }
 
-    fn build_discord_interaction(query_string: String) -> DiscordInteraction {
+    fn build_discord_interaction(query_string: String, locale: Locale) -> DiscordInteraction {
         DiscordInteraction {
             id: "id".to_string(),
             application_id: "app_id".to_string(),
@@ -185,6 +225,10 @@ mod tests {
                     name: "query".to_string(),
                     name_localizations: None,
                     value: query_string,
+                }, DiscordInteractionOptions {
+                    name: "locale".to_string(),
+                    name_localizations: None,
+                    value: locale.to_string(),
                 }],
             }),
             channel_id: None,
