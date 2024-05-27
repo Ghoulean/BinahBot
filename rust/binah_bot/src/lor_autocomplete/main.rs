@@ -23,8 +23,7 @@ pub fn lor_autocomplete(interaction: &DiscordInteraction) -> AutocompleteRespons
         .locale
         .as_ref()
         .or(interaction.guild_locale.as_ref())
-        .map(|x| BinahBotLocale::from_str(x).ok())
-        .flatten()
+        .and_then(|x| BinahBotLocale::from_str(x).ok())
         .unwrap_or(BinahBotLocale::EnglishUS);
 
     // todo: override through args
@@ -59,8 +58,8 @@ pub fn lor_autocomplete(interaction: &DiscordInteraction) -> AutocompleteRespons
     }
 }
 
-fn get_query_option(vec: &Vec<DiscordInteractionOptions>) -> String {
-    vec.into_iter()
+fn get_query_option(vec: &[DiscordInteractionOptions]) -> String {
+    vec.iter()
         .find(|x| x.name == "query")
         .map(|x| x.value.clone())
         .unwrap_or(String::from(""))

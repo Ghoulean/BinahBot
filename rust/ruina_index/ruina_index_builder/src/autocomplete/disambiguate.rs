@@ -24,7 +24,7 @@ fn apply_differentiator_to_autocomplete_map(
     map.0.iter().for_each(|(x, y)| {
         new_map.insert(
             x.clone(),
-            apply_differentiator_to_ambiguous_map(&y, predicate),
+            apply_differentiator_to_ambiguous_map(y, predicate),
         );
     });
     IncompleteAutocompleteMap(new_map)
@@ -53,7 +53,7 @@ fn apply_differentiator_to_ambiguous_map(
         }
     });
     ambiguous_autocomplete_map.0.iter().for_each(|(x, y)| {
-        if !disambiguated_map.contains_key(&x) {
+        if !disambiguated_map.contains_key(x) {
             disambiguated_map.insert(x.clone(), y.clone());
         }
     });

@@ -1,3 +1,4 @@
+use fluent_templates::StaticLoader;
 use serde::Deserialize;
 use serde::Serialize;
 
@@ -31,6 +32,7 @@ pub struct BinahBotEnvironment {
     pub discord_client_id: String,
     pub s3_bucket_name: String,
     pub emojis: Emojis,
+    pub locales: &'static StaticLoader
 }
 
 #[derive(Clone, Debug, strum::Display, strum_macros::EnumString)]
@@ -60,8 +62,8 @@ pub enum DiscordEmbedColors {
     ObjetDArtRarity = 0xebbe00,
 }
 
-impl From<Locale> for BinahBotLocale {
-    fn from(value: Locale) -> Self {
+impl From<&Locale> for BinahBotLocale {
+    fn from(value: &Locale) -> Self {
         match value {
             Locale::English => BinahBotLocale::EnglishUS,
             Locale::Korean => BinahBotLocale::Korean,
@@ -72,8 +74,14 @@ impl From<Locale> for BinahBotLocale {
     }
 }
 
-impl From<BinahBotLocale> for Locale {
-    fn from(value: BinahBotLocale) -> Self {
+impl From<Locale> for BinahBotLocale {
+    fn from(value: Locale) -> Self {
+        BinahBotLocale::from(&value)
+    }
+}
+
+impl From<&BinahBotLocale> for Locale {
+    fn from(value: &BinahBotLocale) -> Self {
         match value {
             BinahBotLocale::EnglishUS => Locale::English,
             BinahBotLocale::Korean => Locale::Korean,
@@ -82,6 +90,18 @@ impl From<BinahBotLocale> for Locale {
             BinahBotLocale::ChineseTaiwan => Locale::TraditionalChinese,
             _ => Locale::English,
         }
+    }
+}
+
+impl From<BinahBotLocale> for Locale {
+    fn from(value: BinahBotLocale) -> Self {
+        Locale::from(&value)
+    }
+}
+
+impl From<&BinahBotLocale> for unic_langid::LanguageIdentifier {
+    fn from(value: &BinahBotLocale) -> Self {
+        value.to_string().parse().unwrap()
     }
 }
 

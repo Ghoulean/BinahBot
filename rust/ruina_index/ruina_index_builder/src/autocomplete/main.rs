@@ -72,7 +72,6 @@ fn serialized_disambiguation_map(
     disambiguated_map
         .0
         .values()
-        .into_iter()
         .for_each(|inverse_map| {
             inverse_map
                 .0
@@ -103,8 +102,8 @@ fn serialized_disambiguation_map(
 
 fn serialize_option(option: Option<DisambiguationDisplay>) -> String {
     if option.is_none() {
-        return String::from("None");
+        String::from("None")
     } else {
-        return format!("Some(\"{:}\")", option.unwrap().0);
+        format!("Some(\"{:}\")", option.unwrap().0)
     }
 }

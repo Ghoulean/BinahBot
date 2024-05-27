@@ -97,9 +97,9 @@ pub struct DiscordInteractionMetadata {
 #[derive(Serialize, Deserialize, Debug)]
 #[serde(untagged)]
 pub enum DiscordInteractionResponse {
-    MessageResponse(MessageResponse),
-    AutocompleteResponse(AutocompleteResponse),
-    PingResponse(PingResponse),
+    Message(MessageResponse),
+    Autocomplete(AutocompleteResponse),
+    Ping(PingResponse),
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -148,7 +148,7 @@ mod tests {
 
     #[test]
     fn sanity_discord_response_deser() {
-        let ping_response = DiscordInteractionResponse::PingResponse(PingResponse {
+        let ping_response = DiscordInteractionResponse::Ping(PingResponse {
             r#type: DiscordInteractionResponseType::Pong,
         });
         assert_eq!(

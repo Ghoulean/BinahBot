@@ -41,11 +41,10 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
         .locale
         .as_ref()
         .or(interaction.guild_locale.as_ref())
-        .map(|x| BinahBotLocale::from_str(x).ok())
-        .flatten()
+        .and_then(|x| BinahBotLocale::from_str(x).ok())
         .unwrap_or(BinahBotLocale::EnglishUS);
 
-    let locale: Locale = get_locale_option(command_args).map(|x| Locale::from_str(x.as_str()).ok()).flatten().unwrap_or(Locale::from(binah_locale.clone()));
+    let locale: Locale = get_locale_option(command_args).and_then(|x| Locale::from_str(x.as_str()).ok()).unwrap_or(Locale::from(binah_locale.clone()));
 
     let embed: DiscordEmbed = match typed_id.0 {
         PageType::AbnoPageId => {
@@ -55,8 +54,8 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
             transform_abno_page(
                 abno_page,
                 abno_page_locale,
-                &env.s3_bucket_name,
                 &binah_locale,
+                env
             )
         }
         PageType::BattleSymbolId => {
@@ -66,8 +65,8 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
             transform_battle_symbol(
                 battle_symbol,
                 battle_symbol_locale,
-                &env.s3_bucket_name,
                 &binah_locale,
+                env
             )
         }
         PageType::CombatPageId => {
@@ -77,10 +76,9 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
             transform_combat_page(
                 combat_page,
                 combat_page_locale,
-                &env.s3_bucket_name,
-                &env.emojis,
                 &locale,
                 &binah_locale,
+                env
             )
         }
         PageType::KeyPageId => {
@@ -91,17 +89,16 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
             transform_key_page(
                 key_page,
                 key_page_locale,
-                &env.s3_bucket_name,
-                &env.emojis,
                 &locale,
                 &binah_locale,
+                env
             )
         }
         PageType::PassiveId => {
             let passive = get_passive_by_id(&typed_id.1).unwrap();
             let passive_locales = get_passive_locales_by_id(&typed_id.1);
             let passive_locale = passive_locales.get(&locale).unwrap();
-            transform_passive(passive, passive_locale, &binah_locale)
+            transform_passive(passive, passive_locale, &binah_locale, env)
         }
     };
 
@@ -113,15 +110,15 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
     }
 }
 
-fn get_query_option(vec: &Vec<DiscordInteractionOptions>) -> String {
-    vec.into_iter()
+fn get_query_option(vec: &[DiscordInteractionOptions]) -> String {
+    vec.iter()
         .find(|x| x.name == "query")
         .map(|x| x.value.clone())
         .unwrap()
 }
 
-fn get_locale_option(vec: &Vec<DiscordInteractionOptions>) -> Option<String> {
-    vec.into_iter()
+fn get_locale_option(vec: &[DiscordInteractionOptions]) -> Option<String> {
+    vec.iter()
         .find(|x| x.name == "locale")
         .map(|x| x.value.clone())
 }
@@ -129,8 +126,7 @@ fn get_locale_option(vec: &Vec<DiscordInteractionOptions>) -> Option<String> {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::models::binahbot::DiscordSecrets;
-    use crate::models::binahbot::Emojis;
+    use crate::test_utils::build_mocked_binahbot_env;
     use crate::models::discord::DiscordInteractionData;
     use crate::models::discord::DiscordInteractionType;
 
@@ -147,7 +143,7 @@ mod tests {
         let weight_of_sin_id = "a#LongBird_Sin";
         let interaction = build_discord_interaction(weight_of_sin_id.to_string(), Locale::English);
         let interaction_kr = build_discord_interaction(weight_of_sin_id.to_string(), Locale::Korean);
-        let env = build_binahbot_env();
+        let env = build_mocked_binahbot_env();
 
         let response = lor_command(&interaction, &env);
         let response_kr = lor_command(&interaction_kr, &env);
@@ -179,7 +175,7 @@ mod tests {
     fn sanity_degraded_pillar() {
         let degraded_pillar_id = "c#607204";
         let interaction = build_discord_interaction(degraded_pillar_id.to_string(), Locale::English);
-        let env = build_binahbot_env();
+        let env = build_mocked_binahbot_env();
 
         let response = lor_command(&interaction, &env);
         assert_eq!(
@@ -199,7 +195,7 @@ mod tests {
         // an associated locale with it.
         let enemy_fourth_match_flame = "c#9901101";
         let interaction = build_discord_interaction(enemy_fourth_match_flame.to_string(), Locale::English);
-        let env = build_binahbot_env();
+        let env = build_mocked_binahbot_env();
 
         let response = lor_command(&interaction, &env);
         assert_eq!(
@@ -235,30 +231,6 @@ mod tests {
             token: "token".to_string(),
             locale: None,
             guild_locale: None,
-        }
-    }
-
-    fn build_binahbot_env() -> BinahBotEnvironment {
-        BinahBotEnvironment {
-            discord_secrets: DiscordSecrets {
-                application_id: "app_id".to_string(),
-                auth_token: "auth_token".to_string(),
-                public_key: "pub_key".to_string(),
-            },
-            discord_client_id: "id".to_string(),
-            s3_bucket_name: "bucket_name".to_string(),
-            emojis: Emojis {
-                slash_emoji_id: None,
-                pierce_emoji_id: None,
-                blunt_emoji_id: None,
-                block_emoji_id: None,
-                evade_emoji_id: None,
-                c_slash_emoji_id: None,
-                c_pierce_emoji_id: None,
-                c_blunt_emoji_id: None,
-                c_block_emoji_id: None,
-                c_evade_emoji_id: None,
-            },
         }
     }
 }

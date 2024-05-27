@@ -13,11 +13,17 @@ use router::get_response;
 use secrets_accessor::get_discord_secrets;
 use std::env;
 use std::ops::Deref;
-use tracing_subscriber;
 
 use crate::models::binahbot::DiscordSecrets;
 use crate::models::binahbot::Emojis;
 use crate::models::discord::DiscordInteractionMetadata;
+
+fluent_templates::static_loader! {
+    static LOCALES = {
+        locales: "./locales",
+        fallback_language: "en-US",
+    };
+}
 
 static TIMESTAMP_HEADER: &str = "x-signature-timestamp";
 static SIGNATURE_HEADER: &str = "x-signature-ed25519";
@@ -77,7 +83,7 @@ async fn main() -> Result<(), lambda_http::Error> {
     let discord_secrets = get_discord_secrets(&asm, &env::var("SECRETS_ID").unwrap()).await;
 
     let binahbot_env = BinahBotEnvironment {
-        discord_secrets: discord_secrets,
+        discord_secrets,
         discord_client_id: env::var("CLIENT_ID").unwrap(),
         s3_bucket_name: env::var("S3_BUCKET_NAME").unwrap(),
         emojis: Emojis {
@@ -92,6 +98,7 @@ async fn main() -> Result<(), lambda_http::Error> {
             c_block_emoji_id: env::var("C_BLOCK_EMOJI_ID").ok(),
             c_evade_emoji_id: env::var("C_EVADE_EMOJI_ID").ok(),
         },
+        locales: &LOCALES
     };
     let binahbot_env_ref = &binahbot_env;
 
@@ -125,4 +132,37 @@ fn validate_headers(
         concatenated.as_bytes(),
         &Signature::from_slice(&signature_bytes)?,
     )?)
+}
+
+#[cfg(test)]
+pub mod test_utils {
+    use crate::models::binahbot::BinahBotEnvironment;
+    use crate::models::binahbot::DiscordSecrets;
+    use crate::models::binahbot::Emojis;
+    use crate::LOCALES;
+
+    pub fn build_mocked_binahbot_env() -> BinahBotEnvironment {
+        BinahBotEnvironment {
+            discord_secrets: DiscordSecrets {
+                application_id: "app_id".to_string(),
+                auth_token: "auth_token".to_string(),
+                public_key: "pub_key".to_string(),
+            },
+            discord_client_id: "id".to_string(),
+            s3_bucket_name: "bucket_name".to_string(),
+            emojis: Emojis {
+                slash_emoji_id: None,
+                pierce_emoji_id: None,
+                blunt_emoji_id: None,
+                block_emoji_id: None,
+                evade_emoji_id: None,
+                c_slash_emoji_id: None,
+                c_pierce_emoji_id: None,
+                c_blunt_emoji_id: None,
+                c_block_emoji_id: None,
+                c_evade_emoji_id: None,
+            },
+            locales: &LOCALES
+        }
+    }
 }

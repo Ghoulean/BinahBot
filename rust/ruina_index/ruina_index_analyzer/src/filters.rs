@@ -65,7 +65,7 @@ mod tests {
 
     #[test]
     fn stopword_filter_sanity() {
-        assert_eq!(true, stopword_filter(&Token("another".to_string())));
+        assert!(stopword_filter(&Token("another".to_string())));
     }
 
     #[test]

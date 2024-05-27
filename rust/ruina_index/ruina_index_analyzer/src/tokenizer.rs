@@ -2,7 +2,7 @@
 pub struct Token(pub String);
 
 pub fn tokenize(txt: &str) -> Vec<Token> {
-    txt.split(" ").map(String::from).map(Token).collect()
+    txt.split(' ').map(String::from).map(Token).collect()
 }
 
 #[cfg(test)]

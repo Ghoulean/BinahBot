@@ -46,7 +46,7 @@ pub fn generate_naive_autocomplete_map(locale: &Locale) -> IncompleteAutocomplet
             try_insert_incomplete_map(
                 &mut ret_val,
                 id,
-                AmbiguousAutocomplete(String::from(autocomplete)),
+                AmbiguousAutocomplete(autocomplete),
             );
         });
 
@@ -69,12 +69,11 @@ pub fn generate_naive_autocomplete_map(locale: &Locale) -> IncompleteAutocomplet
         .iter()
         .filter_map(|page| {
             page.text_id
-                .map(|x| {
+                .and_then(|x| {
                     get_key_page_locales_by_text_id(x)
                         .get(locale)
                         .map(|x| (page.get_typed_id(), x.name))
                 })
-                .flatten()
         })
         .for_each(|(id, autocomplete)| {
             try_insert_incomplete_map(

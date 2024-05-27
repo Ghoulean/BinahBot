@@ -17,7 +17,7 @@ pub fn reserialize_card_effect_locales(document_strings: &HashMap<Locale, Vec<St
         .map(|(x, y)| {
             (
                 x.clone(),
-                y.into_iter()
+                y.iter()
                     .flat_map(|document_string| process_card_effect_locale_file(document_string.as_str()))
                     .collect::<HashMap<_, _>>(),
             )

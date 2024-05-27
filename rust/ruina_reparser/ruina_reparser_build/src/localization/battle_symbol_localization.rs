@@ -17,7 +17,7 @@ pub fn reserialize_battle_symbol_locales(document_strings: &HashMap<Locale, Vec<
         .map(|(x, y)| {
             (
                 x.clone(),
-                y.into_iter()
+                y.iter()
                     .flat_map(|document_string| process_battle_symbol_locale_file(document_string.as_str()))
                     .collect::<HashMap<_, _>>(),
             )

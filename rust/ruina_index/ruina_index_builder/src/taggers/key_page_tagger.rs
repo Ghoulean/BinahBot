@@ -38,6 +38,6 @@ mod tests {
             get_key_page_by_id("250036").expect("couldn't find xiao key page (player)");
         let actual_tags = xiao_key_page.generate_tags();
         let expected_tag = Tag("Xiao’s Page".to_string());
-        assert!(actual_tags.iter().find(|x| **x == expected_tag).is_some());
+        assert!(actual_tags.iter().any(|x| *x == expected_tag));
     }
 }

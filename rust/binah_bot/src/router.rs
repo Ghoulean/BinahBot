@@ -20,14 +20,14 @@ pub fn get_response(
     // switch to static hashmap later, for now just use switch-case
     match (&discord_interaction.r#type, &discord_interaction.data) {
         (DiscordInteractionType::Ping, _) => {
-            DiscordInteractionResponse::PingResponse(PingResponse {
+            DiscordInteractionResponse::Ping(PingResponse {
                 r#type: DiscordInteractionResponseType::Pong,
             })
         }
         (DiscordInteractionType::ApplicationCommand, Some(data))
             if data.name == CommandName::Lor.to_string() =>
         {
-            DiscordInteractionResponse::MessageResponse(lor_command(
+            DiscordInteractionResponse::Message(lor_command(
                 discord_interaction,
                 binahbot_env,
             ))
@@ -35,7 +35,7 @@ pub fn get_response(
         (DiscordInteractionType::ApplicationCommandAutocomplete, Some(data))
             if data.name == CommandName::Lor.to_string() =>
         {
-            DiscordInteractionResponse::AutocompleteResponse(lor_autocomplete(discord_interaction))
+            DiscordInteractionResponse::Autocomplete(lor_autocomplete(discord_interaction))
         }
         _ => panic!(),
     }

@@ -14,7 +14,7 @@ impl InverseIndex {
         index_map.iter().for_each(|(key, tags)| {
             dbg!("inverting index for key=", key);
             tags.iter().for_each(|tag| {
-                let inverse_index_entry = inverse_index.entry(tag.clone()).or_insert(Vec::new());
+                let inverse_index_entry = inverse_index.entry(tag.clone()).or_default();
                 if !inverse_index_entry.contains(key) {
                     inverse_index_entry.push(key.clone());
                 }

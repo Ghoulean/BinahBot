@@ -17,7 +17,7 @@ pub fn reserialize_abno_locales(document_strings: &HashMap<Locale, Vec<String>>)
         .map(|(x, y)| {
             (
                 x.clone(),
-                y.into_iter()
+                y.iter()
                     .flat_map(|document_string| process_abno_locale_file(document_string.as_str()))
                     .collect::<HashMap<_, _>>(),
             )
