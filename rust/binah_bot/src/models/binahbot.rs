@@ -1,4 +1,6 @@
 use fluent_templates::StaticLoader;
+use phf::Map;
+use ruina_common::game_objects::common::Chapter;
 use serde::Deserialize;
 use serde::Serialize;
 
@@ -32,7 +34,8 @@ pub struct BinahBotEnvironment {
     pub discord_client_id: String,
     pub s3_bucket_name: String,
     pub emojis: Emojis,
-    pub locales: &'static StaticLoader
+    pub locales: &'static StaticLoader,
+    pub spoiler_config: &'static Map<&'static str, Chapter>
 }
 
 #[derive(Clone, Debug, strum::Display, strum_macros::EnumString)]

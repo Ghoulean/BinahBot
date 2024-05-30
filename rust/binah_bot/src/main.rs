@@ -8,15 +8,19 @@ use ed25519_dalek::{Signature, Verifier, VerifyingKey};
 use hex::FromHex;
 use http::HeaderMap;
 use lambda_http::{run, service_fn, tracing, Body, Request, Response};
-use models::{binahbot::BinahBotEnvironment, discord::DiscordInteraction};
 use router::get_response;
 use secrets_accessor::get_discord_secrets;
 use std::env;
 use std::ops::Deref;
 
+use ruina_common::game_objects::common::Chapter;
+
 use crate::models::binahbot::DiscordSecrets;
 use crate::models::binahbot::Emojis;
 use crate::models::discord::DiscordInteractionMetadata;
+use models::{binahbot::BinahBotEnvironment, discord::DiscordInteraction};
+
+include!(concat!(env!("OUT_DIR"), "/out.rs"));
 
 fluent_templates::static_loader! {
     static LOCALES = {
@@ -98,7 +102,8 @@ async fn main() -> Result<(), lambda_http::Error> {
             c_block_emoji_id: env::var("C_BLOCK_EMOJI_ID").ok(),
             c_evade_emoji_id: env::var("C_EVADE_EMOJI_ID").ok(),
         },
-        locales: &LOCALES
+        locales: &LOCALES,
+        spoiler_config: &SPOILER_CONFIG
     };
     let binahbot_env_ref = &binahbot_env;
 
@@ -140,6 +145,7 @@ pub mod test_utils {
     use crate::models::binahbot::DiscordSecrets;
     use crate::models::binahbot::Emojis;
     use crate::LOCALES;
+    use crate::SPOILER_CONFIG;
 
     pub fn build_mocked_binahbot_env() -> BinahBotEnvironment {
         BinahBotEnvironment {
@@ -162,7 +168,8 @@ pub mod test_utils {
                 c_block_emoji_id: None,
                 c_evade_emoji_id: None,
             },
-            locales: &LOCALES
+            locales: &LOCALES,
+            spoiler_config: &SPOILER_CONFIG
         }
     }
 }
