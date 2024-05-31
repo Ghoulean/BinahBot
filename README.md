@@ -17,4 +17,5 @@ Talk me to me before doing anything. It would suck if you put out a PR only to f
 - ~~(p2) BinahBot localization (as in, the interface itself, which only supports EN atm)~~
   - (p3) Localize beyond EN
 - (p4) Per-channel spoiler enforcement
+  - still on radar, but rebuilding index comes first
 - (p1 but ETA is next year) Deck repository

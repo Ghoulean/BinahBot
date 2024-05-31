@@ -26,8 +26,7 @@ pub fn lor_autocomplete(interaction: &DiscordInteraction) -> AutocompleteRespons
         .and_then(|x| BinahBotLocale::from_str(x).ok())
         .unwrap_or(BinahBotLocale::EnglishUS);
 
-    // todo: override through args
-    let locale: Locale = Locale::from(binah_locale.clone());
+    let locale: Locale = get_locale_option(command_args).and_then(|x| Locale::from_str(x.as_str()).ok()).unwrap_or(Locale::from(binah_locale.clone()));
 
     let mut ids = get_typed_ids_from_query(&query);
     ids.truncate(5);
@@ -63,6 +62,12 @@ fn get_query_option(vec: &[DiscordInteractionOptions]) -> String {
         .find(|x| x.name == "query")
         .map(|x| x.value.clone())
         .unwrap_or(String::from(""))
+}
+
+fn get_locale_option(vec: &[DiscordInteractionOptions]) -> Option<String> {
+    vec.iter()
+        .find(|x| x.name == "locale")
+        .map(|x| x.value.clone())
 }
 
 #[cfg(test)]
