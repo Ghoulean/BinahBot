@@ -2,7 +2,6 @@
 name = "binah_bot"
 version = "1.0.0"
 edition = "2021"
-build = "build/main.rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -28,6 +27,3 @@ tokio = { version = "1", features = ["macros"] }
 tracing = { version = "0.1.38" }
 tracing-subscriber = "0.3"
 unic-langid = "0.9.5"
-
-[build-dependencies]
-binah_bot_spoiler = { path = "./binah_bot_spoiler", version = "1.0.0" }
