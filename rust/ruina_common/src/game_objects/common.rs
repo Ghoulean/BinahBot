@@ -21,7 +21,7 @@ pub enum Floor {
     None,
 }
 
-#[derive(Debug, PartialEq, strum_macros::Display)]
+#[derive(Debug, PartialEq, PartialOrd, strum_macros::Display)]
 pub enum Chapter {
     Canard,
     UrbanMyth,
@@ -30,5 +30,5 @@ pub enum Chapter {
     UrbanNightmare,
     StarOfTheCity,
     ImpuritasCivitatis,
-    None
+    None,
 }

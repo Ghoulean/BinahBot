@@ -1,38 +1,26 @@
-use std::fs;
-use std::path::PathBuf;
-use std::sync::OnceLock;
+use std::collections::HashMap;
 
 use roxmltree::{Document, Node};
 use ruina_common::game_objects::combat_page::{CombatRange, DieType};
 
-use crate::reserializer::commons::paths::{game_obj_path, read_xml_files_in_dir};
-use crate::reserializer::commons::serde::{
-    get_chapter_from_str, get_rarity_from_str, serialize_option, serialize_option_debug,
-    serialize_option_str, serialize_str_vector,
+use crate::serde::{
+    chapter_enum_serializer, display_serializer, get_chapter_from_str, get_rarity_from_str, serialize_option_2, str_array_serializer, string_literal_serializer
 };
-use crate::reserializer::commons::xml::{
-    get_nodes, get_nodes_text, get_unique_node, get_unique_node_text,
-};
+use crate::xml::get_nodes_text;
+use crate::xml::{get_nodes, get_unique_node, get_unique_node_text};
 
-fn combat_page_path() -> &'static PathBuf {
-    static COMBAT_PAGE_PATH: OnceLock<PathBuf> = OnceLock::new();
-    COMBAT_PAGE_PATH.get_or_init(|| {
-        fs::canonicalize(game_obj_path().as_path().join(PathBuf::from("Card"))).unwrap()
-    })
-}
+type CombatPageKey = String;
+type CombatPageValue = String;
 
-pub fn reserialize_combat_pages() -> String {
-    let combat_pages: Vec<(String, String)> = read_xml_files_in_dir(combat_page_path())
-        .into_iter()
-        .map(|path_and_document_string| path_and_document_string.1)
+pub fn reserialize_combat_pages(document_strings: &[String]) -> String {
+    let combat_pages: HashMap<_, _> = document_strings
+        .iter()
         .flat_map(|document_string| process_combat_page_file(document_string.as_str()))
         .collect();
 
     let mut builder = phf_codegen::Map::new();
     for (id, combat_page_entry) in combat_pages {
-        builder.entry(
-            id.clone(), &combat_page_entry
-        );
+        builder.entry(id.clone(), &combat_page_entry);
     }
     format!(
         "static COMBAT_PAGES: phf::Map<&'static str, CombatPage> = {};",
@@ -40,7 +28,7 @@ pub fn reserialize_combat_pages() -> String {
     )
 }
 
-fn process_combat_page_file(document_string: &str) -> Vec<(String, String)> {
+fn process_combat_page_file(document_string: &str) -> HashMap<CombatPageKey, CombatPageValue> {
     let doc: Box<Document> = Box::new(Document::parse(document_string).unwrap());
     let xml_root_node = get_unique_node(doc.root(), "DiceCardXmlRoot").unwrap();
     let combat_node_list = get_nodes(xml_root_node, "Card");
@@ -51,9 +39,12 @@ fn process_combat_page_file(document_string: &str) -> Vec<(String, String)> {
         .collect()
 }
 
-fn parse_combat_page(combat_node: Node) -> (String, String) {
+fn parse_combat_page(combat_node: Node) -> (CombatPageKey, CombatPageValue) {
     let id = combat_node.attribute("ID").unwrap();
-    let artwork = serialize_option_str(get_unique_node_text(combat_node, "Artwork"));
+    let artwork = serialize_option_2(
+        get_unique_node_text(combat_node, "Artwork"),
+        string_literal_serializer
+    );
     let cost = get_unique_node(combat_node, "Spec")
         .unwrap()
         .attribute("Cost")
@@ -66,20 +57,34 @@ fn parse_combat_page(combat_node: Node) -> (String, String) {
     );
     let rarity = get_rarity_from_str(get_unique_node_text(combat_node, "Rarity").unwrap());
     let dice = parse_dice(get_unique_node(combat_node, "BehaviourList").unwrap());
-    let keywords = serialize_str_vector(get_nodes_text(combat_node, "Keyword"));
-    let options = serialize_str_vector(get_nodes_text(combat_node, "Option"));
+    let keywords = str_array_serializer(&get_nodes_text(combat_node, "Keyword"));
+    let options = str_array_serializer(&get_nodes_text(combat_node, "Option"));
     let script_id =
-        serialize_option_str(get_unique_node_text(combat_node, "Script").filter(|x| !x.is_empty()));
-    let skin_change = serialize_option_str(get_unique_node_text(combat_node, "SkinChange"));
-    let map_change = serialize_option_str(get_unique_node_text(combat_node, "MapChange"));
-    let chapter = serialize_option_debug(
-        "Chapter",
-        get_unique_node_text(combat_node, "Chapter").map(get_chapter_from_str),
+        serialize_option_2(
+            get_unique_node_text(combat_node, "Script").filter(|x| !x.is_empty()),
+            string_literal_serializer
+        );
+    let skin_change = serialize_option_2(
+        get_unique_node_text(combat_node, "SkinChange"),
+        string_literal_serializer
     );
-    let priority = serialize_option(get_unique_node_text(combat_node, "Priority"));
+    let map_change = serialize_option_2(
+        get_unique_node_text(combat_node, "MapChange"),
+        string_literal_serializer
+    );
+    let chapter = serialize_option_2(
+        get_unique_node_text(combat_node, "Chapter").map(get_chapter_from_str),
+        chapter_enum_serializer
+    );
+    let priority = serialize_option_2(
+        get_unique_node_text(combat_node, "Priority"),
+        display_serializer
+    );
 
-    (id.to_string(), format!(
-        "CombatPage {{
+    (
+        id.to_string(),
+        format!(
+            "CombatPage {{
         id: \"{id}\",
         artwork: {artwork},
         cost: {cost},
@@ -94,7 +99,8 @@ fn parse_combat_page(combat_node: Node) -> (String, String) {
         priority: {priority},
         dice: {dice}
     }}"
-    ))
+        ),
+    )
 }
 
 fn parse_dice(dice_node: Node) -> String {
@@ -112,11 +118,20 @@ fn parse_die(die_node: Node) -> String {
     let die_type = die_node.attribute("Type").unwrap();
     let die_detail = die_node.attribute("Detail").unwrap_or("Slash");
     let die_type = get_die_type_from_strs(die_type, die_detail);
-    let script = serialize_option_str(die_node.attribute("Script").filter(|x| !x.is_empty()));
+    let script = serialize_option_2(
+        die_node.attribute("Script").filter(|x| !x.is_empty()),
+        string_literal_serializer
+    );
     let actionscript =
-        serialize_option_str(die_node.attribute("ActionScript").filter(|x| !x.is_empty()));
+        serialize_option_2(
+            die_node.attribute("ActionScript").filter(|x| !x.is_empty()),
+            string_literal_serializer
+        );
     let motion = die_node.attribute("Motion").unwrap();
-    let effect_res = serialize_option_str(die_node.attribute("EffectRes"));
+    let effect_res = serialize_option_2(
+        die_node.attribute("EffectRes"),
+        string_literal_serializer
+    );
 
     format!(
         "Die{{

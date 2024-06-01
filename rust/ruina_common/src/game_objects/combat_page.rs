@@ -50,5 +50,5 @@ pub struct CombatPage<'a> {
     pub skin_change: Option<&'a str>,
     pub map_change: Option<&'a str>,
     pub chapter: Option<Chapter>,
-    pub priority: Option<i16>
+    pub priority: Option<i16>,
 }

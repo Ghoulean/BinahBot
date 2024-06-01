@@ -1,15 +1,15 @@
-use std::str::FromStr;
 use std::fmt;
+use std::str::FromStr;
 
 pub struct Autocomplete<'a> {
     pub base: &'a str,
-    pub disambiguator: Option<&'a str>
+    pub disambiguator: Option<&'a str>,
 }
 
 pub struct DisambiguationPage<'a> {
     pub id: &'a str,
     pub typed_ids: &'a [TypedId<'a>],
-    pub default: Option<&'a str>
+    pub default: Option<&'a str>,
 }
 
 #[derive(Clone, Eq, Hash, PartialEq, Debug)]
@@ -34,7 +34,7 @@ impl fmt::Display for PageType {
             PageType::BattleSymbolId => write!(f, "b#"),
             PageType::CombatPageId => write!(f, "c#"),
             PageType::KeyPageId => write!(f, "k#"),
-            PageType::PassiveId => write!(f, "p#")
+            PageType::PassiveId => write!(f, "p#"),
         }
     }
 }
@@ -55,7 +55,7 @@ impl FromStr for PageType {
             "c#" => Ok(PageType::CombatPageId),
             "k#" => Ok(PageType::KeyPageId),
             "p#" => Ok(PageType::PassiveId),
-            _ => Err("unrecognized PageType")?
+            _ => Err("unrecognized PageType")?,
         }
     }
 }

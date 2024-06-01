@@ -1,16 +1,17 @@
+use fluent_templates::StaticLoader;
 use serde::Deserialize;
 use serde::Serialize;
 
-use ruina_common::localizations::common::Locale;
-use ruina_common::game_objects::common::Rarity;
 use ruina_common::game_objects::combat_page::DieType;
+use ruina_common::game_objects::common::Rarity;
+use ruina_common::localizations::common::Locale;
 
 #[derive(Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct DiscordSecrets {
     pub application_id: String,
     pub auth_token: String,
-    pub public_key: String
+    pub public_key: String,
 }
 
 pub struct Emojis {
@@ -30,7 +31,8 @@ pub struct BinahBotEnvironment {
     pub discord_secrets: DiscordSecrets,
     pub discord_client_id: String,
     pub s3_bucket_name: String,
-    pub emojis: Emojis
+    pub emojis: Emojis,
+    pub locales: &'static StaticLoader
 }
 
 #[derive(Clone, Debug, strum::Display, strum_macros::EnumString)]
@@ -45,7 +47,7 @@ pub enum BinahBotLocale {
     ChineseChina,
     #[strum(serialize = "zh-TW")]
     ChineseTaiwan,
-    Other
+    Other,
 }
 
 #[derive(Clone, Debug)]
@@ -60,8 +62,8 @@ pub enum DiscordEmbedColors {
     ObjetDArtRarity = 0xebbe00,
 }
 
-impl From<Locale> for BinahBotLocale {
-    fn from(value: Locale) -> Self {
+impl From<&Locale> for BinahBotLocale {
+    fn from(value: &Locale) -> Self {
         match value {
             Locale::English => BinahBotLocale::EnglishUS,
             Locale::Korean => BinahBotLocale::Korean,
@@ -72,16 +74,34 @@ impl From<Locale> for BinahBotLocale {
     }
 }
 
-impl From<BinahBotLocale> for Locale {
-    fn from(value: BinahBotLocale) -> Self {
+impl From<Locale> for BinahBotLocale {
+    fn from(value: Locale) -> Self {
+        BinahBotLocale::from(&value)
+    }
+}
+
+impl From<&BinahBotLocale> for Locale {
+    fn from(value: &BinahBotLocale) -> Self {
         match value {
             BinahBotLocale::EnglishUS => Locale::English,
             BinahBotLocale::Korean => Locale::Korean,
             BinahBotLocale::Japanese => Locale::Japanese,
             BinahBotLocale::ChineseChina => Locale::Chinese,
             BinahBotLocale::ChineseTaiwan => Locale::TraditionalChinese,
-            _ => Locale::English
+            _ => Locale::English,
         }
+    }
+}
+
+impl From<BinahBotLocale> for Locale {
+    fn from(value: BinahBotLocale) -> Self {
+        Locale::from(&value)
+    }
+}
+
+impl From<&BinahBotLocale> for unic_langid::LanguageIdentifier {
+    fn from(value: &BinahBotLocale) -> Self {
+        value.to_string().parse().unwrap()
     }
 }
 
@@ -91,22 +111,26 @@ impl From<&Rarity> for DiscordEmbedColors {
             Rarity::Paperback => DiscordEmbedColors::PaperbackRarity,
             Rarity::Hardcover => DiscordEmbedColors::HardcoverRarity,
             Rarity::Limited => DiscordEmbedColors::LimitedRarity,
-            Rarity::ObjetDArt => DiscordEmbedColors::ObjetDArtRarity
+            Rarity::ObjetDArt => DiscordEmbedColors::ObjetDArtRarity,
         }
     }
 }
 
-pub fn get_dietype_emoji<'a>(emojis: &'a Emojis, die_type: &'a DieType, die_type_str: &'a String) -> &'a String {
-    match die_type {
-        DieType::Slash => emojis.slash_emoji_id.as_ref().unwrap_or(die_type_str),
-        DieType::Pierce => emojis.pierce_emoji_id.as_ref().unwrap_or(die_type_str),
-        DieType::Blunt => emojis.blunt_emoji_id.as_ref().unwrap_or(die_type_str),
-        DieType::Block => emojis.block_emoji_id.as_ref().unwrap_or(die_type_str),
-        DieType::Evade => emojis.evade_emoji_id.as_ref().unwrap_or(die_type_str),
-        DieType::CSlash => emojis.c_slash_emoji_id.as_ref().unwrap_or(die_type_str),
-        DieType::CPierce => emojis.c_pierce_emoji_id.as_ref().unwrap_or(die_type_str),
-        DieType::CBlunt => emojis.c_blunt_emoji_id.as_ref().unwrap_or(die_type_str),
-        DieType::CBlock => emojis.c_block_emoji_id.as_ref().unwrap_or(die_type_str),
-        DieType::CEvade => emojis.c_evade_emoji_id.as_ref().unwrap_or(die_type_str),
-    }
+pub fn get_dietype_emoji<'a>(
+    emojis: &'a Emojis,
+    die_type: &'a DieType,
+) -> String {
+    let emoji_match = match die_type {
+        DieType::Slash => emojis.slash_emoji_id.as_ref(),
+        DieType::Pierce => emojis.pierce_emoji_id.as_ref(),
+        DieType::Blunt => emojis.blunt_emoji_id.as_ref(),
+        DieType::Block => emojis.block_emoji_id.as_ref(),
+        DieType::Evade => emojis.evade_emoji_id.as_ref(),
+        DieType::CSlash => emojis.c_slash_emoji_id.as_ref(),
+        DieType::CPierce => emojis.c_pierce_emoji_id.as_ref(),
+        DieType::CBlunt => emojis.c_blunt_emoji_id.as_ref(),
+        DieType::CBlock => emojis.c_block_emoji_id.as_ref(),
+        DieType::CEvade => emojis.c_evade_emoji_id.as_ref(),
+    };
+    emoji_match.unwrap_or(&die_type.to_string()).to_string()
 }

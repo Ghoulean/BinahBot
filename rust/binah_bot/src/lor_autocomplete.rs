@@ -1,2 +1,2 @@
-pub mod main;
 mod lookup;
+pub mod main;

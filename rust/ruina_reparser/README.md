@@ -2,7 +2,7 @@ Put BaseMod in root directoy of this package (so it is on the same level as `./b
 
 There are a few differences between raw XML and the results of this serialization (that I know of/remember):
 1. Due to limitations with the XML library, a missing element cannot be differentiated with an empty element (e.g. `<Desc></Desc>`, `</Desc>`, and `(empty)` are not differentiated among each other)
-2. Abno of `AbnoPage` is explicitly mentioned
+2. Abno of `AbnoPage` is explicitly demarked using an enum, rather than inferred from the ID
 3. Combat page `ScriptDesc`s omitted
 4. Die `Desc`s omitted
 5. Missing die type (`Detail`) defaults to "slash"
@@ -19,7 +19,7 @@ There are a few differences between raw XML and the results of this serializatio
 12. Battle symbol missing `NoAppear` defaults to `false`
 13. Battle symbol localization has some entries with no `Desc` element and others with `""` as the text value of the `Desc` element. Due to limitations with the XML library these two cannot be differentiated, so all `""` `Desc` elements are treated as missing.
 
-While I did these without thinking at first, I believe I may later reconsider this decision of whether to reparse by XML only, if I should encode game assumptions also, or some "reasonable" combination of both approaches.
+While I did these without thinking at first, I may later reconsider this decision of whether to reparse by XML only, if I should encode game assumptions also, or some "reasonable" combination of both approaches.
 
 ## TODO: This package works, but there's a ton of copy paste and crap. Refactor until it's right
 

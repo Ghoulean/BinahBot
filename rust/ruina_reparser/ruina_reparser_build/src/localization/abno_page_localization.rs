@@ -1,45 +1,25 @@
 use std::collections::HashMap;
-use std::fs;
-use std::path::PathBuf;
-use std::sync::OnceLock;
 
 use roxmltree::{Document, Node};
 use ruina_common::localizations::common::Locale;
 
-use crate::reserializer::commons::paths::{localize_paths, read_xml_files_in_dir};
-use crate::reserializer::commons::serde::serialize_str_vector;
-use crate::reserializer::commons::xml::{
-    get_nodes, get_nodes_text, get_unique_node, get_unique_node_text,
+use crate::{
+    serde::str_array_serializer,
+    xml::{get_nodes, get_nodes_text, get_unique_node, get_unique_node_text},
 };
 
-fn abno_locale_paths() -> &'static Vec<(Locale, PathBuf)> {
-    static ABNO_LOCALE_PATHS: OnceLock<Vec<(Locale, PathBuf)>> = OnceLock::new();
-    ABNO_LOCALE_PATHS.get_or_init(|| {
-        localize_paths()
-            .clone()
-            .iter()
-            .map(|x| {
-                (
-                    x.0.clone(),
-                    fs::canonicalize(x.1.as_path().join(PathBuf::from("AbnormalityCards")))
-                        .unwrap(),
-                )
-            })
-            .collect()
-    })
-}
+type AbnoPageLocaleKey = String;
+type AbnoPageLocaleValue = String;
 
-pub fn reserialize_abno_locales() -> String {
-    let abnos: HashMap<Locale, HashMap<String, String>> = abno_locale_paths()
+pub fn reserialize_abno_locales(document_strings: &HashMap<Locale, Vec<String>>) -> String {
+    let abnos: HashMap<Locale, HashMap<AbnoPageLocaleKey, AbnoPageLocaleValue>> = document_strings
         .iter()
-        .map(|x| {
+        .map(|(x, y)| {
             (
-                x.0.clone(),
-                read_xml_files_in_dir(&x.1)
-                    .into_iter()
-                    .map(|path_and_document_string| path_and_document_string.1)
+                x.clone(),
+                y.iter()
                     .flat_map(|document_string| process_abno_locale_file(document_string.as_str()))
-                    .collect(),
+                    .collect::<HashMap<_, _>>(),
             )
         })
         .collect();
@@ -62,7 +42,7 @@ pub fn reserialize_abno_locales() -> String {
     )
 }
 
-fn process_abno_locale_file(document_string: &str) -> HashMap<String, String> {
+fn process_abno_locale_file(document_string: &str) -> HashMap<AbnoPageLocaleKey, AbnoPageLocaleValue> {
     let doc: Box<Document> = Box::new(Document::parse(document_string).unwrap());
     let xml_root_node = get_unique_node(doc.root(), "AbnormalityCardsRoot").unwrap();
     let sephirah_list = get_nodes(xml_root_node, "Sephirah");
@@ -70,7 +50,7 @@ fn process_abno_locale_file(document_string: &str) -> HashMap<String, String> {
     sephirah_list.into_iter().flat_map(parse_sephirah).collect()
 }
 
-fn parse_sephirah(node: Node) -> HashMap<String, String> {
+fn parse_sephirah(node: Node) -> HashMap<AbnoPageLocaleKey, AbnoPageLocaleValue> {
     let floor = node.attribute("SephirahType").unwrap();
     let abno_list = get_nodes(node, "AbnormalityCard");
 
@@ -80,14 +60,14 @@ fn parse_sephirah(node: Node) -> HashMap<String, String> {
         .collect()
 }
 
-fn parse_abno_locale(node: Node, floor: &str) -> (String, String) {
+fn parse_abno_locale(node: Node, floor: &str) -> (AbnoPageLocaleKey, AbnoPageLocaleValue) {
     let internal_name = node.attribute("ID").unwrap();
     let abnormality = get_unique_node_text(node, "Abnormality").unwrap_or("");
     let card_name = get_unique_node_text(node, "CardName").unwrap();
     let description = get_unique_node_text(node, "AbilityDesc").unwrap();
     let flavor_text = get_unique_node_text(node, "FlaborText").unwrap_or("");
     let dialogues_node = get_unique_node(node, "Dialogue").unwrap();
-    let dialogues = serialize_str_vector(get_nodes_text(dialogues_node, "Dialogue"));
+    let dialogues = str_array_serializer(&get_nodes_text(dialogues_node, "Dialogue"));
 
     (
         internal_name.to_string(),

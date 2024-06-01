@@ -1,33 +1,23 @@
-use std::fs;
-use std::path::PathBuf;
-use std::sync::OnceLock;
+use std::collections::HashMap;
 
 use roxmltree::{Document, Node};
 use ruina_common::game_objects::battle_symbol::BattleSymbolSlot;
 
-use crate::reserializer::commons::paths::{game_obj_path, read_xml_files_in_dir};
-use crate::reserializer::commons::serde::serialize_option;
-use crate::reserializer::commons::xml::{get_nodes, get_unique_node, get_unique_node_text};
+use crate::serde::{display_serializer, serialize_option_2};
+use crate::xml::{get_nodes, get_unique_node, get_unique_node_text};
 
-fn battle_symbol_path() -> &'static PathBuf {
-    static BATTLE_SYMBOL_PATH: OnceLock<PathBuf> = OnceLock::new();
-    BATTLE_SYMBOL_PATH.get_or_init(|| {
-        fs::canonicalize(game_obj_path().as_path().join(PathBuf::from("GiftInfo"))).unwrap()
-    })
-}
+type BattleSymbolKey = String;
+type BattleSymbolValue = String;
 
-pub fn reserialize_battle_symbols() -> String {
-    let battle_symbols: Vec<(String, String)> = read_xml_files_in_dir(battle_symbol_path())
-        .into_iter()
-        .map(|path_and_document_string| path_and_document_string.1)
-        .flat_map(|document_string| process_battle_symbol_file(document_string.as_str()))
+pub fn reserialize_battle_symbols(document_strings: &[String]) -> String {
+    let battle_symbols: HashMap<_, _> = document_strings
+        .iter()
+        .flat_map(|document_string| process_battle_symbol_file(document_string))
         .collect();
 
     let mut builder = phf_codegen::Map::new();
     for (id, battle_symbol_entry) in battle_symbols {
-        builder.entry(
-            id.clone(), &battle_symbol_entry
-        );
+        builder.entry(id.clone(), &battle_symbol_entry);
     }
     format!(
         "static BATTLE_SYMBOLS: phf::Map<&'static str, BattleSymbol> = {};",
@@ -35,7 +25,7 @@ pub fn reserialize_battle_symbols() -> String {
     )
 }
 
-fn process_battle_symbol_file(document_string: &str) -> Vec<(String, String)> {
+fn process_battle_symbol_file(document_string: &str) -> HashMap<BattleSymbolKey, BattleSymbolValue> {
     let doc: Box<Document> = Box::new(Document::parse(document_string).unwrap());
     let xml_root_node = get_unique_node(doc.root(), "GiftXmlRoot").unwrap();
     let battle_symbol_node_list = get_nodes(xml_root_node, "Gift");
@@ -46,7 +36,7 @@ fn process_battle_symbol_file(document_string: &str) -> Vec<(String, String)> {
         .collect()
 }
 
-fn parse_battle_symbol(battle_symbol_node: Node) -> (String, String) {
+fn parse_battle_symbol(battle_symbol_node: Node) -> (BattleSymbolKey, BattleSymbolValue) {
     let id = battle_symbol_node.attribute("ID").unwrap();
     // Unsure why empty string results in exclusion from the generated XML tree,
     // possibly a limitation with XML library
@@ -60,10 +50,15 @@ fn parse_battle_symbol(battle_symbol_node: Node) -> (String, String) {
     let hidden = get_unique_node_text(battle_symbol_node, "NoAppear")
         .map(|x| x == "true")
         .unwrap_or(false);
-    let count = serialize_option(get_unique_node_text(battle_symbol_node, "Count"));
+    let count = serialize_option_2(
+        get_unique_node_text(battle_symbol_node, "Count"),
+        display_serializer
+    );
 
-    (internal_name.to_string(), format!(
-        "BattleSymbol {{
+    (
+        internal_name.to_string(),
+        format!(
+            "BattleSymbol {{
         id: \"{id}\",
         internal_name: \"{internal_name}\",
         resource: \"{resource}\",
@@ -71,7 +66,8 @@ fn parse_battle_symbol(battle_symbol_node: Node) -> (String, String) {
         hidden: {hidden},
         count: {count}
     }}"
-    ))
+        ),
+    )
 }
 
 fn get_battle_symbol_slot_from_str(str: &str) -> BattleSymbolSlot {

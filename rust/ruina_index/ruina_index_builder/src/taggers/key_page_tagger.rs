@@ -15,7 +15,7 @@ impl Tagger for KeyPage<'_> {
 
     fn generate_tags(&self) -> Vec<Tag> {
         let default_tags = DEFAULT_KEY_PAGE_TAGS.to_vec();
-        self.text_id.map_or(vec!(), |x| {
+        self.text_id.map_or(vec![], |x| {
             get_key_page_locales_by_text_id(x)
                 .values()
                 .map(|key_page_locale| key_page_locale.name)
@@ -34,9 +34,10 @@ mod tests {
 
     #[test]
     fn sanity() {
-        let xiao_key_page = get_key_page_by_id("250036").expect("couldn't find xiao key page (player)");
+        let xiao_key_page =
+            get_key_page_by_id("250036").expect("couldn't find xiao key page (player)");
         let actual_tags = xiao_key_page.generate_tags();
         let expected_tag = Tag("Xiao’s Page".to_string());
-        assert!(actual_tags.iter().find(|x| **x == expected_tag).is_some());
+        assert!(actual_tags.iter().any(|x| *x == expected_tag));
     }
 }

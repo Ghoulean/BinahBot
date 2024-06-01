@@ -6,15 +6,17 @@ use ruina_index_analyzer::analyze;
 
 use index::index::Index;
 use ruina_common::localizations::common::Locale;
-use ruina_reparser::{get_all_abno_pages, get_all_battle_symbols, get_all_combat_pages, get_all_key_pages, get_all_passives};
+use ruina_reparser::{
+    get_all_abno_pages, get_all_battle_symbols, get_all_combat_pages, get_all_key_pages,
+    get_all_passives,
+};
 use strum::IntoEnumIterator;
 
 use taggers::tagger::Tag;
 
 use crate::taggers::tagger::Tagger;
 use crate::{
-    autocomplete::main::generate_serialized_autocomplete_objs,
-    index::inverse_index::InverseIndex,
+    autocomplete::main::generate_serialized_autocomplete_objs, index::inverse_index::InverseIndex,
 };
 
 pub fn build_index() -> String {
@@ -33,7 +35,7 @@ pub fn build_index() -> String {
 
     [
         inverse_index.to_serialized_phf_map("INVERSE_CARD_INDEX"),
-        autocomplete_objs
+        autocomplete_objs,
     ]
     .join("\n")
 }
@@ -43,18 +45,15 @@ fn build_index_from(taggers: Vec<&impl Tagger>) -> Index {
         taggers
             .iter()
             .map(|x| {
-                let tags = 
-                x.generate_tags()
+                let tags = x
+                    .generate_tags()
                     .iter()
                     .map(|tag| tag.0.clone())
                     .flat_map(|txt| analyze(&txt))
                     .map(|token| token.0)
                     .map(Tag)
                     .collect();
-                (
-                    x.get_typed_id(),
-                    tags
-                )
+                (x.get_typed_id(), tags)
             })
             .collect(),
     )

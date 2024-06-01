@@ -4,7 +4,7 @@ use crate::game_objects::common::Floor;
 pub enum AbnoTargetting {
     SelectOne,
     All,
-    AllIncludingEnemy // Obsession only afaik
+    AllIncludingEnemy, // Obsession only afaik
 }
 
 #[derive(Debug, PartialEq)]

@@ -19,7 +19,7 @@ mod tests {
         let expected = vec![
             Token("etern".to_string()),
             Token("lit".to_string()),
-            Token("lamp".to_string())
+            Token("lamp".to_string()),
         ];
         assert_eq!(expected, analyze(input));
     }
@@ -27,10 +27,7 @@ mod tests {
     #[test]
     fn sanity_degraded_pillar() {
         let input = "degraded pillar";
-        let expected = vec![
-            Token("degrad".to_string()),
-            Token("pillar".to_string()),
-        ];
+        let expected = vec![Token("degrad".to_string()), Token("pillar".to_string())];
         assert_eq!(expected, analyze(input));
     }
 }
