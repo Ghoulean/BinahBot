@@ -1,29 +1,17 @@
-use rust_stemmers::Algorithm;
-use rust_stemmers::Stemmer;
+use unicode_normalization::char::is_combining_mark;
+use unicode_normalization::UnicodeNormalization;
 
-use crate::tokenizer::Token;
+use crate::Token;
 
 fn punctuation_filter(token: &Token) -> Token {
-    Token(
-        token
-            .0
-            .to_lowercase()
-            .replace("’s", "")
-            .replace(
-                &[
-                    '(', ')', ',', '\"', '.', ';', ':', '\'', '?', '!', '’', '~', '…', '♣', '◆',
-                ][..],
-                "",
-            )
-            .replace("<color=red>♥</color>", "")
-            .replace(&['-'][..], " "),
+    let str = &token.0.nfd().filter(|x| !is_combining_mark(*x)).collect::<String>();
+    Token(str.to_lowercase()
+        .replace("’s", "")
+        .replace("'s", "")
+        .replace(&['(', ')', ',', '\"', '.', ';', ':', '\'', '?', '!', '’', '~', '…', '♣', '◆'][..], "")
+        .replace("<color=red>♥</color>", "")
+        .replace(&['-'][..], " ")
     )
-}
-
-fn stemmer_filter(token: Token) -> Token {
-    // todo: lazy static
-    let en_stemmer: Stemmer = Stemmer::create(Algorithm::English);
-    Token(String::from(en_stemmer.stem(&token.0)))
 }
 
 fn stopword_filter(token: &Token) -> bool {
@@ -35,12 +23,11 @@ fn stopword_filter(token: &Token) -> bool {
 }
 
 pub fn filter(tokens: Vec<Token>) -> Vec<Token> {
-    tokens
-        .iter()
-        .map(punctuation_filter)
-        .filter(stopword_filter)
-        .map(stemmer_filter)
-        .collect()
+    tokens.iter().map(
+        punctuation_filter
+    ).filter(
+        stopword_filter
+    ).collect()
 }
 
 #[cfg(test)]
@@ -56,11 +43,11 @@ mod tests {
     }
 
     #[test]
-    fn stemmer_filter_sanity() {
-        let input = Token("senses".to_string());
-        let expected = Token("sens".to_string());
+    fn punctuation_filter_accents() {
+        let input = Token("ChīWěn".to_string());
+        let expected = Token("chiwen".to_string());
 
-        assert_eq!(expected, stemmer_filter(input));
+        assert_eq!(expected, punctuation_filter(&input));
     }
 
     #[test]
@@ -73,7 +60,11 @@ mod tests {
         let input = vec![
             Token("Trim".to_string()),
             Token("The".to_string()),
-            Token("Ingredients".to_string()),
+            Token("Ingredients".to_string())
+        ];
+        let expected = vec![
+            Token("trim".to_string()),
+            Token("ingredients".to_string())
         ];
         let expected = vec![Token("trim".to_string()), Token("ingredi".to_string())];
         assert_eq!(expected, filter(input));

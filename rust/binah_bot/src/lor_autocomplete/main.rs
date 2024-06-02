@@ -29,7 +29,7 @@ pub fn lor_autocomplete(interaction: &DiscordInteraction) -> AutocompleteRespons
     let locale: Locale = get_locale_option(command_args).and_then(|x| Locale::from_str(x.as_str()).ok()).unwrap_or(Locale::from(binah_locale.clone()));
 
     let mut ids = get_typed_ids_from_query(&query);
-    ids.truncate(5);
+    ids.truncate(10);
     ids.shrink_to_fit();
 
     let options: Vec<_> = ids

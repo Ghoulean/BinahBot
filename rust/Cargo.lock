@@ -1691,10 +1691,9 @@ dependencies = [
 name = "ruina_index_analyzer"
 version = "1.0.0"
 dependencies = [
- "rust-stemmers",
  "strum 0.25.0",
  "strum_macros 0.25.3",
- "unidecode",
+ "unicode-normalization",
 ]
 
 [[package]]
@@ -2445,12 +2444,6 @@ checksum = "a56d1686db2308d901306f92a263857ef59ea39678a5458e7cb17f01415101f5"
 dependencies = [
  "tinyvec",
 ]
-
-[[package]]
-name = "unidecode"
-version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "402bb19d8e03f1d1a7450e2bd613980869438e0666331be3e073089124aa1adc"
 
 [[package]]
 name = "untrusted"
