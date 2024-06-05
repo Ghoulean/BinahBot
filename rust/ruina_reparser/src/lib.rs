@@ -167,7 +167,7 @@ fn get_locales_by_identifier<T>(
             (
                 locale.clone(),
                 locale_mapping
-                    .get(locale.clone().to_string().as_str())
+                    .get(locale.to_string().as_str())
                     .unwrap(),
             )
         })

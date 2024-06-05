@@ -1671,6 +1671,18 @@ version = "1.0.0"
 dependencies = [
  "strum 0.25.0",
  "strum_macros 0.25.3",
+ "unic-langid",
+]
+
+[[package]]
+name = "ruina_identifier"
+version = "1.0.0"
+dependencies = [
+ "ruina_common",
+ "ruina_reparser",
+ "serde",
+ "strum 0.25.0",
+ "strum_macros 0.25.3",
 ]
 
 [[package]]
@@ -1697,13 +1709,31 @@ dependencies = [
 ]
 
 [[package]]
+name = "ruina_index_annotations"
+version = "1.0.0"
+dependencies = [
+ "fluent-templates",
+ "phf",
+ "phf_codegen",
+ "ruina_common",
+ "ruina_identifier",
+ "serde",
+ "strum 0.25.0",
+ "strum_macros 0.25.3",
+ "toml",
+ "unic-langid",
+]
+
+[[package]]
 name = "ruina_index_builder"
 version = "1.0.0"
 dependencies = [
  "phf",
  "phf_codegen",
  "ruina_common",
+ "ruina_identifier",
  "ruina_index_analyzer",
+ "ruina_index_annotations",
  "ruina_reparser",
  "rust-stemmers",
  "serde",
@@ -1949,6 +1979,15 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
+]
+
+[[package]]
+name = "serde_spanned"
+version = "0.6.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "79e674e01f999af37c49f70a6ede167a8a60b2503e56c5599532a65baa5969a0"
+dependencies = [
+ "serde",
 ]
 
 [[package]]
@@ -2255,6 +2294,40 @@ dependencies = [
  "pin-project-lite",
  "tokio",
  "tracing",
+]
+
+[[package]]
+name = "toml"
+version = "0.8.13"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a4e43f8cc456c9704c851ae29c67e17ef65d2c30017c17a9765b89c382dc8bba"
+dependencies = [
+ "serde",
+ "serde_spanned",
+ "toml_datetime",
+ "toml_edit",
+]
+
+[[package]]
+name = "toml_datetime"
+version = "0.6.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4badfd56924ae69bcc9039335b2e017639ce3f9b001c393c1b2d1ef846ce2cbf"
+dependencies = [
+ "serde",
+]
+
+[[package]]
+name = "toml_edit"
+version = "0.22.13"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c127785850e8c20836d49732ae6abfa47616e60bf9d9f57c43c250361a9db96c"
+dependencies = [
+ "indexmap",
+ "serde",
+ "serde_spanned",
+ "toml_datetime",
+ "winnow",
 ]
 
 [[package]]
@@ -2679,6 +2752,15 @@ name = "windows_x86_64_msvc"
 version = "0.52.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "32b752e52a2da0ddfbdbcc6fceadfeede4c939ed16d13e648833a61dfb611ed8"
+
+[[package]]
+name = "winnow"
+version = "0.6.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "86c949fede1d13936a99f14fafd3e76fd642b556dd2ce96287fbe2e0151bfac6"
+dependencies = [
+ "memchr",
+]
 
 [[package]]
 name = "xmlparser"

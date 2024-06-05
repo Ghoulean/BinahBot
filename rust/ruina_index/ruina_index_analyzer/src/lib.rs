@@ -1,38 +1,46 @@
 mod filters;
 
+use std::collections::HashMap;
+
 use crate::filters::filter;
 
 const LEFT_PAD: char = '^';
 const RIGHT_PAD: char = '|';
 const N_NGRAM: usize = 3;
 
-#[derive(Clone, Debug, Eq, Hash, PartialEq)]
-pub struct Token(pub String);
+type Token = String;
 
 #[derive(Clone, Debug, Eq, Hash, PartialEq)]
 pub struct Ngram(pub String);
 
-pub fn analyze(text: &str) -> Vec<Ngram> {
+type Frequency = i32;
+
+pub fn analyze(text: &str) -> HashMap<Ngram, Frequency> {
     let str = filter(tokenize(text)).iter()
-        .map(|x| pad(x).0)
+        .map(|x| pad(x))
         .collect::<Vec<_>>()
         .join("");
 
     let vec = generate_ngrams(&str);
 
-    return vec.iter()
+    vec.iter()
         .filter(|x| !x.ends_with(LEFT_PAD))
         .map(|x| if !x.contains(LEFT_PAD) { sort_ngram(x) } else { x.to_string() })
         .map(|x| Ngram(x.to_string()))
-        .collect();
+        .fold(HashMap::new(), |mut map, x| {
+            map.entry(x)
+                .and_modify(|y| *y += 1)
+                .or_insert(1);
+            map
+        })
 }
 
 fn tokenize(txt: &str) -> Vec<Token> {
-    txt.split(" ").map(String::from).map(Token).collect()
+    txt.split(" ").map(String::from).collect()
 }
 
 fn pad(token: &Token) -> Token {
-    Token(format!("{}{}{}{}", LEFT_PAD, LEFT_PAD, token.0, RIGHT_PAD))
+    format!("{}{}{}{}", LEFT_PAD, LEFT_PAD, token, RIGHT_PAD)
 }
 
 fn generate_ngrams(str: &str) -> Vec<String> {
@@ -63,10 +71,10 @@ mod tests {
     fn sanity_tokenize() {
         let input = "The Weight of Sin";
         let expected = vec![
-            Token("The".to_string()),
-            Token("Weight".to_string()),
-            Token("of".to_string()),
-            Token("Sin".to_string()),
+            "The".to_string(),
+            "Weight".to_string(),
+            "of".to_string(),
+            "Sin".to_string(),
         ];
         assert_eq!(expected, tokenize(input));
     }
@@ -74,23 +82,28 @@ mod tests {
     #[test]
     fn sanity_eternally_lit_lamp() {
         let input = "Eternally Lit Lamp"; // ^^eternally|^^lit|^^lamp|
-        let expected: Vec<_> = vec![
+
+        // all are Frequency=1 except "^^l"
+        let mut expected: HashMap<_, _> = vec![
             "^^e", "^et", "eet", "ert", "enr", "anr", "aln", "all", "lly", "ly|",
             "^^l", "^li", "ilt", "it|", "^^l", "^la", "alm", "amp", "mp|"
         ].iter()
-        .map(|x| Ngram(x.to_string()))
+        .map(|x| (Ngram(x.to_string()), 1))
         .collect();
+
+        expected.insert(Ngram("^^l".to_string()), 2);
+
         assert_eq!(expected, analyze(input));
     }
 
     #[test]
     fn sanity_degraded_pillar() {
         let input = "degraded pillar"; // ^^degraded|^^pillar|
-        let expected: Vec<_> = vec![
+        let expected: HashMap<_, _> = vec![
             "^^d", "^de", "deg", "egr", "agr", "adr", "ade", "dde", "de|",
             "^^p", "^pi", "ilp", "ill", "all", "alr", "ar|"
         ].iter()
-        .map(|x| Ngram(x.to_string()))
+        .map(|x| (Ngram(x.to_string()), 1))
         .collect();
         assert_eq!(expected, analyze(input));
     }
@@ -98,10 +111,10 @@ mod tests {
     #[test]
     fn sanity_jp() {
         let input = "回避"; // ^^回避|
-        let expected: Vec<_> = vec![
+        let expected: HashMap<_, _> = vec![
             "^^回", "^回避", "|回避"
         ].iter()
-        .map(|x| Ngram(x.to_string()))
+        .map(|x| (Ngram(x.to_string()), 1))
         .collect();
         assert_eq!(expected, analyze(input));
     }
