@@ -1,6 +1,7 @@
 import { Command } from "commander";
 import * as dotenv from "dotenv";
 import { DiscordAccessor, GlobalCommandList } from "./discord_accessor";
+import * as commands_config from "./commands.json";
 
 const program = new Command();
 dotenv.config({ path: `${__dirname}/../.env` });
@@ -33,9 +34,8 @@ if (isList) {
         .then((retval: GlobalCommandList) => {
             console.log(JSON.stringify(retval, null, 4));
         });
-
 } else if (isWrite) {
-    discordAccessor.writeGlobalCommands()
+    discordAccessor.writeGlobalCommands(commands_config as unknown as GlobalCommandList)
         .then((retval: GlobalCommandList) => {
             console.log(JSON.stringify(retval, null, 4));
         });
