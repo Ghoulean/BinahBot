@@ -1,24 +1,13 @@
 use std::fmt;
 use std::str::FromStr;
 
-pub struct Autocomplete<'a> {
-    pub base: &'a str,
-    pub disambiguator: Option<&'a str>,
-}
-
-pub struct DisambiguationPage<'a> {
-    pub id: &'a str,
-    pub typed_ids: &'a [TypedId<'a>],
-    pub default: Option<&'a str>,
-}
-
 #[derive(Clone, Eq, Hash, PartialEq, Debug)]
 pub enum PageType {
-    AbnoPageId,
-    BattleSymbolId,
-    CombatPageId,
-    KeyPageId,
-    PassiveId,
+    AbnoPage,
+    BattleSymbol,
+    CombatPage,
+    KeyPage,
+    Passive,
 }
 
 #[derive(Clone, Eq, Hash, PartialEq, Debug)]
@@ -30,11 +19,11 @@ pub struct ParsedTypedId(pub PageType, pub String);
 impl fmt::Display for PageType {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match *self {
-            PageType::AbnoPageId => write!(f, "a#"),
-            PageType::BattleSymbolId => write!(f, "b#"),
-            PageType::CombatPageId => write!(f, "c#"),
-            PageType::KeyPageId => write!(f, "k#"),
-            PageType::PassiveId => write!(f, "p#"),
+            PageType::AbnoPage => write!(f, "a#"),
+            PageType::BattleSymbol => write!(f, "b#"),
+            PageType::CombatPage => write!(f, "c#"),
+            PageType::KeyPage => write!(f, "k#"),
+            PageType::Passive => write!(f, "p#"),
         }
     }
 }
@@ -50,11 +39,11 @@ impl FromStr for PageType {
 
     fn from_str(pagetype_str: &str) -> Result<Self, Self::Err> {
         match pagetype_str {
-            "a#" => Ok(PageType::AbnoPageId),
-            "b#" => Ok(PageType::BattleSymbolId),
-            "c#" => Ok(PageType::CombatPageId),
-            "k#" => Ok(PageType::KeyPageId),
-            "p#" => Ok(PageType::PassiveId),
+            "a#" => Ok(PageType::AbnoPage),
+            "b#" => Ok(PageType::BattleSymbol),
+            "c#" => Ok(PageType::CombatPage),
+            "k#" => Ok(PageType::KeyPage),
+            "p#" => Ok(PageType::Passive),
             _ => Err("unrecognized PageType")?,
         }
     }
@@ -76,7 +65,7 @@ mod tests {
 
     #[test]
     fn sanity_typed_id_display() {
-        let under_test = TypedId(PageType::AbnoPageId, "123");
+        let under_test = TypedId(PageType::AbnoPage, "123");
         let format = format!("{}", under_test);
         assert_eq!(format, "a#123");
     }
@@ -85,7 +74,7 @@ mod tests {
     fn sanity_parsed_typed_id_fromstr() {
         let under_test = "a#123";
         let parsed_typed_id = ParsedTypedId::from_str(under_test).expect("should not fail");
-        assert_eq!(parsed_typed_id.0, PageType::AbnoPageId);
+        assert_eq!(parsed_typed_id.0, PageType::AbnoPage);
         assert_eq!(parsed_typed_id.1, "123");
     }
 }

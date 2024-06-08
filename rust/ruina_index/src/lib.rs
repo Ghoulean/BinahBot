@@ -1,82 +1,79 @@
 pub mod models;
 
-use std::collections::HashSet;
-
-use crate::models::Autocomplete;
-use crate::models::DisambiguationPage;
-use crate::models::PageType::AbnoPageId;
-use crate::models::PageType::BattleSymbolId;
-use crate::models::PageType::CombatPageId;
-use crate::models::PageType::KeyPageId;
-use crate::models::PageType::PassiveId;
 use crate::models::TypedId;
+use crate::models::ParsedTypedId;
+
+use ruina_index_analyzer::analyze;
 use ruina_common::localizations::common::Locale;
-pub use ruina_index_analyzer::analyze;
-pub use ruina_index_analyzer::Token;
+use std::collections::HashMap;
+use std::cmp::min;
+use std::str::FromStr;
 
 include!(concat!(env!("OUT_DIR"), "/out.rs"));
 
-pub fn get_typed_ids(index: &str) -> Option<HashSet<&TypedId<'static>>> {
-    INVERSE_CARD_INDEX
-        .get(index)
-        .and_then(|x| Some(HashSet::from_iter(x.into_iter())))
+pub fn get_disambiguation(
+    typed_id: &TypedId,
+    locale: &Locale,
+) -> Option<&'static &'static str> {
+    DISAMBIGUATIONS_MAP.get(&typed_id.to_string()).map(|x| x.get(&locale.to_string())).flatten()
 }
 
-pub fn get_disambiguation_page<'a>(
-    display_name: &'a str,
-    locale: &'a Locale,
-) -> Option<&'a DisambiguationPage<'static>> {
-    match locale {
-        Locale::Korean => DISAMBIGUATION_PAGES_KR.get(display_name),
-        Locale::English => DISAMBIGUATION_PAGES_EN.get(display_name),
-        Locale::Japanese => DISAMBIGUATION_PAGES_JP.get(display_name),
-        Locale::Chinese => DISAMBIGUATION_PAGES_CN.get(display_name),
-        Locale::TraditionalChinese => DISAMBIGUATION_PAGES_TRCN.get(display_name),
-    }
-}
+pub fn query(query: &str) -> Vec<ParsedTypedId> {
+    let ngrams = analyze(query);
 
-pub fn get_autocomplete_entry<'a>(
-    typed_id: &'a TypedId,
-    locale: &'a Locale,
-) -> Option<&'a Autocomplete<'static>> {
-    let serialized_typed_id = format!("{}", typed_id);
-    match locale {
-        Locale::Korean => DISAMBIGUATION_MAP_KR.get(&serialized_typed_id),
-        Locale::English => DISAMBIGUATION_MAP_EN.get(&serialized_typed_id),
-        Locale::Japanese => DISAMBIGUATION_MAP_JP.get(&serialized_typed_id),
-        Locale::Chinese => DISAMBIGUATION_MAP_CN.get(&serialized_typed_id),
-        Locale::TraditionalChinese => DISAMBIGUATION_MAP_TRCN.get(&serialized_typed_id)
-    }
+    let mut scorekeeper = HashMap::new();
+
+    ngrams.iter().for_each(|(ngram, freq1)| {
+        INVERSE_INDEX.get(&ngram.0).map(|map| {
+            map.into_iter().for_each(|(typed_id_str, freq2)| {
+                scorekeeper.entry(typed_id_str)
+                    .and_modify(|x: &mut i32| *x += min(*freq1, *freq2))
+                    .or_insert(min(*freq1, *freq2));
+            });
+        });
+    });
+
+    let mut vec: Vec<_> = scorekeeper.iter().collect();
+    vec.sort_by(|a, b| b.1.partial_cmp(a.1).unwrap());
+
+    vec.iter().map(|(typed_id_str, _)| {
+        ParsedTypedId::from_str(typed_id_str).unwrap()
+    }).collect()
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::models::PageType;
 
     #[test]
-    fn sanity_get_typed_ids() {
-        let degraded_pillar = TypedId(CombatPageId, "607204");
+    fn sanity_query() {
+        let return_padding = 2;
 
-        let pillar_hashset = get_typed_ids("pillar").expect("pillar hashset not found");
-        assert!(pillar_hashset.get(&degraded_pillar).is_some());
+        let degraded_pillar = ParsedTypedId(PageType::CombatPage, "607204".to_string());
+
+        let pillar_vec = query("pillar");
+        let pillar_position = pillar_vec.iter()
+            .position(|x| *x == degraded_pillar)
+            .expect("couldn't find degraded pillar");
+
         // pillar, degraded pillar
-        assert_eq!(pillar_hashset.len(), 2);
+        assert!(pillar_position <= 1 + return_padding);
 
-        let degraded_hashset = get_typed_ids("degrad").expect("degrad hashset not found");
-        // fairy, chain, lock, shockwave, pillar
-        assert_eq!(degraded_hashset.len(), 5);
-        assert!(degraded_hashset.get(&degraded_pillar).is_some());
+        let degraded_vec = query("degraded");
+        let degraded_position = degraded_vec.iter()
+            .position(|x| *x == degraded_pillar)
+            .expect("couldn't find degraded pillar");
+
+        dbg!(&degraded_vec);
+        dbg!(degraded_position);
+
+        // degraded shockwave, pillar, chain, lock, fairy
+        assert!(degraded_position <= 4 + return_padding);
     }
 
     #[test]
-    fn sanity_get_disambiguation_page() {
-        assert!(get_disambiguation_page("Prepared Mind", &Locale::English).is_some());
-    }
-
-    #[test]
-    fn sanity_get_autocomplete_entry() {
-        let degraded_pillar = TypedId(CombatPageId, "607204");
-
-        assert!(get_autocomplete_entry(&degraded_pillar, &Locale::English).is_some());
+    fn sanity_get_disambiguation() {
+        assert!(get_disambiguation(&TypedId(PageType::CombatPage, "202002"), &Locale::English).is_some());
     }
 }

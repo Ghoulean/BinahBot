@@ -38,6 +38,25 @@ pub fn precompute_disambiguations_map<'a>() -> AnnotationMapping<'a> {
     manual_mappings
 }
 
+pub fn write_to_string(annotation_mapping: &AnnotationMapping) -> String {
+    let mut builder = phf_codegen::Map::new();
+
+    for (typed_id, locale) in annotation_mapping.iter() {
+        let mut locale_builder = phf_codegen::Map::new();
+        for (locale, annotation) in locale.iter() {
+            locale_builder.entry(
+                format!("{}", locale),
+                &format!("\"{}\"", annotation)
+            );
+        }
+        builder.entry(typed_id.to_string(), locale_builder.build().to_string().as_str());
+    }
+    format!(
+        "phf::Map<&'static str, phf::Map<&'static str, &'static str>> = {};",
+        builder.build()
+    )
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
