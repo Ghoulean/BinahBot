@@ -12,6 +12,7 @@ use ruina_index::models::ParsedTypedId;
 use ruina_reparser::get_abno_page_locales_by_internal_name;
 use ruina_reparser::get_battle_symbol_locales_by_internal_name;
 use ruina_reparser::get_combat_page_locales_by_id;
+use ruina_reparser::get_key_page_by_id;
 use ruina_reparser::get_key_page_locales_by_text_id;
 use ruina_reparser::get_passive_locales_by_id;
 use unic_langid::LanguageIdentifier;
@@ -57,7 +58,7 @@ pub fn lor_autocomplete(interaction: &DiscordInteraction, env: &BinahBotEnvironm
                     &lang_id,
                     "autocomplete_display_disambiguation",
                     &HashMap::from([
-                        ("display", FluentValue::from(get_display_name_locale(&x, &locale).unwrap_or("?".to_string()))),
+                        ("display", FluentValue::from(get_display_name_locale(&x, &locale).unwrap_or(x.to_string()))),
                         ("disambiguation", FluentValue::from(*disambiguation_str)),
                     ])
                 )
@@ -66,7 +67,7 @@ pub fn lor_autocomplete(interaction: &DiscordInteraction, env: &BinahBotEnvironm
                     &lang_id,
                     "autocomplete_display",
                     &HashMap::from([
-                        ("display", FluentValue::from(get_display_name_locale(&x, &locale).unwrap_or("?".to_string()))),
+                        ("display", FluentValue::from(get_display_name_locale(&x, &locale).unwrap_or(x.to_string()))),
                     ])
                 )
             }
@@ -115,7 +116,15 @@ fn get_display_name_locale(
             get_combat_page_locales_by_id(&typed_id.1).get(locale).map(|x| x.name.to_string())
         }
         PageType::KeyPage => {
-            get_key_page_locales_by_text_id(&typed_id.1).get(locale).map(|x| x.name.to_string())
+            get_key_page_by_id(&typed_id.1).map(|key_page| {
+                key_page.text_id.map(|text_id| {
+                    get_key_page_locales_by_text_id(text_id)
+                        .get(locale)
+                        .map(|key_page_locale| {
+                            key_page_locale.name.to_string()
+                        })
+                }).or(key_page.skin.map(|skin| Some(skin.to_string()))).flatten()
+            }).flatten()
         }
         PageType::Passive => {
             get_passive_locales_by_id(&typed_id.1).get(locale).map(|x| x.name.to_string())
@@ -136,30 +145,26 @@ mod tests {
         let interaction = build_discord_interaction(weight_of_sin_query.to_string());
 
         let response = lor_autocomplete(&interaction, &build_mocked_binahbot_env());
-        assert_eq!(
-            response
-                .data
-                .as_ref()
-                .expect("no data field found")
-                .choices
-                .as_ref()
-                .expect("no embeds found")
-                .len(),
-            10
-        );
-        assert!(
-            response
-                .data
-                .as_ref()
-                .expect("no data field found")
-                .choices
-                .as_ref()
-                .expect("no embeds found")
-                .iter()
-                .map(|x| x.name.clone())
-                .collect::<Vec<_>>()
-                .contains(&"The Weight of Sin".to_string())
-        );
+        let choices = response.data.as_ref().expect("no data field found")
+            .choices.as_ref().expect("no embeds found")
+            .iter().map(|x| x.name.clone()).collect::<Vec<_>>();
+        assert_eq!(choices.len(), 10);
+        assert!(choices.contains(&"The Weight of Sin".to_string()));
+    }
+
+    #[test]
+    fn sanity_xiao() {
+        let xiao_query = "Xiao";
+        let interaction = build_discord_interaction(xiao_query.to_string());
+
+        let response = lor_autocomplete(&interaction, &build_mocked_binahbot_env());
+        let choices = response.data.as_ref().expect("no data field found")
+            .choices.as_ref().expect("no embeds found")
+            .iter().map(|x| x.name.clone()).collect::<Vec<_>>();
+        assert_eq!(choices.len(), 10);
+        dbg!(&choices);
+        assert!(choices.contains(&"Xiao".to_string()));
+        assert!(choices.contains(&"Xiao’s Page".to_string()));
     }
 
     fn build_discord_interaction(query_string: String) -> DiscordInteraction {

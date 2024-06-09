@@ -48,6 +48,8 @@ pub fn query(query: &str) -> Vec<ParsedTypedId> {
     let mut vec: Vec<_> = scorekeeper.iter().collect();
     vec.sort_by(|a, b| b.1.partial_cmp(a.1).unwrap());
 
+    dbg!(&vec);
+
     vec.iter().map(|(typed_id_str, _)| {
         ParsedTypedId::from_str(typed_id_str).unwrap()
     }).collect()
@@ -89,7 +91,9 @@ pub fn get_page_locale<'a>(
             get_combat_page_locales_by_id(id).get(locale).map(|x| PageLocale::CombatPage(x))
         }
         PageType::KeyPage => {
-            get_key_page_locales_by_text_id(id).get(locale).map(|x| PageLocale::KeyPage(x))
+            get_key_page_by_id(id).map(|key_page| key_page.text_id.map(|text_id| {
+                get_key_page_locales_by_text_id(text_id).get(locale).map(|x| PageLocale::KeyPage(x))
+            })).flatten().flatten()
         }
         PageType::Passive => {
             get_passive_locales_by_id(id).get(locale).map(|x| PageLocale::Passive(x))
@@ -121,11 +125,30 @@ mod tests {
             .position(|x| *x == degraded_pillar)
             .expect("couldn't find degraded pillar");
 
-        dbg!(&degraded_vec);
-        dbg!(degraded_position);
-
         // degraded shockwave, pillar, chain, lock, fairy
         assert!(degraded_position <= 4 + return_padding);
+    }
+
+    #[test]
+    fn xiao() {
+        let return_padding = 2;
+
+        let binding = vec![
+            "250036", "150020", "150036", "150038"
+        ];
+        let xiaos = binding.iter().map(|x| ParsedTypedId(PageType::KeyPage, x.to_string()));
+
+        let query_return = query("Xiao");
+        dbg!(&query_return);
+        
+        xiaos.for_each(|x| {
+            let position = query_return.iter()
+                .position(|y| *y == x)
+                .expect(&format!("couldn't find xiao {}", x));
+
+            assert!(position <= 4 + return_padding);
+        });
+
     }
 
     #[test]

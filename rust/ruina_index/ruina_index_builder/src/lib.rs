@@ -18,6 +18,7 @@ use ruina_reparser::get_battle_symbol_locales_by_internal_name;
 use ruina_reparser::get_combat_page_locales_by_id;
 use ruina_reparser::get_key_page_locales_by_text_id;
 use ruina_reparser::get_passive_locales_by_id;
+use ruina_reparser::get_key_page_by_id;
 
 type Frequency = i32;
 
@@ -144,7 +145,9 @@ fn combat_page_lookup_fn(id: &str) -> HashMap<Locale, String> {
 }
 
 fn key_page_lookup_fn(id: &str) -> HashMap<Locale, String> {
-    get_key_page_locales_by_text_id(id).iter().map(|(x, y)| (x.clone(), y.name.to_owned())).collect()
+    get_key_page_by_id(id).map(|key_page| key_page.text_id.map(|text_id| {
+        get_key_page_locales_by_text_id(text_id).iter().map(|(x, y)| (x.clone(), y.name.to_owned())).collect()
+    })).flatten().unwrap_or(HashMap::new())
 }
 
 fn passive_lookup_fn(id: &str) -> HashMap<Locale, String> {
