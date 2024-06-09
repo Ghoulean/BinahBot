@@ -1,10 +1,22 @@
 pub mod models;
 
-use crate::models::TypedId;
 use crate::models::ParsedTypedId;
 
-use ruina_index_analyzer::analyze;
+use ruina_common::game_objects::common::Page;
+use ruina_common::game_objects::common::PageType;
 use ruina_common::localizations::common::Locale;
+use ruina_common::localizations::common::PageLocale;
+use ruina_index_analyzer::analyze;
+use ruina_reparser::get_abno_page_by_internal_name;
+use ruina_reparser::get_battle_symbol_by_internal_name;
+use ruina_reparser::get_combat_page_by_id;
+use ruina_reparser::get_key_page_by_id;
+use ruina_reparser::get_passive_by_id;
+use ruina_reparser::get_abno_page_locales_by_internal_name;
+use ruina_reparser::get_battle_symbol_locales_by_internal_name;
+use ruina_reparser::get_combat_page_locales_by_id;
+use ruina_reparser::get_key_page_locales_by_text_id;
+use ruina_reparser::get_passive_locales_by_id;
 use std::collections::HashMap;
 use std::cmp::min;
 use std::str::FromStr;
@@ -12,10 +24,10 @@ use std::str::FromStr;
 include!(concat!(env!("OUT_DIR"), "/out.rs"));
 
 pub fn get_disambiguation(
-    typed_id: &TypedId,
+    parsed_typed_id: &ParsedTypedId,
     locale: &Locale,
 ) -> Option<&'static &'static str> {
-    DISAMBIGUATIONS_MAP.get(&typed_id.to_string()).map(|x| x.get(&locale.to_string())).flatten()
+    DISAMBIGUATIONS_MAP.get(&parsed_typed_id.to_string()).map(|x| x.get(&locale.to_string())).flatten()
 }
 
 pub fn query(query: &str) -> Vec<ParsedTypedId> {
@@ -41,10 +53,54 @@ pub fn query(query: &str) -> Vec<ParsedTypedId> {
     }).collect()
 }
 
+pub fn get_page(typed_id: &ParsedTypedId) -> Option<Page> {
+    match typed_id.0 {
+        PageType::AbnoPage => {
+            get_abno_page_by_internal_name(&typed_id.1).map(|x| Page::Abno(x))
+        }
+        PageType::BattleSymbol => {
+            get_battle_symbol_by_internal_name(&typed_id.1).map(|x| Page::BattleSymbol(x))
+        }
+        PageType::CombatPage => {
+            get_combat_page_by_id(&typed_id.1).map(|x| Page::CombatPage(x))
+        }
+        PageType::KeyPage => {
+            get_key_page_by_id(&typed_id.1).map(|x| Page::KeyPage(x))
+        }
+        PageType::Passive => {
+            get_passive_by_id(&typed_id.1).map(|x| Page::Passive(x))
+        }
+    }
+}
+
+pub fn get_page_locale<'a>(
+    page_type: &'a PageType,
+    id: &'a str,
+    locale: &'a Locale
+) -> Option<PageLocale<'a>> {
+    match page_type {
+        PageType::AbnoPage => {
+            get_abno_page_locales_by_internal_name(id).get(locale).map(|x| PageLocale::Abno(x))
+        }
+        PageType::BattleSymbol => {
+            get_battle_symbol_locales_by_internal_name(id).get(locale).map(|x| PageLocale::BattleSymbol(x))
+        }
+        PageType::CombatPage => {
+            get_combat_page_locales_by_id(id).get(locale).map(|x| PageLocale::CombatPage(x))
+        }
+        PageType::KeyPage => {
+            get_key_page_locales_by_text_id(id).get(locale).map(|x| PageLocale::KeyPage(x))
+        }
+        PageType::Passive => {
+            get_passive_locales_by_id(id).get(locale).map(|x| PageLocale::Passive(x))
+        }
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::models::PageType;
+    use ruina_common::game_objects::common::PageType;
 
     #[test]
     fn sanity_query() {
@@ -74,6 +130,6 @@ mod tests {
 
     #[test]
     fn sanity_get_disambiguation() {
-        assert!(get_disambiguation(&TypedId(PageType::CombatPage, "202002"), &Locale::English).is_some());
+        assert!(get_disambiguation(&ParsedTypedId(PageType::CombatPage, "202002".to_string()), &Locale::English).is_some());
     }
 }

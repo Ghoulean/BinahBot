@@ -1,8 +1,8 @@
 use std::str::FromStr;
 
 use lambda_http::tracing;
+use ruina_common::game_objects::common::PageType;
 use ruina_common::localizations::common::Locale;
-use ruina_index::models::PageType;
 use ruina_index::models::ParsedTypedId;
 use ruina_reparser::get_abno_page_by_internal_name;
 use ruina_reparser::get_abno_page_locales_by_internal_name;
@@ -47,7 +47,7 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
     let locale: Locale = get_locale_option(command_args).and_then(|x| Locale::from_str(x.as_str()).ok()).unwrap_or(Locale::from(binah_locale.clone()));
 
     let embed: DiscordEmbed = match typed_id.0 {
-        PageType::AbnoPageId => {
+        PageType::AbnoPage => {
             let abno_page = get_abno_page_by_internal_name(&typed_id.1).unwrap();
             let abno_page_locales = get_abno_page_locales_by_internal_name(&typed_id.1);
             let abno_page_locale = abno_page_locales.get(&locale).unwrap();
@@ -58,7 +58,7 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
                 env
             )
         }
-        PageType::BattleSymbolId => {
+        PageType::BattleSymbol => {
             let battle_symbol = get_battle_symbol_by_internal_name(&typed_id.1).unwrap();
             let battle_symbol_locales = get_battle_symbol_locales_by_internal_name(&typed_id.1);
             let battle_symbol_locale = battle_symbol_locales.get(&locale).unwrap();
@@ -69,7 +69,7 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
                 env
             )
         }
-        PageType::CombatPageId => {
+        PageType::CombatPage => {
             let combat_page = get_combat_page_by_id(&typed_id.1).unwrap();
             let combat_page_locales = get_combat_page_locales_by_id(&typed_id.1);
             let combat_page_locale = combat_page_locales.get(&locale).unwrap();
@@ -81,7 +81,7 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
                 env
             )
         }
-        PageType::KeyPageId => {
+        PageType::KeyPage => {
             let key_page = get_key_page_by_id(&typed_id.1).unwrap();
             let key_page_locale = key_page
                 .text_id
@@ -94,7 +94,7 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
                 env
             )
         }
-        PageType::PassiveId => {
+        PageType::Passive => {
             let passive = get_passive_by_id(&typed_id.1).unwrap();
             let passive_locales = get_passive_locales_by_id(&typed_id.1);
             let passive_locale = passive_locales.get(&locale).unwrap();
