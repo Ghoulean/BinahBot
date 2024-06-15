@@ -6,6 +6,7 @@
     "scripts": {
         "build": "tsc",
         "clean": "tsc --build --clean",
+        "discord:avatar": "node ./src/index.js -a",
         "discord:delete": "node ./src/index.js -d",
         "discord:list": "node ./src/index.js -l",
         "discord:write": "node ./src/index.js -w",

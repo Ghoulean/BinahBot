@@ -2,6 +2,8 @@ import { Command } from "commander";
 import * as dotenv from "dotenv";
 import { DiscordAccessor, GlobalCommandList } from "./discord_accessor";
 import * as commands_config from "./commands.json";
+import * as fs from "fs";
+import * as path from "path";
 
 const program = new Command();
 dotenv.config({ path: `${__dirname}/../.env` });
@@ -15,6 +17,7 @@ program
   .option("-l, --list", "List all global commands in the bot currently.")
   .option("-w, --write", "Write and overwrite global commands stored in commands.json into the bot.")
   .option("-d, --delete <value>", "Delete specified global command id.")
+  .option("-a, --avatar <value>", "Reads png file in /assets and uploads as avatar. Only supply the file name including extension. Do not prepend /assets.")
   .parse(process.argv);
 
 const options = program.opts();
@@ -23,6 +26,7 @@ const options = program.opts();
 const isList: boolean = options.list;
 const isWrite: boolean = options.write;
 const deleteCommandId: string = options.delete;
+const avatarFilename: string = options.avatar;
 
 const discordAccessor: DiscordAccessor = new DiscordAccessor({
     applicationId,
@@ -42,4 +46,7 @@ if (isList) {
 } else if (deleteCommandId) {
     // noop
     discordAccessor.deleteGlobalCommandById(deleteCommandId);
+} else if (avatarFilename) {
+    const avatar_contents = fs.readFileSync(path.join(__filename, "../../assets", avatarFilename), {encoding: 'base64'});
+    discordAccessor.uploadAvatar(avatar_contents);
 }

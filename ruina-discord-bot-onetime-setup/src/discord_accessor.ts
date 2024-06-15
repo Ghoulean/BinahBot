@@ -86,4 +86,20 @@ export class DiscordAccessor {
         console.log(`Deleted ${id} with status ${status}`);
         return true;
     }
+
+    async uploadAvatar(avatar_png_base64: string): Promise<boolean> {
+        const { data } = await axios.patch(
+            `${BASE_DISCORD_URL}/users/@me`,
+            {
+                avatar: `data:image/png;base64,${avatar_png_base64}`
+            },
+            {
+                headers: {
+                    ...this.authorizationHeader,
+                },
+            }
+        );
+        console.log(`Successfully uploaded avatar: ${JSON.stringify(data)}`);
+        return true;
+    }
 }
