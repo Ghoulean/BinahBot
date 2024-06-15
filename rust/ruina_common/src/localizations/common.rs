@@ -1,5 +1,6 @@
 use std::str::FromStr;
 
+use unic_langid::langid;
 use unic_langid::LanguageIdentifier;
 
 use super::abno_page_locale::AbnoPageLocale;
@@ -36,6 +37,24 @@ impl From<&LanguageIdentifier> for Locale {
 impl From<LanguageIdentifier> for Locale {
     fn from(value: LanguageIdentifier) -> Self {
         Locale::from(&value)
+    }
+}
+
+impl From<&Locale> for LanguageIdentifier {
+    fn from(value: &Locale) -> Self {
+        match value {
+            Locale::English => langid!("en-US"),
+            Locale::Korean => langid!("ko"),
+            Locale::Japanese => langid!("ja"),
+            Locale::Chinese => langid!("zh-CN"),
+            Locale::TraditionalChinese => langid!("zh-TW"),
+        }
+    }
+}
+
+impl From<Locale> for LanguageIdentifier {
+    fn from(value: Locale) -> Self {
+        LanguageIdentifier::from(&value)
     }
 }
 

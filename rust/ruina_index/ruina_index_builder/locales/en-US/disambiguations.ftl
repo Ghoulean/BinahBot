@@ -4,7 +4,7 @@ page_type_combat_page = combat page
 page_type_key_page = key page
 page_type_passive = passive
 
-availability_collectible = collectible
+availability_collectible = collectable
 availability_obtainable = obtainable
 availability_enemy = enemy
 

@@ -1692,7 +1692,6 @@ dependencies = [
  "phf",
  "ruina_common",
  "ruina_index_analyzer",
- "ruina_index_annotations",
  "ruina_index_builder",
  "ruina_reparser",
  "serde",
@@ -1710,7 +1709,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "ruina_index_annotations"
+name = "ruina_index_builder"
 version = "1.0.0"
 dependencies = [
  "fluent-templates",
@@ -1718,28 +1717,14 @@ dependencies = [
  "phf_codegen",
  "ruina_common",
  "ruina_identifier",
- "serde",
- "strum 0.25.0",
- "strum_macros 0.25.3",
- "toml",
- "unic-langid",
-]
-
-[[package]]
-name = "ruina_index_builder"
-version = "1.0.0"
-dependencies = [
- "phf",
- "phf_codegen",
- "ruina_common",
- "ruina_identifier",
  "ruina_index_analyzer",
- "ruina_index_annotations",
  "ruina_reparser",
  "rust-stemmers",
  "serde",
  "strum 0.25.0",
  "strum_macros 0.25.3",
+ "toml",
+ "unic-langid",
 ]
 
 [[package]]

@@ -1,7 +1,6 @@
 use std::{env, fs::File, io::Write, path::PathBuf};
 
-use ruina_index_annotations::{precompute_disambiguations_map, write_to_string};
-use ruina_index_builder::precompute_index;
+use ruina_index_builder::{precompute_disambiguations_map, precompute_index, write_to_string};
 
 fn main() {
     let out_file_path = PathBuf::from(env::var("OUT_DIR").unwrap()).join(PathBuf::from("out.rs"));

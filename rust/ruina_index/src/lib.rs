@@ -55,6 +55,7 @@ pub fn query(query: &str) -> Vec<ParsedTypedId> {
     }).collect()
 }
 
+// todo: where to put this function?
 pub fn get_page(typed_id: &ParsedTypedId) -> Option<Page> {
     match typed_id.0 {
         PageType::AbnoPage => {
@@ -75,6 +76,7 @@ pub fn get_page(typed_id: &ParsedTypedId) -> Option<Page> {
     }
 }
 
+// todo: where to put this function?
 pub fn get_page_locale<'a>(
     page_type: &'a PageType,
     id: &'a str,

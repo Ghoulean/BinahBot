@@ -1,4 +1,4 @@
-# ruina_index_annotations
+# annotations
 
 Contains heuristics and manual mappings for annotations and disambiguations.
 

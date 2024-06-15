@@ -6,14 +6,16 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+fluent-templates = "0.9.4"
 phf = { version = "0.11.2", default-features = false }
 phf_codegen = "0.11.2"
 ruina_common = { path = "../../ruina_common", version = "1.0.0" }
 ruina_identifier = { path = "../ruina_identifier" }
 ruina_index_analyzer = { path = "../ruina_index_analyzer" }
-ruina_index_annotations = { path = "../ruina_index_annotations" }
 ruina_reparser = { path = "../../ruina_reparser", version = "1.0.0" }
 rust-stemmers = "1.2.0"
 serde = { version = "1.0", features = ["derive"] }
 strum = "0.25.0"
 strum_macros = "0.25.0"
+toml = "0.8.13"
+unic-langid = "0.9.5"
