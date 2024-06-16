@@ -35,7 +35,7 @@ pub fn get_response(
         (DiscordInteractionType::ApplicationCommandAutocomplete, Some(data))
             if data.name == CommandName::Lor.to_string() =>
         {
-            DiscordInteractionResponse::Autocomplete(lor_autocomplete(discord_interaction))
+            DiscordInteractionResponse::Autocomplete(lor_autocomplete(discord_interaction, binahbot_env))
         }
         _ => panic!(),
     }

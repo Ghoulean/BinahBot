@@ -192,17 +192,16 @@ pub fn transform_combat_page(
         },
     ];
 
-    if page.script_id.is_some() {
-        let page_desc = get_card_effect_locales_by_id(page.script_id.unwrap())
-            .get(card_locale)
-            .map(|x| x.desc.join("\n"));
-        if let Some(desc_string) = page_desc {
-            fields.push(DiscordEmbedFields {
-                name: env.locales.lookup(&lang_id, "combat_page_description_header"),
-                value: desc_string.to_string(),
-                inline: Some(true),
-            })
-        }
+    let page_desc = page.script_id.map(|x| {
+        get_card_effect_locales_by_id(x).get(card_locale).map(|y| y.desc.join("\n").to_string())
+    }).flatten();
+
+    if let Some(desc) = page_desc {
+        fields.push(DiscordEmbedFields {
+            name: "Page Description".to_string(),
+            value: desc,
+            inline: Some(true)
+        })
     }
 
     let dice_vec = page.dice.to_vec();

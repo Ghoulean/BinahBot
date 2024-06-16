@@ -1,3 +1,6 @@
+autocomplete_display = { $display }
+autocomplete_display_disambiguation = { $display } ({ $disambiguation })
+
 abno_type_display_awakening = Awakening
 abno_type_display_breakdown = Breakdown
 abno_flavor_text_header = Flavor text

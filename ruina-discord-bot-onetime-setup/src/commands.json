@@ -1,33 +1,40 @@
 {
     "commands": [
         {
+            "name": "lor",
             "names": {
                 "en-US": "lor"
             },
             "type": 1,
+            "description": "Search for information about combat pages, key pages, abno pages, passives, and battle symbols",
             "descriptions": {
-                "en-US": "Search for information about combat pages[wip], key pages[wip], abno pages[wip], and passives[wip]."
+                "en-US": "Search for information about combat pages, key pages, abno pages, passives, and battle symbols"
             },
             "options": [
                 {
-                    "required": true,
                     "type": 3,
+                    "name": "query",
                     "names": {
                         "en-US": "query"
                     },
+                    "description": "What to search for",
                     "descriptions": {
-                        "en-US": "What you want to search for"
+                        "en-US": "What to search for"
                     },
+                    "required": true,
+                    "max_length": 100,
                     "autocomplete": true
                 },
                 {
                     "required": false,
                     "type": 3,
+                    "name": "locale",
                     "names": {
                         "en-US": "locale"
                     },
+                    "description": "Get card in this locale instead (BinahBot locale will remain the same)",
                     "descriptions": {
-                        "en-US": "Get card in this locale instead"
+                        "en-US": "Get card in this locale instead (BinahBot locale will remain the same)"
                     },
                     "choices": [
                         {
@@ -53,15 +60,6 @@
                     ]
                 }
             ]
-        },
-        {
-            "names": {
-                "en-US": "binahbot"
-            },
-            "type": 1,
-            "descriptions": {
-                "en-US": "About BinahBot"
-            }
         }
     ]
 }
