@@ -8,6 +8,7 @@ use ruina_identifier::TypedId;
 use serde::Deserialize;
 use toml::from_str;
 use unic_langid::LanguageIdentifier;
+use strum::IntoEnumIterator;
 
 use crate::heuristics::get_disambiguations_for_uniqueness_heuristic;
 
@@ -67,40 +68,27 @@ pub fn precompute_disambiguations_map<'a>() -> AnnotationMapping<'a> {
 
     let collectability_toml_str = include_str!("../data/collectability.toml");
     let collectable_heuristic = create_obtainability_heuristic(&LOCALES, "availability_collectible", "collectable", collectability_toml_str);
-    let collectable_map = get_disambiguations_for_uniqueness_heuristic(collectable_heuristic);
     let obtainable_heuristic = create_obtainability_heuristic(&LOCALES, "availability_obtainable", "obtainable", collectability_toml_str);
-    let obtainable_map = get_disambiguations_for_uniqueness_heuristic(obtainable_heuristic);
     let enemyonly_heuristic = create_obtainability_heuristic(&LOCALES, "availability_enemy", "enemy_only", collectability_toml_str);
-    let enemyonly_map = get_disambiguations_for_uniqueness_heuristic(enemyonly_heuristic);
 
-    // todo: iterate over PageType.iter()
-    let abno_page_heuristic = create_pagetype_heuristic(&LOCALES, &PageType::AbnoPage);
-    let battle_symbol_heuristic = create_pagetype_heuristic(&LOCALES, &PageType::BattleSymbol);
-    let combat_page_heuristic = create_pagetype_heuristic(&LOCALES, &PageType::CombatPage);
-    let key_page_heuristic = create_pagetype_heuristic(&LOCALES, &PageType::KeyPage);
-    let passive_heuristic = create_pagetype_heuristic(&LOCALES, &PageType::Passive);
-    let abno_page_map = get_disambiguations_for_uniqueness_heuristic(abno_page_heuristic);
-    let battle_symbol_map = get_disambiguations_for_uniqueness_heuristic(battle_symbol_heuristic);
-    let combat_page_map = get_disambiguations_for_uniqueness_heuristic(combat_page_heuristic);
-    let key_page_map = get_disambiguations_for_uniqueness_heuristic(key_page_heuristic);
-    let passive_map = get_disambiguations_for_uniqueness_heuristic(passive_heuristic);
+    let pagetype_heuristics = PageType::iter().map(|x| create_pagetype_heuristic(&LOCALES, &x)).collect::<Vec<_>>();
 
     let manual_mappings = parse_manual_mappings(&LOCALES, &manual_disambiguation_toml);
 
-    merge_all(&vec![
-        manual_mappings,
-        abno_page_map,
-        battle_symbol_map,
-        combat_page_map,
-        key_page_map,
-        passive_map,
-        enemyonly_map,
-        obtainable_map,
-        collectable_map
-    ])
+    let mut heuristics = Vec::new();
+    heuristics.extend(pagetype_heuristics);
+    heuristics.extend(vec![
+        collectable_heuristic,
+        obtainable_heuristic,
+        enemyonly_heuristic
+    ]);
+
+    let mut vec = heuristics.into_iter().map(|x| get_disambiguations_for_uniqueness_heuristic(x)).collect::<Vec<_>>();
+    vec.insert(0, manual_mappings);
+
+    merge_all(&vec)
 }
 
-// todo: impl FromStr
 pub fn write_to_string(annotation_mapping: &AnnotationMapping) -> String {
     let mut builder = phf_codegen::Map::new();
 

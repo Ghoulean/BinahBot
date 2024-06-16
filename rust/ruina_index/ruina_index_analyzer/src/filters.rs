@@ -11,7 +11,7 @@ fn punctuation_filter(token: &Token) -> Token {
         .replace("’s", "")
         .replace("'s", "")
         .replace(&['(', ')', ',', '\"', '.', ';', ':', '\'', '?', '!', '’', '~', '…', '♣', '◆'][..], "")
-        .replace("<color=red>♥</color>", "")
+        .replace("<color=red>♥</color>", "♥")
         .replace(&['-', '/'][..], " ")
 }
 

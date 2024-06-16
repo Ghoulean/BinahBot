@@ -42,7 +42,7 @@ pub enum Chapter {
     None,
 }
 
-#[derive(Clone, Eq, Hash, PartialEq, Debug)]
+#[derive(Clone, Eq, Hash, PartialEq, Debug, strum_macros::EnumIter)]
 pub enum PageType {
     AbnoPage,
     BattleSymbol,

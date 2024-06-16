@@ -71,8 +71,28 @@ fn get_display_names_for_locale(locale: &Locale) -> HashMap<TypedId, String> {
         get_all_passives().into_iter().map(|x| x.get_typed_id())
     ).into_iter().map(|x| (
         x.clone(),
-        get_display_names(&x).get(locale).unwrap_or(&x.to_string()).clone()
+        get_display_equivalence(get_display_names(&x).get(locale).unwrap_or(&x.to_string()))
     )).collect()
+}
+
+fn get_display_equivalence(s: &str) -> String {
+    let suffixes = vec![
+        "’s Page",
+        "’ Page",
+        "のページ",
+        "사서 책장",
+        "의 책장",
+        "책장",
+        "之页",
+        "之頁"
+    ];
+    let mut new_str = s;
+    suffixes.iter().for_each(|x| {
+        if new_str.ends_with(x) {
+            new_str = &new_str[0..new_str.len() - x.len()];
+        }
+    });
+    new_str.trim().to_string()
 }
 
 fn group_ambiguities(map: &HashMap<TypedId, String>) -> HashMap<String, Vec<TypedId>> {
@@ -98,10 +118,18 @@ mod tests {
     use super::*;
 
     #[test]
+    fn sanity_display_equivalence() {
+        assert_eq!(get_display_equivalence("Xiao’s Page"), get_display_equivalence("Xiao"));
+        assert_eq!(get_display_equivalence(",D@;Q7Yのページ"), get_display_equivalence(",D@;Q7Y"));
+        assert_eq!(get_display_equivalence("enlxmfflsdis"), get_display_equivalence("enlxmfflsdis"));
+    }
+
+    #[test]
     fn sanity_group_english_ambiguities() {
         let english = group_ambiguities(&get_display_names_for_locale(&Locale::English));
 
-        assert!(english.contains_key("Xiao’s Page"));
+        assert!(english.contains_key("Xiao"));
+        assert!(english.contains_key("얀샋ㄷ요무"));
         assert!(!english.contains_key("Concussion"));
     }
 }
