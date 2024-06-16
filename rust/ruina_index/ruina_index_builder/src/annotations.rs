@@ -66,12 +66,21 @@ pub fn precompute_disambiguations_map<'a>() -> AnnotationMapping<'a> {
     let manual_disambiguation_toml = manual_disambiguation_toml_map.remove("entry").take().expect("couldn't find \"entry\" from toml");
 
     let collectability_toml_str = include_str!("../data/collectability.toml");
-    let collectable_heuristic = create_heuristic(&LOCALES, &Locale::English, "availability_collectible", "collectable", collectability_toml_str);
-    let collectable_english_map = get_disambiguations_for_uniqueness_heuristic(collectable_heuristic);
+    let collectable_heuristic = create_heuristic(&LOCALES, "availability_collectible", "collectable", collectability_toml_str);
+    let collectable_map = get_disambiguations_for_uniqueness_heuristic(collectable_heuristic);
+    let obtainable_heuristic = create_heuristic(&LOCALES, "availability_obtainable", "obtainable", collectability_toml_str);
+    let obtainable_map = get_disambiguations_for_uniqueness_heuristic(obtainable_heuristic);
+    let enemyonly_heuristic = create_heuristic(&LOCALES, "availability_enemy", "enemy_only", collectability_toml_str);
+    let enemyonly_map = get_disambiguations_for_uniqueness_heuristic(enemyonly_heuristic);
 
     let manual_mappings = parse_manual_mappings(&LOCALES, &manual_disambiguation_toml);
 
-    merge(&manual_mappings, &collectable_english_map)
+    merge_all(&vec![
+        enemyonly_map,
+        obtainable_map,
+        collectable_map,
+        manual_mappings
+    ])
 }
 
 // todo: impl FromStr
@@ -116,6 +125,23 @@ fn parse_manual_mappings<'a>(locales: &'static StaticLoader, toml_data: &'a [Tom
     map
 }
 
+// in case of collision, the later annotation mappings get priority over the earlier.
+// that is, mappings[x] has lesser priority than mappings[x+1] w.r.t. collisions
+fn merge_all<'a>(mappings: &'a [AnnotationMapping<'a>]) -> AnnotationMapping<'a> {
+    if mappings.len() == 0 {
+        return HashMap::new();
+    }
+    if mappings.len() == 1 {
+        return mappings.first().unwrap().clone();
+    }
+    let merge = merge(&mappings[mappings.len() - 2], &mappings[mappings.len() - 1]);
+    let mut vec = mappings[0..mappings.len() - 2].iter().cloned().collect::<Vec<_>>();
+    vec.push(merge);
+
+    merge_all(&vec)
+}
+
+// do not use this function except in merge_all due to flipped priority (until refactor ig)
 // in case of collision, m1 > m2 priority
 fn merge<'a>(m1: &'a AnnotationMapping<'a>, m2: &'a AnnotationMapping<'a>) -> AnnotationMapping<'a> {
     let mut ret_val = m1.clone();
@@ -161,5 +187,41 @@ mod tests {
 
         assert_eq!(disambiguation_map.get(&xiao)
             .is_some_and(|x| x.get(&Locale::English).unwrap() == "collectable"), true);
+    }
+
+    #[test]
+    fn obtainable_disambiguation() {
+        let disambiguation_map = precompute_disambiguations_map();
+
+        let fourth_match_flame = TypedId(PageType::CombatPage, "910001".to_string());
+        let sound_of_a_star = TypedId(PageType::CombatPage, "910048".to_string());
+
+        assert_eq!(disambiguation_map.get(&fourth_match_flame)
+            .is_some_and(|x| x.get(&Locale::English).unwrap() == "obtainable"), true);
+        assert_eq!(disambiguation_map.get(&sound_of_a_star)
+            .is_some_and(|x| x.get(&Locale::English).unwrap() == "obtainable"), true);
+    }
+
+    #[test]
+    fn gather_intel() {
+        let disambiguation_map = precompute_disambiguations_map();
+
+        dbg!(&disambiguation_map);
+
+        let enemy_only = TypedId(PageType::CombatPage, "202005".to_string());
+        let collectable = TypedId(PageType::CombatPage, "202009".to_string());
+        let handling_work = TypedId(PageType::CombatPage, "301001".to_string());
+
+        assert_eq!(disambiguation_map.get(&collectable)
+            .is_some_and(|x| x.get(&Locale::English).unwrap() == "collectable"), true);
+        assert_eq!(disambiguation_map.get(&enemy_only)
+            .is_some_and(|x| x.get(&Locale::English).unwrap() == "enemy"), true);
+
+        assert_eq!(disambiguation_map.get(&handling_work)
+            .is_some_and(|x| x.get(&Locale::Korean).unwrap() == "collectable"), true);
+        assert_eq!(disambiguation_map.get(&enemy_only)
+            .is_some_and(|x| x.get(&Locale::Korean).unwrap() == "enemy"), true);
+
+
     }
 }

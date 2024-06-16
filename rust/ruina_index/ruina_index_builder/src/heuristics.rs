@@ -18,29 +18,29 @@ use crate::name::get_display_names;
 
 pub fn create_heuristic(
     locales: &'static StaticLoader,
-    locale: &Locale,
     disambiguation_key: &str,
     toml_key: &str,
     toml_str: &str
-) -> Box<dyn Fn(&TypedId) -> Option<String>> {
+) -> Box<dyn Fn(&TypedId, &Locale) -> Option<String>> {
     let toml_map: HashMap<String, Vec<String>> = from_str(
         toml_str
     ).unwrap();
     let toml_vec: Vec<String> = toml_map.get(toml_key).unwrap().clone();
-    let lang_id = LanguageIdentifier::from(locale);
-    let str = locales.lookup(&lang_id, disambiguation_key);
+    let binding = disambiguation_key.to_owned().clone();
 
-    Box::new(move |typed_id: &TypedId| {
+    Box::new(move |typed_id: &TypedId, locale: &Locale| {
         if toml_vec.contains(&typed_id.to_string()) {
+            let lang_id = LanguageIdentifier::from(locale);
+            let str = locales.lookup(&lang_id, &binding);
             Some(str.clone())
         } else {
-            None    
+            None
         }
     })
 }
 
 pub fn get_disambiguations_for_uniqueness_heuristic<'a>(
-    f: Box<dyn Fn(&TypedId) -> Option<String>>
+    f: Box<dyn Fn(&TypedId, &Locale) -> Option<String>>
 ) -> AnnotationMapping<'a> {
     // locale -> (display -> vec<ids>)
     // apply heuristic
@@ -53,8 +53,9 @@ pub fn get_disambiguations_for_uniqueness_heuristic<'a>(
                 .into_iter()
                 .filter_map(|(_, ids)| {
                     let vec = ids.into_iter().filter(|id| {
-                        f(&id).is_some()
+                        f(&id, &x).is_some()
                     }).collect::<Vec<_>>();
+
                     if vec.len() == 1 {
                         Some(vec.first().unwrap().clone())
                     } else {
@@ -64,17 +65,24 @@ pub fn get_disambiguations_for_uniqueness_heuristic<'a>(
         )
     }).collect::<HashMap<_, _>>();
 
+    dbg!(&disambiguations);
     let mut ret_val = HashMap::new();
 
     for (locale, vec_ids) in disambiguations {
         for id in vec_ids {
             ret_val.entry(id.clone())
                 .and_modify(|x: &mut HashMap<Locale, String>| {
-                    x.insert(locale.clone(), f(&id).unwrap());
+                    x.insert(locale.clone(), f(&id, &locale).unwrap());
                 })
-                .or_insert(HashMap::new());
+                .or_insert(HashMap::from(
+                    [
+                        (locale.clone(), f(&id, &locale).unwrap())
+                    ]
+                ));
         }
     }
+
+    dbg!(&ret_val);
 
     ret_val
 }
