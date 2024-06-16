@@ -7,8 +7,8 @@ use ruina_common::localizations::common::Locale;
 use ruina_identifier::TypedId;
 use serde::Deserialize;
 use toml::from_str;
+use unic_langid::LanguageIdentifier;
 
-use crate::heuristics::create_heuristic;
 use crate::heuristics::get_disambiguations_for_uniqueness_heuristic;
 
 fluent_templates::static_loader! {
@@ -66,20 +66,37 @@ pub fn precompute_disambiguations_map<'a>() -> AnnotationMapping<'a> {
     let manual_disambiguation_toml = manual_disambiguation_toml_map.remove("entry").take().expect("couldn't find \"entry\" from toml");
 
     let collectability_toml_str = include_str!("../data/collectability.toml");
-    let collectable_heuristic = create_heuristic(&LOCALES, "availability_collectible", "collectable", collectability_toml_str);
+    let collectable_heuristic = create_obtainability_heuristic(&LOCALES, "availability_collectible", "collectable", collectability_toml_str);
     let collectable_map = get_disambiguations_for_uniqueness_heuristic(collectable_heuristic);
-    let obtainable_heuristic = create_heuristic(&LOCALES, "availability_obtainable", "obtainable", collectability_toml_str);
+    let obtainable_heuristic = create_obtainability_heuristic(&LOCALES, "availability_obtainable", "obtainable", collectability_toml_str);
     let obtainable_map = get_disambiguations_for_uniqueness_heuristic(obtainable_heuristic);
-    let enemyonly_heuristic = create_heuristic(&LOCALES, "availability_enemy", "enemy_only", collectability_toml_str);
+    let enemyonly_heuristic = create_obtainability_heuristic(&LOCALES, "availability_enemy", "enemy_only", collectability_toml_str);
     let enemyonly_map = get_disambiguations_for_uniqueness_heuristic(enemyonly_heuristic);
+
+    // todo: iterate over PageType.iter()
+    let abno_page_heuristic = create_pagetype_heuristic(&LOCALES, &PageType::AbnoPage);
+    let battle_symbol_heuristic = create_pagetype_heuristic(&LOCALES, &PageType::BattleSymbol);
+    let combat_page_heuristic = create_pagetype_heuristic(&LOCALES, &PageType::CombatPage);
+    let key_page_heuristic = create_pagetype_heuristic(&LOCALES, &PageType::KeyPage);
+    let passive_heuristic = create_pagetype_heuristic(&LOCALES, &PageType::Passive);
+    let abno_page_map = get_disambiguations_for_uniqueness_heuristic(abno_page_heuristic);
+    let battle_symbol_map = get_disambiguations_for_uniqueness_heuristic(battle_symbol_heuristic);
+    let combat_page_map = get_disambiguations_for_uniqueness_heuristic(combat_page_heuristic);
+    let key_page_map = get_disambiguations_for_uniqueness_heuristic(key_page_heuristic);
+    let passive_map = get_disambiguations_for_uniqueness_heuristic(passive_heuristic);
 
     let manual_mappings = parse_manual_mappings(&LOCALES, &manual_disambiguation_toml);
 
     merge_all(&vec![
+        manual_mappings,
+        abno_page_map,
+        battle_symbol_map,
+        combat_page_map,
+        key_page_map,
+        passive_map,
         enemyonly_map,
         obtainable_map,
-        collectable_map,
-        manual_mappings
+        collectable_map
     ])
 }
 
@@ -125,8 +142,7 @@ fn parse_manual_mappings<'a>(locales: &'static StaticLoader, toml_data: &'a [Tom
     map
 }
 
-// in case of collision, the later annotation mappings get priority over the earlier.
-// that is, mappings[x] has lesser priority than mappings[x+1] w.r.t. collisions
+// in case of collision, earlier > later
 fn merge_all<'a>(mappings: &'a [AnnotationMapping<'a>]) -> AnnotationMapping<'a> {
     if mappings.len() == 0 {
         return HashMap::new();
@@ -141,7 +157,6 @@ fn merge_all<'a>(mappings: &'a [AnnotationMapping<'a>]) -> AnnotationMapping<'a>
     merge_all(&vec)
 }
 
-// do not use this function except in merge_all due to flipped priority (until refactor ig)
 // in case of collision, m1 > m2 priority
 fn merge<'a>(m1: &'a AnnotationMapping<'a>, m2: &'a AnnotationMapping<'a>) -> AnnotationMapping<'a> {
     let mut ret_val = m1.clone();
@@ -159,6 +174,53 @@ fn merge<'a>(m1: &'a AnnotationMapping<'a>, m2: &'a AnnotationMapping<'a>) -> An
     }
 
     ret_val
+}
+
+fn create_obtainability_heuristic(
+    locales: &'static StaticLoader,
+    disambiguation_key: &str,
+    toml_key: &str,
+    toml_str: &str
+) -> Box<dyn Fn(&TypedId, &Locale) -> Option<String>> {
+    let toml_map: HashMap<String, Vec<String>> = from_str(
+        toml_str
+    ).unwrap();
+    let toml_vec: Vec<String> = toml_map.get(toml_key).unwrap().clone();
+    let binding = disambiguation_key.to_owned().clone();
+
+    Box::new(move |typed_id: &TypedId, locale: &Locale| {
+        if toml_vec.contains(&typed_id.to_string()) {
+            let lang_id = LanguageIdentifier::from(locale);
+            let str = locales.lookup(&lang_id, &binding);
+            Some(str.clone())
+        } else {
+            None
+        }
+    })
+}
+
+fn create_pagetype_heuristic(
+    locales: &'static StaticLoader,
+    page_type: &PageType
+) -> Box<dyn Fn(&TypedId, &Locale) -> Option<String>> {
+    let pagetype_key = match page_type {
+        PageType::AbnoPage => "page_type_abno_page",
+        PageType::BattleSymbol => "page_type_battle_symbol",
+        PageType::CombatPage => "page_type_combat_page",
+        PageType::KeyPage => "page_type_key_page",
+        PageType::Passive => "page_type_passive",
+    };
+    let binding = page_type.clone();
+
+    Box::new(move |typed_id: &TypedId, locale: &Locale| {
+        if typed_id.0 == binding {
+            let lang_id = LanguageIdentifier::from(locale);
+            let str = locales.lookup(&lang_id, &pagetype_key);
+            Some(str.clone())
+        } else {
+            None
+        }
+    })
 }
 
 #[cfg(test)]
@@ -203,6 +265,19 @@ mod tests {
     }
 
     #[test]
+    fn pagetype_disambiguation() {
+        let disambiguation_map = precompute_disambiguations_map();
+
+        let coffin = TypedId(PageType::AbnoPage, "Butterfly_Casket".to_string());
+        let coffin_angela = TypedId(PageType::CombatPage, "9910005".to_string());
+
+        assert_eq!(disambiguation_map.get(&coffin)
+            .is_some_and(|x| x.get(&Locale::English).unwrap() == "abno page"), true);
+        assert_eq!(disambiguation_map.get(&coffin_angela)
+            .is_some_and(|x| x.get(&Locale::English).unwrap() == "combat page"), true);
+    }
+
+    #[test]
     fn gather_intel() {
         let disambiguation_map = precompute_disambiguations_map();
 
@@ -221,7 +296,5 @@ mod tests {
             .is_some_and(|x| x.get(&Locale::Korean).unwrap() == "collectable"), true);
         assert_eq!(disambiguation_map.get(&enemy_only)
             .is_some_and(|x| x.get(&Locale::Korean).unwrap() == "enemy"), true);
-
-
     }
 }

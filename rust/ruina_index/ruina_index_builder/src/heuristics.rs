@@ -1,7 +1,5 @@
 use std::collections::HashMap;
 
-use fluent_templates::Loader;
-use fluent_templates::StaticLoader;
 use ruina_common::localizations::common::Locale;
 use ruina_identifier::Identifier;
 use ruina_identifier::TypedId;
@@ -11,33 +9,8 @@ use ruina_reparser::get_all_combat_pages;
 use ruina_reparser::get_all_key_pages;
 use ruina_reparser::get_all_passives;
 use strum::IntoEnumIterator;
-use toml::from_str;
-use unic_langid::LanguageIdentifier;
 use crate::annotations::AnnotationMapping;
 use crate::name::get_display_names;
-
-pub fn create_heuristic(
-    locales: &'static StaticLoader,
-    disambiguation_key: &str,
-    toml_key: &str,
-    toml_str: &str
-) -> Box<dyn Fn(&TypedId, &Locale) -> Option<String>> {
-    let toml_map: HashMap<String, Vec<String>> = from_str(
-        toml_str
-    ).unwrap();
-    let toml_vec: Vec<String> = toml_map.get(toml_key).unwrap().clone();
-    let binding = disambiguation_key.to_owned().clone();
-
-    Box::new(move |typed_id: &TypedId, locale: &Locale| {
-        if toml_vec.contains(&typed_id.to_string()) {
-            let lang_id = LanguageIdentifier::from(locale);
-            let str = locales.lookup(&lang_id, &binding);
-            Some(str.clone())
-        } else {
-            None
-        }
-    })
-}
 
 pub fn get_disambiguations_for_uniqueness_heuristic<'a>(
     f: Box<dyn Fn(&TypedId, &Locale) -> Option<String>>
