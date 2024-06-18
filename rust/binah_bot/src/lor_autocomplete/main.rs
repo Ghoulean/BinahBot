@@ -116,7 +116,7 @@ fn get_display_name_locale(
             get_combat_page_locales_by_id(&typed_id.1).get(locale).map(|x| x.name.to_string())
         }
         PageType::KeyPage => {
-            get_key_page_by_id(&typed_id.1).map(|key_page| {
+            get_key_page_by_id(&typed_id.1).and_then(|key_page| {
                 key_page.text_id.map(|text_id| {
                     get_key_page_locales_by_text_id(text_id)
                         .get(locale)
@@ -124,7 +124,7 @@ fn get_display_name_locale(
                             key_page_locale.name.to_string()
                         })
                 }).or(key_page.skin.map(|skin| Some(skin.to_string()))).flatten()
-            }).flatten()
+            })
         }
         PageType::Passive => {
             get_passive_locales_by_id(&typed_id.1).get(locale).map(|x| x.name.to_string())

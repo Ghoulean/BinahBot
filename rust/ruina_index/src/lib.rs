@@ -27,7 +27,7 @@ pub fn get_disambiguation(
     parsed_typed_id: &ParsedTypedId,
     locale: &Locale,
 ) -> Option<&'static &'static str> {
-    DISAMBIGUATIONS_MAP.get(&parsed_typed_id.to_string()).map(|x| x.get(&locale.to_string())).flatten()
+    DISAMBIGUATIONS_MAP.get(&parsed_typed_id.to_string()).and_then(|x| x.get(&locale.to_string()))
 }
 
 pub fn query(query: &str) -> Vec<ParsedTypedId> {
@@ -36,13 +36,11 @@ pub fn query(query: &str) -> Vec<ParsedTypedId> {
     let mut scorekeeper = HashMap::new();
 
     ngrams.iter().for_each(|(ngram, freq1)| {
-        INVERSE_INDEX.get(&ngram.0).map(|map| {
-            map.into_iter().for_each(|(typed_id_str, freq2)| {
+        if let Some(map) = INVERSE_INDEX.get(&ngram.0) { map.into_iter().for_each(|(typed_id_str, freq2)| {
                 scorekeeper.entry(typed_id_str)
                     .and_modify(|x: &mut i32| *x += min(*freq1, *freq2))
                     .or_insert(min(*freq1, *freq2));
-            });
-        });
+            }); }
     });
 
     let mut vec: Vec<_> = scorekeeper.iter().collect();
@@ -59,19 +57,19 @@ pub fn query(query: &str) -> Vec<ParsedTypedId> {
 pub fn get_page(typed_id: &ParsedTypedId) -> Option<Page> {
     match typed_id.0 {
         PageType::AbnoPage => {
-            get_abno_page_by_internal_name(&typed_id.1).map(|x| Page::Abno(x))
+            get_abno_page_by_internal_name(&typed_id.1).map(Page::Abno)
         }
         PageType::BattleSymbol => {
-            get_battle_symbol_by_internal_name(&typed_id.1).map(|x| Page::BattleSymbol(x))
+            get_battle_symbol_by_internal_name(&typed_id.1).map(Page::BattleSymbol)
         }
         PageType::CombatPage => {
-            get_combat_page_by_id(&typed_id.1).map(|x| Page::CombatPage(x))
+            get_combat_page_by_id(&typed_id.1).map(Page::CombatPage)
         }
         PageType::KeyPage => {
-            get_key_page_by_id(&typed_id.1).map(|x| Page::KeyPage(x))
+            get_key_page_by_id(&typed_id.1).map(Page::KeyPage)
         }
         PageType::Passive => {
-            get_passive_by_id(&typed_id.1).map(|x| Page::Passive(x))
+            get_passive_by_id(&typed_id.1).map(Page::Passive)
         }
     }
 }
@@ -93,9 +91,9 @@ pub fn get_page_locale<'a>(
             get_combat_page_locales_by_id(id).get(locale).map(|x| PageLocale::CombatPage(x))
         }
         PageType::KeyPage => {
-            get_key_page_by_id(id).map(|key_page| key_page.text_id.map(|text_id| {
+            get_key_page_by_id(id).and_then(|key_page| key_page.text_id.map(|text_id| {
                 get_key_page_locales_by_text_id(text_id).get(locale).map(|x| PageLocale::KeyPage(x))
-            })).flatten().flatten()
+            })).flatten()
         }
         PageType::Passive => {
             get_passive_locales_by_id(id).get(locale).map(|x| PageLocale::Passive(x))
@@ -135,9 +133,7 @@ mod tests {
     fn xiao() {
         let return_padding = 2;
 
-        let binding = vec![
-            "250036", "150020", "150036", "150038"
-        ];
+        let binding = ["250036", "150020", "150036", "150038"];
         let xiaos = binding.iter().map(|x| ParsedTypedId(PageType::KeyPage, x.to_string()));
 
         let query_return = query("Xiao");
@@ -146,7 +142,7 @@ mod tests {
         xiaos.for_each(|x| {
             let position = query_return.iter()
                 .position(|y| *y == x)
-                .expect(&format!("couldn't find xiao {}", x));
+                .unwrap_or_else(|| panic!("couldn't find xiao {}", x));
 
             assert!(position <= 4 + return_padding);
         });

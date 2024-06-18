@@ -26,7 +26,7 @@ pub fn get_disambiguations_for_uniqueness_heuristic<'a>(
                 .into_iter()
                 .filter_map(|(_, ids)| {
                     let vec = ids.into_iter().filter(|id| {
-                        f(&id, &x).is_some()
+                        f(id, &x).is_some()
                     }).collect::<Vec<_>>();
 
                     if vec.len() == 1 {
@@ -69,23 +69,21 @@ fn get_display_names_for_locale(locale: &Locale) -> HashMap<TypedId, String> {
         get_all_key_pages().into_iter().map(|x| x.get_typed_id())
     ).chain(
         get_all_passives().into_iter().map(|x| x.get_typed_id())
-    ).into_iter().map(|x| (
+    ).map(|x| (
         x.clone(),
         get_display_equivalence(get_display_names(&x).get(locale).unwrap_or(&x.to_string()))
     )).collect()
 }
 
 fn get_display_equivalence(s: &str) -> String {
-    let suffixes = vec![
-        "’s Page",
+    let suffixes = ["’s Page",
         "’ Page",
         "のページ",
         "사서 책장",
         "의 책장",
         "책장",
         "之页",
-        "之頁"
-    ];
+        "之頁"];
     let mut new_str = s;
     suffixes.iter().for_each(|x| {
         if new_str.ends_with(x) {

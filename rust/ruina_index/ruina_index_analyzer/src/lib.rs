@@ -17,7 +17,7 @@ type Frequency = i32;
 
 pub fn analyze(text: &str) -> HashMap<Ngram, Frequency> {
     let str = filter(tokenize(text)).iter()
-        .map(|x| pad(x))
+        .map(pad)
         .collect::<Vec<_>>()
         .join("");
 
@@ -36,7 +36,7 @@ pub fn analyze(text: &str) -> HashMap<Ngram, Frequency> {
 }
 
 fn tokenize(txt: &str) -> Vec<Token> {
-    txt.split(" ").map(String::from).collect()
+    txt.split(' ').map(String::from).collect()
 }
 
 fn pad(token: &Token) -> Token {
@@ -59,7 +59,7 @@ fn generate_ngrams(str: &str) -> Vec<String> {
 
 fn sort_ngram(ngram: &str) -> String {
     let mut chars: Vec<char> = ngram.chars().collect();
-    chars.sort_by(|a, b| a.cmp(b));
+    chars.sort();
     String::from_iter(chars)
 }
 
@@ -111,9 +111,7 @@ mod tests {
     #[test]
     fn sanity_jp() {
         let input = "回避"; // ^^回避|
-        let expected: HashMap<_, _> = vec![
-            "^^回", "^回避", "|回避"
-        ].iter()
+        let expected: HashMap<_, _> = ["^^回", "^回避", "|回避"].iter()
         .map(|x| (Ngram(x.to_string()), 1))
         .collect();
         assert_eq!(expected, analyze(input));

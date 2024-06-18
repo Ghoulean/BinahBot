@@ -192,9 +192,9 @@ pub fn transform_combat_page(
         },
     ];
 
-    let page_desc = page.script_id.map(|x| {
+    let page_desc = page.script_id.and_then(|x| {
         get_card_effect_locales_by_id(x).get(card_locale).map(|y| y.desc.join("\n").to_string())
-    }).flatten();
+    });
 
     if let Some(desc) = page_desc {
         fields.push(DiscordEmbedFields {

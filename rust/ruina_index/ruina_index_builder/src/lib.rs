@@ -90,8 +90,8 @@ fn generate_index<T: Identifier>(
                 analyze(
                     &assemble_name(
                         &x.get_typed_id(),
-                        &annotations,
-                        &disambiguations
+                        annotations,
+                        disambiguations
                     )
                 )
             )
@@ -118,8 +118,8 @@ fn assemble_name(
     annotations: &AnnotationMapping,
     disambiguations: &AnnotationMapping
 ) -> String {
-    let annotations_vec = annotations.get(typed_id).map(|x| x.values().collect::<Vec<_>>()).unwrap_or(vec![]);
-    let disambiguations_vec = disambiguations.get(typed_id).map(|x| x.values().collect::<Vec<_>>()).unwrap_or(vec![]);
-    get_display_names(&typed_id).values()
-        .chain(annotations_vec).chain(disambiguations_vec).map(|x| x.clone()).collect::<Vec<_>>().join(" ")
+    let annotations_vec = annotations.get(typed_id).map(|x| x.values().collect::<Vec<_>>()).unwrap_or_default();
+    let disambiguations_vec = disambiguations.get(typed_id).map(|x| x.values().collect::<Vec<_>>()).unwrap_or_default();
+    get_display_names(typed_id).values()
+        .chain(annotations_vec).chain(disambiguations_vec).cloned().collect::<Vec<_>>().join(" ")
 }

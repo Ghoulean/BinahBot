@@ -55,9 +55,9 @@ pub fn precompute_annotations_map<'a>() -> AnnotationMapping<'a> {
     ).unwrap();
     let manual_annotations_toml = manual_annotation_toml_map.get("entry").expect("couldn't find \"entry\" from toml");
 
-    let manual_mappings = parse_manual_mappings(&LOCALES, &manual_annotations_toml);
+    
 
-    manual_mappings
+    parse_manual_mappings(&LOCALES, manual_annotations_toml)
 }
 
 pub fn precompute_disambiguations_map<'a>() -> AnnotationMapping<'a> {
@@ -115,7 +115,7 @@ fn parse_manual_mappings<'a>(locales: &'static StaticLoader, toml_data: &'a [Tom
         let mut typed_id_map = HashMap::new();
 
         locales.locales().for_each(|y| {
-            typed_id_map.insert(Locale::from(y), locales.lookup(&y, &x.localization_id));
+            typed_id_map.insert(Locale::from(y), locales.lookup(y, &x.localization_id));
         });
 
         map.insert(
@@ -132,14 +132,14 @@ fn parse_manual_mappings<'a>(locales: &'static StaticLoader, toml_data: &'a [Tom
 
 // in case of collision, earlier > later
 fn merge_all<'a>(mappings: &'a [AnnotationMapping<'a>]) -> AnnotationMapping<'a> {
-    if mappings.len() == 0 {
+    if mappings.is_empty() {
         return HashMap::new();
     }
     if mappings.len() == 1 {
         return mappings.first().unwrap().clone();
     }
     let merge = merge(&mappings[mappings.len() - 2], &mappings[mappings.len() - 1]);
-    let mut vec = mappings[0..mappings.len() - 2].iter().cloned().collect::<Vec<_>>();
+    let mut vec = mappings[0..mappings.len() - 2].to_vec();
     vec.push(merge);
 
     merge_all(&vec)
@@ -203,7 +203,7 @@ fn create_pagetype_heuristic(
     Box::new(move |typed_id: &TypedId, locale: &Locale| {
         if typed_id.0 == binding {
             let lang_id = LanguageIdentifier::from(locale);
-            let str = locales.lookup(&lang_id, &pagetype_key);
+            let str = locales.lookup(&lang_id, pagetype_key);
             Some(str.clone())
         } else {
             None
@@ -235,8 +235,8 @@ mod tests {
 
         let xiao = TypedId(PageType::KeyPage, "250036".to_string());
 
-        assert_eq!(disambiguation_map.get(&xiao)
-            .is_some_and(|x| x.get(&Locale::English).unwrap() == "collectable"), true);
+        assert!(disambiguation_map.get(&xiao)
+            .is_some_and(|x| x.get(&Locale::English).unwrap() == "collectable"));
     }
 
     #[test]
@@ -246,10 +246,10 @@ mod tests {
         let fourth_match_flame = TypedId(PageType::CombatPage, "910001".to_string());
         let sound_of_a_star = TypedId(PageType::CombatPage, "910048".to_string());
 
-        assert_eq!(disambiguation_map.get(&fourth_match_flame)
-            .is_some_and(|x| x.get(&Locale::English).unwrap() == "obtainable"), true);
-        assert_eq!(disambiguation_map.get(&sound_of_a_star)
-            .is_some_and(|x| x.get(&Locale::English).unwrap() == "obtainable"), true);
+        assert!(disambiguation_map.get(&fourth_match_flame)
+            .is_some_and(|x| x.get(&Locale::English).unwrap() == "obtainable"));
+        assert!(disambiguation_map.get(&sound_of_a_star)
+            .is_some_and(|x| x.get(&Locale::English).unwrap() == "obtainable"));
     }
 
     #[test]
@@ -259,10 +259,10 @@ mod tests {
         let coffin = TypedId(PageType::AbnoPage, "Butterfly_Casket".to_string());
         let coffin_angela = TypedId(PageType::CombatPage, "9910005".to_string());
 
-        assert_eq!(disambiguation_map.get(&coffin)
-            .is_some_and(|x| x.get(&Locale::English).unwrap() == "abno page"), true);
-        assert_eq!(disambiguation_map.get(&coffin_angela)
-            .is_some_and(|x| x.get(&Locale::English).unwrap() == "combat page"), true);
+        assert!(disambiguation_map.get(&coffin)
+            .is_some_and(|x| x.get(&Locale::English).unwrap() == "abno page"));
+        assert!(disambiguation_map.get(&coffin_angela)
+            .is_some_and(|x| x.get(&Locale::English).unwrap() == "combat page"));
     }
 
     #[test]
@@ -275,14 +275,14 @@ mod tests {
         let collectable = TypedId(PageType::CombatPage, "202009".to_string());
         let handling_work = TypedId(PageType::CombatPage, "301001".to_string());
 
-        assert_eq!(disambiguation_map.get(&collectable)
-            .is_some_and(|x| x.get(&Locale::English).unwrap() == "collectable"), true);
-        assert_eq!(disambiguation_map.get(&enemy_only)
-            .is_some_and(|x| x.get(&Locale::English).unwrap() == "enemy"), true);
+        assert!(disambiguation_map.get(&collectable)
+            .is_some_and(|x| x.get(&Locale::English).unwrap() == "collectable"));
+        assert!(disambiguation_map.get(&enemy_only)
+            .is_some_and(|x| x.get(&Locale::English).unwrap() == "enemy"));
 
-        assert_eq!(disambiguation_map.get(&handling_work)
-            .is_some_and(|x| x.get(&Locale::Korean).unwrap() == "collectable"), true);
-        assert_eq!(disambiguation_map.get(&enemy_only)
-            .is_some_and(|x| x.get(&Locale::Korean).unwrap() == "enemy"), true);
+        assert!(disambiguation_map.get(&handling_work)
+            .is_some_and(|x| x.get(&Locale::Korean).unwrap() == "collectable"));
+        assert!(disambiguation_map.get(&enemy_only)
+            .is_some_and(|x| x.get(&Locale::Korean).unwrap() == "enemy"));
     }
 }
