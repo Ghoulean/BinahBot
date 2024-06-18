@@ -5,7 +5,9 @@ import {
     RequestValidator,
     RestApi,
 } from "aws-cdk-lib/aws-apigateway";
-import { Architecture, Code, Function, Runtime } from "aws-cdk-lib/aws-lambda";
+import { AttributeType, TableV2 } from "aws-cdk-lib/aws-dynamodb";
+import * as lambda from "aws-cdk-lib/aws-lambda";
+import { Architecture, Code, Runtime } from "aws-cdk-lib/aws-lambda";
 import { BlockPublicAccess, Bucket } from "aws-cdk-lib/aws-s3";
 import { Secret } from "aws-cdk-lib/aws-secretsmanager";
 import { Construct } from "constructs";
@@ -20,15 +22,16 @@ const FUNCTION_HANDLER = "binah_bot.bootstrap";
 export interface DiscordStackProps extends StackProps {
     clientId: string;
     emojis: {
-        [key: string]: string | undefined
-    }
+        [key: string]: string | undefined;
+    };
 }
 
 export class DiscordStack extends Stack {
-    private readonly discordBotLambda: Function;
+    private readonly discordBotLambda: lambda.Function;
     private readonly discordAPISecrets: Secret;
     private readonly apigw: RestApi;
     private readonly imageHostBucket: Bucket;
+    private readonly deckRepository: TableV2;
 
     constructor(scope: Construct, id: string, props: DiscordStackProps) {
         super(scope, id);
@@ -36,6 +39,7 @@ export class DiscordStack extends Stack {
         this.discordAPISecrets = this.createSecret();
         this.apigw = this.createApigw();
         this.imageHostBucket = this.createImageHostBucket();
+        this.deckRepository = this.createDeckRepository();
 
         this.discordAPISecrets.grantRead(this.discordBotLambda);
 
@@ -52,22 +56,27 @@ export class DiscordStack extends Stack {
             "SECRETS_ID",
             this.discordAPISecrets.secretName
         );
+        this.discordBotLambda.addEnvironment(
+            "DECK_REPOSITORY_NAME",
+            this.deckRepository.tableName
+        );
         this.discordBotLambda.addEnvironment("CLIENT_ID", props.clientId);
 
+        this.deckRepository.grantReadWriteData(this.discordBotLambda);
     }
 
     private createSecret(): Secret {
         return new Secret(this, "discord-bot-api-key");
     }
 
-    private createDiscordBotLambda(): Function {
-        return new Function(this, "DiscordBotFunction", {
+    private createDiscordBotLambda(): lambda.Function {
+        return new lambda.Function(this, "DiscordBotFunction", {
             runtime: Runtime.PROVIDED_AL2023,
             handler: FUNCTION_HANDLER,
             code: Code.fromAsset(BOOTSTRAP_LOCATION),
             timeout: Duration.seconds(30),
             memorySize: 512,
-            architecture: Architecture.ARM_64
+            architecture: Architecture.ARM_64,
         });
     }
 
@@ -136,6 +145,26 @@ export class DiscordStack extends Stack {
             }),
             enforceSSL: true,
             publicReadAccess: true,
+        });
+    }
+
+    private createDeckRepository(): TableV2 {
+        return new TableV2(this, "DeckRepositoryTable", {
+            partitionKey: { name: "author", type: AttributeType.STRING },
+            sortKey: { name: "deck_name", type: AttributeType.STRING },
+            deletionProtection: true,
+            globalSecondaryIndexes: [
+                {
+                    indexName: "gsi1",
+                    partitionKey: {
+                        name: "keypage",
+                        type: AttributeType.STRING,
+                    },
+                    sortKey: { name: "author", type: AttributeType.STRING },
+                },
+            ],
+            pointInTimeRecovery: true,
+            tableName: "DeckRepository",
         });
     }
 }
