@@ -138,7 +138,9 @@ mod tests {
     use crate::models::discord::DiscordInteractionType;
     use crate::test_utils::build_mocked_binahbot_env;
 
-    // TODO: sanity test differentiated display
+    // TODO: \u{2068} and \u{2069} are known as left-to-right marks. Their inclusion
+    // is intentional w.r.t. localization. Implement helper test function to
+    // remove these in order to increase test readability
     #[test]
     fn sanity_weight_of_sin() {
         let weight_of_sin_query = "the weight of sin";
@@ -149,7 +151,8 @@ mod tests {
             .choices.as_ref().expect("no embeds found")
             .iter().map(|x| x.name.clone()).collect::<Vec<_>>();
         assert_eq!(choices.len(), 10);
-        assert!(choices.contains(&"The Weight of Sin".to_string()));
+        assert!(choices.contains(&"\u{2068}The Weight of Sin\u{2069} (\u{2068}abno page\u{2069})".to_string()));
+        assert!(choices.contains(&"\u{2068}The Weight of Sin\u{2069} (\u{2068}passive\u{2069})".to_string()));
     }
 
     #[test]
@@ -162,9 +165,8 @@ mod tests {
             .choices.as_ref().expect("no embeds found")
             .iter().map(|x| x.name.clone()).collect::<Vec<_>>();
         assert_eq!(choices.len(), 10);
-        dbg!(&choices);
-        assert!(choices.contains(&"Xiao".to_string()));
-        assert!(choices.contains(&"Xiao’s Page".to_string()));
+        assert!(choices.contains(&"\u{2068}Xiao\u{2069} (\u{2068}passive\u{2069})".to_string()));
+        assert!(choices.contains(&"\u{2068}Xiao’s Page\u{2069} (\u{2068}collectable\u{2069})".to_string()));
     }
 
     fn build_discord_interaction(query_string: String) -> DiscordInteraction {

@@ -46,8 +46,6 @@ pub fn query(query: &str) -> Vec<ParsedTypedId> {
     let mut vec: Vec<_> = scorekeeper.iter().collect();
     vec.sort_by(|a, b| b.1.partial_cmp(a.1).unwrap());
 
-    dbg!(&vec);
-
     vec.iter().map(|(typed_id_str, _)| {
         ParsedTypedId::from_str(typed_id_str).unwrap()
     }).collect()
@@ -137,7 +135,6 @@ mod tests {
         let xiaos = binding.iter().map(|x| ParsedTypedId(PageType::KeyPage, x.to_string()));
 
         let query_return = query("Xiao");
-        dbg!(&query_return);
         
         xiaos.for_each(|x| {
             let position = query_return.iter()

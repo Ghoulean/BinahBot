@@ -7,11 +7,8 @@ use crate::models::discord::DiscordInteractionResponseType;
 use crate::models::discord::DiscordInteractionType;
 use crate::models::discord::PingResponse;
 
-#[derive(strum::Display)]
-#[strum(serialize_all = "lowercase")]
-enum CommandName {
-    Lor,
-}
+static LOR_COMMAND_NAME: &str = "lor";
+static DECK_COMMAND_NAME: &str = "deck";
 
 pub fn get_response(
     discord_interaction: &DiscordInteraction,
@@ -19,23 +16,31 @@ pub fn get_response(
 ) -> DiscordInteractionResponse {
     // switch to static hashmap later, for now just use switch-case
     match (&discord_interaction.r#type, &discord_interaction.data) {
-        (DiscordInteractionType::Ping, _) => {
-            DiscordInteractionResponse::Ping(PingResponse {
-                r#type: DiscordInteractionResponseType::Pong,
-            })
-        }
+        (DiscordInteractionType::Ping, _) => DiscordInteractionResponse::Ping(PingResponse {
+            r#type: DiscordInteractionResponseType::Pong,
+        }),
         (DiscordInteractionType::ApplicationCommand, Some(data))
-            if data.name == CommandName::Lor.to_string() =>
+            if data.name == LOR_COMMAND_NAME =>
         {
-            DiscordInteractionResponse::Message(lor_command(
+            DiscordInteractionResponse::Message(lor_command(discord_interaction, binahbot_env))
+        }
+        (DiscordInteractionType::ApplicationCommandAutocomplete, Some(data))
+            if data.name == LOR_COMMAND_NAME =>
+        {
+            DiscordInteractionResponse::Autocomplete(lor_autocomplete(
                 discord_interaction,
                 binahbot_env,
             ))
         }
-        (DiscordInteractionType::ApplicationCommandAutocomplete, Some(data))
-            if data.name == CommandName::Lor.to_string() =>
+        (DiscordInteractionType::ApplicationCommand, Some(data))
+            if data.name == DECK_COMMAND_NAME =>
         {
-            DiscordInteractionResponse::Autocomplete(lor_autocomplete(discord_interaction, binahbot_env))
+            todo!()
+        }
+        (DiscordInteractionType::ApplicationCommandAutocomplete, Some(data))
+            if data.name == DECK_COMMAND_NAME =>
+        {
+            todo!()
         }
         _ => panic!(),
     }

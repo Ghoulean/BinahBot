@@ -16,12 +16,18 @@ pub struct Ngram(pub String);
 type Frequency = i32;
 
 pub fn analyze(text: &str) -> HashMap<Ngram, Frequency> {
-    let str = filter(tokenize(text)).iter()
+    let mut filtered_tokens = filter(tokenize(text));
+
+    if filtered_tokens.is_empty() {
+        filtered_tokens.push("".to_string());
+    }
+    
+    let padded_str = filtered_tokens.iter()
         .map(pad)
         .collect::<Vec<_>>()
         .join("");
 
-    let vec = generate_ngrams(&str);
+    let vec = generate_ngrams(&padded_str);
 
     vec.iter()
         .filter(|x| !x.ends_with(LEFT_PAD))
@@ -43,15 +49,15 @@ fn pad(token: &Token) -> Token {
     format!("{}{}{}{}", LEFT_PAD, LEFT_PAD, token, RIGHT_PAD)
 }
 
-fn generate_ngrams(str: &str) -> Vec<String> {
+fn generate_ngrams(padded_str: &str) -> Vec<String> {
     let mut vec = Vec::new();
-    let count = str.char_indices().count();
+    let count = padded_str.char_indices().count();
 
     for i in 0..count - N_NGRAM + 1 {
-        let mut iter = str.char_indices();
+        let mut iter = padded_str.char_indices();
         let start = iter.nth(i).map(|x| x.0).unwrap();
-        let end = iter.nth(N_NGRAM - 1).map(|x| x.0).unwrap_or(str.len());
-        vec.push(String::from(&str[start..end]));
+        let end = iter.nth(N_NGRAM - 1).map(|x| x.0).unwrap_or(padded_str.len());
+        vec.push(String::from(&padded_str[start..end]));
     }
 
     vec
@@ -115,5 +121,15 @@ mod tests {
         .map(|x| (Ngram(x.to_string()), 1))
         .collect();
         assert_eq!(expected, analyze(input));
+    }
+
+    #[test]
+    fn analyze_short_str() {
+        vec![
+            "", "b", "bb", "bbb",
+            "a", "of", "the"
+        ].iter().for_each(|x| {
+            analyze(x);
+        });
     }
 }

@@ -120,7 +120,14 @@ pub struct PingResponse {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
+pub struct AllowedMentions {
+    pub parse: Vec<String>
+}
+
+#[derive(Serialize, Deserialize, Debug)]
 pub struct DiscordInteractionResponseMessage {
+    pub allowed_mentions: Option<AllowedMentions>,
+    pub content: Option<String>,
     pub embeds: Option<Vec<DiscordEmbed>>,
 }
 

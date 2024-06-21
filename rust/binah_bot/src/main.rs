@@ -1,8 +1,10 @@
+mod ddb_accessor;
 mod lor_autocomplete;
 mod lor_command;
 mod models;
 mod router;
 mod secrets_accessor;
+mod tiph;
 
 use ed25519_dalek::{Signature, Verifier, VerifyingKey};
 use hex::FromHex;
@@ -80,6 +82,7 @@ async fn main() -> Result<(), lambda_http::Error> {
 
     let config = aws_config::load_from_env().await;
     let asm = aws_sdk_secretsmanager::Client::new(&config);
+    let ddb = aws_sdk_dynamodb::Client::new(&config);
     let discord_secrets = get_discord_secrets(&asm, &env::var("SECRETS_ID").unwrap()).await;
 
     let binahbot_env = BinahBotEnvironment {
@@ -99,6 +102,7 @@ async fn main() -> Result<(), lambda_http::Error> {
             c_evade_emoji_id: env::var("C_EVADE_EMOJI_ID").ok(),
         },
         locales: &LOCALES,
+        ddb_client: Some(ddb)
     };
     let binahbot_env_ref = &binahbot_env;
 
@@ -162,7 +166,8 @@ pub mod test_utils {
                 c_block_emoji_id: None,
                 c_evade_emoji_id: None,
             },
-            locales: &LOCALES
+            locales: &LOCALES,
+            ddb_client: None
         }
     }
 }

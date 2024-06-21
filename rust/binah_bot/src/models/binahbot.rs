@@ -32,7 +32,8 @@ pub struct BinahBotEnvironment {
     pub discord_client_id: String,
     pub s3_bucket_name: String,
     pub emojis: Emojis,
-    pub locales: &'static StaticLoader
+    pub locales: &'static StaticLoader,
+    pub ddb_client: Option<aws_sdk_dynamodb::Client>
 }
 
 #[derive(Clone, Debug, strum::Display, strum_macros::EnumString)]

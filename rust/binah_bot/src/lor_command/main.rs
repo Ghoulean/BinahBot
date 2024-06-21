@@ -17,6 +17,7 @@ use ruina_reparser::get_passive_locales_by_id;
 
 use crate::models::binahbot::BinahBotEnvironment;
 use crate::models::binahbot::BinahBotLocale;
+use crate::models::discord::AllowedMentions;
 use crate::models::discord::DiscordEmbed;
 use crate::models::discord::DiscordInteraction;
 use crate::models::discord::DiscordInteractionOptions;
@@ -105,6 +106,8 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
     MessageResponse {
         r#type: DiscordInteractionResponseType::ChannelMessageWithSource,
         data: Some(DiscordInteractionResponseMessage {
+            allowed_mentions: Some(AllowedMentions { parse: Vec::new() }),
+            content: None,
             embeds: Some(vec![embed]),
         }),
     }
