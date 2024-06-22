@@ -3,9 +3,9 @@ use serde::Serialize;
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct DeckData {
-    pub keypage_id: String,
+    pub keypage_id: Option<String>,
     pub passive_ids: Vec<String>,
-    pub combat_page_ids: [String; 9],
+    pub combat_page_ids: [Option<String>; 9],
 }
 
 #[derive(Debug, Eq, PartialEq, Serialize, Deserialize)]
@@ -17,7 +17,7 @@ pub struct Deck {
     pub author: String,
     pub description: String,
     pub deck_data: DeckData,
-    pub tiph_deck: TiphDeck
+    pub tiph_deck: Option<TiphDeck>
 }
 
 pub struct DeckMetadata {

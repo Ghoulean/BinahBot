@@ -139,14 +139,17 @@ impl TryFrom<&HashMap<String, AttributeValue>> for Deck {
     type Error = Box<dyn Error>;
 
     fn try_from(value: &HashMap<String, AttributeValue>) -> Result<Self, Self::Error> {
+        let tiph_deck = value.get("tiph_deck").map(|x| x.as_s().ok()).flatten();
+        let tiph_version = value.get("tiph_version").map(|x| x.as_n().ok().map(|x| x.parse::<i32>().ok())).flatten().flatten();
+
         Ok(Deck {
             name: value.get("deck_name").ok_or("no deck name")?.as_s().map_err(failed_attributevalue_cast)?.clone(),
             author: value.get("author").ok_or("no author")?.as_s().map_err(failed_attributevalue_cast)?.clone(),
             deck_data: serde_json::from_str(value.get("deck_data").ok_or("no deck data")?.as_s().map_err(failed_attributevalue_cast)?)?,
-            tiph_deck: TiphDeck(
-                value.get("tiph_deck").ok_or("no tiph deck")?.as_s().map_err(failed_attributevalue_cast)?.clone(),
-                value.get("tiph_version").ok_or("no tiph version")?.as_n().map_err(failed_attributevalue_cast)?.parse()?,
-            ),
+            tiph_deck: match (tiph_deck, tiph_version) {
+                (Some(a), Some(b)) => Some(TiphDeck(a.clone(), b.clone())),
+                _ => None
+            },
             description: value.get("description").ok_or("no description")?.as_s().map_err(failed_attributevalue_cast)?.clone(),
         })
     }
@@ -164,15 +167,20 @@ impl TryFrom<&Deck> for HashMap<String, AttributeValue> {
     type Error = Box<dyn Error>;
 
     fn try_from(value: &Deck) -> Result<Self, Self::Error> {
-        Ok(HashMap::from([
+        let mut hm = HashMap::from([
             ("author".to_string(), AttributeValue::S(value.author.clone())),
             ("deck_name".to_string(), AttributeValue::S(value.name.clone())),
             ("deck_data".to_string(), AttributeValue::S(serde_json::to_string(&value.deck_data)?)),
-            ("tiph_deck".to_string(), AttributeValue::S(value.tiph_deck.0.clone())),
             ("description".to_string(), AttributeValue::S(value.description.clone())),
-            ("keypage".to_string(), AttributeValue::S(value.deck_data.keypage_id.clone())),
-            ("tiph_version".to_string(), AttributeValue::N(value.tiph_deck.1.to_string()))
-        ]))
+            ("keypage".to_string(), value.deck_data.keypage_id.as_ref().map(|x| AttributeValue::S(x.clone())).unwrap_or(AttributeValue::Null(true)) )
+        ]);
+
+        if let Some(tiph) = value.tiph_deck.as_ref() {
+            hm.insert("tiph_deck".to_string(), AttributeValue::S(tiph.0.clone()));
+            hm.insert("tiph_version".to_string(), AttributeValue::N(tiph.1.to_string()));
+        }
+
+        Ok(hm)
     }
 }
 

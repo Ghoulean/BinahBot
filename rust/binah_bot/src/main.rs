@@ -1,9 +1,9 @@
-mod ddb_accessor;
+mod ddb;
 mod lor_autocomplete;
 mod lor_command;
 mod models;
 mod router;
-mod secrets_accessor;
+mod secrets;
 mod tiph;
 
 use ed25519_dalek::{Signature, Verifier, VerifyingKey};
@@ -11,7 +11,7 @@ use hex::FromHex;
 use http::HeaderMap;
 use lambda_http::{run, service_fn, tracing, Body, Request, Response};
 use router::get_response;
-use secrets_accessor::get_discord_secrets;
+use secrets::get_discord_secrets;
 use std::env;
 use std::ops::Deref;
 
