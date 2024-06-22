@@ -26,7 +26,6 @@
                     "autocomplete": true
                 },
                 {
-                    "required": false,
                     "type": 3,
                     "name": "locale",
                     "names": {
@@ -36,6 +35,7 @@
                     "descriptions": {
                         "en-US": "Get card in this locale instead (BinahBot locale will remain the same)"
                     },
+                    "required": false,
                     "choices": [
                         {
                             "name": "en",
@@ -58,6 +58,198 @@
                             "value": "trcn"
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "name": "deck",
+            "names": {
+                "en-US": "deck"
+            },
+            "type": 1,
+            "description": "Look up a deck from the deck repository",
+            "descriptions": {
+                "en-US": "Look up a deck from the deck repository"
+            },
+            "options": [
+                {
+                    "type": 3,
+                    "name": "name",
+                    "names": {
+                        "en-US": "name"
+                    },
+                    "description": "Name of deck",
+                    "descriptions": {
+                        "en-US": "Name of deck"
+                    },
+                    "required": true,
+                    "max_length": 50,
+                    "autocomplete": true
+                },
+                {
+                    "type": 6,
+                    "name": "author",
+                    "names": {
+                        "en-US": "author"
+                    },
+                    "description": "Author of deck",
+                    "descriptions": {
+                        "en-US": "Author of deck"
+                    },
+                    "required": false,
+                    "max_length": 300,
+                    "autocomplete": false
+                },
+                {
+                    "type": 3,
+                    "name": "keypage",
+                    "names": {
+                        "en-US": "keypage"
+                    },
+                    "description": "Key page of deck",
+                    "descriptions": {
+                        "en-US": "Key page of deck"
+                    },
+                    "required": false,
+                    "max_length": 50,
+                    "autocomplete": true
+                }
+            ]
+        },
+        {
+            "name": "createdeck",
+            "names": {
+                "en-US": "createdeck"
+            },
+            "type": 1,
+            "description": "Create deck",
+            "descriptions": {
+                "en-US": "Create deck"
+            },
+            "options": [
+                {
+                    "type": 3,
+                    "name": "deck",
+                    "names": {
+                        "en-US": "deck"
+                    },
+                    "description": "Deck code from Tiphereth (Zasz)'s deck editor",
+                    "descriptions": {
+                        "en-US": "Deck code from Tiphereth (Zasz)'s deck editor"
+                    },
+                    "required": true,
+                    "max_length": 50,
+                    "autocomplete": false
+                },
+                {
+                    "type": 3,
+                    "name": "name",
+                    "names": {
+                        "en-US": "name"
+                    },
+                    "description": "Name of deck",
+                    "descriptions": {
+                        "en-US": "Name of deck"
+                    },
+                    "required": true,
+                    "max_length": 50,
+                    "autocomplete": false
+                },
+                {
+                    "type": 3,
+                    "name": "description",
+                    "names": {
+                        "en-US": "description"
+                    },
+                    "description": "Optional description associated with the deck",
+                    "descriptions": {
+                        "en-US": "Optional description associated with the deck"
+                    },
+                    "required": false,
+                    "max_length": 300,
+                    "autocomplete": false
+                }
+            ]
+        },
+        {
+            "name": "updatedeck",
+            "names": {
+                "en-US": "updatedeck"
+            },
+            "type": 1,
+            "description": "Update deck",
+            "descriptions": {
+                "en-US": "Update deck"
+            },
+            "options": [
+                {
+                    "type": 3,
+                    "name": "name",
+                    "names": {
+                        "en-US": "name"
+                    },
+                    "description": "Name of deck",
+                    "descriptions": {
+                        "en-US": "Name of deck"
+                    },
+                    "required": true,
+                    "max_length": 50,
+                    "autocomplete": false
+                },
+                {
+                    "type": 3,
+                    "name": "deck",
+                    "names": {
+                        "en-US": "deck"
+                    },
+                    "description": "Deck code from Tiphereth (Zasz)'s deck editor",
+                    "descriptions": {
+                        "en-US": "Deck code from Tiphereth (Zasz)'s deck editor"
+                    },
+                    "required": false,
+                    "max_length": 50,
+                    "autocomplete": false
+                },
+                {
+                    "type": 3,
+                    "name": "description",
+                    "names": {
+                        "en-US": "description"
+                    },
+                    "description": "Optional description associated with the deck",
+                    "descriptions": {
+                        "en-US": "Optional description associated with the deck"
+                    },
+                    "required": false,
+                    "max_length": 300,
+                    "autocomplete": false
+                }
+            ]
+        },
+        {
+            "name": "deletedeck",
+            "names": {
+                "en-US": "deletedeck"
+            },
+            "type": 1,
+            "description": "Delete deck",
+            "descriptions": {
+                "en-US": "Delete deck"
+            },
+            "options": [
+                {
+                    "type": 3,
+                    "name": "name",
+                    "names": {
+                        "en-US": "name"
+                    },
+                    "description": "Name of deck",
+                    "descriptions": {
+                        "en-US": "Name of deck"
+                    },
+                    "required": true,
+                    "max_length": 50,
+                    "autocomplete": false
                 }
             ]
         }
