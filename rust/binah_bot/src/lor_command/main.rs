@@ -21,8 +21,10 @@ use crate::models::discord::AllowedMentions;
 use crate::models::discord::DiscordEmbed;
 use crate::models::discord::DiscordInteraction;
 use crate::models::discord::DiscordInteractionOptions;
+use crate::models::discord::DiscordInteractionOptionValue;
 use crate::models::discord::DiscordInteractionResponseMessage;
 use crate::models::discord::DiscordInteractionResponseType;
+use crate::models::discord::DiscordMessageFlag;
 use crate::models::discord::MessageResponse;
 
 use crate::lor_command::transformers::transform_abno_page;
@@ -103,12 +105,19 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
         }
     };
 
+    let flags = if get_private_option(command_args).is_some_and(|x| x == true) {
+        Some(DiscordMessageFlag::EphemeralMessage as i32)
+    } else {
+        None
+    };
+
     MessageResponse {
         r#type: DiscordInteractionResponseType::ChannelMessageWithSource,
         data: Some(DiscordInteractionResponseMessage {
             allowed_mentions: Some(AllowedMentions { parse: Vec::new() }),
             content: None,
             embeds: Some(vec![embed]),
+            flags: flags
         }),
     }
 }
@@ -116,19 +125,44 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
 fn get_query_option(vec: &[DiscordInteractionOptions]) -> String {
     vec.iter()
         .find(|x| x.name == "query")
-        .map(|x| x.value.clone())
-        .unwrap()
+        .map(|x| { 
+            match &x.value {
+                DiscordInteractionOptionValue::String(s) => s,
+                _ => unreachable!()
+            }
+        })
+        .expect("no query option found")
+        .to_string()
 }
 
 fn get_locale_option(vec: &[DiscordInteractionOptions]) -> Option<String> {
     vec.iter()
-        .find(|x| x.name == "locale")
-        .map(|x| x.value.clone())
+        .find(|x| &x.name == "locale")
+        .map(|x| { 
+            match &x.value {
+                DiscordInteractionOptionValue::String(s) => s,
+                _ => unreachable!()
+            }
+        })
+        .cloned()
+}
+
+fn get_private_option(vec: &[DiscordInteractionOptions]) -> Option<bool> {
+    vec.iter()
+        .find(|x| x.name == "private")
+        .map(|x| { 
+            match &x.value {
+                DiscordInteractionOptionValue::Bool(b) => b,
+                _ => unreachable!()
+            }
+        })
+        .copied()
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::models::discord::DiscordUser;
     use crate::test_utils::build_mocked_binahbot_env;
     use crate::models::discord::DiscordInteractionData;
     use crate::models::discord::DiscordInteractionType;
@@ -223,17 +257,21 @@ mod tests {
                 options: vec![DiscordInteractionOptions {
                     name: "query".to_string(),
                     name_localizations: None,
-                    value: query_string,
+                    value: DiscordInteractionOptionValue::String(query_string),
                 }, DiscordInteractionOptions {
                     name: "locale".to_string(),
                     name_localizations: None,
-                    value: locale.to_string(),
+                    value: DiscordInteractionOptionValue::String(locale.to_string()),
                 }],
             }),
             channel_id: None,
             token: "token".to_string(),
             locale: None,
             guild_locale: None,
+            user: Some(DiscordUser {
+                id: "snowflake".to_string(),
+            }),
+            member: None
         }
     }
 }

@@ -39,3 +39,7 @@ passive_rarity_header = Rarity
 passive_description_header = Description
 passive_transferable_header = Transferable
 passive_not_transferable_display = false
+
+create_deck_success = Successfully created "{ $deck_name }"
+
+generic_error_message = Unknown error has occured

@@ -1,10 +1,12 @@
 mod ddb;
+mod deck;
 mod lor_autocomplete;
 mod lor_command;
 mod models;
 mod router;
 mod secrets;
 mod tiph;
+mod utils;
 
 use ed25519_dalek::{Signature, Verifier, VerifyingKey};
 use hex::FromHex;
@@ -13,6 +15,7 @@ use lambda_http::{run, service_fn, tracing, Body, Request, Response};
 use router::get_response;
 use secrets::get_discord_secrets;
 use std::env;
+use std::error::Error;
 use std::ops::Deref;
 
 use crate::models::binahbot::DiscordSecrets;
@@ -33,7 +36,7 @@ static SIGNATURE_HEADER: &str = "x-signature-ed25519";
 async fn function_handler(
     event: Request,
     binahbot_env: &BinahBotEnvironment,
-) -> Result<Response<Body>, lambda_http::Error> {
+) -> Result<Response<Body>, Box<dyn Error + Send + Sync>> {
     tracing::debug!("Rust function invoked");
 
     let request_body: String = String::from_utf8(event.body().deref().to_vec()).unwrap();
@@ -58,7 +61,7 @@ async fn function_handler(
     }
 
     let discord_interaction: DiscordInteraction = serde_json::from_str(request_body.as_str())?;
-    let response = get_response(&discord_interaction, binahbot_env);
+    let response = get_response(&discord_interaction, binahbot_env).await?;
 
     let resp = Response::builder()
         .status(200)
@@ -83,6 +86,7 @@ async fn main() -> Result<(), lambda_http::Error> {
     let config = aws_config::load_from_env().await;
     let asm = aws_sdk_secretsmanager::Client::new(&config);
     let ddb = aws_sdk_dynamodb::Client::new(&config);
+    let http = reqwest::Client::new();
     let discord_secrets = get_discord_secrets(&asm, &env::var("SECRETS_ID").unwrap()).await;
 
     let binahbot_env = BinahBotEnvironment {
@@ -102,7 +106,9 @@ async fn main() -> Result<(), lambda_http::Error> {
             c_evade_emoji_id: env::var("C_EVADE_EMOJI_ID").ok(),
         },
         locales: &LOCALES,
-        ddb_client: Some(ddb)
+        ddb_table_name: env::var("DECK_REPOSITORY_NAME").unwrap(),
+        ddb_client: Some(ddb),
+        reqwest_client: Some(http)
     };
     let binahbot_env_ref = &binahbot_env;
 
@@ -125,7 +131,7 @@ fn get_header(header_map: &HeaderMap, header_key: &str) -> String {
 fn validate_headers(
     discord_secrets: &DiscordSecrets,
     metadata: &DiscordInteractionMetadata,
-) -> Result<(), Box<dyn std::error::Error>> {
+) -> Result<(), Box<dyn Error + Send + Sync>> {
     let public_key_bytes = <[u8; 32]>::from_hex(&discord_secrets.public_key)?;
     let public_key = VerifyingKey::from_bytes(&public_key_bytes)?;
 
@@ -167,7 +173,9 @@ pub mod test_utils {
                 c_evade_emoji_id: None,
             },
             locales: &LOCALES,
-            ddb_client: None
+            ddb_table_name: "table_name".to_string(),
+            ddb_client: None,
+            reqwest_client: None
         }
     }
 }

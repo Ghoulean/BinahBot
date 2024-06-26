@@ -33,7 +33,7 @@ struct TiphDeckEncode {
 pub async fn decode(
     client: &reqwest::Client,
     tiph: &TiphDeck
-) -> Result<DeckData, Box<dyn Error>> {
+) -> Result<DeckData, Box<dyn Error + Send + Sync>> {
     let txt = client.post(format!("{}{}{}", BASE_TIPH_URL, "/internal/dvi_decode/?d=", tiph.0))
         .send()
         .await?
@@ -46,7 +46,7 @@ pub async fn decode(
 pub async fn encode(
     client: &reqwest::Client,
     deck_data: &DeckData
-) -> Result<TiphDeck, Box<dyn Error>> {
+) -> Result<TiphDeck, Box<dyn Error + Send + Sync>> {
     let mut query_params = Vec::new();
     query_params.push(deck_data.keypage_id.as_ref().map(|x| ("k", x)));
     deck_data.passive_ids.iter().for_each(|x| {
@@ -71,7 +71,7 @@ pub async fn encode(
 }
 
 impl TryFrom<&TiphDeckDecode> for DeckData {
-    type Error = Box<dyn Error>;
+    type Error = Box<dyn Error + Send + Sync>;
 
     fn try_from(value: &TiphDeckDecode) -> Result<Self, Self::Error> {
         let mut resized_combat_page_ids: Vec<_> = value.data.cards.iter().map(|x| Some(x.to_string())).collect();

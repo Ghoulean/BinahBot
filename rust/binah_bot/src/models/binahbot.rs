@@ -33,7 +33,9 @@ pub struct BinahBotEnvironment {
     pub s3_bucket_name: String,
     pub emojis: Emojis,
     pub locales: &'static StaticLoader,
-    pub ddb_client: Option<aws_sdk_dynamodb::Client>
+    pub ddb_table_name: String,
+    pub ddb_client: Option<aws_sdk_dynamodb::Client>,
+    pub reqwest_client: Option<reqwest::Client>
 }
 
 #[derive(Clone, Debug, strum::Display, strum_macros::EnumString)]

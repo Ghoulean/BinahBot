@@ -15,7 +15,7 @@ pub struct TiphDeck(pub String, pub i32);
 pub struct Deck {
     pub name: String,
     pub author: String,
-    pub description: String,
+    pub description: Option<String>,
     pub deck_data: DeckData,
     pub tiph_deck: Option<TiphDeck>
 }

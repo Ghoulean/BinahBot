@@ -21,6 +21,7 @@ use crate::models::binahbot::BinahBotEnvironment;
 use crate::models::binahbot::BinahBotLocale;
 use crate::models::discord::AutocompleteResponse;
 use crate::models::discord::DiscordInteractionOptions;
+use crate::models::discord::DiscordInteractionOptionValue;
 use crate::models::discord::DiscordInteractionResponseAutocomplete;
 use crate::models::discord::DiscordInteractionResponseType;
 use crate::DiscordInteraction;
@@ -75,7 +76,7 @@ pub fn lor_autocomplete(interaction: &DiscordInteraction, env: &BinahBotEnvironm
             DiscordInteractionOptions {
                 name: display_name,
                 name_localizations: None,
-                value: x.to_string(),
+                value: DiscordInteractionOptionValue::String(x.to_string()),
             }
         })
         .collect();
@@ -91,14 +92,26 @@ pub fn lor_autocomplete(interaction: &DiscordInteraction, env: &BinahBotEnvironm
 fn get_query_option(vec: &[DiscordInteractionOptions]) -> String {
     vec.iter()
         .find(|x| x.name == "query")
-        .map(|x| x.value.clone())
-        .unwrap_or(String::from(""))
+        .map(|x| { 
+            match &x.value {
+                DiscordInteractionOptionValue::String(s) => s,
+                _ => unreachable!()
+            }
+        })
+        .unwrap_or(&"".to_string())
+        .to_string()
 }
 
 fn get_locale_option(vec: &[DiscordInteractionOptions]) -> Option<String> {
     vec.iter()
         .find(|x| x.name == "locale")
-        .map(|x| x.value.clone())
+        .map(|x| { 
+            match &x.value {
+                DiscordInteractionOptionValue::String(s) => s,
+                _ => unreachable!()
+            }
+        })
+        .cloned()
 }
 
 fn get_display_name_locale(
@@ -136,6 +149,7 @@ mod tests {
     use super::*;
     use crate::models::discord::DiscordInteractionData;
     use crate::models::discord::DiscordInteractionType;
+    use crate::models::discord::DiscordUser;
     use crate::test_utils::build_mocked_binahbot_env;
 
     // TODO: \u{2068} and \u{2069} are known as left-to-right marks. Their inclusion
@@ -180,13 +194,17 @@ mod tests {
                 options: vec![DiscordInteractionOptions {
                     name: "query".to_string(),
                     name_localizations: None,
-                    value: query_string,
+                    value: DiscordInteractionOptionValue::String(query_string),
                 }],
             }),
             channel_id: None,
             token: "token".to_string(),
             locale: None,
             guild_locale: None,
+            user: Some(DiscordUser {
+                id: "snowflake".to_string(),
+            }),
+            member: None
         }
     }
 }
