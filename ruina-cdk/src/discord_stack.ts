@@ -6,6 +6,12 @@ import {
     RestApi,
 } from "aws-cdk-lib/aws-apigateway";
 import { AttributeType, TableV2 } from "aws-cdk-lib/aws-dynamodb";
+import {
+    Effect,
+    Policy,
+    PolicyDocument,
+    PolicyStatement,
+} from "aws-cdk-lib/aws-iam";
 import * as lambda from "aws-cdk-lib/aws-lambda";
 import { Architecture, Code, Runtime } from "aws-cdk-lib/aws-lambda";
 import { BlockPublicAccess, Bucket } from "aws-cdk-lib/aws-s3";
@@ -63,6 +69,11 @@ export class DiscordStack extends Stack {
         this.discordBotLambda.addEnvironment("CLIENT_ID", props.clientId);
 
         this.deckRepository.grantReadWriteData(this.discordBotLambda);
+        this.createBucketDeckThumbnailWriteAccessPolicy(
+            this.imageHostBucket
+        ).forEach((statement) => {
+            this.discordBotLambda.addToRolePolicy(statement);
+        });
     }
 
     private createSecret(): Secret {
@@ -146,6 +157,28 @@ export class DiscordStack extends Stack {
             enforceSSL: true,
             publicReadAccess: true,
         });
+    }
+
+    private createBucketDeckThumbnailWriteAccessPolicy(
+        bucket: Bucket
+    ): PolicyStatement[] {
+        return [
+            new PolicyStatement({
+                effect: Effect.ALLOW,
+                actions: ["s3:PutObject", "s3:GetObject"],
+                resources: [`${bucket.bucketArn}/deck_thumbnails/*`],
+            }),
+            new PolicyStatement({
+                effect: Effect.ALLOW,
+                actions: ["s3:ListBucket"],
+                resources: [bucket.bucketArn],
+                conditions: {
+                    StringLike: {
+                        "s3:prefix": ["deck_thumbnails/*"],
+                    },
+                },
+            }),
+        ];
     }
 
     private createDeckRepository(): TableV2 {
