@@ -17,6 +17,7 @@ pub struct DiscordEmbed {
     pub image: Option<DiscordEmbedImage>,
     pub footer: Option<DiscordEmbedFooter>,
     pub author: Option<DiscordEmbedAuthor>,
+    pub url: Option<String>,
     pub fields: Option<Vec<DiscordEmbedFields>>,
 }
 
@@ -171,8 +172,10 @@ pub enum DiscordInteractionResponseType {
 
 #[repr(i32)]
 pub enum DiscordMessageFlag {
+    #[allow(dead_code)]
     SuppressEmbeds = 4,
     EphemeralMessage = 64,
+    #[allow(dead_code)]
     SuppressNotifications = 4096
 }
 

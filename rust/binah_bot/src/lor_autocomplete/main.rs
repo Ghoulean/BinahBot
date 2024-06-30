@@ -144,6 +144,7 @@ fn get_display_name_locale(
         }
     }
 }
+
 #[cfg(test)]
 mod tests {
     use super::*;

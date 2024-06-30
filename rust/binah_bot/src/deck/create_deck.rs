@@ -6,14 +6,12 @@ use unic_langid::LanguageIdentifier;
 
 use crate::ddb::put_deck;
 use crate::models::binahbot::BinahBotEnvironment;
-use crate::models::binahbot::BinahBotLocale;
 use crate::models::binahbot::DiscordEmbedColors;
 use crate::models::deck::Deck;
 use crate::models::deck::TiphDeck;
 use crate::models::discord::AllowedMentions;
 use crate::models::discord::DiscordEmbed;
 use crate::models::discord::DiscordInteraction;
-use crate::models::discord::DiscordInteractionOptions;
 use crate::models::discord::DiscordInteractionOptionValue;
 use crate::models::discord::DiscordInteractionResponseMessage;
 use crate::models::discord::DiscordInteractionResponseType;
@@ -22,6 +20,8 @@ use crate::models::discord::MessageResponse;
 use crate::tiph::decode;
 use crate::utils::get_binahbot_locale;
 use crate::utils::get_option_value;
+
+use super::deck_utils::build_generic_error_message_response;
 
 static DEFAULT_TIPH_DECK_VERSION: i32 = 1;
 
@@ -40,8 +40,8 @@ pub async fn create_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
 
     let deck_data = match deck_data_result {
         Ok(x) => x,
-        // todo: early return
-        Err(e) => panic!()
+        // todo: early return MessageResponse
+        Err(_) => panic!()
     };
 
     let deck_name = match get_option_value("name", command_args).expect("no deck option") {
@@ -94,6 +94,7 @@ pub async fn create_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
                             image: None,
                             footer: None,
                             author: None,
+                            url: None,
                             fields: None
                         }
                     ]),
@@ -103,25 +104,7 @@ pub async fn create_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
         },
         Err(_) => {
             // todo: check for error type
-            MessageResponse {
-                r#type: DiscordInteractionResponseType::ChannelMessageWithSource,
-                data: Some(DiscordInteractionResponseMessage {
-                    allowed_mentions: Some(AllowedMentions { parse: Vec::new() }),
-                    content: None,
-                    embeds: Some(vec![
-                        DiscordEmbed {
-                            title: None,
-                            description: Some(env.locales.lookup(&lang_id, "generic_error_message")),
-                            color: Some(DiscordEmbedColors::Default as i32),
-                            image: None,
-                            footer: None,
-                            author: None,
-                            fields: None
-                        }
-                    ]),
-                    flags: Some(DiscordMessageFlag::EphemeralMessage as i32)
-                })
-            }
+            build_generic_error_message_response(&lang_id, env)
         }
     }
 }

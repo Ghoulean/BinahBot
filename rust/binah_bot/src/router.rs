@@ -1,10 +1,10 @@
 use std::error::Error;
 
 use crate::deck::create_deck::create_deck;
+use crate::deck::read_deck::read_deck;
 use crate::lor_autocomplete::main::lor_autocomplete;
 use crate::lor_command::main::lor_command;
 use crate::models::binahbot::BinahBotEnvironment;
-use crate::models::discord;
 use crate::models::discord::DiscordInteraction;
 use crate::models::discord::DiscordInteractionResponse;
 use crate::models::discord::DiscordInteractionResponseType;
@@ -47,13 +47,7 @@ pub async fn get_response(
         (DiscordInteractionType::ApplicationCommand, Some(data))
             if data.name == READ_DECK_COMMAND_NAME =>
         {
-            todo!()
-            // get user id deck name from input
-            // getitem ddb
-            // check ddb result
-            // resource not found exception -> does not exist soz (ephemeral)
-            // other exception -> crash or something
-            // success -> transform  (NOT ephemeral)
+            Ok(DiscordInteractionResponse::Message(read_deck(discord_interaction, binahbot_env).await))
         }
         (DiscordInteractionType::ApplicationCommand, Some(data))
             if data.name == UPDATE_DECK_COMMAND_NAME =>

@@ -43,3 +43,5 @@ passive_not_transferable_display = false
 create_deck_success = Successfully created "{ $deck_name }"
 
 generic_error_message = Unknown error has occured
+
+tiph_database = Tiphereth

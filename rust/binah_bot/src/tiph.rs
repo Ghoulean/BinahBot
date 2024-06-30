@@ -43,7 +43,7 @@ pub async fn decode(
     DeckData::try_from(&serde_json::from_str(&txt)?)
 }
 
-pub async fn encode(
+pub async fn _encode(
     client: &reqwest::Client,
     deck_data: &DeckData
 ) -> Result<TiphDeck, Box<dyn Error + Send + Sync>> {
@@ -128,7 +128,7 @@ mod tests {
                 "608009", "608009", "608004"
             ].iter().map(|x| Some(x.to_string())).collect::<Vec<_>>().try_into().unwrap()
         };
-        let encode = encode(&client, &turbo_nikolai).await.expect("error with encode");
+        let encode = _encode(&client, &turbo_nikolai).await.expect("error with encode");
 
         assert_eq!(encode, TiphDeck("CS-iRmsieV9ddwW4-BA1C~n".to_string(), 1));
     }

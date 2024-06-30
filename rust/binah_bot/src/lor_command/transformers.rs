@@ -6,6 +6,7 @@ use ruina_common::game_objects::battle_symbol::BattleSymbol;
 use ruina_common::game_objects::combat_page::CombatPage;
 use ruina_common::game_objects::combat_page::Die;
 use ruina_common::game_objects::combat_page::DieType;
+use ruina_common::game_objects::common::Floor;
 use ruina_common::game_objects::key_page::KeyPage;
 use ruina_common::game_objects::passive::Passive;
 use ruina_common::localizations::abno_page_locale::AbnoPageLocale;
@@ -25,9 +26,11 @@ use crate::models::binahbot::DiscordEmbedColors;
 use crate::models::binahbot::Emojis;
 use crate::models::discord::DiscordEmbed;
 use crate::models::discord::DiscordEmbedFields;
+use crate::models::discord::DiscordEmbedFooter;
 use crate::models::discord::DiscordEmbedImage;
 
-static NOT_FOUND_IMAGE_NAME: &str = "404_Not_Found.png";
+static NOT_FOUND_IMAGE_NAME: &str = "404_Not_Found";
+static TIPH_BASE_URL: &str = "https://tiphereth.zasz.su";
 
 pub fn transform_abno_page(
     page: &AbnoPage,
@@ -58,8 +61,12 @@ pub fn transform_abno_page(
         description: None,
         color: Some(embed_color as i32),
         image: Some(DiscordEmbedImage { url }),
-        footer: None,
+        footer: Some(DiscordEmbedFooter {
+            text: format!("{}/abno_pages/{}/{}", TIPH_BASE_URL, page.sephirah, page.id),
+            icon_url: None
+        }),
         author: None,
+        url: None,
         fields: Some(vec![
             DiscordEmbedFields {
                 name: env.locales.lookup(&lang_id, "abno_flavor_text_header"),
@@ -153,6 +160,7 @@ pub fn transform_battle_symbol(
         image: Some(DiscordEmbedImage { url }),
         footer: None,
         author: None,
+        url: None,
         fields: Some(fields),
     }
 }
@@ -216,8 +224,12 @@ pub fn transform_combat_page(
         description: None,
         color: Some(embed_color as i32),
         image: Some(DiscordEmbedImage { url }),
-        footer: None,
+        footer: Some(DiscordEmbedFooter {
+            text: format!("{}/cards/{}/", TIPH_BASE_URL, page.id),
+            icon_url: None
+        }),
         author: None,
+        url: None,
         fields: Some(fields),
     }
 }
@@ -336,8 +348,12 @@ pub fn transform_key_page(
         description: None,
         color: Some(embed_color as i32),
         image: Some(DiscordEmbedImage { url }),
-        footer: None,
+        footer: Some(DiscordEmbedFooter {
+            text: format!("{}/keypages/{}/", TIPH_BASE_URL, page.id),
+            icon_url: None
+        }),
         author: None,
+        url: None,
         fields: Some(fields),
     }
 }
@@ -387,8 +403,12 @@ pub fn transform_passive(
         description: None,
         color: Some(embed_color as i32),
         image: None,
-        footer: None,
+        footer: Some(DiscordEmbedFooter {
+            text: format!("{}/passives/{}/", TIPH_BASE_URL, page.id),
+            icon_url: None
+        }),
         author: None,
+        url: None,
         fields: Some(fields),
     }
 }
@@ -417,19 +437,37 @@ fn format_dice(dice: &[Die], locale: &Locale, emojis: &Emojis) -> String {
 
 fn format_to_indented_list(v: &[String]) -> String {
     v.iter()
-        .map(|x| format!(" > - {}", x))
+        .map(|x| format!("- {}", x))
         .collect::<Vec<_>>()
         .join("\n")
 }
 
 #[cfg(test)]
 mod tests {
+    use ruina_reparser::get_abno_page_by_internal_name;
+    use ruina_reparser::get_abno_page_locales_by_internal_name;
+
+    use crate::test_utils::build_mocked_binahbot_env;
+
     use super::*;
 
     #[test]
     fn sanity_format_to_indented_list() {
         let input = vec!["item 1".to_string(), "item 2".to_string()];
-        let expected_output = " > - item 1\n > - item 2";
+        let expected_output = "- item 1\n- item 2";
         assert_eq!(expected_output, format_to_indented_list(&input));
+    }
+
+    #[test]
+    fn sanity_abno_page_footer() {
+        let abno_page = get_abno_page_by_internal_name("LongBird_Sin").unwrap();
+        let binding = get_abno_page_locales_by_internal_name("LongBird_Sin");
+        let abno_page_locale = binding.get(&Locale::English).unwrap();
+        let request_locale = BinahBotLocale::EnglishUS;
+        let env = build_mocked_binahbot_env();
+
+        let embed = transform_abno_page(abno_page, abno_page_locale, &request_locale, &env);
+
+        assert!(embed.footer.expect("no footer").text.contains("https://tiphereth.zasz.su/abno_pages/Binah/7"));
     }
 }

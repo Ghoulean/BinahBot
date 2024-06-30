@@ -8,6 +8,8 @@ use ruina_identifier::TypedId;
 use serde::Deserialize;
 use toml::from_str;
 use unic_langid::LanguageIdentifier;
+// It's used; IDE (not cargo) is complaining too much tho
+#[allow(unused_imports)]
 use strum::IntoEnumIterator;
 
 use crate::heuristics::get_disambiguations_for_uniqueness_heuristic;
