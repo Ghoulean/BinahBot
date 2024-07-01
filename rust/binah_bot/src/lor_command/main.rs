@@ -270,6 +270,8 @@ mod tests {
             guild_locale: None,
             user: Some(DiscordUser {
                 id: "snowflake".to_string(),
+                username: "username".to_string(),
+                avatar: "hash".to_string(),
             }),
             member: None
         }

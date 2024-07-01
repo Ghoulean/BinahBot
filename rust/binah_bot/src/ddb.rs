@@ -15,6 +15,7 @@ pub async fn get_deck(
     name: &str,
     author: &str
 ) -> Result<Deck, Box<dyn Error + Send + Sync>> {
+    tracing::info!("Calling GetDeck with name={}; author={}", name, author);
     let binding = client.get_item()
         .table_name(table_name)
         .key("author", AttributeValue::S(author.to_string()))
@@ -34,6 +35,7 @@ pub async fn put_deck(
     deck: &Deck,
     overwrite: bool
 ) -> Result<(), Box<dyn Error + Send + Sync>> {
+    tracing::info!("Calling PutDeck with deck={:?}", deck);
     let condition_expression = if overwrite { None } else { Some("attribute_not_exists(author)".to_string()) };
     Ok(client.put_item()
         .table_name(table_name)

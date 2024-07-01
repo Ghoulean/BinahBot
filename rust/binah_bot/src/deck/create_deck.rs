@@ -17,6 +17,7 @@ use crate::models::discord::DiscordInteractionResponseMessage;
 use crate::models::discord::DiscordInteractionResponseType;
 use crate::models::discord::DiscordMessageFlag;
 use crate::models::discord::MessageResponse;
+use crate::thumbnail::generate_thumbnail;
 use crate::tiph::decode;
 use crate::utils::get_binahbot_locale;
 use crate::utils::get_option_value;
@@ -48,13 +49,19 @@ pub async fn create_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
         DiscordInteractionOptionValue::String(x) => x,
         _ => unreachable!()
     };
-    let description = get_option_value("name", command_args).map(|x| {
+    let description = get_option_value("description", command_args).map(|x| {
         match x {
             DiscordInteractionOptionValue::String(y) => y,
             _ => unreachable!()
         }
     });
     let author_id = &interaction.user.as_ref().unwrap_or(interaction.member.as_ref().unwrap().user.as_ref().unwrap()).id;
+
+    let _ = generate_thumbnail(
+        &env.lambda_client.as_ref().expect("no aws lambda client"),
+        &env.thumbnail_lambda_name,
+        &deck_data.combat_page_ids
+    ).await;
 
     let deck = Deck {
         name: deck_name.to_string(),

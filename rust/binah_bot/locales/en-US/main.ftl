@@ -41,7 +41,9 @@ passive_transferable_header = Transferable
 passive_not_transferable_display = false
 
 create_deck_success = Successfully created "{ $deck_name }"
+read_deck_keypage_header = Keypage
+read_deck_combat_pages_header = Combat pages
+read_deck_passives_header = Passives
+read_deck_combat_page_count = { $page_name } x{ $count }
 
 generic_error_message = Unknown error has occured
-
-tiph_database = Tiphereth

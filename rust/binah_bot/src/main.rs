@@ -5,6 +5,7 @@ mod lor_command;
 mod models;
 mod router;
 mod secrets;
+mod thumbnail;
 mod tiph;
 mod utils;
 
@@ -86,13 +87,14 @@ async fn main() -> Result<(), lambda_http::Error> {
     let config = aws_config::load_from_env().await;
     let asm = aws_sdk_secretsmanager::Client::new(&config);
     let ddb = aws_sdk_dynamodb::Client::new(&config);
+    let lambda = aws_sdk_lambda::Client::new(&config);
     let http = reqwest::Client::new();
-    let discord_secrets = get_discord_secrets(&asm, &env::var("SECRETS_ID").unwrap()).await;
+    let discord_secrets = get_discord_secrets(&asm, &env::var("SECRETS_ID").expect("no SECRETS_ID")).await;
 
     let binahbot_env = BinahBotEnvironment {
         discord_secrets,
-        discord_client_id: env::var("CLIENT_ID").unwrap(),
-        s3_bucket_name: env::var("S3_BUCKET_NAME").unwrap(),
+        discord_client_id: env::var("CLIENT_ID").expect("no CLIENT_ID"),
+        s3_bucket_name: env::var("S3_BUCKET_NAME").expect("no S3_BUCKET_NAME"),
         emojis: Emojis {
             slash_emoji_id: env::var("SLASH_EMOJI_ID").ok(),
             pierce_emoji_id: env::var("PIERCE_EMOJI_ID").ok(),
@@ -106,8 +108,10 @@ async fn main() -> Result<(), lambda_http::Error> {
             c_evade_emoji_id: env::var("C_EVADE_EMOJI_ID").ok(),
         },
         locales: &LOCALES,
-        ddb_table_name: env::var("DECK_REPOSITORY_NAME").unwrap(),
+        ddb_table_name: env::var("DECK_REPOSITORY_NAME").expect("no DECK_REPOSITORY_NAME"),
+        thumbnail_lambda_name: env::var("THUMBNAIL_LAMBDA_ARN").expect("no THUMBNAIL_LAMBDA_ARN"),
         ddb_client: Some(ddb),
+        lambda_client: Some(lambda),
         reqwest_client: Some(http)
     };
     let binahbot_env_ref = &binahbot_env;
@@ -157,6 +161,7 @@ pub mod test_utils {
                 application_id: "app_id".to_string(),
                 auth_token: "auth_token".to_string(),
                 public_key: "pub_key".to_string(),
+                bot_token: "bot_token".to_string()
             },
             discord_client_id: "id".to_string(),
             s3_bucket_name: "bucket_name".to_string(),
@@ -174,7 +179,9 @@ pub mod test_utils {
             },
             locales: &LOCALES,
             ddb_table_name: "table_name".to_string(),
+            thumbnail_lambda_name: "thumb_lambda_name".to_string(),
             ddb_client: None,
+            lambda_client: None,
             reqwest_client: None
         }
     }

@@ -22,6 +22,7 @@ pub async fn get_response(
     binahbot_env: &BinahBotEnvironment,
 ) -> Result<DiscordInteractionResponse, Box<dyn Error + Send + Sync>> {
     // switch to static hashmap later, for now just use switch-case
+    tracing::info!("Calling router with interaction type={:?}", &discord_interaction.r#type);
     match (&discord_interaction.r#type, &discord_interaction.data) {
         (DiscordInteractionType::Ping, _) => Ok(DiscordInteractionResponse::Ping(PingResponse {
             r#type: DiscordInteractionResponseType::Pong,

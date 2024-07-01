@@ -91,6 +91,7 @@ export class DiscordStack extends Stack {
         ).forEach((statement) => {
             this.thumbnailLambda.addToRolePolicy(statement);
         });
+        this.thumbnailLambda.grantInvoke(this.discordBotLambda);
     }
 
     private createSecret(): Secret {
