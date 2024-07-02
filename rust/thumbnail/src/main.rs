@@ -76,7 +76,13 @@ async fn function_handler(
         for j in 0..=2 {
             let index = i * 3 + j;
             let image = &image_data[index];
-            let _ = canvas.copy_from(image, j as u32 * BASE_COMBAT_PAGE_WIDTH, i as u32 * BASE_COMBAT_PAGE_HEIGHT);
+            let resized = image.resize_exact(
+                BASE_COMBAT_PAGE_WIDTH,
+                BASE_COMBAT_PAGE_HEIGHT,
+                image::imageops::FilterType::Lanczos3
+            );
+
+            let _ = canvas.copy_from(&resized, j as u32 * BASE_COMBAT_PAGE_WIDTH, i as u32 * BASE_COMBAT_PAGE_HEIGHT);
         }
     }
 
@@ -135,6 +141,7 @@ mod tests {
 
     // todo: this test is broken. figure out how to run tests
     // using SSO crednetials provider
+    #[ignore]
     #[tokio::test]
     async fn sanity() {
         let config = aws_config::load_from_env().await;
