@@ -1,6 +1,7 @@
 use std::error::Error;
 
 use crate::deck::create_deck::create_deck;
+use crate::deck::list_deck::list_deck;
 use crate::deck::read_deck::read_deck;
 use crate::lor_autocomplete::main::lor_autocomplete;
 use crate::lor_command::main::lor_command;
@@ -75,23 +76,15 @@ pub async fn get_response(
         (DiscordInteractionType::ApplicationCommandAutocomplete, Some(data))
             if data.name == READ_DECK_COMMAND_NAME =>
         {
-            todo!()
-            // listitem ddb based on keypage and author (if provided)
-            // check ddb result
-            // post-parse ddb results by name (very simple text match; nothing sophisticated like prebuilt index)
-            // other exception -> crash or something
-            // success -> return
+            Ok(DiscordInteractionResponse::Autocomplete(list_deck(
+                discord_interaction,
+                binahbot_env,
+            ).await))
         }
         (DiscordInteractionType::ApplicationCommandAutocomplete, Some(data))
             if data.name == UPDATE_DECK_COMMAND_NAME || data.name == DELETE_DECK_COMMAND_NAME =>
         {
             todo!()
-            // get user id from input
-            // listitem ddb on author
-            // check ddb result
-            // post-parse ddb results by name (very simple text match; nothing sophisticated like prebuilt index)
-            // other exception -> crash or something
-            // success -> return
         }
         _ => panic!(),
     }

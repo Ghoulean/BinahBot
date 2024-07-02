@@ -1,4 +1,3 @@
-
 use std::collections::HashMap;
 use std::str::FromStr;
 
@@ -77,6 +76,7 @@ pub fn lor_autocomplete(interaction: &DiscordInteraction, env: &BinahBotEnvironm
                 name: display_name,
                 name_localizations: None,
                 value: DiscordInteractionOptionValue::String(x.to_string()),
+                focused: None
             }
         })
         .collect();
@@ -196,6 +196,7 @@ mod tests {
                     name: "query".to_string(),
                     name_localizations: None,
                     value: DiscordInteractionOptionValue::String(query_string),
+                    focused: None
                 }],
             }),
             channel_id: None,

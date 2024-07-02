@@ -56,6 +56,7 @@ pub async fn create_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
         }
     });
     let author_id = &interaction.user.as_ref().unwrap_or(interaction.member.as_ref().unwrap().user.as_ref().unwrap()).id;
+    let author_name = &interaction.user.as_ref().unwrap_or(interaction.member.as_ref().unwrap().user.as_ref().unwrap()).username;
 
     let _ = generate_thumbnail(
         &env.lambda_client.as_ref().expect("no aws lambda client"),
@@ -65,7 +66,8 @@ pub async fn create_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
 
     let deck = Deck {
         name: deck_name.to_string(),
-        author: author_id.to_string(),
+        author_id: author_id.to_string(),
+        author_name: author_name.to_string(),
         description: description.cloned(),
         deck_data: deck_data,
         tiph_deck: Some(tiph_deck)
@@ -115,4 +117,3 @@ pub async fn create_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
         }
     }
 }
-

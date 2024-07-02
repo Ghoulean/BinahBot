@@ -52,9 +52,9 @@ pub async fn list_decks(
     author: Option<&str>,
     keypage_id: Option<&str>
 ) -> Result<Vec<DeckMetadata>, Box<dyn Error + Send + Sync>> {
-    let mut query_builder = client.query()
-        .table_name(table_name)
-        .projection_expression("author, deck_name");
+    tracing::info!("Calling ListDeck with author={:?}, keypage_id={:?}", author, keypage_id);
+
+    let mut query_builder = client.query();
     let mut key_condition_expression = Vec::new();
 
     if let Some(keypage_str) = keypage_id {
@@ -68,15 +68,30 @@ pub async fn list_decks(
         key_condition_expression.push("author = :author");
     }
 
-    let items: Vec<HashMap<String, AttributeValue>> = query_builder
-        .key_condition_expression(key_condition_expression.join(" and "))
-        .into_paginator()
-        .items()
-        .send()
-        .collect::<Vec<_>>()
-        .await
-        .into_iter()
-        .collect::<Result<Vec<_>, _>>()?;
+    let items: Vec<HashMap<String, AttributeValue>> = if keypage_id.is_none() && author.is_none() {
+        client.scan()
+            .table_name(table_name)
+            .projection_expression("author, author_name, deck_name")
+            .into_paginator()
+            .items()
+            .send()
+            .collect::<Vec<_>>()
+            .await
+            .into_iter()
+            .collect::<Result<Vec<_>, _>>()?
+    } else {
+        query_builder
+            .table_name(table_name)
+            .key_condition_expression(key_condition_expression.join(" and "))
+            .projection_expression("author, author_name, deck_name")
+            .into_paginator()
+            .items()
+            .send()
+            .collect::<Vec<_>>()
+            .await
+            .into_iter()
+            .collect::<Result<Vec<_>, _>>()?
+    };
 
     items.into_iter().map(|x| -> Result<DeckMetadata, Box<dyn Error + Send + Sync>> {
         DeckMetadata::try_from(&x)
@@ -119,7 +134,8 @@ impl TryFrom<&HashMap<String, AttributeValue>> for Deck {
 
         Ok(Deck {
             name: value.get("deck_name").ok_or("no deck name")?.as_s().map_err(failed_attributevalue_cast)?.clone(),
-            author: value.get("author").ok_or("no author")?.as_s().map_err(failed_attributevalue_cast)?.clone(),
+            author_id: value.get("author").ok_or("no author_id")?.as_s().map_err(failed_attributevalue_cast)?.clone(),
+            author_name: value.get("author_name").ok_or("no author_name")?.as_s().map_err(failed_attributevalue_cast)?.clone(),
             deck_data: serde_json::from_str(value.get("deck_data").ok_or("no deck data")?.as_s().map_err(failed_attributevalue_cast)?)?,
             tiph_deck: match (tiph_deck, tiph_version) {
                 (Some(a), Some(b)) => Some(TiphDeck(a.clone(), b.clone())),
@@ -143,7 +159,8 @@ impl TryFrom<&Deck> for HashMap<String, AttributeValue> {
 
     fn try_from(value: &Deck) -> Result<Self, Self::Error> {
         let mut hm = HashMap::from([
-            ("author".to_string(), AttributeValue::S(value.author.clone())),
+            ("author".to_string(), AttributeValue::S(value.author_id.clone())),
+            ("author_name".to_string(), AttributeValue::S(value.author_name.clone())),
             ("deck_name".to_string(), AttributeValue::S(value.name.clone())),
             ("deck_data".to_string(), AttributeValue::S(serde_json::to_string(&value.deck_data)?)),
             ("description".to_string(), value.description.as_ref().map(|x| AttributeValue::S(x.clone())).unwrap_or(AttributeValue::Null(true))),
@@ -165,7 +182,8 @@ impl TryFrom<&HashMap<String, AttributeValue>> for DeckMetadata {
     fn try_from(value: &HashMap<String, AttributeValue>) -> Result<Self, Self::Error> {
         Ok(DeckMetadata {
             name: value.get("deck_name").ok_or("no deck name")?.as_s().map_err(failed_attributevalue_cast)?.clone(),
-            author: value.get("author").ok_or("no author")?.as_s().map_err(failed_attributevalue_cast)?.clone(),
+            author_id: value.get("author").ok_or("no author id")?.as_s().map_err(failed_attributevalue_cast)?.clone(),
+            author_name: value.get("author_name").ok_or("no author name")?.as_s().map_err(failed_attributevalue_cast)?.clone(),
         })
     }
 }

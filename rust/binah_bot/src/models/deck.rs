@@ -14,13 +14,16 @@ pub struct TiphDeck(pub String, pub i32);
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Deck {
     pub name: String,
-    pub author: String,
+    pub author_id: String,
+    pub author_name: String,
     pub description: Option<String>,
     pub deck_data: DeckData,
     pub tiph_deck: Option<TiphDeck>
 }
 
+#[derive(Debug)]
 pub struct DeckMetadata {
     pub name: String,
-    pub author: String
+    pub author_id: String,
+    pub author_name: String,
 }

@@ -45,5 +45,6 @@ read_deck_keypage_header = Keypage
 read_deck_combat_pages_header = Combat pages
 read_deck_passives_header = Passives
 read_deck_combat_page_count = { $page_name } x{ $count }
+list_deck_name_author = { $deck_name } ({ $author })
 
 generic_error_message = Unknown error has occured

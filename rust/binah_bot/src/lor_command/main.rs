@@ -258,10 +258,12 @@ mod tests {
                     name: "query".to_string(),
                     name_localizations: None,
                     value: DiscordInteractionOptionValue::String(query_string),
+                    focused: None,
                 }, DiscordInteractionOptions {
                     name: "locale".to_string(),
                     name_localizations: None,
                     value: DiscordInteractionOptionValue::String(locale.to_string()),
+                    focused: None,
                 }],
             }),
             channel_id: None,

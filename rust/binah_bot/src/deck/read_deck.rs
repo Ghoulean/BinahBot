@@ -11,11 +11,10 @@ use ruina_reparser::get_key_page_locales_by_text_id;
 use ruina_reparser::get_passive_locales_by_id;
 use unic_langid::LanguageIdentifier;
 
+use crate::ddb::get_deck;
+use crate::deck::deck_utils::get_user;
 use crate::models::discord::DiscordEmbedAuthor;
 use crate::models::discord::DiscordEmbedFields;
-use crate::models::discord::DiscordUser;
-use crate::thumbnail::generate_thumb_name;
-use crate::ddb::get_deck;
 use crate::models::binahbot::BinahBotEnvironment;
 use crate::models::binahbot::BinahBotLocale;
 use crate::models::binahbot::DiscordEmbedColors;
@@ -30,10 +29,9 @@ use crate::models::discord::DiscordInteractionResponseType;
 use crate::models::discord::MessageResponse;
 use crate::utils::get_binahbot_locale;
 use crate::utils::get_option_value;
+use crate::thumbnail::generate_thumb_name;
 
 use super::deck_utils::build_generic_error_message_response;
-
-static BASE_DISCORD_URL: &str = "https://discord.com/api/v10";
 
 struct DeckKey(String, String);
 
@@ -131,18 +129,18 @@ async fn transform_deck(
     let user = get_user(
         &env.reqwest_client.as_ref().expect("no http client"),
         &env.discord_secrets.bot_token,
-        &deck.author
+        &deck.author_id
     ).await;
 
     let avatar_hash = user.as_ref().map(|x| { format!(
         "https://cdn.discordapp.com/avatars/{0}/{1}.png",
-        &deck.author,
+        &deck.author_id,
         &x.avatar
     )}).ok();
 
     let author_name = user.map(|x| {
         format!("@{}", &x.username)
-    }).unwrap_or(deck.author.clone());
+    }).unwrap_or(deck.author_id.clone());
 
     let key_page_name = deck.deck_data.keypage_id.as_ref().and_then(|x| {
         get_key_page_by_id(&x)    
@@ -213,23 +211,6 @@ async fn transform_deck(
             },
         ]),
     })
-}
-
-async fn get_user(
-    client: &reqwest::Client,
-    bot_auth_token: &str,
-    user_id: &str
-) -> Result<DiscordUser, Box<dyn Error + Send + Sync>> {
-    let response = client.get(&format!("{}{}{}", BASE_DISCORD_URL, "/users/", user_id))
-        .header("Authorization", format!("Bot {}", bot_auth_token))
-        .send()
-        .await?
-        .text()
-        .await?;
-
-    let user = serde_json::from_str(&response)?;
-
-    Ok(user)
 }
 
 // todo: move to utils

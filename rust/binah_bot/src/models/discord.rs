@@ -86,7 +86,8 @@ pub struct DiscordInteractionData {
 #[serde(untagged)]
 pub enum DiscordInteractionOptionValue {
     Bool(bool),
-    String(String)
+    String(String),
+    User(DiscordUser),
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -94,6 +95,7 @@ pub struct DiscordInteractionOptions {
     pub name: String,
     pub name_localizations: Option<HashMap<String, String>>,
     pub value: DiscordInteractionOptionValue,
+    pub focused: Option<bool>
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -147,7 +149,7 @@ pub struct DiscordInteractionResponseAutocomplete {
     pub choices: Option<Vec<DiscordInteractionOptions>>,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug, PartialEq)]
 pub struct DiscordUser {
     pub id: String,
     pub username: String,

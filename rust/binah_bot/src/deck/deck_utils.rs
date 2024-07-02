@@ -1,3 +1,5 @@
+use std::error::Error;
+
 use fluent_templates::Loader;
 use unic_langid::LanguageIdentifier;
 
@@ -8,7 +10,10 @@ use crate::models::discord::DiscordEmbed;
 use crate::models::discord::DiscordInteractionResponseMessage;
 use crate::models::discord::DiscordInteractionResponseType;
 use crate::models::discord::DiscordMessageFlag;
+use crate::models::discord::DiscordUser;
 use crate::models::discord::MessageResponse;
+
+static BASE_DISCORD_URL: &str = "https://discord.com/api/v10";
 
 pub fn build_generic_error_message_response(lang_id: &LanguageIdentifier, env: &BinahBotEnvironment) -> MessageResponse {
     MessageResponse {
@@ -31,4 +36,21 @@ pub fn build_generic_error_message_response(lang_id: &LanguageIdentifier, env: &
             flags: Some(DiscordMessageFlag::EphemeralMessage as i32)
         })
     }
+}
+
+pub async fn get_user(
+    client: &reqwest::Client,
+    bot_auth_token: &str,
+    user_id: &str
+) -> Result<DiscordUser, Box<dyn Error + Send + Sync>> {
+    let response = client.get(&format!("{}{}{}", BASE_DISCORD_URL, "/users/", user_id))
+        .header("Authorization", format!("Bot {}", bot_auth_token))
+        .send()
+        .await?
+        .text()
+        .await?;
+
+    let user = serde_json::from_str(&response)?;
+
+    Ok(user)
 }
