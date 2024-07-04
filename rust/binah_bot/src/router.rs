@@ -1,6 +1,7 @@
 use std::error::Error;
 
 use crate::deck::create_deck::create_deck;
+use crate::deck::delete_deck::delete_deck;
 use crate::deck::list_deck::list_deck;
 use crate::deck::read_deck::read_deck;
 use crate::lor_autocomplete::main::lor_autocomplete;
@@ -66,12 +67,7 @@ pub async fn get_response(
         (DiscordInteractionType::ApplicationCommand, Some(data))
             if data.name == DELETE_DECK_COMMAND_NAME =>
         {
-            todo!()
-            // make delete item ddb call
-            // check ddb result
-            // dne exception -> err doesn't exist lol (ephemeral)
-            // other exception -> just crash
-            // success -> return success message (ephemeral)
+            Ok(DiscordInteractionResponse::Message(delete_deck(discord_interaction, binahbot_env).await))
         }
         (DiscordInteractionType::ApplicationCommandAutocomplete, Some(data))
             if data.name == READ_DECK_COMMAND_NAME =>

@@ -34,16 +34,6 @@ pub async fn create_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
         _ => unreachable!()
     };
     let tiph_deck = TiphDeck(tiph_deck_str.to_string(), DEFAULT_TIPH_DECK_VERSION);
-    let deck_data_result = decode(
-        &env.reqwest_client.as_ref().expect("no reqwest client"),
-        &tiph_deck
-    ).await;
-
-    let deck_data = match deck_data_result {
-        Ok(x) => x,
-        // todo: early return MessageResponse
-        Err(_) => panic!()
-    };
 
     let deck_name = match get_option_value("name", command_args).expect("no deck option") {
         DiscordInteractionOptionValue::String(x) => x,
@@ -57,6 +47,17 @@ pub async fn create_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
     });
     let author_id = &interaction.user.as_ref().unwrap_or(interaction.member.as_ref().unwrap().user.as_ref().unwrap()).id;
     let author_name = &interaction.user.as_ref().unwrap_or(interaction.member.as_ref().unwrap().user.as_ref().unwrap()).username;
+
+    let deck_data_result = decode(
+        &env.reqwest_client.as_ref().expect("no reqwest client"),
+        &tiph_deck
+    ).await;
+
+    let deck_data = match deck_data_result {
+        Ok(x) => x,
+        // todo: early return MessageResponse
+        Err(_) => panic!()
+    };
 
     let _ = generate_thumbnail(
         &env.lambda_client.as_ref().expect("no aws lambda client"),
@@ -74,7 +75,7 @@ pub async fn create_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
     };
 
     let put_deck_result = put_deck(
-        &env.ddb_client.as_ref().expect("no reqwest client"),
+        &env.ddb_client.as_ref().expect("no ddb client"),
         &env.ddb_table_name,
         &deck,
         false

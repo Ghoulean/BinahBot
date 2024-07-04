@@ -1,20 +1,19 @@
 use std::string::ToString;
 
 use fluent_templates::Loader;
-use ruina_common::game_objects::abno_page::AbnoPage;
-use ruina_common::game_objects::battle_symbol::BattleSymbol;
-use ruina_common::game_objects::combat_page::CombatPage;
 use ruina_common::game_objects::combat_page::Die;
 use ruina_common::game_objects::combat_page::DieType;
-use ruina_common::game_objects::key_page::KeyPage;
-use ruina_common::game_objects::passive::Passive;
-use ruina_common::localizations::abno_page_locale::AbnoPageLocale;
-use ruina_common::localizations::battle_symbol_locale::BattleSymbolLocale;
-use ruina_common::localizations::combat_page_locale::CombatPageLocale;
+use ruina_common::game_objects::common::PageType;
 use ruina_common::localizations::common::Locale;
-use ruina_common::localizations::key_page_locale::KeyPageLocale;
-use ruina_common::localizations::passive_locale::PassiveLocale;
+use ruina_index::models::ParsedTypedId;
+use ruina_reparser::get_abno_page_by_internal_name;
+use ruina_reparser::get_abno_page_locales_by_internal_name;
+use ruina_reparser::get_battle_symbol_by_internal_name;
+use ruina_reparser::get_battle_symbol_locales_by_internal_name;
 use ruina_reparser::get_card_effect_locales_by_id;
+use ruina_reparser::get_combat_page_by_id;
+use ruina_reparser::get_key_page_by_id;
+use ruina_reparser::get_passive_by_id;
 use ruina_reparser::get_passive_locales_by_id;
 use unic_langid::LanguageIdentifier;
 
@@ -26,16 +25,20 @@ use crate::models::binahbot::Emojis;
 use crate::models::discord::DiscordEmbed;
 use crate::models::discord::DiscordEmbedFields;
 use crate::models::discord::DiscordEmbedImage;
+use crate::utils::get_disambiguation_format;
 
 static NOT_FOUND_IMAGE_NAME: &str = "404_Not_Found";
 static TIPH_BASE_URL: &str = "https://tiphereth.zasz.su";
 
 pub fn transform_abno_page(
-    page: &AbnoPage,
-    locale_page: &AbnoPageLocale,
+    internal_name: &str,
+    card_locale: &Locale,
     request_locale: &BinahBotLocale,
     env: &BinahBotEnvironment,
 ) -> DiscordEmbed {
+    let page = get_abno_page_by_internal_name(internal_name).unwrap();
+    let binding = get_abno_page_locales_by_internal_name(internal_name);
+    let locale_page = binding.get(&card_locale).unwrap();
     let lang_id = LanguageIdentifier::from(request_locale);
 
     let abno_type_display = env.locales.lookup(
@@ -98,11 +101,14 @@ pub fn transform_abno_page(
 }
 
 pub fn transform_battle_symbol(
-    page: &BattleSymbol,
-    locale_page: &BattleSymbolLocale,
+    internal_name: &str,
+    card_locale: &Locale,
     request_locale: &BinahBotLocale,
     env: &BinahBotEnvironment
 ) -> DiscordEmbed {
+    let page = get_battle_symbol_by_internal_name(internal_name).unwrap();
+    let binding = get_battle_symbol_locales_by_internal_name(internal_name);
+    let locale_page = binding.get(&card_locale).unwrap();
     let lang_id = LanguageIdentifier::from(request_locale);
     // TODO: upload battle symbol images + model them as optional in commons + reparser
     let url = format!("https://{0}.s3.amazonaws.com/{NOT_FOUND_IMAGE_NAME}.png", env.s3_bucket_name);
@@ -160,15 +166,21 @@ pub fn transform_battle_symbol(
     }
 }
 
-// TODO: pass in relevant card effect locales
 pub fn transform_combat_page(
-    page: &CombatPage,
-    locale_page: &CombatPageLocale,
+    id: &str,
     card_locale: &Locale,
     request_locale: &BinahBotLocale,
     env: &BinahBotEnvironment
 ) -> DiscordEmbed {
+    let page = get_combat_page_by_id(id).unwrap();
     let lang_id = LanguageIdentifier::from(request_locale);
+
+    let display_name = get_disambiguation_format(
+        &ParsedTypedId(PageType::CombatPage, id.to_string()),
+        card_locale,
+        &lang_id,
+        env
+    );
 
     let embed_color = DiscordEmbedColors::from(&page.rarity);
     let url = format!(
@@ -215,7 +227,7 @@ pub fn transform_combat_page(
     });
 
     DiscordEmbed {
-        title: Some(locale_page.name.to_string()),
+        title: Some(display_name),
         description: None,
         color: Some(embed_color as i32),
         image: Some(DiscordEmbedImage { url }),
@@ -227,13 +239,20 @@ pub fn transform_combat_page(
 }
 
 pub fn transform_key_page(
-    page: &KeyPage,
-    locale_page: Option<&KeyPageLocale>,
+    id: &str,
     card_locale: &Locale,
     request_locale: &BinahBotLocale,
     env: &BinahBotEnvironment
 ) -> DiscordEmbed {
+    let page = get_key_page_by_id(id).unwrap();
     let lang_id = LanguageIdentifier::from(request_locale);
+
+    let display_name = get_disambiguation_format(
+        &ParsedTypedId(PageType::KeyPage, id.to_string()),
+        card_locale,
+        &lang_id,
+        env
+    );
 
     let embed_color = DiscordEmbedColors::from(&page.rarity);
     let hp_resists = format_to_indented_list(&[
@@ -336,7 +355,7 @@ pub fn transform_key_page(
     }
 
     DiscordEmbed {
-        title: locale_page.map(|x| x.name.to_string()),
+        title: Some(display_name),
         description: None,
         color: Some(embed_color as i32),
         image: Some(DiscordEmbedImage { url }),
@@ -348,12 +367,22 @@ pub fn transform_key_page(
 }
 
 pub fn transform_passive(
-    page: &Passive,
-    locale_page: &PassiveLocale,
+    id: &str,
+    card_locale: &Locale,
     request_locale: &BinahBotLocale,
     env: &BinahBotEnvironment
 ) -> DiscordEmbed {
+    let page = get_passive_by_id(id).unwrap();
+    let binding = get_passive_locales_by_id(id);
+    let locale_page = binding.get(&card_locale).unwrap();
     let lang_id = LanguageIdentifier::from(request_locale);
+
+    let display_name = get_disambiguation_format(
+        &ParsedTypedId(PageType::Passive, id.to_string()),
+        card_locale,
+        &lang_id,
+        env
+    );
 
     let embed_color = page
         .rarity
@@ -388,7 +417,7 @@ pub fn transform_passive(
     }
 
     DiscordEmbed {
-        title: Some(locale_page.name.to_string()),
+        title: Some(display_name),
         description: None,
         color: Some(embed_color as i32),
         image: None,
@@ -430,9 +459,6 @@ fn format_to_indented_list(v: &[String]) -> String {
 
 #[cfg(test)]
 mod tests {
-    use ruina_reparser::get_abno_page_by_internal_name;
-    use ruina_reparser::get_abno_page_locales_by_internal_name;
-
     use crate::test_utils::build_mocked_binahbot_env;
 
     use super::*;
@@ -446,13 +472,12 @@ mod tests {
 
     #[test]
     fn sanity_abno_page_url() {
-        let abno_page = get_abno_page_by_internal_name("LongBird_Sin").unwrap();
-        let binding = get_abno_page_locales_by_internal_name("LongBird_Sin");
-        let abno_page_locale = binding.get(&Locale::English).unwrap();
+        let internal_name = "LongBird_Sin";
+        let card_locale = Locale::English;
         let request_locale = BinahBotLocale::EnglishUS;
         let env = build_mocked_binahbot_env();
 
-        let embed = transform_abno_page(abno_page, abno_page_locale, &request_locale, &env);
+        let embed = transform_abno_page(internal_name, &card_locale, &request_locale, &env);
 
         assert!(embed.url.expect("no url").contains("https://tiphereth.zasz.su/abno_pages/Binah/7"));
     }

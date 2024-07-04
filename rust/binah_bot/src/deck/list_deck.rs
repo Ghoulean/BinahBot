@@ -5,9 +5,6 @@ use fluent_templates::fluent_bundle::FluentValue;
 use fluent_templates::Loader;
 use ruina_common::game_objects::common::PageType;
 use ruina_common::localizations::common::Locale;
-use ruina_index::get_disambiguation;
-use ruina_reparser::get_key_page_by_id;
-use ruina_reparser::get_key_page_locales_by_text_id;
 use unic_langid::LanguageIdentifier;
 
 use crate::ddb::list_decks;
@@ -19,6 +16,7 @@ use crate::models::discord::DiscordInteractionOptionValue;
 use crate::models::discord::DiscordInteractionOptions;
 use crate::models::discord::DiscordInteractionResponseAutocomplete;
 use crate::models::discord::DiscordInteractionResponseType;
+use crate::utils::get_disambiguation_format;
 use crate::utils::get_focused_option;
 use crate::utils::get_option_value;
 
@@ -58,48 +56,12 @@ pub async fn list_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironme
     let choices = match focused {
         Some(x) => match x {
             "keypage" => {
-                let ids = ruina_index::query(&keypage_option.unwrap_or(&"".to_string()));
-
-                ids.iter()
-                    .filter(|x| x.0 == PageType::KeyPage)
-                    .take(10)
-                    .map(|parsed_id| {
-                        // todo: please don't copy paste this. it pains me
-                        let display_name_page = get_key_page_by_id(&parsed_id.1)
-                            .and_then(|x| x.text_id)
-                            .and_then(|x| get_key_page_locales_by_text_id(x).get(&card_locale).cloned())
-                            .map(|x| x.name);
-                        let display_name_option;
-            
-                        let disambiguation = get_disambiguation(&parsed_id, &card_locale);
-                        if let Some(disambiguation_str) = disambiguation {
-                            display_name_option = env.locales.lookup_with_args(
-                                &lang_id,
-                                "autocomplete_display_disambiguation",
-                                &HashMap::from([
-                                    ("display", FluentValue::from(display_name_page.unwrap_or(&parsed_id.to_string()))),
-                                    ("disambiguation", FluentValue::from(*disambiguation_str)),
-                                ])
-                            )
-                        } else {
-                            display_name_option = env.locales.lookup_with_args(
-                                &lang_id,
-                                "autocomplete_display",
-                                &HashMap::from([
-                                    ("display", FluentValue::from(display_name_page.unwrap_or(&parsed_id.to_string()))),
-                                ])
-                            )
-                        }
-
-                        DiscordInteractionOptions {
-                            name: display_name_option,
-                            name_localizations: None,
-                            value: DiscordInteractionOptionValue::String(parsed_id.1.clone()),
-                            focused: None
-                        }
-                        // todo: end copy paste
-                    })
-                    .collect::<Vec<_>>()
+                get_choices_by_keypage_query(
+                    keypage_option,
+                    &card_locale,
+                    &lang_id,
+                    env
+                )
             }
             _ => {
                 let decks = list_decks(
@@ -157,8 +119,32 @@ pub async fn list_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironme
     }
 }
 
+fn get_choices_by_keypage_query(
+    query: Option<&String>,
+    card_locale: &Locale,
+    lang_id: &LanguageIdentifier,
+    env: &BinahBotEnvironment
+) -> Vec<DiscordInteractionOptions> {
+    let ids = ruina_index::query(&query.unwrap_or(&"".to_string()));
+
+    ids.iter()
+        .filter(|x| x.0 == PageType::KeyPage)
+        .take(10)
+        .map(|parsed_id| {
+            let display_name = get_disambiguation_format(&parsed_id, &card_locale, &lang_id, env);
+
+            DiscordInteractionOptions {
+                name: display_name,
+                name_localizations: None,
+                value: DiscordInteractionOptionValue::String(parsed_id.1.clone()),
+                focused: None
+            }
+        })
+        .collect::<Vec<_>>()
+}
+
 // https://github.com/TheAlgorithms/Rust/blob/218c4a8758667fc6d3784bda563fbe1e98fc04b4/src/dynamic_programming/longest_common_subsequence.rs
-pub fn longest_common_subsequence(a: &str, b: &str) -> String {
+fn longest_common_subsequence(a: &str, b: &str) -> String {
     let a: Vec<_> = a.chars().collect();
     let b: Vec<_> = b.chars().collect();
     let (na, nb) = (a.len(), b.len());

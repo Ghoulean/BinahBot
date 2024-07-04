@@ -4,16 +4,6 @@ use lambda_http::tracing;
 use ruina_common::game_objects::common::PageType;
 use ruina_common::localizations::common::Locale;
 use ruina_index::models::ParsedTypedId;
-use ruina_reparser::get_abno_page_by_internal_name;
-use ruina_reparser::get_abno_page_locales_by_internal_name;
-use ruina_reparser::get_battle_symbol_by_internal_name;
-use ruina_reparser::get_battle_symbol_locales_by_internal_name;
-use ruina_reparser::get_combat_page_by_id;
-use ruina_reparser::get_combat_page_locales_by_id;
-use ruina_reparser::get_key_page_by_id;
-use ruina_reparser::get_key_page_locales_by_text_id;
-use ruina_reparser::get_passive_by_id;
-use ruina_reparser::get_passive_locales_by_id;
 
 use crate::models::binahbot::BinahBotEnvironment;
 use crate::models::binahbot::BinahBotLocale;
@@ -50,60 +40,17 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
     let locale: Locale = get_locale_option(command_args).and_then(|x| Locale::from_str(x.as_str()).ok()).unwrap_or(Locale::from(binah_locale.clone()));
 
     let embed: DiscordEmbed = match typed_id.0 {
-        PageType::AbnoPage => {
-            let abno_page = get_abno_page_by_internal_name(&typed_id.1).unwrap();
-            let abno_page_locales = get_abno_page_locales_by_internal_name(&typed_id.1);
-            let abno_page_locale = abno_page_locales.get(&locale).unwrap();
-            transform_abno_page(
-                abno_page,
-                abno_page_locale,
-                &binah_locale,
-                env
-            )
-        }
-        PageType::BattleSymbol => {
-            let battle_symbol = get_battle_symbol_by_internal_name(&typed_id.1).unwrap();
-            let battle_symbol_locales = get_battle_symbol_locales_by_internal_name(&typed_id.1);
-            let battle_symbol_locale = battle_symbol_locales.get(&locale).unwrap();
-            transform_battle_symbol(
-                battle_symbol,
-                battle_symbol_locale,
-                &binah_locale,
-                env
-            )
-        }
-        PageType::CombatPage => {
-            let combat_page = get_combat_page_by_id(&typed_id.1).unwrap();
-            let combat_page_locales = get_combat_page_locales_by_id(&typed_id.1);
-            let combat_page_locale = combat_page_locales.get(&locale).unwrap();
-            transform_combat_page(
-                combat_page,
-                combat_page_locale,
-                &locale,
-                &binah_locale,
-                env
-            )
-        }
-        PageType::KeyPage => {
-            let key_page = get_key_page_by_id(&typed_id.1).unwrap();
-            let key_page_locale = key_page
-                .text_id
-                .map(|x| *get_key_page_locales_by_text_id(x).get(&locale).unwrap());
-            transform_key_page(
-                key_page,
-                key_page_locale,
-                &locale,
-                &binah_locale,
-                env
-            )
-        }
-        PageType::Passive => {
-            let passive = get_passive_by_id(&typed_id.1).unwrap();
-            let passive_locales = get_passive_locales_by_id(&typed_id.1);
-            let passive_locale = passive_locales.get(&locale).unwrap();
-            transform_passive(passive, passive_locale, &binah_locale, env)
-        }
-    };
+        PageType::AbnoPage => transform_abno_page,
+        PageType::BattleSymbol => transform_battle_symbol,
+        PageType::CombatPage => transform_combat_page,
+        PageType::KeyPage => transform_key_page,
+        PageType::Passive => transform_passive
+    }(
+        &typed_id.1,
+        &locale,
+        &binah_locale,
+        env
+    );
 
     let flags = if get_private_option(command_args).is_some_and(|x| x == true) {
         Some(DiscordMessageFlag::EphemeralMessage as i32)

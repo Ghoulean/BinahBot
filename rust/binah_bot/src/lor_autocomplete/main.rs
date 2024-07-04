@@ -1,19 +1,7 @@
-use std::collections::HashMap;
 use std::str::FromStr;
 
-use fluent_templates::fluent_bundle::FluentValue;
-use fluent_templates::Loader;
 use lambda_http::tracing;
-use ruina_common::game_objects::common::PageType;
 use ruina_common::localizations::common::Locale;
-use ruina_index::get_disambiguation;
-use ruina_index::models::ParsedTypedId;
-use ruina_reparser::get_abno_page_locales_by_internal_name;
-use ruina_reparser::get_battle_symbol_locales_by_internal_name;
-use ruina_reparser::get_combat_page_locales_by_id;
-use ruina_reparser::get_key_page_by_id;
-use ruina_reparser::get_key_page_locales_by_text_id;
-use ruina_reparser::get_passive_locales_by_id;
 use unic_langid::LanguageIdentifier;
 
 use crate::models::binahbot::BinahBotEnvironment;
@@ -23,6 +11,7 @@ use crate::models::discord::DiscordInteractionOptions;
 use crate::models::discord::DiscordInteractionOptionValue;
 use crate::models::discord::DiscordInteractionResponseAutocomplete;
 use crate::models::discord::DiscordInteractionResponseType;
+use crate::utils::get_disambiguation_format;
 use crate::DiscordInteraction;
 
 pub fn lor_autocomplete(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -> AutocompleteResponse {
@@ -43,34 +32,13 @@ pub fn lor_autocomplete(interaction: &DiscordInteraction, env: &BinahBotEnvironm
 
     let lang_id = LanguageIdentifier::from(&binah_locale);
 
-    let mut ids = ruina_index::query(&query);
-    ids.truncate(10);
-    ids.shrink_to_fit();
+    let ids = ruina_index::query(&query);
 
     let options: Vec<_> = ids
         .into_iter()
+        .take(10)
         .map(|x| {
-            let display_name;
-
-            let disambiguation = get_disambiguation(&x, &locale);
-            if let Some(disambiguation_str) = disambiguation {
-                display_name = env.locales.lookup_with_args(
-                    &lang_id,
-                    "autocomplete_display_disambiguation",
-                    &HashMap::from([
-                        ("display", FluentValue::from(get_display_name_locale(&x, &locale).unwrap_or(x.to_string()))),
-                        ("disambiguation", FluentValue::from(*disambiguation_str)),
-                    ])
-                )
-            } else {
-                display_name = env.locales.lookup_with_args(
-                    &lang_id,
-                    "autocomplete_display",
-                    &HashMap::from([
-                        ("display", FluentValue::from(get_display_name_locale(&x, &locale).unwrap_or(x.to_string()))),
-                    ])
-                )
-            }
+            let display_name = get_disambiguation_format(&x, &locale, &lang_id, env);
 
             DiscordInteractionOptions {
                 name: display_name,
@@ -112,37 +80,6 @@ fn get_locale_option(vec: &[DiscordInteractionOptions]) -> Option<String> {
             }
         })
         .cloned()
-}
-
-fn get_display_name_locale(
-    typed_id: &ParsedTypedId,
-    locale: &Locale
-) -> Option<String> {
-    match typed_id.0 {
-        PageType::AbnoPage => {
-            get_abno_page_locales_by_internal_name(&typed_id.1).get(locale).map(|x| x.card_name.to_string())
-        }
-        PageType::BattleSymbol => {
-            get_battle_symbol_locales_by_internal_name(&typed_id.1).get(locale).map(|x| format!("{} {}", x.prefix, x.postfix))
-        }
-        PageType::CombatPage => {
-            get_combat_page_locales_by_id(&typed_id.1).get(locale).map(|x| x.name.to_string())
-        }
-        PageType::KeyPage => {
-            get_key_page_by_id(&typed_id.1).and_then(|key_page| {
-                key_page.text_id.map(|text_id| {
-                    get_key_page_locales_by_text_id(text_id)
-                        .get(locale)
-                        .map(|key_page_locale| {
-                            key_page_locale.name.to_string()
-                        })
-                }).or(key_page.skin.map(|skin| Some(skin.to_string()))).flatten()
-            })
-        }
-        PageType::Passive => {
-            get_passive_locales_by_id(&typed_id.1).get(locale).map(|x| x.name.to_string())
-        }
-    }
 }
 
 #[cfg(test)]

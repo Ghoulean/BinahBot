@@ -47,7 +47,7 @@ fn resolve_optional(
     combat_pages: &[Option<String>; 9]
 ) -> [String; 9] {
     combat_pages.into_iter().map(|x| {
-        x.clone().unwrap_or("0".to_string())    
+        x.clone().unwrap_or("0".to_string())
     }).collect::<Vec<_>>().try_into().expect("couldn't cast")
 }
 
