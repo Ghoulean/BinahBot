@@ -35,7 +35,7 @@ pub async fn create_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
     };
     let tiph_deck = TiphDeck(tiph_deck_str.to_string(), DEFAULT_TIPH_DECK_VERSION);
 
-    let deck_name = match get_option_value("name", command_args).expect("no deck option") {
+    let deck_name = match get_option_value("name", command_args).expect("no name option") {
         DiscordInteractionOptionValue::String(x) => x,
         _ => unreachable!()
     };

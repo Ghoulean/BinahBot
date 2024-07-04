@@ -4,6 +4,7 @@ use crate::deck::create_deck::create_deck;
 use crate::deck::delete_deck::delete_deck;
 use crate::deck::list_deck::list_deck;
 use crate::deck::read_deck::read_deck;
+use crate::deck::update_deck::update_deck;
 use crate::lor_autocomplete::main::lor_autocomplete;
 use crate::lor_command::main::lor_command;
 use crate::models::binahbot::BinahBotEnvironment;
@@ -55,14 +56,7 @@ pub async fn get_response(
         (DiscordInteractionType::ApplicationCommand, Some(data))
             if data.name == UPDATE_DECK_COMMAND_NAME =>
         {
-            todo!()
-            // convert tiph deck -> actual deck (if provided)
-            // convert rest of input to Deck obj (if provided)
-            // make update item ddb call
-            // check ddb result
-            // dne exception -> err, use create (ephemeral)
-            // other exception -> just crash ig
-            // success -> return success message (ephemeral)
+            Ok(DiscordInteractionResponse::Message(update_deck(discord_interaction, binahbot_env).await))
         }
         (DiscordInteractionType::ApplicationCommand, Some(data))
             if data.name == DELETE_DECK_COMMAND_NAME =>
