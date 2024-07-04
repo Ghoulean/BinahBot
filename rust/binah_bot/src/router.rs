@@ -3,6 +3,7 @@ use std::error::Error;
 use crate::deck::create_deck::create_deck;
 use crate::deck::delete_deck::delete_deck;
 use crate::deck::list_deck::list_deck;
+use crate::deck::list_deck::list_my_decks;
 use crate::deck::read_deck::read_deck;
 use crate::deck::update_deck::update_deck;
 use crate::lor_autocomplete::main::lor_autocomplete;
@@ -74,7 +75,10 @@ pub async fn get_response(
         (DiscordInteractionType::ApplicationCommandAutocomplete, Some(data))
             if data.name == UPDATE_DECK_COMMAND_NAME || data.name == DELETE_DECK_COMMAND_NAME =>
         {
-            todo!()
+            Ok(DiscordInteractionResponse::Autocomplete(list_my_decks(
+                discord_interaction,
+                binahbot_env,
+            ).await))
         }
         _ => panic!(),
     }
