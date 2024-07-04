@@ -87,7 +87,7 @@ pub struct DiscordInteractionData {
 pub enum DiscordInteractionOptionValue {
     Bool(bool),
     String(String),
-    User(DiscordUser),
+    Integer(i32),
 }
 
 #[derive(Serialize, Deserialize, Debug)]

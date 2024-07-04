@@ -19,6 +19,7 @@ use crate::utils::get_option_value;
 
 use super::deck_utils::build_generic_error_message_response;
 
+struct DeckKey((), String);
 
 pub async fn delete_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -> MessageResponse {
     let command_args = &interaction.data.as_ref().unwrap().options;
@@ -27,12 +28,16 @@ pub async fn delete_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
         DiscordInteractionOptionValue::String(x) => x,
         _ => unreachable!()
     };
+    let deck_key = match parse_deck_name_option(deck_name) {
+        Ok(x) => x,
+        Err(_) => panic!()
+    };
     let author_id = &interaction.user.as_ref().unwrap_or(interaction.member.as_ref().unwrap().user.as_ref().unwrap()).id;
 
     let delete_deck_result = crate::ddb::delete_deck(
         &env.ddb_client.as_ref().expect("no ddb client"),
         &env.ddb_table_name,
-        &deck_name,
+        &deck_key.1,
         &author_id
     ).await;
 
@@ -52,7 +57,7 @@ pub async fn delete_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
                                 &lang_id,
                                 "delete_deck_success",
                                 &HashMap::from([
-                                    ("deck_name", FluentValue::from(deck_name)),
+                                    ("deck_name", FluentValue::from(deck_key.1)),
                                 ])
                             )),
                             color: Some(DiscordEmbedColors::Default as i32),
@@ -71,5 +76,16 @@ pub async fn delete_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
             // todo: check for error type
             build_generic_error_message_response(&lang_id, env)
         }
+    }
+}
+
+// todo: move to utils
+fn parse_deck_name_option(name_option: &str) -> Result<DeckKey, ()> {
+    let mut split: Vec<_> = name_option.split('#').collect();
+    if split.len() >= 2 {
+        let split2 = split.split_off(1);
+        Ok(DeckKey((), split2.join("#")))
+    } else {
+        Err(())
     }
 }

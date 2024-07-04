@@ -98,6 +98,21 @@ fn get_display_name_locale(
     }
 }
 
+pub fn parse_tiph_deck_id(raw_input: &str) -> String {
+    let url = "https://tiphereth.zasz.su/u/decks";
+    let mut ret_val: String = raw_input.to_string();
+    if ret_val.starts_with(url) {
+        ret_val = ret_val[url.len()..ret_val.len()].to_string();
+    }
+    if ret_val.starts_with('/') {
+        ret_val = ret_val[1..ret_val.len()].to_string();
+    }
+    if ret_val.ends_with('/') {
+        ret_val = ret_val[0..ret_val.len() - 1].to_string();
+    }
+    ret_val
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -150,5 +165,22 @@ mod tests {
             options[1].name,
             get_focused_option(&options).unwrap().name
         );
+    }
+
+    #[test]
+    fn sanity_parse_tiph_deck_id() {
+        let inputs = vec![
+            "CS-iRmsieV9ddwW4-BA1C~n",
+            "https://tiphereth.zasz.su/u/decks/CS-iRmsieV9ddwW4-BA1C~n/",
+            "https://tiphereth.zasz.su/u/decks/CS-iRmsieV9ddwW4-BA1C~n",
+            "/CS-iRmsieV9ddwW4-BA1C~n/",
+            "CS-iRmsieV9ddwW4-BA1C~n/",
+            "/CS-iRmsieV9ddwW4-BA1C~n",
+        ];
+        let expected_output = "CS-iRmsieV9ddwW4-BA1C~n";
+        
+        for str in inputs {
+            assert_eq!(expected_output, parse_tiph_deck_id(str));
+        }
     }
 }

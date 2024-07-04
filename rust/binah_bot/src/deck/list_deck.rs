@@ -40,10 +40,13 @@ pub async fn list_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironme
             DiscordInteractionOptionValue::String(x) => x,
             _ => unreachable!()
     });
+
+    tracing::info!("{:?}", get_option_value("author", command_args));
+
     let author_id_option = get_option_value("author", command_args).map(|x| match x {
-            DiscordInteractionOptionValue::User(x) => x,
+            DiscordInteractionOptionValue::String(x) => x,
             _ => unreachable!()
-    }).map(|x| &x.id);
+    });
     let focused = get_focused_option(&command_args).map(|x| x.name.as_str());
 
     tracing::info!("Got the following: incomplete_name={:?}, keypage_option={:?}, author_id_option={:?}, focused={:?}",

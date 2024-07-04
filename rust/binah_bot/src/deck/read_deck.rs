@@ -60,7 +60,6 @@ pub async fn read_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironme
     let request_locale = get_binahbot_locale(interaction);
     let lang_id = LanguageIdentifier::from(&request_locale);
 
-
     match deck_result {
         Ok(x) => {
             let embed = transform_deck(&x, &request_locale, env).await.expect("failed deck processing");
@@ -81,14 +80,9 @@ pub async fn read_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironme
             build_generic_error_message_response(&lang_id, env)
         }
     }
-            // get user id+deck name from input
-            // getitem ddb
-            // check ddb result
-            // resource not found exception -> does not exist soz (ephemeral)
-            // other exception -> crash or something
-            // success -> transform  (NOT ephemeral)
 }
 
+// todo: move to utils
 fn parse_deck_name_option(name_option: &str) -> Result<DeckKey, ()> {
     let mut split: Vec<_> = name_option.split('#').collect();
     if split.len() >= 2 {
@@ -181,6 +175,30 @@ async fn transform_deck(
         )
     }).collect::<Vec<_>>();
 
+    let mut fields = vec![
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "read_deck_keypage_header"),
+            value: key_page_name.to_string(),
+            inline: Some(true),
+        }
+    ];
+
+    if !passives.is_empty() {
+        fields.push(DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "read_deck_passives_header"),
+            value: format_to_list(&passives),
+            inline: Some(true),
+        });
+    };
+
+    fields.push(
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "read_deck_combat_pages_header"),
+            value: format_to_list(&combat_page_pretty_print),
+            inline: Some(true),
+        }
+    );
+
     Ok(DiscordEmbed {
         title: Some(deck.name.clone()),
         description: deck.description.clone(),
@@ -193,23 +211,7 @@ async fn transform_deck(
             icon_url: avatar_hash,
         }),
         url: tiph_deck_url,
-        fields: Some(vec![
-            DiscordEmbedFields {
-                name: env.locales.lookup(&lang_id, "read_deck_keypage_header"),
-                value: key_page_name.to_string(),
-                inline: Some(true),
-            },
-            DiscordEmbedFields {
-                name: env.locales.lookup(&lang_id, "read_deck_passives_header"),
-                value: format_to_list(&passives),
-                inline: Some(true),
-            },
-            DiscordEmbedFields {
-                name: env.locales.lookup(&lang_id, "read_deck_combat_pages_header"),
-                value: format_to_list(&combat_page_pretty_print),
-                inline: Some(true),
-            },
-        ]),
+        fields: Some(fields),
     })
 }
 

@@ -60,11 +60,17 @@ pub async fn list_decks(
     if let Some(keypage_str) = keypage_id {
         query_builder = query_builder
             .index_name("gsi1")
-            .expression_attribute_names(":keypage", keypage_str);
+            .expression_attribute_values(
+                ":keypage",
+                AttributeValue::S(keypage_str.to_string())
+            );
         key_condition_expression.push("keypage = :keypage");
     }
     if let Some(author_str) = author {
-        query_builder = query_builder.expression_attribute_names(":author", author_str);
+        query_builder = query_builder.expression_attribute_values(
+            ":author",
+            AttributeValue::S(author_str.to_string())
+        );
         key_condition_expression.push("author = :author");
     }
 
@@ -104,6 +110,7 @@ pub async fn delete_deck(
     name: &str,
     author: &str
 ) -> Result<(), Box<dyn Error + Send + Sync>> {
+    tracing::info!("Calling DeleteDeck with name={}; author={}", name, author);
     Ok(client.delete_item()
         .table_name(table_name)
         .key("author", AttributeValue::S(author.to_string()))

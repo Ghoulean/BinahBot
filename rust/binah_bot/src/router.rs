@@ -80,6 +80,6 @@ pub async fn get_response(
                 binahbot_env,
             ).await))
         }
-        _ => panic!(),
+        _ => unreachable!(),
     }
 }

@@ -21,6 +21,7 @@ use crate::thumbnail::generate_thumbnail;
 use crate::tiph::decode;
 use crate::utils::get_binahbot_locale;
 use crate::utils::get_option_value;
+use crate::utils::parse_tiph_deck_id;
 
 use super::deck_utils::build_generic_error_message_response;
 
@@ -33,7 +34,7 @@ pub async fn create_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
         DiscordInteractionOptionValue::String(x) => x,
         _ => unreachable!()
     };
-    let tiph_deck = TiphDeck(tiph_deck_str.to_string(), DEFAULT_TIPH_DECK_VERSION);
+    let tiph_deck = TiphDeck(parse_tiph_deck_id(tiph_deck_str), DEFAULT_TIPH_DECK_VERSION);
 
     let deck_name = match get_option_value("name", command_args).expect("no name option") {
         DiscordInteractionOptionValue::String(x) => x,
