@@ -1,16 +1,22 @@
+mod ddb;
+mod deck;
 mod lor_autocomplete;
 mod lor_command;
 mod models;
 mod router;
-mod secrets_accessor;
+mod secrets;
+mod thumbnail;
+mod tiph;
+mod utils;
 
 use ed25519_dalek::{Signature, Verifier, VerifyingKey};
 use hex::FromHex;
 use http::HeaderMap;
 use lambda_http::{run, service_fn, tracing, Body, Request, Response};
 use router::get_response;
-use secrets_accessor::get_discord_secrets;
+use secrets::get_discord_secrets;
 use std::env;
+use std::error::Error;
 use std::ops::Deref;
 
 use crate::models::binahbot::DiscordSecrets;
@@ -31,7 +37,7 @@ static SIGNATURE_HEADER: &str = "x-signature-ed25519";
 async fn function_handler(
     event: Request,
     binahbot_env: &BinahBotEnvironment,
-) -> Result<Response<Body>, lambda_http::Error> {
+) -> Result<Response<Body>, Box<dyn Error + Send + Sync>> {
     tracing::debug!("Rust function invoked");
 
     let request_body: String = String::from_utf8(event.body().deref().to_vec()).unwrap();
@@ -56,7 +62,7 @@ async fn function_handler(
     }
 
     let discord_interaction: DiscordInteraction = serde_json::from_str(request_body.as_str())?;
-    let response = get_response(&discord_interaction, binahbot_env);
+    let response = get_response(&discord_interaction, binahbot_env).await?;
 
     let resp = Response::builder()
         .status(200)
@@ -80,12 +86,15 @@ async fn main() -> Result<(), lambda_http::Error> {
 
     let config = aws_config::load_from_env().await;
     let asm = aws_sdk_secretsmanager::Client::new(&config);
-    let discord_secrets = get_discord_secrets(&asm, &env::var("SECRETS_ID").unwrap()).await;
+    let ddb = aws_sdk_dynamodb::Client::new(&config);
+    let lambda = aws_sdk_lambda::Client::new(&config);
+    let http = reqwest::Client::new();
+    let discord_secrets = get_discord_secrets(&asm, &env::var("SECRETS_ID").expect("no SECRETS_ID")).await;
 
     let binahbot_env = BinahBotEnvironment {
         discord_secrets,
-        discord_client_id: env::var("CLIENT_ID").unwrap(),
-        s3_bucket_name: env::var("S3_BUCKET_NAME").unwrap(),
+        discord_client_id: env::var("CLIENT_ID").expect("no CLIENT_ID"),
+        s3_bucket_name: env::var("S3_BUCKET_NAME").expect("no S3_BUCKET_NAME"),
         emojis: Emojis {
             slash_emoji_id: env::var("SLASH_EMOJI_ID").ok(),
             pierce_emoji_id: env::var("PIERCE_EMOJI_ID").ok(),
@@ -99,6 +108,11 @@ async fn main() -> Result<(), lambda_http::Error> {
             c_evade_emoji_id: env::var("C_EVADE_EMOJI_ID").ok(),
         },
         locales: &LOCALES,
+        ddb_table_name: env::var("DECK_REPOSITORY_NAME").expect("no DECK_REPOSITORY_NAME"),
+        thumbnail_lambda_name: env::var("THUMBNAIL_LAMBDA_ARN").expect("no THUMBNAIL_LAMBDA_ARN"),
+        ddb_client: Some(ddb),
+        lambda_client: Some(lambda),
+        reqwest_client: Some(http)
     };
     let binahbot_env_ref = &binahbot_env;
 
@@ -121,7 +135,7 @@ fn get_header(header_map: &HeaderMap, header_key: &str) -> String {
 fn validate_headers(
     discord_secrets: &DiscordSecrets,
     metadata: &DiscordInteractionMetadata,
-) -> Result<(), Box<dyn std::error::Error>> {
+) -> Result<(), Box<dyn Error + Send + Sync>> {
     let public_key_bytes = <[u8; 32]>::from_hex(&discord_secrets.public_key)?;
     let public_key = VerifyingKey::from_bytes(&public_key_bytes)?;
 
@@ -147,6 +161,7 @@ pub mod test_utils {
                 application_id: "app_id".to_string(),
                 auth_token: "auth_token".to_string(),
                 public_key: "pub_key".to_string(),
+                bot_token: "bot_token".to_string()
             },
             discord_client_id: "id".to_string(),
             s3_bucket_name: "bucket_name".to_string(),
@@ -162,7 +177,12 @@ pub mod test_utils {
                 c_block_emoji_id: None,
                 c_evade_emoji_id: None,
             },
-            locales: &LOCALES
+            locales: &LOCALES,
+            ddb_table_name: "table_name".to_string(),
+            thumbnail_lambda_name: "thumb_lambda_name".to_string(),
+            ddb_client: None,
+            lambda_client: None,
+            reqwest_client: None
         }
     }
 }

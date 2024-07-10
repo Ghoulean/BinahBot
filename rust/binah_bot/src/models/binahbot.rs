@@ -12,6 +12,7 @@ pub struct DiscordSecrets {
     pub application_id: String,
     pub auth_token: String,
     pub public_key: String,
+    pub bot_token: String,
 }
 
 pub struct Emojis {
@@ -29,10 +30,16 @@ pub struct Emojis {
 
 pub struct BinahBotEnvironment {
     pub discord_secrets: DiscordSecrets,
+    #[allow(dead_code)]
     pub discord_client_id: String,
     pub s3_bucket_name: String,
     pub emojis: Emojis,
-    pub locales: &'static StaticLoader
+    pub locales: &'static StaticLoader,
+    pub ddb_table_name: String,
+    pub thumbnail_lambda_name: String,
+    pub ddb_client: Option<aws_sdk_dynamodb::Client>,
+    pub lambda_client: Option<aws_sdk_lambda::Client>,
+    pub reqwest_client: Option<reqwest::Client>,
 }
 
 #[derive(Clone, Debug, strum::Display, strum_macros::EnumString)]

@@ -12,6 +12,9 @@ fn punctuation_filter(token: &Token) -> Token {
         .replace("'s", "")
         .replace(&['(', ')', ',', '\"', '.', ';', ':', '\'', '?', '!', '’', '~', '…', '♣', '◆'][..], "")
         .replace("<color=red>♥</color>", "♥")
+        .replace("Ⅰ", "I")
+        .replace("Ⅱ", "II")
+        .replace("Ⅲ", "III")
         .replace(&['-', '/'][..], " ")
 }
 
@@ -28,7 +31,8 @@ pub fn filter(tokens: Vec<Token>) -> Vec<Token> {
         punctuation_filter
     ).filter(
         stopword_filter
-    ).collect()
+    ).filter(|x| !x.is_empty() )
+    .collect()
 }
 
 #[cfg(test)]

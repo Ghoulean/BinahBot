@@ -17,6 +17,7 @@ pub struct DiscordEmbed {
     pub image: Option<DiscordEmbedImage>,
     pub footer: Option<DiscordEmbedFooter>,
     pub author: Option<DiscordEmbedAuthor>,
+    pub url: Option<String>,
     pub fields: Option<Vec<DiscordEmbedFields>>,
 }
 
@@ -57,6 +58,8 @@ pub struct DiscordInteraction {
     pub r#type: DiscordInteractionType,
     pub data: Option<DiscordInteractionData>,
     pub channel_id: Option<String>,
+    pub member: Option<DiscordGuildMember>,
+    pub user: Option<DiscordUser>,
     pub token: String,
     pub locale: Option<String>,
     pub guild_locale: Option<String>,
@@ -79,11 +82,20 @@ pub struct DiscordInteractionData {
     pub options: Vec<DiscordInteractionOptions>,
 }
 
+#[derive(Serialize, Deserialize, Debug, PartialEq)]
+#[serde(untagged)]
+pub enum DiscordInteractionOptionValue {
+    Bool(bool),
+    String(String),
+    Integer(i32),
+}
+
 #[derive(Serialize, Deserialize, Debug)]
 pub struct DiscordInteractionOptions {
     pub name: String,
     pub name_localizations: Option<HashMap<String, String>>,
-    pub value: String,
+    pub value: DiscordInteractionOptionValue,
+    pub focused: Option<bool>
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -120,13 +132,33 @@ pub struct PingResponse {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
+pub struct AllowedMentions {
+    pub parse: Vec<String>
+}
+
+#[derive(Serialize, Deserialize, Debug)]
 pub struct DiscordInteractionResponseMessage {
+    pub allowed_mentions: Option<AllowedMentions>,
+    pub content: Option<String>,
     pub embeds: Option<Vec<DiscordEmbed>>,
+    pub flags: Option<i32>
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct DiscordInteractionResponseAutocomplete {
     pub choices: Option<Vec<DiscordInteractionOptions>>,
+}
+
+#[derive(Serialize, Deserialize, Debug, PartialEq)]
+pub struct DiscordUser {
+    pub id: String,
+    pub username: String,
+    pub avatar: String,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct DiscordGuildMember {
+    pub user: Option<DiscordUser>
 }
 
 #[derive(Serialize_repr, Deserialize_repr, PartialEq, Debug)]
@@ -140,6 +172,15 @@ pub enum DiscordInteractionResponseType {
     ApplicationCommandAutocompleteResult = 8,
     Modal = 9,
     PremiumRequired = 10,
+}
+
+#[repr(i32)]
+pub enum DiscordMessageFlag {
+    #[allow(dead_code)]
+    SuppressEmbeds = 4,
+    EphemeralMessage = 64,
+    #[allow(dead_code)]
+    SuppressNotifications = 4096
 }
 
 #[cfg(test)]
