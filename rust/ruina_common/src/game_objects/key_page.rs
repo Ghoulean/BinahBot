@@ -1,4 +1,5 @@
 use crate::game_objects::common::Chapter;
+use crate::game_objects::common::Collectability;
 use crate::game_objects::common::Rarity;
 
 #[derive(Debug, PartialEq, strum_macros::Display)]
@@ -50,4 +51,5 @@ pub struct KeyPage<'a> {
     pub chapter: Option<Chapter>,
     pub category: Option<&'a str>,
     pub only_card_ids: &'a [&'a str],
+    pub collectability: Collectability,
 }

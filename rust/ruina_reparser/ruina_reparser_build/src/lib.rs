@@ -61,6 +61,11 @@ pub fn build_reparser() -> String {
         }
     }
 
+    let collectability_toml_str = include_str!("../data/collectability.toml");
+    let collectability_toml_map: HashMap<String, Vec<String>> = from_str(
+        collectability_toml_str
+    ).unwrap();
+
     let abno_pages = reparse(ABNO_PAGE_PATH_STR, reserialize_abno_pages);
     let battle_symbols = reparse(BATTLE_SYMBOL_PATH_STR, reserialize_battle_symbols);
     let combat_pages = reparse(COMBAT_PAGE_PATH_STR, reserialize_combat_pages);

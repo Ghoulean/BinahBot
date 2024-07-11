@@ -16,8 +16,7 @@ pub enum BattleSymbolSlot {
 pub struct BattleSymbol<'a> {
     pub id: &'a str,
     pub internal_name: &'a str,
-    // TODO: change resource to Option<&str>
-    pub resource: &'a str,
+    pub resource: Option<&'a str>,
     pub slot: BattleSymbolSlot,
     pub hidden: bool,
     pub count: Option<u8>,

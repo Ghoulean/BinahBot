@@ -56,6 +56,7 @@ fn parse_combat_page_locale(node: Node) -> (CombatPageLocaleKey, CombatPageLocal
     let id = node.attribute("ID").unwrap();
     let name = get_unique_node_text(node, "LocalizedName").unwrap_or("");
     let card_effect = serialize_option_2(get_unique_node_text(node, "AbilityDesc"), string_literal_serializer);
+    let dice_desc_overrides = get_nodes(node, "Behaviour");
 
     (
         String::from(id),
