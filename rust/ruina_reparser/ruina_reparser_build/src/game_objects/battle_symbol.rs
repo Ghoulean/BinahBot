@@ -3,14 +3,15 @@ use std::collections::HashMap;
 use roxmltree::{Document, Node};
 use ruina_common::game_objects::battle_symbol::BattleSymbolSlot;
 
-use crate::serde::{display_serializer, serialize_option_2};
+use crate::game_objects::common::ParserProps;
+use crate::serde::{display_serializer, serialize_option_2, string_literal_serializer};
 use crate::xml::{get_nodes, get_unique_node, get_unique_node_text};
 
 type BattleSymbolKey = String;
 type BattleSymbolValue = String;
 
-pub fn reserialize_battle_symbols(document_strings: &[String]) -> String {
-    let battle_symbols: HashMap<_, _> = document_strings
+pub fn reserialize_battle_symbols(parser_props: &ParserProps) -> String {
+    let battle_symbols: HashMap<_, _> = parser_props.document_strings
         .iter()
         .flat_map(|document_string| process_battle_symbol_file(document_string))
         .collect();
@@ -42,8 +43,10 @@ fn parse_battle_symbol(battle_symbol_node: Node) -> (BattleSymbolKey, BattleSymb
     // possibly a limitation with XML library
     let internal_name = get_unique_node_text(battle_symbol_node, "Name").unwrap_or("");
 
-    // TODO - change this to optional
-    let resource = get_unique_node_text(battle_symbol_node, "Resource").unwrap_or("");
+    let resource = serialize_option_2(
+        get_unique_node_text(battle_symbol_node, "Resource"),
+        string_literal_serializer
+    );
     let slot = get_battle_symbol_slot_from_str(
         get_unique_node_text(battle_symbol_node, "Position").unwrap(),
     );
@@ -61,7 +64,7 @@ fn parse_battle_symbol(battle_symbol_node: Node) -> (BattleSymbolKey, BattleSymb
             "BattleSymbol {{
         id: \"{id}\",
         internal_name: \"{internal_name}\",
-        resource: \"{resource}\",
+        resource: {resource},
         slot: BattleSymbolSlot::{slot:?},
         hidden: {hidden},
         count: {count}

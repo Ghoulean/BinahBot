@@ -11,6 +11,7 @@ use ruina_common::game_objects::combat_page::CombatRange;
 use ruina_common::game_objects::combat_page::Die;
 use ruina_common::game_objects::combat_page::DieType;
 use ruina_common::game_objects::common::Chapter;
+use ruina_common::game_objects::common::Collectability;
 use ruina_common::game_objects::common::Floor;
 use ruina_common::game_objects::common::Rarity;
 use ruina_common::game_objects::key_page::KeyPage;
