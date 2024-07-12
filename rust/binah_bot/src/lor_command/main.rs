@@ -115,7 +115,7 @@ mod tests {
     use crate::models::discord::DiscordInteractionType;
 
     #[test]
-    fn get_query_option_sanity() {
+    fn sanity_get_query_option() {
         let query_value = "value";
         let interaction = build_discord_interaction(query_value.to_string(), Locale::English);
         let options = interaction.data.unwrap().options;

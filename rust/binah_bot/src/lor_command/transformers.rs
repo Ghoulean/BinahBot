@@ -4,6 +4,7 @@ use fluent_templates::Loader;
 use ruina_common::game_objects::combat_page::Die;
 use ruina_common::game_objects::combat_page::DieType;
 use ruina_common::game_objects::common::PageType;
+use ruina_common::localizations::combat_page_locale::CombatPageLocale;
 use ruina_common::localizations::common::Locale;
 use ruina_index::models::ParsedTypedId;
 use ruina_reparser::get_abno_page_by_internal_name;
@@ -12,6 +13,7 @@ use ruina_reparser::get_battle_symbol_by_internal_name;
 use ruina_reparser::get_battle_symbol_locales_by_internal_name;
 use ruina_reparser::get_card_effect_locales_by_id;
 use ruina_reparser::get_combat_page_by_id;
+use ruina_reparser::get_combat_page_locales_by_id;
 use ruina_reparser::get_key_page_by_id;
 use ruina_reparser::get_passive_by_id;
 use ruina_reparser::get_passive_locales_by_id;
@@ -173,6 +175,8 @@ pub fn transform_combat_page(
     env: &BinahBotEnvironment
 ) -> DiscordEmbed {
     let page = get_combat_page_by_id(id).unwrap();
+    let binding = get_combat_page_locales_by_id(id);
+    let page_locale = binding.get(&card_locale);
     let lang_id = LanguageIdentifier::from(request_locale);
 
     let display_name = get_disambiguation_format(
@@ -222,7 +226,7 @@ pub fn transform_combat_page(
     let dice_vec = page.dice.to_vec();
     fields.push(DiscordEmbedFields {
         name: env.locales.lookup(&lang_id, "combat_page_dice_header"),
-        value: format_dice(&dice_vec, card_locale, &env.emojis),
+        value: format_dice(&dice_vec, card_locale, &page_locale, &env.emojis),
         inline: Some(false),
     });
 
@@ -428,16 +432,31 @@ pub fn transform_passive(
     }
 }
 
-fn format_dice(dice: &[Die], locale: &Locale, emojis: &Emojis) -> String {
+fn format_dice(
+    dice: &[Die],
+    locale: &Locale,
+    combat_page_locale: &Option<&&CombatPageLocale>,
+    emojis: &Emojis
+) -> String {
     let formatted_die = dice
         .iter()
-        .map(|die| {
-            let desc = die
-                .script
+        .enumerate()
+        .map(|(i, die)| {
+            let binding = die.script
                 .map(get_card_effect_locales_by_id)
                 .and_then(|x| x.get(locale).map(|y| y.desc))
-                .unwrap_or(&[])
-                .join("\n");
+                .map(|x| x.join("\n"));
+
+            let desc = combat_page_locale.and_then(|x| {
+                if x.dice_description_override.len() > i {
+                    x.dice_description_override[i]
+                } else {
+                    None
+                }
+            }).or(
+                binding.as_deref()
+            ).unwrap_or("");
+
             format!(
                 "{} {}-{} {}",
                 get_dietype_emoji(emojis, &die.die_type),
@@ -481,4 +500,28 @@ mod tests {
 
         assert!(embed.url.expect("no url").contains("https://tiphereth.zasz.su/abno_pages/Binah/7"));
     }
+
+    #[test]
+    fn sanity_format_dice() {
+        let env = build_mocked_binahbot_env();
+
+        let fmf_card = get_combat_page_by_id("9901101").unwrap();
+        let binding = get_combat_page_locales_by_id("9901101");
+        let fmf_locale = binding.get(&Locale::English);
+
+        let fmf_format_dice = format_dice(fmf_card.dice, &Locale::English, &fmf_locale, &env.emojis);
+
+        assert!(fmf_format_dice.contains("[On Hit] Inflict 10 Burn"));
+
+        let uncontrollable_instinct_card = get_combat_page_by_id("9906215").unwrap();
+        let binding = get_combat_page_locales_by_id("9906215");
+        let uncontrollable_instinct_locale = binding.get(&Locale::English);
+
+        let uncontrollable_instinct_format_dice = format_dice(uncontrollable_instinct_card.dice, &Locale::English, &uncontrollable_instinct_locale, &env.emojis);
+
+        assert!(uncontrollable_instinct_format_dice.contains(
+            "Roll this die 5 times without processing damage, then deal damage equal to the sum of rolls that would have won clashes or hit the target"
+        ));
+    }
+
 }
