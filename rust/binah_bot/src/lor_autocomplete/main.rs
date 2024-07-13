@@ -1,7 +1,12 @@
 use std::str::FromStr;
 
 use lambda_http::tracing;
+use ruina_common::game_objects::common::Collectability;
 use ruina_common::localizations::common::Locale;
+use ruina_index::models::ParsedTypedId;
+use ruina_reparser::get_combat_page_by_id;
+use ruina_reparser::get_key_page_by_id;
+use ruina_reparser::get_passive_by_id;
 use unic_langid::LanguageIdentifier;
 
 use crate::models::binahbot::BinahBotEnvironment;
@@ -12,14 +17,22 @@ use crate::models::discord::DiscordInteractionOptionValue;
 use crate::models::discord::DiscordInteractionResponseAutocomplete;
 use crate::models::discord::DiscordInteractionResponseType;
 use crate::utils::get_disambiguation_format;
+use crate::utils::get_option_value;
 use crate::DiscordInteraction;
+
+static MAX_AUTOCOMPLETE_OPTIONS: usize = 10;
 
 pub fn lor_autocomplete(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -> AutocompleteResponse {
     let command_args = &interaction.data.as_ref().unwrap().options;
 
     tracing::info!("Lor command: command args: {:#?}", command_args);
 
-    let query = get_query_option(command_args);
+    // let query = get_query_option(command_args);
+    let binding = "".to_string();
+    let query = get_option_value("query", command_args).map(|x| match x {
+        DiscordInteractionOptionValue::String(y) => y,
+        _ => unreachable!()
+    }).unwrap_or(&binding);
 
     let binah_locale: BinahBotLocale = interaction
         .locale
@@ -28,7 +41,21 @@ pub fn lor_autocomplete(interaction: &DiscordInteraction, env: &BinahBotEnvironm
         .and_then(|x| BinahBotLocale::from_str(x).ok())
         .unwrap_or(BinahBotLocale::EnglishUS);
 
-    let locale: Locale = get_locale_option(command_args).and_then(|x| Locale::from_str(x.as_str()).ok()).unwrap_or(Locale::from(binah_locale.clone()));
+    let locale: Locale = get_option_value("locale", command_args).map(|x| match x {
+        DiscordInteractionOptionValue::String(y) => y,
+        _ => unreachable!()
+    }).and_then(|x| Locale::from_str(x.as_str()).ok()).unwrap_or(Locale::from(binah_locale.clone()));
+
+    let all: bool = get_option_value("all", command_args).map(|x| match x {
+        DiscordInteractionOptionValue::Bool(y) => y.to_owned(),
+        _ => unreachable!()
+    }).unwrap_or(false);
+
+    let collectability_filter = if all {
+        |_: &ParsedTypedId| { true }
+    } else {
+        is_collectable_or_obtainable
+    };
 
     let lang_id = LanguageIdentifier::from(&binah_locale);
 
@@ -36,7 +63,8 @@ pub fn lor_autocomplete(interaction: &DiscordInteraction, env: &BinahBotEnvironm
 
     let options: Vec<_> = ids
         .into_iter()
-        .take(10)
+        .filter(collectability_filter)
+        .take(MAX_AUTOCOMPLETE_OPTIONS)
         .map(|x| {
             let display_name = get_disambiguation_format(&x, &locale, &lang_id, env);
 
@@ -57,29 +85,25 @@ pub fn lor_autocomplete(interaction: &DiscordInteraction, env: &BinahBotEnvironm
     }
 }
 
-fn get_query_option(vec: &[DiscordInteractionOptions]) -> String {
-    vec.iter()
-        .find(|x| x.name == "query")
-        .map(|x| { 
-            match &x.value {
-                DiscordInteractionOptionValue::String(s) => s,
-                _ => unreachable!()
-            }
-        })
-        .unwrap_or(&"".to_string())
-        .to_string()
-}
-
-fn get_locale_option(vec: &[DiscordInteractionOptions]) -> Option<String> {
-    vec.iter()
-        .find(|x| x.name == "locale")
-        .map(|x| { 
-            match &x.value {
-                DiscordInteractionOptionValue::String(s) => s,
-                _ => unreachable!()
-            }
-        })
-        .cloned()
+fn is_collectable_or_obtainable(parsed_typed_id: &ParsedTypedId) -> bool {
+    match parsed_typed_id.0 {
+        ruina_common::game_objects::common::PageType::CombatPage => {
+            get_combat_page_by_id(&parsed_typed_id.1).map(|x| {
+                x.collectability == Collectability::Obtainable || x.collectability == Collectability::Collectable
+            }).unwrap_or(false)
+        },
+        ruina_common::game_objects::common::PageType::KeyPage => {
+            get_key_page_by_id(&parsed_typed_id.1).map(|x| {
+                x.collectability == Collectability::Obtainable || x.collectability == Collectability::Collectable
+            }).unwrap_or(false)   
+        },
+        ruina_common::game_objects::common::PageType::Passive => {
+            get_passive_by_id(&parsed_typed_id.1).map(|x| {
+                x.collectability == Collectability::Obtainable || x.collectability == Collectability::Collectable
+            }).unwrap_or(false)
+        },
+        _ => true
+    }
 }
 
 #[cfg(test)]
@@ -96,13 +120,14 @@ mod tests {
     #[test]
     fn sanity_weight_of_sin() {
         let weight_of_sin_query = "the weight of sin";
-        let interaction = build_discord_interaction(weight_of_sin_query.to_string());
+        let interaction = build_discord_interaction(weight_of_sin_query.to_string(), true);
 
         let response = lor_autocomplete(&interaction, &build_mocked_binahbot_env());
         let choices = response.data.as_ref().expect("no data field found")
             .choices.as_ref().expect("no embeds found")
             .iter().map(|x| x.name.clone()).collect::<Vec<_>>();
-        assert_eq!(choices.len(), 10);
+
+        assert!(choices.len() <= MAX_AUTOCOMPLETE_OPTIONS);
         assert!(choices.contains(&"\u{2068}The Weight of Sin\u{2069} (\u{2068}abno page\u{2069})".to_string()));
         assert!(choices.contains(&"\u{2068}The Weight of Sin\u{2069} (\u{2068}passive\u{2069})".to_string()));
     }
@@ -110,18 +135,39 @@ mod tests {
     #[test]
     fn sanity_xiao() {
         let xiao_query = "Xiao";
-        let interaction = build_discord_interaction(xiao_query.to_string());
+        let interaction = build_discord_interaction(xiao_query.to_string(), true);
 
         let response = lor_autocomplete(&interaction, &build_mocked_binahbot_env());
         let choices = response.data.as_ref().expect("no data field found")
             .choices.as_ref().expect("no embeds found")
             .iter().map(|x| x.name.clone()).collect::<Vec<_>>();
-        assert_eq!(choices.len(), 10);
+
+        assert!(choices.len() <= MAX_AUTOCOMPLETE_OPTIONS);
         assert!(choices.contains(&"\u{2068}Xiao\u{2069} (\u{2068}passive\u{2069})".to_string()));
         assert!(choices.contains(&"\u{2068}Xiao’s Page\u{2069} (\u{2068}collectable\u{2069})".to_string()));
+        assert!(choices.contains(&"Xiao’s Page".to_string()));
     }
 
-    fn build_discord_interaction(query_string: String) -> DiscordInteraction {
+    #[test]
+    fn sanity_not_all() {
+        let xiao_query = "Xiao";
+        let interaction = build_discord_interaction(xiao_query.to_string(), false);
+
+        let response = lor_autocomplete(&interaction, &build_mocked_binahbot_env());
+        let choices = response.data.as_ref().expect("no data field found")
+            .choices.as_ref().expect("no embeds found")
+            .iter().map(|x| x.name.clone()).collect::<Vec<_>>();
+
+        dbg!(&choices);
+
+        assert!(choices.len() <= MAX_AUTOCOMPLETE_OPTIONS);
+        assert!(!choices.contains(&"\u{2068}Xiao\u{2069} (\u{2068}passive\u{2069})".to_string()));
+        assert!(choices.contains(&"\u{2068}Xiao’s Page\u{2069} (\u{2068}collectable\u{2069})".to_string()));
+        assert!(!choices.contains(&"Xiao’s Page".to_string()));
+
+    }
+
+    fn build_discord_interaction(query_string: String, is_all: bool) -> DiscordInteraction {
         DiscordInteraction {
             id: "id".to_string(),
             application_id: "app_id".to_string(),
@@ -133,6 +179,11 @@ mod tests {
                     name: "query".to_string(),
                     name_localizations: None,
                     value: DiscordInteractionOptionValue::String(query_string),
+                    focused: None
+                }, DiscordInteractionOptions {
+                    name: "all".to_string(),
+                    name_localizations: None,
+                    value: DiscordInteractionOptionValue::Bool(is_all),
                     focused: None
                 }],
             }),

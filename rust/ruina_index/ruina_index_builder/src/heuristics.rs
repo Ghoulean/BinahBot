@@ -38,7 +38,6 @@ pub fn get_disambiguations_for_uniqueness_heuristic<'a>(
         )
     }).collect::<HashMap<_, _>>();
 
-    dbg!(&disambiguations);
     let mut ret_val = HashMap::new();
 
     for (locale, vec_ids) in disambiguations {
@@ -54,8 +53,6 @@ pub fn get_disambiguations_for_uniqueness_heuristic<'a>(
                 ));
         }
     }
-
-    dbg!(&ret_val);
 
     ret_val
 }

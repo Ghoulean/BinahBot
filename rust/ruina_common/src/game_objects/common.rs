@@ -42,7 +42,7 @@ pub enum Chapter {
     None,
 }
 
-#[derive(Debug, PartialEq, strum_macros::Display)]
+#[derive(Clone, Debug, Eq, PartialEq, strum_macros::Display)]
 pub enum Collectability {
     Collectable,
     Obtainable,
