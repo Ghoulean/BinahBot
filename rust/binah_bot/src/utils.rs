@@ -3,15 +3,18 @@ use std::str::FromStr;
 
 use fluent_templates::fluent_bundle::FluentValue;
 use fluent_templates::Loader;
+use ruina_common::game_objects::common::Collectability;
 use ruina_common::game_objects::common::PageType;
 use ruina_common::localizations::common::Locale;
 use ruina_index::get_disambiguation;
 use ruina_index::models::ParsedTypedId;
 use ruina_reparser::get_abno_page_locales_by_internal_name;
 use ruina_reparser::get_battle_symbol_locales_by_internal_name;
+use ruina_reparser::get_combat_page_by_id;
 use ruina_reparser::get_combat_page_locales_by_id;
 use ruina_reparser::get_key_page_by_id;
 use ruina_reparser::get_key_page_locales_by_text_id;
+use ruina_reparser::get_passive_by_id;
 use ruina_reparser::get_passive_locales_by_id;
 use unic_langid::LanguageIdentifier;
 
@@ -113,9 +116,36 @@ pub fn parse_tiph_deck_id(raw_input: &str) -> String {
     ret_val
 }
 
+pub fn is_collectable_or_obtainable(parsed_typed_id: &ParsedTypedId) -> bool {
+    match parsed_typed_id.0 {
+        ruina_common::game_objects::common::PageType::CombatPage => {
+            get_combat_page_by_id(&parsed_typed_id.1).map(|x| {
+                x.collectability == Collectability::Obtainable || x.collectability == Collectability::Collectable
+            }).unwrap_or(false)
+        },
+        ruina_common::game_objects::common::PageType::KeyPage => {
+            get_key_page_by_id(&parsed_typed_id.1).map(|x| {
+                x.collectability == Collectability::Obtainable || x.collectability == Collectability::Collectable
+            }).unwrap_or(false)   
+        },
+        ruina_common::game_objects::common::PageType::Passive => {
+            get_passive_by_id(&parsed_typed_id.1).map(|x| {
+                x.collectability == Collectability::Obtainable || x.collectability == Collectability::Collectable
+            }).unwrap_or(false)
+        },
+        _ => true
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
+    use strum::IntoEnumIterator;
+    use ruina_reparser::get_all_abno_pages;
+    use ruina_reparser::get_all_battle_symbols;
+    use ruina_reparser::get_all_combat_pages;
+    use ruina_reparser::get_all_key_pages;
+    use ruina_reparser::get_all_passives;
 
     #[test]
     fn sanity_get_option_value() {
@@ -182,5 +212,43 @@ mod tests {
         for str in inputs {
             assert_eq!(expected_output, parse_tiph_deck_id(str));
         }
+    }
+
+    #[test]
+    #[ignore]
+    fn check_no_lookup_display_collisions() {
+        Locale::iter().for_each(|locale: Locale| {
+            let mut lookups: HashMap<String, Vec<ParsedTypedId>> = HashMap::new();            
+
+            let abno_page_ids = get_all_abno_pages().iter().map(|x| ParsedTypedId(PageType::AbnoPage, x.internal_name.to_string())).collect::<Vec<_>>();
+            let battle_symbol_ids = get_all_battle_symbols().iter().map(|x| ParsedTypedId(PageType::BattleSymbol, x.internal_name.to_string())).collect::<Vec<_>>();
+            let combat_page_ids = get_all_combat_pages().iter().map(|x| ParsedTypedId(PageType::CombatPage, x.id.to_string())).collect::<Vec<_>>();
+            let keypage_ids = get_all_key_pages().iter().map(|x| ParsedTypedId(PageType::KeyPage, x.id.to_string())).collect::<Vec<_>>();
+            let passive_ids = get_all_passives().iter().map(|x| ParsedTypedId(PageType::Passive, x.id.to_string())).collect::<Vec<_>>();
+
+            abno_page_ids.into_iter()
+                .chain(battle_symbol_ids)
+                .chain(combat_page_ids)
+                .chain(keypage_ids)
+                .chain(passive_ids)
+                .filter(is_collectable_or_obtainable)
+                .for_each(|x| {
+                    let display = get_display_name_locale(&x, &locale);
+                    let disambig_entry = get_disambiguation(&x, &locale);
+                    let fmt = format!("{}#{}", display.unwrap_or("".to_string()), disambig_entry.cloned().unwrap_or(""));
+                    lookups.entry(fmt).and_modify(|v| { v.push(x.clone()) }).or_insert(vec![x.clone()]);
+                });
+
+            let mut failures = HashMap::new();
+
+            lookups.iter().for_each(|(display, vec)| {
+                if vec.len() != 1 {
+                    failures.insert(display, vec);
+                }
+            });
+
+            dbg!(&failures);
+            assert!(failures.is_empty());
+        });
     }
 }

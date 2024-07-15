@@ -109,10 +109,17 @@ fn get_private_option(vec: &[DiscordInteractionOptions]) -> Option<bool> {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use strum::IntoEnumIterator;
+    use ruina_reparser::get_all_abno_pages;
+    use ruina_reparser::get_all_battle_symbols;
+    use ruina_reparser::get_all_combat_pages;
+    use ruina_reparser::get_all_key_pages;
+    use ruina_reparser::get_all_passives;
     use crate::models::discord::DiscordUser;
-    use crate::test_utils::build_mocked_binahbot_env;
     use crate::models::discord::DiscordInteractionData;
     use crate::models::discord::DiscordInteractionType;
+    use crate::test_utils::build_mocked_binahbot_env;
+    use crate::utils::is_collectable_or_obtainable;
 
     #[test]
     fn sanity_get_query_option() {
@@ -191,6 +198,30 @@ mod tests {
                 .len(),
             1
         );
+    }
+
+    #[test]
+    fn check_no_crashing() {
+        Locale::iter().for_each(|locale: Locale| {
+            let abno_page_ids = get_all_abno_pages().iter().map(|x| ParsedTypedId(PageType::AbnoPage, x.internal_name.to_string())).collect::<Vec<_>>();
+            let battle_symbol_ids = get_all_battle_symbols().iter().map(|x| ParsedTypedId(PageType::BattleSymbol, x.internal_name.to_string())).collect::<Vec<_>>();
+            let combat_page_ids = get_all_combat_pages().iter().map(|x| ParsedTypedId(PageType::CombatPage, x.id.to_string())).collect::<Vec<_>>();
+            let keypage_ids = get_all_key_pages().iter().map(|x| ParsedTypedId(PageType::KeyPage, x.id.to_string())).collect::<Vec<_>>();
+            let passive_ids = get_all_passives().iter().map(|x| ParsedTypedId(PageType::Passive, x.id.to_string())).collect::<Vec<_>>();
+
+            abno_page_ids.into_iter()
+                .chain(battle_symbol_ids)
+                .chain(combat_page_ids)
+                .chain(keypage_ids)
+                .chain(passive_ids)
+                .filter(is_collectable_or_obtainable)
+                .for_each(|x| {
+                    let interaction = build_discord_interaction(x.to_string(), locale.clone());
+                    let env = build_mocked_binahbot_env();
+
+                    let _does_not_crash = lor_command(&interaction, &env);
+                });
+        });
     }
 
     fn build_discord_interaction(query_string: String, locale: Locale) -> DiscordInteraction {

@@ -38,9 +38,11 @@ pub fn transform_abno_page(
     request_locale: &BinahBotLocale,
     env: &BinahBotEnvironment,
 ) -> DiscordEmbed {
+    tracing::info!("Transforming abno page with internal_name={}, card_locale={}, request_locale={}", internal_name, card_locale, request_locale);
+
     let page = get_abno_page_by_internal_name(internal_name).unwrap();
     let binding = get_abno_page_locales_by_internal_name(internal_name);
-    let locale_page = binding.get(&card_locale).unwrap();
+    let locale_page = binding.get(&card_locale);
     let lang_id = LanguageIdentifier::from(request_locale);
 
     let abno_type_display = env.locales.lookup(
@@ -60,7 +62,7 @@ pub fn transform_abno_page(
     );
 
     DiscordEmbed {
-        title: Some(locale_page.card_name.to_string()),
+        title: Some(locale_page.map(|x| x.card_name).unwrap_or(internal_name).to_string()),
         description: None,
         color: Some(embed_color as i32),
         image: Some(DiscordEmbedImage { url: img_url }),
@@ -70,17 +72,17 @@ pub fn transform_abno_page(
         fields: Some(vec![
             DiscordEmbedFields {
                 name: env.locales.lookup(&lang_id, "abno_flavor_text_header"),
-                value: locale_page.flavor_text.to_string(),
+                value: locale_page.map(|x| x.flavor_text).unwrap_or("").to_string(),
                 inline: Some(true),
             },
             DiscordEmbedFields {
                 name: env.locales.lookup(&lang_id, "abno_effect_header"),
-                value: locale_page.description.to_string(),
+                value: locale_page.map(|x| x.description).unwrap_or("").to_string(),
                 inline: Some(true),
             },
             DiscordEmbedFields {
                 name: env.locales.lookup(&lang_id, "abno_bias_header"),
-                value: page.bias.unwrap().to_string(),
+                value: page.bias.unwrap_or(0).to_string(),
                 inline: Some(true),
             },
             DiscordEmbedFields {
@@ -90,7 +92,7 @@ pub fn transform_abno_page(
             },
             DiscordEmbedFields {
                 name: env.locales.lookup(&lang_id, "abno_tier_header"),
-                value: page.tier.unwrap().to_string(),
+                value: page.tier.unwrap_or(0).to_string(),
                 inline: Some(true),
             },
             DiscordEmbedFields {
@@ -108,6 +110,10 @@ pub fn transform_battle_symbol(
     request_locale: &BinahBotLocale,
     env: &BinahBotEnvironment
 ) -> DiscordEmbed {
+    tracing::info!("Transforming battle symbol with internal_name={}, card_locale={}, request_locale={}", internal_name, card_locale, request_locale);
+
+    dbg!(internal_name);
+
     let page = get_battle_symbol_by_internal_name(internal_name).unwrap();
     let binding = get_battle_symbol_locales_by_internal_name(internal_name);
     let locale_page = binding.get(&card_locale).unwrap();
@@ -174,6 +180,8 @@ pub fn transform_combat_page(
     request_locale: &BinahBotLocale,
     env: &BinahBotEnvironment
 ) -> DiscordEmbed {
+    tracing::info!("Transforming combat page with id={}, card_locale={}, request_locale={}", id, card_locale, request_locale);
+
     let page = get_combat_page_by_id(id).unwrap();
     let binding = get_combat_page_locales_by_id(id);
     let page_locale = binding.get(&card_locale);
@@ -248,6 +256,8 @@ pub fn transform_key_page(
     request_locale: &BinahBotLocale,
     env: &BinahBotEnvironment
 ) -> DiscordEmbed {
+    tracing::info!("Transforming key page with id={}, card_locale={}, request_locale={}", id, card_locale, request_locale);
+
     let page = get_key_page_by_id(id).unwrap();
     let lang_id = LanguageIdentifier::from(request_locale);
 
@@ -376,6 +386,8 @@ pub fn transform_passive(
     request_locale: &BinahBotLocale,
     env: &BinahBotEnvironment
 ) -> DiscordEmbed {
+    tracing::info!("Transforming passive with id={}, card_locale={}, request_locale={}", id, card_locale, request_locale);
+
     let page = get_passive_by_id(id).unwrap();
     let binding = get_passive_locales_by_id(id);
     let locale_page = binding.get(&card_locale).unwrap();

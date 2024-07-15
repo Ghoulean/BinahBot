@@ -1,12 +1,8 @@
 use std::str::FromStr;
 
 use lambda_http::tracing;
-use ruina_common::game_objects::common::Collectability;
 use ruina_common::localizations::common::Locale;
 use ruina_index::models::ParsedTypedId;
-use ruina_reparser::get_combat_page_by_id;
-use ruina_reparser::get_key_page_by_id;
-use ruina_reparser::get_passive_by_id;
 use unic_langid::LanguageIdentifier;
 
 use crate::models::binahbot::BinahBotEnvironment;
@@ -18,6 +14,7 @@ use crate::models::discord::DiscordInteractionResponseAutocomplete;
 use crate::models::discord::DiscordInteractionResponseType;
 use crate::utils::get_disambiguation_format;
 use crate::utils::get_option_value;
+use crate::utils::is_collectable_or_obtainable;
 use crate::DiscordInteraction;
 
 static MAX_AUTOCOMPLETE_OPTIONS: usize = 10;
@@ -82,27 +79,6 @@ pub fn lor_autocomplete(interaction: &DiscordInteraction, env: &BinahBotEnvironm
         data: Some(DiscordInteractionResponseAutocomplete {
             choices: Some(options),
         }),
-    }
-}
-
-fn is_collectable_or_obtainable(parsed_typed_id: &ParsedTypedId) -> bool {
-    match parsed_typed_id.0 {
-        ruina_common::game_objects::common::PageType::CombatPage => {
-            get_combat_page_by_id(&parsed_typed_id.1).map(|x| {
-                x.collectability == Collectability::Obtainable || x.collectability == Collectability::Collectable
-            }).unwrap_or(false)
-        },
-        ruina_common::game_objects::common::PageType::KeyPage => {
-            get_key_page_by_id(&parsed_typed_id.1).map(|x| {
-                x.collectability == Collectability::Obtainable || x.collectability == Collectability::Collectable
-            }).unwrap_or(false)   
-        },
-        ruina_common::game_objects::common::PageType::Passive => {
-            get_passive_by_id(&parsed_typed_id.1).map(|x| {
-                x.collectability == Collectability::Obtainable || x.collectability == Collectability::Collectable
-            }).unwrap_or(false)
-        },
-        _ => true
     }
 }
 
