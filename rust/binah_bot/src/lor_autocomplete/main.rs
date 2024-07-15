@@ -2,7 +2,6 @@ use std::str::FromStr;
 
 use lambda_http::tracing;
 use ruina_common::localizations::common::Locale;
-use ruina_index::models::ParsedTypedId;
 use unic_langid::LanguageIdentifier;
 
 use crate::models::binahbot::BinahBotEnvironment;
@@ -13,6 +12,7 @@ use crate::models::discord::DiscordInteractionOptionValue;
 use crate::models::discord::DiscordInteractionResponseAutocomplete;
 use crate::models::discord::DiscordInteractionResponseType;
 use crate::utils::get_disambiguation_format;
+use crate::utils::get_display_name_locale;
 use crate::utils::get_option_value;
 use crate::utils::is_collectable_or_obtainable;
 use crate::DiscordInteraction;
@@ -48,19 +48,18 @@ pub fn lor_autocomplete(interaction: &DiscordInteraction, env: &BinahBotEnvironm
         _ => unreachable!()
     }).unwrap_or(false);
 
-    let collectability_filter = if all {
-        |_: &ParsedTypedId| { true }
-    } else {
-        is_collectable_or_obtainable
-    };
-
     let lang_id = LanguageIdentifier::from(&binah_locale);
 
     let ids = ruina_index::query(&query);
 
     let options: Vec<_> = ids
         .into_iter()
-        .filter(collectability_filter)
+        .filter(|x| {
+            all || is_collectable_or_obtainable(&x)
+        })
+        .filter(|x| {
+            all || get_display_name_locale(&x, &locale).is_some()
+        })
         .take(MAX_AUTOCOMPLETE_OPTIONS)
         .map(|x| {
             let display_name = get_disambiguation_format(&x, &locale, &lang_id, env);

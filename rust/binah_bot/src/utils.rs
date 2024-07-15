@@ -70,7 +70,7 @@ pub fn get_disambiguation_format(
     }
 }
 
-fn get_display_name_locale(
+pub fn get_display_name_locale(
     typed_id: &ParsedTypedId,
     locale: &Locale
 ) -> Option<String> {
@@ -232,6 +232,7 @@ mod tests {
                 .chain(keypage_ids)
                 .chain(passive_ids)
                 .filter(is_collectable_or_obtainable)
+                .filter(|x| get_display_name_locale(&x, &locale).is_some())
                 .for_each(|x| {
                     let display = get_display_name_locale(&x, &locale);
                     let disambig_entry = get_disambiguation(&x, &locale);

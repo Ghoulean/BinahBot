@@ -112,8 +112,6 @@ pub fn transform_battle_symbol(
 ) -> DiscordEmbed {
     tracing::info!("Transforming battle symbol with internal_name={}, card_locale={}, request_locale={}", internal_name, card_locale, request_locale);
 
-    dbg!(internal_name);
-
     let page = get_battle_symbol_by_internal_name(internal_name).unwrap();
     let binding = get_battle_symbol_locales_by_internal_name(internal_name);
     let locale_page = binding.get(&card_locale).unwrap();
@@ -356,9 +354,10 @@ pub fn transform_key_page(
             .map(|x| {
                 get_passive_locales_by_id(x)
                     .get(card_locale)
-                    .expect("could not get PassiveLocale")
-                    .name
-                    .to_string()
+                    .map(|y| {
+                        y.name.to_string()
+                    })
+                    .unwrap_or(x.to_string())
             })
             .collect();
         fields.push(DiscordEmbedFields {
@@ -387,6 +386,8 @@ pub fn transform_passive(
     env: &BinahBotEnvironment
 ) -> DiscordEmbed {
     tracing::info!("Transforming passive with id={}, card_locale={}, request_locale={}", id, card_locale, request_locale);
+
+    dbg!(id);
 
     let page = get_passive_by_id(id).unwrap();
     let binding = get_passive_locales_by_id(id);

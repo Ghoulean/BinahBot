@@ -119,6 +119,7 @@ mod tests {
     use crate::models::discord::DiscordInteractionData;
     use crate::models::discord::DiscordInteractionType;
     use crate::test_utils::build_mocked_binahbot_env;
+    use crate::utils::get_display_name_locale;
     use crate::utils::is_collectable_or_obtainable;
 
     #[test]
@@ -215,6 +216,7 @@ mod tests {
                 .chain(keypage_ids)
                 .chain(passive_ids)
                 .filter(is_collectable_or_obtainable)
+                .filter(|x| get_display_name_locale(&x, &locale).is_some())
                 .for_each(|x| {
                     let interaction = build_discord_interaction(x.to_string(), locale.clone());
                     let env = build_mocked_binahbot_env();
