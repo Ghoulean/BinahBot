@@ -42,7 +42,7 @@ pub fn transform_abno_page(
 
     let page = get_abno_page_by_internal_name(internal_name).unwrap();
     let binding = get_abno_page_locales_by_internal_name(internal_name);
-    let locale_page = binding.get(&card_locale);
+    let locale_page = binding.get(card_locale);
     let lang_id = LanguageIdentifier::from(request_locale);
 
     let abno_type_display = env.locales.lookup(
@@ -114,7 +114,7 @@ pub fn transform_battle_symbol(
 
     let page = get_battle_symbol_by_internal_name(internal_name).unwrap();
     let binding = get_battle_symbol_locales_by_internal_name(internal_name);
-    let locale_page = binding.get(&card_locale).unwrap();
+    let locale_page = binding.get(card_locale).unwrap();
     let lang_id = LanguageIdentifier::from(request_locale);
     // TODO: upload battle symbol images + model them as optional in commons + reparser
     let url = format!("https://{0}.s3.amazonaws.com/{NOT_FOUND_IMAGE_NAME}.png", env.s3_bucket_name);
@@ -182,7 +182,7 @@ pub fn transform_combat_page(
 
     let page = get_combat_page_by_id(id).unwrap();
     let binding = get_combat_page_locales_by_id(id);
-    let page_locale = binding.get(&card_locale);
+    let page_locale = binding.get(card_locale);
     let lang_id = LanguageIdentifier::from(request_locale);
 
     let display_name = get_disambiguation_format(
@@ -391,7 +391,7 @@ pub fn transform_passive(
 
     let page = get_passive_by_id(id).unwrap();
     let binding = get_passive_locales_by_id(id);
-    let locale_page = binding.get(&card_locale).unwrap();
+    let locale_page = binding.get(card_locale).unwrap();
     let lang_id = LanguageIdentifier::from(request_locale);
 
     let display_name = get_disambiguation_format(

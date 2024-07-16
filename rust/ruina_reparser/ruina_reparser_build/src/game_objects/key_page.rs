@@ -20,7 +20,7 @@ pub fn reserialize_key_pages(parser_props: &ParserProps) -> String {
         .iter()
         .flat_map(|document_string| process_key_page_file(
             document_string.as_str(),
-            &parser_props.collectability_map
+            parser_props.collectability_map
         ))
         .collect();
 

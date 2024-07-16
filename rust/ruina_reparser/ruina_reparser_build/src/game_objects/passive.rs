@@ -16,7 +16,7 @@ pub fn reserialize_passives(parser_props: &ParserProps) -> String {
         .iter()
         .flat_map(|document_string| process_passive_file(
             document_string.as_str(),
-            &parser_props.collectability_map
+            parser_props.collectability_map
         ))
         .collect();
 

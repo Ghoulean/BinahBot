@@ -105,7 +105,7 @@ fn reparse(path_str: &str, collectability_map: &CollectabilityMap, reserializer:
                 x.1
             })
             .collect::<Vec<_>>(),
-        collectability_map: collectability_map
+        collectability_map
     };
 
     reserializer(&parser_props)

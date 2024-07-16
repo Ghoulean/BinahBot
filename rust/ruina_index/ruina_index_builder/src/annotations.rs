@@ -6,16 +6,12 @@ use ruina_common::game_objects::common::Collectability;
 use ruina_common::game_objects::common::PageType;
 use ruina_common::localizations::common::Locale;
 use ruina_identifier::TypedId;
-use ruina_reparser::get_combat_page_by_id;
-use ruina_reparser::get_key_page_by_id;
-use ruina_reparser::get_passive_by_id;
 use serde::Deserialize;
-use toml::from_str;
-use unic_langid::LanguageIdentifier;
-// It's used; IDE (not cargo) is complaining too much tho
-#[allow(unused_imports)]
 use strum::IntoEnumIterator;
+use toml::from_str;
 
+use crate::heuristics::create_obtainability_heuristic;
+use crate::heuristics::create_pagetype_heuristic;
 use crate::heuristics::get_disambiguations_for_uniqueness_heuristic;
 
 fluent_templates::static_loader! {
@@ -165,65 +161,6 @@ fn merge<'a>(m1: &'a AnnotationMapping<'a>, m2: &'a AnnotationMapping<'a>) -> An
     }
 
     ret_val
-}
-
-fn create_pagetype_heuristic(
-    locales: &'static StaticLoader,
-    page_type: &PageType
-) -> Box<dyn Fn(&TypedId, &Locale) -> Option<String>> {
-    let pagetype_key = match page_type {
-        PageType::AbnoPage => "page_type_abno_page",
-        PageType::BattleSymbol => "page_type_battle_symbol",
-        PageType::CombatPage => "page_type_combat_page",
-        PageType::KeyPage => "page_type_key_page",
-        PageType::Passive => "page_type_passive",
-    };
-    let binding = page_type.clone();
-
-    Box::new(move |typed_id: &TypedId, locale: &Locale| {
-        if typed_id.0 == binding {
-            let lang_id = LanguageIdentifier::from(locale);
-            let str = locales.lookup(&lang_id, pagetype_key);
-            Some(str.clone())
-        } else {
-            None
-        }
-    })
-}
-
-fn create_obtainability_heuristic(
-    locales: &'static StaticLoader,
-    collectability: &Collectability,
-    disambiguation_key: &str
-) -> Box<dyn Fn(&TypedId, &Locale) -> Option<String>> {
-    let binding = collectability.clone();
-    let binding2 = disambiguation_key.to_owned();
-
-    Box::new(move |typed_id: &TypedId, locale: &Locale| {
-        if get_collectability(&typed_id) == binding {
-            let lang_id = LanguageIdentifier::from(locale);
-            let str = locales.lookup(&lang_id, &binding2);
-            Some(str.clone())
-        } else {
-            None
-        }
-    })
-}
-
-fn get_collectability(typed_id: &TypedId) -> Collectability {
-    match typed_id.0 {
-        PageType::AbnoPage => Some(Collectability::Collectable),
-        PageType::BattleSymbol => Some(Collectability::Collectable),
-        PageType::CombatPage => {
-            get_combat_page_by_id(&typed_id.1).map(|x| x.collectability.clone())
-        },
-        PageType::KeyPage => {
-            get_key_page_by_id(&typed_id.1).map(|x| x.collectability.clone())   
-        },
-        PageType::Passive => {
-            get_passive_by_id(&typed_id.1).map(|x| x.collectability.clone())
-        },
-    }.unwrap()
 }
 
 #[cfg(test)]

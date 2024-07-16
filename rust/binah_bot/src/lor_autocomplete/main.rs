@@ -50,15 +50,15 @@ pub fn lor_autocomplete(interaction: &DiscordInteraction, env: &BinahBotEnvironm
 
     let lang_id = LanguageIdentifier::from(&binah_locale);
 
-    let ids = ruina_index::query(&query);
+    let ids = ruina_index::query(query);
 
     let options: Vec<_> = ids
         .into_iter()
         .filter(|x| {
-            all || is_collectable_or_obtainable(&x)
+            all || is_collectable_or_obtainable(x)
         })
         .filter(|x| {
-            all || get_display_name_locale(&x, &locale).is_some()
+            all || get_display_name_locale(x, &locale).is_some()
         })
         .take(MAX_AUTOCOMPLETE_OPTIONS)
         .map(|x| {

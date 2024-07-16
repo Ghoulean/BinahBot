@@ -52,7 +52,7 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
         env
     );
 
-    let flags = if get_private_option(command_args).is_some_and(|x| x == true) {
+    let flags = if get_private_option(command_args).is_some_and(|x| x) {
         Some(DiscordMessageFlag::EphemeralMessage as i32)
     } else {
         None
@@ -64,7 +64,7 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
             allowed_mentions: Some(AllowedMentions { parse: Vec::new() }),
             content: None,
             embeds: Some(vec![embed]),
-            flags: flags
+            flags
         }),
     }
 }
@@ -216,7 +216,7 @@ mod tests {
                 .chain(keypage_ids)
                 .chain(passive_ids)
                 .filter(is_collectable_or_obtainable)
-                .filter(|x| get_display_name_locale(&x, &locale).is_some())
+                .filter(|x| get_display_name_locale(x, &locale).is_some())
                 .for_each(|x| {
                     let interaction = build_discord_interaction(x.to_string(), locale.clone());
                     let env = build_mocked_binahbot_env();

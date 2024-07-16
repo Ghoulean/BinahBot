@@ -130,8 +130,8 @@ impl TryFrom<&HashMap<String, AttributeValue>> for Deck {
     type Error = Box<dyn Error + Send + Sync>;
 
     fn try_from(value: &HashMap<String, AttributeValue>) -> Result<Self, Self::Error> {
-        let tiph_deck = value.get("tiph_deck").map(|x| x.as_s().ok()).flatten();
-        let tiph_version = value.get("tiph_version").map(|x| x.as_n().ok().map(|x| x.parse::<i32>().ok())).flatten().flatten();
+        let tiph_deck = value.get("tiph_deck").and_then(|x| x.as_s().ok());
+        let tiph_version = value.get("tiph_version").and_then(|x| x.as_n().ok().map(|x| x.parse::<i32>().ok())).flatten();
         let description_av = value.get("description").ok_or("no description")?;
         let description = if description_av.is_s() {
             Some(description_av.as_s().unwrap())
@@ -145,7 +145,7 @@ impl TryFrom<&HashMap<String, AttributeValue>> for Deck {
             author_name: value.get("author_name").ok_or("no author_name")?.as_s().map_err(failed_attributevalue_cast)?.clone(),
             deck_data: serde_json::from_str(value.get("deck_data").ok_or("no deck data")?.as_s().map_err(failed_attributevalue_cast)?)?,
             tiph_deck: match (tiph_deck, tiph_version) {
-                (Some(a), Some(b)) => Some(TiphDeck(a.clone(), b.clone())),
+                (Some(a), Some(b)) => Some(TiphDeck(a.clone(), b)),
                 _ => None
             },
             description: description.cloned(),

@@ -47,7 +47,7 @@ pub async fn list_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironme
             DiscordInteractionOptionValue::String(x) => x,
             _ => unreachable!()
     });
-    let focused = get_focused_option(&command_args).map(|x| x.name.as_str());
+    let focused = get_focused_option(command_args).map(|x| x.name.as_str());
 
     tracing::info!("Got the following: incomplete_name={:?}, keypage_option={:?}, author_id_option={:?}, focused={:?}",
         incomplete_name,
@@ -106,7 +106,7 @@ pub async fn list_my_decks(interaction: &DiscordInteraction, env: &BinahBotEnvir
     });
     let author_id = &interaction.user.as_ref().unwrap_or(interaction.member.as_ref().unwrap().user.as_ref().unwrap()).id;
 
-    let focused = get_focused_option(&command_args).map(|x| x.name.as_str());
+    let focused = get_focused_option(command_args).map(|x| x.name.as_str());
 
     tracing::info!("Got the following: incomplete_name={:?}, author_id={:?}, focused={:?}",
         deck_name_query,
@@ -145,13 +145,13 @@ fn get_choices_by_keypage_query(
     lang_id: &LanguageIdentifier,
     env: &BinahBotEnvironment
 ) -> Vec<DiscordInteractionOptions> {
-    let ids = ruina_index::query(&query.unwrap_or(&"".to_string()));
+    let ids = ruina_index::query(query.unwrap_or(&"".to_string()));
 
     ids.iter()
         .filter(|x| x.0 == PageType::KeyPage)
         .take(10)
         .map(|parsed_id| {
-            let display_name = get_disambiguation_format(&parsed_id, &card_locale, &lang_id, env);
+            let display_name = get_disambiguation_format(parsed_id, card_locale, lang_id, env);
 
             DiscordInteractionOptions {
                 name: display_name,
@@ -192,7 +192,7 @@ async fn get_choices_by_deck_name(
             closeness.into_iter().take(10)
                 .map(|(x, _)| {
                     let display_name = env.locales.lookup_with_args(
-                        &lang_id,
+                        lang_id,
                         "list_deck_name_author",
                         &HashMap::from([
                             ("deck_name", FluentValue::from(&x.name)),

@@ -24,7 +24,7 @@ pub fn build_generic_error_message_response(lang_id: &LanguageIdentifier, env: &
             embeds: Some(vec![
                 DiscordEmbed {
                     title: None,
-                    description: Some(env.locales.lookup(&lang_id, "generic_error_message")),
+                    description: Some(env.locales.lookup(lang_id, "generic_error_message")),
                     color: Some(DiscordEmbedColors::Default as i32),
                     image: None,
                     footer: None,

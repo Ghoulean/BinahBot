@@ -49,22 +49,22 @@ pub fn get_disambiguation_format(
     lang_id: &LanguageIdentifier,
     env: &BinahBotEnvironment
 ) -> String {
-    let disambiguation = get_disambiguation(&parsed_typed_id, &locale);
+    let disambiguation = get_disambiguation(parsed_typed_id, locale);
     if let Some(disambiguation_str) = disambiguation {
         env.locales.lookup_with_args(
-            &lang_id,
+            lang_id,
             "autocomplete_display_disambiguation",
             &HashMap::from([
-                ("display", FluentValue::from(get_display_name_locale(&parsed_typed_id, &locale).unwrap_or(parsed_typed_id.to_string()))),
+                ("display", FluentValue::from(get_display_name_locale(parsed_typed_id, locale).unwrap_or(parsed_typed_id.to_string()))),
                 ("disambiguation", FluentValue::from(*disambiguation_str)),
             ])
         )
     } else {
         env.locales.lookup_with_args(
-            &lang_id,
+            lang_id,
             "autocomplete_display",
             &HashMap::from([
-                ("display", FluentValue::from(get_display_name_locale(&parsed_typed_id, &locale).unwrap_or(parsed_typed_id.to_string()))),
+                ("display", FluentValue::from(get_display_name_locale(parsed_typed_id, locale).unwrap_or(parsed_typed_id.to_string()))),
             ])
         )
     }
@@ -232,7 +232,7 @@ mod tests {
                 .chain(keypage_ids)
                 .chain(passive_ids)
                 .filter(is_collectable_or_obtainable)
-                .filter(|x| get_display_name_locale(&x, &locale).is_some())
+                .filter(|x| get_display_name_locale(x, &locale).is_some())
                 .for_each(|x| {
                     let display = get_display_name_locale(&x, &locale);
                     let disambig_entry = get_disambiguation(&x, &locale);

@@ -37,7 +37,7 @@ async fn function_handler(
 
     // There is a TOCTOU gap here, but since put doesn't affect the
     // correctness of this logic, this is only here as an optimization
-    if let Ok(_) = head_object_result {
+    if head_object_result.is_ok() {
         tracing::info!("Head Object resulted in success; no need to generate thumbnail");
         return Ok(());
     }
@@ -45,7 +45,7 @@ async fn function_handler(
     let image_dirs = event.combat_pages.into_iter().map(|x| {
         get_combat_page_by_id(&x)
     }).map(|x| {
-        format!("{}.png", x.map(|y| y.artwork).flatten().unwrap_or(NOT_FOUND_IMAGE_NAME))
+        format!("{}.png", x.and_then(|y| y.artwork).unwrap_or(NOT_FOUND_IMAGE_NAME))
     }).collect::<Vec<_>>();
 
     tracing::info!("Grabbing images: {:?}", image_dirs);

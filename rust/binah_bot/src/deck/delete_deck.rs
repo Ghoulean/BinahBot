@@ -35,10 +35,10 @@ pub async fn delete_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
     let author_id = &interaction.user.as_ref().unwrap_or(interaction.member.as_ref().unwrap().user.as_ref().unwrap()).id;
 
     let delete_deck_result = crate::ddb::delete_deck(
-        &env.ddb_client.as_ref().expect("no ddb client"),
+        env.ddb_client.as_ref().expect("no ddb client"),
         &env.ddb_table_name,
         &deck_key.1,
-        &author_id
+        author_id
     ).await;
 
     let lang_id = LanguageIdentifier::from(&get_binahbot_locale(interaction));

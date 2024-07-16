@@ -56,7 +56,7 @@ pub async fn update_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
     let author_id = &interaction.user.as_ref().unwrap_or(interaction.member.as_ref().unwrap().user.as_ref().unwrap()).id;
 
     let get_deck_result = get_deck(
-        &env.ddb_client.as_ref().unwrap(),
+        env.ddb_client.as_ref().unwrap(),
         &env.ddb_table_name,
         &deck_key.1,
         author_id
@@ -74,7 +74,7 @@ pub async fn update_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
 
     if let Some(tiph_deck) = tiph_deck_option {
         let deck_data_result = decode(
-            &env.reqwest_client.as_ref().expect("no reqwest client"),
+            env.reqwest_client.as_ref().expect("no reqwest client"),
             &tiph_deck
         ).await;
 
@@ -85,7 +85,7 @@ pub async fn update_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
         };
 
         let _ = generate_thumbnail(
-            &env.lambda_client.as_ref().expect("no aws lambda client"),
+            env.lambda_client.as_ref().expect("no aws lambda client"),
             &env.thumbnail_lambda_name,
             &deck_data.combat_page_ids
         ).await;
@@ -93,7 +93,7 @@ pub async fn update_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
     }
 
     let put_deck_result = put_deck(
-        &env.ddb_client.as_ref().expect("no ddb client"),
+        env.ddb_client.as_ref().expect("no ddb client"),
         &env.ddb_table_name,
         &deck,
         true
