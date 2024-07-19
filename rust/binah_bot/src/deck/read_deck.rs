@@ -38,7 +38,7 @@ struct DeckKey(String, String);
 pub async fn read_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -> MessageResponse {
     let command_args = &interaction.data.as_ref().unwrap().options;
 
-    let name_option = match get_option_value("name", &command_args).expect("couldn't find required arg") {
+    let name_option = match get_option_value("name", command_args).expect("couldn't find required arg") {
         DiscordInteractionOptionValue::String(x) => x,
         _ => unreachable!()
     };
@@ -51,7 +51,7 @@ pub async fn read_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironme
     tracing::info!("{}, {}", deck_key.0, deck_key.1);
 
     let deck_result = get_deck(
-        &env.ddb_client.as_ref().unwrap(),
+        env.ddb_client.as_ref().unwrap(),
         &env.ddb_table_name,
         &deck_key.1,
         &deck_key.0
@@ -106,11 +106,11 @@ async fn transform_deck(
     });
 
     let _combat_page_names = deck.deck_data.combat_page_ids.iter().map(|x| {
-        x.as_ref().map(|y| {
-            get_combat_page_locales_by_id(&y).get(&Locale::from(request_locale)).map(|z| {
+        x.as_ref().and_then(|y| {
+            get_combat_page_locales_by_id(y).get(&Locale::from(request_locale)).map(|z| {
                 z.name    
             })
-        }).flatten().unwrap_or("-")
+        }).unwrap_or("-")
     }).collect::<Vec<_>>();
 
     // todo: pass in thumbnail dir as env var
@@ -121,7 +121,7 @@ async fn transform_deck(
     );
 
     let user = get_user(
-        &env.reqwest_client.as_ref().expect("no http client"),
+        env.reqwest_client.as_ref().expect("no http client"),
         &env.discord_secrets.bot_token,
         &deck.author_id
     ).await;
@@ -137,7 +137,7 @@ async fn transform_deck(
     }).unwrap_or(deck.author_id.clone());
 
     let key_page_name = deck.deck_data.keypage_id.as_ref().and_then(|x| {
-        get_key_page_by_id(&x)    
+        get_key_page_by_id(x)    
     }).and_then(|x| {
         x.text_id
     }).and_then(|x| {
@@ -147,18 +147,17 @@ async fn transform_deck(
     }).unwrap_or("-");
 
     let passives = deck.deck_data.passive_ids.iter().map(|x| {
-        get_passive_locales_by_id(&x).get(&card_locale).map(|y| {
+        get_passive_locales_by_id(x).get(&card_locale).map(|y| {
             y.name    
         }).unwrap_or("???")
     }).collect::<Vec<_>>();
 
     let combat_pages = &deck.deck_data.combat_page_ids.iter().map(|x| {
-        x.as_ref().map(|y| {
-            get_combat_page_locales_by_id(&y)
+        x.as_ref().and_then(|y| {
+            get_combat_page_locales_by_id(y)
                 .get(&card_locale)
                 .map(|y| y.name)
-                .clone()
-        }).flatten().unwrap_or("???")
+        }).unwrap_or("???")
     }).collect::<Vec<_>>();
 
     let combat_page_counts = aggregate_count(combat_pages);

@@ -1,5 +1,9 @@
 use std::collections::HashMap;
 
+use fluent_templates::Loader;
+use fluent_templates::StaticLoader;
+use ruina_common::game_objects::common::Collectability;
+use ruina_common::game_objects::common::PageType;
 use ruina_common::localizations::common::Locale;
 use ruina_identifier::Identifier;
 use ruina_identifier::TypedId;
@@ -8,12 +12,18 @@ use ruina_reparser::get_all_battle_symbols;
 use ruina_reparser::get_all_combat_pages;
 use ruina_reparser::get_all_key_pages;
 use ruina_reparser::get_all_passives;
+use ruina_reparser::get_combat_page_by_id;
+use ruina_reparser::get_key_page_by_id;
+use ruina_reparser::get_passive_by_id;
 use strum::IntoEnumIterator;
+use unic_langid::LanguageIdentifier;
 use crate::annotations::AnnotationMapping;
 use crate::name::get_display_names;
 
+type HeuristicFunction = Box<dyn Fn(&TypedId, &Locale) -> Option<String>>;
+
 pub fn get_disambiguations_for_uniqueness_heuristic<'a>(
-    f: Box<dyn Fn(&TypedId, &Locale) -> Option<String>>
+    f: HeuristicFunction
 ) -> AnnotationMapping<'a> {
     // locale -> (display -> vec<ids>)
     // apply heuristic
@@ -38,7 +48,6 @@ pub fn get_disambiguations_for_uniqueness_heuristic<'a>(
         )
     }).collect::<HashMap<_, _>>();
 
-    dbg!(&disambiguations);
     let mut ret_val = HashMap::new();
 
     for (locale, vec_ids) in disambiguations {
@@ -55,9 +64,66 @@ pub fn get_disambiguations_for_uniqueness_heuristic<'a>(
         }
     }
 
-    dbg!(&ret_val);
-
     ret_val
+}
+
+pub fn create_pagetype_heuristic(
+    locales: &'static StaticLoader,
+    page_type: &PageType
+) -> HeuristicFunction {
+    let pagetype_key = match page_type {
+        PageType::AbnoPage => "page_type_abno_page",
+        PageType::BattleSymbol => "page_type_battle_symbol",
+        PageType::CombatPage => "page_type_combat_page",
+        PageType::KeyPage => "page_type_key_page",
+        PageType::Passive => "page_type_passive",
+    };
+    let binding = page_type.clone();
+
+    Box::new(move |typed_id: &TypedId, locale: &Locale| {
+        if typed_id.0 == binding {
+            let lang_id = LanguageIdentifier::from(locale);
+            let str = locales.lookup(&lang_id, pagetype_key);
+            Some(str.clone())
+        } else {
+            None
+        }
+    })
+}
+
+pub fn create_obtainability_heuristic(
+    locales: &'static StaticLoader,
+    collectability: &Collectability,
+    disambiguation_key: &str
+) -> HeuristicFunction {
+    let binding = collectability.clone();
+    let binding2 = disambiguation_key.to_owned();
+
+    Box::new(move |typed_id: &TypedId, locale: &Locale| {
+        if get_collectability(typed_id) == binding {
+            let lang_id = LanguageIdentifier::from(locale);
+            let str = locales.lookup(&lang_id, &binding2);
+            Some(str.clone())
+        } else {
+            None
+        }
+    })
+}
+
+fn get_collectability(typed_id: &TypedId) -> Collectability {
+    match typed_id.0 {
+        PageType::AbnoPage => Some(Collectability::Collectable),
+        PageType::BattleSymbol => Some(Collectability::Collectable),
+        PageType::CombatPage => {
+            get_combat_page_by_id(&typed_id.1).map(|x| x.collectability.clone())
+        },
+        PageType::KeyPage => {
+            get_key_page_by_id(&typed_id.1).map(|x| x.collectability.clone())   
+        },
+        PageType::Passive => {
+            get_passive_by_id(&typed_id.1).map(|x| x.collectability.clone())
+        },
+    }.unwrap()
 }
 
 fn get_display_names_for_locale(locale: &Locale) -> HashMap<TypedId, String> {

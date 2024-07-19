@@ -1,8 +1,11 @@
 use std::collections::HashMap;
 
 use roxmltree::{Document, Node};
+use ruina_common::game_objects::common::Collectability;
 use ruina_common::game_objects::key_page::{KeyPageRange, Resistance};
 
+use crate::game_objects::common::CollectabilityMap;
+use crate::game_objects::common::ParserProps;
 use crate::serde::{
     chapter_enum_serializer, get_chapter_from_str, get_rarity_from_str, serialize_option_2, str_array_serializer, string_literal_serializer
 };
@@ -12,10 +15,13 @@ use crate::xml::{get_nodes, get_unique_node, get_unique_node_text};
 type KeyPageKey = String;
 type KeyPageValue = String;
 
-pub fn reserialize_key_pages(document_strings: &[String]) -> String {
-    let key_pages: HashMap<_, _> = document_strings
+pub fn reserialize_key_pages(parser_props: &ParserProps) -> String {
+    let key_pages: HashMap<_, _> = parser_props.document_strings
         .iter()
-        .flat_map(|document_string| process_key_page_file(document_string.as_str()))
+        .flat_map(|document_string| process_key_page_file(
+            document_string.as_str(),
+            parser_props.collectability_map
+        ))
         .collect();
 
     let mut builder = phf_codegen::Map::new();
@@ -28,18 +34,24 @@ pub fn reserialize_key_pages(document_strings: &[String]) -> String {
     )
 }
 
-fn process_key_page_file(document_string: &str) -> HashMap<KeyPageKey, KeyPageValue> {
+fn process_key_page_file(
+    document_string: &str,
+    collectability_map: &CollectabilityMap
+) -> HashMap<KeyPageKey, KeyPageValue> {
     let doc: Box<Document> = Box::new(Document::parse(document_string).unwrap());
     let xml_root_node = get_unique_node(doc.root(), "BookXmlRoot").unwrap();
     let key_page_node_list = get_nodes(xml_root_node, "Book");
 
     key_page_node_list
         .into_iter()
-        .map(|x| parse_key_page(x))
+        .map(|x| parse_key_page(x, collectability_map))
         .collect()
 }
 
-fn parse_key_page(key_node: Node) -> (KeyPageKey, KeyPageValue) {
+fn parse_key_page(
+    key_node: Node,
+    collectability_map: &CollectabilityMap
+) -> (KeyPageKey, KeyPageValue) {
     let id = key_node.attribute("ID").unwrap();
     let text_id = serialize_option_2(get_unique_node_text(key_node, "TextId"), string_literal_serializer);
     let equip_effect_node = get_unique_node(key_node, "EquipEffect").unwrap();
@@ -84,6 +96,17 @@ fn parse_key_page(key_node: Node) -> (KeyPageKey, KeyPageValue) {
         get_unique_node_text(equip_effect_node, "HBResist").unwrap_or("Normal"),
     );
 
+    let is_collectable = collectability_map.collectable.key_pages.iter().any(|x| x == id);
+    let is_enemy_only = collectability_map.enemy_only.key_pages.iter().any(|x| x == id);
+
+    let collectability = if is_collectable {
+        Collectability::Collectable
+    } else if is_enemy_only {
+        Collectability::EnemyOnly
+    } else {
+        unreachable!()
+    };
+
     (
         id.to_string(),
         format!(
@@ -114,7 +137,8 @@ fn parse_key_page(key_node: Node) -> (KeyPageKey, KeyPageValue) {
         options: {options},
         chapter: {chapter},
         category: {category},
-        only_card_ids: {only_card_ids}
+        only_card_ids: {only_card_ids},
+        collectability: Collectability::{collectability:?},
     }}"
         ),
     )

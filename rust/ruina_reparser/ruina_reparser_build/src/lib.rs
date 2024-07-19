@@ -8,7 +8,10 @@ use paths::KEY_PAGE_LOCALIZE_DIR;
 use paths::PASSIVE_LOCALIZE_DIR;
 use ruina_common::localizations::common::Locale;
 use strum::IntoEnumIterator;
+use toml::from_str;
 
+use game_objects::common::CollectabilityMap;
+use game_objects::common::ParserProps;
 use game_objects::abno_page::reserialize_abno_pages;
 use game_objects::battle_symbol::reserialize_battle_symbols;
 use game_objects::combat_page::reserialize_combat_pages;
@@ -30,7 +33,6 @@ use paths::COMBAT_PAGE_PATH_STR;
 use paths::KEY_PAGE_PATH_STR;
 use paths::PASSIVE_PATH_STR;
 use paths::ABNO_LOCALIZE_DIR;
-
 
 mod game_objects;
 mod localization;
@@ -61,11 +63,16 @@ pub fn build_reparser() -> String {
         }
     }
 
-    let abno_pages = reparse(ABNO_PAGE_PATH_STR, reserialize_abno_pages);
-    let battle_symbols = reparse(BATTLE_SYMBOL_PATH_STR, reserialize_battle_symbols);
-    let combat_pages = reparse(COMBAT_PAGE_PATH_STR, reserialize_combat_pages);
-    let key_pages = reparse(KEY_PAGE_PATH_STR, reserialize_key_pages);
-    let passives = reparse(PASSIVE_PATH_STR, reserialize_passives);
+    let collectability_toml_str = include_str!("../data/collectability.toml");
+    let collectability_toml_map: CollectabilityMap = from_str(
+        collectability_toml_str
+    ).unwrap();
+
+    let abno_pages = reparse(ABNO_PAGE_PATH_STR, &collectability_toml_map, reserialize_abno_pages);
+    let battle_symbols = reparse(BATTLE_SYMBOL_PATH_STR, &collectability_toml_map, reserialize_battle_symbols);
+    let combat_pages = reparse(COMBAT_PAGE_PATH_STR, &collectability_toml_map, reserialize_combat_pages);
+    let key_pages = reparse(KEY_PAGE_PATH_STR, &collectability_toml_map, reserialize_key_pages);
+    let passives = reparse(PASSIVE_PATH_STR, &collectability_toml_map, reserialize_passives);
 
     let abno_page_locales = reparse_locale(ABNO_LOCALIZE_DIR, reserialize_abno_locales);
     let battle_symbol_locales = reparse_locale(BATTLE_SYMBOL_LOCALIZE_DIR, reserialize_battle_symbol_locales);
@@ -90,15 +97,18 @@ pub fn build_reparser() -> String {
     .join("\n")
 }
 
-fn reparse(path_str: &str, reserializer: fn(&[String]) -> String) -> String {
-    reserializer(
-        &read_xml_files_in_dir(&PathBuf::from(path_str))
+fn reparse(path_str: &str, collectability_map: &CollectabilityMap, reserializer: fn(&ParserProps) -> String) -> String {
+    let parser_props = ParserProps {
+        document_strings: read_xml_files_in_dir(&PathBuf::from(path_str))
             .into_iter()
             .map(|x| {
                 x.1
             })
-            .collect::<Vec<_>>()
-    )
+            .collect::<Vec<_>>(),
+        collectability_map
+    };
+
+    reserializer(&parser_props)
 }
 
 fn reparse_locale(dir_str: &str, reserializer: fn(&HashMap<Locale, Vec<String>>) -> String) -> String {

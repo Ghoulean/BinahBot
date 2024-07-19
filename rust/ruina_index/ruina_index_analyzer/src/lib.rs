@@ -125,10 +125,8 @@ mod tests {
 
     #[test]
     fn analyze_short_str() {
-        vec![
-            "", "b", "bb", "bbb",
-            "a", "of", "the"
-        ].iter().for_each(|x| {
+        ["", "b", "bb", "bbb",
+            "a", "of", "the"].iter().for_each(|x| {
             analyze(x);
         });
     }

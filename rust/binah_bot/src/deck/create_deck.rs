@@ -50,7 +50,7 @@ pub async fn create_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
     let author_name = &interaction.user.as_ref().unwrap_or(interaction.member.as_ref().unwrap().user.as_ref().unwrap()).username;
 
     let deck_data_result = decode(
-        &env.reqwest_client.as_ref().expect("no reqwest client"),
+        env.reqwest_client.as_ref().expect("no reqwest client"),
         &tiph_deck
     ).await;
 
@@ -61,7 +61,7 @@ pub async fn create_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
     };
 
     let _ = generate_thumbnail(
-        &env.lambda_client.as_ref().expect("no aws lambda client"),
+        env.lambda_client.as_ref().expect("no aws lambda client"),
         &env.thumbnail_lambda_name,
         &deck_data.combat_page_ids
     ).await;
@@ -71,12 +71,12 @@ pub async fn create_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
         author_id: author_id.to_string(),
         author_name: author_name.to_string(),
         description: description.cloned(),
-        deck_data: deck_data,
+        deck_data,
         tiph_deck: Some(tiph_deck)
     };
 
     let put_deck_result = put_deck(
-        &env.ddb_client.as_ref().expect("no ddb client"),
+        env.ddb_client.as_ref().expect("no ddb client"),
         &env.ddb_table_name,
         &deck,
         false

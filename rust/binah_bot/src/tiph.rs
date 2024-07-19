@@ -123,7 +123,7 @@ mod tests {
         let client = reqwest::Client::new();
         let turbo_nikolai = DeckData {
             keypage_id: Some("250023".to_string()),
-            passive_ids: vec!["230018", "240118", "250025", "250151"].iter().map(|x| x.to_string()).collect(),
+            passive_ids: ["230018", "240118", "250025", "250151"].iter().map(|x| x.to_string()).collect(),
             combat_page_ids: [
                 "608014", "608014", "608014",
                 "608015", "608015", "608015",

@@ -18,7 +18,7 @@ pub async fn generate_thumbnail(
     combat_pages: &[Option<String>; 9]
 ) ->  Result<(), Box<dyn Error + Send + Sync>> {
     tracing::info!("Generating thumbnail with combat_pages={:?}", combat_pages);
-    let name = generate_thumb_name(&combat_pages);
+    let name = generate_thumb_name(combat_pages);
 
     let blob = serde_json::to_string(&ThumbnailLambdaInput {
         combat_pages: resolve_optional(combat_pages),
@@ -40,13 +40,13 @@ pub async fn generate_thumbnail(
 pub fn generate_thumb_name(
     combat_pages: &[Option<String>; 9]
 ) -> String {
-    format!("{:X}", xxh3_64(&resolve_optional(combat_pages).join("#").as_bytes()))
+    format!("{:X}", xxh3_64(resolve_optional(combat_pages).join("#").as_bytes()))
 }
 
 fn resolve_optional(
     combat_pages: &[Option<String>; 9]
 ) -> [String; 9] {
-    combat_pages.into_iter().map(|x| {
+    combat_pages.iter().map(|x| {
         x.clone().unwrap_or("0".to_string())
     }).collect::<Vec<_>>().try_into().expect("couldn't cast")
 }

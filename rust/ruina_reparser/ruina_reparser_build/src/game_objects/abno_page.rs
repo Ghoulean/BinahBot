@@ -4,14 +4,15 @@ use roxmltree::{Document, Node};
 use ruina_common::game_objects::abno_page::{Abno, AbnoTargetting};
 use ruina_common::game_objects::common::Floor;
 
+use crate::game_objects::common::ParserProps;
 use crate::serde::{display_serializer, serialize_option_2};
 use crate::xml::{get_nodes, get_unique_node, get_unique_node_text};
 
 type AbnoKey = String;
 type AbnoValue = String;
 
-pub fn reserialize_abno_pages(document_strings: &[String]) -> String {
-    let abnos: HashMap<_, _> = document_strings
+pub fn reserialize_abno_pages(parser_props: &ParserProps) -> String {
+    let abnos: HashMap<_, _> = parser_props.document_strings
         .iter()
         .flat_map(|x| process_abno_page_file(x))
         .collect();

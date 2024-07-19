@@ -2,16 +2,16 @@ use std::collections::HashMap;
 use std::str::FromStr;
 use fluent_templates::Loader;
 use fluent_templates::StaticLoader;
+use ruina_common::game_objects::common::Collectability;
 use ruina_common::game_objects::common::PageType;
 use ruina_common::localizations::common::Locale;
 use ruina_identifier::TypedId;
 use serde::Deserialize;
-use toml::from_str;
-use unic_langid::LanguageIdentifier;
-// It's used; IDE (not cargo) is complaining too much tho
-#[allow(unused_imports)]
 use strum::IntoEnumIterator;
+use toml::from_str;
 
+use crate::heuristics::create_obtainability_heuristic;
+use crate::heuristics::create_pagetype_heuristic;
 use crate::heuristics::get_disambiguations_for_uniqueness_heuristic;
 
 fluent_templates::static_loader! {
@@ -57,8 +57,6 @@ pub fn precompute_annotations_map<'a>() -> AnnotationMapping<'a> {
     ).unwrap();
     let manual_annotations_toml = manual_annotation_toml_map.get("entry").expect("couldn't find \"entry\" from toml");
 
-    
-
     parse_manual_mappings(&LOCALES, manual_annotations_toml)
 }
 
@@ -68,10 +66,9 @@ pub fn precompute_disambiguations_map<'a>() -> AnnotationMapping<'a> {
     ).unwrap();
     let manual_disambiguation_toml = manual_disambiguation_toml_map.remove("entry").take().expect("couldn't find \"entry\" from toml");
 
-    let collectability_toml_str = include_str!("../data/collectability.toml");
-    let collectable_heuristic = create_obtainability_heuristic(&LOCALES, "availability_collectible", "collectable", collectability_toml_str);
-    let obtainable_heuristic = create_obtainability_heuristic(&LOCALES, "availability_obtainable", "obtainable", collectability_toml_str);
-    let enemyonly_heuristic = create_obtainability_heuristic(&LOCALES, "availability_enemy", "enemy_only", collectability_toml_str);
+    let collectable_heuristic = create_obtainability_heuristic(&LOCALES, &Collectability::Collectable, "availability_collectible");
+    let obtainable_heuristic = create_obtainability_heuristic(&LOCALES, &Collectability::Obtainable, "availability_obtainable");
+    let enemyonly_heuristic = create_obtainability_heuristic(&LOCALES, &Collectability::EnemyOnly, "availability_enemy");
 
     let pagetype_heuristics = PageType::iter().map(|x| create_pagetype_heuristic(&LOCALES, &x)).collect::<Vec<_>>();
 
@@ -166,53 +163,6 @@ fn merge<'a>(m1: &'a AnnotationMapping<'a>, m2: &'a AnnotationMapping<'a>) -> An
     ret_val
 }
 
-fn create_obtainability_heuristic(
-    locales: &'static StaticLoader,
-    disambiguation_key: &str,
-    toml_key: &str,
-    toml_str: &str
-) -> Box<dyn Fn(&TypedId, &Locale) -> Option<String>> {
-    let toml_map: HashMap<String, Vec<String>> = from_str(
-        toml_str
-    ).unwrap();
-    let toml_vec: Vec<String> = toml_map.get(toml_key).unwrap().clone();
-    let binding = disambiguation_key.to_owned().clone();
-
-    Box::new(move |typed_id: &TypedId, locale: &Locale| {
-        if toml_vec.contains(&typed_id.to_string()) {
-            let lang_id = LanguageIdentifier::from(locale);
-            let str = locales.lookup(&lang_id, &binding);
-            Some(str.clone())
-        } else {
-            None
-        }
-    })
-}
-
-fn create_pagetype_heuristic(
-    locales: &'static StaticLoader,
-    page_type: &PageType
-) -> Box<dyn Fn(&TypedId, &Locale) -> Option<String>> {
-    let pagetype_key = match page_type {
-        PageType::AbnoPage => "page_type_abno_page",
-        PageType::BattleSymbol => "page_type_battle_symbol",
-        PageType::CombatPage => "page_type_combat_page",
-        PageType::KeyPage => "page_type_key_page",
-        PageType::Passive => "page_type_passive",
-    };
-    let binding = page_type.clone();
-
-    Box::new(move |typed_id: &TypedId, locale: &Locale| {
-        if typed_id.0 == binding {
-            let lang_id = LanguageIdentifier::from(locale);
-            let str = locales.lookup(&lang_id, pagetype_key);
-            Some(str.clone())
-        } else {
-            None
-        }
-    })
-}
-
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -261,10 +211,15 @@ mod tests {
         let coffin = TypedId(PageType::AbnoPage, "Butterfly_Casket".to_string());
         let coffin_angela = TypedId(PageType::CombatPage, "9910005".to_string());
 
+        let your_shield_battle_symbol = TypedId(PageType::BattleSymbol, "YourShield".to_string());
+
         assert!(disambiguation_map.get(&coffin)
             .is_some_and(|x| x.get(&Locale::English).unwrap() == "abno page"));
         assert!(disambiguation_map.get(&coffin_angela)
             .is_some_and(|x| x.get(&Locale::English).unwrap() == "combat page"));
+
+        assert!(disambiguation_map.get(&your_shield_battle_symbol)
+            .is_some_and(|x| x.get(&Locale::English).unwrap() == "battle symbol"));
     }
 
     #[test]

@@ -1,4 +1,5 @@
 use crate::game_objects::common::Chapter;
+use crate::game_objects::common::Collectability;
 use crate::game_objects::common::Rarity;
 
 #[derive(Debug, Clone, PartialEq, strum_macros::Display)]
@@ -51,4 +52,5 @@ pub struct CombatPage<'a> {
     pub map_change: Option<&'a str>,
     pub chapter: Option<Chapter>,
     pub priority: Option<i16>,
+    pub collectability: Collectability,
 }

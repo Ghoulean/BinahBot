@@ -55,7 +55,28 @@ fn process_combat_page_locale_file(document_string: &str) -> HashMap<CombatPageL
 fn parse_combat_page_locale(node: Node) -> (CombatPageLocaleKey, CombatPageLocaleValue) {
     let id = node.attribute("ID").unwrap();
     let name = get_unique_node_text(node, "LocalizedName").unwrap_or("");
-    let card_effect = serialize_option_2(get_unique_node_text(node, "AbilityDesc"), string_literal_serializer);
+    let card_effect = serialize_option_2(get_unique_node_text(node, "Ability"), string_literal_serializer);
+
+    let dice_desc_overrides_vec: Vec<(usize, &str)> = get_nodes(node, "Behaviour")
+        .into_iter()
+        .map(|x| {
+            (x.attribute("ID").unwrap().parse().unwrap(), x.text().unwrap_or(""))
+        })
+        .collect();
+    let some_max_index = dice_desc_overrides_vec.iter().map(|x| x.0).max();
+    let dice_desc_overrides_str = if let Some(max_index) = some_max_index {
+        dbg!(max_index, &dice_desc_overrides_vec);
+        let mut dice_desc_vec_2 = Vec::new();
+        for _ in 0..max_index + 1{
+            dice_desc_vec_2.push("None".to_string());
+        }
+        dice_desc_overrides_vec.into_iter().for_each(|x| {
+            dice_desc_vec_2[x.0] = format!("Some(r#\"{}\"#)", x.1);
+        });
+        format!("&[{}]", dice_desc_vec_2.join(","))
+    } else {
+        "&[]".to_string()
+    };
 
     (
         String::from(id),
@@ -64,6 +85,7 @@ fn parse_combat_page_locale(node: Node) -> (CombatPageLocaleKey, CombatPageLocal
             id: \"{id}\",
             name: r#\"{name}\"#,
             card_effect: {card_effect},
+            dice_description_override: {dice_desc_overrides_str},
         }}"
         ),
     )

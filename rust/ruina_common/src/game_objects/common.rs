@@ -42,6 +42,13 @@ pub enum Chapter {
     None,
 }
 
+#[derive(Clone, Debug, Eq, PartialEq, strum_macros::Display)]
+pub enum Collectability {
+    Collectable,
+    Obtainable,
+    EnemyOnly
+}
+
 #[derive(Clone, Eq, Hash, PartialEq, Debug, strum_macros::EnumIter)]
 pub enum PageType {
     AbnoPage,

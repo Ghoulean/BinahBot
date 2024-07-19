@@ -12,18 +12,15 @@ fn punctuation_filter(token: &Token) -> Token {
         .replace("'s", "")
         .replace(&['(', ')', ',', '\"', '.', ';', ':', '\'', '?', '!', '’', '~', '…', '♣', '◆'][..], "")
         .replace("<color=red>♥</color>", "♥")
-        .replace("Ⅰ", "I")
-        .replace("Ⅱ", "II")
-        .replace("Ⅲ", "III")
+        .replace('Ⅰ', "I")
+        .replace('Ⅱ', "II")
+        .replace('Ⅲ', "III")
         .replace(&['-', '/'][..], " ")
 }
 
 fn stopword_filter(token: &Token) -> bool {
     // todo: something less hardcoded and more config
-    match token.as_str() {
-        "a" | "the" | "of" => false,
-        _ => true,
-    }
+    !matches!(token.as_str(), "a" | "the" | "of")
 }
 
 pub fn filter(tokens: Vec<Token>) -> Vec<Token> {
