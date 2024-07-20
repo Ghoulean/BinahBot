@@ -36,7 +36,7 @@ use super::deck_utils::build_generic_error_message_response;
 struct DeckKey(String, String);
 
 pub async fn read_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -> MessageResponse {
-    let command_args = &interaction.data.as_ref().unwrap().options;
+    let command_args = interaction.data.as_ref().unwrap().options.as_ref().unwrap();
 
     let name_option = match get_option_value("name", command_args).expect("couldn't find required arg") {
         DiscordInteractionOptionValue::String(x) => x,

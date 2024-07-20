@@ -79,7 +79,7 @@ pub enum DiscordInteractionType {
 pub struct DiscordInteractionData {
     pub id: String,
     pub name: String,
-    pub options: Vec<DiscordInteractionOptions>,
+    pub options: Option<Vec<DiscordInteractionOptions>>,
 }
 
 #[derive(Serialize, Deserialize, Debug, PartialEq)]

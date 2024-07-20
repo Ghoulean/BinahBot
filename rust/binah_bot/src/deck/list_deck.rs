@@ -21,7 +21,7 @@ use crate::utils::get_focused_option;
 use crate::utils::get_option_value;
 
 pub async fn list_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -> AutocompleteResponse {
-    let command_args = &interaction.data.as_ref().unwrap().options;
+    let command_args = interaction.data.as_ref().unwrap().options.as_ref().unwrap();
 
     let binah_locale: BinahBotLocale = interaction
         .locale
@@ -90,7 +90,7 @@ pub async fn list_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironme
 }
 
 pub async fn list_my_decks(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -> AutocompleteResponse {
-    let command_args = &interaction.data.as_ref().unwrap().options;
+    let command_args = interaction.data.as_ref().unwrap().options.as_ref().unwrap();
 
     let binah_locale: BinahBotLocale = interaction
         .locale

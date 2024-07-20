@@ -60,7 +60,7 @@ pub enum BinahBotLocale {
 #[derive(Clone, Debug)]
 #[repr(i32)]
 pub enum DiscordEmbedColors {
-    Default = 0x000000,
+    Default = 0x0d0011,
     AwakeningAbnoPage = 0x40ce78,
     BreakdownAbnoPage = 0xd14141,
     PaperbackRarity = 0x7bd671,

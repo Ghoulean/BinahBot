@@ -20,9 +20,9 @@ use crate::DiscordInteraction;
 static MAX_AUTOCOMPLETE_OPTIONS: usize = 10;
 
 pub fn lor_autocomplete(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -> AutocompleteResponse {
-    let command_args = &interaction.data.as_ref().unwrap().options;
+    let command_args = interaction.data.as_ref().unwrap().options.as_ref().unwrap();
 
-    tracing::info!("Lor command: command args: {:#?}", command_args);
+    tracing::info!("Lor autocomplete: command args: {:#?}", command_args);
 
     // let query = get_query_option(command_args);
     let binding = "".to_string();
@@ -150,7 +150,7 @@ mod tests {
             data: Some(DiscordInteractionData {
                 id: "id".to_string(),
                 name: "lor".to_string(),
-                options: vec![DiscordInteractionOptions {
+                options: Some(vec![DiscordInteractionOptions {
                     name: "query".to_string(),
                     name_localizations: None,
                     value: DiscordInteractionOptionValue::String(query_string),
@@ -160,7 +160,7 @@ mod tests {
                     name_localizations: None,
                     value: DiscordInteractionOptionValue::Bool(is_all),
                     focused: None
-                }],
+                }]),
             }),
             channel_id: None,
             token: "token".to_string(),

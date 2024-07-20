@@ -24,7 +24,7 @@ use crate::lor_command::transformers::transform_key_page;
 use crate::lor_command::transformers::transform_passive;
 
 pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -> MessageResponse {
-    let command_args = &interaction.data.as_ref().unwrap().options;
+    let command_args = interaction.data.as_ref().unwrap().options.as_ref().unwrap();
 
     tracing::info!("Lor command: command args: {:#?}", command_args);
 
@@ -126,7 +126,7 @@ mod tests {
     fn sanity_get_query_option() {
         let query_value = "value";
         let interaction = build_discord_interaction(query_value.to_string(), Locale::English);
-        let options = interaction.data.unwrap().options;
+        let options = interaction.data.as_ref().unwrap().options.as_ref().unwrap();
         assert_eq!(get_query_option(&options), query_value)
     }
 
@@ -234,7 +234,7 @@ mod tests {
             data: Some(DiscordInteractionData {
                 id: "id".to_string(),
                 name: "lor".to_string(),
-                options: vec![DiscordInteractionOptions {
+                options: Some(vec![DiscordInteractionOptions {
                     name: "query".to_string(),
                     name_localizations: None,
                     value: DiscordInteractionOptionValue::String(query_string),
@@ -244,7 +244,7 @@ mod tests {
                     name_localizations: None,
                     value: DiscordInteractionOptionValue::String(locale.to_string()),
                     focused: None,
-                }],
+                }]),
             }),
             channel_id: None,
             token: "token".to_string(),

@@ -1,3 +1,4 @@
+mod about_command;
 mod ddb;
 mod deck;
 mod lor_autocomplete;
@@ -38,7 +39,7 @@ async fn function_handler(
     event: Request,
     binahbot_env: &BinahBotEnvironment,
 ) -> Result<Response<Body>, Box<dyn Error + Send + Sync>> {
-    tracing::debug!("Rust function invoked");
+    tracing::info!("Rust function invoked with event={:?}", event);
 
     let request_body: String = String::from_utf8(event.body().deref().to_vec()).unwrap();
     let request_headers: &HeaderMap = event.headers();
@@ -49,8 +50,9 @@ async fn function_handler(
         json_body: request_body.clone(),
     };
 
-    let validate_headers_result = validate_headers(&binahbot_env.discord_secrets, &event_metadata);
+    tracing::info!("request_body={:?}", request_body);
 
+    let validate_headers_result = validate_headers(&binahbot_env.discord_secrets, &event_metadata);
     if validate_headers_result.is_err() {
         tracing::info!("Failed header validation");
 
@@ -62,7 +64,12 @@ async fn function_handler(
     }
 
     let discord_interaction: DiscordInteraction = serde_json::from_str(request_body.as_str())?;
+
+    tracing::info!("discord_interaction={:?}", discord_interaction);
+
     let response = get_response(&discord_interaction, binahbot_env).await?;
+
+    tracing::info!("Returning response={:?}", response);
 
     let resp = Response::builder()
         .status(200)

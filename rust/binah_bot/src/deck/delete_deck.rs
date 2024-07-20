@@ -22,7 +22,7 @@ use super::deck_utils::build_generic_error_message_response;
 struct DeckKey((), String);
 
 pub async fn delete_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -> MessageResponse {
-    let command_args = &interaction.data.as_ref().unwrap().options;
+    let command_args = interaction.data.as_ref().unwrap().options.as_ref().unwrap();
 
     let deck_name = match get_option_value("name", command_args).expect("no name option") {
         DiscordInteractionOptionValue::String(x) => x,

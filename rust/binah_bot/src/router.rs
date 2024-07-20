@@ -1,5 +1,6 @@
 use std::error::Error;
 
+use crate::about_command::about_command;
 use crate::deck::create_deck::create_deck;
 use crate::deck::delete_deck::delete_deck;
 use crate::deck::list_deck::list_deck;
@@ -15,6 +16,7 @@ use crate::models::discord::DiscordInteractionResponseType;
 use crate::models::discord::DiscordInteractionType;
 use crate::models::discord::PingResponse;
 
+static ABOUT_COMMAND_NAME: &str = "about";
 static LOR_COMMAND_NAME: &str = "lor";
 static CREATE_DECK_COMMAND_NAME: &str = "createdeck";
 static READ_DECK_COMMAND_NAME: &str = "deck";
@@ -25,7 +27,7 @@ pub async fn get_response(
     discord_interaction: &DiscordInteraction,
     binahbot_env: &BinahBotEnvironment,
 ) -> Result<DiscordInteractionResponse, Box<dyn Error + Send + Sync>> {
-    // switch to static hashmap later, for now just use switch-case
+    // todo: switch to static hashmap later, for now just use switch-case
     tracing::info!("Calling router with interaction type={:?}", &discord_interaction.r#type);
     match (&discord_interaction.r#type, &discord_interaction.data) {
         (DiscordInteractionType::Ping, _) => Ok(DiscordInteractionResponse::Ping(PingResponse {
@@ -79,6 +81,11 @@ pub async fn get_response(
                 discord_interaction,
                 binahbot_env,
             ).await))
+        }
+        (DiscordInteractionType::ApplicationCommand, Some(data))
+            if data.name == ABOUT_COMMAND_NAME =>
+        {
+            Ok(DiscordInteractionResponse::Message(about_command(discord_interaction, binahbot_env)))
         }
         _ => unreachable!(),
     }
