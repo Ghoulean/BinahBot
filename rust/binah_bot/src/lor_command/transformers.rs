@@ -1,6 +1,7 @@
 use std::string::ToString;
 
 use fluent_templates::Loader;
+use ruina_common::game_objects::battle_symbol::BattleSymbolSlot;
 use ruina_common::game_objects::combat_page::Die;
 use ruina_common::game_objects::combat_page::DieType;
 use ruina_common::game_objects::common::PageType;
@@ -116,11 +117,31 @@ pub fn transform_battle_symbol(
     let binding = get_battle_symbol_locales_by_internal_name(internal_name);
     let locale_page = binding.get(card_locale).unwrap();
     let lang_id = LanguageIdentifier::from(request_locale);
-    // TODO: upload battle symbol images + model them as optional in commons + reparser
-    let url = format!("https://{0}.s3.amazonaws.com/{NOT_FOUND_IMAGE_NAME}.png", env.s3_bucket_name);
+
+    dbg!(&internal_name);
+    dbg!(&page.id);
+
+    let slot_url = match page.slot {
+        BattleSymbolSlot::Eye => "Eye",
+        BattleSymbolSlot::Nose => "Nose",
+        BattleSymbolSlot::Cheek => "Cheek",
+        BattleSymbolSlot::Mouth => "Mouth",
+        BattleSymbolSlot::Ear => "Ear",
+        BattleSymbolSlot::Headwear1 => "HairAccessory",
+        BattleSymbolSlot::Headwear2 => "Hood",
+        BattleSymbolSlot::Headwear3 => "Mask",
+        BattleSymbolSlot::Headwear4 => "Helmet",
+        // todo: remove None enum (just use optional)
+        _ => ""
+    };
+
+    let image_name = page.resource.map(|x| { format!("{slot_url}_{x}_Front_Forward") }).unwrap_or(NOT_FOUND_IMAGE_NAME.to_string());
+    let url = format!("https://{0}.s3.amazonaws.com/battle_symbol/{image_name}.png", env.s3_bucket_name);
+
     let mut fields = vec![
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "battle_symbol_slot_header"),
+            // TODO: slot -> localized name
             value: format!("{}", page.slot),
             inline: Some(true),
         },
@@ -145,6 +166,7 @@ pub fn transform_battle_symbol(
             inline: Some(false),
         },
     ];
+
     if page.hidden {
         fields.push(DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "battle_symbol_hidden_header"),
