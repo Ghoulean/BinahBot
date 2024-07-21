@@ -248,7 +248,6 @@ mod tests {
                 }
             });
 
-            dbg!(&failures);
             assert!(failures.is_empty());
         });
     }

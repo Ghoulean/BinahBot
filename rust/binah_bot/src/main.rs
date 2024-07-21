@@ -1,8 +1,7 @@
 mod about_command;
 mod ddb;
 mod deck;
-mod lor_autocomplete;
-mod lor_command;
+mod lor;
 mod models;
 mod router;
 mod secrets;

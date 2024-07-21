@@ -27,6 +27,7 @@ use crate::models::binahbot::DiscordEmbedColors;
 use crate::models::binahbot::Emojis;
 use crate::models::discord::DiscordEmbed;
 use crate::models::discord::DiscordEmbedFields;
+use crate::models::discord::DiscordEmbedFooter;
 use crate::models::discord::DiscordEmbedImage;
 use crate::utils::get_disambiguation_format;
 
@@ -67,7 +68,10 @@ pub fn transform_abno_page(
         description: None,
         color: Some(embed_color as i32),
         image: Some(DiscordEmbedImage { url: img_url }),
-        footer: None,
+        footer: Some(DiscordEmbedFooter {
+            text: internal_name.to_string(),
+            icon_url: None,
+        }),
         author: None,
         url: Some(format!("{}/abno_pages/{}/{}", TIPH_BASE_URL, page.sephirah, page.id)),
         fields: Some(vec![
@@ -117,9 +121,6 @@ pub fn transform_battle_symbol(
     let binding = get_battle_symbol_locales_by_internal_name(internal_name);
     let locale_page = binding.get(card_locale).unwrap();
     let lang_id = LanguageIdentifier::from(request_locale);
-
-    dbg!(&internal_name);
-    dbg!(&page.id);
 
     let slot_url = match page.slot {
         BattleSymbolSlot::Eye => "Eye",
@@ -187,7 +188,10 @@ pub fn transform_battle_symbol(
         description: None,
         color: Some(DiscordEmbedColors::Default as i32),
         image: Some(DiscordEmbedImage { url }),
-        footer: None,
+        footer: Some(DiscordEmbedFooter {
+            text: internal_name.to_string(),
+            icon_url: None,
+        }),
         author: None,
         url: Some(format!("{}/gifts/{}/", TIPH_BASE_URL, page.id)),
         fields: Some(fields),
@@ -263,7 +267,10 @@ pub fn transform_combat_page(
         description: None,
         color: Some(embed_color as i32),
         image: Some(DiscordEmbedImage { url }),
-        footer: None,
+        footer: Some(DiscordEmbedFooter {
+            text: id.to_string(),
+            icon_url: None,
+        }),
         author: None,
         url: Some(format!("{}/cards/{}/", TIPH_BASE_URL, page.id)),
         fields: Some(fields),
@@ -394,7 +401,10 @@ pub fn transform_key_page(
         description: None,
         color: Some(embed_color as i32),
         image: Some(DiscordEmbedImage { url }),
-        footer: None,
+        footer: Some(DiscordEmbedFooter {
+            text: id.to_string(),
+            icon_url: None,
+        }),
         author: None,
         url: Some(format!("{}/keypages/{}/", TIPH_BASE_URL, page.id)),
         fields: Some(fields),
@@ -408,8 +418,6 @@ pub fn transform_passive(
     env: &BinahBotEnvironment
 ) -> DiscordEmbed {
     tracing::info!("Transforming passive with id={}, card_locale={}, request_locale={}", id, card_locale, request_locale);
-
-    dbg!(id);
 
     let page = get_passive_by_id(id).unwrap();
     let binding = get_passive_locales_by_id(id);
@@ -460,7 +468,10 @@ pub fn transform_passive(
         description: None,
         color: Some(embed_color as i32),
         image: None,
-        footer: None,
+        footer: Some(DiscordEmbedFooter {
+            text: id.to_string(),
+            icon_url: None,
+        }),
         author: None,
         url: Some(format!("{}/passives/{}/", TIPH_BASE_URL, page.id)),
         fields: Some(fields),

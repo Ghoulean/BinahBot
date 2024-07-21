@@ -1,34 +1,36 @@
 use std::str::FromStr;
 
+use fluent_templates::Loader;
 use lambda_http::tracing;
 use ruina_common::game_objects::common::PageType;
 use ruina_common::localizations::common::Locale;
 use ruina_index::models::ParsedTypedId;
+use unic_langid::LanguageIdentifier;
 
+use crate::lor::lookup::lookup;
 use crate::models::binahbot::BinahBotEnvironment;
 use crate::models::binahbot::BinahBotLocale;
+use crate::models::binahbot::DiscordEmbedColors;
 use crate::models::discord::AllowedMentions;
 use crate::models::discord::DiscordEmbed;
 use crate::models::discord::DiscordInteraction;
-use crate::models::discord::DiscordInteractionOptions;
 use crate::models::discord::DiscordInteractionOptionValue;
 use crate::models::discord::DiscordInteractionResponseMessage;
 use crate::models::discord::DiscordInteractionResponseType;
 use crate::models::discord::DiscordMessageFlag;
 use crate::models::discord::MessageResponse;
 
-use crate::lor_command::transformers::transform_abno_page;
-use crate::lor_command::transformers::transform_battle_symbol;
-use crate::lor_command::transformers::transform_combat_page;
-use crate::lor_command::transformers::transform_key_page;
-use crate::lor_command::transformers::transform_passive;
+use crate::lor::transformers::transform_abno_page;
+use crate::lor::transformers::transform_battle_symbol;
+use crate::lor::transformers::transform_combat_page;
+use crate::lor::transformers::transform_key_page;
+use crate::lor::transformers::transform_passive;
+use crate::utils::get_option_value;
 
 pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -> MessageResponse {
     let command_args = interaction.data.as_ref().unwrap().options.as_ref().unwrap();
 
     tracing::info!("Lor command: command args: {:#?}", command_args);
-
-    let typed_id = ParsedTypedId::from_str(get_query_option(command_args).as_str()).unwrap();
 
     let binah_locale: BinahBotLocale = interaction
         .locale
@@ -37,7 +39,32 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
         .and_then(|x| BinahBotLocale::from_str(x).ok())
         .unwrap_or(BinahBotLocale::EnglishUS);
 
-    let locale: Locale = get_locale_option(command_args).and_then(|x| Locale::from_str(x.as_str()).ok()).unwrap_or(Locale::from(binah_locale.clone()));
+    let locale: Locale = get_option_value("locale", command_args).map(|x| match x {
+        DiscordInteractionOptionValue::String(y) => y,
+        _ => unreachable!()
+    }).and_then(|x| Locale::from_str(x.as_str()).ok()).unwrap_or(Locale::from(binah_locale.clone()));
+
+    let lang_id = LanguageIdentifier::from(&binah_locale);
+
+    let all: bool = get_option_value("all", command_args).map(|x| match x {
+        DiscordInteractionOptionValue::Bool(y) => y.to_owned(),
+        _ => unreachable!()
+    }).unwrap_or(false);
+
+    let query = get_option_value("query", command_args).map(|x| match x {
+        DiscordInteractionOptionValue::String(y) => y,
+        _ => unreachable!()
+    }).and_then(|x| {
+        match ParsedTypedId::from_str(x) {
+            Ok(y) => Some(y),
+            Err(_) => lookup(&x, &locale, all).next()
+        }
+    });
+
+    let typed_id = match query {
+        Some(x) => x,
+        None => return no_match_found(&lang_id, env)
+    };
 
     let embed: DiscordEmbed = match typed_id.0 {
         PageType::AbnoPage => transform_abno_page,
@@ -52,7 +79,10 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
         env
     );
 
-    let flags = if get_private_option(command_args).is_some_and(|x| x) {
+    let flags = if get_option_value("private", command_args).map(|x| match x {
+        DiscordInteractionOptionValue::Bool(y) => y,
+        _ => unreachable!()
+    }).is_some_and(|x| *x) {
         Some(DiscordMessageFlag::EphemeralMessage as i32)
     } else {
         None
@@ -69,41 +99,25 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
     }
 }
 
-fn get_query_option(vec: &[DiscordInteractionOptions]) -> String {
-    vec.iter()
-        .find(|x| x.name == "query")
-        .map(|x| { 
-            match &x.value {
-                DiscordInteractionOptionValue::String(s) => s,
-                _ => unreachable!()
-            }
-        })
-        .expect("no query option found")
-        .to_string()
-}
-
-fn get_locale_option(vec: &[DiscordInteractionOptions]) -> Option<String> {
-    vec.iter()
-        .find(|x| &x.name == "locale")
-        .map(|x| { 
-            match &x.value {
-                DiscordInteractionOptionValue::String(s) => s,
-                _ => unreachable!()
-            }
-        })
-        .cloned()
-}
-
-fn get_private_option(vec: &[DiscordInteractionOptions]) -> Option<bool> {
-    vec.iter()
-        .find(|x| x.name == "private")
-        .map(|x| { 
-            match &x.value {
-                DiscordInteractionOptionValue::Bool(b) => b,
-                _ => unreachable!()
-            }
-        })
-        .copied()
+fn no_match_found(lang_id: &LanguageIdentifier, env: &BinahBotEnvironment) -> MessageResponse {
+    MessageResponse {
+        r#type: DiscordInteractionResponseType::ChannelMessageWithSource,
+        data: Some(DiscordInteractionResponseMessage {
+            allowed_mentions: Some(AllowedMentions { parse: Vec::new() }),
+            content: None,
+            embeds: Some(vec![DiscordEmbed {
+                title: None,
+                description: Some(env.locales.lookup(&lang_id, "no_page_error_message")),
+                color: Some(DiscordEmbedColors::Default as i32),
+                image: None,
+                footer: None,
+                author: None,
+                url: None,
+                fields: None
+            }]),
+            flags: Some(DiscordMessageFlag::EphemeralMessage as i32)
+        }),
+    }
 }
 
 #[cfg(test)]
@@ -115,20 +129,13 @@ mod tests {
     use ruina_reparser::get_all_combat_pages;
     use ruina_reparser::get_all_key_pages;
     use ruina_reparser::get_all_passives;
+    use crate::models::discord::DiscordInteractionOptions;
     use crate::models::discord::DiscordUser;
     use crate::models::discord::DiscordInteractionData;
     use crate::models::discord::DiscordInteractionType;
     use crate::test_utils::build_mocked_binahbot_env;
     use crate::utils::get_display_name_locale;
     use crate::utils::is_collectable_or_obtainable;
-
-    #[test]
-    fn sanity_get_query_option() {
-        let query_value = "value";
-        let interaction = build_discord_interaction(query_value.to_string(), Locale::English);
-        let options = interaction.data.as_ref().unwrap().options.as_ref().unwrap();
-        assert_eq!(get_query_option(&options), query_value)
-    }
 
     #[test]
     fn sanity_weight_of_sin() {
@@ -178,6 +185,32 @@ mod tests {
                 .expect("no embeds found")
                 .len(),
             1
+        );
+    }
+
+    #[test]
+    fn best_match() {
+        let liu_section_1_collectable = "250019";
+        let liu_section_1_enemy_query = "Liu Section 1 enemy";
+        let env = build_mocked_binahbot_env();
+
+        // "all" option is false
+        let interaction = build_discord_interaction(liu_section_1_enemy_query.to_string(), Locale::English);
+
+        let response = lor_command(&interaction, &env);
+
+        assert_eq!(response
+            .data
+            .expect("no data field found")
+            .embeds
+            .expect("no embeds found")
+            .first()
+            .expect("no embeds")
+            .footer
+            .as_ref()
+            .expect("no footer")
+            .text,
+            liu_section_1_collectable
         );
     }
 

@@ -4,6 +4,7 @@ use lambda_http::tracing;
 use ruina_common::localizations::common::Locale;
 use unic_langid::LanguageIdentifier;
 
+use crate::lor::lookup::lookup;
 use crate::models::binahbot::BinahBotEnvironment;
 use crate::models::binahbot::BinahBotLocale;
 use crate::models::discord::AutocompleteResponse;
@@ -12,9 +13,7 @@ use crate::models::discord::DiscordInteractionOptionValue;
 use crate::models::discord::DiscordInteractionResponseAutocomplete;
 use crate::models::discord::DiscordInteractionResponseType;
 use crate::utils::get_disambiguation_format;
-use crate::utils::get_display_name_locale;
 use crate::utils::get_option_value;
-use crate::utils::is_collectable_or_obtainable;
 use crate::DiscordInteraction;
 
 static MAX_AUTOCOMPLETE_OPTIONS: usize = 10;
@@ -24,7 +23,6 @@ pub fn lor_autocomplete(interaction: &DiscordInteraction, env: &BinahBotEnvironm
 
     tracing::info!("Lor autocomplete: command args: {:#?}", command_args);
 
-    // let query = get_query_option(command_args);
     let binding = "".to_string();
     let query = get_option_value("query", command_args).map(|x| match x {
         DiscordInteractionOptionValue::String(y) => y,
@@ -50,16 +48,7 @@ pub fn lor_autocomplete(interaction: &DiscordInteraction, env: &BinahBotEnvironm
 
     let lang_id = LanguageIdentifier::from(&binah_locale);
 
-    let ids = ruina_index::query(query);
-
-    let options: Vec<_> = ids
-        .into_iter()
-        .filter(|x| {
-            all || is_collectable_or_obtainable(x)
-        })
-        .filter(|x| {
-            all || get_display_name_locale(x, &locale).is_some()
-        })
+    let options: Vec<_> = lookup(query, &locale, all)
         .take(MAX_AUTOCOMPLETE_OPTIONS)
         .map(|x| {
             let display_name = get_disambiguation_format(&x, &locale, &lang_id, env);
@@ -132,8 +121,6 @@ mod tests {
         let choices = response.data.as_ref().expect("no data field found")
             .choices.as_ref().expect("no embeds found")
             .iter().map(|x| x.name.clone()).collect::<Vec<_>>();
-
-        dbg!(&choices);
 
         assert!(choices.len() <= MAX_AUTOCOMPLETE_OPTIONS);
         assert!(!choices.contains(&"\u{2068}Xiao\u{2069} (\u{2068}passive\u{2069})".to_string()));
