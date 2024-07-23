@@ -19,11 +19,12 @@ use crate::models::discord::DiscordMessageFlag;
 use crate::models::discord::MessageResponse;
 use crate::thumbnail::generate_thumbnail;
 use crate::tiph::decode;
+use crate::utils::build_error_message_response;
 use crate::utils::get_binahbot_locale;
 use crate::utils::get_option_value;
 use crate::utils::parse_tiph_deck_id;
 
-use super::deck_utils::build_generic_error_message_response;
+use super::deck_utils::validate_deck;
 
 static DEFAULT_TIPH_DECK_VERSION: i32 = 1;
 
@@ -46,8 +47,14 @@ pub async fn create_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
             _ => unreachable!()
         }
     });
-    let author_id = &interaction.user.as_ref().unwrap_or(interaction.member.as_ref().unwrap().user.as_ref().unwrap()).id;
-    let author_name = &interaction.user.as_ref().unwrap_or(interaction.member.as_ref().unwrap().user.as_ref().unwrap()).username;
+
+    let author = interaction.user.as_ref().unwrap_or(interaction.member.as_ref().unwrap().user.as_ref().unwrap());
+
+    let author_id = &author.id;
+    let author_name = &author.username;
+
+
+    let lang_id = LanguageIdentifier::from(&get_binahbot_locale(interaction));
 
     let deck_data_result = decode(
         env.reqwest_client.as_ref().expect("no reqwest client"),
@@ -59,6 +66,10 @@ pub async fn create_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
         // todo: early return MessageResponse
         Err(_) => panic!()
     };
+
+    if let Err(e) = validate_deck(&deck_data) {
+        return build_error_message_response(&lang_id, e, env);
+    }
 
     let _ = generate_thumbnail(
         env.lambda_client.as_ref().expect("no aws lambda client"),
@@ -81,8 +92,6 @@ pub async fn create_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
         &deck,
         false
     ).await;
-
-    let lang_id = LanguageIdentifier::from(&get_binahbot_locale(interaction));
     
     match put_deck_result {
         Ok(_) => {
@@ -115,7 +124,7 @@ pub async fn create_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
         },
         Err(_) => {
             // todo: check for error type
-            build_generic_error_message_response(&lang_id, env)
+            build_error_message_response(&lang_id, "generic_error_message", env)
         }
     }
 }

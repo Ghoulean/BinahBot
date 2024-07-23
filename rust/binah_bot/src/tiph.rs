@@ -34,7 +34,6 @@ pub async fn decode(
     client: &reqwest::Client,
     tiph: &TiphDeck
 ) -> Result<DeckData, Box<dyn Error + Send + Sync>> {
-
     tracing::info!("Decoding tiph deck={}", tiph.0);
     let txt = client.post(format!("{}{}{}", BASE_TIPH_URL, "/internal/dvi_decode/?d=", tiph.0))
         .send()
@@ -90,7 +89,6 @@ impl TryFrom<&TiphDeckDecode> for DeckData {
         })
     }
 }
-
 
 #[cfg(test)]
 mod tests {

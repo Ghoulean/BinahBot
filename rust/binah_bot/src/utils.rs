@@ -3,26 +3,30 @@ use std::str::FromStr;
 
 use fluent_templates::fluent_bundle::FluentValue;
 use fluent_templates::Loader;
-use ruina_common::game_objects::common::Collectability;
-use ruina_common::game_objects::common::PageType;
-use ruina_common::localizations::common::Locale;
-use ruina_index::get_disambiguation;
-use ruina_index::models::ParsedTypedId;
-use ruina_reparser::get_abno_page_locales_by_internal_name;
-use ruina_reparser::get_battle_symbol_locales_by_internal_name;
-use ruina_reparser::get_combat_page_by_id;
-use ruina_reparser::get_combat_page_locales_by_id;
-use ruina_reparser::get_key_page_by_id;
-use ruina_reparser::get_key_page_locales_by_text_id;
-use ruina_reparser::get_passive_by_id;
-use ruina_reparser::get_passive_locales_by_id;
+use ruina::ruina_common::game_objects::common::PageType;
+use ruina::ruina_common::localizations::common::Locale;
+use ruina::ruina_index::get_disambiguation;
+use ruina::ruina_index::models::ParsedTypedId;
+use ruina::ruina_reparser::get_abno_page_locales_by_internal_name;
+use ruina::ruina_reparser::get_battle_symbol_locales_by_internal_name;
+use ruina::ruina_reparser::get_combat_page_locales_by_id;
+use ruina::ruina_reparser::get_key_page_by_id;
+use ruina::ruina_reparser::get_key_page_locales_by_text_id;
+use ruina::ruina_reparser::get_passive_locales_by_id;
 use unic_langid::LanguageIdentifier;
 
 use crate::models::binahbot::BinahBotEnvironment;
 use crate::models::binahbot::BinahBotLocale;
+use crate::models::binahbot::DiscordEmbedColors;
+use crate::models::discord::AllowedMentions;
+use crate::models::discord::DiscordEmbed;
 use crate::models::discord::DiscordInteraction;
 use crate::models::discord::DiscordInteractionOptions;
 use crate::models::discord::DiscordInteractionOptionValue;
+use crate::models::discord::DiscordInteractionResponseMessage;
+use crate::models::discord::DiscordInteractionResponseType;
+use crate::models::discord::DiscordMessageFlag;
+use crate::models::discord::MessageResponse;
 
 pub fn get_option_value<'a>(option_name: &'a str, options: &'a [DiscordInteractionOptions]) -> Option<&'a DiscordInteractionOptionValue> {
     options.iter()
@@ -116,24 +120,26 @@ pub fn parse_tiph_deck_id(raw_input: &str) -> String {
     ret_val
 }
 
-pub fn is_collectable_or_obtainable(parsed_typed_id: &ParsedTypedId) -> bool {
-    match parsed_typed_id.0 {
-        ruina_common::game_objects::common::PageType::CombatPage => {
-            get_combat_page_by_id(&parsed_typed_id.1).map(|x| {
-                x.collectability == Collectability::Obtainable || x.collectability == Collectability::Collectable
-            }).unwrap_or(false)
-        },
-        ruina_common::game_objects::common::PageType::KeyPage => {
-            get_key_page_by_id(&parsed_typed_id.1).map(|x| {
-                x.collectability == Collectability::Obtainable || x.collectability == Collectability::Collectable
-            }).unwrap_or(false)   
-        },
-        ruina_common::game_objects::common::PageType::Passive => {
-            get_passive_by_id(&parsed_typed_id.1).map(|x| {
-                x.collectability == Collectability::Obtainable || x.collectability == Collectability::Collectable
-            }).unwrap_or(false)
-        },
-        _ => true
+pub fn build_error_message_response(lang_id: &LanguageIdentifier, err_code: &str, env: &BinahBotEnvironment) -> MessageResponse {
+    MessageResponse {
+        r#type: DiscordInteractionResponseType::ChannelMessageWithSource,
+        data: Some(DiscordInteractionResponseMessage {
+            allowed_mentions: Some(AllowedMentions { parse: Vec::new() }),
+            content: None,
+            embeds: Some(vec![
+                DiscordEmbed {
+                    title: None,
+                    description: Some(env.locales.lookup(lang_id, err_code)),
+                    color: Some(DiscordEmbedColors::Default as i32),
+                    image: None,
+                    footer: None,
+                    author: None,
+                    url: None,
+                    fields: None
+                }
+            ]),
+            flags: Some(DiscordMessageFlag::EphemeralMessage as i32)
+        })
     }
 }
 
@@ -141,11 +147,11 @@ pub fn is_collectable_or_obtainable(parsed_typed_id: &ParsedTypedId) -> bool {
 mod tests {
     use super::*;
     use strum::IntoEnumIterator;
-    use ruina_reparser::get_all_abno_pages;
-    use ruina_reparser::get_all_battle_symbols;
-    use ruina_reparser::get_all_combat_pages;
-    use ruina_reparser::get_all_key_pages;
-    use ruina_reparser::get_all_passives;
+    use ruina::ruina_reparser::get_all_abno_pages;
+    use ruina::ruina_reparser::get_all_battle_symbols;
+    use ruina::ruina_reparser::get_all_combat_pages;
+    use ruina::ruina_reparser::get_all_key_pages;
+    use ruina::ruina_reparser::get_all_passives;
 
     #[test]
     fn sanity_get_option_value() {
@@ -231,7 +237,8 @@ mod tests {
                 .chain(combat_page_ids)
                 .chain(keypage_ids)
                 .chain(passive_ids)
-                .filter(is_collectable_or_obtainable)
+                // todo: move this file somewhere else
+                // .filter(is_collectable_or_obtainable)
                 .filter(|x| get_display_name_locale(x, &locale).is_some())
                 .for_each(|x| {
                     let display = get_display_name_locale(&x, &locale);

@@ -14,10 +14,9 @@ use crate::models::discord::DiscordInteractionResponseMessage;
 use crate::models::discord::DiscordInteractionResponseType;
 use crate::models::discord::DiscordMessageFlag;
 use crate::models::discord::MessageResponse;
+use crate::utils::build_error_message_response;
 use crate::utils::get_binahbot_locale;
 use crate::utils::get_option_value;
-
-use super::deck_utils::build_generic_error_message_response;
 
 struct DeckKey((), String);
 
@@ -74,7 +73,7 @@ pub async fn delete_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
         },
         Err(_) => {
             // todo: check for error type
-            build_generic_error_message_response(&lang_id, env)
+            build_error_message_response(&lang_id, "generic_error_message", env)
         }
     }
 }

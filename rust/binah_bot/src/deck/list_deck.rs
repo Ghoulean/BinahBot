@@ -3,8 +3,8 @@ use std::str::FromStr;
 
 use fluent_templates::fluent_bundle::FluentValue;
 use fluent_templates::Loader;
-use ruina_common::game_objects::common::PageType;
-use ruina_common::localizations::common::Locale;
+use ruina::ruina_common::game_objects::common::PageType;
+use ruina::ruina_common::localizations::common::Locale;
 use unic_langid::LanguageIdentifier;
 
 use crate::ddb::list_decks;
@@ -145,7 +145,7 @@ fn get_choices_by_keypage_query(
     lang_id: &LanguageIdentifier,
     env: &BinahBotEnvironment
 ) -> Vec<DiscordInteractionOptions> {
-    let ids = ruina_index::query(query.unwrap_or(&"".to_string()));
+    let ids = ruina::ruina_index::query(query.unwrap_or(&"".to_string()));
 
     ids.iter()
         .filter(|x| x.0 == PageType::KeyPage)

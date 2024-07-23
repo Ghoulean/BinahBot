@@ -5,10 +5,10 @@ mod name;
 use std::collections::HashMap;
 
 use name::get_display_names;
+use index_analyzer::analyze;
+use index_analyzer::Ngram;
 use ruina_identifier::Identifier;
 use ruina_identifier::TypedId;
-use ruina_index_analyzer::analyze;
-use ruina_index_analyzer::Ngram;
 use ruina_reparser::get_all_abno_pages;
 use ruina_reparser::get_all_battle_symbols;
 use ruina_reparser::get_all_combat_pages;

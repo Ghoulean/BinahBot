@@ -3,13 +3,10 @@ name = "ruina_index"
 version = "1.0.0"
 edition = "2021"
 build = "build/main.rs"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
 phf = { version = "0.11.2", default-features = false }
 ruina_common = { path = "../ruina_common", version = "1.0.0" }
-ruina_index_analyzer = { path = "ruina_index_analyzer" }
+index_analyzer = { path = "../../index_analyzer", version = "1.0.0" }
 ruina_reparser = { path = "../ruina_reparser", version = "1.0.0" }
 serde = { version = "1.0", features = ["derive"] }
 strum = "0.26.0"

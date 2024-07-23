@@ -1,0 +1,10 @@
+[package]
+name = "ruina"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+ruina_common = { path = "./ruina_common", version = "1.0.0" }
+index_analyzer = { path = "../index_analyzer", version = "1.0.0" }
+ruina_index = { path = "./ruina_index", version = "1.0.0" }
+ruina_reparser = { path = "./ruina_reparser", version = "1.0.0" }

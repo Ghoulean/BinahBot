@@ -8,14 +8,14 @@ use futures::stream;
 use futures::StreamExt;
 use image::GenericImage;
 use image::ImageFormat;
-use image::io::Reader;
+use image::ImageReader;
 use image::RgbaImage;
 use lambda_runtime::run;
 use lambda_runtime::service_fn;
 use lambda_runtime::LambdaEvent;
 use models::ThumbnailGeneratorEnvironment;
 use models::ThumbnailLambdaInput;
-use ruina_reparser::get_combat_page_by_id;
+use ruina::ruina_reparser::get_combat_page_by_id;
 use aws_sdk_s3::primitives::ByteStream;
 
 static NOT_FOUND_IMAGE_NAME: &str = "404_Not_Found";
@@ -63,7 +63,7 @@ async fn function_handler(
     }).buffered(9).collect::<Vec<_>>().await;
 
     let image_data = get_object_data.into_iter().map(|x| {
-        Reader::with_format(
+        ImageReader::with_format(
             std::io::Cursor::new(x.into_bytes()),
             ImageFormat::Png
         ).decode().expect("couldn't decode image")

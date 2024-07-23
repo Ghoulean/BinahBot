@@ -4,11 +4,11 @@ use std::error::Error;
 
 use fluent_templates::Loader;
 use fluent_templates::fluent_bundle::FluentValue;
-use ruina_common::localizations::common::Locale;
-use ruina_reparser::get_combat_page_locales_by_id;
-use ruina_reparser::get_key_page_by_id;
-use ruina_reparser::get_key_page_locales_by_text_id;
-use ruina_reparser::get_passive_locales_by_id;
+use ruina::ruina_common::localizations::common::Locale;
+use ruina::ruina_reparser::get_combat_page_locales_by_id;
+use ruina::ruina_reparser::get_key_page_by_id;
+use ruina::ruina_reparser::get_key_page_locales_by_text_id;
+use ruina::ruina_reparser::get_passive_locales_by_id;
 use unic_langid::LanguageIdentifier;
 
 use crate::ddb::get_deck;
@@ -27,11 +27,10 @@ use crate::models::discord::DiscordInteractionOptionValue;
 use crate::models::discord::DiscordInteractionResponseMessage;
 use crate::models::discord::DiscordInteractionResponseType;
 use crate::models::discord::MessageResponse;
+use crate::utils::build_error_message_response;
 use crate::utils::get_binahbot_locale;
 use crate::utils::get_option_value;
 use crate::thumbnail::generate_thumb_name;
-
-use super::deck_utils::build_generic_error_message_response;
 
 struct DeckKey(String, String);
 
@@ -77,7 +76,7 @@ pub async fn read_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironme
         },
         Err(_) => {
             // todo: check for error type
-            build_generic_error_message_response(&lang_id, env)
+            build_error_message_response(&lang_id, "generic_error_message", env)
         }
     }
 }

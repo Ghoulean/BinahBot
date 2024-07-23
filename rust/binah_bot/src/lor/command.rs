@@ -2,9 +2,9 @@ use std::str::FromStr;
 
 use fluent_templates::Loader;
 use lambda_http::tracing;
-use ruina_common::game_objects::common::PageType;
-use ruina_common::localizations::common::Locale;
-use ruina_index::models::ParsedTypedId;
+use ruina::ruina_common::game_objects::common::PageType;
+use ruina::ruina_common::localizations::common::Locale;
+use ruina::ruina_index::models::ParsedTypedId;
 use unic_langid::LanguageIdentifier;
 
 use crate::lor::lookup::lookup;
@@ -124,18 +124,18 @@ fn no_match_found(lang_id: &LanguageIdentifier, env: &BinahBotEnvironment) -> Me
 mod tests {
     use super::*;
     use strum::IntoEnumIterator;
-    use ruina_reparser::get_all_abno_pages;
-    use ruina_reparser::get_all_battle_symbols;
-    use ruina_reparser::get_all_combat_pages;
-    use ruina_reparser::get_all_key_pages;
-    use ruina_reparser::get_all_passives;
+    use ruina::ruina_reparser::get_all_abno_pages;
+    use ruina::ruina_reparser::get_all_battle_symbols;
+    use ruina::ruina_reparser::get_all_combat_pages;
+    use ruina::ruina_reparser::get_all_key_pages;
+    use ruina::ruina_reparser::get_all_passives;
+    use crate::lor::lookup::is_collectable_or_obtainable;
     use crate::models::discord::DiscordInteractionOptions;
     use crate::models::discord::DiscordUser;
     use crate::models::discord::DiscordInteractionData;
     use crate::models::discord::DiscordInteractionType;
     use crate::test_utils::build_mocked_binahbot_env;
     use crate::utils::get_display_name_locale;
-    use crate::utils::is_collectable_or_obtainable;
 
     #[test]
     fn sanity_weight_of_sin() {

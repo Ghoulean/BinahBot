@@ -1,42 +1,9 @@
 use std::error::Error;
 
-use fluent_templates::Loader;
-use unic_langid::LanguageIdentifier;
-
-use crate::models::binahbot::BinahBotEnvironment;
-use crate::models::binahbot::DiscordEmbedColors;
-use crate::models::discord::AllowedMentions;
-use crate::models::discord::DiscordEmbed;
-use crate::models::discord::DiscordInteractionResponseMessage;
-use crate::models::discord::DiscordInteractionResponseType;
-use crate::models::discord::DiscordMessageFlag;
+use crate::models::deck::DeckData;
 use crate::models::discord::DiscordUser;
-use crate::models::discord::MessageResponse;
 
 static BASE_DISCORD_URL: &str = "https://discord.com/api/v10";
-
-pub fn build_generic_error_message_response(lang_id: &LanguageIdentifier, env: &BinahBotEnvironment) -> MessageResponse {
-    MessageResponse {
-        r#type: DiscordInteractionResponseType::ChannelMessageWithSource,
-        data: Some(DiscordInteractionResponseMessage {
-            allowed_mentions: Some(AllowedMentions { parse: Vec::new() }),
-            content: None,
-            embeds: Some(vec![
-                DiscordEmbed {
-                    title: None,
-                    description: Some(env.locales.lookup(lang_id, "generic_error_message")),
-                    color: Some(DiscordEmbedColors::Default as i32),
-                    image: None,
-                    footer: None,
-                    author: None,
-                    url: None,
-                    fields: None
-                }
-            ]),
-            flags: Some(DiscordMessageFlag::EphemeralMessage as i32)
-        })
-    }
-}
 
 pub async fn get_user(
     client: &reqwest::Client,
@@ -53,4 +20,36 @@ pub async fn get_user(
     let user = serde_json::from_str(&response)?;
 
     Ok(user)
+}
+
+// todo: enum errors
+pub fn validate_deck(
+    deck_data: &DeckData
+) -> Result<(), &str> {
+    for x in deck_data.combat_page_ids.as_ref().into_iter() {
+        if x.is_none() {
+            return Err("invalid_deck_error_message");
+        }
+    };
+    if deck_data.keypage_id.is_none() {
+        return Err("invalid_deck_error_message");
+    }
+    Ok(())
+}
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn should_err_on_invalid_deck() {
+        let deck_data = DeckData {
+            keypage_id: Some("12".to_string()),
+            passive_ids: vec![],
+            combat_page_ids: [None, None, None, None, None, None, None, None, None],
+        };
+
+        assert!(validate_deck(&deck_data).is_err());
+    }
 }

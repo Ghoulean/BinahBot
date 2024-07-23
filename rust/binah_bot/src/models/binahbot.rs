@@ -2,9 +2,9 @@ use fluent_templates::StaticLoader;
 use serde::Deserialize;
 use serde::Serialize;
 
-use ruina_common::game_objects::combat_page::DieType;
-use ruina_common::game_objects::common::Rarity;
-use ruina_common::localizations::common::Locale;
+use ruina::ruina_common::game_objects::combat_page::DieType;
+use ruina::ruina_common::game_objects::common::Rarity;
+use ruina::ruina_common::localizations::common::Locale;
 
 #[derive(Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]

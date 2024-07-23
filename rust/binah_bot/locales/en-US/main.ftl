@@ -51,6 +51,7 @@ delete_deck_success = Successfully deleted "{ $deck_name }"
 
 generic_error_message = Unknown error has occurred
 no_page_error_message = *No page found*
+invalid_deck_error_message = Invalid deck code. Use Tiph's Deck Editor to create a valid deck code: https://tiphereth.zasz.su/u/deck_editor/
 
 about_binahbot_header = About BinahBot
 about_binahbot_github_header = GitHub

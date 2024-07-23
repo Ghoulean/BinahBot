@@ -2,11 +2,11 @@ pub mod models;
 
 use crate::models::ParsedTypedId;
 
+use index_analyzer::analyze;
 use ruina_common::game_objects::common::Page;
 use ruina_common::game_objects::common::PageType;
 use ruina_common::localizations::common::Locale;
 use ruina_common::localizations::common::PageLocale;
-use ruina_index_analyzer::analyze;
 use ruina_reparser::get_abno_page_by_internal_name;
 use ruina_reparser::get_battle_symbol_by_internal_name;
 use ruina_reparser::get_combat_page_by_id;

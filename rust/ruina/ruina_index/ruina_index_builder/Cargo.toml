@@ -7,11 +7,11 @@ edition = "2021"
 
 [dependencies]
 fluent-templates = "0.9.4"
+index_analyzer = { path = "../../../index_analyzer" }
 phf = { version = "0.11.2", default-features = false }
 phf_codegen = "0.11.2"
 ruina_common = { path = "../../ruina_common", version = "1.0.0" }
 ruina_identifier = { path = "../ruina_identifier" }
-ruina_index_analyzer = { path = "../ruina_index_analyzer" }
 ruina_reparser = { path = "../../ruina_reparser", version = "1.0.0" }
 rust-stemmers = "1.2.0"
 serde = { version = "1.0", features = ["derive"] }

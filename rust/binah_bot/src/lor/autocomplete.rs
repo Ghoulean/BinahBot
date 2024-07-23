@@ -1,7 +1,7 @@
 use std::str::FromStr;
 
 use lambda_http::tracing;
-use ruina_common::localizations::common::Locale;
+use ruina::ruina_common::localizations::common::Locale;
 use unic_langid::LanguageIdentifier;
 
 use crate::lor::lookup::lookup;
