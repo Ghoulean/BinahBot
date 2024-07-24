@@ -189,6 +189,25 @@ mod tests {
     }
 
     #[test]
+    #[ignore]
+    fn regenerative_mimicry_passive_realization() {
+        let regenerative = "p#605532";
+        let interaction = build_discord_interaction(regenerative.to_string(), Locale::English);
+        let env = build_mocked_binahbot_env();
+
+        let response = lor_command(&interaction, &env);
+        assert_eq!(
+            response
+                .data
+                .expect("no data field found")
+                .embeds
+                .expect("no embeds found")
+                .len(),
+            1
+        );
+    }
+
+    #[test]
     fn best_match() {
         let liu_section_1_collectable = "250019";
         let liu_section_1_enemy_query = "Liu Section 1 enemy";
