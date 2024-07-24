@@ -41,6 +41,7 @@ export class DiscordStack extends Stack {
     private readonly apigw: RestApi;
     private readonly imageHostBucket: Bucket;
     private readonly deckRepository: TableV2;
+    private readonly interactionTtl: TableV2;
 
     constructor(scope: Construct, id: string, props: DiscordStackProps) {
         super(scope, id);
@@ -50,6 +51,7 @@ export class DiscordStack extends Stack {
         this.apigw = this.createApigw();
         this.imageHostBucket = this.createImageHostBucket();
         this.deckRepository = this.createDeckRepository();
+        this.interactionTtl = this.createInteractionTtl();
 
         this.discordAPISecrets.grantRead(this.discordBotLambda);
 
@@ -69,6 +71,10 @@ export class DiscordStack extends Stack {
         this.discordBotLambda.addEnvironment(
             "DECK_REPOSITORY_NAME",
             this.deckRepository.tableName
+        );
+        this.discordBotLambda.addEnvironment(
+            "INTERACTION_TTL_NAME",
+            this.interactionTtl.tableName
         );
         this.discordBotLambda.addEnvironment("CLIENT_ID", props.clientId);
         this.discordBotLambda.addEnvironment(
@@ -227,6 +233,15 @@ export class DiscordStack extends Stack {
             ],
             pointInTimeRecovery: true,
             tableName: "DeckRepository",
+        });
+    }
+
+    private createInteractionTtl(): TableV2 {
+        return new TableV2(this, "InteractionTtlTable", {
+            partitionKey: { name: "token", type: AttributeType.STRING },
+            deletionProtection: true,
+            tableName: "InteractionTtl",
+            timeToLiveAttribute: "ttl"
         });
     }
 }
