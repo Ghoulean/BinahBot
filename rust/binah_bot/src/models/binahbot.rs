@@ -36,6 +36,7 @@ pub struct BinahBotEnvironment {
     pub emojis: Emojis,
     pub locales: &'static StaticLoader,
     pub ddb_table_name: String,
+    pub ddb_interaction_ttl_table_name: String,
     pub thumbnail_lambda_name: String,
     pub ddb_client: Option<aws_sdk_dynamodb::Client>,
     pub lambda_client: Option<aws_sdk_lambda::Client>,
@@ -67,6 +68,13 @@ pub enum DiscordEmbedColors {
     HardcoverRarity = 0x305fba,
     LimitedRarity = 0x6b26bf,
     ObjetDArtRarity = 0xebbe00,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct InteractionTtl {
+    pub interaction_id: String,
+    pub ttl: u64,
+    pub token: String,
 }
 
 impl From<&Locale> for BinahBotLocale {

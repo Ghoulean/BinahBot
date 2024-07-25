@@ -132,7 +132,8 @@ pub async fn update_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
                             fields: None
                         }
                     ]),
-                    flags: Some(DiscordMessageFlag::EphemeralMessage as i32)
+                    flags: Some(DiscordMessageFlag::EphemeralMessage as i32),
+                    components: None,
                 })
             }
         },

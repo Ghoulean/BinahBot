@@ -6,7 +6,12 @@ use unic_langid::LanguageIdentifier;
 use crate::models::binahbot::BinahBotEnvironment;
 use crate::models::binahbot::BinahBotLocale;
 use crate::models::binahbot::DiscordEmbedColors;
+use crate::models::discord::ActionRowComponent;
 use crate::models::discord::AllowedMentions;
+use crate::models::discord::ButtonComponent;
+use crate::models::discord::ButtonStyle;
+use crate::models::discord::DiscordComponent;
+use crate::models::discord::DiscordComponentType;
 use crate::models::discord::DiscordEmbed;
 use crate::models::discord::DiscordEmbedAuthor;
 use crate::models::discord::DiscordEmbedFields;
@@ -72,7 +77,21 @@ pub fn about_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment
             allowed_mentions: Some(AllowedMentions { parse: Vec::new() }),
             content: None,
             embeds: Some(vec![embed]),
-            flags
+            flags: flags,
+            components: Some(vec![
+                DiscordComponent::ActionRow(ActionRowComponent {
+                    r#type: DiscordComponentType::ActionRow,
+                    components: vec![
+                        DiscordComponent::Button(ButtonComponent {
+                            r#type:DiscordComponentType::Button,
+                            style: ButtonStyle::Danger,
+                            label: Some("Delete".to_string()),
+                            custom_id: Some("delete".to_string()),
+                            disabled: None,
+                        })
+                    ]
+                })
+            ])
         }),
     }
 }
@@ -112,7 +131,8 @@ mod tests {
                 username: "username".to_string(),
                 avatar: "hash".to_string(),
             }),
-            member: None
+            member: None,
+            message: None,
         };
 
         let _does_not_crash = about_command(&interaction, &build_mocked_binahbot_env());

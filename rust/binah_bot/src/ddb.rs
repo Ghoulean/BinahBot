@@ -1,14 +1,14 @@
-use std::error::Error;
 use std::collections::HashMap;
+use std::error::Error;
 use std::string::String;
 
 use aws_sdk_dynamodb::types::AttributeValue;
+use crate::models::binahbot::InteractionTtl;
 use crate::models::deck::Deck;
 use crate::models::deck::DeckMetadata;
 use crate::models::deck::TiphDeck;
 
 // todo: https://crates.io/crates/snafu
-
 pub async fn get_deck(
     client: &aws_sdk_dynamodb::Client,
     table_name: &str,
@@ -120,6 +120,20 @@ pub async fn delete_deck(
         .map(|_| ())?)
 }
 
+pub async fn put_interaction_token(
+    client: &aws_sdk_dynamodb::Client,
+    table_name: &str,
+    interaction_ttl: &InteractionTtl
+) -> Result<(), Box<dyn Error + Send + Sync>> {
+    tracing::info!("Calling PutInteractionToken with interaction_ttl={:?}", interaction_ttl);
+    Ok(client.put_item()
+        .table_name(table_name)
+        .set_item(HashMap::<String, AttributeValue>::try_from(interaction_ttl).ok())
+        .send()
+        .await
+        .map(|_| ())?)
+}
+
 fn failed_attributevalue_cast(
     _: &AttributeValue
 ) -> String {
@@ -192,5 +206,17 @@ impl TryFrom<&HashMap<String, AttributeValue>> for DeckMetadata {
             author_id: value.get("author").ok_or("no author id")?.as_s().map_err(failed_attributevalue_cast)?.clone(),
             author_name: value.get("author_name").ok_or("no author name")?.as_s().map_err(failed_attributevalue_cast)?.clone(),
         })
+    }
+}
+
+impl TryFrom<&InteractionTtl> for HashMap<String, AttributeValue> {
+    type Error = Box<dyn Error + Send + Sync>;
+
+    fn try_from(value: &InteractionTtl) -> Result<Self, Self::Error> {
+        Ok(HashMap::from([
+            ("interaction_id".to_string(), AttributeValue::S(value.interaction_id.clone())),
+            ("token".to_string(), AttributeValue::S(value.token.clone())),
+            ("ttl".to_string(), AttributeValue::N(value.ttl.to_string())),
+        ]))
     }
 }
