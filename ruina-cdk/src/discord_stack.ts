@@ -92,6 +92,7 @@ export class DiscordStack extends Stack {
         );
 
         this.deckRepository.grantReadWriteData(this.discordBotLambda);
+        this.interactionTtl.grantReadWriteData(this.discordBotLambda);
         this.createBucketDeckThumbnailWriteAccessPolicy(
             this.imageHostBucket
         ).forEach((statement) => {
@@ -238,7 +239,7 @@ export class DiscordStack extends Stack {
 
     private createInteractionTtl(): TableV2 {
         return new TableV2(this, "InteractionTtlTable", {
-            partitionKey: { name: "token", type: AttributeType.STRING },
+            partitionKey: { name: "interaction_id", type: AttributeType.STRING },
             deletionProtection: true,
             tableName: "InteractionTtl",
             timeToLiveAttribute: "ttl"

@@ -158,7 +158,8 @@ mod tests {
                 username: "username".to_string(),
                 avatar: "hash".to_string(),
             }),
-            member: None
+            member: None,
+            message: None,
         }
     }
 }

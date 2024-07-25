@@ -94,7 +94,8 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
             allowed_mentions: Some(AllowedMentions { parse: Vec::new() }),
             content: None,
             embeds: Some(vec![embed]),
-            flags
+            flags: flags,
+            components: None,
         }),
     }
 }
@@ -115,7 +116,8 @@ fn no_match_found(lang_id: &LanguageIdentifier, env: &BinahBotEnvironment) -> Me
                 url: None,
                 fields: None
             }]),
-            flags: Some(DiscordMessageFlag::EphemeralMessage as i32)
+            flags: Some(DiscordMessageFlag::EphemeralMessage as i32),
+            components: None,
         }),
     }
 }
@@ -307,7 +309,8 @@ mod tests {
                 username: "username".to_string(),
                 avatar: "hash".to_string(),
             }),
-            member: None
+            member: None,
+            message: None,
         }
     }
 }

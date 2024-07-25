@@ -1,6 +1,9 @@
 use std::error::Error;
+use std::time::SystemTime;
+use std::time::UNIX_EPOCH;
 
 use crate::about_command::about_command;
+use crate::ddb::put_interaction_token;
 use crate::deck::create_deck::create_deck;
 use crate::deck::delete_deck::delete_deck;
 use crate::deck::list_deck::list_deck;
@@ -10,6 +13,7 @@ use crate::deck::update_deck::update_deck;
 use crate::lor::autocomplete::lor_autocomplete;
 use crate::lor::command::lor_command;
 use crate::models::binahbot::BinahBotEnvironment;
+use crate::models::binahbot::InteractionTtl;
 use crate::models::discord::DiscordInteraction;
 use crate::models::discord::DiscordInteractionResponse;
 use crate::models::discord::DiscordInteractionResponseType;
@@ -29,6 +33,19 @@ pub async fn get_response(
 ) -> Result<DiscordInteractionResponse, Box<dyn Error + Send + Sync>> {
     // todo: switch to static hashmap later, for now just use switch-case
     tracing::info!("Calling router with interaction type={:?}", &discord_interaction.r#type);
+
+    let (response, _) = tokio::join!(
+        route(discord_interaction, binahbot_env),
+        put_interaction_ttl(discord_interaction, binahbot_env)
+    );
+
+    response
+}
+
+async fn route(
+    discord_interaction: &DiscordInteraction,
+    binahbot_env: &BinahBotEnvironment
+) -> Result<DiscordInteractionResponse, Box<dyn Error + Send + Sync>> {
     match (&discord_interaction.r#type, &discord_interaction.data) {
         (DiscordInteractionType::Ping, _) => Ok(DiscordInteractionResponse::Ping(PingResponse {
             r#type: DiscordInteractionResponseType::Pong,
@@ -89,4 +106,29 @@ pub async fn get_response(
         }
         _ => unreachable!(),
     }
+}
+
+async fn put_interaction_ttl(
+    discord_interaction: &DiscordInteraction,
+    binahbot_env: &BinahBotEnvironment
+) -> Result<(), Box<dyn Error + Send + Sync>> {
+    if discord_interaction.r#type != DiscordInteractionType::ApplicationCommand && discord_interaction.r#type != DiscordInteractionType::MessageComponent {
+        return Ok(());
+    }
+
+    let epoch_time = SystemTime::now()
+        .duration_since(UNIX_EPOCH)
+        .expect("couldn't calculate epoch time")
+        .as_secs();
+    let interaction_ttl: InteractionTtl = InteractionTtl {
+        interaction_id: discord_interaction.id.clone(),
+        token: discord_interaction.token.clone(),
+        ttl: epoch_time,
+    };
+
+    put_interaction_token(
+        binahbot_env.ddb_client.as_ref().expect("no ddb client"),
+        &binahbot_env.ddb_interaction_ttl_table_name,
+        &interaction_ttl
+    ).await
 }

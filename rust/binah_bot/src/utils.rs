@@ -138,7 +138,8 @@ pub fn build_error_message_response(lang_id: &LanguageIdentifier, err_code: &str
                     fields: None
                 }
             ]),
-            flags: Some(DiscordMessageFlag::EphemeralMessage as i32)
+            flags: Some(DiscordMessageFlag::EphemeralMessage as i32),
+            components: None,
         })
     }
 }

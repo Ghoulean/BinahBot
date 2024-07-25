@@ -1,6 +1,7 @@
 mod about_command;
 mod ddb;
 mod deck;
+mod discord;
 mod lor;
 mod models;
 mod router;
@@ -13,16 +14,16 @@ use ed25519_dalek::{Signature, Verifier, VerifyingKey};
 use hex::FromHex;
 use http::HeaderMap;
 use lambda_http::{run, service_fn, tracing, Body, Request, Response};
+use models::binahbot::BinahBotEnvironment;
+use models::binahbot::DiscordSecrets;
+use models::binahbot::Emojis;
+use models::discord::DiscordInteraction;
+use models::discord::DiscordInteractionValidationData;
 use router::get_response;
 use secrets::get_discord_secrets;
 use std::env;
 use std::error::Error;
 use std::ops::Deref;
-
-use crate::models::binahbot::DiscordSecrets;
-use crate::models::binahbot::Emojis;
-use crate::models::discord::DiscordInteractionMetadata;
-use models::{binahbot::BinahBotEnvironment, discord::DiscordInteraction};
 
 fluent_templates::static_loader! {
     static LOCALES = {
@@ -43,7 +44,7 @@ async fn function_handler(
     let request_body: String = String::from_utf8(event.body().deref().to_vec()).unwrap();
     let request_headers: &HeaderMap = event.headers();
 
-    let event_metadata = DiscordInteractionMetadata {
+    let event_metadata = DiscordInteractionValidationData {
         timestamp: get_header(request_headers, TIMESTAMP_HEADER),
         signature: get_header(request_headers, SIGNATURE_HEADER),
         json_body: request_body.clone(),
@@ -51,6 +52,7 @@ async fn function_handler(
 
     tracing::info!("request_body={:?}", request_body);
 
+    // header validation must complete first due to `get_response` causing potential side effects
     let validate_headers_result = validate_headers(&binahbot_env.discord_secrets, &event_metadata);
     if validate_headers_result.is_err() {
         tracing::info!("Failed header validation");
@@ -63,11 +65,9 @@ async fn function_handler(
     }
 
     let discord_interaction: DiscordInteraction = serde_json::from_str(request_body.as_str())?;
-
     tracing::info!("discord_interaction={:?}", discord_interaction);
 
     let response = get_response(&discord_interaction, binahbot_env).await?;
-
     tracing::info!("Returning response={:?}", response);
 
     let resp = Response::builder()
@@ -115,6 +115,7 @@ async fn main() -> Result<(), lambda_http::Error> {
         },
         locales: &LOCALES,
         ddb_table_name: env::var("DECK_REPOSITORY_NAME").expect("no DECK_REPOSITORY_NAME"),
+        ddb_interaction_ttl_table_name: env::var("INTERACTION_TTL_NAME").expect("no INTERACTION_TTL_NAME"),
         thumbnail_lambda_name: env::var("THUMBNAIL_LAMBDA_ARN").expect("no THUMBNAIL_LAMBDA_ARN"),
         ddb_client: Some(ddb),
         lambda_client: Some(lambda),
@@ -140,7 +141,7 @@ fn get_header(header_map: &HeaderMap, header_key: &str) -> String {
 
 fn validate_headers(
     discord_secrets: &DiscordSecrets,
-    metadata: &DiscordInteractionMetadata,
+    metadata: &DiscordInteractionValidationData,
 ) -> Result<(), Box<dyn Error + Send + Sync>> {
     let public_key_bytes = <[u8; 32]>::from_hex(&discord_secrets.public_key)?;
     let public_key = VerifyingKey::from_bytes(&public_key_bytes)?;
@@ -185,10 +186,11 @@ pub mod test_utils {
             },
             locales: &LOCALES,
             ddb_table_name: "table_name".to_string(),
+            ddb_interaction_ttl_table_name: "interaction_ttl_table_name".to_string(),
             thumbnail_lambda_name: "thumb_lambda_name".to_string(),
             ddb_client: None,
             lambda_client: None,
-            reqwest_client: None
+            reqwest_client: None,
         }
     }
 }

@@ -70,7 +70,8 @@ pub async fn read_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironme
                     embeds: Some(vec![
                         embed
                     ]),
-                    flags: None
+                    flags: None,
+                    components: None
                 })
             }
         },
