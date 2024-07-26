@@ -91,7 +91,7 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
 
     let flags = is_private.then_some(DiscordMessageFlag::EphemeralMessage as i32);
 
-    let components = is_private.then_some(vec![
+    let components = (!is_private).then_some(vec![
         DiscordComponent::ActionRow(ActionRowComponent {
             r#type: DiscordComponentType::ActionRow,
             components: vec![DiscordComponent::Button(build_delete_button_component(&lang_id, env))]

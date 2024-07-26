@@ -234,6 +234,7 @@ impl TryFrom<&InteractionTtl> for HashMap<String, AttributeValue> {
             ("interaction_id".to_string(), AttributeValue::S(value.interaction_id.clone())),
             ("token".to_string(), AttributeValue::S(value.token.clone())),
             ("ttl".to_string(), AttributeValue::N(value.ttl.to_string())),
+            ("original_user_id".to_string(), AttributeValue::S(value.original_user_id.clone())),
         ]))
     }
 }
@@ -246,6 +247,7 @@ impl TryFrom<&HashMap<String, AttributeValue>> for InteractionTtl {
             interaction_id: value.get("interaction_id").ok_or("no interaction_id")?.as_s().map_err(failed_attributevalue_cast)?.clone(),
             token: value.get("token").ok_or("no token")?.as_s().map_err(failed_attributevalue_cast)?.clone(),
             ttl: value.get("ttl").ok_or("no ttl")?.as_n().map_err(failed_attributevalue_cast)?.parse()?,
+            original_user_id: value.get("original_user_id").ok_or("no original_user_id")?.as_s().map_err(failed_attributevalue_cast)?.clone(),
         })
     }
 }

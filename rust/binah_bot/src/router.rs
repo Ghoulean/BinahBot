@@ -96,6 +96,7 @@ async fn route(
                         .as_ref()
                         .expect("no interaction_metadata field")
                         .id;
+                    let user_id = discord_interaction.user.as_ref().unwrap_or(discord_interaction.member.as_ref().unwrap().user.as_ref().unwrap()).id.clone();
 
                     let interaction_ttl = get_interaction_token(
                         binahbot_env.ddb_client.as_ref().expect("no ddb client provided"),
@@ -105,11 +106,13 @@ async fn route(
 
                     match interaction_ttl {
                         Ok(x) => {
-                            let _ = delete_interaction(
-                                binahbot_env.reqwest_client.as_ref().expect("no http client provided"),
-                                &binahbot_env.discord_secrets,
-                                &x.token
-                            ).await;
+                            if user_id == x.original_user_id {
+                                let _ = delete_interaction(
+                                    binahbot_env.reqwest_client.as_ref().expect("no http client provided"),
+                                    &binahbot_env.discord_secrets,
+                                    &x.token
+                                ).await;
+                            }
                         },
                         Err(_) => {}
                     };
@@ -137,10 +140,12 @@ async fn put_interaction_ttl(
         .duration_since(UNIX_EPOCH)
         .expect("couldn't calculate epoch time")
         .as_secs();
+
     let interaction_ttl: InteractionTtl = InteractionTtl {
         interaction_id: discord_interaction.id.clone(),
         token: discord_interaction.token.clone(),
         ttl: epoch_time,
+        original_user_id: discord_interaction.user.as_ref().unwrap_or(discord_interaction.member.as_ref().unwrap().user.as_ref().unwrap()).id.clone(),
     };
 
     put_interaction_token(

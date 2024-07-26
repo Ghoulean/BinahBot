@@ -75,6 +75,7 @@ pub struct InteractionTtl {
     pub interaction_id: String,
     pub ttl: u64,
     pub token: String,
+    pub original_user_id: String
 }
 
 impl From<&Locale> for BinahBotLocale {
