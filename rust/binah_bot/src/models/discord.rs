@@ -84,10 +84,23 @@ pub enum DiscordComponentType {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-pub struct DiscordInteractionData {
+#[serde(untagged)]
+pub enum DiscordInteractionData {
+    ApplicationCommand(DiscordApplicationCommandInteractionData),
+    MessageComponent(DiscordMessageComponentInteractionData),
+    ModalSubmit(),
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct DiscordApplicationCommandInteractionData {
     pub id: String,
     pub name: String,
     pub options: Option<Vec<DiscordInteractionOptions>>,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct DiscordMessageComponentInteractionData {
+    pub custom_id: String
 }
 
 #[derive(Serialize, Deserialize, Debug, PartialEq)]
@@ -120,6 +133,7 @@ pub enum DiscordInteractionResponse {
     Message(MessageResponse),
     Autocomplete(AutocompleteResponse),
     Ping(PingResponse),
+    DeferredUpdateMessage(DeferredUpdateResponse),
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -136,6 +150,11 @@ pub struct AutocompleteResponse {
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct PingResponse {
+    pub r#type: DiscordInteractionResponseType,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct DeferredUpdateResponse {
     pub r#type: DiscordInteractionResponseType,
 }
 

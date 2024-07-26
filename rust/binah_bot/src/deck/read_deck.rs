@@ -13,6 +13,9 @@ use unic_langid::LanguageIdentifier;
 
 use crate::ddb::get_deck;
 use crate::deck::deck_utils::get_user;
+use crate::models::discord::ActionRowComponent;
+use crate::models::discord::DiscordComponent;
+use crate::models::discord::DiscordComponentType;
 use crate::models::discord::DiscordEmbedAuthor;
 use crate::models::discord::DiscordEmbedFields;
 use crate::models::binahbot::BinahBotEnvironment;
@@ -23,10 +26,13 @@ use crate::models::discord::AllowedMentions;
 use crate::models::discord::DiscordEmbed;
 use crate::models::discord::DiscordEmbedImage;
 use crate::models::discord::DiscordInteraction;
+use crate::models::discord::DiscordInteractionData;
 use crate::models::discord::DiscordInteractionOptionValue;
 use crate::models::discord::DiscordInteractionResponseMessage;
 use crate::models::discord::DiscordInteractionResponseType;
+use crate::models::discord::DiscordMessageFlag;
 use crate::models::discord::MessageResponse;
+use crate::utils::build_delete_button_component;
 use crate::utils::build_error_message_response;
 use crate::utils::get_binahbot_locale;
 use crate::utils::get_option_value;
@@ -35,7 +41,11 @@ use crate::thumbnail::generate_thumb_name;
 struct DeckKey(String, String);
 
 pub async fn read_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -> MessageResponse {
-    let command_args = interaction.data.as_ref().unwrap().options.as_ref().unwrap();
+    let binding = match interaction.data.as_ref().expect("no data") {
+        DiscordInteractionData::ApplicationCommand(x) => x,
+        _ => unreachable!()
+    };
+    let command_args = binding.options.as_ref().unwrap();
 
     let name_option = match get_option_value("name", command_args).expect("couldn't find required arg") {
         DiscordInteractionOptionValue::String(x) => x,
@@ -46,8 +56,12 @@ pub async fn read_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironme
         Err(_) => panic!()
     };
 
-    tracing::info!(name_option);
-    tracing::info!("{}, {}", deck_key.0, deck_key.1);
+    let is_private = get_option_value("private", command_args).map(|x| match x {
+        DiscordInteractionOptionValue::Bool(y) => y,
+        _ => unreachable!()
+    }).is_some_and(|x| *x);
+
+    let flags = is_private.then_some(DiscordMessageFlag::EphemeralMessage as i32);
 
     let deck_result = get_deck(
         env.ddb_client.as_ref().unwrap(),
@@ -58,6 +72,13 @@ pub async fn read_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironme
 
     let request_locale = get_binahbot_locale(interaction);
     let lang_id = LanguageIdentifier::from(&request_locale);
+
+    let components = is_private.then_some(vec![
+        DiscordComponent::ActionRow(ActionRowComponent {
+            r#type: DiscordComponentType::ActionRow,
+            components: vec![DiscordComponent::Button(build_delete_button_component(&lang_id, env))]
+        })
+    ]);
 
     match deck_result {
         Ok(x) => {
@@ -70,8 +91,8 @@ pub async fn read_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironme
                     embeds: Some(vec![
                         embed
                     ]),
-                    flags: None,
-                    components: None
+                    flags: flags,
+                    components: components
                 })
             }
         },
