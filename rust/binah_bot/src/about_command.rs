@@ -8,24 +8,28 @@ use crate::models::binahbot::BinahBotLocale;
 use crate::models::binahbot::DiscordEmbedColors;
 use crate::models::discord::ActionRowComponent;
 use crate::models::discord::AllowedMentions;
-use crate::models::discord::ButtonComponent;
-use crate::models::discord::ButtonStyle;
 use crate::models::discord::DiscordComponent;
 use crate::models::discord::DiscordComponentType;
 use crate::models::discord::DiscordEmbed;
 use crate::models::discord::DiscordEmbedAuthor;
 use crate::models::discord::DiscordEmbedFields;
 use crate::models::discord::DiscordInteraction;
+use crate::models::discord::DiscordInteractionData;
 use crate::models::discord::DiscordInteractionOptionValue;
 use crate::models::discord::DiscordInteractionResponseMessage;
 use crate::models::discord::DiscordInteractionResponseType;
 use crate::models::discord::DiscordMessageFlag;
 use crate::models::discord::MessageResponse;
+use crate::utils::build_delete_button_component;
 use crate::utils::get_option_value;
 
 pub fn about_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -> MessageResponse {
     let binding = vec![];
-    let command_args = interaction.data.as_ref().unwrap().options.as_ref().unwrap_or(&binding);
+    let binding2 = match interaction.data.as_ref().expect("no data") {
+        DiscordInteractionData::ApplicationCommand(x) => x,
+        _ => unreachable!()
+    };
+    let command_args = binding2.options.as_ref().unwrap_or(&binding);
 
     tracing::info!("About command: command args: {:#?}", command_args);
 
@@ -37,14 +41,12 @@ pub fn about_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment
         .unwrap_or(BinahBotLocale::EnglishUS);
     let lang_id = LanguageIdentifier::from(&binah_locale);
 
-    let flags = if get_option_value("private", command_args).map(|x| match x {
+    let is_private = get_option_value("private", command_args).map(|x| match x {
         DiscordInteractionOptionValue::Bool(y) => y,
         _ => unreachable!()
-    }).is_some_and(|x| *x) {
-        Some(DiscordMessageFlag::EphemeralMessage as i32)
-    } else {
-        None
-    };
+    }).is_some_and(|x| *x);
+
+    let flags = is_private.then_some(DiscordMessageFlag::EphemeralMessage as i32);
 
     tracing::info!("binah_locale={:?}, lang_id={:?}, flags={:?}", binah_locale, lang_id, flags);
 
@@ -71,6 +73,13 @@ pub fn about_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment
         fields: Some(fields),
     };
 
+    let components = is_private.then_some(vec![
+        DiscordComponent::ActionRow(ActionRowComponent {
+            r#type: DiscordComponentType::ActionRow,
+            components: vec![DiscordComponent::Button(build_delete_button_component(&lang_id, env))]
+        })
+    ]);
+
     MessageResponse {
         r#type: DiscordInteractionResponseType::ChannelMessageWithSource,
         data: Some(DiscordInteractionResponseMessage {
@@ -78,26 +87,14 @@ pub fn about_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment
             content: None,
             embeds: Some(vec![embed]),
             flags: flags,
-            components: Some(vec![
-                DiscordComponent::ActionRow(ActionRowComponent {
-                    r#type: DiscordComponentType::ActionRow,
-                    components: vec![
-                        DiscordComponent::Button(ButtonComponent {
-                            r#type:DiscordComponentType::Button,
-                            style: ButtonStyle::Danger,
-                            label: Some("Delete".to_string()),
-                            custom_id: Some("delete".to_string()),
-                            disabled: None,
-                        })
-                    ]
-                })
-            ])
+            components: components
         }),
     }
 }
 
 #[cfg(test)]
 mod tests {
+    use crate::models::discord::DiscordApplicationCommandInteractionData;
     use crate::models::discord::DiscordInteractionData;
     use crate::models::discord::DiscordInteractionOptions;
     use crate::models::discord::DiscordInteractionType;
@@ -112,7 +109,7 @@ mod tests {
             id: "id".to_string(),
             application_id: "app_id".to_string(),
             r#type: DiscordInteractionType::ApplicationCommand,
-            data: Some(DiscordInteractionData {
+            data: Some(DiscordInteractionData::ApplicationCommand(DiscordApplicationCommandInteractionData {
                 id: "id".to_string(),
                 name: "lor".to_string(),
                 options: Some(vec![DiscordInteractionOptions {
@@ -121,7 +118,7 @@ mod tests {
                     value: DiscordInteractionOptionValue::Bool(false),
                     focused: None,
                 }]),
-            }),
+            })),
             channel_id: None,
             token: "token".to_string(),
             locale: None,

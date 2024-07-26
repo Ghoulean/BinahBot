@@ -134,6 +134,23 @@ pub async fn put_interaction_token(
         .map(|_| ())?)
 }
 
+pub async fn get_interaction_token(
+    client: &aws_sdk_dynamodb::Client,
+    table_name: &str,
+    interaction_id: &str
+) -> Result<InteractionTtl, Box<dyn Error + Send + Sync>> {
+    tracing::info!("Calling GetInteractionToken with interaction_id={:?}", interaction_id);
+    
+    let binding = client.get_item()
+        .table_name(table_name)
+        .key("interaction_id", AttributeValue::S(interaction_id.to_string()))
+        .send()
+        .await?;
+    let interaction_ttl = binding.item().ok_or("could not get token")?;
+
+    InteractionTtl::try_from(interaction_ttl)
+}
+
 fn failed_attributevalue_cast(
     _: &AttributeValue
 ) -> String {
@@ -218,5 +235,17 @@ impl TryFrom<&InteractionTtl> for HashMap<String, AttributeValue> {
             ("token".to_string(), AttributeValue::S(value.token.clone())),
             ("ttl".to_string(), AttributeValue::N(value.ttl.to_string())),
         ]))
+    }
+}
+
+impl TryFrom<&HashMap<String, AttributeValue>> for InteractionTtl {
+    type Error = Box<dyn Error + Send + Sync>;
+
+    fn try_from(value: &HashMap<String, AttributeValue>) -> Result<Self, Self::Error> {
+        Ok(InteractionTtl {
+            interaction_id: value.get("interaction_id").ok_or("no interaction_id")?.as_s().map_err(failed_attributevalue_cast)?.clone(),
+            token: value.get("token").ok_or("no token")?.as_s().map_err(failed_attributevalue_cast)?.clone(),
+            ttl: value.get("ttl").ok_or("no ttl")?.as_n().map_err(failed_attributevalue_cast)?.parse()?,
+        })
     }
 }

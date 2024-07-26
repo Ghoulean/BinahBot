@@ -11,9 +11,13 @@ use crate::lor::lookup::lookup;
 use crate::models::binahbot::BinahBotEnvironment;
 use crate::models::binahbot::BinahBotLocale;
 use crate::models::binahbot::DiscordEmbedColors;
+use crate::models::discord::ActionRowComponent;
 use crate::models::discord::AllowedMentions;
+use crate::models::discord::DiscordComponent;
+use crate::models::discord::DiscordComponentType;
 use crate::models::discord::DiscordEmbed;
 use crate::models::discord::DiscordInteraction;
+use crate::models::discord::DiscordInteractionData;
 use crate::models::discord::DiscordInteractionOptionValue;
 use crate::models::discord::DiscordInteractionResponseMessage;
 use crate::models::discord::DiscordInteractionResponseType;
@@ -25,19 +29,20 @@ use crate::lor::transformers::transform_battle_symbol;
 use crate::lor::transformers::transform_combat_page;
 use crate::lor::transformers::transform_key_page;
 use crate::lor::transformers::transform_passive;
+use crate::utils::build_delete_button_component;
+use crate::utils::get_binahbot_locale;
 use crate::utils::get_option_value;
 
 pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -> MessageResponse {
-    let command_args = interaction.data.as_ref().unwrap().options.as_ref().unwrap();
+    let binding = match interaction.data.as_ref().expect("no data") {
+        DiscordInteractionData::ApplicationCommand(x) => x,
+        _ => unreachable!()
+    };
+    let command_args = binding.options.as_ref().unwrap();
 
     tracing::info!("Lor command: command args: {:#?}", command_args);
 
-    let binah_locale: BinahBotLocale = interaction
-        .locale
-        .as_ref()
-        .or(interaction.guild_locale.as_ref())
-        .and_then(|x| BinahBotLocale::from_str(x).ok())
-        .unwrap_or(BinahBotLocale::EnglishUS);
+    let binah_locale: BinahBotLocale = get_binahbot_locale(interaction);
 
     let locale: Locale = get_option_value("locale", command_args).map(|x| match x {
         DiscordInteractionOptionValue::String(y) => y,
@@ -79,14 +84,19 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
         env
     );
 
-    let flags = if get_option_value("private", command_args).map(|x| match x {
+    let is_private = get_option_value("private", command_args).map(|x| match x {
         DiscordInteractionOptionValue::Bool(y) => y,
         _ => unreachable!()
-    }).is_some_and(|x| *x) {
-        Some(DiscordMessageFlag::EphemeralMessage as i32)
-    } else {
-        None
-    };
+    }).is_some_and(|x| *x);
+
+    let flags = is_private.then_some(DiscordMessageFlag::EphemeralMessage as i32);
+
+    let components = is_private.then_some(vec![
+        DiscordComponent::ActionRow(ActionRowComponent {
+            r#type: DiscordComponentType::ActionRow,
+            components: vec![DiscordComponent::Button(build_delete_button_component(&lang_id, env))]
+        })
+    ]);
 
     MessageResponse {
         r#type: DiscordInteractionResponseType::ChannelMessageWithSource,
@@ -95,7 +105,7 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
             content: None,
             embeds: Some(vec![embed]),
             flags: flags,
-            components: None,
+            components: components,
         }),
     }
 }
@@ -132,6 +142,7 @@ mod tests {
     use ruina::ruina_reparser::get_all_key_pages;
     use ruina::ruina_reparser::get_all_passives;
     use crate::lor::lookup::is_collectable_or_obtainable;
+    use crate::models::discord::DiscordApplicationCommandInteractionData;
     use crate::models::discord::DiscordInteractionOptions;
     use crate::models::discord::DiscordUser;
     use crate::models::discord::DiscordInteractionData;
@@ -285,7 +296,7 @@ mod tests {
             id: "id".to_string(),
             application_id: "app_id".to_string(),
             r#type: DiscordInteractionType::ApplicationCommand,
-            data: Some(DiscordInteractionData {
+            data: Some(DiscordInteractionData::ApplicationCommand(DiscordApplicationCommandInteractionData {
                 id: "id".to_string(),
                 name: "lor".to_string(),
                 options: Some(vec![DiscordInteractionOptions {
@@ -299,7 +310,7 @@ mod tests {
                     value: DiscordInteractionOptionValue::String(locale.to_string()),
                     focused: None,
                 }]),
-            }),
+            })),
             channel_id: None,
             token: "token".to_string(),
             locale: None,

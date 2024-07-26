@@ -12,6 +12,7 @@ use crate::models::deck::TiphDeck;
 use crate::models::discord::AllowedMentions;
 use crate::models::discord::DiscordEmbed;
 use crate::models::discord::DiscordInteraction;
+use crate::models::discord::DiscordInteractionData;
 use crate::models::discord::DiscordInteractionOptionValue;
 use crate::models::discord::DiscordInteractionResponseMessage;
 use crate::models::discord::DiscordInteractionResponseType;
@@ -29,7 +30,11 @@ use super::deck_utils::validate_deck;
 static DEFAULT_TIPH_DECK_VERSION: i32 = 1;
 
 pub async fn create_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -> MessageResponse {
-    let command_args = interaction.data.as_ref().unwrap().options.as_ref().unwrap();
+    let binding = match interaction.data.as_ref().expect("no data") {
+        DiscordInteractionData::ApplicationCommand(x) => x,
+        _ => unreachable!()
+    };
+    let command_args = binding.options.as_ref().unwrap();
 
     let tiph_deck_str = match get_option_value("deck", command_args).expect("no deck option") {
         DiscordInteractionOptionValue::String(x) => x,

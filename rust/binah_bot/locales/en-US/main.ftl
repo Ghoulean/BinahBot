@@ -55,3 +55,5 @@ invalid_deck_error_message = Invalid deck code. Use Tiph's Deck Editor to create
 
 about_binahbot_header = About BinahBot
 about_binahbot_github_header = GitHub
+
+delete_message_button_text = Delete
