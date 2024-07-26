@@ -73,7 +73,7 @@ pub async fn read_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironme
     let request_locale = get_binahbot_locale(interaction);
     let lang_id = LanguageIdentifier::from(&request_locale);
 
-    let components = is_private.then_some(vec![
+    let components = (!is_private).then_some(vec![
         DiscordComponent::ActionRow(ActionRowComponent {
             r#type: DiscordComponentType::ActionRow,
             components: vec![DiscordComponent::Button(build_delete_button_component(&lang_id, env))]

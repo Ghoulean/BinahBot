@@ -73,7 +73,7 @@ pub fn about_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment
         fields: Some(fields),
     };
 
-    let components = is_private.then_some(vec![
+    let components = (!is_private).then_some(vec![
         DiscordComponent::ActionRow(ActionRowComponent {
             r#type: DiscordComponentType::ActionRow,
             components: vec![DiscordComponent::Button(build_delete_button_component(&lang_id, env))]
