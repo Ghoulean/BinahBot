@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300104">
+
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-91</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/OtherWorldPortrait</portrait>
+
+      <name openLevel ="1">
+        異世界的肖像畫
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <openText>
+        這幅肖像捕捉了瞬間的精髓. 我們一定失去了什麼?
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {就如光陰飛逝, 我們也隨之改變. 我們或許殘缺, 失去方向, 被排山倒海的壓力擊垮或消逝, 或永不再見.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {這幅肖像捕捉了瞬間的精髓. 我們一定失去了什麼? 那些在肖像中看見自己的員工將會渴望健康. 如果人生能總是如此, 我就會像肖像中那樣常保笑容.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {員工會開始感到詭異. 該員工將不受任何攻擊所傷. 然而, 其他的員工將會承受所有的痛苦.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {這幅畫像會開始變得越來越猙獰醜陋. 員工最終會停下觀賞這幅畫並享受那預料之外的幸運.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {但是奇蹟不會永遠存在. 當所有的員工在承受了他的痛苦和傷害後, 就輪到該員工要死了. 一旦死去, 肖像便化為一片漆黑.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">第一個觀賞此異常的員工將被畫在畫布上.</specialTip>
+      <specialTip openLevel="2" key="2">所有對該員工造成的傷害將由設施裡的其他員工所承受. (然而, 該效果不適用於超過該員工的最大 HP 值的傷害.) 他們會受到更多的傷害. </specialTip>
+      <specialTip openLevel="2" key="3">一旦受傷的員工死去, 另一個員工會接替他的位置. 當失去所有的員工後, 畫在布上的員工將會跟著死去.</specialTip>
+      <specialTip openLevel="2" key="4">如果有新的員工顯現在畫布上, 上一位員工將會被殺害.</specialTip>
+      <specialTip openLevel="2" key="5">若肖像上的員工死於肖像以外, 肖像會變回初始的狀態.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300110">
+
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">D-09-104</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ReverseClock</portrait>
+
+      <name openLevel ="1">
+        逆行時計
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>
+        底まで 落ちてしまって、 もう方法が 見えないのですか？
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {<i>スポンサー「정현교」様のアイデアを基に作られたアブノーマリティです。</i>&#13;&#10;&#13;&#10;とある会社が製造した古い時計です。 真空管ランプが 搭載されたデザインは、 古風な雰囲気を出しています。 この時計の生産はずっと前に 中断されています。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {「…どん底まで落ちてしまって、 もうこれ以上 方法が見えませんか？ あの時、他の選択をしていたら、 という思いに 囚われていませんか？&#13;&#10;病気や自然、 宇宙をも征服した 我々人類は ついに時間までも 征服しました！}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {私たちは あなたが 浪費した 時を 巻き戻すことが できます。&#13;&#10;使い方は簡単！ ただネジを回してから、 目をつぶって10秒数えてください。&#13;&#10;目を開けたら、あなたの過ぎてしまった あらゆる時が 待っているはずです。」}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {＊ 使用説明書を きちんとお読みください。 正しくない使い方をすると、 製品に流れる 高電圧が どんな反応を 起こすか 未知数だからです。 お客様の不注意によって 生じた副作用に 当社は一切責任を負いません。&#13;&#10;＊ 装置を稼働させるには 高いエネルギーが 必要なので 多少の充填時間が必要です。}
+      ]
+    </desc>
+
+  
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">$0の 作業を 完了するごとに、 電球のうち１つが 点灯し、 エネルギーが 充電される。</specialTip>
+      <specialTip openLevel="2" key="2">ランク3未満の 職員が 作業を 完了した場合、 何の変化も 現れなかった。</specialTip>
+      <specialTip openLevel="2" key="3">電球が すべて点灯すると、 $0を 作動させることができる。ただし、$0は1日1回のみ作動できます。</specialTip>
+      <specialTip openLevel="2" key="4">＜注意＞ $0が 完全に充電された後は、 ランク5未満の職員が 接触するのを 必ず阻止してください。</specialTip>
+      <specialTip openLevel="2" key="5">ランク5以上の職員だけが $0を 正常に作動 できます。 $0は、 その職員を除く 職員達を 一日の中で 最も平穏だった 瞬間に 送ってくれるでしょう。</specialTip>
+     </specialTipSize>
+
+
+
+  </observe>
+</creature>

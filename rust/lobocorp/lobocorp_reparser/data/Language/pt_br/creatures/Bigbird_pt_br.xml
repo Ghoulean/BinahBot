@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id="100008">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para começar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {As características mais notáveis do $0 são seus numerosos olhos que cobrem todo seu corpo e a lanterna brilhante que carrega.},
+      {Na verdade, não sabemos a razão por trás de tantas mortes causadas pelo $0.},
+      {O $0 não sendo capaz de voar como a maioria dos pássaros é muito benéfico para nós. Se ele conseguisse voar, metade de nossos funcionários já estariam sem cabeça.},
+      {Uma ideia atingiu a mente do $0: “Se eu matar as criaturas primeiro, então nenhuma será morta pela fera!”. E foi assim que a floresta encontrou paz.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {O som fantasmagórico dos olhos trêmulos e de uma lanterna piscante em chamas permeia a Unidade de Contenção.},
+      {Os olhos e a lanterna do $0 iluminam a escuridão como se fossem estrelas.},
+      {Alguns dos olhos do $0 de repente se direcionam até #0.},
+      {Encarando o $0, #0 encolhe e tem calafrios de nervosismo.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Atrás de #0, o som do estrondo de um pássaro preto peludo pode ser escutado.},
+      {Os grunhidos esporádicos de um pássaro podem ser escutados.},
+      {O $0 pia atrás de #0, agindo como se estivesse com ansiedade.},
+      {O $0 circula e perambula ao redor de #0, piando.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {#0 olha para longe para evitar contato visual, mas se encontra com uma lanterna acesa.},
+      {Uma lanterna deslumbrantemente clara é segurada na frente de #0, que se virou para evitar olhar o $0.},
+      {#0 vê o $0 segurando sua lanterna iluminada.},
+      {Foi uma ótima decisão para #0 olhar para longe do $0.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {Os olhos do $0 estão se tornando vermelhos.},
+      {O $0 se aproxima de #0 enquanto faz ruídos ameaçadores.},
+      {O $0 está audivelmente roendo os próprios dentes.},
+      {O $0 está andando até #0.}
+      ]
+    </narration>
+    <narration action="death">
+      [
+      {A cabeça de #0 rola pelo chão da Unidade de Contenção.},
+      {A cabeça de #0 foi facilmente removida.},
+      {O $0 usou o bico para remover a cabeça de #0 fora como se estivesse removendo ervas daninhas de um jardim.}
+      ]
+    </narration>
+  </info>
+  <observe level="3">
+    <collection>
+      <codeNo openLevel="0">O-02-40</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/BigBird</portrait>
+      <name openLevel="1">
+        Pássaro Grande
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>E um mês depois, chegamos a uma conclusão: Não há nada como uma “fera” na floresta.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Um pássaro largo com vários olhos que patrulha na floresta negra com uma lanterna que nunca apaga. Diferentemente dos pássaros normais, esse não possui asas e tem dois longos braços que podem pegar coisas.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {...(Omitido) ficaria encarando intensamente em qualquer um que encontrava, jovem ou velho, então mordia a cabeça fora.}
+      ]
+    </desc>
+    <desc id="3" openLevel="1">
+      [
+      {Há um conto sobre uma fera que jaz na parte mais profunda e mais escura da floresta, encantando as criaturas para que nunca mais sejam vistas.&#13;&#10;&#13;&#10;Para proteger todas as criaturas dessa fera, o grande pássaro queimou todas as próprias penas para fazer um pavio e então fez uma lanterna que ficaria acesa para sempre.&#13;&#10;&#13;&#10;Com essa lanterna eternamente acesa, o grande pássaro perambulou pela floresta, avisando as criaturas para não ir tão profundamente dentro dela.&#13;&#10;&#13;&#10;Graças ao pássaro largo, menos criaturas na floresta foram vítimas da fera. Porém, ele ainda ainda estava preocupado com as criaturas ainda sendo mortas por ela.&#13;&#10;&#13;&#10;Uma ideia atingiu a mente do grande pássaro: “Se eu matar as criaturas primeiro, então nenhuma será morta pela fera!”&#13;&#10;&#13;&#10;Desde então, somente os rumores de uma fera que arrancaria sua cabeça espalharam-se pela floresta negra.&#13;&#10;&#13;&#10;É dito que o pássaro cuidadosamente examina e encara suas vítimas para ver se elas são a fera que atrai criaturas indefesas.&#13;&#10;
+      Este é um conto de uma cidade na área da &lt;Localização Omitida&gt;. Ouvimos falar dele com o habitante mais velho da cidade, &lt;Omitido&gt;. Mas há uma suposição geral que o conto servia só para prevenir que crianças entrassem na floresta, a primeira pessoa que herdou a história ainda é incerta.}
+      ]
+    </desc>
+    <desc id="4" openLevel="1">
+      [
+      {“Não podemos fazer nada enquanto a Anormalidade está com os olhos abertos. Ela encara você intensamente, e enquanto ela continua encarando…(Omitido). É por isso que precisamos colocá-la para dormir primeiro. Nós só podemos começar a trabalhar nela quando todas as suas dezenas de olhos caírem no sono.”}
+      ]
+    </desc>
+    <desc id="5" openLevel="2">
+      [
+      {E parece que o conto não foi mera invenção.&#13;&#10;
+      “Conseguimos achar esse pássaro largo na floresta. Logo após isso, tentamos procurar pela ‘Fera que encanta as pessoas.’ Procuramos por cada canto e fenda da floresta. Investigamos cada criatura detalhadamente. E um mês depois, chegamos a uma conclusão: Não há nada como uma “fera” na floresta. Exceto aquele grande pássaro.”
+      ]
+    </desc>
+    <desc id="6" openLevel="3">
+      [
+      {“A Anormalidade é completamente ignorante ao conceito comum da morte. As Anormalidades que residem nessa corporação podem ser postas em duas categorias diferentes. A primeira categoria é para aquelas que entendem perfeitamente bem o conceito e o sentido da morte e atacam com intenção de matar. A segunda categoria é para aquelas que conhecem o conceito da morte, mas atacam sem más intenções. Essa Anormalidade aqui não se encaixa em nenhuma das duas categorias. Para esse pássaro, a morte é a salvação. Mesmo arrancando a cabeça de uma pobre garota que se perdeu na floresta, para ele, não houve erro, malícia, ou assassinato. Somente a sensação de que salvou a garota da fera.”}
+      ]
+    </desc>
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">Depois que 5 funcionários morreram na instalação, o Contador Qlifót reduziu. Porém, mortes causadas por Balas de Execução não foram reconhecidas.</specialTip>
+      <specialTip openLevel="2" key="2">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="2" key="3">Quando o resultado do trabalho era Bom, o Contador Qlifót aumentava.</specialTip>
+      <specialTip openLevel="2" key="4">O $0 escapou de sua Unidade de Contenção independentemente de seu Contador Qlifót quando a situação de emergência nas instalações chegou à Segunda Trombeta.</specialTip>
+      <specialTip openLevel="3" key="5">Houve uma queda de energia no Departamento no qual o $0 estava perambulando. Funcionários que estão no Departamento durante a queda de energia podem ser encantados pelo $0.</specialTip>
+      <specialTip openLevel="2" key="6">Parece que alvos encantados recebem menos dano. Entretanto, após um certo período de tempo, os alvos encantados foram até o $0 e morreram com o seu ataque.</specialTip>
+      <specialTip openLevel="2" key="7">Funcionários encantados foram libertos do transe assim que saíram do Departamento que sofreu a queda de energia.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

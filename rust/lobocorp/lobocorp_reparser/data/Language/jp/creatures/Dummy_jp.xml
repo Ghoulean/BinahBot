@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id="100000">
+
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+
+    <narration action="start">
+      [
+      {$0は 自分が ここの職員だと 思っている おもちゃです。}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0は 人間が 大好きです。}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {$0が #0の周りを 元気に走り回りますが、 #0は 自分の仕事に 集中しています。}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {$0は 世界の中心について 思いを馳せてます。}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {$0は #0が帰ってしまうのを とても寂しそうに見つてきます。 ずっと一緒にいたくて 付いて来そうです。}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">0-00-00</codeNo>
+      <name openLevel="1">教育用 ウサギロボ</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/DummyPortrait</portrait>
+      <riskLevel openLevel ="1">TETH</riskLevel>
+      <openText></openText>
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      新しい管理人たちの 教育用に作られた 疑似アブノーマリティです。
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      本当はアブノーマリティなのに、 あまりにも無害で、 なおかつ人懐こい性格のため、 教育用にされてるという 噂があります。 名前に「ウサギ」が 付いていますが、 ニンジンは嫌いです。 たまに脱走しますが、 それは大好きな人と 一緒いたいがためです。
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      <!--특수 상태-->
+    </desc>
+
+    <desc id="4" openLevel="3">
+      <!--특수 상태-->
+    </desc>
+
+    <record openLevel="1">
+      <!-- 관찰기록 -->
+    </record>
+
+    <record openLevel="2">
+      <!-- 관찰기록 -->
+    </record>
+
+    <record openLevel="3">
+      <!-- 관찰기록 -->
+    </record>
+
+    <specialTipSize size="1">
+      <specialTip openLevel="1" key="tutorial">$0に 抑圧作業をすると、 作業完了時に クリフォトカウンターが減少した</specialTip>
+    </specialTipSize>
+
+  </observe>
+</creature>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300103">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção da $0 para iniciar o processo de trabalho.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-90</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/ProphecyOfSkin</portrait>
+      <name openLevel="1">
+        Profecia da Pele
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>
+        Nos salve agora e para todo sempre. A verdade vos libertará.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Um livro religioso com aparência antiga e que está posto em um atril fino. Suas numerosas páginas estão escritas em velhos pergaminhos.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Os crentes rezavam que a santidade duraria para sempre ao ligar o tomo na pele humana.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Aqueles que abrirem o livro serão iluminados a verdades inimagináveis. Aqueles que dominarem todas as verdades serão chamados pelos profetas; esse chamado não pode ser negado.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Nos salve agora e para todo sempre. A verdade vos libertará.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">O funcionário que ler este livro terá um aumento na Prudência.</specialTip>
+      <specialTip openLevel="2" key="2">O livro pode ser lido até a Prudência chegar no limite máximo.</specialTip>
+      <specialTip openLevel="2" key="3">Quanto mais o funcionário ler, mais ficará vulnerável a dano BRANCO.</specialTip>
+      <specialTip openLevel="2" key="4">Qualquer funcionário que entrar em pânico após ler este livro perecerá imediatamente.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

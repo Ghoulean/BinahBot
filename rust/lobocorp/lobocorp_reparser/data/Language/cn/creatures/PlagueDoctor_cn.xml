@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<creature>
+  <info id ="100014">
+
+    <narration action="move">
+      #0 designated to $0's containment room.
+    </narration>
+
+    <narration action="start">
+      [
+      {“$0”声称它是自愿来到这所设施的。}
+      {“$0”将自由给予那些封闭自我的人们，它将治愈身体与心灵的创伤。}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {“$0”曾造访过一个饱受未知疾病侵害的村庄。}
+      {黎明时分，这位不知名的“医生”出现在了设施之中。}
+      {在每个人都放弃希望之际，这位自称“医生”的蒙面人出现了。}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {进入“$0”的收容单元时，#0感到异常地轻松自在。}
+      {在知道自己将要前往“$0”的收容单元时，#0宽慰地舒了一口气。}
+      {#0真希望每一个异想体都能像“$0”这般安静又驯良。}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {“$0”有着沉着而冷静的声音，它希望治愈那些受伤的人们。}
+      {“$0”更希望独自一人冥想，或是继续照料那些病人。}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {&lt;color=#FF00FF&gt;吾是来治病的。如果需要，就来找吾。吾很乐意帮助你们。&lt;/color&gt;}
+      {&lt;color=#FF00FF&gt;面具下空无一物。血肉终会随着时间而腐烂，可灵魂却不会。&lt;/color&gt;}
+      {&lt;color=#FF00FF&gt;吾会把你们从末日中拯救出来，相信吾。&lt;/color&gt;}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">O-01-45</codeNo>
+      <name openLevel="1">疫医</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/PlagueDoctor</portrait>
+      <riskLevel openLevel ="3">ZAYIN</riskLevel>
+      <openText>&lt;color=#FF00FF&gt;吾会治愈所有的疾病，你将重获新生。&lt;/color&gt;</openText>
+    
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {这个异想体戴着一顶黑色的软呢帽，一副黑色的鸟喙面具遮住了它的脸。它没有四肢，取而代之的是数对巨大的黑色翅膀。这个异想体听得懂我们的语言，也能够和我们交流，但它似乎不想多说。它自愿来到这所设施，声称世界已被一种可怕的疾病侵蚀。而它，是唯一能够治愈这种疾病的人。但经过数个月的排查，我们找不到半点有关“疾病”的线索。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {这个异想体喜欢照料生病和受伤的员工。它看起来很仁慈，且富有同情心，它在帮助他人的过程中表现得非常满足。经过整整一个星期的观察，我们发现它完全没有使用暴力，袭击员工或是逃离收容的企图。因此，我们假定这个异想体性情“温柔”，并且对员工有着很大的帮助。（据观察日志中的记录，已经有12名员工用“温柔”这个词形容这个异想体了）}
+      ]
+    </desc>
+
+    <desc id ="3" openLevel="2">
+      [
+      {员工亚历克斯曾在镇压“魔法少女”的行动中受到重伤。在进入这个异想体的收容单元时，他额头上的伤疤还没有完全愈合。“疫医”在看到这名员工的伤疤时，一反常态地同他发起了对话。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {观察日志_1&#13;&#10;&#13;&#10;“疫医”问到：&#13;&#10;&lt;color=#FF00FF&gt;“头上有伤，为何不去治好？”&lt;/color&gt;&#13;&#10;&#13;&#10;亚历克斯说：&#13;&#10;“我没有时间，只能草草处理一下...我能有什么办法...”&#13;&#10;&#13;&#10;“疫医”说：&#13;&#10;&lt;color=#FF00FF&gt;“吾会治愈所有的疾病，你将重获新生。”&lt;/color&gt;&#13;&#10;&#13;&#10;亚历克斯离开收容单元时，额头上的伤疤奇迹般地消失了。}
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">当工作结果为差时，“$0”的逆卡巴拉计数器将会减少。</specialTip>
+      <specialTip openLevel="3" key="2">当工作结果为优时，“$0”的逆卡巴拉计数器将会减少，且完成工作的员工会接受&lt;color=#FF00FF&gt;紫罗兰的洗礼&lt;/color&gt;。</specialTip>
+      <specialTip openLevel="3" key="3">发生二级警报时，“$0”的逆卡巴拉计数器将会减少。</specialTip>
+      <specialTip openLevel="3" key="4">当“$0”的逆卡巴拉计数器归零时，听闻“$0”召唤的员工将会进入它的收容单元，并在那里接受&lt;color=#FF00FF&gt;紫罗兰的洗礼&lt;/color&gt;。</specialTip>
+      <specialTip openLevel="3" key="5">被“$0”亲吻的员工将在温暖的祝福中重获新生。</specialTip>
+    </specialTipSize>
+   
+  </observe>
+
+  <etc>
+    <param key="first" index="1">
+      #1，吾选你作为第一位使徒。吾将在这磐石上筑造我的圣所。哪怕是死亡，也休想动它分毫。
+    </param>
+
+    <param key="second" index="2">
+      第二位使徒#2问到：“请您告诉我们，末日将在何时到来？”
+    </param>
+
+    <param key="third" index="3">
+      第三位使徒#3向他请示：“您要我们吩咐圣火从天堂降下，烧灭他们吗？”
+    </param>
+
+    <param key="fourth" index="4">
+      #3和#4，我授予你们「半尼其」这个名字，意为「雷霆之子」。
+    </param>
+    
+    <param key="fifth" index="5">
+      第五位使徒#5说道：“请恩许我们一睹天父的容颜，这就足够了。”
+    </param>
+    
+    <param key="sixth" index="6">
+      他遇见了第六位使徒#6。他对#6说：“你跟从我来。”&#13;&#10;于是#6立即站起来，撇下所有的东西跟从了他。
+    </param>
+    
+    <param key="seventh" index="7">
+      有那么一段时间，第七位使徒#7的骗术让全城的百姓为之震惊。
+    </param>
+    
+    <param key="eighth" index="8">
+      第八位使徒#8对其余门徒说到：“那就让我们同去，与他钉死在一起。”
+    </param>
+    
+    <param key="ninth" index="9">
+      第九位使徒#9高声宣讲：“您即是他的儿子，您生来为王！”
+    </param>
+    
+    <param key="tenth" index="10">
+      第十位使徒#10问到：“可您为何只向我们显灵，怎不向着世人？”
+    </param>
+    
+    <param key="eleventh" index="11">
+      第十一位使徒#11说：“我的额上已有他的印记。以后，再也没有人能够折磨我。”
+    </param>
+    
+    <param key="twelveth" index="12">
+      第十二个，吾为什么没有选你呢？因为你们之中，有一个卖主的魔鬼。
+    </param>
+  </etc>
+</creature>

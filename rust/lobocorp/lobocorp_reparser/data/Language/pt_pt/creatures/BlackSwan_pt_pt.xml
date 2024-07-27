@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100045" >
+
+
+    <narration action="move">
+      #0 recebeu a ordem para ir para a unidade de contenção de $0.
+    </narration>
+
+    <narration action="start">
+      [
+      {Os irmãos da $0 apenas pestanejam como se fosse a única coisa que eles podem fazer dentro da unidade de contenção.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Quando os irmãos dela demonstram algum sinal de dor, a $0 vai aproximar-se deles, arrastando o seu corpo cansado.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">F-02-70</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/BlackSwan</portrait>
+
+      <name openLevel ="1">
+        Sonho de um Cisne Negro
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <specialName openLevel ="2">
+   
+      </specialName>
+
+      <openText>O quê que acontece quando o cisne negro acorda do seu sonho de ser um cisne branco?</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Elijah tinha uma família grande para alimentar.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Os pais dela eram pobres e sempre diziam aos seus filhos: "Nós não temos nada para vós herdarem, mas vós tendes a dádiva da honestidade e da diligência. Estas dádivas não podem ser vistas nem vos irão ajudar por agora, mas algum dia elas vos farão felizes."}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Um dia, a cidade foi coberta por um nevoeiro denso.&#13;&#10;O fumo cinza, o qual se pensava ser normal, não se dissipou depois de vários dias.&#10;&#10;Alguns diziam que lhes davam náuseas ou fazia-lhes vomitar, mas a maioria das pessoas não se importava. Muitos ainda trabalhavam e passavam os seus dias no meio do nevoeiro.&#13;&#10;Elijah era uma dessas pessoas. Ela herdou muitas dividas e ela era única na família dela com um trabalho. Ela tinha muitos irmãos, mas a sua força de vontade tinha desaparecido após tantas tentativas falhas.&#13;&#10;Elijah estava cansada, mas ela pensava que se ela trabalhasse um pouco mais, as coisas começariam a funcionar como os pais dela diziam-lhe enquanto lhe contavam contos de fadas.&#13;&#10;Como quando aquele pássaro abriu as suas asas brancas e tornou se invejado por todos.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Alguns deixaram a cidade por causa do nevoeiro.&#13;&#10;Outros diziam que a cidade estava condenada, mas a Elijah não lhes deu ouvidos.&#13;&#10;Às vezes ela sentia náusea e o corpo dela estava a empolar.&#13;&#10;Ela estava quase lá. Só um pouco mais de esforço e as roupas feitas de urtiga estariam prontas. Se ela conseguir dá-las aos irmãos que ela tanto ama, aquele momento pode reviver as felizes memórias de quando toda a família conversava, mesmo que seja por uns poucos segundos.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Um dia depois do trabalho, Elijah bateu contra um estranho que passava por ela. Mesmo sendo ele quem foi contra ela enquanto corria, o mesmo não foi capaz de se levantar. Então Elijah quis ajudá-lo, entendendo a sua mão.&#13;&#10;Ele bateu na sua mão, levantou-se e andou um pouco até que caiu novamente. Elijah não se foi embora, o estranho parecia estar a fugir de algo e deve ter pensado que a Elijah ia magoá-lo.&#13;&#10;Ela tentou perguntar-lhe o que se estava a passar, mas o estranho apenas abriu a sua boca primeiro. Ela ficou à espera que ele falasse.&#13;&#10;No entanto, o estranho não tinha aberto a sua boca para falar. Ele começou a vomitar uma mistura de sangue e gosma verde.&#13;&#10;O liquido viscoso saiu-lhe primeiro pela boca e depois pelo nariz, orelhas e pelos olhos. Se a gosma não estivesse a sair por todos os seus orifícios a Elijah iria tentar ajudá-lo.&#13;&#10;Ela ouviu um rugido vindo de longe e começou a se afastar do homem.&#13;&#10;O quê que acontece quando o cisne negro acorda do seu sonho de ser um cisne branco?&#13;&#10;Muitas pessoas estavam deitadas debaixo do fumo. Algumas gritavam, outras riam e o resto aninhava-se desesperados. Aquele lugar estava cheio resíduos negros, húmidos que cheiravam mal e que estavam cobertos de pegadas.&#13;&#10;Ela foi procurar pelos seus irmãos. A familia dela tinha de vestir aquelas roupas de urtiga para se libertar da maldição. Aqueles que ela amava e com quem ela partilhava sonhos felizes.&#13;&#10;Ela os viu, mas eles estavam muito longe.&#13;&#10;Elijah caiu de joelhos e começou a vomitar como todos os outros.&#13;&#10;O lago ondulou gentilmente, como se vários cisnes tivessem acabado de descolar...}
+      ]
+    </desc>
+
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Quando o resultado do trabalho foi Mau, o Qliphoth Counter diminuiu e a aparência de F-02-70-4 mudou.</specialTip>
+      <specialTip openLevel="1" key="2">Quando o resultado do trabalho resgistado como Normal, o Qliphoth Counter diminuiu e a aparência de F-02-70-5 mudou.</specialTip>
+      <specialTip openLevel="1" key="3">Quando 5 ou mais empregados morreram dentro da instalação, o Qliphoth Counter diminuiu e a aparência de F-02-70-1 mudou. No entanto, a morte de empregados por balas de execução não foram detetadas pelo $0.</specialTip>
+      <specialTip openLevel="1" key="4">Quando 5 ou mais empregados entraram em pânico dentro da instalação, o Qliphoth Counter diminuiu e a aparência de F-02-70-2 mudou.</specialTip>
+      <specialTip openLevel="1" key="5">Quando houve 3 fugas de Anormalidades das suas unidades de contenção, o Qliphoth Counter diminuiu e a modificação da aparência de F-02-70-3 foi confirmada.</specialTip>
+      <specialTip openLevel="1" key="6">&lt;Aviso&gt; Redução do Qliphoth Counter forçada também muda a aparência de $0.</specialTip>
+    </specialTipSize>
+
+  </observe>
+
+  <child>
+    <name>Cisne Negro</name>
+    <codeId>F-02-70-7</codeId>
+  </child>
+
+
+</creature>

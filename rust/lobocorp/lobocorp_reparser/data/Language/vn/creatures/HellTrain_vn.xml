@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300102">
+
+    <narration action="move">
+      #0 is going into $0's containment unit to begin the task.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-86</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/HellTrian</portrait>
+
+      <name openLevel ="1">
+        Express Train to Hell
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>
+        When the time comes, the train chugs down the tracks and sounds its mighty horn.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {The station clerk excessively quiet and sells tickets for a train that has no final destination. There are no clocks that alerts the arrival times. Instead, there are some blinking lights.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {The first and second lights turn on. Your mind is cleared.&#13;&#10;The third light turns on. Your mind is cleared and wounds are healed.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {The fourth light turns on. The condition of every employee in all departments improves when you hear the train’s horn off in the distance.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {When the time comes, the train chugs down the tracks and sounds its mighty horn. It will no doubt plunge through the endless tunnel while picking up the employees who have not taken a step back as its passengers.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">Every 30 seconds, The light of the ticket office will light up. The station will light up to four times. when the employee receives a ticket, the lights will reset.</specialTip>
+      <specialTip openLevel="2" key="2">When a ticket is received when 1 light is lit, that employee will recover HP and SP..</specialTip>
+      <specialTip openLevel="2" key="3">When a ticket is received when 2 lights are lit, that employee will recover HP and SP.</specialTip>
+      <specialTip openLevel="2" key="4">When a ticket is received when 3 lights are lit, all employees within the employee’s department will recover HP and SP.</specialTip>
+      <specialTip openLevel="2" key="5">When a ticket is received when 4 lights are lit, all employees within the facility will recover HP and SP.</specialTip>
+      <specialTip openLevel="2" key="6">If 4 lights are lit and one more light is lit by working on Abnormalities, the train will pass through the facility and cause Black damage to all employees who cross its path. After passing, all lights will be reset.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

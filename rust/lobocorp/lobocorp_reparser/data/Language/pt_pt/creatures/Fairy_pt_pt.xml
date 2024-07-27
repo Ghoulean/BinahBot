@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100053">
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+
+    <narration action="start">
+      [
+      {Se #0 for competente, talvez consigará chamar a atenção das fadas.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {A maioria dos empregados não sabe o verdadeiro significado do "Cuidados das Fadas".},
+      ]
+    </narration>
+  </info>
+  
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">F-04-83</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Fairy</portrait>
+
+      <name openLevel ="1">
+        Festival Fada
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+
+      <openText>
+        Tudo será pacifico enquanto estás sobre os cuidados das fadas.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {A Anormalidade é semelhante a uma fada, duas assas e um corpo pequeno. Elas sempre agem como um grupo.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Para comunicarem entre si, elas utilizam uma linguagem que nós não somos capazes de compreender. Elas seguem alguns dos empregados que entraram na unidade de contenção delas e usam as suas habilidades especiais para os ajudar a se curarem. Os empregados chamam isso de "O Cuidado das Fadas".}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {As fadas protegem os nossos empregados. Isso é se tu tens verdadeiramente um bom coração, um amante da natureza e um ser competente, então ai as fadas irão cuidar de ti. Tudo será pacifico enquanto estás sobre os cuidados das fadas (e tu também podes saborear o recalque que os outros empregados vão sentir.). Mas e se as fadas não se aproximarem de ti? Nesse caso é melhor começares a refletir na tua vida. Quando eu e o Emil estivemos com turnos para entrar na unidade de contenção das fadas, elas não hesitaram em se aproximarem de mim. Isso sempre acontecia comigo, mas nunca com o Emil. (Todos sabem como o Emil é. Ontem ele recusou-se em partilhar o lanche dele comigo e agia todo importante de nariz empinado.)&#13;&#10;Em qualquer parte do mundo ser protegido por fadas é algo sagrado, mas não entres na unidade de contenção só por diversão. Se alguma vez leste alguns livros sobre elas, tu deves saber que nenhuma fada não gosta de pessoas que aproveitam-se da sua bondade.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {&lt;color=#FF9E72FF&gt;Este documento é apenas autorizado a empregados de nível 4 e superior.&lt;/color&gt; &#13;&#10;&#13;&#10;Quando Walter, que estava sobre 'O Cuidado das Fadas', morreu na unidade de contenção de uma outra Anormalidade, nós encontramos algumas anomalias. A barriga e a cara dele tinham sido arrancadas, os seus olhos e órgãos tinham sido comidos por algo. Não era possível que a Anormalidade com que Walter estava a trabalhar pudesse ter feito tal atrocidade, já que a mesma apenas causava danos mentais. Após o incidente, detetamos fadas por volta dessa região, elas tinham a carne e sangue de alguém espalhado pelos seus rostos e bocas, nós nem chegamos a fazer testes para saber de quem era aqueles restos.&#13;&#10;No nosso mundo, poucas coisas são feitas por pura bondade. Ter fadas que vivem na floresta vir-te visitar só porque gostam de ti ou porque fizeste boas ações é algo que só acontece nos contos de fada. Mesmo sabendo esta verdade, nós ainda nos iludimos pensando que recebemos 'O Cuidados das Fadas' por causa de todas as coisas boas que fizemos ou que o favoritismo que recebemos das fadas nos faz ser especiais em relação aos outros empregados.}
+      ]
+    </desc>
+
+
+    <desc id="5" openLevel="2">
+      [
+      {No entanto, fadas são apenas monstros que gostam de carne. Elas protegem-vos porque elas querem manter a sua refeição fresca e segura. Quando um empregado começar a trabalhar em uma unidade de contenção diferente, elas irão devora-lo porque temem que elas vão perder o seu alimento para outra Anormalidade.&#13;&#10;Mas a maioria dos empregados que receberam o cuidado das fadas ficaram satisfeitos e a taxa de acidentes foi altamente reduzida quando as fadas tomavam conta dos empregados, o que tem um efeito positivo na companhia; então por esses motivos foi decidido que os empregados não deverão ficar a saber toda a verdade.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Quando o resultado do trabalho é Normal or superior, pequenas fadas irão aparecer a volta do empregado.</specialTip>
+      <specialTip openLevel="2" key="2">O HP do empregado será regenerado à medida que o tempo passa por um determinado período de tempo.</specialTip>
+      <specialTip openLevel="2" key="3">Se algum empregado que se encontra sobre o cuidado das fadas tente realizar algum trabalho com outra Anormalidade, as fadas irão devorar o empregado e o mesmo morrerá.</specialTip>
+    </specialTipSize>
+
+  </observe>
+</creature>

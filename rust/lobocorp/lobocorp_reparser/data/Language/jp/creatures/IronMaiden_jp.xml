@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300101">
+
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-85</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/IronMaiden</portrait>
+
+      <name openLevel ="1">
+        何でも変えて差し上げます
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <openText>
+        今すぐ全てが良くなるでしょう。
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {"オールアラウンドヘルパー"が家庭で大きな人気を集め、 家庭用ロボットシリーズの第2段として発売されました。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {██コーポレーションの様々な機能が内蔵されています。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {子供が言うことを聞いてくれないって？ 変えて差し上げましょう！&#13;&#10;自分の体型が気に入らない？ 変えて差し上げましょう！&#13;&#10;貧乏で家もない、電気もないって？ 変えて差し上げましょう！}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {使い方はとても簡単！ 機械の中に入り、 閉めるボタンを押すだけ！ 今すぐ全てが良くなるでしょう！}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {職員が中に入るとエネルギーが生成された。 中の居心地がいいのか、 一度中に入った職員は二度と出ててこなかった。}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">対象の中に職員が入ると、継続的にエネルギーが生産されます。</specialTip>
+      <specialTip openLevel="2" key="2">一度職員が対象の中に入ると、Redダメージを受けます。 中の職員は出て行くことが出来ず、最終的に死に至ります。</specialTip>
+      <specialTip openLevel="2" key="3">エネルギーの量は時間が経つにつれて増えていきます。</specialTip>
+      <specialTip openLevel="2" key="4">このアブノーマリティはクリフォト暴走の影響を受けません。</specialTip>
+      </specialTipSize>
+
+
+
+  </observe>
+</creature>

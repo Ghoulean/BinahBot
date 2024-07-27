@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300006">
+
+    <narration action="move">
+     #0 recebeu a ordem para ir para a unidade de contenção de $0.
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-82</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Shelter</portrait>
+
+      <name openLevel ="1">
+        Abrigo de 27 de Março
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+      <openText>
+        Literalmente, se tornando no "Lugar mais seguro na Terra."
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Um abrigo que protege contra tudo que vem do exterior, incluindo a luz.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {O abrigo ainda se lembra daquele dia.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {A companhia P queria construir o lugar mais seguro na Terra. O seu interior está cheio de suprimentos, o que permite quem quer que esteja dentro dele sobreviver por um longo período de tempo.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Graças ao abrigo, refugiados, que foram selecionados, ficaram protegidos do oceano de gritos e de sangue.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Mas o abrigo, que é perfeitamente seguro no seu interior, altera a realidade no seu exterior tornando o ainda mais caótico. Literalmente, se tornando no "Lugar mais seguro na Terra."}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">O indivíduo que entra no $0 tornasse imune a todos os tipos de dano. (No entanto, o efeito não se aplica ao dano causado pelo O-09-91). HP e SP irão ser recuperados lentamente assim que o individuo entrar no $0.</specialTip>
+      <specialTip openLevel="2" key="2">Se o sujeito entrar no $0 enquanto está a ser perseguido, ele torna-se indetetável para o seu perseguidor.</specialTip>
+      <specialTip openLevel="3" key="3">Se o sujeito ficar dentro do $0 por 30 ou mais segundos, o Qliphoth Counter de todas Anormalidades da instalação vai começar a descer até todos chegarem a 0. Esse fenómeno irá a continuar até que o indivíduo saía do $0.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300102">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-86</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/HellTrian</portrait>
+      <name openLevel="1">
+        Express Train to Hell
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>
+        When the time comes, the train will chug down the tracks and sound its mighty horn.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {The booking clerk who remains dauntingly quiet sells tickets for a train with no final destination. There are no clocks to alert the arrival times, instead, there are some blinking lights.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {The first and second lights illuminate; your mind clears.&#13;&#10;The third light illuminates; your mind clears and your wounds close.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {The fourth light illuminates; the condition of every employee in every department improves when you hear the train’s horn off in the distance.}
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {When the time comes, the train will chug down the tracks and sound its mighty horn. There is no doubt that it will plunge through the endless tunnel while boarding the employees who have not taken a step back from the tracks.}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Every 30 seconds, the lights of the ticket booth will illuminate one by one. They will brighten up to four, and when an employee receives a ticket from the clerk, the lights will reset.</specialTip>
+      <specialTip openLevel="2" key="2">When a ticket is received with 1 illuminated light, the employee will slightly recover their HP and SP.</specialTip>
+      <specialTip openLevel="2" key="3">When a ticket is received with 2 illuminated lights, the employee will significantly recover HP and SP.</specialTip>
+      <specialTip openLevel="2" key="4">When a ticket is received with 3 illuminated lights, all employees within the department will recover HP and SP.</specialTip>
+      <specialTip openLevel="2" key="5">When a ticket is received with 4 illuminated lights, all employees within the facility will recover HP and SP.</specialTip>
+      <specialTip openLevel="2" key="6">If 4 lights have illuminated and another brightens to a glow, the train will cross through the facility and cause BLACK damage to all employees who are caught in its path. After it has crossed, the booth’s lights will reset.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

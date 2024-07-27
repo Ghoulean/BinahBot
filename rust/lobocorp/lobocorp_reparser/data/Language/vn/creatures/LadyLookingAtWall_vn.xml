@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<creature>
+  <info id="100022">
+
+
+    <narration action="move">
+      #0 is going into $0's containment unit to begin the task.
+    </narration>
+
+    <narration action="start">
+      [
+      {Nothing much is known about $0, except that it gazes at the wall. },
+      {No one has ever seen $0's face. This does not mean anyone even wishes to see her face.},
+      {After listening to $0's murmurs, one can assume that she is longing for someone.},
+      {It is best to leave her attached to the wall as it is. }
+      {I just hope that the employees have brought earplugs.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 always stands in the same pose. If it weren't for her babbling, one may well believe her to be a statue.},
+      { #0 doesn't seem to worry much about $0, because she just stands there, no matter who enters the containment unit.},
+      {#0 seems okay around $0.},
+      {The wall around $0 is moldy, but no one cares to do anything about it.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {While #0 is working, $0 lets out incomprehensible mumbles.},
+      {While #0 is working, the containment unit is silent. $0 breaks the silence by whispering frantically. },
+      {$0 doesn’t even twitch, but she seems to feel the presence of #0 in the containment unit. },
+      {Even though $0 has not moved, #0 finds her creepy.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {The words are faint and muffled.},
+      {The whispering seems to be getting louder.},
+      {It almost seems like one could understand what is being said if only they concentrate harder, but of course, no employee dares to do so.},
+      {As always, the muffled whispers are incomprehensible and ignored by everyone.}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {#0 tries to concentrate on the task at hand.},
+      {#0 knows that ignoring her is the best choice.},
+      {#0 does not response to whatever $0 says, and pretends to be deaf.},
+      {#0 hurries to get the job done and to leave the room as soon as possible. }
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">F-01-18</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/LadyLookingAtWall</portrait>
+
+      <name openLevel ="1">Wall Gazer</name>
+
+      <riskLevel openLevel ="2">
+        TETH
+      </riskLevel>
+
+      <openText>Her unbearable sorrow grew long, mournful hair over time.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {An Abnormality in the form of a woman facing a wall. Her unbearable sorrow grew long, mournful hair over time.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {As she always faces the wall, no one has seen her face. As she talks to herself and weeps, it is impossible to have a meaningful conversation with her. Despite her human appearance, it is impossible to discern her intentions.}
+      ]
+    </desc>
+
+
+    <desc id="3" openLevel="2">
+      [
+      {The Abnormality attempts to talk to or peak the interest of employees who are about to leave the Containment Facility. However, employees should never look back.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {&lt;Excerpt from Observation Log 1-304&gt;&#13;&#10;&#13;&#10;There is only one rule: Ignore her. She always wants to draw our attention. She mutters incoherently in an attempt to have those in the room pay closer attention to her. She even pleads or whispers maliciously when someone is about to leave in hopes that they would instinctively look back. Subconsciousness is a threat to your own health in her presence. It is important to always have your guard up and be aware of what is happening when you are in the room with her. If you forget even for just a second and let your guard down, you may find yourself looking back. Here is another warning I leave to all who reads this: Do not let this insidious Abnormality learn your name. If she learns of your name, she may use it to trick you into turning towards her. No matter what you hear or what she may tempt you with when you are in the room with her, DO NOT look at her.&lt;b&gt;Curiosity is a luxury you must NEVER indulge in when you are in the containment unit. &lt;/b&gt;}
+    ]
+  </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {&lt;Excerpt from Counseling Log #9-39&gt;&#13;&#10;&#13;&#10;Employee F5004: &lt;Redacted&gt; was a colleague for whom I cared deeply. Well, I cared for all my coworkers, but &lt;Redacted&gt; was different. The amount of passion &lt;Redacted&gt; poured into the work was something I have rarely witnessed. Anyways, I have no idea how she learned &lt;Redacted&gt;’s name. Maybe someone called out to &lt;Redacted&gt; while they were inside the containment unit and she heard it. We should have sent two in. It is procedure to have a team of two sent into the containment unit but as you know, we're always shorthanded. And this Abnormality was low on the threat scale. Even if we did follow procedure and sent two inside, the higher-ups would not have been happy about it. (Omitted)&#13;&#10;Well, you know the rest. The day the incident happened, &lt;Redacted&gt; was sent to the containment unit as usual, but didn’t come out for a long time. I knew &lt;Redacted&gt; was a prompt and diligent worker, so I went straight to the containment unit fearing the worst. Thankfully, I found &lt;Redacted&gt; without even a scratch, but the kid looked out of it. Like, way out if it. (Omitted)&#13;&#10;The next day, the kid was "let go." I heard they sent the kid to a mental asylum, but no one ever saw &lt;Redacted&gt; again. The kid kept staring at the wall, murmuring and not responding to anyone. That was the last time I saw &lt;Redacted&gt;. No one knows what happened inside the containment unit. You won’t hear it from the kid either.}
+    ]
+  </desc>
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="CCC">If an employee assigned to $0 has level 1 Temperance, there’s a risk of the employee turning around after listening to her. Turning around towards her will cause instant Panic.</specialTip>
+      <specialTip openLevel="3" key="possible">As soon as Attachment was performed on $0, the Qliphoth counter dropped.</specialTip>
+      <specialTip openLevel="3" key="possible2">When the work result was normal, $0's Qliphoth counter has decreased with a normal probability.</specialTip>
+      <specialTip openLevel="3" key="possible3">When the work result was bad, $0's Qliphoth counter has decreased with a high probability.</specialTip>
+      <specialTip openLevel="2" key="active">When $0's Qliphoth counter reaches zero, all employees in the department will suffer White damage.</specialTip>
+    </specialTipSize>
+
+  </observe>
+
+</creature>

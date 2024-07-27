@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 観測レベルとは関係のない情報 例)ダメージ、ID、画像ソースなど
+    
+    observe - 観測レベルごとに開示される情報
+              各情報には情報が開示されるレベルを表記
+              ex) <desc id="1" openLevel="1">"openLevelが1の時にこの情報が公開される"</desc>
+              
+              observe ノード内のlevelは観測レベルの段階を表す
+  -->
+  <info id ="100025">
+
+    <narration action="move">
+      #0 designated to $0 containment room.
+    </narration>
+
+    <narration action="start">
+      [
+      {There is a hammer, chained like a prisoner who haven’t seen sunlight for a long time.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {The hammer and the chains are not separated. They are one abnormality.}
+      {It gives a sense of extraordinariness as if it should be placed in fantastical dungeon.}
+      {It seems safe, for it is chained.}
+      {Chains are binding the hammer tightly to make sure no one can lift it.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Employee #0 feels shame for working for the company while managing $0.},
+      {#0 is curious about the chains binding $0.},
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 waits for the day to be free from these chains.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-05-48-Z </codeNo>
+      <portrait openLevel ="2">Sprites/Unit/creature/LightHammer</portrait>
+
+      <name openLevel ="1">
+        Hammer of light
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <specialName openLevel ="2">
+         Evening Twilight
+      </specialName>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Huge hammer coiled around with chain. Normally, it is impossible to lift the hammer because the chains are binding it tightly. These chains are likely to be part of the abnormality. When the proper situation comes, the chains are loosened. Thus, it is confirmed that the purpose of these chains is to tell the right time to use the hammer, not to lock it.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {“Poor employee Eric. He was clumsy but diligent. He always worked hard to contribute to the company. One day, when massive breakout happened, he found that Hammer of light’s chains were loose than usual. Eric lifted the hammer. Nothing could stop him. His eyes were looking at nowhere. White flames blazed from his body. He didn’t seem painful even though the flame almost consumed him. He finally ended the situation. When I touched his shoulder to hug him, he crushed like a white sand on a beach..}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Everybody called him hero, never stopped praising him. But I know Eric. It was not his will. The moment he touched the hammer, his soul was eaten by it. I tried to explain how that abnormality sacrificed Eric but nobody listens to me. Since that day, no one has been able to lift that hammer. Maybe it’s waiting for another “chaos” and “hero” to appear.}
+      ]
+    </desc>
+
+   
+
+     <specialTipSize size="6">
+      <specialTip openLevel="0" key="peace">$0's chamber is inaccessible when the facility is in peace</specialTip>
+      <specialTip openLevel="1" key="usable">$0's seal is broken only in emergency. </specialTip>
+      <specialTip openLevel="2" key="grab">Employee #0 picked up the hammer when he/she was sent to room of $0, which was shining.</specialTip>
+      <specialTip openLevel="2" key="manypeople">When employee #0 picked up the hammer, other beings with hammers appeared out of nowhere.</specialTip>
+      <specialTip openLevel="3" key="uncontrol">An employee merged with the hammer couldn’t be ordered or harmed.</specialTip>
+      <specialTip openLevel="3" key="alldead">When the situation settled down, these beings with hammers, including employee #0, disappeared.</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {I was the unluckiest man in the world.}
+        {Everything around me did nothing but ruining my life.}
+        {But I had no power to change this fate.}
+        {Someday, someone made an offer to me.}
+        {‘If you accept it, your whole world will change.’}
+        {Such a tempting offer. I could become something that I could only wish to be.}
+        ]
+      </desc>
+      
+      <!--선택지-->
+      <select id="1">
+        <node desc="Accept the offer"  target="1" isAnswer="true" message="You have succeeded to obtain final observation report on Hammer of light."/>
+      </select>
+      
+      <desc id="1" select="0">
+        [
+        {I accepted the offer and paid the price. }
+        {$0 shined.}
+        ]
+
+      </desc>
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {$0 is such a simple abnormality.}
+        {It takes as much as it gave to you.}
+        {What price did you pay to it?}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+</creature>

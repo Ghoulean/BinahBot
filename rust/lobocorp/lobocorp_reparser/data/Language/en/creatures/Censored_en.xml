@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100056">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {#0 is (CENSORED) to (CENSORED).}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {#0 is feeling (CENSORED) from (CENSORED).}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {(CENSORED) is doing (CENSORED) and… Goodness, that’s disgusting.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">O-03-89</codeNo>
+      <name openLevel="1">CENSORED</name>
+      <portrait openLevel="1">Sprites/Unit/creature/Censored</portrait>
+      <riskLevel openLevel="1">ALEPH</riskLevel>
+      <openText>If a flaw in the system disables the censors covering the Abnormality, we will once again have to sincerely consider how to dispose of the manager.</openText>
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {Any attempts to describe (CENSORED) will cause severe mental corruption to both the speaker and the listener. Therefore, it is forbidden to record any depictions of the appearance of this (CENSORED). All audio and written records should be inspected to ensure that such depictions are deleted from them. All work pertaining to this deletion must be designated to Level 5 or higher employees. }
+      ]
+    </desc>
+    <desc id="2" openLevel="2">
+      [
+      {&lt;Excerpt from Audio Record&gt;&#13;&#10;
+      Randy: It's a shame that we have to send such a capable employee like you to its Containment Unit. Do you have any last words before proceeding? Of course, when I say last words, it’s just a precautionary thing.&#13;&#10;
+      (CENSORED): It can't be helped. I'm the employee with the highest resistance against cognitive breakdown. I’ve been apathetic towards everything since I was a kid. People often said I lacked empathy and wasn’t normal. However, when I got to work here, my abnormal ability became the key to save everyone. This is something that can never be experienced anywhere else. &#13;&#10;
+      Randy: Let me say this again. While it is true that you have the highest resistance among employees, that's only based on human standards. If you begin to suffer from a surge of intrusive thoughts, or you decide to count down from ten but fail to remember what ten even is, or feel an uncontrollable regurgitation of vomit or saliva, or if this place starts to feel like somewhere else other than the company, or you suddenly feel insignificant and think that suffocating is your only hope… you need to leave the Containment Unit immediately.&#13;&#10;
+      (CENSORED): If you tell me that one more time, that'll make it thirteen times you've said that now. &#13;&#10;
+      Randy: We cannot monitor you in real time. All cameras are off, and your audio record will only be updated after the work is finished. Needless to say, I'm worried about you. Why don't you repeat the instructions I gave you a bit ago?&#13;&#10;
+      (CENSORED): Go in, don't do the work myself, accompany employee (CENSORED) and observe the work progress. And record everything that happens; even if (CENSORED) is in danger, do not attempt to rescue unless ordered otherwise. Right?&#13;&#10;
+      Randy: Exactly. Now, our contact will be cut off in ten seconds. Good luck and godspeed to your record.&#13;&#10;
+      (CENSORED): I have no regrets. I’d say I’m pretty lucky compared to the others; at the very least I get to leave my last voice record. Well, I say “last” only as a precaution but…&#13;&#10;
+      Randy: All right, your record will be eternally archived and all our fellow employees will remember you. 3... 2... 1... End audio receiving.&#13;&#10;
+      (CENSORED): Randy... That looks, just like our (CENSORED) from long ago, doesn't it? ...Oh, I forgot for a moment that only I can see this. Employee (CENSORED) who was with me became (CENSORED)... It... looks like it can even breed... Employee (CENSORED) who was with me became (CENSORED)... This is just like the process of (CENSORED)... I feel a little sick, but I’m good… A small (CENSORED) came out of employee (CENSORED)'s (CENSORED)... I can't believe this... Now it's starting to (CENSORED) employee (CENSORED)... Employee (CENSORED) is screaming like (CENSORED)... The cries... Can you hear them? It reminds me of (CENSORED)... &#13;&#10;
+      Sound: (CENSORED)——————————————————&#13;&#10;
+      Now I see... This is our (CENSORED)... This is the reason (CENSORED) exists... &#13;&#10;
+      This is the worst thing I’ve seen in my life. I can’t even move. Looks like (CENSORED) has made me its next target. Soon... I will (CENSORED) too… It’s getting closer. I’ll put the recorder in my (CENSORED)... I hope this record will help everyone…&#13;&#10;&#13;&#10;&lt;Audio cuts off&gt;}
+      ]
+    </desc>
+    <desc id="3" openLevel="3">
+      [
+      {Even after we adopted the cognition filter, many of our managers have lost their minds. Half of them gone because of (CENSORED). Even if we raise the cognition filter to its maximum setting at the risk of having our employees and other Abnormalities being perceived as extremely simple objects, the managers will still be driven insane as soon as this Abnormality comes into sight. We can’t make our manager blind just because of one Abnormality. We’re stuck in a dilemma. The only solution we could come up with was at the suggestion of one of our employees. It was to cover the Abnormality with a giant set of censors and blurring. If a flaw in the system disables the censors covering the Abnormality, we will once again have to sincerely consider how to dispose of the manager.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">The Abnormality’s Qliphoth Counter can be raised by 1 via a special work type. To satisfy the Abnormality, an employee must be selected from a random drawing.</specialTip>
+      <specialTip openLevel="1" key="2">Employees of Level 4 and lower immediately panicked when they encountered the Abnormality. When $0 escaped, employees of that level showed the same response.</specialTip>
+      <specialTip openLevel="3" key="3">When an employee panicked in the Containment Unit, the Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="2" key="4">When the work result was Bad, the Qliphoth Counter decreased.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <name>CENSORED</name>
+    <codeId>O-03-89-1</codeId>
+  </child>
+</creature>

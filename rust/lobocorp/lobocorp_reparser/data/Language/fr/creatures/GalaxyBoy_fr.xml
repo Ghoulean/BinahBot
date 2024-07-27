@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100031">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {Cette nuit-là, lorsque des étoiles filèrent du ciel, un enfant s’avança.},
+      {$0 sait tout ce qu’il y a à savoir sur #0.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {L’attente devient une larme cascadant telle une étoile filante.},
+      {Les vestiges du besoin fleurissent sur le cœur chagriné.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 fait promettre à #0 de revenir demain.},
+      {$0 commence à pleurer, ne supportant pas l’idée que #0 doive maintenant partir.},
+      {#0 ne peut faire un pas de plus en voyant comme $0 pleure.}
+      ]
+    </narration>
+  </info>
+  <observe level="3">
+    <collection>
+      <codeNo openLevel="0">O-01-55</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/GalaxyBoy</portrait>
+      <name openLevel="1">
+        L’Enfant de la Galaxie
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <specialName openLevel="2">
+        Ton Univers
+      </specialName>
+      <openText>
+        Une larme fila des yeux brillants de l’enfant, les étoiles cascadaient du ciel. Le monde s’assoupit, noyé d’une berceuse euphorique.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {C’était une nuit voilée d’un doux brouillard.&#13;&#10;Un enfant pieds nus me regardait.&#13;&#10;Il pleurait, ses yeux rêveurs emplis de chagrin.&#13;&#10;La tristesse accrochée à son visage arrêta mes pas.&#13;&#10;Il m’a dit qu’il avait perdu quelque chose de précieux, et quand je lui ai proposé de l’aide,&#13;&#10;Il m’adressa un grand sourire.&#13;&#10;Une larme fila des yeux brillants de l’enfant, les étoiles cascadaient du ciel.&#13;&#10;Le monde s’assoupit, noyé d’une berceuse euphorique.&#13;&#10;Cette nuit-là, la galaxie descendit pieds nus.&#13;&#10;
+      -	Extrait du journal de l’Employé (Expurgé), qui s’est suicidé.}
+      ]
+    </desc>
+    <desc id="2" openLevel="2">
+      [
+      {Cette Anomalie prend l’apparence d’un jeune garçon avec de grands yeux et une peau rappelant une nuit étoilée.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {L’enfant montre une grande satisfaction à parler et jouer avec les autres. Il montre un grand attachement à l’idée d’établir le contact avec d’autres.}
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {Si l’enfant devient suffisamment proche d’un employé, il lui donnera alors un galet, le considérant désormais comme un ami. L’employé se sentira plus heureux et vigoureux tant qu’il le porte ; mais entrer dans une Unité de Confinement autre que celle de l’enfant avec ce galet entraînera bien plus que des effets positifs.}
+      ]
+    </desc>
+    <desc id="5" openLevel="2">
+      [
+      {Si un employé en possession de l’un des galets de l’enfant (signe de leur grande amitié) meurt, il montrera un profond chagrin et regret de sa perte.}
+      ]
+    </desc>
+    <desc id="6" openLevel="3">
+      [
+      {&lt;Extrait du Journal de l’Employé (Expurgé)&gt;&#13;&#10;
+      X/X/XX
+      J’ai fixé les yeux de l’enfant un moment. J’ai dû me déconcentrer quelque peu à cause de ses yeux si rêveurs. J’ai voulu lui ébouriffer les cheveux, mais je me suis souvenu de mes collègues me répétant de ne pas m’attacher personnellement aux Anomalies.
+      
+      X/X/XX
+      Je lui ai dit mon nom. Il l’a répété avec des yeux écarquillés comme s’il avait découvert un grand secret. Chaque fois qu’il m’appelait, j’avais l’impression qu’il était devenu plus spécial qu’un simple élément familier avec lequel je vivais.
+      
+      X/X/XX
+      Lorsqu’un autre employé est entré dans l’Unité de Confinement de l’enfant, il ne s’y est pas intéressé et a cherché à me retrouver. Je me suis senti très fier en entendant parler de ça. L’enfant &lt;i&gt;me&lt;/i&gt; suit, pas &lt;i&gt;lui&lt;/i&gt;.
+      
+      X/X/XX
+      Lorsque je suis entré dans la chambre de l’enfant, il a sauté dans mes bras en pleurant. Lorsque je l’ai enfin posé au sol, il a pleuré une larme qui s’est transformée en un petit galet blanc en tombant dans ma main. “S’il te plaît, ne le perds pas et ne le donne à personne d’autre”, a-t-il alors murmuré.
+      
+      X/X/XX
+      "Est-ce que tu l’aimes ? Plus que tu ne m’aimes moi ?” M’a doucement demandé l’enfant quand je suis arrivé après avoir fini de travailler avec une autre Anomalie. Je lui ai demandé comment il a su ce que je faisais et il m’a répondu calmement : “N’est-ce pas évident ? Je sais tout. Quoi que tu fasses, où que tu ailles.” Son regard s’est posé sur le galet, puis il a souri. Ses yeux m’ont donné des frissons.
+      
+      X/X/XX
+      J’ai essayé de me débarrasser du galet, mais j’ai réalisé que c’était au-delà de mes capacités. Je ne sais pas de quoi je parle là tout de suite mais… “Tu en prends toujours soin, pas vrai ?” L’enfant me sourit. Sourit. Sourit. Sourit. Sourit…
+      
+      X/X/XX
+      Je n’arrive pas à m’enlever ce galet. Ma seule chance est d’attendre que l’enfant se lasse de moi. J’attends ce jour… mais viendra-t-il un jour ? (Les gens me disent que je suis un excellent employé. Idiots, ils ne savent rien du tout. La ferme.)
+      
+      X/X/XX
+      Je ne peux plus le supporter. Je ne peux pas lui échapper. Je pensais être en contrôle, mais la vérité c’est que j’étais juste un galet dans ses mains tout ce temps. Quoi que je fasse, où que j’aille, j’entends ses murmures. (Je dois y mettre fin, mais je ne sais même pas si je peux.)
+     “Je suis venu de loin. Je suis si heureux de t’avoir rencontré. Deviens un galet, et marchons à travers la galaxie ensemble…” J’entends ses murmures et sa respiration. Les ténèbres profondes ensuivent… comme la nuit où je l’ai rencontré.}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Terminer un travail offrira une Preuve d’Amitié à l’employé ; celle-ci restaure des PV/PSM. La qualité des soins dépend du Compteur Qliphoth de $0.</specialTip>
+      <specialTip openLevel="2" key="2">Le Compteur Qliphoth augmente quand #0 complète son travail avec une Preuve.</specialTip>
+      <specialTip openLevel="2" key="3">Lorsqu’un employé avec une Preuve a travaillé avec une autre Anomalie, il a subi des dommages proportionnels au Compteur Qliphoth de $0, qui a ensuite diminué.</specialTip>
+      <specialTip openLevel="2" key="4">Lorsqu’un employé avec une Preuve d’Amitié de $0 est mort, le Compteur Qliphoth a diminué de 4.</specialTip>
+      <specialTip openLevel="2" key="5">Lorsque le Compteur Qliphoth est tombé à 0, tous les employés possédant une Preuve sont morts.</specialTip>
+      <!--<specialTip openLevel="2" key="6">클리포트 카운터가 0이 된 상태에서는 모든 작업에서 완전히 PE-Box를 모을 수 없다.</specialTip>-->
+    </specialTipSize>
+  </observe>
+  <!-- 대사는 AgentLyrics_kr.xml 에 있음 -->
+</creature>

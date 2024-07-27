@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="300109">
+
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다.
+    </narration>
+ 
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-07-103</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Yang</portrait>
+
+      <name openLevel ="1">
+        양
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>하지만 어찌 세상이 밝음과 따뜻함으로만 이뤄질 수 있겠는가.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {한 짝을 이루는 조각은 사라진 채 놓여있다.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {착용할 경우 정신 오염을 감소시켜주는 효과로 인해 직원들로부터는 선의 펜던트 라고 불린다. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {이 곳을 찾아오는 이들은 자신이 지니는 기운을 원했다. 그들에 말에 의하면 정신이 맑아지고 따뜻함을 느낀다 했다. 그리고 더불어 검은 조각의 팬던트에 대해서는 두려워했다. ‘이렇게 도움이 되는 환상체만 존재한다면 얼마나 좋아.’라고 말하며 한숨을 쉬었다. 이해가 되지 않았다. 도움을 주려는 의도 따위는 처음부터 없었다. 그저 이것은 자신이 존재하는 방식이었다.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {하지만 어찌 세상이 밝음과 따뜻함으로만 이뤄질 수 있겠는가.&#13;&#10;땅이 있기에 하늘이 존재하며 어둠이 있기에 밝음이 있다. 죽음이 있기에 삶이, 절망이 있기에 희망이 있는 것이다.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {검은 잉어는 조화를 향해 헤엄치며 하얀 잉어는 혼돈을 향해 헤엄친다.&#13;&#10;그러니 두 잉어가 만나면 세상에는 무슨 일이 일어나겠는가.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">$0을 장착한 대상은 White 속성의 피해에 대한 저항을 가지게 된다. 단, O-05-102가 시설 내에 없을 경우에는 어떠한 일도 발생하지 않았다.</specialTip>
+      <specialTip openLevel="2" key="2">$0은 장착 대상의 정신력을 일정 주기마다 회복시켜주었다.</specialTip>
+      <specialTip openLevel="2" key="3">&lt;주의&gt; 해당 환상체를 장착한 직원은 O-05-102의 작업에 투입하지 말 것.</specialTip>
+      <specialTip openLevel="2" key="4">&lt;주의&gt; O-05-102가 탈출할 경우 $0 또한 탈출 개체가 되므로 유의할 것. (직원이 해당 환상체를 장착하고 있을 경우에도 동일한 문제가 발생하는 것을 확인함.)</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

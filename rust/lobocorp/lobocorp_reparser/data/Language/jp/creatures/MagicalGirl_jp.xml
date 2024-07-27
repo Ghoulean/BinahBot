@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    5.28
+  -->
+  <info id="100004">
+
+   
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+
+    <narration action="start">
+      [
+      {$0は、すべてのアブノーマリティの中で 最も活発で陽気な少女です。 しかし、それだけではないかもしれません。},
+      {これまで$0は大丈夫だと思われますが、 まだ注意が必要です。},
+      {$0の潜在的な危険性は、 ほとんどの職員の周知である。 警戒を怠らないでください。},
+      {実際$0が望むものは 「平和」ではありません。}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0は気持ちよさそうに 窓の外を眺めながらハミングしています。},
+      {$0はちょうど部屋に入ってきた #0を輝く笑顔で歓迎しています。},
+      {$0は#0へ挨拶します。 「今日は素敵な一日ね！」},
+      {$0は#0を見て 非常に嬉そうです。}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {$0は#0に 3人の悪党を倒した話を 誇らしげに伝えています。},
+      {#0は$0の話を聞いています。 彼女はすでに何度か言及しましたが、 もっと話したがっています。},
+      {$0は自分が巧みに更生した 悪人について話をしています。 #0のお世辞で、彼女は喜んで笑う。}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {彼女の「魔法の靴」は、 時折タップして陽気な音を立てます。},
+      {彼女の首のまわりの「魔法の宝石」は 太陽の光の中で輝いています。},
+      {彼女の贅沢な魔法の衣装のレースは 豊かに振り回されています。}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {彼女は#0に「義務」について話します。 彼女は自分の義務が非常に重要であり、 秘密のものであるとささやいています。},
+      {彼女は#0に「正義」について話します。 彼女は自分の仕事自体が 正義であるとささやいています。}
+      ]
+    </narration>
+
+    <narration action="reverse1">
+      [
+      {$0は、部屋に入ったばかりの#0に 憂鬱な声で何か聞こえないものをささやきます。},
+      {前とは異なり$0は 部屋に入ったばかりの#0を見ていません。}
+      ]
+    </narration>
+
+    <narration action="reverse2">
+      [
+      {#0は彼女の状態を確認するために$0に近づいています。「平和は疲れてる」},
+      {彼女は聞こえるようにささやきます。「今日は良い天気ね。私は不幸だわ。」}
+      ]
+    </narration>
+
+    <narration action="reverse3">
+      [
+      {彼女の「魔法の靴」は 静かに音を立て、沈黙を破る。},
+      {彼女の目は焦点が合ってない、 アブノーマリティに陰惨な微笑が見えます。}
+      ]
+    </narration>
+
+    <narration action="special_ability1">
+      [
+      {$0はもはや魔法少女ではありません、 殺意を持って#0を見つめています。}
+      ]
+    </narration>
+
+    <narration action="special_ability2">
+      [
+      {$0は、#0が麻酔薬を与えているとわかって、 先制攻撃をしました。}
+      ]
+    </narration>
+
+    <narration action="special_ability3">
+      [
+      {$0の鋭い牙が #0の肩に突き刺さる。}
+      ]
+    </narration>
+    
+    <narration action="dead">
+      [
+      {$0は倒れた#0の上を歩き、部屋から出ます。 彼女は現在、収容室周辺の 他の犠牲者を探しています。},
+      {息が切れる直前に、力を絞り出して $0に声をかけますが、 彼女は何も聞こえないかのように部屋のドアを閉じます。}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-01-04</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/MagicalGirl</portrait>
+
+      <name openLevel ="1">
+        魔法少女
+      </name>
+
+      <name openLevel="3">
+        憎しみの女王
+      </name>
+      
+      <riskLevel openLevel ="2">
+        WAW
+      </riskLevel>
+
+      <openText>愛と正義の名のもとに、 魔法少女がやってくる！</openText>
+
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {アブノーマリティは平和と正義のためにどんな悪役とでも戦うような少女の姿をしている。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {通常このアブノーマリティは、親切で職員に対して礼儀正しく、気軽に会話することができる。アブノーマリティは世界を救うために送られた主人公であり、その事をとても誇りに思っている。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {アブノーマリティが「不安」または「懐疑」に直面すると、2～4日以内にその外見が変化し、解離性障害の症状を示す。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {心には善と悪の確固たる定義がある。一部の人は、アブノーマリティの信念が悪の存在について恐ろしい疑いを持ったとき、その疑いを否定するために自ら「悪」になることを選択したと仮定する人もいます。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {「怒り」が終わった後、本人は自身の行動を全く覚えていない。あえてアブノーマリティに過去の出来事を思い出させる必要はない。}
+      ]
+    </desc>
+
+
+    <desc id="6" openLevel="1">
+      [
+      {職員M4032：今日はどうしていますか？&#13;&#10;魔法少女：素晴らしいわ。世界は平和でここも静かだわ。平和はとっても素敵、悪人がいないってことだもんね？}
+      ]
+    </desc>
+
+    <desc id="7" openLevel="2">
+      [
+      {職員M4032：今日は少し落ち込んで見えます。&#13;&#10;魔法の女の子：まだ素晴らしいわ。世界は平和で、ここは…（沈黙）&#13;&#10;（中略）&#13;&#10;職員M4032：大丈夫ですか？&#13;&#10;魔法少女：どうしてまだ平和なの？わたしは邪悪な悪役を倒すために生きてるの。これじゃ、世界がわたしを全く必要としてないみたいじゃない？。ああ、あなたはわたしを魔女だと言ったの？わたしは世界に平和をもたらすために選ばれたのよ。でも世界はすでに静かで（アブノーマリティは自分自身で理解できない言葉をつぶやき続けた）}
+      ]
+    </desc>
+
+    <desc id="8" openLevel="3">
+      [
+      {（アブノーマリティは不安と強迫的な症状を示した、職員が部屋に入ったことすら気が付かなかった）&#13;&#10;魔法少女：世界は善と悪に分かれている。わたしは正義に立つ。わたしが善なら悪もいないと。悪なしでわたしは存在できない。そのとき、だれが世界を救うの？&#13;&#10;これらの症状が現れた後、彼女は3日間持続する強力な麻酔薬で鎮静された。}
+      ]
+    </desc>
+
+    <desc id="9" openLevel="4">
+      [
+      {インタビューログS3_4921&#13;&#10;&lt;警告&gt;&#13;&#10;この文書を読むには、職員レベル​​3以上でなければなりません&#13;&#10;この記録は、██日、事件番号███-█████。アブノーマリティは、緊急対応部の職員を呼び出すために、収容施設の緊急電話を使用しました。&#13;&#10;魔法少女：（すすり泣く音）&#13;&#10;職員：こちら緊急時対応部。身分証明書をください。&#13;&#10;魔法少女：わたしがやったの。ああ、わたしは…わたしは自分を止めることができなかった。もし死んでいたら、わたしのせいです。わたしがすべてやりました。とても親切な人たちを裏切ってしまいました。なにも覚えていない…&#13;&#10;職員：何が起こったのですか？&#13;&#10;魔法少女：わからない。みんな動いてない。こんなにたくさんの血がある。ごめんなさい。わたしは、ただ…。ごめんなさい。&#13;&#10;（中略）&#13;&#10;アブノーマリティの収容室には3つの死体が見つかった。発見された死体は、事件を防ぐために割り当てられた職員のものだった。その後、小さな魔女は事件全体の記憶を失った。}
+      ]
+    </desc>
+
+     <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">作業結果が悪い場合、 クリフォトカウンターが減少した。</specialTip>
+      <specialTip openLevel="2" key="2">クリフォト暴走の警報が発生するまでに、 職員が3名以上死亡しない場合、 クリフォトカウンターが減少した。</specialTip>
+      <specialTip openLevel="1" key="3">クリフォトカウンターが最大時に、 作業を完了した職員の体力と精神力が回復した。</specialTip>
+      <specialTip openLevel="2" key="4">施設が非常事態レベルIIに達すると、$0は自発的に鎮圧を手伝う。ただし、その最中に全職員の20%が死亡すると、$0の状態は変化し、彼女をすぐに鎮圧しなければならない。</specialTip>
+      <specialTip openLevel="3" key="5">クリフォトカウンターが1になると、 $0の状態が変化した。 その状態では$0の作業成功率は減少した。 我々は彼女の情緒不安で強迫的な症状から、この状態を「ヒステリック状態」と命名した。 </specialTip>
+      <specialTip openLevel="4" key="6">ヒステリック状態では、 PE-BOXを16個以上生産するとクリフォトカウンターが増加した。</specialTip>
+      <specialTip openLevel="4" key="7">ヒステリック状態では、 生産したPE-BOXが16個未満なら、クリフォトカウンターが減少した。</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+
+  <etc>
+
+    <!-- 격리실 내 보통 -->
+    <param key="Default_Hero_0" index="0">ここってどういう施設なの？</param>
+    <param key="Default_Hero_1" index="1">ピンチの時はいつでも呼んでね！</param>
+    <param key="Default_Hero_2" index="2">あたし、なんでここにいるんだろう？</param>
+    <param key="Default_Hero_3" index="3">昨日はなにかあったのかなぁ…</param>
+    <param key="Default_Hero_4" index="4">あなたは世界の美しさと 
+    勝利の気持ちよさが 分かる？</param>
+    <param key="Default_Hero_5" index="5">何か起きたら 必ずあたしに教えてね！
+    絶対助けてあげるね！</param>
+
+    <!-- 격리실 내 히스테리 -->
+    <param key="Default_Hysteric_0" index="6">もう私はいらないの…？</param>
+    <param key="Default_Hysteric_1" index="7">あたしが 存在する理由って 何なの…？</param>
+    <param key="Default_Hysteric_2" index="8">お願い… この声を止めて…</param>
+    <param key="Default_Hysteric_3" index="9">もうあたしの番なの？</param>
+    <param key="Default_Hysteric_4" index="10">こんな静かな場所はイヤよ… 
+    あたしの知ってる世界は こんな平和じゃない！</param>
+    <param key="Default_Hysteric_5" index="11">あたしは選ばれたの！ 
+    あたし以外、誰がこの世界を守れるの？！</param>
+    <param key="Default_Hysteric_6" index="12">闇がないと光もないの… 
+    今のあたしとこの場所みたいに…</param>
+    <param key="Default_Hysteric_7" index="13">誰かが言ってたわ。 
+    ここには「悪い奴ら」はもういないって… う、ウソよね？</param>
+
+    <!-- 출동 -->
+    <param key="Hero_Appear_0" index="14">まかせて！</param>
+    <param key="Hero_Appear_1" index="15">愛と正義の名のもとに！ 
+    おしおきよ！</param>
+
+    <!-- teth 조우 -->
+    <param key="Meeting_Teth_0" index="16">このくらい問題ないわ！</param>
+    <param key="Meeting_Teth_1" index="17">大丈夫？あたしが助けてあげるね！</param>
+    <param key="Meeting_Teth_2" index="18">悪い子たちは、おしおきだよ！</param>
+
+    <!-- he 조우 -->
+    <param key="Meeting_He_0" index="19">うぅ…結構やるわね。</param>
+    <param key="Meeting_He_1" index="20">あたしがなんとかしてみる！</param>
+
+    <!-- waw 조우 -->
+    <param key="Meeting_Waw_0" index="21">マイナーアルカナと同じくらい強い… 
+    もしかして、ここって 悪党のアジトじゃないでしょうね？</param>
+    <param key="Meeting_Waw_1" index="22">先輩たちも勝てなかったけど、 
+    あたしは負けない！</param>
+
+    <!-- aleph 조우 -->
+    <param key="Meeting_Aleph_0" index="23">みんな！ 
+    はやくここから逃げて！！</param>
+    <param key="Meeting_Aleph_1" index="24">あたしの命を賭けてでも、 
+    みんなを守ってみせる！！</param>
+    <param key="Meeting_Aleph_2" index="25">メジャーアルカナくらい強い… 
+    しかも、今はあたし一人だけ… 
+    でもあたしは逃げない！</param>
+
+    <!-- 탐욕의 왕 조우 -->
+    <param key="Meeting_Greed_0" index="26">ごめんなさい、先輩！ 
+    今のあたしができるのは 
+    あなたを倒すことだけなの！</param>
+
+    <!-- 절망의 기사 조우 -->
+    <param key="Meeting_Despair_0" index="27">あなたも結局 飲み込まれたのね… 
+    これは決して 逃れられない運命なの？</param>
+
+    <!-- 사망 -->
+    <param key="Dead_0" index="28">あたしが… みんなを… 絶対…守る…から</param>
+
+    <!-- 제압 완료 -->
+    <param key="Suppress_0" index="28">やったね！</param>
+    <param key="Suppress_1" index="30">いつでも私を頼ってくれていいのよ！</param>
+
+    <!-- 탐욕의 왕 제압 -->
+    <param key="Suppress_Greed_0" index="31">外で先輩と戦ってたら、 
+    今頃あたしは死んでたわ…</param>
+
+    <!-- 절망의 기사 제압 -->
+    <param key="Suppress_Despair_0" index="32">そう… 
+    ずっと我慢してたのね… あなたも</param>
+
+    <!-- 탈출 후 히스테릭 -->
+    <param key="Be_Hysteric_0" index="33">ひどいよ…</param>
+    <param key="Be_Hysteric_1" index="34">全部ウソだったの…？</param>
+    <param key="Be_Hysteric_2" index="35">あたしも彼女みたいに、 結局守れなかったんだ…</param>
+    <param key="Be_Hysteric_3" index="36">あたしも一緒なんだ…</param>
+    <param key="Be_Hysteric_4" index="37">私の頭から出てってよ…</param>
+    <param key="Be_Hysteric_5" index="38">対価を支払う時が来たというの…？</param>
+
+    <!-- 영웅 기본공격 -->
+    <param key="Hero_Attack_0" index="39">愛を込めて！</param>
+    <param key="Hero_Attack_1" index="40">正義の名のもとに！</param>
+
+    <!-- 영웅 손가락 총 -->
+    <param key="Hero_Skill_1_0" index="41">アルカナ　ビート！！！</param>
+    <param key="Hero_Skill_1_1" index="42">くらえ！</param>
+
+    <!-- 주문 시작 ~ 끝 (순서대로) -->
+    <param key="Hero_Skill_2_0_0" index="43">正義よりも碧き者よ、 
+    愛よりも紅き者よ！</param>
+    <param key="Hero_Skill_2_1_0" index="44">運命の飲み込まれし その名の下に</param>
+    <param key="Hero_Skill_2_2_0" index="45">我、ここで光に誓う！</param>
+    <param key="Hero_Skill_2_3_0" index="46">我が眼前に立ちはだかる 
+    憎悪すべき存在達に</param>
+    <param key="Hero_Skill_2_4_0" index="47">我とそなたの力をもって、 
+    偉大な愛の力をみせしめん事を！</param>
+    <param key="Hero_Skill_2_5_0" index="48">アルカナ スレイブ！！</param>
+  </etc>
+</creature>

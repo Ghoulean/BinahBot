@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    5.28
+  -->
+  <info id ="100047">
+
+
+    <narration action="move">
+      #0 designated to $0 containment room.
+    </narration>
+
+    <narration action="start">
+      [
+      {#0 dreams a happy dream of running out of the company in total freedom.},
+      ]
+    </narration>
+
+
+    <narration action="mid1">
+      [
+      {Like how everyone wished, #0 can live here forever.},
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-02-71</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Shark</portrait>
+
+      <name openLevel ="1">
+        The Dreaming Current
+      </name>
+
+
+      <riskLevel openLevel ="2">
+        WAW
+      </riskLevel>
+
+
+
+      <openText>Tell the kid today's is going to be grape flavored candy. It's his favorite.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      { Just... keep showing that book. Oh, it must be a page with a photo since it can’t read the words.&#13;&#10;If the experiment goes a bit longer, try drawing its attention, like mimicking sounds.&#13;&#10;I don’t need to explain every detail, right?}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Yes, I know. It’s so sad and pitiful. I also feel the same emotions, too, thanks.&#13;&#10;But consequently, this place allowed for its survival and it will be good to let it continue living here regardless of the form it takes. If you think the same,&#13;&#10;it will be better for all of us for you to drop that guilt you’re feeling right now.&#13;&#10;....&#13;&#10;Tell the kid today's is going to be grape flavored candy. It's his favorite.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Some excerpts from encyclopedia&gt; Contrary to popular belief, most sharks are small in size. Very few species actually harm humans... No matter what people say, the most distinctive aspect of a shark is its strong jaw and teeth. A shark’s jaw can apply an intense amount of force, around 20 times that of a full grown human. Also, its vision and sense of smell are super advanced, allowing it to locate its prey easily. This is how sharks survived as the ocean’s greatest predators.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {The parents long deserted the child.&#13;&#10;They were told that the child wouldn’t survive more than 2 years because of the infection. The researchers were the child’s mother and father. He learned how to coo and walk there. Although unable to talk properly, the child preferred the ocean. Instead of visiting the ocean, the child was given candy which allowed the child to see the ocean.&#13;&#10;Many colorful nights and days passed.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {The child, who was thought to die within 2 years, managed to live for a very long time. He continued to listen and obey, loved sweet candy, and loved this place as home. Unfortunately, the child could only run shakily around inside a cramped lab instead of a grass field under the sun. His only concern was what kind of candy to eat tomorrow.}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">When employee #0 panics during work, Qliphoth counter will be reduced.</specialTip>
+      <specialTip openLevel="1" key="2">When the temperance Level 1 employee completed the work, Qliphoth counter has decreased.</specialTip>
+      <specialTip openLevel="2" key="3">The liquid $0 generated in a specific section, while escaping, drastically reduce the movement of the employees and deal Red type damage over time. SP of the employees in the section will gain healing over time. </specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

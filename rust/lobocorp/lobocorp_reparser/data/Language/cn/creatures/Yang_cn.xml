@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="300109">
+
+    <narration action="move">
+      #0进入了“$0”的收容单元准备开始工作。
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-07-103</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Yang</portrait>
+
+      <name openLevel ="1">
+        阳
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>然而，存在于这世界上的不只有&#13;&#10;温暖与光明。</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {这是一块缺失了一半的玉佩形异想体。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {它将会减少佩戴者受到的精神伤害。因此它被员工们称作&#13;&#10;“和谐之玉”。许多员工因为渴望“阳”的能量而试图接近它。&#13;&#10;员工们都说这块玉佩有着净化人心的力量，能安抚因为工&#13;&#10;作而焦虑惶恐的他们。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {与此同时，他们也畏惧着那块黑色的玉佩。“我希望每个&#13;&#10;异想体都能像它一样既安分又好用...”他们叹着气这么说。&#13;&#10;但“阳”并不能理解这些。“阳”从来都不是有意帮助他们的，&#13;&#10;这只是它存在的方式而已。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {然而，存在于这世界上的不只是温暖与光明。&#13;&#10;天穹依傍土地共存，黑暗依傍光明，生命依傍死亡，希望&#13;&#10;也与绝望共存。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {漆黑的鲤鱼摆动着尾巴试图接近那片光明；而洁白的鲤鱼&#13;&#10;却努力游向混沌。当两条鲤鱼终于相遇的时候，究竟会发&#13;&#10;生什么呢？}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">佩戴“$0”时，佩戴者将具有更高的精神抗性。然而，当&#13;&#10;“O-05-102”没有被收容时，这个加成会失效。</specialTip>
+      <specialTip openLevel="2" key="2">“$0”每隔一段时间会为佩戴者恢复精神值。</specialTip>
+      <specialTip openLevel="2" key="3">&lt;警告&gt;不要佩戴“$0”进入“O-05-102”的收容单元。</specialTip>
+      <specialTip openLevel="2" key="4">&lt;警告&gt;请务必注意，当“O-05-102”突破收容时，“$0”也将突破&#13;&#10;收容。（即使“$0”正被员工佩戴，也会出现同样的情况。）</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

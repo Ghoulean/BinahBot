@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300001">
+    <narration action="move">
+      #0 направлен(а) в камеру содержания аномалии $0.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-77</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/DesireHeart</portrait>
+
+      <name openLevel ="1">
+        Сердце устремления
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>Чрезмерное стремление приведёт к безумию.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Сердце без владельца. Оно всё ещё бьётся. Даже после того, как его вынули из тела.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Будучи экипированным, сердце будет биться в два раза чаще, повышая HP и силу атаки носящего. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Чрезмерное стремление приведёт к безумию.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+
+      [
+      {Сотрудники, которые никого не атаковали или вернули сердце пронося его менее 30 секунд, в приступе безумия совершали бессмысленные, многочисленные убийства, попользовавшись повышенным HP.}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Субъект, экипировавший аномалию $0 повысит своё HP и скорость атаки.</specialTip>
+      <specialTip openLevel="2" key="2">Если субъект, которому приказали вернуть аномалию $0 в камеру содержания, перед этим никого не атаковал, то он сойдёт с ума и будет атаковать всех вокруг, повышая их склонность к насилию.</specialTip>
+      <specialTip openLevel="2" key="3"> Если субъекту будет приказано вернуть аномалию $0, когда он проносил его меньше 30-ти секунд, то с субъектом произойдёт явление описанное в предыдущем пункте.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100003">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {$0 are placed on a stuffed cushion, as if on display.},
+      {If you happen to see something resembling teeth on the interior of $0, it has to simply be a trick of the eyes.},
+      {Anyone whose gaze falls upon $0 will feel an irresistible urge to put them on.},
+      {The girl begged in tears. “Mister, please cut off my feet...”}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Leaving $0 on the worn cushion, #0 begins their work.},
+      {As if someone recently took them off, $0 are lying on the ground.},
+      {Moving past $0, which are neatly aligned, #0 continues with their work.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0’s red enameled leather glistens in the light.},
+      {The ankle straps on $0 still appear elegant even though they’re worn out.},
+      {As if representing a long history, the heels of $0 are worn out.},
+      {The flawless condition the leather of $0 is in seems out of place.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {#0 sneaks a few glances towards $0 while they’re working.},
+      {#0 just keeps looking over at $0.},
+      {Having difficulty concentrating, #0 stops working and turns around to gaze at $0.},
+      {Trying to resist viewing $0 again, #0 looks in the opposite direction, trying to resume the job at hand.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {$0 are clearly not a living organism, but they emit a dismal aura.},
+      {$0 may not be a breathing creature, but its distinct atmosphere reminds those near it of a bloodied past.},
+      {The sanguine color of $0 looks oddly familiar.},
+      {$0 lies still.}
+      ]
+    </narration>
+    <narration action="special_ability1">
+      [
+      {#0 ignores their orders and continually glances at $0. Now they’re reaching out their hand to take the shoes.}
+      ]
+    </narration>
+    <narration action="special_ability2">
+      [
+      {#0 takes off their own shoes and begins to put on $0.}
+      ]
+    </narration>
+    <narration action="special_ability3">
+      [
+      {#0’s eyes look different. Their pupils are dilated and unfocused.}
+      ]
+    </narration>
+    <narration action="special_ability4">
+      [
+      {#0 is satisfied by wearing $0 and savors the sound of tapping their heels.}
+      ]
+    </narration>
+    <narration action="dead">
+      [
+      {#0 roams the corridor with axe in hand.},
+      {#0 uses their weapon against #1, who attempted to stop them.},
+      {#1 was struck on the head by #0’s weapon and died of cerebral hemorrhaging.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-04-08</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/RedShoes</portrait>
+      <name openLevel="1">
+        The Red Shoes
+      </name>
+      <riskLevel openLevel="2">
+        HE
+      </riskLevel>
+      <openText>The girl begged in tears. “Mister, please cut off my feet...”</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {A pair of elegant red women's shoes. The design is antique, but there is no telling where and how they were made.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {It overwhelms the mind with the urge to try them on. The changes that occur from wearing the Abnormality are first visible in the eyes of the wearer.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {The next observable change is that the wearer is unwilling to take off the shoes. They will also act upon any and all desires that they may have subconsciously suppressed. If someone attempts to hamper them from acting on their desires or tries to take off the shoes, the shoes will control its host, which sometimes leads to murder.}
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {It is unknown whether the host’s will is involved in the process, but taking into consideration the sharp increase of one’s desires and aggressiveness, the host’s primal urges seem to remain intact.}
+      ]
+    </desc>
+    <desc id="5" openLevel="1">
+      [
+      {&lt;Excerpt from Counseling Log&gt;&#13;&#10;
+      “&lt;Redacted&gt; was a nice person. Well, they were also kinda a celebrity. They always told us that our job was something to be proud of. They knew how to deal with all kinds of Abnormalities. But it was our biggest mistake to let them enter that Containment Unit. We never thought a pair of shoes of all things would do any sort of harm. At some point, &lt;Redacted&gt; was wearing the shoes, grinning from ear to ear. It was uh, well it was quite strange. That wasn't a smile. It was... (Omitted). Blood was all over the place. The tapping of the shoes echoed in the corridor. I closed my eyes and played dead. I saw one of my colleague’s head rolling around on the floor. The shoes stopped right in front of me and stood still for such a long time. Eventually, they moved past me, and that was right when I passed out. (Omitted) I heard they couldn't take off the shoes and had to cut their legs. No one ever saw &lt;Redacted&gt; again after that, but those who’ve been here long enough will recall the incident.”}
+      ]
+    </desc>
+    <desc id="6" openLevel="2">
+      [
+      {&lt;Footage from Corridor Camera Z3_493&gt;&#13;&#10;
+      &lt;Redacted 1&gt;: So the work on your part is all done right? I just finished mine. That little match girl is still in the same state. It's so frustrating. Wanna grab some coffee at the lounge?
+      &lt;Redacted 2&gt;: You know, &lt;Redacted 1&gt;, there's something I've been thinking about for a long time.
+      &lt;Redacted 1&gt;: Let's talk when we get to the lounge. I'm just too tired right now. Hey, are you wearing shoes? Only staff footwear is allowed during work.
+      &lt;Redacted 2&gt;: That's not important, &lt;Redacted 1&gt;. What's important is that we're alone at the moment.
+      &lt;Redacted 1&gt;: What are you talking about... Wait, what exactly are you wearing on your feet? Y-You didn't wear it, did you?
+      &lt;Redacted 2&gt;: &lt;Redacted 1&gt;, I've loved you for a while.
+      &lt;Redacted 1&gt;: Take it off, now. Do you even realize what you're doing right now?
+      &lt;Redacted 2&gt;: I was thinking about why you wouldn't love me back. It's Emily, isn't it? You were so busy looking at Emily that you didn't even notice me, right?
+      &lt;Redacted 1&gt;: I... I-Is that an axe you're holding? And you're bleeding from your ankles. &lt;Redacted 2&gt;, I'm begging you, please take that off.
+      &lt;Redacted 2&gt;: So all I need to do is get rid of Emily! Wait here for a bit, it won't take long. You have to stay still till I come back.
+      &lt;Redacted 1&gt;: Please snap out of it. Please...
+      &lt;Redacted 2&gt;: If you wanted to stop me, you should have done that the day we first met.&#13;&#10;&#13;&#10;&lt;Redacted 2&gt; stunned &lt;Redacted 1&gt; with their weapon and went to the lounge. Fortunately, no one else besides &lt;Redacted 1&gt; was harmed, including Emily. &lt;Redacted 2&gt; was soon removed from the company database. They were entirely aware of what they were doing. They admitted that the shoes only encouraged them to do what they always desired. A response team handled the suppression of &lt;Redacted 2&gt;. Afterward, the Red Shoes ran away, tearing &lt;Redacted 2&gt;’s ankles off their body. It took a total of 23 minutes for them to be suppressed, contained, and returned to their Containment Unit. &lt;Redacted 2&gt; died from excessive blood loss. &lt;Redacted 1&gt; only sustained minor injuries, but elected to resign due to excessive psychological trauma.}
+      ]
+  </desc>
+    <desc id="7" openLevel="3">
+      [
+      {&lt;Excerpt from a Research Log&gt;&#13;&#10;
+      &lt;i&gt;We received the report that employee &lt;Redacted&gt; was allured by the shoes and was roaming the corridor. We immediately ordered employee F3054 to suppress her. She was a veteran employee with vast experience in suppression, so we expected her to suppress a female employee without any trouble. But she didn’t return, and when others found her, employee F4002 was unconscious with both her ankles severed, while employee F3054 was maniacally trying to remove the shoes from the severed feet.&lt;/i&gt;}
+      ]
+  </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="careful">Employees with Temperance Level 2 or lower should not work with $0, as inside $0’s Containment Unit, #0 went insane. $0 remember their previous owner.</specialTip>
+      <specialTip openLevel="2" key="Attract1">When the work result was Normal, the Qliphoth Counter lowered with a normal probability.</specialTip>
+      <specialTip openLevel="2" key="Attract2">When the work result was Bad, the Qliphoth Counter lowered with a high probability.</specialTip>
+      <specialTip openLevel="2" key="badAttract">When the Qliphoth Counter became 0, a low-Temperance employee #0 entered the Containment Unit in a trance. This phenomenon has been dubbed “Allurement”.</specialTip>
+      <specialTip openLevel="3" key="clickClick">After continuously attempting to select and converse with #0, who was allured, they seemingly returned to normal.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

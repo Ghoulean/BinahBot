@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100026">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {Pour les abeilles, une ruche abîmée est une chose intolérable.},
+      {Il parait que les ouvrières de la ruche passent leur vie entière à fournir de la nourriture à leur reine.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {La priorité absolue des abeilles est la sécurité de leur ruche.},
+     {Si quelqu’un en vient à endommager $0, même par accident, il peut se produire quelque chose qui ne pourra jamais être réparé.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Si #0 sent une douleur abdominale et un picotement dans le cou, la seule option qu’il lui resterait serait de regarder le beau ciel bleu une dernière fois.},
+      {#0 fait de gros efforts pour respirer le moins possible dans l’Unité de Confinement.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 veut toujours plus d’ouvrières ; elles amèneront la prospérité à son royaume.},
+      {$0 sera complétée par le travail de ses ouvrières… Ainsi naîtra son royaume.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">T-04-50</codeNo>
+      <name openLevel="1">La Reine des Abeilles</name>
+      <portrait openLevel="1">Sprites/Unit/creature/QueenBee</portrait>
+      <riskLevel openLevel="1">WAW</riskLevel>
+      <openText>Si vous sentez une douleur abdominale et un picotement dans le cou, la meilleure chose à faire à présent est de regarder le beau ciel bleu que vous ne reverrez plus jamais.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Sa forme semble être l’amalgame d’une ruche gargantuesque et d’une abeille. Une vue en coupe de l’intérieur montre une surface rouge sombre avec des grains ici et là, un peu comme de la viande crue. Le segment qui semble correspondre à la tête est sérieusement déformé. Elle a des ailes, mais elles ont perdu leur rôle primaire. Le seul œil encore relativement intact montre des mouvements pupillaires, comme pour surveiller les intrus en approche. (L’Anomalie reste toujours immobile, il est donc supposé qu’elle ne bouge pas.)}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Lorsque certaines conditions sont remplies, elle relâche des spores. Elle en générera des milliards dans un rayon de 20 mètres. La présence de formes de vie dans les environs semble être l'une des principales exigences.}
+      ]
+    </desc>
+    <desc id="3" openLevel="1">
+      [
+      {Lorsque cela se produit, il n’y a aucun changement immédiat chez les employés qui inhalent les spores, et rien d’anormal n’est détectable au cours des examens qui suivent.}
+      ] 
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {Plus tard, l’employé est pris d’une douleur intense au niveau de son lobe occipital et de son abdomen. Après un certain temps, sa tête se détache de son corps, et une abeille ouvrière émerge du corps séparé.}
+      ]
+    </desc>
+    <desc id="5" openLevel="2">
+      [
+      {Il a été confirmé que les spores transportent des œufs d’abeilles ouvrières qui éclosent dans un hôte vivant. D’après l’autopsie réalisée sur un employé tué par l’Anomalie, nous pensons que la larve peut survivre dans n’importe quelle partie du corps, que ce soit le sang, les organes, ou même le gras. Dès cet instant, elle peut se déplacer librement dans l’organisme. Lorsqu’elle devient trop grosse pour bouger, elle crée un cocon près des intestins. À ce stade, l’hôte ressentira une faim extrême et mangera bien plus que d’habitude. Ce cocon remontera à travers le corps en grandissant, endommageant les artères de la gorge et le muscle crico-thyroïdien avec ses mâchoires, pour finalement séparer la tête de l’hôte du corps. Après cela, elle émerge du corps, en aggravant davantage les blessures de l’hôte.}
+      ]
+    </desc>
+    <desc id="6" openLevel="3">
+      [
+      {&lt;Extrait d’un Enregistrement d’une Session Thérapeutique&gt;&#13;&#10;
+      &lt;Expurgé&gt; me parlait depuis un moment de son cou qui le démangeait. Il se plaignait également d’indigestions ; une fois, je l’ai vu prendre un paquet de digestifs. Qui aurait pu penser que cela était si grave ? Je n’aurais jamais imaginé être témoin d’un aussi horrible moment.&#13;&#10;
+      (Omis)&#13;&#10;
+      &lt;Expurgé&gt; et moi étions juste en train de papoter, mais il a soudainement arrêté de parler. Il continuait toujours de se gratter la nuque. Il devenait si rouge que je commençais à m'inquiéter. Et là, son cou s’est tordu dans un angle tellement étrange. C’est à cet instant que j’ai réalisé la gravité de la situation. Aucune chance qu’il ait pu se déformer le cou ainsi tout seul. C’est comme si quelqu’un était en train de le lui tordre avec force…}
+      ]
+  </desc>
+    <desc id="7" openLevel="3">
+      [
+      {      Et là, j’ai entendu un zip, comme une feuille de papier qu’on déchiquète, le bruit étrange de quelque chose que l’on déchire. Sa tête est tombée au sol. J'ai entendu un bruit sourd.}
+      ]
+    </desc>
+    <desc id="8" openLevel="4">
+      [
+      {      Et comme si ce n’était pas assez, quelque chose a commencé à ramper hors de son cou. Comme un papillon émergeant de son cocon, déchirant le corps sans tête ; les ailes, l’abdomen jaune, les dents qui ont rongé son corps. C’est quelque-chose que je ne veux plus jamais revoir, une chose que je détesterais décrire comme quelque chose de vivant…}
+      ]
+    </desc>
+    <desc id="9" openLevel="4">
+      [
+      {      (Omis) Elle semblait être consciente de ma présence d'une manière ou d'une autre. Mais elle semblait n’avoir aucune raison de m’attaquer à cet instant. Elle a pris son crâne et s’est enfuie comme une ouvrière transportant du miel.}
+      ]
+    </desc>
+    <desc id="10" openLevel="4">
+      [
+      {      … Je peux encore entendre le bruit de sa mâchoire cliquetante et de ses ailes battantes.}
+      ]
+    </desc>
+    <desc id="11" openLevel="3">
+      [
+      {&lt;Abeille Ouvrière&gt;&#13;&#10;
+      Son apparence est clairement différente de la Reine des Abeilles, autrement que par sa couleur. Elle est capable de voler, mais peut seulement planer à environ 1 mètre du sol. Elle n’a ni antenne ni Œil. Un long appendice qui semble être un intestin traîne sur le sol depuis son derrière.&#13;&#10;
+      Les Abeilles Ouvrières ne présentent que deux types de comportement : fournir des nutriments à la Reine, et proliférer. Lorsqu’elles rencontrent un employé, elles utilisent leur mâchoire pour broyer sa tête et injecter une pupe dans son corps.}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="badMood">Lorsque le résultat du travail est Normal, le Compteur Qliphoth a une probabilité moyenne de diminuer.</specialTip>
+      <specialTip openLevel="1" key="badMood2">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth a une probabilité élevée de diminuer.</specialTip>
+      <specialTip openLevel="2" key="beeComing">Lorsque le Compteur Qliphoth atteint 0, $0 diffuse des spores rouges à travers tout le secteur.</specialTip>
+      <specialTip openLevel="1" key="spore">En observant l’Anomalie, il a été confirmé que les spores restent attachées aux employés pendant un certain temps, et infligent des dégâts ROUGE durant cette période. De plus, les employés infectés par des spores sont considérablement ralentis, et ne peuvent pas être soignés par le régénérateur ou les tirs.</specialTip>
+      <specialTip openLevel="3" key="beeing">Lorsque les PV d’un employé infecté atteignent 0, une ouvrière géante sort de son corps. Les ouvrières attaquent sans distinction les employés à proximité. De nouvelles ouvrières sortent des cadavres des employés attaqués.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <name>Abeille Ouvrière</name>
+    <codeId>T-04-50-1</codeId>
+  </child>
+</creature>

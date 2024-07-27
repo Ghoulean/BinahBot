@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300105">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-94</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/YouMusHappy</portrait>
+      <name openLevel="1">
+        Vous Devez Être Heureux
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <openText>
+        Ceux qui ont été opérés par la machine sont nombreux à s’être sentis plus reposés et en meilleure santé.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Une mystérieuse machine délabrée utilisée pour des opérations.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Cette machine a été conçue pour rabattre la surface du crâne et détruire le tissu nerveux de manière sûre et efficace.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Beaucoup de ceux qui ont subi une opération dans la machine se sont retrouvés reposés et en bonne santé.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Ceux qui ont répondu “Oui” à la question “Aimez-vous votre ville ?” ont été considérés guéris. Ceux qui ont répondu “Non” n’ont pas été autorisés à en sortir.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Plus longtemps la machine est utilisée, meilleure la personne devient. Par ailleurs, plus longtemps elle est utilisée et plus vite la question changera.}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">Lorsqu’un employé utilise la machine, toutes ses statistiques augmentent.</specialTip>
+      <specialTip openLevel="2" key="2">Les statistiques augmenteront en fonction du temps d’utilisation de la machine.</specialTip>
+      <specialTip openLevel="2" key="3">Veillez à n’arrêter la machine que lorsqu’elle affiche “YES”. Si elle est arrêtée lorsqu’elle est sur “NO”, toutes les statistiques chuteront d’autant qu’elles auraient dû augmenter.</specialTip>
+      <specialTip openLevel="2" key="4">Les statistiques augmentées retourneront à la normale le lendemain. Cependant, les employés ayant gagné plus de 200 points dans leurs statistiques disparaîtront le lendemain.</specialTip>
+      <specialTip openLevel="2" key="5">&lt;Attention&gt; Il y a eu une fois un incident où un employé ayant utilisé la machine 5 fois ou plus le même jour a explosé sur place.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

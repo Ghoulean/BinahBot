@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100057" >
+
+
+    <narration action="move">
+      #0 designated to $0's containment room.
+    </narration>
+
+    <narration action="start">
+      [
+      {When the trust game with $0 reaches maximum, $0 will gently pet your head with the thorns on its tail. They say the pleasure exceeds the amount a human can bear, but there is no one who can explain how it really feels.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Escaped $0 has a shackle-like necklace around its neck. Nobody knows who tied it up.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {Some employees who were addicted to pleasure tried to pull some of $0's thorns out but failed.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="5">
+    <collection>
+      <codeNo openLevel ="0">O-02-98</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Porccu</portrait>
+
+      <name openLevel ="1">
+        Porccubus
+      </name>
+
+      <riskLevel openLevel ="1">
+       HE
+      </riskLevel>
+
+
+      <openText>Now it’s time for my head to burst. Good day.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {&lt;Head Explosion Time&gt;&#13;&#10;To be honest, daily life here is not so fun. The company says they promote healthy hobbies, but not many employees engage in that notion.&#13;&#10;&#13;&#10;Everybody has their own escape. Violence, gambling, eating... I thought I had a high level of discipline compared to others. And it helped me to live a smoother life. Maybe that is the reason why I was assigned to Porcuvous.&#13;&#10;&#13;&#10;Yes, about Porcuvous... Only the employees who live the lowest of the low are assigned there.&#13;&#10;&#13;&#10;I’ve heard what other employees do in the Containment Facility. They call it "trust game”.&#13;&#10;Trust game, what an elegant way to call it.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {(Omitted)&#13;&#10;&#13;&#10;Employees who were here prior gave me some precautionary tips. They told me it won't be difficult to become intimate with it, but once you do, you can easily get whatever you want.&#13;&#10;&#13;&#10;They said when the right time comes, Porcuvous will lean down so I can get to its thorns easily. It didn't take long until it welcomed me and allowed me to pet it.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {(Omitted)&#13;&#10;&#13;&#10;When I first touched its thorns, I screamed because of how prickly it was. It felt like a giant needle just penetrated my skin. But I wasn’t actually bleeding and the pain went away. Then there it was, the most intense happiness you’ve ever experienced that will make your knees wobble.&#13;&#10;&#13;&#10;Later, other employees came in to notify me of the end of my journey. I was drooling.&#13;&#10;&#13;&#10;The pleasure was so unfamiliar that I didn't go back for a while. However, it made the situation worse. You will start to have withdrawal symptoms, like puking or sweating. It's different for every employee. One employee even pulled out all of their teeth because they felt like small bugs were crawling all over their teeth.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {Feeling? There aren't enough words to describe it. Do you remember the happiest moment in your life? This feeling would be thousands of times better than that.&#13;&#10;&#13;&#10;I am the last employee of Porcuvous? That's understandable, seeing as how the brain demands stronger stimulations. At first, all I needed to do was to slight be stabbed by one of the thorns. Now, I need to scrub myself with the thorns to get the same high.&#13;&#10;&#13;&#10;I feel like all the blood in my body will rush to my head, eventually bursting it. I've already imagined my head bursting thousands of times or more.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {I gotta go now, it’s time to work again. Actually, I am drenched with sweat, did you notice?&#13;&#10;&#13;&#10;By the way, one more thing. It's not what you think, Porcuvous is not aggressive at all. It never tried to eat us or bite our heads off. You mentioned that all the corpses were smiling happily, didn’t you? That’s all. It makes people smile "until death".&#13;&#10;&#13;&#10;No one can be blamed. We are living in hell every day... It's just a taste of a small piece of heaven.}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="4">
+      [
+      {You know what? I feel sorry for you. You've never felt these feelings and you never will. But you have to interview an addicted employee like me while pretending to be decent as well.&#13;&#10;&#13;&#10;Now it’s time for my head to burst. Good day.}
+      ]
+    </desc>
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">When the work result was good, Qliphoth counter has increased.</specialTip>
+      <specialTip openLevel="1" key="2">When the work result was bad, Qliphoth counter has decreased.</specialTip>
+      <specialTip openLevel="1" key="3">Employees Temperance Level 3 or below and have a Good work result will be killed by the Abnormality.</specialTip>
+      <specialTip openLevel="1" key="4">Employees Temperance Level 3 or below will receive very strong White damage from the escaped Abnormality.</specialTip>
+      <specialTip openLevel="1" key="5">The escaped $0 was not affected by the attack coming from outside its attack range.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+
+
+
+</creature>

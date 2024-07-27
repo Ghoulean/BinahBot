@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300004">
+
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-79</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/MeatIdol</portrait>
+
+      <name openLevel ="1">
+        肉の偶像
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>
+      そして、祈りはいつも祈る者の 永遠の絶望で締めくくられる。
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {肉と鉄の混合物の塊。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {浸水区域から発見された遺物。 宗教的な物と推測される。 過去の人々は宗教に答えを求めたそうだ。 職員がこれに祈りを捧げると、 肉が応答するかのように動き始めた。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {祈りを捧げる者には、 ありとあらゆる試練が襲いかかるが 彼以外のすべての人々は、 まるで天からの恵みのように 体力と精神力が回復された。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      <!-- 여기 번역 고치기 -->
+      [
+      {そして、祈りはいつも祈る者の 永遠の絶望で締めくくられる。}
+      ]
+    </desc>
+
+
+
+     <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">$0の効果は祈ることによって作用させることができる。 $0に祈る被験者は、ランダムな属性のダメージを負う。</specialTip>
+      <specialTip openLevel="2" key="2">&lt;実験1&gt;被験者は20秒以下の祈りを行った。 被験者は死亡した。</specialTip>
+      <specialTip openLevel="3" key="3">&lt;実験2&gt;被験者は21-45秒の祈りを行った。 被験者以外の全ての職員は、時間経過と共に体力を回復した。</specialTip>
+      <specialTip openLevel="4" key="4">&lt;実験3&gt;被験者は46-90秒の祈りを行った。 結果は実験2と同様であったが、対象は精神力を回復した。</specialTip>
+      <specialTip openLevel="5" key="5">&lt;実験4&gt;被験者は90秒以上の祈りを行った。 被験者は死亡したが、 全てのアブノーマリティーのクリフォトカウンターが 0に減少した。</specialTip>
+      </specialTipSize>
+
+  
+
+  </observe>
+</creature>

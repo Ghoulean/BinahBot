@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300005">
+
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-80</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/BigTreeSap</portrait>
+
+      <name openLevel ="1">
+        거목수액
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+     
+      <openText>
+        "나무는 그저 베푼만큼 돌려받았을 뿐인 거죠”
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {세계의 외곽에서 자라나는 이름 없는 거목에서 추출한 수액이다. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {탐사대에 의하면 거목의 주변에선 녹색 그을음에 뒤섞인 수많은 생명들이 번식하고 있다고 한다. 수액에는 포만감을 주고 상처의 치유를 하는 데 탁월한 성분이 포함되어 있기 때문이다. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {하지만 이를 마신 직원들 중 일부는 몸이 뒤틀리며 녹색 그을음만 남긴 채 녹아내렸다. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      <!-- 여기 번역 고치기 -->
+      [
+      {다양한 실험이 있었지만 섭취량에 비례하여 녹아내리는 확률이 급증한다는 사실만 확인됐다.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {“그 커다란 나무가 아무 것도 남지 않은 외곽에서 대체 어떻게 왕성히 커지고 있는지에 대해서는 많은 사람들이 궁금해했죠. 거목의 양분이 되는 것은 결국 그 수액을 먹고 자란 생명체들이었어요, 나무는 그저 베푼만큼 돌려받았을 뿐인 거죠”}
+      ]
+    </desc> 
+
+    
+
+     <specialTipSize size="3">
+      <specialTip openLevel="1" key="healthgood">$0을 섭취한 대상은 즉시 체력이 완전히 회복된다. 또한 대상의 체력이 일정 시간동안 지속적으로 회복된다.</specialTip>
+      <specialTip openLevel="2" key="boomDead">$0를 섭취한 몇몇 대상에게서 부작용이 확인되었다. 부작용이 발생한 대상은 $0 섭취 후 20~30초 이내에 구역 전체 White 피해를 주며 폭발하였다.</specialTip>
+      <specialTip openLevel="2" key="boomGood">실험 결과, $0의 사용 빈도와 폭발 확률이 비례한다는 사실이 밝혀졌다.</specialTip>
+      </specialTipSize>
+
+   
+
+  </observe>
+</creature>

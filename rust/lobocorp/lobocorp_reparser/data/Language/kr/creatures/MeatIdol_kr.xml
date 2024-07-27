@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300004">
+
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-79</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/MeatIdol</portrait>
+
+      <name openLevel ="1">
+        살점 우상
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>
+        그리고 기도는 언제나 예배자의 영원한 절망으로 끝이 났다.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {살점과 고철이 한데 섞여져 있는 덩어리다. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {침수 지구에서  발견된 종교적 물품으로 추측된다. 한때 몇몇 사람들은 종교로부터 답을 찾고 싶어했다. 직원이 기도를 올리면 이에 답하듯 것 마냥 꿈틀거리는 살점을 볼 수 있다. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {기도하는 자는 신앙심을 시험 받듯 온갖 종류의 시련이 닥치지만 그를 제외한 모든 이들에게는 구원으로 화답하듯 체력과 정신력이 회복된다. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      <!-- 여기 번역 고치기 -->
+      [
+      {그리고 기도는 언제나 예배자의 영원한 절망으로 끝이 났다.}
+      ]
+    </desc>
+
+
+
+     <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">$0의 효과는 기도를 통해 발현될 수 있다. $0에게 기도를 하는 대상은 일정 시간마다 임의의 속성을 가진 피해를 입는다.</specialTip>
+      <specialTip openLevel="2" key="2">&lt;실험 1&gt; 피험체에게 20초 이하로 기도를 하도록 함. 대상 사망.</specialTip>
+      <specialTip openLevel="3" key="3">&lt;실험 2&gt; 피험체에게 최소 21초, 최대 45초 사이의 시간동안 기도를 하도록 함. 기도 중인 대상을 제외한 모든 직원의 생명력이 지속적으로 회복되는 것을 확인.</specialTip>
+      <specialTip openLevel="4" key="4">&lt;실험 3&gt; 피험체에게 최소 46초, 최대 90초 사이의 시간동안 기도를 하도록 함. 대체로 2번의 결과와 동일하나 정신력이 함께 회복되는 것을 확인.</specialTip>
+      <specialTip openLevel="5" key="5">&lt;실험 4&gt; 피험체에게 90초를 넘겨 기도를 하도록 함. 대상 사망. 모든 환상체의 클리포트 카운터가 0으로 변한 것을 확인.</specialTip>
+      </specialTipSize>
+
+  
+
+  </observe>
+</creature>

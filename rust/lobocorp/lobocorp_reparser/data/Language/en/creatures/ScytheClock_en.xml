@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+
+  <!-- Attrbute "id " must equal to attribute "id" in CreatureList.xml -->
+  <info id ="100101">
+
+    <!-- $0 : Creature name, #0 : Agent name -->
+    <narration action="move">
+      #0 designated to $0's containment room.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 can hear the time flowing.},
+      {$0 is bright green. Sometimes it looks like eyes gazing a person.},
+      {It seems light. But it won’t budge even if you try to move it with all your might.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Employee #0’s tomorrow might come, or not.}
+      {No one knows who -P, who is mentioned in the phrase, is. }
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Rumor says that the curse will fall upon you if you hear the thirteenth ring.}
+      {$0 is the only being that knows a complete solitude.}
+      {You will need to pay a price, if you want to stop the time.}
+      ]
+    </narration>
+  </info>
+
+  <!-- Maximum observation level. -->
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-05-65-H</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ScytheClock</portrait>
+
+      <name openLevel ="1">
+        Price of Silence
+      </name>
+      
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <specialName openLevel ="2">
+       The thirteenth bell
+      </specialName>
+
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {An old watch. Clicking of gears can be heard in close range. A phrase saying “Time flows like life. Life flows like time.” is written on the back. It is unclear what is the meaning this phrase is trying to convey.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {&lt;Observation record&gt;&#13;&#10;There are rare moments when it feels like the time just stopped. A brief instant of total silence. Every time this moment came, an employee died. Rick was a bit of coward, but it barely had anything to do with his heart attack. Justin was above average in his physical test. They had no exterior damage. Their heart just stopped beating. They did not overwork, and had no chronic disease. They just ceased, like a machine ran out of its battery. We couldn’t even guess the cause of this. After 10 deaths, we were sure that it was not just some unfortunate coincidence. We thought an abnormality must have something to do with this. &#13;&#10; When a bell rang all across the facility, and when a scream followed, I thought that the nightmare made out of those terrible coincidences, has finally come. That abnormality which looks like a watch when it’s goal is not telling us what time it is, was like a streetlamp standing amidst hell. &#13;&#10; I remembered about the phrase written on the abnormality’s back, even though I couldn’t remember what it was saying. I could still hear that hellish ring. I just ran to the watch’s containment chamber.&#13;&#10;When the thirteenth ring, which I thought I would never hear, was heard, I frantically groped the watch to flip it. And I realized that the phrase was gone. Instead, something new was written, as if the ring was a cause of some change.&#13;&#10;“I am aware of complete solitude. I take the price of my gifting of silence. When the original owner comes, I shall take the price. –P”'}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="payFor">When $0 was in a bad state, you had to pay for using pause.</specialTip>
+      <specialTip openLevel="3" key="ringMyBell">After $0 has been ringing 12 times, once again the special ability of $0 was triggered, and as many employees as the bell died.</specialTip>
+    </specialTipSize>
+
+    <!-- Narration when observation level is maximum. -->
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {Time’s wasting, time’s running out… They are nothing but meaningless tantrums.}
+        {This watch will not only take your lost time back, but also give you even more time.}
+        {You decided to…}
+        <!--계속-->
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Use the watch" target="1" isAnswer="true"/>
+        <node desc="Not to use the watch" target="2" isAnswer="false"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {The price will follow to your decision.}
+        {It is designed this way.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {Actually, you have no right to refuse this gift.}
+        {Whether you want it or not, we all know that you have to take it.}
+        ]
+      </desc>
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {Silence is no longer just bringing peace.}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+
+
+</creature>

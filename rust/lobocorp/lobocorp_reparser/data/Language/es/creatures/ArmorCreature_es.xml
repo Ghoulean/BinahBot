@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100037">
+
+
+
+    <narration action="move">
+      #0 designado al cuarto de contencion del $0 para trabajar.
+    </narration>
+
+    <narration action="start">
+      [
+      {Empleados cobardes sienten algo espeluznante alrededor de $0.},
+      {Solo con esta armadura, el empleado #0 siente que lo mira fijamente. Por supuesto, no hay nadie está dentro de esa armadura.}
+      {Hay rumores acerca de cómo el grito de batalla apasionado dice “Chrage!” se puede escuchar alrededor de esta armadura en medio de la noche. }
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Un poco roto, pero esta armadura está increíblemente bien conservada considerando que es un artefacto de hace cientos de años. },
+      {Muchos generales estaban en posesión de esta armadura. Nadie sabe si fue la guerra o la armadura que les quitó la vida. }
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {La placa del brazo derecho está rota. Después de un diagnóstico, el daño vino desde adentro, no desde afuera.},
+      {$0 fue hecho hace cientos de años. El artesano que creó esta armadura no está identificado, pero al menos está seguro de que odiaba a los cobardes.}
+      {La armadura sigue esperando a aquellos que son imprudentes, y abandonaron sus vidas.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-05-61</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/SamuraiArmor</portrait>
+
+      <name openLevel ="1">
+        Armadura desmoronada
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        Asociacion Espíritual
+      </specialName>
+
+      <openText>“La vida solo se da a los que no temen a la muerte.”</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Una armadura que parece que fue utilizada hace cientos de años. Grabado en la parte inferior dice “La vida solo se da a los que no temen a la muerte.”. Obviamente, la regla de la compañía prohíbe ponerse esta armadura.  <i> Hay rumores sobre empleados que pretenden ponerse la armadura por diversión. Revisa esto inmediatamente!</i> }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {La armadura fue asegurada de un museo. Los siguientes son fragmentos de su leyenda.&#13;&#10;
+      &lt; …….Esta armadura perteneció al general XXXX, quien se unió a la XX guerra en el año de XXX. Era la herencia de su familia, pasada por muchas generaciones. El general siempre estaba en esta armadura para protegerse. Desafortunadamente, una flecha voló en su brecha de su armadura, matándolo instantáneamente. Pero la armadura quedó sin funda. &#13;&#10;
+      Después de eso, la armadura pasó a XXX, quien era el comandante del batallon OO. El comandante siempre estaba vestido de acero cuando salía a la batalla. En una batalla, se cayó del caballo mientras huía de los enemigos y murió debido a una lesión severa en el cráneo. Aún así, la armadura quedó intacta. Hay varias personas más que tenían sus manos en esta armadura, y todos murieron. Sin embargo, la armadura siempre se mantuvo en su mejor condición. &#13;&#10;
+      Pocos años después, la armadura terminó en un guerrero llamado XXX. Sus rumores se extendieron rápidamente sobre cómo él simplemente contenía la armadura, no la usaba en batallas. Murió de vejez después de participar en docenas de guerras sin una sola lesión. En el proceso, la placa del brazo de la armadura fue dañada. Pero no hubo signos de impacto exterior. Despues, la familia XXX’s donó la armadura a un museo.&gt;
+      }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Después de realizar algunas pruebas, logramos obtener las siguientes conclusiones. Cuando esta armadura es usada por un empleado cobarde, las posibilidades de lesiones fatales o muerte aumentan drásticamente. Por otro lado, cuando un empleado que no teme la muerte usaba esta armadura, las posibilidades de lesiones o muerte disminuían enormemente. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Uno de los gerentes de personal sugirió una prueba de ingreso en la que un entrevistado usa esta armadura y camine durante 10 minutos. La sugerencia fue rechazada de inmediato. }
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="NoPeace">Los empleados con nivel de fortaleza 1 fueron puestos en una sala de contención en $0. Una vez finalizado el trabajo, se encontró a los empleados con el cuello cortado.</specialTip>
+      <specialTip openLevel="2" key="GiveYou">Se encontró que los empleados que habían cometido trabajo de Represión tenían artefactos ($0-01) con los mismos ingredientes que el $0. El empleado declaró que $0 recibió un sentimiento de protección.</specialTip>
+      <specialTip openLevel="3" key="Change">El $0-01 se le ordenó continuar realizando trabajos de represión, y cada vez que se completó el trabajo, se llevó a cabo el examen físico del empleado. Como resultado de la prueba, se encontró que el efecto dado por el $0-01 al objetivo cambia de acuerdo con el número de trabajos de represión.</specialTip>
+      <specialTip openLevel="4" key="KillPeace">&lt;ADVERTENCIA&gt;Dejar que el empleado con $0-01 hace un trabajo de Apego. Luego, cuando el empleado entra en la sala de contención, desaparece, $0-01 se corta el cuello y el empleado muere.</specialTip>
+      <specialTip openLevel="4" key="NegativeChange">&lt;ADVERTENCIA&gt;; Si un empleado con $0-01 está intentando un trabajo excesivo de represión, el efecto que el artefacto proporciona al objetivo cambia gradualmente a negativo.</specialTip>
+    </specialTipSize>
+
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {La armadura que se llevó la vida de muchas personas está sentada frente a ti. }
+        {Puedes ponertelo si lo deseas.}
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Put it on" target="1" isAnswer="true"  message="Has conseguido obtener un informe de observación final sobre la Armadura desmoronada"/>
+        <node desc="Don’t put it on" target="2" isAnswer="false"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {Parece que no fuiste pacifista.}
+        {Sientes la cálida bienvenida de la armadura.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {La armadura espera a otro imprudente.}
+        ]
+      </desc>
+
+
+
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {“Los que no temen a la muerte.” Me recuerda el eslogan de la compañia.}
+        {No sé si es una mentalidad admirable, aunque es beneficioso. }
+        ]
+      </angela>
+    </max>
+
+  </observe>
+</creature>

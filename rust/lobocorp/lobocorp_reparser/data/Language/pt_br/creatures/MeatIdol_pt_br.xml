@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300004">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para iniciar o processo de trabalho.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-79</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/MeatIdol</portrait>
+      <name openLevel="1">
+        Ídolo de Carne
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>
+        E a oração inevitavelmente terminará com o eterno desespero de seu adorador.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Um engrenamento de carne e metal de sucata.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {É especulado ser um artefato religioso encontrado em um distrito inundado. No passado, algumas pessoas procuravam respostas através da religião. Quando um funcionário oferece uma oração, a carne começa a se mexer, como se conseguisse ouví-la.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {O suplicante sofrerá várias provações como se estivesse sendo colocado em um julgamento. Enquanto isso, todos aqueles ao seu redor perderão todas as dores e aflições como se estivessem sendo abençoados com redenção.}
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      <!-- 여기 번역 고치기 -->
+      [
+      {E a oração inevitavelmente terminará com o eterno desespero de seu adorador.}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">O efeito do $0 se manifesta através de orações. É causado dano aleatório naquele que reza em certos intervalos padrões.</specialTip>
+      <specialTip openLevel="2" key="2">&lt;Experimento 1&gt; O sujeito rezou por uma duração de 20 segundos ou menos. Foi encontrado morto.</specialTip>
+      <specialTip openLevel="3" key="3">&lt;Experimento 2&gt; O sujeito rezou por uma duração entre 21 e 45 segundos. Durante esse prazo, todos os funcionários, menos o sujeito, recuperaram PV.</specialTip>
+      <specialTip openLevel="4" key="4">&lt;Experimento 3&gt; O sujeito rezou por uma duração entre 46 e 90 segundos. Os resultados foram similares ao do Experimento 2, mas PS também foi recuperado.</specialTip>
+      <specialTip openLevel="5" key="5">&lt;Experimento 4&gt; O sujeito rezou por uma duração maior que 90 segundos. Ele morreu e os Contadores Qlifót de todas as Anormalidades caíram para zero.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

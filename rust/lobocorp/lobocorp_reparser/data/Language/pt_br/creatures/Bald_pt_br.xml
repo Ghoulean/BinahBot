@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100034">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção de $0 para começar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {#0 está começando a sentir que ter cabelo não passa de um fardo.},
+      {#0 está começando a achar que ter uma tatuagem em uma cabeça careca seria super legal.},
+      {#0 está tirando a peruca porque sente orgulho da própria calvice.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Você pode se parecer com o Bruce Willis se você for careca!},
+      {De certo modo, pessoas carecas sempre têm uma aparência profissional não importa o que façam!},
+      {Se você for careca, nunca mais terá que se preocupar com ralos entupidos!}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Então você ainda tem seu cabelo sedoso?}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">Ser-Careca-é-Íncrível!</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Bald</portrait>
+      <name openLevel="1">
+        Você está Careca… 
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <openText>Você liga sua máquina de barbear…</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Aviso: Você foi atingido pelo ataque psicológico careca-carequinha. Se uma pessoa com cabelos ler isso, ela terá o privilégio de ficar careca em uma rapidez extrema. Caso queira que isso seja impedido, um Agente deve trabalhar nessa Anormalidade. Além disso, se você encontrar 10 ou mais fios de cabelo em seu travesseiro de manhã, é recomendado ler esse artigo da Enciclopédia ao menos três vezes. }
+      ]
+    </desc>
+    <desc id="2" openLevel="2">
+      [
+      {Bill: Eu tive um sonho incrível hoje!&#13;&#10;Brian: O que, você ganhou na loteria ou algo do tipo?&#13;&#10;Bill: Quando eu cheguei no trabalho, todo mundo estava careca! Todo mundo até você! Talvez até as pessoas fora dessa corporação!&#13;&#10;Brian: Bem… Eu acho que você esteve bem estressado esses dias. Por que não procura por aconselhamento?&#13;&#10;&#13;&#10;O Funcionário Bill sofreu um infeliz acidente com a Máquina Cantora naquele dia. E logo após o incidente, a Anormalidade Ser-Careca-É-Incrível! apareceu. Todos nós prezamos pelas memórias do Bill Careca.}
+      ]
+    </desc>
+    <desc id="3" openLevel="3">
+      [
+      {Se alguém entra em contato com a Anormalidade, essa pessoa irá falar ou escrever sobre os aspectos positivos de ser careca por até uma hora e ultimamente fará a si mesma ficar careca.&#13;&#10;&lt;i&gt;Se você ficar careca, não precisará mais desperdiçar tempo lavando ou secando seu cabelo, menos gasto com shampoo te permite ser mais rico que os outros.&lt;/i&gt;&#13;&#10;Nenhuma reação ruim acontecerá se um funcionário careca for mandado para trabalhar na Anormalidade.&#13;&#10;&lt;i&gt;Os carecas não precisam se preocupar mais com perda capilar.&lt;/i&gt;&#13;&#10;Se um funcionário que não for careca for mandado para trabalhar na Anormalidade, ele raspará o próprio cabelo.&#13;&#10;&lt;i&gt;Pessoas carecas podem até refletir luz com a cabeça e cegar seus oponentes como uma erupção solar!&lt;/i&gt;&#13;&#10;O objetivo dessa Anormalidade é fazer todo humano na Terra ficar careca.&#13;&#10;&lt;i&gt;Não vamos mais precisar de lâmpadas nas instalações se tivermos mais funcionários carecas, porque a luz será refletida na testa de cada um deles. Isso nos permitirá poupar uma quantidade tremenda de nossas despesas.&lt;/i&gt;&#13;&#10;Se um funcionário que não for careca for mandado para trabalhar na Anormalidade, ela produzirá menos energia.&#13;&#10;&lt;i&gt;Você sabia que todos os nobres na Europa durante a Idade Média eram carecas? Eles trocavam a peruca todo dia!&lt;/i&gt;}
+      ]
+    </desc>
+    <desc id="4" openLevel="4">
+      [
+      {&lt;i&gt;Nós acabamos de adicionar algumas novas regras para o código de conduta da corporação:&lt;/i&gt;&#13;&#10;
+      + Se você ver um XXX tirando sarro de seu colega que tenha alopecia areata, ele será rotulado como peludo e será banido de usar a sala de descanso por tempo indefinido. Além de estarem proibidos de se juntar a determinados clubes da corporação como o grupo de debate “Questionadores da Ausência de Barbies Carecas”, o encontro gourmet “Polvos acima de Lulas”, e o grupo de proteção ambiental “Salve as Águias Carecas”. (Essas regulações serão removidas assim que a quantidade de fios de cabelo do quebra-regras ficar abaixo de 1.)&#13;&#10;&#13;&#10;&lt;i&gt;E por último, eu dedico esse artigo ao funcionário T.H. Que está quietamente ao meu lado tomando remédio para ficar careca.&lt;/i&gt;}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="memeriBeam">Você ainda parece estar mantendo seu cabelo sedoso… Você foi atingido pelo raio do Ser-Careca-É-Incrível!.</specialTip>
+      <specialTip openLevel="2" key="memeriOnly">Se você não trabalhar agora, todos os funcionários, incluindo você, perderão todo o cabelo e ficarão carecas em até um mês.</specialTip>
+      <specialTip openLevel="3" key="memeriHurryUp">Ainda não é tarde demais. 30... 29... 28...</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

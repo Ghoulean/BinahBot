@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300104">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para iniciar o processo de trabalho.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-09-91</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/OtherWorldPortrait</portrait>
+      <name openLevel="1">
+        Retrato de Outro Mundo
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <openText>
+        Este retrato captura um momento; é o que estamos destinados a perder.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Conforme a passagem do tempo, as pessoas mudam. Podemos ficar inválidos, loucos, ser consumidos por um enorme impulso violento, ou ser desejado sumir, para nunca mais ser visto. }
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Este retrato captura um momento; é o que estamos destinados a perder. Aqueles que veem a própria boa saúde irão subconscientemente começar a ter uma ânsia. “Se a vida pudesse ser sempre assim. Se eu pudesse ter sempre um sorriso tão brilhante como o do retrato.”}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Alguém começará a se sentir estranho. Alguém começará a não ser machucado por qualquer forma de ataque, porém, outros carregarão a dor no lugar. }
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Pouco a pouco, o retrato ficou gradativamente feio. E, eventualmente, alguém parará de ver o retrato e sua sorte inesperada.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Infelizmente, nenhum milagre dura para sempre. Quando todos aqueles que carregam aquela dor perecerem, é a vez do sortudo morrer. Quando a pessoa que pensou que era a mais sortuda do planeta chegar a sua inevitável morte, o retrato voltará a ficar em branco novamente. }
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">A primeira pessoa a usar a Anormalidade terá a imagem gravada na tela de pintura.</specialTip>
+      <specialTip openLevel="2" key="2">Todo o dano que seria causado a pessoa que está gravada será causado a outro escolhido aleatoriamente. (Porém, o efeito da Anormalidade não se aplicará para danos que vão além do PV máximo da pessoa que é mostrada na tela.) A pessoa gravada também sofrerá danos maiores. </specialTip>
+      <specialTip openLevel="2" key="3">Quando aquele que receber a dor morrer, outro tomará seu lugar. Quando não sobrar mais pessoas, aquele que está gravado na tela morrerá.</specialTip>
+      <specialTip openLevel="2" key="4">Se a imagem de uma nova pessoa é colocada na tela de pintura, o anterior morrerá.</specialTip>
+      <specialTip openLevel="2" key="5">Se a pessoa gravada morrer por qualquer outra maneira que não seja por dano normal, a Anormalidade retornará a seu estado original.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

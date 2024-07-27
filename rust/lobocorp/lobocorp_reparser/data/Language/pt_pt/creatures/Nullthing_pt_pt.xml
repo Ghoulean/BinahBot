@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id ="100005">
+
+
+   <narration action="move">
+     #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+   </narration>
+
+    <narration action="start">
+      [
+      {A aparência do $0 é semelhante a um ser humano. No entanto, empregados com uma visão aguçada podem ver que algo não parece ser compatível.},
+      {$0 é diferente de uma Anormalidade ordinária. A sua maior diferença é que o mesmo nunca mostrou a sua verdadeira natureza.},
+      {$0 não têm conceito de 'estresse'. Ele apenas 'existe'.},
+      {Espero que saibas a diferença entre 'casca' e 'pele'.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 range os seus dentes sem motivo enquanto observa #0.},
+      {Ossos que parecem sair fora do $0 produzem som, como se estivessem a ser esmagados.},
+      {O pescoço torcido da casca do $0 não é natural, mas ele apenas incara #0.},
+      {Algo que parece ser a boca do $0 ocasionalmente deixa escorrer para fora algo que parecem intestinos que provavelmente costumavam pertencer a um humano.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {#0 está a fazer o seu melhor para não olhar para o $0},
+      {#0 está a tentar não pisar nas secreções desconhecidas da Anormalidade.},
+      {Mesmo que a Anormalidade não esteja a fazer ameaças contra #0, #0 ainda sente arrepios.},
+      {#0 entende que $0 não irá atacar por agora, mas estar na unidade de contenção é o suficiente para fazer #0 sentir pavor.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {Enquanto trabalhava, #0 acha algo no $0 um tanto familiar.},
+      {#0 encontra algo do $0.},
+      {Finalmente, #0 descobre a verdade sobre a casca do $0.},
+      {Pobre #0 finalmente viu o quê que o $0 "veste".}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {Aquela pessoa costumava ser o/a superior de #0. Ambos raramente falaram, mas podiam ter sido bons colegas de trabalho.},
+      {#0 viu o perfil de empregado daquela pessoa. #0 conseguiu-se lembrar de quem eram por causa do sinal que têm na cara.},
+      {Aquela pessoa tinha sido contratada muito antes de #0, juntando-se à companhia quatro anos antes. #0 lembra-se do que outros empregados lhe disseram sobre tal indivíduo.}
+      ]
+    </narration>
+
+    <narration action="special_ability1">
+      [
+      {O $0 veste-se com #0.}
+      ]
+    </narration>
+
+    <narration action="special_ability2">
+      [
+      {Enquanto $0 se veste, os ossos de #0 são espalhados pelo chão.}
+      ]
+    </narration>
+
+    <narration action="special_ability3">
+      [
+      {O seu braço direito está em no lugar errado, mas parece que $0 não sabe disso.}
+      ]
+    </narration>
+
+    <narration action="special_ability3_3">
+      [
+      {Agora, disfarçando-se de #0, $0 está a fazer sons bastante desconfortáveis de ossos a partir.}
+      ]
+    </narration>
+
+    <narration action="panic">
+      [
+      {#0 não consegue mais encarar $0. O $0 não é nada para #0, nada é nada…},
+      {#0 sente desespero e nojo do $0. Aversão inata infiltra o corpo de #0.}
+      ]
+    </narration>
+
+
+    <narration action="dead">
+      [
+      {Agora #0 tornou-se a nova casca do $0. Talvez chegará o dia em que #0 terá um enterro digno, como o da "casca" que $0 acabou de substituir.},
+      {#0 é agora a nova casca de $0. Todos empregados irão lembra-se de #0. Quer queiram, quer não.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-06-20</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/NotThing</portrait>
+
+      <name openLevel ="1">
+        Nada Ali
+      </name>
+      
+      <riskLevel openLevel ="1">
+        ALEPH
+      </riskLevel>
+
+     
+      <openText>E as várias peles apenas gritavam uma coisa: “Gerente!”</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Ele tem forma humana mas certamente não é um. Em um certo período de tempo ele irá devorar um empregado e vestir a sua pele. Durante este processo a sua estrutura óssea e os seus órgãos estarão em uma grande confusão então ele mantêm uma forma estranha. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {A criatura tem lingua mas não sabe como falar, então só é capaz de produzir sons sem lógica alguma. Não se sabe o que está dentro da sua casca mas a sua pele desgasta-se constantemente, então é preciso mudas e manutenção para manter a camada exterior. A criatura é incapaz de sentir dor comum então não se importa com os seus ossos partidos e é capaz de parti-los e de se cortar para conseguir fugir por algum lugar apertado.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Mais uma coisa, descobriu-se que esta Anormalidade pode estar evoluindo. Ela demonstrou imitar a personalidade da pessoa cuja a pele que ela veste pertence e tenta igualar-se aos seres humanos.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Quando se encontra em fuga, ele irá vestir a pele do empregado que matou e imitá-lo, e então sem nenhum aviso prévio, ele revela a sua verdadeira forma. A sua última transformação apresenta maior semelhança a um ser humano do que as outras. Também foi confirmado que na sua última forma ele pode tornar-se bípede e colocar os seus órgãos na ordem correta, possuindo também uma grande força física. Empregados temem esta forma.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {&lt;Aviso sobre Algo&gt;&#13;&#10;Se a sua fuga for confirmada e se já se tornou bípede, agora só há uma coisa que tu podes fazer. Coloca-te com uma postura correta e junta as tuas mãos, reza para o Deus em que tu acreditas e observa a desgraça acontecer.}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="3">
+      [
+      {&lt;Excerto do Registo da Sessão de Aconselhamento #4-593&gt;&#13;&#10; Empregada F4055 : “Assim como a maioria das Anormalidades neste lugar, ninguém sabe o motivo da sua existência. Eu não sei o quê que está dentro daquela coisa que a faz querer cobrir-se com pele humana ou como é que é capaz de a vestir tão rapidamente. Eu não entendo porquê que aquela coisa não cuida da sua própria pele, (Omitido). &#13;&#10;Quando ele devora um de nós, é um processo tão nojento que é capaz de danificar a psique de alguém só de pensar nisso. De qualquer forma, ir para a zona de contenção para verificar o estado da pele é trabalho sério. Pensa bem. Um colega teu com quem conversaste e ris-te muito nestes últimos dias, agora tem um pescoço partido, órgãos a sair para fora do seu corpo e anda com quatro patas. (Omitido) &#13;&#10;Isso não é tudo que a criatura faz. Quando eu ainda era nova aqui, ninguém queria ir para aquela sala, então mandaram-me a mim. Era pior do que agora. Ele tinha a forma de um ser humano que tinha sido todo torcido e agora parecia Deus sabe lá o quê. Ele tentou agir como um ser humano e falar com ele mesmo no espelho. Eu vi-o tentar recompor a sua estrutura para ter uma postura mais humana. Eu acho que ele estava a tentar imitar-'nos'. Quem sabe algum dia ele talvez se torne bom o suficiente para poder andar por aí casualmente entre nós."}
+      ]
+    </desc>
+
+    <desc id="7" openLevel="3">
+      [
+      {&lt;Aviso&gt;&#13;&#10;Apenas indivíduos Nível 3 ou superior podem ler este documento. &#13;&#10;&#13;&#10; (Esta é a gravação de uma chamada feita pelo telefone de emergência dentro da unidade de contenção da Anormalidade. Telefones são instalados em salas de entidades de nível HE ou superior para que emergências possam ser resolvidas rapidamente.)&#13;&#10;&#13;&#10;Empregado M3120: Andem lá, respondam logo masé, respondam. Esta é a zona de contenção do ‘Nada Ali’&#13;&#10;Departamento de Resposta de Emergências(DRE): Equipa de Resposta de Emergências. Como posso ajudar?&#13;&#10;Empregado M3120: Eu preciso de uma arma de choque imediatamente! É uma emergência!&#13;&#10;DRE: Podes especificar o quê que se está a passar, por favor?&#13;&#10;Empregado M3120: A Anormalidade...(barulho, algo sendo quebrado) está a desfazê-lo. &#13;&#10;DRE: Desculpe, o quê?&#13;&#10;Empregado M3120: Está a matar o meu colega!&#13;&#10;DRE: Já estamos a trabalhar no assunto. Por favor identifique o empregado que está a ser atacado. &#13;&#10;Empregado M3120: Uh… É o M2658…não é o M26850. Nome, &lt;EDITADO&gt;. Eu sou o M3120, &lt;EDITADO&gt;.&#13;&#10;DRE: Identidade confirmada. O quê que está a acontecer com o teu colega agora? &#13;&#10;Empregado M3120: 'Tá, podem despachar-se, por favor. Eu preciso de uma arma para controlar a criatura. (barulho – provavelmente gritos do M2658) Oh Deus, isto…&#13;&#10;DRE: Podes dizer-me o quê que se está a passar?&#13;&#10;Empregado M3120: Uma Anormalidade está a atacar o meu colega. Ela está literalmente a despedaçá-lo. Eu não consigo fazer nada. Eu repito. Eu preciso de uma arma para controlar a criatura. &#13;&#10;DRE: A Equipa de Resposta de Emergências já está a ir para aí. Eles vão chegar em pouco tempo.&#13;&#10;(Omitido) &#13;&#10;DRE: &lt;EDITADO&gt;, o quê que está a acontecer? A Anormalidade ainda está a atacar o teu colega?&#13;&#10;Empregado M3120: Sim... oh. Não. Acho que não está atacá-lo.&#13;&#10;DRE: Então a Anormalidade parou?&#13;&#10;Empregado M3120: Não. O meu colega está... ele está morto. Eu repito, ele está morto.&#13;&#10;DRE: Como é que tens certeza disso?&#13;&#10;Empregado M3120: Porque ele parece… ele está…&#13;&#10;DRE: Ele foi desmembrado? Quais partes foram danificadas?&#13;&#10;Empregado M3120: Todas.}
+      ]
+    </desc>
+
+    <desc id="8" openLevel="3">
+      [
+      {&lt;Registo de uma Entrevista&gt;&#13;&#10;Assim como os nossos empregados estudam as Anormalidades, o ‘Nada Ali’ também nos estuda. &#13;&#10;E depois de vestir a pele do empregado que morreu, aquela coisa pensa que se tornou nessa pessoa. &#13;&#10;Em seguida, ele tenta imitar o seu comportamento, hábitos de fala, gostos, desgostos e tudo que lhe aparece pela frente. &#13;&#10;Nós não sabemos por quanto tempo ou o quão cuidadosamente ele tem estado a observar os nossos empregados para que os possa imitar. &#13;&#10;O que eu quero dizer é que nós não podemos tratar aquela coisa como ‘um monstro assustador sem nenhuma inteligência’.&#13;&#10;Mesmo agora, ele pode estar a passear por aí usando a pele de alguém que nós conhecemos.&#13;&#10;Cada vez se tornando mais semelhante ao ser humano. &#13;&#10;A sua transformação está a ficar cada vez mais rápida. Isto tem estado a dar-me arrepios.&#13;&#10;Quando chegar o dia em que não conseguiremos o distinguir dos outros seres humanos, esse será o dia em que esta companhia será destruída. &#13;&#10;Nós devemos estar vigilantes com esta Anormalidade.}
+      ]
+
+    </desc>
+
+    <desc id="9" openLevel="3">
+      [
+      {(O seguinte é uma gravação do comportamento incomum demonstrado por uma empregada que se tornou a pele do “Nada Ali”.)&#13;&#10; F2930: Gerente, gerente!&#13;&#10;M2023: Hey, tu tens estado a manhã toda a chamar pelo gerente. Qual é o teu problema? Com esse sorrisinho e tudo.&#13;&#10; F2930: …&#13;&#10;M2023: Bem, eu espero que tenhamos massa para o jantar, com muito bacon.&#13;&#10; F2930: … &#13;&#10;M2023: Oh, acabei de receber um aviso. “O último empregado que trabalhou com o 'Nada Ali’, dirija-se ao escritório do conselheiro imediatamente.” &#13;&#10; F2930: … &#13;&#10;M2023: Não foste...tu?&#13;&#10; F2930: ...&#13;&#10;M2023: Hey, diz alguma cois— &#13;&#10; F2930: Gerente! GERENTE! ████████!  !! }
+      ]
+    </desc>
+
+    <desc id="10" openLevel="3">
+      [
+      {O empregado M2023 efetuou os procedimentos imediatos após ouvir aquelas palavras. No entanto, "Nada Ali" saiu de dentro da empregada F2930, revelando a sua primeira forma. As gravações realizadas apenas contem áudio, tornando assim impossível de saber o quê que exatamente aconteceu.  &#13;&#10;A pele que cobre o "Nada Ali" tenta imitar o empregado que o tentou suprimir. Ele tentar repetir o comportamento ou as palavras do último empregado que viu. &#13;&#10;E as várias peles apenas gritavam uma coisa: “Gerente!”.}
+      ]
+    </desc>
+
+     <specialTipSize size="7"> 
+      <specialTip openLevel="1" key="needKill">Quanto menor é o nível de Fortaleza do empregado, menor a probabilidade de sucesso e menor a estabilidade do trabalho.</specialTip>
+      <specialTip openLevel="2" key="justice">Quando um empregado com Justiça abaixo do nível 4 completou o seu trabalho, o Qliphoth Counter de $0 diminuiu.</specialTip>
+      <specialTip openLevel="2" key="killUp">Quando #0 morrera dentro na sala de contenção pelos ataques de $0. Repentinamente, $0 mudou a sua forma para a de #0. O mesmo aconteceu quando o empregado entrou em pânico.</specialTip>
+      <specialTip openLevel="2" key="panicUp">Quando o resultado do trabalho foi Mau, $0 atacou o empregado e criou a sua nova pele.</specialTip>
+      <specialTip openLevel="3" key="makePanic">Empregados com nível de Fortaleza 3 entraram imediatamente em pânico quando entraram na sala de contenção. É recomendado não enviar empregados com nível de Fortaleza 4 para a cela de $0.</specialTip>
+      <specialTip openLevel="3" key="backMonster">O empregado que viu a forma humana do $0 entrou em pânico, e também o juntou a sua pele. E o Qliphoth Counter também diminuiu.</specialTip>
+      <specialTip openLevel="4" key="needGun">Quando o Counter chegou a 0, $0, que tinha a forma semelhante a de #0, desapareceu da sala de contenção. Rapidamente encontre-o e mate o $0 que está com a mesma aparência do empregado que morrera.</specialTip>
+    </specialTipSize>
+
+   
+
+  </observe>
+</creature>

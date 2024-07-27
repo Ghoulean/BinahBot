@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+   <info id="300107">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-09-96</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/JusticeReceiver</portrait>
+      <name openLevel="1">
+        Ajusteur d’Attitude
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>À terme, réfléchir perd tout son sens puisqu’ils oublient même comment exister.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Un appareil électronique portant la gravure d’un mystérieux symbole.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Il peut remettre chacun dans le droit chemin, qu’importe à quel point l’on est malfaisant, nocif et arrogant.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Cependant, ses utilisateurs deviennent progressivement dépendants à l’appareil, perdant toute capacité à penser par eux-mêmes.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {À terme, réfléchir perd tout son sens puisqu’ils oublient même comment exister.}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Les Statistiques liées à la Justice augmenteront beaucoup si $0 est équipé. Cependant, celles en rapport avec la Prudence diminueront en contrepartie.</specialTip>
+      <specialTip openLevel="2" key="2">L’utilisateur paniquera si on lui demande de rendre $0 moins de trente secondes après l’avoir équipé et mourra après avoir montré un comportement anormal.</specialTip>
+      <specialTip openLevel="2" key="3">Si les PSM du porteur tombent à 0, il mourra instantanément.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

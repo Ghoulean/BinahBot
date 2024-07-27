@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100023">
+
+
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+
+    <narration action="start">
+      [
+      {在无人知晓的密室中，那个女巫问到：“魔镜啊魔镜，谁是这个世界上最美丽的女人？”},
+      {镜子自然不会作出回应，可女巫心里早已有了答案。},
+      {那一天，随着被诅咒的苹果遗落在公主与王子的花园里，那个女巫的内心也随之崩溃。},
+      {女巫不顾死活，在苹果上施下了最恶毒的咒语...}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {#0看到了铺满整个收容单元的藤蔓。},
+      {一些藤蔓和枝叶仍然在“$0”的收容单元里缓慢生长着。},
+      {藤蔓正缠绕在“$0”附近。},
+      {枝叶沙沙作响。}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {如果你走近观察，你会意识到这些藤蔓早已枯萎。},
+      {茎叶已经完全干透了，只要轻轻一碰就能把它们变回尘土。如此恐怖的东西很难被称作是“植物”。},
+      {尽管茎叶已经枯萎了，可它们仍然在生长。}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {“$0”的眼睛是在很久很久以前被小鸟和昆虫咬出来的。“$0”靠吃小鸟和昆虫的死尸而生长。},
+      {“$0”孤独了很久很久...它的四周遍布小鸟和昆虫的残骸。}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {“$0”想起了在众人的祝福声中迈过鲜花之道的公主与王子。},
+      {无辜的苹果被女巫降下最恶毒的诅咒，可那个因苹果而陷入沉睡的公主，最终却过上了幸福快乐的生活。}
+      {随着可怕的嫉妒、愤怒、孤独...“$0”将愈发强大。}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">F-04-42</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/SnowWhite</portrait>
+
+      <name openLevel ="1">
+        白雪公主的苹果
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>那一天，随着被诅咒的苹果遗落在公主与王&#13;&#10;子的花园里，那个女巫的内心也随之崩溃。</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {...在白马王子深情地亲吻白雪公主之后，白雪公主咳出了卡在喉咙里的毒苹果...白雪公主与白马王子在七个小矮人的祝福声中携手穿过鲜花漫烂的小道，迈向幸福的城堡...从此以后，他们过上了幸福快乐的生活...}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {然而，那个被女巫的愤怒与诅咒所污染，已然成为了女巫一部分的苹果，仅仅只被白雪公主咬了一小口后，便如垃圾一般被丢弃在了地上。慢慢地，苹果被愤怒侵染着，除了对白雪公主和她给予的孤独感到憎恶之外，它已经什么都感受不到了。可它唯一能做的，就是等待着腐烂，等待着回归自然母亲的怀抱。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {不知是因为女巫的诅咒，还是它的仇恨扭曲了自然的法则。岁月流转，时间飞逝，本该早已发芽的苹果却没有丝毫的腐烂，它的一些部分被过路的旅人踩碎了，其余的部分也满是蛀虫与鸟儿留下的空洞。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {...苹果的周围已经堆满了死去的蛀虫与小鸟，它在腐烂的尸堆之中思考着自己的存在意义。一天又一天，了无生机的茎干慢慢地从苹果中长了出来，但纵使全数干枯，它们也从未停歇。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {某个宁静的午后，白雪公主的苹果终于获得了可以使它活动起来的力量...它想起了弃它而去的，正过着幸福生活的公主与王子。白雪公主，亦如现在的它，也曾静静地沉睡了很久...很久...但属于她的王子最终与她相逢，温柔地将她唤醒。现在，这颗苹果，不，这位公主，开始动身，踏上了寻找属于她的那位王子的旅途...&#13;&#10;——摘录自《童话故事背后的秘密》（作者不详）}
+      ]
+    </desc>
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="Escape">当工作结果为良时，“$0”的逆卡巴拉计数器有小概率在倒计时结束后减少。</specialTip>
+      <specialTip openLevel="1" key="Escape2">当工作结果为差时，“$0”的逆卡巴拉计数器有大概率在倒计时结束后减少。</specialTip>
+      <specialTip openLevel="2" key="Making">突破收容后，“$0”会瞬移到设施内的某一条走廊，然后开始散布藤蔓。藤蔓上的员工会降低移动速度，当藤蔓与“$0”相连时，藤蔓上的员工将会受到“$0”的攻击。 </specialTip>
+      <specialTip openLevel="3" key="NotDisappear">当一条走廊完全被藤蔓覆盖时，“$0”将会瞬移到其他的走廊并继续散布藤蔓。即使“$0”被成功镇压，它的藤蔓在下一天到来前都不会消失。</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+
+
+
+</creature>

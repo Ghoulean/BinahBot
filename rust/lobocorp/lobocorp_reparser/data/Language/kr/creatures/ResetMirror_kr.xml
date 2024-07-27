@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300007">
+
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다
+    </narration>
+
+   
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-81</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ResetMirror</portrait>
+
+      <name openLevel ="1">
+        조정의 거울
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+
+      <openText>
+        “만족은 순간이지.”
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {전신형 거울의 형태를 띄고 있지만 정작 비추는 건 아무 것도 없다.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {거울이 비추는 건 오직 사람이다. 거울 속 자신을 마주보고 있으면 대상이 뒤바뀐다. 평행 세계의 가능성 중 하나다, 마법적인 힘이다 등등 여러가지 추측이 오 갔지만 확인할 길이 없었다. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {거울을 응시한 사람은 겉모습만 같을 뿐, 알맹이는 완벽히 다른 타인이 된다. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      <!-- 여기 번역 고치기 -->
+      [
+      {거울을 두 번 이상 응시하기 시작하면 인간성이 좀먹혀 최종적으로는 걸어다니는 시체와 다름없어지니 주의해야 한다.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {“방금 브라이언 직원이 날 무시하고 걸어가던데, 무슨 일 있었어?”&#13;&#10;“아, 거울을 보았대.”&#13;&#10;“본인 몸이 너무 약하게 태어났다고 툴툴대더만, 드디어 마음을 먹었나 보네.”&#13;&#10;“만족은 순간이지.”}
+      ]
+    </desc> 
+
+  
+
+     <specialTipSize size="2">
+      <specialTip openLevel="1" key="1">$0을 마주한 대상은 그동안 쌓아온 능력치가 임의로 조정된다.</specialTip>
+      <specialTip openLevel="2" key="2">동일한 직원이 하루에 2번 이상 $0을 보게될 경우, 대상을 마주할 때마다 모든 능력치가 감소하게 된다.</specialTip>
+      </specialTipSize>
+
+   
+
+  </observe>
+</creature>

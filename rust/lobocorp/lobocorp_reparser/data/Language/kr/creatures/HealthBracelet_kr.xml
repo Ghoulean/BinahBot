@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300106">
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-95 </codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/HealthBracelet</portrait>
+
+      <name openLevel ="1">
+        발광 팔찌
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>팔찌는 이 욕심많은 자를 용서하지 않으니 부디 간절한 자들에게만 착용되어야만 한다.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {은은하게 옥 색의 빛을 스스로 뿜어내는 팔찌. 외곽에는 설명 불가능한 것들이 많이 발견되었다. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {착용할 시 상처입은 곳은 흔적도 없이 나아지는 모습을 볼 수 있다. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {하지만 더 이상 나아지는 게 없는 상태임에도 해당 팔찌를 계속해서 차고 다닌다면 그건 욕심이 되어버린다. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+
+      [
+      {팔찌는 이 욕심많은 자를 용서하지 않으니 부디 간절한 자들에게만 착용되어야만 한다.}
+      ]
+    </desc>
+
+     <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">$0을 장착한 대상은 체력이 크게 상승한다.</specialTip>
+      <specialTip openLevel="2" key="2">$0는 착용자의 체력이 감소할 때마다 지속적으로 체력을 회복시켜준다.</specialTip>
+      <specialTip openLevel="2" key="3">체력이 감소한 상태에서 반납을 시도할 경우 착용자는 사망한다.</specialTip>
+      <specialTip openLevel="2" key="4">장착 후 일정 시간동안 체력이 감소하지 않을 경우 착용자는 과도한 회복의 부작용으로 인해 사망한다.</specialTip>
+      </specialTipSize>
+
+
+  </observe>
+</creature>

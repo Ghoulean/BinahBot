@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id="100045">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para começar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {Os irmãos do $0 só piscam; Como se fosse a única coisa que pudessem fazer dentro da Unidade de Contenção.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Quando os irmãos mostram qualquer sinal de dor, o $0 se aproximará deles, carregando seu corpo exausto.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">F-02-70</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/BlackSwan</portrait>
+      <name openLevel="1">
+        Sonho de um Cisne Negro
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>O que acontece quando o cisne negro acorda de um sonho em que era um cisne branco?</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {A Elijah tinha uma enorme família para cuidar.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Os pais empobrecidos dela sempre diziam: “Mesmo que não tenhamos nada para você herdar, você tem o tesouro mais valioso. Honestidade e diligência. Essas características podem não ser de grande ajuda agora, mas farão todos vocês felizes algum dia.”}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Um dia, uma densa névoa cobriu a cidade.&#13;&#10;A névoa, pensada ser um fenômeno natural no começo, não se dissipou mesmo após alguns dias.&#13;&#10;&#13;&#10;Era dita causar náusea ou vômito, mas a grande parte das pessoas não dava muita bola para ela, continuando a trabalhar e continuar a vida cotidiana debaixo da névoa.&#13;&#10;E claro, Elijah era uma das pessoas que precisava aturá-la. Por ser o único membro da família com um trabalho decente para que pudesse aturar a herança da pobreza que os deixaram com uma grande dívida. Ela tinha vários irmãos, mas suas vontades foram quebradas após enfrentarem várias falhas.&#13;&#10;Elijah estava sempre cansada, mas pensava que se ela trabalhasse um pouco mais, as coisas funcionariam bem. Igual o que os pais dela costumavam dizer. Assim como acontecia em contos de fada.&#13;&#10;Igual àquele pássaro que eventualmente abriu suas asas e causou inveja a todos.}
+    ]
+  </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Algumas pessoas saíram da cidade para escapar da névoa.&#13;&#10;&#13;&#10;Disseram que era o fim da cidade. Mas Elijah não escutou.&#13;&#10;&#13;&#10;Ela se sentia meio enjoada às vezes. Sentia todo o seu corpo empolando.&#13;&#10;&#13;&#10;Quase lá, só mais um pouco; se ela tivesse aguentado só mais um pouco, as roupas feitas de urtigas ficariam concluídas, e se ela tivesse jogado elas para os irmãos que já amou carinhosamente, então os dias em que vivia com sua família harmoniosamente poderiam ser recuperados.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Em um dia, no caminho de volta para casa após o trabalho, ela esbarrou em um pedestre que estava correndo em velocidade máxima. Por causa da velocidade em que estava esse pedestre quando esbarrou nela, ele não conseguiu se levantar, então ela se ofereceu para ajudá-lo, perguntando se ele estava bem.&#13;&#10;&#13;&#10;Ele então deu um tapa na mão dela e se levantou sozinho. O pedestre então deu alguns passos titubeantes antes de cair novamente. O homem parecia estar correndo para longe de algo; ele parecia preocupado se a Elijah o machucaria.&#13;&#10;&#13;&#10;Ela tentou perguntar o que estava errado. Porém, o pedestre abriu a boca primeiro. A simples ação de abrir a boca parecia estar dando trabalho, então ela esperou pacientemente para ouvir o que ele tinha para falar.&#13;&#10;&#13;&#10;Mas ele não abriu a boca para falar; começando a vomitar uma mistura de sangue e dejetos.&#13;&#10;&#13;&#10;A mistura pegajosa derramava de sua boca no começo, então começou a jorrar de seu nariz, ouvidos e olhos. Se ele não estivesse expelindo o líquido de todos os orifícios, Elijah poderia ter tentado ajudá-lo.&#13;&#10;&#13;&#10;Ela então achou que ouviu um grito distante. Deixando o homem vomitando para trás e começando a andar lentamente.&#13;&#10;&#13;&#10;O que acontece quando o cisne negro acorda de um sonho em que era um cisne branco?&#13;&#10;&#13;&#10;Tinham muitas pessoas no meio da névoa. Algumas gritando, algumas rindo. Algumas com clavas, outras encolhidas; com seus corpos cobertos de feridas. Resíduos molhados e escuros estavam espalhados no chão, cobertos de pegadas.&#13;&#10;&#13;&#10;Ela então começou a procurar seus irmãos. Sua família que precisava vestir as roupas de urtiga para se livrar da maldição. Aqueles com quem ela compartilhou vários sonhos felizes.&#13;&#10;&#13;&#10;Ela viu seus queridos irmãos bem longe.&#13;&#10;&#13;&#10;Elijah caiu de joelhos e finalmente começou a vomitar aquela coisa que todo mundo também estava vomitando.&#13;&#10;
+      O lago ondula gentilmente. Como se vários cisnes acabara de alçar voo.}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia e a aparência de F-02-70-4 mudava.</specialTip>
+      <specialTip openLevel="1" key="2">Quando o resultado do trabalho era Neutro, o Contador Qlifót reduzia e a aparência de F-02-70-5 mudava.</specialTip>
+      <specialTip openLevel="1" key="3">Quando 5 ou mais funcionários morreram nas instalações, o Contador Qlifót reduzia e a aparência de F-02-70-1 mudava. Entretanto, mortes causadas por Balas de Execução não eram reconhecidas.</specialTip>
+      <specialTip openLevel="1" key="4">Quando 5 ou mais funcionários entraram em pânico nas instalações, o Contador Qlifót reduzia e a aparência de F-02-70-2 mudava.</specialTip>
+      <specialTip openLevel="1" key="5">Quando 3 fugas de Anormalidades eram confirmadas, o Contador Qlifót reduzia e a aparência de F-02-70-3 mudava.</specialTip>
+      <specialTip openLevel="1" key="6">&lt;AVISO&gt; Redução forçada do Contador Qlifót pode também mudar a aparência do $0.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <name>Cisne Negro</name>
+    <codeId>F-02-70-7</codeId>
+  </child>
+</creature>

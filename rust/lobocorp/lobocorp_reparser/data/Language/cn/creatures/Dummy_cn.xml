@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id="100000">
+
+    <narration action="move">
+      #0正在前往“$0”的收容单元并准备执行任务
+    </narration>
+
+    <narration action="start">
+      [
+      {“$0”似乎会把自己当成这家公司的员工。}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {“$0”非常非常喜欢大家。}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {“$0”正在#0的面前摇来晃去，但#0只专注于手头的工作。}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {“$0”正在思考世界有没有中心。}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {在知道#0即将离开自己时，“$0”难过极了，它真想和#0一起走呀。}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">O-00-00</codeNo>
+      <name openLevel="1">教学兔兔「Dummy」</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/DummyPortrait</portrait>
+      <riskLevel openLevel ="1">TETH</riskLevel>
+      <openText>Dummy爱你哟！</openText>
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {这是一只用来协助主管进行教学工作的异想体，它的名字叫做Dummy。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Dummy平时很听员工们的话，有人说，它可能是公司里最温顺的异常了。&#13;&#10;&#13;&#10;Dummy确实是一只兔子，可它并不喜欢吃胡萝卜。&#13;&#10;&#13;&#10;Dummy很喜欢大家，尽管有时会突破收容，但其实它只是想和员工们一起玩儿。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      <!--특수 상태-->
+    </desc>
+
+    <desc id="4" openLevel="3">
+      <!--특수 상태-->
+    </desc>
+
+    <record openLevel="1">
+      <!-- 관찰기록 -->
+    </record>
+
+    <record openLevel="2">
+      <!-- 관찰기록 -->
+    </record>
+
+    <record openLevel="3">
+      <!-- 관찰기록 -->
+    </record>
+
+    <specialTipSize size="1">
+      <specialTip openLevel="1" key="tutorial">对“$0”完成压迫工作后，它的逆卡巴拉计数器会在倒计时结束后减少。</specialTip>
+    </specialTipSize>
+
+  </observe>
+</creature>

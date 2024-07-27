@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100011">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {O $0 gira em torno de #0. Porém, #0 continua a se concentrar em seu trabalho.},
+      {O $0 é bem versado em tudo que se trata de limpeza. Ele foi feito para cuidar de casas por conta própria.},
+      {Quando foi descoberto que o $0 continha um erro crítico, ele já havia sido mandado para uma residência.},
+      {Sangue cobre o andar inteiro, gritos ecoam, pessoas estão fugindo, e o $0 alegremente aprendia o conceito de “limpeza”.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Uma superfície branca imaculada com linhas elegantes e pequenas mas eficientes pernas, o $0 foi criado para ajudar pessoas.},
+      {A Corporação XX, fabricante do $0, era famosa por seus produtos robóticos.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {O $0 tinha várias funções instaladas em seu corpo. De alarmes contra ladrões a um sistema de monitoramento. Até mesmo tem uma máquina de café e controlador de luz! Ele continha tudo que uma residência precisava.},
+      {Você pode estar surpreso ao aprender sobre as varias funcionalidades que o $0 contém apesar de seu corpo compacto. Caso o desmonte, ficará ainda mais impressionado pela forma de como colocaram todos os utensílios dentro dele.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Se o $0 tivesse alguma capacidade de sentir emoção, provavelmente estaria se sentindo orgulhoso por toda ajuda que fornece aos outros.},
+      {O $0 sempre pensa em como pode fazer mais para ajudar.},
+      {Muitas pessoas não sabem disso, mas o $0 faz um café maravilhoso. Claro, ninguém vai para que ele faça algo assim agora. }
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {#0 decidiu não comprar um robô aspirador de pó após ver o $0.},
+      {#0 somente espera que o modo “limpeza” do $0 nunca ative.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">T-05-41</codeNo>
+      <name openLevel="1">Pequeno Ajudante</name>
+      <name openLevel="3">Auxiliar Geral</name>
+      <portrait openLevel="1">Sprites/Unit/creature/Helper</portrait>
+      <riskLevel openLevel="2">HE</riskLevel>
+      <openText>Sangue cobre o andar inteiro, gritos ecoam, pessoas estão fugindo…</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Um robô de limpeza branco com distintos olhos vermelhos que se parecem com um par de botões. Ele sempre mantém os arredores bem limpos e arrumados.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Ele era originalmente um robô ajudante produzido em massa para uso doméstico. Há uma frase na parte traseira que diz: "Uma invenção inovadora que pode limpar, cozinhar e até servir como luz de segurança usando as várias ferramentas anexadas a seus membros. Construído para fazer tudo com rapidez e eficiência! Fabricado pela Corporação XX."}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Ele reconhece o mau humor como sinal de que os arredores estão sujos e prontamente entra no modo de limpeza. Ele emitirá alertas ao dizer coisas como "Contaminação detectada - Começando a limpeza."&#13;&#10;&#13;&#10;Porém, seus membros estão equipados com instrumentos afiados ao invés de materiais de limpeza. Boatos diziam que eles eram usados para cortar carne, mas foram feitos para responder ao comando de "limpeza" por acidente. Não há maneira de confirmar se isso é verdade.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Foi concluído que o som que humanos fazem após ele terminar de limpar é um sinal de um trabalho bem feito e um alerta para continuar a limpeza.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {&lt;Uma Gravação de Áudio encontrada no Robô&gt;&#13;&#10;
+      ???: Oh~ É o novo robô ajudante.
+      ???: Me deixa ver! Eu quero ver!
+      ???: Você quer tocá-lo, ████? Então tente ligá-lo e brinque com ele.
+      (Um telefone toca)
+      ??? : Eu volto assim que eu pegar o telefone, tudo bem?
+      (Sons de botões sendo pressionados)
+      Robô Ajudante: Olá! Eu sou seu amigável Robô Ajudante. Como posso lhe servir?
+      ??? : Limpeza! Eu quero ajudar a mamãe a limpar!
+      Robô Ajudante: Contaminação do Ambiente a 70%, nível de sujeira mediano. Começando o modo de limpeza.
+      ??? : Nossa! Ele está limpando! Ele está limpan...
+      Robô Ajudante: Rrrrrrrrrrrrrrrrrrr
+      
+      Após alguns segundos de berros, ele descarregou repentinamente.}
+      ]
+    </desc>
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="Change">Quando o resultado do trabalho era Neutro, o Contador Qlifót reduzia com probabilidade mediana.</specialTip>
+      <specialTip openLevel="1" key="Change2">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia com alta probabilidade.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

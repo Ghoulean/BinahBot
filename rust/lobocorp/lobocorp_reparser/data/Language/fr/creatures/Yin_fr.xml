@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100104">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="mid1">
+      [
+      {Veuillez vous assurer que les deux pendentifs soient contenus dans deux unités différentes.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 amène le chaos dans ce monde mais il est aussi ce qui l’efface.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Le jour où la carpe noire et la carpe blanche se rencontreront, le monde verra son équilibre renversé.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-05-102</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Yin</portrait>
+      <name openLevel="1">
+        Yin
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>“Maintenant tu deviendras le ciel, et moi la terre.”</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Le pendentif est d’une couleur plus sombre que toutes les teintes de noir connues à ce jour, la plus obscure de toutes les formes de ténèbres de ce monde.&#13;&#10;Les employés ne doivent ni toucher ni s’emparer du pendentif. Juste en le regardant, il peut donner l’impression que les ténèbres sont en train de s’insinuer dans notre cœur.&#13;&#10;Il semblerait qu’à l'origine, ce pendentif avait la forme d’un cercle ; il est cependant séparé de son autre moitié.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {De nombreux employés l'appellent “Le Pendentif du Diable.”&#13;&#10;On dit que le regarder suffit à remplir ton esprit de pensées négatives.&#13;&#10;Les employés n’aiment pas s’approcher de cette chose.&#13;&#10;Après tout, il est parfaitement aux antipodes de son autre moitié.&#13;&#10;Nombreux sont ceux qui se plaignent de manière similaire, toujours avec la même remarque :
+      “Si seulement il ne pouvait y avoir que le blanc.”&#13;&#10;Son environnement s’érode ; ceux qui s’en approchent souffrent.&#13;&#10;Cela n’est pas conséquence de la volition du pendentif ; ces choses arrivent uniquement à cause de l’aura qui s’en dégage.&#13;&#10;Alors il doit probablement se demander : “Pourquoi est-ce que j’existe ?”
+      “Si ma seule existence corrode ce qui m’entoure, et apporte la souffrance et les ténèbres à quiconque interagit avec moi, alors peut-être que je n’aurais dû naître, comme ils le disent si bien.”
+      “Peut-être que mon créateur ne voulait faire que le pendentif blanc et que je ne suis qu’un accident.”&#13;&#10;Si c’est le cas, comment un être aussi impur peut-il disparaître de ce monde ?}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Un jour, le pendentif noir entendit un appel :
+      “Le jour est venu. Il est temps pour nous de nous réunir.”&#13;&#10;Le pendentif noir quitta l’endroit qu’il ne pensait jamais quitter.&#13;&#10;Il se retrouva à nager pour s’échapper.&#13;&#10;&#13;&#10;Tout ce qui se trouvait sur son chemin devint ruine.&#13;&#10;La destruction n’était rien d’autre qu’un instinct.&#13;&#10;Ce n’était pas quelque chose qu’il pouvait arrêter, ni quelque chose qu’il pouvait cacher.&#13;&#10;Il pouvait voir le pendentif blanc, non, il pouvait sentir cette autre partie de lui qu’il n’avait pas vu depuis très, très longtemps. Les deux opposés nageaient l’un vers l’autre.&#13;&#10;Pour la première fois de son existence, le pendentif noir ressentit quel était son but.
+      
+      “Nous étions un. Je suis, et ainsi tu es. Tu es, et ainsi je suis.
+      Au commencement nous étions ensemble ; nous diviser n’était qu’un acte vain.
+      Maintenant tu deviendras le ciel, et moi la terre.”}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Un employé au teint coloré et aux yeux pétillants se mit à grimacer à cause d’une tristesse soudaine.&#13;&#10;Un employé pleurant silencieusement à cause d’un coeur brisé sécha ses larmes.&#13;&#10;Un employé boitant à cause d’une jambe cassée se redressa comme s’il avait toujours pu le faire.&#13;&#10;Un employé en chemin vers la salle de détente s’évanouit soudainement, saignant par tous les orifices possibles.&#13;&#10;Alors que le cycle prenait fin pour recommencer, ceux qui détenaient l’espoir rencontrèrent le désespoir, et ceux qui détenaient le désespoir rencontrèrent l’espoir.&#13;&#10;À la fin du commencement, le dragon devenu grand avatar s’envola dans le ciel.}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Lorsque le résultat du Travail est Mauvais, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="2" key="2">Le Compteur Qliphoth diminue si un employé porte O-07-103 pendant plus de 30 secondes.</specialTip>
+      <specialTip openLevel="2" key="3">Si $0 s’échappe, empêchez tout contact entre lui et O-07-103.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

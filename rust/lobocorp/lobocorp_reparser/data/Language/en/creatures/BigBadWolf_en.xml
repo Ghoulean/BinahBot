@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id="100033">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {Hey #0, #0. By any chance, is there a little chubby baby pig in this place? Oh, it’s nothing important. He was my friend, I just want to see how he’s doing nowadays.},
+      {Oh little #0, will you open the door, please? I won’t hurt anyone, I swear it. I’m just a little bit hungry.},
+      {#0, I’ll give you something good if you let me out!},
+      {I am a big bad wolf, I’ll gobble you all up and get out of this place!},
+      {#0, I’m telling this secret only to you. If you ever build a house, make it a sturdy brick house.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 vividly remembers the moment when his belly was torn open and his guts spilled out.},
+      {$0 likes meat over anything else. He used to be always hungry, now he wants to be always full.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 suffers from chronic indigestion. The origin of this problem of his goes back to the very, very far past…},
+      {According to reports from employees who have been inside $0’s stomach, it is a dark, empty, lonely place.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {“What big teeth I have, all the better for eating with.”},
+      {“I’ll huff, and I’ll puff, and I’ll blow this room away with one breath!”},
+      {“Open the door sweetheart, I’ve brought you a basket of gifts from the forest.”}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">F-02-58</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/BigBadWolf</portrait>
+      <name openLevel="1">
+        Big and Might be Bad Wolf
+      </name>
+      <name openLevel="3">
+        Big and Will be Bad Wolf
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>Still, it didn’t matter to him. After all, he was “destined” to be a big bad wolf.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {An Abnormality in the shape of a wolf with sparsely damaged fur. It is bipedal, and is capable of communication to some extent. It always attempts to devour employees or breach. Such actions are easily preventable, since it shows obvious signs in behaviour and conversation before doing so, making this Abnormality fairly easy to manage. }
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {The incident on the day of &lt;Redacted&gt; was an alerting event for many employees. The moment Red Riding Hood ran into the Wolf, the situation spiraled out of control. Prevent the two from meeting at all costs. Considering the potential damage it may cause, it could be a wise decision to sacrifice a few employees to divert their attention away from each other. }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {He had flesh for the first time in a long while, and its taste was so good. In the corner of his eye, a familiar piece of red cloth stood out from the wardrobe. He may or may not have seen it before, but he didn't really care about it. Since then, it got harder and harder to keep himself in check. Still, it didn’t matter to him. After all, he was “destined” to be a big bad wolf. }
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {There may be lots of stories here, but no story is as disgusting as the wolf's role. It was a sin to be born as a wolf. No one cared about a wolf's name. It has to be called the big bad wolf. All wolves are raised to become giant, ferocious, and hairy monsters. Wolves could not eat other animals even if they were starving. Wolves could not cross the line when doing bad things. And wolves had to be punished. Wolves always needed to be an example. Wolves could not make friends with anyone... (Omitted)}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">When #0, carrying the scent of F-01-57 from their previous work, completed the work process, the Qliphoth Counter decreased. #0 was then devoured by $0.</specialTip>
+      <specialTip openLevel="2" key="2">When the work result was Bad, the Qliphoth Counter decreased. Subsequently, #0 was devoured by $0.</specialTip>
+      <specialTip openLevel="2" key="3">When an Instinct work process was completed with $0 while its abdomen was noticeably enlarged, all previously consumed employees were orally voided.</specialTip>
+      <specialTip openLevel="3" key="4">When a subject who suffered bleeding by aggression from F-01-57 entered the hallway leading to the containment unit of $0, the Qliphoth Counter decreased.</specialTip>
+      <specialTip openLevel="3" key="5">When F-01-57 entered the hallway leading to $0’s containment unit, the Qliphoth Counter immediately became zero.</specialTip>
+      <specialTip openLevel="4" key="6">Some employees reported that they heard a voice coming from the stomach of $0. Rescue should be possible after suppression when it escapes. It may be possible to contract help from F-01-57.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

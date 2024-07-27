@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id="100061">
+
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {很久以前, 傳說說到, 獲得了 $0 的羽毛會同時得到財富與考驗.},
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {有些時候, $0 會治癒受傷的員工.},
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {如果員工表現出像是為 $0 狩獵的樣子, $0 或許會感到很開心.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="2">
+    <collection>
+      <codeNo openLevel ="0">O-02-101</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/FireBird</portrait>
+
+      <name openLevel ="1">
+        火之鳥
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>這些在狩獵上獲得成績的人將被授予那受無數獵人渴望的羽毛.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {很久, 很久以前, 在一個化外之地的森林裡住著一隻鳥. 它的羽毛是如此的光輝閃耀, 甚至能吞噬最漆黑的黑暗.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {許多的獵人渴望著它的羽毛. 那象徵著他們的驕傲與榮耀. 有許多關於那隻鳥的謠言, 例如有人說抓到那隻鳥會獲得好幾輩子的財富. 有些人甚至說到拿到它的羽毛才算的上是個真正的獵人. 其他人說它的羽毛強大到能帶著擁有者飛到任何地方. 無論如何, 那隻鳥兒是人們冒險的象徵.&#13;&#10;那做森林很快就湧進了許多尋找鳥兒的人們. 不只是獵人, 還有冒險家以及旅行者.&#13;&#10;曾經安靜的森林現在擁擠不堪.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {人們很快的就厭倦了謠言. 他們不再對狩獵感到興趣. 越來越少的人進入了森林. 當鳥兒最後成為了一個傳說時, 它的眼睛被劇烈的疼痛給蒙蔽了. 在這座被人遺棄的森裡當中, 剩下的只有一隻羽毛奪目卻瞎了雙眼的鳥兒.&#13;&#10;很久很久以後, 鳥兒發現了一座新的森林. 許多人住在這座森林當中. 鳥兒僅僅只希望他們對狩獵的熱情像它的羽毛般猛烈燃燒著.&#13;&#10;這些在狩獵上獲得成績的人將被授予那受無數獵人渴望的羽毛.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {* 請注意, 當火之鳥的狩獵季節來到時. 不建議進行諸如壓制的行為.&#13;&#10;* 也不建議狩獵那隻鳥來證明某人的勇氣. 請記得那些空手而歸的獵人.&#13;&#10;* 每個員工都這麼想著 “我能抓到它, 只要再多走一步…” 在必要的時候放棄也是需要勇氣的.}
+      ]
+    </desc>
+
+
+
+
+   
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">當其他跟 $0 同個部門的異常突破收容時, 逆卡巴拉計數器減少了.</specialTip>
+      <specialTip openLevel="2" key="2">當工作的結果為優時, 逆卡巴拉計數器減少了.</specialTip>
+      <specialTip openLevel="2" key="3">當工作的結果為普通時, 逆卡巴拉計數器會以較低的機率減少. 此外, 逆卡巴拉計數器的指數越低, 工作中的員工受到的傷害就越高.</specialTip>
+      <specialTip openLevel="2" key="4">當工作的結果為差時, 逆卡巴拉計數器增加了.</specialTip>
+      <specialTip openLevel="2" key="5">當逆卡巴拉計數器的指數為 1 時, $0 授予了工作中的員工一道光. 該員工的體力以及精神力被治癒了, 且持續恢復了一段時間. </specialTip>
+      <specialTip openLevel="2" key="6">當員工的生命低於 20% 時, $0 授予了與上述相同的光芒.</specialTip>
+      <specialTip openLevel="2" key="7">在突破收容一陣子後, $0 自行回到了它的收容室裡. $0 在受到攻擊後會變得非常具有攻擊性, 而 HP 或 MP 為 0 的員工會在受到 $0 的攻擊後死去. 在 $0 攻擊時, 員工的眼睛因為該異常發出的光芒燒了起來. 瞎眼的員工在工作時的速度只有一半. $0 會在員工完成工作時治癒受傷的雙眼.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

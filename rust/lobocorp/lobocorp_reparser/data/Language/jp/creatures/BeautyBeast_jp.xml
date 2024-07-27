@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100013">
+
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+
+    <narration action="start">
+      [
+      {$0は 呪いを解いてくれる人を探しています。},
+      {$0は 自身の恐ろしい外見を嫌い、 自己破壊し続けます。}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {しかし、その呪いから解放されることはありません。 ただ繰り返すだけ。},
+      {呪いは長い間存在し、 多くの人々を絶望に落とした。}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {死は新たな誕生の喜びでもあります。}
+      ]
+    </narration>
+
+    <narration action="dead">
+      [
+      {#0の顔は何百もの目で覆われ、角が生え出した。 怪物になった#0は この呪いを解いてくれる人を探している。}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">F-02-44</codeNo>
+      <name openLevel="1">美女と野獣</name>
+      <portrait openLevel ="2">Sprites/Unit/creature/BeautyBeast</portrait>
+      <riskLevel openLevel ="1">TETH</riskLevel>
+      <openText>呪いを解くことはできません、 繰り返すだけです</openText>
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {自らを嫌悪し、毎日悲惨な鳴き声を叫ぶアブノーマリティ。呪いの束縛から解放されようとしたが、方法がありません。&#13;&#10;美女は美しい翠眼の女性でした。彼女は貧困に喘いでいた。ある日、彼女に仕事が舞い込んだ。伯爵の城で働けば 高い賃金が与えられると。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {伯爵は野獣で城に入った者は二度と帰ってこないという噂があった。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="1">
+      [
+      {彼女は「この恐ろしい野獣はすべての人々を食べたにちがいない」と思い、ポケットに鋭いナイフを隠し持った。}
+      ]    
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {美女は伯爵の城で働いた。彼女は野獣の姿を見ることはできませんでしたが。夜の間に暗闇の一室で、彼女は野獣と話をしました。彼女の思いとは裏腹に、野獣の声はとても穏やかで、彼女にたくさんのお金をくれました。}
+      ]
+    </desc>
+    
+    <desc id="5" openLevel="2">
+      [
+      {日が過ぎると、心の中で欲望が鎌首をもたげた。「伯爵が死ねば、この城とその財産は私のものになる！」}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="3">
+      [
+      {ある日、彼女は日中の入室を禁じられている部屋に入った。そこで目にした伯爵の姿恐ろしいものだった。数百の目、四つの足、彼は人間でも野獣でもなかった。}
+      ]
+    </desc>
+
+    <desc id="7" openLevel="3">
+      [
+      {美女は「この恐ろしい怪物を殺すことが世界にとっても良いことだ」と考えた。彼女は懐のナイフで野獣を刺した。}
+      ]
+    </desc>
+
+    <desc id="8" openLevel="4">
+      [
+      {しかし、驚いたことに、野獣は笑い始めた。}
+      ]
+    </desc>
+    
+    <desc id="9" openLevel="4">
+      [
+      {「何が面白いの？」その言葉が彼女の口から出る前に、体が変化し始めた。数百の目、四つの足、彼女の肌から毛が生えてくる。ついには、彼女は刺された野獣の姿になった。}
+      ]
+    </desc>
+
+    <desc id="10" openLevel="4">
+      [
+      {その瞬間から、城と財産は彼女のものになった。}
+      ]
+    </desc>
+
+    <desc id="11" openLevel="4">
+      [
+      {…こんな噂がある、伯爵の城に訪れたものは二度と帰ってこない。}
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="hit">$0に抑圧の作業を行った時、最も作業の成功率が高かった。&#13;&#10;抑圧の作業はPE-Boxの生産の効率は良かったが、$0の健康状態を著しく悪化させた。</specialTip>
+      <specialTip openLevel="2" key="noHit">$0に抑圧以外の作業を行うと$0の健康状態が回復した。</specialTip>
+      <specialTip openLevel="3" key="doubledHit">連続して$0に抑圧の作業を行うと$0はかすかな断末魔を上げてその場に倒れた。&#13;&#10;$0が消えると、作業を行っていた職員#0に異常が起きた。間もなくして新たな$0が誕生した。</specialTip>
+    </specialTipSize>
+ 
+  </observe>
+</creature>

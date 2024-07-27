@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300001">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para iniciar o processo de trabalho.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-77</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/DesireHeart</portrait>
+      <name openLevel="1">
+        Coração da Aspiração
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>Excessiva aspiração traria um frenezi indesejável.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Um coração sem o seu dono; ainda bate mesmo após ter sido removido do corpo original. }
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Ao ser pego emprestado, sua taxa de contração dobrará, melhorando o vigor e a força física de quem o pegou. }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Excessiva aspiração traria um frenesi indesejável. }
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Funcionários que não atacaram alvos antes de devolver o coração ou que o devolveram antes de 30 segundos terem se passado entram em um estado de disfunção, repetindo assassinatos irracionais com sua força aumentada.}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Aqueles que equipam $0 terão PV e Velocidade de Ataque aumentados.</specialTip>
+      <specialTip openLevel="2" key="2">Caso o Agente seja mandado devolver $0 sem antes ter atacado algo, ele enlouquecerá e terá um aumento em tendências violentas, atacando tudo que estiver por perto.</specialTip>
+      <specialTip openLevel="2" key="3">Caso o Agente seja mandado devolver $0 sem antes terem passado 30 segundos, o mesmo resultado acima acontecerá.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

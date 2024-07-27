@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100025">
+
+    <narration action="move">
+      #0 designado a la unidad de contencion de $0.
+    </narration>
+
+    <narration action="start">
+      [
+      {Hay un martillo, encadenado como un prisionero que no ha visto la luz del sol durante mucho tiempo.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {El martillo y las cadenas no están separadas. Son uno solo con la anormalidad.}
+      {Da una sensación de extraordinario como si se colocara en una mazmorra fantástica.}
+      {Parece seguro, porque está encadenado.}
+      {Las cadenas atan firmemente el martillo para asegurarse de que nadie pueda levantarlo.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {El empleado #0 siente vergüenza por trabajar para la compañia mientras administra $0.},
+      {#0 siente curiosidad por las uniones de las cadenas de $0.},
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 espera a que el día esté libre de estas cadenas.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-05-48-Z </codeNo>
+      <portrait openLevel ="2">Sprites/Unit/creature/LightHammer</portrait>
+
+      <name openLevel ="1">
+        Martillo de la luz
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <specialName openLevel ="2">
+         Crepúsculo
+      </specialName>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Enorme martillo enrollado con cadena. Normalmente, es imposible levantar el martillo porque las cadenas lo atan firmemente. Es probable que estas cadenas sean parte de la anormalidad. Cuando llega la situación adecuada, las cadenas se aflojan. Por lo tanto, se confirma que el propósito de estas cadenas es indicar el momento adecuado para usar el martillo, no bloquearlo.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {“Pobre empleado Eric. Era torpe pero diligente. Siempre trabajó duro para contribuir a la compañia. Un día, cuando ocurrió una fuga masiva, descubrió que las cadenas de Martillo de la luz estaban sueltas de lo habitual. Eric levantó el martillo. Nada podría detenerlo. Sus ojos no miraban a ninguna parte. Llamas blancas ardieron de su cuerpo. No parecía doloroso a pesar de que la llama casi lo consumía. Finalmente terminó la situación. Cuando toqué su hombro para abrazarlo, se aplastó como una arena blanca en una playa.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Todos lo llamaban héroe, nunca dejaban de elogiarlo. Pero conozco a Eric. No era su voluntad. En el momento en que tocó el martillo, su alma fue devorada por él. Traté de explicar cómo esa anormalidad sacrificó a Eric, pero nadie me escucha. Desde ese día, nadie ha podido levantar ese martillo. Tal vez está esperando que aparezca otro “caos” y “heroe”.}
+      ]
+    </desc>
+
+   
+
+     <specialTipSize size="6">
+      <specialTip openLevel="0" key="peace">La cámara de $0 es inaccesible cuando la instalación está en paz</specialTip>
+      <specialTip openLevel="1" key="usable">El sello de $0 se rompe solo en caso de emergencia. </specialTip>
+      <specialTip openLevel="2" key="grab">El empleado #0 recogió el martillo cuando fue enviado a la habitación de $0, que estaba brillando.</specialTip>
+      <specialTip openLevel="2" key="manypeople">Cuando el empleado #0 recogió el martillo, otros seres con martillos aparecieron de la nada.</specialTip>
+      <specialTip openLevel="3" key="uncontrol">Un empleado fusionado con el martillo no podría ser ordenado o dañado.</specialTip>
+      <specialTip openLevel="3" key="alldead">Cuando la situación se calmó, estos seres con martillos, incluido el empleado #0, desaparecieron.</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {Era el hombre más desafortunado del mundo.}
+        {Todo a mi alrededor no hizo más que arruinar mi vida.}
+        {Pero no tenía poder para cambiar este destino.}
+        {Algún día alguien me hizo una oferta.}
+        {‘Si lo aceptas, todo tu mundo cambiará.’}
+        {Una oferta tan tentadora. Podría convertirme en algo que solo podría desear ser.}
+        ]
+      </desc>
+      
+      <!--선택지-->
+      <select id="1">
+        <node desc="Accept the offer"  target="1" isAnswer="true" message="Has conseguido obtener un informe de observación final sobre el Martillo de la luz."/>
+      </select>
+      
+      <desc id="1" select="0">
+        [
+        {Acepté la oferta y pagué el precio. }
+        {$0 resplandece.}
+        ]
+
+      </desc>
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {$0 es una anormalidad tan simple.}
+        {Toma tanto como te dio.}
+        {Qué precio le pagaste?}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+</creature>

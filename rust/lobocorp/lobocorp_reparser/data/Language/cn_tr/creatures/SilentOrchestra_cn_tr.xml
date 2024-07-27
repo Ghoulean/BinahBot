@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100019">
+
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 的指揮正等著它的演奏家. }
+      {$0 的指揮通常都很安靜. 收容單位也很和平.}
+      {指揮是帶來生命的魔術師; 招喚神靈的薩滿. }
+      {世界上最美麗的演奏從廢墟中開始.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 準備著末日的音樂.  }
+      {毫無疑問的, $0 是公司裡最頂尖的.}
+      {$0 壯麗的表演使每個人如癡如醉.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {演奏者為聽眾的掌聲而活.}
+      {演奏者的生命在聽眾的掌聲中開始並結束.}
+      {起身歡呼是聽眾能給指揮家最崇高的敬意.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {即將變成 $0 的聽眾, #0 幾乎要完成今天的工作了. }
+      {#0 不帶麻煩的完成了對 $0 的任務.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">T-01-55</codeNo>
+      <name openLevel="1">沉默的管弦樂隊</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/silentOrchestra</portrait>
+      <riskLevel openLevel ="2">ALEPH</riskLevel>
+      <openText>世界上最美麗的演奏從廢墟中開始.</openText>
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {一個喜愛藝術並嘗試在公司裡演奏音樂的異常. &lt;指揮不只要導正演奏者的錯誤, 它也負責讓樂隊創作並引領出最好的合奏. 可以在 5 分鐘內就看出一名指揮的能力. 在指揮開啟音樂的那一刻, 它的眼神, 姿勢, 以及風度都將受到演奏家的評判. 演奏者將決定這位指揮是否值得來帶領他們. 沒有他們的和聲以及合作, 音樂的真實含意將表達不出來. 因此指揮家必須維持精湛的指揮, 領導, 以及極佳的說服力…. (省略) &gt;}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {&lt;第一樂章: 平靜與緩慢 &gt; &#13;&#10;指揮開始了末日.}
+    ]
+  </desc>
+
+    <desc id="3" openLevel="3">
+      [
+      {&lt;第二至第四樂章: 愉快及快速 &gt; &#13;&#10; 員工開始忘記一切並受交響樂感動. 他們的情緒逐漸變得瘋狂, 並試圖攻擊周遭的人. 交響樂加快, 將所有的部門帶至他們的毀滅裡. 當所有的演奏家到齊後, 一首無人能聞音樂, 只有他們自己聽得見的音樂就開始了. }
+    ]
+  </desc>
+
+    <desc id="4" openLevel="4">
+      [
+      {&lt;終章&gt; <b>"音樂將刺入你最深的靈魂當中."</b>}
+      ]
+    </desc>
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="mood1">當工作結果為優良時, 逆卡巴拉計數器降低了.</specialTip>
+      <specialTip openLevel="1" key="mood2">當工作結果為差時, 逆卡巴拉計數器降低了.</specialTip>
+      <specialTip openLevel="1" key="escape">$0 在突破收容時演奏的音樂分為四個樂章. 在樂章演奏時, 員工受到了 W 傷害, 而音樂持續影響著整個區域.</specialTip>
+      <specialTip openLevel="2" key="movement">在每個樂章裡, $0 的弱點都會改變. 第一樂章, 為 Pale, 在第二樂章時, 為 Black. 第三樂章為 White, 然後在第四樂章裡, 只有 Red 傷害能傷害到 $0. 當音樂達到高潮時, $0 會免疫所有類型的傷害. </specialTip>
+    </specialTipSize>
+
+  </observe>
+
+  <etc>
+    <param key="movement1" index="1">
+      第一樂章, 慢板: 平靜, 緩慢
+    </param>
+
+    <param key="movement2" index="2">
+      第二樂章, 小行板: 比快速還要慢一些
+    </param>
+
+    <param key="movement3" index="3">
+      第三樂章, 漸快: 逐漸加快, 加強
+    </param>
+
+    <param key="movement4" index="4">
+      第四樂章, 加快: 逐漸加快
+    </param>
+
+    <param key="movement5" index="5">
+      熱情如火的終章, 不急不徐: 熱情, 但優美
+    </param>
+  </etc>
+</creature>

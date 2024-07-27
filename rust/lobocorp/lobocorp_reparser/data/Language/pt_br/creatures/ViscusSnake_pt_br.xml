@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100046">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção de $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 parece formar uma esfera lustrosa e molhada. Não seria irracional se ele confundisse o cérebro de #0 com um ninho.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Se a pele de #0 ficar com um tom hediondamente verde, já será tarde demais.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-02-74</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/ViscusSnake</portrait>
+      <name openLevel="1">
+        O Ninho Exposto
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>Ele pode entrar em seu corpo por qualquer orifício.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {+ Caso você encontre um funcionário com a face se tornando verde-escura, entre imediatamente em contato com o Sefirá do departamento. Certifique-se em verificar se a causa da descoloração não é uma simples dor de barriga. Ao ser sugerido uma visita a ala médica, aqueles que estão com dor de barriga concordariam mesmo relutantemente, mas um funcionário infectado tentará agir ao máximo como se nada está errado. Nessa situação, tente não alertar esse funcionário de que algo está fora do normal. Quando o hospedeiro fica agitado, a infecção age com mais velocidade. Se a pele começar a mudar, isso significa que 30% do cérebro do hospedeiro já foi consumido e qualquer conversa a partir desse ponto será somente a Anormalidade tentando imitar o comportamento do hospedeiro, então não ligue.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {A Anormalidade reside dentro do cérebro do hospedeiro e ele não conseguirá sentir sensações físicas. Você pode tentar apunhalar o funcionário com algo afiado, fazendo passar como se fosse um acidente, mas isso não é recomendado, pois como mencionado antes, o hospedeiro já deve estar com a infecção em torno 30%, então ter conversas será impossível. }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {! Ele pode entrar em seu corpo por qualquer orifício.&#13;&#10;! Mas isso não significa que a entrada será impedida se cobrí-los.}
+    ]
+  </desc>
+    <desc id="4" openLevel="3">
+      [
+      {!! Mas cobrir o máximo possível te ajudará a se acalmar quando for entrar na Unidade de Contenção.&#13;&#10;!!! O destino final da Anormalidade é o lobo frontal.&#13;&#10;!!! Você se tornará o ninho da serpente, atacando tudo que estiver pela frente.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {!!!! Por favor, entenda que os funcionários serão forçados a atirar em você e queimar o seu corpo caso vire um 'ninho'.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Uma observação concluiu que Agentes com PV baixo são mais sucetíveis a serem infectados pelo $0. Tomar uma alta quantidade de dano no trabalho também aumenta a probabilidade da infecção. Porém um resultado Bom no trabalho impede que isso aconteça.</specialTip>
+      <specialTip openLevel="2" key="2">Alguns funcionários sofrendo do fenômeno mostraram os seguintes sintomas com o tempo:&#13;&#10;1. Pele verde e erupção cutânea no corpo.&#13;&#10;2. Velocidade de movimento drasticamente reduzida.&#13;&#10;Se qualquer um desses sintomas for visto em qualquer funcionário, dê um jeito nisso imediatamente.</specialTip>
+      <specialTip openLevel="2" key="3">Quando #0, que estava sofrendo dos sintomas mencionados foi deixado sozinho por um certo tempo, sofreu uma transformação que o deixou parecido com $0. Chamada de (O-02-74-1)</specialTip>
+      <specialTip openLevel="2" key="4">&lt;Aviso&gt; Qualquer funcionário que fez contato com o funcionário infectado antes dele se tornar O-02-74-1 também estará propenso à infecção. Todos os funcionários daquele departamento precisam ser observados para ver se estão com alguns dos sintomas mencionados anteriormente.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

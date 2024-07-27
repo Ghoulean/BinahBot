@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300006">
+
+    <narration action="move">
+     #0被分配到“$0”的收容单元中
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-82</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Shelter</portrait>
+
+      <name openLevel ="1">
+        3月27日的避难所
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+      <openText>
+        这里完全成为了所谓的“地球上最安&#13;&#10;全的地方”。
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {这是一个与外部世界完全隔开的避难所，即便是光也透不&#13;&#10;进来。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {避难所仍然记得“那一天”。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {P公司希望建造出地球上最安全的地方。为此，设计师们&#13;&#10;在避难所内存放了大量可长时间保存的生活储备品，任何&#13;&#10;进入避难所的人都能活上很长一段时间。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      <!-- 여기 번역 고치기 -->
+      [
+      {多亏了这个避难所，被选中的难民们终于能够逃出那片满&#13;&#10;是哭喊与屠戮的汪洋。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {但是，这个避难所在保证绝对安全的同时，也隔绝了外界&#13;&#10;的每一个分子，这甚至更加令人绝望。这里完全成为了所&#13;&#10;谓的“地球上最安全的地方”。}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">进入“$0”的员工将会免疫任何形式的伤害，他们的生命&#13;&#10;与精神值也将在“$0”内缓慢恢复。（最新的数据显示，&#13;&#10;“T-09-82”不能抵消由“O-09-91”转移的伤害。）</specialTip>
+      <specialTip openLevel="2" key="2">如果某个员工在被异想体追击的情况下进入“$0”，追击&#13;&#10;员工的异想体将因无法杀死这名员工而转移目标。</specialTip>
+      <specialTip openLevel="3" key="3">一旦某个员工在“$0”内停留超过30秒，那么设施内所有&#13;&#10;异想体的逆卡巴拉计数器会一个接一个地归零。直到该员工离开前，&#13;&#10;该效果将反复触发。</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

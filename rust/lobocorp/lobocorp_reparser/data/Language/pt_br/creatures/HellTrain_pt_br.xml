@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300102">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para iniciar o processo de trabalho.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-86</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/HellTrian</portrait>
+      <name openLevel="1">
+        Trem Expresso para o Inferno
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>
+        Quando a hora chegar, o trem percorrerá pelos trilhos e tocará sua poderosa buzina.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {O atendente que se mantém assustadoramente quieto vende bilhetes para um trem que não possui destino final. Não há relógio algum para avisar a hora da chegada. Porém, no lugar disso, há algumas luzes piscantes.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Quando a primeira e segunda luz se acendem; sua mente é purificada.&#13;&#10;Quando a terceira luz acende; sua mente é purificada e seus ferimentos cicatrizam.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Quando a quarta luz acende; O estado de cada funcionário em cada departamento melhora enquanto você escuta a buzina distante do trem.}
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {Quando a hora chegar, o trem percorrerá os trilhos e tocará sua poderosa buzina. Não há dúvidas que irá mergulhar através do túnel sem fim enquanto embarca todos os funcionários que não saíram do meio dos trilhos.}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">A cada 30 segundos, as luzes da bilheteria acenderão uma por uma até acenderem quatro, quando um funcionário recebe um bilhete do atendente, as luzes apagarão.</specialTip>
+      <specialTip openLevel="2" key="2">Quando um bilhete é recebido com 1 luz acesa, o Agente recuperará um pouco de seu PV e PS.</specialTip>
+      <specialTip openLevel="2" key="3">Quando um bilhete é recebido com 2 luzes acesas, o Agente recuperará uma quantidade significante de PV e PS.</specialTip>
+      <specialTip openLevel="2" key="4">Quando um bilhete é recebido com 3 luzes acesas, todos os funcionários daquele departamento recuperarão PV e PS.</specialTip>
+      <specialTip openLevel="2" key="5">Quando um bilhete é recebido com 4 luzes acesas, todos os funcionários de todos os departamentos recuperarão PV e PS.</specialTip>
+      <specialTip openLevel="2" key="6">Se 4 luzes estiverem acesas e outra acender, o trem atravessará as instalações causando dano PRETO em todos os funcionários que estiverem no caminho. Depois de ter atravessado, as luzes da bilheteria apagam novamente.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

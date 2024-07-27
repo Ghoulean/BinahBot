@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등0000000000000000000
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id ="100052">
+
+
+    <narration action="move">
+      #0 is going into $0's containment unit to begin the task.
+    </narration>
+
+    <narration action="start">
+      [
+      {There is no sunlight in the Containment Facility, but #0 is drying its own skin delicately.},
+
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {The city encouraged $0 to continue smile, but the being who was too shy to reveal herself... },
+
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-01-92</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ShyThing</portrait>
+
+      <name openLevel ="1">
+        Shy Look Today
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>Good day today! Are you still shy today?</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [{Good day today! Are you still shy today?}]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {One sunny day, when she was carefully drying the laundry in the yard, sadness came suddenly.&#13;&#10;"In our city, we must hold sacrificing for the city, for the company at a very high value. There is no reason you should cry. Rather, we should rejoice."&#13;&#10;“What’s that look on your face? This city does not encourage that kind of expression.”&#13;&#10;&#13;&#10;“My goodness, why are you making that face? You will make others sad as well. Please be more considerate. You don't live in this world alone.”&#13;&#10;“You are not good at expressing your feelings, you must be shy.”&#13;&#10;“You should look more pleased. That way those living in the outskirts will be more envious of us.”&#13;&#10;&#13;&#10;“Put a bigger smile on your face, come on! It’s not that hard.”&#13;&#10;“Express yourself more clearly. Expressing yourself is very important in this society.”&#13;&#10;On another sunny day, she dried her own skin delicately, just like she once dried her laundry.}
+      ]
+    </desc>
+
+
+    <desc id="3" openLevel="2">
+      [
+      {She smiled broadly to make everyone satisfied. If she meets people who asks what's wrong, she responds by saying, "I'm just shy, that's all. Just shy..."}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Don’t try to see her real face behind her skin. The result will not be pretty. The space behind her skin is the only personal space that she has left. Leaving it uninvaded is the last generosity this city can offer.}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">This Abnormality changes its facial expression every hour. However, when it faces someone, it stops changing its face.</specialTip>
+      <specialTip openLevel="1" key="2">From a smiling face to an angry face, it has a five-levels of facial expressions called facial expressions 1, 2, 3, 4, 5.</specialTip>
+      <specialTip openLevel="1" key="3">Face 3 has no specific features. Under Face 2, the success rate of the task is increased and SP is recovered slightly every time the task succeeds.</specialTip>
+      <specialTip openLevel="1" key="4">Face 4 increases the damage of the employee by 1.5 times. It also decreases the success rate of the task.</specialTip>
+      <specialTip openLevel="1" key="5">Face 5 increases the damage of the employee 2 times during work and decreases the success rate of the task drastically. </specialTip>
+      <specialTip openLevel="1" key="6">Under Face 1, damage the employee receives during work is decreased by 0.5 times and the success rate of the task is increased. Also, whenever the task was successful, HP and SP are recovered.</specialTip>
+    </specialTipSize>
+
+
+ 
+  </observe>
+</creature>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100001">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {Sachez que l’Encyclopédie sur $0 est incomplète, donc beaucoup de choses non-documentées pourraient avoir lieu.},
+      {Les entrées sur $0 sont presque complètes, donc tant que l’on reste prudent, le travail avec elle se finira sans problème.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 se réfugie dans un coin dès que #0 entre dans l’Unité.},
+      {$0 observe comment #0 agit mais recule contre un mur.},
+      {$0 regarde #0 travailler depuis un coin de la pièce.},
+      {$0 semble effrayée et se déplace vers l’un des coins de l’Unité.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 reste parfaitement immobile, comme si la flamme brûlante ne lui faisait aucun mal.},
+      {Seule l'allumette qui transperce $0 brûle frénétiquement.},
+      {Contrairement à son allumette fougueuse et vive, $0 reste immobile dans l’Unité de Confinement.},
+      {L’allumette brûle de mille feux, mais $0 ne bouge pas d’un pouce.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {#0 examine précisément la longueur restante à l’allumette.},
+      {Si l’allumette était presque entièrement brûlée, cela serait très dangereux. #0 regarde anxieusement $0.},
+      {Heureusement, l’allumette n’est pas entièrement brûlée. Mais lorsque la flamme sera à court de carburant…},
+      {Des cendres se répandent dans l’Unité de Confinement. La moitié de l’allumette semble intacte.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {#0 finit son travail pendant que la flamme danse calmement.},
+      {Il n’y a personne au sein du feu, cependant, les yeux de $0 scintillent, comme si elle y voyait quelqu’un.},
+      {Il n’y a rien ni personne dans cette flamme.},
+      {Seules les cendres de l’allumette brûlée s’éparpillent autour de $0.}
+      ]
+    </narration>
+    <narration action="special_ability_1">
+      [
+      {Seule une petite portion de l’allumette est intacte maintenant.}
+      ]
+    </narration>
+    <narration action="special_ability_2">
+      [
+      {#0 remarqua que l’allumette arrivait à terme et tenta de faire quelque chose, mais il était trop tard.}
+      ]
+    </narration>
+    <narration action="special_ability_3">
+      [
+      {Une fois l’allumette entièrement consumée, $0 rit.}
+      ]
+    </narration>
+    <narration action="special_ability_4">
+      [
+      {Après l’explosion, seuls de petits morceaux de #0 peuvent être trouvés dans l’Unité de Confinement.}
+      ]
+    </narration>
+    <narration action="dead">
+      [
+      {Sa flamme danse, noircissant le sol et toute ce qui l’entoure.},
+      {Au moins, la dernière respiration de #0 était joyeuse.}
+      ]
+    </narration>
+    <narration action="panic">
+      [
+      {Les yeux de #0 sont perdus. Le feu de l’allumette a depuis longtemps été éteint, mais il reste insensible aux ordres.},
+      {#0 sort de l’Unité, murmurant des choses incohérentes avec un visage chiffonné. Personne dans le couloir n’ose lui parler.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">F-01-02</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/matchgirl</portrait>
+      <name openLevel="1">
+        La Fille Brûlée
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>Je viens à toi. Toi, celui qui finira réduit en cendres comme moi.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Elle prend la forme d’une fille réduite en cendres. Malgré le fait qu’il ne reste rien à brûler, le feu ne s’éteint pas.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Une allumette empale le corps de la fille comme un bûcher. Habituellement, l’allumette est toujours allumée et l’Anomalie ne montre aucun signe d’activité. En raison de cela, les employés supposent souvent que le véritable corps de l’Anomalie puisse être l’allumette. Cependant, récemment, des témoins affirment avoir vu la figure de cendre pleurer.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Extrait du Journal de Recherche du Docteur &lt;Expurgé&gt;,Spécialiste en Anomalies&gt;&#13;&#10;
+      “Le corps calciné représente l’espoir brisé de l’enfant, tandis que la flamme inextinguible représente son obsession pour l’affection. La contradiction entre ces derniers entraîne un conflit interminable pour elle.”&#13;&#10;
+      “On a dépensé une fortune et c’est tout ce qu’il peut en dire ?”}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;Extrait d’une Conversation Enregistrée entre des membres du personnel&gt;&#13;&#10;
+      “En fait, elle est comme une bombe à retardement. Personne n’arrive à dire si elle de bonne humeur ou non. On espère juste ne pas être celui qui va exploser juste avant d’entrer dans l’Unité de Confinement. Elle n’ira jamais mieux, alors nous ne pouvons qu’empêcher son état d’empirer.”}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {&lt;Extrait d’un Enregistrement d’une Session de Thérapie&gt;&#13;&#10;
+      “Je n’ai jamais pensé que l’Anomalie soit capable de s’échapper. Peut-être avons-nous été imprudents, mais on aurait dit que tout ce qu’elle pouvait faire, c’était brûler l’allumette coincée dans son corps. Donc oui, notre réponse a été tardive. (Omis) La plupart des Anomalies qui essaient de s’échapper attaquent les employés qui lui font face, mais celle-ci ne leur a pas montré le moindre signe d’hostilité. Au lieu de ça, elle s’est dirigée vers un secteur différent, l’endroit le plus bondé de la corporation. Si nous ne l’avions pas réprimée au seuil de la porte, la moitié des gens ici ne seraient pas en un seul morceau.”}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="escape1">Lorsque le résultat du travail est Moyen, le Compteur Qliphoth a une probabilité moyenne de diminuer.</specialTip>
+      <specialTip openLevel="1" key="escape2">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth a une probabilité élevée de diminuer.</specialTip>
+      <specialTip openLevel="3" key="explosionHallway">$0, qui s’est échappée, a explosé après être restée à côté de sa cible pendant 5 secondes. De nombreux membres du personnel qui étaient proches ont souffert de brûlures suite à l’incident.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

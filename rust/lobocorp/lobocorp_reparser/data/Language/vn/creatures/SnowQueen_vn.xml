@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+
+  <!-- Attrbute "id " must equal to attribute "id" in CreatureList.xml -->
+  <info id ="100102">
+
+    <!-- $0 : Creature name, #0 : Agent name -->
+    <narration action="move">
+      #0 designated to $0's containment room.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0’s containment room is storming with frosty blizzard.},
+      {$0’s containment room shines with ice and frosts.},
+      {Kai would have been gifted with the world if he couldn’t have completed “Eternity” with ice pieces.},
+      ]
+    </narration>
+
+    <narration action="special_ability_1">
+      [
+      {Gerda is braver and stronger than anyone. She fights for Kai who is trapped in the Snow Palace.}
+      ]
+    </narration>
+
+    <narration action="win">
+      [
+      {Spring came and roses bloomed. Gerda and Kai headed home, holding each other’s hand.}
+      ]
+    </narration>
+
+    <narration action="lose">
+      [
+      {Gerda and Kai couldn’t defeat the Snow Queen. They became her ice pieces and will never leave the containment chamber.}
+      ]
+    </narration>
+    
+  
+    <narration action="anotherWork">
+      [
+      {Gerda cannot avoid the dual with the Snow Queen while Kai is trapped in the Snow Palace.}
+      ]
+    </narration>
+
+  </info>
+
+  <!-- Maximum observation level. -->
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">F-01-37</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/SnowQueen</portrait>
+
+      <name openLevel ="1">
+        The Snow Queen
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        Third kiss
+      </specialName>
+
+      <openText>"Ices are melting.... We don’t know if it’s because spring is coming, or the palace is crumbling."</openText>
+    
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {A queen lives in the frosty winter forest. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {Like how every story starts, Kai was a child with kind heart. When an evil fairy scattered pieces of mirror in everyone’s heart, Kai could see what he didn’t want or need to see, and left the village that he spent his entire life.&#13;&#10;In an unforgiving blizzard, Kai met the Snow Queen. He wanted to know the world beyond his knowledge. He felt as if everything he knows is just nothing.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {The Snow Palace he reached was so cold, but the Snow Queen’s kiss froze his heart and he couldn’t feel the cold anymore. There was no joy in the palace, just long winter nights continued.&#13;&#10;Gerda was strong enough not to be stabbed by the mirror and brave enough to go on an adventure to rescue Kai.&#13;&#10;The journey was agonizing. Gerda was hurt and pained, and sometimes she cried.&#13;&#10;But eventually, Gerda met Kai. Spring came with blossoming flowers.&#13;&#10;The warmth of spring melted the Snow Queen’s palace and the piece of mirror that was in Kai’s heart without a trace. &#13;&#10;So, left alone, the Snow Queen… }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {We remember when we put her in that cryo-coffin with our own hands. From someday, her joyous laughter was gone. She just kept repeating crying, laughing, crying, laughing… She was eventually found in a bathtub with her wrist cut, soaked in red with her own blood.&#13;&#10;We didn’t believe in death. I will reconstruct her from “the machine” that I have been detested for my lifetime, but became the only answer. She would have been disgusted by me, dying in the bathtub. But we have walked the road too much traveled by.&#13;&#10;..&#13;&#10;One day, “it” talked.&#13;&#10;“A, I remember you. You were kind-hearted.”&#13;&#10;That moment, I had an urge to destroy what I have created myself.}
+      ]
+    </desc>
+
+    <specialTipSize size="5">
+      <specialTip openLevel="3" key="kissProb1">When work result is normal, employee was kissed by $0 with a normal probability.</specialTip>
+      <specialTip openLevel="3" key="kissProb2">When the result is bad, employee was kissed by $0 with a high probability.</specialTip>
+      <specialTip openLevel="2" key="2kiss">Employee who was given the second kiss forgot everything and was trapped inside of $0’s containment room.</specialTip>
+      <specialTip openLevel="3" key="3kiss">To avoid the deadly third kiss, and to save the trapped employee, a dual with $0 must be commenced. </specialTip>
+      <specialTip openLevel="3" key="4kiss">Only those with high fortitude will be able to safely save the employee. Let's rescue it before the day is over.</specialTip>
+    </specialTipSize>
+    
+    <!-- Narration when observation level is maximum. -->
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {You remember her.}
+        {She got cold easily.}
+        {Cryo-coffin must have been freezing.}
+        {Freezing and cold.}
+        {You thought a lot, seeing her who couldn’t see her dreams come true, trapped inside ice.}
+        {Brave Gerda headed to the Snow Palace and…}
+        <!--계속-->
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Saved Kai" target="1" isAnswer="false"/>
+        <node desc="Met the Snow Queen" target="2" isAnswer="true"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {Gerda saved Kai and returned home.}
+        {They lived happily ever after.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {The Snow Queen was cold and beautiful.}
+        {You heard ices melting.}
+        ]
+      </desc>
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {Ices are melting....}
+        {We don’t know if it’s because spring is coming, or the palace is crumbling.}
+        ]
+      </angela>
+    </max>
+    
+  </observe>
+
+
+</creature>

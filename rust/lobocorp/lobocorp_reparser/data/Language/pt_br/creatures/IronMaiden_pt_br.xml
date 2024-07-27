@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300101">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção de $0 para iniciar o processo de trabalho.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-85</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/IronMaiden</portrait>
+      <name openLevel="1">
+        Nós Podemos Mudar Qualquer Coisa
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <openText>
+        Agora tudo ficará bem.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Após a enorme popularidade do "Auxiliar Geral", O “Nós Podemos Mudar Qualquer Coisa” foi lançado como segundo volume da série de robôs domésticos da Indústria XX. }
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Como é esperado de todos os produtos da Indústria XX, esse também possui uma variedade de funções.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Sua criança é mal educada e chora o tempo todo? Nós podemos mudar isso!&#13;&#10;Não gosta de sua aparência? É muito gordo? Muito magro? Nós podemos mudar isso!&#13;&#10;Sua residência está sem energia e você não tem dinheiro para pagar a conta de luz? Nós podemos mudar isso!}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {É bastante simples. Abra a máquina, entre nela e pressione o botão para fechá-la. Agora tudo ficará bem.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {A máquina produzirá energia após um Agente entrar nela. Ela deve ser bastante confortável, visto que quando uma vez dentro, ninguém sai.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Colocar um Agente dentro da máquina produzirá energia com o tempo.</specialTip>
+      <specialTip openLevel="2" key="2">Quando um Agente estiver dentro da máquina, constante e crescente dano VERMELHO será causado e ele não poderá sair dela.</specialTip>
+      <specialTip openLevel="2" key="3">A quantidade de energia produzida aumenta conforme o tempo passado dentro dela.</specialTip>
+      <specialTip openLevel="2" key="4">Esta Anormalidade não é afetada por Colapsos Qlifót.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

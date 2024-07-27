@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100057" >
+
+
+    <narration action="move">
+      #0 recebeu a ordem para ir para a unidade de contenção de $0.
+    </narration>
+
+    <narration action="start">
+      [
+      {Quando se atinge a confiança total de $0, o mesmo irá gentilmente esfregar a tua cabeça com os espinhos da sua cauda. Aqueles que foram acariciados dizem que o prazer que sentiram excede o máximo que um ser humano pode aguentar, mas ninguém é realmente capaz de descrever essa sensação.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Quando o $0 foge da sua unidade de contenção ele tem no seu pescoço um colar que parece uma manilha. Ninguém sabe quem o amarrou.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {Alguns empregados ficaram viciados no prazer que a Anormalidade causa e tentaram arrancar os espinhos do $0, mas todos falharam.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="5">
+    <collection>
+      <codeNo openLevel ="0">O-02-98</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Porccu</portrait>
+
+      <name openLevel ="1">
+        Porccubus
+      </name>
+
+      <riskLevel openLevel ="1">
+       HE
+      </riskLevel>
+
+
+      <openText>Agora é a hora para a minha cabeça estourar. Tenha um bom dia.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {&lt;Hora Para a Cabeça Explodir&gt;&#13;&#10;Sendo honesto, a vida quotidiana não é divertida. A companhia diz que promove hobbies saudáveis, mas não são muitos os empregados que o fazem.&#13;&#10;&#13;&#10;Todos tem a sua maneira de escapar da realidade. Violência, apostar, comer... Eu pensava que eu tinha um nível de disciplinar maior do que os outros e que isso me ajudava a viver a minha vida mais suavemente. Talvez esse seja o motivo de eu ter sido indicado para trabalhar com o Porccubus.&#13;&#10;&#13;&#10;Sim, o Porccubus... Apenas os empregados que estão mal o visitam.&#13;&#10;&#13;&#10;Eu ouvi sobre o que outros empregados fazem dentro da unidade de contenção. Eles chamam-lhe de o "jogo da confiança”.&#13;&#10;'Jogo da confiança', que jeito elegante de o chamar.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {(Omitido)&#13;&#10;&#13;&#10;Empregados que estiveram aqui antes deram-me umas dicas de precaução. Eles disseram-me que não seria difícil ficar intimo com a criatura e assim que eu ficasse, não seria díficil de conseguir qualquer coisa que eu queira.&#13;&#10;&#13;&#10;Eles contaram-me que quando a hora certa chegar, Porccubus vai baixar-se para que tu possas tocar os seus espinhos mais facilmente. Não demorou muito até ele me deixar-me fazer-lhe mimos.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {(Omitido)&#13;&#10;&#13;&#10;Quando eu toquei os seus espinhos pela primeira vez, eu gritei por causa deles serem tão pontiagudos. Era como uma agulha gigante tivesse penetrado a minha pele, mas não sangrei e depois a dor se foi. E ali estava ela, a felicidade mais intensa que se tu alguma vez experienciasse iria-te fazer cair de joelhos.&#13;&#10;&#13;&#10;Quanto eu sai daquele transe eu vi que estava a babar-me todo.&#13;&#10;&#13;&#10;Aquela situação assustou-me um pouco então eu não voltei para lá por algum tempo. No entanto, as coisas só ficaram piores. Eu comecei a ter sintomas de ressaca como vomitar e suar. Varia de empregado para empregado. Um deles chegou até mesmo a arrancar os próprios dentes porque ele sentia que eles estavam cobertos de bichos.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {A sensação? Não há palavras que a possam descrever. Sabes o momento mais feliz da tua vida? É tipo isso mas mil vezes melhor.&#13;&#10;&#13;&#10;Ah, eu sou o último empregado no Porccubus? Entendo, o cérebro quer sempre mais e mais estímulos. No começo, tudo que eu precisava fazer era picar-me em um dos seus espinhos. Agora, eu tenho de esfregar-me neles para poder ficar alterado.&#13;&#10;&#13;&#10;Eu sinto que todo o sangue no meu corpo me vai à cabeça e que ela vai eventualmente explodir. Eu já a imaginei a rebentar mais de mil vezes.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {Tenho que ir, é hora de voltar ao trabalho. Já notaste que eu estou encharcado no meu próprio suor?&#13;&#10;&#13;&#10;Aproposito, não é o que tu pensas que é, Porccubus não é nada agressivo. Nunca tentou nos comer ou arrancar fora as nossas cabeças. Tu mencionaste que todos os corpos sorriam, não foi? Isso é tudo que aquela coisa faz é fazer alguém sorrir "até à morte".&#13;&#10;&#13;&#10;Ninguém pode ser culpado por querer morrer assim. Nós estamos a viver no inferno todos os dias... Isto é apenas o sabor de um pedaço do paraíso.}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="4">
+      [
+      {Sabes o que mais? Eu tenho pena de ti. Tu nunca sentiste estas sensações e nunca as sentirás. Mas tu tens de entrevistar um empregado viciado que nem eu enquanto finges que não te sentes tentado.&#13;&#10;&#13;&#10;Agora é a hora para a minha cabeça estourar. Tenha um bom dia.}
+      ]
+    </desc>
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">Quando o resultado do trabalho foi Bom, o Qliphoth Counter aumentou.</specialTip>
+      <specialTip openLevel="1" key="2">Quando o resultado do trabalho foi Mau, o Qliphoth Counter diminuiu.</specialTip>
+      <specialTip openLevel="1" key="3">Quando o resultado foi Bom, mas o trabalho fora realizado por um empregado de nível 3 ou inferior de Moderação, o sujeito foi morto pela Anormalidade.</specialTip>
+      <specialTip openLevel="1" key="4">Empregados de nível 3 ou inferior de Moderação irão sofrer grandes quantidades de dano Branco dos ataques da Anormalidade após se encontrar em fuga.</specialTip>
+      <specialTip openLevel="1" key="5">$0 não sofreu nenhum tipo de dano se o atacante está fora so seu alcançe de ataque. Leve isto em conta caso uma supressão seja necessária.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+
+
+
+</creature>

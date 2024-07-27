@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id="100018">
+
+    <narration action="move">
+      #0 va a entrar en la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 se erige como una estatua en una esquina de la unidad de contención.}
+      {A veces $0 murmulla mientras se agita.}
+      {$0 también tiende a gritar de vez en cuando, pero como está atado, probablemente no hay necesidad de preocuparse.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {#0 siente desesperación.}
+      {#0 huele el olor insoportable de la desesperación.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {Por qué este lugar es siempre oscuro y frío?}
+      {En la oscuridad, el cerebro de $0 se pudrió lentamente.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {Abandonado incluso por la muerte, $0 permanecerán confinados aquí por el resto de su vida.}
+      {Ya no era rabia, sino un aborrecimiento más profundo, más retorcido y maníaco que se encontró.}
+      ]
+    </narration>
+
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">T-01-54</codeNo>
+      <name openLevel="1">Asesino Abandonado</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/StraitJacket</portrait>
+      <riskLevel openLevel ="2">TETH</riskLevel>
+      <openText>Pero lo que es realmente lamentable es que personas como tú mueran en manos de personas como yo.</openText>
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Una anormalidad que grita blasfemias e insultos, debido al daño cerebral causado por la ira excesiva. Siempre hay una herida en la frente que nunca parece curarse. Odia a todos y todo. Lleva una camisa de fuerza, pero es tan libre como cualquiera, y ninguna cantidad de cadenas y restricciones son suficientes para evitar que cometa violencia.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Siempre tuvo que llevar una camisa de fuerza. Algunos dicen que era un preso condenado a muerte de una prisión federal. Los investigadores siempre fueron cautelosos mientras estaban cerca de él. Sintieron que la camisa de fuerza no podía contenerlo. &#13;&#10;Querían estudiar el cerebro de un asesino para demostrar que existía un mal innato. Fue difícil determinar quién era peor: Un hombre que asesinó a los inocentes o los investigadores que querían abrir ese cerebro para saciar su curiosidad.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Una amplia gama de medicamentos y productos químicos fueron inyectados. Algunos de ellos se utilizaron por el bien de la humanidad, mientras que otros se utilizaron para nuevas técnicas médicas. Todos ellos tenían el potencial de cambiar el mundo. &#13;&#10;Estaban emocionados. Aunque no expresaron abiertamente su entusiasmo, fue casi palpable. Dijeron que encontraron una cura. Pero solo ellos sabían lo que curaba.&#13;&#10;El prisionero hablaba cada vez menos. Su agresividad fue suprimida, pero al mismo tiempo se perdió a si mismo. Después de una extensa revisión, se le permitió quitarse la camisa de fuerza. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {"Creo que mi cabeza se está convirtiendo en metal. A veces escucho crujidos metálicos en mi cabeza..." &#13;&#10; A medida que pasaban los días, comenzó a infligirse autolesiones. Se golpeó la cabeza en la pared o en superficies duras. Insistió en comprobar si su cabeza se estaba convirtiendo en metal.&#13;&#10;Un día decidieron dejarlo con la esperanza de que se detuviera una vez que viera gotear su propia sangre. Sin embargo, a pesar de que la sangre le corría por la cara, no se detuvo hasta que su herida era tan profunda, el blanco de su cráneo estaba sobresaliendo. Tuvo que usar una camisa de fuerza de nuevo, pero ya no fue temido ni monitoreado como antes. }
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Murió un investigador. Hubiera sido difícil identificarlo sin la tarjeta de identificación ya que su rostro estaba hundido su rostro dentro de su craneo. La seguridad laxa significaba que la puerta a menudo se dejaba abierta o sin vigilancia. El prisionero que todos creían que estaba confinado, comenzó a moverse de rodillas. &#13;&#10; "Siento...  mi cabeza convirtiéndose en metal... Los surcos en mi cerebro se están volviendo tan liso y brillante como el metal..." &#13;&#10;Comenzó a murmurar repetidamente palabras extrañas, y se llevó a cabo el procedimiento final. El tratamiento se detuvo, y su cerebro se utilizó para la investigación. Cómo puedo saberlo? Yo lo sedé yo mismo. Siguió murmurando tonterías hasta el final. &#13;&#10; "el fin...comienza...el fin...comienza...se acabó."}
+      ]
+    </desc>
+
+    <specialTipSize size="1">
+      <specialTip openLevel="1" key="badEscape">Si el resultado del trabajo es malo, el contador Qlifot disminuye.</specialTip>
+    </specialTipSize>
+
+  </observe>
+</creature>

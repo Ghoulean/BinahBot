@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id="100038">
+    <narration action="move"></narration>
+    <!-- 짱새는 작업로그 없다-->
+    <narration action="start">
+      [
+      {}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {}
+      ]
+    </narration>
+    <narration action="death">
+      [
+      {}
+      ]
+    </narration>
+  </info>
+  <observe level="3">
+    <collection>
+      <codeNo openLevel="0">O-02-63</codeNo>
+      <!-- 안나오겠지만 혹시 몰라서 넣어봐씀-->
+      <portrait openLevel="0">Sprites/Unit/creature/BossBird</portrait>
+      <name openLevel="0">
+        Apocalypse Bird
+      </name>
+      <riskLevel openLevel="0">
+        ALEPH
+      </riskLevel>
+      <specialName openLevel="0">
+        The Monster in the Black Forest
+      </specialName>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Known to come when the world is filled with sin, many employees fear the advent of this Abnormality.&#13;&#10;&#13;&#10;To talk about this bird, we first need to tell the story of the Black Forest. We must remember the forest that was once so peaceful and beautiful…&#13;&#10;&#13;&#10;And the apocalypse shall follow.}
+      ]
+    </desc>
+    <desc id="2" openLevel="0">
+      [
+      {&lt;The Tale of the Black Forest&gt;&#13;&#10;&#13;&#10;Once upon a time, three happy birds lived in a warm and lush forest.&#13;&#10;&#13;&#10;The birds had no names, though the creatures of the forest would call them Big Bird, Long Bird, and Small Bird.&#13;&#10;&#13;&#10;Everyone lived freely and happily together in the peaceful forest. The birds wanted the forest to be safe more than anyone else, that way creatures from the outside could visit and have fun.&#13;&#10;&#13;&#10;It was a warm and sunny afternoon when a stranger visited the peaceful forest. He was a traveler, pioneer, and prophet, but at the same time, he was a nobody. He wanted to enter the forest, but the birds found him suspicious, so they didn't let him in. The stranger, angered, told the birds as he left:&#13;&#10;&#13;&#10;“Soon, a tragedy will befall the forest. It will be tainted with misdeeds and evil, and there will be constant conflict. The tragedies will only stop when a terrible beast appears and devours everything. The sun and moon will shine upon the forest no longer; the forest will never go back to what it was before.”&#13;&#10;&#13;&#10;The birds worried about the prophecy. What if conflicts really break out and a beast shows up to harm the forest just like the man said? That's when the birds decided to become the guardians of the forest. They loved this forest more than anyone else did, so they wanted to protect the creatures living in the forest and keep the peace.&#13;&#10;&#13;&#10;Big Bird, with its many eyes, decided to watch over the forest for intruders. For Big Bird's eyes could see very far, and see things we cannot see. Then somebody said, “But what if the beast shows up in the middle of the night, when the sky is dark and everyone is asleep?” Worried, Big Bird burned all of its feathers to make an everlasting lamp. Now the creatures of the forest were under Big Bird's constant watch, day and night.&#13;&#10;&#13;&#10;To keep the forest's peace, Long Bird weighed the sins of those who entered the forest. For Long Bird's scale was fair and just, and could weigh any and all kinds of sin. Then somebody said, “But what if the scale doesn't tip in either direction someday?” Worried, Long Bird made a scale that always tipped to one side. That way every judgement would yield a clear verdict.&#13;&#10;&#13;&#10;Small Bird decided to punish the creatures' wrongdoings with its beak. Then somebody said, “But your beak is so small, no one would find it hurtful.” Worried, Small Bird tore its mouth wide so it could swallow any creature in one bite.&#13;&#10;&#13;&#10;No one could visit the forest anymore, and bad rumors about the forest began to spread outside. “I heard terrible things happen to any creature that enters the forest.”&#13;&#10;
+      “The Big Bird is always watching the creatures of the forest, there's no freedom.”
+      “The Long Bird's scale isn't fair at all.”
+      “The Small Bird's punishment is so scary.”&#13;&#10;&#13;&#10;The birds got upset. “We work so hard to protect the forest; why doesn't anyone appreciate our effort?”&#13;&#10;&#13;&#10;Fewer and fewer visitors came to the forest, more and more creatures were complaining, fights broke out daily, and yet the birds continued to work even harder to make the forest peaceful again, but...&#13;&#10;
+      “No, this forest is so vast and wide, the three of us aren't enough to protect all of it.”
+      “But there is no creature to protect this forest but us.”
+      “If we combined our power, we could be stronger.”&#13;&#10;&#13;&#10;The day when Big Bird's eyes that could see hundreds of kilometers away, Long Bird who could judge any sin, and Small Bird's mouth that could devour everything united into one, darkness fell upon the forest. Creatures screamed in terror and fear at the sight of the bird, and the forest soon fell into mayhem.&#13;&#10;&#13;&#10;Then, in the middle of all the chaotic cries, someone shouted:&#13;&#10;&#13;&#10;“It's the beast! A big, scary monster lives in the black, dusky forest!”&#13;&#10;&#13;&#10;The beast is here? The three birds, now as one, looked around but there was no one to be seen. The bird began to prowl the forest, looking for the beast. The forest would be in trouble if the beast really showed up.&#13;&#10;&#13;&#10;But there was nothing. There were no creatures, no sun and moon, and no beast. All that was left was just a bird and the Black Forest.&#13;&#10;&#13;&#10;Since then, there were only nights dark as pitch.&#13;&#10;&#13;&#10;Rumor says there is a terrible beast in the Black Forest where no one lives.}
+      ]
+    </desc>
+    <desc id="3" openLevel="0">
+      [
+      {&lt;Survivor Testimony&gt;&#13;&#10;
+      Every single light in the facility went crazy. They kept flickering and flickering. I couldn’t even use my lighter. Then, this warm light shone through it all. It looked like a waning twilight, or a growing sunrise. Though, as we all know, sunlight can’t make its way into our facility. Everyone silently gazed at the light. Sudden darkness and a weird ray of light were enough reason to be frightened. It was scarier than anything gorey we’d seen here. It was a true fear of the unknown itself…&#13;&#10;
+      (Omitted) …Something from afar was coming our way. Incandescent lights like stars from outer space were marching towards us. It looked like Big Bird’s eyes, but it wasn’t that Abnormality. I could hear these long arms scratching the floor.&#13;&#10;
+      Someone broke the silence with a whisper: “That guy over there couldn’t run away in time...”&#13;&#10;
+      There was an employee kneeling on the floor; perhaps he couldn’t sense the danger approaching behind him, and once he noticed, it was too late. He couldn’t even scream. Nobody would have been able to then. He just meaninglessly struggled to move his legs, desperate to run from the beast. There was no heroic act of someone standing up against the monster, not even a yell to warn him. Everyone was just watching him, waiting for the terrible thing that was about to happen.&#13;&#10;
+      Each step sent a tremor through the whole facility. The monster was moving with such slow steps, but it seemed so fast.&#13;&#10;
+      In the blink of an eye, it devoured the nameless employee in one bite, and right after that everyone started screaming in chaos. I had gone through handling countless suppressions, but that day, for the first time, I regretted ever joining the company. I was certain I wouldn’t get out of there alive. This helplessness overwhelmed me. I couldn’t even think about fighting back against the monster, and many others were feeling the same.&#13;&#10;
+      I think I’m the only one who stayed sane enough to write this among all the survivors. The company will never tell our newbies about the existence of that monster. However, I wanted to leave them a warning at the very least. That’s why I’m writing this.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="0" key="bigBirdEgg">The Big Bird’s eyes imprisoned light.</specialTip>
+      <specialTip openLevel="0" key="longBirdEgg">The Long Bird’s arms concealed time.</specialTip>
+      <specialTip openLevel="0" key="littleBirdEgg">And the Small Bird’s beak whispered, endlessly…</specialTip>
+      <specialTip openLevel="0" key="eggExist">As long as they exist, the Apocalypse Bird will not disappear.</specialTip>
+    </specialTipSize>
+  </observe>
+  <etc>
+    <param key="Escape" index="0">
+      Once upon a time, three happy birds lived in a warm and lush forest.
+    </param>
+    <param key="BigBirdArrive" index="1">
+      Big Bird, with its many eyes, decided to watch over the forest for intruders.&#13;&#10;For Big Bird's eyes could see very far, and see things we cannot see.
+    </param>
+    <param key="LongBirdArrive" index="2">
+      To keep the forest's peace, Long Bird weighed the sins of those who entered the forest.&#13;&#10;For Long Bird's scale was fair and just, and could weigh any and all kinds of sin.
+    </param>
+    <param key="SmallBirdArrive" index="3">
+      Small Bird decided to punish the creatures' wrongdoings with its beak.
+    </param>
+    <param key="BossBirdAppear" index="4">
+      Then, in the middle of all the chaotic cries, someone shouted:&#13;&#10;“It's the beast! A big, scary monster lives in the black, dusky forest!”
+    </param>
+    <param key="BigBirdBreak" index="5">
+      Big Bird's far seeing eyes were blinded,
+    </param>
+    <param key="LongBirdBreak" index="6">
+      The head that always gazed upon the cosmos was lowered, 
+    </param>
+    <param key="SmallBirdBreak" index="7">
+      Small Bird's mouth that could devour anything was shut,
+    </param>
+    <param key="Suppressed" index="8">
+      The bird began to prowl the forest, but there was nothing.&#13;&#10;There were no creatures, no sun and moon, and no beast. All that was left was just a bird and the Black Forest.
+    </param>
+    <param key="gateway" index="9">
+      Entrance to the Black Forest
+    </param>
+    <param key="bigBirdEgg" index="10">
+      Big Eyes
+    </param>
+    <param key="longBirdEgg" index="10">
+      Long Arms
+    </param>
+    <param key="smallBirdEgg" index="10">
+      Small Beak
+    </param>
+  </etc>
+</creature>

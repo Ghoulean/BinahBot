@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300101">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-85</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/IronMaiden</portrait>
+      <name openLevel="1">
+        We Can Change Anything
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <openText>
+        Now everything will be just fine.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {After the popularity of the “All-Around Helper” skyrocketed, “We Can Change Anything” was released as the second installment of XX Inc’s home robot series. }
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {As to be expected of all of XX Inc’s products, it sports a variety of functions.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Is your child a troublemaker who cries all the time? We can change that!&#13;&#10;Don’t like how you look? Are you too fat? Too skinny? We can change that!&#13;&#10;Is your house suffering from an outage because you don’t have the money to pay for the power bill? We can change that!}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {It’s quite simple. Just open up the machine, step inside, and press the button to make it shut. Now everything will be just fine.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {The machine will produce energy after an employee enters it. Seeing as once inside, nobody ever comes out, it must be rather comfortable.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Placing an employee inside the machine will produce energy over time.</specialTip>
+      <specialTip openLevel="2" key="2">Once the employee is inside the machine, they will take RED damage. They will be unable to leave and will eventually die.</specialTip>
+      <specialTip openLevel="2" key="3">The amount of energy produced will increase as time goes by.</specialTip>
+      <specialTip openLevel="2" key="4">This Abnormality is not affected by Qliphoth Meltdowns.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

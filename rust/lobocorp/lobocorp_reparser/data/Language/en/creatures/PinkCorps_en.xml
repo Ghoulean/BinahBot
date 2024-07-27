@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+  -->
+  <info id="100064">
+    <narration action="move"></narration>
+    <narration action="start">
+      [
+      {$0 tells #0 all about love.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0’s goal is to make sure goodhearted people are safe.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 feels hope from seeing $0’s friendly color.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">D-01-106</codeNo>
+      <portrait openLevel="0">Sprites/Unit/creature/PinkCorps</portrait>
+      <name openLevel="1">
+        Army in Pink
+      </name>
+      <name openLevel="3">
+        Army in Black
+      </name>
+      <riskLevel openLevel="0">
+        ZAYIN
+      </riskLevel>
+      <riskLevel openLevel="3">
+        ALEPH
+      </riskLevel>
+      <openText>The color of the human heart is pink, and by wearing the same color, we can blend in with people’s minds. </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;This Abnormality was created with the ideas provided by Tumblbug Backer 문정호 (Moon Jeong-ho).&lt;/i&gt;&#13;&#10;&#13;&#10;This Abnormality takes the form of humanoid creatures in pink equipment. Its intellectual capacity is high enough that it can verbally converse with human beings. At the very least, it seems friendly during observation and work. It has identified itself as a special force from (Redacted) and uses the pronoun “we” when referring to itself. It has continuously shown positive intentions to help humanity.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {&lt;Audio Record from First Contact with the Abnormality&gt;&#13;&#10;
+      (Omitted)
+      Serena: Well, I feel threatened because you’re armed. That bright pink outfit’s disturbing as well. It doesn’t belong in a place like this.
+      - What’s your opinion on the nature of humans, Miss Serena?
+      Serena: …I think it depends on a person’s experience. Why do you ask?
+      - It is a highly debatable topic, but this is what we think we should do. If a person is good from the start, we protect their good heart. If a person is bad from the start, we will make a good heart out of them and protect that heart.
+      Serena: How are you going to do that?
+      - We can see the color of humanity’s hearts. The color of the human heart is pink, and by wearing the same color, we can blend in with people’s minds. We will gladly get dirty for the sake of the goodhearted.
+      Serena: Wait, you’ll get dirty instead of the people? Is that actually a thing that’s possible?
+      - Indeed it is.
+      Serena: I’m sorry, but I just can’t trust you or what you say. It’s rather suspicious that you can just “see” the color of someone’s heart.
+      - If anything happens, just call us, ma’am.&#13;&#10;(End of recording)&#13;&#10;&#13;&#10;Following what was stated in the recording, the Abnormality’s will to help others is solid.&#13;&#10;We have yet to grasp detailed information around this Abnormality. Perhaps actually asking it for help could aid in learning more. However, just like any other Abnormality, we shouldn’t blindly trust it. I plan to have a suppression team ready while I pretend to ask it for help.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {So a lot’s happened up to now. To summarize the whole thing, this Abnormality is the best thing we’ve ever had here. A few months ago, I took a chance asking this Abnormality for help, and ever since I’ve been using it. I’ve gotten help from it about (Redacted) times by now. My efficiency at work has gotten so much better too. At this point, just looking at something pink makes me feel better. Those creatures bolster in a way even the greatest leaders can’t match. This Abnormality will greatly improve our employees’ quality of life.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;Excerpt from an Audio Record&gt;&#13;&#10;
+      Serena: You can do it again today, right?
+      - Yes, the human heart is pink, and we wear the same color. We will drive away bad thoughts.
+      Serena: You hear that? Yes, it’s still in the best condition. We can put this Abnormality to good use again in our next suppression. They’re so much better than human soldiers. Perhaps we should positively consider putting them as our special suppression team. On a side note, they seem to have gotten a bit darker in color, but I don’t think it’s anything to lose sleep over.
+      - The human heart… it’s… we must… clean…
+      - Even… the smallest speck… of evil… must… be cleaned…
+      Serena: It seems a bit less… energetic than usual. Though it’ll be fine, I think.&#13;&#10;(End of recording)}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {&lt;Urgent Report of the Incident related to Army in Pink&gt;&#13;&#10;We’ve filed this urgent report due to the drastic change in Army in Pink.&#13;&#10;We’re still trying to grasp exactly what happened. A total of (Redacted) employees have passed away. The following audio is a recording of the assumed first casualty, employee Serena.&#13;&#10;&#13;&#10;(Audio Recording)
+      Serena: An Abnormality has broken out again in the (Redacted) section. I’d like to ask if you could help us out again.
+      - Yes… we, the Army in Black… blend into the human heart… and drive away good thoughts…
+      Serena: ...Hold on. What? That’s not your line.
+      - The human heart… is black… we must… regularly… clean…
+      Serena: What are you talking about? You’re creeping me out, man.
+      - We’ll protect you with our black love.
+      Serena: Stop, I’ll call the suppression team... If you move even an inch I swear…
+      - We salute you, ma’am…&#13;&#10;(The recording abruptly ends after the sound of a huge explosion.)}
+      ]
+    </desc>
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">$0 can be ordered to protect an employee. However, it should be noted that the Qliphoth Counter lowered when the order was given.</specialTip>
+      <specialTip openLevel="1" key="2">$0 increases the defense of the employee it protects while healing everyone in the same area. However, if the level of the employee being protected is lower than 3, they will go out of control while under protection.</specialTip>
+      <specialTip openLevel="1" key="3">When Repression work was performed, the Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="1" key="4">The Qliphoth Counter lowered every time 5 employees died. However, deaths caused by Execution Bullets were not recognized.</specialTip>
+      <specialTip openLevel="1" key="5">When the work result was Bad, the Qliphoth Counter decreased.</specialTip>
+      <specialTip openLevel="1" key="6">When an Abnormality was suppressed, the Qliphoth Counter raised.</specialTip>
+      <specialTip openLevel="1" key="7">When an employee Level 3 or lower encounters $0 while it is escaping, they will go out of control and attack other employees. The same instance occurred when an employee’s SP hit 0 due to $0’s attack.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <name>Army in Black</name>
+    <codeId>D-01-106-1</codeId>
+  </child>
+</creature>

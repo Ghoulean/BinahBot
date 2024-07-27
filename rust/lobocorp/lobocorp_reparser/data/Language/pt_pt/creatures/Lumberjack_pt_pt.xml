@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100051">
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+
+    <narration action="start">
+      [
+      {Não há motivo para ter medo do $0 se #0 não for uma pessoa de coração quente.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {O $0 coleta corações. Ele pensa que se o seu coração começasse a bater, ele seria capaz de amar.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {O $0 continua a colocar corações no seu interior.}
+      ]
+    </narration>
+
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">F-05-32</codeNo>
+      <name openLevel="1">Lenhador De Coração Quente</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/Lumberjack</portrait>
+      <riskLevel openLevel ="2">HE</riskLevel>
+      <openText>Esta floresta está cheia de corações. Não importa quantas vezes ele abata-os, a floresta continua densa.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Uma Anormalidade humanoide mecânica com um corpo de metal. Ele segura uma grande machado nas suas mãos mas não se move, como se estivesse parado no tempo.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Aqueles amigos eram incompletos, então eles ajudavam uns aos outros e embarcaram juntos em uma jornada para tornarem os seus desejos realidade. O Espantalho queria um cérebro, o Lenhador de Lata queria um coração, o Leão Covarde queria coragem e a Dorothy queria ir para casa.&#13;&#10;No entanto, aquele que eles pensavam que era o grande feiticeiro deu ao Lenhador de Lata um coração inútil...}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {"Mas tu és uma máquina, isso significa que és feito para os humanos. Não estás a entender? Uma máquina não precisa de um coração. Mas obrigado por vires até a aqui. Toma, este chumbo é tudo que eu tenho para te dar. Vai lá ter com eles e diz-lhes que o teu desejo tornou-se realidade."&#13;&#10;Os seus amigos se foram satisfeitos e nunca mais ele os viu. Aquele pesado chumbo frio entristecia-o.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {O Lenhador de Lata não aceitou o que lhe foi dito. Com raiva ele cravou o seu machado no peito do feiticeiro. O coração dele era quente e batia com grande intensidade. Ele colocou o chumbo dentro do feiticeiro e colocou o coração dele dentro do seu próprio peito. O lenhador começou a rir perante a vista espetacular e pela primeira vez ele sentiu uma felicidade que nunca tinha sentido antes.&#13;&#10;Hoje em dia o Lenhador tem montes de corações dentro do seu peito. Não importa quantos ele tenha no seu interior, nunca será o suficiente. A máquina antigamente conhecida como o Lenhador agora apenas abate humanos em vez de árvores. Esta floresta está cheia de corações. Não importa quantas vezes ele abata-os, a floresta continua densa.&#13;&#10;O coração daqueles de bom coração é quente.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Quando o Lenhador perde os seus corações, ele cai de joelhos, desesperadamente agarrando o seu peito vazio. É como se implorasse para que não lhe tirassem a única coisa que lhe restou.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Quando o resultado do trabalho é Mau, o Qliphoth Counter diminui.</specialTip>
+      <specialTip openLevel="1" key="2">Se um empregado com Moderação nível 3 ou superior realizar um trabalho, o Qliphoth counter diminui.</specialTip>
+      <specialTip openLevel="2" key="3">Quando um empregado entra na unidade de contenção quando o Qliphoth Counter está a 0, o mesmo irá morrer imediatamente e a Anormalidade irá escapar.</specialTip>
+    </specialTipSize>
+
+  </observe>
+
+
+</creature>

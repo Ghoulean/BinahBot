@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300106">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-09-95 </codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/HealthBracelet</portrait>
+      <name openLevel="1">
+        Luminous Bracelet
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>This bracelet shall not forgive those who hold greed in their hearts, thus it must only be worn by those in true need.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {A bracelet that gives off a soft turquoise light. Many unexplainable things have been discovered in the Outskirts.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {When it is worn, all wounds are healed without a trace of scarring.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {However, to wear this bracelet even when one has not a scratch left on their body is an act of greed.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+
+      [
+      {This bracelet shall not forgive those who hold greed in their hearts, thus it must only be worn by those in true need.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Stats regarding Fortitude will greatly increase while $0 is worn.</specialTip>
+      <specialTip openLevel="2" key="2">$0 continually recovers the wearer’s HP when it drops.</specialTip>
+      <specialTip openLevel="2" key="3">The wearer will die if any attempt to return $0 is made before they are fully healed.</specialTip>
+      <specialTip openLevel="2" key="4">If the wearer’s HP has not dropped after a certain period of time, then they will die from excessive regeneration.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

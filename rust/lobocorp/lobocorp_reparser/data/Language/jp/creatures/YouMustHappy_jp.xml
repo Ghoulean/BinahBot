@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300105">
+
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-94</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/YouMusHappy</portrait>
+
+      <name openLevel ="1">
+        あなたは幸せでなければならない
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <openText>
+     この機械で手術を受けた 多くの人は心が安らぎ、 再び健康になりました。
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {ところどころ錆びている 謎の施術用の機械。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {この機械は、頭蓋骨を持ち上げ、安全かつ効率的に 神経組織を破壊するように設計されています。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {この機械で手術を受けた 多くの人は心が安らぎ、 再び健康になりました。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {「あなたは自分の街を愛していますか？」 という質問に、 「はい」と答えた人は病が治った人で、 「いいえ」と答えた人たちは 決して退院することはできなかった。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {機械を長く使うほど、 職員は良くなっていきます。 使用する時間が長くなればなるほど、 質問の変化は速くなります。}
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">機械を使用している職員は、すべての能力が向上します。</specialTip>
+      <specialTip openLevel="2" key="2">職員が機械を使用する時間が長ければ長いほど、 上昇する能力の価値は高くなります。</specialTip>
+      <specialTip openLevel="2" key="3">機械上部がYES状態のときに使用中止してください。 NO状態で使用中止した場合、上昇した能力値だけ すべての能力値が低下します。</specialTip>
+      <specialTip openLevel="2" key="4">上昇した能力は翌日元の状態に戻ります。 しかし、1度でも機械の効果で計200以上の能力上昇を経験した職員は、 その日の終わりに消滅しました。</specialTip>
+      <specialTip openLevel="2" key="5">&lt;注意事項&gt; 機械を5回以上使用した職員が その場で爆発した事例が確認されました。</specialTip>
+      </specialTipSize>
+
+
+
+  </observe>
+</creature>

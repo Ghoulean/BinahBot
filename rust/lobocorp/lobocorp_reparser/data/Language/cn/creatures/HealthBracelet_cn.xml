@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300106">
+    <narration action="move">
+     #0被分配到“$0”的收容单元中
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-95</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/HealthBracelet</portrait>
+
+      <name openLevel ="1">
+        荧光手镯
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>这个手镯不会饶恕那些贪婪的鼠辈，&#13;&#10;所以它只该被有需要的人佩戴。</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {我们在郊区发现了许多无法以常理解释的物体，而这个散&#13;&#10;发出柔和荧光的手镯就是其中之一。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {当一名伤者佩戴手镯后，其身上所有的伤口都会毫无痕迹&#13;&#10;地快速愈合。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {但是，在没有任何伤口的情况下佩戴手镯，是一种非常贪&#13;&#10;婪的行为。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {这个手镯不会饶恕那些贪婪的鼠辈，所以它只该被有需要&#13;&#10;的人佩戴。}
+      ]
+    </desc>
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">佩戴“$0”的员工会大幅提高生命值。</specialTip>
+      <specialTip openLevel="2" key="2">当佩戴者受伤后，“$0”会为其持续恢复生命值。</specialTip>
+      <specialTip openLevel="2" key="3">如果佩戴者在生命值没有全满的情况下试图归还“$0”，那么&#13;&#10;佩戴者就会立刻死亡。</specialTip>
+      <specialTip openLevel="2" key="4">如果佩戴者的生命值在一定时间内不曾损失，那么佩戴者也会立刻死&#13;&#10;亡。</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

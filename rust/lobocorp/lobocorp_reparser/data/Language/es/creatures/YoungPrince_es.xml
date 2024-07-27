@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100040">
+
+    <narration action="move">
+      #0 va a entrar en la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="start">
+      [
+      {El empleado #0 puede sentir esporas que salen de $0.}
+      {El empleado #0 se siente confuso debido a $0.}
+      {$0 parece repugnante, pero encantador.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {El zorro dijo, “Ya sabes, lo más importante no se puede ver.”}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {$0 vino de lejos, en algún lugar que no sabemos.}
+      {Quizás $0 no es lo que estamos viendo con nuestros ojos.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {Los fines de los empleados que fueron domesticados por $0 siempre fueron trágicos.}
+      {Los empleados que se convirtieron en monstruos por $0 vagaron en la sala de contención de $0 sin rumbo alguno.}
+      {Muchos empleados que terminaron de trabajar en $0 se quejan de que ya no pueden comer hongos.}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {A diferencia de las otras ilusiones, solo un empleado nombró de la forma como lo conocemos a $0.}
+      {El empleado #0 recuerda un pedazo de estrella.}
+      ]
+    </narration>
+
+    <narration action="special_ability_1">
+      [
+      {Docenas de tumores comienzan a crecer en el cuerpo de #0 crece sin cesar. No pueden ser detenidos… la conciencia de #0 está desesperadamente anhelando el consenso con $0. }
+      {El empleado #0 pierde la mente, con la estrella de $0 mantenida en su cuerpo.}
+      ]
+    </narration>
+
+    <narration action="special_ability_2">
+      [
+      {El precio por buscar algo más de lo que somos, fue grande.}
+      {El empleado #0 oye la voz del amigo en su conciencia que se está desvaneciendo.}
+      ]
+    </narration>
+
+    <narration action="special_ability_3">
+      [
+      {El empleado #0 vio estrellas en sus sueños. El anhelo de $0 se está profundizando…}
+      {El empleado #0 no podría pertenecer al mundo de $0 mas tiempo. El trágico final del empleado exiliado #0 comienza.}
+
+      ]
+    </narration>
+
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">O-04-66</codeNo>
+      <name openLevel="1">Champiñon Gigante</name>
+      <name openLevel="4">El Principito</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/YoungPrince</portrait>
+      
+      <riskLevel openLevel ="2">WAW</riskLevel>
+
+      <openText>
+        Incluso si esta es mi maldición, amaré esta maldición como una bendición.
+      </openText>
+
+   
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Se llama “Champiñon Gigante” entre los empleados. A medida que el apodo se le da, se asemeja a un hongo considerable o una colonia de hongos. Difunde continuamente las esporas, que son visibles a simple vista, en el aire.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {A la mayoría de los empleados no les gusta esta anormalidad. Ningún empleado es lo suficientemente generoso como para preocuparse por un hongo gigante que arroja esporas misteriosas mientras tienen otras docenas de trabajos en sus manos. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="1">
+      [
+      {Además de eso, solo pocos empleados se ofrecieron como voluntarios para su observación. Solo pudimos grabar muy poca información al respecto. Originalmente, la empresa asignó el trabajo de observación únicamente de acuerdo con el sistema de turnos. Sin embargo, después de los “incidentes de chicas mágicas” hace unos años, la opinión de un empleado comenzó a desempeñar un papel en la asignación de trabajos..}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="1">
+      [
+      {Las esporas animadas se crean a partir de la anormalidad, fluyendo por el aire. Principalmente invade un organismo a través del sistema respiratorio de un humano. Es difícil notar los síntomas iniciales porque un empleado que inhaló estas esporas no siente más que una ligera disnea y una sensación de arena en la garganta. Por lo tanto, una máscara se usa obligatoriamente cuando se acerca a esta anormalidad.}
+      ]
+    </desc>
+
+
+    <desc id="5" openLevel="1">
+      [
+      {Si un empleado inhala una cierta cantidad de esporas, los tumores comienzan a desarrollarse en su cuerpo y eventualmente, se convierten en un monstruo con su forma original apenas perceptible. En esta etapa, son hostiles hacia todo lo que está a la vista. Deben ser exterminados con extremo prejuicio. El daño será grave si la infección primaria no se detiene porque las esporas son altamente contagiosas. Además, se supone que las esporas tienen componentes alucinantes. Se recomienda extrema precaución cuando se trabaje en esta anormalidad, ya que la anormalidad tiene un gran deseo de reproducirse y su proceso de reproducción es fatal para los empleados.}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="2">
+      [
+      {&lt;Expediente de la sesión de consejería – Empleado John&gt; &#13;&#10;Había un chico, no muy hablador. Era ese tipo que nos miraba de reojo, como esperando que habláramos con él.&#13;&#10; Pero había algo peculiar en él. Se ofreció como voluntario para trabajar en el Champiñon Gigante. No teníamos ni idea de qué parte de ese hongo repugnante le gustaba. Era un poco perturbador que pasara inusualmente mucho tiempo en la cámara de contención del hongo. Quién sabe qué clase de cosa monstruosa sacaría de esa cosa?&#13;&#10;Decidimos que finalmente se volvió loco cuando habló de tonterías sobre cómo se hizo amigo del champiñon. Aunque era un común en la corporacion. Muchas cosas pasan aqui. Un empleado que se estaba volviendo loco no era gran cosa. Le insinuamos que se sometiera a un examen psiquiátrico, pero nos lanzó una mirada condescendiente, como si supiera algo que no sabemos.&#13;&#10; Pocos días después, como todos sabemos, pateó el cubo. Te dije que fui yo quien descubrió que el monstruo del hongo era él? La marca de nacimiento en su frente. Si no pudiéramos encontrar esa marca de nacimiento en esa cosa, ni siquiera habríamos adivinado que era él. Nadie sabía realmente que tenía una marca de nacimiento excepto yo. No tenia amigos, ya sabes.&#13;&#10; Él, después de convertirse en ese monstruo, simplemente vagó por la cámara de contención del Champiñon Gigante. Tratamos de atraerlo a un lugar que no haya empleados, porque atacó todo lo que estaba a la vista. Pero no se movió a 10 metros de ella hasta el momento de su muerte.&#13;&#10; Por eso decidimos renombrar la anormalidad. Debido a razones complejas como la compasión por ese tipo que se hizo amigo de un hongo y el recuerdo de su trágica muerte. &#13;&#10;Él siempre dijo que no necesitaba un amigo, pero sabía que era una tontería. El necesitaba un amigo. Esa es la razón por la que ni siquiera sabía que estaba infectado, se estaba volviendo loco con las alucinaciones, sin saber que se estaba convirtiendo en un monstruo. El hongo acaba de domesticar al pobre bastardo para que se convierta en su herramienta de reproducción. El chico cuyo nombre no se conocía, Alex……}
+      ]
+    </desc>
+
+    <desc id="7" openLevel="3">
+      [
+      {&lt;La nota de Alex del empleado&gt; &#13;&#10;La mente humana es demasiado frágil; no puede contener todo lo que una persona es. Sabes que los camarones mantis pueden ver cientos de colores que los humanos no pueden? Este es un ejemplo simple para ilustrar mi punto de que es perjudicial creer y juzgar todo basándose únicamente en lo que ve.&#13;&#10; En realidad no tengo muchos amigos. Espero que no entiendas mal. No HAGO amigos, No PUEDO. Nosotros, como seres humanos, no nos entendemos. Una persona piensa en sí misma como una entidad completamente aislada, lo que hace que la simpatía sea imposible. Pero irónicamente, un instinto inherente de la psicología del grupo sobrevivió en el curso de nuestra revolución. Jugamos al juego arriesgado de permanecer dentro de la línea, mientras que en vano tratamos de entender, invadiendo a los demás.&#13;&#10; Ya he terminado con este juego. Esa fue la razón por la cual me ofrecí para la observación en el Champiñon Gigante. Nadie quería acercarse a esa anormalidad. Debe ser debido a razones insignificantes, como lo repugnante y extraño que les parece a sus ojos. En realidad, me sentí algo superior cuando todos me miraron sorprendidos diciendo que haré el trabajo.&#13;&#10; El Champiñon no hizo nada especial. Pero observé pacientemente y registré su actividad. El día que esparció polvos de colores encantadores, pensé que la anormalidad me estaba dando una recompensa para mi paciente. &#13;&#10;Después de eso, sufrí un cambio especial. Pude percibir un mayor nivel de la realidad, “hyper realidad”. Fue una mano que me tendió. Lo tomé, y fui recompensado con una invitación a un lugar tan especial. Era posible solo para mi.&#13;&#10;Hablamos de muchas cosas. Me recibió porque yo era el único que podía realizar su esencia. Me habló a través de las mentes. Había estado imaginando, anhelando el momento de tener una conversación con la mente. Para ser completado mi entendimiento, el sentimiento de unificación. Fue emocionante, apenas pude ocultar mi alegría. &#13;&#10; (omitido) Quería acercarme a él. Yo quería ser parte de él. Siempre había estado pensando en él y esperando entrar en su cámara de contención. Quería pertenecerle y entender su mundo... Puedo sentir que mi corazón está listo como un capullo antes de que florezca... Estaba siendo domesticado lentamente…}
+      ]
+    </desc>
+
+    <desc id="8" openLevel="4">
+      [
+      {&lt;Un extracto del disco&gt; &#13;&#10;Este registro es parte de lo que la cámara de vigilancia que capto en la cámara de contención de la anormalidad. Desafortunadamente, la grabacion fue bloqueada por las esporas, todo lo que se pudo extraer fue el audio. Teniendo en cuenta el contenido de esta conversación, es seguro asumir que la espora de la anormalídad contiene agentes alucinantes. Porque incluso después de un análisis exhaustivo del audio, no se pudo encontrar otra voz que no fuera la del empleado. Después de pocas horas, dicho empleado sufrió un grave estado de delirios y otro empleado lo mató a tiros. &#13;&#10;-	No, yo no tengo amigos. Como dije antes, no me gustan las relaciones tan contradictorias. Pero al menos, creo que puedes ser mi amigo. El lenguaje humano es demasiado simple. No puedo ilustrar cómo me gustaría llamar a esta relación, pero creo que tengo que conformarme con “amigos”. &#13;&#10;-	Si. Soy solo un material amigo para ti.&#13;&#10;-     te acepto. Cambiaste mi vida. Había estado viviendo toda mi vida deprimida, sin saber qué hacer o hablar con alguien. Todo lo que había estado haciendo es trabajar. Pero me llevaste, a quien yo mismo me destrozé. Sentí que me entendían como entendía algo más que todo. Viste a través de mi esencia como yo vi la tuya. Es, es verdad… una experiencia arrebatadora. Yo tambien quiero entenderte. Quiero amarte, conviértete en ti. Nací como humano, viví una vida tediosa y podría haber seguido haciéndolo hasta que muera de no haber sido por ti. Estoy tan feliz de haberte conocido. &#13;&#10;-	Incluso si esta es mi maldición, Amaré esta maldición como una bendición. Pensaré en ti hasta el día en que mi mente se derrumbe y se desmorone. Cerraré los ojos pensando en mi único amigo que vino del universo lejano… (La anormalidad hace un ligero ruido de ventilación y se silencia).&#13;&#10;-	Incluso si esta es mi maldición, amaré esta maldición como una bendición. Pensaré en ti hasta el día en que mi mente se derrumbe y se desmorone. Cerraré los ojos pensando en mi único amigo que vino del universo lejano… (La anormalidad hace un ligero ruido de ventilación y se silencia).}
+      ]
+    </desc>
+
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">El contador Qlifot disminuirá si el trabajo de Percepción no se lleva a cabo regularmente tres o más veces.</specialTip>
+      <specialTip openLevel="1" key="2">Los empleados que trabajaron en $0 tienen la posibilidad de ser infectados por sus esporas. Envíelos a trabajar regularmente sobre otras anormalídades para evitar una infección completa.</specialTip>
+      <specialTip openLevel="1" key="3">Cuando el resultado del trabajo fue malo, El contador Qlifot se reduce.</specialTip>
+      <specialTip openLevel="2" key="4">El #0 empleado, que trabajaba constantemente en $0, apeló por sufrir en la unidad de contención. Después de esto, $0 crece como tejido emergió en su cuerpo, y el empleado #0 comenzara a transformarse en $0-1.</specialTip>
+      <specialTip openLevel="3" key="5">Los empleados $0 son atraidos a su unidad de contención cuando el contador Qlifot llega a 0. Cuando el empleado liderado por los $0 ingresan a la unidad de contención, ocurrira el mismo fenómeno que en el caso anterior.</specialTip>
+      <specialTip openLevel="4" key="6">Al suprimir a $0-1, presta atención a las esporas que ocurren en el momento de la muerte. Las esporas producen daño mental sostenido, que debe detenerse de inmediato si se encuentra a un empleado en pánico que se movilizara a la unidad de contención de $0 ciegamente.</specialTip>
+    </specialTipSize>
+
+  </observe>
+
+  <child>
+    <codeId>O-04-66-1</codeId>
+  </child>
+</creature>

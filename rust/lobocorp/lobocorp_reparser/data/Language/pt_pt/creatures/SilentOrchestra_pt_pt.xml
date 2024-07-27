@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100019">
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+
+    <narration action="start">
+      [
+      {O maestro d'$0 está a espera de músicos.}
+      {O maestro d'$0 normalmente é silencioso. A unidade de contenção também está pacifica.}
+      {O maestro é um mágico que cria vida; como um shaman que invoca os espiritos.}
+      {O concerto mais belo do mundo começa arruinado.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 prepara a música do Apocalipse.}
+      {Sem dúvida que $0 é o melhor conjunto musical da companhia.}
+      {A sensacional performance d'$0 irá admirar todos.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {Músicos vivem pelos aplausos do público.}
+      {A vida de um músico começa e acaba com os aplausos do público.}
+      {Uma ovação incrível é o honroso presente que a audiência pode dar ao maestro.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {Possivelmente podendo tornar-se parte da audiência d'$0, #0 termina o trabalho.}
+      {#0 completa a sua tarefa com $0 sem nenhum problema.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">T-01-31</codeNo>
+      <name openLevel="1">A Orquestra Silenciosa</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/silentOrchestra</portrait>
+      <riskLevel openLevel ="2">ALEPH</riskLevel>
+      <openText>O concerto mais belo do mundo começa arruinado.</openText>
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {Uma Anormalidade que ama arte e tenta tocar a sua música para a companhia. &#13;&#10;&lt;Excerto de uma Enciclopédia&gt; &#13;&#10;	O maestro não apenas corrige erros musicais, mas ele também é responsável por criar o melhor conjunto e liderar essa orquestra. As capacidades dele podem ser determinadas em apenas 5 minutos. O momento em que o maestro começa a ser avaliado, os seus olhos, o seu comportamento e atmosfera serão julgados por músicos. Então os músicos irão decidir se o condutor merece liderá-los. Sem a cooperação e a harmonia deles, a verdadeira mensagem da música não pode ser expressa, então o maestro deve manter uma liderança e comando soberbo e ter um poder de persuasão excelente….}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {&lt;Movimento 1: Calmo e lento&gt; &#13;&#10;	O maestro inicia o Apocalipse.}
+      ]
+  </desc>
+
+    <desc id="3" openLevel="3">
+      [
+      {&lt;Movimento 2 até ao 4: Alegre e rápido&gt; &#13;&#10; 	Os empregados começam-se a esquecer de tudo e se movem pela sinfonia. As suas emoções transformam-se em loucura e então irão tentar atacar aqueles que estão por perto. A música da orquestra acelera, trazendo destruição a todos os departamentos. Quando todos os músicos estiverem reunidos, uma música, que ninguém consegue ouvir mas que todos podem escutar, começa.}
+      ]
+  </desc>
+
+    <desc id="4" openLevel="4">
+      [
+      {&lt;Finale&gt;&#13;&#10; 	"A música trespassará o vosso ser."}
+      ]
+    </desc>
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="mood1">Quando o resultado do trabalho foi Bom, o Qliphoth Counter diminuiu.</specialTip>
+      <specialTip openLevel="1" key="mood2">Quando o resultado do trabalho foi Mau, o Qliphoth Counter diminuiu.</specialTip>
+      <specialTip openLevel="1" key="escape">Quando a música d'$0 começa a tocar após a sua fuga consiste em 4 movimentos. A medida que os movimentos continuam, empregados sofrem dano Branco, e a área auditiva continua a expandir.</specialTip>
+      <specialTip openLevel="2" key="movement">Cada movimento a franqueza d'$0 muda. No movimento 1, a fraqueza era ataques Pálidos, já para o movimento 2, era Negro. Para o movimento 3 era Branco, e durante o movimento 4, apenas dano Vermelho foi efetivo contra $0. Quando a música atingiu o seu pique, $0 tornou-se imune a todos os tipos de ataques.</specialTip>
+    </specialTipSize>
+
+  </observe>
+
+  <etc>
+    <param key="movement1" index="1">
+      1º Movimento, Adagio: Calmo e lento
+    </param>
+
+    <param key="movement2" index="2">
+      2º Movimento, Sostenuto: Restrito, porém, rápido
+    </param>
+
+    <param key="movement3" index="3">
+      3º Movimento, Accelerando: Gradualmente mais rápido e mais forte
+    </param>
+
+    <param key="movement4" index="4">
+      4º Movimento, Stringendo: Gradualmente ainda mais rápido
+    </param>
+
+    <param key="movement5" index="5">
+      Finale con fuoco, ma non troppo: Apaixonante, mas refinado
+    </param>
+  </etc>
+</creature>

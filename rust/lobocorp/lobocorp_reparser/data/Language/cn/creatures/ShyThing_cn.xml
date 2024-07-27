@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등0000000000000000000
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id ="100052">
+
+
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+
+    <narration action="start">
+      [
+      {收容单元内没有阳光，但“$0”正以某种微妙的方式干燥着自己的脸皮。},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {那座城市鼓励“$0”一直露出笑容，可她过于害羞了，不敢表露自己的真实感受...},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-01-92</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ShyThing</portrait>
+
+      <name openLevel ="1">
+        今天也很害羞
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <openText>多美好的一天！可你仍然很害羞吗？</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {“多美好的一天！可你仍然很害羞吗？”}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {在一个阳光明媚的日子里，她正小心翼翼地把洗干净的衣服挂到后院晾干。&#13;&#10;悲剧突然降临到了她的身上。&#13;&#10;“为了我们的城市，为了那些有价值的大公司，我们的牺牲是非常有必要的！所以，你根本就没有必要哭。相反，我们应该感到庆幸才是呀！”&#13;&#10;&#13;&#10;“你那是什么破表情？这座城市想要看到的不是那样的表情！”&#13;&#10;&#13;&#10;“我的天呐，你为什么要摆出那种表情？你这样也会让别人难过的。喂！你摆表情之前仔细想想行不行啊！你应该清楚你不是唯一一个住在这里的人吧！？”&#13;&#10;&#13;&#10;“你不太擅长表达自己的情感，所以你一定是个害羞的家伙。”&#13;&#10;&#13;&#10;“你应该露出高兴的表情，这样才能让那些住在郊区的贱民更加羡慕我们，嫉妒我们呀。”&#13;&#10;&#13;&#10;“快露出一张大大的笑脸，来嘛~这一点儿都不难的。”&#13;&#10;&#13;&#10;“你需要更加清楚地表达自己的情感。在这个城市里，表达可是非常非常重要的！”&#13;&#10;&#13;&#10;...在另一个阳光明媚的日子里，她正小心翼翼地晾干自己的皮，就像以前晾衣服那样。}
+    ]
+  </desc>
+
+
+    <desc id="3" openLevel="2">
+      [
+      {她的笑容让每个人都感到满意。有些人问她为什么要这样做，她回答到：“我...我...我很...害羞...”}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {不要试图去一睹她隐藏在脸皮后的真实容貌，这不会有什么好结果的。那张巨大的脸皮之后是她唯一的私人空间，确保她的隐私不受侵犯是那座城市留给她的最后一个特权。}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">“$0”会不定时地突然变换表情，当收容单元内有员工存在时，它不会做出任何改变。</specialTip>
+      <specialTip openLevel="1" key="2">“$0”共有五种面部表情，从笑脸到怒脸，我们将其分别标记为1,2,3,4,5。</specialTip>
+      <specialTip openLevel="1" key="3">当“$0”处在表情2下时，对其进行任意工作的成功率都会有所提高，正在进行工作的员工能够持续恢复精神值。当“$0”处在表情3下时，它不会造成任何异常效应。</specialTip>
+      <specialTip openLevel="1" key="4">当“$0”处在表情4下时，对其进行任意工作的成功率都会有所降低，正在进行工作的员工将承受1.5倍的伤害。</specialTip>
+      <specialTip openLevel="1" key="5">当“$0”处在表情5下时，对其进行任意工作的成功率都会大大降低，正在进行工作的员工将承受2倍的伤害。</specialTip>
+      <specialTip openLevel="1" key="6">当“$0”处在表情1下时，对其进行任意工作的成功率都会大大提高，正在进行工作的员工只会受到一半的伤害并能持续恢复生命值和精神值。</specialTip>
+    </specialTipSize>
+
+
+ 
+  </observe>
+</creature>

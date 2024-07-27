@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id="100026">
+
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+
+    <narration action="start">
+      [
+      {Para as abelhas, uma colmeia danificada é algo que não pode ser tolerado.}
+      {Diz-se que as abelhas-operárias passam as suas vidas inteiras provindo a rainha com alimento.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {A maior prioridade para as abelhas é a segurança da colmeia.}
+      {Se alguém danificar a $0, mesmo acidentalmente, algo que nunca poderá ser revertido irá acontecer.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {Se #0 sentir uma dor aguda no seu estômago ou uma sensação de cocegas no seu pescoço, a única coisa a se fazer é olhar para o céu azul uma última vez.}
+      {#0 tenta não inspirar o máximo de ar possível da unidade de contenção.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {A $0 quer mais e mais abelhas-operárias que trarão prosperidades para o reino dela.}
+      {A $0 será completa graças ao trabalho das suas abelhas-operárias... Isso será o começo do seu reino...}
+      ]
+    </narration>
+
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">T-04-50</codeNo>
+      <name openLevel="1">Abelha Rainha</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/QueenBee</portrait>
+
+      <riskLevel openLevel ="1">WAW</riskLevel>
+
+
+
+      <openText>Se tu sentes uma dor aguda no teu estômago ou uma sensação de cocegas no teu pescoço, a única coisa a se fazer é olhar para o céu azul uma última vez.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Esta Anormalidade é uma monstruosa forma hibrida de uma abelha-rainha e uma colmeia. As secções transversais expostas revelam algo vermelho escuro que parece carne cortada. A sua face está severamente distorcida, as suas assas não são funcionais, um dos seus olhos está relativamente intacto e ela usa-o pra observar intrusos. A Anormalidade está sempre de pé no mesmo lugar, então assume-se que ela não se move.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Quando certos requisitos são cumpridos, ela gera bilhões de esporos em um raio de 20 metros. A existência de outras formas de vida parece ser um dos requisitos mais importantes.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="1">
+      [{Mudanças imediatas não foram detetadas nos empregados que inalaram os esporos e vários testes falhar em detetar sintomas.}]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {Após um tempo, empregados que inalaram os esporos sofreram fortes dores nos seus lobos occipitais e abdómenes. E após mais algum tempo, as cabeças desses empregados desprenderam-se dos seus corpos e Anormalidades operárias sairiam de dentro deles.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="2">
+      [
+      {Foi confirmado que esses esporos contêm ovos de abelhas-operárias e eles incubam e chocam dentro de um hospedeiro. Baseando-nos no que foi descoberto na autópsia de um empregado que morreu por causa da Anormalidade, nós acreditamos que a larva de abelha alimenta-se de sangue, órgãos e gordura e move-se livremente pelo corpo do hospedeiro. Quando fica demasiado grande para se mexer, a larva cria um casulo perto dos intestinos. O hospedeiro irá sentir uma fome extrema neste estágio, e irá comer muito mais do que o costume. O casulo irá começar a deslocar-se para cima, no fim irá danificar as artérias e veias do pescoço e a cricotireoide com a sua mandibula e arranca a cabeça do hospedeiro fora. A abelha finamente sairá do corpo através da parte que fora decepada.}
+      ]
+    </desc>
+
+
+    <desc id="6" openLevel="3">
+      [{&lt;Registo de uma sessão de aconselhamento&gt;&#13;&#10;&lt;EDITADO&gt; falou sobre sentir uma sensação de cocegas no pescoço. Eu também vi ████████ tomar vários digestivos... Quem é que pensaria que aquilo podia ser um problema grave? Eu nunca pensei que eu seria eu aquele que testemunharia tal momento horrível. &#13;&#10;(Omitido)&#13;&#10;Nós estávamos apenas a conversar, mas ████████ parou de falar. Ele estava a esticar o pescoço, o qual estava muito vermelho, eu cheguei a pensar que ele tinha uma infeção ou algo do tipo. Então ele começou a posicionar o seu pescoço em uma maneira estranha, foi aí que eu apercebi-me da severidade da situação. Ele não podia estar a torcer o pescoço por si próprio, era como se alguém o estivesse a tornece-lo fortemente.}]
+    </desc>
+
+
+    <desc id="7" openLevel="3">
+      [{E então eu ouvi algo a ser rasgado, o tipo de som que parece papel a ser rasgado, e aí a cabeça dele saltou fora. O som que ela fez quando caiu no chão foi o mesmo som com se fosse um pedaço de carne.}]
+    </desc>
+
+    <desc id="8" openLevel="4">
+      [
+      {Então algo saiu do pescoço dele. Como uma borboleta saindo do seu casulo, assas, um corpo amarelo, dentes e algo que eu nunca mais quero ver, um monstro....}
+      ]
+    </desc>
+
+    <desc id="9" openLevel="4">
+      [
+      {(Omitido) Aquela coisa não parece ter olhos, mas acho que ela sabe que eu estou aqui, no entanto também não tentou atacar-me. A criatura apenas pegou na cabeça dele e foi em direção da unidade de contenção como uma abelha carregando mel... }
+      ]
+    </desc>
+
+    <desc id="10" openLevel="4">
+      [
+      {Às vezes eu ainda consigo ouvir o som das suas mandíbulas a mexer e as suas asas agitando.}
+      ]
+    </desc>
+
+    <desc id="11" openLevel="3">
+      [
+      {&lt;Abelhas Operárias&gt;&#13;&#10; Pensa-se que sejam da mesma espécie que a Abelha Rainha, mas possuem muitas diferenças em aparência com exceção das suas cores. Elas têm oito pernas e uma capacidade de voo limitada que apenas permitem-lhes pairar um metro acima do chão. A cabeça, o tórax e o abdomen são um tanto distintas da rainha, e elas não têm olhos ou antenas. Algo semelhante a intestinos podem ser vistos na ponta das suas caudas sendo arrastados pelo chão.&#13;&#10;Elas apenas fazem duas coisas. Se não estão a dar nutrientes à rainha então elas estão focadas a aumentar o número de abelhas. Quando encontram um empregado, elas atacarão a cabeça dele com as suas mandíbulas e inserem a sua larva dentro da vítima.}
+      ]
+    </desc>
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="badMood">Quando o resultado do trabalho foi Normal, o Qliphoth Counter diminuiu com uma probabilidade Média.</specialTip>
+      <specialTip openLevel="1" key="badMood2">Quando o resultado do trabalho foi Mau, o Qliphoth Counter diminuiu com uma probabilidade Elevada.</specialTip>
+      <specialTip openLevel="2" key="beeComing">Quando o Qliphoth Counter chegou a 0, $0 emitiu esporos amarelos por todo o departamento.</specialTip>
+      <specialTip openLevel="1" key="spore">Após várias observações terem sido realizadas, foi confirmado que os esporos que ficaram presos num empregado causam dano Vermelho à medida que o tempo passa. Também foi confirmado que empregados infetados com os esporos movem-se significativamente mais devagar e o seu HP perdido não pode ser recuperado pelos regeneradores nem pelas balas.</specialTip>
+      <specialTip openLevel="3" key="beeing">Quando o HP da #0 foi a 0, uma abelha gigante apareceu dentro do seu corpo. As abelhas atacam os empregados que estão por perto. Dos corpos daqueles que morreram pelos os seus ataques mais abelhas surgiram.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+
+  <child>
+    <name>Abelha Operária</name>
+    <codeId>T-04-50-1</codeId>
+  </child>
+
+</creature>

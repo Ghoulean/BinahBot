@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id="100061">
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Era uma vez, uma lenda que dizia que aqueles que conseguiam uma das penas do $0 teriam bençãos e provações.},
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {Às vezes, $0 cura os empregados feridos.},
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {O $0 talvez fique feliz se os empregados fingirem que estão a caçá-lo.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="2">
+    <collection>
+      <codeNo openLevel ="0">O-02-101</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/FireBird</portrait>
+
+      <name openLevel ="1">
+        Pássaro Flamejante
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>Aqueles que tiveram sucesso na caçada receberam a pena que incontáveis caçadores ansiaram ter.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Há muito, muito tempo atrás em uma floresta do estrangeiro viva um pássaro. As suas penas eram maravilhosamente incandescente, como incontaveis línguas de fogo, dizia-se que elas poderiam engolir a mais negra das escuridões.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Vários caçadores queriam as suas penas. Era a honra e orgulho deles. Háviam vários rumores sobre o pássaro, como o que dizia que aquele que conseguisse capturar o pássaro iria prosperar por gerações. Alguns chegavam até mesmo a dizer que era preciso teres uma destas penas para seres considerado um verdadeiro caçador. Outros diziam que a pena era tão forte que podia caçar o quer que seja que o seu dono quisesse. Seja qual for a verdade, aquele pássaro era o símbolo da aventura para aquelas pessoas.&#13;&#10;Em pouco tempo a floresta ficou cheia de gente que procurava pelo pássaro, não eram apenas caçadores, mas também aventureiros e viajantes.&#13;&#10;A floresta que costumava ser silenciosa tornou-se abarrotada com pessoas.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Algum tempo depois, todos já tinham ficado entediados com os rumores, eles já não estavam mais interessados na caça. Cada vez menos gente veio visitar a floresta, ao ponto que o pássaro passou apenas a ser uma lenda, e assim os seus olhos foram cegados pela dor. O pássaro cego de asas brilhantes decidiu abandonar a floresta.&#13;&#10;Mais algum tempo depois, ele encontrou um sítio novo para morar, muitas pessoas viviam nesse lugar. O pássaro só queria que o desejo de caçada deles se acendesse e queimasse como as suas penas.&#13;&#10;Aqueles que tiveram sucesso na caçada receberam a pena que incontáveis caçadores ansiaram ter.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {+ É instruído ter cuidado quando a época de caça ao Pássaro Flamejante começar. Ações brutas como supressão não são recomendadas.&#13;&#10;+ Também não é recomendado tentar caçar o pássaro para provar ter coragem. Lembrem-se de todos aqueles caçadores que voltaram de mãos vazias.&#13;&#10;+ Todos os empregados pensam que eles podem apanhá-lo se fizerem um pouco de esforço, realmente é preciso ter coragem para desistir quando é necessário.}
+      ]
+    </desc>
+
+
+
+
+   
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">O Qliphoth Counter diminuiu quando uma Anormalidade do departamento do $0 escapou.</specialTip>
+      <specialTip openLevel="2" key="2">Quando o resultado do trabalho foi Bom, o Qliphoth Counter diminuiu.</specialTip>
+      <specialTip openLevel="2" key="3">Quando o resultado do trabalho foi Normal, o Qliphoth Counter diminuiu com uma Baixa probabilidade. E quanto menor o Qliphoth Counter é, o dano que os empregados que irão trabalhar sofreram irá aumentar.</specialTip>
+      <specialTip openLevel="2" key="4">Quando o resultado do trabalho foi Mau, o Qliphoth Counter aumentou.</specialTip>
+      <specialTip openLevel="2" key="5">O $0 deu uma luz ao empregado que trabalhou com ele quando o Qliphoth Counter estava a 1. A saúde física e mental do empregado foi restaurada e continuou a ser regenerada por algum tempo.</specialTip>
+      <specialTip openLevel="2" key="6">Quando empregados tinham menos 20% de HP, o $0 deu-lhes a mesma luz citada acima.</specialTip>
+      <specialTip openLevel="2" key="7">Após escapar, o $0 retornou para a sua cela de contenção por vontade própria após algum tempo. O $0 tornou-se agressivo após ter sido atacado, empregados que ficaram com HP ou SP a 0 por causa do ataque do $0, morreram. No momento que o $0 foi atacado, os olhos dos empregados presentes no local foram queimados pela a luz emitida da Anormalidade. Empregados cegos realizam trabalhos à metade da velocidade. O $0 curou empregados após eles terminarem o trabalho.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

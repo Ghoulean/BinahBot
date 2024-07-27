@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100001">
+
+    <narration action="move">
+      #0 va a ingresar a la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="start">
+      [
+      { Tenga en cuenta que el registro de observación de $0 está incompleto, por lo que puede pasar cualquier cosa.},
+      {Las entradas de la Enciclopedia de $0 están casi completas, por lo tanto, mientras sigamos siendo cautelosos, terminará con éxito el trabajo allí.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {La niña se esconde en un rincón tan pronto como #0 entra en la habitación.},
+      {La niña observa la reacción de #0 pero retrocede hacia la pared.},
+      {La niña observa el trabajo de #0 mientras está parada en una esquina.},
+      {La niña parece asustada y se dirige a un rincón.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {La niña está parada, como si las llamas ardientes no duelen en absoluto.},
+      {Solo el fósforo que perfora a la chica arde salvajemente.},
+      {A diferencia del fósforo ardiente, la chica permanece inmóvil en la unidad de contención.}
+      {La mecha sigue ardiendo, pero la chica no se mueve.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {#0 examina de cerca la duración restante de la mecha.},
+      {Si la cerilla está casi todo quemado, es muy peligroso. #0 está mirando tensamente a la chica.}
+      {Afortunadamente, todavía queda suficiente cerilla para quemar. Pero cuando se quema completamente...}
+      {Las cenizas se esparcen por todas partes. La mitad de la cerilla aún parece sin quemarse.}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {#0 completa el trabajo mientras el fuego oscila suavemente.},
+      {No hay nadie dentro del fuego, pero los ojos de la niña brillan como si vieran a alguien.},
+      {No hay nadie, nada dentro de la llama.}
+      {Solo las cenizas del fósforo quemado se dispersan sobre la chica.}
+      ]
+    </narration>
+
+    <narration action="special_ability_1">
+      [
+      {Ahora solo queda una pequeña parte de la cerilla sin quemar.}
+      ]
+    </narration>
+
+    <narration action="special_ability_2">
+      [
+      {#0 notó esto y trató de hacer algo, pero era demasiado tarde.}
+      ]
+    </narration>
+
+    <narration action="special_ability_3">
+      [
+      {La cerilla se quemó completamente, y la niña se rió.}
+      ]
+    </narration>
+
+    <narration action="special_ability_4">
+      [
+      {Después de la explosión, solo se descubren pequeños pedazos de #0 en la unidad de contención.}
+      ]
+    </narration>
+
+    <narration action="dead">
+      [
+      {Las llamas saltan alrededor, ennegreciendo el suelo y alrededor de él.}
+      {Al menos el último aliento de #0 fue feliz.}
+      ]
+    </narration>
+
+
+    <narration action="panic">
+      [
+      {Los ojos de #0 están desenfocados. El fuego se ha extinguido durante mucho tiempo desde su mecha, pero #0 no responde a los comandos.}
+      {Murmurando incoherentemente con un rostro arrugado, #0 y abandona la habitación. Nadie se atreve a hablar con #0.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">F-01-02</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/matchgirl</portrait>
+
+      <name openLevel ="1">
+        Niña Chamuscada
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <openText>Voy a venir por ti. Tú, quien serás reducido a cenizas como yo.</openText>
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Una anormalidad en forma de una niña quemada. Incluso si no queda nada que quemar, el fuego que la envuelve no se extingue. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Una cerilla ha empalado a la chica como una estaca. La cerilla suele ser quemaduras y la anormalídad no muestra signos de angustia. Algunos incluso especulan que la Anormalidad es la cerilla, no la chica. Sin embargo, ha habido recientes avistamientos de la chica chamuscada llorando. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Extracto del doctor &lt;Redactado&gt;'s Investigación de registro, un especialista en la Anormalidad&#13;&#10;&#13;&#10;"El cuerpo carbonizado significa la esperanza destrozada del niño, mientras que el fuego perpetuo significa su deseo de afecto. Ella siempre está luchando entre los dos."&#13;&#10; "Maldita sea, pagamos una barcada llena de dinero por esta basura?}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Conversaciones de empleados&#13;&#10;&#13;&#10;"Ella es como una bomba de tiempo. Es difícil saber si está de buen humor o no. Solo rezamos a Dios para que no sea yo antes de ingresar a la unidad de contención. Ella no mejorará. Solo podemos evitar que empeore."}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {&lt;color=#FF9E72FF&gt; &lt;b&gt;&lt;Empleado M-3923 Registro de Consejería&gt;&lt;/b&gt;&#13;&#10;&#13;&#10;"Nunca pensé que la Anormalidad podría escapar. Tal vez nos estábamos descuidando, pero parecía que todo lo que podía hacer era quemar la cerilla en su cuerpo. Sí, nuestra respuesta fue un poco tarde. (Omitido) La mayoría de las anormalídades que intentan escapar atacarían a los empleados que se encuentran frente a ellos. Pero no mostró ninguna agresión hacia los empleados cercanos. En cambio, se dirigió a un departamento diferente, el lugar más concurrido de la empresa. Si no lo suprimiéramos en la puerta, la mitad de la gente aquí no estaría viva hoy." &lt;/color&gt;}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="escape1">Cuando el resultado del trabajo fue normal, el Contador Qlifot puede reducirse con una probabilidad Normal.</specialTip>
+      <specialTip openLevel="1" key="escape2">Cuando el resultado del trabajo fue malo, el Contador Qlifot se reduce con una probabilidad alta.</specialTip>
+      <specialTip openLevel="2" key="explosionMain">Cuando $0 escapa, explotara después de cinco segundos de encontrarse con su objetivo. Muchos de los empleados que estaban allí en ese momento sufrieron quemaduras.</specialTip>
+     </specialTipSize>
+  </observe>
+
+
+
+</creature>

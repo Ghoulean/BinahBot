@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id="100038">
+
+    <narration action="move">
+    </narration>
+    <!-- 짱새는 작업로그 없다-->
+    <narration action="start">
+      [
+      {}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {}
+      ]
+    </narration>
+
+    <narration action="death">
+      [
+      {}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-02-63</codeNo>
+      <!-- 안나오겠지만 혹시 몰라서 넣어봐씀-->
+      <portrait openLevel ="0">Sprites/Unit/creature/BossBird</portrait>
+
+      <name openLevel ="0">
+        El Ave del Apocalipsis
+      </name>
+
+      <riskLevel openLevel ="0">
+        ALEPH
+      </riskLevel>
+
+      <specialName openLevel ="0">
+        La Bestia en el Bosque Negro
+      </specialName>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Un Ave que se sabe que viene cuando el mundo está lleno de pecados. Muchos empleados temen la llegada de esta Ave. &#13;&#10;Si queremos hablar sobre esta ave, primero debemos contar la historia del bosque negro. No debemos olvidar ese bosque tan hermoso y pacífico.  &#13;&#10;Y después de eso vendrá el apocalipsis.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="0">
+      [
+      {&lt;Cuentos de El Bosque Negro&gt;&#13;&#10;Hace mucho tiempo, en un bosque cálido y denso vivían tres felices aves. &#13;&#10;Las aves no tenían nombres, pero las criaturas del bosque las llamaban Gran Ave, Ave larga y Pequeña Ave. &#13;&#10;Todos vivían libres y felices juntos en el bosque en paz. Las aves querían que el bosque estuviera más seguro que nadie, así que las criaturas del exterior pueden venir y visitar para divertirse. &#13;&#10;Era una tarde cálida y soleada cuando un extraño visito el bosque pacífico. Era un viajero, pionero y profeta, pero al mismo tiempo no era nada. Quería entrar en el bosque, pero los pájaros no lo dejaron porque lo encontraron sospechoso. El forastero, enojado, le dijo a los pájaros que se iba. &#13;&#10;“Pronto vendrán tragedias a este bosque. Estará manchado con los pecados y el mal, y las peleas nunca se detendrán. Las tragedias se detendrán una vez que un monstruo terrible lo devore todo. El sol y la luna ya no brillarán sobre ti; El bosque nunca volverá a ser lo que era antes.”&#13;&#10;Las aves se preocuparon por esta profecía. Qué pasa si las peleas nunca se detienen, y una bestia terrible devora todo como dijo? Las aves decidieron convertirse en centinelas del bosque. Amaban este bosque, por lo que querían proteger a las criaturas que viven en él y mantener la paz. &#13;&#10;Gran Ave, con sus muchos ojos, vigilaba el bosque en busca de intrusos. Los ojos del Gran Ave pueden ver muy lejos, y las cosas que no podemos ver. Entonces alguien dijo, “Pero, y si la bestia aparece en medio de la noche, cuando el cielo está oscuro y todos duermen?”. El Gran Ave se preocupó, por lo que quemó todas sus plumas para hacer una linterna eterna. Ahora, las criaturas en el bosque estaban bajo la vigilancia constantemente del Gran Ave, día y noche.&#13;&#10;Para mantener la paz en el bosque, Ave Larga pesó los pecados de quienes ingresaron al bosque. La balanza del Ave Larga era justa y razonable, podía pesar cualquier tipo de pecado. Entonces alguien dijo, “Pero, qué debemos hacer si las escalas no se inclinan en ninguna dirección?”. Preocupado, Ave Larga hizo una escala que siempre se inclinaba hacia un lado. De esa manera todo juicio daría un claro veredicto. &#13;&#10;La Pequeña Ave decidió castigar las malas acciones de las criaturas con su pico. Entonces alguien dijo, “Pero tu pico es tan pequeño, a nadie le haría daño!”. Preocupado, la Pequeña Ave se abrió la boca para poder tragar a cualquier criatura de un bocado. &#13;&#10;Ya nadie podía visitar el bosque, y los malos rumores sobre el bosque comenzaron a extenderse afuera. “Quien entra en ese bosque termina en una situación terrible!” “El gran ave siempre está observando a la criatura del bosque, no hay libertad.” “La Balanza del Ave largo no es justa en absoluto.” “El castigo de Pequeña Ave es tan aterrador.”&#13;&#10;Las aves se enojaron. Por qué difundirían rumores así cuando trabajaban duro para proteger el bosque? &#13;&#10;Cada vez menos visitantes llegaban al bosque, las criaturas se quejaban, se desataban peleas diariamente y las aves trabajaban aún más para hacer que el bosque volviera a ser pacífico.  &#13;&#10;“No, este bosque es tan vasto y ancho, los tres no son suficientes para protegerlo todo.”&#13;&#10;“Pero no hay criatura que pueda proteger este bosque sino nosotros.”&#13;&#10;“Si combinamos nuestro poder, podríamos ser más fuertes.”&#13;&#10;El día en que los ojos de Gran Ave puedan ver a cientos de kilómetros de distancia, Ave Largo que puede juzgar cualquier pecado y la boca del Pequeña Ave que puede devorar todo lo que se fusionó, la oscuridad cayó sobre el bosque. Las criaturas gritaron de miedo y de terror al ver el pájaro, el bosque cayó en caos pronto. &#13;&#10;Luego, en medio de todos los caóticos gritos, alguien gritó.&#13;&#10;“Es la bestia! Un monstruo grande y aterrador vive en el bosque negro y oscuro!” &#13;&#10;La bestia esta aqui? Tres aves, ahora como uno solo, miraron a su alrededor para encontrar a la bestia pero no pudieron encontrarlo. El Ave comenzó a buscar a la bestia, vagando por el bosque. El bosque estaría en problemas si la bestia realmente apareciera. &#13;&#10;Pero no habia nada. No había criaturas, ni sol ni luna, ni bestia. Todo lo que queda es solo un Ave, y el Bosque Negro. &#13;&#10;Solo frio, desde entonces, solo hubo noches oscuras como el tono.&#13;&#10;Los rumores dicen que hay una bestia terrible en el bosque negro donde nadie vive……}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="0">
+      [
+      {&lt;Testimonio de un sobreviviente&gt;&#13;&#10;Cada luz en la instalación se volvió loca. Siguieron encendiendose y apagarse. Ni siquiera podía usar un encendedor. Entonces, la luz cálida brilló a través de mi. Parecía un crepúsculo menguante, o un sol naciente de la mañana. Pero como todos sabemos, la luz solar no puede entrar en las instalaciones. Miramos en silencio a la luz. Una oscuridad repentina y un extraño brillo de luz eran razones suficientes para asustarse. Era más aterrador que cualquier escena sangrienta que viéramos aquí. Era un miedo a lo desconocido……(omitido) ..Algo venía de lejos. Luces incandescentes como estrellas en el espacio, caminaban hacia nosotros. Parecían los ojos del Gran Ave, pero no era él. Oí esos largos brazos arañando el suelo. &#13;&#10;Alguien susurró, “Hay alguien que no pudo escapar.”&#13;&#10;Había un empleado, arrodillado en el suelo, como si no pudiera sentir que la cosa se acercaba por detrás de él. No podia gritar. Estaba luchando sin sentido para mover sus piernas. No hubo ningún acto heroico de otro empleado de pie contra el monstruo, ni siquiera un grito que le dice que tenga cuidado. Todos lo miraban, esperando lo terrible que iba a suceder. &#13;&#10;Cada paso enviaba un temblor a toda la instalacion. El monstruo caminaba a un ritmo muy lento, pero parecía tan rápido.&#13;&#10;Devoró al empleado de un bocado y en ese momento, todos empezaron a gritar en el caos. Tuve éxito en numerosas supresiones, pero ese día, por primera vez, lamento haberme unido a la compañia. Estaba seguro de no salir vivo de aquí. Esta impotencia me agobio, ni siquiera podía pensar en reprimir al monstruo.  &#13;&#10;Creo que soy el único que está lo suficientemente intacto para escribir, entre los sobrevivientes. La compañía nunca le dirá a los nuevos empleados sobre la presencia de ese monstruo. Pero quiero advertirles. Es por eso que estoy escribiendo esto. &#13;&#10;}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="0" key="bigBirdEgg">Los Ojos Grandes confinaron la luz.</specialTip>
+      <specialTip openLevel="0" key="longBirdEgg">El Brazo Largo escondió el tiempo.</specialTip>
+      <specialTip openLevel="0" key="littleBirdEgg">El Pequeño Pico susurró. Sin fin…</specialTip>
+      <specialTip openLevel="0" key="eggExist">Mientras existan, el Ave del Apocalipsis no desaparecerá.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+
+  <etc>
+    <param key="Escape" index="0">
+      Había una vez, tres pájaros felices vivían en un bosque cálido y exuberante.
+    </param>
+
+    <param key="BigBirdArrive" index="1">
+      Gran Ave con muchos ojos, decidió vigilar el bosque en busca de intrusos. &#13;&#10;Porque los ojos del Gran Ave podrían ver muy lejos, y ver cosas que no podemos ver.
+    </param>
+
+    <param key="LongBirdArrive" index="2">
+      Para mantener la paz en el bosque, la Ave larga pesó los pecados de quienes ingresaron al bosque. &#13;&#10;La balanza del Ave Larga era justa y razonable, podía pesar cualquier tipo de pecado.
+    </param>
+
+    <param key="SmallBirdArrive" index="3">
+      La Pequeña Ave decidió castigar las malas acciones de las criaturas con su pico.
+    </param>
+
+    <param key="BossBirdAppear" index="4">
+      Entonces, en medio de todos los gritos caóticos, alguien gritó.&#13;&#10;“Es la bestia! Un monstruo grande y aterrador vive en el bosque negro y oscuro!”
+    </param>
+
+    <param key="BigBirdBreak" index="5">
+      Los ojos que veían el Gran Ave estaban cegados,
+    </param>
+
+    <param key="LongBirdBreak" index="6">
+      La cabeza que siempre contempló el cosmos se redujo,
+    </param>
+
+    <param key="SmallBirdBreak" index="7">
+      La boca del pequeño pájaro que podía devorar cualquier cosa estaba cerrada,
+    </param>
+
+    <param key="Suppressed" index="8">
+      Tres aves, ahora como uno solo, miraron a su alrededor para encontrar a la bestia pero no pudieron encontrarlo.&#13;&#10;No había criaturas, ni sol ni luna, ni bestia. Todo lo que queda es solo un Ave, y el Bosque Negro.
+    </param>
+
+    <param key="gateway" index="9">
+      Entrada al Bosque Negro
+    </param>
+
+    <param key="bigBirdEgg" index="10">
+      Ojos Grandes
+    </param>
+
+    <param key="longBirdEgg" index="10">
+      Brazo Largo
+    </param>
+
+    <param key="smallBirdEgg" index="10">
+      Pequeño Pico
+    </param>
+  </etc>
+</creature>

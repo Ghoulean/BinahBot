@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="200001">
+
+
+
+    <narration action="move">
+      #0 designated to $0 containment room.
+    </narration>
+
+    <narration action="start">
+      [
+      {The moment we enter $0’s universe, then we will finally understand the secrets of the universe.},
+      {$0 and other employees who went crazy look like they are calling for something with their song.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 once told us, “There are no coincidences in the universe.”},
+      {Employees shudder in fear when $0 tries to laugh.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {Whatever their original purpose is, those tentacles inflict severe damage to human brain.},
+      {$0’s tentacles blur the line between human and alien dimension. }
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">X</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/NoData</portrait>
+
+      <name openLevel ="0">
+        The dawn of green
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        Echoes from the beyond
+      </specialName>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {At first, it had no fixed form. It was changing its shape in a minuscule speed. The chemical component test resulted that it is made of material that is not present on the Earth. Its metaphysical form can hardly be explained in human language. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Sometimes, it engages in unintelligible linguistic activity. An employee tried to decode what it is saying, but resulted in mental derangement. (See document 1 &lt;Song of employee David&gt;)
+      }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="1">
+      [
+      { Its parts that seem to be tentacles can penetrate objects, if an employee is attacked by these tentacles, they suffer permanent brain damage. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      { If this abnormality escapes from its chamber, it emits incomprehensible sounds. Considering that these sounds have some sort of melody, they are designated as a song. Employees who were exposed to the song lost good amount of memories and suffered from severe mental damage. Some testified that the song was sounds that cannot be created in this world, or plane. Thus, this song has been named “Echoes from the beyond.” (See document 2 &lt;The song&gt;)}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {Experiment 1_&lt;Possibility of communication&gt; &#13;&#10;
+      We have concluded that this abnormality possesses intelligence that is equivalent of, or advanced than human. We proceeded to give simple lectures on human language. As a result, we were able to communicate with it in some form. The followings are documented text of the conversation record. &#13;&#10;
+      Q: Do your race all look the same as you?&#13;&#10;
+      A: Negative. Outside. Child. See. Picture. Face. Happiness. Change. Shape.&#13;&#10; &#13;&#10;
+      Q: Why are you here?&#13;&#10;
+      A: Knowledge. Give. Human. &#13;&#10;&#13;&#10;
+      Q: Why are you trying to give us the knowledge?&#13;&#10;
+      A: Understand. Knowledge. Moment. Know. Universe. Coincidence. Negative. No.&#13;&#10;
+      The followings are the result of efforts to comprehend the abnormality’s words.&#13;&#10;
+      1.	It took its form referencing to a child’s painting, and because the child looked happy, it changed the shape.&#13;&#10;
+      2.	It came here to give humanity their knowledge, the moment we understand this knowledge, we will know the goal behind its action. &#13;&#10;
+      3.	There are no coincidences in the universe. &#13;&#10;}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="3">
+      [
+      {Experiment_2 &lt;Reaction to laughter&gt;&#13;&#10;
+      After being exposed to the video of laughter for 30 minutes, it perceived the facial expression of laughter. After this experiment, when an employee enters its chamber, it sometimes rips its bottom in lengthways and makes eerie sound. It is assumed to be imitation of laughter.}
+      ]
+    </desc>
+
+    <desc id="7" openLevel="4">
+      [
+      {Experiment_3 &lt;Comprehension of symbols&gt;;&#13;&#10;
+      As we taught this abnormality our language, we also gave lectures about the meanings of symbols. The abnormality had a special reaction to the symbol of heart. &#13;&#10;
+      Q: (Showing the heart symbol) This is a symbol representing a heart. People think emotions come from hearts, so this symbol is often used to express one’s positive feelings to others.&#13;&#10;
+      (Omitted)&#13;&#10;
+      Later, we saw symbols similar to “hearts” drawn on this abnormality’s body. It is assumed that the abnormality understood the meaning of heart symbol as friendly approach. &#13;&#10;
+      Considering the results of experiments, the abnormality does not possess any hostility towards humanity, rather, it is trying to be friendly. }
+      ]
+    </desc>
+
+    <desc id="8" openLevel="4">
+      [
+      {Document 1 &lt;Song of employee David&gt;&#13;&#10;
+      Employee David was well-known as a person who tries to commune with “Fragment of the Universe”. His queer hobbies involved reading eccentric and suspicious books, and watching stars through a telescope. He was interested in “Fragment of the Universe” since he joined the company, and it was later found out that he had been researching the abnormality’s language and behavior pattern out of personal curiosity.  &#13;&#10;
+      What happened to him is, to be direct, that he eventually succeeded to enter the plane of “Fragment of the Universe”. However, his brain was not capable of handling such burden. He had to be transferred to mental hospital. In there, he starved to death, after surviving for few days singing something unintelligible while refusing to eat. After this incident, we decided to lock away the audio file that contains the abnormality’s sound. &#13;&#10;
+      Audio record: Echoes from the beyond (Currently deleted)}
+      ]
+    </desc>
+
+    <desc id="9" openLevel="4">
+      [
+      {Document 2 &lt;The song&gt;&#13;&#10;
+      …..Haven’t I told you that these people went crazy because of that abnormality? They show irregular behavior on a certain day. I am not sure there is any rule to it, though. In the night, when everyone is asleep, these three guys scream to the top of their lung, looking up to the ceiling. I went through a lot of trouble explaining it to the other patients that that was just a practice for Halloween stage. No counseling or drugs help this. They just keep repeating “It’s coming. It’s coming. It’s coming.”. Sometimes they say something different but I don’t think that language even exists in this world. I think putting them into a normal medical institute was a mistake.&#13;&#10;
+      -	Letter from Dr. Alisha from OO hospital.}
+      ]
+    </desc>
+
+    <specialTipSize size="1">
+      <specialTip openLevel="1" key="escape">As a result of putting in a large number of employees, Employees with prudence level 1 was found not to be affected by the $0 look at work. Therefore, a psychoanalytic study of optimist employee was requested.</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {It started singing.}
+        {You...}
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Listen to it" target="1" isAnswer="true"  message="You have succeeded to obtain final observation report on  Fragment of the Universe"/>
+        <node desc="Plug ears" target="2" isAnswer="false"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {You silently listen to it.}
+        {The universe lingers in your ears.}
+        {You see the song. Glamorously, it approaches you.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {You are not prepared yet.}
+        {The song stopped when you plugged the ears.  }
+        ]
+      </desc>
+
+
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {They won’t be interested in anything in their lives, once its tentacle penetrates them. }
+        {Rumors say some employees yearn to be penetrated by the tentacle.}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+</creature>

@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100027">
+
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+
+    <narration action="start">
+      [
+      {“你知道的，在我加入脑叶公司之后，我觉得我的生活回到了正轨。”},
+      {#0从“$0”那里感受到了悲伤。},
+      {凝视着“$0”时，#0的手腕隐隐作痛},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {“抑郁症是一种心理疾病，我们是第一批发现如何获得快乐的人。”},
+      {#0凝视着漂浮在浴缸中的绝望。},
+      {#0感觉自己被压抑和悲伤淹没了。},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {“用于治疗身体的药物以无法想象的速度高速发展着，但用于治疗心理的药物并没有。”},
+      {#0看见了即将到来的困难与失败。},
+      {#0看见了未来的艰辛与磨难。无论自己如何挣扎，结局只剩下失败。}
+      ]
+    </narration>
+
+    <narration action="special_ability">
+      [
+      {失去了活下去的希望，#0没有抵抗从“$0”中伸出的手。}
+      {#0的悲伤汇聚到了一个地方。}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-05-51</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/BloodBath</portrait>
+
+      <name openLevel ="1">
+        血浴缸
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        Things you have forsaken.
+      </specialName>
+
+      <openText>浴缸里漂浮着许多苍白的手。那些&#13;&#10;我曾经深爱过的人的手。</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {一个装满鲜血的浴缸。浴缸中的血总是处于不会溢出的平衡状态...&#13;&#10;在浴缸里漂浮着苍白的手，它们试图慢慢接近员工，就好像它们在寻求员工的帮助。当员工向浴缸看去时，难以承受的抑郁和绝望将把他们淹没，然后，就在一瞬间，它们将员工拉入了血池。虽然这些手并没有相当大的力量，但由于被压抑的绝望所吞噬，那些员工几乎没有挣扎。被拉进浴缸的员工将被它慢慢吞没，直至完全消失。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {当你处于理智的情绪时，很难用刀片割开手腕，你必须拥有强大的意志力才能重复许多次。只有当你把自己你的手腕当做一块肉来割时，你才有可能成功——只有当你对死亡充满了巨大的渴望时，你才有可能成功。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {我后悔当她向我寻求帮助时我没有问其原因；我后悔我没有注意到她用手表遮住了自己的手腕；我后悔我没有意识到当我和她说话时，她总是刻意将手腕隐藏起来；我后悔我没有意识到也许从某个时刻起，我再听不到她的笑声了。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="1">
+      [
+      {我甚至无法想象割腕有多么的痛苦。我意识到，她离开我的唯一原因是她真的把她的手腕割破了。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {每当我们成功完成工作后，我们都要开一瓶红酒喝，这成了我们的习惯之一。但她告诉我们，如果我们习惯了这样的成功，那只需要一点小小的挫折，就能让我们陷入万劫不复的状态。因此，我们是应该为每一件成功的小事而感到高兴，可我们也绝不能忽视失败，因为失败乃成功之母。&#13;&#10;当我注视着浴缸中那伤痕累累的手腕时，我想起了我们的酒窖。许多酒都不见了，只剩下了最后一瓶。&#13;&#10;那天，我把最后一瓶喝得精光。}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="noRationalist">勇气或自律等级为1级的员工完成了对“$0”的工作后，苍白的手从“$0”中伸了出来，并将员工抓进了浴缸中。</specialTip>
+      <specialTip openLevel="1" key="manyHands">在员工被抓进浴缸后，一只苍白的手出现在了“$0”的表面。随着手的数量的增加，“$0”的PE-BOX的生产效率也将增加。</specialTip>
+      <specialTip openLevel="1" key="threeHands">>&lt;警告&gt;当“$0”中已经有三只手时，“$0”会直接将进入收容单元的员工抓进浴缸中。</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {The Encephalin cure affected not only mind, but also body.}
+        {The problem is, the supply of cure became tremendously huge to control when we realized the problem. }
+        {One of the problem was numbing. }
+        {People believed they could live happy life.}
+        {People believed they could buy sadness and sell happiness with money.}
+        {When the first suicide happened, we should have known that these beliefs had been shattered.}
+        {Many hands float in the bath.}
+        {Hands that wanted to grab something but could not.}
+        {You……}
+        <!--계속-->
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Grabbed a hand." target="1" isAnswer="true" message="You have succeeded to obtain final observation report on Bloodbath." />
+        <node desc="Did not grab a hand." target="2" isAnswer="false"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {I feel coldness and stiffness. }
+        {I know these hands.}
+        {These are the hands of people I once loved.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {You looked away.}
+        {This is not the first time you ignore them.}
+        {It will be the same afterwards.  }
+        ]
+      </desc>
+
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {Do you sometimes believe that forgotten memories can be more beautiful?}
+        {I believe.}
+        {You're showing me now.}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+
+
+</creature>

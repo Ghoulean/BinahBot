@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id ="100020">
+
+    <narration action="move">
+     #0被分配到“$0”的收容单元中
+    </narration>
+
+    <narration action="start">
+      [
+      {因为“$0”看起来很无聊，所以员工们在“$0”的收容单元里放了一棵用作栖息处的树。},
+      {“$0”站在树上，回想着那片它曾经居住过的森林以及它的过往。}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {实际上，因为“$0”的体型娇小，所以放置这棵树可以防止它被踩到。},
+      {实际上，放置这棵树的目的是防止体型娇小的“$0”受到不可预料的伤害。}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {大多数时候，“$0”都像一只普通的鸟一样在收容单元内飞来飞去。},
+      {“$0”从不鸣叫，但它的腹部有时会隐隐的抽搐。}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {没有多少人知道“$0”那隐藏的獠牙。},
+      {有多少人知道“$0”那分为几块的，令人作呕的肉？}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="2">
+    <collection>
+      <codeNo openLevel ="0">O-02-56</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/SmallBird</portrait>
+
+      <name openLevel ="1">
+        小鸟
+      </name>
+
+      <name openLevel="2">
+        惩戒鸟
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        惩戒！
+      </specialName>
+
+      <openText>人们从很久以前就开始不停地犯下罪恶。“为什么他&#13;&#10;们要做这种事儿？即使他们知道那是充满罪恶的？”</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {一只惩罚那些懦弱，充满罪恶，亵渎神灵之人的自信的小小鸟。一些员工表示，小鸟扑腾着小翅膀的样子看上去非常可爱。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {人们从很久以前就开始不停地犯下罪恶。“为什么他们要做这种事儿？即使他们知道那是充满罪恶的？”一只小小鸟好奇地想着。&#13;&#10;“这一定是因为没有一个惩罚坏人的人，既然如此，那我就自己扮演这个角色，让那些肮脏而罪恶的事情永远不要发生！”自那以后，一只小鸟离开了它一生居住的森林，再也没有回去过。}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="NoWorking">当“$0”的收容单元内没有员工时，如果有员工进入其他异想体的收容单元，那么“$0”的逆卡巴拉计数器有小概率立刻减少。当某个员工陷入恐慌时，“$0”的逆卡巴拉计数器会立刻减少。</specialTip>
+      <specialTip openLevel="2" key="PanicOut">当“$0”的逆卡巴拉计数器归零后，“$0”会飞出收容单元并对您的员工进行数次啄击。在造成一定伤害后，“$0”飞回了收容单元。</specialTip>
+      <specialTip openLevel="2" key="comebackhome">当某个员工的恐慌正好导致“$0”突破收容时，“$0”会飞向这名员工并帮助其恢复精神值。在该员工恢复正常后，“$0”飞回了收容单元。</specialTip>
+      <specialTip openLevel="2" key="NoAccept">我们曾指派某个员工镇压“$0”，当他攻击“$0”后，“$0”肚子上的红色部分突然裂开并████，在那之后该员工被发现已经死亡，镇压失败。</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {A bird stares at you.}
+        {What is the name of this bird?}
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="A little bird" target="" isAnswer="false"/>
+        <node desc="Punishing Bird" target="" isAnswer="true"  message="You have succeeded to obtain final observation report on Punishing Bird."/>
+      </select>
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {“A long time ago somewhere in the deep dark forest, three birds were living.”}
+        {It’s the first line of the fairytale you loved as a kid.}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+</creature>

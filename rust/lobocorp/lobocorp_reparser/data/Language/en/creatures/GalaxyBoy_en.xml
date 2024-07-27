@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100031">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {That night, when stars showered down from the sky, a child walked.},
+      {$0 knows all there is to know about #0.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {The longing becomes a tear, and cascades down like a shooting star.},
+      {The remnants of longing blossom on the sorrowing heart.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 makes #0 pinky swear and promise to come back again tomorrow.},
+      {$0 starts sobbing, he can’t handle the fact that #0 needs to leave now.},
+      {#0 can’t take another step after seeing how tearful $0’s face is.}
+      ]
+    </narration>
+  </info>
+  <observe level="3">
+    <collection>
+      <codeNo openLevel="0">O-01-55</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/GalaxyBoy</portrait>
+      <name openLevel="1">
+        Child of the Galaxy
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <specialName openLevel="2">
+        Your Universe
+      </specialName>
+      <openText>
+        A teardrop fell from the child's dewy eyes, as stars showered from the sky. The world falls into a slumber, trapped in an ecstatic lullaby.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {It was a night veiled in gentle mist.&#13;&#10;A barefooted child was looking at me.&#13;&#10;He was crying, his dreamy eyes filled with sorrow.&#13;&#10;The sadness hanging on his face stopped me in my tracks.&#13;&#10;He said he lost something precious, and when I offered to help,&#13;&#10;He gave me a big smile.&#13;&#10;A teardrop fell from the child's dewy eyes, as stars showered from the sky.&#13;&#10;The world falls into a slumber, trapped in an ecstatic lullaby.&#13;&#10;That night the galaxy descended with bare feet.&#13;&#10;
+      -	Excerpt from the diary of Employee (Redacted), who committed suicide.}
+      ]
+    </desc>
+    <desc id="2" openLevel="2">
+      [
+      {It takes the form of a young boy with big eyes and skin that resembles the night sky. }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {The child shows great enjoyment with talking and playing with others. He has a strong attachment to the act of making contact with another. }
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {If the child and an employee reach a certain level of intimacy, he will give a small pebble to the employee he now considers his friend. The employee will feel happiness and vigor while in possession of the pebble. However, this pebble will do more than just good if the employee happens to enter any Containment Unit other than his. }
+      ]
+    </desc>
+    <desc id="5" openLevel="2">
+      [
+      {If an employee in possession of one of the child’s pebbles (the sign of their strong friendship) dies, he will show deep grief and sorrow for their loss.}
+      ]
+    </desc>
+    <desc id="6" openLevel="3">
+      [
+      {&lt;Excerpt from Employee (Redacted)'s Diary&gt;&#13;&#10;
+      X/X/XX
+      I looked into the child's eyes for a while. I may have spaced out a little bit because his eyes were so dreamy. I wanted to pet him, but I remembered my coworkers telling me not to have personal feelings towards Abnormalities.
+      
+      X/X/XX
+      I told him my name. He repeated it with wide eyes as if he found out a big secret. Each time he called my name, it felt like it became something more than just a familiar thing I had been living with.
+      
+      X/X/XX
+      When another employee entered the child's Containment Unit, he did not follow that employee and looked for me instead. I felt basely triumphant after hearing about that. The kid follows &lt;i&gt;me&lt;/i&gt;, not &lt;i&gt;you&lt;/i&gt;.
+      
+      X/X/XX
+      The moment I entered the child's room, he jumped into my arms crying. When I finally set him down, he shed a tear that became a small, white pebble that fell in my hand. "Please don't lose it, and don't give it to anyone else." The boy mumbled.
+      
+      X/X/XX
+      "Do you like it? More than you like me?" The boy quietly asked when I arrived after finishing working with another Abnormality. I asked how he knew what I was doing, and he answered lightly: "Isn't it obvious? I know everything. Whatever you do, wherever you go." His gaze lay on the pebble, then he smiled. His eyes gave me goosebumps.
+      
+      X/X/XX
+      I tried to rid myself of the pebble, but I realized it was beyond my control. I don't get what I'm talking about right now but... "You still treasure it right?" The child smiles at me. Smiles. Smiles. Smiles. Smiles...
+      
+      X/X/XX
+      I can't get this pebble off me. My only hope is to wait for the child to tire of me. I'm waiting for that day... but will it ever come? (People tell me I’m an excellent employee. Idiots, they don’t know a thing. Shut up.)
+      
+      X/X/XX
+      I can't take it anymore. I can't escape him. I thought I was in charge, but the truth is I was just a pebble in his hands the whole time. Whatever I do, wherever I go, I hear his whispers. (I have to end it, but I’m not even sure if I can.)
+      "...I came from afar. I'm so glad to meet you. Become a pebble, and let's walk the galaxy together..." I hear his whispers and breath. Pitch black darkness follows... just like the night I met him.}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Successful work completion will cause a healing (HP/SP) Token of Friendship to be bestowed upon the employee. The amount of healing will vary in relation to $0’s Qliphoth Counter.</specialTip>
+      <specialTip openLevel="2" key="2">The Qliphoth Counter increased when #0 completed their work with the Token.</specialTip>
+      <specialTip openLevel="2" key="3">When an employee with the Token worked with another Abnormality, they received damage in proportion to $0’s Qliphoth Counter, which will then decrease.</specialTip>
+      <specialTip openLevel="2" key="4">When an employee with $0’s Token of Friendship died, the Qliphoth Counter lowered by 4.</specialTip>
+      <specialTip openLevel="2" key="5">When the Qliphoth Counter reached 0, all employees with the Token died.</specialTip>
+      <!--<specialTip openLevel="2" key="6">클리포트 카운터가 0이 된 상태에서는 모든 작업에서 완전히 PE-Box를 모을 수 없다.</specialTip>-->
+    </specialTipSize>
+  </observe>
+  <!-- 대사는 AgentLyrics_kr.xml 에 있음 -->
+</creature>

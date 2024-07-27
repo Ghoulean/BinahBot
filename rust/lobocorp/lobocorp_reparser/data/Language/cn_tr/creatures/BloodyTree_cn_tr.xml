@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100044">
+
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 活在目標的眼裡.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 在員工 #0 的眼裡將棘刺伸向天堂. },
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-04-72</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/BloodyTree</portrait>
+
+      <name openLevel ="1">
+        滲透天堂
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>不要移開視線, 就一直看著吧. 將它保持在你的目光之中.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {一個滿是棘刺的異常, 使用其他人的視線當作它伸展翅膀的燃料.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {不要移開視線, 就一直看著吧.&#13;&#10;它活在你的雙眼之中. 收容單位毫無意義.&#13;&#10;將它保持在你的目光之中.&#13;&#10;眨眼是可以的, 它能容忍那一下下.&#13;&#10;但是, 當它認為你對它失去了注意以及關心,&#13;&#10;它會展開它的翅膀.&#13;&#10;翅膀, 是的, 就是翅膀.&#13;&#10;像是對遭遺忘許久的神致敬般, 它血紅色的翅膀將會展開覆蓋整個走廊.&#13;&#10;它的翅膀上有些水果, 由那些最近死去的軀體做成.&#13;&#10;如果它仍然吸引不了你的注意, 那些梗將會伸向充滿光照的地方, 在過程中逐漸穿過整個公司.&#13;&#10;像個天使, 它的翅膀會伸向天空並遮住陽光,&#13;&#10;但仍有希望. 當你最終決定將你的視線專注在它身上時,&#13;&#10;它會回歸到那又深又黑的地下,&#13;&#10;如果你還活著的話, 就這樣.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {關於視線的部份. 注意. 一串無人能見的連結. 請全神貫注.&#13;&#10;不要來這, 這裡沒有讓你休息的地方.&#13;&#10;但是你瞧, 只要我在你的視線中, 我就能在最後帶來果實.&#13;&#10;這不就是你要的嗎?&#13;&#10;當你的眼淚乾掉後, 請告訴我你的答案.}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">在與 $0 工作時管理者必須緊盯著收容單位.</specialTip>
+      <specialTip openLevel="1" key="2">當收容單位不在監控攝影機的視線內時, $0 的逆卡巴拉計數器將會減少. 即使在這現象發生後仍沒監控 $0 的收容單位, 逆卡巴拉計數器將會持續的減少.</specialTip>
+      <specialTip openLevel="1" key="3">當工作的結果為普通或優良時, $0 的逆卡巴拉計數器將會增加. 它似乎最多能增加 3 個等級, 基於工作的結果.</specialTip>
+      <specialTip openLevel="1" key="4">&lt;警告&gt;在鎮壓程序時也不要停止觀看此異常.</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

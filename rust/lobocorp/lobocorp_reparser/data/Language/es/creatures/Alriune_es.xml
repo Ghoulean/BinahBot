@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100029" >
+
+
+    <narration action="move">
+      #0 esta designado para la sala de contención de $0 para trabajar.
+    </narration>
+
+    <narration action="start">
+      [
+      {El que vino de la nada, volverá sin nada.},
+      {$0 recuerda las quemaduras por dentro.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Quizás intentamos hacer un humano sin corazón.},
+      {Florecen sin cesar flores violentamente. },
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {El empleado #0 quiere tener un sueño reparador en la cama de flores.},
+      {El empleado #0 está profundamente impresionado por las lavandas que saturan la cámara de contención.},
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {Una vez floreció y se marchitó. Se dio cuenta del significado de la resurrección. Las huellas se mantendrán y todas las vidas se juntarán para $0.},
+      {El empleado #0 brota aroma refrescante en lugar de sangre.}
+      {Flor florece en el corazón de todos.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="5">
+    <collection>
+      <codeNo openLevel ="0">T-04-53</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Alriune</portrait>
+
+      <name openLevel ="1">
+        Alriune
+      </name>
+      
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        Nacido de la tierra, vuelve a la tierra
+      </specialName>
+      
+       <openText>Con su esperanza de volver al polvo, volverá a la tumba con todo lo que desea vivir.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Tiene superficie suave. Las cuencas de los ojos están vacías; están llenas de plantas en crecimiento.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Alriune, una muñeca anhelada ser humana. Fue amado por personas con sus ojos conmovedores.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Alriune, abandonado en el bosque oscuro. Los cuervos desearon y le robaron los ojos brillantes. Su mente, vida y corazón se desvanecieron lentamente.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Alriune, viendo todo sin ojos. Un humano anhelaba ser una muñeca. Con su esperanza de volver al polvo, volverá a la tierra con todo lo que desea vivir.}
+      ]
+    </desc>
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="PanicDeath">Cuando el resultado del trabajo fue bueno, el Contador Qlifot de $0 llega a disminuir con una alta probabilidad.</specialTip>
+      <specialTip openLevel="1" key="PanicDeath2">Cuando el resultado del trabajo fue malo, el Contador Qlifot de $0 llega a disminuir con una alta probabilidad.</specialTip>
+    </specialTipSize>
+    
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {Me lo dijiste, derramando pétalos en lugar de lágrimas. }
+        {"Una vez todos fuimos nada más que suelos, así que no hablemos de un final aquí."}
+        {Me lo dijiste, floreciendo flores con cuerpo como si fueran tus últimas palabras.}
+        {"Pronto..."}
+
+        <!--계속-->
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Spring will come." target="1" isAnswer="true" message="Has conseguido obtener un informe final de observación sobre Alriune"/>
+        <node desc="Winter will come." target="2" isAnswer="true" message="Has conseguido obtener un informe final de observación sobre Alriune"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {La primavera está llegando.}
+        {Lentamente, alegremente, comenzó mi fin.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {Viene el invierno.}
+        {Poco a poco, mi exipación fue llegando a su fin frenéticamente. }
+        ]
+      </desc>
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {Se marchitan tus recuerdos de amor?}
+        {O ya se han marchitado a nada?}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+
+
+
+</creature>

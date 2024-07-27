@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100051">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {Não há motivos para #0 ter medo do $0 desde que seja uma pessoa fria.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {O $0 coleta corações. Ele pensava que se seu coração começasse a bater, iria aprender a amar.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Coisas que antes eram corações agora estão enfiadas de maneira indiscriminada dentro do $0.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">F-05-32</codeNo>
+      <name openLevel="1">Lenhador de Coração Caloroso</name>
+      <portrait openLevel="1">Sprites/Unit/creature/Lumberjack</portrait>
+      <riskLevel openLevel="2">HE</riskLevel>
+      <openText>Essa é uma floresta cheia de corações. Não importa quantos ele corte, ela sempre continuará densa.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Uma Anormalidade mecânica no qual seu corpo humanóide é composto inteiramente por aço galvanizado. Ele segura um machado gigante com ambas as mãos, mas não mostra qualquer atividade, como se não pudesse se mover.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Os amigos eram imperfeitos de uma maneira ou de outra, então ao completar o que faltava no outro, embarcaram em uma jornada para tornar seus desejos realidade. O Espantalho queria um cérebro, o Homem de Lata queria um coração, o Leão Covarde queria coragem e Dorothy queria voltar para casa.&#13;&#10;
+      Aquela que pensavam ser uma grande feiticeira deu ao Lenhador um coração de chumbo ao invés de um verdadeiro. }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {“Mas você é uma máquina, isso significa que você foi construído para servir humanos. Você não entende? Máquinas não precisam de coração. Mas bom trabalho em chegar até aqui, tome isso para compensar. E tenha certeza de falar para todos que estão esperando por você que seu desejo se realizou.”&#13;&#10;&#13;&#10;Alguns saíram satisfeitos. Os amigos então foram embora para nunca mais serem vistos. O duro e frio chumbo era deprimente.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {O Homem de Lata não conseguia concordar com isso. Furioso, ele atravessou seu machado por dentro do coração da feiticeira. Aquele coração caloroso estava pulsando vigorosamente. Ele então enfiou chumbo no peito, agora vazio, da feiticeira. E pela primeira vez em sua vida, ele começou a rir e sentiu um prazer que nunca antes sentiu.&#13;&#10;&#13;&#10;Pegando uma pilha de corações macios, ele os enfia em seu "peito". Ele nunca terá corações o suficiente. Ele, que antes era um Lenhador, agora corta pessoas ao invés de árvores. Essa é uma floresta cheia de corações. Não importa quantos ele corte, ela continuará densa. Uma pessoa bondosa sempre carrega um coração mais caloroso. }
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Quando o coração for perdido, o Homem de Lata cairá em seus joelhos de tristeza, apertando seu peito vazio. Como se estivesse implorando para que a única coisa que ele tinha não fosse tomada. }
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="1" key="2">Quando um Agente com Temperança de Nível 3 ou superior completou o trabalho, o Contador Qlifót reduziu.</specialTip>
+      <specialTip openLevel="2" key="3">Quando um Agente entra na Unidade de Contenção enquanto o Contador está em 0, ele imediatamente morrerá. Então, a Anormalidade escapará.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

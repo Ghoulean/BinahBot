@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100003">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção de $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {$0 são colocados em uma almofada macia, como se estivessem à mostra.},
+      {Se você acabar vendo algo que se parece com dentes no interior deles, deve ser somente uma ilusão de ótica.},
+      {Qualquer um que encarar $0 sentirá um impulso irresistível de colocá-los.},
+      {A garota implorou em lágrimas. “Senhor, por favor, corte meus pés fora...”}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Deixando $0 na almofada desgastada, #0 começa o trabalho.},
+      {Como se alguém tivesse tirado recentemente, $0 estão deitados no chão.},
+      {Deixando $0 de lado, que estão bem alinhados, #0 continua o trabalho.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {O couro esmaltado dos saltos cintila debaixo da luz.},
+      {As tiras de tornozelo dos saltos ainda parecem elegantes mesmo estando desgastadas.},
+      {Como se estivesse representando uma longa história, os calcanhares dos saltos também estão desgastados.},
+      {A condição perfeita do couro dos saltos parece estranha.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {#0 fica olhando de relance enquanto trabalha.},
+      {#0 só fica olhando para $0.},
+      {Estando com dificuldades de se concentrar, #0 para de trabalhar e se vira para olhar $0.},
+      {Tentando resistir olhar para $0 novamente, #0 olha para outra direção, tentando continuar o trabalho.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {$0 claramente não são organismos vivos, mas emitem uma aura lúgubre.},
+      {$0 podem não ser criaturas que respiram, mas suas distintas atmosferas me lembram aqueles que estão perto de um passado sangrento.},
+      {A cor de sangue dos saltos se parece estranhamente familiar.},
+      {$0 ficam parados.}
+      ]
+    </narration>
+    <narration action="special_ability1">
+      [
+      {#0 ignora as ordens e fica olhando para $0. Agora está lentamente movendo sua mão para pegá-los.}
+      ]
+    </narration>
+    <narration action="special_ability2">
+      [
+      {#0 tira o próprio calçado e começa a colocar $0.}
+      ]
+    </narration>
+    <narration action="special_ability3">
+      [
+      {Os olhos de #0 parecem estar diferentes. Suas pupilas estão dilatadas e desfocadas.}
+      ]
+    </narration>
+    <narration action="special_ability4">
+      [
+      {#0 está satisfeito ao calçar $0 e saboreia o som de bater seus calcanhares.}
+      ]
+    </narration>
+    <narration action="dead">
+      [
+      {#0 perambula pelo corredor com um machado em mãos.},
+      {#0 usa sua arma contra #1, que tentou pará-lo.},
+      {#1 foi atingido na cabeça por #0 e morreu de hemorragia cerebral.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-04-08</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/RedShoes</portrait>
+      <name openLevel="1">
+        Os Saltos Vermelhos
+      </name>
+      <riskLevel openLevel="2">
+        HE
+      </riskLevel>
+      <openText>A garota implorou em lágrimas. “Senhor, corte meus pés fora...”</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Um par de elegantes saltos vermelhos. Seu design é antiquado, mas não há como dizer onde e como foram feitos.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Eles preenchem a mente com o impulso de usá-los. As mudanças que acontecem ao calçar a Anormalidade são primeiro vistas nos olhos de quem a vestiu.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {A próxima mudança observável é que o portador não quer tirar os saltos. Eles também irão agir sob todo o desejo que tiver supresso em seu subconsciente. Se alguém tentar pará-lo de agir conforme seu desejo ou tentar tirar os saltos, eles controlarão o hospedeiro, o que as vezes levava a assassinatos.}
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {Não sabemos se a vontade do hospedeiro está envolvida no processo, mas tendo em consideração o aumento em seu desejo e agressividade, os impulsos primitivos do hospedeiro parecem permanecer intactos.}
+      ]
+    </desc>
+    <desc id="5" openLevel="1">
+      [
+      {&lt;Trecho de um Registro de Aconselhamento&gt;&#13;&#10;
+      “&lt;Omitido&gt; era uma boa pessoa, bem, também era meio que uma celebridade. Sempre me dizendo que nosso trabalho era algo para se orgulhar. Ele sabia como lidar com todos os tipos de Anormalidades. Mas nosso maior erro foi deixá-lo entrar naquela Unidade de Contenção. Nós nunca pensávamos que um par de saltos dentro de todas as coisas faria qualquer tipo de dano. Em certo momento, &lt;Omitido&gt; estava usando os saltos, com um sorriso de orelha a orelha. Bem, era bem estranho. Aquilo não era um sorriso. Aquilo era... (Omitido). Sangue estava por toda a parte. O barulho dos saltos ecoava em todo o corredor. Eu fechei meus olhos e fingi estar morto. Eu vi a cabeça de um de meus colegas rolando pelo chão. Os saltos pararam logo na minha frente e ficaram lá por muito tempo. Eventualmente, eles foram para longe de mim e foi logo quando eu tinha desmaiado. (Omitido) Ouvi dizer que não era possível remover os saltos e precisaram cortar as pernas dele. Ninguém nunca mais viu &lt;Omitido&gt; novamente após isso, mas aqueles que estão aqui a tempo o suficiente vão lembrar daquele incidente.”}
+      ]
+    </desc>
+    <desc id="6" openLevel="2">
+      [
+      {&lt;Vídeo Z3_493 da Câmera do Corredor&gt;&#13;&#10;
+      &lt;Omitido 1&gt;: Então sua parte do trabalho está acabada, certo? Eu acabei de terminar a minha. Aquela garotinha do fósforo ainda está no mesmo estado. É tão frustrante. Quer ir tomar um café lá na sala de estar?
+      &lt;Omitido 2&gt;: Sabe, &lt;Omitido 1&gt;, há algo que eu estive pensando por um bom tempo.
+      &lt;Omitido 1&gt;: Vamos conversar quando chegarmos lá. Eu estou muito cansado agora. Ei, você está usando saltos? Somente os sapatos do uniforme são permitidos durante o trabalho.
+      &lt;Omitido 2&gt;: Isso não é importante, &lt;Omitido 1&gt;. O que realmente é importante é que estamos sozinhos no momento.
+      &lt;Omitido 1&gt;: Do que você está falando... Espera, o que exatamente você está vestindo nos pés? V-Você não o colocou, não é?
+      &lt;Omitido 2&gt;: &lt;Omitido 1&gt;, Eu te amei por um bom tempo.
+      &lt;Omitido 1&gt;: Tire eles, agora. Você ao menos sabe o que está fazendo?
+      &lt;Omitido 2&gt;: Eu estive pensando no porquê você não me ama de volta. É por causa da Emily, não é? Você estava tão ocupado olhando para ela que você nem sequer me notou, certo?
+      &lt;Omitido 1&gt;: I... I-isso é um machado que você está segurando? E seus tornozelos estão sangrando. &lt;Omitido 2&gt;, Estou te implorando, por favor, tire esses saltos.
+      &lt;Omitido 2&gt;: Então tudo que eu preciso fazer é me livrar da Emily! Espere um pouco aqui, isso não vai demorar muito. Você precisará ficar aqui até eu voltar.
+      &lt;Omitido 1&gt;: Por favor, pare com isso. Por favor...
+      &lt;Omitido 2&gt;: Se você quisesse ter me parado, você deveria ter feito isso no dia em que nos conhecemos.&#13;&#10;&#13;&#10;&lt;Omitido 2&gt; atordoou &lt;Omitido 1&gt; com sua arma e foi para a sala. Felizmente, ninguém além de &lt;Omitido 1&gt; foi machucado, incluindo Emily. &lt;Omitido 2&gt; foi então removido do banco de dados da corporação. Ela tinha toda noção do que estava fazendo. E admitiu que os saltos só a encorajaram a fazer o que sempre queria fazer. A equipe de resposta cuidou da supressão da &lt;Omitido 2&gt;. Após isso, $0 fugiram, arrancando os tornozelos da &lt;Omitido 2&gt; para fora de seu corpo. Demorou um total de 23 minutos para serem suprimidos, contidos e colocados de volta na Unidade de Contenção. &lt;Omitido 2&gt; morreu de perda excessiva de sangue. &lt;Omitido 1&gt; só sofreu pequenos machucados, mas pediu demissão devido ao trauma psicológico excessivo.}
+      ]
+  </desc>
+    <desc id="7" openLevel="3">
+      [
+      {&lt;Trecho de um Registro de Pesquisa&gt;&#13;&#10;
+      &lt;i&gt;Nós recebemos o relatório que a funcionária &lt;Omitido&gt; estava seduzida pelos saltos e perambulava pelo corredor. Nós imediatamente ordenamos a funcionária F3054 suprimí-la. Ela era uma funcionária veterana com vasta experiência em supressão, estávamos esperando que ela não tivesse problema algum em suprimir outra funcionária. Mas ela não voltou, e quando outros a encontraram, a funcionária F4002 estava inconsciente com ambos os tornozelos cortados fora, enquanto a funcionária F3054 estava manualmente tentando remover os saltos dos pés arrancados.&lt;/i&gt;}
+      ]
+  </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="careful">Funcionários com Temperança de Nível 2 ou Inferior não devem trabalhar com $0, já que dentro de sua Unidade de Contenção, #0 ficou louco. $0 lembram de seu dono anterior.</specialTip>
+      <specialTip openLevel="2" key="Attract1">Quando o resultado do trabalho era Neutro, o Contador Qlifót reduzia com probabilidade mediana.</specialTip>
+      <specialTip openLevel="2" key="Attract2">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia com alta probabilidade.</specialTip>
+      <specialTip openLevel="2" key="badAttract">Quando o Contador Qlifót se tornou 0, o funcionário #0 que tinha baixa Temperança entrou na Unidade de Contenção em um transe. Esse fenômeno foi chamado de “Sedução”.</specialTip>
+      <specialTip openLevel="3" key="clickClick">Após repetidamente selecionar e conversar com o funcionário seduzido, ele voltou ao normal.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

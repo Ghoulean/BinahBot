@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100106">
+
+
+    <narration action="move">
+      #0 va a ingresar a la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="start">
+      [
+      {La piel de $0 es muy esponjosa y suave. Es bueno para tu depresión.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Muchos empleados tienen al menos 55 fotografías diferentes tomadas en varios ángulos de $0.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Es una razón suficiente para ser degradado si no le gustan a $0.},
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {A veces, partes misteriosas del esqueleto humano se encuentran alrededor de $0 pero a quién le importa.},
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">D-02-107 </codeNo>
+      <portrait openLevel ="0">Sprites/Unit/creature/Ppodae</portrait>
+
+      <name openLevel ="1">
+        Ppodae
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>Señor, su ‘angel’ está masticando una parte del cuerpo de nuestro colega. </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {<i>Esta anormalidad se realiza en base a la idea de la Tumblbug backer '이은희(Lee Eunhee)'</i>&#13;&#10;&#13;&#10;Lindo perrito mullido con pelaje blanco.&#13;&#10;Esta anormalidad es tan linda que con solo mirarla te hace sentir mejor.&#13;&#10;Tiene los ojos de un ángel y es lo más puro del mundo.&#13;&#10;(Se elimina la descripción adicional de esta criatura por razones de brevedad. Esas oraciones fueron simplemente ‘es lindo’ dijo de varias maneras.)}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Esta anormalidad no tiene absolutamente ninguna influencia negativa. Es solo que tu corazón podría doler si lo miras por mucho tiempo debido a la ternura. Los empleados que ingresan a la unidad de contención de esta anormalidad tienden a perder el control y, a menudo, otros empleados deben retirarlos de la unidad a la fuerza. Se recomienda precaución ya que los otros empleados a veces también se cautivan por su ternura y pierden el control.&#13;&#10;&#13;&#10;* Los intentos de llevar la Anormalídad fuera de la unidad de contención pueden ocurrir, pero la mayoría del tiempo son suprimidos. &#13;&#10;&#13;&#10;* Cuando hay demasiados empleados que desean trabajar en esta anormalidad, se lleva a cabo una lotería para decidir a quién acudir.&#13;&#10;&#13;&#10;* Los empleados muestran síntomas de regresión mental, como dificultad para hablar al ingresar a su unidad de contención, pero parece que solo es temporal. &#13;&#10;* Muchos empleados refieren esta anormalídad como “Buen Chico Ppodae” pero su designación oficial es “Ppodae”. Ten cuidado de no confundirte. &#13;&#10;&#13;&#10;**** Todo empleado que ingrese a su unidad de contención debe presentar un video o un informe fotográfico relacionado con esta anormalidad.  (Extremadamente importante)}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="1">
+      [
+      {Una compañia de este tamaño siempre tiene uno o dos mitos.&#13;&#10;“Puedes escuchar los huesos romperse si caminas por los pasillos en la noche…”&#13;&#10;“Si vas a ver de qué se trata ese sonido, verás a ese criptido Yeti comiéndose a un empleado…!”&#13;&#10;“Pero no tenemos ninguna anormalidad que se parezca al Yeti.”}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {&lt;Grabación de audio&gt;&#13;&#10;&#13;&#10;John: Tienes que estar agradecido, chico. Es una rara oportunidad para que Jacob esté trabajando en un Buen Chico Ppodae. &#13;&#10;&#13;&#10;Jacob: Uh, me está golpeando con las patas. Es esto un ataque?&#13;&#10;&#13;&#10;John: Quiere que lo alimentes. No sabes que es una tendencia corporativa llevar siempre uno o dos alimentos para perros?&#13;&#10;&#13;&#10;Jacob: Realmente no me gustan los animales… (Sonido ininteligible de irritación de john)&#13;&#10;&#13;&#10;Por cierto, este cachorro es bastante reforzado. Así es como son los cachorros? Este debe haber jugado mucho. &#13;&#10;&#13;&#10;John: Solíamos jugar a la pelota bastante a menudo solo para verlo correr por el balón. Nos detuvimos por alguna razón…&#13;&#10;&#13;&#10;Jacob: Oye, viste su cara cuando la alimenté? Fue super espeluznante.&#13;&#10;&#13;&#10;John: Es tu imaginacion. Siempre es como un ángel. innitrightgudboi? &#13;&#10;&#13;&#10;Jacob: Tiene esta cosa algún tipo de poder de manipulación mental?&#13;&#10;&#13;&#10;John: No tengo ni idea de lo que estás hablando. Doyoudo cutiepie? Usted si?}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {John: Me has estado esperando, Ppodae? &#13;&#10;&#13;&#10;Jacob: Oye, se esta comiendo algo. Pero hoy somos los primeros en venir. &#13;&#10;&#13;&#10;John: Tu buen chico tenias hambre, hmmmm? Dios, es tan lindo. Mira cómo está masticando eso.&#13;&#10;&#13;&#10;Jacob: Que demonios estas comiendo… Jesus! Lo sabía! es… es el dedo del empleado James! Desapareció en el último turno de patrulla! Mira esa uña! No te acuerdas de él presumiendo de cómo tenía una forma de corazón dibujada en las uñas? Te dije que esta cosa no es para nada bueno!&#13;&#10;&#13;&#10;John: N…No puedo creerlo… quien….&#13;&#10;&#13;&#10;Jacob: Esta anormalidad es el asesino! Puedo entender que estás en shock, pero te he dicho muchas veces que no puede haber una linda mascota en este lugar. Me alegra que finalmente hayas acudido a tu env…&#13;&#10;&#13;&#10;John: Quien…no lo alimentó a tiempo?!&#13;&#10;&#13;&#10;Jacob: ………&#13;&#10;&#13;&#10;John: Esta pobre debió haber estado hambrienta toda la noche. Es… es desgarrador.&#13;&#10;&#13;&#10;Jacob: Uh… creo que deberíamos suprimirlo?&#13;&#10;&#13;&#10;John: Cómo se puede hacer algo tan violento a este niño pequeño lindo? Mira sus ojos… los animales son inocentes. No es así, chico lindo&#13;&#10;&#13;&#10;(La anormalidad no muestra ninguna reacción. Sólo se escucha el sonido de un hueso siendo masticado.)&#13;&#10;&#13;&#10;Jacob: Señor, su ‘angel’ está masticando una parte del cuerpo de nuestro colega. &#13;&#10;&#13;&#10;John: Que eres, un novato? No sabes que algo lindo es perdonado aquí?&#13;&#10;&#13;&#10;Jacob: Nunca escuché sobre eso y no creeré eso. Debemos tranquilizarla. Si no lo haces, lo haré!&#13;&#10;&#13;&#10;(Se escucha un disparo de un tranquilizante)&#13;&#10;&#13;&#10;John: NO!&#13;&#10;&#13;&#10;(Sobresale gemidos de la anormalidad)&#13;&#10;&#13;&#10;(La grabación se corta bruscamente después de unos pocos gritos)&#13;&#10;&#13;&#10;&#13;&#10;…..Por lo tanto, solicito una degradación del empleado que disparó el tranquilizante a Ppodae.&#13;&#10;Tal abusador de animales no tiene lugar en nuestra empresa.&#13;&#10;Nuestro buen chico Ppodae está grandemente impactado por este incidente. Ahora solo come 5kg de su merienda favorita.&#13;&#10;Lo que nos lleva a otra solicitud para el nuevo aperitivo para Ppodae. ‘Clase alta de salmón rico en vitamina B’. &#13;&#10;Estaré esperando la respuesta.}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="4">
+      [
+      {Respuesta: &#13;&#10;Solicitudes aceptadas.&#13;&#10;Nota al margen: En su próxima solicitud, adjunte 5 fotos diferentes de Buen Chico Ppodae. }
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">A $0 le gusta más el instinto de trabajo. Cuando se realizaron otros trabajos además en el trabajo instinto que se hizo en él, el contador Qlifot disminuyó por probabilidad media.</specialTip>
+      <specialTip openLevel="1" key="2">El Contador Qlifot disminuye cuando el resultado del trabajo fue malo.</specialTip>
+      <specialTip openLevel="1" key="3">Cuando $0 escapa, volvió voluntariamente a su unidad de contención después de atacar a un empleado y arrancarle el █████ de su cuerpo fallecido.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

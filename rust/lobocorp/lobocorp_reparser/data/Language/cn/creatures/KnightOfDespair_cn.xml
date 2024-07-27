@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100048">
+
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+
+    <narration action="mid1">
+      [
+      {“$0”有时会无助地流泪，不愿和#0说话。},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {“$0”沉浸在她的过去，就同她的姐妹一样。},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-01-73</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/KnightOfDespair</portrait>
+
+      <name openLevel ="1">
+       魔法少女
+      </name>
+
+      <name openLevel ="3">
+       绝望骑士
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>如今，这位饱经风霜的骑士只剩下&#13;&#10;空洞的自尊。</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {这是一个绝望的异想体，反复承受着信赖与背叛的枷锁。那不断滴落的黑色眼泪成为了她唯一的情感。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {她曾是个有模有样的英雄，一位正义的守护者。她立下誓言成为一名光荣的骑士，永远守护国王，守护国家，守护那些需要帮助的人们。&#13;&#10;一名骑士既要时刻拥护主的意愿，恪守骑士精神，又要英勇地追求正义与荣耀。但在经历了漫长的风波之后，她发现自己什么都没能遵守，而这个事实同样改变了很多人。&#13;&#10;当那个坚信着自己一直在为正义而战的人，意识到世间不再有邪恶留存时，其自身便开始化为邪恶；而那个希望世界永远安宁幸福的人，现在却变得堕落，任由她的贪婪吞噬一切。&#13;&#10;就和她们一样，许多拥有纯洁之心的人逐渐发掘出最为黑暗的一面。慢慢地，所有的良善都消失不见了...}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {谁说骑士永不哭泣？难道你们只看到过悲伤的哭泣，却从未见识过从无底的绝望中流出的泪水！？&#13;&#10;悲恸的溪流无穷无尽地流淌着，逐渐将她的眼窝冲刷成空洞。如此漫长的时光足以把黑色的钻石磨成灰。&#13;&#10;然而骑士的誓言似乎仍存于她的心中，即便遭到囚禁，她也依然狂热地想要守护他人。&#13;&#10;如今，这位饱经风霜的骑士只剩下空洞的自尊。&#13;&#10;当人们看到这位无法抛弃过去的骑士时，心中都充满了怜悯与惋惜。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {当正义再一次抛弃你的时候，失去存在意义的剑刃会迷茫地徘徊。或许是出于再度失败的耻辱，亦或是出于对这个悲惨世界的愤怒，它们终将背叛她没能守护的人。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {那位希望通过拯救他人来救赎自己的骑士，现在被称作“绝望骑士”，早已被那些她曾守护过的人们忘却了，就和她们一样...}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">每天第一位以“优秀”结果完成工作的员工将会获得“$0”的祝福。（此刻起该员工将被称作O-01-73-1）</specialTip>
+      <specialTip openLevel="2" key="2">O-01-73-1不能进行任何工作，只能镇压出逃的异想体。同时，由于骑士的祝福，O-01-73-1受到的红色、白色、黑色伤害都将减半，但是其受到的蓝色伤害将翻两倍。</specialTip>
+      <specialTip openLevel="2" key="3">当O-01-73-1死亡或陷入恐慌时，“$0”给予的祝福将会消失。祝福消失后，其他员工依然可以获得新的祝福。</specialTip>
+      <specialTip openLevel="1" key="4">当O-01-73-1死亡或陷入恐慌时，“$0”将会突破收容。</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

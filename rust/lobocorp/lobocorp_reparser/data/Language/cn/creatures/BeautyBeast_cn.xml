@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100013">
+
+    <narration action="move">
+      #0正在前往“$0”的收容单元并准备执行任务。
+    </narration>
+
+    <narration action="start">
+      [
+      {“$0”正寻找着能够转移诅咒的人。}
+      {“$0”想着自己的面貌是如此的可憎，它绝望地试图杀死自己。}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {然而诅咒仍将继续，永不解除。}
+      {诅咒已然存在了好几个世纪，一刻不停地折磨着可怜的受害者。}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {“死亡”乃另一种令人喜悦的“新生”。}
+      ]
+    </narration>
+
+    <narration action="dead">
+      [
+      {数百只眼睛和一对可怖的犄角从#0的脸上冒了出来。现在，#0成为了那只想要解除诅咒的怪物。}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">F-02-44</codeNo>
+      <name openLevel="1">美女和野兽</name>
+      <portrait openLevel ="2">Sprites/Unit/creature/BeautyBeast</portrait>
+      <riskLevel openLevel ="1">TETH</riskLevel>
+      <openText>然而诅咒仍将继续，永不解除。</openText>
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {这是一头终日在绝望中嚎哭，深深憎恨着自己的异想体。它拼命地试图解除自身的诅咒，可都无济于事...&#13;&#10;&#13;&#10;很久很久以前，有一个美丽却贫穷的女人，她有着非常迷人的翠绿眼睛。&#13;&#10;&#13;&#10;有一天，女人听闻在伯爵的庄园里有一份薪水可观的工作。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {据说，伯爵有着可怕的外表，任何胆敢进入伯爵庄园的人都会消失在稀薄的空气之中。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="1">
+      [
+      {“那里一定有个可怕的怪物在吃人。”&#13;&#10;&#13;&#10;女人边想边在口袋里藏好一把锋利的匕首。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {女人开始在伯爵的庄园里工作。与传闻相反，她从未发现怪物出没的痕迹。&#13;&#10;&#13;&#10;到了晚上，有时会有一个温柔的男声同女人交谈。他为她辛劳一天表示感谢，并慷慨地付给她很多很多的钱。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="2">
+      [
+      {女人每天都在庄园里工作。时间一长，她变得越来越贪婪。&#13;&#10;&#13;&#10;“如果那伯爵死了，他的财富和这座庄园就全是我的了！”}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="3">
+      [
+      {一天早晨，女人踏入了伯爵的房间——她曾被告知过永远不要进入那间房间。&#13;&#10;&#13;&#10;在那里，女人看到了伯爵的真实面貌。&#13;&#10;&#13;&#10;伯爵是一头可怕的怪物，他长有数百只眼睛，四条奇形怪状的腿。他既不是人类，也不是野兽。}
+      ]
+    </desc>
+
+    <desc id="7" openLevel="3">
+      [
+      {女人心想：没有了这个可怕的怪物，世界就会变得更好。&#13;&#10;&#13;&#10;女人掏出匕首就朝它刺去。}
+      ]
+    </desc>
+
+    <desc id="8" openLevel="4">
+      [
+      {出人意料的是，那怪物在最后一刻发出了疯狂的笑声。}
+      ]
+    </desc>
+
+    <desc id="9" openLevel="4">
+      [
+      {“你在笑什么？”这句话还没来得及说出口，女人的身体就已发生了转变——成百上千只眼睛，一对可怖的犄角，光洁的肌肤上长出渗人的皮毛...&#13;&#10;&#13;&#10;很快，女人变成了那个怪物。}
+      ]
+    </desc>
+
+    <desc id="10" openLevel="4">
+      [
+      {现在，庄园和财富都是她的了...}
+      ]
+    </desc>
+
+    <desc id="11" openLevel="4">
+      [
+      {有一个可怕的传闻，任何胆敢进入伯爵庄园的人都会消失在稀薄的空气之中...}
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="hit">对“$0”进行压迫工作时有着非常高的成功率。压迫工作能显著提高这个异想体的PE-BOX产量，但会恶化其健康状况。</specialTip>
+      <specialTip openLevel="2" key="noHit">对“$0”完成除压迫以外的其他工作后，它的健康状况将会得到改善。</specialTip>
+      <specialTip openLevel="3" key="doubledHit">在被施以连续的压迫工作后，“$0”倒在了地上，而刚刚对它完成压迫工作的员工经历了一系列可怕的突变。很快，一只新的“$0”突然出现在收容单元中。</specialTip>
+    </specialTipSize>
+
+  </observe>
+</creature>

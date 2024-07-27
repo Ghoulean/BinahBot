@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="300109">
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-07-103</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Yang</portrait>
+
+      <name openLevel ="1">
+        Yang
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>No entanto, o mundo tem mais calor e luz.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {A outra parte está em falta.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Ele diminui o dano mental que o usuário recebe. Por causa disso, ele é chamado de "O Pingente de Deus" pelo os empregados.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Aqueles que chegam-lhe perto querem a sua energia. Eles dizem que é para clarificar as suas mentes e para lhes fazer sentir calor nos seus corações. Eles também temem o pingente negro. “Eu espero que todas as Anormalidades sejam tão úteis como esta.” Eles o dizem enquanto suspiram. $0 não o conseguia entender. Ele nunca teve a intenção de ajudar os outros. É apenas o jeito que ele funciona.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {No entanto, o mundo tem mais calor e luz.&#13;&#10;O céu existe porque a terra também existe, escuridão existe porque a luz também existe. A vida existe porque a morte também existe, a esperança existe porque o desespero também existe.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {A carpa negra nada em direção da harmonia e a carpa branca nada em direção do caos.&#13;&#10;O quê que irá acontecer quando as duas carpas se encontrarem?}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">O usuário do $0 irá ganhar resistência contra ataques Brancos. No entanto, quando O-05-102 não estava na instalação nada aconteceu.</specialTip>
+      <specialTip openLevel="2" key="2">$0 periodicamente regenera a saúde mental do usuário.</specialTip>
+      <specialTip openLevel="2" key="3">&lt;Aviso&gt; Não envie o usuário do $0 para a unidade de contenção do O-05-102.</specialTip>
+      <specialTip openLevel="2" key="4">&lt;Aviso&gt; Lembre-se que se O-05-102 escapar, $0 também irá escapar. (Foi confirmado que o mesmo ocorre quando $0 está sendo utilizado.)</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

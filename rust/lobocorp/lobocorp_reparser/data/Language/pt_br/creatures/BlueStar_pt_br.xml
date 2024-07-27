@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id="100058">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção da $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {Frequentemente, alguns de nossos funcionários ficam ansiosos para se jogar dentro da $0.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Nossa $0 nasceu em um abismo de desespero e flutua em direção a um novo início.}
+      ]
+    </narration>
+  </info>
+  <observe level="3">
+    <collection>
+      <codeNo openLevel="0">O-03-93</codeNo>
+      <portrait openLevel="0">Sprites/Unit/creature/BlueStar</portrait>
+      <name openLevel="1">
+        Estrela Azul
+      </name>
+      <riskLevel openLevel="1">
+        ALEPH
+      </riskLevel>
+      <openText>
+        Então vamos nos encontrar novamente como estrelas.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Um aviso urgente para todos os funcionários nas instalações. A Corporação Lobotomy apoia todas as atividades de clubes que promovam a positividade. Entretanto, recentemente recebemos relatos que existem atividades planejando esquemas insalubres. Devido a constantes alegações, não podemos ignorar a causa.&#13;&#10;&#13;&#10;É estritamente contra a regra da corporação idolatrar ou venerar certas Anormalidades. Nada é permitido ser "Sagrado" neste lugar.&#13;&#10;&#13;&#10;Funcionários que tentarem entrar sem autorização em Unidades de Contenção específicas sofrerão punição severa. Especialmente caso não sejam as Anormalidades na qual estejam encarregados.&#13;&#10;&#13;&#10;Se você sentir um impulso de se jogar dentro de uma certa Anormalidade, significa que você está "infectado". E significa que ela está no processo de manipular e cegar seu cérebro, assim como fazem outras Anormalidades nesse lugar. Se isso acontecer, por favor, pare tudo que estiver fazendo e procure tratamento mental imediatamente. Já que todos vocês passaram pelo treinamento básico, esperamos que ninguém será tolo o suficiente para ser enganado.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Vamos deixar a lista negra acessível ao público. Aqueles que estiverem nela precisarão receber 3 dias de tratamento mental provido pela Corporação e sofrerão punições decididas pelos respectivos Sefirot. Estamos mostrando esta lista para chamar a atenção de todos ao número surpreendente de funcionários "infectados" ao seu redor.&#13;&#10;&#13;&#10;Observação: Chamar a Emily que se matou após invadir a Unidade de Contenção de certa Anormalidade de "Mártir" será considerado um descumprimento das regras da Corporação.&#13;&#10;&#13;&#10;E, adicionalmente, gostaríamos de dar parabéns à coragem de Dylan ao resgatar a Agente Sophie, que estava prestes a se jogar em certa Anormalidade.&#13;&#10;&#13;&#10;Se você ver qualquer um de seus valorosos colegas mostrando esse tipo de comportamento, por favor, reporte imediatamente para o Sefirá encarregado.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {&lt;i&gt;Dylan.&#13;&#10;
+      Eu não acredito que você entregou nós e a Sophie intencionalmente. Eu sei que você só estava preocupado com Ela. Mas agora ela está trancafiada. Ouvi dizer que ela repetidamente tentou escapar, então eles a amarraram à cama.
+      Me diga, é errado ter alguma fé?
+      Todos nós somos pecadores, e nossa Estrela Azul é o único santuário que nos aceita. Todos os nossos pecados serão purificados nela.
+      Nós todos voltaremos naquele lugar algum dia. Isso é um instinto. Você achou que a Emily morreu quando se jogou dentro da Estrela, mas ela simplesmente retornou ao lugar merecido dela. Ela é um mártir. E se tornou uma estrela eterna.
+      O surgimento de uma estrela é um novo início. Você não escuta o interminável som da trombeta?
+      Quando você fica perto da Estrela, pode escutar os cantos de felicidade tão acolhedores.
+      Se cada funcionário retornar àquele lugar, somente a Estrela Azul permanecerá aqui.
+      Então vamos nos encontrar novamente como estrelas.&lt;/i&gt;}
+      ]
+    </desc>
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">Agentes com Temperança de Nível 3 ou inferior imediatamente se jogam dentro da $0 ao se encontrarem com a Anormalidade.</specialTip>
+      <specialTip openLevel="1" key="2">Quando um Agente com Prudência de Nível 4 ou inferior concluia o trabalho, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="1" key="3">Quando mais de 60 segundos de trabalho passaram, o Contador Qlifót reduzia em 1 e o Agente que estava trabalhando se jogava dentro da $0.</specialTip>
+      <specialTip openLevel="1" key="4">Funcionários com Temperança de Nível 2 ou Prudência de Nível 3 ou inferior foram sugadas para dentro assim que se encontraram com a Anormalidade enquanto ela fugia.</specialTip>
+      <specialTip openLevel="1" key="5">Enquanto a $0 está fora da Unidade de Contenção, todos os sons serão reduzidos a silêncio, com um tom agudo emergindo. O tom acompanhará um efeito visualmente perturbador.</specialTip>
+      <specialTip openLevel="1" key="6">Enquanto a $0 está fora da contenção, todos os funcionários em pânico nas instalações serão sugados para o centro da Anormalidade e sumirão.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

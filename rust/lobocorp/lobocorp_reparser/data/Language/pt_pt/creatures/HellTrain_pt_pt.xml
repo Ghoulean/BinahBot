@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300102">
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-86</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/HellTrian</portrait>
+
+      <name openLevel ="1">
+        O Expresso para o Inferno
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>
+        Quando a hora chegar, o comboio descerá pelos carris e o seu apito suará.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {O funcionário incrivelmente silencioso entrega bilhetes para um comboio que não têm destino final. Não há relógios que indiquem a hora de chegada. Em vez disso, luzes são usadas.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {A primeira e a segunda luz se ligam. A tua mente está calma.&#13;&#10;A terceira também se acende. A tua mente está calma e os teus ferimentos curados.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Quando a quarta luz acende, a condição de todos os empregados de todos os departamentos melhorou quando ouviram o seu apito na distância.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {Quando a hora chegar, o comboio descerá pelos carris e o seu apito suará. Sem dúvida ele irá mergulhar em um túnel sem fim enquanto pega empregados que não recuaram a tempo como os seus passageiros.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">A cada 30 segundos, uma das luzes na bilheteira irá acender uma por uma. A estação irá acender até quatro vezes. Quando o funcionário da estação dá um bilhete a alguém, todas as luzes irão ser reiniciadas.</specialTip>
+      <specialTip openLevel="2" key="2">Quando um bilhete é retirado quando 1ª luz está ligada, esse empregado irá recuperar um pouco de HP e SP.</specialTip>
+      <specialTip openLevel="2" key="3">Quando um bilhete é retirado quando 2ª luz está ligada, esse empregado irá recuperar HP e SP.</specialTip>
+      <specialTip openLevel="2" key="4">Quando um bilhete é retirado quando 3ª luz está ligada, todos os empregados no departamento do sujeito recuperarão HP e SP.</specialTip>
+      <specialTip openLevel="2" key="5">Quando um bilhete é retirado quando 4ª luz está ligada, todos os empregados na instalação irão recuperar HP e SP.</specialTip>
+      <specialTip openLevel="2" key="6">Se as 4 luzes estiverem ligadas e um certo período de tempo passar, o comboio irá atravessar a instalação e causar dano Negro a todos os empregados que se encontram no seu caminho. Após passar, todas as luzes irão ser reiniciadas.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

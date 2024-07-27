@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300108">
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-97</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/PromiseAndFaith</portrait>
+
+      <name openLevel ="1">
+        Velha Crença e Promessa 
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <openText>
+        Corações atraiçoados lentamente são esquecidos nas profundezas.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Um misterioso berlinde está pendurado no teto da unidade de contenção.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Nós sabemos sobre inúmeras promessas e crenças que se repetem desde várias eras atrás.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {No entanto, elas apenas devolvem uma vazia traição.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Corações atraiçoados lentamente são esquecidos nas profundezas.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Se tu tentares sem queres nada em retorno, talvez possas receber uma recompensa inesperada.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Um indivíduo pode usar $0 para melhorar a sua arma E.G.O. Uma pequena quantidade de energia será consumida após o melhoramento.</specialTip>
+      <specialTip openLevel="2" key="2">Uma arma que foi melhorada tem a sua Força de Ataque aumentada.</specialTip>
+      <specialTip openLevel="2" key="3">No entanto, é possível que a arma E.G.O seja destruída durante este processo.</specialTip>
+      <specialTip openLevel="2" key="4">A arma que recebeu melhoramentos irá voltar ao seu estado original no dia seguinte.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

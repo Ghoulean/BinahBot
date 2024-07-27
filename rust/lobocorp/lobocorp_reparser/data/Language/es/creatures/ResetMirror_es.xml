@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300007">
+
+    <narration action="move">
+      #0 designado a la sala de contención de $0 para el trabajo.
+    </narration>
+
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-81</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ResetMirror</portrait>
+
+      <name openLevel ="1">
+        Espejo de Ajuste
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+
+      <openText>
+        “La satisfacción es sólo temporal.”
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Lo único que muestra son personas. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Al enfrentarse en el espejo, el sujeto cambia. Hay numerosas sugerencias, como la posibilidad de un universo paralelo, es de poderes mágicos, pero nada de esto puede ser confirmado.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {La persona que se enfrenta al espejo puede verse igual, pero en realidad se convierte en una persona totalmente diferente. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      <!-- 여기 번역 고치기 -->
+      [
+      {Cuando se mira al espejo más de una vez, la humanidad del sujeto se elimina, convirtiéndolos en un cadáver ambulante.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {"Hey, Brian simplemente me ignoró y pasó por delante. Que esta pasando?”&#13;&#10;“Ah, el se miro al espejo.”&#13;&#10;“Siempre se quejaba de haber nacido demasiado débil. Supongo que finalmente se decidió.”&#13;&#10;“La satisfacción es sólo temporal.”}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="1">Los sujetos que enfrentan el $0 tendrán sus estadísticas ajustadas al azar.</specialTip>
+      <specialTip openLevel="2" key="2">Si un empleado se enfrenta el $0 más de una vez al día, todas las estadísticas se reducirán cada vez que lo enfrenten.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

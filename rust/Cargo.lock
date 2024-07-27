@@ -1911,6 +1911,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "lobocorp"
+version = "1.0.0"
+dependencies = [
+ "lobocorp_common",
+]
+
+[[package]]
+name = "lobocorp_common"
+version = "1.0.0"
+dependencies = [
+ "strum 0.26.2",
+ "strum_macros 0.26.2",
+ "unic-langid",
+]
+
+[[package]]
 name = "lock_api"
 version = "0.4.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"

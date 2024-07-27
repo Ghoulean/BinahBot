@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300107">
+    <narration action="move">
+      #0 va a ingresar a la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-96</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/JusticeReceiver</portrait>
+
+      <name openLevel ="1">
+        Ajuste de comportamiento
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>Eventualmente perderán toda Prudencia e incluso olvidarán cómo existir.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Un dispositivo electrónico con un patrón misterioso tallado en él.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Reajusta a todos a ser justos, no importa cuán malos, malvados y arrogantes sean.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Pero los usuarios se volverán demasiado dependientes del dispositivo y perderán poder para pensar por su cuenta.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+
+      [
+      {Eventualmente perderán toda Prudencia e incluso olvidarán cómo existir.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Las estadísticas con respecto a la Justicia aumentarán enormemente cuando se equipe $0. Sin embargo, todas las estadísticas relacionadas con Prudencia caerán al mismo tiempo.</specialTip>
+      <specialTip openLevel="2" key="2">El usuario estará en pánico si se le ordena devolver este equipo dentro de los 30 segundos de haberlo equipado y morir después de mostrar un comportamiento anormal.</specialTip>
+      <specialTip openLevel="2" key="3">Si el SM del usuario llega a 0 cuando se equipa $0, el usuario morirá mientras está en estado de pánico.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

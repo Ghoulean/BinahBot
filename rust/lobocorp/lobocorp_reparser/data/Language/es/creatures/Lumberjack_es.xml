@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100051">
+
+    <narration action="move">
+      #0 va a entrar $0 a la unidad de contención para comenzar la tarea.
+    </narration>
+
+    <narration action="start">
+      [
+      {No hay que temer a $0 si #0 no es una persona de buen corazón.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 recoge corazones. Pensó que si su corazón comenzaba a latir, sería capaz de amar.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {Aquellos que alguna vez pudieron haber sido corazones ahora fueron empujados a $0 indiscriminadamente.}
+      ]
+    </narration>
+
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">F-05-32</codeNo>
+      <name openLevel="1">Leñador de buen corazón</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/Lumberjack</portrait>
+      <riskLevel openLevel ="2">HE</riskLevel>
+      <openText>Este es un bosque lleno de corazones. No importa cuántas veces corte los corazones, el bosque permanece denso.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Es una Anormalídad humanoide mecánica con un cuerpo hecho completamente de metal cubierto de una pradera verdoso. Sostiene grandes hachas en ambas manos pero no se mueve. Como si se congelara al lugar.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Los amigos estaban incompletos de alguna manera, así que se ayudaron mutuamente a rellenar donde faltaban y emprendieron un viaje juntos para hacerse realidad sus deseos. El espantapájaros quería un cerebro, el leñador de estaño quería un corazón, el león cobarde quería el coraje, y Dorothy quería volver a casa.&#13;&#10;Sin embargo, el que pensaron que era un gran mago le dio al hombre de ojalata un inútil corazón de plomo...}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {"Pero eres una máquina, eso significa que estás hecho para los humanos. No entiendes? Una máquina no necesita un corazón. Gracias por venir hasta aquí. Toma esto, es todo lo que tengo que darte. Asegúrese de decirle a todos los que lo están esperando que su deseo se hizo realidad."&#13;&#10;Algunos se fueron con satisfacción, pero no pudo volver a ver a sus amigos. El plomo duro y frío lo puso triste.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {El leñador no estaba de acuerdo. Agitó su hacha con ira directamente al mago y penetró el torax del mago. Su corazón estaba caliente y comenzó a latir vigorosamente solo para arrancarselo con sus manos introduciendo sus manos en su torax destrozado. Colocó el corazon de plomo en el pecho del mago y para colocarse el corazon aun palpitante dentro de su armadura llenandose de sangre del mago. El leñador se echó a reír ante la vista espectacular y, por primera vez, sintió un placer que nunca antes había sentido.&#13;&#10;Ahora el leñador pone un montón de corazones en su pecho. No importa cuantos corazones tenga, no siempre es suficiente. Una vez llamado el Leñador, ahora corta humanos en lugar de árboles. Este es un bosque lleno de corazones. No importa cuántas veces corte los corazones, el bosque permanece denso.&#13;&#10;Aquellos que son de buen corazón también tendrán corazones cálidos.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Si el leñador pierde sus corazones, caerá de rodillas desesperado mientras se agarra su pecho vacío. Como si te rogara que no tomaras lo único que le queda.  }
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Cuando el resultado del trabajo fue malo, puede reducir el contador de Qlifot.</specialTip>
+      <specialTip openLevel="1" key="2">Un empleado con un nivel de Templanza 3 o superior completó el trabajo, es posible que baje el contador Qlifot.</specialTip>
+      <specialTip openLevel="2" key="3">Cuando un empleado ingresa y el contador Qlifot está en 0, morira inmediatamente por el ataque de su hacha. Entonces la Anormalidad escapará.</specialTip>
+    </specialTipSize>
+
+  </observe>
+
+
+</creature>

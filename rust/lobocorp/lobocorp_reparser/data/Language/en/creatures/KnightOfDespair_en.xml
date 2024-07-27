@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100048">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 occasionally sheds helpless tears while the work goes on, not saying anything to #0.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 still dwells in her past glories, just like her sisters.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-01-73</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/KnightOfDespair</portrait>
+      <name openLevel="1">
+        Magical Girl
+      </name>
+      <name openLevel="3">
+        The Knight of Despair
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>All that remains is the hollow pride of a weathered knight.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {An Abnormality of despair that has gone through a repeated cycle of faith and betrayal, leaving only the emotion that is expressed through black tears.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {A hero of the past who used to be a guardian of justice. She dedicated her entire life to protect the king, the state, the city, and the weak.&#13;&#10;&#13;&#10;The knight had to uphold the laws of God and the pursuit of valor, chivalry, and justice. However, after a long history fraught with hardship and conflict, the knight realized in retrospect that nothing was truly upheld on her watch. The truth changed a lot of people.&#13;&#10;&#13;&#10;One who fought for good became evil upon realizing that there was no evil left in the world. One who dreamed of a world where everyone could be happy was tinged with greed and started to devour everything. Like them, so many things once thought to be forever constant faced changes and perished.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Who said a knight never cries? Have you ever seen tears brought out by despair, not sadness? The endless stream of grief has long turned the eye sockets into hollow husks. Inside, black diamonds sometimes fall down like ashes.&#13;&#10;&#13;&#10;The will to protect seems to remain unchanged after all this time; even in containment, it is still obsessed with the act of protection. All that remains is the hollow pride of a weathered knight. The tenacity of the hero who cannot leave the past behind is a pitiful sight.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {When Justice turns its back once more, several dozen blades will rove without a purpose. In shame of failing to defend once again, and in rage against the world, the swords will eventually point at those she could not protect.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {The knight who wanted to redeem herself by saving others was now dishonorably called the Knight of Despair; forgotten from the people's memory, just like the others.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">The first employee who completes their work with a Good result will receive $0’s blessing. (From then on, the employee will be referred to as O-01-73-1.)</specialTip>
+      <specialTip openLevel="2" key="2">O-01-73-1 could only aid in suppressing Abnormalities. Furthermore, thanks to the blessing, RED, WHITE, and BLACK damage dealt to them was halved, however, PALE was doubled.</specialTip>
+      <specialTip openLevel="2" key="3">$0’s blessing dissipated when O-01-73-1 died or panicked. After the blessing was gone, a new employee could receive it.</specialTip>
+      <specialTip openLevel="1" key="4">When O-01-73-1 panicked, $0 escaped from its Containment Unit. The same results occurred when O-01-73-1 died.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<creature>
+  <info id ="100014">
+
+    <narration action="move">
+      #0 designado a la sala de contención de $0 para empezar el trabajo.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 dice que llegó a esta instalación con su propia voluntad.}
+      {$0 da libertad a aquellos que están encerrados dentro de sí mismos y cuidan de los quebrantados.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 visitó un pueblo que padecía una enfermedad desconocida.}
+      {Era un amanecer cuando este médico, que no dijo su nombre, apareció. }
+      {Cuando todos abandonaron la esperanza, apareció el hombre enmascarado que se hace llamar doctor.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {#0 se siente cómodo visitando la habitación de $0 durante el trabajo.}
+      {#0 se alivia más cuando va a la habitación de $0.}
+      {#0 desea que todas las anormalidades sean tranquilas y calmadas como $0.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {$0 tiene una voz tranquila y calmada y le gusta tratar a personas heridas.}
+      {$0 quiere meditar solo o seguir cuidando a los demás.}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {$0 dice, “Estoy aquí para tratar enfermedades. Cuando llegue el día, ven a buscarme. Estaré más que dispuesto a ayudarte.”}
+      {$0 dice, “No hay nada detrás de esta máscara, porque la carne está ligada al flujo del tiempo, pero el alma es inmortal.”}
+      {$0 dice, “Salvaré tu vida de la destrucción y el fin del mundo. Pon tu confianza en mi.”}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">O-01-45</codeNo>
+      <name openLevel="1">Doctor de la Plaga</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/PlagueDoctor</portrait>
+      <riskLevel openLevel ="3">ZAYIN</riskLevel>
+      <openText>“Te curaré, privándote de todas las enfermedades y lesiones que poseas.”</openText>
+    
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {Sombrero de fieltro o fedora negro y máscara de pico con rudamentaria de un doctor de la edad media. Tiene enormes alas negras en lugar de brazos o piernas. Posee la capacidad de comunicación humana, aunque prefiere no hablar mucho. Llegó a esta instalación por sí mismo, afirmando que el mundo ha contraído una enfermedad terrible que sólo es capaz de curar. No pudimos encontrar nada sobre esta “enfermedad” a la que se refiere.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Parece que les gusta tratar a los empleados cuando están lesionados o enfermos. Muestra satisfacción al ayudar a los demás y parece bastante simpático y benevolente. Incluso después de una semana de observación, no encontramos agresión, violencia o intento de escapar. Solo contribuyendo a suponer que esta anormalidad es eminentemente “suave” (12 de nuestros empleados utilizaron esta palabra para describir a esta criatura) y son buenos para nosotros.}
+      ]
+    </desc>
+
+    <desc id ="3" openLevel="2">
+      [
+      {El empleado Alex, que tenía una cicatriz grave en la frente mientras sometía a la Chica Mágica, entró en la cámara de esta anormalidad con su cicatriz no completamente curada. La anormalidad, que normalmente no es locuaz, comenzó a hablar tan pronto como vio la cicatriz del empleado.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Registro de observación_1&#13;&#10;La anormalidad preguntó. Por qué no has tratado esa cicatriz?”&#13;&#10;Alex dijo.&#13;&#10;No tuve tiempo así que solo me aplique un poco de primeros auxilios.” &#13;&#10;Entonces el doctor de la plaga respondió.&#13;&#10;“Te curaré, privándote de todas las enfermedades y lesiones que poseas.”&#13;&#10;Alex salió de la cámara con su cicatriz completamente curada.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">Cuando el resultado del trabajo fue malo, el contador Qlifot disminuye.</specialTip>
+      <specialTip openLevel="3" key="2">Cuando el resultado del trabajo fue bueno, el contador Qlifot disminuye. $0 luego bautizó al empleado que trabajó en él.</specialTip>
+      <specialTip openLevel="3" key="3">Cuando se estalla una emergencia nivel 2, el contador Qlifot disminuye.</specialTip>
+      <specialTip openLevel="3" key="4">Cuando el Contandor Qlifot alcanza 0, los empleados que escucharon su llamado fueron a su unidad de contención y se bautizaron.</specialTip>
+      <specialTip openLevel="3" key="5">Los empleados que son besados por $0 renacerán como los bendecidos.</specialTip>
+    </specialTipSize>
+   
+  </observe>
+
+  <etc>
+    <param key="first" index="1">
+      'Y te digo que eres el apóstol #1 y sobre esta roca edificaré mi iglesia, y las puertas del infierno no prevalecerán contra ella.'
+    </param>
+
+    <param key="second" index="2">
+      'Díganos, cuándo sucederá esto y cuál será el signo de su llegada y del fin de la era?'
+    </param>
+
+    <param key="third" index="3">
+      'Quieres que llamemos fuego del cielo para destruirlos?'
+    </param>
+
+    <param key="fourth" index="4">
+      'El apóstol #3 y el el apóstol #4 a ellos les dio el nombre de Boanerges, que significa “hijos del trueno."'
+    </param>
+    
+    <param key="fifth" index="5">
+      '#5 el apóstol dijo, “Muéstranos al Padre y eso será suficiente para nosotros.'
+    </param>
+    
+    <param key="sixth" index="6">
+      'Vio a un hombre llamado #6 el apostol. "Sígueme,” Le dijo, y #6 se levantó y lo siguió.'
+    </param>
+    
+    <param key="seventh" index="7">
+      'Ahora, por algún tiempo, un hombre llamado #7 el apóstol había practicado la brujería y asombrado a todas las personas.'
+    </param>
+    
+    <param key="eighth" index="8">
+      Entonces el apóstol #8 dijo al resto de los discípulos, “Vayamos también, para que podamos morir con él.”
+    </param>
+    
+    <param key="ninth" index="9">
+
+      Entonces el apostol #9 declaró, “Tú eres el hijo de él, tú eres el rey.”
+    </param>
+    
+    <param key="tenth" index="10">
+      Entonces el apostol #10 dijo, “Pero, por qué pretendes mostrarte a nosotros y no al mundo?”
+    </param>
+    
+    <param key="eleventh" index="11">
+      'De ahora en adelante, que nadie me cause problemas, porque llevo sobre mi cuerpo las marcas de él.'
+    </param>
+    
+    <param key="twelveth" index="12">
+      'No te he elegido tu, a los doce? Sin embargo, uno de ustedes es un demonio'
+    </param>
+  </etc>
+</creature>

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100026">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {For bees, a damaged hive is something that cannot be tolerated.},
+      {They say a hive’s drones spend their entire life providing food for the queen.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {The highest priority for bees would be the safety of their hive.},
+     {If someone happens to damage $0, even by accident, something that can never be undone may occur.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {If #0 happens to feel abdominal pain and a tingling sensation in their neck, the only option they would have is to look at the great blue sky one last time.},
+      {#0 makes a conscious effort to take in as little breath of the Containment Unit’s air as possible.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 desires more and more and more and more drones; they will bring prosperity to its kingdom.},
+      {$0 will be completed by the work of its drones… Such will be the beginning of its kingdom.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">T-04-50</codeNo>
+      <name openLevel="1">Queen Bee</name>
+      <portrait openLevel="1">Sprites/Unit/creature/QueenBee</portrait>
+      <riskLevel openLevel="1">WAW</riskLevel>
+      <openText>If you feel an abdominal pain and a tingling sensation in your neck, the best thing you can do now is look at the great blue sky you'll never get to see again.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Its form appears to be an amalgamation of a gargantuan beehive and a bee. A cross-section of the inside shows a darkish red surface with particles here and there, much like that of raw meat. The segment that appears to be the face is heavily distorted. It has wings, but they lost their intended function of flight. The one eye that remains relatively intact shows pupillary movement, as if to watch for approaching intruders. (The Abnormality always remains still, so it is assumed that it does not move.) }
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {When certain conditions are met, it releases spores. It will generate billions of spores within a 20-meter radius. The existence of lifeforms in its vicinity seems to be one of the key requirements.}
+      ]
+    </desc>
+    <desc id="3" openLevel="1">
+      [
+      {When it did, there was no immediate change in the employees who inhaled the spores, and no anomalous signs could be detected on the examinations that followed. }
+      ] 
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {Once more time had passed, the employee experienced severe pain in their occipital lobe and abdomen. Then after a certain period of time, their head dislodged from their body, and a Worker Bee emerged from the separated body.}
+      ]
+    </desc>
+    <desc id="5" openLevel="2">
+      [
+      {It has been confirmed that the spores carry drone eggs that hatch inside a living host. Based on the findings of an autopsy done on an employee killed by the Abnormality, we believe that the larva will subsist on any portion of the body, be it blood, organs, or fat. It will move freely around the body at this stage. When it becomes too large to move, it creates a cocoon near the intestines. The host feels extreme hunger at this stage, eating much more than usual. This cocoon moves upward through the body as it grows, eventually damaging the arteries of the throat and the cricothyroid with its jaws as it severs the host’s head from the body. After this it will emerge from the body, exacerbating the wound of the host further.}
+      ]
+    </desc>
+    <desc id="6" openLevel="3">
+      [
+      {&lt;Excerpt from Counseling Log&gt;&#13;&#10;
+      &lt;Redacted&gt; had been telling me about his itchy neck for a while. He complained about indigestion too; one time I saw him take a bunch of digestives. Who woulda thought that it’d turn out to be such a serious issue? I never knew I’d be the one to witness that horrible moment.&#13;&#10;
+      (Omitted)&#13;&#10;
+      &lt;Redacted&gt; and I were just chatting, but suddenly he stopped speaking. He was still scratching his neck. It was turning so red, I was getting worried. Then his neck started to turn at such a strange angle. Right then and there I realized the severity of the situation. There was no way he could’ve been putting his neck that way on his own. It looked like someone was forcefully twisting his neck...}
+      ]
+  </desc>
+    <desc id="7" openLevel="3">
+      [
+      {      And then, I heard a zip, like the noise of shredding paper, a foreign sound of something tearing. His head fell to the floor. I heard a dull thud.}
+      ]
+    </desc>
+    <desc id="8" openLevel="4">
+      [
+      {      Then as if enough hadn't happened already, something began to crawl out of his neck. Just like a butterfly emerging from a cocoon, tearing apart his headless body; the wings, the yellow trunk, the teeth that gnawed away his body; it's something I never want to see again, a being I'd hate to describe as something alive...}
+      ]
+    </desc>
+    <desc id="9" openLevel="4">
+      [
+      {      (Omitted) It seemed to be aware of me somehow. But it looked like it didn't have any reason to attack at that moment. It picked up his cranium and flew away, like a drone carrying honey.}
+      ]
+    </desc>
+    <desc id="10" openLevel="4">
+      [
+      {      ...I can still hear the sound of its jaw rattling and its wings beating.}
+      ]
+    </desc>
+    <desc id="11" openLevel="3">
+      [
+      {&lt;Worker Bee&gt;&#13;&#10;
+      Its appearance is clearly different from Queen Bee's, other than its color. It is capable of flight, but can only hover about 1 meter above the ground. It lacks antennae or eyes. A long appendage that appears to be an intestine drags behind its rear on the floor.&#13;&#10;
+      Worker Bees show only two forms of behavior: Delivering nutrients to the Queen, and proliferating. Upon encountering an employee, it uses its jaw to crush their head and then proceeds to inject a pupa into their body.}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="badMood">When the work result was Normal, the Qliphoth Counter lowered with a normal probability.</specialTip>
+      <specialTip openLevel="1" key="badMood2">When the work result was Bad, the Qliphoth Counter lowered with a high probability.</specialTip>
+      <specialTip openLevel="2" key="beeComing">When the Qliphoth Counter reached 0, $0 emitted red spores throughout the entire department.</specialTip>
+      <specialTip openLevel="1" key="spore">Upon observing the Abnormality, it has been confirmed that the spores attached to employees for a certain amount of time, and inflicted RED damage over that period. In addition, employees infested with spores were significantly slowed, and could not be healed by the regenerator or bullets.</specialTip>
+      <specialTip openLevel="3" key="beeing">When the HP of an employee infested with spores had depleted, a giant drone burst out of their body. The drone indiscriminately attacked nearby employees. From the corpses of attacked employees, more drones emerged.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <name>Worker Bee</name>
+    <codeId>T-04-50-1</codeId>
+  </child>
+</creature>

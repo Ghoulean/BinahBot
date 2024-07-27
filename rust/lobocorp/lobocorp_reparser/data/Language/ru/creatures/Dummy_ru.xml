@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id="100000">
+
+    <narration action="move">
+      #0 направился к камеру содержания аномалии $0 для выполнения задачи.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 - это манекен, считающий себя сотрудником этого комплекса.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Судя по всему аномалии $0 нравятся люди.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {$0 наворачивает круги вокруг сотрудника #0, но сотрудник #0 полностью сосредоточен на своей работе.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {$0 думает о центре вселенной.}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {Аномалии $0 очень жаль, что сотрудник #0 уже уходит. Судя по всему он хочет следовать за ним.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">0-00-00</codeNo>
+      <name openLevel="1">Заяц-неваляшка для обучающего режима</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/DummyPortrait</portrait>
+      <riskLevel openLevel ="1">Teth</riskLevel>
+      <openText>Аномалия-манекен, используемая для тренировки заступающих на пост управляющих.</openText>
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      Аномалия-манекен, используемая для тренировки заступающих на пост управляющих.
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      Ходит слух, что эта аномалия стала тренировочной из-за своей покорности и приручаемости. Эту аномалию зовут зайцем-неваляшкой, но он ненавидит морковь. А ещё он любит людей. И при побеге пытается следовать за последним работавшим у него сотрудником.
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      <!--특수 상태-->
+    </desc>
+
+    <desc id="4" openLevel="3">
+      <!--특수 상태-->
+    </desc>
+
+    <record openLevel="1">
+      <!-- 관찰기록 -->
+    </record>
+
+    <record openLevel="2">
+      <!-- 관찰기록 -->
+    </record>
+
+    <record openLevel="3">
+      <!-- 관찰기록 -->
+    </record>
+
+    <specialTipSize size="1">
+      <specialTip openLevel="1" key="tutorial">Работа на подавление понижает уровень счётчика Клипот у аномалии $0.</specialTip>
+    </specialTipSize>
+
+  </observe>
+</creature>

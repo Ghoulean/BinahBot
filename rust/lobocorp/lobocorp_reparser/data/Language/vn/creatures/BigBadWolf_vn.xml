@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id ="100033">
+
+    <narration action="move">
+      #0 is going into $0's containment unit to begin the task.
+    </narration>
+
+    <narration action="start">
+      [
+      {#0, #0, By any chance, is there a chubby baby pig in this place? Oh, it’s nothing. He was my friend. I just want to see how he’s doing now.},
+      {#0, will you open this door, please? I won’t hurt anyone, I’m just a little bit hungry.}
+      {#0, I will give you something good if you let me out!}
+      {I am big bad wolf. I will eat you all and get out of this place!}
+      {#0, I’m telling this only to you. If you ever build a house, make it sturdy brick house.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 vividly remembers the moments when its belly is ripped open, and guts spilled out.},
+      {$0 likes meat. He used to be always hungry, now he wants to be always full.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 is suffering from chronic indigestion. The origin of this problem goes back to very, very far past…...},
+      {According to employees who have been into $0’s stomach. It is a dark, empty, and lonely place.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {“I have very big teeth.”},
+      {“I can blow this room away with one breath!”}
+      {“Open the door, sweetheart. I have brought gifts from the forest.”}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">F-02-58</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/BigBadWolf</portrait>
+
+      <name openLevel ="1">
+        Big and Might be bad Wolf
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>Actually I didn’t really care. I must be called Big Bad Wolf. </openText>
+
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {A wolf with sparsely damaged fur. It is bipedal, and capable of communication to some extent. It always tries to devour employees and escape. Such actions are easily preventable, since it shows obvious signs in behaviors and conversations before doing so, which makes this abnormality fairly easy to manage.(“…That’s why I could slash the wolf’s belly and returned safely back here!” )}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {The accident happened in X, XX promoted awareness to employees. The situation went out of control at the moment Little Red Riding Hooded Mercenary and Big and Might be bad Wolf contacted. Avoid their contact at all cost. Considering the potential damage, it is rather wise to use some of the employees as living bait to distract them than allowing them to see each other.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Flesh, I had been yearning for it for a long time. It was so delicious. I saw some red piece of cloth sticking out from the wardrobe. I might have seen it from somewhere, or not, actually I didn’t really care. I must be called Big Bad Wolf. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {There are many stories in the world. But none is as disgusting as the wolf's story. Wolves are born with sin. They have no names. People call them "Big Bad Wolf". All wolves grow into a giant, ferocious, and hairy monster. Wolves should not eat other animals even if they are starving. Wolves should not cross the line when doing bad things. Wolves should be punished. Wolves should be examples. Wolves should not make friends……(Omitted)}
+      ]
+    </desc>
+
+
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">When the employee # 0 who has worked on F-01-57 completed the work, the Qliphoth counter is decreased. Then the employee was eaten by $0.</specialTip>
+      <specialTip openLevel="2" key="2">When the work result was bad, Qliphoth counter has decreased. Then the employee was eaten by $0.</specialTip>
+      <specialTip openLevel="2" key="3">When the employee finished instinct work while $0 was fed, $0 vomits all the employees who had been eaten before.</specialTip>
+      <specialTip openLevel="3" key="4">The Qliphoth counter decreased when a target that bleeds from the attack of F-01-57 enters the hallway of the containment room for $0.</specialTip>
+      <specialTip openLevel="3" key="5">When the F-01-57 entered the hallway of the $0' s containment room, the Qliphoth counter became zero.</specialTip>
+      <specialTip openLevel="4" key="6">Some employees reported that they heard a voice in the stomach of $0. We should rescue them by suppressing the escaped $0. It may be possible to contract to the F-01-57.</specialTip>
+    </specialTipSize>
+
+   
+
+  </observe>
+</creature>

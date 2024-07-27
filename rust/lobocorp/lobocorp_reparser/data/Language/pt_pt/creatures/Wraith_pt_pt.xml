@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100055">
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Muitos empregados morrem por causa da cognição da $0.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Quanto mais tempo #0 demorar, pior a situação irá ficar.},
+      ]
+    </narration>
+  
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-03-88</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Wraith</portrait>
+
+      <name openLevel ="1">
+        Variante de Refração Dimensional
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>O único aviso que pode ser dado é para serem cuidadosos e estarem atentos aos vossos arredores.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {É um estranho fenómeno que não pode ser detetado a olho nu.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Apesar de não poder ser visto, não quer dizer que não exista. A unidade de contenção têm XXX metros de comprimento, esse é o alcance cognitivo da Anormalidade. O único aviso que pode ser dado é para serem cuidadosos e estarem atentos aos vossos arredores. A região que é afetada pela a Anormalidade é como um vácuo, então respirar tornará-se impossível quando se entra na área de alcance. Em outras palavras, a entidade por si própria é um fenómeno de vácuo.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Registo da Morte do Empregado Chomsky&gt;&#13;&#10;Não tínhamos nenhuma maneira de verificar se a Anormalidade tinha escapado da unidade de contenção ou não. Um dia, subitamente um empregado identificado como Chomsky parou no meio de um corredor e não se moveu. Esse corredor encontrava-se cheio de pessoas que passavam de um lado para o outro, muitos demonstrando o seu descontentamento com o facto que Chomsky estava apenas ocupando espaço.&#13;&#10; E de repente o corpo do mesmo começou a flutuar a 3 metros de distância do chão. Os seus braços e pernas estavam estranhamente esticados, se ele estivesse no chão poderia até parecer que ele estava prestes a realizar uma performance ou algo do tipo. Todos no corredor pararam e ficaram a olhar para ele. Chomsky começou a gritar. Ninguém sabia o que fazer, alguns empregados tentaram puxa-lo para baixo pelas pernas, mas ele não se moveu. De repente, Chomsky parou de gritar. Após uns poucos momentos de silêncio, os dois empregados que estavam a tentar puxar-lo para baixo começaram a gritar, sangue escorria pelo corpo dele. As suas pernas e braços foram separados do corpo, deixando o desmembrado flutuando no ar. Pânico instaurou-se naquele corredor e todos começaram a fugir.}
+    ]
+  </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Como esta Anormalidade reconhece matéria ainda precisa de ser discutida. Atualmente, nós estamos a realizar pesquisas com tecnologias de ultravioleta que conseguem deteta-la utilizando olhos de camarões, mas a performance tem sido tudo menos satisfatória. Por agora, um bom método para lidar com a Anormalidade é para um empregado colocar um copo cheio até à metade com água no chão enquanto trabalham. Se a água começa a mover-se agitadamente, o empregado terá de parar o trabalho e sair da unidade de contenção imediatamente.}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Quando o resultado do trabalho foi Mau, o Qliphoth Counter diminuiu.</specialTip>
+      <specialTip openLevel="2" key="2">Quando o trabalho demorou 40 segundos ou mais, o Qliphoth Counter diminuiu.</specialTip>
+      <specialTip openLevel="2" key="3">Todos os empregados na instalação não são capazes de detetar a Anormalidade após escapar. Então o gerente deve ordenar uma supressão diretamente.</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

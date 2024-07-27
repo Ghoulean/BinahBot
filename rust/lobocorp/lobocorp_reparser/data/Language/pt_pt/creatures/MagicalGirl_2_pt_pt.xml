@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    5.28
+  -->
+  <info id="100039">
+
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+
+    <narration action="start">
+      [
+      {Quando $0 assume a forma de ovo, uma menina sorrindo pode ser vista lá dentro.},
+      {Alguns empregados pensam que $0 está presa dentro de algo que parece um ovo, mas na verdade foi ela que se trancou ali dentro.},
+      ]
+    </narration>
+
+
+    <narration action="mid1">
+      [
+      {O glamoroso padrão âmbar n'$0 pode impressionar os empregados as vezes.},
+      {A cor d'$0 é um dourado brilhante.}
+      ]
+    </narration>
+
+
+    <narration action="mid2">
+      [
+      {O mundo que $0 amava está agora a ser devorado por ela.},
+      {$0 costumava ter olhos tão vermelhos como o sol poente, mas a ganância consumiu tudo, deixando nada para trás.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {$0 rendeu-se à fome, e começou a devorar-se.}
+      {O dia em que a fome d'$0 parar será o fim de tudo.}
+      ]
+    </narration>
+
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-01-64</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/MagicalGirl_2</portrait>
+
+      <name openLevel ="1">
+        Menina Mágica
+      </name>
+
+      <name openLevel="3">
+        O Rei da Ganância
+      </name>
+
+      <riskLevel openLevel ="2">
+        WAW
+      </riskLevel>
+
+
+
+      <openText>
+        A tristeza dirá: "Desaparece! Morre!", mas o desejo quer eternidade. Uma imortalidade que não pode ser abolida!
+      </openText>
+
+
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {"O primeiro desejo começou com uma mordida de uma maçã doce. &#13;&#10;Nós fomos banidos do Éden por causa desse pecado. &#13;&#10;E agora nós estamos em um vasto pomar. &#13;&#10;O meu cesto é tão grande que todos os frutos do mundo não conseguiriam o encher. &#13;&#10;Mas é errado desejar por mel quando há flores? &#13;&#10;Afinal, nós nascemos para perseguirmos a felicidade."}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {Felicidade tornou-se em obsessão, obsessão tornou-se em ganância e a ganância endureceu como um âmbar dourado. A primeira semente do desejo foi originada do puro desejo pela felicidade. A semente, pequena no começo, cresceu cada vez maior e mais dura à medida que os dias iam passando. Um dia ela tornou-se em uma joia brilhante, enfeitiçado pelo seu brilho um peixe esfomeado engoliu-a, mas ela apenas fez o peixe ficar ainda com mais fome.&#13;&#10;Os desejos das pessoas muitas das vezes não são satisfeitos, a maioria são abandonados, mas eles nunca desaparecem. Enterrados no subconsciente, prontos para florescerem a qualquer momento.&#13;&#10;Foi apenas preciso uma pequena isca tocar a água para que o peixe esfomeado fosse até ela e a devorasse.&#13;&#10;A Menina Mágica, que agora já não era mais mágica, devorou muitas coisas: poder, dinheiro, honra e outras formas de prazer. Ela sempre engolia tudo que encontrava e agora age por pura ganância.&#13;&#10;Mas o seu desejo de quer ser feliz ainda está dentro dela, vindo ao de cima de vez em quando.&#13;&#10;Humanos acreditam que são seres racionais que conseguem-se controlar, mas isto não é verdade. Humanos nunca estão sobre controlo deles próprios. A Rei da Ganância sabe isto melhor do que ninguém.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="3">
+      [
+      {&lt;O Diário de Alguém&gt;&#13;&#10;&#13;&#10;Muitos de nós secretamente desejávamos por um herói.&#13;&#10;Eles disseram que costumava haver uma coisa chamada de o tratamento da alma. Como é ter uma alma doente? Nós não sabemos, somos todos saudáveis, mas talvez isto seja apenas uma trágica ilusão.&#13;&#10;Já houveram pessoas que tentaram proteger o mundo. Nós todos nos lembramos deles, nós todos nos lembramos de como eles foram destruídos. Nós sabemos que desejo destrói tudo.&#13;&#10;Nós já não acreditamos mais em algo, nem desejamos por um milagre.&#13;&#10;Não pensamos muito sobre o porquê que eles mudaram e não os culpamos. Nós agora sabemos que infindável desejo traz desespero.&#13;&#10;Às vezes eu sinto-me muito em baixo, mas não sei de onde essa dor vem.&#13;&#10;Muitos de nós secretamente desejamos por um herói que nos salve.}
+    ]
+  </desc>
+
+    <desc id="4" openLevel="4">
+      [
+      {"O sofrimento do mundo é profundo. O desejo vai mais fundo do que a agonia. A tristeza dirá: "Desaparece! Morre!", mas o desejo quer eternidade. Uma imortalidade que não pode ser abolida!"}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="monster">Quando o resultado do trabalho foi Normal, o Qliphoth Counter diminuiu com uma probabilidade Média.</specialTip>
+      <specialTip openLevel="1" key="monster2">Quando o resultado do trabalho foi Mau, o Qliphoth Counter foi reduzido com uma probabilidade Elevada.</specialTip>
+      <specialTip openLevel="2" key="swallow">O padrão comportamental d'$0 e de engolir tudo que esteja no seu caminho após escapar. Durante o período de supressão, preste atenção para aonde a Anormalidade está virada.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

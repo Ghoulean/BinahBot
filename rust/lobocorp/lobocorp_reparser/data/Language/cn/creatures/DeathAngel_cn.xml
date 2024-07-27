@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100015">
+
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+
+    <narration action="start">
+      [
+      {寻求救赎的员工#0在一片光芒之中踏入了“$0”的收容单元。}
+      {“你为何而犹豫？我正在创造奇迹。”}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {尽管“$0”看上去像个胎儿，但这并不意味着它需要被人照料。}
+      {在钟声响彻12次后，炫目的光芒吞没了整个设施，那是对使徒们的救赎之光。}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {“$0”的身边只有寂静。}
+      {“$0”将身边的光芒和声音一并带走。}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {“$0”来此救赎众生。}
+      {“$0”来自世界的终末，亦将走向一个全新的世界。}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {“#0，为什么要害怕？在达成使命之前，我不会抛弃你的。”}
+      {“#0，不必害怕。我与你同在，我会给你救赎。”}
+      {“我听见了你的哭喊，你的心声早已传到我的耳边。#0，你正呼唤着我。”}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="5">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">T-03-46</codeNo>
+      <name openLevel="1">白夜</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/DeathAngel</portrait>
+      <riskLevel openLevel ="2">ALEPH</riskLevel>
+      <openText>&lt;color=#F7F7F7&gt;起来吧，我的仆从，欢唱着迎接我&#13;&#10;的到来。&lt;/color&gt;</openText>
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {这个异想体形似一个新生的胎儿，但它的样貌非常怪诞，以致于人们很难把它和一个正常的胎儿联想到一起。同它对话是可行的，但我们不能通过常规的方式与其进行交流。它所说的每一句话都会在收容单元内产生极为响亮的回声。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {&lt;color=#F7F7F7&gt;我的门徒，受我祝福之人，一旦你们追随我的步伐，并找到了我，那就意味着你们已经远离了邪恶之道。到了那一天，我会降临到你们生活的大地之上，而你们的罪孽将由我一手赦宥。&lt;/color&gt;} <!-- 폰트!!! 바꿔야돼!!!!!!!!!!!!!!!!!!!!!!-->
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {曾被它治愈过的12名员工将戴上鸟喙面具并经历一系列可怕的突变，它们的身形会变得更为庞大，后背上长出一对洁白的翅膀。它们拿着能够“赦免”一切罪孽的十字架徘徊在设施中，为它们所遇见的每一名员工带来“救赎”。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {&lt;color=#F7F7F7&gt;聆听我的教诲，摈弃你的血肉，才能迎来新生。&lt;/color&gt;} <!-- 폰트!!! 바꿔야돼!!!!!!!!!!!!!!!!!!!!!!-->
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {它的使徒将化身为传教士，向身边的人们转播“福音”，为身边的人们带来“新生”。它们......}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="4">
+      [
+      {&lt;color=#F7F7F7&gt;时机已然成熟。古老的钟声再度响彻，全新的世界即将来临。起来吧，我的仆从，欢唱着迎接我的到来。&lt;/color&gt;&#13;&#10;&#13;&#10;&lt;color=#F7F7F7&gt;我乃死，我乃生。我为暗，我亦为光。&lt;/color&gt;}
+      ]
+    </desc>
+
+   
+
+  <specialTipSize size="5">
+      <specialTip openLevel="0" key="1">一旦“$0”的逆卡巴拉计数器归零，它的使徒就会回来。</specialTip>
+      <specialTip openLevel="0" key="2">&lt;警告&gt;不像其他异想体，“$0”的逆卡巴拉计数器会周期性地减少。建议经常派遣员工与其互动并检查它的状态。</specialTip>
+      <specialTip openLevel="1" key="3">当工作结果为优时，“$0”的逆卡巴拉计数器将会增加。同时，设施内所有的员工都会恢复生命值和精神值。</specialTip>
+      <specialTip openLevel="2" key="4">当工作结果为良时，“$0”的逆卡巴拉计数器有一定概率增加。同时，该部门的所有员工都会恢复生命值和精神值。</specialTip>
+      <specialTip openLevel="3" key="5">当工作结果为差时，“$0”的逆卡巴拉计数器将会减少。同时，该部门的所有员工都会持续受到“$0”的伤害。</specialTip>
+    </specialTipSize>
+
+  
+  </observe>
+
+  <etc>
+    <!--UI막는 이벤트 때 띄울 대사-->
+    <param key="escape" index="0">
+      毋须恐惧，我与你同在。除非我允许，否则你永远不能离开。
+    </param>
+    <param key="time" index="1">
+      切莫相信时间，我将为你指明道路。
+    </param>
+    <param key="manual0" index="2">
+      休得否认我的存在，我就在你的眼前。
+    </param>
+    <param key="manual1" index="3">
+      我之事迹，无人知晓，亦无处可寻。
+    </param>
+  </etc>
+</creature>

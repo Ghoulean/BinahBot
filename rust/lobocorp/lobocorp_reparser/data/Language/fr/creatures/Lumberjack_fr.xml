@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100051">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement du $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {#0 n’a pas à craindre le $0 tant qu'il se montre froid.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 récolte des cœurs. Il pense que si son cœur se met à battre, il serait capable d'aimer.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Des choses qui auraient pu être des cœurs sont à présent fourrées sans distinction dans le $0.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">F-05-32</codeNo>
+      <name openLevel="1">Bûcheron au Cœur Tendre</name>
+      <portrait openLevel="1">Sprites/Unit/creature/Lumberjack</portrait>
+      <riskLevel openLevel="2">HE</riskLevel>
+      <openText>C'est une forêt pleine de cœurs. Peu importe combien il en abat, la forêt reste toujours dense.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Une Anomalie mécanique dont le corps humanoïde est entièrement fait d’acier galvanisé. Il tient une hache géante à deux mains, mais ne montre aucune activité, comme s'il était incapable de bouger.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Les amis étaient imparfaits d'une manière ou d'une autre, alors ils s'entraidaient pour combler ce qui leur manquait. Ils se sont lancés dans un voyage pour réaliser leurs souhaits. L'Épouvantail voulait un cerveau, l’Homme de Fer-Blanc voulait un cœur, le Lion Peureux voulait du courage et Dorothy voulait rentrer chez elle.&#13;&#10;
+      Celle qu'ils pensaient être la grande magicienne a donné à l’Homme de Fer un cœur de plomb.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {“Mais vous êtes une machine, cela signifie que vous avez été construit pour servir les humains. Vous ne comprenez pas ? Une machine n’a pas besoin de cœur. Félicitations pour être arrivé jusqu’ici cependant. Prenez ça comme dédommagement. Assurez-vous de dire à tous ceux qui vous attendent que votre souhait s’est réalisé exactement comme vous le souhaitiez.”&#13;&#10;&#13;&#10;Certains sont partis satisfaits. Les amis s’en allèrent et ne furent jamais revus. Le plomb dur et froid était déprimant.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {L’Homme de Fer ne pouvait pas être d'accord avec ça. En colère, il frappa le cœur de la magicienne de sa hache. Ce cœur, si chaud, battait vigoureusement. Il enfonça le plomb dans la poitrine désormais vide de la magicienne. Pour la première fois de sa vie, l’Homme se mit à rire à cette vue et ressentit un plaisir qu'il n'avait jamais connu auparavant.&#13;&#10;&#13;&#10;Attrapant un gros morceau de cœur mou, il le fourra dans sa «poitrine». Il n'y aura jamais assez de cœurs. Autrefois bûcheron, il abat désormais des gens au lieu d'arbres. C'est une forêt pleine de cœurs. Peu importe combien il en abat, la forêt reste toujours dense. Et une personne gentille porte un cœur plus chaleureux.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Lorsque le cœur est perdu, le bûcheron tombe à genoux sous le coup de la tristesse, serrant sa poitrine vide. Comme s'il implorait qu’on ne lui prenne pas la seule chose qu’il lui reste.}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="1" key="2">Lorsqu’un employé de Tempérance 3 ou plus termine son travail, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="2" key="3">Si un employé entre dans l’Unité de Confinement alors que le Compteur Qliphoth est à 0, il mourra immédiatement. Ensuite, l’Anomalie s’échappera.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

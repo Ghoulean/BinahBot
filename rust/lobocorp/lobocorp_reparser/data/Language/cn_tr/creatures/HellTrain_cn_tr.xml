@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300102">
+
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-86</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/HellTrian</portrait>
+
+      <name openLevel ="1">
+        地獄特快車
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>
+        當時候到了, 就像一輛火車快要到站一樣, 它吹響了它的喇叭.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {站務員賣著一張抵達不了終點的列車車票. 沒有任何的時刻表, 只有幾道令人毛骨悚然的燈光在那閃爍.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {#1 以及 #2 的燈亮了. 你的腦袋清醒了.&#13;&#10;#3 的燈亮了. 你的腦袋清醒了, 而且傷口也癒合了.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {#4 的燈亮了. 你能聽見了在遠方的火車吹響著喇叭. 所有在部門裡的員工狀態全都改善了.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {當時候到了, 就像一輛火車快要到站一樣, 它吹響了它的喇叭. 它穿過了那無盡了隧道, 帶走那些尚存一息的員工.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">每過 30 秒, 收票處的燈就會亮起一盞. 車站總共會亮起四次. 當員工收到車票後, 燈泡就會重置.</specialTip>
+      <specialTip openLevel="2" key="2">當在 1 個燈亮時收到一張車票, 該員工將會恢復 HP 及 SP.</specialTip>
+      <specialTip openLevel="2" key="3">當在 2 個燈亮時收到一張車票, 該員工將會恢復 HP 及 SP.</specialTip>
+      <specialTip openLevel="2" key="4">當在 3 個燈亮時收到一張車票, 所有與該員工同個部門的員工將會恢復 HP 及 SP.</specialTip>
+      <specialTip openLevel="2" key="5">當在 4 個燈亮時收到一張車票, 所有在設施內的員工將會恢復 HP 及 SP.</specialTip>
+      <specialTip openLevel="2" key="6">當第 4 個燈光亮起後又再透過異常工作亮起一次燈, 列車將會發動穿過整個設施並對所有在路徑上的員工造成 B 傷害. 在發動後, 所有的燈光就會重置.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

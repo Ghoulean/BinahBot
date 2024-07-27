@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100060">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {$0 is always asleep in the Containment Unit.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0’s dream is sublime, showing everything.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 grants sweet dreams to all; but in reality, this sweetness is unreachable and chips away at the hope of the dreamer.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {“I always wanted to sleep. I just want to have a happy dream.”}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-02-99 </codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/VoidDream</portrait>
+      <name openLevel="1">
+        Void Dream
+      </name>
+      <riskLevel openLevel="1">
+      TETH
+      </riskLevel>
+      <openText>Please, eat my dreams.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {“I wished to sleep eternally.”&#13;&#10;“So don’t bother trying to wake me up again.”}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {An Abnormality whose form sports a goat’s fur and horns.&#13;&#10;It is not unique in regards to its appearance with the exception of several colorful eyes embedded upon its body.&#13;&#10;Gaining information about this Abnormality is expected to be difficult due to its ceaseless slumber.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {+ The following counseling log illustrates how $0’s ability to make any person slumber psychologically affects the employees. The results indicate that we cannot utilize this ability to reduce the mental corruption of our staff. Please refer to this record for further research.&#13;&#10;
+      Vincent: Please, make it quick… I gotta sleep...&#13;&#10;
+      Counselor: Is that because of the Abnormality?&#13;&#10;
+      Vincent: Yeah, I remember seeing something that looked like a sheep pass by me, and… well, I fell asleep. Since then I’ve been like this.&#13;&#10;
+      Counselor: Do you remember the dream you had back when that occurred?&#13;&#10;
+      Vincent: Oh, I could never forget that dream…&#13;&#10;
+      Counselor: Could you please tell me as much as you can about it?&#13;&#10;&#13;&#10;
+      Vincent: It was a happy, wonderful, sweet dream. That’s all the words I need to describe it. Heck, I even felt glad to be working for this company. And I saw a guy who’s not with me anymore, he was right next to me…&#13;&#10;
+      (Omitted)&#13;&#10;
+      …Because of that I couldn’t get a hold on myself when I woke up.&#13;&#10;&#13;&#10;
+      Counselor: I see. I’ve heard a little about you from the other employees recently. All of them say that the only thing you do outside of work hours is sleep. Could you please tell me why?&#13;&#10;
+      Vincent: Don’t you understand what I’m talking about? I just want to have that dream again. That dream where I was there with him. Recalling those happy moments… But I couldn’t go back no matter how many times I slept. I slept, and slept, and slept, and slept, and slept, and yet…!&#13;&#10;
+      Counselor: ... I see. I’d advise you to take some rest in your room.&#13;&#10;
+      Vincent: ...They said everyone who woke up after hearing that Abnormality’s sound went mad. People think it’s because they all had a horrible nightmare they couldn’t handle, but it’s actually the other way around.&#13;&#10;
+      The reality they had to wake up to was so terrible that the soul gave up on waking life.&#13;&#10;
+      As you know, time flows differently in dreams. A mere instant of waking life constitutes an eternity in the dreamworld. &#13;&#10;
+      Maybe, if $0 were to put me to sleep once again, then I might just have that wonderful dream anew.&#13;&#10;
+      Counselor: ... I’ll prescribe you some sleep medicine. I assure you that it’ll help you sleep. Please get some rest for now.&#13;&#10;
+      Finally, you will be prohibited from entering the Abnormality’s Containment Unit from now on. }
+    ]
+  </desc>
+    <desc id="4" openLevel="3">
+      [
+      {A demon must change its shape to deceive others.&#13;&#10;A demon must grant sweet dreams to deceive others.&#13;&#10;A crack appears in the human mind when it is shown the dream it yearns for.&#13;&#10;A demon will never miss this chance to bring one to their doom.&#13;&#10;&#13;&#10;&lt;i&gt;Don’t say such complicated things, don’t say those scary words.&#13;&#10;I just want to grant people sweet dreams;&#13;&#10;Grant them the enrapturing dreams they want.&#13;&#10;Those who’ve had my dreams are destined to come back to me.&#13;&#10;So, just close your eyes…&lt;/i&gt;}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {In the dream, your smile was beaming, and we chatted with such liveliness.&#13;&#10;When I came back to waking life, I realized I was back in a world in which you no longer existed; I felt a void as big as that fleeting happiness I felt in my dream fill my heart.&#13;&#10;I closed my eyes and forced myself to sleep, but morning was still to come no matter what.&#13;&#10;I think that’s when my soul started to crumble.&#13;&#10;In fact, I was already broken since the day I parted with you, but I’ve only been acting fine. My soul was already shattering itself into fragments after the passing of that day.&#13;&#10;Once I saw you again, my yearning for you began to bear down too heavily, I couldn’t ever go back to my old self again.&#13;&#10;Counseling… Rest… All of it was useless.&#13;&#10;I spent days by myself, agonizing until I finally realized it.&#13;&#10;It lured me with an unforgettable bait.&#13;&#10;That was the price for eating away my nightmares. And then it left me with nothing but void, so I would have no choice but to return to it.&#13;&#10;Then… I have lost to it. I don’t want to know anything anymore.&#13;&#10;&#13;&#10;Please, eat my dreams.}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Any employee with Temperance under Level 2 will fall asleep after working on the Abnormality, never to reawaken.</specialTip>
+      <specialTip openLevel="2" key="2">When the work result was Bad, the Qliphoth Counter decreased.</specialTip>
+      <specialTip openLevel="2" key="3">When $0 escaped, its light put every employee who came into contact with it asleep. They woke up when the manager shook them.</specialTip>
+      <specialTip openLevel="2" key="4">$0 eventually returned to its Containment Unit of its own volition. </specialTip>
+      <specialTip openLevel="2" key="5">&lt;WARNING&gt; Attempts to suppress the Abnormality will provoke it, transforming into an extremely hostile entity. (This second form is designated as $0-1).</specialTip>
+      <specialTip openLevel="3" key="6">$0-1 occasionally crowed, dealing WHITE damage to an entire department. Employees who were asleep due to the Abnormality’s light awoke and panicked after hearing $0-1’s sound. </specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

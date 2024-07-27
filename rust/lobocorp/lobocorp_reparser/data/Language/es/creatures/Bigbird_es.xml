@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id ="100008">
+
+    <narration action="move">
+      #0 esta designado a la sala de contención de $0.
+    </narration>
+
+    <narration action="start">
+      [
+      {Las características más notables de $0 son sus numerosos ojos que se extienden por todo su cuerpo y su brillante lámpara},
+      {De hecho, no sabemos por qué $0 mata a la gente.},
+      {El hecho de que $0 no pueda volar es un gran beneficio. Si pudiera, la mitad de los empleados se habrían quedado sin cabeza.},
+      {Un pensamiento repentino golpeó a $0. ‘Si mato a las criaturas primero, ninguna criatura será asesinada por la bestia.’ Entonces, el bosque encontró paz.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {El sonido espantoso de los ojos parpadeantes y la lámpara encendida está llenando la cámara de contención.},
+      {Los ojos de $0 y la lámpara iluminan la cámara oscura como estrellas.},
+      {Los pupilas de los ojos de $0 apuntan a #0 de repente.},
+      {Frente a $0, #0 se encoge nerviosamente y se contrae.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {La parte posterior de #0, se puede oír un sonido estruendoso de su vello del ave negro. },
+      {Se escuchan chillidos esporádicos del ave.},
+      {$0 lloriquea detrás de #0 como si se sintiera angustiado y ansioso.}
+      {$0 está vagando alrededor de #0, llorando.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {#0 gira su cabeza para evitar el contacto visual. En su lugar ve una lámpara encendida.},
+      {Una lámpara brillante deslumbrante está frente a #0 que ha girado su cabeza para evitar ver $0.}
+      {La decisión de #0 de no enfrentar $0 fue una muy buena elección.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {Los ojos de $0 se están volviendo carmesí.},
+      {Se aproxima $0 mientras haces sonidos amenazantes.},
+      {$0 está haciendo sonidos con sus dientes.}
+      {$0 está caminando hacia #0.}
+      ]
+    </narration>
+
+    <narration action="death">
+      [
+      {La cabeza de #0 está rodando alrededor de la cámara de contención.}
+      {La cabeza de #0 fue arrancado fácilmente.}
+      {$0 arrancó la cabeza de #0 con su pico como si estuviera arrancando malezas.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-02-40</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/BigBird</portrait>
+     
+      <name openLevel ="1">
+        Gran Ave
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>Un mes después llegamos a la conclusión, de que no había tal cosa como la bestia.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Es un ave con muchos ojos, deambulando por bosques oscuros con una linterna que nunca se apaga en la oscuridad.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {La criatura mirará fijamente y luego morderá la cabeza a cualquiera -no importa cuán joven o viejo- se encuentra. En lugar de alas como un pájaro normal, la criatura tiene brazos largos con los que puede recoger cosas. Un pequeño pájaro que parece un globo ocular siempre sigue a la criatura alrededor.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="1">
+      [
+      {Hay una historia de una bestia que se encuentra en un bosque profundo, oscuro y vacío que atrae a las criaturas.&#13;&#10;Para proteger a todas las criaturas de esta gran bestia, Gran Ave hizo una mecha con todas sus plumas. Con esa mecha hizo una lámpara que ardería para siempre.&#13;&#10;Con la lámpara eternamente encendida, vagó por las criaturas de advertencia del bosque para no adentrarse en el bosque.&#13;&#10;Gracias al Gran Ave, el número de criaturas que fueron atacadas disminuyó. Pero aún así, Gran Ave se sintió mal por las criaturas que murieron en manos de la bestia.&#13;&#10;Gran Ave tuvo un pensamiento, “Si mato a las criaturas primero, la bestia no las matará!”&#13;&#10;Después de eso, corrieron rumores sobre un monstruo que te arrancaría la cabeza.&#13;&#10;Se dice que el monstruo mira a las víctimas cuidadosamente para ver si son la bestia que atrae a las criaturas.&#13;&#10;Este cuento es de un pueblo de &lt;Ubicación Redactada&gt; area. Es el cuento popular más antiguo de la ciudad y fue contado por el habitante más antiguo de la ciudad &lt;Redactado&gt;. Aunque existe la suposición general de que se contó la historia para evitar que los niños ingresen al bosque, no se sabe con certeza quién comenzó la historia.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {El cuento no era mentira. “Encontramos el Gran Ave en el bosque después de todo. Y después buscamos ‘la bestia que atrae a los humanos'. Miramos en cada rincón y en cada esquina. Un mes después, concluimos, no había tal cosa como la bestia, aparte del Gran Ave.”}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {“La anormalidad es, sin duda, inconsciente del concepto de la muerte. Las anormalídades en esta compañia se pueden clasificar en dos. Primero, criaturas que saben muy bien qué es la muerte y atacarán para matar. El segundo tipo de criaturas es consciente del concepto de muerte pero no tiene mala voluntad en su ataque. Esta anormalidad no es ninguno de los dos. Para esta criatura, la muerte en sí misma es la salvación. Si la criatura le arrancó la cabeza a una niña perdida en el bosque, no cometió asesinato. Salvó a la niña de un monstruo.”}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="1">
+      [
+      {“No podemos hacer nada cuando la criatura tiene los ojos abiertos. Mira fijamente. Cuando se mantiene la mirada… (Omitido) Así que primero tenemos que ponerlo a dormir. Cuando todos los ojos se duermen, podemos comenzar nuestro trabajo.”}
+      ]
+    </desc>
+
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">Cada vez que 5 empleados murieron en las instalaciones, el contador Qlifot disminuye. Sin embargo, no reconoció la muerte de empleados que fueron eliminados con balas de ejecución.</specialTip>
+      <specialTip openLevel="2" key="2">Cuando el resultado del trabajo fue malo, se redujo el contador Qlifot.</specialTip>
+      <specialTip openLevel="2" key="3">Cuando el resultado del trabajo fue bueno, el contador Qlifot aumentó.</specialTip>
+      <specialTip openLevel="2" key="4">Cuando escapa $0 de la unidad de contención independientemente del contador Qlifot cuando la situación se convirtió en una emergencia de nivel 2.</specialTip>
+      <specialTip openLevel="3" key="5">Hubo un apagón en el departamento donde $0 estaba escapándose. Los empleados de un departamento con un apagón pueden quedar encantados por $0.</specialTip>
+      <specialTip openLevel="2" key="6">Parecía que los objetivos encantados estar muy seguros ya que recibían menos daño. Sin embargo, después de una cierta cantidad de tiempo, se trasladaron a donde estaba $0 y murieron a causa de su ataque.</specialTip>
+      <specialTip openLevel="2" key="7">Los empleados encantados fueron liberados de su trance tan pronto como estuvieron fuera del área del departamento que tuvo un apagón.</specialTip>
+    </specialTipSize>
+
+ 
+    
+    </observe>
+</creature>

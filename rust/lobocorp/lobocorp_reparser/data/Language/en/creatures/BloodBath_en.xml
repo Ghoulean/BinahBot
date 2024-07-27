@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100027">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {“You know, after joining Lobotomy Corporation I really feel like I have my life back together.”},
+      {#0 can feel the sadness of $0.},
+      {#0’s wrist aches when they look at $0.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {“Depression is a disease of the mind. We are the first doctors who discovered how to be happy.”},
+      {#0 stares at the despair which floats in the bath.},
+      {#0 senses overwhelming despair and sadness.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {“Medicine to heal the body has developed at such a tremendous rate, meanwhile treatments for the mind lie stagnant.”},
+      {#0 can see upcoming hardship and failure.},
+      {#0 can see upcoming hardship and many ordeals in the future. No matter what they do, it will only result in failure.}
+      ]
+    </narration>
+    <narration action="special_ability">
+      [
+      {#0, deprived of all reason and hope to live, doesn’t resist the hands which reach out to them.},
+      {#0’s dejection concentrates into a single point.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-05-51</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/BloodBath</portrait>
+      <name openLevel="1">
+        Bloodbath
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>Many hands float in the bath. They are the hands of the people I once loved.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {An Abnormality which contains the pain of all those who couldn’t take their sorrow in stride.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {A bath of a gloomy color, topped up with blood. The blood is always kept in equilibrium; it never overflows. Only despair can be found in its sunken depths. Unbearable depression overwhelms all who look into the bath.&#13;&#10;&#13;&#10;In an instant, it can pull a nearby person into it. It bears no considerable strength, but those who suffer from its crushing depression do not resist. It devours the victim until nothing remains except for their wrists. All the hands which float in the bath are pale, exsanguinated; they stretch into the air and reach out as if asking for help. }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {&lt;i&gt;It is no easy feat to cut one’s wrist with a sane mind. A strong will is needed with the resolve to make multiple attempts. Only when it is sliced as if one were simply cutting a mere slab of meat, can they achieve this. Only when one yearns for death that much, can they succeed.&lt;/i&gt;}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;i&gt;I eternally regret not realizing to ask her why she needed that industrial knife. I eternally regret not realizing that she was hiding her wrists with long sleeves. I eternally regret not realizing that she always took extra care to hide them whenever I spoke with her. I eternally regret not realizing that I never heard her cheerful laughter anymore, and that she roamed around the company with lifeless eyes more and more often.&lt;/i&gt; }
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {&lt;i&gt;I can’t even imagine how painful it would be to cut your wrist. I found out that the only reason she could manage to do something like that was she cut hers straight through.&lt;/i&gt;}
+      ]
+    </desc>
+    <desc id="6" openLevel="4">
+      [
+      {&lt;i&gt;We always popped open a bottle of wine every time we succeeded. It became one of our customs. She told us that it only takes one slight misstep to fall into indifferent habit if we get too used to success. Thus, we should always smile, rejoice, and celebrate every little thing in the wake of success. And we should never neglect failure, as success can be born from a pile of failures.&#13;&#10;When I saw the latticework of scars on her wrist, I was reminded of our wine cabinet. We had used up so many of the bottles; there was only one left.&#13;&#10;
+      That day, I popped the cork off the last one.&lt;/i&gt;}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="noRationalist">When #0, who had Level 1 Fortitude, completed the work process, a hand stretched out of $0 and dragged #0 into its depths. The same phenomenon occurred with an Agent who had Level 1 Temperance.</specialTip>
+      <specialTip openLevel="1" key="manyHands">A pale hand surfaced from $0 after it had absorbed an employee. As the number of hands increased, the number of PE-Boxes produced with it also increased.</specialTip>
+      <specialTip openLevel="1" key="threeHands">&lt;Caution&gt; When $0 has three hands, the safety of the next worker cannot be guaranteed. It seems $0 will absorb employees regardless of the work result or virtue levels.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

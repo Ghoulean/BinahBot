@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100048">
+
+    <narration action="move">
+      #0 designated to $0 containment room.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 sometimes sheds helpless tears, not saying anything to $0.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 lives in the past, just like her sisters.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-01-73</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/KnightOfDespair</portrait>
+
+      <name openLevel ="1">
+       Magical Girl
+      </name>
+
+      <name openLevel ="3">
+        The Knight of Despair
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText> All that remained was the hollow pride of a weathered knight.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {An Abnormality of despair which has gone through a repeated cycle of trust and betrayal; leaving only back black tears as its emotion.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {It was a former hero, a guardian of justice in the past. It protected the king, the state, the city, and those in need.&#13;&#10;A knight had to uphold the laws of god and pursue valor, chivalry, and justice. But after a long history of conflict, the knight realized that nothing was truly upheld. The truth changed the people.&#13;&#10;The one who fought for justice became evil when they realized there was no evil left in the world. The one who dreamed of a world of peace turned greedy and started devouring everything.&#13;&#10;Like them, many others who once thought to never change became altered and disappeared.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Who said a knight never cries? Have you ever seen tears flowing from despair, not sadness?&#13;&#10;The endless stream of sorrow turned the eye sockets into empty shells. From inside the shells, black diamonds sometimes fall down like ashes.&#13;&#10;As if its will to protect still remains, it is obsessed with protecting even while imprisoned. All that remained was the hollow pride of a weathered knight. People who see the hero that can’t abandon the past are filled with pity.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {When Justice turns its back once more, several dozen blades will linger on without a purpose. Shame of failing again to protect, rage against the world will eventually lead to the blades pointing to those he could not protect.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {A knight who wanted to redeem himself by saving others is now called a knight of despair; forgotten from the minds of the people, just like the others.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">The first employee who completes the work with Good results will receive $0‘s blessing. (From then on, the employee will be named O-01-73-1.)</specialTip>
+      <specialTip openLevel="2" key="2">O-01-73-1 could only do suppression as work. Also, thanks to the blessing, Red, White, and Black type damage dealt to O-01-73-1 will be reduced to half. Only Pale type damage will be doubled.</specialTip>
+      <specialTip openLevel="2" key="3">Blessing dissipates when O-01-73-1 dies or panics. After the blessing disappears, a new blessing can be given to another employee.</specialTip>
+      <specialTip openLevel="1" key="4">When O-01-73-1 panics and it escapes from the Containment room. The same results happen when O-01-73-1 dies. </specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

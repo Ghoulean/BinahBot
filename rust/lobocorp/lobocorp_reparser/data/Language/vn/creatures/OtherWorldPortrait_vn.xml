@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300104">
+
+    <narration action="move">
+      #0 is going into $0's containment unit to begin the task.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-91</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/OtherWorldPortrait</portrait>
+
+      <name openLevel ="1">
+        Portrait of Another World
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <openText>
+        This portrait captures a moment. It is what we must lose.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {As time passes, we change. We may become disabled, lose our minds, be consumed by overwhelming violence or to disappear, to never be seen again.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {This portrait captures a moment. It is what we must lose. The employee who sees their own healthy self will unconsciously start to crave. If life can always be like this, if only I can always have a bright smile just like in the portrait.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {The employee will start feeling strange. The employee will not get hurt by any damage or attacks. However, other employees will take all the afflicted pain instead.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {It was not the self, but the portrait that started becoming increasingly hideous and ugly. The employee eventually stops looking at the portrait and decides to enjoy all the unexpected luck.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {But miracles don't last forever. When all the employees that bore the employee's pain and damage perished, it was the employee's turn to die. Once dead, the portrait turned blank.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">The first employee to see the Abnormality will be portraited on the canvas.</specialTip>
+      <specialTip openLevel="2" key="2">All damage done to the employee will be taken by another employee in the facility. (However, the effect does not apply to damage that exceeds the maximum HP of the employee engraved on the canvas.) They will receive increased damage. </specialTip>
+      <specialTip openLevel="2" key="3">Once damaged employee dies, another employee will their spot. When no more employees remain, the employee painted in the portrait will die.</specialTip>
+      <specialTip openLevel="2" key="4">If a new employee is shown on the canvas, the previous employee will be killed.</specialTip>
+      <specialTip openLevel="2" key="5">If the employee who is in the portrait is killed other than by the portrait, the portrait will return its original state.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

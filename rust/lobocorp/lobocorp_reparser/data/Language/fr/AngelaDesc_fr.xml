@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--  #0 -> 직원 이름
+  #1 -> 작업 이름 (을)
+  #2 -> 환상체 이름
+  #3 -> 죽는 이유
+  #4 -> 특수작업
+  #5 -> 작업 이름 (을 이 업다)
+-->
+<root>
+  <!-- 
+  Normal - 일반적인 상황
+  Danger - 위급 상황 
+  Position up 상단 UI
+  Position down 하단 UI
+
+  상단 UI에 올라오는 것은 전부 하단 UI에 등장. 
+
+up 중요한 - 상단 // 둘다 하단ㅇ에도
+down 별로안중요 - 하단에만
+
+  normal type num 1 = 일상
+  type num 2 = 에너지 절반 이상
+  type num 3 = 에너지 다 모았을 때
+  type num 4 = 환상체에게 작업을 시작할 때
+  type num 5 = 환상체에게 작업을 끝냈을 때
+  type num 6 = 작업을 성공했을 때
+  type num 7 = 게임오버 된 후에 다시 시작했을 때 
+
+  danger type 
+              num 1 = 사무직 직원이 다 죽었을 때 (게임오버)
+              num 2 = 환상체의 기분이 좋지 않을 때
+              num 3 = 환상체의 작업이 실패했을 때 (특수공격)
+              num 4 = 환상체가 탈출했을 때
+              num 5 = 직원들이 패닉에 빠졌을 때
+              num 6 = 직원들의 멘탈수치가 좋지 않아 졌을 때 경고
+              num 7 = 직원이 죽었을 때
+              num 8 = 체력 피해 때문에 죽었을 때
+              num 9 = 멘탈 피해 때문에 죽었을 때
+
+  # 은 변수
+  #0 -> 직원 이름
+  #1 -> 작업 이름
+  #2 -> 환상체 이름
+  #3 -> 죽는 이유 
+  #4 -> 특수작업
+
+  #1$0가 #1$1에게 #2$0에게 질문을 합니다. 이런식으로.
+  
+
+  -->
+  <normal>
+    <type num="0" position="up">
+      <!-- 일상 인삿말 특수케이스 ,id 가 day 에 매칭됨 -->
+      <item id="1" desc="Bonjour, Administrateur. Comme je vous l’ai déjà dit, je suis votre assistante IA, Angela. Je suis ici pour vous aider puisqu'il s'agit de votre premier jour. Je vous fournirai des conseils pratiques et un support émotionnel jusqu'à ce que vous soyez habitué à votre travail."/>
+      <item id="2" desc="Il s'agit maintenant de votre second jour ici. Je suis sûre que vous pouvez reconnaître ma voix maintenant, cependant, permettez moi de vous le rappeler au cas où : je suis votre assistante IA, Angela. J'ai la fantastique capacité de vous saluer avec des mots différents tous les jours. J'espère que vous passerez cette journée sans incidents."/>
+      <item id="3" desc="Rien n'est certain ici. La seule chose certaine est que rien n'est certain. Préparez-vous aux moindres variables."/>
+      <item id="4" desc="Vous auriez juste pu être une personne ordinaire, un visage dans la foule. Cependant, vous êtes différent ici. Vous êtes le seul et unique Administrateur de ce complexe."/>
+      <item id="5" desc="Les employés parlent souvent de vous. D'après mes données, votre nom est apparu dans des conversations au moins 43 fois hier. Il semblerait que vous soyez plutôt populaire."/>
+      <item id="6" desc="La météo est plutôt mauvaise aujourd’hui. Le monde ne peut pas toujours être ensoleillé, je suppose. Cependant, peu importe le temps qu'il fait, vous avez toujours votre travail à faire."/>
+      <item id="7" desc="N'ayez pas peur de demander de l'aide lorsque vous sentez qu'il y a trop à gérer, Administrateur. Je peux réaliser une multitude de tâches pour vous."/>
+      <item id="8" desc="(On dirait qu’Angela est silencieuse aujourd'hui.)"/>
+      <item id="9" desc="Vous êtes assez chanceux d’avoir rejoint cette corporation. Vous ne pouvez trouver de corporation qui tient autant à ses employés nulle part ailleurs."/>
+      <item id="10" desc="Tout ce que vous souhaitez se réalisera ici. Passez une bonne journée !"/>
+      <item id="11" desc="(Angela est silencieuse aujourd'hui)"/>
+      <item id="12" desc="On dirait que je dois mettre à jour le système de sécurité. Il n’a pas été modernisé depuis longtemps."/>
+      <item id="13" desc="(On dirait qu’Angela est silencieuse aujourd'hui.)"/>
+      <item id="14" desc="(On dirait qu’Angela est silencieuse aujourd'hui.)"/>
+      <item id="15" desc="(On dirait qu’Angela est silencieuse aujourd'hui.)"/>
+      <item id="16" desc="La confiance est un facteur plutôt important ici. La confiance entre vous et moi, vous et les employés, envers vous-même, et ainsi de suite."/>
+      <item id="17" desc="Bien sûr, passez une bonne journée !"/>
+      <item id="18" desc="La Lobotomy Corporation fait toujours de son mieux pour garder ses employés heureux."/>
+      <item id="19" desc="(On dirait qu’Angela est silencieuse aujourd'hui.)"/>
+      <item id="20" desc="Je sais que je dis toujours ceci, mais faites de votre mieux pour notre production d'énergie."/>
+    </type>
+
+    <type num="1" position="down">
+      <!-- 에너지가 절반 이상 모였을 때 한번뜨면 그날에는 두번다시안뜬다-->
+      <item id="1" desc="Présentement, vous avez accumulé exactement la moitié de l'énergie nécessaire. Enfin, il n'y a rien de tel qu'“exactement la moitié de l'énergie” ; l'énergie ne possédant pas de forme. Ainsi, la phrase “exactement la moitié de l'énergie” est contradictoire sans aucune raison. En d'autres termes-- (Vous avez coupé la diffusion.)"/>
+      <item id="2" desc="Il y a une différence majeure entre un conteneur à “moitié plein” et à “moitié vide”. Il m'a fallu longtemps avant de moi aussi saisir la différence."/>
+      <item id="3" desc="Nous avons désormais plus de la moitié de l'énergie. Veuillez vérifier combien de temps il nous reste aujourd'hui."/>
+      <item id="4" desc="Vous ne devez pas vous contenter de la moitié de l’énergie. Votre mission doit être accomplie. Vous devez collecter la totalité de l'énergie, pas juste la moitié."/>
+      <item id="5" desc="Il est possible que vous ayez eu à faire des sacrifices pour obtenir la moitié de l’énergie. Ne laissez pas ces sacrifices être vains, courage."/>
+    </type>
+
+    <type num="2" position="up" default="La quantité cible d'énergie a été collectée. Démarrage du raffinage…">
+      <!-- 1차로 에너지가 찼을 때 -->
+      <!-- 에너지가 다모였을 때 -->
+      <item id="1" desc="La nouvelle que vous avez attendue est finalement arrivée ! Toute l'énergie dont nous avions besoin aujourd’hui a été récupérée. L'énergie que vous allez collecter à partir de maintenant sera un extra permettant à notre compagnie d'être encore plus prospère."/>
+      <item id="2" desc="Je savais que vous pouviez le faire ! Nous avons réussi à collecter assez d'énergie. Bien que vous ne puissiez pas me voir, je vous encourageais tout du long."/>
+      <item id="3" desc="Je pense que j'ai l'œil pour les gens. Nous avons réussi à atteindre notre objectif d’énergie. Vous pouvez enfin prendre une pause."/>
+      <item id="4" desc="Regardez, le résultat de vos efforts est sous nos yeux. C'est tout ce dont nous avons besoin. Vous voyez, vous êtes l’Administrateur parfait pour ce complexe."/>
+      <item id="5" desc="Nous avons assez d'énergie, donc la collecte d’énergie et gestion d’Anomalies peuvent être mises en pause. Si j'en étais capable, je vous ferais un tape-m'en-cinq."/>
+    </type>
+
+    <type num="3" position="down" default="L'Intervenant #0$0 commence son #1$0 sur l'Anomalie #2$0.">
+      <!-- 20개 정도 더 쓰기 -->
+      <!-- 직원이 환상체에게 작업 시작했을 때 . ** called 로 작업 이름을 호출한다 -->
+      <item id="1" desc="L'Intervenant #0$0, qui faisait l'idiot, commence son #1$0 sur #2$0."/>
+      <item id="2" desc="L'Intervenant #0$0, qui venait de finir son repas, commence son #1$0 sur #2$0."/> 
+      <item id="3" desc="L'Intervenant #0$0, qui se laissait aller, vient de commencer son #1$0 sur #2$0."/>
+      <item id="4" desc="L'Intervenant #0$0, qui voulait boire une pinte de bière, commence son #1$0 sur #2$0."/>
+      <item id="5" desc="L'Intervenant #0$0, qui était en train de grignoter, commence son #1$0 sur #2$0."/>
+      <item id="6" desc="L'Intervenant #0$0, qui a besoin d’aller aux toilettes, commence son #1$0 avec #2$0."/>
+      <item id="7" desc="L'Intervenant #0$0, qui était en retard sur le planning, commence son #1$0 sur #2$0."/>
+      <item id="8" desc="L'Intervenant #0$0, qui en a marre de tout ça, s'est dirigé vers la chambre de confinement de #2$0 pour commencer son #1$0."/>
+      <item id="9" desc="L'Intervenant #0$0 sait qu'il est l'heure. Il se dirige vers la chambre de confinement de #2$0 pour commencer son #1$0 avec grande détermination."/>
+      <item id="10" desc="L'Intervenant #0$0 récupère l'équipement nécessaire et commence son #1$0 sur #2$0."/>
+      <item id="11" desc="L'Intervenant #0$0 relit le manuel de survie une dernière fois et se prépare rapidement à faire son #1$0 sur #2$0."/>
+      <item id="12" desc="L'Intervenant #0$0, qui ruminait sur le sens de la vie, commence son #1$0 sur #2$0"/>
+      <item id="13" desc="L'Intervenant #0$0, qui est un peu fatigué à cause d’une consommation excessive d’alcool hier soir, se reprend pour commencer son #1$0 sur #2$0."/>
+      <item id="14" desc="L'Intervenant #0$0, qui est énervé après s'être cogné le petit doigt de pied contre le mur, commence son #1$0 sur #2$0." /> 
+      <item id="15" desc="L'Intervenant #0$0, qui est excité pour le jour de paie qui approche, prend une grande inspiration pour commencer son #1$0 sur #2$0."/>
+      <item id="16" desc="L'Intervenant #0$0, qui s'est rendu malade à force de manger, se prépare à commencer son #1$0 sur #2$0."/>
+      <item id="17" desc="L'Intervenant #0$0, qui n’aime pas vraiment à ce à quoi il ressemble dans le miroir, se prépare à commencer son #1$0 sur #2$0."/>
+      <item id="18" desc="L'Intervenant #0$0, fatigué à force de trop travailler, démarre son #1$0 sur #2$0."/>
+      <item id="19" desc="L'Intervenant #0$0, qui est démotivé après s'être fait enguirlander par son Sephirah, va dans la chambre de confinement pour commencer son #1$0 sur #2$0."/>
+      <item id="20" desc="L'Intervenant #0$0, qui est très sensible sur son poids suite à son régime, se tient prêt à commencer son #1$0 sur #2$0."/>
+    </type>
+
+
+
+
+    <!--  <type num="4" position="down">
+   
+      <item id="1" desc="#0$0 직원은 $1$0 끝냈습니다."/>
+      <item id="2" desc="#0$0 직원이 당신에게 명령받은 $1$0 완료했습니다."/>
+      <item id="3" desc="#0$0 직원이 $1$0 다 끝마쳤습니다."/>
+    </type>
+
+
+     <type num="5"> 
+      <item id="1" position="down" desc="#0의 작업은 성공적이었습니다."/>
+      <item id="2" position="down" desc="#0에게는 다행히도 성공적인 작업이었어요."/>
+      <item id="3" position="down" desc="#0가 한 작업은 꽤 괜찮았어요."/>
+    </type> -->
+
+
+    <type num="6" position="up">
+      <!-- 게임오버 되서 다시 시작했을 때 -->
+      <!-- 5개까지 늘리기 -->
+      <item id="1" desc="Ce n’est pas la chose la plus aisée du monde que d’être Administrateur dans notre corporation. Ne soyez pas trop en confiance, vous allez probablement échouer à votre première tentative. Plus vous essayez, meilleur sera votre résultat. Assurez-vous d’avoir confiance en vous."/>
+      <item id="2" desc="Vous n'êtes pas déjà découragé, n'est-ce pas ? Ce n'est pas que vous soyez terrible ou, hmmm, inutile, c'est juste que vous faites face à quelque chose d’incroyablement difficile. Vous devriez essayer de le voir de cette manière."/>
+      <item id="3" desc="Bonjour, Administrateur ? Pouvez-vous m'entendre ? Vous avez l'air distant. Vous n’avez pas perdu le contrôle sur votre stabilité mentale, n’est-ce pas ? Vous avez maintenant compris qu'être Administrateur n'est pas aussi facile que vous le pensiez. Alors ressaisissez-vous. Il est temps de réparer vos erreurs."/>
+      <item id="4" desc="Vous ne pensez pas à abandonner après quelques échecs, n'est-ce pas ? Je suis certaine que vous savez comment surmonter ça. J'avais de solides raisons de vous choisir comme Administrateur parmi tant d’autres candidats."/>
+      <item id="5" desc="Tous les employés ici comptent sur vous. Vous devez tous les diriger. La différence entre ici et le monde extérieur est qu'ici il y a toujours une chance. Voici la chance de réparer vos erreurs, et une chance de vous racheter."/>
+    </type>
+
+    <type num="14" position="down" default="L'Intervenant #0$0 commence une &lt;color=#e6e600ff&gt;Observation&lt;/color&gt; sur #2$0.">
+      <!-- 관찰 시작했을 때 -->
+      <item id="1" desc="L'Intervenant #0$0 a pris l’Encyclopédie et va commencer à Observer #2$0."/>
+      <item id="2" desc="L'Intervenant #0$0 va commencer à Observer #2$0 pour mettre à jour l’Encyclopédie."/>
+      <item id="3" desc="L'Intervenant #0$0 récupère l'équipement nécessaire pour commencer à Observer #2$0."/>
+    </type>
+
+
+    <type num="15" position="down" default="&lt;color=#e6e600ff&gt;Observation&lt;/color&gt; de l'Anomalie #2$0 &lt;color=#66FF33FF&gt;réussie&lt;/color&gt;.">
+      <!-- 관찰 성공-->
+      <item id="1" desc="L'Intervenant #0$0 a réussi son observation de #2$0. Ses enregistrements ont été ajoutés à l’Encyclopédie."/>
+      <item id="2" desc="Heureusement, L'Intervenant #0$0 a réussi à finir d'observer #2$0. Le rapport dans l’Encyclopédie contient son écriture irrégulière."/>
+      <item id="3" desc="L'Intervenant #0$0 a réussi à finir d'observer #2$0. L’Encyclopédie a été mise à jour avec les nouvelles informations."/>
+      <item id="4" desc="L'Intervenant #0$0 a lutté pour réussir à finir d'observer #2$0. Nous sommes maintenant un pas plus près du secret de l'Anomalie."/>
+    </type>
+
+    <type num="16" position="down" default="&lt;color=#e6e600ff&gt;Observation&lt;/color&gt; de l'Anomalie #2$0 &lt;color=#FF9E72FF&gt;échouée&lt;/color&gt;.">
+      <!-- 관찰 실패-->
+      <item id="1" desc="Malheureusement, L'Intervenant #0$0 a échoué à observer #2$0. L’Encyclopédie reste inchangée."/>
+      <item id="2" desc="L'Intervenant #0$0 n'a pas pu observer #2$0. Il n'était pas assez enthousiaste sur cette recherche."/>
+      <item id="3" desc="L'Intervenant #0$0 a essayé d'observer #2$0 mais a échoué et ce n'est pas seulement car il est fainéant."/>
+    </type>
+
+  </normal>
+
+  <danger>
+    <type num="7" position="up" default="Les Intervenants du Secteur de #3$0 sont tous morts.">
+      <!-- 사무실 직원들이 다 죽었을 때 (게임 오버) 곧 다시 재시작해서 볼 수도 있다는 느낌을 은근히 주게 했음 -->
+      <!-- 5개까지 늘리기 -->
+      <item id="1" desc="Administrateur, que pensez-vous pouvoir faire sans employés ? Vous avez tout ruiné. Vous n'êtes pas celui que nous voulions. Il semblerait que vous ayez un train à prendre, celui qui vous ramène chez vous. Tout est fini maintenant."/>
+      <item id="2" desc="Vous sauriez combien les employés sont importants si vous aviez lu le manuel au moins une fois depuis que vous avez rejoint la corporation. Regardez leurs cadavres. On ne peut plus rien faire maintenant."/>
+      <item id="3" desc="C'est peut-être une erreur triviale pour vous, mais les employés mettaient leurs vies en jeu pour leur travail. Tout le monde voulait survivre et espérait un miracle jusqu'à la dernière seconde. Si vous obteniez une seconde chance, êtes-vous sûr que vous ne laisseriez pas cela se reproduire ?"/>
+      <item id="4" desc="Vous ne savez pas combien vous êtes chanceux. Vous regardez simplement votre écran. Les choses sont plus graves ici. C'est rouge partout. Votre caméra sera bientôt éteinte. Tout comme vous…"/>
+      <item id="5" desc="Avez-vous déjà connu la mort ? C'est dur à croire, mais il ne reste plus que nous deux ici. Je ne suis qu'une IA avec une voix, et il y a des entités que l'on peut difficilement qualifier de monstres en train de ramper dehors. Je pense que vous comprenez désormais la gravité de la situation."/>
+    </type> 
+
+    <type num="8" position="down">
+      <!-- 환상체의 기분이 좋지 않을 때 경고 -->
+      <!-- 5개까지 늘리기 -->
+      <item id="1" desc="Nous devrions nous concentrer sur #2$0. Si son humeur s’aggrave encore ne serait-ce qu’un peu, on ne pourra probablement plus rien faire."/>
+      <item id="2" desc="Pouvez-vous vous occuper de #2$0 si vous n'êtes pas occupé ? Ce n'est pas un orphelinat. Les Anomalies n'exprimeront pas leurs émotions en pleurant."/>
+      <item id="3" desc="#2$0 n'a pas l'air heureux. Et si vous lui portiez un peu d’attention ? Je continue de devoir répéter que vous devriez garder un œil sur les Anomalies tout en maintenant nos employés hors de danger."/>
+      <item id="4" desc="J’ignore pourquoi vous ignorez #2$0, mais si vous m'entendez, veuillez vous occuper de #2$0."/>
+      <item id="5" desc="Quelque chose de mauvais va arriver si vous ne faites pas attention à #2$0, et ce même si je suis au courant qu'il s'agit d'une tâche difficile à effectuer avec seulement deux yeux."/>
+    </type>
+
+    <!--
+    <type num="9" position="down">
+       환상체 작업이 실패했을 때 (특수공격)
+      <item id="1" desc="" 
+    </type> -->
+
+    <type num="9" position="up" default="#2$0 s'est échappé de son confinement.">
+      <!-- 환상체가 탈출했을 때 -->
+      <item id="1" desc="Oh non, #2$0 vient de s'échapper de son confinement. Ne vous affolez pas, ordonnez sa répression à vos subordonnés."/>
+      <item id="2" desc="#2$0 vient de s'échapper. Mais qu'est-ce que vous étiez en train de faire ?"/>
+      <item id="3" desc="J’imagine que vous savez que #2$0 s'est échappé ? Il se déplace farouchement à travers le complexe. Évidemment, vous n'avez pas à compenser les dégâts qu’il fait, mais gardez à l'esprit que la réparation et la récupération coûtent bien plus que vous ne le pensez."/>
+      <item id="4" desc="#2$0 s'est échappé. Cela signifie, très probablement, que cela va tuer chaque personne de ce complexe. Excepté vous et moi bien sûr, quel soulagement."/>
+      <item id="5" desc="#2$0 aurait dû rester dans sa chambre de confinement à tout prix. Je vous avais averti plusieurs fois mais nous y voilà. Cependant, il n'est pas trop tard. Veuillez faire de votre mieux pour la réprimer."/>
+    </type>
+
+    <type num="10" position="up" default="#0$0 a paniqué.">
+      <!-- 직원이 패닉에 빠졌을 때 -->
+      <item id="1" desc="Ce n'est pas bon. L'Intervenant #0$0 a subi un lourd stress et est maintenant en train de paniquer."/>
+      <item id="2" desc="Je pense que vous avez une nouvelle chose dont vous devez vous inquiéter. L'Intervenant #0$0 est devenu totalement fou."/>
+      <item id="3" desc="Qui sait ce que l'Intervenant #0$0, qui est en train de paniquer, va faire ? Je ne veux honnêtement pas savoir."/>
+    </type>
+
+    <type num="11" position="down">
+      <!-- 직원의 멘탈이 좋지 않을 때 경고 빈도 수를 보고 넣을지 뺄지 결정한다. -->
+      <item id="1" desc="L'Intervenant #0$0 semble souffrir d’un énorme stress. Avant que cela n’empire, nous devons lui porter de l'attention."/>
+      <item id="2" desc="Je sais que vous êtes occupé, mais pourquoi vous ne porteriez pas attention à l'Intervenant #0$0 ? Il semble être très déprimé."/>
+      <item id="3" desc="Vous n'avez que deux yeux, mais j'ai des douzaines d'appareils en fonction me servant d'yeux. C'est ainsi que j'ai découvert comment l'Intervenant #0$0 se sent. C’est-à-dire pas très bien."/>
+      <item id="4" desc="Veuillez observer l’'Intervenant #0$0. La raison de pourquoi l'Intervenant #0$0 fronce les sourcils n'est pas car il a mal mangé aujourd’hui. Je vous le dis au cas où vous l'auriez raté."/>
+    </type>
+
+    <!--
+    <type num="7" posotion="down">
+       
+      <item id="1" position="up" desc="#0$0 직원이 방금 죽었어요. 많은 부상들이 있었지만 가장 큰 원인은 #2$0에게 #1$0 시도하다가 부러진 갈비뼈가 그의 폐를 찔렀기 때문이죠. 괜찮아요. 그는 예전부터 이런 날을 각오해왔어요. 관리자님의 탓이라고 생각하지 마세요."/>
+      <item id="2" position="up" desc="#2$0에게 #1$0 하는 것은 적절하지 않았나 보네요. 관리자님, 잠깐 에너지 모으는 건 그만 두고 #3$0로 죽은 #0$0 직원을 위해 묵념을 하는 시간을 가져보는 건 어떨까요? … 자 애도는 끝났어요. 이제 다시 에너지에 집중!"/>
+      <item id="3" position="up" desc="지금 막 우리 회사의 자랑스러운 직원 #0이 #1$0 시도하다가 목숨을 다했습니다. 당신 탓이라고 생각하지 마세요. 서로 불쌍해질 뿐이니까."/>
+      <item id="4" position="up" desc="당신이 방금 하품을 하고 싶어 했던 그 순간에 #0$0 직원은 #2$0에게 #1$0 하려다가 머리가 으깨져 죽었다고 하네요."/>
+      <item id="5" position="up" desc="이봐요 관리자님. 방금 #2$0 환상체 때문에 #1$0 하려는 직원 #0$0이 과다출혈로 죽었다는 건 알고 에너지를 모으고 있는 건가요?"/>
+      <item id="6" position="up" desc="이젠 딱히 당신에게 이런 걸 보고하는 게 필요 있을지 잘 모르겠어요. 점점 당신은 직원들이 죽는 거에 신경을 쓰지 않고 있잖아요. 직원 #0$0이 죽었어요. #2$0에게 당신이 명령한 #1$0 하려다가요. 그게 다에요"/>
+      <item id="7" position="up" desc="당신이 이 죽음에 이제 어느 정도의 애도를 가지는지, 그건 중요한 게 아니겠죠? 당신이 알고 싶은 건 직원 #0$0의 죽음이 이제 어떤 영향을 끼칠지 겠죠."/>
+      <item id="8" position="up" desc="#0$1 직원이 심각한 부상으로 인해 죽었어요. #2$0에게 #1$0 하려다가요. 그는 행복한 삶을 살아왔고 이게 바로 그가 원하던 죽음이죠"/>
+    </type> -->
+
+    <type num="12" position="down" default="#0$0 est mort.">
+      <!-- 체력피해 때문에 죽었을 때 -> 체력이 0 -->
+      <item id="1" desc="Je suis désolée. L'Intervenant #0$0 est mort de saignement en essayant son #1$0 sur #2$0. Il a perdu un tiers de son sang, qui recouvre maintenant le sol."/>
+      <item id="2" desc="Il semblerait qu’un #1$0 sur #2$0 n'était pas approprié. Le crâne de l'Intervenant #0$0 a été sévèrement endommagé. Il ne respirera plus jamais."/>
+      <item id="3" desc="#2$0 n'a pas aimé le #1$0. Elle a sectionné la colonne vertébrale de l'Intervenant #0$0. Il a survécu quelques minutes, mais n’a pas tardé à expirer une dernière fois."/>
+      <item id="4" desc="L'Intervenant #0$0 a été attaqué alors qu'il essayait son #1$0 sur #2$0. Ses organes ont été éparpillés sur le sol. Je sais que vous avez fait de votre mieux, mais les résultats ne sont pas bons."/>
+      <item id="5" desc="#2$0 n'a pas aimé le #1$0 fait par #0$0. Son corps a été démembré et est en train de rouler dans la chambre de confinement."/>
+      <item id="6" desc="L'Intervenant #0$0 vient de mourir. Il avait une longue liste de blessures, mais la cause directe de sa mort est sa cage thoracique. Elle s'est cassée et a percé un poumon pendant qu'il était en plein #1$0 sur #2$0. Il s'y attendait depuis longtemps. Ce n'est pas de votre faute."/>
+      <item id="7" desc="Le #1$0 n'était pas la bonne chose à faire sur #2$0. Administrateur, une minute de silence pour l'Intervenant #0$0 qui est mort de dégâts cérébraux… Bien ! Reprenons le travail !"/>
+      <item id="8" desc="Notre fier employé #0$0 a vu sa vie défiler devant ses yeux durant ses derniers moments au cours de son #1$0. Ne vous blâmez pas. Cela ne nous rendrait que plus misérables."/>
+    </type>  
+
+
+    <type num="13" position="down">
+      <!-- 멘탈피해 때문에 죽었을 때 -> 멘탈이 0 -->
+      <item id="1" desc="L'Intervenant #0$0 a essayé le #1$0 sur #2$0 mais le résultat n'a pas l'air bon. Il est devenu fou, marmonnant des mots incompréhensibles et ayant perdu la mémoire."/>
+      <item id="2" desc="Il est évident que #2$0 n'a pas aimé le #1$0 de #0$0. #0$0 ne supporte pas les démangeaisons de son cerveau et se gratte la tête en bavant. À partir de maintenant, il ne sera plus jamais le même."/>
+      <item id="3" desc="L'Intervenant #0$0 voulait finir le #1$0 que vous avez ordonné sur #2$0 mais n'a pas pu. C’est parce que la paranoïa et l'anxiété ont consumé son esprit et l'ont finalement rendu fou. Nous ne reverrons plus jamais son sourire."/>
+      <item id="4" desc="L'Intervenant #0$0 a essayé son #1$0 sur #2$0 mais sa santé mentale a atteint ses limites avant de pouvoir finir. Il ne sait même pas où il est actuellement. Il va doucement perdre chaque souvenir qu'il possède."/>
+      <item id="5" desc="L'Intervenant #0$0 a fait du mieux qu'il pouvait le #1$0 sur #2$0 mais son esprit était trop fragile. Il montre de l'hostilité envers tout ce qui l'entoure. Il ne reconnaît même pas ses collègues."/>
+    </type>
+
+    <type num="17" position="down" default="#0$0 est mort.">
+      <!-- 기본적인 체력피해 죽음 입니다만…-->
+      <item id="1" desc="Administrateur, un moment de silence pour l'Intervenant #0$0 qui est mort suite aux dégâts cérébraux causés par #2$0 enragé… Fini ! Reprenons le travail."/>
+      <item id="2" desc="Notre fier employé #0$0 a poussé son dernier souffle suite à l'attaque de #2$0. Ne vous blâmez pas. Cela ne nous rendrait que plus misérables."/>
+      <item id="3" desc="Au moment où vous avez voulu bailler, le crâne de l'Intervenant #0$0 a été écrasé par l'attaque de #2$0."/>
+      <item id="4" desc="Regardez, Administrateur, ne voyez-vous pas que l'Intervenant #0$0 est mort d'hémorragie à cause de #2$0 ?"/>
+      <item id="5" desc="Je ne suis même plus sûre que cela soit nécessaire de vous le dire. Vous devenez apathique à la mort des employés. L'Intervenant #0$0 est mort. Tué par #2$0. C'est tout."/>
+      <item id="6" desc="L'Intervenant #0$0 qui a été attaqué par #2$0 enragé vient de mourir. Il a douloureusement respiré pendant quelques minutes avant de mourir à cause de son poumon perforé."/>
+      <item id="7" desc="L'Intervenant #0$0 est mort suite à de sévères blessures causées par #2$0. Il a vécu une vie heureuse et c'est la mort qu'il a souhaité."/>
+    </type>
+
+    <type num="18" position="down" default="#0$0 est mort.">
+      <!-- 성냥팔이 소녀 한정 작업 실패했을 때 -->
+      <item id="1" desc="La flamme qui entourait #2$0 est allée sur l'Intervenant #0$0. Son #1$0 a échoué."/>
+      <item id="2" desc="L'Intervenant #0$0 a essayé son #5$0 mais ça n'a pas duré longtemps. La flamme inextinguible de #2$0 est allée sur #0$0."/>
+      <item id="3" desc="Le progrès de #5$0 a été réduit en cendres dans la flamme de #2$0."/>
+    </type>
+
+    <type num="19" position="down">
+      <!-- 에너지 바가 채워질 때 -->
+      <item id="1" desc="Nous avons toute l'énergie nécessaire mais veuillez attendre un peu plus longtemps, nous sommes en train de filtrer les impuretés avec notre technologie spéciale."/>
+      <item id="2" desc="Vous avez atteint notre objectif d’énergie. Je comprends que vous vouliez partir aussi vite que possible mais attendez un peu plus longtemps, nous sommes en train de raffiner l'énergie."/>
+      <item id="3" desc="Vous demandez pourquoi vous n'êtes pas autorisé à partir alors que vous avez récupéré toute l'énergie ? C'est parce que cela prend du temps de convertir l'énergie en électricité. C'est une technologie complexe."/>
+      <item id="4" desc="La production d'énergie n'est pas la fin du processus. Nous devons raffiner l'énergie et cela prend du temps supplémentaire. Mais comparé à votre temps de gestion, c'est un bref moment."/>
+      <item id="5" desc="Nous ne pouvons pas utiliser votre énergie tout de suite. Nous devons d'abord filtrer les impuretés, donc veuillez patienter un peu."/>
+    </type>
+
+    <type num="20" position="up">
+      <item id="1" desc="L'Intervenant #0$0 est fortement captivé par #2$0 et il court vers la salle de confinement. Faites quelque chose ou il va tout ruiner !"/>
+      <item id="2" desc="Le pauvre petit #0$0 est captivé par #2$0. Maintenant il va entrer dans la chambre de confinement de #2$0 et exprimer ses désirs interdits."/>
+      <item id="3" desc="#2$0 se souvient de son vieux maître et appelle l'Intervenant #0$0 pour répéter la tragédie. Arrêtez #0$0 !"/>
+    </type>
+
+    <type num="21" position="down" default="#0$0 est paniqué.">
+      <item id="1" desc="L'Intervenant rationaliste #0$0 a paniqué et violemment poignardé à mort #0$1."/>
+      <item id="2" desc="L'Intervenant rationaliste #0$0 a essayé de changer cette situation désespérée en perçant l’estomac de #0$01 avec un couteau."/>
+      <item id="3" desc="L'Intervenant rationaliste #0$0 a essayé d'échapper à cette situation extrême en fracassant l'Intervenant #0$1 à mort."/>
+    </type>
+
+    <type num="22" position="down" default="#0$0 est paniqué.">
+      <item id="1" desc="L'Intervenant pacifiste #0$0 erre dans les couloirs avec terreur."/>
+      <item id="2" desc="L'Intervenant pacifiste #0$0 erre dans les corridors avec indécision."/>
+      <item id="3" desc="L'Intervenant pacifiste #0$0 a paniqué et refuse de recevoir vos ordres. Il erre simplement dans les couloirs."/>
+    </type>
+
+    <type num="23" position="down" default="#0$0 est paniqué.">
+      <item id="1" desc="L'Intervenant moral #0$0 s'est suicidé après avoir réalisé qu'il n'y avait aucun espoir."/>
+      <item id="2" desc="L'Intervenant moral #0$0 a choisi la mort pour échapper à cette terrible situation."/>
+      <item id="3" desc="L'Intervenant moral #0$0 n'a pas supporté la tragédie devant lui et s'est tranché la gorge."/>
+    </type>
+
+    <type num="24" position="down" default="#0$0 est paniqué.">
+      <item id="1" desc="L'Intervenant optimiste #0$0 n'a pas accepté le fait qu'il ait échoué et a ouvert la chambre de confinement."/>
+      <item id="2" desc="L'Intervenant optimiste #0$0 a ouvert la chambre de confinement pour attirer l'attention de quelqu’un."/>
+      <item id="3" desc="L'Intervenant optimiste #0$0 est devenu fou et a ouvert la chambre de confinement."/>
+    </type>
+  </danger>
+</root>

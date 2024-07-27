@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100028">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção da $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="mid1">
+      [
+      {A máquina de vendas pega toda a atenção de #0 com sua iluminação de neon brilhante.},
+      {Uma música animada pode ser escutada, emitida de dentro da máquina de vendas.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Camarões ficam deliciosos de qualquer maneira que você os prepare! Seja fervendo, fritando, tudo fica gostoso!},
+      {Você está realmente perdendo uma grande parte da vida se nunca provou camarão.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Há um boato circulando sobre pessoas que foram sequestradas para dentro de um barco de pesca após beberem uma lata aberta de refrigerante sabor uva.},
+      {O boato diz que você pode ter um de seus órgãos removidos após beber uma lata aberta de refrigerante de uva.},
+      {Se alguém oferecer uma lata já aberta de refrigerante de uva, você definitivamente não deve beber.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">F-05-52</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Wellcheers</portrait>
+      <name openLevel="1">
+        Wéllcheers
+      </name>
+      <name openLevel="2">
+        Lata Aberta de Wéllcheers
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <openText>Em algum lugar distante, você pode ouvir gaivotas.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;Gravações dos Funcionários (Fonte Desconhecida)&gt;&#13;&#10;
+      Ei, algum de vocês já foram para um desses encontros da Lobotomy??
+      Veja bem, precisei de muita coragem pra trazer isso à tona novamente…
+      Tipo, há um monte de clubes nessa companhia onde os funcionários se juntam. Eu já participei de um grupo de eventos de tênis de mesa aí, mas não tinha nenhuma garota então eu saí de lá bem rápido, kkkk. Então, tipo, um dia eu vi esse anúncio pra esse encontro estranho no quadro de mensagens da corporação. Eu fiquei interessado então chamei o líder do grupo e ele se apresentou como &lt;Omitido&gt; da Segurança. Eu perguntei se tinha alguma garota no grupo e ele me disse que tinha um montão de funcionárias lá. Só isso me deixou muito interessado, então eu assinei logo de cara para ir nesse encontro. Então eu apareci, consegui um crachá como todo mundo. Eu não lembro de tudo, mas eu acho que vi tipo três pessoas do Treinamento e duas da Informação. E meio que meia hora depois, o líder trouxe dezenas de latas de Wéllcheers numa bandeja e deu um para cada um de nós… Eu devia ter notado que algo estava errado porque a lata já estava aberta, mas eu sou doido por refrigerante então eu simplesmente botei guela abaixo assim que ele me deu aquela latinha kkkkkkkkkkk.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {     Depois que o líder nos disse que era hora de irmos e disse que ele alugou uma van para nós. Realmente achávamos que ele era um cara incrível. Eu pulei logo na van com dois funcionários da horda e um cara do mesmo departamento que eu. O líder disse que ia demorar uma hora e tal de viagem, então dava pra tirar um cochilo se a gente quisesse, e foi dito e feito. A parte estranha foi que eu caí no sono bem rápido, tipo, bem rápido MESMO. Tipo assim, no momento que eu fechei os olhos, eu apaguei como luz queimada. Eu sofro de insônia, mas, por sei lá o motivo, eu caí no sono rapidinho, então. Suspiro... aquele foi meu maior erro. De qualquer jeito, eu estava dormindo igual a um anjinho, mas aí escutei umas gaivotas, e eu tava tipo, “Pqp??? Gaivotas???????” É, no começo eu pensava que era o telefone de alguém tocando, mas aí escutei as ondas quebrando. E eu fiquei tipo, “cara, isso é muito real pra ser um só um toque de telefone”, então eu abri meus olhos e me encontrei…
+      …deitado em um convés. Eu estava na porra de um barco, puta merda. UM BARCO DE VERDADE. Eu sabia que eu estava ferrado no momento que eu vi camarões saltitando por aí. Fiquei todo arrepiado. Queria acreditar que tudo aquilo era só um sonho mas eu garanto que a visão daqueles camarões saltitantes era mais que o suficiente para eu acreditar. A realização disso me esmagou como um martelo. E eu estava rodeado por pessoas que pareciam ser da tripulação. Eles eram bombados, parecia que eles me colocariam pra dormir com força se eu falasse algo errado. Um deslize e eu estaria dormindo com os tubarões.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {      A tripulação era algo como 10 pessoas incluindo o capitão, o contramestre, o cozinheiro e tudo isso aí. Todos eles riram de mim enquanto eu estava 'voando'. O cara que parecia ser o capitão andou em minha direção e perguntou minha altura e peso. Eu perguntei pra ele quando é que o navio chega ao porto e ele me disse que iria demorar um mês, mas que eu não deveria tentar fugir ou algo assim por que eles já fizeram um pacto com “meu povo”. Eu não tinha ideia alguma de quem era esse “meu povo”, mas eu estava muito assustado para perguntar. Então os outros tripulantes me chamaram para almoçar. Eles estavam fazendo macarrão instantâneo, colocando camarão, carangueijo, molusco e várias outras coisas dentro dele. Eles me falaram para parar de agir como se eu estivesse prestes a pular fora do navio e provasse o lámen deles. Eu disse não no começo, mas eles riram de mim novamente e disseram que não tinham colocado 'boa noite cinderela' ou algo do tipo e me deram um pouco assim mesmo. Um homem deve viver, então eu comi. O gosto era muito melhor do que eu esperava. E assim que terminamos de almoçar, eles me disseram que iriam me ensinar a como ajustar as cordas. Eu basicamente desisti nessa altura do campeonato, então eu só respondi “claro…”. Tudo que eu podia ver mesmo eram essas ilhazinhas em que ninguém teria chance de sobreviver. Por um mês, eu aprendi a como puxar as armadilhas para peixes, encher as caixas de isca, consertar as redes de pesca, cozinhar lámen, conseguir café e várias outras coisas. Eu continuava ficando melhor e melhor até chegar no ponto em que eu podia preparar sashimi de cavala e ensopado de peixe para toda a tripulação. Todos estavam elogiando, dizendo que eu poderia abrir um restaurante com aquele ensopado. Mais tarde, nós tivemos que enfrentar alguns tufões. Então eu comecei a formar um certo tipo de vínculo, um companherismo. Baleias estão se tornando uma visão comum a esse ponto. Após duas semanas lá, o capitão me disse que eu era muito bom e me perguntou se eu queria me juntar oficialmente à tripulação. Quando eu pensei nisso, eu lembrei que já teria sido demitido da Corporação de qualquer jeito, então isso parecia como uma oportunidade legítima de viver. Essa foi a primeira vez que eu recebi elogios assim. O que estou fazendo agora? Bem, eu fui promovido e estou vivendo bem. Eu encontrei a verdadeira felicidade em abrir aquela geladinha após um dia duro de trabalho, coberto de água marinha e suor. Agora já cheguei ao porto, mas vamos zarpar em breve para pegar mais camarão. Nunca sabendo o que o futuro reserva, manos. As vezes, eu penso sobre esses outros caras que foram para aquele encontro. Não que eu queira ficar fuçando nisso, eu só tento manter uma mente positiva. Eu quero dizer que espero que estejam indo bem do mesmo jeito que estou.&#13;&#10;
+      Oh, está na hora da gente ir navegar, vejo vocês por aí.}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="0" key="specialCan">Após completar o processo de trabalho, uma bebida enlatada é descarregada da máquina de vendas. O sabor da bebida que aparece parece ter relação com o tipo de trabalho feito.</specialTip>
+      <specialTip openLevel="2" key="healthCan">&lt;Resultado do Teste W-1&gt; Uma bebida vermelha é emitida. O funcionário que ingeriu a bebida disse que ela tinha um aroma e doçura distintas, e disse ter se sentido com bastante energia depois. Após o teste, a saúde física do sujeito foi confirmada.</specialTip>
+      <specialTip openLevel="2" key="metalCan">&lt;Resultado do Teste W-2&gt; Uma bebida azul é emitida. Ela contém um líquido inodor que é altamente carbonatado. Foi descoberto ser efetivo em restaurar a força mental.</specialTip>
+      <specialTip openLevel="3" key="WéllcheersCan">&lt;Resultado do Teste W-3; W-4&gt; Uma bebida roxa foi emitida. Sua aparência, composição e gosto são exatamente iguais as outras bebidas carbonatadas. Foi descoberto que a fortitude física e a força mental de quem a ingeriu foram recuperadas.</specialTip>
+      <specialTip openLevel="4" key="goToSea">&lt;CUIDADO&gt; Quando o resultado do trabalho com a $0 for Ruim, não tome nenhuma bebida que a máquina de vendas estiver fornecendo.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

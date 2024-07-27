@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300110">
+
+    <narration action="move">
+      #0 va a ingresar a la unidad de contención de $0 para comenzar la tarea. 
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">D-09-104</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ReverseClock</portrait>
+
+      <name openLevel ="1">
+        Reloj Hacia Atrás
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>
+        Has caído al fondo más bajo?
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {<i>Esta anormalidad se realiza en base a la idea del Tumblbug backer '정현교(Jung Hyunkyo)'</i>&#13;&#10;&#13;&#10;Un reloj viejo fabricado por una empresa desconocida. Son tubos de vacío que desprenden vibra vintage. El fabricante dejó de hacer esto hace mucho tiempo.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {“…Es tu futuro oscuro? Has caído al fondo más bajo? Has pensado, ‘Y si hubiera hecho o no hecho eso”?&#13;&#10;Nosotros, como humanidad, hemos vencido las enfermedades y la naturaleza. Ahora, hemos llegado lo suficientemente lejos como para aprovechar el tiempo en sí. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Sí, podemos rebobinar su tiempo perdido.&#13;&#10;Solo enrolla la primavera, cierra los ojos y cuenta hasta diez.&#13;&#10;Cuando abras los ojos, estarás en el momento exacto en el que quisiste estar."}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {* Lea el manual a fondo. No sabemos qué pasará si esta maquinaria se maneja mal. No nos hacemos responsables de los accidentes causados por el descuido del usuario. &#13;&#10;	Este reloj requiere una gran cantidad de energía para funcionar. Por favor, comprenda que tomará un tiempo considerable para cargar.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">Una luz se apaga y se carga energía por cada trabajo realizado en $0.</specialTip>
+      <specialTip openLevel="2" key="2">No sucedió nada cuando un empleado cuyo nivel es inferior a 3 trabajó en él.</specialTip>
+      <specialTip openLevel="2" key="3">Después de que cada luz se haya encendido, se pueden activar $0. Sin embargo, $0 solo puede operarse una vez al día, así que tenga cuidado al usarlo.</specialTip>
+      <specialTip openLevel="2" key="4">&lt;ADVERTENCIA&gt;Está estrictamente prohibido que los empleados en el nivel 5 se pongan en contacto con $0 después de que esté completamente cargado.</specialTip>
+      <specialTip openLevel="2" key="5">Empleado con nivel 5 o más puede operar a $0 normalmente. $0 enviará a todos excepto al empleado que lo activó a la hora más pacífica de ese día.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

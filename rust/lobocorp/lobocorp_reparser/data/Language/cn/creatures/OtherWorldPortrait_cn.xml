@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300104">
+
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-91</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/OtherWorldPortrait</portrait>
+
+      <name openLevel ="1">
+        异世的肖像
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <openText>
+        我们必将失去什么？这幅肖像牢牢&#13;&#10;抓住了那一瞬间的精髓。
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {随着时间的流逝，我们在慢慢发生改变。我们可能会变成&#13;&#10;残废，失去理智、可能被压倒一切的暴力所吞没、也可能&#13;&#10;就此消失，再也不被任何人看到。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {我们必将失去什么？这幅肖像牢牢抓住了那一瞬间的精髓。&#13;&#10;一位员工静静地端详着画中的自己，他渴望自己的身体能够&#13;&#10;永远健康。如果生活能够一直如此，如果我可以和肖像里的&#13;&#10;自己一样，永远挂着灿烂的微笑，那该多好啊...}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {那位员工开始觉得蹊跷。为何自己无论遭到怎样的攻击都&#13;&#10;不会受到伤害？自己的同事又为何会感受到所有的痛苦？}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {肖像中的自己变得越来越丑陋，可怖。最终，那位员工决&#13;&#10;定不再去看它，而是好好享受这意料之外的幸运。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {然而奇迹不会永存。当所有替他承受苦难的员工都死去之&#13;&#10;时，自然就轮到他去死了。画布又再度变回了空白。}
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">第一位与这个异想体互动的员工（以下称为员工A）将会在画布上&#13;&#10;作画。</specialTip>
+      <specialTip openLevel="2" key="2">之后，员工A受到的所有伤害都将转移给设施内的一位随机员工B，&#13;&#10;且员工B会受到比原来更重的伤害。（最新的数据显示，超过员工A&#13;&#10;生命值上限的伤害并不能被转移。）</specialTip>
+      <specialTip openLevel="2" key="3">一旦员工B死去，伤害将转移给下一位随机员工C，以此类推。当设&#13;&#10;施内再也没有其他员工存活时，员工A会立刻死亡。</specialTip>
+      <specialTip openLevel="2" key="4">如果画布上出现了新的肖像，那么前一个画肖像的员工会立刻死亡。</specialTip>
+      <specialTip openLevel="2" key="5">如果肖像中的员工被肖像以外的事物杀死，那么肖像将会变回空白。</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

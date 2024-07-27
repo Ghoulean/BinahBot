@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100024">
+
+    <narration action="move">
+      #0は、作業をするために$0の部屋に入ります。
+    </narration>
+
+    <narration action="start">
+      [
+      {触れてはならない}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {触れてはならない}
+      {触れてはならない}
+      {触れてはならない}
+      {触れてはならない}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {触れてはならない}
+      {触れてはならない},
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {触れてはならない},
+      ]
+    </narration>
+   
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-05-47</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/DontTouchMe</portrait>
+
+      <name openLevel ="1">
+        触れてはならない
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <specialName openLevel ="1">
+        何もするな
+      </specialName>
+
+      <openText>何度も押してきましたが、 まだ知りたいことがあるんですか？</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {箱の形をした魅力的な大きな赤いボタンが付いた機械。古い走り書きがあり、そこには「ボタンを押してはならない」と書かれている。誰がこれを書いたのかはハッキリしていないが、ずっと昔からここで働いていた職員の1人である可能性がある。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {このアブノーマリティを管理するのは難しいことではないが、多くの職員は不眠症になるほど「ボタンを押したい」という強い誘惑を持っている。最初は誇張とされていたが、このような誘惑に苦しんでいると主張する職員の数が多すぎるため、この問題に対する解決策が現在実施されている。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="1">
+      [
+      {アブノーマリティを定義する最も重要な要素の一つは「自由意志」である。このアブノーマリティは、周囲の誰もがボタンを押したいと思うようになる能力を持っていることが確認された。したがってこれはアブノーマリティとして分類された。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {ボタンを押すとありえないことが起こる。災害が地域を襲い、光が虹色に輝き、ユニコーンが空から降りてくる。噂によると、最終的に施設の下にある巨大な爆弾がすべてを破壊しつくす。この噂を確認する方法はない。}
+      ]
+    </desc>
+    
+    <desc id="5" openLevel="3">
+      [
+      {また、このアブノーマリティは、誤ってボタンを押してしまうように狡猾に形を変えることがあるので注意する必要がある。}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="4">
+      [
+      {職員の証言&#13;&#10;気がついたら、私はちょうどそのボタンを押そうとしていました。もし周りの職員が引き止めていなかったら、私は押していたかもしれません。（職員は様々な検査を受けたが正常と診断され、職場に復帰した。しかしボタンを押せなかったことに若干の残念さを感じているように見えたので、彼女にカウンセリングを受けるように指示した）}
+      ]
+    </desc>
+
+      <specialTipSize size="5">
+      <specialTip openLevel="1" key="confessionIs">このボタンを押すと 何が起こるかわからない。</specialTip>
+      <specialTip openLevel="2" key="confessionIsGood">たとえ 何が収容室で 起こっても このボタンは 押してはならない。</specialTip>
+      <specialTip openLevel="3" key="lightening">止まってください！ あなたは かわいそうな職員を 気の毒に思いませんか 管理人？</specialTip>
+      <specialTip openLevel="4" key="lightening1">ああ お願いします。 そのボタンを 押さないでください。</specialTip>
+      <specialTip openLevel="5" key="lightening2">あなたは 幾度も それを 押してきましたが まだ 知りたいことが 残っていますか？</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

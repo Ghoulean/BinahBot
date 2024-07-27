@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100058">
+
+
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+    
+    <narration action="start">
+      [
+      {通常情况下，员工们会渴望把自己献给“$0”。},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {我们的“$0”诞生自绝望的深渊，亦将飘向一个全新的开始。},
+      ]
+    </narration>
+
+
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-03-93</codeNo>
+      <portrait openLevel ="0">Sprites/Unit/creature/BlueStar</portrait>
+
+      <name openLevel ="1">
+        碧蓝新星
+      </name>
+
+      <riskLevel openLevel ="1">
+        ALEPH
+      </riskLevel>
+
+      <openText>
+        我们还会再见面的。到那时，你我&#13;&#10;都将化成明星！
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {&lt;color=#FF9E72FF&gt;&lt;b&gt;&lt;紧急通知&gt;&lt;/b&gt;&lt;/color&gt;&#13;&#10;此通知面向所有脑叶公司的在职员工：&#13;&#10;我司一贯支持能够增进员工工作积极性的企划。但我们近期收到的报告称，公司内部疑似存在“策动违规企划”或“暗中举办神秘活动”的团体。由于已经收到了大量类似的报告，所以我们决定开始调查。&#13;&#10;据公司规定，严禁所有在职员工崇拜和/或信仰异想体。我司绝不存在那些所谓“神圣”的东西，也决不允许员工将这里的任何事物，特别是将“某个异想体”偶像化。&#13;&#10;未经授权擅自进入收容单元（特别是“某个异想体”的收容单元）的员工一旦发现必将严惩！&#13;&#10;如果你有把自己奉献给“某个异想体”的冲动，那你将被视为“已感染”。就跟收容在这里的部分异想体一样，“某个异想体”会以这样的方式迷惑并控制你的大脑。一旦发生这种情况，请立即停止工作并去寻求心理咨询。鉴于读到此通知的各位都是通过了基础能力培训的合格员工，我希望你们不会蠢到被“某个异想体”所迷惑。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {下面我们将列出一份黑名单。出现在黑名单上的员工必须接受为期3天的强制性心理治疗，并将被各自所在部门的Sephirah处罚。我们列出黑名单的目的是为了让你们所有人都能意识到周遭事态的严重性——你的身边可能正潜伏着数量惊人的，已被“某个异想体”感染的员工。&#13;&#10;几个月前，员工艾米丽闯进“某个异想体”的收容单元并在那里自杀身亡。事发之后，我们注意到某些员工将她“尊称”为“殉教者”。这种行为显然不符合公司的规定。&#13;&#10;此外，我们还应赞扬员工迪伦那非凡的勇气，他救下了正欲自寻短见的员工索菲。&#13;&#10;如果你发现身边有同事表现出类似的怪异行为，请立即上报给你们的Sephirah。}
+    ]
+  </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {&lt;color=#BFEFFF&gt;亲爱的迪伦，&#13;&#10;我愿意相信你不是故意出卖索菲和其他教友的，我敢肯定你正在担心索菲。她已经被关起来了，我听说她多次尝试逃跑，所以他们把她牢牢绑在了病床上。&#13;&#10;迪伦，告诉我，信仰难道有错吗！？&#13;&#10;我们生来即是罪人，而&lt;/color&gt;&lt;color=#00FFFF&gt;碧蓝新星&lt;/color&gt;&lt;color=#BFEFFF&gt;是唯一能够接纳我们这种罪人的地方，我们将在那里净化我们的一切。&#13;&#10;我们终有一天会回到那个地方，这是我们与生具来的本能。&#13;&#10;你也许会认为，那个把自己献给&lt;/color&gt;&lt;color=#00FFFF&gt;碧蓝新星&lt;/color&gt;&lt;color=#BFEFFF&gt;的艾米丽已经死了？大错特错！她回到了真正的归属，她是一位殉教者，她化成了一颗永远的明星！&#13;&#10;一颗冉冉升起的新星意味着全新的开始！你听不到那永恒的号角吗！？&#13;&#10;靠近那颗星，你能听到他们正欢呼着，歌唱着迎接我们的到来！&#13;&#10;所有人都将回到那个地方，唯有&lt;/color&gt;&lt;color=#00FFFF&gt;碧蓝新星&lt;/color&gt;&lt;color=#BFEFFF&gt;才能永世长存！&#13;&#10;我们还会再见面的。到那时，你我都将化成明星！&lt;/color&gt;}
+      ]
+    </desc>
+
+
+    <specialTipSize size="1">
+      <specialTip openLevel="1" key="1">自律等级低于4级的员工进入“$0”的收容单元后会被吸入它的中心并死亡。</specialTip>
+      <specialTip openLevel="1" key="2">谨慎等级不为5级的员工在完成了对“$0”的工作后，“$0”的逆卡巴拉计数器会立刻减少。</specialTip>
+      <specialTip openLevel="1" key="3">当工作时间超过60秒时，“$0”的逆卡巴拉计数器会立刻减少且正在进行工作的员工将被吸入它的中心并死亡。</specialTip>
+      <specialTip openLevel="1" key="4">突破收容后，谨慎等级低于4级或自律等级低于3级的员工遭遇“$0”时会被吸入它的中心并死亡。</specialTip>
+      <specialTip openLevel="1" key="5">突破收容后，主管听到的所有声音都会变成静谧，低沉的音调，并将受到一定程度的视觉干扰。</specialTip>
+      <specialTip openLevel="1" key="6">突破收容后，设施中所有陷入恐慌的员工都会被吸入“$0”的中心并死亡。</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

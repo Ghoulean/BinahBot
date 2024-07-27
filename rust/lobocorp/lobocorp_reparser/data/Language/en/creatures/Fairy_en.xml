@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100053">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {If #0 can show that they are competent, then they may be able to draw $0’s attention.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Most of the employees do not know the true meaning of “The Fairies’ Care”.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">F-04-83</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Fairy</portrait>
+      <name openLevel="1">
+        Fairy Festival
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <openText>
+        Everything will be peaceful while you are under the fairies' care.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {The Abnormality is similar to a fairy, having two pairs of wings and a small body. They act as a cluster. }
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {They use a language we cannot understand to communicate with each other. They follow a few employees around when they enter the Containment Unit, using their special abilities to help heal injuries. Employees call this act "The Fairies' Care".}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {The fairies protect our employees. If you often act out of the goodness of your heart, and are a lover of nature, then the fairies will gladly take care of you. Everything will be peaceful while you are under the fairies' care (you can also enjoy the envious glances you'll get from other employees. Not that it's important, but...). What if the fairies don't approach you? Then you should reflect on your life. When Emil and I took shifts entering the fairies' Containment Unit, the fairies did not hesitate to approach me. Only me, never towards Emil. (You all know Emil and how he is. Why, just yesterday he refused to share his snacks with me, and he was acting all high and mighty.)&#13;&#10;&#13;&#10;It is a sacred act to be protected by fairies in any world. However, do not enter their Containment Unit just to have a bit of fun; if you’ve read a few books on them, you’ll know that fairies dislike those who take advantage of their kindness. }
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      <!-- 여기 번역 고치기 -->
+      [
+      {&lt;The corresponding document is only accessible by Employees Level 4 and higher&gt;&#13;&#10;
+      When Walter, who was under the care of the fairies, died in the room of another Abnormality, we noticed some anomalies. His stomach and face were ripped off, and his eyeballs and organs were damaged as if they were eaten by something. Moreover, the Containment Unit Walter was found in was for an Abnormality that uses psychological attacks. Meanwhile, the fairies had someone's blood and flesh smeared all over their mouths. We did not bother to examine them to find out whose flesh and blood it was.&#13;&#10;
+      In our world, there are few outcomes that result from perfect kindness. Having fairies that live in a forest visit you just because they like you or that you've done many good deeds is only something that happens in fairy tales. Even though we know this truth, we still sometimes become deluded. Thinking that "The Fairies' Care" is happening because of all the good deeds we've done, or that the fairies are "favoring" us because there is something that makes us more special than the other employees.  }
+      ]
+    </desc>
+    <desc id="5" openLevel="2">
+      [
+      {      The fairies are no more than carnivorous monsters, and their "protection" is their method to keep the meat fresh. When an employee enters another Containment Unit, they gobble them up in fear that they would lose their food to something else.&#13;&#10;
+      However, the employees were greatly satisfied by the fairies' care, and we saw a drastic decrease in the accident rate, so we deemed it unnecessary to tell the truth to the employees.}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">When the work result was Normal or Good, small fairies appeared around the employee.</specialTip>
+      <specialTip openLevel="2" key="2">The small fairies will heal the employee’s HP over a limited time.</specialTip>
+      <specialTip openLevel="2" key="3">If an employee under the fairies' care is assigned to a different Containment Unit, they will immediately die and be consumed by the fairies.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

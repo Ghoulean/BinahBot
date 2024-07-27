@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300110">
+
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">D-09-104</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ReverseClock</portrait>
+
+      <name openLevel ="1">
+        거꾸로 가는 시계
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>
+        바닥까지 떨어져서 더 이상 방법이 보이지 않으신가요?
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {<i>'정현교 후원자님의 아이디어를 기반으로 만들어진 환상체입니다.'</i>&#13;&#10;&#13;&#10;어느 회사가 제조한 낡은 시계다. 진공관 램프가 탑재된 디자인은 고풍스러운 느낌을 자아낸다. 현재는 생산이 중단된지 오래다.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {“…. 바닥까지 떨어져서 더 이상 방법이 보이지 않으신가요? 그 때, 그 순간, 다른 선택을 했더라면, 이라는 생각에 사로 잡혀 버렸나요?&#13;&#10;병과 자연, 우주를 정복한 우리 인류는 이제 시간까지 정복하였습니다.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {네, 저희는 당신이 낭비한 시간을 돌려드립니다.&#13;&#10;그저 태엽을 돌린 후 눈을 감고 10초를 세십시오.&#13;&#10;눈을 뜨면, 당신이 떠나보낸 모든 순간들이 기다리고 있을 것입니다.”}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {* 사용지침서를 제대로 읽어주세요. 비정상적인 작동을 할 경우 제품에 흐르는 고전압이 어떤 반응을 일으킬지는 미지수이니까요. 고객의 부주의로 생긴 부작용을 저희 회사는 일절 책임지지 않습니다.}
+      ]
+    </desc>
+
+  
+     <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">$0의 작업을 1회 완료할 때마다 전구 중 1개가 점등되며 에너지가 충전된다.</specialTip>
+      <specialTip openLevel="2" key="2">3등급 미만인 직원이 작업을 진행한 경우에는 아무런 변화도 나타나지 않았다.</specialTip>
+      <specialTip openLevel="2" key="3">전구가 모두 점등된 이후부터 $0를 작동시킬 수 있다. 단, $0는 하루 한 번만 작동할 수 있으니 사용 시 신중을 요함.</specialTip>
+      <specialTip openLevel="2" key="4">&lt;주의&gt;$0가 완전히 충전된 이후에는 5등급 미만 직원의 접근을 엄격히 막을 것.</specialTip>
+      <specialTip openLevel="2" key="5">5등급 이상인 직원만이 $0를 정상적으로 작동시킬 수 있다. $0는 해당 직원을 제외한 나머지 직원들을 하루 중 가장 평온했던 순간으로 보내줄 것이다.</specialTip>
+     </specialTipSize>
+
+
+
+  </observe>
+</creature>

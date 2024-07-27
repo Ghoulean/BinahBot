@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100012">
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {$0 quer comida para o inverno que aí vem. Os filhos dela estão sempre com fome.}
+      {A unidade de contenção é uma gigante teia de aranha. Mal um empregado entra, os olhos da aranha se fixam na sua presa.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {No momento que #0 se apercebe de que os fios do teto estão mais longos que o usual, um fio começa a se mover.}
+      {Quando #0 nota que o chão não deveria ser preto, uma grande sombra começa a se mover.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Os numerosos olhos da $0 silenciosamente vigiam todos os movimentos de #0.}
+      {$0 provavelmente consegue ouvir, sentir e cheirar tão bem quanto vê.}
+      {Aranhas tem instintos maternais fortes. Elas defendem as suas crias a todo o custo.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {#0 não olha para o teto da unidade de contenção enquanto trabalha. Fazer contacto visual com ela iria arruinar-lhe o dia.}
+      {Às vezes crias de arranha caiem do teto, mas tudo vai ficar bem se os ignorares.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {#0 não se esqueceu de abanar as suas roupas gentilmente para que nenhuma cria de arranha ficasse agarrada no tecido antes de sair.}
+      {#0 conseguiu com sucesso sair da unidade de contenção sem esmagar nenhuma arranha.}
+      ]
+    </narration>
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">T-02-43</codeNo>
+      <name openLevel="1">Casulo Aranha</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/SpiderMom</portrait>
+      <riskLevel openLevel ="1">TETH</riskLevel>
+      <openText>E sem ser surpresa alguma, nenhum empregado voluntariou-se para retirar o corpo dele do meio das teias.</openText>
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Uma Anormalidade com a forma de uma arranha gigante que guarda o seu território na escuridão. Pequenas arranhas vagam pelo chão, enquanto fios não identificados estão presos no teto. É difícil de ver a Anormalidade porque os cabos do teto da unidade de contenção estão danificados, sendo assim, não há iluminação dentro da unidade de contenção.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {O nosso caro empregado Peter entrou na unidade de contenção. Ele viu as crias da arranha fugir para longe da luz que vinha do chão.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [{No momento em que ele esmagou uma das crias, um horrível incidente se desencadeou. Uma arranha gigante com muitos olhos desceu do teto e levou o empregado consigo em uns meros segundos. A mesma enrolou Peter em um casulo e o pendurou pelo teto, ele tornou-se em uma refeição saudável para as crias dela.}]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [{E sem ser surpresa alguma, nenhum empregado voluntariou-se para retirar o corpo dele do meio das teias.}]
+    </desc>
+
+    <desc id="5" openLevel="2">
+      [{&lt;Excerto de uma Enciclópedia&gt;&#13;&#10;A maioria das pessoas não sabe disto, mas as criaturas presas nos casulos das aranhas não estão mortos. As vitimas estão a morrer lentamente lá dentro, mantidas vivas para que possam estar frescas até serem consumidas mais tarde. O veneno das aranha contêm uma toxina especial que causa danos irreversíveis ao coração, o que eventualmente leva à morte. Aqueles presos dentro do casulo não têm outra escolha a não ser ficar no escuro sendo consumidos pelas crias da aranha, enquanto ouvem os seus corações abrandarem lentamente. (Omitido)}]
+    </desc>
+
+    <desc id="6" openLevel="3">
+      [{&lt;Excerto de uma Carta&gt;&#13;&#10;Obrigado por partilhar a sua opinião. No entanto, as nossas pesquisas indicam que as situações que vos preocupam são improváveis de acontecerem. Note que também já foi provado que a presença de um casulo na unidade de contenção aumenta a energia produzida, então por essas razões não iremos implantar um procedimento de resgate para os empregados que foram capturados pela a Mãe Aranha já que não nos favorece. No entanto, nós iremos disponibilizar no futuro mais recursos para melhorar a pesquisa deste espécime. Por favor não se esqueça que tentar realizar um resgate é contra o código de conduta e haverá penalizações incluindo a demissão dos envolvidos. Lobotomy preocupa-se com o bem-estar e as opiniões dos empregados.&#13;&#10;   ―Chefe do Departamento de Bem-Estar, Lobotomy Corporation.}]
+  </desc>
+
+    <desc id="7" openLevel="4">
+      [{Há um estranho rumor que tem se espalhando entre os empregados. O que não é surpreendente devido ao calibre desta companhia, mas realmente é interessante ver o número de alegadas testemunhas aumentar. Alguns dos rumores que vêm circulando na companhia: "Sussurros podem ser ouvidos naquela unidade de contenção durante a noite.", "É a voz do Alex, aquele que desapareceu alguns dias atrás..." e "Eles dizem que ouvem uma voz que pede desesperadamente para ser salva da escuridão".}]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="OneChick">Empregados com Prudência de nível 1 pisaram nas crias de aranha. A $0 torna aqueles que magoam os bebés dela em casulos de teias.</specialTip>
+      <specialTip openLevel="2" key="Clean">A $0 rapidamente fez com que #0 se tornasse um casulo enquanto #0 estava a limpar a unidade, parte do procedimento do trabalho de Esclarecimento.</specialTip>
+      <specialTip openLevel="3" key="Cocoon">Os casulos da $0 produzem mais PE-Boxes. Quanto mais casulos, mais PE-Boxs serão produzidas.</specialTip>
+    </specialTipSize>
+
+  </observe>
+
+
+</creature>

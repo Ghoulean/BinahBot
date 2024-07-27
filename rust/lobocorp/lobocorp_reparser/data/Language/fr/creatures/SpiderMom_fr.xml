@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100012">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {$0 veut stocker de la nourriture pour l’hiver à venir. Ses enfants sont toujours affamés.},
+      {L’Unité de Confinement est une gigantesque toile d’araignée. Dès qu’un employé y pénètre, le regard de l’araignée est fixé sur sa proie.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Dès que #0 s’aperçoit que les fils au plafond sont plus longs que d’habitude, l’un d’entre eux a commencé à bouger.},
+      {Dès que #0 s’aperçoit que le sol ne devrait pas être noir, une grande ombre a commencé à bouger.}	
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Les nombreux yeux de $0 suivent chaque mouvement de #0.},
+      {$0 est probablement capable d'entendre, de toucher, de sentir et de voir. Et surtout, de goûter.},
+      {Les araignées ont un fort instinct maternel. Elles défendront leur progéniture à tout prix.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Durant le travail dans l’Unité, #0 n’a jamais regardé le plafond. Croiser son regard ruinerait sa journée.},
+      {Parfois, quelques araignées peuvent tomber du plafond, mais tout ira bien si vous vous contentez de les ignorer.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {#0 veille à ne pas oublier de tapoter sa tenue avant de partir, afin de s'assurer qu'aucune araignée n’y soit encore accrochée.},
+      {#0 a réussi à quitter l'Unité de Confinement en n’écrasant aucun des petits.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">T-02-43</codeNo>
+      <name openLevel="1">Bourgeon d'Araignée</name>
+      <portrait openLevel="1">Sprites/Unit/creature/SpiderMom</portrait>
+      <riskLevel openLevel="1">TETH</riskLevel>
+      <openText>Sans surprise, aucun employé ne s’est porté volontaire pour récupérer le corps encoconné de leur collègue.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Une Anomalie prenant la forme d’une araignée géante gardant son domaine plongé dans l’obscurité. Il est difficile de voir l’anomalie à l’œil nu. De petites araignées rampent sur le sol.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Notre fier employé, Peter, est un jour entré dans l’Unité de Confinement de l’Anomalie. Lorsqu’il a éclairé le sol de sa lampe de poche, de petites petites araignées se sont éloignées de la lumière.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Lorsque Peter a écrasé l'une des araignées par accident, une araignée géante est descendue du plafond. Peter a été traîné au plafond en un instant. L'employé suspendu au plafond de l'Unité de Confinement sera un repas sain pour la descendance de l'araignée.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Sans surprise, aucun employé ne s’est porté volontaire pour récupérer le corps encoconné de leur collègue.}
+      ]
+    </desc>
+    <desc id="5" openLevel="2">
+      [
+      {&lt;Extrait d’une Encyclopédie Animale&gt;&#13;&#10;
+      … L’on néglige souvent qu’en réalité, les victimes piégées dans le cocon d'une araignée ne sont pas encore mortes. La proie meurt lentement à l'intérieur. Leur mort est reportée afin qu'ils puissent être conservés au frais pour une consommation ultérieure. Le poison d'une araignée contient une toxine qui endommage le cœur de façon permanente, menant à la mort après une longue agonie. Les insectes, pris au piège dans les cocons noirs, n'ont pas d'autre choix que d'attendre que les araignées se nourrissent d'elles, sentant leur cœur battre de plus en plus lentement. (Omis)}
+      ]
+    </desc>
+    <desc id="6" openLevel="3">
+      [
+      {&lt;Extrait de la Lettre du Directeur du Secteur de Bien-Être&gt;&#13;&#10;
+      Nous apprécions votre suggestion. Cependant, nos propres recherches indiquent que vos préoccupations sont peu susceptibles d'être fondées. De plus, il est prouvé que la présence d'un cocon dans l'Unité de Confinement augmente le rendement énergétique. Pour ces raisons, nous ne mettrons pas en œuvre de procédure de sauvetage pour les employés victimes du Bourgeon d’Araignée, car cela va à l'encontre de nos intérêts. Cependant, nous allouerons plus de ressources à la recherche sur ce spécimen à l'avenir en accord avec votre opinion. Veuillez cependant noter que perturber l'atmosphère de notre espace de travail en répandant des rumeurs infondées est contraire au code de conduite et peut même être passible de sanctions, y compris le licenciement. La Lobotomy valorise toujours le bien-être et la parole de ses employés.&#13;&#10;
+      - Directeur du Secteur de Bien-Être, Lobotomy Corporation.}
+      ]
+    </desc>
+    <desc id="7" openLevel="4">
+      [
+      {Une étrange rumeur se répand parmi les employés. Il n'est pas inhabituel qu'une rumeur ou deux se répandent dans une corporation comme celle-ci, mais il est intéressant de noter que le nombre de témoins présumés semblent se multiplier. La rumeur raconte que :&#13;&#10;“Des murmures peuvent être entendus dans l'Unité de Confinement la nuit…”&#13;&#10;“C'était la voix d'Alex, qui a disparu il y a quelques jours…”&#13;&#10;“Ils disent que la voix pleurait de terreur, demandant à être sauvée de l'obscurité…”}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="OneChick">Les employés avec une Prudence de niveau 1 ont écrasé les araignées. $0 a changé ceux qui ont blessé ses enfants en cocons.</specialTip>
+      <specialTip openLevel="2" key="Clean">Lorsque l’Unité de Confinement a été nettoyée dans le cadre d’un Travail de Perspicacité, #0 a rapidement été changé en cocon par $0.</specialTip>
+      <specialTip openLevel="3" key="Cocoon">Les cocons de $0 produisent des Boîtes-EP. Plus de cocons signifie une plus grande production de Boîtes-EP.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

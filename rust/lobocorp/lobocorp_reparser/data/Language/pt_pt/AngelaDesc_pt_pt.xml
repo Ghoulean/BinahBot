@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--  #0 -> 직원 이름
+  #1 -> 작업 이름 (을)
+  #2 -> 환상체 이름
+  #3 -> 죽는 이유
+  #4 -> 특수작업
+  #5 -> 작업 이름 (을 이 업다)
+-->
+<root>
+  <!-- 
+  Normal - 일반적인 상황
+  Danger - 위급 상황 
+  Position up 상단 UI
+  Position down 하단 UI
+
+  상단 UI에 올라오는 것은 전부 하단 UI에 등장. 
+
+up 중요한 - 상단 // 둘다 하단ㅇ에도
+down 별로안중요 - 하단에만
+
+  normal type num 1 = 일상
+  type num 2 = 에너지 절반 이상
+  type num 3 = 에너지 다 모았을 때
+  type num 4 = 환상체에게 작업을 시작할 때
+  type num 5 = 환상체에게 작업을 끝냈을 때
+  type num 6 = 작업을 성공했을 때
+  type num 7 = 게임오버 된 후에 다시 시작했을 때 
+
+  danger type 
+              num 1 = 사무직 직원이 다 죽었을 때 (게임오버)
+              num 2 = 환상체의 기분이 좋지 않을 때
+              num 3 = 환상체의 작업이 실패했을 때 (특수공격)
+              num 4 = 환상체가 탈출했을 때
+              num 5 = 직원들이 패닉에 빠졌을 때
+              num 6 = 직원들의 멘탈수치가 좋지 않아 졌을 때 경고
+              num 7 = 직원이 죽었을 때
+              num 8 = 체력 피해 때문에 죽었을 때
+              num 9 = 멘탈 피해 때문에 죽었을 때
+
+  # 은 변수
+  #0 -> 직원 이름
+  #1 -> 작업 이름
+  #2 -> 환상체 이름
+  #3 -> 죽는 이유 
+  #4 -> 특수작업
+
+  #1$0가 #1$1에게 #2$0에게 질문을 합니다. 이런식으로.
+  
+
+  -->
+  <normal>
+    <type num="0" position="up">
+      <!-- 일상 인삿말 특수케이스 ,id 가 day 에 매칭됨 -->
+      <item id="1" desc="Bem-vindo, gerente. Eu sou a sua IA assistente, Angela. Eu estou aqui para dar-te suporte no teu primeiro dia. Eu irei dar-te conselhos práticos e suporte emocional até que tu te acostumes com o teu trabalho."/>
+      <item id="2" desc="Este é o teu segundo dia. Eu acho que já me reconheces pela a minha voz. Mas deixa-me relembrar-te. Eu sou a sua IA assistente, Angela. Eu tenho esta incrível capacidade de te saudar com diferentes palavras todos os dias. Eu espero que nada de mal aconteça hoje!"/>
+      <item id="3" desc="Nada é certo neste lugar. A única coisa que é certa é que nada é certo. Prepara-te para imprevistos."/>
+      <item id="4" desc="Tu talvez sejas uma pessoa ordinária. Apenas uma cara no meio da multidão. Mas não neste lugar. Tu és o único gerente nesta instalação."/>
+      <item id="5" desc="Os empregados frequentemente falam sobre ti. De acordo com as minhas fontes, o teu nome foi citado em conversas cerca de 43 vezes. Tu és famoso!"/>
+      <item id="6" desc="O clima está mau lá fora. Nem sempre o dia pode ser ensolarado, não é? Mas, qualquer que seja o clima, há energia para ser extraída."/>
+      <item id="7" desc="Gerente, fique à vontade para me ligar por ajuda quando sentires que o trabalho é demasiado para suportares. Eu estou aqui para ajudar!"/>
+      <item id="8" desc="(Angela está em silêncio hoje)"/>
+      <item id="9" desc="Foi uma grande sorte que tu te juntaste a esta companhia. Tu não serás capaz de encontrar uma corporação que se importa com os seus empregados assim como nós."/>
+      <item id="10" desc="Tudo o que tu desejas se tornará realidade aqui. Tem um bom dia!"/>
+      <item id="11" desc="(Angela está em silêncio hoje)"/>
+      <item id="12" desc="Nós temos de atualizar o sistema de segurança. Já não o fazemos há muito tempo."/>
+      <item id="13" desc="(Angela está silenciosa hoje)"/>
+      <item id="14" desc="(Angela está em silêncio hoje)"/>
+      <item id="15" desc="(Angela está silenciosa hoje)"/>
+      <item id="16" desc="Confiança é importante neste lugar. A confiança entre eu e tu, tu e os empregados, e a confiança em ti próprio. "/>
+      <item id="17" desc="Yep, tem um bom dia!"/>
+      <item id="18" desc="Lobotomy faz o seu melhor para manter os seus empregados felizes."/>
+      <item id="19" desc="(Angela está em silêncio hoje)"/>
+      <item id="20" desc="Eu sei que eu sempre digo isto, mas por favor faz o teu melhor na produção de energia."/>
+    </type>
+
+    <type num="1" position="down">
+      <!-- 에너지가 절반 이상 모였을 때 한번뜨면 그날에는 두번다시안뜬다-->
+      <item id="1" desc="Tu acumulaste exatamente metade da energia que tu deves coletar. Bem, não existem metades exatas de energia. Energia não possui forma, a frase “exatamente metade da energia” não faz sentido. Por outras palavras, ……. (A transmissão foi cortada.)"/>
+      <item id="2" desc="Há uma grande diferença entre “meio cheio” e “meio vazio”. Demorei muito tempo a entender a diferença."/>
+      <item id="3" desc="Mais de metade da energia foi adquirida. Por favor verifique quanto tempo ainda tens hoje."/>
+      <item id="4" desc="Não te fiques por apenas metade da energia. Tu deves coletar toda a energia necessária, não apenas metade."/>
+      <item id="5" desc="Certamente tu tiveste de realizar sacrifícios para coletares metade da energia total. Não deixes que eles sejam em vão. Alegra-te!"/>
+    </type>
+
+    <type num="2" position="up" default="Quantidade necessária de energia foi adquirida. Iniciando o refinamento.">
+      <!-- 1차로 에너지가 찼을 때 -->
+      <!-- 에너지가 다모였을 때 -->
+      <item id="1" desc="Tu deves ter estado à espera desta notícia: tu conseguiste adquirir toda a energia que precisamos para hoje! A energia que tu vais coletar apartir de agora será um extra, o que fará a nossa companhia prosperar ainda mais."/>
+      <item id="2" desc="Eu sabia que tu conseguias! Nós conseguimos coletar toda a energia necessária. Mesmo que tu não me consigas ver, eu estive sempre aqui, a apoiar-te."/>
+      <item id="3" desc="Eu acho que eu escolho bem os meus gerentes. Tu conseguiste coletar toda a energia necessária. Agora faz uma pausa."/>
+      <item id="4" desc="Olha, o resultado dos teus esforços está diante de nós. Isto é tudo que precisamos. Vês? Tu és prefeito para a Lobotomy."/>
+      <item id="5" desc="Nós temos energia suficiente, a coleta pode parar agora. Se eu estivesse aí, eu dava-te um high-five."/>
+    </type>
+
+    <type num="3" position="down" default="#0$0 recebeu a ordem para realizar #1$0 na Anormalidade #2$0.">
+      <!-- 20개 정도 더 쓰기 -->
+      <!-- 직원이 환상체에게 작업 시작했을 때 . ** called 로 작업 이름을 호출한다 -->
+      <item id="1" desc="Employee #0$0, who was goofing around, begins #1$0 on #2$0."/>
+      <item id="2" desc="Employee #0$0, who just finished his/her lunch, begins #1$0 for Abnormality #2$0."/> 
+      <item id="3" desc="Employee #0$0, who was slacking off, just began #1$0 on #2$0."/>
+      <item id="4" desc="Employee #0$0 who wanted to drink a pint of beer, begins #1$0 on #2$0."/>
+      <item id="5" desc="Employee #0$0 who was having a snack, begins #1$0 on #2$0."/>
+      <item id="6" desc="Employee #0$0, who wanted to go to the bathroom, starts #1$0 to #2$0."/>
+      <item id="7" desc="Employee #0$0 who was behind schedule, begins #1$0 on #2$0."/>
+      <item id="8" desc="Employee #0$0 who wished to be out of this, headed to the containment chamber to begin #1$0 on #2$0."/>
+      <item id="9" desc="Employee #0$0 knows it’s about time. He/she heads to #2$0’s containment chamber to begin #1$0 with resolute determination."/>
+      <item id="10" desc="Employee #0$0 picks up the necessary equipment and begins #1$0 on #2$0."/>
+      <item id="11" desc="Employee #0$0 goes over the survival manual once again and swiftly prepares to begin #1$0 on #2$0."/>
+      <item id="12" desc="Employee #0$0, who was contemplating about the meaning of life, begins #1$0 on #2$0"/>
+      <item id="13" desc="Employee #0$0, who was a bit tired due to heavy drinking last night, collects him/herself to begin #1$0 on #2$0."/>
+      <item id="14" desc="Employee #0$0, who is upset after bumping his/her toenail into the wall, starts #1$0 on #2$0." /> 
+      <item id="15" desc="Employee #0$0, who is excited for upcoming payday, takes a deep breath to begin #1$0 on #2$0."/>
+      <item id="16" desc="Employee #0$0, who made him/herself ill by overeating, prepares to begin #1$0 on #2$0."/>
+      <item id="17" desc="Employee #0$0, who doesn’t really what he/she is looking on the mirror, prepares to begin #1$0 on #2$0."/>
+      <item id="18" desc="Employee #0$0, tired from all the overwork, starts #1$0 on #2$0."/>
+      <item id="19" desc="Employee #0$0, who is upset from being grilled by his/her boss, goes into the containment chamber to begin #1$0 on #2$0."/>
+      <item id="20" desc="Employee #0$0, who is oversensitive due to being on a diet, gets ready to begin #1$0 on #2$0."/>
+    </type>
+
+
+
+
+    <!--  <type num="4" position="down">
+   
+      <item id="1" desc="#0$0 직원은 $1$0 끝냈습니다."/>
+      <item id="2" desc="#0$0 직원이 당신에게 명령받은 $1$0 완료했습니다."/>
+      <item id="3" desc="#0$0 직원이 $1$0 다 끝마쳤습니다."/>
+    </type>
+
+
+     <type num="5"> 
+      <item id="1" position="down" desc="#0의 작업은 성공적이었습니다."/>
+      <item id="2" position="down" desc="#0에게는 다행히도 성공적인 작업이었어요."/>
+      <item id="3" position="down" desc="#0가 한 작업은 꽤 괜찮았어요."/>
+    </type> -->
+
+
+    <type num="6" position="up">
+      <!-- 게임오버 되서 다시 시작했을 때 -->
+      <!-- 5개까지 늘리기 -->
+      <item id="1" desc="Não é fácil trabalhar como gerente na nossa companhia. Não penses que irás ter sucesso logo de primeira. Quanto mais tu tentares, melhor o resultado será. Acredita em ti proprio."/>
+      <item id="2" desc="You’re not discouraged already, are you? It’s not that you are terrible or useless; it’s just something incredibly difficult. You should think that way."/>
+      <item id="3" desc="Hey, gerente. Tu consegues ouvir-me? Tu pareces distante. Estás bem? Acabaste de descobrir que ser um gerente não era tão fácil quanto tu imaginavas. Pull yourself together. É hora de consertares os teus erros."/>
+      <item id="4" desc="Tu não estás a pensar em desistir depois de You’re not thinking about giving up after a couple of failures, pois não? Now you know how to handle this. I have a solid reason for selecting you as a manager out of many other candidates."/>
+      <item id="5" desc="The staff here counts on you. You should lead them all. The difference between here and the outside world is that here there is always a chance: a chance to correct your mistakes, and a chance to redeem yourself.."/>
+    </type>
+
+    <type num="14" position="down" default="Employee #0$0 starts &lt;color=#e6e600ff&gt;observation&lt;/color&gt; on abnormality #2$0.">
+      <!-- 관찰 시작했을 때 -->
+      <item id="1" desc="Employee #0$0 will take the logbook and begin observation on #2$0 soon."/>
+      <item id="2" desc="Employee #0$0 will begin observation on #2$0 to update the codex."/>
+      <item id="3" desc="Employee #0$0 picks up necessary equipment and starts observation on #2$0."/>
+    </type>
+
+
+    <type num="15" position="down" default="#2$0 abnormality's &lt;color=#e6e600ff&gt;observation&lt;/color&gt; &lt;color=#66FF33FF&gt;successed&lt;/color&gt;.">
+      <!-- 관찰 성공-->
+      <item id="1" desc="#0$0 successfully complete observing #2$0. His recordings are updated to the codex."/>
+      <item id="2" desc="Fortunately, employee #0$0 succeeds to finish observing #2$0. The log contains his/her crooked handwriting."/>
+      <item id="3" desc="#0$0 successfully finishes observing #2$0. Codex has been updated with the new information."/>
+      <item id="4" desc="#0$0 managed to finish observation on #2$0 with a struggle. We are now one step closer to this abnormality’s secret."/>
+    </type>
+
+    <type num="16" position="down" default="#2$0 abnormality's &lt;color=#e6e600ff&gt;observation&lt;/color&gt; &lt;color=#FF9E72FF&gt;failed&lt;/color&gt;.">
+      <!-- 관찰 실패-->
+      <item id="1" desc="Unfortunately, employee #0$0 fails to observe #2$0. The codex remains unchanged."/>
+      <item id="2" desc="Employee #0$0 could not observe #2$0. He/she was not an enthusiastic researcher."/>
+      <item id="3" desc="Employee #0$0 tried to observe #2$0 but failed. It’s not only because he/she is lazy. "/>
+    </type>
+
+  </normal>
+
+  <danger>
+    <type num="7" position="up" default="Os empregados do departamento #3$0 estão todos mortos.">
+      <!-- 사무실 직원들이 다 죽었을 때 (게임 오버) 곧 다시 재시작해서 볼 수도 있다는 느낌을 은근히 주게 했음 -->
+      <!-- 5개까지 늘리기 -->
+      <item id="1" desc="Gerente, o quê que tu pensas que podes fazer sem empregados? Estragaste tudo. Tu não és aquele que nós queríamos. Parece-me que tu tens um comboio para apanhar. Aquele que leva-te para casa. Acabou-se."/>
+      <item id="2" desc="Tu devias saber quão importante empregados são, se tivesses lido o manual pelo menos uma vez quando entraste para a companhia. Olha para todos estes corpos. Não há nada que nós possamos fazer agora."/>
+      <item id="3" desc="Isto pode ser apenas um erro trivial para ti, mas os empregados estavam a fazer os seus trabalhos com as suas vidas em jogo. Todos queriam sobreviver e esperavam que milagres acontecessem até o último momento. Se eu der-te uma segunda change, tu não vais deixar que isto aconteça novamente?"/>
+      <item id="4" desc="Tu não sabes quão sortudo és. Tu estás apenas a olhar para eles aí. As coisas estão muito piores aqui. Há vermelho em todo o lado. A tua câmera irá ser desligada em breve. E tu também serás……."/>
+      <item id="5" desc="Já alguma vez experienciaste morte antes? É difícil de acreditar, mas só sou eu e tu neste lugar. Eu sou meramente uma IA, e há entidades monstruosas lá fora rastejando. Acho que entendes a gravidade da situação agora."/>
+    </type> 
+
+    <type num="8" position="down">
+      <!-- 환상체의 기분이 좋지 않을 때 경고 -->
+      <!-- 5개까지 늘리기 -->
+      <item id="1" desc=" We should focus on #2$0. If it gets a little bit worse, there’s likely nothing we can do."/>
+      <item id="2" desc="Will you pay more attention to #2$0 if you are not busy? This is not an orphanage. Abnormalitys will not express their emotions by crying."/>
+      <item id="3" desc="#2$0 doesn’t look happy. Why don’t you pay more attention to it? I have to repeat myself that you have to keep an eye on abnormalities while making sure that our employees are out of danger."/>
+      <item id="4" desc="I have no clue why you’re ignoring #2$0 Abnormality, but if you are listening to me, please pay more attention to #2$0."/>
+      <item id="5" desc="Something bad might happen if you don’t pay attention to #2$0, though I am aware that this is a difficult task to perform with only two eyes."/>
+    </type>
+
+    <!--
+    <type num="9" position="down">
+       환상체 작업이 실패했을 때 (특수공격)
+      <item id="1" desc="" 
+    </type> -->
+
+    <type num="9" position="up" default="#2$0 escapou da sua unidade de contenção.">
+      <!-- 환상체가 탈출했을 때 -->
+      <item id="1" desc=". Oh, no. Abnormality #2$0 just escaped the containment. Do not panic, order suppression on it."/>
+      <item id="2" desc="Abnormality #2$0 just escaped. What in the world were you doing?"/>
+      <item id="3" desc="May I assume you do know that Abnormality #2$0 escaped? It’s fiercely darting around the facility. Of course, you don’t have to compensate for the damage done by it, but bear in mind that repairs and recovery cost way more than you think."/>
+      <item id="4" desc="Abnormality #2$0 has broken out. That means, by high chance, it will kill every single person in the facility. Except you and me! What a relief."/>
+      <item id="5" desc="Abnormality #2$0 should have been staying in the containment chamber. I warned you so many times but here we are. Nevertheless, it is not too late. Do your best to suppress it. Please."/>
+    </type>
+
+    <type num="10" position="up" default="#0$0 entrou em pânico.">
+      <!-- 직원이 패닉에 빠졌을 때 -->
+      <item id="1" desc="This is not good. Employee #0$0 went under heavy stress and now panicking."/>
+      <item id="2" desc="I think you have something new to care about. Employee #0$0 has gone completely insane."/>
+      <item id="3" desc="Who knows what employee #0$0, who is panicking, would do? I don’t really want to know."/>
+    </type>
+
+    <type num="11" position="down">
+      <!-- 직원의 멘탈이 좋지 않을 때 경고 빈도 수를 보고 넣을지 뺄지 결정한다. -->
+      <item id="1" desc="Employee #0$0 appears to be under a lot of stress. Before it gets worse, we should pay attention to him/her."/>
+      <item id="2" desc="I know you are busy, but why don’t you pay attention to employee #0$0? He/she seems to be very depressed."/>
+      <item id="3" desc="You have only two eyes, but I have dozens of devices functioning as eyes. That’s how I find out how employee #0$0 is doing. He/she is not doing well."/>
+      <item id="4" desc="Take a look at employee #0$0. The reason employee #0$0 is frowning is not that he ate bad food. I’m telling you just in case you missed it."/>
+    </type>
+
+    <!--
+    <type num="7" posotion="down">
+       
+      <item id="1" position="up" desc="#0$0 직원이 방금 죽었어요. 많은 부상들이 있었지만 가장 큰 원인은 #2$0에게 #1$0 시도하다가 부러진 갈비뼈가 그의 폐를 찔렀기 때문이죠. 괜찮아요. 그는 예전부터 이런 날을 각오해왔어요. 관리자님의 탓이라고 생각하지 마세요."/>
+      <item id="2" position="up" desc="#2$0에게 #1$0 하는 것은 적절하지 않았나 보네요. 관리자님, 잠깐 에너지 모으는 건 그만 두고 #3$0로 죽은 #0$0 직원을 위해 묵념을 하는 시간을 가져보는 건 어떨까요? … 자 애도는 끝났어요. 이제 다시 에너지에 집중!"/>
+      <item id="3" position="up" desc="지금 막 우리 회사의 자랑스러운 직원 #0이 #1$0 시도하다가 목숨을 다했습니다. 당신 탓이라고 생각하지 마세요. 서로 불쌍해질 뿐이니까."/>
+      <item id="4" position="up" desc="당신이 방금 하품을 하고 싶어 했던 그 순간에 #0$0 직원은 #2$0에게 #1$0 하려다가 머리가 으깨져 죽었다고 하네요."/>
+      <item id="5" position="up" desc="이봐요 관리자님. 방금 #2$0 환상체 때문에 #1$0 하려는 직원 #0$0이 과다출혈로 죽었다는 건 알고 에너지를 모으고 있는 건가요?"/>
+      <item id="6" position="up" desc="이젠 딱히 당신에게 이런 걸 보고하는 게 필요 있을지 잘 모르겠어요. 점점 당신은 직원들이 죽는 거에 신경을 쓰지 않고 있잖아요. 직원 #0$0이 죽었어요. #2$0에게 당신이 명령한 #1$0 하려다가요. 그게 다에요"/>
+      <item id="7" position="up" desc="당신이 이 죽음에 이제 어느 정도의 애도를 가지는지, 그건 중요한 게 아니겠죠? 당신이 알고 싶은 건 직원 #0$0의 죽음이 이제 어떤 영향을 끼칠지 겠죠."/>
+      <item id="8" position="up" desc="#0$1 직원이 심각한 부상으로 인해 죽었어요. #2$0에게 #1$0 하려다가요. 그는 행복한 삶을 살아왔고 이게 바로 그가 원하던 죽음이죠"/>
+    </type> -->
+
+    <type num="12" position="down" default="#0$0 foi a óbito.">
+      <!-- 체력피해 때문에 죽었을 때 -> 체력이 0 -->
+      <item id="1" desc="I’m sorry. Employee #0$0 died of excessive bleeding trying to do #1$0 to #2$0. S/he lost a third of his/her blood, which covered the floor."/>
+      <item id="2" desc="It seems it was not appropriate to #1$0 on #2$0. Employee #0$0’s skull has been severely damaged. He/she will never breathe again."/>
+      <item id="3" desc="Abnormality #2$0 did not like #1$0. It severed employee #0$0’s spine. He/she survived few minutes, but soon took last breath."/>
+      <item id="4" desc="Employee #0$0 was attacked while trying to do #1$0 to #2$0. His/her organs spilled out onto the floor. I know you did your best, but the results are not good."/>
+      <item id="5" desc="Abnormality #2$0 did not like #1$0 done by #0$0. His/her body dismembered and rolling around the containment chamber."/>
+      <item id="6" desc="Employee #0$0 just died. He/she had long history of injuries, but the direct cause of death is his/her ribcage. It broke and pierced the lung while he/she was #1$0 on #2$0. He/she expected this for a long time. It is not your fault."/>
+      <item id="7" desc="#1$0 was not a right thing to do on #2$0. Manager, let us have a moment of silence for employee #0$0 who died of brain damage……Done! Now let’s get back to work!"/>
+      <item id="8" desc="Our proud employee #0$0 lived the last moment while #1$0. Don’t blame yourself. It just makes us more miserable."/>
+    </type>  
+
+
+    <type num="13" position="down">
+      <!-- 멘탈피해 때문에 죽었을 때 -> 멘탈이 0 -->
+      <item id="1" desc="Employee #0$0 tried #1$0 on #2$0 but the result doesn’t look good. He/she has gone insane. He/she babbles unintelligible words and lost all of his/her memoires."/>
+      <item id="2" desc="It’s obvious #2$0 Abnormality didn’t like #1$0 by #0$0. He/she cannot stand his/her itching brain and keeps scratching his/her head while drooling. From this moment on, he/she will never be the same. "/>
+      <item id="3" desc="Employee #0$0 wanted to finish #1$0 you ordered on #2$0 but couldn’t. Because paranoid and anxiety consumed his mind and eventually drove him insane. We will never see his/her smile again."/>
+      <item id="4" desc="Employee #0$0 tried #1$0 on #2$0 but his/her sanity had met its limit before he/she finished. He/she doesn’t even know where he/she is now. He/she will slowly lose every single memory he/she has."/>
+      <item id="5" desc="Employee #0$0 tried best to #1$0 on #2$0 but his/her mind was too fragile. He/she is showing hostility to everything that surrounds him/her. He/she doesn’t even recognize his/her co-worker.."/>
+    </type>
+
+    <type num="17" position="down" default="#0$0 foi a óbito.">
+      <!-- 기본적인 체력피해 죽음 입니다만...-->
+      <item id="1" desc="Manager, let us have a moment of silence for employee #0$0 who died of brain damage caused by enraged #2$0………done! Now let’s get back to work!"/>
+      <item id="2" desc="Our proud employee #0$0 breathed his last due to #2$0’s attack. Don’t blame yourself. It will just make us even more miserable."/>
+      <item id="3" desc="At that moment you wanted to yawn, employee #0$0’s skull crashed by #2$0’s attack."/>
+      <item id="4" desc="Look, manager, do you know that employee #0$0 died of blood loss because of #2$0?"/>
+      <item id="5" desc="I’m not even sure there is a point in reporting these anymore. You’re becoming dull to employees’ death. Employee #0$0 died. Killed by #2$0. That’s all."/>
+      <item id="6" desc="Employee #0$0 who were attacked by enraged #2$0 just died. He/she painfully breathed for few minutes before death with his/her fractured lung."/>
+      <item id="7" desc="Employee #0$0 died of severe injury caused by #2$0. He/she lived happy life and this is the death he/she had been wishing for. "/>
+    </type>
+
+    <type num="18" position="down" default="#0$0 foi a óbito.">
+      <!-- 성냥팔이 소녀 한정 작업 실패했을 때 -->
+      <item id="1" desc="The flame that has been engulfing #2$0 got on employee #0$0. #1$0 failed."/>
+      <item id="2" desc="Employee #0$0 tried #5$0 but did not last long. #2$0’s inextinguishable flame got on #0$0."/>
+      <item id="3" desc="The progress of #5$0 burned to ashes in #2$0’s flame."/>
+    </type>
+
+    <type num="19" position="down">
+      <!-- 에너지 바가 채워질 때 -->
+      <item id="1" desc="We’ve got all the energy needed but please wait a little longer, as we are in the process of filtering out impurities with our special technology."/>
+      <item id="2" desc="You’ve accumulated the full amount of energy. I understand you want to leave as soon as possible but please wait a little longer, as we are in the process of refining the energy."/>
+      <item id="3" desc="Why are you not allowed to leave even though you’ve accumulated the target energy? It is because it takes some time to convert the energy to electricity. It’s a complex technology."/>
+      <item id="4" desc="Energy production is not the end of the process. We should refine the energy and it takes more time. But compared to your management time, it is a brief moment."/>
+      <item id="5" desc="We cannot use your energy right away. We have to filter out impurities first. So wait just a little longer."/>
+    </type>
+
+    <type num="20" position="up">
+      <item id="1" desc="#0$0 ficou sobre controlo d'#2$0 e agora se dirigem à unidade de contenção. Faça alguma coisa antes que tudo esteja arruinado! "/>
+      <item id="2" desc="Pobre #0$0 ficou sobre controlo d'#2$0. Agora #0$0 vai entrar na unidade de contenção onde #2$0 se encontram e iram expressar todos os seus desejos."/>
+      <item id="3" desc="#2$0 lembram-se da sua antiga dona e irão chamar #0$0 para repetir a tragédia. Pare #0$0!"/>
+    </type>
+
+    <type num="21" position="down" default="#0$0 entrou em pânico.">
+      <item id="1" desc="Rationalist employee #0$0 panicked and violently stabbed employee #0$1 to death."/>
+      <item id="2" desc="Rationalist employee #0$0 tried to change this dire situation by piercing employee #0$01’s stomach with a knife."/>
+      <item id="3" desc="Rationalist employee #0$0 tried to escape this extreme situation by smashing employee #0$1 to death. "/>
+    </type>
+
+    <type num="22" position="down" default="#0$0 entrou em pânico.">
+      <item id="1" desc="Pacifist employee #0$0 wanders around the containment chambers in dire fear."/>
+      <item id="2" desc="Pacifist employee #0$0 wanders around the containment chambers Indecisively."/>
+      <item id="3" desc="Pacifist employee #0$0 panicked and refused to take orders from you. He/she just wanders around the containment chambers."/>
+    </type>
+
+    <type num="23" position="down" default="#0$0 entrou em pânico.">
+      <item id="1" desc="Principlist employee #0$0 committed suicide after realizing there is no hope."/>
+      <item id="2" desc="Principlist employee #0$0 chose death to escape from this dire situation."/>
+      <item id="3" desc="Principlist employee #0$0 could not endure the tragedy before him/her, and stabbed his/her own neck to death. "/>
+    </type>
+
+    <type num="24" position="down" default="#0$0 entrou em pânico.">
+      <item id="1" desc="Optimist employee #0$0 could not accept the fact that he/she fail and opened the containment chamber."/>
+      <item id="2" desc="Optimist employee #0$0 opened the containment chamber to grab attention."/>
+      <item id="3" desc="Optimist employee #0$0 went insane and opened the containment chamber."/>
+    </type>
+  </danger>
+</root>

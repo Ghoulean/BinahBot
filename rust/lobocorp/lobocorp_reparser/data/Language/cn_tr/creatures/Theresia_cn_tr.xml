@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300003">
+
+    <narration action="move">
+      指派 #0 至 $0 的收容室.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-09</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Theresia</portrait>
+
+      <name openLevel ="1">
+        特蕾希雅
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <openText>
+        "還記得這個旋律嗎? 在學生們犯睏的時候教授總是放著這首曲子. 生日快樂."
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {一個帶著芭蕾舞女的音樂盒.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {在扭轉發條後, 一段悲傷的旋律播放了出來. 沒有人知道是誰製造它, 但它似乎非常的舊以至於偶爾會停下來.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {有句話刻在上面, "還記得這個旋律嗎? 在學生們犯睏的時候教授總是放著這首曲子. 生日快樂."}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {聆聽該音樂盒會讓任何人感到一切都會變得更好, 且他們的疲勞都被消去了. 但是聆聽過久將會使目標失去對現實的掌控, 使他們發狂.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="1">當目標開始聆聽 $0 的音樂, 該部門員工的 MP 將不斷的恢復.</specialTip>
+      <specialTip openLevel="2" key="2">當聆聽該音樂盒約 20~30 秒後, 目標的 MP 會迅速的下降, 造成他們恐慌.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100044">
+
+    <narration action="move">
+      #0 is going into $0's containment unit to begin the task.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 lives inside the target’s eyes.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 grows thorns headed towards heaven inside $0's vision. },
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-04-72</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/BloodyTree</portrait>
+
+      <name openLevel ="1">
+        The Burrowing Heaven
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>Don’t look away, just keep on watching. Contain it inside your sight.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {An Abnormality full of thorns that extends its wings using other people’s sight as fuel.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Don’t look away, just keep on watching.&#13;&#10;It lives inside your eyes. The containment unit means nothing.&#13;&#10;Contain it inside your sight.&#13;&#10;Blinking is okay, it will tolerate a brief moment.&#13;&#10;But when it thinks you have lost attention and concentration,&#13;&#10;it will spread its wings.&#13;&#10;Wings, yes, wings.&#13;&#10;Like paying tribute to a long forgotten god, its bloody wings will extend, as if to cover the entire corridor.&#13;&#10;There are fruits on its wings. It uses recently deceased bodies as fertilizer.&#13;&#10;If it still doesn’t attract your attention, the stalks will head towards a sunny location, impaling the company in the process.&#13;&#10;Like an angel, its wings will extend toward the skies and black out the sun,&#13;&#10;but there’s still hope. When you finally decide to move your eyes and bring it to your consciousness,&#13;&#10;it will return back to this deep and dark subterranean area,&#13;&#10;if you’re still alive, that is.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {That’s what gazing is. Attention. A string of invisible links. Full concentration.&#13;&#10;Don’t come here, there’s no place for you to rest.&#13;&#10;But you see, I could finally bear fruit only when I’m inside your sight.&#13;&#10;Is this what you wanted?&#13;&#10;When your tears dry up, tell me your answer.}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Work on $0 must be done while the Manager is overseeing the Containment Unit.</specialTip>
+      <specialTip openLevel="1" key="2">When the Containment Unit is out of the surveillance camera’s sight, $0‘s Qliphoth counter will be reduced. When $0‘s Containment Unit is not monitored even after the phenomenon, the Qliphoth counter will continue to decrease.</specialTip>
+      <specialTip openLevel="1" key="3">When the work result is Medium or better, $0‘s Qliphoth counter will increase. It seems that a maximum of 3 levels could be increased, based on the work results.</specialTip>
+      <specialTip openLevel="1" key="4">&lt;Warning&gt;Do not stop looking at the Abnormality while suppression is in progress</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

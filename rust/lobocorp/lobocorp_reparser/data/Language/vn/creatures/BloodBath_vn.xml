@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100027">
+
+    <narration action="move">
+      #0 designated to $0's containment room.
+    </narration>
+
+    <narration action="start">
+      [
+      {“You know, I feel like I have my life back together after joining Lobotomy.”},
+      {Employee #0 feels sadness from $0.},
+      {Employee #0’s wrist aches when looking at $0.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {“Depression is a disease of mind. We are the first doctors who discovered how to be happy.”},
+      {Employee #0 stares at the despairs floating in the bath.},
+      {Employee #0 feels overwhelming depression and sadness.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {“Medicine for body advanced in unimaginable speed, but medicine for mind did not.”},
+      {Employee #0 sees upcoming hardships and failures.},
+      {Employee #0 sees hardships and ordeals in future. Whatever he/she does, it will only result in failure.}
+      ]
+    </narration>
+
+    <narration action="special_ability">
+      [
+      {Employee #0, deprived of reasons and hope to live, does not resist to hands reaching out for him/her.}
+      {Employee #0’s sadness concentrates into one place.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-05-51</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/BloodBath</portrait>
+
+      <name openLevel ="1">
+        Bloodbath
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        Things you have forsaken.
+      </specialName>
+
+      <openText>Many hands float in the bath. These are the hands of people I once loved.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {A bath full of blood. The blood is always kept in balance. It never overflows. It contains despair. .&#13;&#10;Unbearable depression overwhelms you when you look into the bath. At one moment, it pulls employees into it. It bears no considerable strength, but employees suffering in crushing depression does not resist. It devours the employee until nothing leaves but the wrists. Hands floating around in the bath are pale. They try to reach to you as if they are asking for help. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {It is not easy to cut your wrist with sane mind. It takes strong willpower as it requires multiple tries. Only when you chop it as if you are cutting a chunk of meat, you can succeed. Only when you yearn for death that much, you can succeed.  }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {I regret not asking why when she asked me for clever. I regret not realizing that she was hiding her wrist with watch. I regret not realizing that she always hides her wrist when I talk to her. I regret not realizing that I could not hear her laughter at some point.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="1">
+      [
+      {I can’t even imagine how painful it is to cut wrist. I realized the only reason she could succeed was because she literally chopped her wrist off. }
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {We always popped a bottle of wine every time we succeeded. It became one of our customs. She told us it only takes a slight misstep to fall into mannerism if we get used to success. Thus, we have to be happy about every single little thing. And we should not neglect failures because success can be made on pile of failures. &#13;&#10;When I saw the scars on her chopped wrist, I thought about our wine cellar. Many bottles of wine were gone. There was only one bottle left. &#13;&#10;That day, I popped the last bottle.}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="noRationalist">When the Fortitude Level 1 employee completed the work, the hand stretched out of the $0 and took the employee into it. The same phenomenon occurred when the Temperance Level 1 employee was working.</specialTip>
+      <specialTip openLevel="1" key="manyHands">A white hand appeared over the $0 surface that absorbed the employee. As the number of hands increased, the PE-BOX produced by $0 increased.</specialTip>
+      <specialTip openLevel="1" key="threeHands">>&lt;Caution in Command&gt; When $0 has three hands, it can not guarantee the life of the employee. It seems to absorb employee regardless of the conditions and results of the work.</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {The Encephalin cure affected not only mind, but also body.}
+        {The problem is, the supply of cure became tremendously huge to control when we realized the problem. }
+        {One of the problem was numbing. }
+        {People believed they could live happy life.}
+        {People believed they could buy sadness and sell happiness with money.}
+        {When the first suicide happened, we should have known that these beliefs had been shattered.}
+        {Many hands float in the bath.}
+        {Hands that wanted to grab something but could not.}
+        {You……}
+        <!--계속-->
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Grabbed a hand." target="1" isAnswer="true" message="You have succeeded to obtain final observation report on Bloodbath." />
+        <node desc="Did not grab a hand." target="2" isAnswer="false"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {I feel coldness and stiffness. }
+        {I know these hands.}
+        {These are the hands of people I once loved.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {You looked away.}
+        {This is not the first time you ignore them.}
+        {It will be the same afterwards.  }
+        ]
+      </desc>
+
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {Do you sometimes believe that forgotten memories can be more beautiful?}
+        {I believe.}
+        {You're showing me now.}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+
+
+</creature>

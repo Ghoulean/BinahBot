@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    5.28
+  -->
+  <info id ="100047">
+
+
+    <narration action="move">
+      指派 #0 至 $0 的收容室.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 夢想能快樂的離開公司.},
+      ]
+    </narration>
+
+
+    <narration action="mid1">
+      [
+      {跟每個人一樣, $0 希望他能一輩子住在那裡.},
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-02-71</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Shark</portrait>
+
+      <name openLevel ="1">
+        夢中的洋流
+      </name>
+
+
+      <riskLevel openLevel ="2">
+        WAW
+      </riskLevel>
+
+
+
+      <openText>跟寶貝說它會得到它最喜歡的水果糖, 葡萄.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {就... 繼續展示那些書. 喔, 一定要是有圖片的那種, 因為我看不懂那些字.&#13;&#10;如果這個實驗還要一段時間, 試著引起它的注意, 像是模仿它的聲音.&#13;&#10;我不用解釋每個細節, 對吧?}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {是的, 我明白. 這有多難過可憐. 我也有相同的感覺.&#13;&#10;此外, 這個地方能讓我活下來, 而且不管我是以何種形式, 能繼續住在這裡都是件好事. 如果你也這麼想,&#13;&#10;對我們來說, 現在拋下你感到的罪惡感會更好.&#13;&#10;....&#13;&#10;跟寶貝說它會得到它最喜歡的水果糖, 葡萄.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {&lt;摘錄自百科&gt;與大眾的看法相反, 大部分的鯊魚身軀都很小. 非常少的品種才會真的去攻擊人類... 不管人們怎麼說, 鯊魚最獨特的地方在於它強壯有力的下顎跟牙齒. 鯊魚的下顎能施加約莫成年人 20 倍的壓力. 此外, 它的視覺以及嗅覺非常的發達, 能輕易的鎖定它的獵物. 這就是鯊魚為什麼能成為在海裡最厲害的獵食者.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {父母很久以前就拋棄了孩子.&#13;&#10;他們被告知小孩因為感染而活不過 2 年. 小孩的父母都是研究員. 小孩學習如何說話跟走路. 雖然無法說話, 但小孩非常喜歡大海. 不能去到海裡, 小孩卻得到了能看見大海的糖果.&#13;&#10;許多夜晚跟白天過去了.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {被認為活不過 2 年的小孩卻已經好幾歲了. 小孩繼續聽著跟服從著, 喜愛那甜甜的糖果, 並把這裡當作喜愛的家. 不幸的, 小孩只能在狹窄的實驗室裡跑著, 而不是在寬廣自由, 陽光灑落的草地上. 小寶貝唯一的在乎的只有明天吃到的是什麼樣的糖果.}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">當員工 #0 在工作中陷入恐慌, 逆卡巴拉計數器將會減少.</specialTip>
+      <specialTip openLevel="1" key="2">當自律等級 1 的員工完成了任務, 逆卡巴拉計數器減少了.</specialTip>
+      <specialTip openLevel="2" key="3">$0 在突破收容時, 於特定區域裡生成的液體, 大幅的降低了員工的移動速度, 並不斷的造成 R 傷害. 員工在那區域裡 MP 會得到恢復. </specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

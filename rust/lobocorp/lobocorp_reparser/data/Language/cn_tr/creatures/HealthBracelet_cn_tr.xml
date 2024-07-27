@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300106">
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-95 </codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/HealthBracelet</portrait>
+
+      <name openLevel ="1">
+        發光的手鐲
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>手鐲將永不赦免那些貪婪之徒. 所以只能由所需之人持有.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {一個發出柔和藍綠色光的手鐲. 從外面發現了許多無法解釋的事物.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {當裝備時, 所有的傷口不留痕跡的治癒了. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {但是在沒有任何傷口下穿戴該手鐲是個貪婪的行為.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+
+      [
+      {手鐲將永不赦免那些貪婪之徒. 所以只能由所需之人持有.}
+      ]
+    </desc>
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">當穿戴 $0  時, 關於堅韌的狀態大幅的增加了.</specialTip>
+      <specialTip openLevel="2" key="2">當持有者的 HP 降低時, $0 會不斷地恢復 HP.</specialTip>
+      <specialTip openLevel="2" key="3">如果持有者在沒有 HP 回滿的情況下嘗試歸還它將會死亡.</specialTip>
+      <specialTip openLevel="2" key="4">在配戴它後, 如果持有者的 HP 在一定的時間裡沒有下降, 那麼持有者也會死亡.</specialTip>
+
+    </specialTipSize>
+
+
+  </observe>
+</creature>

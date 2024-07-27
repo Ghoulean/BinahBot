@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    5.28
+  -->
+  <info id="100039">
+
+
+    <narration action="move">
+      #0 va a ingresar a la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="start">
+      [
+      {Cuando $0 asume la forma de un huevo, puedes ver a una niña sonriente dentro de él. },
+      {Algunos empleados piensan que $0 está atrapado dentro de algo que se parece a un huevo, pero la verdad es que ella se encerró dentro de él.},
+      ]
+    </narration>
+
+
+    <narration action="mid1">
+      [
+      {El patrón ámbar glamoroso en $0 puede impresionar a los empleados a veces.},
+      {El color de $0 es un oro brillante.}
+      ]
+    </narration>
+
+
+    <narration action="mid2">
+      [
+      {El mundo de $0 que alguna vez amó ahora está siendo devorado por ella. },
+      {Una vez $0 tenía ojos tan rojos como el sol poniente, pero la codicia ha consumido todo, sin dejar nada atrás.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {$0 se rindió al hambre y comenzó a devorarse.}
+      {El día en donde para el hambre de $0 para, será el fin de todo.}
+      ]
+    </narration>
+
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-01-64</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/MagicalGirl_2</portrait>
+
+      <name openLevel ="1">
+        Chica Magica
+      </name>
+
+      <name openLevel="3">
+        El Rey de la Codicia
+      </name>
+
+      <riskLevel openLevel ="2">
+        WAW
+      </riskLevel>
+
+
+
+      <openText>
+        La tristeza dirá, "Vete! Muere! Pero la codicia quiere la eternidad. Una inmortalidad que nunca puede ser abolida!"
+      </openText>
+
+
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {"El primer deseo comenzó con la mordida de una manzana dulce. &#13;&#10;Hemos sido expulsados del Edén por ese pecado. &#13;&#10;Y ahora estamos parados dentro de un gran huerto. &#13;&#10;Mi canasta es tan grande que todos los frutos del mundo no pueden llenarse. &#13;&#10;Pero es malo desear miel cuando hay flores? &#13;&#10;Después de todo, nacemos para buscar la felicidad."}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {La felicidad se convirtió en obsesión, la obsesión se convirtió en codicia y la codicia se convirtió en un ámbar dorado. La felicidad del principio, aún sonriendo, está dentro de ella.&#13;&#10;La primera semilla del deseo se originó de la pura necesidad de felicidad. La semilla, pequeña al principio, se hizo más grande y más dura, con hambre de más. A medida que pasaban los días, la semilla se convirtió en un pedazo de gema brillante y, atraída por su brillo, un pez hambriento se la tragó. Pero solo hizo que el pez tuviera más hambre.&#13;&#10;Los deseos de las personas van en su mayoría insatisfechos. La mayoría de los deseos son abandonados, pero no han desaparecido por completo. Están enterrados profundamente en la subconsciencia, listos para surgir en cualquier momento.&#13;&#10;Solo se necesita un poco de cebo en el agua para que los peces hambrientos suban y lo atrapen.&#13;&#10;La Chica Mágica, ahora ya no es mágica, comió muchas cosas. Poder, dinero, honor y otras formas de placer. Ella terminó engullendo todo lo que pudo encontrar. Ahora ella actúa sobre pura codicia.&#13;&#10;Pero su voluntad de ser feliz todavía está dentro de ella, emergiendo de vez en cuando.&#13;&#10;Los humanos se creen a sí mismos como seres racionales que pueden permanecer en control de sí mismos, pero esto no es cierto. Los humanos nunca tienen el control total de sí mismos. Y nadie lo sabe mejor que el Rey de la Codicia.  }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="3">
+      [
+      {&lt;El diario de alguien&gt; Muchos de nosotros deseamos en secreto un héroe.&#13;&#10;Dicen que solía haber algo que se llama un tratamiento para el alma. Cómo es tener un alma enferma? Todos estamos sanos. Pero quizás todo esto pueda ser una ilusión trágica.&#13;&#10;Hubo una vez personas que intentaron proteger el mundo. Todos nos acordamos de ellos. Recordamos cómo fueron destruidos. Sé que el deseo lo destruye todo.&#13;&#10;Ya no creemos en algo, ni esperamos un milagro.&#13;&#10;No pensamos mucho en por qué han cambiado. Y no los culpamos. Ahora sabemos que el deseo infinito trae desesperación.&#13;&#10;A veces, me siento increíblemente abatido, pero no tengo idea de dónde viene.&#13;&#10;Muchos de nosotros queremos secretamente un héroe para salvarlos.}
+    ]
+  </desc>
+
+    <desc id="4" openLevel="4">
+      [
+      {"La pena del mundo es profundo. El deseo corre más profundo que la agonía. La tristeza dirá, "Vete! Muere!" Pero la codicia quiere la eternidad. Una inmortalidad que nunca puede ser abolida!"}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="monster">Cuando el resultado del trabajo era Normal, el Contador Qlifot se reduce con una probabilidad Normal.</specialTip>
+      <specialTip openLevel="1" key="monster2">Cuando el resultado del trabajo fue malo, el Contador Qlifot se redujo con una probabilidad Alta.</specialTip>
+      <specialTip openLevel="2" key="swallow">El patrón de comportamiento de $0 es engullir todo lo que está frente a ella cuando se escapa. Al suprimirla, preste especial atención a hacia dónde se dirige la Anormalidad.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

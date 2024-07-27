@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id="100008">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {Les caractéristiques les plus mémorables de $0 sont les nombreux yeux couvrant tout son corps et la lampe aveuglante qu’il porte..},
+      {Mais en vérité, nous ignorons toujours pourquoi $0 tue les gens.},
+      {Le fait que $0 soit incapable de voler comme la plupart des oiseaux est pour nous un grand avantage. S’il le pouvait, la moitié de notre personnel serait déjà décapité.},
+      {Une idée traversa l’esprit de $0 : “Si je tue les créatures en premier, alors personne ne sera tué par la bête !” C’est alors que la forêt trouva la paix.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {L’horrible son de clignements d’yeux et de la lampe crépitante et brûlante remplit l’Unité de Confinement.},
+      {Les yeux et la lampe de $0 illuminent la salle sombre tels des étoiles.},
+      {Une vingtaine des yeux de $0 pointent soudainement en direction de #0.},
+      {Faisant face à $0, #0 recule et tremble nerveusement.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Derrière #0, le grondement d’un oiseau noir poilu se fait entendre.},
+      {Le cri sporadique d’un oiseau peut être entendu.},
+      {$0 crie derrière #0, agissant comme s’il était anxieux.},
+      {$0 tourne et erre autour de #0, en piaillant.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {#0 tourne sa tête pour éviter de croiser le regard de $0, et rencontre ainsi une lampe brûlante.},
+      {Une lampe brillante et éblouissante est tenue devant #0, qui se détourne pour éviter de regarder $0.},
+      {#0 voit $0 tenir sa lampe aveuglante.},
+      {C’était une très bonne décision pour #0 de ne pas regarder $0.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {Les yeux de $0 deviennent pourpres.},
+      {$0 s’approche de #0 en faisant des bruits menaçants.},
+      {$0 grince des dents de façon audible.},
+      {$0 marche vers #0.}
+      ]
+    </narration>
+    <narration action="death">
+      [
+      {La tête de #0 roule sur le sol de l’Unité de Confinement.},
+      {La tête de #0 a facilement été arrachée.},
+      {$0 a utilisé son bec pour arracher la tête de #0, comme s’il retirait les mauvaises herbes d’un jardin.}
+      ]
+    </narration>
+  </info>
+  <observe level="3">
+    <collection>
+      <codeNo openLevel="0">O-02-40</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/BigBird</portrait>
+      <name openLevel="1">
+        Gros Oiseau
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>Un mois plus tard, nous sommes parvenus à la conclusion qu’une telle “bête” ne se trouvait pas dans la forêt.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Un gros oiseau avec de nombreux yeux qui patrouille dans la forêt sombre avec une lampe inextinguible. Contrairement aux oiseaux habituels, il n’a pas d’ailes et possède à la place de long bras avec lesquels il peut ramasser des choses.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {…(Omis) fixerait intensément quiconque croise son chemin, jeune ou vieux, et lui arracherait la tête avec les dents.}
+      ]
+    </desc>
+    <desc id="3" openLevel="1">
+      [
+      {Il existe un conte qui parle d’une bête qui réside dans la partie la plus sombre et la plus profonde de la forêt, capable d’éblouir des créatures que l’on ne revoit plus jamais ensuite.&#13;&#10;&#13;&#10;Pour protéger toutes les créatures de la bête, le gros oiseau brûla toutes ses plumes pour créer une mèche, puis créa une lampe qui brûlerait pour toujours.&#13;&#10;&#13;&#10;Avec cette lampe inextinguible, le gros oiseau erra dans la forêt, avertissant les créatures de ne pas s’aventurer trop profondément dans les bois.&#13;&#10;&#13;&#10;Grâce au large oiseau, moins de créatures furent victimes de la bête dans la forêt. Cependant, il était toujours préoccupé pour les créatures qui se faisait encore tuer par la bête.&#13;&#10;&#13;&#10;Une idée traversa l’esprit du gros oiseau : “Si je tue les créatures en premier, alors personne ne sera tué par la bête !”&#13;&#10;&#13;&#10;Depuis, seuls les rumeurs d’une bête qui vous arrache la tête traversent la forêt sombre.&#13;&#10;&#13;&#10;Il est dit que la bête examine attentivement et fixe ses victimes pour voir si elles sont la bête qui attire les créatures sans défense.&#13;&#10;
+      C’est une histoire d’une ville dans les environs de &lt;Emplacement Expurgé&gt;. Nous avons entendu l’histoire de la part de l’un des plus anciens habitants de la ville, &lt;Expurgé&gt;. Même s’il est fortement supposé que l’histoire était racontée pour éviter que les enfants aillent dans la forêt, l’identité de la première personne ayant raconté l’histoire est incertaine.}
+      ]
+    </desc>
+    <desc id="4" openLevel="1">
+      [
+      {“Nous ne pouvons rien faire tant que l’Anomalie a ses yeux ouverts. Elle fixe intensément, et continue de fixer… (Omis). C’est pourquoi nous devons d’abord l’endormir. Nous ne pouvons commencer à travailler que lorsque ses dizaines d’yeux sont en sommeil.”}
+      ]
+    </desc>
+    <desc id="5" openLevel="2">
+      [
+      {Et il s’avère que l’histoire n’était pas inventée.&#13;&#10;
+      “Nous avons pu trouver ce gros oiseau dans la forêt. Immédiatement après, nous avons essayé de localiser la “bête qui éblouit les gens.” Nous avons fouillé chaque recoin et chaque fente de la forêt. Nous avons enquêté sur chaque créature en détail. Un mois plus tard, nous sommes parvenus à la conclusion qu’une telle “bête” ne se trouvait pas dans la forêt. À l’exception de ce gros oiseau.”}
+      ]
+    </desc>
+    <desc id="6" openLevel="3">
+      [
+      {“Cette Anomalie est incapable de comprendre le concept-même de la mort comme nous autres. Les Anomalies qui résident dans cette corporation peuvent être séparées en deux catégories. La première est celle de ceux qui comprennent parfaitement le concept et la signification de la mort, et qui attaquent notre personnel avec l’intention de tuer. La seconde contient celles qui sont conscientes du concept de la mort, mais attaquent sans intention malicieuse. Cette Anomalie ne rentre dans aucune de ces deux catégories. Pour cet oiseau, la mort en elle-même est un salut. Si elle venait à arracher la tête d’une pauvre petite fille qui s’est perdue dans la forêt, pour elle, ce ne serait pas une erreur, de la malveillance ou un meurtre. Elle pense qu’elle vient de sauver la fille de la bête.”}
+      ]
+    </desc>
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">Après la mort de 5 employés dans le complexe, le Compteur Qliphoth a diminué. Cependant, les morts par Tir d’Exécution n’ont pas été reconnus.</specialTip>
+      <specialTip openLevel="2" key="2">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="2" key="3">Lorsque le résultat du travail est Bon, le Compteur Qliphoth augmente.</specialTip>
+      <specialTip openLevel="2" key="4">$0 a breché de son Unité de Confinement en dépit de son Compteur Qliphoth lorsque la situation d’urgence dans le complexe a atteint la seconde Trompette.</specialTip>
+      <specialTip openLevel="3" key="5">Il y a eu une panne d’électricité dans le Secteur où $0 errait. Les employés qui sont dans le Secteur avec une panne d’électricité peuvent se faire enchanter par $0.</specialTip>
+      <specialTip openLevel="2" key="6">Il semblerait que les cibles enchantées reçoivent moins de dégâts. Cependant, après qu’une certaine durée se soit écoulée, ces cibles se sont rendues à la position de $0 et sont mortes de son attaque.</specialTip>
+      <specialTip openLevel="2" key="7">Les employés enchantés furent libérés de leur transe dès qu’ils sont sortis du Secteur touché par la panne d’électricité.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

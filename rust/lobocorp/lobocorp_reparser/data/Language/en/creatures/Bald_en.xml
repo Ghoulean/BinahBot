@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100034">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {#0 is starting to feel that hair is just a burden.},
+      {#0 is beginning to think that having a tattoo on a bald head would be super cool.},
+      {#0 is taking off their wig because they feel proud of their partial balding.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {You can look just like Bruce Willis if you’re bald!},
+      {Somehow, bald people always look professional no matter what they’re doing!},
+      {If you’re bald, you never have to worry about clogging the drain!}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {So you still have your silky hair?}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">Bald-is-awesome!</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Bald</portrait>
+      <name openLevel="1">
+        You’re Bald… 
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <openText>You turn on your electric hair clipper…</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Warning: You have been hit by the baldy-bald psychological attack. If a non-bald person reads this, they’ll be granted the privilege to go bald at an extremely rapid pace. If one wants to stop this from happening, they must be assigned to work on this Abnormality. In addition, if you find 10 or more strands of hair on your pillow in the morning, it is recommended to peruse this encyclopedia article at least three times. }
+      ]
+    </desc>
+    <desc id="2" openLevel="2">
+      [
+      {Bill: I had an amazing dream today!&#13;&#10;Brian: What, did you win the lottery or something?&#13;&#10;Bill: When I got to work, everyone here was bald! Everyone including you! Maybe even people outside of this corporation!&#13;&#10;Brian: Umm… I think you’ve been pretty stressed lately. Why don’t you go take counseling?&#13;&#10;&#13;&#10;Employee Bill suffered an unfortunate accident with Singing Machine that day. Right after the incident, Abnormality Bald-is-awesome! appeared in the facility. We all cherish the memories of Bald Bill.}
+      ]
+    </desc>
+    <desc id="3" openLevel="3">
+      [
+      {If one comes in contact with the Abnormality, they will talk or write about the positive aspects of baldness for about an hour, and ultimately make themselves go bald.&#13;&#10;&lt;i&gt;If you become bald, you can save time because you don’t have to wash and dry your hair anymore, allowing you to be richer than others.&lt;/i&gt;&#13;&#10;No adverse reactions will happen if a bald employee is assigned to work with the Abnormality.&#13;&#10;&lt;i&gt;The bald don’t have to worry about hair loss.&lt;/i&gt;&#13;&#10;If a non-bald employee is assigned, they will shave off their own hair.&#13;&#10;&lt;i&gt;Bald people can even reflect light off their head and blind their opponents like a solar flare!&lt;/i&gt;&#13;&#10;This Abnormality’s goal is to make every single human on Earth bald.&#13;&#10;&lt;i&gt;We won’t need light bulbs in our facility if there are more bald employees, because reflects off their heads. This will allow us to save a tremendous amount of our budget.&lt;/i&gt;&#13;&#10;If a non-bald employee is sent to work with the Abnormality, it’ll produce less energy.&#13;&#10;&lt;i&gt;Did you know that every single noble in Europe during the Middle Ages was bald? They’d change their wig everyday!&lt;/i&gt;}
+      ]
+    </desc>
+    <desc id="4" openLevel="4">
+      [
+      {&lt;i&gt;We’ve just added some new rules to the company code of conduct:&lt;/i&gt;&#13;&#10;
+      + If you ever spot a XXX mocking their coworker with alopecia areata, they will be labeled as a hirsute, and will be banned from using the lounge for an indefinite period. They will also be forbidden from joining the company’s debate club “Questioners of the absence of bald Barbies”, the gourmet meetup “Octopi over Squid”, and the environmental protection group “Save the Bald Eagles”. (These regulations will be lifted as soon as the rulebreaker’s hair strand count goes below 1.)&#13;&#10;&#13;&#10;&lt;i&gt;Lastly, I dedicate this article to employee T.H. who is quietly taking balding medicine next to me right now.&lt;/i&gt;}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="memeriBeam">You still seem to be keeping your silky hair… You’ve been struck by the Bald-is-awesome! beam.</specialTip>
+      <specialTip openLevel="2" key="memeriOnly">If you don’t work now, every employee, including you, will lose all their hair and become bald within a month.</specialTip>
+      <specialTip openLevel="3" key="memeriHurryUp">It’s not too late. 30... 29... 28...</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

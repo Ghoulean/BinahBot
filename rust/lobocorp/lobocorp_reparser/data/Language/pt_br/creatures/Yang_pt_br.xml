@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300109">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção de $0 para iniciar o processo de trabalho.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-07-103</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Yang</portrait>
+      <name openLevel="1">
+        Yang
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>Entretanto, o mundo é mais do que simplesmente calor e luz.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {A Anormalidade é a metade de um todo que está faltando o outro par.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Ele reduz o dano mental que o portador terá que aturar. Por causa disso, é chamado de “O Amuleto do Anjo.”}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Aqueles que chegavam perto desejavam por sua energia; diziam que limpava suas mentes e dava calor a seus corações. Porém, tinham medo do amuleto negro. “Eu realmente queria que toda Anormalidade fosse tão útil quanto essa.” falavam, suspirando. Ainda assim, ele não entendia. Pois nunca tinha a intenção de ajudar os outros, era só o que fazia.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Entretanto, o mundo é mais do que simplesmente calor e luz.&#13;&#10;O Céu existe, da mesma maneira que a terra; Escuridão existe, da mesma maneira que a luz; a vida existe da mesma maneira que a morte; a esperança existe, da mesma maneira que o desespero.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {A carpa negra nada em direção a harmonia. A carpa branca nada em direção ao caos.&#13;&#10;O que acontecerá quando os dois peixes se encontrarem?}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">O portador de $0 ganhará resistência a dano BRANCO. Porém, quando O-05-102 não era encontrado nas instalações, nenhum benefício era dado.</specialTip>
+      <specialTip openLevel="2" key="2">$0 periodicamente curava o PS de seu portador.</specialTip>
+      <specialTip openLevel="2" key="3">&lt;Cuidado&gt; Tenha certeza de que você não mandará o portador de $0 dentro da unidade de Contenção de O-05-102.</specialTip>
+      <specialTip openLevel="2" key="4">&lt;Cuidado&gt; Por favor atente-se de que quando O-05-102 escapa, $0 também escapará. (Nós confirmamos que o mesmo problema acontecerá mesmo se um funcionário estiver o usando.)</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

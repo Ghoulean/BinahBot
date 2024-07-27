@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+
+  <!-- Attrbute "id " must equal to attribute "id" in CreatureList.xml -->
+  <info id ="100102">
+
+    <!-- $0 : Creature name, #0 : Agent name -->
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+
+    <narration action="start">
+      [
+      {$0の収容室は 凍える寒さの吹雪で荒れています。},
+      {$0の収容室は 氷と霜で輝いています。},
+      {もしカイが氷の彫刻で 「永遠」を完成させていなければ、 彼は世界を贈られたでしょう。},
+      ]
+    </narration>
+
+    <narrationa action="mid1">
+      [
+      {$0の宮殿は寒く寂しいため、 $0は早く帰りたいと思っています。}
+      {$0の宮殿までの道はとても遠く寒いため、 $0は暖かいものを求めています。}
+      ]
+    </narrationa>
+
+    <narration action="special_ability_1">
+      [
+      {ゲルダは誰よりも勇敢で強く。 彼女は雪の宮殿に閉じ込められた カイを求めて戦う。}
+      ]
+    </narration>
+
+    <narration action="win">
+      [
+     {春が来てバラの花が咲きました。 ゲルダとカイはお互いの手を取り合って 家路に向かいました。}
+      ]
+    </narration>
+
+    <narration action="lose">
+      [
+      {ゲルダとカイは雪の女王を倒すことができませんでした。 彼らは氷の彫刻となり、収容室を出ることができません。}
+      ]
+    </narration>
+
+    <narration action="anotherWork">
+      [
+      {カイが雪の宮殿に閉じ込められている間、 ゲルダは雪の女王との決闘を避けることができません。}
+      ]
+    </narration>
+
+  </info>
+
+  <!-- Maximum observation level. -->
+  <observe level="4">
+    <collection>
+      <codeNo openLevel ="0">F-01-37</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/SnowQueen</portrait>
+
+      <name openLevel ="1">
+        雪の女王
+      </name>
+      
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+   
+      <openText>「氷は溶けている…春が訪れたからか、 宮殿が崩れ落ちてしまったからか 私たちには分かりません。」</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {女王は酷寒の冬の森に住んでいます。 }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {すべての物語の始まりがそうであるように、カイはとても暖かい心を持った子供でした。邪悪な妖精が作った鏡の破片が全ての人々の胸にまかれた日、カイは見たくないもの、あるいは見なくても良いものまで見ることになり、これまで過ごしてきた小さな村から離れました。&#13;&#10;厳しい吹雪の中で、カイは雪の女王と出会いました。彼は自分の知識を超える世界を知りたがっていました。彼は自分が知っていることはまったく無意味であるかのように感じました。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+     {彼が着いた雪の宮殿はとても寒かった。しかし、雪の女王の口づけが彼の心を凍らせ、彼はもう寒さを感じることができなくなりました。宮殿に喜びはなく、ただ長い冬の夜が続きました。&#13;&#10;ゲルダは鏡に刺されないほど強く、カイを救うための冒険に行くほど勇敢でした。&#13;&#10;苦しい旅でした。ゲルダは痛み、傷つき、時には泣きました。&#13;&#10;しかし、ついに、ゲルダはカイと出会いました。春には花が咲き乱れました。&#13;&#10;春の暖かさは、雪の女​​王の宮殿と、カイの心の中にあった鏡の破片を跡形もなく溶かしました。&#13;&#10;そして、残された雪の女王は…}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+     {私たちの手で彼女を冷凍棺に入れた日を覚えている。いつしか彼女の楽しい笑いが消えていった。彼女はただ、泣き、笑い、泣いて、笑ってを続けた。最終的に、彼女は手首を切って自分の血で赤く染まった浴槽で見つかった。&#13;&#10;私たちは死を信じなかった。私は生涯嫌っていた「機械」から彼女を再構築しようとすることが、唯一の答えとなった。彼女は浴槽で死んだ、私にうんざりしていたのだろう。しかし、私たちはあまりにも多くの旅の道を歩いた。&#13;&#10;…&#13;&#10;ある日、「それ」が話した。&#13;&#10;「私はあなたを覚えています、A。あなたは暖かい心を持っている人でした」&#13;&#10;その瞬間、自分が作りあげたものを破壊してしまいたいという衝動に襲われた。}
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="3" key="kissProb1">作業結果が普通の場合、職員は通常の確率で$0により口づけをされた。</specialTip>
+      <specialTip openLevel="3" key="kissProb2">作業結果が悪い場合、職員は高確率で$0により口づけをされた。</specialTip>
+      <specialTip openLevel="2" key="2kiss">2回目の口づけを与えられた職員はすべてを忘れて、$0の収容室に閉じ込められた。</specialTip>
+      <specialTip openLevel="3" key="3kiss">致命的な3回目の口づけを避け、捕えられた職員を救うためには$0と決闘を行う必要がある。</specialTip>
+      <specialTip openLevel="3" key="4kiss">高い勇気を持つ人だけが、安全に職員を救うことができる。一日が終わる前に救出しよう。 </specialTip>
+    </specialTipSize>
+
+  
+
+  </observe>
+
+
+</creature>

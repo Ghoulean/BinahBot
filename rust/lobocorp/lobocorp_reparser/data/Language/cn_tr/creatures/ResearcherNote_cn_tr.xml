@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300002">
+
+    <narration action="move">
+      指派 #0 至 $0 的收容室.
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-78</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ResearcherNote</portrait>
+
+      <name openLevel ="1">
+        瘋狂研究員的筆記
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <openText>
+        最後一個章節以一句話作為結尾, "重生."
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {老舊的筆記滿是無法理解的潦草字跡.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {它曾經屬於一位在研究中發瘋的學者. 只破解筆記的一部份, 其中涉及了許多的實驗.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {它在開頭提到了關於不人道的實驗, 但實驗的最後以狂亂破碎的句子結束.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+
+      [
+      {最後一個章節以一句話作為結尾, "重生."}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {透過裝備這個物品, 員工的觀察力會增加. 但若在沒有滿足它求知的欲望時就歸還它, 這無能的員工將會爆炸. }
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">目標在裝備 $0 時將會提昇大量關於自律的數值.</specialTip>
+      <specialTip openLevel="2" key="2">如果在裝備 30 秒後歸還 $0, 持有者的肌膚在數秒內將會逐漸腫起並爆炸.</specialTip>
+      <specialTip openLevel="3" key="3">如果在沒有進行任何管理工作就歸還 $0, 持有者將會爆炸.</specialTip>
+      <specialTip openLevel="4" key="4">當持有者受到一定的 HP 或是 MP 傷害, 持有者將會爆炸, 遍佈整個區域. 爆炸將會對任何在附近的人造成 R 傷害.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100029">
+
+
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+
+    <narration action="start">
+      [
+      {何からも生まれなかったもの、 何にも帰らない。},
+      {$0は内部の焼け跡を記憶しています。},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {おそらく、私たちは 心の無い人間を作ろうとしました。},
+      {枯れることのない花が 激しく咲き誇る。},
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {#0は花壇で 穏やかな春眠を望んでいます。},
+      {#0は収容室を埋め尽くすラベンダーに 深く感動している。},
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {アルリウネは一度花が咲いてしぼみました。 それは復活の意味を理解しました。 どこへ行こうとその痕跡は残り、 すべての命は$0へと集まります。},
+      {#0は、血の代わりに 爽やかな香りを吐き出します。}
+      {みんなの心に花が咲きます。}
+      ]
+    </narration>
+
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-04-53</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Alriune</portrait>
+
+      <name openLevel ="1">
+        アルリウネ
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+
+       <openText>塵に帰りたいという彼女の願いは、 生きようとするものすべてを死に場所へと返すでしょう。</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {春の誕生と秋の日暮れに知っているアブノーマリティである。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {それは滑らかな表面をしている。眼窩は空いており成長している植物で満たされている。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {アルリウネ、人間になることを切望した人形。それは魂のこもった目で人々に愛されていた。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {アルリウネ、暗い森に捨てられた。カラスは輝く目を盗んだ。その精神、生命、心はゆっくりと消えていった。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {アルリウネ、目もなしにすべてを見る。人形になることを切望した人間。それは塵に帰りたいと思い、生を望むすべてと共に塵に帰る。}
+      ]
+    </desc>
+
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="PanicDeath">作業結果が良い場合、一般的な確率でクリフォトカウンターが減少した。</specialTip>
+      <specialTip openLevel="1" key="PanicDeath2">作業結果が悪い場合、一般的な確率でクリフォトカウンターが減少した。</specialTip>
+    </specialTipSize>
+
+  
+
+  </observe>
+
+
+
+</creature>

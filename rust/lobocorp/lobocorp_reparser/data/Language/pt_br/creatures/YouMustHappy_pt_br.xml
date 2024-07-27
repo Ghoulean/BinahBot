@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300105">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção de $0 para iniciar o processo de trabalho.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-94</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/YouMusHappy</portrait>
+      <name openLevel="1">
+        Você Precisa Ser Feliz
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <openText>
+        Vários que fizeram uma cirurgia dentro da máquina ficaram descansados e saudáveis novamente.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Uma máquina misteriosa que está velha e desgastada. Ela costumava ser usada em cirurgias.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Esta máquina foi construída para puxar o crânio de volta no lugar e destruir o tecido nervoso de forma segura e eficiente.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Vários que fizeram uma cirurgia dentro da máquina ficaram descansados e saudáveis novamente.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Aqueles que responderam “Sim” para a pergunta “Você ama sua cidade?” foram considerados curados. Aqueles que responderam “Não” não foram permitidos sair da máquina.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Quanto mais tempo a máquina é usada, melhor a pessoa fica. Além disso, quanto mais tempo demorar dentro da máquina, mais rápida a pergunta mudará.}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">Quando um Agente usa a máquina, ele terá um aumento em todos os atributos.</specialTip>
+      <specialTip openLevel="2" key="2">Os atributos aumentarão conforme o tempo gasto na máquina.</specialTip>
+      <specialTip openLevel="2" key="3">Certifique-se de parar a máquina somente quando mostrar “YES”. Se for parada enquanto mostrar “NO”, todos os atributos cairão no lugar de aumentar.</specialTip>
+      <specialTip openLevel="2" key="4">Os atributos aumentados retornarão ao normal no próximo dia. Porém, Agentes que ganharam mais de 200 pontos em seus atributos desaparecerão no próximo dia.</specialTip>
+      <specialTip openLevel="2" key="5">&lt;Cuidado&gt; Já houve um acidente onde um funcionário que usou a máquina 5 ou mais vezes no mesmo dia explodiu.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

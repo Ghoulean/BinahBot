@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100105">
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {#0 observa o $0, que está sentado meditando em paz.}
+      {O $0 nunca para de praticar, olhando fundo na serenidade e desejando retornar ao seu jeito de viver dos tempos de quando era vivo.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {A angústia que o $0 não consegue controlar enche a unidade de contenção.},
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {O $0 está a segurar pedaços de contas nas suas mãos em desespero.},
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {"O que é isto que não posso conseguir por me ir e me ir por conseguir".},
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">D-01-110</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/FengYun</portrait>
+
+      <name openLevel ="1">
+        Monge Ofuscado
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>No entanto, se de ti sair sarira o suficiente para maravilhar a todos, o teu nome será cantado por gerações.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;Esta Anormalidade é baseada na ideia do(a) apoiante '나준(Na Joon)' do Tumblbug.&lt;/i&gt;&#13;&#10;&#13;&#10;No século (EDITADO), um monge chamado (EDITADO) da área (EDITADO) caminhava no caminho do Budismo, buscando um verdadeiro esclarecimento. Ele ia a caminho da sua terra natal espalhando a sua filosofia até que ele ouviu sobre um velho monge que iria ser cremado em uma vila próxima. Ele decidiu que ele queria ir lá e ir assistir.&#13;&#10;&#13;&#10;—Senhor, há um rumor sobre um espírito do mal que vaga naquela cidade!&#13;&#10;&#13;&#10;—Espíritos do mal nascem naturalmente do coração das pessoas. Como é que eu podia perder a cremação de um grande monge ancião por causa de um rumor? — ele respondeu.&#13;&#10;Em seguida ele continuou a ir em direção à vila (EDITADO).}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Quando ele chegara lá, pessoas de todas as partes da vila vieram assistir a cerimónia. Eles olhavam o cadáver do velho monge que estava de pé e prantavam o nome de Avalokitasvara.&#13;&#10;—Avalokitasvara!&#13;&#10;—Avalokitasvara!&#13;&#10;—Avalokitasvara!&#13;&#10;&#13;&#10;Os prantos pareciam encher-se cada vez mais de desespero por algo que desejavam do que comemoração. &#13;&#10;&#13;&#10;O fogo começou a fazer sons de estalidos como se tivesse a queimar pequenos paus. O som da percursão de madeira ecoava e os cantos ficavam cada vez mais altos.&#13;&#10;&#13;&#10;Pouco depois, a multidão começou a vibrar de nervosismo.&#13;&#10;&#13;&#10;—…Algo não parece estar certo.&#13;&#10;&#13;&#10;As pessoas estavam muito desapontadas com a quantidade de sarira que havia.&#13;&#10;Apenas havia o suficiente para duas colheres. A multidão chocada em breve tornou-se furiosa.&#13;&#10;&#13;&#10;—Não faz sentido que um monge tão grandioso apenas tivesse esta sarira.&#13;&#10;—Ele não deve ter praticado ascetismo suficiente!&#13;&#10;—Ele pode não ter feito muitos bons atos.&#13;&#10;&#13;&#10;O monge também tinha sido surpreendido. Ele não estava acostumado com esta obsessão com sarira durante a cremação e até mesmo ele estava a espera que um grande monge como aquele tivesse mais sarira.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Ele falou com o homem que estava atrás dele no meio da multidão.&#13;&#10;&#13;&#10;—Como é que eles podem estar tão zangados durante uma cerimónia tão sagrada?&#13;&#10;&#13;&#10;—Os pobres e esfomeados buscam por milagres para os salvarem. Pela tua aparência, eu assumo que também te encontras no caminho do Budismo. Este evento deve ter-te preocupado. — um homem muito velho no meio da multidão respondeu.&#13;&#10;&#13;&#10;—A sarira forma-se quando um monge melhora a sua mente e corpo, e finalmente atinge o nirvana. É um processo natural e não deve ser querido artificialmente. Como é que podem chamar este tipo de coisas de milagre? — o monge respondeu com um tom um pouco perturbado.&#13;&#10;&#13;&#10;Então o velho homem começou a rir.&#13;&#10;&#13;&#10;—O monge cremado era conhecido pelos seus bons atos. Ele partilhava os seus alimentos com aqueles que tinham fome e as suas roupas com aqueles que tinham frio. No entanto, assim como eles dizem, parece que ele não atingiu o verdadeiro nirvana pois apenas duas colheres de sarira saíram dele. Ele acabou por ser um pobre monge que não atingiu o nirvana mesmo ele sendo respeitado e conhecido como um benevolente santo vivo. Achas que serás diferente dele?&#13;&#10;&#13;&#10;—Eu…tenho praticado…&#13;&#10;&#13;&#10;—Um monge do templo (EDITADO) tinha mais de trezentas colheres de sarira. Luzes brilhantes cintilaram pelo céu enquanto a multidão faziam rezas devotas e a sarira era redonda como contas. O próprio imperador ordenou que quatro templos fossem construidos em seu nome.&#13;&#10;&#13;&#10;O monge não disse nada por uns momentos.&#13;&#10;&#13;&#10;—…..Mas, a criação da sarira é um processo natural….&#13;&#10;&#13;&#10;—Sabe-se que de Buddha saiu sarira o suficiente para encher um grande palácio quando ele foi cremado. Algum dia o teu corpo irá falhar e eventualmente trazer-te ao paraíso eterno. Algum dia na tua cremação haverão pessoas como estas lá.&#13;&#10;&#13;&#10;—.....................&#13;&#10;&#13;&#10;—Se nada for colhido dos teus restos, tu serás um pecado dos três mundos e o teu caminho chegará a lugar nenhum. No entanto, se de ti sair sarira o suficiente para maravilhar a todos, o teu nome será cantado por gerações. O imperador estará surpreso e irá construir um grande templo em teu nome, e as pessoas irão dizer os seus cânticos enquanto olham o pagode desse lugar. &#13;&#10;&#13;&#10;—.....................&#13;&#10;&#13;&#10;—Este mero homem velho apenas está a dizer-te isto porque eu consigo ver que tu serás um grande monge. Se caminhares por umas horas, irás encontrar um monte chamado (EDITADO). Lá em cima tu poderás ver vários pagodes velhos. Dentro deles há caixas de sarira de grandes monges que já foram esquecidos há muito. Eles irão voltar à terra se nada lhes acontecer. Mas talvez se tu os consumires, muita sarira poderá sair de ti, talvez mais sarira do que o próprio Buddah…&#13;&#10;&#13;&#10;Então o monge apercebeu-se que o velho homem parecia suspeito e a sua voz não era compatível com a sua idade. Ele tentou olhar a sua face, mas ele tinha desaparecido em um instante. O monge concluiu que era uma brincadeira do Diabo e tentou esquecer o que foi dito. Mas a voz do velho homem ainda ecoava nos seus ouvidos quando ele tentava dormir.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {O monge não conseguia dormir, então ele decidiu passear pela noite.&#13;&#10;&#13;&#10;No entanto, em pouco tempo ele encontrou-se perto dos pagodes que o velho homem tinha mencionado. Caminhar da cama dele até lá demoraria algumas horas.&#13;&#10;&#13;&#10;Por muito tempo, apenas uma voz dizendo “Buddha Mantra” ecoava pelos pagodes.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {&lt;Excerto de uma fábula da área de (EDITADO)&gt;&#13;&#10;&#13;&#10;Durante a noite, um som estranho pode ser ouvido perto dos pagodes e estátuas na área de (EDITADO). Diz-se que a fonte desse som é uma criatura demoníaca que têm longos braços, garras e uma boca enorme. Alguns afirmam que esse ser traz consigo contas quebradas, mas isso não pode ser confirmado. Depois desses sons serem ouvidos a criatura aparece, as pessoas descobriram que caixas de sarira que tinham sido oferecidas tinham sido abertas por força bruta e o conteúdo no seu interior tinha desaparecido. &#13;&#10;&#13;&#10;Além do mais, os monges que ficam nesta província não devem dormir sozinhos e devem carregar um talismã que repele espíritos demoníacos. &#13;&#10;&#13;&#10;Este conto criou a tradição de cantar estas frases durante uma cremação:;&#13;&#10;&#13;&#10;亦僧子乎 (Yeoseungzaho)&#13;&#10;亦僧子乎 (Yeoseungzaho)&#13;&#10;今汝不必僧 (Keumyeobupilseung)&#13;&#10;魔羅汝不極樂往生 (Marayeobugukrakwangsang)&#13;&#10;&#13;&#10;Este cântico é traduzido para:;&#13;&#10;&#13;&#10;&lt;i&gt;Tu és um monge?&#13;&#10;Tu és um monge?&#13;&#10;Tu já não és mais um monge.&#13;&#10;És um demónio que nunca chegará ao paraíso.&lt;/i&gt;&#13;&#10;&#13;&#10;Esta cantiga é cantada aos monges que não se aperceberam que se tornaram em um demónio.}
+      ]
+    </desc>
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">A saúde mental do empregado que realizou trabalho de esclarecimento foi regenerada.</specialTip>
+      <specialTip openLevel="2" key="2">O Qliphoth Counter diminuiu por um cada vez que 10 empregados morreram dentro da instalação. No entanto, a morte de empregados por balas de execução não foram detetadas pelo $0.</specialTip>
+      <specialTip openLevel="2" key="3">O Qliphoth Counter diminuirá com uma probabilidade Média, caso o resultado do trabalho seja Normal.</specialTip>
+      <specialTip openLevel="2" key="4">O Qliphoth Counter diminuiu quando o resultado do trabalho foi Mau.</specialTip>
+      <specialTip openLevel="2" key="5">O Qliphoth Counter foi a 0 quando O-05-102 passou pela unidade de contenção do $0.</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

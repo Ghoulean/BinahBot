@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+  -->
+  <info id ="100064">
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+
+    <narration action="start">
+      [
+      {O $0 fala com #0 sobre amor.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {O objetivo do $0 é manter as pessoas de bom coração seguras.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 sente esperança vinda da cor rosa do $0.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">D-01-106</codeNo>
+      <portrait openLevel ="0">Sprites/Unit/creature/PinkCorps</portrait>
+
+      <name openLevel ="1">
+        Exército de Rosa
+      </name>
+
+      <name openLevel ="3">
+        Exército de Preto
+      </name>
+
+      <riskLevel openLevel ="0">
+        ZAYIN
+      </riskLevel>
+
+      <riskLevel openLevel ="3">
+        ALEPH
+      </riskLevel>
+
+      <openText>A cor do coração humano é rosa. E por vestir a mesma cor, nós podemo-nos misturar para dentro da mente das pessoas.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {<i>Esta Anormalidade é baseada na ideia do(a) apoiante '문정호(Moon Jungho)' do Tumblbug</i>&#13;&#10;&#13;&#10;Uma criatura humanoide armada com equipamento rosa. A sua capacidade intelectual permite comunicação com seres humanos. Através de observações podemos assumir que parece amigável. O mesmo se intitula de uma equipa de forças especiais vinda de (EDITADO), usa o pronome ‘nós’ quando se refere a si próprio e tem intenção de ajudar os seres humanos.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {(Esta é a gravação de áudio do primeiro contacto com esta Anormalidade).&#13;&#10;(Omitido)&#13;&#10;&#13;&#10;Empregada Serena: Eu sinto-me ameaçada porque tu estás armado. E esse cor-de-rosa brilhante parece estranho, não é algo que combina neste lugar.&#13;&#10;&#13;&#10;- Qual é a tua opinião na natureza humana, minha cara Serena?&#13;&#10;&#13;&#10;Serena: …. Eu acho que depende das experiências de cada pessoa. Porquê que perguntas?&#13;&#10;&#13;&#10;- É um tópico altamente debatível. Mas isto é o que nós achamos que devemos fazer. Se uma pessoa for boa desde o começo, nós protegemos o seu bom coração. Se uma pessoa for má desde o começo, nós tornaremos o seu mau coração em um bom e protegeremos-no.&#13;&#10;&#13;&#10;Serena: Como é que tu vais fazer isso?&#13;&#10;&#13;&#10;- Nós conseguimos ver a cor dos corações. A cor do coração humano é rosa. E por vestir a mesma cor, nós podemo-nos misturar para dentro da mente das pessoas. Nós iremos de bom grado nos sujar se for para ajudar pessoas de bom coração.&#13;&#10;&#13;&#10;Serena: Espera, então tu sujaste para que eles não fiquem sujos? Como é que isso é possível?&#13;&#10;&#13;&#10;- Sim, é possível.&#13;&#10;&#13;&#10; Serena: Desculpa, mas eu não posso confiar em ti. É muito suspeito o facto que podes ver a cor do coração das pessoas.&#13;&#10;&#13;&#10;- Se alguma coisa acontecer, apenas nos chame, senhora. &#13;&#10;&#13;&#10;(Fim da gravação)&#13;&#10;&#13;&#10;De acordo com esta gravação, a vontade da Anormalidade para ajudar os empregados é sólida.&#13;&#10;Nós ainda precisamos de mais detalhes sobre este ser, talvez pedir pela sua ajuda poderá ajudar-nos a conseguir mais informações. No entanto, assim como todas as outras Anormalidades, nós não podemos confiar cegamente. Planeio ter uma equipa de supressão pronta enquanto finjo pedir pela sua ajuda. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Muitas coisas aconteceram. Para sumariar a história toda, esta Anormalidade é a melhor coisa que alguma vez tivemos. Alguns meses atrás, eu decidi pedir ajuda a este ser e eu tenho o usado desde então. Ele já me ajudou cerca de (EDITADO) vezes. A minha eficiência no trabalho melhorou muito. Agora apenas olhar para a cor rosa acalma-me a mente. Este ser pode dar-nos um suporte que nenhum grande líder poderia dar. Isto irá melhorar muito a qualidade de vida dos empregados.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {&lt;Áudio Gravado&gt;&#13;&#10;&#13;&#10;Empregada Serena: Tu podes fazê-lo novamente, certo?&#13;&#10;&#13;&#10;- Sim, o coração humano é rosa, e nós vestimos a mesma cor. Nós levamos embora os pensamentos maus. &#13;&#10;&#13;&#10;Serena: Entendeste? Sim, ainda está tudo em belas condições. Nós podemos por esta Anormalidade a bom uso novamente na nossa próxima supressão. É realmente muito melhor do que soldados humanos. Por favor considera coloca-lo na equipa de supressão da companhia. Um à parte, o tom de cor dele parece ter escurecido um pouco mas eu acho que não é nada de mais.&#13;&#10;&#13;&#10;- O coração humano…. é…. nós devemos… limpar….&#13;&#10;&#13;&#10;- Até mesmo… um ponto de mal… deve… ser limpo….&#13;&#10;&#13;&#10;Serena: Ele parece um pouco… menos energético do que o costume. Mas vai tudo correr bem, eu acho. &#13;&#10;&#13;&#10;(Fim da gravação)}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {&lt;Relatório Urgente do Incidente Relacionado com o Exército de Rosa&gt;&#13;&#10;&#13;&#10;Nós estamos a preencher este relatório urgentemente por causa da mudança drástica do Exército de Rosa.&#13;&#10;Ainda estamos a tentar entender o que aconteceu. No total, (EDITADO) foram empregados mortos.Esta é a gravação de áudio do que se assume ser o primeiro incidente, a empregada Serena. &#13;&#10;&#13;&#10;(Gravação de Áudio)&#13;&#10;&#13;&#10;Empregada Serena: Uma Anormalidade fugiu novamente na secção (EDITADO). Eu vim pedir a tua ajuda novamente.&#13;&#10;&#13;&#10;-Sim, nós o Exército de Preto… misturamo-nos para dentro da mente das pessoas.…e levamos embora bons pensamentos…&#13;&#10;&#13;&#10;Serena: ….O quê? Esse não é o teu bordão.&#13;&#10;&#13;&#10;- O coração humano… é preto… nós devemos…limpar…regularmente…..&#13;&#10;&#13;&#10;Serena: Estás a falar do quê? Olha, estás a começar a assustar-me.&#13;&#10;&#13;&#10;- Nós iremos-te proteger com o nosso amor negro.&#13;&#10;&#13;&#10;Serena: Para, eu vou chamar a equipa de supressão… não mexas nem um músculo…&#13;&#10;&#13;&#10;- Nós vos saudamos, senhora…&#13;&#10;&#13;&#10;(A gravação é terminada bruscamente depois do som de uma explosão)}
+      ]
+    </desc>
+
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">O $0 pode ser enviado para proteger qualquer empregado. No entanto, leve em conta que o Qliphoth Counter irá descer após a ordem ter sido dada.</specialTip>
+      <specialTip openLevel="1" key="2">O $0 aumenta a defesa do empregado que está a ser protegido e regenera todos os que se encontram na mesma área. No entanto, o nível do empregado que está a ser protegido deverá ser maior do que 3, caso contrário o empregado entrará em pânico enquanto está a ser protegido.</specialTip>
+      <specialTip openLevel="1" key="3">O Qliphoth Counter diminuiu quando trabalho de Repressão foi realizado.</specialTip>
+      <specialTip openLevel="1" key="4">Quando 5 ou mais empregados morreram na instalação, o Qliphoth Counter irá diminuir. No entanto, a Anormalidade não reconhece a morte de empregados por balas de execução.</specialTip>
+      <specialTip openLevel="1" key="5">O Qliphoth Counter diminuiu quando o resultado foi Mau.</specialTip>
+      <specialTip openLevel="1" key="6">O Qliphoth Counter aumentou quando uma Anormalidade foi suprimida.</specialTip>
+      <specialTip openLevel="1" key="7">Quando empregados de nível inferior a 3 encontram o $0 em fuga, eles perdem o controlo e começam a atacar outros empregados. O mesmo aconteceu aos empregados que tiveram os seus SPs reduzidos a 0 pelo ataque da Anormalidade.</specialTip>
+    </specialTipSize>
+    
+  </observe>
+</creature>

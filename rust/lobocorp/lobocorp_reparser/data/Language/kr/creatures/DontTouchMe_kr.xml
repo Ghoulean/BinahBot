@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100024">
+
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다
+    </narration>
+
+    <narration action="start">
+      [
+      {빛을 오래 보지 못한 죄수처럼 쇠사슬에 묶여 있는 망치가 있습니다. }
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {망치와 쇠사슬은 분리된 존재가 아니라 그 자체로 하나의 환상체입니다.}
+      {깊숙한 지하 던전에서 존재할 것 같은 범상함이 느껴집니다.}
+      {왠지 쇠사슬이 풀리지 않은 상태가 안전해 보이는 느낌입니다.}
+      {쇠사슬은 절대 망치를 꺼낼 수 없도록 아주 강하게 옭아매어져 있습니다.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 직원은 $0 를 관리하며 이러려고 회사에 취직을 했는지 자괴감을 느낍니다.}
+      {#0 직원은 $0 에 감긴 쇠사슬에 대해 호기심을 느낍니다.},
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 는 구속구가 풀릴 그 날을 기다립니다.},
+      ]
+    </narration>
+   
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-05-47</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/DontTouchMe</portrait>
+
+      <name openLevel ="1">
+        만지지마
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <specialName openLevel ="1">
+        하지말라면하지마루요
+      </specialName>
+
+      <openText>그렇게 눌러봤으면서 아직도 궁금한 게 남아있는 거야?</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {정말 누르고 싶게 생긴 빨간 색 버튼 이외에는 아무 것도 없는 상자 모양의 기계다. 주위에는 오래되어 보이는 낙서들이 있다. ‘부탁인데, 버튼은 누르지 마’ 등의 내용이다.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {많은 직원의 하는 호소 중 하나가 버튼을 누르고 싶은 마음이 너무나 강해 밤에 잠이 안 올 정도라고 한다. 과장이라고 생각되었으나 후유증에 대해 심각하게 주장하는 직원들의 수가 많았기에 이에 대한 예방책을 수립 중이다.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="1">
+      [
+      {환상체를 정의하는 가장 중요한 요소 중 하나가 ‘자유의지’ 인데 본 환상체는 자신의 버튼을 누르게 만들고자 하는 강력한 의지가 존재하는 것이 확인돼 무리 없이 환상체 라는 개체에 속할 수 있었다.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {버튼을 누를 경우 벌어져선 안 될 일들이 벌어진다. 재앙이 내린다 부터 시작하여 무지개색 빛이 쏟아지며 유니콘이 내려온다, 회사 지하 깊이 묻어두었던 모든 것을 초기화시킨다던 폭탄이 터진다든가 하는 각종 괴담이 퍼지고 있지만 모두 아니다.}
+      ]
+    </desc>
+    
+    <desc id="5" openLevel="3">
+      [
+      {누르고 싶게 만드는 호기심과, 시시때때로 모습을 바꾸어 실수로라도 버튼에 손이 가게끔 유도하는 교묘함을 갖추고 있으므로 주의가 필요하다.}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="4">
+      [
+      {직원 증언 일부 발췌&#13;&#10;"정신을 차려보니 제가 그 환상체의 격리실 앞에 가서 버튼을 누르기 직전의 상태였다니까요, 주위 직원들이 절 끌어내지 않았더라면..." &#13;&#10;해당 직원은 여러 가지 검사를 받았지만, 정상 상태로 판명이 되어 작업에 복귀하였다. 하지만 버튼을 누르지 못한 것에 대하여 묘하게 아쉬워하는 기색이 만연하였기에 심리상담을 명령했다.}
+      ]
+    </desc>
+
+      <specialTipSize size="5">
+      <specialTip openLevel="1" key="confessionIs">이 버튼을 누른 후 무슨 일이 발생할 지는 그 누구도 알지 못한다.</specialTip>
+      <specialTip openLevel="2" key="confessionIsGood">격리실 내부에서 어떠한 일이 발생하더라도 절대로 이 버튼을 눌러서는 안된다.</specialTip>
+      <specialTip openLevel="3" key="lightening">동작 그만! 저 불쌍한 직원들이 가엾지도 않은가요. 관리자님?</specialTip>
+      <specialTip openLevel="4" key="lightening1"> 오, 제발 그 버튼 좀 건드리지마.</specialTip>
+      <specialTip openLevel="5" key="lightening2">그렇게 눌러봤으면서 아직도 궁금한 게 남아있는 거야?</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

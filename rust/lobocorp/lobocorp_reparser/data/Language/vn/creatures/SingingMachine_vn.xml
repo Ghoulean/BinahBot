@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100006">
+    
+    <narration action="move">
+      #0 is going into $0's containment unit to begin the task.
+    </narration>
+    <narration action="start">
+      [
+      {Ordinary grinder maybe in front of you, but please be careful. Every abnormality may not have reason to exist, but have intention to exist.},
+      {It has an extremely powerful suction force.},
+      {Music that it emits is known to be terribly beautiful.},
+      {Your blood and flesh, shall we harmonize and melodize.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 is not in motion if anyone isn’t nearby.},
+      {Before #0 entered, $0 didn’t move in the slightest.},
+      {Before #0 entered the containment chamber, $0 was nothing more than a normal machine that’s turned off.},
+      {If $0 had a power switch, #0 might have been more comfortable working.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 is working on $0 with extreme caution},
+      {#0 is always cautious since $0 can be activated at any time.},
+      {$0 is not responding to #0 as if it is digesting flesh bits internally.}
+      {#0 is working on $0 while it is not in motion }
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {It is simple to figure out when $0 activates; just open its lid and check how much flesh bits are digested.},
+      {#0 does not enough guts to open the lid to check $0‘s next activation. .},
+      {Rumor has it that any employee that has opened the lid of $0 later became sick.}
+      {Actually, the insides of $0 is known to be sophisticated but no employee dares to check it with their own eyes.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {It is a lucky day for #0. $0 has not been activated.}
+      {For #0, they are thankful that $0 is not active. But condolences to whichever employee is going to work there after.}
+      {$0 has decided to take a day off.}
+      {$0 is not responding as it is still finishing up what its leftover. }
+      ]
+    </narration>
+    <narration action="dead">
+      [
+      {The containment chamber is full of unprecedented harmony made by $0.},
+      {To generate the very best masterpiece, a sacrifice must be made. $0 is the best example of such phrase.}
+      ]
+    </narration>
+    <narration action="panic">
+      [
+      {#0 is possessed by the timbre of $0. #0 will not respond to any command.}
+      {#0 is charmed by transmundane song of $0. #0’s mind is completely paralyzed.}
+      ]
+    </narration>
+    
+  </info>
+  
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-05-30</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/SingingMachine</portrait>
+     
+     
+
+      <name openLevel ="1">Singing Machine</name>
+      
+      <riskLevel openLevel ="2">HE</riskLevel>
+
+  
+        <openText>But nothing was like a music it makes when it eats a human.</openText>
+    
+     
+    </collection>
+    
+    <desc id="1" openLevel="0">
+    [
+    {The machine takes the shape of a long cuboid.}
+       ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {By the look of it, it may look like a simple grinder but the existence of the thing’s own ‘will’ fills the criteria of abnormality.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {When approached (extra experiments are needed to determine how many meters the perimeter actually is) or touched, the employees put their bodies into the Abnormality. Afterwards, the machine’s fan shuts and the abnormality works on the “task”. The task takes approximately 5 minutes.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {After a few experiments, we have concluded that the Abnormality desires the result of ‘music’ from this interaction.}
+      ]
+    </desc>
+
+      <desc id="5" openLevel="4">
+    [
+        {&lt;color=#FF9E72FF&gt;There is no detailed research of the ' Music '.However, there is a hypothesis that the music has a special characteristic that attracts people based on the specific behavior of some employees or the psychological counseling record. If an employee is determined to be addicted to the music, there will need to be treated quickly to prevent any secondary damage that the employee may cause.&lt;/color&gt; }
+      ]
+    </desc>
+
+
+    <desc id="6" openLevel="1">
+     [
+        {&lt;Excerpt from Interview Log&gt;&#13;&#10;&#13;&#10;I was supposed to be sent in alone. The abnormality looked rather unassuming. Something like a machine used in a factory, as it didn’t react to anything. But that day, &lt;Redacted&gt; insisted that we had to go there. He kept on saying that “The Pale Horse” has responded to him. I didn’t think ‘Pale Horse’ was thinking about me when it responded. Most of the abnormalities that I take care of are safe. Also, I’m very lucky. I thought that day would be the same. (Omitted)}
+      ]
+    </desc>
+
+    <desc id="7" openLevel="2">
+      [
+       {&lt;Redacted&gt; closely observed the abnormality. I just wanted to write the report quickly and get out, but he was thinking differently. He was sure; there wouldn’t be an abnormality that doesn’t have special powers. I warned him not to get too close, but &lt;Redacted&gt; took one step closer. And suddenly, the thing came to life, opened its lid and swallowed him whole. Literally swallowed him. The lid closed and a loud noise came from the inside of the creature, there was no way of knowing what was happening, but I was too terrified to do anything. (Omitted)}
+    ]
+  </desc>
+
+    <desc id="8" openLevel="3">
+      [
+      {In the dark, I realized that the thing was playing an instrument. By crushing and cutting &lt;Redacted&gt;’s body, it was creating a melody. As I was contemplating my horrific realizations, the lid opened again. Bits and pieces of &lt;Redacted&gt; were in there. So little that you had to wonder as to what happened to the rest. (Omitted)}
+      ]
+    </desc>
+
+    <desc id="9" openLevel="4">
+      [
+      {&lt;color=#FF9E72FF&gt; &lt;&lt;b&gt;MUST READ: Symptoms of intoxication by ‘The Singing Machine’&lt;/b&gt;&gt;&#13;&#10;&#13;&#10;1. Attempts to take other employees to containment chamber of ‘The Singing Machine’ by using physical force.&#13;&#10;2. The size of the pupils are enlarged.&#13;&#10;3. Concentration and cognitive ability are greatly reduced.&#13;&#10;4. Does not try to listen to other music. &#13;&#10;Please add any additional symptoms that are found and immediately report the case if any employees are suspected of the above symptoms. &lt;/color&gt;}
+      ]
+    </desc>
+
+    <desc id="10" openLevel="4">
+      [
+      {&lt;color=#FF9E72FF&gt; &lt;&lt;b&gt;Excerpt from Incident Log&#13;&#10;&#13;&#10;XXXX XXth, there was a disappearing incident of employee M1840. 2 days later on the XXth, part of the body was found inside the ‘The Singing Machine’. DNA analysis has found the corpse to be of employee M1840. Employee M1840 was a new hire who had worked in the company for only 3 months, the employee had no record of an assignment with the abnormality. The employee assigned to the ‘The Singing Machine’, &lt;Redacted&gt; was the suspect. After an extensive investigation, &lt;Redacted&gt; confessed to the crime.&#13;&#10;&#13;&#10; “I know it’s crazy, but I had to hear that music again. It wouldn’t get out of my head for months. I performed all kinds of experiments. When the machine takes in a cat, it plays for 1 minute. A large dog, 2 minutes and 30 seconds, &lt;Redacted&gt; music came from it. But nothing was like a music it makes when it eats a human. It might sound ridiculous but I feel satisfied after having heard it once more.”}
+      ]
+    </desc>
+
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">The employee with level 4 or more Fortitude dives into $0 to operate it after completing the work.</specialTip>
+      <specialTip openLevel="2" key="2">The employee with level 2 or less Temperance dives into $0 to operate it after completing the work.</specialTip>
+      <specialTip openLevel="2" key="3">When the work result was bad, its Qliphoth counter is decreased.</specialTip>
+      <specialTip openLevel="3" key="4">When the Qliphoth counter reached 0, the employee who entered the containment room dived into $0 to operate.</specialTip>
+      <specialTip openLevel="3" key="5">When the machine was working, one of the nearby employee complained that she can hear the continuous melody from nowhere. We have decided to call this phenomenon 'Bewitched'.</specialTip>
+      <specialTip openLevel="4" key="6">Employee #1 fainted after being attacked by employee #0. After the attack, employee #0 made unconscious #1 get sucked into $0.</specialTip>
+    </specialTipSize>
+    
+  
+
+  </observe>
+</creature>

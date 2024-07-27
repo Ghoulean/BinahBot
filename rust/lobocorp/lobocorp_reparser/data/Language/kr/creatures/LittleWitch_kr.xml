@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100041">
+
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다
+    </narration>
+
+    <narration action="mid1">
+      [
+      {부끄럼이 많은 $0는 #0 모르게 직접 준비한 선물을 줄지도 모릅니다.},
+      {아주 먼 곳에서 온 $0는 시끌벅적한 웃음 소리를 좋아합니다.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0는 친구를 좋아합니다. },
+      {정성스러운 이 선물로 인해 #0 직원이 기뻐하면 좋을련만.},
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {받는 이가 깜짝 놀랄 상상을 하며 $0는 기쁜 마음으로 #0 직원을 쳐다봅니다.},
+      {조그맣더라도 값진 이 선물을 부디 기쁘게 받아주길.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {$0의 ‘친구’는 선물안에 잠든 채 받는 이를 기다리고 있습니다.},
+      {하트 모양의 깜찍한 선물 안에 무엇이 있는지 #0 직원은 생각도 못합니다.},
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-01-67</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/LittleWitch</portrait>
+
+      <name openLevel ="1">
+        꼬마마녀
+      </name>
+
+      <name openLevel="4">
+        래티씨아
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        깜짝 상자
+      </specialName>
+
+      <openText>소중한 친구들을 두고 올 수 없어서 슬펐던 아이는 기막힌 생각을 해냈지!</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {<i>어린아이 크기와 유사하며, 밝음성 있는 미소를 시종일관 유지하는.. </i> &#13;&#10;엄청 엄청 귀여어운 꼬마아이다}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {꼬마 아이라는 건 작고 사랑스러운 아이라는 뜻이래!&#13;&#10;아이는 엄청 먼 곳에서 왔어!&#13;&#10;그리고 마음에 드는 사람을 만나면 내가 꼬마가 직접 만든 선물을 나눠준다.&#13;&#10;다만 선물의 내용이 무엇인지는 비밀이야!}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {이것도 정말 정말 중요한 비밀인데 꼬마에게는 많은 재주가 있다!&#13;&#10;소녀는 많은 친구들이 있지만 이곳에 친구들을 데려와서는 안된다고 하더라고&#13;&#10;소중한 친구들을 두고 올 수 없어서 슬펐던 아이는 기막힌 생각을 해냈지!}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {내 친구들을 꽁꽁 잘 숨긴 다음에 선물처럼 보이게 한다면 모두 깜짝 놀라겠지?&#13;&#10;그리고 내 장난에 다 같이 웃을 수 있을 거야!&#13;&#10;앗 선물 내용도 다 말해버렸다}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {이곳에서도 많은 친구를 찾을 수 있다면 좋겠다!&#13;&#10;꼬마는 수줍음이 많이 타니까 몰래 선물을 줄거야!&#13;&#10;떠나는 건 아쉬워, 나랑 더 놀아줬으면 좋겠어!그리고 이곳 사람들에게서는 웃음이 보이지 않아!&#13;&#10;쓸쓸해 보인단 말이야 그런 건!&#13;&#10;그래서 꼬마아가씨는 결심했어! 이 곳에 웃음소리를 되찾을 때까지 떠나지 않겠다고!&#13;&#10;내 재미난 장난에 모두가 즐거워 해준다면 기쁠 것 같아!}
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="give">작업 결과가 보통으로 결정되자 $0가 작업을 진행한 #0 직원에게 선물꾸러미를 주었다.</specialTip>
+      <specialTip openLevel="2" key="gift">선물을 받은 #0 직원이 $0가 아닌 다른 환상체의 작업을 진행하려 하자 #0 직원의 몸을 뚫고 ███████이 태어났다.</specialTip>
+      <specialTip openLevel="2" key="cancle">███████이 태어나기 전에 직원의 작업 명령을 취소하자 이전과 달리 직원의 몸에서 어떠한 이상도 발생하지 않았다.</specialTip>
+    </specialTipSize>
+  </observe>
+  
+  <child>
+    <name>꼬마 마녀의 친구</name>
+    <codeId>O-01-67-1</codeId>
+  </child>
+</creature>

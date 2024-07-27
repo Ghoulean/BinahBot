@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300105">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-94</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/YouMusHappy</portrait>
+      <name openLevel="1">
+        You Must Be Happy
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <openText>
+        Many of those who underwent an operation inside the machine have found themselves rested and healthy again.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {A mysterious worn-out machine used for operations.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {This machine was designed to pull back the skull and destroy nerve tissue safely and efficiently.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Many of those who underwent an operation inside the machine have found themselves rested and healthy again.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Those who answered “Yes” to the question “Do you love your city?” were deemed cured. Those who answered “No” weren’t allowed to discharge.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {The longer the machine is in use, the better a person becomes. Furthermore, the longer it is used, the faster the question will change.}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">When an employee uses the machine, they will experience an increase in all their stats.</specialTip>
+      <specialTip openLevel="2" key="2">The stats will increase greater the longer the machine is used.</specialTip>
+      <specialTip openLevel="2" key="3">Be sure to stop the machine only when it displays “YES”. If it is stopped while on “NO”, all the stats will drop as much as they were due to increase.</specialTip>
+      <specialTip openLevel="2" key="4">The increased stats will return to normal the next day. However, employees who’ve gained more than 200 points in their stats will vanish the next day.</specialTip>
+      <specialTip openLevel="2" key="5">&lt;Caution&gt; There once was an incident where an employee who used the machine for 5 times or more in a single day exploded on the spot.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

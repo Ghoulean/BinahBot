@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+  -->
+  <info id="100064">
+    <narration action="move"></narration>
+    <narration action="start">
+      [
+      {$0 discourt au sujet de l’amour à #0.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Le but de $0 est de s’assurer que les personnes bienveillantes soient en sécurité.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 ressent de l’espoir en voyant la couleur apaisante de $0.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">D-01-106</codeNo>
+      <portrait openLevel="0">Sprites/Unit/creature/PinkCorps</portrait>
+      <name openLevel="1">
+        Armée de Rose
+      </name>
+      <name openLevel="3">
+        Armée de Noir
+      </name>
+      <riskLevel openLevel="0">
+        ZAYIN
+      </riskLevel>
+      <riskLevel openLevel="3">
+        ALEPH
+      </riskLevel>
+      <openText>La couleur du cœur humain est rose, et en portant la même couleur, nous pouvons nous fondre dans l’esprit des gens.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;Cette Anomalie a été créée à partir des idées du Donateur Tumblbug 문정호 (Moon Jeong-ho).&lt;/i&gt;&#13;&#10;&#13;&#10;Cette Anomalie prend la forme de créatures humanoïdes en combinaison rose. Ses capacités intellectuelles sont suffisantes pour pouvoir converser verbalement avec des êtres humains. Au moins, elle semble amicale durant les observations et le travail. Elle s’est identifiée comme étant une force spéciale de (Expurgé) et utilise le pronom “nous” en parlant d’elle-même. Elle a montré à plusieurs reprises l’intention d’aider l’humanité.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {&lt;Enregistrement Audio de la Première Rencontre avec l’Anomalie&gt;&#13;&#10;
+      (Omis)
+      Serena : Eh bien, je me sens menacée parce que vous êtes armé. Et puis cette tenue rose vive est aussi troublante. Elle n’a pas sa place dans un tel endroit.
+      - Quelle est votre opinion sur la nature humaine, Mademoiselle Serena ?
+      Serena : …Je pense que cela dépend de nos expériences personnelles. Pourquoi demandez-vous ça ?
+      - Il s’agit d’un sujet très controversé, mais voici ce que nous pensons que nous devons faire. Si un personne est bienveillante de naissance, nous protégeons leur cœur. Si une personne est mauvaise de naissance, nous ferons de leur cœur un cœur bon et protégerons ce dernier.
+      Serena : Comment ferez-vous cela ?
+      - Nous pouvons voir la couleur des cœurs de l’humanité. La couleur du cœur humain est rose, et en portant la même couleur, nous pouvons nous fondre dans l’esprit des gens. Nous nous salirons volontiers pour le bien des bons cœurs.
+      Serena : Attendez, vous vous salirez à la place des gens ? Est-ce qu’une telle chose est réellement possible ?
+      - En effet, oui.
+      Serena : Je suis désolé, mais je ne peux pas avoir confiance en vous ou en vos paroles. C’est assez suspicieux que vous puissiez “voir” la couleur du cœur de quelqu’un.
+      - Si quelque chose arrive, appelez-nous m’dame.&#13;&#10;(Fin de l’enregistrement)&#13;&#10;&#13;&#10;D’après ce qui a été déclaré durant l’enregistrement, la volonté d’aider de l’Anomalie est solide.&#13;&#10;Nous n’avons pas encore obtenu d’informations détaillées sur l’Anomalie. Peut-être que lui demander son aide pourrait nous aider à en apprendre plus. Cependant, comme avec n’importe quelle autre Anomalie, nous ne devons pas lui faire confiance aveuglément. Je prévois d’avoir une équipe de répression prête pendant que je prétends lui demander de l’aide.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Beaucoup de choses ont eu lieu depuis ce dernier enregistrement. Pour faire simple, cette Anomalie est la meilleure chose que l’on ait jamais eu ici. Il y a quelques mois, j’ai saisi l’opportunité de lui demander de l’aide et depuis je ne fais que l’utiliser. J’ai reçu de l’aide de sa part environ (Expurgé) fois. Mon efficacité au travail est devenue bien meilleure elle aussi. Aujourd’hui, simplement regarder quelque chose de rose me calme. Ces créatures nous soutiennent d’une manière que même les plus grands dirigeants ne peuvent égaler. Cette Anomalie améliorera grandement la qualité de vie de nos employés.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;Extrait d’un Enregistrement Audio&gt;&#13;&#10;
+      Serena : Vous pouvez le refaire aujourd’hui, n’est-ce pas ?
+      - Oui, le cœur humain est rose, et nous portons la même couleur. Nous repousserons les mauvaises pensées.
+      Serena : Vous entendez cela ? Oui, elle est encore en pleine forme. Nous pouvons à nouveau mettre à profit cette Anomalie durant notre prochaine répression. Ils sont tellement mieux que des soldats humains. Peut-être devrions-nous sérieusement envisager de les intégrer à notre équipe spéciale de répression. En dehors de cela, ils semblent s’être légèrement assombris, mais je ne pense pas qu’il y ait de quoi s’inquiéter.
+      - Le cœur humain… est… nous devons… nettoyer…
+      - La… moindre trace… du mal… doit… être nettoyée…
+      Serena : Elle semble être un peu moins… énergique que d’habitude. Mais tout ira bien, je pense.&#13;&#10;(Fin de l’enregistrement.)}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {&lt;Rapport Urgent de l’Accident en rapport avec Armée de Rose&gt;&#13;&#10;Nous avons rempli ce rapport urgent en raison d’un changement drastique chez l’Armée de Rose.&#13;&#10;Nous essayons encore de comprendre ce qu’il s’est passé exactement. Un total de (Expurgé) employés sont morts. L’enregistrement audio suivant est un enregistrement de la supposée première victime, l’employée Serena.&#13;&#10;&#13;&#10;(Enregistrement Audio)
+      Serena : Une Anomalie s’est encore échappée dans la section (Expurgé). J’aimerais vous demander à nouveau votre aide.
+      - Oui… nous, l’Armée de Noir… nous nous fondons dans le cœur humain… et repoussons les bonnes pensées…
+      Serena: …Attendez. Quoi ? Ce n’est pas votre réplique.
+      - Le cœur humain… est noir… nous devons… régulièrement… nettoyer…
+      Serena : De quoi parlez-vous ? Vous me foutez les jetons…
+      - Nous vous protégerons avec notre amour noir.
+      Serena : Arrêtez, je vais appeler l’équipe de répression… Si vous bougez ne serait-ce que d’un centimètre, je vous jure que…
+      - Nous vous saluons, m’dame…&#13;&#10;(L’enregistrement s’arrête brutalement après le bruit d’une grosse explosion.)}
+      ]
+    </desc>
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">$0 peut recevoir l’ordre de protéger un employé. Cependant, il est à noter que le Compteur Qliphoth a diminué lorsque l’ordre a été donné.</specialTip>
+      <specialTip openLevel="1" key="2">$0 augmente les défenses de l’employé qu’il protège tout en soignant tous ceux dans la même zone. Cependant, si le niveau de l’employé protégé est inférieur à 3, il deviendra hors-de-contrôle en étant protégé.</specialTip>
+      <specialTip openLevel="1" key="3">Lorsqu’un travail de Répression est effectué, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="1" key="4">Le Compteur Qliphoth a diminué chaque fois que 5 employés sont morts. Cependant, les morts par Tir d’Exécution n’ont pas été reconnus.</specialTip>
+      <specialTip openLevel="1" key="5">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="1" key="6">Lorsqu’une Anomalie est réprimée, le Compteur Qliphoth augmente.</specialTip>
+      <specialTip openLevel="1" key="7">Lorsqu’un employé de Niveau 3 ou moins rencontre $0 en brèche, il deviendra incontrôlable et attaquera les autres employés. La même chose arrive lorsque les PSM d’un employé atteignent 0 suite aux attaques de $0.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <name>Armée de Noir</name>
+    <codeId>D-01-106-1</codeId>
+  </child>
+</creature>

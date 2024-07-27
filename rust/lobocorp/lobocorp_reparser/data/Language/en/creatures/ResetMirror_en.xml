@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300007">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-09-81</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/ResetMirror</portrait>
+      <name openLevel="1">
+        Mirror of Adjustment
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <openText>
+        “The satisfaction is only temporary though.”
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {It assumes the shape of a cheval glass, but nothing is reflected on its surface.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {The only thing it shows is people. When facing oneself in the mirror, the subject changes. There are numerous suggestions, like the possibility of a linkage to a parallel universe or magical powers, but none of this can be confirmed. }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Those who face themselves in the mirror may appear the same, but in actuality, they have become completely different people. }
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      <!-- 여기 번역 고치기 -->
+      [
+      {Looking into the mirror multiple times will gradually eat away one’s humanity until they become indistinguishable from a hollowed husk of a man, so caution is advised.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {“Yo, Brian just walked right past me without saying a word. What’s up with him?”&#13;&#10;“Oh, he took a peek at the mirror.”&#13;&#10;“Y’know, he always complained about being born too weak. I guess he finally made up his mind about it huh.”&#13;&#10;“The satisfaction is only temporary though.”}
+      ]
+    </desc>
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="1">Those who face $0 will have their stats randomly adjusted.</specialTip>
+      <specialTip openLevel="2" key="2">If one faces $0 more than once a day, all their stats will lower each subsequent time they face it.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

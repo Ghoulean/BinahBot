@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100055">
+
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {許多員工都在 $0 的認知下死去.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {員工 #0 待得越久, 他們的處境就變得越糟.},
+      ]
+    </narration>
+  
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-03-88</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Wraith</portrait>
+
+      <name openLevel ="1">
+        三維折射變異體
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>多加謹慎並留意你的周遭.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {其為一奇怪的現象. 它就是現象本身. 它不被肉眼所見.  }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {就因為它沒辦法被看見, 也不代表它就不存在. 此異常的認知範圍為收容單位長寬的 XXX 公尺. 多加謹慎並留意你的周遭. 在該異常的範圍裡呼吸變成天方夜譚. 區域裡是真空的. 嚴格來說, 該異常本身是個真空的現象. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {&lt;員工 Chomsky 的死亡紀錄&gt;&#13;&#10;沒有方法來檢測此異常是否從收容單位裡突破收容. 意外的, 員工 Chomsky 在走廊中央停下並站在原地. 那條走廊人來人往. 一些員工甚至叫 Chomsky 快點走動.&#13;&#10;當下, Chomsky 的身體被升上空中 10 呎. 他的雙臂與雙腿奇怪的展開, 就像進行著古老的儀式般. 如果他的雙腿還在地上, 他的樣子或許看起來就只是跳著芭蕾. 每個人停下腳步看著他. Chomsky 開始尖叫. 他像個瘋子般尖叫. 他或許感覺到了什麼. 員工們恐慌了. 一些員工試圖拉下 Chomsky 的雙腿. Chomsky 卻動也不動. 在一陣短暫的寂靜後, Chomsky 張開了他的嘴巴低語著什麼. 兩名試圖將 Chomsky 拉下來的員工開始發出尖叫. 鮮血從他的身體裡噴發而出. 他的手臂與大腿從身體上分開後仍懸在空中. Chomsky 的軀體也還在空中. 在走廊上, 一切變得有如地獄, 大家開始逃竄.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {該進一部討論要如何識別此異常. 目前來說, 我們正在研究能否使用蝦眼探測到紫外線的技術來偵測此異常, 但表現並不理想. 對進入收容單位的員工來說, 一個方法是帶著半杯水進去. 在工作時將杯子擺在地板上. 如果水濺到地上, 立刻停下工作並離開收容單位. }
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">當工作結果為差時, 逆卡巴拉計數器減少了.</specialTip>
+      <specialTip openLevel="2" key="2">當工作時間超過 40 秒時, 逆卡巴拉計數器減少了.</specialTip>
+      <specialTip openLevel="2" key="3">當此異常突破收容時, 所有的員工以及設施都無法探測到此異常, 因此需要管理者親自指揮鎮壓.</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

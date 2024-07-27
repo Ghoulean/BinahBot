@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300108">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção da $0 para iniciar o processo de trabalho.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-97</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/PromiseAndFaith</portrait>
+      <name openLevel="1">
+        Velha Crença e Promessa
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <openText>
+        Aqueles corações traídos afundaram nas profundesas, lentamente sendo esquecidos nos corredores do tempo cada vez mais extensos.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Um instrumento de mármore misterioso que fica pendurado na Unidade de Contenção.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Nós sabemos de uma prática anciã; das incontáveis promessas que foram feitas, e da fé interminável colocada nelas.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Entretanto, tudo que era cedido não passava do vazio e da enganação.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Aqueles corações traídos afundaram nas profundesas, lentamente sendo esquecidos nos corredores do tempo cada vez mais extensos}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Entretanto, se você fizer uma tentativa com um coração sério, desprovido de desejo e expectativa, você pode receber uma recompensa inesperada.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Utilize a Anormalidade para fortalecer Armas E.G.O. Isso consumirá uma quantidade baixa da energia atualmente coletada.</specialTip>
+      <specialTip openLevel="2" key="2">A arma fortalecida terá maior Poder de Ataque.</specialTip>
+      <specialTip openLevel="2" key="3">Porém, ainda há uma possibilidade de perder o E.G.O durante o processo de fortalecimento.</specialTip>
+      <specialTip openLevel="2" key="4">A arma fortalecida perderá o poder da Anormalidade após o dia ter passado.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

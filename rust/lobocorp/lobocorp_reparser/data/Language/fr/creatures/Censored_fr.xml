@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100056">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {#0 est (CENSURÉ) aux yeux de (CENSURÉ).}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {#0 se sent (CENSURÉ) à cause de (CENSURÉ).}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {(CENSURÉ) fait (CENSURÉ) et… Doux seigneur, c’est dégoûtant.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">O-03-89</codeNo>
+      <name openLevel="1">CENSURÉ</name>
+      <portrait openLevel="1">Sprites/Unit/creature/Censored</portrait>
+      <riskLevel openLevel="1">ALEPH</riskLevel>
+      <openText>Si une erreur système désactive la censure recouvrant l’Anomalie, nous devrons de nouveau réfléchir à comment nous débarrasser de l’Administrateur.</openText>
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {Toutes tentatives de décrire (CENSURÉ) causera une grave corruption mentale chez la personne qui parle et chez l’auditeur. En conséquence, il est interdit d’enregistrer la moindre description sur l’apparence de cette (CENSURÉ). Tous les enregistrements audio et écrits doivent être inspectés afin de s’assurer que de telles descriptions en soient supprimées. Tout travail concernant cette suppression doit être assignée à des employés de Niveau 5 ou plus.}
+      ]
+    </desc>
+    <desc id="2" openLevel="2">
+      [
+      {&lt;Extrait d’un Enregistrement Audio&gt;&#13;&#10;
+      Randy : C’est vraiment dommage que l’on ait à envoyer un employé aussi performant que toi dans son Unité de Confinement. Est-ce que tu as de dernières paroles avant de commencer ? Bien sûr, quand je parle de dernières paroles, ce n’est qu’à titre préventif.&#13;&#10;
+      (CENSURÉ) : On ne peut rien y faire. Je suis l’employé avec la plus haute résistance aux effondrements cognitifs. Je suis apathique envers tout depuis mon enfance. Les gens disaient souvent que je manquais d’empathie et que je n’étais pas normal. Cependant, quand j’ai commencé à travailler ici, ma capacité anormale est devenue la clé pour sauver tout le monde. C’est quelque chose qui ne pourrait être vécu nulle part ailleurs.&#13;&#10;
+      Randy : Permets-moi de le redire. Bien qu’il soit vrai que ce soit toi qui possède la plus haute résistance de tous les employés, ce n’est que basé sur des standards humains. Si tu commences à souffrir d’un déferlement de pensées intrusives, ou que tu décides de faire un compte à rebours à partir de dix mais que tu échoues à te rappeler ce qu’est dix, ou que tu régurgites de manière incontrôlable du vomi ou de la salive, ou que cet endroit commence à donner l’impression d’être autre chose que la corporation, ou que tu te sens soudainement insignifiant et commence à penser que suffoquer est ton seul espoir… Tu dois immédiatement quitter l’Unité de Confinement.&#13;&#10;
+      (CENSURÉ) : Si vous le me le redites encore une fois, cela fera treize fois que vous l’aurez dit.&#13;&#10;
+      Randy : Nous ne pouvons pas te surveiller en temps réel. Toutes les caméras sont désactivées, et ton enregistrement audio ne sera mis à jour qu’après la complétion du travail. Il va sans dire que je suis inquiet pour toi. Pourquoi tu ne répéterais pas les consignes que je t’ai donné il y a quelques instants ?&#13;&#10;
+      (CENSURÉ) : Entrer, ne pas faire moi-même le travail, accompagner l’employé (CENSURÉ) et observer la progression du travail. Et enregistrer tout ce qu’il se passe ; même si (CENSURÉ) est en danger, ne pas essayer de le secourir à moins d’en recevoir l’ordre. C’est ça ?&#13;&#10;
+      Randy : Exactement. Maintenant, nous allons couper le contact dans dix secondes. Bonne chance et bon vent pour ton enregistrement.&#13;&#10;
+      (CENSURÉ) : Je n’ai aucun regret. Je dirais que je suis très chanceux comparé aux autres ; au moins, j’ai l’occasion de laisser un dernier enregistrement vocal. Enfin, je dis “dernier” seulement par précaution mais…&#13;&#10;
+      Randy : Bien, ton enregistrement sera à jamais archivé et tous nos chers employés se rappeleront de toi. 3... 2... 1... Fin de la réception audio.&#13;&#10;
+      (CENSURÉ) : Randy... On dirait notre (CENSURÉ) d’il y a si longtemps, non ? …Oh, pendant un instant j’ai oublié que moi seul peut voir ça. On… dirait qu’elle peut même se reproduire… L’employé (CENSURÉ) qui était avec moi est devenu (CENSURÉ)… C’est exactement comme lorsque (CENSURÉ)… Je me sens légèrement nauséeux, mais je vais bien… Un petit (CENSURÉ) est sorti du (CENSURÉ) de l’employé (CENSURÉ)… Je n’arrive pas à le croire… Maintenant elle commence à (CENSURÉ) l’employé (CENSURÉ)… L’employé (CENSURÉ) hurle comme un (CENSURÉ)… Les pleurs… Pouvez-vous les entendre ? lls me rappellent (CENSURÉ)…&#13;&#10;
+      Son : (CENSURÉ)——————————————————&#13;&#10;
+      Je comprends maintenant… C’est notre (CENSURÉ)… C’est la raison pour laquelle (CENSURÉ) existe…&#13;&#10;
+      C’est la pire chose que j’aie vue de ma vie. Je ne peux même pas bouger. On dirait que (CENSURÉ) a fait de moi sa prochaine cible. Bientôt… Je serai aussi (CENSURÉ)… Elle se rapproche. Je vais mettre mon enregistreur dans mon (CENSURÉ)… J’espère que cet enregistrement aidera tout le monde…&#13;&#10;&#13;&#10;&lt;L’audio se coupe&gt;}
+      ]
+    </desc>
+    <desc id="3" openLevel="3">
+      [
+      {Même après que l’on ait mis en place le filtre cognitif, plusieurs de nos administrateurs ont perdu la tête. La moitié a disparu à cause de (CENSURÉ). Même si l’on règle le filtre cognitif à son niveau maximum, au risque d’afficher nos employés et les autres Anomalies comme des objets extrêmement simples, les administrateurs continuent de devenir fous dès qu’ils voient cette Anomalie. Nous ne pouvons pas rendre l’administrateur aveugle à cause d’une seule Anomalie. Nous faisons face à un dilemme. La seule solution que nous avons pu mettre en place vient de la suggestion d’un de nos employés. Il s’agissait de couvrir l’Anomalie d’une immense barre de censure et la flouter. Si une erreur système désactive la censure recouvrant l’Anomalie, nous devrons de nouveau réfléchir à comment nous débarrasser de l’Administrateur.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Le Compteur Qliphoth de l’Anomalie peut être augmenté de 1 en effectuant un type de travail spécial. Pour satisfaire l’Anomalie, un employé doit être choisi au hasard.</specialTip>
+      <specialTip openLevel="1" key="2">Les employés de Niveau 4 et moins paniquent immédiatement lorsqu’ils rencontrent l’Anomalie. Lorsque $0 s’échappe, les employés de ce niveau ont montré une réponse similaire.</specialTip>
+      <specialTip openLevel="3" key="3">Lorsqu’un employé panique dans l’Unité de Confinement, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="2" key="4">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth diminue.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <name>CENSURÉ</name>
+    <codeId>O-03-89-1</codeId>
+  </child>
+</creature>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300101">
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-85</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/IronMaiden</portrait>
+
+      <name openLevel ="1">
+        Nós Pudemos Mudar Tudo
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <openText>
+        Agora vai ficar tudo bem.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Depois que popularidade da "Ajudante Alada" descolou, "Nós Pudemos Mudar Tudo" foi lançado como uma segunda instalação da série de robôs domésticos.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Como esperado de um produto da corporação xx, a máquina veio com várias funções.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Os teus filhos causam-te problemas e choram o tempo todo? Nós podemos mudar isso!&#13;&#10;Não gostas do teu corpo? Muito gorda, muito magro? Nós podemos mudar isso!&#13;&#10;Estás sem energia por causa da falta de dinheiro ou de casa? Nós podemos mudar isso!}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {É simples. Apenas abra a máquina, entre e aperte o botão. Agora vai ficar tudo bem.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Assim que um empregado entrar dentro dela, a máquina irá começar a produzir energia. E como já se sabe, os empregados nunca saem de lá, talvez porque o seu interior seja muito confortável.}
+
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Após um empregado entrar dentro da máquina, ela irá começar a produzir energia.</specialTip>
+      <specialTip openLevel="2" key="2">Depois que um empregado esteja dentro da máquina, o mesmo começará a sofrer dano Vermelho. E o empregado que entrou não conseguirá sair e eventualmente irá morrer.</specialTip>
+      <specialTip openLevel="2" key="3">A quantidade de energia produzida aumenta â medida que tempo passa.</specialTip>
+      <specialTip openLevel="2" key="4">Esta Anormalidade não é afetada pelos Meltdowns de Qliphoth.</specialTip>
+      </specialTipSize>
+
+
+
+  </observe>
+</creature>

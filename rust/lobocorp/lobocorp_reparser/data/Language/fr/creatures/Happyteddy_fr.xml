@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100002">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {$0 ressemble tout à fait à l’ours en peluche que tout le monde avait lorsqu’il était jeune.},
+      {$0 a toujours voulu câliner des enfants.},
+      {$0 adore les câlins. Ses souvenirs commencent avec un câlin chaleureux.},
+      {Un ours en peluche est né du bonheur ; il a donc besoin de toujours être heureux.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 a l’air perdu dans ses pensées, fixant tristement le rembourrage perçant et débordant de ses coutures.},
+      {Le ruban sale autour du cou de $0 balance doucement bien qu’il n’y ait pas de vent. Le nom écrit dessus est effacé et méconnaissable désormais.},
+      {$0 ne bouge pas d’un pouce comme s’il avait le regard dans le vide. Mais en vérité, il fixe la photo d’une petite fille.},
+      {L’œil en plastique de $0 pendouille silencieusement au bout d’un fil sur le côté gauche de son visage.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Tandis que #0 travaille, $0 fixe incessamment le cadre photo.},
+      {Même s’il y a du chaos, $0 fixera imperturbablement l’image.},
+      {Il semble que l’image devant lui est la seule chose qui compte pour $0.},
+      {#0 est incapable de détourner l’attention de $0 de sa photo.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Pendant qu’il travaille, #0 s’approche de $0 et rattache son ruban effiloché.},
+      {#0 prend un instant pour dépoussiérer le cadre photo que $0 fixe avec tant d’attention.},
+      {Quand #0 commence à raccommoder les déchirures sur son corps pelucheux, $0 ne réagit pas.},
+      {#0 nettoie un peu $0, mais il n’y réagit pas.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {$0 se souvient de la fête d’anniversaire de cette fantastique fille de sept ans. Il attendait de la surprendre dans une grande boîte colorée.},
+      {$0 se souvient de ses vacances si incroyablement amusantes avec la petite fille. Il s’appelait “Nounours”.},
+      {$0 se rappelle des nombreuses nuits où il a protégé cette petite fille des ténèbres alors qu’elle le serrait dans ses bras.},
+      {$0 se souvient affectueusement de l’enfant désormais adulte. Quelque part sous sa commode, des mites dévoraient lentement son corps.}
+      ]
+    </narration>
+    <narration action="special_ability">
+      [
+      {$0 étend ses bras, attirant #0 dans un grand câlin. #0 commence à s’étouffer et se débattre, essayant de se libérer.}
+      ]
+    </narration>
+    <narration action="dead">
+      [
+      {Les os de #0 commencent à craquer et se broyer dans les bras de $0. Sa fourrure vieillie a l’odeur de ceux que l’on regrette.},
+      {$0 ne relâche pas #0 de ses bras, l’empêchant de partir. Les mouvements de #0 ralentissent puis s’arrêtent. $0 ne lâchera jamais ce câlin.}    
+      ]
+    </narration>
+    <narration action="panic">
+      [
+      {#0 est désormais désespérément déprimé. La vie n’a plus aucun sens pour lui. #0 n’est plus rien qu’un grain de poussière dans le vent du grand ordre des choses.}   
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-04-06</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Teddy</portrait>
+      <name openLevel="1">
+        Un Ours en Peluche
+      </name>
+      <name openLevel="2">
+        Heureux Ours en Peluche
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <openText>Ses souvenirs commencent avec un câlin chaleureux.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Une Anomalie ressemblant à un grand ours en peluche débraillé. Il lui manque un peu de fourrure et il n’a qu’un seul œil.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Le vieux ruban autour de son cou indique qu’il a reçu beaucoup d’affection de son propriétaire précédent. Il y a un nom sur le ruban, mais il est trop abîmé pour le lire. Il semblerait qu’il sache qu’il a été abandonné et en semble profondément abattu.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Extrait du Suivi Thérapeutique&gt;&#13;&#10;
+      "J’étais garde de nuit, mais je ne ressentais pas le besoin de surveiller l’Ours Heureux puisqu’il était majoritairement inoffensif. J’ai juste regardé à l’intérieur de l’Unité de Confinement pour vérifier. L’Ourson serrait quelqu’un très fort. Je croyais que c’était (Expurgé), celui qui était en charge de l’Ourson, faisant des heures supplémentaires. Mais quelque chose clochait. Je suis entré dans l’Unité et ai appelé (Expurgé) sans qu’il ne réponde. J’ai immédiatement appuyé sur le bouton d’urgence pour appeler les renforts. Apparemment, (Expurgé) était dans le coma depuis 8 heures. Il était dans les bras de l’Ourson tout ce temps."}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;Une Vieille Lettre, Tamponnée d’un “Rejeté”&gt;&#13;&#10;
+      Tu te souviens de ce qui était écrit dans le manuel des employés?
+      "Ne développez AUCUN attachement personnel aux Anomalies."
+      Au début, je ne comprenais pas ce que ça voulait dire.
+      Est-ce que ça fait seulement sens de développer toute forme d’attachement envers ces monstres, déjà ?
+      C’est pas grave. Ce sont des monstres. Entre nous, on peut les appeler ainsi.
+      '$0' est la seconde Anomalie dont tu te sois occupé.
+      J’imagine que tu as pensé que toutes les Anomalies n’étaient pas forcément monstrueuses en la voyant.
+      L’apparence d’un vieux ours en peluche abandonné a peut-être ravivé certains de tes souvenirs.
+      L’Ourson semblait aimer tes câlins.
+      Après tout, il produisait plus d’énergie quand tu étais dans le coin.
+      Et en peu de temps, ils t’ont mis en charge de l’Ourson.
+      Tu t’es sûrement senti responsable de lui, pas vrai ?
+      J’ai commencé à m’inquiéter alors que tu visitais de plus en plus souvent l’unité de l’Ourson.
+      C’est comme si tu allais à l’orphelinat pour du bénévolat.
+      …
+      &lt;i&gt;Il semble que l’Ourson t’ait désigné comme son nouveau propriétaire.
+      Peut-être que tu aurais été heureux de l’apprendre.
+      Mais, vois-tu, l’Ourson ne voulait plus jamais être séparé de son propriétaire.&lt;/i&gt;
+      Tu as sûrement toujours promis que tu reviendrais.
+      Mais il ne pouvait pas comprendre.
+      J’ai entendu dire que tu as miraculeusement survécu.
+      Et qu’ils ont passé une heure à essayer de te séparer des bras de l’Ourson.
+      Bien que les autres vont peut-être t’oublier.
+      Je me souviendrai toujours de toi.
+      Espérons qu’il y ait un miracle.}
+    ]
+  </desc>
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="manyDead">#0 est mort d’asphyxie après avoir travaillé avec $0 plusieurs fois de suite.</specialTip>
+      <specialTip openLevel="2" key="manyDead2">#0 a été trouvé mort dans les bras de $0 avec la nuque brisée. Nous pensons que visiter l’Unité de Confinement de $0 plusieurs fois de suite est ce qui cause des malheureux incidents.&#13;&#10;Veuillez vous référer au document “Vieille Lettre” pour plus d’informations.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

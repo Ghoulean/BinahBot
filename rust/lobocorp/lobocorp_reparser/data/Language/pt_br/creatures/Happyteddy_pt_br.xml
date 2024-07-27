@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100002">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para iniciar o processo de trabalho
+    </narration>
+    <narration action="start">
+      [
+      {O $0 se parece com aqueles que todos tinham quando eram jovens.},
+      {O $0 sempre queria abraçar crianças.},
+      {O $0 ama abraços. E suas lembranças começaram com um abraço caloroso.},
+      {Um ursinho de pelúcia nasce da felicidade, então ele precisa estar feliz a todo momento.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {O $0 parece estar perdido nos próprios pensamentos, desesperadamente olhando para o enchimento que derrama para fora de suas costuras.},
+      {O laço sujo ao redor do pescoço do $0 balança gentilmente mesmo não havendo vento para movê-lo. O nome que estava escrito nesse laço está desgastado e ilegível.},
+      {O $0 não mexe um centímetro, como se estivesse olhando para o nada. Mas na verdade, está olhando para a foto de uma jovem garota.},
+      {O olho de plástico do $0 está silenciosamente balançando por um fio no lado esquerdo de seu rosto.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Quando #0 está ocupado trabalhando, o $0 continua a olhar o porta retratos.},
+      {Mesmo se houver alguma confusão, o $0 olhará fixamente para a foto.},
+      {Parece que a tal foto é a única coisa que importa ao $0.},
+      {#0 não conseguiu tirar a atenção do $0 da foto.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Enquanto trabalha, #0 se aproxima do $0 e arruma seu laço desgastado.},
+      {#0 tira um tempinho para tirar a poeira do porta retratos que o $0 olha com tanta frequência.},
+      {Quando #0 começa a remendar as aberturas e rasgos na pelúcia, o $0 não reage.},
+      {#0 arruma o $0 um pouco, porém ele não reage.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {O $0 se lembra da maravilhosa festa de aniversário daquela garotinha de 7 anos. Ele esperou para fazer uma surpresa dentro de uma caixa grande e colorida.},
+      {O $0 lembra de ir a uma viagem maravilhosamente divertida com a jovem garota. E recebeu o nome de “Ursalina”.},
+      {O $0 lembra das inúmeras noites que protegeu aquela jovem garota da escuridão enquanto ela se abraçava em seus braços.},
+      {O $0 lembra carinhosamente da criança, que agora está crescida. Enquanto ficava debaixo da cómoda. Bolas de naftalina estavam se juntando em seu corpo.}
+      ]
+    </narration>
+    <narration action="special_ability">
+      [
+      {O $0 extende os braços, puxando #0 para dentro de seu forte abraço. #0 começa a ser asfixiado, se debatendo e tentando se libertar.}
+      ]
+    </narration>
+    <narration action="dead">
+      [
+      {Os ossos de #0 começam a ser triturados e quebrados nos braços do $0. Sua pelagem velha cheira a saudade.},
+      {O $0 não abre seus braços, impedindo que #0 saia. Os movimentos de #0 ficam mais lentos e então param. Mas o $0 simplesmente não para de abraçar.}    
+      ]
+    </narration>
+    <narration action="panic">
+      [
+      {#0 agora está desamparadamente deprimido. A vida não tem mais significado para ele. #0 não é nada mais do que um pedaço de poeira ao vento no grande esquema das coisas.}   
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-04-06</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Teddy</portrait>
+      <name openLevel="1">
+        Um Ursinho de Pelúcia
+      </name>
+      <name openLevel="2">
+        Ursinho de Pelúcia Feliz
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <openText>Suas memórias começaram com um abraço caloroso.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Uma Anormalidade que se assemelha a um enorme e esfarrapado ursinho de pelúcia. Está sem alguns pelos e só possui um olho.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {O laço velho ao redor de seu pescoço indica que pode ter sido recebido com muito amor de seu dono anterior. Há um nome no laço, mas está muito desgastado para ser legível. Ele parece que sabe ter sido abandonado e parece estar deprimido. }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Trecho do Registro de Aconselhamento&gt;&#13;&#10;
+      "Eu estava na patrulha noturna e não sentia a necessidade de prestar atenção no Ursinho de Pelúcia Feliz, já que era inofensivo em geral. Eu só olhei dentro da Unidade de Contenção para realizar uma verificação e vi que ele estava abraçando alguém firmemente. Eu pensei que era (Omitido), um funcionário que antes estava encarregado do Ursinho, trabalhando até tarde. Mas algo estava estranho. Eu entrei na Unidade e chamei pelo nome de (Omitido), porém, não houve resposta. Eu imediatamente apertei o botão de emergência para chamar reforços. Parece que, (Omitido) estava em coma por 8 horas enquanto estava nos braços do Ursinho por todo esse tempo."}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;Uma Carta Antiga, Estampada com "Rejeitada"&gt;&#13;&#10;
+      Lembra do que estava escrito no manual dos funcionários?
+      "NÃO tenha sentimentos pessoais pelas Anormalidades."
+      No começo, eu não entendia o que era para significar.
+      Será que há algum sentido em desenvolver sentimentos por esses monstros pra começo de história?
+      Está tudo bem. Eles são monstros. Entre nós dois, nós podemos chamá-los assim.
+      O 'Ursinho de Pelúcia Feliz' foi a segunda Anormalidade em que você ficou encarregado.
+      Eu acho que você deve ter pensado que nem todas as Anormalidades são seres mostruosos após vê-lo.
+      A imagem de um ursinho velho e abandonado pode ter trazido de volta algumas de suas lembranças mais antigas.
+      O Ursinho parecia gostar de seus abraços.
+      Sim, ele até produzia mais energia quando você estava por perto.
+      E tão rapidamente, te colocaram para cuidar dele.
+      Você provavelmente se sentiu responsável por ele, certo?
+      Eu fiquei preocupado, já que você estava visitando a Unidade do Ursinho com mais e mais frequência.
+      Parecia que você estava visitando um orfanato para fazer trabalho voluntário.
+      …
+      &lt;i&gt;Parece que o Ursinho te escolheu como novo dono.
+      Talvez você ficaria feliz em ouvir isso.
+      Mas sabe, o Ursinho nunca mais queria se separar novamente de seu dono.&lt;/i&gt;
+      Você provavelmente sempre prometeu que retornaria lá.
+      Mas ele não conseguia entender.
+      Eu ouvi que você milagrosamente sobreviveu.
+      E que passaram uma hora inteira tentando te separar do abraço do Ursinho.
+      Enquanto outros poderão esquecer sobre você.
+      Eu sempre me lembrarei.
+      Espero que haja um milagre.}
+    ]
+  </desc>
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="manyDead">#0 morreu de asfixia após trabalhar com o $0 múltiplas vezes seguidas.</specialTip>
+      <specialTip openLevel="2" key="manyDead2">#0 foi encontrado morto com o pescoço quebrado nos braços do $0. Acredita-se que visitar a Unidade de Contenção do $0 muitas vezes seguidas é o que causa esses infelizes incidentes.&#13;&#10;Por favor, verifique o documento “Uma Carta Antiga” na história da Anormalidade para descobrir mais informações.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

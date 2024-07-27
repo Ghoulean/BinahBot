@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<creature>
+  <info id ="100014">
+
+    <narration action="move">
+      #0 designated to $0's containment room.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 says that he came to this facility with his own will.}
+      {$0 gives freedom to those who are locked inside of themselves and look after the broken.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 visited a village suffering from unknown disease.}
+      {It was a dawn when this doctor, who didn’t tell his name, appeared. }
+      {When everyone abandoned hope, the masked man who calls himself doctor appeared.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {#0 is comfortable with visiting $0’s room.}
+      {#0 is most relieved when going to $0’s room.}
+      {#0 wishes all abnormalities to be quiet and calm as $0.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {$0 has a quiet and calming voice and likes to treat wounded people.}
+      {$0 wants to meditate alone or keep on taking care of others.}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {$0 says, “I am here to treat diseases. When the day comes, come find me. I will be more than willing to help you.”}
+      {$0 says, “There is nothing behind this mask, for flesh is bound to the flow of time but soul is immortal.”}
+      {$0 says, “I will save your life from destruction and the end of the world. Put your trust in me.”}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">O-01-45</codeNo>
+      <name openLevel="1">Plague Doctor</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/PlagueDoctor</portrait>
+      <riskLevel openLevel ="3">ZAYIN</riskLevel>
+      <openText>“I shall cure you, depriving of every disease and injury you possess.”</openText>
+    
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {Black fedora and beak mask. Huge black wings instead of arms or legs. Capable of human communication, though it prefers not to talk a lot. It came to this facility by itself, claiming that the world has contracted a dreadful disease which only it is able to cure. We could not find anything about this “disease” it’s referring to.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {It seems to like treating employees when they are injured or sick. It shows satisfaction when helping others and seems quite sympathetic and benevolent. Even after a week of observation, we found no aggression, violence or attempt to escape. Only contributing to assumption that this abnormality is eminently “gentle” (12 of our employees used this word to describe this creature) and good for us.}
+      ]
+    </desc>
+
+    <desc id ="3" openLevel="2">
+      [
+      {Employee Alex, who had a serious scar on his forehead while subduing Magical girl, walked into this abnormality’s chamber with his scar not completely healed. The abnormality, which is normally not loquacious, started talking as soon as it saw the employee’s scar.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Observation record_1&#13;&#10;The abnormality asked.Why have you not treated that scar?”&#13;&#10;Alex said.&#13;&#10;I had no time so I just gave it a little bit of first aid.” &#13;&#10;Then the plague doctor answered.&#13;&#10;“I shall cure you, depriving of every disease and injury you possess.”&#13;&#10;Alex came out of the chamber with his scar completely healed.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">When the work result was bad, Qliphoth Counter decreased.</specialTip>
+      <specialTip openLevel="3" key="2">When the work result was good, Qliphoth Counter decreased. $0 then baptized the employee who worked on it.</specialTip>
+      <specialTip openLevel="3" key="3">When emergency level 2 broke out, Qliphoth Counter decreased.</specialTip>
+      <specialTip openLevel="3" key="4">When Qliphoth Counter reached 0, employees who heard his calling went to his containment unit and are baptized.</specialTip>
+      <specialTip openLevel="3" key="5">Employees who are kissed by $0 shall reborn as the blessed.</specialTip>
+    </specialTipSize>
+   
+  </observe>
+
+  <etc>
+    <param key="first" index="1">
+      'And I tell you, you are #1 the apostle, and on this rock I will build my church, and the gates of hell shall not prevail against it.'
+    </param>
+
+    <param key="second" index="2">
+      'Tell us, when will this happen, and what will be the sign of your coming and of the end of the age?'
+    </param>
+
+    <param key="third" index="3">
+      'Do you want us to call fire down from heaven to destroy them?'
+    </param>
+
+    <param key="fourth" index="4">
+      '#3 the apostle and #4 the apostle to them he gave the name Boanerges, which means “sons of thunder."'
+    </param>
+    
+    <param key="fifth" index="5">
+      '#5 the apostle said, “Show us the Father and that will be enough for us.'
+    </param>
+    
+    <param key="sixth" index="6">
+      'He saw a man named #6 the apostle. "Follow me,” he told him, and #6 got up and followed him.'
+    </param>
+    
+    <param key="seventh" index="7">
+      'Now for some time a man named #7 the apostle had practiced sorcery and amazed all the people.'
+    </param>
+    
+    <param key="eighth" index="8">
+      Then #8 the apostle said to the rest of the disciples, “Let us also go, that we may die with him.”
+    </param>
+    
+    <param key="ninth" index="9">
+
+      Then #9 the apostle declared, “You are the Son of him, you are the king.”
+    </param>
+    
+    <param key="tenth" index="10">
+      Then #10 the apostle said, “But why do you intend to show yourself to us and not to the world?”
+    </param>
+    
+    <param key="eleventh" index="11">
+      'From now on, let no one cause me trouble, for I bear on my body the marks of him.'
+    </param>
+    
+    <param key="twelveth" index="12">
+      'Have I not chosen you, the Twelve? Yet one of you is a devil'
+    </param>
+  </etc>
+</creature>

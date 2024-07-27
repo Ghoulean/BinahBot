@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300105">
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-94</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/YouMusHappy</portrait>
+
+      <name openLevel ="1">
+        Tu Deves Estar Feliz.
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <openText>
+        Muitos daqueles que foram submetidos a uma operação dentro da maquinaria encontraram descanso e uma boa saúde.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Uma misteriosa máquina desgastada usada para realizar operações.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Esta máquina foi feita para levantar o crânio e destruir tecido nervoso com segurança e eficácia.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Muitos daqueles que foram submetidos a uma operação dentro da maquinaria encontraram descanso e uma boa saúde.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Aqueles que responderam "Sim" à pergunta "Tu amas a tua cidade?" foram curados. Aqueles que responderam "Não" não foram dispensados.&#13;&#10;Quando mais tempo a máquina é usada, maior será o efeito que o empregado recebe.}
+    ]
+  </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Quanto mais tempo a máquina é usada, mais rapidamente a pergunta muda.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">Empregados que usem esta maquinaria irão sofrer um aumento em todos os status.</specialTip>
+      <specialTip openLevel="2" key="2">A quantidade de status que aumentão torna-se maior à medida que o tempo de uso passa.</specialTip>
+      <specialTip openLevel="2" key="3">Apenas pare a máquina quando "YES" ("SIM") estiver no ecrã. Se parar de ser usada no quando "NO" ("NÃO") é mostrado, a quantidade de status que aumentaria irá ser retirada do status do empregado.</specialTip>
+      <specialTip openLevel="2" key="4">Status aumentados ou diminuídos irão voltar ao normal no próximo dia. No entanto, se um empregado ganhou mais de 200 de status ele ou ela irá desaparecer no próximo dia.</specialTip>
+      <specialTip openLevel="2" key="5">&lt;Aviso&gt; Houve um incidente onde um empregado que usou a máquina 5 vezes explodiu.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

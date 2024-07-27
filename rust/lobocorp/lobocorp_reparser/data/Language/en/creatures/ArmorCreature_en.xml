@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100037">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {Cowardly employees sense something ominous about $0.},
+      {Alone with the armor, #0 feels the Abnormality’s piercing gaze upon them. Of course, there is not a single living thing inside that armor.},
+      {Rumor has it that passionate battle cries or shouts such as “CHARGE!” can be heard from the armor in the middle of the night.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Although it is slightly broken, this armor is in an unbelievably well-preserved state considering that it is an artifact forged hundreds of years ago.},
+      {Many past generals had possession of this armor. Nobody knows whether it was the war or the armor that took their lives.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {The right arm of the suit is broken. After a light investigation, the conclusion was that the damage stemmed from the inside, not externally.},
+      {$0 was forged hundreds of years ago. The craftsman that created this armor remains unidentified, but at the very least it is certain that he hated cowards.},
+      {The armor still awaits those who are reckless, and those who have given up on life.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-05-61</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/SamuraiArmor</portrait>
+      <name openLevel="1">
+        Crumbling Armor
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <specialName openLevel="2">
+        The Do-or-die Spirit
+      </specialName>
+      <openText>“Life is only granted to those who hold no fear of death.”</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {An armor that seems to have been used hundreds of years ago. An engraving on its bottom states: “Life is only granted to those who hold no fear of death.” Obviously, putting this armor on is forbidden by the company regulations.&#13;&#10;&#13;&#10;&lt;i&gt;Note: There have been rumors of employees pretending to put on the armor for fun. Please look into this immediately!&lt;/i&gt;}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {This armor was secured from a museum. The information below is the fragments of its legend.&#13;&#10;
+      &lt;i&gt;…This armor once belonged to General XXXX, who joined the War of XX during the year of XXX. It was a family heirloom, passed down through many generations. The general always wore this armor to keep himself protected. By a stroke of bad luck however, an arrow flew into a gap in the armor, killing him instantly. Somehow, the armor was undamaged.&#13;&#10;
+      After the death of General XXXX, the armor was presented to Commander XXX of Battalion 00. The commander was always seen steel-clad each time he set out into battle. During one of his battles, the commander fell from his horse while fleeing from the enemy and died due to a fatal injury upon his skull. Still, the armor once again remained undamaged. There are many others throughout this armor’s history who have had their hands on it, and each and every one of them has died in battle. Meanwhile, the armor still kept its pristine condition.&#13;&#10;
+      Over the years, the armor made its way to a warrior named XXX. He was known for simply keeping the armor in storage, not wearing it for a single battle. Eventually, XXX died of old age after participating in dozens of wars without sustaining a single injury. During his lifetime, the armor’s right arm became damaged, but there was no sign of exterior impact. XXX’s family later donated the armor to a museum.&lt;/i&gt;}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {After running a few tests on the armor, we have come up with the following conclusions: If this armor is worn by a cowardly employee, their chances of fatal injury and death are drastically increased. Inversely, when an employee who holds no fear of death wears it, their chances of injury and death are exceedingly decreased.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {One of our personnel managers suggested an entrance test where interviewees wear the armor and walk around in it for ten minutes. This suggestion was immediately shot down. }
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="NoPeace">An Agent with Level 1 Fortitude was placed into $0’s Containment Room. After the Work Process ended, they were found with their head sliced clean off. </specialTip>
+      <specialTip openLevel="2" key="GiveYou">An Agent who performed Repression Work with the Abnormality was found to have an artifact ($0-01), which had the same chemical composition as $0. The Agent stated that it made them feel as if $0 were protecting them.</specialTip>
+      <specialTip openLevel="3" key="Change">An Agent with $0-01 attached was ordered to continue engaging in Repression work with any Abnormality. Each time the Work Process ended, a physical examination on the Agent was carried out. The results of the examinations found that the effect given to the Agent by $0-01 changed in accordance with the number of times Repression work was done.</specialTip>
+      <specialTip openLevel="4" key="KillPeace">&lt;CAUTION&gt; Do not let an Agent with $0-01 perform Attachment Work. If they do, $0-01 will disappear with the Agent being decapitated as soon as they enter the Containment Unit, killing them instantly.</specialTip>
+      <specialTip openLevel="4" key="NegativeChange">&lt;CAUTION&gt; If an Agent carrying $0-01 performs an excessive amount of Repression work, then the effect that the artifact provides will gradually become negative. </specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

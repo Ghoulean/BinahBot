@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100037">
+    <narration action="move">
+      #0 se dirige vers l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {$0 est ressentie comme sinistre par les employés lâches..},
+      {Seul avec l’armure, #0 sent le regard perçant de l’Anomalie. Pour autant, il n’y a rien de vivant dans cette cuirasse.},
+      {Les rumeurs disent que des cris de guerre déchaînés comme “CHARGEZ !” peuvent venir de l’armure au beau milieu de la nuit.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {En dépit de ses légères entailles, cette armure est incroyablement bien préservée ; après tout, elle a été forgée il y a plusieurs siècles.},
+      {Nombreux sont les généraux ayant porté cette cuirasse.. Personne ne sait si leur vie a été prise par la guerre ou par l’armure.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Le bras droit de l’armure est brisé. Après une courte enquête, il a été conclu que les dégâts venaient de l’intérieur de l’armure, et non de l’extérieur.},
+      {$0 a été forgé il y a plusieurs siècles. L’artisan l’ayant forgé est inconnu, mais l’on peut être sûr d’une chose : il détestait les lâches.},
+      {L’armure continue d’attendre les imprudents, et ceux qui ont renoncé à leur vie.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-05-61</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/SamuraiArmor</portrait>
+      <name openLevel="1">
+        L’Armure Effritée
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <specialName openLevel="2">
+        L’Esprit Marche-ou-Crève
+      </specialName>
+      <openText>“La vie n’est accordée qu’à ceux sans aucune peur de la mort.”</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Une armure qui semble avoir été utilisée il y a plusieurs siècles. Selon une gravure sur le bas de l’armure : “La vie n’est accordée qu’à ceux sans aucune peur de la mort.” Bien évidemment, enfiler cette armure est formellement interdit par le règlement de la corporation.&#13;&#10;&#13;&#10;&lt;i&gt;Note : Selon certaines rumeurs qui circulent, des employés feraient semblant d’enfiler l’armure pour s’amuser. Veuillez enquêter là-dessus au plus vite !&lt;/i&gt;}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Cette armure a été récupérée dans un musée. Les informations ci-dessous sont des extraits issus de sa légende.&#13;&#10;
+      &lt;i&gt;…Cette armure appartenait autrefois au Général XXXX, ayant participé à la Guerre du XX ayant eu lieu en XXX. C’est un objet de famille, légué de génération en génération. Le général portait toujours cette armure afin de rester protégé. Par un coup du sort, une flèche vola dans l’un des trous de la cuirasse, le tuant instantanément. Curieusement, l’armure est restée intacte.&#13;&#10;
+      À la mort du Général XXXX, elle fut remise au Commandant XXX du bataillon 00. Le Commandant était toujours visible dans cette dernière à chaque fois qu’il partait au combat. Durant l’une de ces batailles, le Commandant tomba de son cheval en fuyant l’ennemi et mourut d’une blessure fatale au crâne. Une nouvelle fois, l’armure resta intacte. De nombreuses autres personnes ayant eu possession de cette armure sont mentionnées dans son histoire, et tous sans exception sont morts au combat. Et pourtant, l’armure garda son état immaculé.&#13;&#10;
+      Au fil des années, l’armure revint à un soldat nommé XXX. Au contraire des autres, il a gardé l’armure chez lui, ne l’ayant jamais porté pour une quelconque bataille. Un jour, XXX mourut de vieillesse après avoir pris part à des dizaines de conflits sans avoir subi une quelconque blessure. De son vivant, le bras droit de l’armure commença à s’endommager, mais il n’y eût aucune trace d’un impact extérieur. La famille XXX donna par la suite cette armure à un musée.&lt;/i&gt;}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Après avoir réalisé une série d’expériences sur cette armure, nous en sommes arrivés aux conclusions suivantes : si cette armure est portée par un lâche, ses chances de subir une blessure fatale et d’en mourir sont drastiquement augmentées. Inversement, quand un employé n’ayant pas peur de mourir la porte, ses chances de recevoir des blessures et de mourir sont extrêmement diminuées.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {L’un de nos DRH a suggéré un test d’entrée où le candidat devait mettre l’armure et se promener pendant 10 minutes. Cette suggestion a été immédiatement refusée.}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="NoPeace">Un Intervenant avec une Fortitude de Niveau 1 est entré dans l’Unité de Confinement de $0. À l’issue du travail, ce dernier a été retrouvé décapité net. </specialTip>
+      <specialTip openLevel="2" key="GiveYou">Un Intervenant ayant effectué un travail de Répression a reçu un artefact ($0-01) de même composition chimique que $0. L’Intervenant a déclaré qu’il avait l’impression que $0 le protégeait.</specialTip>
+      <specialTip openLevel="3" key="Change">Il a été demandé à un Intervenant auquel a été attaché $0-01 de continuer à pratiquer des travaux de Répression avec d’autres Anomalies. À chaque fois qu’un travail de Répression prenait fin, l’Intervenant recevait un examen médical. Les résultats de ces examens ont permis de déterminer que l’effet donné à l’Intervenant par $0-01 changeait en accord avec le nombre de travaux de Répression effectués.</specialTip>
+      <specialTip openLevel="4" key="KillPeace">&lt;ATTENTION&gt; Ne laissez pas un Intervenant affecté par $0-01 réaliser des travaux d’Attachement. Sinon $0-01 disparaîtra et l’Intervenant sera décapité en arrivant dans l’Unité de Confinement, le tuant sur le coup.</specialTip>
+      <specialTip openLevel="4" key="NegativeChange">&lt;ATTENTION&gt; Si un Intervenant portant $0-01 réalise une quantité excessive de travaux de Répression, alors l’effet donné par l’artefact deviendra progressivement négatif.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

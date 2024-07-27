@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100037">
+
+
+
+    <narration action="move">
+      #0 designated to $0 containment room.
+    </narration>
+
+    <narration action="start">
+      [
+      {Cowardly employees sense something creepy around $0.},
+      {Left with this armor alone, employee #0 feels a gaze upon him. Of course, no one is inside of that armor.}
+      {There are rumors about how passionate battle cry saying “Chrage!” can be heard around this armor in the middle of the night. }
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {A little bit broken, but this armor is unbelievably well-preserved considering that it is an artifact from hundreds of years ago. },
+      {Many generals were in possession of this armor. Nobody knows whether it was the war, or the armor that took their lives away. }
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {The right arm plate is broken. After a diagnosis, the damage came from the inside, not the outside.},
+      {$0 was made hundreds of years ago. The craftsman that created this armor is unidentified, but at least it is sure that he hated cowards.}
+      {The armor still awaits those who are reckless, and gave up on their lives.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-05-61</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/SamuraiArmor</portrait>
+
+      <name openLevel ="1">
+        Crumbling Armor
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        Spirit of association
+      </specialName>
+
+      <openText>“Life is only given to those who do not fear death.”</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {An armor that seems it was used hundreds of years ago. Engraving on the bottom says “Life is only given to those who do not fear death.”. Obviously, putting this armor on is forbidden by the company rule.  <i> There are rumors about employees pretending to put the armor on for fun. Check this immediately!</i> }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {The armor was secured from a museum. Followings are fragments of its legend.&#13;&#10;
+      &lt; …….This armor belonged to general XXXX, who joined the XX war on the year of XXX. It was his family’s heirloom, passed over many generations. The general was always in this armor in order to protect himself. Unfortunately, an arrow flew into its gap, killing him instantly. But the armor remained undented. &#13;&#10;
+      After that, the armor was passed over to XXX, who was the commander of OO battalion. The commander was always steel-clad whenever he set out to battle. In one battle, he fell from the horse while running away from enemies and died due to severe injury to his skull. Still, the armor remained undamaged. There are several more people who had their hands on this armor, and they all died. However, the armor always stayed in its best condition. &#13;&#10;
+      Few years later, the armor ended up in a warrior named XXX. His rumors quickly spread about how he just contained the armor, not wearing it in battles. He died of old age after participating in dozens of wars without a single injury. In the process, the armor’s arm plate was damaged. But there was no sign of exterior impact. Later, XXX’s family donated the armor to a museum.&gt;
+      }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {After running few test on it, we managed to get following conclusions. When this armor is worn by a cowardly employee, the chances of fatal injury or death drastically increased. On the other hand, when an employee who has no fear about death wore this armor, the chances of injury or death exceedingly decreased. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {One of the personnel managers suggested an entrance test where an interviewee wears this armor and walk for 10 minutes. The suggestion was immediately rejected. }
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="NoPeace">Employees with Fortitude level 1 was put into a containment room at $0. After the work ended, the employees was found with their neck cut.</specialTip>
+      <specialTip openLevel="2" key="GiveYou">Employees who had committed Repression work were found to have artifact ($0-01) with the same ingredients as the $0. The employee stated that $0 was given a feeling of protection.</specialTip>
+      <specialTip openLevel="3" key="Change">The $0-01 was ordered to continue to engage in Repression work, and each time the work was completed, the physical examination of the employee was carried out. As a result of the test, it was found that the effect given by the $0-01 to the target changes according to the number of Repression works.</specialTip>
+      <specialTip openLevel="4" key="KillPeace">&lt;CAUTION&gt;Let the employee with $0-01 work on the attachment. Then, when the employee enters the containment room, $0-01 disappears and the neck is cut off and the employee dies.</specialTip>
+      <specialTip openLevel="4" key="NegativeChange">&lt;CAUTION&gt;; If an employee with $0-01 is attempting excessive Repression work, the effect that artifact provides to the target gradually changes to negative.</specialTip>
+    </specialTipSize>
+
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {The armor that took away many people’s lives is sitting in front of you. }
+        {You can put it on, if you wish.}
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Put it on" target="1" isAnswer="true"  message="You have succeeded to obtain final observation report on Crumbling Armor"/>
+        <node desc="Don’t put it on" target="2" isAnswer="false"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {It seems like you were not pacifist.}
+        {You feel the armor’s warm welcome.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {The armor waits for another reckless one.}
+        ]
+      </desc>
+
+
+
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {“Those who do not fear death.” It reminds me of Lobotomy’s slogan.}
+        {I don’t know if it is admirable mindset, though. }
+        ]
+      </angela>
+    </max>
+
+  </observe>
+</creature>

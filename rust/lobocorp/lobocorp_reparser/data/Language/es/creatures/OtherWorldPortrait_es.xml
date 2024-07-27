@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300104">
+
+    <narration action="move">
+      #0 va a ingresar a la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-91</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/OtherWorldPortrait</portrait>
+
+      <name openLevel ="1">
+        Retrato del Otro Mundo
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <openText>
+        Este retrato captura un momento. Es lo que debemos perder.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {A medida que pasa el tiempo, cambiamos. Podemos volvernos discapacitados, perder nuestra mente, ser consumidos por una violencia abrumadora o desaparecer, para no volver a ser vistos.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Este retrato captura un momento. Es lo que debemos perder. El empleado que ve su propio ser sano inconscientemente comenzará a desear. Si la vida siempre puede ser así, si solo puedo tener una sonrisa brillante como en el retrato.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {El empleado comenzará a sentirse extraño. El empleado no resultará herido por ningún daño o ataque. Sin embargo, otros empleados tomarán todo el dolor afligido en su lugar.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {No era el mismo, sino el retrato que comenzó a ser cada vez más horrible y feo. El empleado finalmente deja de mirar el retrato y decide disfrutar de toda la suerte inesperada.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Pero los milagros no duran para siempre. Cuando todos los empleados que soportaban el dolor y el daño del empleado perecieron, fue el turno de morir del empleado. Una vez muerto, el retrato se puso en blanco.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">El primer empleado que vea la Anormalidad tendrá su imagen grabada en el lienzo.</specialTip>
+      <specialTip openLevel="2" key="2">Todo el daño hecho al empleado grabado en el retrato será tomado por otro empleado en la instalación. (Sin embargo, el efecto no se aplica a daños que excedan el PS máximo del empleado grabado en el lienzo.) Ellos recibiran un mayor daño.</specialTip>
+      <specialTip openLevel="2" key="3">Una vez que el empleado dañado muere, otro empleado tomará su lugar. Cuando no queden más empleados, el empleado grabado en el retrato morirá.</specialTip>
+      <specialTip openLevel="2" key="4">Si la imagen de un nuevo empleado se graba en el lienzo, se suicidara al empleado anterior.</specialTip>
+      <specialTip openLevel="2" key="5">Si el empleado cuya imagen está grabada en el retrato muere por medios distintos al daño normal, el retrato volverá a su estado original.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100051">
+
+    <narration action="move">
+      #0 is going into $0's containment unit to begin the task.
+    </narration>
+
+    <narration action="start">
+      [
+      {There is no need to be afraid of $0 if #0 is not a warm-hearted person.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 collects hearts. It thought that if its heart started beating, it will be able to love.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {Those that may have once been hearts were now shoved into $0 indiscriminately.}
+      ]
+    </narration>
+
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">F-05-32</codeNo>
+      <name openLevel="1">Warm-hearted Woodsman</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/Lumberjack</portrait>
+      <riskLevel openLevel ="2">HE</riskLevel>
+      <openText>This is a forest full of hearts. No matter how many times he cuts down the hearts, the forest remains dense.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {It is a humanoid mechanical Abnormality with a body made entirely of metal. It holds big axes in both hands but doesn't move. As if it frozen to the spot.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {The friends were incomplete in some way, so they helped each other to fill where they were lacking and embarked on a journey together to make their wishes come true. The Scarecrow wanted a brain, the Tin Woodsman wanted a heart, the Cowardly Lion wanted courage, and Dorothy wanted to go back home.&#13;&#10;However, the one they thought to be a great wizard gave the Tin Woodsman a worthless lead heart..}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {"But you're a machine, that means you're made for humans. Don't you understand? A machine doesn't need a heart. Thank you for coming all this way though. Take this, it's all I have to give you. Be sure to tell everyone that is waiting for you that your wish came true."&#13;&#10;Some left with satisfaction, but he could not see his friends again. The hard, cold lead made him sad.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {The Woodsman disagreed. He swung his ax with anger and penetrated the wizard's chest. His heart was warm and started beating vigorously. He placed the lead into the wizard’s chest. The Woodsman began to laugh at the spectacular sight and for the first time, he felt a pleasure that he had never felt before.&#13;&#10;Now the Woodsman puts a mess of hearts into his chest. No matter how many hearts he has, it's always not enough. Once called the Woodsman now cuts down humans instead of trees. This is a forest full of hearts. No matter how many times he cuts down the hearts, the forest remains dense.&#13;&#10;Those who are kind-hearted will also have warm hearts.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {If the Woodsman loses his hearts, he will fall to his knees in despair while clutching his empty chest. As if begging you to not take the only thing he has left.  }
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">When the work result was bad, Qliphoth counter has decreased.</specialTip>
+      <specialTip openLevel="1" key="2">An employee whose temperance is over level 3 completed the work, lowering the Qliphoth counter.</specialTip>
+      <specialTip openLevel="2" key="3">When an employee enters and the Qliphoth Counter is at 0, he will die immediately. Then the Abnormality will escape.</specialTip>
+    </specialTipSize>
+
+  </observe>
+
+
+</creature>

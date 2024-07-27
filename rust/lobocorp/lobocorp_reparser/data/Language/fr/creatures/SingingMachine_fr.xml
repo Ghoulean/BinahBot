@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100006">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {Elle peut ressembler à une broyeuse ordinaire, mais soyez prudent. Toutes les Anomalies n'ont peut-être pas de raison d'exister, mais elles ont toutes une volonté de persister.},
+      {Sa force d'aspiration est extrêmement puissante.},
+      {On dit que la musique qu'elle laisse s’échapper est terriblement belle.},
+      {Son sang fera des accords merveilleux et sa chair de magnifiques harmonies.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 ne s’activera pas si personne ne se trouve à proximité.},
+      {Avant l'arrivée de #0, $0 était immobile.},
+      {Avant que #0 n'entre dans l'unité, $0 n'était rien de plus qu'une machine à l’arrêt.},
+      {Si $0 avait un interrupteur d'alimentation, #0 serait peut-être un peu plus à l'aise avec elle.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 travaille avec $0 aussi prudemment que possible.},
+      {#0 doit toujours être prudent lorsqu’il travaille dans cette unité, car $0 peut s'activer à tout moment.},
+      {$0 ne donne aucune forme de réponse ou de réaction à #0, comme s'il digérait des morceaux de chair en interne.}
+      {#0 essaie de finir rapidement le travail avec $0 tant qu'il est immobile.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Il est assez simple de savoir quand $0 va s’activer ; ouvrez simplement son couvercle et vérifiez la quantité de chair qu'il a digérée.},
+      {#0 n'a pas le courage d'ouvrir le couvercle de $0 menant à ses tripes mécaniques et ainsi vérifier quand aura lieu la prochaine activation.},
+      {La rumeur veut que tout employé qui a ouvert le couvercle de $0 a fini par demander un congé maladie.},
+      {Il paraît que l'intérieur de $0 est sophistiqué, mais aucun employé n'ose le vérifier de ses propres yeux.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {Aujourd'hui, c’est le jour de chance de #0 ; $0 ne s’est pas activée.},
+      {#0 est plutôt reconnaissant que $0 soit inactive, cependant, il présente ses plus sincères condoléances au prochain employé qui travaillera avec.},
+      {$0 a décidé de prendre une journée de repos.},
+      {$0 ne répond pas puisqu’elle finit encore ses restes.}
+      ]
+    </narration>
+    <narration action="dead">
+      [
+      {L'Unité de Confinement se remplit de l'harmonie sans précédent qui coule de $0.},
+      {Pour donner naissance aux plus grands chefs-d'œuvre, des sacrifices doivent être faits. $0 en est le parfait exemple.},
+      {Tout ce qu’il reste de #0, ce sont quelques morceaux de chair et d'os, et sa propre mélodie que l’on n’entendra plus jamais.}
+      ]
+    </narration>
+    <narration action="panic">
+      [
+      {#0 a été charmé par le timbre de $0. Il ne répondra à aucun ordre.},
+      {#0 est tombé sous le charme de la musique envoûtante de $0. Son esprit est complètement paralysé.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-05-30</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/SingingMachine</portrait>
+      <name openLevel="1">
+        La Machine Chantante
+      </name>
+      <riskLevel openLevel="2">
+        HE
+      </riskLevel>
+      <openText>“Mais rien n’est comparable à la musique qu’elle joue lorsqu’elle mange un humain.”</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {$0 prend la forme d'une longue machine cubique.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {À première vue, elle ressemble à une simple broyeuse industrielle. Cependant, l'existence d'une “volonté” propre est suffisante pour la classifier comme une Anomalie.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Lorsqu'elle est approchée ou touchée, l’employé devient délirant et se jette dans le corps mécanique de l’Anomalie. Ensuite, le couvercle de la machine se referme rapidement et le bruit de l'Anomalie en fonctionnement peut être entendu de l'intérieur. Ce processus prend environ 5 minutes.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Après quelques expériences, nous avons conclu que l'Anomalie désire produire de la “musique” à partir de cette interaction.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {&lt;i&gt;Il n'y a pas de recherche détaillée sur la “musique” de cette Anomalie, cependant, il y a une hypothèse selon laquelle elle a une caractéristique particulière qui attire les humains en corrélation avec leurs comportements ou leurs antécédents psychologiques. Si l'un de nos employés a été diagnostiqué addict à la musique, il devra être traité rapidement pour éviter tout dommage collatéral.&lt;/i&gt;}
+    ]
+    </desc>
+    <desc id="6" openLevel="1">
+      [
+      {&lt;Extrait d’un Enregistrement d’une Séance de Thérapie&gt;&#13;&#10;
+      Je voulais juste écrire le rapport d'observation et sortir, mais il agissait bizarrement.}
+      ]
+    </desc>
+    <desc id="7" openLevel="2">
+      [
+      {      Je l'avais averti de ne pas trop s'approcher, mais &lt;Expurgé&gt; a fait encore un pas. Il a dit qu'il me laisserait entendre une création, puis il a ouvert le couvercle et a sauté dans la machine. Le couvercle s’est refermé et un bruit assourdissant est sorti de l'intérieur de la créature. Il n'y avait aucun moyen de savoir ce qui se passait, mais j'étais trop terrifié pour faire quoi que ce soit. (Omis)}
+      ]
+    </desc>
+    <desc id="8" openLevel="3">
+      [
+      {      Dans le noir, j'ai réalisé que cette chose jouait d'un instrument. En concassant et coupant le corps de &lt;Expurgé&gt;, elle créait un rythme. Alors que je contemplais mon horrible réalisation, le couvercle s'est ouvert à nouveau. Des morceaux de &lt;Expurgé&gt; gisaient là. Si peu qu'il fallait se demander ce qui était arrivé au reste. (Omis)}
+      ]
+    </desc>
+    <desc id="9" openLevel="4">
+      [
+      {&lt;ATTENTION, LECTURE IMPÉRATIVE : Symptômes de la dépendance à la musique de “La Machine Chantante”&gt;&#13;&#10;
+      &lt;i&gt;1. Tentatives d'amener d'autres employés dans l'Unité de Confinement de “La Machine Chantante” par la force physique.
+      2. Pupilles dilatées.
+      3. Concentration et capacités cognitives considérablement réduites.
+      4. Refus d'écouter d'autres formes de musique.&lt;/i&gt;&#13;&#10;&#13;&#10;Veuillez noter tout autre symptôme détecté et signaler immédiatement tout employé soupçonné de souffrir de l’un d’entre eux.}
+      ]
+    </desc>
+    <desc id="10" openLevel="4">
+      [
+      {&lt;Extrait d’un Rapport d’Incident&gt;&#13;&#10;
+      Date : XX/XX/XXXX
+      L’employé M1840 a disparu des locaux. 2 jours plus tard, le XX, une partie d'un cadavre a été retrouvée à l'intérieur de la “Machine Chantante”. L'analyse génomique a révélé que le cadavre appartenait à l'employé disparu. L'employé était un nouveau qui n'avait travaillé pour la corporation que pendant 3 mois, et qui n'avait aucune trace d'affectation pour travailler avec l'Anomalie. Le coupable était l’employé &lt;Expurgé&gt;, qui était en charge de la “Machine Chantante”. &lt;Expurgé&gt; a avoué après une enquête approfondie.&#13;&#10;
+      “Je sais que c'est dément, mais je devais réentendre cette musique. Elle était coincée dans ma tête depuis des mois. J'ai effectué toutes sortes d'expériences. Lorsque la machine prend un chat, elle joue pendant 1 minute, un gros chien, 2 minutes et 30 secondes. Mais rien n’est comparable à la musique qu’elle joue lorsqu’elle mange un humain. …Cela peut sembler ridicule, mais je suis satisfait d'avoir pu l’entendre une fois de plus.”}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Un employé avec une Fortitude de niveau 4 ou plus se jette dans $0 après avoir complété son travail.</specialTip>
+      <specialTip openLevel="2" key="2">Un employé avec une Tempérance de niveau 2 ou moins se jette dans $0 après avoir complété son travail.</specialTip>
+      <specialTip openLevel="2" key="3">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="3" key="4">Lorsque le Compteur Qliphoth atteint 0, le prochain employé à entrer dans l'unité plonge dans $0 et l'active.</specialTip>
+      <specialTip openLevel="3" key="5">Alors que $0 était en fonctionnement, un employé à proximité s'est plaint qu'il pouvait entendre une mélodie continue de nulle part. Nous avons décidé d'appeler ce phénomène «Addiction».</specialTip>
+      <specialTip openLevel="4" key="6">#1 a perdu connaissance en raison d'une attaque de #0. Après son attaque, #0 a traîné #1 vers l'Unité de Confinement de $0 pour en faire de la musique.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

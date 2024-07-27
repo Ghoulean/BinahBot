@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100041">
+
+    <narration action="move">
+      #0 va a ingresar a la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0, quien es muy tímida, puede que le dé a #0 un regalo sorpresa preparado personalmente.},
+      {$0 vino de un lugar lejano y disfruta de una risa ruidosa.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 le gustan los amigos.},
+      {Espero que #0 sea feliz con este regalo.},
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Imaginando la sorpresa que traería el regalo, $0 mira a #0 con felicidad.},
+      {Será genial si la gente acepta este pequeño pero precioso regalo.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {El "amigo" de $0 está durmiendo dentro del regalo, esperando el receptor.},
+      {#0 no tiene idea de lo que hay dentro del regalo que tiene la forma de un corazón lindo.},
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-01-67</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/LittleWitch</portrait>
+
+      <name openLevel ="1">
+        Una niña tímida
+      </name>
+
+      <name openLevel="4">
+        Laetitia
+      </name>
+
+      <riskLevel openLevel ="1">
+       HE
+      </riskLevel>
+
+      <openText>Así que se le ocurrió esta brillante idea!</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {<i>Similar a una niña en tamaño, ella siempre mantiene una sonrisa brillante...</i> &#13;&#10;Es una niña pequeña, muy, muy adorable.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Dicen que soy un niñita adorable porque soy un niña pequeña y preciosa!&#13;&#10;La niña vino de un lugar muy lejos!&#13;&#10;Y cuando me encuentro con alguien que me gusta, le doy un regalo que hice yo misma.&#13;&#10;Pero el contenido del regalo es secreto!}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Esto es otro secreto muy importante, pero la niña tiene muchos talentos!&#13;&#10;Ella dice que tiene muchos amigos, pero no pueden venir aquí con ella.&#13;&#10;Ella estaba tan triste que tenía que dejar a sus amigos, entonces elaboró un idea brillante!}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Si yo empaquetara bien a mis amigos en una caja de regalo, a todos les sorprendería!&#13;&#10;Y se reirán juntos por mi broma!&#13;&#10;Ups, el secreto del regalo se revelo!}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Espero poder encontrar muchos amigos aquí!&#13;&#10;La niña es tímida, entonces el regalo se dará en secreto!&#13;&#10;Las despedidas son tristes, entonces espero que juguemos más! Y también la gente aquí no sonríe!&#13;&#10;Se ven sombríos!&#13;&#10;Entonces esta chiquita ha hecho una decisión, es quedarse aquí y nunca sale hasta que las risotadas regresen a aquí!&#13;&#10;Seré feliz si todos están satisfechos con mis travesuras!}
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="give">Después de que el resultado del trabajo se haya determinado como Normal, $0 dio un regalo a #0.</specialTip>
+      <specialTip openLevel="2" key="gift">Cuando se asignó a #0 para trabajar en una Anormalídad diferente en lugar de $0, un ███████ estalló por el cuerpo de #0. </specialTip>
+      <specialTip openLevel="2" key="cancle">Cuando el encargo fue cancelado antes de nacer un ███████ nada extraño le pasó al cuerpo del empleado.</specialTip>
+    </specialTipSize>
+  </observe>
+
+  <child>
+    <name>Amigo de la Pequeña Bruja</name>
+    <codeId>O-01-67-1</codeId>
+  </child>
+</creature>

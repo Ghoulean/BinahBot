@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100046">
+
+    <narration action="move">
+      #0 designado para la sala de contención de $0 para el trabajo.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {El nido de $0 parece formar una esfera húmeda y elegante. No es irrazonable confundir el cerebro de #0 con un nido.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Cuando la piel de #0 se vuelve horriblemente verde, ya es demasiado tarde.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-02-74</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ViscusSnake</portrait>
+
+      <name openLevel ="1">
+        El Nido Desnudo
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>Puede entrar en cualquier orificio de tu cuerpo.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {* Cuando vea a un empleado cuyo rostro se ponga verde oscuro, informe de inmediato a la Sephirah de cada departamento. Tenga en cuenta que debe verificar que la causa de la decoloración no sea un simple dolor de estómago. Cuando se les aconseja visitar la sala médica, aquellos con dolor de estómago estarán de acuerdo, pero un empleado infectado intentará actuar como si nada estuviera mal. Si es así, no avise al empleado de que algo está fuera de lo común. Cuando el huésped se agita, la infección se acelerará. Si la piel comienza a cambiar, el 30% del cerebro ya ha sido consumido. Cualquier conversación en este punto será realizada por la anormalídad, por lo que no le preste atención.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {La anormalidad que reside dentro del lóbulo frontal del huésped y el huésped no sentirá ninguna sensación física. Puede intentar apuñalar al empleado con algo afilado, fingiendo que es un error, pero no se recomienda. Como se mencionó anteriormente, el anfitrión ya es parte de la anormalídad, alrededor del 30%, por lo que será imposible conversar. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {* “La Serpiente Desnuda” puede entrar en cualquier agujero de tu cuerpo.&#13;&#10;* Esto no significa que tapar sus orificios le impedirá entrar.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {** Pero le ayudará a tranquilizarse si se cubre todo lo posible.&#13;&#10;*** “La Serpiente Desnuda” destino final es su lóbulo frontal.&#13;&#10;*** Te convertirás en el nido de la serpiente, atacando cualquier cosa a la vista.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {**** Por favor, comprenda, si se convierte en un nido, nos veremos obligados a dispararle a la vista y quemar su cadáver.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Un resultado de observación concluyó que los empleados con bajo PS son más susceptibles a la habilidad especial de $0 mientras trabajan. En particular, recibir un mayor daño durante el trabajo aumenta la probabilidad de activación de habilidades.</specialTip>
+      <specialTip openLevel="2" key="2">Algunos de los empleados que sufrían el fenómeno tenían los siguientes síntomas. &#13;&#10;1. Piel verde y erupción en el cuerpo.&#13;&#10;2. Velocidad de movimiento drásticamente reducida.&#13;&#10;Si se observa algún síntoma mencionado en algún empleado, elimínelo de inmediato.</specialTip>
+      <specialTip openLevel="2" key="3">Después de dejar #0 que sufría los síntomas mencionados anteriormente durante un tiempo determinado, el empleado cambió en una forma similar a $0 (por este medio se le llama O-02-74-1).</specialTip>
+      <specialTip openLevel="2" key="4">&lt;Peligro&gt; Es probable que todos los empleados que hayan estado en contacto con el empleado infectado antes de que se conviertan en O-02-74-1 también estén infectados. Todos los empleados en el departamento y la sección deben ser observados por cualquier síntoma mencionado en la regla de administración 2.</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

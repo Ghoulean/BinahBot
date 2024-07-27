@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300110">
+
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務. 
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">D-09-104</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ReverseClock</portrait>
+
+      <name openLevel ="1">
+        倒轉之鐘
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>
+        你跌到谷底了嗎?
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {一具不知由哪家公司製成的老舊時鐘. 它的真空管散發出一股復古的風格. 製作商很久以前就停止製作這些時鐘了.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {“…你的未來一片陰暗嗎? 你跌到谷底了嗎? 你曾經想過, ‘如果我這麼做, 或是沒這麼做的話”?&#13;&#10;我們, 作為人類, 征服了疾病以及未來. 而現在, 我們則能夠駕馭時間本身了. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {沒錯, 我們能夠扭轉那些浪費掉的時間.&#13;&#10;只要扭動那個發條, 閉上你的雙眼, 再數到十.&#13;&#10;在你睜開雙眼的時候, 你就能站在你想回到的那一刻了."}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {* 請注意閱讀此說明書. 若疏於操作此機器, 我們並不知道會發生何事. 本公司對用戶不小心造成的副作用概不承擔任何責任. &#13;&#10;使用此鐘需要大量的能源. 請明白, 需花費大量的時間來重新充電.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">每次完成 $0 的工作時, 其中一個燈泡會點亮並且充電.</specialTip>
+      <specialTip openLevel="2" key="2">等級低於 3 的員工進行工作時, 什麼事都沒發生.</specialTip>
+      <specialTip openLevel="2" key="3">在點亮所有的燈泡後, $0 將能夠被啟動.</specialTip>
+      <specialTip openLevel="2" key="4">&lt;請注意&gt; 嚴格禁止等級 5 以下的員工在 $0 充滿電時接觸它.</specialTip>
+      <specialTip openLevel="2" key="5">等級 5 或更高的員工可以正常的操作 $0. $0 會將除了啟動它的員工全都送回當天最平靜的時候.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

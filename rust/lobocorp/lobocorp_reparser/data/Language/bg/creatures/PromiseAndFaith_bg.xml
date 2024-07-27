@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300108">
+
+    <narration action="move">
+      #0 тръгва към камерата на $0, за да се залавя със задачата.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-97</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/PromiseAndFaith</portrait>
+
+      <name openLevel ="1">
+        Древно Вярване и Обещание 
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <openText>
+        Предадените сърца бавно били забравени.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Мистериозно парче мрамор носещо сред камерата.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Знаем за безбройните обещания и вярвания, които биват повтаряни векове наред.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {От тях обаче е останала само празнота и предателство.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Предадените сърца бавно били забравени.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Ако се опиташ без да искаш нищо в замяна, може и да получиш неочаквана награда.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Използвайте Аномалията, за да подобрите E.G.O оръжие. По време на процеса ще бъде изразходено малко количество енергия.</specialTip>
+      <specialTip openLevel="2" key="2">Оръжието подобрено чрез Аномалията има по-голяма Сила на атаката.</specialTip>
+      <specialTip openLevel="2" key="3">Все пак има малък шанс E.G.O оръжието да бъде повредено по време на подобрението.</specialTip>
+      <specialTip openLevel="2" key="4">Подобреното оръжие си връща първоначалната Сила на атаката след един ден.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

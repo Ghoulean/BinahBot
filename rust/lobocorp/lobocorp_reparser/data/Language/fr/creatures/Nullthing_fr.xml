@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id="100005">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {$0 ressemble tout à fait à un être humain. Cependant, ceux qui ont le regard affûté remarquent des incohérences.},
+      {$0 est différent des Anomalies ordinaires. La différence la plus notable est qu’il n’a jamais montré sa véritable nature.},
+      {Connaissez-vous la différence entre une “carapace” et une “peau” ?}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Sans raison apparente, $0 grince des dents en fixant #0.},
+      {L’os, qui semble être une côte de $0, fait un bruit croquant.},
+      {$0 fixe #0, le cou tordu de sa carapace se pliant et courbant de façon anormale.},
+      {L'organe qui ressemble à la bouche de $0 goutte parfois d’intestins qui ont probablement autrefois appartenu à un humain.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 fait de son mieux pour éviter de marcher sur les sécrétions inconnues de $0.},
+      {Même si $0 n’a fait aucune action hostile envers #0, son corps entier tremble de peur.},
+      {#0 sait que l’Anomalie ne va pas l’attaquer tout de suite, mais il reste terrifié d’être dans son unité de confinement.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Alors que #0 travaille, il trouve $0 anormalement familier.},
+      {#0 a repéré quelque chose chez $0.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {“Elle” était la supérieure de #0. Ils n’ont jamais échangé un mot mais ils auraient pu être de bons collègues.},
+      {#0 avait déjà vu “son” profil. #0 pouvait “la” reconnaître grâce à son grain de beauté distinctif.}
+      ]
+    </narration>
+    <narration action="special_ability1">
+      [
+      {$0 a enfilé #0.}
+      ]
+    </narration>
+    <narration action="special_ability2">
+      [
+      {Alors qu’il revêtait #0, les os de celui-ci ont été éparpillés au sol.}
+      ]
+    </narration>
+    <narration action="special_ability3">
+      [
+      {$0, maintenant sous la forme de #0, fait du bruit à chaque pas à cause de ses os délogés.}
+      ]
+    </narration>
+    <narration action="panic">
+      [
+      {#0 sent de la crainte et du dégoût désespérés de la part de $0. Cette haine innée exsudant de $0 frappe #0 en plein cœur.}
+      ]
+    </narration>
+    <narration action="dead">
+      [
+      {#0 est désormais la nouvelle carapace de $0. Peut-être aura-t-il un jour droit à un enterrement correct, comme celui dont $0 vient de muer.},
+      {#0 est désormais la nouvelle carapace de $0. Chaque employé de la corporation se souviendra de lui ; qu’ils le veuillent ou non, ils n’en ont plus le choix.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-06-20</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/NotThing</portrait>
+      <name openLevel="1">
+        Rien à Signaler
+      </name>
+      <riskLevel openLevel="1">
+        ALEPH
+      </riskLevel>
+      <openText>Et toutes ces carapaces hurlaient un mot : “Administrateur”.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Une Anomalie à l’apparence humaine, mais qui ne peut et ne devrait pas être humaine. Elle dévore régulièrement des employés puis les revêt comme “carapace”. Le squelette et les organes s'agencent mal dans le processus, ce qui lui donne une forme étrange.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Cette Anomalie a beau avoir une langue, elle ne sait pas parler et de fait, communiquer ; elle ne peut que produire des sons incohérents. Il est impossible de savoir ce qu’il y a dans sa carapace mais puisque celle-ci s’use au fil du temps, il y a un besoin de la changer régulièrement. Insensible à la douleur, elle peut briser ses propres os ou s’entailler profondément afin de fuir au-travers d’une fissure supposément trop petite.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Petit à petit, nous avons découvert que cette Anomalie semble évoluer. Elle fait ainsi preuve de comportements similaires à ceux de la personne qu’elle utilise comme carapace. Elle essaie même de se faire passer pour un être humain.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Quand elle s’échappe, elle enfile la peau de la personne qu’elle a tuée et l’imite. Puis, sans aucun signe avant-coureur ou avertissement, elle révèle sa véritable (ou seconde) apparence. Celle-ci ressemble beaucoup plus à un humain en comparaison de la précédente. Il a été confirmé qu’elle est bipède, possède des organes proprement alignés et dispose d’une force physique décuplée. Tous les employés craignent cette forme.}
+      ]
+    </desc>
+    <desc id="5" openLevel="3">
+      [
+      {&lt;Avertissement sur un certain sujet&gt;&#13;&#10;
+      S’il a été confirmé qu’il s’est échappé et se tient sur deux pieds, il n’y a qu’une seule chose que vous puissiez faire. Redresser votre posture, réunir vos mains soigneusement et prier tout ce en quoi vous croyez tout en regardant comment la situation avance.}
+      ]
+    </desc>
+    <desc id="6" openLevel="3">
+      [
+      {&lt;Extrait du Suivi Thérapeutique&gt;&#13;&#10;
+      “De la même façon que nous étudions les Anomalies en tant qu’employés, “Rien à Signaler” nous étudie. Puis il enfile la carapace d’un employé et se considère être ledit employé qui vient de mourir.&#13;&#10;
+      Rien que penser à la vision de ce monstre dévorant l’un d’entre nous… est indescriptiblement horrifiant,  et pourrait bien me rendre fou. Se rendre dans son confinement pour vérifier l’état de sa carapace met aussi un sale coup au moral. Imaginez qu’un de vos collègues avec lequel vous discutiez il y a quelques jours est désormais assis dans cette salle, nuque brisée, intestins à l’air, marchant à quatre pattes et bavant comme un animal sauvage. (Omis)&#13;&#10;
+      Ce n’est pas tout. Quand j’étais encore nouveau, personne ne voulait entrer dans son Unité de Confinement, alors j’étais obligé d’aller travailler avec lui. Il avait une apparence bien pire qu’actuellement. Il ressemblait à un humain horriblement déformé. Le pire, c’est qu’il essayait quand même d’imiter les humains. En faisant des trucs du genre… se regarder dans un miroir, marmonner pour lui-même, ou arranger son squelette, comme s’il essayait de “nous” ressembler. Qui sait, peut-être qu’un jour, il deviendra assez bon pour se promener inaperçu parmi nous.”}
+      ]
+    </desc>
+    <desc id="7" openLevel="4">
+      [
+      {&lt;Attention&gt; Seuls les employés de niveau 3 ou plus ont le droit de lire ce document.&#13;&#10;(Cet enregistrement provient d’un appel du téléphone d’urgence de l’Unité de Confinement. Ceux-ci sont installés dans chaque salle d’Anomalie de risque HE ou plus pour répondre plus rapidement aux menaces.)&#13;&#10;
+      Employé 1 : Répondez s’il vous plaît, répondez… C’est l’Unité de Confinement de “Rien à Signaler”.
+      Secteur d’Intervention d’Urgence (SIU) : Bonjour, c’est bien l’Équipe d’Intervention d’Urgence. Quel est le problème ?
+      Employé 1 : J’ai besoin d’un pistolet taser maintenant ! Il y a une urgence en cours là tout de suite !      
+    SIU : Pouvez-vous en préciser la raison ?
+      Employé 1 : L’Anomalie… (des sons de quelque chose se brisant peuvent être entendus) Elle déchiquète…
+      SIU : Pardon ?
+      Employé 1 : Elle essaie de tuer mon collègue !
+      SIU : Nous allons intervenir immédiatement. Merci d’identifier l’employé victime de l’attaque.
+      Employé 1 : C’est euh… attendez une seconde. Son nom est &lt;Expurgé&gt;. Équipe de Contrôle. Je suis &lt;Expurgé&gt;. Aussi de l’Équipe de Contrôle.
+      SIU : C’est noté. Qu’est-ce qui est en train d’arriver à votre collègue en ce moment ?
+      Employé 1 : Pitié, dépêchez-vous. Nous avons besoin d’une arme pour maîtriser l’Anomalie.
+      (Un bruit strident est entendu, sûrement un hurlement du collègue)
+      Oh putain, c’est…
+      SIU : Qu’est-ce qu’il se passe ?
+      Employé 1 : L’Anomalie est en train d’attaquer mon collègue. Elle est littéralement en train de le déchirer, je ne peux vraiment rien faire. Je répète, nous avons besoin d’une arme pour maîtriser l’Anomalie.
+      SIU : L’Équipe d’Intervention d’Urgence a été envoyée. Ils arriveront bientôt.
+      (Omis)
+      SIU : &lt;Expurgé&gt; ? Que se passe-t-il ? Attaque-t-il toujours votre collègue ?
+      Employé 1 : Ouais, euh, non. Je pense qu’il a fini.
+      SIU : A-t-il arrêté d’attaquer ?
+      Employé 1 : Non, je veux dire. Mon collègue… il est mort. Ouais, il est définitivement mort.
+      SIU : Comment pouvez-vous en être aussi sûr ?
+      Employé 1 : Eh bien c’est parce qu’il est… il…
+      SIU : A-t-il été amputé d’une quelconque façon ? Quelles parties du corps sont endommagées ?
+      Employé 1 : Toutes.}
+      ]
+    </desc>
+    <desc id="8" openLevel="4">
+      [
+      {&lt;Extrait du Suivi Thérapeutique&gt;&#13;&#10;
+      “De la même façon que nous étudions les Anomalies en tant qu’employés, “Rien à Signaler” nous étudie.
+       Puis il enfile la carapace d’un employé et se considère être ledit employé qui vient de mourir.
+       Il imite les comportements usuels de l’employé, la manière dont il parle, ses préférences, et tout autre trait perceptible.
+       On ne peut qu’imaginer à quel point il a dû s’appliquer à étudier les employés pour les imiter si bien.
+       Ce que j’essaie de dire, c’est qu’on ne peut pas juste le traiter comme un “horrible monstre stupide”.
+       Même en ce moment, il pourrait se promener en portant la carapace de quelqu’un qu’on connaît.
+       Cette Anomalie devient de plus en plus similaire à un humain.
+       Sa transformation s’accélère aussi. J’ai des frissons rien qu’en y pensant.
+       Si un jour on n’arrive plus à le reconnaître, ce sera la fin de la corporation.
+       On doit rester aussi vigilant que possible quand on s’occupe de cette Anomalie.”}
+      ]
+    </desc>
+    <desc id="9" openLevel="4">
+      [
+      {L’enregistrement qui suit retranscrit l’attitude anormale d’un employé devenu une carapace de “Rien à Signaler”.&#13;&#10;
+      Employé 1 : Administrateur, Administrateur !
+      Employé 2 : Mec, tu cherches l’administrateur depuis un moment maintenant. Tu agis vraiment bizarrement aujourd’hui tu sais ? Avec ce sourire bizarre et tout.
+      Employé 1 : …
+      Employé 2 : Quoi qu’il en soit, j’espère qu’on aura des pâtes au réfectoire aujourd’hui. J’adorerais en avoir avec un peu de bacon bien gras.
+      Employé 1 : …
+      Employé 2 : Oh, on a reçu un avis d’urgence. Il dit que le dernier employé ayant travaillé avec “Rien à Signaler” doit aller au bureau du psychologue immédiatement.
+      Employé 1 : …
+      Employé 2 : Attends… mais c’était pas… toi ?
+      Employé 1 : …
+      Employé 2 : Hey, dis quelque ch—
+      Employé 1 : Administrateur, Administrateur ! Administrateur !}
+      ]
+    </desc>
+    <desc id="10" openLevel="4">
+      [
+      {Le second employé a immédiatement réagi en entendant ça. Cependant, “Rien à Signaler” a déchiré la carapace du premier employé, révélant sa forme de départ. Cet enregistrement ne contient que des documents audio, donc ce qu’il s’est exactement passé ou quel genre de comportements l’employé adoptait reste un mystère.&#13;&#10;&#13;&#10;La carapace contenant “Rien à Signaler” en son sein fait de son mieux pour imiter le comportement de l’employé qu’il a tué quelques instants auparavant. Ses actions, ses mots, ce genre de choses.&#13;&#10;&#13;&#10;Et toutes ces carapaces hurlaient un mot : “Administrateur”.}
+      ]
+    </desc>
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="needKill">Plus l’employé qui travaille a une Fortitude faible et plus les chances de succès sont faibles, rendant le travail plus instable.</specialTip>
+      <specialTip openLevel="2" key="justice">Quand un employé ayant moins de 4 en Justice a complété son travail, le Compteur Qliphoth a diminué.</specialTip>
+      <specialTip openLevel="2" key="killUp">#0, qui était dans l’Unité de Confinement, a été tué par $0. Soudainement, $0 s’est transformé en #0. La même chose s’est produite lorsqu’un autre employé a paniqué.</specialTip>
+      <specialTip openLevel="2" key="panicUp">Lorsque le résultat de travail était Mauvais, #0 a été attaqué et transformé en carapace pour $0.</specialTip>
+      <specialTip openLevel="3" key="makePanic">Les employés de Fortitude 3 ou moins paniquent immédiatement en entrant dans l’Unité de $0. Il est donc recommandé que les employés avec moins de 4 en Fortitude ne travaillent pas avec lui.</specialTip>
+      <specialTip openLevel="3" key="backMonster">Lorsque #0, qui a vu l’apparence humaine de $0, a paniqué, il est devenu sa nouvelle carapace. Au même moment, le Compteur Qliphoth a diminué.</specialTip>
+      <specialTip openLevel="4" key="needGun">Lorsque le Compteur Qliphoth est tombé à 0, $0, prenant l’apparence de feu #0, a disparu de son Unité de Confinement. L’Administrateur doit rapidement trouver et tuer la carapace de $0.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

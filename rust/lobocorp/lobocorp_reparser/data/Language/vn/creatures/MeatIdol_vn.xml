@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300004">
+
+    <narration action="move">
+      #0 designated to $0's containment room.
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-79</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/MeatIdol</portrait>
+
+      <name openLevel ="1">
+        Flesh Idol
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>And the prayer always ends with eternal despair of the worshipper.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {A lump of flesh and iron.  }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {It is speculated to be a religious artifact that was found in the flooded section. In the past, some people sought answers from religion. When an employee offers prayer, the flesh begins to move, as if responding to the prayer.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {The person praying will suffer various ordeals, as if being tested, but others around them will recover HP and SP just like a redemption.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+    
+      [
+      {And the prayer always ends with eternal despair of the worshipper.}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">$0‘s effect can be done through chanting. The subject who prays to the $0 will receive damage of a random type.</specialTip>
+      <specialTip openLevel="2" key="2">&lt;Experiment 1&gt; The subject who chanted 20 seconds or less. The subject died.</specialTip>
+      <specialTip openLevel="3" key="3">&lt;Experiment 2&gt;The subject chanted for a duration between 21 to 45 seconds. All employees other than the subject recovered HP over time.</specialTip>
+      <specialTip openLevel="4" key="4">&lt;Experiment 3&gt;The subject chanted for a duration between 46 to 90 seconds. The result was similar to experiment 2, but the subject also recovered SP.</specialTip>
+      <specialTip openLevel="5" key="5">&lt;Experiment 4&gt; The subject chanted longer than 90 seconds. The subject died, but the Cliport counter of all Abnormalities was reduced to 0.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

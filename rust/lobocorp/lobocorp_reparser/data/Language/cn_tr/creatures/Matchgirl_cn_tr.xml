@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100001">
+
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務.
+    </narration>
+
+    <narration action="start">
+      [
+      {請注意關於 $0 的觀察日誌尚未完成, 所以任何事都有可能發生.},
+      {百科關於的 $0 章節幾乎就要完成了, 所以只要我們盡量保持謹慎, 那麼工作很快就會完成.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {女孩在 #0 進入房間時快快的躲到了房間的角落.},
+      {女孩觀察了 #0 的動作後卻回過頭看著牆面.},
+      {女孩站在角落觀察著 #0 的工作.},
+      {女孩似乎非常害怕並將頭埋進了角落.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {女孩直直地站著, 如同一道火焰人畜無害的燃燒著.},
+      {只有那穿過女孩身體的火柴狂野地燃燒著.},
+      {不同於那根熱烈的火柴, 女孩靜靜的站在收容單位裡.}
+      {火柴不停的燒著, 但是女孩卻動也不動.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {#0 仔細的檢查了火柴剩下的長度.},
+      {如果火柴就要燒完的話, 這將是危險就要發生的跡象. #0 緊張的看著女孩.}
+      {幸運的是, 剩下的火柴還是足夠的. 但在燒完的那時...}
+      {灰燼遍布四周. 有一半的活柴還沒燒完.}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {#0 在火焰微弱閃爍的時候完成了工作.},
+      {沒有東西在火焰之中, 但是女孩的雙眼如同看見某人般閃閃發亮.},
+      {在那之中沒有東西, 火焰之中毫無一切.}
+      {只有火柴燃餘的灰燼遍布在女孩身旁.}
+      ]
+    </narration>
+
+    <narration action="special_ability_1">
+      [
+      {現在只剩一小部分的火柴沒有燃燒.}
+      ]
+    </narration>
+
+    <narration action="special_ability_2">
+      [
+      {#0 注意到了這個並試著做些什麼, 但一切都已經太遲了.}
+      ]
+    </narration>
+
+    <narration action="special_ability_3">
+      [
+      {火柴燒完了, 而女孩跟著笑了.}
+      ]
+    </narration>
+
+    <narration action="special_ability_4">
+      [
+      {在爆炸之後,  在收容單位裡只發現了 #0 遺體的一小部份 .}
+      ]
+    </narration>
+
+    <narration action="dead">
+      [
+      {火焰四處跳躍, 將地板與它的周遭燻黑.}
+      {至少在 #0 嚥下最後一口氣時是快樂的.}
+      ]
+    </narration>
+
+
+    <narration action="panic">
+      [
+      {#0 的眼神相當渙散. 火柴引發的火勢早就撲滅了, 但是 #0 仍然對命令毫無反應.}
+      {帶著滿是扭曲的臉龐碎唸著鬆散的字詞, #0 離開了房間. 沒人敢跟 #0 說話.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">F-01-02</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/matchgirl</portrait>
+
+      <name openLevel ="1">
+        火柴女孩
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <openText>我來這見你. 你將會像我一樣化為灰燼.</openText>
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {此異常的外型像是一位完全焦黑的女孩. 即使已經沒有東西能燒了, 還是撲滅不了覆滿女孩的火焰. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {一根火柴像枝柱子般穿過了女孩的身體. 雖然火柴總是燃燒著, 此異常並不會對此表現出痛苦的樣子. 這讓員工覺得這根火柴或許就是該異常本身. 然而, 最近有人看到有個哭泣著的灰黑色身影. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {摘錄自異常專家 &lt;████████&gt; 博士的研究日誌&#13;&#10;&#13;&#10;"這燃盡的身軀是孩童破滅的希望, 而火焰是她對愛情的無盡渴望. 她總是掙扎在這兩者之中."&#13;&#10; "該死, 我們付了一整船的錢就為了這個垃圾?"}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {員工的故事&#13;&#10;&#13;&#10;"她就像是顆滴答響的定時炸彈. 很難確認她現在是開心還是難過. 我們只能在工作的時候希望她不要就這麼炸掉了. 她從沒好過. 我們只能盡量阻止她變得更糟."}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {&lt;color=#FF9E72FF&gt; &lt;b&gt;&lt;員工 M-3923 諮詢日誌&gt;&lt;/b&gt;&#13;&#10;&#13;&#10;"我從來沒想過這個異常能夠突破收容. 也許是我們疏忽了, 但是她看起來能做的只有在她的身體上點燃那根火柴而已. 是的, 我們的回報是慢了點. (省略) 許多的異常在試圖突破收容的時候都會攻擊在它們眼前的員工. 但是她對周遭的員工卻沒有表現出一丁點的敵意. 反而的是, 她就直直地走向了其他部門. 一個在公司內有最多人的辦公室. 如果我們沒有在門前制止她的話, 將近一半的員工都活不到今天了." &lt;/color&gt;}
+      ]
+    </desc>
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="escape1">當工作結果為普通時, $0 的逆卡巴拉計數器會以普通的機率減少.</specialTip>
+      <specialTip openLevel="1" key="escape2">當工作結果為差時, $0 的逆卡巴拉計數器會以較高的機率減少.</specialTip>
+      <specialTip openLevel="2" key="explosionMain">突破收容的 $0 在接觸到鎖定的員工五秒後爆炸了.</specialTip>
+    </specialTipSize>
+  </observe>
+
+
+
+</creature>

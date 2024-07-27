@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100050">
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+
+    <narration action="start">
+      [
+      {Nós ainda estamos no meio da nossa jornada. Caminharemos pela estrada de tijolos amarelos para tornarmos os nossos sonhos em realidade.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Este tratamento silenciou a todos, incluindo aqueles que recusaram-se a ficar em silêncio em relação ao seu procedimento. }
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {O $0 persegue cérebros inteligentes em vez de espantar os pássaros.}
+      ]
+    </narration>
+
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">F-01-87</codeNo>
+      <name openLevel="1">Espantalho Que Procura Por Sabedoria</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/Scarecrow</portrait>
+      <riskLevel openLevel ="2">HE</riskLevel>
+      <openText>A cidade continuou bela e as ruas de esmeralda brilhavam mais que nunca.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Uma Anormalidade na forma de um espantalho de palha que possuí uma panhílha na sua boca. A mesma está coberta com sangue.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {A sua cabeça está vazia, como se alguém tivesse arrancado o que estive dentro com força bruta. A Anormalidade é agressiva e tenta roubar os cérebros dos empregados. Mas a mesma apenas demonstra essa agressividade para com aqueles que tiveram "Excelente" em testes de QI.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Cada cidade tinha a sua tecnologia, essa era a solução para reviver a cidade deles. Havia uma grande variedade delas, mas apenas uma cidade tinha equipamentos capazes de realizar substituição corporal avançada. Essa tecnologia podia consertar, mudar ou trocar uma parte do corpo indesejada ou danificada. Todos que viviam na cidade eram capazes de receber esse tratamento. No entanto havia um rumor que dizia que se um pobre tivesse problemas nos pulmões e um rico quisesses ter uma visão melhor, os médicos arrancariam os olhos do pobre e davam nos ao homem rico, e depois o corpo do pobre seria levado para os Subúrbios para apodrecer.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {O porta-voz da cidade afirmou à população que os rumores eram falsos, mas para acabar com eles de uma vez por todas, ele anunciou que algumas pessoas doentes dos Subúrbios seriam escolhidas para terem qualquer parte do seu corpo que quisessem curada. Dos poucos sortudos que foram escolhidos, um voltou muitos dias depois. Ele tinha uma longa cicatriz na sua cabeça que era bem visível. As pessoas perguntaram-lhe como se sentia e ele respondeu que sentia a sua cabeça mais leve. Ele era um homem triste que chorava muito, então com a sua mudança todos acreditaram que a cirurgia tinha sido um sucesso.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {No entanto, quando lhe foi perguntado quem eram os outros escolhidos, ele apenas sorriu sem falar nada. Mais tarde, no funeral dos seus pais, ele não demonstrou qualquer emoção. Depois de ter recebido aquele tratamento tudo que ele fazia era olhar pela janela e falar para ele mesmo. Eventualmente, ele enforcou-se na maçaneta da porta da casa aonde morava. Alguns acreditavam que os problemas dele foram causados pelo procedimento médico, mas depois de alguns dias ele já tinha sido esquecido. A cidade continuou bela e as ruas de esmeralda brilhavam mais que nunca.}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Quando um empregado com Prudência de nível 3 ou acima terminou o trabalho, o Qliphoth Counter diminuiu.</specialTip>
+      <specialTip openLevel="1" key="2">Quando o resultado do trabalho foi Mau, o Qliphoth Counter diminuiu.</specialTip>
+      <specialTip openLevel="2" key="3">Após a Anormalidade ter escapado e matado um empregado, ela sugou o cérebro do empregado e recuperou a sua saúde.</specialTip>
+    </specialTipSize>
+  
+  </observe>
+
+
+
+</creature>

@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100009">
+
+    <narration action="move">
+      #0 va a entrar $0 unidad de contención para comenzar la tarea.
+    </narration>
+
+    <narration action="start">
+      [
+      {No tener información sobre $0, #0 está comprensiblemente aterrorizado de entrar en la unidad de contención.},
+      {Dependiendo de la situación, $0 puede tener un efecto positivo en los empleados.},
+      {Quizás es mejor enviar a un empleado honesto para que atienda $0.},
+      {$0 ve a través de ti.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      { $0 está esperando el pecado de la gente.},
+      {#0 los pecados alcanzarán a $0 pronto.},
+      {$0 a veces hace clic amenazadoramente en sus dientes, pero no es nada de qué preocuparse.},
+      {$0 Flota suavemente en el aire y se mueve lentamente.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 no tiene ojos, pero reconoce la presencia de #0 en la habitación.},
+      {$0 es el castigador.},
+      {#0 presencia la reverencia y la solemnidad de $0.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {#0 ha completado la tarea, pero $0 es indiferente.},
+      {Mientras #0 procedió con el trabajo, $0 no respondió en absoluto.}
+      {#0 no pudo desencadenar una reacción de $0.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+
+      {Llevar el dolor es la mitad de la expiación.},
+      {Sólo aquellos que pueden engañarse a sí mismos pueden vivir vidas felices..}
+      {No es posible, por una vez, perdonar un acto de maldad mientras sus intenciones sean buenas?}
+      ]
+    </narration>
+
+
+    <narration action="special_ability1">
+      [
+      {#0 confesó sobre la falta de trabajo para $0.}
+      {#0 confesado sobre mentir a sus padres para $0.},
+      {#0 confesado por estar celoso de un amigo para $0.},
+      {#0 confesó sobre el "incidente del pasado julio" a $0.}
+      ]
+    </narration>
+    <narration action="special_ability2">
+      [
+      {El castigo comienza a llover.}
+      ]
+    </narration>
+    <narration action="special_ability3">
+      [
+      {La culpa eterna es probablemente el mayor castigo para #0.}
+      ]
+    </narration>
+
+    <narration action="panic">
+      [
+      {Todos los pensamientos se extinguen de #0. La agonía y la ansiedad lo presionan, sin salida.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-03-03</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/OneBadManyGood</portrait>
+
+      <name openLevel ="1">
+       Un pecado y cientos de buenas acciones
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+
+      <openText>
+        Se alimenta del mal que surge durante las conversaciones entre personas.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Una anormalidad silenciosa que entiende el conflicto entre el bien y el mal. Sus cuencas vacías miran fijamente a todos aquellos que lo encuentran.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="0">
+      [
+      {Un cráneo gigante que se une a una cruz con una corona de espinas. Flota a unos 2 metros sobre el suelo.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="1">
+      [
+      {Si bien su apariencia es extraña, los incidentes de violencia contra los empleados raramente han sido registrados. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {Se alimenta del mal que surge durante las conversaciones entre personas. El empleado asignado debe confesarle sus pecados. Su mecanismo de alimentación es aún desconocido.}
+      ]
+    </desc>
+
+
+    <desc id="5" openLevel="2">
+      [
+      {&lt;Registro de experimentos x2-321&gt;&#13;&#10;Los pecados han sido catalogados en tres niveles. Nivel 1: una pequeña mentira o acción que pasa desapercibida o puede compartirse en broma. Nivel 2: Pecados que son más serios y solo se comparten con los amigos más cercanos. Nivel 3: Pecados tan profundos que no pueden compartirse con nadie y son llevados a la tumba.&#13;&#10;&lt;Redactado&gt; ha sido asignado para confesar los pecados de nivel 1.&#13;&#10;La producción de energía se ha incrementado en 12%.&#13;&#10;&lt;Redactado&gt; ha sido asignado para confesar los pecados de nivel 2.&#13;&#10;La producción de energía se ha incrementado en 15%.&#13;&#10;&lt;Redactado&gt; ha sido asignado para confesar los pecados de nivel 3.&#13;&#10;1 minuto y 48 segundos después de que el empleado fue enviado, se vio un brillante destello de luz. La luz era tan brillante que se veía incluso fuera de la unidad de contención. Inmediatamente después de la luz, hubo un apagón en toda la empresa. Los fenómenos duraron 2 horas. &lt;Redactado&gt; Perdieron 6 años de su memoria. El experimento fue cancelado después de este incidente. El nivel de corrupción mental de todos los empleados en el departamento se redujo considerablemente. La ética decretó que todas las imágenes de quienes participaron en el experimento se mantendrían selladas, pero el incidente no nos dejó más remedio que revisar las imágenes en la unidad de contención.}
+    ]
+  </desc> -->
+
+    <desc id="6" openLevel="3">
+      [
+      {&lt;Redactado&gt;: "Esto sucedió durante &lt;Redactado&gt;, alrededor de las 4:00 pm. Por cierto, ¿esto realmente funcionará? De todos modos, había un ferrocarril a unos 20 minutos de mi casa. Algunos de mis buenos amigos y yo decidimos vestirnos como animales del bosque. Uno de nosotros decidió vestirse como un ciervo. Era un traje crudo, uno que difícilmente podría llamarse un traje para ser honesto. Era solo un par de astas torpemente hechas y un atuendo oscuro con algunos puntos como ciervos. De todos modos, no sé cómo nuestro amigo 'venado' se internó en el bosque. Ni siquiera nos dimos cuenta de que faltaba tal vez por una hora. Lo buscamos y finalmente lo encontramos en unos arbustos. Lo llamamos por su nombre, y no estoy seguro si fue por el alivio de finalmente encontrarnos o qué, pero él comenzó a correr hacia nosotros. Y ahí fue cuando lo oímos; los disparos. Bang! Bang! Bang! No sabíamos de dónde venía. Pero cuando llegué a mis sentidos vi que su sangre salpicó todo el camino hasta mis pies. Después de eso, ninguno de nosotros nos vestimos como animales nunca más."}
+    ]
+  </desc>
+
+    <desc id="7" openLevel="3">
+      [
+      {&lt;Registro de observación #4_435&gt;&#13;&#10;Sus ojos estan vacios. Es un cráneo, después de todo. Pero dudo que sea ciego. Siento su mirada en mi, y me esta escuchando. Y confesarlo me aligera el corazón.}
+    ]
+  </desc>
+
+
+    <desc id="8" openLevel="4">
+      [
+      {Posteriormente, investigamos los incidentes durante el período en la ciudad natal del empleado para obtener una mejor imagen. Nos enteramos de que un niño llamado Justin fue asesinado a tiros y matado por los cazadores durante una temporada de caza de ciervos. A diferencia de la confesión del empleado, Justin fue acosado repetidamente por otros niños, y los testigos dijeron que escucharon a los niños gritar "Corre, Justin, corre!" justo antes del disparo. Después del incidente, los niños en la escena se mudaron de la ciudad y la caza de ciervos fue prohibida en el área.}
+      ]
+    </desc>
+
+
+    <desc id="9" openLevel="4">
+      [
+      {&lt;color=#FF9E72FF&gt;&lt;Extracto del registro de investigación de anomalías X-392&gt;&#13;&#10;No se puede esperar que todos los empleados le den confesiones honestas a esa calavera. Aproximadamente uno de cada diez empleados tiende a decir algo que no es completamente cierto. Es un poco diferente de una mentira. Se puede decir que es una excusa subconsciente que están haciendo. Distorsionan perspectivas para justificar sus acciones. Una vez que esto sucede, la confesión ya no es una confesión. Sí, estoy hablando de que justificas tu retraso por 5 minutos ahora.&lt;/color&gt;}
+    </desc>
+
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="confessionIs">$0 restaura el SM del empleado cuando el resultado del trabajo es bueno. #0, quien estaba en el lado receptor, comentó que se sentía refrescante.</specialTip>
+      <specialTip openLevel="2" key="confessionIsGood">Después de producir perfectamente cajas de PE, $0 restaura el SM de todos los empleados del departamento.</specialTip>
+    </specialTipSize>
+
+    
+
+  </observe>
+</creature>

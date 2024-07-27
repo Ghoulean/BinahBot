@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100035">
+
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다.
+    </narration>
+
+    <narration action="start">
+      [
+      {우리의 오래된 속담 중엔 ‘심판의 새를 잊지 말라. 시간이 얼마가 걸리든 그것은 분명히 당신 앞을 찾아온다’ 라는 말이 있습니다.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0는 결코 조급해하지 않습니다. },
+      {어쩌면 지금 이미 당신의 집에 와있을지도 모릅니다. }
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {용서가 없는 세계에 살고 있는 우리는 영혼을 봉헌하여 구원을 바랍니다.},
+      {사람은 본래 간사하여 스스로의 영혼을 구제하지 못합니다. 그것이 $0가 우리에게 온 이유입니다.}
+      {스스로의 허물을 깨닫는 자는 드뭅니다. $0의 천칭은 이를 대신합니다.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 는 숲의 파수꾼이었지만 숲을 지키고자 하는 마음이 너무나 강한 탓에 가장 중요한 것을 놓쳤습니다. },
+      {그 후 아주 어두운 밤만 계속되었습니다.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-02-62</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/LongBird</portrait>
+
+      <name openLevel ="1">
+        긴 새
+      </name>
+      
+      <name openLevel="2">
+        심판 새
+      </name>
+      
+      <riskLevel openLevel ="1">
+       WAW
+      </riskLevel>
+
+
+      <openText>그의 천칭은 항상 어떤 죄의 무게도 소홀히 여기지 않았다.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {어두운 숲을 불공정한 저울을 들고 다니며 생물들을 심판하던 새다.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {어두운 숲을 불공정한 저울을 들고 다니며 생물들을 심판하던 새다. 천칭은 항상 한 쪽으로만 기울지만 눈이, 가려져 있으므로 그 사실을 알지 못한다. 외면하고 있는 건지도 모른다. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {사실, 한 때 새는 공명정대한 심판자였다. 그의 천칭은 항상 어떤 죄의 무게도 소홀히 여기지 않았다.}
+      ]
+    </desc>
+    
+    <desc id="4" openLevel="2">
+      [
+      {긴 새는 숲에 평화를 지키기 위해 어떤 죄의 무게도 잴 수 있는 저울을 만들었다.}
+      ]
+    </desc>
+    
+    <desc id="5" openLevel="3">
+      [
+      {한때 새의 눈은 모든 것을 꿰뚫어 볼 수 있었다. 새의 눈은 언제나 반짝였고 밤하늘의 별처럼 불타올랐다. 하지만 숲을 지키기 위해 큰 새에게 눈을 바쳤다. 지금은 눈이 있어야 할 자리에 허공이 대신 자리 잡혀 있다.  }
+      ]
+    </desc>
+    
+    <desc id="6" openLevel="3">
+      [
+      {붕대는 곧 뜯어질 것처럼 너덜거린다. 이 역시 반짝이는 깃털들로 뒤덮여 있었지만, 오랫동안 햇빛을 보지 않아 볼품없이 빠졌다. }
+      ]
+    </desc>
+    
+    <desc id="7" openLevel="4">
+      [
+      {이제 남은 것은 불공정한 천칭뿐이다. 긴 새는 여전히 심판을 멈추지 않는다.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="MoodZero">작업 결과가 보통일 때 보통 확률로 클리포트 카운터가 감소하였다.</specialTip>
+      <specialTip openLevel="1" key="MoodZero2">작업 결과가 나쁨일 때 높은 확률로 클리포트 카운터가 감소하였다.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id="100005">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {A aparência do $0 é como a de um ser humano. Porém, funcionários com visão apurada perceberão uma incompatibilidade.},
+      {O $0 é diferente de sua Anormalidade convencional. Sua maior diferença é que nunca mostrou sua verdadeira natureza.},
+      {Você sabe a diferença entre os termos “casca” e “pele”?}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {O $0 range os próprios dentes enquanto encara #0.},
+      {O osso, que parece ser a costela do $0, faz um som crocante.},
+      {$0 fica olhando para #0, com o pescoço de sua casca quebrando e virando anormalmente.},
+      {O órgão que é semelhante a uma boca pertencente ao $0 ocasionalmente derrama intestinos que podem ter sidos de um humano.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 faz de tudo para evitar pisar nas secreções desconhecidas do $0.},
+      {Mesmo quando $0 não faz ações ameaçadoras, o corpo de #0 treme de medo.},
+      {#0 está ciente que a Anormalidade não o atacará assim que puder, mas se sente extremamente assustado por estar em sua Unidade de Contenção.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Enquanto #0 trabalha, descobre que o $0 parece familiar de uma maneira estranha.},
+      {#0 percebe algo no $0.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {“Ela” era a sênior de #0. Eles nunca falaram uma palavra sequer com o outro, mas eles eram bons colegas de trabalho.},
+      {#0 viu o perfil de funcionário “dela”. O motivo de #0 ter lembrado “dela” foi por causa que ela tinha uma distinta verruga no rosto.}
+      ]
+    </narration>
+    <narration action="special_ability1">
+      [
+      {$0 vestiu #0.}
+      ]
+    </narration>
+    <narration action="special_ability2">
+      [
+      {Durante o ato de vestir #0, seus ossos foram espalhados pelo chão.}
+      ]
+    </narration>
+    <narration action="special_ability3">
+      [
+      {$0, agora com a forma de #0, faz barulhos com seus ossos ainda deslocados toda vez que dá um passo.}
+      ]
+    </narration>
+    <narration action="panic">
+      [
+      {#0 não consegue evitar de sentir um desgosto e pavor vindo do $0. Esse ódio inato transpirando do $0 atinge #0 diretamente.}
+      ]
+    </narration>
+    <narration action="dead">
+      [
+      {Agora #0 se tornou a nova casca do $0. Talvez algum dia ele terá um enterro digno, como a “casca” que $0 usou.},
+      {#0 agora se tornou a nova casca do $0. E sempre será lembrado por outros funcionários; mesmo quando não desejarem fazer isso, pois serão forçados a lembrar.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-06-20</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/NotThing</portrait>
+      <name openLevel="1">
+        Há Nada Aqui
+      </name>
+      <riskLevel openLevel="1">
+        ALEPH
+      </riskLevel>
+      <openText>E várias cascas falavam uma só palavra, "Gerente".</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Uma Anormalidade com aparência que se assemelha a humana, mas não pode e nem deve ser humano. Ele periodicamente devora funcionários e veste sua casca. O esqueleto e os órgãos são colocados em lugares errados durante o processo, por isso ele toma uma forma bizarra. }
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {A Anormalidade possui uma língua, porém, não possui conhecimento linguístico e por isso não consegue falar; ele só consegue fazer sons sem sentido. Não há maneira de dizer o que está dentro de sua casca, mas sua pele se desgasta sem parar, então há uma necessidade de mudar e manter a camada exterior. Ele é insensível a dor e pode quebrar os próprios ossos ou se cortar para escapar por um espaço pequeno.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Pouco a pouco, nós descobrimos que essa Anormalidade pode estar evoluindo e demonstra comportamento similar ao da pessoa que costumava a usar de casca. Ela até faz tentativas de se igualar com seres humanos. }
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Quando escapa, ele veste a pele da pessoa que matou e a imita. Então, sem nenhum sinal ou aviso, revela sua verdadeira/segunda forma. Nessa forma, sua semelhança é muito maior a humana em comparação a primeira. Ela é confirmada ser bípede, ter órgãos propriamente alinhados e possuir uma força física absurda. Todos os funcionários temem essa forma. }
+      ]
+    </desc>
+    <desc id="5" openLevel="3">
+      [
+      {&lt;Um Aviso de Algo&gt;&#13;&#10;
+      Se for confirmado que ele escapou e está de pé com duas pernas, só há uma coisa que você pode fazer. Deixe sua postura reta, junte suas mãos e reze para o que você acreditar enquanto observa tudo acontecer.}
+      ]
+    </desc>
+    <desc id="6" openLevel="3">
+      [
+      {&lt;Trecho de um Registro de Aconselhamento&gt;&#13;&#10;
+      “Assim como nós observamos as Anormalidades como funcionários, ‘Há Nada Aqui’ nos observa. Então ele coloca a casca de um funcionário e pensa igual ao funcionário que acabou de matar.&#13;&#10;
+      A visão daquela coisa devorando um de nós é tão horrível que não existem palavras para descrever, só de pensar sobre isso já é o suficiente para me deixar louco. Só ir para a Unidade de Contenção dele para olhar o estado de sua casca já é um peso na sua mente. Imagine que um colega seu que estava conversando contigo alguns dias atrás está agora sentado naquela sala com o pescoço quebrado, intestinos expostos, andando de quatro e babando igual a um animal. (Omitido)&#13;&#10;
+      E isso não é tudo. Quando eu ainda era um novato, ninguém queria entrar naquela Unidade de Contenção, então eu fui forçado a trabalhar com ele. Ele estava pior do que está agora. Sua forma era a de um humano horrivelmente deformado. E o que era pior, ele tentava imitar outros humanos. Fazendo coisas como se olhar no espelho, resmungar para si mesmo ou tentar arrumar sua estrutura óssea; como se estivesse tentando imitar a ‘nós’. Quem sabe, talvez algum dia ele possa ficar bom o suficiente para tranquilamente andar entre nós.”}
+      ]
+    </desc>
+    <desc id="7" openLevel="4">
+      [
+      {&lt;Aviso&gt; Somente funcionários de Nível 3 ou superior são permitidos ler este documento.&#13;&#10;(Essa gravação é de uma ligação do telefone de emergência da Unidade de Contenção. Sistemas telefônicos são instalados em cada contenção de Anormalidades com o Nível de Risco HE ou superior para habilitar rápida resposta a ameaças.)&#13;&#10;
+      Funcionário 1: Por favor atende, por favor atende, por favor atende. Essa é a Unidade de Contenção do ‘Há Nada Aqui.’
+      O Departamento de Resposta Emergencial (DRE): Olá, aqui é a Equipe de Resposta Emergencial. Qual é o problema?
+      Funcionário 1: Eu preciso de uma arma tranquilizante agora! Há uma emergência acontecendo!
+      DRE: Você pode especificar o motivo?
+      Funcionário 1: A Anormalidade… (sons de algo quebrando podem ser escutados) Está rasgando o funcionário.
+      DRE: Perdão?
+      Funcionário 1: Está matando meu colega!
+      DRE: Vamos responder imediatamente. Por favor, identifique o funcionário sendo atacado.
+      Funcionário 1: Ele é… espera um segundo. O nome dele é &lt;Omitido&gt;. Equipe de Controle. Eu sou, &lt;Omitido&gt;. Também da Equipe de Controle.
+      DRE: Confirmado. O que está acontecendo com seu colega nesse exato momento?
+      Funcionário 1: Nos ajude logo, nos ajude logo. Precisamos de uma arma para controlar a Anormalidade.
+      (Um barulho alto pode ser escutado, provavelmente um grito do colega)
+      Funcionário 1: Meu deus, isso é…
+      DRE: O que está acontecendo?
+      Funcionário 1: A Anormalidade está atacando meu colega. Está literalmente arrancando tudo dele completamente, eu não consigo fazer nada, repito, preciso de uma arma para controlar a Anormalidade.
+      DRE: A Equipe de Resposta Emergencial foi mandada. Ela chegará em breve.
+      (Omitido)
+      DRE: &lt;Omitido&gt;? O que está acontecendo agora? Ela ainda está atacando seu colega?
+      Funcionário 1: Ah não. Eu acho que já parou.
+      DRE: Ela parou de atacar?
+      Funcionário 1: Não, quero dizer. Meu colega… ele está morto. Sim, ele está completamente morto.
+      DRE: Como você pode estar tão certo disso?
+      Funcionário 1: Bem, é porque ele parece… ele parece…
+      DRE: Ele foi rasgado de alguma forma? Que partes do corpo foram danificadas?
+      Funcionário 1: Todas.}
+      ]
+    </desc>
+    <desc id="8" openLevel="4">
+      [
+      {&lt;Trecho de um Registro de Aconselhamento&gt;&#13;&#10;
+      “Assim como nós observamos as Anormalidades como fucionários, ‘Há Nada Aqui’ nos observa.
+      Então ela coloca a casca de um funcionário e pensa como o funcionário que acabou de matar.
+      Ele imita o comportamento mais comum do funcionário, a maneira que fala, seus gostos, desgostos e toda outra característica visível.
+      Só podemos imaginar o quão cuidadosamente e por quanto tempo esteve observando os funcionários para poder imitá-los.
+      O que estou tentando dizer é que não podemos tratá-la como um ‘monstro bobo e assustador’.
+      Até mesmo agora, ela poderia estar caminhando por aí vestindo a casca de alguém que conhecemos.
+      Essa Anormalidade está se tornando mais e mais humana.
+      Sua transformação está ficando mais rápida também. Eu tenho calafrios só de pensar sobre isso.
+      Quando chegar o dia em que falharmos em reconhecê-la, esse será o dia que a corporação chegará à ruína.
+      Precisamos ficar sempre vigilantes enquanto lidarmos com essa Anormalidade.”}
+      ]
+
+    </desc>
+    <desc id="9" openLevel="4">
+      [
+      {O documento a seguir é um registro de um comportamento anormal que um funcionário exibiu em seus últimos momentos antes que se tornasse uma casca do ‘Há Nada Aqui’.&#13;&#10;
+      Funcionário 1: Gerente, gerente!
+      Funcionário 2: Cara, você esteve procurando pelo gerente já faz um tempo. Você está agindo estranhamente hoje também, sabia? Com esse sorriso estranho e tal.
+      Funcionário 1: ...
+      Funcionário 2: De qualquer jeito, eu realmente espero que a janta na cafeteria seja macarrão novamente. Eu adoraria um macarrãozinho com bacon suculento.
+      Funcionário 1: ...
+      Funcionário 2: Oh, acabamos de ter um aviso de emergência. E falava para o último funcionário que trabalhou com "Há Nada Aqui" deve ir imediatamente ao escritório do conselheiro.
+      Funcionário 1: ...
+      Funcionário 2: Espera... não era... você?
+      Funcionário 1: ...
+      Funcionário 2: Ei, diga algum—
+      Funcionário 1: Gerente, gerente! Gerente!}
+      ]
+    </desc>
+    <desc id="10" openLevel="4">
+      [
+      {O segundo funcionário tomou ação imediata após escutar aquilo. Porém, ‘Há Nada Aqui’ saiu de dentro da casca do primeiro funcionário, revelando sua forma inicial. O registro só possui arquivos de áudio, então o que realmente aconteceu ou que tipo de comportamentos o funcionário mostrou ainda permanecem desconhecidos.&#13;&#10;&#13;&#10;A casca com o ‘Há Nada Aqui’ dentro tenta seu melhor em imitar o comportamento do funcionário que matou em alguns momentos atrás, como as ações dele, suas palavras finais, esses tipos de coisas.&#13;&#10;&#13;&#10;E várias cascas falavam uma só palavra, "Gerente".}
+      ]
+    </desc>
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="needKill">Quanto menor era a Fortitude do funcionário que está trabalhando, menor era a Taxa de Êxito e menos estável era o trabalho.</specialTip>
+      <specialTip openLevel="2" key="justice">Quando um funcionário que tinha Justiça de Nível inferior a 4 terminou o trabalho, o Contador Qlifót reduziu.</specialTip>
+      <specialTip openLevel="2" key="killUp">#0, que estava na Unidade de Contenção, foi morto pelo $0. De repente, $0 se transformou em #0. O mesmo aconteceu quando outro funcionário entrou em pânico durante o trabalho.</specialTip>
+      <specialTip openLevel="2" key="panicUp">Quando o resultado do trabalho era Ruim, #0 foi atacado e se tornou a casca do $0.</specialTip>
+      <specialTip openLevel="3" key="makePanic">Funcionários com Fortitude de Nível 3 ou inferior imediatamente entraram em pânico ao entrar na Unidade de Contenção. É recomendado que funcionários de Nível menor que 4 em Fortitude não sejam mandados para a contenção da Anormalidade.</specialTip>
+      <specialTip openLevel="3" key="backMonster">Quando #0, que testemunhou a aparência humana do $0 entrou em pânico, ele se tornou a nova casca do $0. E ao mesmo tempo, o Contador Qlifót reduziu.</specialTip>
+      <specialTip openLevel="4" key="needGun">Quando o Contador Qlifót chegava a 0, $0, tomando a aparência do falecido #0, desapareceu de sua Unidade de Contenção. O gerente precisa rapidamente encontrar e matar o $0 disfarçado.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

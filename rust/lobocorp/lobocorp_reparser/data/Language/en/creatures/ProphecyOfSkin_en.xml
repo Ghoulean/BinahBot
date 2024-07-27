@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300103">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-90</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/ProphecyOfSkin</portrait>
+      <name openLevel="1">
+        Skin Prophecy
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>
+        Save us now and forevermore. The truth shall set us free.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {An ancient-looking religious book that rests on top of a skinny lectern. Its numerous pages are written on old parchment.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Its believers prayed that its sanctity would last forever by binding the tome in human skin.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Those who open the book will be enlightened to unimaginable truths. The ones who have mastered the truths will be called by the prophets; this call cannot be denied.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Save us now and forevermore. The truth shall set us free.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">The employee who reads this book will experience an increase in Prudence.</specialTip>
+      <specialTip openLevel="2" key="2">The book can be read until one’s Prudence reaches its limit.</specialTip>
+      <specialTip openLevel="2" key="3">The more one reads, the more they will become vulnerable to WHITE damage.</specialTip>
+      <specialTip openLevel="2" key="4">Any employee who panics after reading this book will perish immediately.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

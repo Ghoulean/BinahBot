@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100036">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {Talvez seremos capazes de entender os segredos do universo quando entrarmos no domínio do $0.},
+      {A cena de funcionários enlouquecidos cantando junto ao $0 se parece com um ritual para trazer algo ou alguém.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Uma das coisas que o $0 nos disse foi: “Não há algo como a coincidência no universo.”},
+      {Vários de nossos funcionários ficam compreensivelmente aterrorizados quando o $0 tenta imitar risadas.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {O propósito dos tentáculos do $0 é incerto, mas é certo que eles podem causar danos permanentes ao cérebro humano.},
+      {Os tentáculos do $0 mancham as barreiras entre a realidade e o desconhecido.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-03-60</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/GalaxyPiece</portrait>
+      <name openLevel="1">
+        Fragmento do Universo
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>Você vê uma música em sua frente. Ela está se aproximando, tornando-se mais colorida a cada segundo.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Uma Anormalidade que se assemelha aos inocentes rabiscos de uma criança.&#13;&#10;
+      Originalmente, não possuía forma estável, pois ela continuava a mudar. Até hoje os aspectos ainda mudam, embora seja em ritmo mais lento. A análise de componentes revelou que a Anormalidade consiste de matéria que não existe na Terra. Ela é notável por sua aparência metafísica que ninguém consegue descrever com palavras.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Ele frequentemente mostra atividade linguística incompreensível. Um funcionário tentou decifrar essa linguagem (Veja o Documento #1 &lt;A Canção do Funcionário Davi&gt;), mas o seu Nível de contaminação mental passou dos limites em apenas alguns dias. Ele sofreu de psicose e precisou ser quarentenado.}
+      ]
+    </desc>
+    <desc id="3" openLevel="1">
+      [
+      {Os tentáculos da Anormalidade (que são bem diferentes do que consideramos tentáculo e por simplicidade nós o chamamos assim) pode perfurar através da barreira da humanidade. Funcionários empalados pelos tentáculos sofrerão dano cerebral semi-permanente.}
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {Quando a Anormalidade escapa da Unidade de Contenção, ela emitirá sons pelo corredor. E os sons que ela faz possuem o que podem ser considerados melodia e sílabas, nós chamamos isso de “cantar”. Entretanto, nenhum de nossos funcionários consegue lembrar com precisão, já que na maior parte do tempo eles não conseguem descrever nada devido ao dano cerebral que sofreram. Aqueles que estavam em até 100 metros do “cantar” o chamaram de um som que nunca foi escutado nesse mundo. Por causa dessa descrição, o entitulamos de “Ecos do Além”. (Veja o Documento #2 &lt;Cantar&gt;)}
+      ]
+    </desc>
+    <desc id="5" openLevel="3">
+      [
+      {Experimento_1 &lt;A Possibilidade de Comunicação&gt;&#13;&#10;
+      Nós determinamos que a Anormalidade possui inteligência similar (ou até maior que) a humana, e demos um curso de linguagem básica a ela. Como resultado, uma comunicação rudimentar combinando palavras se tornou possível. O que vem a seguir é um segmento de uma gravação de uma conversa com a Anormalidade.&#13;&#10;
+      P: Todos da sua espécie possuem aparência similar?
+      R: Negativo. Fora. Criança. Vê. Figura. Rosto. Feliz. Muda. Formato.&#13;&#10;
+      P: Por que você veio para cá?
+      R: Conhecimento. Compartilhar. Humano.&#13;&#10;
+      P: Por que você quer compartilhar seu conhecimento conosco?
+      R: Entender. Conhecimento. Momento. Saber. Universo. Coincidência. Negativa; Nenhuma.&#13;&#10;&#13;&#10;Esta seção é uma tentativa de decifrar a conversa com a Anormalidade.&#13;&#10;
+      1. Sua forma é baseada na figura desenhada por uma criança. E ela mudou porque a expressão da criança estava feliz quando fez o desenho.
+      2. Ela veio aqui para compartilhar o conhecimento de sua espécie conosco. No momento em que entendermos por completo esse conhecimento, nós saberemos seu objetivo final.
+      3. Não há algo como a coincidência no universo.}
+      ]
+    </desc>
+    <desc id="6" openLevel="3">
+      [
+      {Experimento_2 &lt;Um Experimento Sobre Risadas&gt;&#13;&#10;
+      Após assistir um vídeo sobre risadas por 30 minutos, a Anormalidade entendeu o conceito de “rir”. Após isso, quando Agentes entravam na Unidade de Contenção para realizar o trabalho, as vezes ela emitia um som estranho com o que parecia com o formato de um sorriso em seu rosto e parecia estar imitando risadas.}
+      ]
+    </desc>
+    <desc id="7" openLevel="4">
+      [
+      {Experimento_3 &lt;Compreensão de Símbolos&gt;&#13;&#10;
+      Nós ensinamos o sentido de vários símbolos junto a palavras. Desses símbolos tinhamos o formato de coração. Ele provocou uma mudança distinta na Anormalidade.&#13;&#10;
+      P (Mostrando uma figura de coração para a Anormalidade): Esse símbolo é do “coração”. Várias pessoas acreditam que as emoções vêm do coração, então esse símbolo é utilizado para expressar emoções positivas ou que você gosta de alguém.
+      (Omitido)&#13;&#10;
+      Após isso, vários símbolos que se assemelhavam a corações foram vistos no corpo da Anormalidade. Ela parecia entender que o símbolo poderia ser utilizado para expressar simpatia aos humanos.&#13;&#10;
+      Combinando os resultados dos dois experimentos anteriores, podemos confirmar que esta Anormalidade não é hostil a humanos e deseja se tornar amiga. }
+      ]
+    </desc>
+    <desc id="8" openLevel="4">
+      [
+      {Documento #1 &lt;A Canção do Funcionário Davi&gt;&#13;&#10;
+      Davi era famoso em seu departamento por suas tentativas de se comunicar com o 'Fragmento do Universo'. Ele era um intelectual que adorava ler livros filosóficos e observar estrelas. Ele tinha tanto interesse na Anormalidade que conseguiu o emprego; ele pesquisou sua linguagem e comportamento puramente por interesses próprios.&#13;&#10;
+      E o que aconteceu com Davi? Eventualmente, ele obteve sucesso em entrar no domínio do Fragmento do Universo. Entretanto, era óbvio que o pequeno cérebro dele não conseguia aguentar. Ele foi transferido para a enfermaria psiquiátrica e morreu de fome após cantar uma música irreconhecível. É por isso que a voz da Anormalidade não pode ser revelada para o público.&#13;&#10;&#13;&#10;Gravação de Áudio: Ecos no Universo (Atualmente Removido)}
+      ]
+    </desc>
+    <desc id="9" openLevel="4">
+      [
+      {Documento #2 &lt;O Cantar&gt;&#13;&#10;
+      ...Por que você não me disse antes que a Anormalidade era responsável pela situação deles? Eu não tenho ideia se há algum padrão, mas todos mostram o mesmo comportamento estranho no exato mesmo dia. Você pode imaginar um grupo de pacientes encarando o céu completamente atordoados, gemendo sons estranhos no corredor à noite enquanto todos estão dormindo? Foi tão difícil persuadir os outros pacientes falando que eles estavam praticando para o evento de dia das bruxas da corporação que estava a vir. Tratamento psiquiátrico e medicamentos não ajudarão. "Vindo, vindo, ainda vindo," eles continuam a repetir essas palavras e todo resto que eles resmungam é de nenhum idioma que conhecemos. Eu acho que mandá-los para um hospital comum foi uma decisão imprudente. &#13;&#10;
+      - Doutor da Ala (Gravação deletada) }
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="escape">Quando o resultado do trabalho era Neutro, o Contador Qlifót reduzia com probabilidade mediana.</specialTip>
+      <specialTip openLevel="1" key="escape2">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia com alta probabilidade.</specialTip>
+      <specialTip openLevel="1" key="escape3">Quando o Agente #0 entrou em pânico durante o trabalho, o Contador Qlifót reduziu.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

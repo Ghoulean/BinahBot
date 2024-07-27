@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100050">
+
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務.
+    </narration>
+
+    <narration action="start">
+      [
+      {我們仍在旅途當中. 我們沿著黃色的磚道前行, 讓我們的夢想成真.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {這個治療讓大家都沉默了, 包括那些不願治療而拒絕沉默的人. }
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {$0 開始在腦袋後面緊追不放, 而不是將鳥兒嚇跑. }
+      ]
+    </narration>
+
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">F-01-87</codeNo>
+      <name openLevel="1">尋求智慧的稻草人</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/Scarecrow</portrait>
+      <riskLevel openLevel ="2">HE</riskLevel>
+      <openText>這座城市依然美麗, 翡翠之路仍舊閃閃發光.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {一個外型有如稻草人的異常. 稻草上遍布血跡.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {沒有頭部, 或許是遭人給用力扯掉. 它對員工充滿敵意. 它會嘗試取走那些在智力測驗裡獲得 “極佳” 分數的員工的腦袋. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {每座城市都有自己獨特的科技. 這是振興他們城市的關鍵. 有許多的科技, 但在其中, 有一項替換身體的科技. 它能修復, 改變, 以及替換掉失能或不想要的身體部位. 住在這座城裡的人們都能得到這種治療. 然而, 有個謠言. 如果有個富人的肺部開始衰竭並對呼吸感到困難, 那位富人會拿走窮人的肺. 同樣的當富人想要更好的視力時, 他們會拿走人的眼睛. 這可憐的人接著會被處理掉, 將失去眼睛以及肺臟衰竭的他們帶去某個地方獨自衰亡.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {城市的發言人向人們保證, 說到那則謠言是不實的. 為了讓謠言消散, 他在城市中挑選了些需要幫助的病人, 並修復了他們的身體. 在這些少數幸運兒中, 其中一人終於在漫漫長日後返回了. 在他的頭上有道明顯的疤痕. 人們問他覺得如何, 而他也回覆到自己覺得腦袋輕鬆多了. 他曾經是個以淚洗面的傷心之人, 所以大家都相信那個手術成功了.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {然而, 在那些被選中的人之中出現了問題. 當被問到時, 他只是笑而不語. 在後面的日子裡, 他的父母的葬禮上, 他也沒有露出傷痛. 在那場治療後, 他什麼也沒做, 就只做著一些瑣碎的小事. 他喜歡盯著窗外以及自言自語. 最後, 他在家裡的門把上自縊了. 一些人們相信是那場治療引起了他的問題, 但過沒幾天他就完全被遺忘了. 這座城市依然美麗, 翡翠之路仍舊閃閃發光.}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">一名謹慎等級 3 或是更高的員工完成了工作, 逆卡巴拉計數器減少了</specialTip>
+      <specialTip openLevel="1" key="2">當工作結果為差時, 逆卡巴拉計數器減少了.</specialTip>
+      <specialTip openLevel="2" key="3">突破收容的異常在殺掉員工後, 會吸收員工的大腦並恢復它的血量.</specialTip>
+    </specialTipSize>
+  
+  </observe>
+
+
+
+</creature>

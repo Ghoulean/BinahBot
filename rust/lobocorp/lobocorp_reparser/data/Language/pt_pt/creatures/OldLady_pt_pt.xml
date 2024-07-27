@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등0000000000000000000
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id ="100021">
+
+    <narration action="move">
+      #0 recebeu a ordem para ir para a unidade de contenção de $0.
+    </narration>
+
+    <narration action="start">
+      [
+      {A $0 é uma Anormalidade que não conhecemos bem. Trabalhos devem ser efetuados com grande cuidado.},
+      {A $0 é uma Anormalidade que pode causar danos psicológicos. É recomendado enviar um empregado com bom status mental.}
+      {A $0 pode enlouquecer #0, mas esse risco diminuirá quanto mais soubermos sobre ela.}
+      {Estás pronto para ouvir uma das histórias da $0?}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {No quarto da $0, um silêncio sofucante aproxima-se. },
+      {O sillêncio usurpando a sala é horrivelmente quebrado pelo a chiadeira da cadeira de baloiço.},
+      {A cadeira de baloiço chia em um chão cheio de mofo não natural.},
+      {Não sendo capazes de aguentar as histórias da $0, as paredes e o chão da sala ficaram com rachaduras.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {As velhas histórias da $0 estão recheadas com maldições. Agora as pessoas teram de ouvir as histórias dela.},
+      {A alma da $0 pode ter desaparecido solitariamente há muito tempo.}
+      {As histórias dela fascinavam as pessoas, mas agora tudo que restou nas histórias dela são maldições.}
+      {As histórias dela são venenosas. Elas infiltram-se nas pessoas trazendo as para um mundo inaguentavel.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {A $0 é surda e quase cega mas ela reconhece a presença de #0.},
+      {De repente, os rangidos da cadeira pararm. A $0 começa a recitar uma frase de um poema em voz baixa.}
+      {A $0 não olha para #0. Mas #0 irá olhar para ela quando a $0 começar a sua história.}
+      {Tentar conversar com a $0 é inutil. Tudo que ela precisa é de uma audiencia, #0.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {#0 acabou de terminar o seu trabalho. #0 sai da unidade de contenção com pressa.},
+      {#0 sai da unidade de contenção após o trabalho. Os restos da solidão dela serão preenchidos com histórias.},
+      {Uma triste atmosfera unica adentra #0. #0 termina o trabalho e sai da unidade de contenção com pressa.}
+      {Antes que a interminavel histórias começe, #0 sai da unidade de contenção com sucesso.}
+      ]
+    </narration>
+
+    <narration action="special_ability_1">
+      [
+      {$0 inicia uma conversa com #0.}
+      ]
+    </narration>
+
+    <narration action="special_ability_2">
+      [
+      {“Meu doce, queres ouvir uma hitória?"}
+      ]
+    </narration>
+
+    <narration action="special_ability_3">
+      [
+      {“Perto de um monte de lenha, perto de um monte de lenha,”}
+      ]
+    </narration>
+
+    <narration action="special_ability_4">
+      [
+      {“Foi aí que eu conheci o teu pai,”}
+      ]
+    </narration>
+
+    <narration action="special_ability_6">
+      [
+      {“Tu arrancas-te a cabeça dele e bebes o seu sangue.”}
+      ]
+    </narration>
+
+    <narration action="special_ability_7">
+      [
+      {“Tu mataste-o, Sexta, enterrado no domingo.”}
+      ]
+    </narration>
+
+
+
+    <narration action="panic">
+      [
+      {Derepente, #0 vê uma pá lamasenta na sua mão. Os outros empregados insistem que #0 não tem nada nas suas mãos, mas #0 apenas grita.}
+      {A mente de #0 não aguentou a história de outro mundo. Com o seu cerebro deretido, #0 agora está aprisionado(a) nas histórias dela.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-01-12</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/OldLady</portrait>
+
+      <name openLevel ="1">
+       Velha Senhora
+      </name>
+      
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        Várias Histórias, Várias Mortes.
+      </specialName>
+
+      <openText>Ela falava tanto. Mas no fim das contas, a solidão era a sua única ouvinte.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [{A Anormalidade tem a forma de uma velha e frágil mulher. Quando alguém entra na sua unidade de contenção, ela irá falar com a pessoa que entrou.}]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {As historias dela variam de vez enquando mas ela sempre as começa com ‘Criança, criança. Queres ouvir uma velha história?’. A história pode ser uma canção de ninar, um poema desconhecido, uma história infantil comum ou algo completamente novo.}
+      ]
+    </desc>
+
+
+    <desc id="3" openLevel="1">
+      [
+      {Ela sabe todas as histórias infantis que existem e nunca para de contá-las até que o ouvinte vá embora.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+
+      {&lt;Excerto do Registo de uma Entrevista&gt;&#13;&#10;Empregada F5049: “Ela deve ser a Anormalidade mais solitaria de todas. Uma criatura cheia de solidão. Ela conta histórias para preencher o vazio, e uma história precisa de um ouvinte. Quando alguém entra na unidade de contenção, ela irá tentar preencher esse vazio. Mas é claro que dar-lhe ouvidos é perigoso. Ela sabe todas as histórias deste mundo e até mesmo aquelas que nem existem. A nossa mente não é capaz de aguentar isso tudo então ela pode fritar o teu cérebro em um mero instante.”}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="Godoku">Após completar um trabalho com outra Anormalidade para além da $0, o seu Qliphoth Counter diminuiu.</specialTip>
+      <specialTip openLevel="1" key="Attached">Quando o Counter da $0 chega a 0, umas formas negras misteriosas se formam dentro na sala de contenção. Nós chamamo-las de "Solidão".</specialTip>
+      <specialTip openLevel="1" key="NoAttached">Quando a solidão se acumulou, a mesma ficou agarrada ao empregado que entrou dentro da unidade de contenção.</specialTip>
+      <specialTip openLevel="1" key="NoAttached2">#0 sofreu um continuo dano Branco até que a solidão se disipou. #0 também não foi capaz de seguir nenhuma ordem até se libertar da mesma.</specialTip>
+    </specialTipSize>
+
+  
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {There was some cracking along the floor.}
+        {Hair-raising screeching of wooden rocking chair filled the air.}
+        {I did not want to enter this house.}
+        {Because I don’t like to listen to a story.}
+        {Bugs were buzzing around here and there.}
+        {Something slimy popped as I set my foot on it.}
+        {I found it.}
+        {Every hole on its face, was swarming bugs.}
+        {I don’t want to stay here.}
+        {I want to get out.}
+        {Damp, nasty, awful. I can’t stand it anymore.}
+        <!--계속-->
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Get out." target="1" isAnswer="false" />
+        <node desc="Stay." target="2" isAnswer="true" message="You have succeeded to obtain final observation report on Old lady."/>
+      </select>
+      
+      <desc id="1" select="0">
+        [
+        {I turned around to get out of this place.}
+        {Once again, I bit lips in self-hatred while escaping.}
+        ]
+      </desc>
+      
+      <desc id="2" select="0">
+        [
+        {I stayed, bearing the unpleasantness.}
+        {She was so talkative before. In the end, loneliness was the only listener.}
+        {She called me, with her finger.}
+        {I am now ready to listen to her story.}
+        ]
+      </desc>
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {“Shall I tell you a story, my sweetheart?”}
+        {She told me stories.}
+        {And the stories built my world.}
+        ]
+      </angela>
+    </max>
+  </observe>
+</creature>

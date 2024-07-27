@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100027">
+
+    <narration action="move">
+      指派 #0 至 $0 的收容室.
+    </narration>
+
+    <narration action="start">
+      [
+      {“你知道嗎, 我覺得在加入 Lobotomy 後我的生活又重新振作了起來.”},
+      {員工 #0 從 $0 裡感到悲傷.},
+      {員工 #0 在看著 $0 的時候手腕感到一陣酸痛.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {“沮喪是種內心的疾病. 我們是第一個發現該如何快樂的醫生.”},
+      {員工 #0 盯著漂浮在浴缸上的絕望.},
+      {員工 #0 感到壓倒性的沮喪及悲傷.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {“治癒身體的藥物以不可置信的速度進展著, 但治癒內心的卻不是.”},
+      {員工 #0 看見即將到來的困境及失敗.},
+      {員工 #0 看見了未來的困境以及考驗. 無論他/她做了什麼, 唯一的結果只有失敗一途.}
+      ]
+    </narration>
+
+    <narration action="special_ability">
+      [
+      {員工 #0, 被剝奪了活下去的原因及希望, 沒有抗拒伸向他/她的手.}
+      {員工 #0 的悲傷集中到了一個地方.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-05-51</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/BloodBath</portrait>
+
+      <name openLevel ="1">
+        血浴池
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        被你遺棄的東西.
+      </specialName>
+
+      <openText>許多的手漂浮在這浴缸之上. 在那有雙手屬於我曾愛過的人.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {一個滿是鮮血的浴缸. 血量總是保持在剛好的水平. 從沒溢出來過. 絕望也容納於此. &#13;&#10;在你看向浴缸內部時, 無法忍受的沮喪會將你壓垮. 在那瞬間, 它會將員工拽進裡面. 它的力量並不大, 但是被沮喪壓垮的員工卻抗拒不了. 除了手腕, 它會將員工一點不剩的吞噬殆盡. 漂浮在浴缸內的手腕一片蒼白. 它們會試著伸向你, 就像是在尋求幫助似的. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {在腦袋清醒時要砍下你的手腕並不容易. 這需要強大的意志力來重複嘗試. 只有在你把它當成是在切割一片肉塊時, 你才會成功. 只有在你如此渴望死亡時, 你才會成功.  }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {我很後悔沒有問她為什麼跟我要了一把菜刀. 我也非常後悔沒有意識到她為什麼把手腕藏了起來不讓人看見. 我更後悔的是沒有意識到她在跟我說話時總是藏著手腕. 我最後悔的是沒有意識到在她的笑聲裡藏著的東西.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="1">
+      [
+      {我甚至沒辦法想像砍下手腕會有多痛. 我只能從字面上來理解她為什麼能成功的砍下她的手腕. }
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {我們總是在每次成功時敲擊酒瓶. 這成了我們的傳統. 她告訴我們如果我們對成功習以為常的話, 一個輕微的失足將陷我們於低迷之中. 因此, 我們對每件細微瑣事都感到快樂. 而我們也不該輕忽每個失敗, 因為失敗才能堆積出成功. &#13;&#10;當我看見被她砍下的手腕上的傷疤時, 我想起了我們的酒櫃. 許多酒瓶都已經沒了. 只剩下最後一瓶. &#13;&#10;在那一天, 我喝光了那最後一瓶.}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="noRationalist">當堅韌等級 1 的員工完成工作後, 會從 $0 內伸出一隻手並將該員工拉至裡面. 同樣的現象在自律等級 1 的員工工作時也會發生.</specialTip>
+      <specialTip openLevel="1" key="manyHands">一隻蒼白的手會從 $0 的表面出現並將員工拉入裡面. 當手隻的數量增加時, $0 的 PE-BOX 產出也增加了.</specialTip>
+      <specialTip openLevel="1" key="threeHands">>&lt;小心指揮&gt; 當 $0 有著三隻手時, 就無法保證員工的性命了. 無論工作的條件和結果如何, 它似乎都會將員工吸入.</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {腦內啡療法影響了不只是內心, 也包括了身體.}
+        {問題是, 當我們意識到問題的時候, 藥物的供給已經變得相當龐大了. }
+        {其中一個問題是變得麻木. }
+        {人們相信他們能活在快樂之中.}
+        {人們也相信他們能用金錢來購買悲傷並銷售快樂.}
+        {當第一起自殺發生後, 我們應該明白這個信念已經被打破了.}
+        {許多的手漂浮在這浴缸之上.}
+        {這些手想要抓握某些東西卻無能為力.}
+        {你……}
+        <!--계속-->
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Grabbed a hand." target="1" isAnswer="true" message="You have succeeded to obtain final observation report on Bloodbath." />
+        <node desc="Did not grab a hand." target="2" isAnswer="false"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {我感到被凍僵了. }
+        {我記得那些手.}
+        {在那有雙手屬於我曾愛過的人.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {你轉過了頭.}
+        {這不是你第一次忽視它們了.}
+        {之後也會一樣.  }
+        ]
+      </desc>
+
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {有時候你會相信失去的回憶總是比較美麗的嗎?}
+        {我相信.}
+        {你現在就讓我看著.}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+
+
+</creature>

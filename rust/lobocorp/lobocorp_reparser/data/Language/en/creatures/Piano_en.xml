@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+  -->
+  <info id="100065">
+    <narration action="move"></narration>
+    <narration action="start">
+      [
+      {We can feel the passion and fire that emerges from deep inside $0.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Even without a guiding score, $0 will allow anyone to make the greatest performance of their life.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {The sonata played by the performer possessed by the moon is breathtakingly alluring to the point that it shatters the walls between man.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Music sets all free with no prejudice.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">D-01-105</codeNo>
+      <portrait openLevel="0">Sprites/Unit/creature/Piano</portrait>
+      <name openLevel="1">
+        Il Pianto della Luna
+      </name>
+      <riskLevel openLevel="0">
+        WAW
+      </riskLevel>
+      <openText>“Tales say that the moon bewitches man, yet in reality, it is the man that despairs at the moon.”</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;This Abnormality was created with the ideas provided by Tumblbug Backer 에레 (Ere).&lt;/i&gt;&#13;&#10;&#13;&#10;An old woman with a piano at her side. Her eyes are usually closed. She only nods instead of speaking, but on rare occasions, she will faintly smile.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {&lt;Excerpt from a Newspaper Article&gt;&#13;&#10;
+      The world’s greatest pianist, (Redacted), always gave her best performances when playing that sonata, her favorite piece. Many praised her excellent skill. Some couldn’t even stay seated when she played the third movement because of the overflowing energy and madness that would come of her performance.
+      
+      In her now empty residence from which she left for the moon, lies the piano she played since childhood, and shrunken heads which allow us to delve into her mind.}
+      ]
+
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Excerpt of Audio Record of Employee (Redacted)’s Counseling&gt;&#13;&#10;
+      “I mean, we didn’t see anything outstanding when we went to secure it. There was just some lady sitting there. It was like she had been waiting for us to come.
+      What happened when one of us approached her?
+      Well, that guy didn’t know the first thing about art or music, but before we knew it, he was playing the first movement of that sonata.
+      And the lady smiled.
+      …To be honest, I don’t think I’ll ever get to hear a piano performance as beautiful as what I heard then ever again.
+      We never got to see that guy again.
+      That’s why you need my testimony, right?
+      Because I played the third movement.”
+      (Omitted)}
+    ]
+  </desc>
+    <desc id="4" openLevel="3">
+      [
+      {“I don’t know how or why it makes you play. Your hands just move, and you feel… euphoric while playing it. Everything around you fades away. It’s just you and the piano. After I finished playing, exhausted, I realized what my feet had been pressing down on weren’t pedals, but severed heads.”}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {“…The moon represents the human psyche.&#13;&#10;They often say that the moon is beautiful.&#13;&#10;But when enough time has passed, when you look at it and see what kind of face it truly wears…&#13;&#10;You’ll realize you were madly in love with something so broken and shattered.&#13;&#10;In the end, we all become like the moon. All because we can’t bear ourselves.”}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">The piano can be played by ordering an Agent to Perform. However, please note that the Qliphoth Counter will lower when the performance is finished.</specialTip>
+      <specialTip openLevel="1" key="2">The music temporarily increased the Temperance and Justice of all employees by a small degree. However, the one who performed lost half their HP by the end of the performance.</specialTip>
+      <specialTip openLevel="1" key="3">When the work result was Normal, the Qliphoth Counter lowered with a moderate probability.</specialTip>
+      <specialTip openLevel="1" key="4">When the work result was Bad, the Qliphoth Counter decreased.</specialTip>
+      <specialTip openLevel="1" key="5">The Qliphoth Counter lowered to 0 when an employee entered the unit to play for the third time.</specialTip>
+      <specialTip openLevel="1" key="6">When $0 escaped, it voluntarily returned to its Containment Unit after the end of the third movement. The movement also prematurely ended when $0 was suppressed.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <!--본체와 같아야 함-->
+    <name>Il Pianto della Luna</name>
+    <codeId>D-01-105</codeId>
+  </child>
+</creature>

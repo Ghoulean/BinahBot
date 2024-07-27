@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100056">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção de $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {#0 está fazendo (CENSURADO) ao (CENSURADO).}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {#0 está se sentindo (CENSURADO) do (CENSURADO).}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {(CENSURADO) está fazendo (CENSURADO) e… Meu deus, é repugnante.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">O-03-89</codeNo>
+      <name openLevel="1">CENSURADO</name>
+      <portrait openLevel="1">Sprites/Unit/creature/CENSORED</portrait>
+      <riskLevel openLevel="1">ALEPH</riskLevel>
+      <openText>Se uma falha no sistema desabilitar a censura que cobre a Anormalidade, precisaremos novamente considerar a eliminação do gerente.</openText>
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {Qualquer tentativa de descrever (CENSURADO) causará severa corrupção mental para tanto o ouvinte, quanto quem fala. Por isso, é proibido gravar qualquer coisa que represente a aparência desse (CENSURADO). Todos os registros de áudio e escrita precisam ser inspecionados para que haja certeza que tais representações sejam deletadas de cada um deles. Todo o trabalho de deleção precisa ser atribuído para Agentes de Nível 5 ou superior. }
+      ]
+    </desc>
+    <desc id="2" openLevel="2">
+      [
+      {&lt;Trecho de uma Gravação de Áudio&gt;&#13;&#10;
+      Randy: É uma pena que precisamos mandar um Agente tão bom quanto você para aquela Unidade de Contenção. Você tem algumas últimas palavras antes de ir? Claro, posso estar falando isso, mas é só por precaução.&#13;&#10;
+      (CENSURADO): Não dá para ser evitado. Eu sou o Agente com a maior resistência à quebra cognitiva. Eu sempre fui apático com tudo desde que era pequeno. As pessoas sempre diziam que me faltava empatia e que eu não era normal. Porém, quando eu comecei a trabalhar aqui, minha habilidade anormal virou a chave para a salvação de todos. Isso é algo que nunca se pode ter em qualquer outro lugar. &#13;&#10;
+      Randy: Deixe-me repetir isso mais uma vez. Enquanto seja verdade que você tem a maior resistência entre os Agentes, isso é somente baseado em padrões humanos. Se você começar a sentir alguns sintomas como: Surto de pensamentos intrusivos, decidir fazer contagem regressiva do dez, mas esquecer até o que é o dez, sentir uma regurgitação de vômito ou saliva, se esse lugar começar a ter aparência que não seja a corporação ou se de repente se sentir insignificante e pensar que se asfixiar é única esperança que resta… você precisará sair da Unidade de Contenção imediatamente.&#13;&#10;
+      (CENSURADO): Se você me falar isso mais uma vez, farão treze vezes no total que você terá me contado. &#13;&#10;
+      Randy: Não podemos monitorá-lo ao vivo. Todas as câmeras estão desligadas e seu gravador de som só será atualizado quando o trabalho for concluído. Nem preciso dizer que eu estou preocupado com você. Por que você não repete as instruções que eu acabei de te dar?&#13;&#10;
+      (CENSURADO): Vá para dentro, não faça o trabalho sozinho, acompanhe o Agente (CENSURADO) e observe o progresso do trabalho. Grave tudo o que acontecer; e mesmo se (CENSURADO) estiver em perigo, não tentar realizar o resgate a não ser que seja ordenado. É isso, certo??&#13;&#10;
+      Randy: Exatamente. Agora, nosso contato será cortado em dez segundos. Boa sorte e vá com Deus.&#13;&#10;
+      (CENSURADO): Eu não tenho arrependimentos. Eu diria que sou bastante sortudo comparado aos outros; ao menos eu posso deixar minha última gravação de voz. Bem, eu digo “a última” só como precaução, mas…&#13;&#10;
+      Randy: Certo, sua gravação será eternamente arquivada e todos os seus colegas se lembrarão de você. 3... 2... 1... Finalizar recebimento de áudio.&#13;&#10;
+      (CENSURADO): Randy... Aquilo se parece exatamente como nosso (CENSURADO) de muito tempo atrás, não parece? ...Ah, eu esqueci por um momento que só eu posso ver isso. O Agente (CENSURADO) que estava comigo se tornou (CENSURADO)... Ele... parece que consegue até acasalar... É exatamente como o processo de (CENSURADO)... Eu me sinto enjoado, mas estou bem… Um pequeno (CENSURADO) saiu do (CENSURADO) do Agente (CENSURADO)... Não consigo acreditar nisso... Agora está começando a (CENSURADO) o Agente (CENSURADO)... O Agente (CENSURADO) está gritando como (CENSURADO)... Os gritos... você pode escutá-los? Eles me lembram de (CENSURADO)... &#13;&#10;
+      Som: (CENSURADO)——————————————————&#13;&#10;
+      Agora eu entendo... esse é nosso (CENSURADO)... essa é a razão do (CENSURADO) existir... &#13;&#10;
+      Essa é a pior coisa que eu já vi na minha vida, não consigo nem me mexer. Parece que o (CENSURADO) me fez o próximo alvo. Em breve... eu serei (CENSURADO) também… ele está chegando mais perto. Vou colocar meu gravador no meu (CENSURADO)... eu espero que esta gravação possa ajudar a todos…&#13;&#10;&#13;&#10;&lt;O áudio é cortado&gt;}
+      ]
+    </desc>
+    <desc id="3" openLevel="3">
+      [
+      {Mesmo após a adoção de filtro cognitivo, vários de nossos funcionários ainda ficaram loucos e metade deles foi perdida por conta do (CENSURADO). Mesmo se aumentarmos o filtro cognitivo para a configuração máxima, com o risco de ter nossos funcionários e outras Anormalidades sendo percebidas como objetos extremamente simples. Os gerentes ainda ficarão loucos assim que essa Anormalidade for vista. Não podemos deixar nosso gerente cego só por causa de uma Anormalidade. Estamos presos a um dilema. A única proposta de solução que conseguimos foi a de um de nossos funcionários. Que era para cobrir a Anormalidade com uma quantidade enorme de faixas de censura e borrões. Se uma falha no sistema desabilitar a censura que cobre a Anormalidade, precisaremos novamente considerar a eliminação do gerente.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">O Contador Qlifót da Anormalidade pode ser aumentado em 1 por meio de um tipo de trabalho especial. Para satisfazer a Anormalidade, um funcionário precisa ser selecionado de uma seleção aleatória.</specialTip>
+      <specialTip openLevel="1" key="2">Funcionários de Nível 4 ou inferior imediatamente entraram em pânico quando se encontraram com a Anormalidade. Quando $0 escapou, funcionários desse mesmo nível mostraram a mesma reação.</specialTip>
+      <specialTip openLevel="3" key="3">Quando um funcionário entrava em pânico dentro da Unidade de Contenção, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="2" key="4">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <name>CENSURADO</name>
+    <codeId>O-03-89-1</codeId>
+  </child>
+</creature>

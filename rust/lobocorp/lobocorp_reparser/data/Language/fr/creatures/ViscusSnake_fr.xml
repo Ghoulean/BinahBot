@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100046">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="mid1">
+      [
+      {Le $0 semble former une sphère humide et lisse. Il n'est pas impossible qu'il confonde le cerveau de #0 avec un nid.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Si la peau de #0 prend une affreuse teinte verdâtre, il est déjà trop tard pour lui.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-02-74</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/ViscusSnake</portrait>
+      <name openLevel="1">
+        Nid Dénudé
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>Il peut entrer dans votre corps par n’importe quel orifice.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {+ Si vous repérez un employé dont le visage devient vert foncé, veuillez le signaler immédiatement au Sephirah du secteur. Il est conseillé de vérifier que la cause de la décoloration n'est pas un simple mal de ventre. Lorsqu'on leur suggère de se rendre au service médical, ceux qui ont mal au ventre acceptent à contrecœur, mais un employé infecté s'efforce trop d'agir comme si de rien n'était. Dans cette situation, essayez de ne pas alerter l'employé que quelque chose sort de l'ordinaire. Lorsque l’hôte s’agite, l'infection s'accélère. Si la peau change de couleur, cela signifie qu’au moins 30% du cerveau de l’hôte a déjà été consommé. À ce stade, toute conversation est une tentative de l'Anomalie d'imiter le comportement de l'hôte, alors n'y prêtez pas attention.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {L’Anomalie réside dans le cerveau de l’hôte et ce dernier sera incapable de ressentir la moindre sensation physique. Vous pouvez essayer de poignarder l'employé avec quelque chose de tranchant, feignant que c'est une erreur, mais ce n'est pas recommandé. Comme mentionné précédemment, l'hôte devrait déjà avoir fusionné à environ 30% avec l’Anomalie, donc la conversation sera impossible.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {! Il peut entrer dans votre corps par n’importe quel orifice.&#13;&#10;! Cela ne veut pas dire que couvrir vos orifices en empêchera l'entrée.}
+    ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {!! Mais cela vous rassurera de vous couvrir autant que possible lorsque vous entrerez dans l'Unité de Confinement.&#13;&#10;!!! La destination finale du “Nid Dénudé” est le lobe frontal.&#13;&#10;!!! Vous deviendrez le nid du serpent, attaquant tout ce qui est à portée.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {!!!! Veuillez comprendre que nous serons obligés de tirer à vue et de brûler votre cadavre si vous devenez un nid.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Les observations ont permis de conclure que les employés ayant peu de PV sont plus sensibles à la capacité spéciale du $0. En particulier, subir plus de dégâts durant le travail augmente la probabilité qu’elle se déclenche. Cependant, obtenir un Bon résultat de travail l’empêche de se déclencher.</specialTip>
+      <specialTip openLevel="2" key="2">Certains employés souffrant de ce phénomène ont présenté au fil du temps les symptômes suivants :&#13;&#10;1. Peau verte et éruption cutanée sur le corps.&#13;&#10;2. Réduction drastique de la vitesse de déplacement.&#13;&#10;Si l'un de ces symptômes est observé chez un employé, il faut le traiter immédiatement.</specialTip>
+      <specialTip openLevel="2" key="3">Lorsque #0, qui souffrait des symptômes mentionnés, a été laissé seul un certain temps, il s’est transformé en une chose proche de $0. (O-02-74-1)</specialTip>
+      <specialTip openLevel="2" key="4">&lt;Attention&gt; Tout employé qui a été en contact avec l'employé infecté avant qu'il ne se transforme en O-02-74-1 est également susceptible d'être infecté. Tous les employés du secteur doivent être surveillés afin de détecter tout symptôme mentionné précédemment.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

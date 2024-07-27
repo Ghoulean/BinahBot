@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등0000000000000000000
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id="100021">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="mid1">
+      [
+      {Un silence étouffant écrase l’intérieur de l’Unité de la $0.},
+      {Le calme qui noie la pièce est brisé par l’horrible grincement d’une chaise à bascule.},
+      {La chaise à bascule de la $0, qui se tient sur un sol anormalement moisi, grince.},
+      {Étant incapables de supporter les histoires racontées par la $0, le sol et les murs se sont craquelés à divers endroits.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Une ancienne malédiction imprègne les histoires de la $0.},
+      {L’âme de la $0 s’est estompée depuis longtemps dans la solitude.},
+      {Ses nombreuses histoires fascinaient autrefois les gens, mais un jour, une malédiction s’est glissée dans ses récits.},
+      {Ses histoires sont empoisonnées. Elles s’infiltrent dans quiconque les écoute et les mènent vers un monde insupportable.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {La $0 est sourde et presque aveugle, et pourtant, elle ressent encore la présence de #0.},
+      {La $0 n’a pas besoin de regarder #0. Il la regardera lorsqu’elle racontera son histoire de toute façon.},
+      {Les conversations sont inutiles pour la $0. Tout ce dont elle a besoin, c’est un public… #0.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {#0 a fini le travail qui lui a été assigné. Il court rapidement hors de l’Unité de Confinement de la $0.},
+      {#0 quitte l’unité après avoir fini son travail. La solitude qui remplace sa présence sera comblée des histoires de la $0.},
+      {Avant même que l’histoire interminable de la $0 ne commence, #0 réussit à finir rapidement son travail et à sortir d’ici en sécurité.}
+      ]
+    </narration>
+    <narration action="special_ability_1">
+      [
+      {La $0 commence à converser avec #0.}
+      ]
+    </narration>
+    <narration action="special_ability_2">
+      [
+      {“Mon enfant, mon enfant… veux-tu entendre une histoire ?”}
+      ]
+    </narration>
+    <narration action="special_ability_3">
+      [
+      {“Près d’une pile de bois, près d’une pile de bois…”}
+      ]
+    </narration>
+    <narration action="special_ability_4">
+      [
+      {“Près de là, tu as rencontré ton père…”}
+      ]
+    </narration>
+    <narration action="special_ability_6">
+      [
+      {“Tu lui as arraché la tête puis bu son sang…”}
+      ]
+    </narration>
+    <narration action="special_ability_7">
+      [
+      {“Tu l’as tué un vendredi et enterré un dimanche.”}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-01-12</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/OldLady</portrait>
+      <name openLevel="1">
+        Vieille Femme
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <specialName openLevel="2">
+        Histoires Empilées, Morts Empilées
+      </specialName>
+      <openText>Elle était si bavarde autrefois, mais au bout du compte, la solitude fut sa seule auditrice.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+     [
+     {Une Anomalie qui prend la forme d’une vieille femme fébrile. Chaque fois que quelqu’un entre dans son Unité de Confinement, elle lui parlera.}
+     ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Ce qu’elle raconte diffère de temps en temps, cependant, elle commencera toujours par un “Mon enfant, mon enfant, veux-tu entendre une histoire ?”. Il peut s’agir d’une berceuse, d’un poème inconnu, d’une comptine, d’une histoire banale pour enfants, ou quelque chose d’entièrement nouveau.}
+      ]
+    </desc>
+    <desc id="3" openLevel="1">
+      [
+      {Elle connaît toutes les histoires pour enfants et ne s’arrêtera de les raconter que lorsque l’auditeur partira enfin.}
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {&lt;Extrait d’un Journal de Thérapie&gt;&#13;&#10;
+      “Elle est sûrement la plus seule de toutes les Anomalies. Elle est remplie de solitude et raconte des histoires pour combler ce vide. Chaque histoire a besoin d’un auditeur. Dès que quelqu’un entre dans sa salle, elle essaiera de combler ce vide. Bien sûr, l’écouter est une chose dangereuse. Elle connaît toutes les histoires de la Terre, même celles qui ne devraient pas exister. Nos esprits ne peuvent supporter une telle chose. Elle pourrait faire griller votre cerveau en moins d’une seconde.”}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="Godoku">Lorsqu’un travail est fait avec une Anomalie autre que $0, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="1" key="Attached">Lorsque le Compteur Qliphoth atteint 0, des figures noires se créent dans l’Unité de Confinement. Nous avons nommé ces éléments “solitude” en se basant sur la condition nécessaire à leur formation.</specialTip>
+      <specialTip openLevel="1" key="NoAttached">Lorsque la solitude s’est empilée, elle s’est accrochée à #0 au moment où il est entré dans l’Unité de Confinement.</specialTip>
+      <specialTip openLevel="1" key="NoAttached2">#0 a subi des dégâts BLANC continuellement jusqu’à ce que la solitude ne disparaisse. Tant qu’elle était sur lui, il était incapable de bouger ou d’effectuer le moindre travail.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100019">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção de $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {O maestro de $0 está esperando pelos músicos.},
+      {O maestro de $0 é normalmente quieto. E também é imóvel na Unidade de Contenção.},
+      {Um maestro é um feiticeiro que traz a vida; um xamã que invoca espíritos.},
+      {Da ruptura e ruína, o mais belo espetáculo se inicia.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 prepara a música do apocalipse. },
+      {$0 é sem dúvidas o melhor conjunto musical na corporação.},
+      {A aprensentação sensacional de $0 hipnotizará a todos.}
+      ]
+    </narration>
+    <narration action="mid2"> 
+      [
+      {Músicos vivem pelo aplauso da audiência no final de sua apresentação.},
+      {A vida de um intérprete começa e termina com os aplausos da audiência.},
+      {Uma ovação de pé é o presente mais honroso que a audiência pode conceder ao maestro.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {#0, que também em breve se tornará parte da audiência para $0, está quase terminando o processo de trabalho.},
+      {#0 cuida da tarefa com $0 sem ter problemas.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">T-01-31</codeNo>
+      <name openLevel="1">A Orquestra Silenciosa</name>
+      <portrait openLevel="1">Sprites/Unit/creature/silentOrchestra</portrait>
+      <riskLevel openLevel="2">ALEPH</riskLevel>
+      <openText>Da morte e ruína, o mais belo espetáculo se inicia.</openText>
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {Uma anormalidade que ama arte e tenta fazer com que toda a corporação escute sua música.&#13;&#10;&#13;&#10;&lt;Trecho de uma Enciclopéida&gt;&#13;&#10;
+      O maestro não somente corrige erros musicais, mas também é responsável na criação do melhor conjunto e no comando da música. A habilidade de um maestro pode ser determinada em até 5 minutos estando no palco. No momento que o maestro abre a partitura, os intérpretes leem seus olhos, suas ações, e espírito como se estivessem vendo se aquela pessoa é digna para conduzí-los. Sem o entendimento e a harmonia entre eles, a significância macroscópica contida na partitura não pode ser expressa. Portanto, um excelente grau de influência, liderança e eloquência são qualidades essenciais para um maestro ter...(Omitido)}
+      ]
+    </desc>
+    <desc id="2" openLevel="2">
+      [
+      {&lt;1º Movimento: Calmo e Lento&gt;
+      O maestro começa a dirigir o apocalipse. }
+      ]
+    </desc>
+    <desc id="3" openLevel="3">
+      [
+      {&lt;Movimentos 2 ao 4: Animado e Rápido&gt;
+      Os funcionários começam a esquecer tudo e mostram fervente adoração à sinfonia. A emoção rapidamente se torna uma insanidade interna, os fazendo atacar qualquer um por perto. A orquestra dá ímpeto para a música, levando o departamento inteiro à perdição. Quando todos os intérpretes se juntarem, a música que ninguém consegue ouvir, mas que todos conseguem escutar se inicia.}
+      ]
+    </desc>
+    <desc id="4" openLevel="4">
+      [
+      {&lt;O Final&gt;
+      &lt;b&gt;“A música deve perfurar todo o seu ser.”&lt;/b&gt;}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="mood1">Quando o resultado do trabalho era Bom, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="1" key="mood2">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="1" key="escape">A música que $0 toca quando escapa consiste em 4 movimentos. Conforme o espetáculo progride, os funcionários que estiverem escutando sofrerão dano BRANCO, enquanto o tamanho da área audível da música se expande.</specialTip>
+      <specialTip openLevel="2" key="movement">Para cada Movimento, $0 mudava suas fraquezas. O 1º Movimento era PÁLIDO, enquanto o 2º Movimento era PRETO. Para o 3º movimento, era BRANCO, e por último, durante o 4º Movimento, somente ataques do tipo VERMELHO eram efetivos. Quando a música chegava ao clímax, $0 se tornava imune a qualquer tipo de ataque.</specialTip>
+    </specialTipSize>
+  </observe>
+  <etc>
+    <param key="movement1" index="1">
+      1º Movimento, Adagio e Tranquillo: Calmo e Lento.
+    </param>
+    <param key="movement2" index="2">
+      2º Movimento, Sostenuto: Com velocidade restringida
+    </param>
+    <param key="movement3" index="3">
+      3º Movimento, Accelerando e Crescendo: Acelerando e Crescendo.
+    </param>
+    <param key="movement4" index="4">
+      4º Movimento, Stringendo: Pressionando para frente, agarrando.
+    </param>
+    <param key="movement5" index="5">
+      O Final: Finale con fuoco, ma non troppo: Apaxinonante igual a fogo, porém refinado.
+    </param>
+  </etc>
+</creature>

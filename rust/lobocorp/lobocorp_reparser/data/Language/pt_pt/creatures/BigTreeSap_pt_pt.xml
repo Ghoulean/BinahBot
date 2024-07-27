@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300005">
+
+    <narration action="move">
+      #0 recebeu a ordem para ir para a unidade de contenção de $0.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-80</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/BigTreeSap</portrait>
+
+      <name openLevel ="1">
+        Seiva da Árvore Gigante
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+
+      <openText>
+        "A árvore colheu o que plantou.”
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Seiva extraída de uma árvore gigante sem nome nas fronteiras do mundo.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Segundo a equipa de exploração, haviam numerosas formas de vida verdes à sua volta. O porquê disso era que a seiva os saciava e ela continha poderes curativos.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {No entanto, alguns dos empregados que a beberam derreteram, deixando para trás restos verdes fumegantes.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Vários outros experimentos confirmaram que a probabilidade do individuo derreter rapidamente aumenta quando mais seiva é consumida.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {“Muitos se perguntam como uma árvore assim tão grande pode prosperar nos estéreis Subúrbios. As formas de vida que consumiram a seiva eram os seus nutrientes. A árvore colheu o que plantou.”}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="healthgood">Indivíduos que consumem a $0 instantaneamente recuperam HP, eles também continuaram a recuperar HP ao longo do tempo.</specialTip>
+      <specialTip openLevel="2" key="boomDead">Um efeito colateral nos sujeitos que consumem a $0 foi encontrado. Indivíduos que sofreram esse efeito secundário explodiram entre 20 a 30 segundos após consumirem a $0, causando dano BRANCO na secção inteira.</specialTip>
+      <specialTip openLevel="2" key="boomGood">Um experimento confirmou que a quantidade de $0 consumida, a quantidade de HP que é recuperado e a probabilidade de explodir estão todas relacionadas.</specialTip>
+    </specialTipSize>
+
+  </observe>
+</creature>

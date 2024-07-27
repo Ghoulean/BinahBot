@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100014">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {O $0 afirma que ele veio para cá por vontade própria.},
+      {O $0 alivia os aflitos de suas agonias, garante liberdade para aqueles que estão presos dentro de si, e cuida daqueles que estão quebrados.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {O $0 uma vez visitou um vilarejo que estava sofrendo de uma doença desconhecida.},
+      {Ainda era alvorada quando esse doutor misterioso, que se manteve sem nome, apareceu.},
+      {Quando todos tinham abandonado a esperança, o homem mascarado que se chamava de doutor apareceu.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 se sente perfeitamente confortável ao ir para a Unidade de Contenção do $0.},
+      {#0 fica bastante aliviado ao visitar a Unidade de Contenção do $0.},
+      {#0 gostaria que todas as Anormalidades fossem tão calmas e serenas quanto o $0.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {O $0 tem uma voz gentil e suave. Ele gosta de cuidar daqueles que estão feridos.},
+      {O $0 deseja simplesmente meditar sozinho ou cuidar dos outros.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {O $0 fala: “Eu estou aqui para tratar doenças. Quando o dia chegar, me encontre. Eu estarei mais do que disposto para ajudar você.”},
+      {O $0 afirma: “Não há nada por trás de minha máscara; a carne é presa ao fluxo do tempo, mas a alma é imortal.”},
+      {O $0 declara: “Eu salvarei sua vida da destruição e cuidarei de ti até o fim do mundo. Confie em mim.”}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">O-01-45</codeNo>
+      <name openLevel="1">Doutor da Praga</name>
+      <portrait openLevel="1">Sprites/Unit/creature/PlagueDoctor</portrait>
+      <riskLevel openLevel="3">ZAYIN</riskLevel>
+      <openText>“Eu curarei você, tratando de toda doença ou machucado que possuir.”</openText>
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {Ele veste um fedora escuro e uma máscara com bico. Possui grandes asas negras no lugar de braços ou pernas. É capaz de se comunicar com humanos, mas prefere falar pouco. Ele veio para cá por vontade própria, afirmando que o mundo contraiu uma doença terrível e somente ele é capaz de curá-la. Nós não conseguimos encontrar nada sobre essa “doença” na qual ele se refere.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Ele parece gostar de cuidar dos funcionários quando estão doentes ou machucados, mostrando satisfação ao ajudá-los. Ele parece ser bastante simpático e benevolente. Mesmo após uma semana de observação, não encontramos nenhum sinal de agressão, violência, ou tentativa de fuga. Tais informações somente contribuem para a hipótese de que essa Anormalidade é eminentemente “gentil” (12 de nossos funcionários usaram essa palavra para descrever a criatura) e benéfica para nós.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {O funcionário Alex, que tinha uma cicatriz séria na testa por ter tido que lidar com uma Anormalidade, foi para Unidade de Contenção dele com sua cicatriz ainda em recuperação. Ele então, que normalmente não é muito loquaz, começou a falar assim que viu a cicatriz do funcionário.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;Registro de Obseração_1&gt;&#13;&#10;
+      A Anormalidade Perguntou:
+      “Por que você ainda não cuidou de sua cicatriz?”&#13;&#10;
+      Alex respondeu:
+      “Eu não tive tempo, então só apliquei os primeiros socorros.”&#13;&#10;
+      Então o $0 respondeu:
+      “Eu curarei você, tratando de toda doença ou machucado que possuir.”&#13;&#10;
+      Alex então saiu da câmara com sua cicatriz completamente curada.}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="3" key="2">Quando o resultado do trabalho era Bom, o Contador Qlifót reduzia. O $0 então abençoava o Agente que tinha efetuado o trabalho.</specialTip>
+      <specialTip openLevel="3" key="3">Quando uma trombeta de emergência de Nível 2 aconteceu, o Contador Qlifót reduziu.</specialTip>
+      <specialTip openLevel="3" key="4">Quando o Contador Qlifót chegou a 0, alguns funcionários escutaram o chamado do $0 e foram para sua Unidade de Contenção para serem abençoados.</specialTip>
+      <specialTip openLevel="3" key="5">Aqueles que foram beijados pelo $0 serão renascidos como os 'Abençoados'.</specialTip>
+    </specialTipSize>
+  </observe>
+  <etc>
+    <param key="first" index="1">
+      “E eu também te digo, que você és o #1, e sobre esta rocha eu construo minha igreja; as portas do inferno não prevalecerão contra ela.”
+    </param>
+    <param key="second" index="2">
+      “Nos diga, quando serão essas coisas?”
+    </param>
+    <param key="third" index="3">
+      “Senhor, queres que comandemos o fogo para que caia do céu e os consuma?”
+    </param>
+    <param key="fourth" index="4">
+      “O #3 e o #4; ele os apelidou de Boanerges, que significava, 'Os Filhos do Trovão'.” 
+    </param>
+    <param key="fifth" index="5">
+      “#5 disse a ele, Senhor, nos mostre o Pai, e isso nos bastou.”
+    </param>
+    <param key="sixth" index="6">
+      “E quando ele saiu de lá, ele viu um homem, chamado de #6: e disse a ele, siga-me. Então ele se levantou e o seguiu.”
+    </param>
+    <param key="seventh" index="7">
+      “Mas havia um certo homem, chamado #7, que antes do tempo usava feiticaria e enfeitiçava pessoas, dando a entender que ele era alguém grandioso.”
+    </param>
+    <param key="eighth" index="8">
+      “Então disse #8, para seus condiscípulos, Vamos ir também, para que possamos morrer junto a ele.”
+    </param>
+    <param key="ninth" index="9">
+      “#9 respondeu e o disse, você és o Filho de Deus; você és o Rei de Israel.”
+    </param>
+    <param key="tenth" index="10">
+      “#10 disse a ele, Senhor, como tu se manifestará a nós, e não ao mundo?” 
+    </param>
+    <param key="eleventh" index="11">
+      “De agora em diante, nenhum homem me perturba: já que agora eu carrego em meu corpo a marca Dele.”
+    </param>
+    <param key="twelveth" index="12">
+      “Ele respondeu, eu escolhi vocês doze, e um de vocês é um demônio?”
+    </param>
+  </etc>
+</creature>

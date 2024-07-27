@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100043">
+
+    <narration action="move">
+      #0 is going into $0's containment unit to begin the task.
+    </narration>
+
+    <narration action="start">
+      [
+      {Having someone to mourn you after you die is a blessing.}
+      {Those left behind have no time to remember those who died, but prepares for the next death.}
+      {$0 gazes upon #0 in silence.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 dreams. The curtain is drawn on an empty faith with no exits. },
+      {The huge coffin is not enough to replace the hundreds of graves.},
+      {#0 watches the funeral procession of the butterflies.}
+      {The burdensome fluttering wings comes closer in a familiar yet strange way.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {This place has no flowers or trees, so where are all those butterflies coming from?},
+      {The employees cannot return to whence they came and have no choice but to repeat the day.},
+      {The funeral procession never ends, and #0 continues to mourn.}
+      {#0 thinks about the end of life.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {Returning to whence you came is a miracle that can never happen.},
+      {Death in your finest hour is an unexpected blessing.},
+      {In fact, most employees who died here wanted to live as long as possible.}
+      {Some thought death would be a new start, but there is nothing but void after death.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-01-68</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Butterfly</portrait>
+
+      <name openLevel ="1">
+        Funeral of the Dead Butterflies
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+
+      <openText>What happens when people die?</openText>
+
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {What happens when people die?&#13;&#10;What happened to those who worked here?}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {- They must returned to their home, where family and warmness await.&#13;&#10;But everyone knows that the employees can’t leave the company unless they retire.&#13;&#10;-  Then they must have "retired" and returned to their homes, having earned what they wanted and full of hope.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {We are feathers of the Wing. But retiring isn't as easy as it sounds. Just like how feathers do not fall out on their own free will.&#13;&#10;- Then where did the retired employees go?&#13;&#10;They are bound to the company the moment they enter. They cannot leave even if they retire.&#13;&#10;-Long ago, in some world, people believed that they become beautiful beings with small wings when they die. What nonsense.&#13;&#10;If we have wings, can we leave here? Do we get wings after we retire?}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {The mourner with the colossal baggage on his back is said to have come here to be the savior of all.&#13;&#10;But now he is trapped like everyone else, roaming the company with only the memory of empty faith.&#13;&#10;The baggage he carries is a coffin. A large coffin to pay tribute to the employees who have nowhere else to go. But it is too small to comfort those innocent sacrifices.&#13;&#10;Inside it are butterflies waiting for the time to sleep. Until then, they flutter their wings uselessly.&#13;&#10;Butterflies are supposed to pollinate flowers, but not a single flower blooms in this place.&#13;&#10;They have no choice but to wait. After all, there must be an end to the world.}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">#0, an employee whose Justice is below level 3 completed the work, lowering the Qliphoth counter.</specialTip>
+      <specialTip openLevel="1" key="2">Other employees whose Fortitude exceeds level 3 experienced the same.</specialTip>
+      <specialTip openLevel="1" key="3">When the work result was bad, Qliphoth counter has decreased with a high probability.</specialTip>
+    </specialTipSize>
+
+  </observe>
+</creature>

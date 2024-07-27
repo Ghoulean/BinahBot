@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id="100015">
+
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+
+    <narration action="start">
+      [
+      {神の光の後、 悔い改めた#0は$0の収容室に入る。},
+      {「なにものが汝を躊躇させるのか、 私はここで奇跡を起こしている」}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0は胎児のように見えるが、 世話が必要なようには見えない。},
+      {鐘が12回鳴ったとき、 施設は目をくらます明りでのみこまれた。 使徒による救済の光だった。}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {沈黙だけが$0の空気を満たす},
+      {$0は周囲のあらゆる音と光を吸収する。}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {$0はあなたを 救済して新世界へ導くためにここに来た。},
+      {$0は世界の終わりから来た。 そして、彼は新世界の始まりに向けて歩いていく。}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {#0、汝は何故に畏れるか？ 私は使命を果たすまで汝のもとを去りはしない。},
+      {#0、畏れてはいけない。 私は汝の救い主であり、私は汝と共にある。},
+      {汝らが叫び聞いた。汝らの心が届いた。 #0が私を呼んだ。}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="5">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">T-03-46</codeNo>
+      <name openLevel="1">白夜</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/DeathAngel</portrait>
+      <riskLevel openLevel ="2">ALEPH</riskLevel>
+      <openText>「我が使徒たちよ、目覚めよ。 そして我を迎えるのだ。」</openText>
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {アブノーマリティは胎児に似ている。通常の赤子と呼ぶにはむしろグロテスクに見える。交信可能だが通常の方法ではない。彼の話すすべての言葉は部屋全体に反響する。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {私が祝福した使徒たちは、汝らが身を置いた邪悪な道を離れ、私を見つけるだろう。時が来れば、私は汝の罪を許し、汝らが暮らす土地に降りる。} <!-- 폰트!!! 바꿔야돼!!!!!!!!!!!!!!!!!!!!!!-->
+      ] <!-- 글씨체 교체-->
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {彼の祝福を受けた職員12人は全てが部屋の中を歩き回り、施設内の職員すべてに救いを与える。背中から翼が生え始め、嘴マスクを身に着け、背中にすべての罪を許す十字架をもたらす。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {汝、私の教えに続きなさい。汝は肉を捨て、再誕する。} <!-- 폰트!!! 바꿔야돼!!!!!!!!!!!!!!!!!!!!!!-->
+      ] <!-- 글씨체 교체-->
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {彼の使徒たちは宣教師として再誕し、他者を助ける者に福音を伝える。彼らは…}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="4">
+      [
+      {時は来た。鐘が鳴る。新世界が訪れる。立ち上がれ僕よ。立ち上がり、仕えよ。私は死と生である。闇と光である。}
+      ] <!-- 글씨체 교체-->
+    </desc>
+
+   
+
+    <specialTipSize size="5">
+      <specialTip openLevel="0" key="1">クリフォトカウンターが0になると、$0とその使徒たちは再び降臨するだろう。</specialTip>
+      <specialTip openLevel="0" key="2">＜注意＞ $0は他のアブノーマリティと違い、 一定周期ごとにクリフォトカウンターが減少する。 管理時はこのアブノーマリティの監視を怠ってはいけない。</specialTip>
+      <specialTip openLevel="1" key="3">作業結果が良い場合、クリフォトカウンターが増加し、施設内の全職員の体力と精神力が回復した。</specialTip>
+      <specialTip openLevel="2" key="4">作業結果が普通の場合、普通の確率でクリフォトカウンターが増加し、$0がいる部門の職員の体力と精神力が回復した。 </specialTip>
+      <specialTip openLevel="3" key="5">作業結果が悪い場合、クリフォトカウンターが減少した。 それと同時にその部門の全職員がWHITEダメージを受けた。</specialTip>
+    </specialTipSize>
+
+ 
+  </observe>
+
+  <etc>
+    <!--UI막는 이벤트 때 띄울 대사-->
+    <param key="escape" index="0">
+      恐れてはならない、私はあなたと共にある。&#13;&#10;私があなたを許すまで、去ることはできない。
+    </param>
+    <param key="time" index="1">
+      時を信用してはならない。&#13;&#10;私はあなたを導くだろう。
+    </param>
+    <param key="manual0" index="2">
+      私を否定してはいけない。&#13;&#10;私はあなたの目の前にいるのだから。
+    </param>
+    <param key="manual1" index="3">
+      私の物語はどこにもなく、未知である。
+    </param>
+  </etc>
+</creature>

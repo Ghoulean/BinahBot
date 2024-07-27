@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100023">
+
+
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+
+    <narration action="start">
+      [
+      {「鏡よ鏡。世界で一番美しい女性は誰ですか？」 魔女はもう誰も訪れない部屋で尋ねた},
+      {もちろん、鏡は答えなかった。 しかし、魔女は望んだ答えを得た。},
+      {王子と姫の庭にリンゴが落ちた日、 魔女の心も崩壊した。},
+      {魔女はすべてをあきらめ、 リンゴに最も強い呪文をかけた。}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {#0は、つるが収容室に もつれ合っているのを見た。},
+      {$0の収容室の茎と葉は ほとんど育っていない。},
+      {つるは$0の収容室の付近でも もつれ合っている。},
+      {葉が動く静かな音が $0の収容室から聞こえる。}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {よく見ると、これらのつるが 既に死んでいる事がわかる。},
+      {茎は死んでいる、それは指先一つでつぶれる。 もはや植物と呼ぶことはできない。},
+      {つると葉は死んでいるにも関わらず 成長し続ける。}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {$0の空の眼窩は、 虫や鳥が食べたところである。 $0は近くの死体を食べて育った。},
+      {$0は長い間一人でいた。 死んだ虫や鳥だけが唯一の仲間だった。}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {$0はすべての祝福を受けたまま 花道を歩いて行った姫と王子を思い出した。},
+      {$0は魔女に呪われた。 おとぎ話は$0を食べたために 倒れた姫ともに終わった。},
+      {恐ろしい嫉妬、怒り、孤独を感じながら $0は成長した。}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">F-04-42</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/SnowWhite</portrait>
+
+      <name openLevel ="1">
+        白雪姫のりんご
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+ 
+      <openText>リンゴが王女と王の庭に落ちた日、 魔女の心は崩壊しました。</openText>
+     
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {…王子のキスで白雪姫の喉を塞いでいるリンゴが口から出てきた。小人たちは喜び叫びました。白雪姫と王子は王国への花道を歩きずっと幸せに暮らしました。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {しかし、魔女の怒りと呪いがかけられたリンゴがありました。それは魔女自身の一部でもありました。白雪姫が一口食べた後、地面に落ちたリンゴは幸せではありませんでした。リンゴは白雪姫と孤独に対して憎しみを募らせました。そして、母なる自然に帰るために腐るのを待ちました。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {呪いのためでしょうか？あるいはその憎しみが自然の法則を克服したのでしょうか？リンゴの種子が芽吹くはずの時間は訪れませんでした。さらにリンゴは少しも腐っていませんでした。リンゴは誰かの足で踏み砕かれ、他の部分は虫や鳥によって食べられた穴でいっぱいでした。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {リンゴの周りには呪いで死んだ虫と鳥の死骸がたまっていきました。自分の代わりに腐っていく死骸の山の中でリンゴは絶えず自分の存在について考えていました。そして、ある日、幹が育ち始めました。ただし、乾いて枯れてしまった茎と葉は生気もないまま成長し続けました。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {ある日、リンゴはようやく動きました。リンゴは白雪姫と王子について考えました。王子が目覚めさせてくれるまで、白雪姫もまたリンゴのように長い間横たわっていました。リンゴは自分の王子を見つけるために旅に出ました。&#13;&#10; - 「誰も知らなかった童話」（著者不明）から一部抜粋}
+      ]
+    </desc>
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="Escape">作業結果が普通な場合、一般的な確率でクリフォトカウンターが減少した。</specialTip>
+      <specialTip openLevel="1" key="Escape2">作業結果が悪い場合、高い確率でクリフォトカウンターが減少した。</specialTip>
+      <specialTip openLevel="2" key="Making">$0は収容室を脱走後、部門内の通路に移動し、根やつるを発芽させた。$0のつるは 職員の歩行を妨害し、移動に支障をもたらした。</specialTip>
+      <specialTip openLevel="3" key="NotDisappear">通路がつるで完全に 覆われると、$0は別の通路に移動し、再びつるを発芽させ始めた。$0を鎮圧し、収容室に戻したが、通路を覆ったつるは翌日まで枯れなかった。</specialTip>
+    </specialTipSize>
+  
+  
+  </observe>
+
+ 
+  
+</creature>

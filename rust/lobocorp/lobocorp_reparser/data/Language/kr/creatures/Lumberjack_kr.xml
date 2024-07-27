@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100051">
+
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다.
+    </narration>
+
+    <narration action="start">
+      [
+      {#0 직원이 그리 마음이 따뜻하지 않은 자라면 $0을 두려워 할 필요는 없습니다.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {심장을 수집하는 $0. 심장이 작동하면 사랑을 할 수 있을지도 모른다고 생각했다.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {한때 심장이었을지도 모르는 것들이 $0의 속에 마구잡이로 쑤셔넣어져 있습니다.}
+      ]
+    </narration>
+
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">F-05-32</codeNo>
+      <name openLevel="1">따뜻한 마음의 나무꾼</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/Lumberjack</portrait>
+      <riskLevel openLevel ="2">HE</riskLevel>
+      <openText>이 곳엔 수많은 심장이 있는 숲. 베어도 베어도 여전히 숲은 울창하다.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {몸 전체가 양철로 이뤄졌으며 인간과 유사한 형태를 가진 기계 환상체. 양손에는 커다란 도끼를 치켜들고 있는데 움직임은 없다. 마치 꼼짝도 할 수 없다는 듯.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {한 부분씩 불완전함이 있었던 친구들은 부족한 만큼 서로의 도움을 받아서 각자의 소원을 이루는 여행길을 떠났다. 뇌를 원했던 허수아비, 심장을 되찾고 싶은 양철 나무꾼, 용기를 가지고 싶었던 사자와 고향을 잃어버린 도로시.&#13;&#10;위대했던 마법사 라고 생각했던 자는 대신에 납으로 만든 심장을 주었지. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {‘하지만 너는 기계잖아, 그건 인간을 위해 만들어졌다는 뜻이야 그 사실을 모르는 건 아니지? 기계에는 심장이 필요 없지, 여기까지 오느라 수고했어, 빈손으로 돌아가기에는 아쉬우니까 이거라도 받아, 그리고 너희를 기다리는 이들에게 전하는 거야, 소원은 틀림없이 이뤄졌다고.'&#13;&#10;만족하여 떠난 이들도 있었다. 헤어진 친구들은 다시 볼 수 없었다. 납은 딱딱하고 차가워서 슬펐다.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {양철 나무꾼은 동의할 수 없었다. 분노로 인해 휘두른 도끼가 마법사의 심장을 관통했다. 심장은 따뜻하고 힘차게 펄떡거렸다. 마법사의 텅 빈 구멍에는 대신에 납을 넣어주었다. 볼만한 광경에 나무꾼은 처음으로 웃었고 이제껏 한 번도 느껴보지 못한 쾌감을 느꼈다.&#13;&#10;곤죽이 된 심장들을 한 대 움켜 집으면서 ‘가슴’ 속에 집어넣는다. 더 많은 심장을 가져도 모자라다. 한때 나무꾼이었던 자는 이제 나무 대신 사람을 벤다. 이곳엔 수많은 심장이 있는 숲. 베어도 베어도 여전히 숲은 울창하다. 마음이 따뜻한 자들일수록 심장 역시 따뜻하다. }
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {심장이 떨어져 나가면, 나무꾼은 슬픔을 못 이겨 주저앉을 것이다. 텅 빈 마음을 틀어막고. 자신에게 남은 유일을 뺏어가지 말라는 듯. }
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">작업의 결과가 나쁨일 경우 클리포트 카운터가 감소하였다.</specialTip>
+      <specialTip openLevel="1" key="2">절제 3등급 이상의 직원이 작업을 완료한 경우 클리포트 카운터가 감소하였다.</specialTip>
+      <specialTip openLevel="2" key="3">클리포트 카운터가 0인 상태에서 격리실에 들어오는 직원은 즉시 사망한다. 이후 해당 환상체는 탈출한다.</specialTip>
+    </specialTipSize>
+
+  </observe>
+
+
+</creature>

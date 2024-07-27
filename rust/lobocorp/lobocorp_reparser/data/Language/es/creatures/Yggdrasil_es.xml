@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+  -->
+  <info id ="100062">
+
+    <narration action="move">
+      #0 va a entrar en la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="start">
+      [
+      {El empleado #0 siente un delicado aroma a hierba que abraza el aire.},
+      {El empleado #0 siente una brisa suave, que posiblemente no puede entrar dentro de la unidad de contención. },
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {El sonido de las hojas crujientes es increíblemente tranquilo.},
+      {El aroma floral permanece en la nariz del empleado #0…},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {La mayoría de los empleados aquí están descontentos. Se sienten muy felices hasta la bendición más pequeña.},
+      ]
+    </narration>
+    
+    <narration action="mid3">
+      [
+      {Bendición incandescente viene para el empleado #0.},
+      ]
+    </narration>
+    
+    <narration action="mid4">
+      [
+      {Cuando la flor de la bendición finalmente florece desde $0…},
+      ]
+    </narration>
+
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">D-04-108</codeNo>
+      <portrait openLevel ="0">Sprites/Unit/creature/Yggdrasil</portrait>
+
+      <name openLevel ="1">
+        Arbol Mundial
+      </name>
+
+      <name openLevel ="3">
+        Árbol Parasitario
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>"Relájate, no necesitas la bendición?"</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {<i>Esta anormalidad se basa en la idea del patrocinador de Tumblbug 'llooll530'</i>&#13;&#10;&#13;&#10;Un árbol con muchas hojas.&#13;&#10;Esas hojas con un rico color verde desprenden un ambiente cómodo. El aroma floral llevado por una suave brisa era refrescante.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Los empleados que fueron contactados con la anormalidad declararon que les proporcionó comodidad psicológica. Esto se demuestra por la mayor eficiencia de los empleados en el trabajo y la disminución de la contaminación mental.}
+      ]
+
+    </desc>
+    
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Un extracto del diario de un empleado&gt;&#13;&#10;&#13;&#10;Pensé que era solo mi imaginación. Pero la voz sonaba cada vez más clara cuando mi cuerpo y mi mente se agotaban. &#13;&#10;“Puedo ayudarte.”&#13;&#10;Si, me puedes ayudar.&#13;&#10;Para qué me estoy preguntando?&#13;&#10;Huelo el aroma de la flor.}
+      ]
+    </desc>
+
+
+    <desc id="4" openLevel="3">
+      [
+      {Ellos importaron un arbol.&#13;&#10;&#13;&#10;Fue una belleza a primera vista. Podía oler el aroma de la flor a pesar de que no había brisa ni viento. &#13;&#10;Mi apego por el árbol creció ciegamente después de oler ese olor. Fui muy intuitivo desde mi infancia. Pude sentir que este apego es peligroso.&#13;&#10;&#13;&#10;Traté de evitar ser asignado al árbol haciendo todo lo que pude.&#13;&#10;&#13;&#10;“Bueno, si lo pones asi… solo esta vez bien? Caray, ese árbol te hizo algo?”&#13;&#10;&#13;&#10;Su broma vuela hacia mi oído. Hizo algo? Sí, lo hizo. Y me asusta.&#13;&#10;&#13;&#10;Unos días después, el joven, que originalmente era optimista, ahora se ha vuelto fiel al trabajo con una sonrisa. Me sentí incómodo porque la cara me parecía extrañamente cómoda.&#13;&#10;&#13;&#10;“Me veo bien últimamente? Sí, bueno, eso es porque el árbol me está ayudando.”&#13;&#10;&#13;&#10;Respondió alegremente. Por mi experiencia de varios años, supe que son pocos los que pueden sonreír tan sinceramente mientras trabajan para esta empresa. Eso significa que, cuando alguien sonríe, era una señal de que algo salió mal. Me sentí desconcertado e inmediatamente luego del reporté al superior.&#13;&#10;&#13;&#10;La respuesta del superior llegó antes de lo que pensaba. Estaba diciendo, que debo presentar un informe de observación de la anormalídad porque hay varios comportamientos anormales relacionados con este árbol detectados en otros empleados, No solo el que informé. &#13;&#10;&#13;&#10;La orden me obligó a contactar con este árbol que había estado evitando con mi mejor esfuerzo. Sabía que no podía entregarlo a otra persona esta vez.&#13;&#10;&#13;&#10;No pude ver al árbol desenvainado y estéril que vi el día en que se importó. En cambio, vi la unidad de contención cubierta de hierba que parece estar extendida alrededor del árbol como centro. Pero, una hierba no puede crecer en la unidad de contención. Esta instalación es completamente inorgánica. En el momento en que sentí que algo andaba mal,&#13;&#10;&#13;&#10;‘Hola, Has venido aquí para ser bendecido, también?’&#13;&#10;&#13;&#10;Una voz hizo eco en mi cabeza... }
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {<i>(Fue difícil descifrar el contenido ya que la escritura se distorsiona mucho a partir de este punto)</i>&#13;&#10;&#13;&#10;No sé cómo escribí el informe de observación. Lo cierto es que acabo de escribir lo que sentí sobre el árbol, que esta hermosa planta está haciendo felices a los empleados y contribuirá a la búsqueda de prosperidad y avance de la humanidad. &#13;&#10;&#13;&#10;Pero, cómo puede una anormalidad ser una buena influencia para la humanidad?&#13;&#10;&#13;&#10;‘Solo quiero ayudarte.’&#13;&#10;&#13;&#10;Una voz sin una pizca de intención maliciosa hizo eco de nuevo en mi cabeza. Si, solo me esta ayudando.&#13;&#10;&#13;&#10;‘Y si está de acuerdo con eso, podría traer a sus amigos que están teniendo dificultades? Quiero ayudarlos.”&#13;&#10;&#13;&#10;Sí, este árbol les traerá paz a sus mentes fácilmente. Hablando de eso, ese novato parece estar bastante deprimido últimamente. &#13;&#10;&#13;&#10;“Conozco un lugar que puede hacerte sentir mejor. Si quieres venir.”&#13;&#10;&#13;&#10;Ella me siguió sin ninguna sospecha. No fue difícil llevarla a la unidad de contención del árbol.&#13;&#10;&#13;&#10;La ofrezco al arbol. Ella puede, ella mejorará.&#13;&#10;&#13;&#10;‘Trajiste a tu amiga. Eres un buen niño. Dejame regalarte algo.’&#13;&#10;&#13;&#10;Siento algo que brota en mi. No puedo mover mis extremidades. No, no es algo malo. Estoy renaciendo con el arbol. &#13;&#10;&#13;&#10;El árbol y yo nos estamos volviendo completos. &#13;&#10;&#13;&#10;Ah, Puedo sentirlo completamente ahora.}     ]
+    </desc>
+
+     <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">Un brote surgio en la parte superior de $0, bendiciendo al empleado cuando se termina el trabajo. El empleado con la bendición disfrutó de la mayor eficiencia en el trabajo y su salud mental.</specialTip>
+      <specialTip openLevel="1" key="2">El contador Qlifot Disminuye cuando se realiza el trabajo de represión.</specialTip>
+      <specialTip openLevel="1" key="3">El contador Qlifot Disminuye en baja probabilidad cuando una anormalidad se escapa.</specialTip>
+      <specialTip openLevel="1" key="4">El contador Qlifot disminuyó cuando se realiza un trabajo 5 veces en otras anormalidades mientras se descuidaba a $0 durante su trabajo.</specialTip>
+      <specialTip openLevel="1" key="5">Cuando el contador Qlifot alcanza a 0, $0 obligó a los empleados ir a su unidad de contención y los bendijo.</specialTip>
+      <specialTip openLevel="1" key="6">Cuando brotaron 5 brotes, $0 se oscureció y los empleados que fueron bendecidos entraron en pánico. Después de un tiempo, los tallos rasgaran su piel y lo convertira en un retoño o en un arbol joven conocido como (D-04-108-1) que se parece a la anormalidad en sí misma.</specialTip>
+      <specialTip openLevel="1" key="7">D-04-108-1 secreta veneno altamente contagioso y fatal. Necesitan ser removidos inmediatamente para descontaminar el área.</specialTip>
+    </specialTipSize>
+
+  </observe>
+
+<child>
+    <name>Árbol joven</name>
+    <codeId>D-04-108-1</codeId>
+  </child>
+</creature>

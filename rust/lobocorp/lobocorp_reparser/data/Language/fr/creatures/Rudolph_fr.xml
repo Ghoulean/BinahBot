@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100016">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {Lorsque les cloches rouillées du traîneau tintent, Noël commence.},
+      {Avec une mâchoire déboîtée et une langue sans vie, les mots sont avalés au lieu d'être chantés.},
+      {Où est le Père Noël des malheureux ?}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Les lumières colorées étaient aussi vives que Noël et aussi sombres que le cauchemar et la grimace de tous les enfants.},
+      {La couture a l'air rudimentaire, mais l'effort qu’on y a investi n'est rien de moins que l’œuvre d’un maniaque.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Noël, Ô horrible kermesse. Chaque Noël, je ressentais l’impulsion d’arracher la langue des chanteurs d’hymnes de Noël.},
+      {Avec ma haine infinie, je vous fais ce cadeau.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 ne montre aucun signe de vie, mais il bouge néanmoins. Cela doit être dû à l'énergie qu'il produit.},
+      {$0 erre sans but. Il veut distribuer sa pile de cadeaux.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">F-02-49</codeNo>
+      <name openLevel="1">Rudoël du Traîneau</name>
+      <portrait openLevel="1">Sprites/Unit/creature/Rudolta</portrait>
+      <riskLevel openLevel="2">HE</riskLevel>
+      <openText>Avec ma haine infinie, je vous fais ce cadeau.</openText>
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {&lt;Une Vieille Carte attachée à l'Anomalie&gt;&#13;&#10;
+      『Joyeux Noël ! Le Père Noël fait sa tournée dans le ciel nocturne pour offrir des cadeaux aux enfants heureux qui ne pleurent pas. Rudolphe, le renne dont le nez rouge brille si fort à travers le brouillard tout en tirant un traîneau rempli de cadeaux, le guide ce soir. Tous les enfants heureux aux quatre coins du monde méritent un cadeau !』}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {De loin, l'Anomalie ressemble au Père Noël sur son traîneau, mais à y regarder de plus près, elle est complètement différente de sa description du folklore commun. Contrairement au personnage principal des histoires, Rudolphe, c’est le traîneau qui traîne le renne. Nous avons étudié les trois différentes parties de l'Anomalie séparément.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Rudolphe : Une entité organique aux couleurs vertes, rouges et blanches qui semble être un cheval ou un renne. Ses muscles ne semblent pas bouger, mais bon nombre de nos employés signalent des mouvements dans les yeux. Certains disent même avoir établi un contact visuel avec lui. Il y a un trou de 30 cm de diamètre dans son abdomen. Des employés armés ont rapporté plus tard que le trou était vide.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Père Noël : Une entité organique mystérieuse et transparente au-dessus de Rudolph. Il est rempli de ce qui semble être des organes humains, qui fonctionnent tous normalement.}
+      ]
+    </desc>
+    <desc id="5" openLevel="3">
+      [
+      {Le Traîneau : D’une taille similaire à celle d'un enfant. Le placage ressemble à une peau animale et il y a des patins blancs attachés en-dessous. Les accessoires du traîneau sont remplacés par des mains rigides et coupées. Des objets inconnus sont soigneusement emballés dans des cadeaux. De nombreux employés ont tenté d'ouvrir ces cadeaux sans succès. La rumeur veut qu'ils ne puissent être ouverts que le jour de Noël.}
+      ]
+    </desc>
+    <desc id="6" openLevel="4">
+      [
+      {Ces trois éléments sont grossièrement cousus ensemble. Dr. ████████ a suggéré que “Les trois parties pourraient provenir d'un seul corps. Celui qui a fait cette chose devait vraiment haïr Noël. Enfin, ça ou il n’a jamais vu le Père Noël.”}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="comingTown">Lorsque le résultat du travail est Normal, le Compteur Qliphoth a une probabilité moyenne de diminuer.</specialTip>
+      <specialTip openLevel="1" key="comingTown2">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth a une probabilité élevée de diminuer.</specialTip>
+      <specialTip openLevel="2" key="horrorMoving">Lorsque $0 s’échappe, il se déplace lentement dans tout le complexe, infligeant des dégâts BLANC aux employés à proximité.</specialTip>
+    </specialTipSize>
+  </observe>
+  <etc>
+    <!--특수 능력 발생할 때, 너프 특성 가진 직원에게 랜덤으로 뜨는 텍스트.-->
+    <param key="present1" index="0">
+      La jeune enfant de #0 passera Noël seule parce qu’elle gagnera sa vie toute seule.
+    </param>
+    <param key="present2" index="1">
+      #0 consommera des dizaines de pilules le jour fatidique de Noël.
+    </param>
+    <param key="present3" index="2">
+     #0 pleurera seul alors que son/sa bien-aimé(e) le/la quittera au prochain Noël.
+    </param>
+    <param key="present4" index="3">
+      #0 recevra la nouvelle de la mort d'un être cher alors qu'il se tiendra sous un arbre de Noël merveilleusement décoré.
+    </param>
+    <param key="present5" index="4">
+      #0 sera renversé par un camion rempli de cadeaux la veille de Noël et ne pourra plus jamais marcher.
+    </param>
+    <param key="present6" index="5">
+      #0 sera informé par son médecin qu'il a contracté une maladie incurable la veille de Noël.
+    </param>
+    <param key="present7" index="6">
+      Le toit de la maison de #0 s'effondrera sous le poids de la neige et personne ne survivra. Tout cela arrivera quelques années plus tard, le jour de fatidique de Noël.
+    </param>
+  </etc>
+</creature>

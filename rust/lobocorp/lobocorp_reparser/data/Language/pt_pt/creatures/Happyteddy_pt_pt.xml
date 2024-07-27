@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100002">
+
+
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 parece como um ursinho de peluche que todos tiveram quando eram pequenos.},
+      {$0 sempre quis abraçar crianças.},
+      {$0 ama abraços. A sua primeira memória é a de um quente abraço.},
+      {O ursinho de peluche nasceu da felicidade, então ele tem de estar sempre feliz.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 está perdido nos seus pensamentos, olhando despreocupadamente para o algodão saindo das suas costuras.},
+      {A fita suja que está à volta do pescoço do $0 abana suavemente, mesmo que não haja vento. O nome escrito na fita é ilegível agora.},
+      {$0 olha para o nada. Espera, ele está a olhar para uma foto de uma menina.},
+      {O olho preto de plástico do $0 está pendurado apenas por um fio do lado esquerdo da sua cara.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Enquanto #0 trabalha, o ursinho continua a olhar para a foto.},
+      {Mesmo que haja movimento, o ursinho continua a olhar fixamente para a foto.},
+      {Parece que a foto, que o ursinho observa, é a única coisa importante para ele.},
+      {#0 não foi capaz de distrair o urso.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Enquanto trabalha, #0 aproxima-se do ursinho e reajusta a sua fita desfiada.},
+      {#0 para de trabalhar para limpar a fotografia que o ursinho observa.}
+      {#0 começa a limpar as lágrimas no ursinho enquanto trabalha. O mesmo não reage.}
+      {#0 ajeita e limpa o ursinho, mas o mesmo não reage.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {O ursinho lembra-se de uma festa de aniversário de uma menina de sete anos. Ele estava dentro de uma grande caixa colorida.},
+      {O urso de peluche lembra-se de uma incrível viagem com uma criança. O seu nome era Ursinho.},
+      {O ursinho relembra-se de inúmeras noites com o seu dono. A criança que dormia nos seus braços.}
+      {O ursinho ainda pensa sobre a criança que agora tinha crescido. Abandonado em algum lugar no fundo do armário, sendo devorado por traças.}
+      ]
+    </narration>
+
+    <narration action="special_ability">
+      [
+      {$0 estende os seus braços e arrasta #0 para si. #0 esperneia-se, tentando se libertar.}
+      ]
+    </narration>
+
+    <narration action="dead">
+      [
+      {Os ossos de #0 começam a partir entre os braços do urso. O seu pelo cheira a saudade.}
+      {O urso não abre os seus braços, impedindo #0 de fugir. #0 continua a se debater. Mesmo assim o urso não solta #0 do seu abraço.}
+      ]
+    </narration>
+
+    <narration action="panic">
+      [
+      {Depressão caí sobre #0. A vida não tem valor. #0 não é nada para além de pó.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-04-06</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Teddy</portrait>
+
+      <name openLevel ="1">
+        Ursinho de Peluche
+      </name>
+
+      <name openLevel="2">
+        Ursinho de Peluche Feliz
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+
+      <openText>A sua primeira memória é a de um quente abraço.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Uma Anormalidade que parece um grande e velho ursinho de peluche. Falta-lhe enchimento e um olho.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [Levando em conta o nome escrito na fita no seu pescoço, pode-se afirmar que o antigo dono do ursinho gostava muito dele. A fita está muito esfarrapada então não dá para ler o nome que está escrito nela. Parece que o urso sabe que foi abandonado e parece triste.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Registo da Sessão de Aconselhamento 32_356&gt;&#13;&#10;&#13;&#10; Empregado M2434: &quot;Eu estava no meu turno de patrulha. Não era preciso prestar muita atenção no urso de peluche, era inofensivo a maior parte do tempo. Eu apenas olhava dentro da unidade de contenção para verificar que estava tudo bem. Naquele dia ele estava abraçar alguém. Primeiro eu pensei que &lt;EDITADO&gt; estava a trabalhar até tarde, mas tinha algo parecia não estar bem. Eu disse ao &lt;EDITADO&gt; para fazer uma pausa. Aí eu entrei na unidade de contenção, &lt;EDITADO&gt; não me respondia. Eu premi o botão de emergência e chamei por reforço. &lt;EDITADO&gt; tinha morrido há 8 horas atrás. Durante esse tempo todo, desde o dia de trabalho começou até ao momento que eu o encontrei, o urso o abraçou.&quot;}
+    ]
+  </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {&lt;Carta Velha com um Selo de "Devolução"&gt; &#13;&#10;&#13;&#10;Lembraste do artigo 3 no Manual dos Empregados?&#13;&#10;"Não te apegues as Anormalidades".&#13;&#10;No começo em não entendi o porquê que isso tinha de ser explicado.&#13;&#10;Achas que é possível simpatizar com aqueles monstros?&#13;&#10;Hey, eles são realmente monstros, sabes. Não tem problema chama-los assim quando a conversa é entre eu e tu.&#13;&#10;O Ursinho de Peluche Feliz é a tua segunda Anormalidade, não é?&#13;&#10;Tu deves ter achado que nem todas as Anormalidades são monstruosas depois de o veres.&#13;&#10;Um urso de peluche abandonado deve ter mexido com umas das tuas memórias que foram há muito tempo esquecidas. Hey, eu entendo-te.&#13;&#10;De qualquer forma, parece que o Ursinho gostou do teu abraço.&#13;&#10;Ele produz mais energia quando estavas por aqui.&#13;&#10;E foi por causa disso que eles te puseram a cuidar dele, não é?&#13;&#10;Tu deves ter sentido-te responsável por ele, não foi?&#13;&#10;Eu comecei a preocupar-me pois o tempo que passavas na unidade de contenção estava a começar a aumentar.&#13;&#10;Para mim, parecia mais que estavas a fazer um trabalho de caridade para um orfanato.&#13;&#10;...&#13;&#10; &lt;color=#FF9E72FF&gt;Eu acho que o urso pensou que tu serias o seu novo dono.&#13;&#10;Talvez tu estejas feliz em ouvir isso.&#13;&#10;Mas ele não quer nunca mais separar-se do seu dono novamente.&lt;/color&gt;&#13;&#10;&#13;&#10;Eu sei que deves ter prometido-lhe que tu ias voltar,&#13;&#10;mas ele não entendeu. Ele não consegue entender.&#13;&#10;Eu ouvi dizer que tu sobreviveste milagrosamente a esse problema todo.&#13;&#10;E que eles demoraram uma hora para te libertar do seu abraço mortal.&#13;&#10;Mesmo que os outros se esqueçam,&#13;&#10;eu prometo que eu nunca irei-te esquecer.&#13;&#10;Fica bem.&#13;&#10;- K. H.}
+    ]
+  </desc>
+
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="manyDead">#0 morreu por asfixia após tentar trabalhar com o $0 várias vezes seguidas.</specialTip>
+      <specialTip openLevel="2" key="manyDead2">#0 apareceu já em estado de óbito nos braços do $0 com o seu pescoço partido. Acredita-se que visitar a unidade de contenção do $0 múltiplas vezes pode fazer com que este terrível incidente se repita.&#13;&#10;Verifique a Carta Velha com um selo de "Devolução".</specialTip>
+    </specialTipSize>
+
+  </observe>
+
+
+</creature>

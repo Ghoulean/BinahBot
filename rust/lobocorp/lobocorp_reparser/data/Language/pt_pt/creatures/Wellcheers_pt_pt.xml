@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100028">
+
+
+
+    <narration action="move">
+      #0 recebeu a ordem para ir para a unidade de contenção de $0.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {A máquina de vendas com as suas luzes néon brilhantes fazem com que #0 se sinta um pouco mal.},
+      {A máquina de vendas emite uma música energética do seu interior.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Camarões são deliciosos não importa como tu os cozinhes. Assados, fritos, escalfados, de qualquer modo que tu queiras!},
+      {Estas a perder metade da diversão de se ser um ser humanos se não gostas de camarões.},
+
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Rumores dizem que pessoas são abduzidas para barcos de pesca depois que bebem uma lata de sumo aberta com sabor a uva.},
+      {Rumores dizem que um dos teus órgãos pode desaparecer se beberes uma lata de sumo aberta com sabor a uva.},
+      {Se alguém oferecer-te uma lata aberta de refrigerante com sabor a uva, tu deves a rejeitar.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">F-05-52</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/WellCheers</portrait>
+
+      <name openLevel ="1">
+        Wellcheers
+      </name>
+
+      <name openLevel="2">
+        Lata Aberta de Wellcheers
+      </name>
+      
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        Um Réfri de Outro Mundo!
+      </specialName>
+      
+      
+
+      <openText>Em algum lugar no horizonte, tu ouves gaivotas.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {&lt;Registos de um empregado&gt;&#13;&#10;Já alguma vez foste a um encontro na Lobotomy?&#13;&#10;Eu tive de preparar-me para trazer isto ao de cima…&#13;&#10; Uma vez eu compareci em um tipo de encontro de grupo de ping-pong, mas porque não havia mulheres nenhumas no grupo eu dei meia volta e sai de lá bem rapidamente lol.&#13;&#10;Então, um dia, eu vi um anúncio sobre um grupo estranho no placar.&#13;&#10;Eu interessei-me então contactei o líder do grupo e ele introduziu-se como OO do departamento de OO.&#13;&#10;Eu perguntei se iriam haver moças no grupo e ele disse-me que havia montes de empregadas lá.&#13;&#10;Aí eu interessei-me ainda mais e inscrevi-me no encontro que vinha aí.&#13;&#10;Então chegou o dia, lá estava eu com o meu crachá com o meu nome como todos os outros, eu cheguei a ver três pessoas do departamento da Hod e dois do departamento do Netzach.&#13;&#10;Uns 30 minutos depois, o líder chegou com um monte de latas de Wellcheers num tabuleiro e deu a cada um de nós uma lata.&#13;&#10;Eu senti que tinha algo quando vi que ela já estava aberta quando me a deram.&#13;&#10;Mas como eu sou maluco por refrigerantes bebi aquilo em um gole no momento que pusseram a lata nas minhsa mãos.&#13;&#10;}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Bem, depois disso, o líder disse que tínhamos de ir para um sítio diferente e que ele tinha alugado uma carrinha para isso.&#13;&#10;‘Ele é um gajo porreiro’, eu pensei, então eu saltei para dentro da carrinha com dois empregados da Hod e um do mesmo departamento que eu.&#13;&#10;O líder disse que ia demorar uma hora a chegarmos lá e que nós devíamos tentar dormir durante a viagem e nós todos assim fizemos.&#13;&#10;Foi estranho, eu adormeci muito rapidamente. &#13;&#10;Tipo, quando fechei os meus olhos eu fiquei inconsciente. &#13;&#10;Eu tinha insomnia mas por algum motivo eu adormeci muito depressa.&#13;&#10;Esse foi o meu maior erro.&#13;&#10;Eu não sei quanto tento eu passei a dormir. &#13;&#10;Eu ouvi o barulho distante das gaivotas.&#13;&#10; No começo eu pensei que fosse o alarme do telemóvel de alguém.&#13;&#10; Mas então eu ouvi as ondas. Parecia demasiado real para estar vindo de um telemóvel então eu abri os meus olhos.&#13;&#10;Eu estava na porra de um barco.&#13;&#10; UM BARCO.&#13;&#10;Aí a realidade esmagou-me como se fosse um martelo, causando-me arrepios.&#13;&#10; O líder do grupo pões-me a mim e aos outros a dormir e vendeu-nos a pescadores.&#13;&#10; No convés havia um camarão que estava a saltar e a tentar voltar para o mar.&#13;&#10; Parecia que tinha escapado da rede.&#13;&#10; Eu pensei que isto tudo devia ser um sonho, mas aquele camarão parecia demasiado real para o ser.&#13;&#10;Então eu vi pessoas no convés, eles eram a tripulação do barco.&#13;&#10; Eles eram todos enormes e musculoso.&#13;&#10; Eu não sei o porquê, mas eu tive a impressão que se eu dissesse algo de errado eles iam estrangular-me até eu adormecer novamente.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {A tripulação era de 10 pessoas incluindo o capitão, o contramestre e o cozinheiro.&#13;&#10; Eles estavam a olhar para mim enquanto riam.&#13;&#10;Aquele que parecia ser o capitão caminhou até mim e perguntou-me sobre o meu peso e a minha altura.&#13;&#10; Eu perguntei-lhe quando é que o navio ia para o porto. &#13;&#10;Ele disse-me que iriam parar lá daqui a um mês e que eu não me devia atrever a fugir porque eles já tinham feito um acordo com o "meu pessoal".&#13;&#10; Eu não sei quem é o "meu pessoal" mas eu estava com demasiado medo para perguntar.&#13;&#10;Eu apenas fiquei a olhar para o nada.&#13;&#10; Um pouco depois a tripulação chamou-me para ir almoçar com eles. Para almoço íamos ter algum tipo de sopa que parecia picante com camarões, amêijoas e outros frutos-do-mar. &#13;&#10;Eles disseram que eu não devia ficar ali em pé a olhar para o nada como se eu fosse atirar-me para o mar. &#13;&#10;Eu disse-lhes que não estava a pensar em fazer isso, eles riram e disseram que não tinham posto nada na sopa então que eu devia ir com eles e come-la.&#13;&#10; Eu não tinha outra escolha, então tomei a sopa.&#13;&#10; Era bem boa.&#13;&#10;Assim que acabamos de almoçar, eles disseram-me que iam ensinar-me a ajustar as cordas.&#13;&#10; Nessa altura eu já tinha desistido. Tudo que eu podia ver eram pequenas ilhas na linha do horizonte onde nenhum ser humano poderia sobreviver.&#13;&#10; Eu teria de aguentar tudo isto por um mês inteiro até que chegasse-mos ao porto.&#13;&#10;Eu aprendi como ajustar as cordas, como puxar de volta as redes para os peixes e como mante-la no lugar enquanto preparo café e sopa de marisco para a tripulação.&#13;&#10; Eu estou a ficar cada fez melhor a faze-la.&#13;&#10; Eu juro que eu podia abrir um restaurante com aquilo.&#13;&#10; Um pouco depois nós passamos por uns poucos tufões.&#13;&#10; Eu e eles começamos a criar algum tipo de laço, uma camaradagem.&#13;&#10;Duas semanas depois, quando eu estava entediado a ver as baleias, o capitão veio falar comigo e disse-me que eu era bom no que fazia e perguntou-me se eu estava interessado em trabalhar com eles na pesca oficialmente.&#13;&#10;Bem, eu já tinha a certeza que eu tinha sido despedido da Lobotomy e preocupava-me com o que eu ia fazer com a minha vida depois que eu me fosse embora daqui.&#13;&#10; Então aquela oferta interessou-me.&#13;&#10;O quê que eu estou a fazer agora? &#13;&#10;Bem, eu estou a viver bem com uma posição fixa e salário.&#13;&#10;Neste barco, um shot de vodka após um longo dia de trabalho no mar é como estar no paraíso.&#13;&#10; Eu estou agora no porto, mas tenho que me ir embora em breve para ir à caça de camarões. &#13;&#10;Nunca sabemos os que o futuro nos aguarda, não é?&#13;&#10;Às vezes eu penso sobre os outros que estavam comigo naquele encontro na Lobotomy. &#13;&#10;Mas sendo sincero, eu não quero saber o que lhes aconteceu.&#13;&#10;Eu só vou continuar a ver as coisas pelo lado positivo, eu acho que eles estão em uma boa situação assim como eu. &#13;&#10;Oh, é hora de zarpar.&#13;&#10;Adeus.}
+      ]
+    </desc>
+
+    <specialTipSize size="5">
+      <specialTip openLevel="0" key="specialCan">Após terminar o trabalho uma bebida irá ser dispensada da máquina de vendas. O sabor da bebida depende do tipo de trabalho que é realizado.</specialTip>
+      <specialTip openLevel="2" key="healthCan">&lt;Resultado do Teste W-1&gt;Uma lata vermelha foi disponibilizada. A pessoa que ingeriu a bebida diz que a mesma possui um aroma característico e que é doce, e também disse que se sentia com as energias recuperadas. Após o ocorrido foi confirmado uma melhoria na força física do indivíduo.</specialTip>
+      <specialTip openLevel="2" key="metalCan">&lt;Resultado do Teste W-2&gt; Uma lata azul de alumínio é dispensada. Ela tem um líquido inodoro com um ácido carbónico forte. Foi comprovado que a bebida ajuda a melhorar a força mental.</specialTip>
+      <specialTip openLevel="3" key="wellCheersCan">&lt;Resultado do Teste W-3 e W-4&gt; A aparência, a composição e o sabor são exatamente os mesmos que os das bebidas carbonizadas com sabor a uva quem vêm em latas roxas. Após o conteúdo da lata ser ingerido a força mental e física do indivíduo que o consumiu se recuperaram.</specialTip>
+      <specialTip openLevel="4" key="goToSea">&lt;AVISO&gt; Quando a máquina não está de bom humor, não beba nada que venha dela.</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {Um máquina de vendas está diante de ti.}
+        {Dois camarões que parecem deliciosos estão de pé ao lado da máquina.}
+        {Vais comprar uma bebida?}
+        <!--계속-->
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="SIM" target="1" isAnswer="true"  message="You have succeeded to obtain final observation report on Opened can of Wellcheers." />
+        <node desc="NÃO" target="2" isAnswer="true" message="You have succeeded to obtain final observation report on Opened can of Wellcheers." />
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {Tu bebes o refrigerante.}
+        {Tu fechas os teus olhos.}
+        {Tu adormeces.}
+        {…}
+        {Em algum lugar no horizonte, tu ouves gaivotas.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {Tu recusas-te o refrigerante.}
+        {Mas o camarão à direita trouxe-a até ti.}
+        {Tu bebes o refrigerante.}
+        {Tu fechas os teus olhos.}
+        {Tu adormeces.}
+        {…}
+        {Em algum lugar no horizonte, tu ouves gaivotas.}
+        ]
+      </desc>
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {Qual é a semelhança entre o idiota e o camarão?}
+        {Em ambos os casos...}
+        {A cabeça não serve para nada.}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+
+
+</creature>

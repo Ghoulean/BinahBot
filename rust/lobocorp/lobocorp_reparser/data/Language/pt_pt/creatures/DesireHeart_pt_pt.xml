@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300001">
+    <narration action="move">
+      #0 recebeu a ordem para ir para a unidade de contenção de $0.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-77</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/DesireHeart</portrait>
+
+      <name openLevel ="1">
+        Coração de Aspiração
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>Excessiva aspiração trará loucura.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Um coração sem dono. Ele continua a bater mesmo depois de ter sido removido do corpo.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Quando emprestado, o coração baterá em dobro, aumentando HP e a Velocidade de Ataque.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Excessiva aspiração trará loucura.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+
+      [
+      {Empregados que não atacaram nada nem ninguém ou que devolveram o coração em menos de 30 segundos enlouqueceram e tiveram os seus HPs aumentados.}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Indivíduos que equiparam o $0 tiveram os seus HPs e a Velocidades de Ataque aumentados.</specialTip>
+      <specialTip openLevel="2" key="2">Se o usuário tentar devolver o $0 sem ter atacado nada nem ninguém, o mesmo irá enlouquecer e irá atacar tudo que estiver ao seu redor.</specialTip>
+      <specialTip openLevel="2" key="3">Se o usuário tentar devolver o $0 após usá-lo por menos de 30 segundos o mesmo efeito irá ocorrer.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

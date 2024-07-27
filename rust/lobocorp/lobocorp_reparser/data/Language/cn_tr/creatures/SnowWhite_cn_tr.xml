@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100023">
+
+
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務.
+    </narration>
+
+    <narration action="start">
+      [
+      {"鏡子啊, 鏡子, 誰是世界上最美麗的人?’ 女巫在沒有其他人進入房間時問到.},
+      {但是鏡子並沒有回話. 即使如此, 女巫也已經知道答案了.},
+      {當熟透的蘋果從公主與國王駐足的花園裡的樹上落下時, 女巫的內心夾雜著憤怒燃燒著.},
+      {女巫對那顆蘋果施下她所知道最強大的咒語, 也犧牲了她的一切...}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {#0 能看到樹枝遍布在收容單位中.},
+      {$0 的收容單位裡長著一些葉子與樹枝.},
+      {當你進入 $0 的收容單位後, 你會看到樹枝彼此糾結.},
+      {樹葉在 $0 的收容單位裡微弱的發出沙沙作響的聲音.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {如果你仔細看著, 你會看到那些樹枝已經乾掉了.},
+      {看起來只要輕輕一觸就能將他們化為塵埃. 很難把他們稱作植物.},
+      {雖然乾掉了, 那些樹枝及葉子仍不斷生長著.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {$0 空洞的雙眼在過去吞噬著鳥兒與蟲子. $0 透過吃下周遭的生物所茁壯.},
+      {$0 獨自一人非常久了. 在 $0 的四周, 蟲子與鳥兒在吃下 $0 後遍布四周的死在附近.}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {$0 認為公主與王子在走下滿是花朵的道路時受到大家的祝福.},
+      {$0 受到了女巫的詛咒, 且因為 $0 而倒下的公主在幸福快樂之中結束了她的故事. }
+      {$0 在對公主的忌妒裡茁壯著, 帶著自己的憤怒, 和孤獨.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">F-04-42</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/SnowWhite</portrait>
+
+      <name openLevel ="1">
+        白雪公主的蘋果
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>當熟透的蘋果從公主與國王駐足的花園裡的樹上落下時, 女巫的內心夾雜著憤怒燃燒著.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {當王子親吻公主後, 她咳出了噎在她喉嚨裡的蘋果籽. 矮人們喜極而泣. 白雪公主與王子走過滿是花朵的道路, 並往他們的王國走去. 大家從此過著幸福美滿生活.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {一顆從女巫的憤怒與詛咒當中創造出來的蘋果. 這是她自身的一部分. 蘋果在白雪公主的手中被她咬了一口後不開心的掉了下來. 蘋果, 充滿著對公主的怨恨並感到如此孤獨, 等著它腐爛並回歸地球的那一天.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {我們不知道這超然的自然力量是魔法或是憤怒. 即使有足夠的時間讓它腐爛並讓它的種籽結出果實, 蘋果還是沒有爛掉. 這段時間裡, 蘋果已經被一隻鳥或是蟲子踏上, 並在它的身上鑽出一個洞來.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {鳥而與蟲子的屍體堆積在蘋果的周遭. 蘋果在腐爛的屍體中間思索著它的存在. 而在某一天, 一枝樹枝從它身上長了出來. 樹葉及樹枝都早已死亡, 但仍不斷的生長著.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {最後, 在一個下午, 蘋果得到了四處移動的能力, 他想到了幸福的公主與王子. 白雪公主已經睡了很久很久, 但是王子來了並喚醒了她. 蘋果, 現在變成了一位公主, 開始了她的旅途去找尋她的王子. &#13;&#10; - 摘錄自 "不可揭露的隱藏童話故事" (佚名)}
+      ]
+    </desc>
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="Escape">當工作結果為普通時, $0 的逆卡巴拉計數器會以普通的機率減少.</specialTip>
+      <specialTip openLevel="1" key="Escape2">當工作結果為差時, $0 的逆卡巴拉計數器會以較高的機率減少.</specialTip>
+      <specialTip openLevel="2" key="Making">在從收容單位突破收容後, $0 會在地上蔓延它的根, 在走廊內射出樹枝. $0 的樹枝會減緩員工的速度, 阻礙他們的移動. </specialTip>
+      <specialTip openLevel="3" key="NotDisappear">在走廊充滿樹枝後, $0 走向其他的走廊製造更多的樹枝. &#13;&#10;雖然 $0 被鎮壓並回歸正常, 但是 $0 遍布走廊的樹枝得等到隔天才會消失.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+
+
+
+</creature>

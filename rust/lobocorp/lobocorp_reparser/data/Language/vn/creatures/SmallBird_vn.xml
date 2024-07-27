@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id ="100020">
+
+    <narration action="move">
+      #0 designated to $0's containment room.
+    </narration>
+
+    <narration action="start">
+      [
+      {Employees put a perch in $0’s containment chamber because it seemed to be bored.},
+      {$0 feels like it’s back in the forest it used to live when sitting on the perch.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Actually, the perch is there to prevent $0 from being stepped on due to its small size.},
+      {Actually, the purpose of the perch is to prevent unexpected physical hazard that could happen to $0 due to its small size.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Most of the time, $0 acts like a normal bird, flying here and there in the containment chamber. },
+      {$0 never chirps. But Its stomach twitches sometimes.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Not many knows about $0’s hidden teeth.},
+      {How many knows about $0’s disgusting flesh that divides into several parts?}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="2">
+    <collection>
+      <codeNo openLevel ="0">O-02-56</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/SmallBird</portrait>
+
+      <name openLevel ="1">
+        Little Bird
+      </name>
+
+      <name openLevel="2">
+        Punishing Bird
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        Punishment!
+      </specialName>
+
+      <openText>People have been committing sins from a long time ago. ‘Why do they commit such a thing? Even when they know that it is bad'</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {A little, confident bird that punishes the weak, the sinners, and other profane ones. Some employees stated that it looks fairly cute after seeing its small wings flapping. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {People have been committing sins from a long time ago. ‘Why do they commit such a thing? Even when they know that it is bad’, a little bird wondered. &#13;&#10; ‘It must be because they don’t have someone that punishes bad people. Foul things will never happen if I take that role myself!’ A little bird moved out of the forest that it had been living for the lifetime, and never went back.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="NoWorking">When an employee enters an containment room in another Abnormality, $0's Qliphoth counter has decreased with a normal probability.</specialTip>
+      <specialTip openLevel="2" key="PanicOut">When #0 employee falls into a panic, $0's Qliphoth counter has decreased.</specialTip>
+      <specialTip openLevel="2" key="comebackhome">$0 returned to the containment room after a panicky employee became normal or after a certain period of time after the escape.</specialTip>
+      <specialTip openLevel="2" key="NoAccept">Order #0 employees to take control of birds. When the employee tries to attack $0, the central part of $0 is broken and [DATA REDACTED]. After that #0 employee's death confirmed. Failure to suppress.</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {A bird stares at you.}
+        {What is the name of this bird?}
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="A little bird" target="" isAnswer="false"/>
+        <node desc="Punishing Bird" target="" isAnswer="true"  message="You have succeeded to obtain final observation report on Punishing Bird."/>
+      </select>
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {“A long time ago somewhere in the deep dark forest, three birds were living.”}
+        {It’s the first line of the fairytale you loved as a kid.}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+</creature>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300006">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-82</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Shelter</portrait>
+      <name openLevel="1">
+        Le Refuge du 27 Mars
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <openText>
+        Il devient littéralement “l'endroit le plus sûr du monde.”
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Un abri nucléaire qui protège complètement son contenu de toute menace extérieure, y compris la lumière.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Le refuge garde encore le souvenir de ce jour.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {L'entreprise P souhaitait construire l'endroit le plus sûr du monde. En tant que tel, l'intérieur de ce refuge abrite un grand nombre de produits non périssables, ce qui permettrait à quiconque y restant de survivre très longtemps.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      <!-- Translation has been fixed here ;) -->
+      [
+      {Grâce à cet abri, les réfugiés sélectionnés ont été totalement protégés de l’océan des cris sans fin et des carnages.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Cependant, ce refuge, bien que parfaitement sûr de l’intérieur, altère la réalité du monde extérieur pour la rendre encore plus désespérante.Il devient littéralement “l'endroit le plus sûr du monde.”}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Tout sujet qui entre dans $0 sera immunisé à toute forme de dégâts (Cependant, cela ne s’applique pas aux dégâts causés par O-09-91). De plus, les PV et PSM se régénèrent lentement à partir du moment où il entre dans $0.</specialTip>
+      <specialTip openLevel="2" key="2">Si un sujet entre dans $0 alors qu’il est poursuivi par une entité hostile, le sujet deviendra indétectable par le poursuivant.</specialTip>
+      <specialTip openLevel="3" key="3">Si le moindre sujet reste dans $0 pendant plus de 30 secondes, le Compteur Qliphoth d’une Anomalie choisie au hasard dans le complexe tombera à 0. Un tel phénomène se produira de manière régulière jusqu’à ce que le sujet quitte $0.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300007">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para iniciar o processo de trabalho.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-09-81</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/ResetMirror</portrait>
+      <name openLevel="1">
+        Espelho de Ajuste
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <openText>
+        “Mas a satisfação é somente temporária.”
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {A anormalidade assume uma forma de um espelho cheval, mas nada é refletido em sua superfície.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {A única coisa que ele mostra são pessoas. Ao se ver no espelho, o sujeito muda. Há inúmeras hipóteses de como isso ocorre, como a possibilidade de uma conexão a um universo paralelo ou poderes mágicos, mas nada disso pode ser confirmado. }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Aqueles que se olham no espelho podem se parecer iguais, mas na realidade, se tornaram pessoas completamente diferentes. }
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      <!-- 여기 번역 고치기 -->
+      [
+      {Se olhar no espelho múltiplas vezes irá gradativamente devorar a humanidade até que se torne nada mais do que um casco humano indistinguível, então cuidado é recomendado.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {“E aí, Brian acabou de passar por mim sem falar uma palavra. O que há com ele?”&#13;&#10;“Ah, ele deu uma olhada no espelho.”&#13;&#10;“Tipo, ele sempre reclamava sobre ter nascido fraco e tal. Acho que ele finalmente se decidiu sobre isso hein.”&#13;&#10;“Mas a satisfação é somente temporária..”}
+      ]
+    </desc>
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="1">Aqueles que se olham no $0 terão seus atributos aleatoriamente ajustados.</specialTip>
+      <specialTip openLevel="2" key="2">Se o mesmo funcionário se olhar no $0 mais de uma vez por dia, todos os seus atributos diminuirão a cada vez que se olhar no espelho.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

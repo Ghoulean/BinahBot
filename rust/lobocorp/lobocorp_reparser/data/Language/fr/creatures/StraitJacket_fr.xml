@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100018">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {$0 se tient comme une statue dans un coin de l’Unité de Confinement.},
+      {Parfois, $0 murmure en tremblant.},
+      {$0 peut parfois crier, mais puisqu’il est attaché, il n’y a probablement aucune raison de s’inquiéter.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {#0 ressent le désespoir.},
+      {#0 sent l’odeur insupportable du désespoir.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Pourquoi cet endroit est-il toujours si sombre et froid ?},
+      {Dans l’obscurité, le cerveau de $0 a lentement pourri.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Abandonné même par la mort, $0 restera confiné ici jusqu’à la fin des temps.},
+      {Ce n’était plus de la rage, mais bien une exécration plus profonde et plus tordue qui l’animait.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">T-01-54</codeNo>
+      <name openLevel="1">Meurtrier Abandonné</name>
+      <portrait openLevel="1">Sprites/Unit/creature/StraitJacket</portrait>
+      <riskLevel openLevel="2">TETH</riskLevel>
+      <openText>“Ce qui est vraiment pitoyable, c’est que des gens comme vous meurent à cause de gens comme moi.”</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Une Anomalie dont le cerveau est imbibé de rage, de cris, et de pleurs malicieux.&#13;&#10;&#13;&#10;Sur son front se trouve une blessure qui semble ne jamais cicatriser. Il déteste tout et tout le monde. Il porte une camisole, mais est aussi libre que n’importe quel homme. Il n’y aura jamais assez de chaînes ou de contraintes pour l’empêcher d’être violent.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Il devait toujours porter une camisole. On raconte qu’il était un condamné à mort issu d’une prison fédérale. Les chercheurs étaient toujours prudents autour de lui. Ils sentaient que la camisole ne pouvait pas le retenir.&#13;&#10;&#13;&#10;Les chercheurs voulaient étudier le cerveau du meurtrier pour prouver que le mal inné existe. Il était difficile de dire qui était le pire : un homme qui a assassiné un innocent sans remords, ou les chercheurs qui voulaient lui ouvrir le cerveau pour satisfaire leur curiosité.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Une grande quantité de médicaments et de produits chimiques lui ont été injectés. Certains étaient utilisés pour le bien du futur de l’humanité, tandis que d’autres étaient pour de nouvelles procédures médicales. Tous avaient le potentiel de changer le monde.&#13;&#10;&#13;&#10;Les chercheurs devenaient de plus en plus excités. Bien qu’ils ne le disaient pas ouvertement, c’était presque palpable. Ils disaient avoir trouvé un remède, mais ils n’ont jamais dit ce qui a été guéri.&#13;&#10;&#13;&#10;Le prisonnier parlait de moins en moins. Son agressivité fut supprimée, mais il se perdit lui-même en simultané. Après un examen approfondi, on lui permit de retirer la camisole.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {      “J’ai l’impression que ma tête se transforme en métal. J’entends parfois des grincements métalliques dans ma tête…”&#13;&#10;&#13;&#10;Au fil des jours, il commença à s’auto-mutiler. Il se frappait la tête à répétition contre le mur ou des surfaces dures. Il insistait pour que l’on vérifie si sa tête se transformait vraiment en métal.&#13;&#10;&#13;&#10;Un jour, ils ont décidé de le laisser faire en espérant qu’il arrêterait une fois blessé. Cependant, même lorsque du sang coula sur son visage, il continua jusqu’à ce que la blessure soit si profonde que l’on puisse voir la blancheur de son crâne. Il dût remettre la camisole, mais il n’était plus craint ou surveillé comme avant.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Un chercheur est mort. Sans sa carte d’identification, il aurait été difficile de l’identifier puisque sa tête a été violemment écrasée. La porte était souvent déverrouillée ou non-surveillée puisqu’on avait relâché la sécurité. Le prisonnier que tout le monde pensait confiné se déplaçait sur ses genoux.&#13;&#10;
+      “Ma tête… se transforme en métal… se replie sur mon cerveau, se fait écraser…”&#13;&#10;&#13;&#10;Il continuait de répéter des mots étranges, et la dernière procédure fut rapidement mise en place. Le traitement fut arrêté, et il a été disséqué pour que son cerveau soit utilisé par la recherche. Comment je le sais ? C’est moi qui l’ai sédaté. Jusqu’au bout, il n’a pas arrêté de marmonner n’importe quoi.&#13;&#10;
+      “Finit, commence, finit, commence, fin”}
+      ]
+    </desc>
+    <specialTipSize size="1">
+      <specialTip openLevel="1" key="badEscape">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth diminue.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

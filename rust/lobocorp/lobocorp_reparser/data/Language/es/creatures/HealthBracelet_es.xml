@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300106">
+    <narration action="move">
+      #0 va a entrar en la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-95 </codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/HealthBracelet</portrait>
+
+      <name openLevel ="1">
+        Pulsera luminosa
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>Este brazalete no perdona a quienes tienen avaricia, por lo que solo deben usarlo los necesitados.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Una pulsera que emite una suave luz azul-verde. Muchas cosas inexplicables han sido descubiertas desde los alrededores.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+       {Cuando está equipado, todas las heridas se curan sin dejar rastro.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Pero usar esta pulsera, incluso cuando no hay heridas, es un acto de codicia.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+
+      [
+      {Este brazalete no perdona a quienes tienen avaricia, por lo que solo deben usarlo los necesitados.}
+      ]
+    </desc>
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">>El estado con respecto a la fortaleza aumentará considerablemente cuando se usen $0 aunque es activo cuando esta equipado.</specialTip>
+      <specialTip openLevel="2" key="2">$0 recupera constantemente el PS del usuario cuando lo pierde.</specialTip>
+      <specialTip openLevel="2" key="3">El usuario morirá si se intenta devolverlo cuando su PS ha disminuido.</specialTip>
+      <specialTip openLevel="2" key="4">Si el PS del usuario llega a su limite después de que haya transcurrido cierto tiempo al usarlo, el usuario morirá a los pocos segundos.</specialTip>
+
+    </specialTipSize>
+
+
+  </observe>
+</creature>

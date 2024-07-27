@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100048">
+
+    <narration action="move">
+      #0 está designado a la celda contención de $0.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 a veces arroja lágrimas indefensas, sin decir nada a #0.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 vive en el pasado, al igual que sus hermanas.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-01-73</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/KnightOfDespair</portrait>
+
+      <name openLevel ="1">
+       Chica mágica
+      </name>
+
+      <name openLevel ="3">
+        La caballera de la desesperación
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>Todo lo que quedaba era el orgullo hueco de una caballera degradada.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Una anormalidad de la desesperación que ha pasado por un ciclo repetido de confianza y traición; Dejando solo atrás lágrimas negras como su emoción.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Fue una antigua heroina, una guardiána de la justicia en el pasado. Protegió al rey, al estado, a la ciudad y a los necesitados.&#13;&#10;Un caballero tenía que defender las leyes de Dios y perseguir el valor, la caballería y la justicia. Pero después de una larga historia de conflictos, la caballera se dio cuenta de que nada era realmente que no era verdad. La verdad cambió a la gente.&#13;&#10;El que luchó por la justicia se convirtió en malvado cuando se dieron cuenta de que no quedaba mal en el mundo. El que soñaba con un mundo de paz se volvió codicioso y comenzó a devorarlo todo.&#13;&#10;Como ellos, muchos otros que una vez pensaron que nunca cambiarían se alteraron y desaparecieron.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Quién dijo que un caballero nunca llora? Alguna vez has visto lágrimas que fluyen de la desesperación, no de la tristeza?&#13;&#10;La interminable corriente de dolor convirtió las cuencas de los ojos en cascaras vacías. Desde el interior de las cascaras, los diamantes negros a veces caen como cenizas.&#13;&#10;Como si su voluntad de proteger aún permanece, está obsesionada con la protección incluso cuando está encarcelada. Todo lo que quedaba era el orgullo hueco de una caballera degradada. La gente que ve al héroe que no puede abandonar el pasado está llena de pena.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Cuando la Justicia se vuelve de espaldas una vez más, varias docenas de cuchillas persistirán sin un propósito. La vergüenza de no volver a proteger, la ira contra el mundo llevará a que las cuchillas apunten a las que no pudo proteger.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Una caballera que quería redimirse salvando a otros se llama ahora caballera de la desesperación; Olvidado de las mentes de la gente, igual que los demás.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">El primer empleado que complete el trabajo con buenos resultados recibirá una bendición de $0. (A partir de entonces, el empleado será nombrado O-01-73-1.)</specialTip>
+      <specialTip openLevel="2" key="2">O-01-73-1 solo pudo hacer trabajo de supresión. Además, gracias a la bendición, el daño de tipo Rojo, Blanco y Negro disminuye en O-01-73-1 y se redujo a la mitad. Sin embargo, el daño de tipo pálido se duplicó.</specialTip>
+      <specialTip openLevel="2" key="3">La bendición de $0 se disipa cuando $0-1 murió o entró en pánico. Después de que la bendición desapareciera, un nuevo empleado pudo recibir la bendición.</specialTip>
+      <specialTip openLevel="1" key="4">Cuando O-01-73-1 entre en pánico, $0 escapara de la unidad de contención. Los mismos resultados se produjeron cuando O-01-73-1 muere.</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

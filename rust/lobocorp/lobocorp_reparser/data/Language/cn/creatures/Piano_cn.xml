@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+  -->
+  <info id ="100065">
+
+    <narration action="move">
+      #0正在前往“$0”的收容单元并准备执行任务
+    </narration>
+
+    <narration action="start">
+      [
+      {热情之炎自“$0”的深处燃起。},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {无需乐谱，“$0”将指引人们完成此生最辉煌的演出。},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {月光依附的演奏者所弹出的奏鸣曲美妙至极，它能打破人与人之间的壁障。},
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {悠扬的乐声会毫无偏见地解放每一个人。},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">D-01-105</codeNo>
+      <portrait openLevel ="0">Sprites/Unit/creature/Piano</portrait>
+
+      <name openLevel ="1">
+        月光女神
+      </name>
+
+      <riskLevel openLevel ="0">
+        WAW
+      </riskLevel>
+
+
+      <openText>“夫月者，惑心作妖也。然众谓&#13;&#10;之无望矣。”</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {一位年迈的贵妇端坐在古旧的钢琴旁边。她总是闭着眼睛，仅仅用点头代替语言交流。但在极少数情况下，她会露出浅浅的微笑。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {&lt;一篇摘自报纸的简讯&gt;&#13;&#10;世界上最伟大的钢琴家██总会在演奏她钟爱的奏鸣曲时献上精彩的演出。人们对她绝妙的技巧赞不绝口。当她演奏第三乐章时，那漫溢而出的能量与疯狂甚至会令一些听众坐立不安。&#13;&#10;自她赴月而去后，那空寂之所只剩下自幼与她相伴的钢琴，和能让我们挖掘她精神世界的干缩头骨。}
+      ]
+
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {&lt;员工███的心理咨询记录&gt;&#13;&#10;“在进入收容单元准备维护时，我们并没有见到任何异样。只有一位女士坐在那里，就像是等候多时了一般。&#13;&#10;有人接近了她，你猜接下来发生了什么？&#13;&#10;他可不是那种懂音乐懂艺术的家伙。当我们回过神后，他已经在弹奏奏鸣曲的第一乐章了。&#13;&#10;我看到那位女士露出了微笑。&#13;&#10;...老实说，我觉得我这辈子都不可能再听到如此美妙的钢琴曲了。&#13;&#10;后来，我们再也没有见过那名员工。&#13;&#10;这就是你们找到我，并向我记录证词的原因，没错吧？&#13;&#10;——因为我弹奏了第三乐章。”&#13;&#10;（省略）}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {“我不知道它为什么要我演奏...也不知道它是怎么做到的。我的手...就那样动起来，而且我对此感到...无比喜悦。我感觉周围的一切都在慢慢褪去...最后只剩下我自己，还有那架钢琴...直到我精疲力竭地结束演奏时，才发现我脚底踩着的根本就不是踏板...而是数不清的断头...”}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {“...月者，人之魂也。&#13;&#10;众云月之美。&#13;&#10;然时过境迁，汝复视之，其面几何哉？&#13;&#10;心之所属，魂之所归，皆尽破碎四散。&#13;&#10;终焉之刻，吾等皆化身为月，是以不堪凡躯也。”}
+      ]
+    </desc>
+
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">您可以指派一名员工对“$0”进行演奏工作。但请注意，演奏工作结束后“$0”的逆卡巴拉计数器将会减少。</specialTip>
+      <specialTip openLevel="1" key="2">乐声持续期间，所有员工的自律与正义属性都会得到小幅提升。然而，完成演奏工作的员工将损失当前生命值的50%。</specialTip>
+      <specialTip openLevel="1" key="3">当工作结果为良时，“$0”的逆卡巴拉计数器有小概率立刻减少。</specialTip>
+      <specialTip openLevel="1" key="4">当工作结果为差时，“$0”的逆卡巴拉计数器将会立刻减少。</specialTip>
+      <specialTip openLevel="1" key="5">当一名员工进入收容单元进行第三次演奏工作时，“$0”的逆卡巴拉计数器将会归零。</specialTip>
+      <specialTip openLevel="1" key="6">突破收容后，“$0”将在第三乐章结束时欣然返回收容单元。“$0”被成功镇压后，第三乐章也会随之结束。</specialTip>
+    </specialTipSize>
+    
+  </observe>
+  
+  <child>
+    <!--본체와 같아야 함-->
+    <name>月之泣</name>
+    <codeId>D-01-105</codeId>
+  </child>
+
+</creature>

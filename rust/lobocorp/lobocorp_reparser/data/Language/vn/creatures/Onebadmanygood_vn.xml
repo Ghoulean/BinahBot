@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100009">
+
+    <narration action="move">
+      #0 đang đi tới $0's để bắt đầu nhiệm vụ.
+    </narration>
+
+    <narration action="start">
+      [ {Having no information on $0, #0 is understandably terrified of entering the containment unit.}, {Depending on the situation, $0 can have a positive effect on employees.}, {Maybe it's best to send an honest employee to tend to $0.}, {$0 sees through you.} ]
+    </narration>
+
+    <narration action="mid1">
+      [ { $0 is waiting for people’s sin.}, {#0's sins shall reach $0 soon.}, {$0 sometimes menacingly clicks its teeth, but it is nothing to be worried about.}, {$0 gently floats in the air and moves sluggishly.} ]
+    </narration>
+    <narration action="mid2">
+      [ {$0 has no eyes, but it recognizes the presence of #0 in the room.}, {$0 is the punisher.}, {#0 witnesses the reverence and solemnness of $0.} ]
+    </narration>
+    <narration action="mid3">
+      [ {#0 has completed the task, but $0 was indifferent.}, {While #0 proceeded with the work, $0 did not respond at all.} {#0 failed to trigger a reaction from $0.} ]
+    </narration>
+    <narration action="mid4">
+      [ {Bearing the pain is half the atonement.}, {Only those who can deceive themselves can live happy lives.} {Isn't it possible just for once to forgive an act of evil as long as its intentions were good?} ]
+    </narration>
+
+
+    <narration action="special_ability1">
+      [ {#0 confessed about missing work to $0.} {#0 confessed about lying to their parents to $0.}, {#0 confessed about being jealous of a friend to $0.}, { #0 confessed about "incident of last July" to $0.} ]
+    </narration>
+    <narration action="special_ability2">
+      [ {Punishment begins to rain down.} ]
+    </narration>
+    <narration action="special_ability3">
+      [ {Everlasting guilt is most likely the greatest punishment for #0.} ]
+    </narration>
+
+    <narration action="panic">
+      [ {All thoughts extinguished from #0. Agony and anxiety press upon him, with no outlet.} ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-03-03</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/OneBadManyGood</portrait>
+
+      <name openLevel ="1">
+        One Sin and Hundreds of Good Deeds
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+
+      <openText>
+        It feeds on the evil that surfaces during conversations between people.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [ {A silent Abnormality that understands the conflict between good and evil. Its empty eye sockets stare at all those who encounter it.} ]
+    </desc>
+
+    <desc id="2" openLevel="0">
+      [ {A giant skull that is attached to a cross with a crown of thorns. It floats about 2 meters above the ground.} ]
+    </desc>
+
+    <desc id="3" openLevel="1">
+      [ {While its appearance is bizarre, incidents of violence against employees by it has rarely been recorded. } ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [ {It feeds on the evil that surfaces during conversations between people. The assigned employee must confess their sins to it. Its feeding mechanism is still unknown.} ]
+    </desc>
+
+
+    <desc id="5" openLevel="2">
+      [ {&lt;Experiment Log x2-321&gt;&#13;&#10;The sins have been cataloged in three levels. Cấp 1: A small lie or action that either goes unnoticed or can be shared in jest. Cấp 2: Sins that are more serious and only shared to the closest of friends. Cấp 3: Sins so profound that they cannot be shared with anyone and are taken to the grave.&#13;&#10;&lt;Redacted&gt; has been assigned to confess level 1 sins.&#13;&#10;Energy production has been increased by 12%.&#13;&#10;&lt;Redacted&gt; has been assigned to confess level 2 sins.&#13;&#10;Energy production has been increased by 15%.&#13;&#10;&lt;Redacted&gt; has been assigned to confess level 3 sins.&#13;&#10;1 minute and 48 seconds after the employee was sent in, a bright flash of light was seen. The light was so bright that it was seen even outside the containment unit. Immediately following the light, there was a company-wide power outage. The phenomena lasted for 2 hours. &lt;Redacted&gt; lost 6 years of their memory. The experiment was canceled following this incident. The level of mental corruption of all employees in the department was greatly decreased. Ethics decree that all footage of those who participated in the experiment were to be kept sealed, but the incident left us no choice but to review the footage in the containment unit.} ]
+  </desc> --&gt;
+
+    <desc id="6" openLevel="3">
+      [ {&lt;Redacted&gt;: "This happened during &lt;Redacted&gt;, at around 4:00 PM. By the way, will this really work? Anyways, there was a railway about 20 minutes from my house. Some of my good friends and I decided to have ourselves dressed as forest animals. One of us decided to dress as a deer. It was a crude costume, one that could hardly be called a costume to be honest. It was just a pair of clumsily made antlers and a dark outfit with some deer-like spots on it. Anyways, I don't know how our 'deer' friend wondered into the woods. We didn't even realize he was missing maybe for an hour. We looked for him and finally found him in some bushes. We called out his name, and I'm not sure if it was from relief of finally finding us or what but he started sprinting towards us. And that's when we heard it; the gunshots. Bang! Bang! Bang! We didn't know where it came from. But when I came to my senses I saw that his blood splattered all the way to my feet. After that, not one of us dressed up as an animal ever again."} ]
+  </desc>
+
+    <desc id="7" openLevel="3">
+      [ {&lt;Observation Log #4_435&gt;&#13;&#10;Its eyes are empty. It is a skull, after all. But I doubt it’s blind. I feel its gaze on me, and it is listening to me. And confessing to it lightens my heart.} ]
+  </desc>
+
+
+    <desc id="8" openLevel="4">
+      [ {Afterwards, we investigated incidents during the period in the employee’s hometown to get a better picture. We learned that a boy named Justin was shot and killed in a deer costume by hunters during a deer hunting season. Unlike the employee’s confession, Justin was repeatedly bullied by other kids, and witnesses said they heard the kids shout "Run, Justin, run!" right before the gunshot. After the incident, the kids at the scene moved out of town, and deer hunting was banned in the area.} ]
+    </desc>
+
+
+    <desc id="9" openLevel="4">
+      [ {&lt;color=#FF9E72FF&gt;&lt;Excerpt from Abnormality Research Log X-392&gt;&#13;&#10;You can’t expect all of the employees to give honest confessions to that skull. About one out of ten employees tends to say something that is not completely true. It’s a bit different from a lie. You can say that it is a subconscious excuse that they are making. They distort perspectives to justify their actions. Once this happens, the confession is no longer a confession. Yes, I am talking about you justifying your tardiness for 5 minutes now.&lt;/color&gt;}
+    </desc>
+
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="confessionIs">$0 restores the employee’s SP when the work result is Good. #0, who was on the receiving end, commented that it felt refreshing.</specialTip>
+      <specialTip openLevel="2" key="confessionIsGood">After fully producing PE-boxes, $0 restored the SP of all employees in the department.</specialTip>
+    </specialTipSize>
+
+    
+
+  </observe>
+</creature>

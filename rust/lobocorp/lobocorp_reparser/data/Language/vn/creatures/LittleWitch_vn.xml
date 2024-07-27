@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100041">
+
+    <narration action="move">
+      #0 is going into $0's containment unit to begin the task.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0, who is very shy, may give #0 a personally prepared surprise gift.},
+      {$0 came from a far away place and enjoys boisterous laughter.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 likes friends.},
+      {I hope #0 would be happy with this gift.},
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Imagining the surprise the gift would bring, #0 looks at #0 with happiness.},
+      {It'll be great if people will accept this small but precious gift.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {$0's "friend" is sleeping inside the gift, waiting for the receiver.},
+      {#0 has no idea what's inside the gift that is shaped like a cute heart.},
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-01-67</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/LittleWitch</portrait>
+
+      <name openLevel ="1">
+        A Shy Kid
+      </name>
+
+      <name openLevel="4">
+        Laetitia
+      </name>
+
+      <riskLevel openLevel ="1">
+       HE
+      </riskLevel>
+
+      <openText>So she came up with this brilliant idea!</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {<i>Similar to a child in size, she always maintains a bright smile...</i> &#13;&#10;She is a small very, very adorable child.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Small adorable child means cute little kid!&#13;&#10;The kid came from a place far away!&#13;&#10;And when I find someone I like, I give them a gift which the kid made herself.&#13;&#10;But the content of the gift is a secret!}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {This is another important secret, but the kid has lots of talents!&#13;&#10;She says that she has many friends, but they can't come here with her.&#13;&#10;The kid was sad about this, so she came up with this brilliant idea!}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {If I hide my friends in a box and give it as a gift, everyone will be surprised!&#13;&#10;And they will laugh together over my prank!&#13;&#10;Oh, there goes the secret of the gift!}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {I hope I can find lots of friends here!&#13;&#10;The kid is shy, so the gift will be given in secret!&#13;&#10;Farewells are said, so I hope we can play more!&#13;&#10;And people here don’t smile!&#13;&#10;They look gloomy!&#13;&#10;So the little lady decided to stay until she brings laughter in here!&#13;&#10;I will be happy if everyone is pleased with my pranks!}
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="give">After the work result has been determined as normal, $0 gave a gift to #0.</specialTip>
+      <specialTip openLevel="2" key="gift">When #0 was assigned to work on a different Abnormality instead of $0, a &lt;Redacted&gt; busted from #0. </specialTip>
+      <specialTip openLevel="2" key="cancle">If the assignment is canceled before a &lt;Redacted&gt; is born, the employee experience nothing special.</specialTip>
+    </specialTipSize>
+  </observe>
+
+  <child>
+    <name>LittleWitchMonster</name>
+    <codeId>100041_b</codeId>
+  </child>
+</creature>

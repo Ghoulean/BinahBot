@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100015">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {#0, repented, enters the Containment Unit, following His divine light.},
+      {“What maketh thee hesitate? I work miracles here.”}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 looks like a fetus, but it seems as though He needs no nannying.},
+      {When the bell struck twelve, the facility was swallowed by a blinding light. It was the light of redemption for His disciples.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Only silence fills the air around $0.},
+      {$0 absorbs all light and sound which surrounds Him.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 came here to redeem you and lead the new world.},
+      {$0 arrived from the end of the world, and He walks towards the beginning of the new world.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {“#0, why art thou in fear? I shall not leave thee until I have completed my mission.”},
+      {“#0, be not frightened. I am thy savior and I shall be with thee.”},
+      {“I heard thy cries. Thy heart reached me. #0, thou hath called me.”}
+      ]
+    </narration>
+  </info>
+  <observe level="5">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">T-03-46</codeNo>
+      <name openLevel="1">WhiteNight</name>
+      <portrait openLevel="1">Sprites/Unit/creature/DeathAngel</portrait>
+      <riskLevel openLevel="2">ALEPH</riskLevel>
+      <openText>“Rise, my servants. Rise and serve me.”</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {It takes the form of a newborn fetus, though the appearance is so grossly grotesque, it's hard to even call it a fetus. While communication is possible, it doesn't occur in a normal way. Every word He utters echoes throughout the entire Containment Unit.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {&lt;i&gt;“My disciples, whom I blessed, ye shall leave the way of evil that once ye were following and find me. When the time comes, I shall forgive your sins and descend to the earth ye are living on.”&lt;/i&gt;} <!-- 폰트!!! 바꿔야돼!!!!!!!!!!!!!!!!!!!!!!-->
+      ] <!-- 글씨체 교체--></desc>
+    <desc id="3" openLevel="2">
+      [
+      {The twelve employees who were blessed by Him will transform and roam the facility to deliver redemption to every single employee. Wings will grow from their backs, and they will wear masks in the shape of beaks and bear crosses that forgive all sins.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;i&gt;“Follow my teachings as I told thee. Thou wilt abandon flesh and be born again.”&lt;/i&gt;} <!-- 폰트!!! 바꿔야돼!!!!!!!!!!!!!!!!!!!!!!-->
+      ] <!-- 글씨체 교체--></desc>
+    <desc id="5" openLevel="3">
+      [
+      {His disciples will be born again as ones who shall reach out to those far away from the light, ones who shall embrace their neighbors, missionaries who shall spread the gospel to all their fellows. They are…}
+      ]
+    </desc>
+    <desc id="6" openLevel="4">
+      [
+      {&lt;i&gt;“The time has come. Soon, the bell shall ring. A new world will come. Rise, my servants. Rise and serve me. I am death and life. Darkness and light.”&lt;/i&gt;}
+      ] <!-- 글씨체 교체--></desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="0" key="1">Once the Qliphoth Counter reaches 0, $0 and His disciples shall advent again.</specialTip>
+      <specialTip openLevel="0" key="2">&lt;Caution&gt; $0, unlike other Abnormalities, will periodically decrease His Qliphoth Counter. It is recommended to frequently check up on $0.</specialTip>
+      <specialTip openLevel="1" key="3">When the work result was Good, the Qliphoth Counter increased; the physical and mental health of every employee in the facility was healed.</specialTip>
+      <specialTip openLevel="2" key="4">When the work result was Normal, the Qliphoth Counter increased with a normal probability; the physical and mental health of the employees stationed in $0’s department were healed. </specialTip>
+      <specialTip openLevel="3" key="5">When the work result was Bad, the Qliphoth Counter lowered; every employee stationed in $0’s department took WHITE damage.</specialTip>
+    </specialTipSize>
+  </observe>
+  <etc>
+    <!--UI막는 이벤트 때 띄울 대사-->
+    <param key="escape" index="0">
+      Do not fear, for I am with thee.&#13;&#10;Thou shalt not leave until I permit thee.
+    </param>
+    <param key="time" index="1">
+      Do not trust time.&#13;&#10;I shall guide thee.
+    </param>
+    <param key="manual0" index="2">
+      Do not deny me.&#13;&#10;Why dost thou doubt me when I am in front of thine eyes?
+    </param>
+    <param key="manual1" index="3">
+      My story is nowhere, unknown to all.
+    </param>
+  </etc>
+</creature>

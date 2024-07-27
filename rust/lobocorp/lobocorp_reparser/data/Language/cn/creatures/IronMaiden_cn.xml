@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300101">
+
+    <narration action="move">
+     #0被分配到“$0”的收容单元中
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-85</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/IronMaiden</portrait>
+
+      <name openLevel ="1">
+        我们可以改变一切
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <openText>
+        现在，一切都会好起来哒！
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {在家用清洁机器人“小帮手”走红之后，XX有限公司推出&#13;&#10;了第二款全新的家用机器人——“我们可以改变一切”。} 
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {作为XX有限公司的产品，这款机器人同样内置了多种功能。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {孩子不乖老哭闹？我们能改变这一切！&#13;&#10;身材走样不喜欢？我们能改变这一切！&#13;&#10;生活疲累又缺钱？我们能改变这一切！}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {超简单的使用方法！打开这台机器，然后走进去，按下按&#13;&#10;钮，哔哔哔哔~现在，一切都会好起来哒！}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {员工进入这台机器之后，它就会持续生产能源。进入其中&#13;&#10;的员工从没想过出来，所以我们推测机器内部一定相当舒&#13;&#10;适~}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">指派一名员工进入这台机器，之后它就会持续生产能源。</specialTip>
+      <specialTip openLevel="2" key="2">进入这台机器的员工将会持续受到红色伤害，且永远无法离开。其结&#13;&#10;局只能是被其榨干。</specialTip>
+      <specialTip openLevel="2" key="3">随着运行时间的增加，机器的伤害将会越来越高，其产能同样也会越&#13;&#10;来越高。</specialTip>
+      <specialTip openLevel="2" key="4">“$0”不会受到逆卡巴拉能量熔毁的影响。</specialTip>
+      </specialTipSize>
+
+
+
+  </observe>
+</creature>

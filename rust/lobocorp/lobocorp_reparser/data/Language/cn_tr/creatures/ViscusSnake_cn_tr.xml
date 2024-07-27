@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100046">
+
+    <narration action="move">
+      指派 #0 至 $0 的收容室.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 的巢像個潮濕光滑的球體. 把 #0 員工的腦袋當成巢並非毫無道理.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {當 #0 的皮膚化為可怕的綠色時, 就已經太遲了.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-02-74</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ViscusSnake</portrait>
+
+      <name openLevel ="1">
+        裸巢
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>它能鑽入你身體的任何洞裡.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {* 當你發現有任何員工的臉帶著一些慘綠時, 請立即將他們回報給每個部門的 Sephirah. 請注意到那不只是普通的腹痛. 在建議去診療室時, 一般的員工都會同意, 但是受感染的員工會竭力裝作若無其事般. 如果是這樣, 不要以任何不尋常的事來驚動該員工. 當宿主焦慮, 會使感染變快. 如果皮膚開始改變了, 那麼約有 30% 的大腦已經被吃掉了. 在此時任何的對話都會透過異常來傳達, 所以請不要引起它的注意.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {此異常居住在宿主的前葉額裡, 且宿主不會感到任何的疼痛. 你能試著假裝是個錯誤般用任何銳利的東西戳他, 但並不建議這麼做. 就如先前提醒的, 宿主已經逐漸成為該異常的一部分了, 約莫 30%, 所以溝通是不可能的. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {* “裸巢” 能鑽入你身體的任何洞裡.&#13;&#10;*這並不是說即使你全身緊覆它就鑽不進去.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {**如果你極力包緊全身, 它會試圖讓你鬆懈.&#13;&#10;*** “赤裸之蛇” 的最終目的是你的前葉額.&#13;&#10;*** 你會變成毒蛇的窩, 攻擊任何你接觸到的人.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {**** 請明白, 如果你成為了窩, 我們會被迫射殺你, 並燒掉你的屍體.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">觀察提到, 低 HP 的員工在工作中更容易受到特殊能力的影響. 特別的是, 在工作中受到越多的傷害會提高能力的發動率. 然而, 當工作的結果為優時, 特殊能力沒有出現.</specialTip>
+      <specialTip openLevel="2" key="2">某些員工出現了以下的症狀.&#13;&#10;1.皮膚變綠以及全身皮疹.&#13;&#10;2.移動速度大幅降低.&#13;&#10;如果在任何員工身上發現上述的症狀, 立即將他們處理.</specialTip>
+      <specialTip openLevel="2" key="3">讓員工 #0 感染相同的症狀一段時間後, 它變成類似 $0 的形狀(稱其 O-02-74-1).</specialTip>
+      <specialTip openLevel="2" key="4">&lt;警告&gt; 任何與變形的員工接觸過的員工, 可能也受到員工 O-02-74-1 的感染. 所有在部門裡或是該區域的員工必須接受觀察, 注意是否出現管理方式 2 的任何症狀.
+      </specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

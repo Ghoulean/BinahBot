@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300104">
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-91</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/OtherWorldPortrait</portrait>
+
+      <name openLevel ="1">
+        Retrato do Outro Mundo
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <openText>
+        Este retrato capturou um momento. É algo que nós devemos perder.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {À medida que o tempo passa, nós mudamos. Poderemos ficar deficientes, enlouquecer, ser consumidos por violência ou desaparecer e nunca mais seremos vistos.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Este retrato capturou um momento. É algo que nós devemos perder. O empregado irá ver a melhor versão de si mesmo e começar a desejar que a realidade fosse diferente. 'Se a vida pudesse ser sempre assim, se apenas pudesse ter sempre aquele sorriso do retrato'.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {O empregado irá começar a sentir uma sensação estranha. O mesmo não será magoado por qualquer tipo de dano ou ataques. No entanto, outro empregado irá receber todo o dano e dor.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Não era o indivíduo, mas o retrato que começou a ficar cada vez mais horrendo. O empregado eventualmente irá parar de olhar para o retrato e decidir aproveitar toda a sorte inesperada.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Mas milagres não duram para sempre. Quando todos os outros que aguentaram a dor morrerem será a vez desse empregado morrer. Depois de morto, a tela voltará a ficar vazia.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">O primeiro empregado a encarar a Anormalidade terá a sua imagem gravada na tela.</specialTip>
+      <specialTip openLevel="2" key="2">Todo o dano causado ao empregado do retrato será recebido por outra pessoa na instalação e o mesmo receberá dano aumentado. (Este efeito não se aplica se o dano exceder o máximo de HP do empregado do retrato.)</specialTip>
+      <specialTip openLevel="2" key="3">Quando a pessoa que aguenta o dano morrer, outro empregado será escolhido para ficar no seu lugar. Quando não sobrar mais ninguém, o empregado do retrato morre.</specialTip>
+      <specialTip openLevel="2" key="4">Se a imagem de um novo empregado for gravada na tela, o empregado anterior irá morrer.</specialTip>
+      <specialTip openLevel="2" key="5">Se o empregado do retrato for morto de outro modo sem ser por sofrer danos normais, a tela voltará ao seu estado original.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

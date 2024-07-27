@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100054" >
+
+
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0는 기이한 빛을 띄는 발광체를 지상에만 내민 채로 #0 직원을 바라봅니다.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0의 완전한 모습을 본 직원들은 한 명도 없습니다.},
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {만약 $0이 격리소 밖으로 완전히 나오는 날이라면 회사가 무너지게 될지도 모릅니다. },
+      ]
+    </narration>
+
+   
+
+  </info>
+
+  <observe level ="5">
+    <collection>
+      <codeNo openLevel ="0">O-04-84</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Bunny</portrait>
+
+      <name openLevel ="1">
+        고기 초롱
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+   
+      <openText>그건 꽃이 아니야, 당장 근처에 있는 모든 직원들에게 대피 명령을 내려.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {언제나 격리실 바닥에 박혀 있으며 성분을 알 수 없는 발광체와 눈의 일부만 보인다. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {온전한 실체가 어떤 모습인지는 확인할 방법이 없다. 복도를 통해 이동하는 것이 아닌, 회사의 지반을 통해 이동하므로 탈출 시 경로를 예측하는 것은 불가능하다. 마찬가지 이유로, 탈출 감지 또한 되지 않는다. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {&lt;음성기록&gt;로이드 : 지금 정보팀 근처에 있지? 그 구역에서 직원들이 실종되고 있다는 소식이 들리는데, 근처에 공간간섭을 하는 환상체가 있는지 확인을 해봐야 할 것 같아. &#13;&#10;폴 : 네? 하지만 주변에 그런 부류의 환상체는 없어요, 탈출한 환상체도 감지가 되지 않았네요.&#13;&#10;로이드 : 샅샅이 찾아봐. &#13;&#10;폴 : 로이드씨, 환상체는 보이지 않고 바닥에 조그만 꽃 같은 게 피었어요. &#13;&#10;로이드 : 무슨 소리야? 꽃이 왜 피고 있어.&#13;&#10;폴 : 꽃봉오리가 밝게 빛나고 있는데, 너무 신기해요. 햇빛도 안 들어오는 이곳에서 식물들을 구경하는 건 쉽지 않으니까.. 빛이 정말 밝아요, 저뿐만 아니라 많은 직원이 이 꽃을 쳐다보고 있어요.. 당신도 한번 와서 보면 좋을 것 같아요.. 빛은 정말 영롱해서 따뜻한 기분이 들고.. 좋은 일이 생길 것만 같은 기분이 느껴져요… &#13;&#10;로이드 : …. 그건 꽃이 아니야, 당장 근처에 있는 모든 직원에게 대피 명령을 내려. 한꺼번에 도망치는 것보단 한 명씩 천천히 움직이면서 대피해. 발걸음을 최대한 줄여가면서..&#13;&#10;폴 : 하지만, 아까도 말했다시피 근처에는 아무도 없는걸요? 그런데 아까부터 발에서부터 미세한 진동이 느껴져요, 혹시 파이프 보수 공사가 오늘이었나요?&#13;&#10;로이드 : 아, 망했군. 그냥 꽃 감상이나 마저 해.. }
+      ]
+    </desc>
+
+   
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">작업의 결과가 나쁨일 경우 클리포트 카운터가 감소하였다.</specialTip>
+      <specialTip openLevel="1" key="2">작업의 진행 시간이 40초 이하였을 경우 클리포트 카운터가 감소하였다.</specialTip>
+       <specialTip openLevel="1" key="3">탈출 시 직원과 시설은 해당 환상체를 감지하지 못한다. 따라서 관리자가 직접 제압을 명령해야한다.</specialTip>
+    </specialTipSize>
+
+  </observe>
+
+
+
+</creature>

@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id="100026">
+
+
+    <narration action="move">
+      #0 is going into $0's containment unit to begin the task.
+    </narration>
+
+    <narration action="start">
+      [
+      {For bees, a damaged hive is something which cannot be tolerated.}
+      {They say drones spend their entire life providing food for the queen.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {The highest priority for the bees would be the safety of the hive.}
+      {If someone damages $0, even by accident, something that can never be undone may happen.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {If #0 feels a sharp pain in the stomach or a tickling sensation in the neck, the only available action will be to look up at the blue sky one last time.}
+      {#0 tries not to breathe as much as possible.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {$0 wants more and more and more drones which will bring prosperity to its kingdom.}
+      {$0 will be completed by the work of its drones... Such will be the beginning of their kingdom...}
+      ]
+    </narration>
+
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">T-04-50</codeNo>
+      <name openLevel="1">Queen Bee</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/QueenBee</portrait>
+
+      <riskLevel openLevel ="1">WAW</riskLevel>
+
+
+
+      <openText>If you feel a sharp pain in the stomach or a tickling sensation in the neck, the only available action will be to look up at the blue sky one last time.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {This Abnormality assumes the form of a monstrous hybrid of a queen bee and bee hive. The exposed cross sections reveal dark red particles that look like sliced meat. Its face is severely distorted. There are wings, but it does not function as a wing. One of the eyes is relatively intact, and its pupil moves to scan intruders. The Abnormality always stands still, so it is assumed it does not move.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {When certain requirements are fulfilled, it spreads spores around it. It will generate billions of spores in a 20 meter radius. The existence of lifeforms in the vicinity seems to be one of the key requirements.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="1">
+      [{No immediate change was found from the employee who inhaled spores, and several tests failed to detect any notable symptoms.}]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {Afterwards, the employee who inhaled spores suffered severe pain in the occipital lobe and abdomen. Some time after, the employee's head detached from the body, and a drone Abnormality came out of it.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="2">
+      [
+      {It has been confirmed that spores carry drone eggs and they hatch inside a living host. Based on the findings from the autopsy of an employee killed by the Abnormality, we believe that the larva preys on anything from blood, organs or fat, and moves freely around in the body. When it becomes too large to move, it creates a cocoon near the intestines. The host feels extreme hunger at this stage, eating much more than usual. The cocoon moves upward as it grows, finally damaging the artery and cricothyroid with its jaws and severs its hosts' head from the body. It will come out of the body, expanding the severed part of the host.}
+      ]
+    </desc>
+
+
+    <desc id="6" openLevel="3">
+      [{Counseling Log_&#13;&#10;&lt;Redacted&gt; talked about a tickling sensation at the neck for some time. I also saw &lt;Redacted&gt; taking several digestives... Who would have thought that would be such a serious issue? I never knew I would be the one to witness that horrible moment. &#13;&#10;(Omitted)&#13;&#10;We were just chatting, but then [Redacted] stopped talking. He was still scratching his neck. His neck was so red, that I was worried he might have an infection or something. Then he started to twist his neck in a strange direction. That was when I realized the severity of the situation. He could not have been twisting his neck that way on his own. It looked like someone else was forcefully twisting his neck.}]
+    </desc>
+
+
+    <desc id="7" openLevel="3">
+      [{And then I heard the sound of something tearing, like the noise you might hear when shredding paper, and his head just popped off. It fell on the ground with a damp plop. }]
+    </desc>
+
+    <desc id="8" openLevel="4">
+      [
+      {Then something came out of his neck. Like a butterfly coming out of its cocoon, wings, a yellow body, teeth, and something I never want to see again, a monster... }
+      ]
+    </desc>
+
+    <desc id="9" openLevel="4">
+      [
+      {(Omitted) It had no eyes, but it seemed to be aware of me. But it didn’t want to attack me. It picked up the head and started for the Containment Facility like a drone carrying honey... }
+      ]
+    </desc>
+
+    <desc id="10" openLevel="4">
+      [
+      {Sometimes I still hear the sound of its jaws moving, its wings fluttering.}
+      ]
+    </desc>
+
+    <desc id="11" openLevel="3">
+      [
+      {Drone&#13;&#10; Thought to be a member of the same species as the Queen Bee, its form is very different from the queen except for its color. It has eight legs and a limited flying capability that allows it to hover approximately 1 meter above the ground. The head, thorax, and abdomen can be easily distinguished. Unlike its queen, it doesn’t have eyes or antennas. Something resembling intestines drags behind at the end of its tail.&#13;&#10;They only show two behaviors. They either provide nutrients to the queen or focus on increasing their numbers. When encountering an employee, it attacks the head with its jaws, smashing it and inserting a larva into victim.}
+      ]
+    </desc>
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="badMood">When the work result was normal, $0's Qliphoth counter has decreased with a normal probability.</specialTip>
+      <specialTip openLevel="1" key="badMood2">When the work result was bad, $0's Qliphoth counter has decreased with a high probability.</specialTip>
+      <specialTip openLevel="2" key="beeComing">When the Qliphoth counter reached zero, $0 emitted red spores all over the department.</specialTip>
+      <specialTip openLevel="1" key="spore">Upon observing the Abnormality, it has been confirmed that if the spore is attached to an employee for a certain amount of time, it deals Red damage to its victim. In addition, the spore-eroded employee was significantly slower to move and reduced HP could not be cured by regenerator and bullets.</specialTip>
+      <specialTip openLevel="3" key="beeing">When #0's HP has been depleted, a giant drone burst out of #0's body. Drones attacked the employees nearby. From the corpse of the employees attacked by drones, more drones emerged.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+
+  <child>
+    <name>Drone</name>
+    <codeId>100027_beta</codeId>
+  </child>
+
+</creature>

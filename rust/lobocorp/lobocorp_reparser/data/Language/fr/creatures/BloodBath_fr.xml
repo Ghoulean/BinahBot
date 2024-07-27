@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100027">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {“Vous savez, après avoir rejoint la Lobotomy Corporation, j'ai vraiment eu l'impression de reprendre ma vie en main.”},
+      {#0 peut ressentir la tristesse de $0.},
+      {Le poignet de #0 lui fait mal quand il regarde $0.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {“La dépression est une maladie de l'esprit. Nous sommes les premiers médecins à avoir découvert comment être heureux.”},
+      {#0 regarde le désespoir qui flotte dans le bain.},
+      {#0 ressent un désespoir et une tristesse accablants.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {“La médecine du corps s’est développée à un rythme si rapide alors que les traitements de l'esprit stagnent.”},
+      {#0 peut voir les difficultés et les échecs à venir.},
+      {#0 peut voir les difficultés et les nombreuses épreuves à venir. Peu importe ce qu'il fait, tout cela finira par un échec.}
+      ]
+    </narration>
+    <narration action="special_ability">
+      [
+      {#0, privé de toute raison et d’espoir de vivre, ne résiste pas aux mains qui se tendent vers lui.},
+      {La tristesse de #0 se concentre en un seul point.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-05-51</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/BloodBath</portrait>
+      <name openLevel="1">
+        Le Bain de Sang
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>De nombreuses mains flottent dans le bain. Ce sont les mains des gens que j'aimais autrefois.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Une Anomalie qui contient la souffrance de tous ceux qui n'ont pas pu accepter leur chagrin.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Un bain d'une couleur sombre, rempli de sang. Le sang est toujours en quantité parfaite ; il ne déborde jamais. Seul le désespoir peut être trouvé dans ses profondeurs englouties. Une dépression insupportable accable tous ceux qui regardent dans le bain.&#13;&#10;&#13;&#10;En un instant, il peut entraîner une personne proche en son sein. Il n'a pas une force considérable, mais ceux qui souffrent de sa dépression écrasante n'y résistent pas. Il dévore la victime jusqu'à ce qu'il ne reste plus rien d’elle à part ses poignets. Toutes les mains qui flottent dans le bain sont pâles, exsangues ; elles s'étirent dans les airs et se tendent comme si elles demandaient de l'aide. }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {&lt;i&gt;Ce n’est pas une mince affaire de se couper le poignet avec un esprit sain. Une volonté forte est nécessaire, ainsi que  la détermination de s’y reprendre à plusieurs fois. Ce n'est que lorsque l’on se tranche comme si l'on se coupait une simple rondelle de saucisson que l’on y arrive. Ce n’est que lorsque l’on aspire profondément à la mort que l’on y parvient.&lt;/i&gt;}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;i&gt;Je regretterai toujours de ne pas lui avoir demandé pourquoi elle avait besoin de ce couteau industriel. Je regretterai toujours de ne pas avoir réalisé qu'elle cachait ses poignets avec des manches longues. Je regretterai toujours de ne pas avoir réalisé qu'elle prenait toujours soin de les cacher chaque fois que je lui parlais. Je regretterai toujours de ne pas avoir réalisé que je ne l’entendais plus rire joyeusement et qu'elle errait de plus en plus souvent dans la corporation, les yeux éteints.&lt;/i&gt;}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {&lt;i&gt;Je ne peux même pas imaginer à quel point ce doit être douloureux de se couper le poignet. J'ai découvert que la seule manière pour elle de faire quelque chose comme ça était de les couper net.&lt;/i&gt;}
+      ]
+    </desc>
+    <desc id="6" openLevel="4">
+      [
+      {&lt;i&gt;Nous avions pour habitude d’ouvrir une bouteille de vin à chaque fois que nous réussissions. C'était devenu une de nos coutumes. Elle nous disait qu'il suffisait d'un léger faux pas pour tomber dans l'indifférence si l'on s'habitue trop au succès. Ainsi, nous devrions toujours sourire, nous réjouir et célébrer chaque petite chose à la suite d’un succès. Et nous ne devrions jamais négliger l'échec, car le succès peut naître d'une montagne d'échecs.&#13;&#10;Quand j'ai vu la mosaïque de cicatrices sur son poignet, je me suis souvenu de notre cave à vin. Nous avions vidé tant de bouteilles ; il n'en restait plus qu'une.&#13;&#10;
+      Ce jour-là, j'ai fait sauter le bouchon de la dernière.&lt;/i&gt;}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="noRationalist">Lorsque #0, qui avait une Fortitude de 1, a terminé la procédure de travail, une main s'est tendue de $0 et a traîné #0 dans ses profondeurs. Le même phénomène s'est produit avec un Intervenant qui avait une Tempérance de 1.</specialTip>
+      <specialTip openLevel="1" key="manyHands">Une main pâle est sortie de $0 après qu’il ait absorbé un employé. Au fur et à mesure que le nombre de mains augmentait, le nombre de Boîtes-EP produites avec lui augmentait également.</specialTip>
+      <specialTip openLevel="1" key="threeHands">&lt;Attention&gt; Lorsque $0 a trois mains, la sécurité du prochain Intervenant ne peut être garantie. Il semble que $0 absorbera l’employé quel que soit le résultat du travail ou les niveaux de vertu.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+
+  <!-- Attrbute "id " must equal to attribute "id" in CreatureList.xml -->
+  <info id ="100102">
+
+    <!-- $0 : Creature name, #0 : Agent name -->
+    <narration action="move">
+      #0 designado a la sala de contención de $0 para el trabajo.
+    </narration>
+
+    <narration action="start">
+      [
+      {La sala de contención de $0 está siendo asaltado con ventisca helada.},
+      {La sala de contención de $0 brilla con hielo y heladas.},
+      {Kai habría sido dotado con el mundo si no hubiera podido completar su “Eternidad” con trozos de hielo.},
+      ]
+    </narration>
+
+    <narration action="special_ability_1">
+      [
+      {Gerda es más valiente y más fuerte que nadie. Ella lucha por Kai que está atrapada en el Palacio de la Nieve.}
+      ]
+    </narration>
+
+    <narration action="win">
+      [
+      {Llegó la primavera y florecieron las rosas. Gerda y Kai se dirigieron a casa, tomándose de la mano.}
+      ]
+    </narration>
+
+    <narration action="lose">
+      [
+      {Gerda y Kai no pudieron derrotar a la Reina de la Nieve. Se convirtieron en sus pedazos de hielo y nunca abandonarán la cámara de contención.}
+      ]
+    </narration>
+    
+  
+    <narration action="anotherWork">
+      [
+      {Gerda no puede evitar el duelo con la Reina de las Nieves mientras Kai está atrapada en el Palacio de la Nieve.}
+      ]
+    </narration>
+
+  </info>
+
+  <!-- Maximum observation level. -->
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">F-01-37</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/SnowQueen</portrait>
+
+      <name openLevel ="1">
+        La Reina de la Nieve
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        Tercer beso
+      </specialName>
+
+      <openText>"Los hielos se están derritiendo.... no sabemos si es porque se acerca la primavera o el palacio se está desmoronando."</openText>
+    
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {Una reina vive en el bosque helado de invierno. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {Como cada historia comienza, Kai era un niño con un corazón bondadoso. Cuando un hada malvada desparramó pedazos de espejo en el corazón de todos, Kai pudo ver lo que no quería o necesitaba ver, y abandonó el pueblo donde pasó toda su vida.&#13;&#10;En una tormenta de nieve implacable, Kai conoció a la Reina de las Nieves. Quería conocer el mundo más allá de su conocimiento. Sentía como si todo lo que sabía no fuera nada.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {El Palacio de Nieve al que llegó estaba tan frío, pero el beso de la Reina de las Nieves le congeló el corazón y ya no podía sentir el frío. No había alegría en el palacio, solo continuaban las largas noches de invierno.&#13;&#10;Gerda era lo suficientemente fuerte como para no ser apuñalada por el espejo y lo suficientemente valiente como para ir en una aventura para rescatar a Kai.&#13;&#10;El viaje fue agonizante. Gerda estaba herida y dolida, a veces lloraba.&#13;&#10;Pero finalmente, Gerda se reune con Kai. La primavera llegó con flores florecientes.&#13;&#10;El calor de la primavera derritió el palacio de la Reina de las Nieves y el espejo que estaba el corazón de Kai no dejo un rastro. &#13;&#10;De este modo, se quedo sola, la reina de la Nieve… }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Recordamos cuando la metimos en ese ataúd crio con nuestras propias manos. De algún día, su risa alegre se había ido. Ella seguía repitiendo llorando, riendo, llorando, riendo… Finalmente la encontraron en una bañera con el corte en la muñeca, empapada en rojo con su propia sangre.&#13;&#10;No creímos en la muerte. La reconstruiré a partir de “la maquina” que me detestaron durante toda mi vida, pero se convirtió en la única respuesta. Ella habría estado disgustada por mí, muriendo en la bañera. Pero hemos recorrido el camino demasiado transitado por.&#13;&#10;..&#13;&#10;Un día, “eso” habló.&#13;&#10;“A, te recuerdo. Fuiste de buen corazón.”&#13;&#10;En ese momento, tuve la necesidad de destruir lo que yo mismo he creado.}
+      ]
+    </desc>
+
+    <specialTipSize size="5">
+      <specialTip openLevel="3" key="kissProb1">Cuando el resultado del trabajo es normal, empleado puede ser besado por $0 con una probabilidad normal.</specialTip>
+      <specialTip openLevel="3" key="kissProb2">Cuando el resultado es malo, empleado puede ser besado por $0 con una alta probabilidad.</specialTip>
+      <specialTip openLevel="2" key="2kiss">El empleado que recibió el segundo beso se olvidó de todo y quedó atrapado dentro de la sala de contención de $0 durante el trabajo.</specialTip>
+      <specialTip openLevel="3" key="3kiss">Para evitar el tercer beso mortal, y para salvar al empleado atrapado, debe comenzar un duelo con $0 debe ser iniciado. </specialTip>
+      <specialTip openLevel="3" key="4kiss">Solo aquellos con gran fortaleza podrán salvar con seguridad al empleado. Rescatémoslo antes de que termine el día.</specialTip>
+    </specialTipSize>
+    
+    <!-- Narration when observation level is maximum. -->
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {Te acuerdas de ella.}
+        {Ella se enfrio facilmente.}
+        {Cryo-ataúd debe haber estado congelando.}
+        {Congelación y frio.}
+        {Pensaste mucho al verla que no podía ver sus sueños hechos realidad, atrapada en el hielo.}
+        {Gerda la valiente se dirigió al Palacio de la Nieve y…}
+        <!--계속-->
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Kai Salvado" target="1" isAnswer="false"/>
+        <node desc="Conoció a la reina de las nieves" target="2" isAnswer="true"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {Gerda salvó a Kai y regresó a casa.}
+        {Vivieron felices para siempre.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {La Reina de las Nieves era fría y hermosa.}
+        {Escuchaste hielos derritiéndose.}
+        ]
+      </desc>
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {Los fragmentos de hielo se están derritiendo....}
+        {No sabemos si es porque se acerca la primavera o el palacio se está desmoronando.}
+        ]
+      </angela>
+    </max>
+    
+  </observe>
+
+
+</creature>

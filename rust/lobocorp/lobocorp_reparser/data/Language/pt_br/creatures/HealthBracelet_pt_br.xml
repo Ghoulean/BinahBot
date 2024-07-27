@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300106">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para iniciar o processo de trabalho.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-09-95 </codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/HealthBracelet</portrait>
+      <name openLevel="1">
+        Bracelete Luminoso
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>Este bracelete não perdoará aqueles que guardam ganância no coração, por isso, deve ser somente usado por aqueles que realmente precisam.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Um bracelete que exala uma suave luz turquesa. É uma das coisas inexplicáveis que foram encontradas nos Subúrbios.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Quando é equipado, todos os ferimentos são curados sem nenhum traço de cicatrização.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Entretanto, usar este bracelete quando não há mais nenhum ferimento no corpo é um ato de ganância.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+
+      [
+      {Este bracelete não perdoará aqueles que guardam ganância no coração, por isso, deve ser somente usado por aqueles que realmente precisam.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Atributos relacionados a Fortitude aumentarão consideravelmente enquanto o $0 está equipado.</specialTip>
+      <specialTip openLevel="2" key="2">O $0 continuamente recupera o PV do portador.</specialTip>
+      <specialTip openLevel="2" key="3">Qualquer tentativa de devolver o $0 sem estar totalmente curado resultará na morte do portador.</specialTip>
+      <specialTip openLevel="2" key="4">Caso o portador não perca PV por um certo período, ele morrerá por conta da regeneração excessiva.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

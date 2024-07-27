@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100050">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {Nous sommes toujours au milieu de notre périple. Nous avons suivi la route de brique jaune pour faire de nos rêves une réalité.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Le traitement a rendu tout le monde miraculeusement silencieux, même ceux qui avaient refusé de se taire après n’importe quelle autre thérapie.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 commença à courir après de grands cerveaux plutôt que d’effrayer les oiseaux.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">F-01-87</codeNo>
+      <name openLevel="1">L'Épouvantail à la Recherche de Sagesse</name>
+      <portrait openLevel="1">Sprites/Unit/creature/Scarecrow</portrait>
+      <riskLevel openLevel="2">HE</riskLevel>
+      <openText>La ville restait un endroit magnifique où les routes d'émeraude brillaient toujours autant.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Une Anomalie ayant l’apparence d’un épouvantail fait de paille. Cette dernière est tachée de sang.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {La tête est évidée comme si quelqu’un l’avait arrachée de force. Il se montre agressif envers certains employés, essayant de voler leur cerveau. Ces employés sont ceux ayant obtenu un "Excellent" au test d’intelligence.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Chaque ville se devait d’avoir sa propre technologie ; c’était la clef pour la redynamiser. Elles étaient nombreuses, mais parmi ces villes, l’une d’entre elles fit une grande avancée scientifique dans le remplacement de parties du corps. Il était possible de réparer et améliorer des parties du corps qui étaient défectueuses ou cassées, ou tout simplement indésirables. Chaque citoyen avait la possibilité d’accéder à ce traitement. Cependant, des rumeurs circulaient. Quand une personne fortunée cherchant à améliorer sa vue approchait un mendiant aux poumons défaillants luttant pour respirer, ils transplantaient les yeux du mendiant au riche. Le cadavre du mendiant serait ensuite jeté quelque part dans les Banlieues, ses poumons pourrissant toujours.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Les représentants de la ville les rassuraient, rejetant ces rumeurs comme étant des inepties. Pour mettre un terme à ces rumeurs, ils annoncèrent qu’ils sélectionneraient un petit groupe d’habitants malades des Banlieues afin de les inviter pour qu’ils se fassent réparer toutes les parties du corps qu’ils désiraient. De tous les heureux gagnants, un seul revint quelques jours plus tard. Il avait une longue cicatrice apparente sur le front. Les gens lui demandèrent comment il se sentait et il répondit que sa tête lui semblait plus légère. C’était un homme déprimé qui avait pour habitude de pleurer souvent, alors tout le monde crut que cette opération fut un succès.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Cependant, lorsqu’il lui fut demandé où étaient passés les autres qui étaient partis avec lui, il se mit à sourire sans prononcer un mot. Après ça, même à l’enterrement de ses parents, il ne montra plus aucune émotion. Tout ce qu’il faisait depuis cette opération, c’était regarder par la fenêtre et se parler à lui-même. Il finit par se pendre à la poignée de porte de sa maison. Certains pensaient que l’opération était la source de ses problèmes, mais après quelques jours il fut complètement oublié. La ville restait un endroit magnifique où les routes d’émeraudes brillaient toujours autant.}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Lorsqu’un employé de Prudence 3 ou plus finit un travail avec $0, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="1" key="2">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="2" key="3">Quand $0 s’échappe et tue un employé, il aspire son cerveau afin de restaurer ses PV.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

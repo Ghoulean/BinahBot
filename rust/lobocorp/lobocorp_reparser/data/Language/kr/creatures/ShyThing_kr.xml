@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등0000000000000000000
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id ="100052">
+
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다.
+    </narration>
+
+    <narration action="start">
+      [
+      {격리소에는 비록 한점 햇빛도 들어오지 않지만 $0는 자신의 가죽을 정성스럽게 말리고 있습니다.},
+
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {도시는 $0에게 계속 웃음을 권유했고 수줍음에 차마 자신을 드러낼 수 없었던 이는... },
+
+      ]
+    </narration>
+   
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-01-92</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ShyThing</portrait>
+
+      <name openLevel ="1">
+        수줍은 오늘의 표정
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      
+      <openText>오늘은 날이 좋네요. 당신은 오늘도 여전히 수줍나요?</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [{오늘은 날이 좋네요. 당신은 오늘도 여전히 수줍나요?}]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {마당에서 빨래를 정성스레 말리고 있었던 햇빛이 좋은 어느 날, 슬픔이 순식간에 밀어닥쳤다. &#13;&#10;“우리 도시에서는, 기업에서의 희생을 매우 높이 사야 합니다. 그들의 죽음에는 경배를. 당신이 울 이유 또한 없죠. 오히려 기뻐해야 마땅합니다.”&#13;&#10;“표정이 왜 그런가요? 우리 도시에선 그런 표정은 권장하지 않습니다.”&#13;&#10;“맙소사, 왜 그런 얼굴을 하고 있나요, 다른 사람들 기분까지 우울해지네요, 조심해주신다면 좋겠어요, 혼자 사는 세상이 아니잖아요.”&#13;&#10;“감정 표현에 매우 서툴군요, 수줍음을 많이 타는 성격인가 봅니다.”&#13;&#10;“이봐요, 좀 더 기쁜 표정을 지어봐요, 그래야 외곽에 사는 이들이 우리를 더 부러워 하지 않겠어요.”&#13;&#10;“밝게 웃어봐요, 그렇게 힘든 일은 아니잖아요.”&#13;&#10;“다음에는 좀더 명확하게 자신을 드러내도록 하세요, 이 사회에서 자신을 표현한다는 건 매우 중요한 거죠. “&#13;&#10;어느 날, 또다시 햇빛이 너무나 좋았던 그런 날, 오래전 정성스럽게 빨래를 말렸던 그 날처럼 자신의 가죽을 말렸다.}
+    ]
+  </desc>
+
+
+    <desc id="3" openLevel="2">
+      [
+      {활짝 웃는 표정을 보여주자 그제야 모두 만족했다. 왜 그러냐고 묻는 사람들이 생기면, 이렇게 말했다. 그저 수줍어서 그래요, 수줍어서…}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {만일 피부 뒤의 얼굴을 보려고 시도할 경우, 지금까지의 모든 것은 좋지 않게 끝날 것이다. 피부 뒤는 오로지 그것만의 공간이므로 침해하지 않는 것이 이 도시에 남아있는 마지막 배려이기 때문이다.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">일정 시간마다 해당 개체는 자신의 표정을 교체해간다. 하지만 다른 누군가를 앞에 둘 경우 표정의 교체는 정지한다.</specialTip>
+      <specialTip openLevel="1" key="2">웃는 표정에서 화난표정까지 총 5단계의 표정 스펙트럼을 가지며 이를 표정 1,2,3,4,5이라 칭한다.</specialTip>
+      <specialTip openLevel="1" key="3">표정 3 상태에서는 특별한 특징이 감지되지 않았다. 표정2 상태에서는 직원의 작업 성공률이 증가하였으며, 작업이 성공할 때 마다 직원의 정신력이 소폭 회복되었다.</specialTip>
+      <specialTip openLevel="1" key="4">표정 4 상태에서 작업을 진행할 경우 작업 중 직원이 받는 피해가 1.5배 가량 증가하였으며, 작업의 성공률이 하락하였다.</specialTip>
+      <specialTip openLevel="1" key="5">표정 5 상태에서 작업을 진행할 경우 작업중 직원이 받는 피해가 2배 가량 증가하였으며, 작업의 성공률이 대폭 하락하였다.</specialTip>
+      <specialTip openLevel="1" key="6">표정 1 상태에서 작업을 진행할 경우 작업중 직원이 받는 피해가 0.5배 가량 감소하였으며, 작업의 성공률이 상승되었다. 또한 작업이 성공할 때 마다 직원의 체력과 정신력이 회복되었다.</specialTip>
+    </specialTipSize>
+
+
+   
+  </observe>
+</creature>

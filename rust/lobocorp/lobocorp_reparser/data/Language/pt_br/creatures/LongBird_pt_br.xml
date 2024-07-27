@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100035">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {Há um velho ditado que diz: “Nunca se esqueça do pássaro do julgamento; não importa o quanto demore, ele eventualmente irá te encontrar.”}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {O $0 nunca está apressado.},
+      {Talvez ele já esteja em sua casa.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Nós que vivemos em um mundo sem perdão oferecemos nossas almas como tributo pela redenção.},
+      {As pessoas são dissimuladas e incapazes de salvar as próprias almas. É por isso que o $0 veio até nós.},
+      {Poucos reconhecem o próprio pecado. A balança do $0 os guiam para reconhecer isso.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {O $0 já foi um guardião da floresta. Porém, se esqueceu de uma das coisas mais importantes, já que só estava focado em proteger as criaturas.},
+      {Agora, somente a escuridão reina sobre a floresta.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-02-62</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/LongBird</portrait>
+      <name openLevel="1">
+        Pássaro Longo
+      </name>
+      <name openLevel="2">
+        Pássaro do Julgamento
+      </name>
+      <riskLevel openLevel="1">
+       WAW
+      </riskLevel>
+      <openText>Sua balança não negligenciaria nem o peso do menor pecado.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Um pássaro que costumava julgar os vivos na Floresta Negra, carregando consigo uma balança injusta.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {A balança sempre inclina para a mesma direção, mas ele não sabe disso, já que seus olhos estão cobertos. Ou talvez esteja se cegando a essa verdade. }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Na verdade, o pássaro já foi justo. Sua balança não negligenciaria nem o peso do menor pecado.}
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {O pássaro longo fez uma balança que era capaz de pesar qualquer pecado para assim manter a paz na floresta.}
+      ]
+    </desc>
+    <desc id="5" openLevel="3">
+      [
+      {Em certo ponto, os olhos do pássaro podiam ver através de tudo. Seus olhos sempre brilhavam fortemente, queimando como estrelas no céu noturno. Mas ele deu seus olhos para o Grande Pássaro para que ele protegesse a floresta. Agora, somente o vazio preenche suas cavidades oculares.  }
+      ]
+    </desc>
+    <desc id="6" openLevel="3">
+      [
+      {A atadura está em frangalhos, como se a qualquer segundo ela pudesse se rasgar por completo. O rosto do pássaro já foi coberto de penas brilhantes, mas elas caíram porque ele passava muito tempo longe da luz solar. }
+      ]
+    </desc>
+    <desc id="7" openLevel="4">
+      [
+      {Tudo o que permanece é uma balança injusta. E o pássaro longo continua a distribuir seus julgamentos.}
+      ]
+    </desc>
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="MoodZero">Quando o resultado do trabalho era Neutro, o Contador Qlifót reduzia com probabilidade mediana.</specialTip>
+      <specialTip openLevel="1" key="MoodZero2">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia com alta probabilidade.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

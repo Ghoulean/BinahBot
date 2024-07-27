@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    5.28
+  -->
+  <info id="100047">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {$0’s dreams are those of running outside of the facility in total freedom.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Just as everyone wished for, $0 can live here forever.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-02-71</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Shark</portrait>
+      <name openLevel="1">
+        The Dreaming Current
+      </name>
+      <riskLevel openLevel="2">
+        WAW
+      </riskLevel>
+      <openText>Tell the kid today's treat is going to be grape-flavored candy. It's his favorite.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {“Just... Just keep showing him the book. Oh, and it has to be a page with pictures, since he probably can't read.&#13;&#10;When the experiment seems to drag on, try to draw his attention, like mimicking sounds.&#13;&#10;I don't need to explain every detail, right?}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Yes, I know. It's unfortunate. Pitiful and sad. I do feel human emotions, thank you very much.&#13;&#10;However, he ultimately survived thanks to this place. I hope he continues to live, in any shape or form. If you're thinking the same thing, it'd be better off if you dropped that guilt right now.&#13;&#10;....&#13;&#10;Tell the kid today's treat is going to be grape-flavored candy. It's his favorite.”}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Excerpt from an Encyclopedia&gt;&#13;&#10;
+      Contrary to popular belief, most sharks are small in size. There are only a handful of species that cause harm to humans... After all is said and done, the biggest appeal of sharks is their strong jaws and teeth. A shark's jaw can apply an intense amount of force, around 20 times that of an adult human. Besides, their vision and olfactory sense are extremely well developed, allowing them to locate their targets easily. This is why sharks could reign as the ocean's greatest predator until today. }
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {The parents had long deserted the child.&#13;&#10;They said the old infection would kill the child before two years passed. The researchers were the child's new parents. He learned to coo and walk. Although unable to talk properly, the child liked the ocean. Instead of visiting the ocean, the child was given candy which let him see the ocean.&#13;&#10;Many colorful nights and days passed.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {The child, who was thought to die within 2 years, managed to live for a long time. As always, he liked sweet candy, followed them, and loved the place as his home. Though the only thing the child could do was run around inside a cramped lab instead of a grass field under the sun, his steps were shaky but filled with enthusiasm. Excited about what kind of candy he would eat tomorrow. }
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">When employee #0 panicked during work, the Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="1" key="2">When an employee with Temperance Level 1 finished their work, the Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="2" key="3">The pools of liquid that profused certain sections of the facility while $0 escaped drastically inhibited the movement of employees and dealt RED damage over time. However, the employees’ SP healed over time.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

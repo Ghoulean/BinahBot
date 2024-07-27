@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100043">
+
+    <narration action="move">
+      指派 #0 至 $0 的收容室.
+    </narration>
+
+    <narration action="start">
+      [
+      {能被記住是件幸福的事.}
+      {在這裡的人沒有時間去記住那些死去的人.}
+      {$0 靜靜的盯著 #0.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 夢著. 一個希望隕落並死絕的夢. },
+      {那個棺材非常的大, 但它並足以容納數百個人.},
+      {#0 看著漫長的哀悼者.}
+      {翅膀飛向他們, 奇異卻又熟悉.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {這個地方沒有花朵或是樹木, 所以那些蝴蝶是從哪裡飛來的? },
+      {沒有辦法回到他們過來的地方, 員工沒有選擇只好繼續工作.},
+      {像一場永不結束的葬禮, #0 不停的哀悼.}
+      {#0 想到他們活著時的最後一刻.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {離開公司只是一場夢. 這永遠不會發生.},
+      {在你最美好的時刻死亡是最意想不到的祝福.},
+      {事實上, 大多數死去的員工都想盡可能的活久一點.}
+      {有些人認為死亡只是新的開始, 但是死後除了虛無則一無所有.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-01-68</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Butterfly</portrait>
+
+      <name openLevel ="1">
+        葬禮亡蝶
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+
+      <openText>人在死後會發生什麼事?</openText>
+
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {人在死後會發生什麼事?&#13;&#10;在這裡工作的人發生了什麼事?}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {- 他們必須返回他們的家中, 家庭和溫暖等候的地方.&#13;&#10;但是大家都知道員工除了被... '丟掉' 以外, 所有人都無法離開這裡.&#13;&#10;- 他們必須返回他們的家中.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {我們是翅膀上的羽毛. 翅膀會在他們不再有用的時候落下.&#13;&#10;- 接著他們會去到哪裡呢?&#13;&#10;即使被拋棄了, 他們也是被公司束縛著.&#13;&#10;- 很久以前, 人們相信在他們死後會變成有著小小翅膀的蝴蝶. 真是荒唐.&#13;&#10;如果我們能有翅膀, 那我們能離開那裡嗎? 難道只有在被拋棄後我們才能擁有翅膀嗎?}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {背負負擔的哭喊者來到這裡贖回一切.&#13;&#10;但現在他像其他人一樣陷入困境, 徘徊在死去的希望之中.&#13;&#10;他為那些無處可去的人提供棺材. 雖然它對他們來說太小了.&#13;&#10;裡面是等待著永恆安息的蝴蝶.&#13;&#10;很多蝴蝶, 卻沒有花朵.&#13;&#10;他們只是在等待著這個世界的結束.}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">#0, 正義等級低於 3 的員工完成了工作, 降低了逆卡巴拉計數器.</specialTip>
+      <specialTip openLevel="1" key="2">其他堅韌等級超過 3 的員工遭受了相同的情形.</specialTip>
+      <specialTip openLevel="1" key="3">當工作結果為差時, 逆卡巴拉計數器會以較高的機率降低.</specialTip>
+    </specialTipSize>
+
+  </observe>
+</creature>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100001">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção da $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {Esteja avisado que as informações sobre a $0 estão incompletas, então é possível que algo não documentado possa acontecer.},
+      {As informações sobre a $0 estão quase concluídas, contanto que tivermos cautela, o trabalho será terminado com sucesso.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {A $0 se esconde no cantinho da sala assim que #0 entra na Unidade de Contenção.},
+      {A $0 observa como #0 reage mas anda de costas de volta para a parede.},
+      {A $0 observa #0 trabalhando enquanto fica de pé no canto da sala.},
+      {A $0 parece estar assustada e se move para um dos cantos da Unidade de Contenção.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 fica sem se mover, como se as chamas não machucassem nem um pouco.},
+      {Somente o fósforo que perfura a $0 está queimando fortemente.},
+      {Diferentemente do fósforo com chama vibrante, a $0 está parada sem mostrar reações na Unidade de Contenção.},
+      {O fósforo queima brilhantemente, mas a $0 não mexe um centímetro.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {#0 examina de perto o comprimento que falta do fósforo.},
+      {Se o fósforo estiver quase totalmente queimado, será bastante perigoso. #0 observa com tensão a $0.},
+      {Felizmente, ainda havia tamanho o suficiente para ser queimado. Mas quando o combustível da chama finalmente acabar…},
+      {Cinzas se espalham ao redor da Unidade de Contenção. Metade do fósforo ainda parece não estar queimado.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {#0 conclui o trabalho enquanto a chama faísca gentilmente.},
+      {Não há ninguém dentro da chama, porém, os olhos da $0 brilham como se estivessem vendo alguém.},
+      {Não há nada nem ninguém dentro daquela chama.},
+      {Somente as cinzas do fósforo queimado se espalham sobre a $0.}
+      ]
+    </narration>
+    <narration action="special_ability_1">
+      [
+      {Somente uma pequena porção do fósforo permanece sem estar queimada.}
+      ]
+    </narration>
+    <narration action="special_ability_2">
+      [
+      {#0 percebeu que o fósforo estava quase acabando e tentou fazer algo, mas já era tarde demais.}
+      ]
+    </narration>
+    <narration action="special_ability_3">
+      [
+      {Com o fósforo completamente queimado, a $0 ri.}
+      ]
+    </narration>
+    <narration action="special_ability_4">
+      [
+      {Após a explosão, somente pedacinhos de #0 podem ser encontrados na Unidade de Contenção.}
+      ]
+    </narration>
+    <narration action="dead">
+      [
+      {Suas chamas cintilam, escurecendo o chão e tudo ao seu redor.},
+      {Ao menos, o suspiro final de #0 foi um feliz.}
+      ]
+    </narration>
+    <narration action="panic">
+      [
+      {Os olhos de #0 estão sem foco. Já faz algum tempo que a chama do fósforo foi apagada, porém, #0 permanece indiferente a qualquer comando.},
+      {#0 sai da unidade de contenção, murmurando incoerentemente com seu rosto completamente fechado. Ninguém nos corredores ousa tentar conversar.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">F-01-02</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/matchgirl</portrait>
+      <name openLevel="1">
+        Garota Queimada
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>Estou indo até você. Você, que será reduzido a cinzas assim como eu.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {A Anormalidade toma forma de uma garota completamente queimada. Mesmo quando não há nada sobrando para queimar, a chama não se apaga.  }
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Um fósforo empala o corpo da garota como uma estaca. Normalmente, o fósforo está sempre aceso enquanto a Anormalidade não mostra sinal algum de atividade. Por causa disso, alguns funcionários especulam que o fósforo seja o corpo verdadeiro dessa Anormalidade. Entretanto, de acordo com testemunhas, a figura acinzentada foi vista chorando.  }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Trecho do Registro de Pesquisa do Doutor Especialista em Anormalidades &lt;Omitido&gt;.&gt;&#13;&#10;
+      “O corpo carbonizado representa a esperança destruída da criança, enquanto a chama sempre ardente representa a obsessão por afeto. Ela está sempre em conflito por causa da contradição desses dois.”&#13;&#10;
+      “Nós pagamos um absurdo e é tudo isso que você tem para dizer?”}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;Trecho de uma Conversa Gravada de Alguns Funcionários&gt;&#13;&#10;
+      “Bem, ela é como uma bomba-relógio. Ninguém consegue dizer quando está de bom humor ou não. Nós só esperamos que não seja a gente sendo explodido antes de entrar na Unidade de Contenção. Ela não ficará melhor, então só precisamos tentar fazer com que ela não piore mais.”}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {&lt;Trecho do Registro de Aconselhamento&gt;&#13;&#10;
+      “Eu nunca pensei que ela poderia ser capaz de escapar. Talvez estamos ficando mais imprudentes, mas parecia que tudo que ela conseguia fazer era queimar o fósforo preso em seu corpo. Sim, nossa resposta foi meio tardia. (Omitido) a maioria das Anormalidades que tentam escapar atacam os funcionários que estiverem em sua frente, mas essa não mostrou nenhuma agressão aos funcionários. No lugar disso, ela foi em direção para outro departamento, o lugar mais movimentado da corporação. Se não tivéssemos a suprimido ali, metade das pessoas aqui não estariam inteiras.”}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="escape1">Quando o resultado do trabalho era Neutro, o Contador Qlifót reduzia com probabilidade mediana.</specialTip>
+      <specialTip openLevel="1" key="escape2">Quando resultado do trabalho era Ruim, o Contador Qlifót reduzia com alta probabilidade.</specialTip>
+      <specialTip openLevel="3" key="explosionHallway">A $0, após ter escapado, marcou um alvo e então foi em sua direção. Após 5 segundos perto de seu alvo, ela explodiu. Vários funcionários que estavam por perto sofreram queimaduras desse incidente.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

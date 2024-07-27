@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100034">
+
+
+
+    <narration action="move">
+      #0 recebeu a ordem para ir para a unidade de contenção de $0.
+    </narration>
+
+    <narration action="start">
+      [
+      {#0 sente que o seu cabelo é apenas um fardo.},
+      {#0 sente que uma tatuagem na sua cabeça sem cabelo iria ficar muito fixe.}
+      {#0 começa a tirar a sua peruca, pois agora sente orgulho de ser parcialmente careca.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Podes ficar parecido com o Bruce Willis se fores careca!},
+      {Pessoas carecas sempre parecem profissionais mesmo que eles estejam a fazer coisas triviais!}
+      {Pessoas carecas não têm que se preocuparem sobre entupir o ralo!}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {E tu ainda tens cabelo sedoso?},
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">Ser-Careca-É-Incrível!</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Bald</portrait>
+
+      <name openLevel ="1">
+        Tu és careca…
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        MANTÊM A CALMA E FIQUE CARECA
+      </specialName>
+
+      <openText>Tu ligaste a tua máquina de cortar cabelo...</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {&lt;Aviso&gt;&#13;&#10;&#13;&#10;Tu deves estar a receber dano mental careca neste momento. Se este artigo for lido por um individuo que tem cabelo, ele ou ela terá o privilégio de ser tornar careca. Se queres que isso não aconteça terás de trabalhar com esta Anormalidade. Se tu achares 10 ou mais fios de cabelo na tua almofada amanhã de manhã é recomendado que leias este artigo 3 vezes ou mais. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {Bill: Eu tive um sonho incrível. &#13;&#10;
+       Brian: Que tipo de sonho? Ganhas-te a lotaria ou o quê?&#13;&#10;
+      Bill: Todos aqui eram carecas! O James, tu, e todos os outros na instalação! E talvez até aqueles que estão fora desta instalação! &#13;&#10;
+       Brian: Uh…… Eu acho que tu tens estado sobre muito estresse ultimamente. Porquê que não vais ver um conselheiro ou um psicólogo? &#13;&#10;
+      Bill foi sacrificado na Máquina Que Canta naquele mesmo dia. Vários empregados ficaram de luto por ele. Logo após o incidente, a Anormalidade Ser-Careca-É-Incrível! apareceu. Todos nós celebramos a memória do Bill Careca.
+      }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="3">
+      [
+      {Se alguém entrar em contacto com esta Anormalidade, ele ou ela irão falar ou escrever sobre o facto de que ser careca é incrível durante uma hora, depois desse período de tempo esse individuo irá rapar o seu cabelo fora. Se ficares careca não precisas de perder tempo a lavar e a secar o teu cabelo. Se um empregado careca for enviado para esta Anormalidade, a mesma não irá fazer nada. Não precisas de te preocupares em perder cabelo se já és careca. Mas se um empregado com cabelo fizer o mesmo, ele irá rapar o seu cabelo depois de falar sobre quão bom é ser careca (fenómeno mencionado acima). Pessoas carecas podem refletir luz com as suas brilhantes carecas podendo assim cegar os seus inimigos, incrível não é?! O objetivo desta Anormalidade é fazer todos do planeta Terra não terem cabelo. Nós não precisaremos de tantas lâmpadas se tivermos muito carecas porque a luz será refletida nas nossas cabeças, assim iluminando grandes áreas. Isso seria uma grande ajuda com a conta da eletricidade! Se os não-carecas não forem enviados para esta Anormalidade, a energia produzida será menor. Sabias que os nobres da Europa na Idade Média eram todos carecas? Eles mudavam de peruca todos os dias!}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="4">
+      [
+      {Nós decidimos adicionar algumas novas regras para o código de conduta da companhia.&#13;&#10; Se vires algum filho da p--- que ri-se da calvíce dos seus colegas de trabalho, ele ou ela será banido ou banida de usar a sala de convívio e será permanente banido(a) de juntar-se aos seguintes grupos: O club de debate da companhia conhecido por "Aqueles Questionam A Ausência De Barbies Carecas", o club de culinária Gourmet "Polvo Melhor que Lula" e o grupo ecológico nomeado "Salvemos As Águias Carecas". O banimento será retirado caso o número de cabelos do infrator fique abaixo de 1. &#13;&#10; Eu dedico este artigo ao empregado T.H., que agora está a tomar medicamentos pro-calvíce aqui do meu lado de bico calado. }
+    ]
+  </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="memeriBeam">Parece que ainda tens cabelo sedoso.... Bam! Foste atingido pelo Lazer Ser-careca-é-incrível!</specialTip>
+      <specialTip openLevel="2" key="memeriOnly">Se vários empregados forem atingidos pelo o Lazer Ser-careca-é-incrível! do $0, todos irão ficar carecas por um mês inteiro. Sim, todos, incluindo tu, gerente.</specialTip>
+      <specialTip openLevel="3" key="memeriHurryUp">Ainda não é tarde demais. 30... 29... 28...</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {Esta Anormalidade está cheia dos sonhos das pessoas carecas.}
+        {Estás a perder o teu cabelo ou já és careca?}
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Yes" target="1" isAnswer="true"  message="You're BALD"/>
+        <node desc="No" target="2" isAnswer="false"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {A Lobotomy dá-te boas-vindas.}
+        ]
+      </desc>
+
+      <desc id="2" select="2">
+        [
+        {Desejas ser careca?}
+        ]
+      </desc>
+
+      <select id="2">
+        <node desc="Yes" target="3" isAnswer="true" message="You're BALD"/>
+        <node desc="No" target="4" isAnswer="false"/>
+      </select>
+
+      <desc id="3" select="0">
+        [
+        {Tu ligaste a tua máquina de cortar cabelo...}
+        {A Lobotomy dá-te boas-vindas.}
+        ]
+      </desc>
+
+      <desc id="4" select="0">
+        [
+        {Volta aqui depois de teres assistido 'Rapidez Raivosa 7' mais de cinco vezes.}
+        ]
+      </desc>
+
+
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {Oh, quando é que tu rapaste o teu cabelo, gerente?}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+</creature>

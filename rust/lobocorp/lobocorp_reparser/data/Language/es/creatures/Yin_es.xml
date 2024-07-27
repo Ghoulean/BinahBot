@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100104">
+
+    <narration action="move">
+      #0 va a entrar en la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Por favor, contenga estos dos colgantes en habitaciones separadas.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 trae el caos al mundo, y borra ese caos al mismo tiempo.},
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {El mundo se derrumba cuando el pez negro y el pez blanco se encuentran.},
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-05-102</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Yin</portrait>
+
+      <name openLevel ="1">
+        Yin
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>Ahora, tú te conviertes en el cielo, y yo me convierto en la tierra.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {El colgante negro es el color más oscuro de todos, el más negro de toda la oscuridad del mundo.&#13;&#10;Los empleados no deben tocar, o poseer el colgante. Simplemente mirarlo hace que el corazón de uno se oscurezca.&#13;&#10;Parece que originalmente era un círculo. Sin embargo, está separado de la otra mitad.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Muchos empleados lo llamaron “El colgante del diablo.”&#13;&#10;Dijeron que con solo mirarlo te deprime sin cesar.&#13;&#10;A los empleados no les gustaba estar en el mismo lugar que.&#13;&#10;Era el polo opuesto de su otra mitad.&#13;&#10;Ellos se quejaron,&#13;&#10;“Ojalá fuera solo el colgante blanco.”&#13;&#10;Su entorno se erosiona; los que se acercan sufren.&#13;&#10;No era lo que quería hacer, estaba sucediendo simplemente debido a la energía que exuda.&#13;&#10;Se preguntó, “Por qué existo?”&#13;&#10;“Si mi propia existencia hace que la gente sufra y se deprima, tal vez no debería haber nacido, como dicen.”&#13;&#10;“Tal vez mi creador solo pretendía hacer el colgante blanco, y no soy más que un resultado involuntario.”&#13;&#10;Entonces, cómo puede el ser que es negado, ser borrado de este mundo?}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Un día escuché que alguien me llamaba.&#13;&#10;“Es hora. Es hora de que nos reunamos.”&#13;&#10;Estaba saliendo del lugar que alguna vez pensé que nunca más me iría.&#13;&#10;Me encontré nadando lejos de eso.&#13;&#10;&#13;&#10;Todo lo que paso se convierte en ruinas.&#13;&#10;La destrucción no era más que un instinto.&#13;&#10;No pude pararlo, ni ocultarlo.&#13;&#10;Pude ver un colgante blanco, no, la parte de mí mismo que no he visto en mucho tiempo, nadando hacia mí.&#13;&#10;Por primera vez, sentí sentido en mi existencia.&#13;&#10;&#13;&#10;“Solíamos ser uno. Yo soy, asi tu eres. Usted es, así que yo soy.&#13;&#10;Originalmente estábamos juntos; Fue inútil dividirnos.&#13;&#10;Ahora, tú te conviertes en el cielo, y yo me convierto en la tierra.”}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {El rostro de un empleado que tenía los ojos alegres, distorsionado por la tristeza.&#13;&#10;El empleado que acaba de llorar todo el tiempo, finalmente se detuvo.&#13;&#10;El empleado, que se rompió una pierna, se paró sobre sus propias piernas.&#13;&#10;El empleado que se dirigía al salón se desangró hasta morir.&#13;&#10;Cuando el final vuelve al principio, los que tenían esperanza se encontraron con desesperación, los que tenían desesperación se encontraron con esperanza.&#13;&#10;Al final del comienzo, el dragón que se ha convertido en un gran avatar, voló por el cielo.}
+      ]
+    </desc>
+
+   <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Cuando el resultado del trabajo fue malo, el contador Qlifot disminuye.</specialTip>
+      <specialTip openLevel="2" key="2">El contador Qlifot disminuyó cuando un empleado usa a O-07-103 durante 30 segundos o más.</specialTip>
+      <specialTip openLevel="2" key="3">Si se escapa $0 de su sala de contencion, no le permita ponerse en contacto con O-07-103 a toda costa.</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id="100008">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {$0’s most notable features are its numerous eyes that cover its whole body, and the bright lamp it carries.},
+      {In fact, we don’t know the reason behind why $0 was killing people.},
+      {$0 being unable to fly like most birds is a huge benefit. If it could, half of our staff would be headless by now.},
+      {An idea struck $0’s mind: “If I kill the creatures first, then no one would be killed by the beast!” It was then that the forest found peace.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {The ghastly sound of fluttering eyes and a flickering, burning lamp fills the Containment Unit.},
+      {The eyes and lamp of $0 light up the dark chamber like stars.},
+      {Scores of $0’s eyes suddenly direct themselves towards #0.},
+      {Facing towards $0, #0 shrinks away and shudders nervously.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Behind #0, the rumbling sound of a hairy black bird can be heard.},
+      {The sporadic squeals of a bird can be heard.},
+      {$0 cries behind #0, acting as if it feels anxious.},
+      {$0 circles and roams around #0, crying.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {#0 turns their head away to avoid eye contact, and is met with a burning lamp.},
+      {A dazzlingly bright lamp is held in front of #0, who turned away to avoid looking towards $0.},
+      {#0 sees $0 holding its illuminating lamp.},
+      {It was a very good decision for #0 to face away from $0.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {$0’s eyes are turning crimson.},
+      {$0 approaches #0 while making threatening noises.},
+      {$0 is audibly grinding its teeth.},
+      {$0 is walking towards #0.}
+      ]
+    </narration>
+    <narration action="death">
+      [
+      {#0’s head rolls around on the floor of the Containment Unit.},
+      {#0’s head was easily pulled off.},
+      {$0 used its beak to pull off #0’s head as if it were uprooting weeds in a garden.}
+      ]
+    </narration>
+  </info>
+  <observe level="3">
+    <collection>
+      <codeNo openLevel="0">O-02-40</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/BigBird</portrait>
+      <name openLevel="1">
+        Big Bird
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>A month later, we came to this conclusion: There was no such “beast” in the forest.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {A large, many-eyed bird that patrols the dark forest with an everlasting lamp. Unlike regular birds, it lacks wings and has long arms instead with which it can pick things up.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {...(Omitted) would stare intently at anyone it found, young or old, and bite their head off.}
+      ]
+    </desc>
+    <desc id="3" openLevel="1">
+      [
+      {There is a tale of a beast that lies in the deepest, darkest part of the forest who dazzles creatures away never to be seen again.&#13;&#10;&#13;&#10;To protect all creatures from the beast, the big bird burned all of its feathers to make a wick, and then made a lamp that would burn forever.&#13;&#10;&#13;&#10;With this eternally lit lamp, the big bird wandered the forest, warning the creatures to not stray too deep into the trees.&#13;&#10;&#13;&#10;Thanks to the large bird, fewer creatures fell victim to the beast in the forest. However, it was still concerned for the creatures still being killed by the beast.&#13;&#10;&#13;&#10;An idea struck the big bird’s mind: “If I kill the creatures first, then no one would be killed by the beast!”&#13;&#10;&#13;&#10;Since then, only rumors of a beast that would bite your head off flew around the dark forest.&#13;&#10;&#13;&#10;It is said that the beast carefully examines and stares at its victims to see if they are the beast that lures helpless creatures away.&#13;&#10;
+      This is a tale from a town in the &lt;Location Redacted&gt; area. We heard the tale from the town's oldest inhabitant, &lt;Redacted&gt;. Although there is a general assumption that the tale was told to prevent children from entering the forest, it is uncertain who first inherited the tale.}
+      ]
+    </desc>
+    <desc id="4" openLevel="1">
+      [
+      {“We can’t do anything while the Abnormality has its eyes open. It stares intently, and as it keeps staring…(Omitted). This is why we need to put it to sleep first. We can only begin working when all of its numerous dozens of eyes have entered into slumber.”}
+      ]
+    </desc>
+    <desc id="5" openLevel="2">
+      [
+      {And it turns out that the tale was not made up.&#13;&#10;
+      “We could find this large bird in the forest. Right after that, we tried to look for the ‘Beast that dazzles people.’ We searched through every nook and cranny of the forest. Investigated every single creature in detail. A month later, we came to this conclusion: There was no such ‘beast’ in the forest. Except for that big bird.”
+      ]
+    </desc>
+    <desc id="6" openLevel="3">
+      [
+      {“This Abnormality is completely ignorant of the common perception of death. The Abnormalities that reside in this corporation can be placed into two different categories. The first category is those who understand perfectly well what the concept and meaning of death is, and will attack our staff with the intent to kill. The second has those who are aware of the concept of death, but attack without malicious intent. This Abnormality we have contained here fits into neither of these two categories. To this bird, death in itself is salvation. If it just ripped off the head of a poor little girl who got lost in the forest, to it, there was no mistake, malice, or murder. It thinks it’s just saved the girl from the beast.”}
+      ]
+    </desc>
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">After 5 employees died within the facility, the Qliphoth Counter decreased. However, deaths caused by Execution Bullets were not recognized.</specialTip>
+      <specialTip openLevel="2" key="2">When the work result was Bad, the Qliphoth Counter decreased.</specialTip>
+      <specialTip openLevel="2" key="3">When the work result was Good, the Qliphoth Counter increased.</specialTip>
+      <specialTip openLevel="2" key="4">$0 breached its Containment Unit regardless of its Qliphoth Counter when the emergency situation in the facility reached the 2nd Trumpet.</specialTip>
+      <specialTip openLevel="3" key="5">There was a blackout in the Department where $0 was roaming. Employees who are in the Department with a blackout may become enchanted by $0.</specialTip>
+      <specialTip openLevel="2" key="6">It seems enchanted targets receive less damage. However, after a certain amount of time had passed, those targets made their way to where $0 was and died from its attack.</specialTip>
+      <specialTip openLevel="2" key="7">Enchanted employees were freed from their trance as soon as they were out of the Department that suffered from the blackout.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

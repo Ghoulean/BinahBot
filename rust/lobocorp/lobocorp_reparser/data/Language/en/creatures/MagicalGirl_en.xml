@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    5.28
+  -->
+  <info id="100004">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {$0 is perhaps the most active and cheerful girl out of all our Abnormalities. However, there may be more than meets the eye to her.},
+      {$0 seems to be friendly and good to us for now, but caution should still be maintained.},
+      {The potential threat $0 possesses is well known to most of our employees. Please remain cautious.},
+      {In fact, “peace” is not what $0 desires.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 is humming while looking out the window, she seems well.},
+      {$0 welcomes #0 with a radiant smile just as they step through the door.},
+      {$0 happily greets #0. “What a beautiful day it is!”},
+      {$0 is evidently glad to see #0.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 proudly recounts the time she defeated 3 villains all by herself to #0.},
+      {#0 listens to one of $0’s stories. Even though she has told this one several times already, she never gets sick of telling it again.},
+      {$0 is talking about a villain who virtuously reformed because of her. As #0 compliments her for the act, she laughs delightfully.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Her “Magic Shoes” occasionally click together, making a cheerful sound.},
+      {The “Magic Jewelry” around her neck shimmers in the light.},
+      {The lace of her luxuriant magical outfit is swinging exuberantly.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {$0 speaks of her “Duty” to #0. She whispers that it is very important and secretive.},
+      {$0 talks about “Justice” to #0. She whispers that her work in itself is justice.}
+      ]
+    </narration>
+    <narration action="reverse1">
+      [
+      {$0 is mumbling inaudibly with a melancholic tone to #0, who has just stepped through the door.},
+      {Unlike how she usually is, $0 is not paying any attention to #0 who just entered the room.}
+      ]
+    </narration>
+    <narration action="reverse2">
+      [
+      {#0 approaches $0 to see how she’s doing. “Peace is getting tired.”},
+      {$0 mumbles audibly: “The weather looks good today. Though, I’m not really that happy about it.”}
+      ]
+    </narration>
+    <narration action="reverse3">
+      [
+      {Her “Magic Shoes” tap quietly, breaking the heavy silence.},
+      {Her eyes are unfocused, and she’s forcing an unusually dreary smile.}
+      ]
+    </narration>
+    <narration action="special_ability1">
+      [
+      {$0, a magical girl no longer, gazes at #0 with murderous intent.}
+      ]
+    </narration>
+    <narration action="special_ability2">
+      [
+      {$0 figured out that #0 was going to administer anesthetic, and chose to make the first strike.}
+      ]
+    </narration>
+    <narration action="special_ability3">
+      [
+      {One of $0’s sharp fangs misses and penetrates #0’s shoulder.}
+      ]
+    </narration>
+    <narration action="dead">
+      [
+      {$0 steps over #0’s limp body and exits the room. She will now search for other victims in every corner of the facility.},
+      {Before breathing their final breath, #0 earnestly tries to speak with $0 using all their might. However, she shuts the door as if she didn’t hear a thing.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-01-04</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/MagicalGirl</portrait>
+      <name openLevel="1">
+        Magical Girl
+      </name>
+      <name openLevel="3">
+        The Queen of Hatred
+      </name>
+      <riskLevel openLevel="2">
+        WAW
+      </riskLevel>
+      <openText>In the name of Love and Justice~ Here comes Magical Girl!</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {A humanoid Abnormality that looks like it would go and fight villains for peace and justice at any moment.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {It is friendly toward every employee and is able to engage in casual conversation. It believes that it is a hero born to save the world, and takes considerable pride in it.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {When it shows signs of anxiety or doubt while conversing with an employee, its appearance and personality will undergo an adverse change within 4 days, and it will display symptoms of dissociative disorders. }
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {The definition of “good” and “evil” are fixed in its mind. Some assume that when the Abnormality’s beliefs lead to a horrible doubt about the existence of evil, it will choose to become evil to negate that doubt.}
+      ]
+    </desc>
+    <desc id="5" openLevel="3">
+      [
+      {All parameters will return to normal after the negative phase passes, and the Abnormality will have no memory of the behavior it exhibited during that phase. }
+      ]
+    </desc>
+    <desc id="6" openLevel="1">
+      [
+      {&lt;Audio Log_1&gt;&#13;&#10;
+      Employee: How are you feeling today?
+      Magical Girl: Good. The world is at peace, and it’s quiet around here. Peace is a great thing to have. It means there aren't any villains around, right?}
+      ]
+    </desc>
+    <desc id="7" openLevel="2">
+      [
+      {&lt;Audio Log_2&gt;&#13;&#10;
+      Employee: You're looking a bit down today.
+      Magical Girl: Still fine. The world is peaceful, and it's... (The Abnormality fell silent and did not wish to continue speaking)
+      (Omitted)&#13;&#10;&#13;&#10;&lt;Audio Log_3&gt;&#13;&#10;
+      Employee: ...Are you alright?
+      Magical Girl: Why is it still so peaceful? You see, the whole purpose of my life is to defeat villains. It's as if the world is trying to say it doesn't need me. Really, why is it still so peaceful? Oh, did I mention that I'm a magical girl? To keep the world's peace, I was born. But today, it's quiet today. (The Abnormality continued to murmur incomprehensible words to itself)}
+      ]
+    </desc>
+    <desc id="8" openLevel="3">
+      [
+      {&lt;Audio Log_4&gt;&#13;&#10;
+      (The Abnormality endlessly mumbles to itself, without even noticing the employee in its containment)
+      Magical Girl: The world can be divided into good and evil. I am on the side of justice. If I am on the side of good, then someone has to be on the side of evil. Without someone to play the villain, I can't exist. Then, who is going to protect the world?&#13;&#10;&#13;&#10;&lt;Audio Cuts Out&gt;}
+      ]
+    </desc>
+    <desc id="9" openLevel="4">
+      [
+      {&lt;Audio Log_5: Level 3 or above access required&gt;&#13;&#10;
+      This is part of an audio record obtained during the rampage on the date of &lt;Redacted&gt;. The Abnormality used a radio installed in the facility to call the Emergency Planning Team.&#13;&#10;
+      - (Continuous Sobbing)
+      Employee: This is the Emergency Planning Team. Please identify yourself.
+      - I think, I... I did this. I, I couldn't stop myself. It's my fault. I ruined everything. I betrayed the people who were kind to me. I don't remember why I did this.
+      Employee: Could you elaborate on what happened?
+      - I don't know. They aren't moving. There's so much blood. I'm sorry. I'm really sorry.
+      (Omitted)
+      
+      Three bodies were found in the Abnormality's Containment Unit. The Abnormality lost all memory of the incident afterward.}
+      ]
+    </desc>
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">When the work result was Bad, the Qliphoth Counter decreased.</specialTip>
+      <specialTip openLevel="2" key="2">When a Qliphoth Meltdown occurred in the facility without the death of 3 or more employees, the Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="1" key="3">When the Qliphoth Counter was at its max, the HP and SP of the employee who worked with her were healed.</specialTip>
+      <specialTip openLevel="2" key="4">When the facility reached Trumpet Level 2, $0 voluntarily helped with Abnormality suppression. However, if 20% of our employees die while help is provided, the state of the Abnormality will change and will need to be suppressed immediately.</specialTip>
+      <specialTip openLevel="3" key="5">$0’s status changed when her Qliphoth Counter became 1. The work success rate was low when in said status. This status has been designated as “Hysteric” due to her anxiety and compulsive disorders. </specialTip>
+      <specialTip openLevel="4" key="6">When she was Hysteric, generating 16+ PE-Boxes raised her Qliphoth Counter.</specialTip>
+      <specialTip openLevel="4" key="7">When she was Hysteric, generating 15 or fewer PE-Boxes lowered her Qliphoth Counter.</specialTip>
+    </specialTipSize>
+  </observe>
+  <etc>
+    <!-- 격리실 내 보통 -->
+    <param key="Default_Hero_0" index="0">What kind of place is this?</param>
+    <param key="Default_Hero_1" index="1">Please feel free to call me whenever there’s danger~!</param>
+    <param key="Default_Hero_2" index="2">How did I get to this place?</param>
+    <param key="Default_Hero_3" index="3">I don’t remember what happened yesterday…</param>
+    <param key="Default_Hero_4" index="4">Do you all know about the worth of victory and the beauty of the world?</param>
+    <param key="Default_Hero_5" index="5">Tell me if anything bad happens, okay? I know I can help you!</param>
+    <!-- 격리실 내 히스테리 -->
+    <param key="Default_Hysteric_0" index="6">Don’t you need me anymore…?</param>
+    <param key="Default_Hysteric_1" index="7">Why do I exist…?</param>
+    <param key="Default_Hysteric_2" index="8">Please… Stop these voices…</param>
+    <param key="Default_Hysteric_3" index="9">Is it my turn now…?</param>
+    <param key="Default_Hysteric_4" index="10">I hate this silent place. The world I knew wasn’t “peaceful” like this.</param>
+    <param key="Default_Hysteric_5" index="11">I am the chosen one. Who would protect the world besides me?</param>
+    <param key="Default_Hysteric_6" index="12">There’s no light without the darkness, it’s like I’m not even here.</param>
+    <param key="Default_Hysteric_7" index="13">Someone told me that there are no bad guys anymore… Is that true?</param>
+    <!-- 출동 -->
+    <param key="Hero_Appear_0" index="14">Just leave it to me!</param>
+    <param key="Hero_Appear_1" index="15">In the name of Love and Justice~ Here comes Magical Girl!</param>
+    <!-- teth 조우 -->
+    <param key="Meeting_Teth_0" index="16">A piece of cake!</param>
+    <param key="Meeting_Teth_1" index="17">Don’t worry~! I’ll help you!</param>
+    <param key="Meeting_Teth_2" index="18">Weak baddies like this are no match for me!</param>
+    <!-- he 조우 -->
+    <param key="Meeting_He_0" index="19">Hmph! It’s going to be a bit tough.</param>
+    <param key="Meeting_He_1" index="20">I swear I’ll do something!</param>
+    <!-- waw 조우 -->
+    <param key="Meeting_Waw_0" index="21">That one’s as strong as a minor arcana... Is this place filled with villains?</param>
+    <param key="Meeting_Waw_1" index="22">My senpais couldn’t handle this, but I know I can!</param>
+    <!-- aleph 조우 -->
+    <param key="Meeting_Aleph_0" index="23">Everyone, get out of here!</param>
+    <param key="Meeting_Aleph_1" index="24">I’ll protect everyone, even if it means I have to die!</param>
+    <param key="Meeting_Aleph_2" index="25">It has the strength of a major arcana… And I’m alone in this… But I won’t run away!</param>
+    <!-- 탐욕의 왕 조우 -->
+    <param key="Meeting_Greed_0" index="26">I’m sorry, senpai! The only thing I can do is stop your rampage!</param>
+    <!-- 절망의 기사 조우 -->
+    <param key="Meeting_Despair_0" index="27">So you’ve been consumed too, senpai… Can this cycle really not be stopped?</param>
+    <!-- 사망 -->
+    <param key="Dead_0" index="28">I swore I would protect everyone to the end…</param>
+    <!-- 제압 완료 -->
+    <param key="Suppress_0" index="28">We did it, everyone!</param>
+    <param key="Suppress_1" index="30">You can count on me any time!</param>
+    <!-- 탐욕의 왕 제압 -->
+    <param key="Suppress_Greed_0" index="31">Senpai, if I had to face you outside, I’d totally be dead by now…</param>
+    <!-- 절망의 기사 제압 -->
+    <param key="Suppress_Despair_0" index="32">Senpai… I know you tried your hardest to hold it back…</param>
+    <!-- 탈출 후 히스테릭 -->
+    <param key="Be_Hysteric_0" index="33">It’s too much…</param>
+    <param key="Be_Hysteric_1" index="34">Was everything a lie…?</param>
+    <param key="Be_Hysteric_2" index="35">I wasn’t able to protect anyone like she did…</param>
+    <param key="Be_Hysteric_3" index="36">I’m just like her huh…</param>
+    <param key="Be_Hysteric_4" index="37">Get out of my head…</param>
+    <param key="Be_Hysteric_5" index="38">Is it time for me to pay the price…?</param>
+    <!-- 영웅 기본공격 -->
+    <param key="Hero_Attack_0" index="39">With love!</param>
+    <param key="Hero_Attack_1" index="40">In the name of justice!</param>
+    <!-- 영웅 손가락 총 -->
+    <param key="Hero_Skill_1_0" index="41">Go! Arcana Beats~!</param>
+    <param key="Hero_Skill_1_1" index="42">Begone~!</param>
+    <!-- 주문 시작 ~ 끝 (순서대로) -->
+    <param key="Hero_Skill_2_0_0" index="43">Heed me, thou that are more azure than justice and more crimson than love…</param>
+    <param key="Hero_Skill_2_1_0" index="44">In the name of those buried in destiny…</param>
+    <param key="Hero_Skill_2_2_0" index="45">I shall make this oath to the light.</param>
+    <param key="Hero_Skill_2_3_0" index="46">Mark the hateful beings who stand before us…</param>
+    <param key="Hero_Skill_2_4_0" index="47">Let your strength merge with mine, so that we may deliver the power of love to all…</param>
+    <param key="Hero_Skill_2_5_0" index="48">ARCANA SLAVE!</param>
+  </etc>
+</creature>

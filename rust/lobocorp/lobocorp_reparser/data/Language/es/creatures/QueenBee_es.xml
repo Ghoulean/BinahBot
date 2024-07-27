@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id="100026">
+
+
+    <narration action="move">
+      #0 va a ingresar a la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="start">
+      [
+      {Para las abejas, una colmena dañada es algo que no se puede tolerar.}
+      {Dicen que los drones pasan toda su vida proporcionando comida a la reina.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {La máxima prioridad para las abejas sería la seguridad de la colmena.}
+      {Si alguien daña $0, incluso por accidente, puede suceder algo que nunca se puede deshacer.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {Si #0 siente un dolor agudo en el estómago o una sensación de cosquilleo en el cuello, la única acción disponible será mirar el cielo azul por última vez.}
+      {#0 intenta de no respirar tanto como sea posible.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {$0 quiere más y más y más drones que traerán prosperidad a su reino.}
+      {$0 se completará con el trabajo de sus drones... tal será el comienzo de su reino...}
+      ]
+    </narration>
+
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">T-04-50</codeNo>
+      <name openLevel="1">Abeja Reina</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/QueenBee</portrait>
+
+      <riskLevel openLevel ="1">WAW</riskLevel>
+
+
+
+      <openText>Si siente un dolor agudo en el estómago o una sensación de cosquilleo en el cuello, la única acción disponible será mirar el cielo azul una última vez.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Esta anormalidad asume la forma de un monstruoso híbrido de una abeja reina y una colmena de abejas. Las secciones transversales expuestas revelan partículas de color rojo oscuro que se parecen a la carne cortada en rodajas. Su cara está muy distorsionada. Tiene alas anormalmente grandes, pero no posee la capacidad de usarlos por el tamaño de su cuerpo. Uno de los ojos está relativamente intacto y su pupila se mueve para escanear intrusos. La anormalidad siempre se queda quieto, por lo que se supone que no se mueve.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Cuando se cumplen ciertos requisitos, se propagan las esporas a su alrededor. Generará miles de millones de esporas en un radio de 20 metros. La existencia de formas de vida en la vecindad parece ser uno de los requisitos clave.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="1">
+      [{No se encontró ningún cambio inmediato en el empleado que inhaló las esporas, y varias pruebas no detectaron ningún síntoma notable.}]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {Posteriormente, el empleado que inhalaba las esporas sufrió un dolor severo en el lóbulo occipital y el abdomen. Algún tiempo después, la cabeza del empleado se desprendió del cuerpo y de ella surgió un dron anomalo de la colmena.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="2">
+      [
+      {Se ha confirmado que las esporas llevan huevos los drones y se incuban dentro de un huésped vivo. Con base en los hallazgos de la autopsia de un empleado asesinado por la anormalídad, creemos que la larva se alimenta de cualquier cosa de sangre, órganos o grasa, y se mueve libremente por el cuerpo. Cuando se vuelve demasiado grande para moverse, crea un capullo cerca de los intestinos. El anfitrión siente hambre extrema en esta etapa, comiendo mucho más de lo usual. El capullo se mueve hacia arriba a medida que crece, dañando finalmente la arteria y el cricotiroide con sus mandíbulas y separa la cabeza de su huésped del cuerpo. Saldrá del cuerpo, expandiendo la parte cortada del huésped.}
+      ]
+    </desc>
+
+
+    <desc id="6" openLevel="3">
+      [{Registro de Consejería_&#13;&#10;&lt;Redactado&gt; hablamos de una sensación de cosquilleo en el cuello durante algún tiempo. También vi ████████ tomando varios digestivos... Quién hubiera pensado que sería un problema tan serio? Nunca supe que sería el único en presenciar ese horrible momento. &#13;&#10;(Omitido)&#13;&#10;Estábamos charlando, pero luego ████████ dejamos de hablar. Seguía rascándose el cuello. Su cuello era tan rojo, que me preocupaba que pudiera tener una infección o algo así. Entonces comenzó a girar su cuello en una dirección extraña. Fue entonces cuando me di cuenta de la gravedad de la situación. Él no podría haber estado torciendo su cuello de esa manera solo. Parecía que alguien más le estaba torciendo el cuello con fuerza.}]
+    </desc>
+
+
+    <desc id="7" openLevel="3">
+      [{Y luego escuché el sonido de algo desgarrado, como el ruido que puedes escuchar cuando destruyes papel, y su cabeza acaba de desprenderse de su cuerpo. Cayó al suelo con un plop húmedo. }]
+    </desc>
+
+    <desc id="8" openLevel="4">
+      [
+      {Entonces algo salió de su cuello. Como una mariposa que sale de su capullo, alas, un cuerpo amarillo, dientes y algo que nunca quiero volver a ver, un monstruo... }
+      ]
+    </desc>
+
+    <desc id="9" openLevel="4">
+      [
+      {(Omitido) No tenía ojos, pero parecía estar consciente de mí presencia. Pero no quería atacarme. Levantó la cabeza y se dirigió a la instalación de contención como un drone cargando miel para la colmena... }
+      ]
+    </desc>
+
+    <desc id="10" openLevel="4">
+      [
+      {A veces aún escucho el sonido de sus mandíbulas moviéndose, sus alas revoloteando.}
+      ]
+    </desc>
+
+    <desc id="11" openLevel="3">
+      [
+      {Drone&#13;&#10; Se cree que es un miembro de la misma especie que la Reina Abeja, su forma es muy diferente de la Reina, excepto por su color. Tiene ocho patas y una capacidad de vuelo limitada que le permite flotar aproximadamente 1 metro por encima del suelo. La cabeza, el tórax y el abdomen pueden distinguirse fácilmente. A diferencia de su reina, no tiene ojos ni antenas. Algo parecido a los intestinos se arrastra hacia atrás al final de su cola.&#13;&#10;Solo muestran dos comportamientos. O bien proporcionan nutrientes a la reina o se centran en aumentar sus números. Cuando se encuentra con un empleado, ataca la cabeza con sus mandíbulas a su cabeza, rompiéndola e insertando una larva en la víctima.}
+      ]
+    </desc>
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="badMood">Cuando el resultado del trabajo fue normal, el Contador Qlifot se reduce con una probabilidad Normal.</specialTip>
+      <specialTip openLevel="1" key="badMood2">Cuando el resultado del trabajo fue malo, el Contador Qlifot se reduce con una alta probabilidad.</specialTip>
+      <specialTip openLevel="2" key="beeComing">Cuando el contador Qlifot alcanza a 0, $0 emite esporas rojas en todo el departamento.</specialTip>
+      <specialTip openLevel="1" key="spore">Al observar la anormalídad, se ha confirmado que las esporas adheridas a un empleado durante un cierto tiempo infligen daño rojo a su víctima. Además, el empleado erosionado por las esporas fue significativamente más lento para moverse y el PS reducido no puede ser curado por el regenerador y las balas.</specialTip>
+      <specialTip openLevel="3" key="beeing">Cuando el PS de #0 se ha agotado, un drone gigante salió del cuerpo de #0 luego de ser asesinado. El drone atacaron a los empleados cercanos. Del cadáver de los empleados atacados por drones, surgieron más drones.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+
+  <child>
+    <name>Abeja Trabajadora</name>
+    <codeId>T-04-50-1</codeId>
+  </child>
+
+</creature>

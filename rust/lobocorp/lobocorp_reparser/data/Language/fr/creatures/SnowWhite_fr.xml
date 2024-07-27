@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id="100023">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {“Miroir, mon beau miroir, qui est la plus belle entre toutes ?” demanda la sorcière dans une pièce qui n'était plus visitée par qui que ce soit.},
+      {Le miroir resta silencieux, mais la sorcière entendit la réponse.},
+      {Le jour où une pomme mûre tomba de l'arbre du jardin où se tenaient la princesse et le roi, le cœur de la sorcière s'est brisé.},
+      {La sorcière jeta le sort le plus puissant qu'elle connaissait sur cette pomme, se sacrifiant ainsi.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {#0 peut voir des branches recouvrir l’Unité de Confinement.},
+      {L'Unité de Confinement de $0 contient du feuillage en croissance.},
+      {Lorsque vous approchez de l’Unité de Confinement de $0, vous pouvez voir les branches entrelacées dans sa structure.},
+      {Le faible bruit du bruissement des feuilles peut être entendu depuis l'Unité de Confinement de $0.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Si vous regardez attentivement, vous pouvez voir que les branches sont fanées.},
+      {Ces choses sont si craquelées qu'un seul contact les ferait partir en poussière ; elles ont l'air bien trop immondes pour être appelées “plantes”.},
+      {Bien que flétries, les branches et les feuilles poussent toujours.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Les yeux de $0 sont partis depuis longtemps, dévorés par les oiseaux et les insectes. $0 a ensuite grandi en se délectant de leurs carcasses à proximité.},
+      {$0 est seule depuis très longtemps. Autour de $0 sont dispersés les restes d'insectes et d'oiseaux morts en la consommant.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {$0 pensait à la princesse et au prince qui marchaient sur un chemin de fleurs, bénis par tous.},
+      {$0 a été maudite par la sorcière et la princesse endormie par sa faute a finalement vécu heureuse pour toujours.}
+      {$0 a grandi baignée dans la jalousie, la colère et la solitude.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">F-04-42</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/SnowWhite</portrait>
+      <name openLevel="1">
+        La Pomme de Blanche-Neige
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>Le jour où une pomme mûre tomba de l'arbre du jardin où se tenaient la princesse et le roi, le cœur de la sorcière s'est brisé.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {…Quand le prince embrassa la princesse, elle recracha le morceau de pomme coincé dans sa gorge. Les nains en pleurèrent de joie. Blanche-Neige et le prince traversèrent un chemin couvert de fleurs et rentrèrent au royaume. Ils vécurent heureux pour toujours.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Resta alors la pomme née de la colère et de la malédiction de la sorcière. C'était aussi une partie d'elle-même. La pomme tombée de la main de Blanche-Neige après une petite bouchée ne pourra jamais être heureuse. Emplie de solitude et de haine envers la princesse, elle attendit le jour où elle pourrait se décomposer et retourner à la terre.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Était-ce l’enchantement, ou la colère de la sorcière qui brisa les lois de la nature ? Même après que le temps aurait dû lui permettre de pourrir et à ses graines de porter leurs fruits, la pomme ne pourrit pas. Pendant ce temps, une de ses moitiés fut écrasée par un pied, l’autre fut envahie de trous, rongée par les oiseaux et les insectes.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Les carcasses d’oiseaux et d’insectes s’empilèrent autour de la pomme. Elle réfléchit à son existence au milieu des cadavres pourrissants. Un jour, une branche poussa de sa chair. Les feuilles et les branches étaient déjà flétries et sèches, mais elles continuèrent de pousser.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Finalement, un après-midi, la pomme put enfin bouger par elle-même. Elle pensa à la princesse et au prince qui étaient partis heureux. Blanche-Neige aussi a dormi pendant longtemps, mais un prince est venu et l’a réveillée. La pomme, à présent une princesse de son bon droit, n’avait plus besoin de prince ; elle entama alors son voyage.
+      - Extrait de “Les histoires cachées des contes de fées que personne ne connaît” (Auteur inconnu)}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="Escape">Lorsque le résultat du travail est Normal, le Compteur Qliphoth a une probabilité normale de diminuer.</specialTip>
+      <specialTip openLevel="1" key="Escape2"> Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth a une probabilité élevée de diminuer.</specialTip>
+      <specialTip openLevel="2" key="Making">Quand $0 s’échappe de son confinement, elle commence à étendre ses racines et ses branches sur le sol de la salle où elle se trouve. Ces plantes rampantes ralentissent les employés, entravant leurs mouvements.</specialTip>
+      <specialTip openLevel="3" key="NotDisappear">Une fois la zone entièrement recouverte des racines et des branches de $0, elle part vers une autre pièce pour s’étendre encore plus. Lorsque $0 est finalement réprimée, sa flore ne disparaît pas avant le jour suivant.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

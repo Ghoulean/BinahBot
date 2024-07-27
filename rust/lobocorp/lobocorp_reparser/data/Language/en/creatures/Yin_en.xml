@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100104">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="mid1">
+      [
+      {Please ensure these two pendants are contained in separate rooms.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 brings chaos to the world, yet also erases such chaos.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {The world will be overturned the day the black carp and white carp meet.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-05-102</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Yin</portrait>
+      <name openLevel="1">
+        Yin
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>“Now you become the sky, and I the land.”</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {The black pendant is darker than any other shade of black, the most obscure of all the forms of darkness in the world.&#13;&#10;Employees should not touch or possess the pendant. Merely looking at it makes one feel as if darkness is creeping into their heart.&#13;&#10;It seems that this pendant originally made up a circle; however, it is now separated from its other half.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Many employees called it “The Devil’s Pendant.”&#13;&#10;Some say just looking at it will fill up your mind with negativity.&#13;&#10;Employees dislike being anywhere near the thing.&#13;&#10;After all, it was the polar opposite of its other half.&#13;&#10;Many would let out similar complaints that all ended with the same remark:
+      “We wish it was only the white one.”&#13;&#10;Its surroundings erode; those who come near it suffer.&#13;&#10;This wasn’t the result of the pendant’s own volition; those things only happened because of the aura it exudes.&#13;&#10;Then it must wonder: “Why do I exist?”
+      “If my very existence corrodes my surroundings, and brings suffering and darkness to whoever interacts with me, maybe I shouldn’t have been born at all, just like they say.”
+      “Maybe my creator only wanted to make the white pendant, and I’m just an unintentional accident.”&#13;&#10;If so, how can such an impure being disappear from this world?}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {One day, the black pendant heard a call:
+      “Now the day has come. It is time for us to reunite.”&#13;&#10;The black pendant left the place it thought it would never leave.&#13;&#10;It found itself swimming away.&#13;&#10;&#13;&#10;Everything it passed turned to ruin.&#13;&#10;Destruction was but an instinct.&#13;&#10;It wasn’t something that could be stopped, nor could it be hidden.&#13;&#10;It could see the white pendant, no, it could see the part of itself that it hadn’t seen for a long, long time. The two opposites were swimming towards each other.&#13;&#10;For the first time ever, the black pendant felt meaning in its existence.
+      
+      “We used to be one. I am, and thus you are. You are, and thus I am.
+      We were originally together; it was a fruitless deed to divide us.
+      Now you become the sky, and I the land.”}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {An employee who had a face colored with cheerful eyes began to grimace at their sudden burst of sadness.&#13;&#10;An employee who was quietly crying from having their heart broken dried their tears.&#13;&#10;An employee who was dragging along their broken leg stood up straight as if they always could.&#13;&#10;An employee who was on their way to the lounge suddenly fainted, bleeding from every place imaginable.&#13;&#10;As the end circles back to the beginning, those who held hope are met with despair, and those who held despair are met with hope.&#13;&#10;At the end of the beginning, the dragon which now became a great avatar soared through the sky.}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">When the work result was Bad, the Qliphoth Counter decreased.</specialTip>
+      <specialTip openLevel="2" key="2">The Qliphoth Counter decreased when an employee wore O-07-103 for more than 30 seconds.</specialTip>
+      <specialTip openLevel="2" key="3">If $0 escapes, prevent any contact between it and O-07-103.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

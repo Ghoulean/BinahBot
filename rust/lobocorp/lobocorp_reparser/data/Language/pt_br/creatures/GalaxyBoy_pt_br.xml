@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100031">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção da $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {Naquela noite, enquanto estrelas choviam do céu, uma criança andava.},
+      {A $0 sabe de tudo sobre #0.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {A saudade se torna uma lágrima, e ela cai como uma estrela cadente.},
+      {Os restantes da saudade florescem no coração cheio de tristeza.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {A $0 faz uma promessa de dedo mindinho com #0 e #0 promete vir novamente amanhã.},
+      {A $0 começa a chorar, ele não aguenta o fato de que #0 precisa ir.},
+      {#0 não consegue dar mais nenhum passo depois de ver como o rosto da $0 já está cheio de lágrimas.}
+      ]
+    </narration>
+  </info>
+  <observe level="3">
+    <collection>
+      <codeNo openLevel="0">O-01-55</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/GalaxyBoy</portrait>
+      <name openLevel="1">
+        Criança da Galáxia
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <specialName openLevel="2">
+        Seu Universo
+      </specialName>
+      <openText>
+        Uma lágrima caiu dos olhos úmidos da criança enquanto estrelas choviam do céu. O mundo então adormece, preso em uma canção de ninar extática.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {Era uma noite coberta por uma gentil névoa.&#13;&#10;Uma criança descalça estava olhando para mim.&#13;&#10;Ele estava chorando, seus olhos sonhadores estavam cheios de tristeza.&#13;&#10;Essa tristeza pendurada em seu rosto me parou no caminho.&#13;&#10;Ele disse ter perdido algo precioso e quando eu me ofereci para ajudar,&#13;&#10;Ele me deu um grande sorriso.&#13;&#10;Uma lágrima caiu dos olhos úmidos da criança enquanto estrelas choviam do céu.&#13;&#10;O mundo então adormece, preso em uma canção de ninar extática.&#13;&#10;Naquela noite, a galáxia desceu com os pés descalços.&#13;&#10;
+      -	Trecho do diário do Funcionário (Omitido), que cometeu suicídio.}
+      ]
+    </desc>
+    <desc id="2" openLevel="2">
+      [
+      {A Anormalidade tem forma de uma jovem criança com grandes olhos e com pele que se assemelha ao céu noturno. }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {A criança mostra grande felicidade ao falar e brincar com os outros. Ele possui um grande afeto pelo ato de fazer contato com outras pessoas. }
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {Se a criança e um funcionário chegarem a um certo nível de afinidade, ela dará uma pedrinha a ele, que agora é considerado como amigo. Esse funcionário então sentirá felicidade e vigor enquanto estiver em posse da pedrinha. Porém, essa pedrinha não faz somente o bem, especialmente quando entra em uma Unidade de Contenção que não seja dessa Anormalidade. }
+      ]
+    </desc>
+    <desc id="5" openLevel="2">
+      [
+      {Se um fucionário em posse da pedrinha (o símbolo de sua forte amizade) morrer, ela mostrará profundo desespero e tristeza pela perda.}
+      ]
+    </desc>
+    <desc id="6" openLevel="3">
+      [
+      {&lt;Trecho do Diário do Funcionário (Omitido)&gt;&#13;&#10;
+      X/X/XX
+      Eu olhei para dentro dos olhos da criança por um tempo. Eu posso ter perdido um pouco a noção porque os olhos dela eram tão sonhadores. Eu queria afagá-la, mas lembrei de meus colegas falando para não ter sentimentos pessoais pelas Anormalidades.
+      
+      X/X/XX
+      Eu o disse meu nome. Ele o repetiu com olhos bem abertos como se ele tivesse descoberto um grande segredo. Toda vez que ele chamava pelo meu nome, parecia que esse ato se tornava algo mais do que algo familiar no qual eu estava lidando.
+      
+      X/X/XX
+      Quando outro funcionário entrou na Unidade de Contenção da criança, ele não o seguiu e ficou olhando para mim. Eu me senti triunfante após escutar isso. O garoto segue a &lt;i&gt;mim&lt;/i&gt;, e não &lt;i&gt;a você&lt;/i&gt;.
+      
+      X/X/XX
+      No momento em que entrei na sala da criança, ele pulou em meus braços chorando. Quando eu finalmente o acalmei, ele chorou uma lágrima que se tornou uma pequena pedrinha branca que caiu em minha mão. "Por favor, não a perca e não dê ela para outra pessoa." O garoto resmungou.
+      
+      X/X/XX
+      "Você gosta dela? Mais do que gosta de mim?" O garoto quietamente perguntou isso quando eu cheguei após terminar o trabalho com outra Anormalidade. Eu então perguntei a ele como é que ele sabia do que eu estava fazendo, e ele respondeu calmamente: "Não é óbvio? Eu sei de tudo. Tudo o que você faz e todos os lugares que vai." O olhar dele ficou fixo na pedrinha, então ele sorriu. Os olhos dele me deram arrepios.
+      
+      X/X/XX
+      Eu tentei me livrar da pedrinha, mas eu percebi que estava além do meu controle. Eu não entendo do que eu estou falando agora mas... "Você ainda a guarda com carinho, certo?" A criança dá vários sorrisos para mim. Sorrisos. Sorrisos. Sorrisos. Sorrisos...
+      
+      X/X/XX
+      Eu não consigo me livrar dessa pedrinha. Minha única esperança é esperar que a criança se canse de mim. Eu estou esperando por esse dia... mas será que ele virá? (As pessoas me dizem que eu sou um funcionário excelente. Idiotas, elas não sabem de nada. Calem a boca.)
+      
+      X/X/XX
+      Eu não aguento mais. Eu não consigo escapar dele. Eu pensava que estava no controle, mas a verdade é que eu era somente mais uma pedrinha o tempo todo nas mãos dele. Tudo que eu fazia, não importa para onde eu ia, eu ouvia os sussurros dele. (Eu preciso acabar com isso, mas eu não tenho nem a certeza de como vou fazer.)
+      "...Eu vim de longe. Então estou feliz de ter te conhecido. Torne-se uma pedrinha, e vamos andar pela galáxia juntos..." Eu ouço a respiração e os sussurros dele seguidos de uma escuridão absurdamente sombria... assim como na noite em que eu o conheci.}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Trabalhos completados com sucesso farão com que um "Símbolo de Amizade" que cura PV e PS seja entregue para o Agente que efetuou. A quantidade da cura é variante em relação ao Contador Qlifót da $0.</specialTip>
+      <specialTip openLevel="2" key="2">O Contador Qlifót aumentou quando #0 concluiu seu trabalho com o Símbolo.</specialTip>
+      <specialTip openLevel="2" key="3">Quando um Agente com o Símbolo trabalhava com outra Anormalidade, dano proporcional ao Contador Qlifót da $0 era causado nele e então o Contador reduzia.</specialTip>
+      <specialTip openLevel="2" key="4">Quando um Agente com o "Símbolo da Amizade" morria, o Contador Qlifót reduzia em 4.</specialTip>
+      <specialTip openLevel="2" key="5">Quando o Contador Qlifót chegou a 0, todos os Agentes com os Símbolos de Amizade morreram.</specialTip>
+      <!--<specialTip openLevel="2" key="6">클리포트 카운터가 0이 된 상태에서는 모든 작업에서 완전히 PE-Box를 모을 수 없다.</specialTip>-->
+    </specialTipSize>
+  </observe>
+  <!-- 대사는 AgentLyrics_kr.xml 에 있음 -->
+</creature>

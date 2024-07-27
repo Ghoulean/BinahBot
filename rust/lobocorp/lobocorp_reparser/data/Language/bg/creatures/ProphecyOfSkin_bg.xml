@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300103">
+
+    <narration action="move">
+      #0 тръгва към камерата на $0, за да се залавя със задачата.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-90</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ProphecyOfSkin</portrait>
+
+      <name openLevel ="1">
+        Пророчество на Кожата
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <openText>Спаси ни сега и завинаги. Истината ще ни освободи.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Антична религиозна книга, която стои на стойка от кожа. Огромната информация в книгата е написана на стари пергаментни листи.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Поклонниците вярвали, че светостта на книгата ще бъде запазена, завинаги ако тя бъде изтъкана от човешки кожи.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Който отвори книгата, ще бъде просветен за невъобразими истини. Тези, които усвоят истината, ще бъдат призовани от пророците. Призив, който не може да бъде отхвърлен.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Спаси ни сега и завинаги. Истината ще ни освободи.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Служител, който чете от книгата придобива известно Ниво на благоразумие.</specialTip>
+      <specialTip openLevel="2" key="2">От книгата може да се чете докато Нивото на благоразумие не достигне максимума.</specialTip>
+      <specialTip openLevel="2" key="3">Колкото повече работника чете, толкова повече става уязвим на Бяла щета.</specialTip>
+      <specialTip openLevel="2" key="4">Всеки работник, който се паникьоса след като прочете книгата, умира.</specialTip>
+    </specialTipSize>
+
+  </observe>
+</creature>

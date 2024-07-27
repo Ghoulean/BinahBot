@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id="100023">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {“Mirror, mirror on the wall, who’s the fairest of them all?” asked the witch in a room which was no longer visited by anyone.},
+      {The mirror lay silent, but the witch heard the answer.},
+      {The day a ripe apple fell off the tree in the garden where the princess and the king stood, the witch's heart shattered.},
+      {The witch cast the most powerful spell she knew on that apple, sacrificing herself.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {#0 can see branches covering the Containment Unit.},
+      {$0’s Containment Unit has some foliage growing inside of it.},
+      {When you approach $0’s Containment Unit, you will be able to see the branches that intertwine it.},
+      {The faint sound of rustling leaves can be heard from $0’s Containment Unit.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {If you look closely, you can see that the branches are withered. },
+      {Those things are dried to such a crisp that a single touch would render them dust; they look much too horrible to be called “plants”.},
+      {Although withered, the branches and leaves are still growing.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0’s eyes are long gone, feasted on by birds and bugs in the past. $0 later grew by feasting on their carcasses nearby.},
+      {$0 was alone for a very long time. Around $0, the remains of bugs and birds that died from consuming parts of it were scattered about.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {$0 thought of the princess and the prince who walked down a path of flowers amidst everyone’s blessings. },
+      {$0 was cursed by the witch, and the princess who fell asleep because of it eventually lived happily ever after. }
+      {$0 grew, stewed in jealousy, wrath, and loneliness.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">F-04-42</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/SnowWhite</portrait>
+      <name openLevel="1">
+        Snow White's Apple
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>The day a ripe apple fell off the tree in the garden where the princess and the king stood, the witch's heart shattered.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {...When the prince kissed the princess, she coughed up the bits of an apple stuck in her throat. The dwarfs cried out in happiness. Snow White and the prince walked through a flower-covered path and headed to their kingdom. Everyone lived happily ever after.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Then there was the apple created from the witch's wrath and curse. It was also a part of herself. The apple that dropped from Snow White's hand after a single bite could never be happy. The apple, full of loneliness and hatred toward the princess, waited for the day it would rot away and return to the earth.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Was it the enchantment, or was it the wrath which was bending the laws of nature? Even after enough time had passed for it to rot and allow its seed to bear fruit, the apple did not rot. In the meantime, one half of it was kicked and crushed by someone's foot, the other half was filled with holes, eaten away by the likes of birds and bugs.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {The carcasses of birds and bugs piled up near the apple. The apple pondered about its existence in the midst of the corpses rotting around it. One day, a branch grew from it. The leaves and branches were already withered and dry, but it continued to grow.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Finally, one afternoon the apple gained the ability to move on its own. It thought of the princess and the prince who left happily. Snow White had also been sleeping for a long time, but a prince came and woke her up. The apple, now a princess in its own right, no longer needed a prince; she began to embark on a journey.
+      - Excerpt from ‘The Hidden Stories in Fairy Tales No One Knew’ (Author unknown)}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="Escape">When the work result was Normal, the Qliphoth Counter lowered with a normal probability.</specialTip>
+      <specialTip openLevel="1" key="Escape2">When the work result was Bad, the Qliphoth Counter lowered with a high probability.</specialTip>
+      <specialTip openLevel="2" key="Making">When $0 escaped from its containment, it began to spread its roots and branches along the ground of the area it was in. Those withered vines slowed employees, hampering their movement.</specialTip>
+      <specialTip openLevel="3" key="NotDisappear">Once the area was completely filled with $0’s roots and branches, it moved to another to grow even more. When $0 was eventually suppressed, its flora did not disappear until the next day.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

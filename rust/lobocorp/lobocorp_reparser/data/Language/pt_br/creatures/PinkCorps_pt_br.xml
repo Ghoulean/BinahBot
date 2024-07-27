@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+  -->
+  <info id="100064">
+    <narration action="move"></narration>
+    <narration action="start">
+      [
+      {O $0 conta a #0 tudo sobre o amor.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {O objetivo do $0 é fazer com que pessoas boas fiquem seguras.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 sente esperança após ver a cor amigável do $0.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">D-01-106</codeNo>
+      <portrait openLevel="0">Sprites/Unit/creature/PinkCorps</portrait>
+      <name openLevel="1">
+        Exército Vestido de Rosa
+      </name>
+      <name openLevel="3">
+        Exército Vestido de Preto
+      </name>
+      <riskLevel openLevel="0">
+        ZAYIN
+      </riskLevel>
+      <riskLevel openLevel="3">
+        ALEPH
+      </riskLevel>
+      <openText>A cor do coração humano é rosa, e ao vestir a mesma cor, podemos nos misturar com as mentes humanas. </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;Esta Anormalidade foi criada com as ideias dadas pelo Apoiador do Tumblbug 문정호 (Moon Jeong-ho).&lt;/i&gt;&#13;&#10;&#13;&#10;Essa Anormalidade toma forma de criaturas humanóides vestidas com equipamento rosa. Sua capacidade intelectual é alta o suficiente para ter conversas com seres humanos. Pelo menos, parece ser amigável durante a observação e trabalho. A Anormalidade identificou-se como sendo de uma força especial de (Omitido) e usa o pronome “Nós” quando se refere a si mesma. Ela continuamente mostrou intenções positivas em ajudar a humanidade.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {&lt;Gravação de Áudio do Primeiro Contato com a Anormalidade&gt;&#13;&#10;
+      (Omitido)
+      Serena: Bem, eu me sinto ameaçada, já que você está armado. Essa roupa rosa também me assusta. Ela não pertence a um lugar como esse.
+      - Qual é sua opinião a respeito da natureza humana, Senhorita Serena?
+      Serena: …Eu acho que depende da experiência da pessoa. Por que a pergunta?
+      - É um tópico bastante discutível, mas é isso que eu acho que devemos fazer. Se uma pessoa é boa desde o começo, nós protegeremos seu coração bom. Se uma pessoa for ruim desde o começo, nós faremos aquele coração se tornar bom e o protegeremos.
+      Serena: Como é que você vai fazer isso?
+      - Nós podemos ver a cor dos corações da humanidade. A cor do coração humano é rosa, e ao vestir a mesma cor, podemos nos misturar com as mentes humanas. Teremos o maior prazer em nos sujar pelo bem das pessoas de bom coração.
+      Serena: Espere, você se sujará no lugar das pessoas? Isso é realmente algo possível?
+      - Com certeza é.
+      Serena: Me desculpe, mas eu não posso simplesmente confiar em você ou no que diz. Já é bastante suspeito você conseguir “ver” a cor do coração de alguém.
+      - Se algo acontecer, só nos chame, madame.&#13;&#10;(Fim da Gravação)&#13;&#10;&#13;&#10;Seguindo o que foi dito na gravação, a vontade da Anormalidade em ajudar os outros é sólida.&#13;&#10;Mas ainda precisamos de informações mais detalhadas sobre ela. Talvez pedir o auxílio dela poderia nos ajudar a aprender mais. Porém, como qualquer outra Anormalidade, não devemos confiar cegamente nela. Eu planejo ter uma equipe de supressão preparada enquanto eu finjo estar pedindo por ajuda.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Então, bastante coisa aconteceu até agora. Para resumir a coisa toda, essa Anormalidade é a melhor coisa que já tivemos por aqui. Há alguns meses atrás, eu tentei pedir ajuda a ela e desde então continuei a usá-la. Eu consegui ajuda dela umas (Omitido) vezes. Minha eficiência no trabalho também ficou muito melhor. Já estou no ponto em que só de olhar para algo rosa me faz sentir melhor. Essas criaturas nos fortalecem de uma maneira que nem os maiores líderes mundiais teriam chance. Essa Anormalidade vai melhorar bastante a qualidade de vida de nossos funcionários.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;Trecho de uma Gravação de Áudio&gt;&#13;&#10;
+      Serena: Você pode fazer novamente hoje, certo?
+      - Sim, o coração humano é rosa, e nós vestimos a mesma cor. Nós vamos mandar os pensamentos ruins para longe.
+      Serena: Ouviu isso? Sim, ele ainda está em boas condições. Nós podemos colocar essa Anormalidade em bom uso novamente em nossa próxima supressão. Eles são muito melhores que soldados humanos. Talvez nós deveríamos até pensar em colocá-las como nossa equipe especial de supressão. E adicionando, parece que suas cores estão ficando um pouco mais escuras, mas eu não acho que seja algo tão problemático assim.
+      - O coração humano… está… precisamos… limpar…
+      - Até mesmo… a menor mancha… de malvadeza… precisa… ser purificada…
+      Serena: Ele parece estar bem menos… animado que o normal. Mas tudo ficará bem, eu acho.&#13;&#10;(Fim da Gravação)}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {&lt;Relatório Urgente do Incidente relacionado ao Exército Vestido de Rosa&gt;&#13;&#10;Nós registramos esse relatório urgente devido a drástica mudança no Exército Vestido de Rosa.&#13;&#10;Nós ainda estamos tentando entender o que exatamente aconteceu. Um total de (Omitido) funcionários faleceram. O seguinte áudio é uma gravação da possível primeira morte, a funcionária Serena.&#13;&#10;&#13;&#10;(Gravação de Áudio)
+      Serena: Uma Anormalidade escapou novamente na seção (Omitida). Eu gostaria de perguntar se você pode nos ajudar novamente.
+      - Sim… nós, o Exército Vestido de Preto… nos misturamos com o coração humano… e mandamos para longe os pensamentos bons…
+      Serena: ...Espera. O quê? Essa não é sua fala.
+      - O coração humano… é preto… precisamos… regularmente… limpar…
+      Serena: Do que você está falando? Você está me assustando, cara.
+      - Nós te protegeremos com nosso amor escuro.
+      Serena: Pare, eu vou chamar a equipe de supressão... Se você mover mais um centímetro, eu juro que vou…
+      - Nós te saudamos, madame…&#13;&#10;(A gravação acaba bruscamente após o som de uma enorme explosão.)}
+      ]
+    </desc>
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">O $0 pode ser ordenado para proteger um Agente. Porém, deve ser notado que o Contador Qlifót reduz quando a ordem é dada.</specialTip>
+      <specialTip openLevel="1" key="2">O $0 aumenta a defesa do Agente que está protegendo enquanto cura todos na mesma área. Entretanto, se o nível do funcionário a ser protegido for menor que 3, ele perderá completamente o controle enquanto sob proteção.</specialTip>
+      <specialTip openLevel="1" key="3">Quando o trabalho de Repressão era feito, o contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="1" key="4">A cada 5 mortes de funcionários, o Contador Qlifót reduzia. Porém, mortes causadas por Balas de Execução não eram reconhecidas.</specialTip>
+      <specialTip openLevel="1" key="5">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="1" key="6">Quando uma Anormalidade era suprimida, o Contador Qlifót aumentava.</specialTip>
+      <specialTip openLevel="1" key="7">Quando um funcionário de Nível 3 ou inferior encontra o $0 enquanto está escapando, ele sairá do controle e atacará outros funcionários. O mesmo aconteceu quando o PS de um funcionário caiu para 0 devido a um ataque do $0.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <name>Éxercito Vestido de Preto</name>
+    <codeId>D-01-106-1</codeId>
+  </child>
+</creature>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100002">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {$0 looks just like the teddy bears everyone had when they were young.},
+      {$0 always wanted to hug children.},
+      {$0 loves hugs. Its memories began with a warm hug.},
+      {A teddy bear is born from happiness, so it needs to be happy at all times.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 appears to be lost in thought, forlornly gazing at the stuffing that pokes and spills out of its seams.},
+      {The dirty ribbon around $0’s neck ruffles gently even though there is no wind to move it. The name that was written on that ribbon is worn away and unrecognizable by now.},
+      {$0 doesn’t move an inch, as if it is gazing towards nothing. In fact, it’s looking at a photo of a young girl.},
+      {$0’s plastic eye silently dangles by a thread on the left side of its face.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {While #0 is busy working, $0 continues to gaze upon the picture frame.},
+      {Even if there’s a commotion, $0 will fixedly stare at the picture.},
+      {It seems the picture in front of it is the only thing that matters to $0.},
+      {#0 was unable to draw $0’s attention away from the photo.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {While working, #0 approaches $0 and refastens its frayed ribbon.},
+      {#0 takes a moment to dust off the picture frame $0 so dotingly gazes upon.},
+      {When #0 begins to mend the tears and rips on its plush body, $0 does not react.},
+      {#0 tidies up $0 a bit, however it does not react.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {$0 remembers the birthday party of that wonderful seven-year-old girl. It waited to surprise her inside a large and colorful box.},
+      {$0 remembers going on a wonderfully fun vacation with the young girl. It was named “Bearly”.},
+      {$0 recalls the numerous nights it protected that young girl from the dark as she snuggled up in its arms.},
+      {$0 fondly remembers the child, now grown. Somewhere beneath her dresser, moth balls were collecting on its body.}
+      ]
+    </narration>
+    <narration action="special_ability">
+      [
+      {$0 extends its arms, dragging #0 into its wide embrace. #0 starts choking and thrashing about, trying to free themself.}
+      ]
+    </narration>
+    <narration action="dead">
+      [
+      {#0’s bones begin to crunch and crack in $0’s arms. Its old fur smells of longing.},
+      {$0 does not release its arms, keeping #0 from leaving. #0’s movements slow and stop. $0 just won’t let go of its hug.}    
+      ]
+    </narration>
+    <narration action="panic">
+      [
+      {#0 is now helplessly depressed. Life is meaningless for them. #0 is nothing but a speck of dust in the wind in the grand scheme of things.}   
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-04-06</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Teddy</portrait>
+      <name openLevel="1">
+        A Teddy Bear
+      </name>
+      <name openLevel="2">
+        Happy Teddy Bear
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <openText>Its memories began with a warm hug.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {An Abnormality that resembles a large, raggedy teddy bear. It's missing some fur and only has one eye.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {The old ribbon around its neck hints that it may have received much affection from its previous owner. There is a name on the ribbon, but it is too tattered to be discernible. It seems that it knows it has been abandoned, and looks dejected. }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Excerpt from Counseling Log&gt;&#13;&#10;
+      "I was on the night patrol. I didn't feel the need to pay attention to Happy Teddy since it was harmless for the most part. I just looked inside the Containment Unit to check on it. Teddy was hugging someone tightly. I thought it was (Redacted), the employee who was in charge of Teddy for a while, working late. But something was odd. I entered the unit and called (Redacted)'s name, but they didn't answer. I immediately pressed the emergency button to call in reinforcement. Turns out, (Redacted) had been in a coma for 8 hours. They were in Teddy's arms the whole time."}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;An Old Letter, Stamped with "Rejected"&gt;&#13;&#10;
+      Remember what was written in the employee manual?
+      "Do NOT have personal feelings towards Abnormalities."
+      At first, I didn't get what that was supposed to mean.
+      Does it even make sense to develop any emotion toward those monsters in the first place?
+      It's okay. They are monsters. Between the two of us, we can call them that.
+      'Happy Teddy Bear' was the second Abnormality you took charge of.
+      I guess you must’ve thought that not all Abnormalities are monstrous after seeing it.
+      The figure of an old, abandoned teddy bear may have brought up old memories of yours.
+      Teddy seemed to like your hugs.
+      Yeah, it would actually produce more energy when you were around.
+      And in no time, they put you in charge of Teddy.
+      You probably felt some kind of responsibility for it, right?
+      I started getting worried as you visited Teddy's unit more and more often.
+      It felt as if you were visiting an orphanage for volunteer work.
+      …
+      &lt;i&gt;It seems Teddy saw you as its new owner.
+      Maybe you'd have been happy to hear that.
+      But, you see, Teddy never wanted to be separate from its owner ever again.&lt;/i&gt;
+      You probably always promised that you'd return.
+      But it couldn't understand.
+      I heard that you miraculously survived.
+      And that they spent an hour trying to separate you from Teddy's embrace.
+      Though others may forget about you.
+      I will always remember you.
+      May there be a miracle.}
+    ]
+  </desc>
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="manyDead">#0 died of asphyxiation after working with $0 multiple times in a row.</specialTip>
+      <specialTip openLevel="2" key="manyDead2">#0 was found dead in $0’s arms with a broken neck. It is believed that visiting $0’s Containment Unit several times in a row is what causes these unfortunate incidents.&#13;&#10;Please refer to the “Old Letter” document for more information.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

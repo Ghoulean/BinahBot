@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100035">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {Il y a un vieux proverbe : “N’oublie jamais l’oiseau du jugement ; peu importe combien de temps il lui faut, il finira par te trouver.”}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 n’est jamais pressé.},
+      {Peut-être est-il déjà dans ta maison.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Nous qui vivons dans un monde impitoyable offrons nos âmes comme preuve de rédemption.},
+      {Les gens sont vils et incapables de sauver leurs propres âmes. Voici pourquoi il nous est venu.},
+      {Peu réalisent leur propre péché. Sa balance les guide jusqu’à en prendre conscience.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 était autrefois le gardien de la forêt. Cependant, obsédé par la protection des créatures, il en a oublié l’une des choses les plus importantes.},
+      {Désormais, seules les ténèbres règnent sur la forêt.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-02-62</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/LongBird</portrait>
+      <name openLevel="1">
+        Long Oiseau
+      </name>
+      <name openLevel="2">
+        Oiseau du Jugement
+      </name>
+      <riskLevel openLevel="1">
+       WAW
+      </riskLevel>
+      <openText>Sa balance ne négligeait jamais rien ; pas même le poids du plus infime péché.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Un oiseau qui jugeait les vivants de la Forêt Noire, portant avec lui une balance déséquilibrée.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {La balance penche toujours dans la même direction, mais il ne le sait pas puisque ses yeux sont bandés. Ou peut-être ignore-t-il consciemment cette vérité.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {En vérité, l’oiseau était auparavant un juge impartial. Sa balance ne négligeait jamais rien ; pas même le poids du plus infime péché.}
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {Le long oiseau avait créé une balance qui était capable de peser n’importe quel péché pour assurer la paix de la forêt.}
+      ]
+    </desc>
+    <desc id="5" openLevel="3">
+      [
+      {Les yeux de l’oiseau devinrent un jour capables de tout percevoir. Ses yeux brillaient toujours intensément, ardents comme des étoiles dans la nuit. Mais il les donna au Gros Oiseau afin de protéger la forêt. Désormais, seul le vide remplit ses orbites.}
+      ]
+    </desc>
+    <desc id="6" openLevel="3">
+      [
+      {Le bandeau est en lambeaux, comme s’il pouvait se déchirer n’importe quand. La tête de l’oiseau était autrefois couverte de plumes étincelantes, mais elles finirent par tomber à force de passer tant de temps dans l’ombre.}
+      ]
+    </desc>
+    <desc id="7" openLevel="4">
+      [
+      {Il ne reste plus que son injuste balance. Le long oiseau continue ainsi à rendre son jugement.}
+      ]
+    </desc>
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="MoodZero">Lorsque le résultat du travail est Normal, le Compteur Qliphoth a une probabilité moyenne de diminuer.</specialTip>
+      <specialTip openLevel="1" key="MoodZero2">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth a une probabilité élevée de diminuer.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100013">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {$0 forever searches for someone to lift the curse.},
+      {$0 is so appalled by its grotesque appearance, it repeatedly tries to kill itself.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {However, the curse continues eternally, never broken.},
+      {The curse has existed for centuries, inflicting agony upon many unfortunate victims.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Death is another form of joy brought by birth.}
+      ]
+    </narration>
+    <narration action="dead">
+      [
+      {#0 has begun to have hundreds of eyes burst from their mouth, while a pair of horns expel from their eye sockets, adorning themselves with flowers. Now the Beast, #0 forever searches for someone to lift the curse.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">F-02-44</codeNo>
+      <name openLevel="1">Beauty and the Beast</name>
+      <portrait openLevel="2">Sprites/Unit/creature/BeautyBeast</portrait>
+      <riskLevel openLevel="1">TETH</riskLevel>
+      <openText>However, the curse continues eternally, never broken.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {A self-loathing Abnormality that spends every day letting out miserable screams. It wishes to break the cycle of the curse, but there is no way to do so.&#13;&#10;
+      Beauty was once a fair lady with charming green eyes. One day, this poor lady learns of a job opening at the manor of the count, with the promise of hefty payment.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {The count had a monstrous appearance. Rumor says anyone who dares to enter his manor is never seen again.}
+      ]
+    </desc>
+    <desc id="3" openLevel="1">
+      [
+      {“It must be that hideous monster preying on people.”&#13;&#10;
+      With that thought in her mind, she brought a very sharp knife with her.}
+      ]    
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {The lady was hired and worked at the manor. Contrary to the rumor, the monster was nowhere to be seen. Sometimes at night, she could hear a voice. It was very kind and compensated her for her troubles handsomely.}
+      ]
+    </desc>
+    <desc id="5" openLevel="2">
+      [
+      {Working in the manor, the lady bore a greedy thought.&#13;&#10;
+      “If the count was gone, I could take all his possessions for myself!”}
+      ]
+    </desc>
+    <desc id="6" openLevel="3">
+      [
+      {One day, she went inside the count's room. The room that she was instructed to never enter during the day. There she saw the count's true form. He was truly horrendous. Hundreds of eyes, four legs, he was neither human nor animal.}
+      ]
+    </desc>
+    <desc id="7" openLevel="3">
+      [
+      {The lady thought: "Perhaps such a hideous monster would be better off if it didn't exist."&#13;&#10;
+      She proceeded to stab the beast with her knife.}
+      ]
+    </desc>
+    <desc id="8" openLevel="4">
+      [
+      {Surprisingly, the beast laughed in its last moments.}
+      ]
+    </desc>
+    <desc id="9" openLevel="4">
+      [
+      {Before the lady could even ask why it was laughing, she began to change. Hundreds of eyes formed and a thick coat of fur grew on her. Soon, she turned into the beast.}
+      ]
+    </desc>
+    <desc id="10" openLevel="4">
+      [
+      {Now, the manor and all its riches belonged to her.}
+      ]
+    </desc>
+    <desc id="11" openLevel="4">
+      [
+      {...Rumor says anyone who dares to enter the count's manor is never seen again.}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="hit">Committing Repression work with $0 showed the best energy results. The work produced a good number of PE-Boxes, but negatively affected the health of $0.</specialTip>
+      <specialTip openLevel="2" key="noHit">Any work other than Repression was found to improve the health of $0.</specialTip>
+      <specialTip openLevel="3" key="doubledHit">After repeated Repression work, $0 collapsed with a weak moan onto the floor. Once it had passed, #0, who had carried out the work process, began to suffer unidentifiable symptoms. Soon, $0 was born anew.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

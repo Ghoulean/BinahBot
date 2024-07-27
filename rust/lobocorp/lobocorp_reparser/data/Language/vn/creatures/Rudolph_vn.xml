@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id="100016">
+
+    <narration action="move">
+      #0 is going into $0's containment unit to begin the task.
+    </narration>
+
+    <narration action="start">
+      [
+      {When the rusty bell jingles, Christmas begins.}
+      {With a displaced jaw and lifeless tongue, words are swallowed instead of being expressed.}
+      {Where is Santa for the unhappy?}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {The colorful lights were bright as Christmas, and dark as every children’s living nightmare.}
+      {The sewing looks crude, but the effort that went into making it is borderline obsessive.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {Christmas, oh the hideous carnival. On every Christmas, I want to pull out the tongues of those who sing carols.}
+      {With my infinite hatred, I give you this gift.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {#0 does not show any sign of life, but it moves. This may be due to the energy it produces.}
+      {#0 roams around without purpose. It wants to give out its pile of gifts.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">F-02-49</codeNo>
+      <name openLevel="1">Rudolta</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/Rudolta</portrait>
+      <riskLevel openLevel ="2">HE</riskLevel>
+      <openText>With my infinite hatred, I give you this gift.</openText>
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      { - There’s an old card attached to it.&#13;&#10;'Merry Christmas! Santa rushes along the night sky to deliver presents to happy kids who don’t cry. Rudolf, the red-nosed reindeer, shines a light through the night fog while tugging a sleigh full of presents. All the happy kids in the world deserves a present!'}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Looking from a far, it resembles Santa Claus riding a sleigh, but upon closer inspection the Abnormality is totally different from the fairy tale. Contrary to the popular character, the sleigh drags it. We observed the Abnormality from three different points.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Rudolf: A horse-like organic entity in the colors of green, red, and white. Its muscles do not seem to move, but many employees report the movement of its eyes, and some even say that they've made an eye contact with it. There’s a hole with a 30cm diameter on its belly. Armed employees later reported the hole was empty.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Santa: A mysterious, transparent organic entity on top of Rudolf. It shows full of what seems to be organs. All organs seem to be functioning normally.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {Sleigh: Its size is similar to that of a child’s. The plating looks like organic skin, and there are white blades attached at the bottom. The accessories of the sleigh are replaced by stiff, severed hands. Unknown objects are carefully wrapped into gifts. Many employees tried to open the gifts, but failed. Rumors have it that the gifts can be opened only on Christmas.}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="4">
+      [
+      {All three are crudely sewn together. Dr. [Redacted] suggested that "All three may be made from a single body. Whoever made this, must had a great hatred against Christmas. Or never saw Santa Claus."}
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="comingTown">When the work result was normal, $0's Qliphoth counter has decreased with a normal probability.</specialTip>
+      <specialTip openLevel="1" key="comingTown2">When the work result was bad, $0's Qliphoth counter has decreased with a high probability.</specialTip>
+      <specialTip openLevel="2" key="horrorMoving">After escaping, $0 slowly roams the facility, dealing White damage to employees.</specialTip>
+    </specialTipSize>
+  </observe>
+
+  <etc>
+    <!--특수 능력 발생할 때, 너프 특성 가진 직원에게 랜덤으로 뜨는 텍스트.-->
+    <param key="present1" index="0">
+      #0’s young daughter would spend Christmas alone because she would make a living by herself.
+    </param>
+    <param key="present2" index="1">
+      #0 would consume dozens of pills on a fateful Christmas day.
+    </param>
+    <param key="present3" index="2">
+      #0 would cry alone as their loved one left them.
+    </param>
+    <param key="present4" index="3">
+      #0 would receive the news of the loved one's death under the splendidly decorated Christmas tree.
+    </param>
+    <param key="present5" index="4">
+      #0 would be run over by a truck full of gifts on Christmas eve, and would never be able to walk again.
+    </param>
+    <param key="present6" index="5">
+      #0 would be told by a doctor that they had a terminal illness.
+    </param>
+    <param key="present7" index="6">
+      #0's house would collapse under the weight of the snow on the roof and none would survive. All this would happen a few years later on Christmas day.
+    </param>
+  </etc>
+</creature>

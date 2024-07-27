@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300107">
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-96</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/JusticeReceiver</portrait>
+
+      <name openLevel ="1">
+        行為矯正
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>最後他們將會失去所有的智慧, 甚至遺忘生存的能力.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {一台電子設備上刻印著一幅神秘的圖案.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {無論有多麼惡劣, 邪惡, 以及傲慢, 它都能使每個人變為正義之士.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {但是, 如果使用者太過於依賴該設備, 會讓他們失去獨立思考的能力.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+
+      [
+      {最後他們將會失去所有的智慧, 甚至遺忘生存的能力.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">當持有 $0 時, 正義的數值會大幅的提昇. 然而, 所有有關謹慎的數值在同時也會下降.</specialTip>
+      <specialTip openLevel="2" key="2">如果在裝備後的 30 秒內命令他歸還該配備, 持有者會陷入恐慌並在顯露出異常的行為後死去.</specialTip>
+      <specialTip openLevel="2" key="3">如果在裝備 $0 後 MP 歸零的話, 持有者會死於恐慌之中.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+  -->
+  <info id ="100063">
+
+    <narration action="move">
+      #0 va a entrar en la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 hace que las personas que lo miran sientan afecto sin que se den cuenta.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {La slime rosado, $0 se está deslizando alrededor de la unidad de contención.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Si el empleado #0 tiene ganas de descuidar algunos de los protocolos de seguridad y sanitarios, se producirá un infierno del slime.  },
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Sin saberlo, El ejército de crece día a día de $0 sin parar.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">D-03-109</codeNo>
+      <portrait openLevel ="0">Sprites/Unit/creature/SlimeGirl</portrait>
+
+      <name openLevel ="1">
+        Derretimiento de Amor
+      </name>
+
+      <riskLevel openLevel ="3">
+        ALEPH
+      </riskLevel>
+      
+      <openText>… y mis queridos empleados, espero que se pongan las máscaras de gas que les distribuimos antes de venir aquí. </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {<i>Esta anormalidad se basa en la idea del patrocinador Tumblbug backer 'mul'</i>&#13;&#10;&#13;&#10;Un slime derretido. Su parecido es humana se revela cuando se inspecciona de cerca. La unidad de contención está cubierta de moco secretado por esta anormalídad. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Me gustaría hablar sobre el incidente reciente que todos escucharon sobre.&#13;&#10;Sí, ese terrible incidente cuando un ejército de lodos se hizo cargo de esta instalación por (Redactado) minutos.&#13;&#10;Quedaron varios contenedores en el (Redactado) laboratorio que no fueron procesados adecuadamente durante el experimento relacionado con (Redactado)&#13;&#10;Si sabes sobre (Redactado) experimento, ya sabría que el contenido dentro de esos contenedores son simplemente restos inútiles que solo prueban que el experimento ha fallado. Los investigadores no sintieron la necesidad de deshacerse de ellos. &#13;&#10;&#13;&#10;Era obvio que el recién llegado al equipo de investigación no tenía idea de lo que había dentro de ellos. La empleada Marie encontró un slime rosado en los contenedores y decidió que podían representar una amenaza. Se supone que ella los ocultó completamente y los mantuvo en estado (redactado).&#13;&#10;&#13;&#10;Si mi suposición es correcta, el objeto fundido en los contenedores es el (Redactado) de (Redactado)}
+      ]
+
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {No sé si fue afortunado para nosotros o no, pero sus recuerdos, incluidos los de los experimentos, se habían ido por completo y apenas podía decir una o dos palabras. También fue mentalmente inestable. Se ponía extremadamente nervioso cuando la empleada Marie no estaba presente.&#13;&#10;&#13;&#10;Hermano. La empleada Marie tuvo un hermano que perdió en su infancia. Todo comenzó cuando sintió un apego a una baba rosada de aspecto infantil que la sigue.&#13;&#10;&#13;&#10;La empleada Marie mostró una tasa de contaminación mental sin precedentes. Sí, era cierto que la anormalídad de alguna manera la afectaba de algun modo. Pero ese fue el final.&#13;&#10;&#13;&#10;Sus colegas comenzaron a captar sus extraños comportamientos. Trataron de presionarla sobre eso. Era lo correcto para ellos hacer eso. Fueron educados sobre la contaminación mental y que alguien desapareciera en cada descanso es una señal peligrosa. Pero la empleada Marie no les dijo nada y terminó siendo contenida en la habitación del consejero hasta que se abrió. &#13;&#10;&#13;&#10;Mientras tanto, esta criatura viscosa, que había olvidado todo, instintivamente recordó algo. Que tenía que salir de la instalación pasara lo que pasara.  &#13;&#10;&#13;&#10;La anormalídad, una vez más, se sintió extremadamente nerviosa cuando la empleada Marie no se presentó a tiempo. Pensó que ella estaba en peligro. Fue entonces cuando decidió escapar CON ella. &#13;&#10;&#13;&#10;Era un enlace raro que se formó entre ellas dos. Se cuidaron desde el fondo de sus corazones.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Encerrada en la habitación del consejero, la empleada Marie renunció a su derecho a guardar silencio y comenzó a revelar lo que había hecho. Cómo se mantuvo el contenido dentro del contenedor, cómo pudo formar un vínculo con él. Sin embargo, ella no pudo terminar. Porque ella se derritió en un abrir y cerrar de ojos. Sí, ella literalmente se derritió. Completamente. Ese no fue el final de eso. La baba que fue empleada Marie hace unos segundos comenzó a moverse. No fue una tarea difícil deslizarse debajo de la puerta de la habitación del consejero. &#13;&#10;&#13;&#10;Tenía un punto de racionalidad humana? No. Como si una criatura recién nacida siguiera ciegamente a su madre, simplemente se movió hacia la anormalidad.&#13;&#10;&#13;&#10;No fue solo la empleada Marie la que se convirtió en un slime. Todos los empleados que la habían contactado empezaron a derretirse también. Empleado que la interrogó, comieron juntos, trabajaron juntos… &#13;&#10;&#13;&#10;Pronto, este ejército de slime comenzó a atacar a los empleados. Por la anormalidad de slime como una madre que aman. Sí, con viejo amor, mataron. }
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {… y mis queridos empleados, espero que se pongan las máscaras de gas que les distribuimos antes de venir aquí. Desearía que nadie se lo quitara por aburrimiento o por congestión. &#13;&#10;&#13;&#10;Debo informarles que algunos de ustedes ya están infectados por la anormalidad del slime que les hablé. No les dimos máscara de gas a algunos de ustedes. Dijimos eso es que porque estábamos fuera de valores. Pero la verdad es que fue para distinguir a los infectados y aquellos que no están. Puede que te sientas bien por ahora, pero en una hora, tu carne y hueso comenzarán a fundirse, y tu mente se desintegrará en la nada negro. Entonces comenzarás a arruinar la instalación. Matar a todos los empleados aquí como el principio. &#13;&#10;&#13;&#10;Sí, lo sé. No puedes creerlo. Te sientes tan vivo y claro pero ahora, cómo puedes fundirte en un slime? Pero lo harás. No es tu culpa. Alguien entre ustedes contactó con la anormalidad del slime, y usted tuvo la mala suerte de estar cerca de esa persona. No tiene sentido ahora encontrar el primer infectado. Dudo que él o ella tuvieran alguna idea de cuán catastrófico será el resultado de su acción. Lo hicieron por puro afecto, después de todo.&#13;&#10;&#13;&#10;Y, no infectados que usen máscaras, preste especial atención a su higiene e informe inmediatamente cuando vea a un empleado que actúa de manera extraña. Usted solo se infectará si trata de ayudarlos. Ahora, en tu escritorio, habrá pistolas de 9 mm, todas cerradas y cargadas.&#13;&#10;&#13;&#10;Lo que tienes que hacer ahora está claro. No abriremos las puertas hasta que la situación esté… bajo control. Si crees que esto es demasiado cruel, déjame recordarte. Es tu trabajo.&#13;&#10;&#13;&#10;Espero verte de nuevo después de que todo haya terminado.}
+      ]
+    </desc>
+
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">El contador Qlifot disminuyó cuando el resultado del trabajo fue malo o normal.</specialTip>
+      <specialTip openLevel="1" key="2">$0 le dio un montón de baba al primer empleado (D-03-109-1) que realizó cualquier otro trabajo que no sea el trabajo de represión. El bulto curó la salud mental del D-03-109-1 y aumentó las posibilidades de éxito en el trabajo. Sin embargo, se requiere más observación para decidir cómo cambia el efecto del bulto de acuerdo con el estado de $0.</specialTip>
+      <specialTip openLevel="1" key="3">El contador Qlifot disminuye cuando D-03-109-1 cuando termina un trabajo de represion de cualquier anormalidad.</specialTip>
+      <specialTip openLevel="1" key="4">Los empleados que están en la misma área que D-03-109-1 pueden ser infectados por el limo por baja probabilidad. El empleado que está infectado por el slime (D-03-109-2) se puede distinguir con el rastro de slime en sus mejillas. El empleado que estuvo en contacto con D-03-109-2 se infectó por una baja probabilidad. Cuando pasó el tiempo suficiente después de la infección, la piel del D-03-109-2 se fusionó completamente con el slime y los empleados infectados se convirtieron en ████████.</specialTip>
+      <specialTip openLevel="1" key="5">El contador Qlifot cuando alcanza a 0 el numero de D-03-109-2 ocupó la mitad del departamento, mientras que D-03-109-1 aún estaba vivo.</specialTip>
+      <specialTip openLevel="1" key="6">El contador Qlifot alcanza a 0 cuando D-03-109-1 murio o es asesinado.</specialTip>
+      <specialTip openLevel="1" key="7">Después de una serie de experimentos, se encuentra que el slime afecta la onda electromagnética. Si el D-03-109-1 lleva a cabo un trabajo de percepción y produce 24 Cajas-PE como resultado, el slime no afectará a otros empleados durante 30 segundos. Sin embargo, tenga cuidado de que si se producen menos de 24 Cajas-PE, cada D-03-109-2 puede transformarse en ████████.</specialTip>
+    </specialTipSize>
+  </observe>
+
+  <child>
+    <codeId>D-03-109-1</codeId>
+  </child>
+</creature>

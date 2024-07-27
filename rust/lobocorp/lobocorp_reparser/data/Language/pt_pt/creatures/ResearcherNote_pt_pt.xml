@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300002">
+
+    <narration action="move">
+      #0 recebeu a ordem para ir para a unidade de contenção de $0.
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-78</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ResearcherNote</portrait>
+
+      <name openLevel ="1">
+        Apontamentos de um Pesquisador Enlouquecido
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <openText>
+        O último capítulo acaba com a frase "Nascido de novo".
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {O velho apontamento está escrito em uma caligrafia incompreensível.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Ele costumava pertencer a um pesquisador que enlouqueceu durante a sua pesquisa. As notas só foi decifrada parcialmente, a maioria relata os vários experimentos que ocorreram.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Elas começam com culpa e confissões sobre experimentos antiéticos, mas acaba com loucas frases soltas sobre a pesquisa.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+
+      [
+      {O último capítulo acaba com a frase "Nascido de novo".}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {A observação do empregado irá aumentar apenas por equipá-la. Mas se for devolvida sem satisfazer o seu desejo de conhecimento, esse incompetente irá explodir.}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Indivíduos que equipam os $0 irão receber um aumento no status de Moderação.</specialTip>
+      <specialTip openLevel="2" key="2">Se lhe for ordenado para devolver os $0 após 30 segundos de ser equipada, a pele do usuário irá inchar e o seu corpo irá explodir em segundos.</specialTip>
+      <specialTip openLevel="3" key="3">Se lhe for ordenado para devolver os $0 sem nenhum trabalho ter sido realizado, o mesmo efeito irá ocorrer.</specialTip>
+      <specialTip openLevel="4" key="4">Quando o usuário recebe uma certa quantidade de dano no seu HP ou SP, ele irá explodir e causará dano VERMELHO a todos na mesma secção.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

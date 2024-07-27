@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100041">
+
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+
+    <narration action="mid1">
+      [
+      {“$0”是个害羞的小孩，她可能会送给#0一个令人惊喜的礼物。},
+      {“$0”来自非常遥远的地方，她喜欢令人愉悦的笑声。},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {“$0”喜欢她的朋友们。},
+      {我希望#0收到这个礼物后能感到开心！},
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {一想到这个礼物将会带来的惊喜，“$0”便开心地注视着#0。},
+      {如果人们愿意接受这份小巧而珍贵的礼物，那就太好啦！}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {“$0”的“朋友们”正在礼物里睡觉觉，等待着接收者的出现。},
+      {#0并不知道这个可爱的心形礼物里藏着什么。},
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-01-67</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/LittleWitch</portrait>
+
+      <name openLevel ="1">
+        害羞的小孩
+      </name>
+
+      <name openLeve="4">
+        蕾蒂希娅
+      </name>
+
+      <riskLevel openLevel ="1">
+       HE
+      </riskLevel>
+
+      <openText>所以，她想出了这个绝妙的主意！</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {就跟所有同龄的小孩一样，她总是洋溢着灿烂的微笑...&#13;&#10;她是一个非常非常可爱的小孩！}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {“小孩”的意思就是“又小又可爱的孩子”！&#13;&#10;这个小孩来自很远很远的地方！&#13;&#10;每当我遇见喜欢的人，我就会送给他们我亲手制作的小礼物！&#13;&#10;不过，礼物里是什么呀？嘘——那是个秘密哦！}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {这个小孩会玩各种各样的把戏，这要扯到另外一个秘密了！&#13;&#10;她总是说，自己有很多很多的朋友，可是他们不能和自己一同过来。&#13;&#10;这可怎么办呀？真伤脑筋。所以，她想出了这个绝妙的主意！}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {如果，我把我的朋友们藏进一个盒子里，然后把盒子作为礼物送给大家的话，他们一定会感到惊喜的！&#13;&#10;然后，他们就会为我的小小恶作剧一起超开心地笑！&#13;&#10;啊偶！我把小秘密说出来啦！}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {希望我可以在这里交到很多很多的朋友！&#13;&#10;这个小孩很害羞，所以她会悄悄地把礼物送给你哦！&#13;&#10;我不想离开这里，我还想和大家一起玩儿！可是这里的人好像都不会笑！&#13;&#10;他们看起来好悲观呀！&#13;&#10;于是，这位小小的女士决定留下来，直到她驱散所有的阴霾，为这里的每一个人带来欢声和笑语！&#13;&#10;最能让我感到开心的事儿，就是大家为我的小小恶作剧一起哈哈大笑啦！嘻嘻嘻嘻嘻！}
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="give">当工作结果为良时，“$0”会赠送一个小小的礼物给完成工作的员工。</specialTip>
+      <specialTip openLevel="2" key="gift">当持有礼物的员工被派去其他异想体的收容单元进行工作时，一个████会从其体内爆出并杀死这名员工。</specialTip>
+      <specialTip openLevel="2" key="cancle">如果在████诞生前取消工作指令的话，持有礼物的员工就不会出现任何变化。</specialTip>
+    </specialTipSize>
+  </observe>
+
+  <child>
+    <name>小女孩的朋友</name>
+    <codeId>O-01-67-1</codeId>
+  </child>
+</creature>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id="100020">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    
+    <!-- Double Check Narration Start Remove with PM <3 Watson -->
+    <narration action="mid1">
+      [
+      {The employees put a perch in $0’s Containment Unit because it seemed to be bored.},
+      {$0 feels like it’s back in the forest in which it used to live when sitting on its perch.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {A majority of the time $0 acts like any other normal bird, flying here and there in the Containment Unit.},
+      {$0 never cheeps or chirps. However, its stomach occasionally twitches.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Few employees know of $0’s hidden teeth.},
+      {Not many know about $0’s disgusting flesh, which splits apart into several sections.}
+      ]
+    </narration>
+  </info>
+  <observe level="2">
+    <collection>
+      <codeNo openLevel="0">O-02-56</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/SmallBird</portrait>
+      <name openLevel="1">
+        Small Bird
+      </name>
+      <name openLevel="2">
+        Punishing Bird
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <specialName openLevel="2">
+        Punishment
+      </specialName>
+      <openText>People have been committing sins since long ago. “Why do they commit sins, knowing it's wrong?"</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {A small and confident bird that punishes the evil, guilty, and all sorts of irreverent people. Some employees have said that it is cute when the bird mightily flutters its tiny wings.}
+      ]
+    </desc>
+    <desc id="2" openLevel="2">
+      [
+      {People have been committing sins since long ago. “Why do they commit sins, knowing it's wrong?" The small bird wondered.&#13;&#10;&#13;&#10;“It must be because there's no one to punish people for their misdeeds. If someone takes that role, then no foul act would happen in this world ever again!”&#13;&#10;&#13;&#10;With this in mind, the little bird left the forest it had been living in, and never went back.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="NoWorking">When an employee entered the Containment Unit of another Abnormality, $0’s Qliphoth Counter lowered with a normal probability.</specialTip>
+      <specialTip openLevel="2" key="PanicOut">When #0 fell into a panic, $0’s Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="2" key="comebackhome">$0 voluntarily returned to its containment after a panicking employee returned to normal; it also returned after a period of time had passed.</specialTip>
+      <specialTip openLevel="2" key="NoAccept">#0 was ordered to suppress $0. When they tried to attack it, the central portion of the Abnormality split and &lt;Redacted&gt;. Afterward, #0 was confirmed to have died. The suppression ended in failure.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+  -->
+   <info id="100063">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {$0 fait ressentir de l’affection à ceux qui la regardent sans même qu’ils ne s’en rendent compte.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Entièrement composée de mucus rose, $0 glisse le long de l’Unité de Confinement.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Si #0 décide d’ignorer les protocoles de santé et de sécurité, ça finira en enfer muqueux.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Inconnue de tous, l’armée de l’$0 grandit de jour en jour.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">D-03-109</codeNo>
+      <portrait openLevel="0">Sprites/Unit/creature/SlimeGirl</portrait>
+      <name openLevel="1">
+        Amour Fusionnel
+      </name>
+      <riskLevel openLevel="3">
+        ALEPH
+      </riskLevel>
+      <openText>…et, mes chers employés, j’espère que vous avez tous mis les masques anti-gaz que nous vous avons distribués avant d’entrer.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;Cette Anomalie a été créée à partir des idées du Donateur Tumblbug mul.&lt;/i&gt;&#13;&#10;&#13;&#10;Du mucus fondu ressemblant à un humain lorsque observé de près. Son Unité de Confinement est recouverte de ses sécrétions.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Aujourd’hui, j’aimerais parler du récent incident dont tout le monde a entendu parler.&#13;&#10;Oui, cet horrible incident où une armée de mucus a pris le contrôle de notre installation durant (Expurgé) minutes.&#13;&#10;Il restait plusieurs conteneurs dans le laboratoire (Expurgé) qui n’avaient pas été bien traités lors de l’expérience en lien avec (Expurgé).&#13;&#10;Si vous connaissez l’expérience (Expurgé) vous savez déjà que ces conteneurs ne contiennent que des résidus inutiles qui prouvent seulement que l’expérience a échoué. Nos chercheurs se sont dit qu’il n’y avait pas besoin de s’en débarrasser.&#13;&#10;Il est évident qu’un débutant de l’équipe de recherche n’avait aucune idée de ce qu’il y avait dedans. L’employée Marie a trouvé ces conteneurs et a senti qu’ils pouvaient constituer une menace. Il est supposé qu’elle les a soigneusement cachés et gardés dans un état (Expurgé).&#13;&#10;Si mes suppositions sont exactes, la matière fondue dans ces conteneurs était probablement le (Expurgé) de (Expurgé). J’en suis devenu sûr quand j’ai lu le passage qui décrivait son apparence comme celle d’une adolescente humaine.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Je ne sais pas si nous avons eu de la chance ou le contraire, mais sa mémoire, y compris celle des expériences, était complètement effacée ; elle pouvait à peine prononcer un mot ou deux. Elle était également mentalement instable. Elle devenait extrêmement nerveuse dès que Marie n’était plus présente.&#13;&#10;Un frère. Marie avait un frère qu’elle a perdu alors qu’elle était enfant. Tout a commencé lorsqu’elle s’est attachée à ce mucus avec la forme d’un enfant qui la suivait partout.&#13;&#10;Marie a montré une baisse de son niveau de corruption mentale sans précédent. Effectivement, c’était extrêmement peu fréquent. Bien sûr, il était certain que l’Anomalie avait un effet positif sur elle, mais c’étaient les seuls bénéfices.&#13;&#10;Ses collègues ont commencé à noter son comportement étrange ; ils ont essayé de l’interroger, c’était la bonne chose à faire. Ils étaient bien informés sur les potentielles implications d’une baisse abrupte du niveau de corruption mentale, et comprenaient qu’une personne disparaissant à chaque pause est mauvais signe. Cependant, Marie n’a pas dit un mot et a fini retenue en salle de thérapie jusqu’à bien vouloir s’expliquer.&#13;&#10;Pendant ce temps, cette créature visqueuse qui avait tout oublié s’est instinctivement souvenue d’une chose : elle devait sortir d’ici peu importe les moyens.&#13;&#10;Cette Anomalie s’est à nouveau mise à stresser quand Marie n’est pas revenue à temps. Elle pensait qu’elle était en danger ; c’est alors qu’elle a décidé de s’échapper AVEC elle.&#13;&#10;Un lien rare s’était formé entre eux. Elles tenaient l’une à l’autre du plus profond de leur cœur.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Confinée dans la salle de thérapie, Marie finit par laisser tomber son droit au silence et révéla ce qu’elle avait fait. Comment elle avait gardé ce qu’il y avait dans ces conteneurs et comment elle avait été capable de former un lien avec. Cependant, elle n’a pas pu finir. C’est parce qu’elle a fondu en un clin d’œil, juste après que les signes d’une Anomalie se soient manifestés sur sa peau. Oui, elle a littéralement fondu, en entier. Et ce n’était pas la fin. Le mucus qui fut autrefois Marie a commencé à bouger. Ce ne fut pas bien difficile pour un fluide mouvant de glisser sous la porte de la salle de thérapie.&#13;&#10;Avait-il une once de rationalité humaine ? Non. À la manière d’un caneton suivant aveuglément sa mère, il se rendait simplement vers l’Anomalie.&#13;&#10;Et ce n’est pas la seule à s’être changée en mucus. Le moindre employé qui avait établi un contact avec elle commença à fondre à son tour. Ceux qui lui ont posé des questions, qui ont partagé un repas avec elle, qui ont travaillé avec elle…&#13;&#10;Rapidement, cette armée de mucus commença à attaquer les autres employés. Tout pour la mère des mucus, l’Anomalie qu’ils aimaient. Oui, par amour et juste par amour, ils ont tué.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {…et, mes chers employés, j’espère que vous avez tous mis les masques anti-gaz que nous vous avons distribués avant d’entrer. J'espère que personne ne l'a enlevé par ennui ou par manque d’air.&#13;&#10;Je dois vous informer que certains d’entre vous sont déjà infectés par ce mucus dont je viens de vous parler. Nous n’avons pas fourni de masques anti-gaz à tout le monde, sous prétexte que nous étions en rupture de stock. Pour être tout à fait honnête, c’était juste pour que nous puissions distinguer ceux qui sont infectés de ceux qui ne le sont pas. Vous vous sentez peut-être bien pour l’instant, mais dans moins d’une heure, votre chair et vos os vont commencer à fondre, et votre esprit disparaîtra dans le néant. Ensuite, vous allez faire des ravages dans la corporation. Vous allez probablement, comme première action sous votre nouvelle forme, vous jeter sur les employés à côté de vous. Tout pour l’amas de mucus que vous adorez tant.&#13;&#10;Oui, je sais. C’est difficile à croire. Vous vous sentez si vivants et lucides actuellement, comment pourriez-vous ne serait-ce que vous décomposer en mucus ? Et pourtant, vous le ferez. Bien sûr, ce n’est pas votre faute. L’un d’entre vous a été en contact avec l’Anomalie mucus, et vous êtes juste les malchanceux qui se sont retrouvés à côtoyer cette personne. Il est inutile à présent de déterminer le patient Zéro. Je doute qu’il ait eu la moindre idée de la catastrophe à laquelle mèneraient ses actions. Il l’a fait par pure affection, après tout.&#13;&#10;Enfin, pour les épargnés qui portent un masque, je vous invite à faire extrêmement attention à votre hygiène et à immédiatement rapporter tout employé dont le comportement sortirait de l’ordinaire. Les aider ne vous servirait à rien à part vous faire contaminer. À présent, dans vos bureaux, vous pouvez trouver des pistolets 9mm, tous parfaitement verrouillés et chargés.&#13;&#10;Vous savez quoi faire. Nous n’ouvrirons pas les portes avant que la situation ne soit… réglée. Si vous trouvez cela trop cruel, permettez-moi de vous rappeler que ceci &lt;i&gt;est&lt;/i&gt; votre travail.&#13;&#10;J’espère vous revoir une fois que tout sera réglé.}
+      ]
+    </desc>
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">Quand le résultat du travail est Normal ou Mauvais, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="1" key="2">$0 donne un tas de mucus au premier employé (D-03-109-1) qui effectue avec lui un travail autre que celui de Répression. Le mucus soigne les PSM de D-03-109-1 et augmente ses chances de réussite de travail. Cependant, des observations approfondies sont nécessaires pour déterminer comment les effets du mucus changent en fonction de l’état d’$0.</specialTip>
+      <specialTip openLevel="1" key="3">Lorsque D-03-109-1 effectue un travail de Répression, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="1" key="4">Les employés dans la même zone que D-03-109-1 ont une faible chance d’être infectés. Ceux qui sont infectés par le mucus (D-03-109-2) peuvent être identifiés par une trace de mucus sur leurs joues. Les employés qui établissent un contact avec D-03-109-2 ont également une faible chance d’être infectés. Après un délai suffisant suivant l’infection, la peau de D-03-109-2 est totalement recouverte de mucus, et l’employé infecté se transforme en ████████.</specialTip>
+      <specialTip openLevel="1" key="5">Le compteur Qliphoth tombe à 0 lorsque le nombre de D-03-109-2 dépasse 50% du secteur alors que D-03-109-1 est toujours vivant.</specialTip>
+      <specialTip openLevel="1" key="6">Le compteur Qliphoth tombe à 0 lorsque D-03-109-1 meurt.</specialTip>
+      <specialTip openLevel="1" key="7">Après une série d’expériences, il a été découvert que la propagation du mucus peut être contrôlée à travers les travaux de Perspicacité. Si D-03-109-1 effectue un travail de perspicacité et produit au moins 24 Boîtes-EP, le mucus cessera d’infecter les autres employés pendant 30 secondes. Cependant, faites attention car si moins de 24 Boîtes-EP sont produites, tous les D-03-109-2 peuvent se transformer en ████████.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <codeId>D-03-109-1</codeId>
+  </child>
+</creature>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300007">
+
+    <narration action="move">
+      指派 #0 至 $0 的收容室.
+    </narration>
+
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-81</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ResetMirror</portrait>
+
+      <name openLevel ="1">
+        改變之鏡
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+
+      <openText>
+        “安逸只是暫時的.”
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {雖然它看起來就像是個全身鏡, 但實際上它無法照映出任何東西.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {它唯一會顯現的只有人類. 在某人面對這個鏡子時, 該目標會發生變化. 有許多對此的猜測說到可能是平行宇宙, 或是魔力之類的影響, 但沒有任何一個能被證實.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {站在鏡子面前的人看起來或許沒有改變, 但實際上已經變成另一個人了. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      <!-- 여기 번역 고치기 -->
+      [
+      {當觀看這面鏡子超過一次時, 目標的人性會被奪走, 將他們轉變成一個遊蕩的死屍.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {"嘿, Brian 沒有回應. 發生了什麼事?”&#13;&#10;“啊, 他看了那面鏡子.”&#13;&#10;“他老是抱怨自己太軟弱. 我猜他的願望終於成真了.”&#13;&#10;“安逸只是暫時的.”}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="1">目標在面對 $0 時將會得到全新的狀態.</specialTip>
+      <specialTip openLevel="2" key="2">若員工在一天內面對 $0 超過一次, 所有的數值都將下跌.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

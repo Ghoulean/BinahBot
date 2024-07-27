@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300107">
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-96</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/JusticeReceiver</portrait>
+
+      <name openLevel ="1">
+        行为矫正仪
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>最后他们会变成智障，甚至生活不&#13;&#10;能自理。</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {这是一块刻有神秘图案的电子设备。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {它能帮助那些误入歧途的人们矫正品行，不管他们先前有&#13;&#10;多么的邪恶，多么的顽劣。即便是那些曾犯下无数罪业，&#13;&#10;却依旧高傲自大不知悔改的人，在它的帮助下亦能改过自&#13;&#10;新，重新做人。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {但是使用者会变得对此设备极度依赖，并逐渐失去自主思&#13;&#10;考的能力。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+
+      [
+      {最后他们会变成智障，甚至生活不能自理。}
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">员工携带“$0”后，与正义相关的能力会大幅提高。同时，该&#13;&#10;员工的精神值会有所下降。</specialTip>
+      <specialTip openLevel="2" key="2">如果员工在携带“$0”后的30秒内被要求归还，该员工会立刻&#13;&#10;陷入恐慌并在做出一系列怪异的举动后死亡。</specialTip>
+      <specialTip openLevel="2" key="3">当携带者的精神值归零后，该员工会在惊恐中死去。</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

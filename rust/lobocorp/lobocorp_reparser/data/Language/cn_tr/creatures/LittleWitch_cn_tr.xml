@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100041">
+
+    <narration action="move">
+      指派 #0 至 $0 的收容室.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0, 一個害羞的孩子, 或許給了 #0 一個驚喜.},
+      {來自一個非常遙遠的地方, $0 喜歡發自內心的大笑.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 喜歡朋友.},
+      {我希望 #0 會對這個禮物感到開心.},
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {想到這個禮物會帶來多大的驚喜, $0 開心的看著 #0.},
+      {人們會感激這小巧卻又珍貴的禮物.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {$0 的朋友睡著了, 等待著收到它的人.},
+      {#0 對禮物裡的東西毫無頭緒.},
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-01-67</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/LittleWitch</portrait>
+
+      <name openLevel ="1">
+        害羞的女孩
+      </name>
+
+      <name openLevel="4">
+        蕾蒂希雅
+      </name>
+
+      <riskLevel openLevel ="1">
+       HE
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        驚喜箱
+      </specialName>
+
+      <openText>所以我想到了一個超棒的主意!</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {<i>相當於一個孩童的身材, 她總是帶著一付清爽的笑容... </i> &#13;&#10;...而且她真的很可愛.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {如他們所言的像個小孩子般小巧可愛!&#13;&#10;那位小孩來自一個非常遙遠的地方!&#13;&#10;而在我遇到我喜歡的人時, 我會把那個小孩親手製作的禮物送給他們.&#13;&#10;但是禮物的內容是祕密的!}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {這是另一個重要的祕密, 那個小孩有著許多的把戲!&#13;&#10;她說到她有著許多的朋友, 但是無法跟她過來.&#13;&#10;所以我想到了一個超棒的主意!}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {如果我把我的朋友藏在箱子裡並把它像個禮物般送出去, 大家都會感到驚喜的!&#13;&#10;而他們都會因為我的把戲大笑不已!&#13;&#10;喔, 這就是我的祕密.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {我希望我能在這裡交到許多的朋友!&#13;&#10;那孩子非常害羞, 所以禮物要非常的神秘!&#13;&#10;我希望能跟你多玩一會! 因為這裡的人都不怎麼笑!&#13;&#10;他們看起來很憂鬱!&#13;&#10;所以那位小女士決定留在這裡直到她將笑聲帶來這裡為止!&#13;&#10;如果大家都因為我的把戲感到開心的話我也會很開心!}
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="give">在工作的結果呈現出普通後, $0 送給了 #0 一個禮物.</specialTip>
+      <specialTip openLevel="2" key="gift">當 #0 被指派去對 $0 以外的異常工作時, 一個 &lt;████████&gt; 會從 #0 裡暴出. </specialTip>
+      <specialTip openLevel="2" key="cancle">如果在 &lt;████████&gt; 出現之前取消指派的工作, 該員工則不會出現特別的感覺.</specialTip>
+    </specialTipSize>
+  </observe>
+
+  <child>
+    <name>小女孩的小朋友</name>
+    <codeId>100041_b</codeId>
+  </child>
+</creature>

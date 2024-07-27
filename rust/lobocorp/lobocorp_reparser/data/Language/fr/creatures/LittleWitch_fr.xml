@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100041">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="mid1">
+      [
+      {$0, qui est une fillette très timide, pourrait bien offrir un cadeau à #0 préparé rien que pour lui en secret.},
+      {$0 vient d’un endroit fort fort lointain et aime les rires joyeux.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 aime beaucoup avoir des amis.},
+      {Elle espère vraiment que #0 appréciera son cadeau venant du fond du cœur.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {En imaginant la stupeur qui peindra le visage de #0 lorsqu’il ouvrira le cadeau, $0 le regarde d’un air joyeux.},
+      {Ce serait fantastique que les gens acceptent ce cadeau si petit mais si précieux.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {“L’ami” de $0 dort dans le cadeau, attendant son destinataire.},
+      {#0 n’a aucune idée de ce qui se trouve dans ce cadeau en forme de mignon p’tit cœur.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-01-67</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/LittleWitch</portrait>
+      <name openLevel="1">
+        Une Petite Sorcière
+      </name>
+      <name openLevel="4">
+        Lætitia
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <specialName openLevel="2">
+        Cadeau Surprise
+      </specialName>
+      <openText>Elle était si déchirée d’avoir à laisser ses précieux amis derrière qu’elle eut une idée absolument géniale !</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;Faisant à peu près la taille d’un enfant et arborant constamment un sourire radieux…&lt;/i&gt;&#13;&#10;Voici une petite fille absolument adoraaaaaable.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Ils disent que je suis une fillette adorable parce que je suis petite et charmante !&#13;&#10;L’enfant vient d’un endroit fort fort lointain !&#13;&#10;Et quand elle rencontre quelqu’un qu’elle apprécie, elle lui donne un cadeau qu’elle a fait elle-même.&#13;&#10;Mais le contenu du cadeau est un secret !}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {C’est un autre secret très très important, mais cette enfant a beaucoup de talents !&#13;&#10;Cette fillette a beaucoup d’amis, mais ils lui ont dit qu’elle ne pouvait pas les amener ici.&#13;&#10;Elle était si déchirée d’avoir à laisser ses précieux amis derrière qu’elle eut une idée absolument géniale !}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Si je recouvre mes amis comme il faut pour qu’ils ressemblent à des cadeaux, tout le monde sera surpris !&#13;&#10;Ils rigoleront tous ensemble de ma farce !&#13;&#10;Oups, j’ai dévoilé le secret de mes cadeaux.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {J’espère me faire plein d’amis ici aussi !&#13;&#10;Cette enfant est très timide, alors le cadeau sera donné en secret !&#13;&#10;Les adieux sont tristes, j’espère qu’on pourra jouer ensemble à nouveau ! Et les gens ici ne sourient pas !&#13;&#10;Ils ont l’air si moroses !&#13;&#10;Alors cette petite fille prit une décision ! Elle restera ici et ne partira pas tant que le rire ne sera pas revenu en ces lieux !&#13;&#10;Je serai heureuse quand tout le monde sera satisfait de mes farces !}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="give">Lorsque le résultat du travail est Normal, $0 donne un cadeau sincère à #0.</specialTip>
+      <specialTip openLevel="2" key="gift">Lorsque #0 a été envoyé travailler avec une Anomalie autre que $0, un ███████ finit par sortir de son corps après un certain temps.</specialTip>
+      <specialTip openLevel="2" key="cancle">Si le travail est annulé avant la naissance du ███████, rien de perceptible n’arrive à l’employé.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <name>Ami de La Petite Sorcière</name>
+    <codeId>O-01-67-1</codeId>
+  </child>
+</creature>

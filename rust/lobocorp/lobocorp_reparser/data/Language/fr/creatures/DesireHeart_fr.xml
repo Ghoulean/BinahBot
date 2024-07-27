@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300001">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-77</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/DesireHeart</portrait>
+      <name openLevel="1">
+        Le Cœur de l’Ambition
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>L’ambition excessive entraînera une frénésie irrationnelle.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Un cœur sans propriétaire ; il continue de battre bien qu’il en ait été arraché.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Quand il est tenu, sa fréquence de contraction double, renforçant la vigueur et la force de son porteur.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {L’ambition excessive entraînera une frénésie irrationnelle.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Les employés n’ayant attaqué aucune cible avant de rendre le cœur ou qui l’ont ramené avant que 30 secondes ne soient passées sont entrés dans un état de folie, multipliant les meurtres irréfléchis avec leur force accrue.}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Ceux qui s’équipent avec $0 bénéficient d’une hausse de PV et de Vitesse d’Attaque.</specialTip>
+      <specialTip openLevel="2" key="2">Si on leur ordonne de rendre $0 sans avoir attaqué, ils perdront la tête et auront une augmentation des tendances à la violence ; ils tenteront d'attaquer tout ce qui se trouve à proximité.</specialTip>
+      <specialTip openLevel="2" key="3">Si on leur ordonne de rendre $0 dans les 30 secondes suivant l’emprunt, le même résultat aura lieu.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

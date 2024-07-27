@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+
+  <!-- Attrbute "id " must equal to attribute "id" in CreatureList.xml -->
+  <info id ="100102">
+
+    <!-- “$0” : Creature name, #0 : Agent name -->
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+
+    <narration action="start">
+      [
+      {“$0”的收容单元里刮着寒冷的暴风雪。},
+      {收容单元内的冰与雪霜闪闪发亮。},
+      {凯必须用冰片拼出“永恒”。如果不是这样的话，他本将是世界的宠儿。},
+      ]
+    </narration>
+
+    <narration action="special_ability_1">
+      [
+      {格尔达比任何人都要勇敢强大。她为了困在冰雪宫殿的凯而战。}
+      ]
+    </narration>
+
+    <narration action="win">
+      [
+      {春日来临，玫瑰盛开，格尔达和凯手拉着手踏上归家旅途。}
+      ]
+    </narration>
+
+    <narration action="lose">
+      [
+      {格尔达和凯败给了冰雪女皇，他们变成了冰的碎片，永远地留在了冰雪宫殿。}
+      ]
+    </narration>
+    
+  
+    <narration action="anotherWork">
+      [
+      {为了拯救被被困在冰雪宫殿里的凯，格尔达与冰雪女皇的决斗无法避免。}
+      ]
+    </narration>
+
+  </info>
+
+  <!-- Maximum observation level. -->
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">F-01-37</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/SnowQueen</portrait>
+
+      <name openLevel ="1">
+        冰雪女皇
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        第三个吻
+      </specialName>
+
+      <openText>冰雪正在消融...是因为宫殿正在崩塌&#13;&#10;吗？又或许是因为春天即将来临？</openText>
+    
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {一位居住在永远被冬日笼罩的寒冷森林的女皇。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {就像每个童话故事都是这么开头的——凯是一个热心的孩子。在那个邪恶的女巫将破镜的碎片散播进每个人的心中时后，凯竟能看见那些他不想，也不需要看到的东西。于是，他离开了他生活了一辈子的村庄。&#13;&#10;在无情的暴风雪中，凯遇见了冰雪女皇。他觉得他所知道的一切都已经没有了意义，他想要了解那在他认知之外的世界。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {冰雪女皇的吻冰封了凯的内心，即时这华丽的冰雪宫殿是如此的寒冷，但他也再感受不到这刺骨的极寒了——这个宫殿没有一丝生机，有的只是没有止境的漫长冬夜...&#13;&#10;同时，这里有一个心灵强大到不会被碎镜刺伤的孩子，一个勇气强大到不惜冒险去解救凯的孩子，她的名字叫格尔达。&#13;&#10;这段旅途充满了坎坷与艰险。伤痛伴随着格尔达，有时，她甚至会难受地哭出来。&#13;&#10;但最终，格尔达找到了凯，鲜花开始在四周盛开，紧接着，春天来临。&#13;&#10;春日的暖阳融化了冰雪女皇的寒冷宫殿，凯心中的镜片也不留痕迹地消融了。&#13;&#10;最后，只留下了冰雪女皇孤独一人...}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {我们还记得我们亲手把她放进冷冻棺里的时候。从某一天起，她那欢快的笑声永远消失了。她只是不断重复着哭泣，强颜欢笑，哭泣，强颜欢笑...最终，她选择了割腕自尽。我们在一个浴缸里发现了被她自己的鲜血浸染的她。&#13;&#10;我们从不相信死亡。现在，答案只剩下一个，我将用我此生一直所憎恨着的“那个机器”重新将她制造出来。死在浴缸里的她，一定一直讨厌着我。但我们已经一起走过了太多太多的路...&#13;&#10;...&#13;&#10;有一天，“它”说话了。&#13;&#10;“A，我记得你。你是个善良的人。”&#13;&#10;那一刻，我有一种冲动，一种毁掉我所创造的一切的冲动。}
+      ]
+    </desc>
+
+    <specialTipSize size="5">
+      <specialTip openLevel="3" key="kissProb1">当工作结果为良时，员工有小概率被“$0”亲吻。</specialTip>
+      <specialTip openLevel="3" key="kissProb2">当工作结果为差时，员工有大概率被“$0”亲吻。</specialTip>
+      <specialTip openLevel="2" key="2kiss">被“$0”亲吻第二次的员工会忘记一切，然后被冰封在“$0”的收容单元中。</specialTip>
+      <specialTip openLevel="3" key="3kiss">为了避免第三次的死亡之吻，也为了救出被困住的员工，必须指派一名员工与“$0”进行决斗。</specialTip>
+      <specialTip openLevel="3" key="4kiss">只有那些勇气强大的员工才能安全地救出被困住的员工。请务必在今天的工作结束前救出员工。</specialTip>
+    </specialTipSize>
+    
+    <!-- Narration when observation level is maximum. -->
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {You remember her.}
+        {She got cold easily.}
+        {Cryo-coffin must have been freezing.}
+        {Freezing and cold.}
+        {You thought a lot, seeing her who couldn’t see her dreams come true, trapped inside ice.}
+        {Brave Gerda headed to the Snow Palace and…}
+        <!--계속-->
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Saved Kai" target="1" isAnswer="false"/>
+        <node desc="Met the Snow Queen" target="2" isAnswer="true"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {Gerda saved Kai and returned home.}
+        {They lived happily ever after.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {The Snow Queen was cold and beautiful.}
+        {You heard ices melting.}
+        ]
+      </desc>
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {Ices are melting....}
+        {We don’t know if it’s because spring is coming, or the palace is crumbling.}
+        ]
+      </angela>
+    </max>
+    
+  </observe>
+
+
+</creature>

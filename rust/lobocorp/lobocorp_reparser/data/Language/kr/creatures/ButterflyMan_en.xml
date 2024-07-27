@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100042">
+
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다
+    </narration>
+    
+    <narration action="start">
+      [
+      {Being remembered is a blessing.}
+      {People here have no time to remember those who died.}
+      {$0 gazes upon #0 in silence.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 dreams. A dream of false hopes and dead-ends.},
+      {The coffin is huge, but it is not enough to accommodate hundreds of them.},
+      {#0 watches the long line of mourners.}
+      {Wings coming to them, strange yet familiar.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {This place has no flowers or trees, so where are all those butterflies coming from?},
+      {Unable to return to where they came from, employees have no choice but to work on.},
+      {Like a never-ending funeral, #0 mourn continues.}
+      {#0 thinks about their life one last time.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {Leaving the company is nothing but a dream. It never happens in reality.},
+      {Death in your finest hour is an unexpected blessing.},
+      {In fact, most employees who died here wanted to live as long as possible.}
+      {Some thought death would be a new start, but there is nothing but void after death.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0"></codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ButterflyMan</portrait>
+
+      <name openLevel ="1">
+        Funeral of the Dead Butterflies
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <specialName openLevel ="2">
+       
+      </specialName>
+
+      <openText>소중한 친구들을 두고 올 수 없어서 슬펐던 아이는 기막힌 생각을 해냈지!</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {What happens when people die?&#13;&#10;What happened to those who worked here?}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {- They must returned to their home, where family and warmness await..&#13;&#10;But everyone knows that the employees can’t leave the company unless they are... 'discarded.'&#13;&#10;- They must have returned to their homes.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {We are feathers of a wing. Feathers fall off when they are no longer useful.&#13;&#10;- Then where did they go?&#13;&#10;They are bound to the company even after they are discarded.&#13;&#10;- A long ago, people believed that they become beautiful beings with small wings when they die. Nonsense.&#13;&#10;If we have wings, can we leave here? Do we get wings only after we are discarded?}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {The burdened crier came here to redeem all.&#13;&#10;But now he is trapped like everyone else, lingering with dying hopes.&#13;&#10;He carries a coffin for those who have nowhere else to go. It’s too small for them though.&#13;&#10;Inside it are butterflies waiting for eternal rest. &#13;&#10;Lots of butterflies and no flowers. &#13;&#10;They just wait for the end of this world.}
+      ]
+    </desc>
+
+    <specialTipSize size="2"> <!-- 나중에 변수 수정하ㅣ기-->
+      <specialTip openLevel="1" key="give">#0, an employee with level 3 Justice completed the $0 work, lowering the Qliphoth counter of $0.</specialTip>
+      <specialTip openLevel="2" key="gift">Other employees with level 3 Fortitude experienced the same.</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

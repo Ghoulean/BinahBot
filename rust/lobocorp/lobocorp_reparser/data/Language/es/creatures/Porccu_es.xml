@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100057" >
+
+
+    <narration action="move">
+      #0 designado a la sala de contención de $0 para empezar el trabajo.
+    </narration>
+
+    <narration action="start">
+      [
+      {Cuando el juego de confianza con $0 alcanza el máximo, $0 acariciará suavemente tu cabeza con las espinas en su cola. Dicen que el placer excede la cantidad que un humano puede soportar, pero no hay nadie que pueda explicar cómo se siente realmente.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Cuando $0 escapa tiene un collar con forma de grillete alrededor de su cuello. Nadie sabe quién lo ató.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {Algunos empleados que eran adictos al placer trataron de sacar algunas de las espinas de $0 pero fallaron.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="5">
+    <collection>
+      <codeNo openLevel ="0">O-02-98</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Porccu</portrait>
+
+      <name openLevel ="1">
+        Porccubus
+      </name>
+
+      <riskLevel openLevel ="1">
+       HE
+      </riskLevel>
+
+
+      <openText>Ahora es el momento de que mi cabeza estalle. Buen día.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {&lt;Tiempo de explosión de su cabeza&gt;&#13;&#10;Para ser honesto, la vida diaria aquí no es tan divertida. La compañía dice que promueven pasatiempos saludables, pero no muchos empleados se involucran en esa nocion.&#13;&#10;&#13;&#10;Todos tienen su propio escape. Violencia, Juego, comiendo... Pensé que tenía un alto nivel de disciplina en comparación con otros. Y me ayudó a vivir una vida más tranquila. Tal vez esa es la razón por la que fui asignado a Porcuvous.&#13;&#10;&#13;&#10;Sí, acerca de Porcuvous... Solo los empleados que viven con los más bajos están asignados allí.&#13;&#10;&#13;&#10;He escuchado lo que hacen otros empleados en la instalación de contención. Lo llaman "juego de confianza”.&#13;&#10;Juego de confianza, que forma tan elegante de llamarlo.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {(Omitido)&#13;&#10;&#13;&#10;Los empleados que estaban aquí antes me dieron algunos consejos de precaución. Me dijeron que no será difícil intimar con él, pero una vez que lo haces, puedes obtener fácilmente lo que quieras.&#13;&#10;&#13;&#10;Dijeron que cuando llegue el momento adecuado, Porcuvous se inclinará hacia al suelo para que pueda llegar a sus espinas fácilmente. No pasó mucho tiempo hasta que me dio la bienvenida y me permitió acariciarlo.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {(Omitido)&#13;&#10;&#13;&#10;Cuando toqué sus espinas por primera vez, grité por lo espinosa que era. Se sentía como una aguja gigante que acaba de penetrar en mi piel. Pero en realidad no estaba sangrando y el dolor desapareció. entonces ahí estaba, la felicidad más intensa que jamás hayas experimentado que hará que tus rodillas tambaleen.&#13;&#10;&#13;&#10;Más tarde, otros empleados vinieron a notificarme el final de mi viaje. Yo estaba babeando.&#13;&#10;&#13;&#10;El placer era tan poco familiar que no volví por un tiempo. Sin embargo, empeoró la situación. Comenzará a tener síntomas de abstinencia, como ganas de vomitar o sudar. Es diferente para cada empleado. Un empleado incluso sacó todos sus dientes porque sintió como pequeños insectos se arrastraban por todos sus dientes.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {Sensación? No hay palabras suficientes para describirlo. Recuerdas el momento más feliz de tu vida? Este sentimiento sería miles de veces mejor que eso.&#13;&#10;&#13;&#10;Soy el último empleado de Porcuvous? Eso es comprensible, ya que el cerebro exige estímulos más fuertes. Al principio, todo lo que tenía que hacer era ser apuñalado por una de las espinas. Ahora, necesito frotarme con las espinas para obtener la misma altura.&#13;&#10;&#13;&#10;Siento que toda la sangre en mi cuerpo se precipitará hacia mi cabeza, eventualmente reventándola. Ya me he imaginado mi cabeza estallando miles de veces o más.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {Tengo que irme, es hora de volver a trabajar. En realidad, estoy empapado de sudor, te diste cuenta?&#13;&#10;&#13;&#10;Por cierto, una cosa más. No es lo que piensas, Porcuvous no es agresivo en absoluto. Nunca trató de comernos o morder nuestras cabezas. Usted mencionó que todos los cadáveres sonreían alegremente, verdad? Eso es todo. Hace sonreír a la gente "hasta la muerte".&#13;&#10;&#13;&#10;Nadie puede ser culpado. Vivimos en el infierno todos los días... Es solo una muestra de un pequeño pedazo de cielo.}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="4">
+      [
+      {Sabes que? Lo siento por usted. Nunca has sentido estos sentimientos y nunca lo harás. Pero tienes que entrevistar a un empleado adicto como yo mientras pretendes ser decente también.&#13;&#10;&#13;&#10;Ahora es el momento de que mi cabeza estalle. Buen dia.}
+      ]
+    </desc>
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">Cuando el resultado del trabajo fue bueno, el Contador Qlifot igualmente se reduce.</specialTip>
+      <specialTip openLevel="1" key="2">Cuando el resultado del trabajo fue malo, el Contador Qlifot se reduce.</specialTip>
+      <specialTip openLevel="1" key="3">Cuando el resultado de trabajo para los empleados con Nivel de Templanza 3 e inferior fue Bueno, seran asesinados por la anormalidad.</specialTip>
+      <specialTip openLevel="1" key="4">Los empleados con Nivel de Templanza 3 o inferior recibirán un daño blanco masivo por el ataque de Anormalidad que escapo.</specialTip>
+      <specialTip openLevel="1" key="5">El $0 que ha escapado no se vio afectado por el ataque proveniente de fuera de su rango de ataque.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+
+
+
+</creature>

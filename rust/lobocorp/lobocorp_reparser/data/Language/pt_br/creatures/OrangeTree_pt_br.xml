@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+    
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id ="100010">
+
+   <narration action="move">
+      #0 foi designado à Unidade de Contenção do 'Meu Pé de Laranja Lima'.
+    </narration>
+
+    <narration action="start">
+      [
+      {Mesmo que possa não ter númeno, tentará se mostrar de algum modo.},
+      {Todos tem seu próprio Pé de Laranja Lima em seus corações.},
+      {Se você ainda tiver algum pedaço de inocência de sua infância.}
+      {“Por que crianças devem crescer?”}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Milhares de partículas na Unidade de Contenção penetraram o centro nervoso do cérebro de #0},
+      {Parte do ‘Meu Pé de Laranja Lima’ está entrando na memória de #0.},
+      {A entidade do ‘Meu Pé de Laranja Lima’ é tão extremamente pequena, que poderia vagar ao redor da mente de #0.},
+      {‘Meu Pé de Laranja Lima’ está vagando pelo tempo de #0.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {‘Meu Pé de Laranja Lima’ visualiza os sonhos que tivemos.},
+      {‘Meu Pé de Laranja Lima’ recupera o que esquecemos.},
+      {Vários funcionários encontraram o que tinham perdido antes.},
+      {#0 encontrará sua Laranjeira no ‘Meu Pé de Laranja Lima’.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {#0 parece estar exausto e abatido.},
+      {#0 Acabou ficando muito diferente do que achava que iria ser durante sua infância. },
+      {#0 só está pensando em deixar o emprego}
+      {#0 queria se tornar um astronauta quando era pequeno.}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {#0 caiu durante o trabalho ao ver uma visão inacreditável durante o processo. },
+      {#0 confronta o que esqueceu há muito tempo.}
+      {#0 pode entrar no mundo que criou em seus primeiros anos de vida.}
+      {#0 está aproveitando o cenário que está em sua frente e sequer pensa em sair da Unidade de Contenção.}
+      ]
+    </narration>
+
+    <narration action="panic">
+      [
+      {#0 está preso no mundo que o ‘Meu Pé de Laranja Lima’ mostrou. },
+      {#0 está cativado pelo ‘Meu Pé de Laranja Lima’ e começou a esquecer a realidade.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="2">
+    <collection>
+      <codeNo openLevel ="0">0-01-04-W</codeNo>
+      <portrait openLevel ="0"></portrait>
+
+      <name openLevel ="1">
+        Meu Pé de Laranja Lima
+      </name>
+      
+      <riskLevel openLevel ="2">
+        WAW
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        Mandrágora
+      </specialName>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {A criatura é um aglomerado de milhares, senão centenas de milhões de moléculas.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Esta anormalidade possui uma forte vontade em voltar a seu lugar original; ela causa dano psicológico não intencional por causa de seu desejo pela pureza de uma criança. Para especificar este fenômeno, mais estudos e experimentos são necessários. Mas, é confirmado que as minúsculas moléculas possuem capacidade de fazer lavagem cerebral nas pessoas.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Quando ela se aproxima do cérebro do sujeito, ela tenta recriar a memória mais pura de sua infância usando suas incontáveis moléculas, e é por essa memória criada que ela tenta voltar para sua jovem existência.}
+      ]
+    </desc>
+
+    <record openLevel="1">
+      [
+      {Trecho de Uma Entrevista
+      Funcionário F2-403: Quando eu tinha 5 anos de idade, eu queria voar em aventuras com o Peter Pan. Em meus sonhos, assim como nas histórias, o Peter Pan iria extender sua mão para eu segurar, e então me levaria para a Terra do Nunca. Eu tinha me esquecido de tudo isso até eu ter ido para aquela Sala de Contenção. As coisas que eu tinha descrito estavam logo na frente dos meus olhos. Se ninguém tivesse ido me buscar, eu teria ficado lá mesmo, não notando nem o tempo passando.
+      ]
+    </record>
+
+    <record openLevel="1">
+      [
+      {O Conto dos Funcionários
+      “Eu não quero nem falar do problema que nós passamos para colocar essa criatura em quarentena. Não era somente uma, essa criatura é feita de milhares de moléculas. Os funcionários vão lembrar por muito tempo o quão horrível de delicado era o trabalho.”
+      ]
+    </record>
+
+    <record openLevel="2">
+      ->[
+      {Trecho de um Registro de Pesquisa
+      Quando um funcionário era mandado na sala de dita criatura, ele não iria sair por 85 minutos e também só iria sair caso outro funcionário entrasse para soltá-lo. Durante uma entrevista com o funcionário atribuído, ele disse que a Anormalidade tem a capacidade de fazer tudo se tornar real, até mesmo um sonho, desde que a memória seja o tão ‘inocente’ quanto for possível. Até então, não houve nenhuma morte por causa da Anormalidade, entretanto, ela ainda é instável e imprevisível. Considerando suas habilidades, é impossível imaginar o que a criatura irá fazer e tornar real. E é essa a razão por trás do Nível de Risco WAW dessa Anormalidade.}
+      ]
+    </record>
+
+    <record openLevel="2">
+      [
+      {Trecho do Material de Pesquisa do Especialista em Anormalidades [Omitido]
+      “A coisa mais interessante sobre essa Anormalidade é que ela não mostra ilusões, ela realmente realiza as cenas de nossa memória. Se conseguirmos achar uma maneira de usar essa habilidade a nosso favor, poderemos tornar qualquer coisa em real. Nós estamos fazendo muitas pesquisas nessa criatura e vamos continuar sem parar. Mas por que é sempre essa tal de ‘inocência’? Após várias deduções e pesquisas cuidadosas, aprendemos que isso poderia ser definido como [Omitido].”
+      }
+      ]
+    </record>
+
+
+    <specialTipSize size="0">
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id="100000">
+
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務.
+    </narration>
+
+    <narration action="start">
+      [
+      {假人 $0 覺得他是在這座設施裡的員工.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 似乎喜歡人類.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {$0 一直繞著 #0, 不過 #0 專心在工作上.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {$0 思索著世界的中心.}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {$0 在 #0 離開時覺得難過. 它似乎想要跟他走.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">0-00-00</codeNo>
+      <name openLevel="1">基礎訓練用模型兔子</name>
+      <portrait openLevel ="1">Sprites/CreatureSprite/Dummy</portrait>
+      <riskLevel openLevel ="1">TETH</riskLevel>
+      <openText> 給即將上任的管理者訓練用的異常假人.</openText>
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      給即將上任的管理者訓練用的異常假人.
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      有謠言說它能成為訓練用的異常是因為它非常的溫順柔和. 雖然它被叫做模型兔子, 但它似乎不怎麼紅蘿蔔. 如果它突破收容的話, 它僅僅只會跟隨著離開的人.
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      <!--특수 상태-->
+    </desc>
+
+    <desc id="4" openLevel="3">
+      <!--특수 상태-->
+    </desc>
+
+    <record openLevel="1">
+      <!-- 관찰기록 -->
+    </record>
+
+    <record openLevel="2">
+      <!-- 관찰기록 -->
+    </record>
+
+    <record openLevel="3">
+      <!-- 관찰기록 -->
+    </record>
+
+    <specialTipSize size="1">
+      <specialTip openLevel="1" key="tutorial">在 $0 上執行壓迫工作後降低了逆卡巴拉計數器.</specialTip>
+    </specialTipSize>
+
+  </observe>
+</creature>

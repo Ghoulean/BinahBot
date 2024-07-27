@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300004">
+
+    <narration action="move">
+      #0 recebeu a ordem para ir para a unidade de contenção de $0.
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-79</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/MeatIdol</portrait>
+
+      <name openLevel ="1">
+        Ídolo de Carne
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>E a reza irá inevitavelmente acabar com o eterno desespero do seu louvador.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Uma estrutura feita de carne e ferro.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {É especulado que seja um artefacto religioso, que foi encontrado em um distrito inundado. No passado, as pessoas procuravam por respostas através da religião. Quando um empregado reza para a Anormalidade, a carne começa a mover-se como se estivesse a responder às suas preçes.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {A pessoa que está a rezar irá sofrer vários tipos de provações, como se estivesse a ser testado, mas os outros ao seu redor irão recuperar HP e SP como se estivessem sendo abençoados com redenção.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+    
+      [
+      {E a reza irá inevitavelmente acabar com o eterno desespero do seu louvador.}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">O efeito do $0 se manifesta através daquele que reza. O indivíduo que reza para o $0 irá receber dano de um tipo aleatório.</specialTip>
+      <specialTip openLevel="2" key="2">&lt;Experimento 1&gt; O indivíduo rezou por 20 segundos ou menos. O sujeito morreu.</specialTip>
+      <specialTip openLevel="3" key="3">&lt;Experimento 2&gt; O indivíduo rezou entre 21 a 45 segundos. Todos os empregados, excluindo o sujeito, recuperam HP ao longo do tempo.</specialTip>
+      <specialTip openLevel="4" key="4">&lt;Experimento 3&gt; O indivíduo rezou entre 46 a 90 segundos. O resultado foi semelhante ao do experimento 2, mas SP também foi recuperado.</specialTip>
+      <specialTip openLevel="5" key="5">&lt;Experimento 4&gt; O indivíduo rezou por mais de 90 segundos. O sujeito morreu, e o Qliphoth Counter de todas as Anormalidades foi a 0.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

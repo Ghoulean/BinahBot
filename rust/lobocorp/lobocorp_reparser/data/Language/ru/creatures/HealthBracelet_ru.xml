@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300106">
+    <narration action="move">
+      #0 направлен(а) в камеру содержания аномалии $0 для выполнения задачи.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-95 </codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/HealthBracelet</portrait>
+
+      <name openLevel ="1">
+        Светящийся браслет
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>Этот браслет не прощает алчных, поэтому его должны носить лишь те, кто в нём нуждается.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Браслет, излучающий мягкое свечение сине-зелёного цвета. При его ношении было обнаружено множество необъяснимых явлений.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Когда браслет экипирован, все раны носящего будут затягиваться без следа. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Но ношение этого браслета без каких-либо повреждений, расценивается им как алчность.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+
+      [
+      {Этот браслет не прощает алчных, поэтому его должны носить лишь те, кто в нём нуждается.}
+      ]
+    </desc>
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">>Мужество носящего повышается на порядок при ношении аномалии $0.</specialTip>
+      <specialTip openLevel="2" key="2">$0 постоянно восстанавливает HP носящего его сотрудника, когда оно падает.</specialTip>
+      <specialTip openLevel="2" key="3">Сотрудник умрёт, попытавшись возвратить браслет, если у него будет неполное HP.</specialTip>
+      <specialTip openLevel="2" key="4">Если HP сотрудника не будет каким-либо образом уменьшаться после экипировки аномалии $0, то сотрудник также умрёт.</specialTip>
+
+    </specialTipSize>
+
+
+  </observe>
+</creature>

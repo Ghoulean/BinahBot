@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100028">
+
+
+
+    <narration action="move">
+      #0 designated to $0's containment room.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {The vending machine overwhelms employee #0 with shiny neon lights.},
+      {The vending machine emits upbeat music from the inside.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Shrimps are delicious no matter how you cook them. Boiling, frying, poaching, whatever you want!},
+      {You’re missing half of all the enjoyment human being can have if you don’t like shrimp.},
+
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Rumor says people get abducted to fishing boats after drinking an opened can of grape-flavored soda.},
+      {Rumor says one of your organ might go missing after drinking an opened can of grape-flavored soda.},
+      {If someone offers you an opened can of grape-flavored soda, you must reject it.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">F-05-52</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/WellCheers</portrait>
+
+      <name openLevel ="1">
+        Wellcheers
+      </name>
+
+      <name openLevel="2">
+        Opened can of Wellcheers
+      </name>
+      
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        Otherworldly Soda!
+      </specialName>
+      
+      
+
+      <openText>Somewhere in the distance, you hear seagulls.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Employee record_&#13;&#10;Have you guys been to Lobotomy meetup?&#13;&#10;I had to collect myself before bringing this up…&#13;&#10; I once attended some kind of ping-pong group meetup but there were no girls so I just pulled out real quick lol.&#13;&#10;Anyway, one day, I saw an announcement for some weird group on the board.&#13;&#10;I got interested so I contacted the group leader and he introduced himself as OO from OO Sephira.&#13;&#10;I asked if there are girls in the group and he told me they have tons of female employees.&#13;&#10;Now it got me super interested so I signed up for the upcoming meetup.&#13;&#10;So I was there, with a name tag like everyone else. I saw like three people from Hod and two from Netzach.&#13;&#10;About 30 minutes later, the leader came in with dozens of cans of Wellcheers on a tray and gave one to each of us..&#13;&#10;I should have realized something was wrong when the can was already opened..&#13;&#10;But I’m sucker for soda so I just rammed it down to my throat the moment he gave me the can..&#13;&#10;}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Now, after that, the leader told us it’s time to move and he rented a van for that.&#13;&#10;‘He’s an awesome guy’, I thought. I hopped onto the van with two employees from horde and one from the same department as me.&#13;&#10;The leader said it’s going to take about an hour so just take a nap. So we did.&#13;&#10;The weird thing was, I went to sleep real fast. &#13;&#10;Like, the moment I closed my eyes I became unconscious. &#13;&#10;I had insomnia but for some reason I could sleep so fast.&#13;&#10;It was my biggest mistake.&#13;&#10;I don’t know how much time passed since I had fell asleep. &#13;&#10;I heard a seagull from the distance.&#13;&#10; At first I thought it was someone’s phone alarm.&#13;&#10; But then I heard wave. It sounded too real to be coming out of a phone so I opened my eyes.&#13;&#10;I was on a goddamn boat.&#13;&#10; A BOAT.&#13;&#10; There was a shrimp hopping and struggling to go back to the sea on the deck.&#13;&#10; It looked it escaped from the net.&#13;&#10;The realization crushed me like a hammer, sending shivers down on my spine.&#13;&#10; The group leader put me and other guys into sleep and sold us to fishing boats. &#13;&#10;I thought this must be a dream but the shrimp hopping there was too real to be a dream.&#13;&#10;I saw people on the deck. They must be crews.&#13;&#10; Everyone was so bulky and muscular.&#13;&#10; I don’t know why but I had an impression If I say something wrong, they would strangle me back to sleep.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Crews were about 10 people including the captain, the boatswain, and the cook.&#13;&#10; They were looking at me and laughing.&#13;&#10;The guy who looked like captain walked towards me and asked about my heights and weights.&#13;&#10; I asked him when does this ship go to the port. &#13;&#10;He told me it’s after a month and don’t I dare run away because they already made a deal with my people.&#13;&#10; I had no idea what “my people” is but I was too scared to ask.&#13;&#10;I was just staring at nowhere dumbfounded.&#13;&#10; Then the crews called me for a lunch. They were making some kind of red spicy-looking soup with shrimps and clams and other seafood. &#13;&#10;They told me don’t just stand there like I’m going to jump into the sea. &#13;&#10;I told them I’m not planning to. Then they laughed, saying they didn’t put sleeping pill in this soup so just come here and have it.&#13;&#10; I had no other choices so I just had it.&#13;&#10; It was actually good though.&#13;&#10;As soon as we finished the lunch, they told me they are going to teach me how to adjust the ropes.&#13;&#10; I just gave up at that point. All I could see over the sea line were tiny islands on which no human being would survive.&#13;&#10; I had to endure this for a month until I get to the port.&#13;&#10;I learned how to adjust the ropes, how to pull fish trap up, and how to maintain fishing net while making coffee and seafood soup for the crews.&#13;&#10; I kept getting better and better at making that seafood soup.&#13;&#10; I swear I can open a restaurant with that.&#13;&#10; Later on, we went through a couple of typhoons.&#13;&#10; Me and them started forming some kind of bond. A companionship.&#13;&#10;Two weeks later, just when I was starting to get bored to see whales, the captain told me I’m really good and asked me if I’m interested in officially working on the fishing boat.&#13;&#10;Now, I was sure that I must had been fired from Lobotomy and worried about my life afterwards.&#13;&#10; So the offer interested me.&#13;&#10;What am I doing now? &#13;&#10;Well, I am living well with solid position and pay.&#13;&#10; On the boat. A shot of vodka after hardworking on the sea tastes like heaven.&#13;&#10; I’m at the port now but I gotta take off soon to catch shrimps. &#13;&#10;No one knows what your future holds, huh?&#13;&#10;Sometimes I think about those other people at the meetup. &#13;&#10;I wouldn’t want to know what happened to them, though.&#13;&#10; I just try to keep positive mind, thinking they are doing good just like me. &#13;&#10;Oh, it’s time to take off.&#13;&#10; See you all later.}
+      ]
+    </desc>
+
+    <specialTipSize size="5">
+      <specialTip openLevel="0" key="specialCan">Upon completion of the work, the beverage can is discharged from the central vending machine. The type of beverage that is emitted seems to vary with the type of work.</specialTip>
+      <specialTip openLevel="2" key="healthCan">&lt;Test result W-1&gt;A red can drink is emitted. The person who ingests the beverage has a distinctive aroma and sweetness, and is expressed as a feeling of heightened energy.Afterwards, the fitness of the subject was confirmed..</specialTip>
+      <specialTip openLevel="2" key="metalCan">&lt;Test result W-2&gt; The blue aluminum can contains an odorless liquid with strong carbonic acid. It has been shown to be effective in restoring mental strength.</specialTip>
+      <specialTip openLevel="3" key="wellCheersCan">&lt;Test result W-3, W-4&gt; Appearance, composition and taste are exactly the same as grape flavored carbonated beverages of purple cans. We found that the physical strength and mental strength of the person ingesting the drink recovered together.</specialTip>
+      <specialTip openLevel="4" key="goToSea">&lt;CAUTION&gt; When the mood of the vending machine is not good, do not take any drink from the vending machine.</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {A vending machine stands before you.}
+        {Two delicious looking shrimp are standing at both sides of the machine.}
+        {Will you buy soda?}
+        <!--계속-->
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="YES" target="1" isAnswer="true"  message="You have succeeded to obtain final observation report on Opened can of Wellcheers." />
+        <node desc="NO" target="2" isAnswer="true" message="You have succeeded to obtain final observation report on Opened can of Wellcheers." />
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {You drank soda.}
+        {Your eyes close.}
+        {You fell asleep.}
+        {…}
+        {Somewhere in the distance, you hear seagulls.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {You didn’t buy soda.}
+        {But the shrimp on the right bought it for you.}
+        {You drank soda.}
+        {Your eyes close.}
+        {You fell asleep.}
+        {…}
+        {Somewhere in the distance, you hear seagulls.}
+        ]
+      </desc>
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {Why wouldn't the shrimp share his treasure?}
+        {Because..}
+        {Because he was a little shllfish.}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+
+
+</creature>

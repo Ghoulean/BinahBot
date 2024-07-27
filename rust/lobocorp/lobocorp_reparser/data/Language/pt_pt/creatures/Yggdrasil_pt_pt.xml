@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+  -->
+  <info id ="100062">
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+
+    <narration action="start">
+      [
+      {#0 sente o cheiro delicado de erva.},
+      {#0 sente uma brisa gentil, algo que não poderia vir de dentro da unidade de contenção.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {O som das folhas secas é incrivelmente tranquilo.},
+      {#0 sente o cheiro de flores.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {A maioria dos empregados deste lugar são infelizes, mas eles sentem grande alegria por causa das coisas mais pequenas.},
+      ]
+    </narration>
+    
+    <narration action="mid3">
+      [
+      {#0 recebe uma benção incandescente.},
+      ]
+    </narration>
+    
+    <narration action="mid4">
+      [
+      {Quando a flor da benção da $0 finalmente florescer…},
+      ]
+    </narration>
+
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">D-04-108</codeNo>
+      <portrait openLevel ="0">Sprites/Unit/creature/Yggdrasil</portrait>
+
+      <name openLevel ="1">
+        Árvore do Mundo
+      </name>
+
+      <name openLevel ="3">
+        Árvore Parasita
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>"Relaxa, não precisas da benção?"</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {<i>Esta Anormalidade é baseada na ideia do(a) apoiante 'llooll530' do Tumblbug.</i>&#13;&#10;&#13;&#10;Uma árvore cheia de folhas.&#13;&#10;Elas têm uma estranha cor verde que causa desconforto. O cheiro de flores é carregado por uma brisa suave.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Empregados que entram em contacto com esta Anormalidade foram testados e constatou-se que eles sentiram conforto psicológico. Isto foi provado pelo aumento da eficiência dos empregados e a diminuição nos seus níveis de contaminação mental.}
+      ]
+
+    </desc>
+    
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Excerto do diário de um empregado&gt;&#13;&#10;&#13;&#10;Eu pensava que era apenas a minha imaginação, mas a voz parecia cada vez mais real à medida que o meu corpo e a minha mente se cansavam. &#13;&#10;“Eu posso ajudar-te.”&#13;&#10;Sim, tu podes ajudar-me.&#13;&#10;O quê que busco?&#13;&#10;Eu consigo sentir o cheiro das flores.}
+      ]
+    </desc>
+
+
+    <desc id="4" openLevel="3">
+      [
+      {Eles importaram uma árvore.&#13;&#10;&#13;&#10;Era uma bela árvore eu podia cheirar o odor das flores mesmo não havendo brisas ou ventos cá dentro. &#13;&#10;O meu apego com a árvore crescia cegamente depois que eu sentir aquele cheiro. Sempre fui muito intuitivo desde que era pequeno, e consegui sentir que aquele sentimento era perigoso.&#13;&#10;&#13;&#10;Eu tentei de tudo para que não me enviassem para a sua sala de contenção.&#13;&#10;&#13;&#10;“Bem, eu entendo… só desta vez, okay? Porra, aquela árvore fez-te alguma coisa?”&#13;&#10;&#13;&#10;O comentário dele ficou preso dentro dos meus ouvidos. Será que eu fiz alguma coisa? Sim, eu fiz. E isso assusta-me.&#13;&#10;&#13;&#10;Uns poucos dias depois, um junior, que costumava ser pessimista, agora vem trabalhar sempre com um sorriso. Eu senti que also estava errado, pois a sua expressão facial era estranhamente confortável.&#13;&#10;&#13;&#10;“Eu pareço melhor hoje em dia? Bem, yeah, é porque a árvore tem estado a ajudar-me.”&#13;&#10;&#13;&#10;Ele respondeu alegremente. Graças aos meus vários anos de experiência, eu sabia que apenas existem uns poucos que podem sorrir tão sinceramente quanto trabalham para esta companhia. Isso significa que quando alguém sorri, é sinal que tem algo de errado. Eu contactei o meu superior imediatamente.&#13;&#10;&#13;&#10;A sua resposta veio mais cedo do que eu esperava. Ela dizia que eu tinha de preencher um relatório de observação sobre a Anormalidade por existem vários comportamentos anormais relacionados com aquela árvore que foram detetados em outros empregados. Eu não era o único que tinha feito uma denúncia sobre esta situação. &#13;&#10;&#13;&#10;Para fazer esse relatório eu tinha de entrar em contacto que a árvore que eu tentei evitar ao máximo. Eu sabia que não podia passar esta tarefa para outra pessoa.&#13;&#10;&#13;&#10;Eu não vi a árvore vazia e nua que eu vi no dia que ela foi importada. Em vez disso, eu vi uma unidade de contenção coberta de erva que parecia estar a desabrochar do chão ao redor da árvore. Mas era impossível para erva crescer neste lugar. Esta instalação é totalmente inorgânica. No momento que eu senti que havia algo de errado....&#13;&#10;&#13;&#10;‘Olá, também viste aqui para ser abençoado?’&#13;&#10;&#13;&#10;uma voz ecoou na minha cabeça... }
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {<i>(É complicado decifrar o conteúdo escrito por a caligrafia torna-se bastante distorcida a partir deste ponto)</i>&#13;&#10;&#13;&#10;Eu não sei como é que eu escrevi o relatório de observação. O que é certo é que eu só escrevi o que eu sentia pela árvore, que aquela bela planta fazia os empregados felizes e deseja contribuir com a jornada da Humanidade por prosperidade e progresso. &#13;&#10;&#13;&#10;Mas como é que uma Anormalidade pode ser uma boa influência nos seres humanos?&#13;&#10;&#13;&#10;‘Eu apenas quero ajudar-te.’&#13;&#10;&#13;&#10;Uma voz ecoou dentro da minha cabeça novamente sem um pingo de maldade. Sim, ela só quer ajudar-me.&#13;&#10;&#13;&#10;‘E se não te importares, tu podes trazer os teus amigos que estão mal? Eu também quero ajuda-los.”&#13;&#10;&#13;&#10;Sim, esta árvore facilmente irá trazer paz para as suas mentes. Já agora, tem aquela novata que parece um tanto depressiva ultimamente. &#13;&#10;&#13;&#10;“Eu conheço um lugar que pode fazer-te sentir melhor. Podes vir se quiseres.”&#13;&#10;&#13;&#10;E ela seguiu-me sem suspeitar de nada e não foi nada complicado trazê-la para a unidade de contenção.&#13;&#10;&#13;&#10;Eu oferci-a à árvore. Ela pode e vai ficar melhor.&#13;&#10;&#13;&#10;‘Tu trouxeste-me a tua amiga. Tu és uma boa criança. Deixa-me presentear-te com algo.’&#13;&#10;&#13;&#10;Eu sinto algo desabrochando dentro de mim. Eu não consigo-me mexer. Não, isto não é algo de mau. Eu estou a ser renascido com a árvore. &#13;&#10;&#13;&#10;Eu e ela tornaremo-nos um. &#13;&#10;&#13;&#10;Ah, eu finalmente estarei completo.}     ]
+    </desc>
+
+     <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">Um rebento apareceu no topo de #0, quando o trabalho foi terminado. Graças a benção, #0 experienciou um aumento na sua eficiência no trabalho e na sua saúde mental.</specialTip>
+      <specialTip openLevel="1" key="2">O Qliphoth Counter diminuiu quando trabalho de Repressão foi realizado.</specialTip>
+      <specialTip openLevel="1" key="3">O Qliphoth Counter diminuiu quando uma Anormalidade escapou, baixa probabilidade.</specialTip>
+      <specialTip openLevel="1" key="4">O Qliphoth Counter diminuiu quando 5 trabalhos foram realizados com outras Anormalidades enquanto a $0 foi ignorada.</specialTip>
+      <specialTip openLevel="1" key="5">Quando o Qliphoth Counter atingiu 0, a $0 obrigou empregados a dirigirem-se para a sua unidade de contenção para abençoa-los.</specialTip>
+      <specialTip openLevel="1" key="6">Quando 5 rebentos floresceram, a $0 tornou-se negra e os abençoados por ela entraram em pânico. Um pouco depois, pedúnculos começaram a perfurar as peles deles e finalmente eles tornaram-se em um rebento (D-04-108-1) os quais são semelhantes à Anormalidade.</specialTip>
+      <specialTip openLevel="1" key="7">D-04-108-1 secreta veneno altamente contagioso e fatal. Todos eles deveram ser removidos para que a área seja descontaminada.</specialTip>
+    </specialTipSize>
+
+  </observe>
+
+<child>
+    <name>Rebento</name>
+    <codeId>D-04-108-1</codeId>
+  </child>
+</creature>

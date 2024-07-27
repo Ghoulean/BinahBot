@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100035">
+
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+
+    <narration action="start">
+      [
+      {有句古话叫做“永远不要忘记审判之鸟。它迟早会找到你，无论这要花上多久的时间。”},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {“$0”从不会感到焦虑。},
+      {也许“$0”此刻就在你的身后。}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {我们生活在一个没有宽恕的世界之中，我们的灵魂即是赎罪的祭品。},
+      {人类都是狡诈的存在，他们无法救赎自己。这就是为什么“$0”必须来到我们的身边。}
+      {很少有人能意识到自己的罪恶，不过“$0”会帮你们理解的。}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {“$0”曾是森林的守望者，可它守护森林的意愿过于强大了，以至于忽视了更加重要的东西。},
+      {如今，无边的黑暗和永远的寒冷正笼罩着整片森林...}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-02-62</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/LongBird</portrait>
+
+      <name openLevel ="1">
+        高鸟
+      </name>
+
+      <name openLevel="2">
+        审判鸟
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>它的天平能够绝对公正地衡量任何&#13;&#10;罪恶。</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {它就是那只在黑森林中拿着失衡的天平审判众生的鸟。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {天平总是偏向一边，可它并不知情，因为它的眼睛被绷带遮住了。&#13;&#10;又或许它再清楚不过，只是它一直在避免自己看到这件事。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {很久很久以前，高鸟曾是一名公正的裁判长。它的天平能够绝对公正地衡量任何罪恶。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {为了守护森林，高鸟制作了这杆能够衡量罪恶的天平。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {曾经，高鸟的眼睛就像夜空中的明星一般闪烁，仿佛它能看透一切事物。但为了守护森林，它把自己的眼睛赠予了大鸟。现在，它的眼中只剩下无尽的空虚。}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="3">
+      [
+      {脆弱的绷带随风飘动，仿佛随时都有可能开裂。过去，它曾拥有一身光彩夺目的羽毛，但由于长期缺少阳光的照射，这些羽毛完全失去了昔日的光泽。}
+      ]
+    </desc>
+
+    <desc id="7" openLevel="4">
+      [
+      {如今，它只剩下那杆失衡的天平了。即便如此，审判鸟的裁决也从未停止过，永远都不会...}
+      ]
+    </desc>
+
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="MoodZero">当工作结果为良时，“$0”的逆卡巴拉计数器有小概率在倒计时结束后减少。</specialTip>
+      <specialTip openLevel="1" key="MoodZero2">当工作结果为差时，“$0”的逆卡巴拉计数器有大概率在倒计时结束后减少。</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

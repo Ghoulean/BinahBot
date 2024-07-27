@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100103">
+
+
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0는 사랑의 반짝임이라던가 선행의 기쁨이라던가 하는 양지의 느낌은 더 이상 기억하지 않은 채 죽어가는 모든 것에만 반응합니다.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0의 심장은 오래 전, 어떤 것도 명중시킬 수 있던 마탄에게 꿰뚫렸습니다.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {악마와의 계약이 그러하듯, $0의 의뢰는 마냥 평화롭게 이뤄지지는 않을 것입니다.},
+      ]
+    </narration>
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">F-01-69 </codeNo>
+      <portrait openLevel ="0">Sprites/Unit/creature/Freischutz</portrait>
+
+      <name openLevel ="1">
+       마탄의 사수
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+
+
+      <openText>역시 네 말 대로 어떤 사람이라도 맞출 수 있는 마법의 탄환이로구나</openText>
+     
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {악마가 마침내 바란 것은 절망이었다.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {절망은 마음을 좀먹으며 앞으로 나갈 의지를 잃게 만들기 때문이다. 앞에 아무것도 없게 되었다고 느끼는 순간, 영혼은 죽어서 지옥으로 떨어진다. 지옥, 악마의 영역 말이다. 악마가 사람을 죽이는 것 같은 단순한 짓거리보다 절망에 빠지는 사람을 보고 쾌감을 느끼는 이유가 그것이다. 그걸 보고 우리는 ‘악마에게 영혼이 팔렸다'라고 말한다.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {한 사수가 악마로부터 총을 받았을 때, 악마는 마지막 탄환은 사랑하는 사람의 머리를 관통할 것이라는 유치한 계약을 내걸었다. 그는 그 말을 듣자마자 자신이 사랑하는 모든 사람을 찾은 뒤 명중시켰다. 그러고 나서 악마에게 말했다. ‘역시 네 말 대로 어떤 사람이라도 맞출 수 있는 마법의 탄환이로구나'&#13;&#10;마지막 탄환이 영영 사라진 사수는 수많은 세계를 돌아다녔다. 때로는 어려운 사람을 도와줄 때도, 악한 이를 물리칠 때도 있었지만 그건 사수의 어떤 관념이라기보다는 마음이 내키는 대로 행동한 결과였다. 어떤 세계에서는 정의로운 사냥꾼, 또 다른 세계에서는 피에 물든 사수라고 불렸다.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {어느 날, 사수는 어느새 자신의 주위에 계속 맴돌던 악마는 보이지 않는다는 걸 깨달았다. 왜일까. 이미 자신의 영혼은 처음부터 지옥에 떨어졌다는 사실을 알았다. 계약조건이 완료되었으니 악마는 물러난 것이다.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {악마가 되어버린 마탄의 사수는 다른 사람들의 영혼을 얻기 위해 계속해서 방아쇠를 당겼다. 악마와 같은 이치로, 탄환은 당신이 원하는 곳을 관통할 것이다. 영원히. }
+      ]
+    </desc>
+    
+
+
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">$0에게는 의뢰 작업을 진행할 수 있다. 의뢰 작업 시 현재 에너지의 10%가 비용으로 소모된다.</specialTip>
+      <specialTip openLevel="1" key="2">단, 의뢰 후 발사되는 총알은 모든 대상을 관통하여 피해를 입힐 수 있으니 작업 명령 시 직원 위치에 주의해야 한다. 또한 $0의 7번째 탄환은 원하는 곳으로 발사할 수 없으니 신중히 결정해야 한다.</specialTip>
+      <specialTip openLevel="1" key="3">정의가 3등급 미만인 직원이 작업을 진행하자 작업 완료 시 클리포트 카운터가 감소했다.</specialTip>
+      <specialTip openLevel="1" key="4">작업 결과가 보통일 때 보통 확률로 클리포트 카운터가 감소하였다.</specialTip>
+      <specialTip openLevel="1" key="5">작업 결과가 나쁨일 때 높은 확률로 클리포트 카운터가 감소하였다.</specialTip>
+      <specialTip openLevel="1" key="6">클리포트 카운터가 0이 되자 $0가 시설 어딘가를 향해 스스로 탄환을 발사하였다.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

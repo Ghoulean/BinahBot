@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300108">
+
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-97</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/PromiseAndFaith</portrait>
+
+      <name openLevel ="1">
+        오래전의 믿음과 약속
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <openText>
+        보답받지 못한 마음들은 밑바닥에서 조용히 잠들어간 채 잊혀져갔다.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {격리실에 매달려 있는 신비한 구슬.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {우리들은 아주 오래전에 반복되어온 수많은 약속과 믿음들에 대해 알고 있다.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {하지만 돌아오는 것은 언제나 허탈과 배신뿐이었다.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {보답받지 못한 마음들은 밑바닥에서 조용히 잠들어간 채 잊혀져갔다.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {오히려 기대없는 무욕의 마음으로 시도한다면 생각지도 못한 보답이 주어질 것이다. }
+      ]
+    </desc>
+
+  
+     <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">대상을 사용하여 E.G.O 무기를 강화할 수 있다. 강화 시에는 약간의 에너지가 소모된다.</specialTip>
+      <specialTip openLevel="2" key="2">대상을 통해 강화된 무기는 더욱 강력한 공격력을 가지게 된다.</specialTip>
+      <specialTip openLevel="2" key="3">단, 강화 도중 일정 확률로 E.G.O 무기가 소멸할 수 있다.</specialTip>
+      <specialTip openLevel="2" key="4">강화된 무기는 하루가 지나면 대상의 영향이 사라져 원래의 공격력으로 돌아온다.</specialTip>
+     </specialTipSize>
+
+
+
+  </observe>
+</creature>

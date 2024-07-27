@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300104">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-09-91</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/OtherWorldPortrait</portrait>
+      <name openLevel="1">
+        Portrait of Another World
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <openText>
+        This portrait encaptures a moment; it is what we are destined to lose.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {As time passes, people change. We may become disabled, lose our minds, be consumed by overwhelming violence, or be willed to disappear, never seen again. }
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {This portrait encaptures a moment; it is what we are destined to lose. Those who see their healthy self will subconsciously begin craving. “If life could always be like that. If only I could always have a bright smile just like in that portrait.”}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {One will begin to feel strange. One will be unharmed by any shape or form of attacks, however, others will bear the pain instead. }
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Little by little, the portrait turned uglier and uglier. Eventually one will stop viewing the portrait and simply enjoy their unexpected luck.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {However, no miracle lasts forever. When all those that bear one’s pain perish, it is their turn to die. Once the person who thought themself to be the luckiest person in the world meets their demise, the portrait turns blank once again. }
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">The first person to use the Abnormality will have their image etched onto the canvas.</specialTip>
+      <specialTip openLevel="2" key="2">All damage that would be dealt to the etched will be taken by another within the facility. (However, the effect of the Abnormality will not apply to damage that exceeds the maximum HP of the one who is shown on the canvas.) The etched will also receive increased damage. </specialTip>
+      <specialTip openLevel="2" key="3">Once the one who bears the etched’s pain died, another will take their place. When not a single person remains, the one etched on the portrait will die.</specialTip>
+      <specialTip openLevel="2" key="4">If the image of a new person is placed upon the canvas, the previous will be killed.</specialTip>
+      <specialTip openLevel="2" key="5">If the etched is killed by means other than normal damage, then the portrait will return to its original state.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

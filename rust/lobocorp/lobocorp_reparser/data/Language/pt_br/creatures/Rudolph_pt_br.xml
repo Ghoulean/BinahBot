@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100016">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {Quando os sinos enferrujados do trenó estiverem tinindo, significa que o Natal chegou.},
+      {Com uma mandíbula deslocada e uma língua desprovida de vida, palavras são engolidas ao invés de cantigas.},
+      {Onde está o Papai Noel para aqueles que estão tristes?}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {As luzes coloridas eram tão brilhantes quanto o Natal e tão escuras quanto o pesadelo de qualquer criança.},
+      {O remendo parece rudimentar, mas o esforço em fazê-lo não foi nada além de astúcia obssessiva.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Natal, oh o carnaval hediondo. Todo natal, eu ficava cheio de vontade de arrancar as línguas de todos que estão cantando essas cantigas natalinas.},
+      {Com meu infinito ódio, eu te dou este presente.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 não mostra sinais de vida, mesmo assim continua a se mover. Talvez seja devido a energia que produz.},
+      {$0 perambula por aí sem razão. Ele quer dar os presentes que estão em sua pilha.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">F-02-49</codeNo>
+      <name openLevel="1">Rudolta do Trenó</name>
+      <portrait openLevel="1">Sprites/Unit/creature/Rudolta</portrait>
+      <riskLevel openLevel="2">HE</riskLevel>
+      <openText>Com meu infinito ódio, eu te dou este presente.</openText>
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {&lt;Um Cartão de Natal Antigo Anexado a Anormalidade&gt;&#13;&#10;
+      『Feliz Natal! O Papai Noel corre com pressa pelo céu noturno para entregar presentes a crianças felizes que não choram. Rudolph, a rena de nariz vermelho, brilha intensamente através da névoa com seu nariz enquanto carrega um trenó cheio de presentes, o guiando pela noite. Toda criança feliz ao redor do mundo merece um presente!』}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {De longe, a Anormalidade se assemelha com o Papai Noel no topo de seu trenó, mas após uma inspeção mais próxima, é completamente diferente de sua descrição no folclore comum. Contrário ao personagem de nome Rudolph, é o treno que carrega a rena. Nós observamos três porções diferentes da Anormalidade separadamente.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Rudolph: Uma entidade orgânica de cores verde, vermelha e branca que parece ser um cavalo ou uma rena. Seus músculos não parecem se mover, mas muitos de nossos funcionários relataram movimentos oculares. Alguns até dizem que fizeram contato visual com ele. Há um buraco de 30cm de diâmetro em seu abdômen. Funcionários armados relataram depois que o buraco estava vazio.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Papai Noel: Uma entidade misteriosa e transparente em cima do Rudolph. Ele está cheio do que parecem ser órgãos humanos, todos funcionando normalmente.}
+      ]
+    </desc>
+    <desc id="5" openLevel="3">
+      [
+      {O Trenó: O tamanho é similar ao de uma criança. O chapamento parece ser feito de pele orgânica, e há corrediças brancas na parte de baixo. Os acessórios do trenó foram substituídos por mãos arrancadas. Objetos desconhecidos estão carinhosamente enrolados em presentes. Vários funcionários tentaram abrir esses presentes, mas falharam. Boatos dizem que eles só podem ser abertos no Natal.}
+      ]
+    </desc>
+    <desc id="6" openLevel="4">
+      [
+      {Esses três elementos estão costurados grosseiramente. O Dr. ████████ mencionou que: “Todas as três partes talvez sejam feitas de um só corpo. Quem tiver sido o responsável por essa coisa devia ter um grande ódio pelo natal. Bem, ou era isso ou ele nunca viu o Papai Noel.”}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="comingTown">Quando o resultado do trabalho era Neutro, o Contador Qlifót reduzia com probabilidade mediana.</specialTip>
+      <specialTip openLevel="1" key="comingTown2">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia com alta probabilidade.</specialTip>
+      <specialTip openLevel="2" key="horrorMoving">Quando $0 escapou, ele lentamente se moveu pelas instalações, inflingindo dano BRANCO a todos os funcionários ao seu redor.</specialTip>
+    </specialTipSize>
+  </observe>
+  <etc>
+    <!--특수 능력 발생할 때, 너프 특성 가진 직원에게 랜덤으로 뜨는 텍스트.-->
+    <param key="present1" index="0">
+      A filha mais nova de #0 passará o Natal sozinha por que ela gostaria de viver por conta própria.
+    </param>
+    <param key="present2" index="1">
+      #0 consumirá dezenas de pílulas naquele fatídico Dia de Natal.
+    </param>
+    <param key="present3" index="2">
+     #0 chorará sozinho enquanto sua pessoa amada irá embora até o próximo Natal.
+    </param>
+    <param key="present4" index="3">
+      #0 receberá a notícia da morte de uma pessoa que amava enquanto estará debaixo de uma Árvore de natal maravilhosamente decorada.
+    </param>
+    <param key="present5" index="4">
+      #0 será atropelado por um caminhão cheio de presentes na Véspera do Natal, e nunca mais poderá andar.
+    </param>
+    <param key="present6" index="5">
+      O médico de #0 avisará que #0 contraiu uma doença terminal na Véspera do Natal.
+    </param>
+    <param key="present7" index="6">
+      O telhado da casa de #0 cairá devido ao peso da neve, e ninguém irá sobreviver. Tudo isso acontecerá após alguns anos em um fatídico Dia de Natal.
+    </param>
+  </etc>
+</creature>

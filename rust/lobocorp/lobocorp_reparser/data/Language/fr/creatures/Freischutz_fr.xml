@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id="100103">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {$0 n’a aucun souvenir positif, tels que les étincelles de l’amour ou la satisfaction de faire une bonne action. Il ne réagit qu’aux choses mourantes.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Il y a bien longtemps, le cœur de $0 a été transpercé par une balle magique qui ne manque jamais sa cible.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Comme pour tous les pactes conclus avec le Diable, la demande de $0 ne se terminera pas pacifiquement.}
+      ]
+    </narration>
+  </info>
+  <observe level="3">
+    <collection>
+      <codeNo openLevel="0">F-01-69</codeNo>
+      <portrait openLevel="0">Sprites/Unit/creature/Freischutz</portrait>
+      <name openLevel="1">
+       Der Freischütz
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <openText>"Cette balle magique peut vraiment toucher n'importe qui, exactement comme vous le disiez."</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Le Diable a fini par préférer le désespoir.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Le désespoir ronge l'esprit et draine la volonté d'aller de l'avant. Quand on sent qu'il n'y a plus rien à faire, l'âme tombe en Enfer, le domaine du Diable. C'est pourquoi le Diable trouve plus divertissant de regarder les gens sombrer dans le désespoir plutôt que de simplement les tuer. C’est ce que nous appelons "vendre son âme au Diable".}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Lorsqu'un tireur d'élite reçut un pistolet du Diable, celui-ci lui proposa un contrat enfantin : la dernière balle allait perforer la tête de sa bien-aimée. Dès qu'il entendit cela, il chercha et tua tous les gens qu'il aimait. Puis il dit au Diable : "Cette balle magique peut vraiment toucher n'importe qui, exactement comme vous le disiez.".&#13;&#10;&#13;&#10;La dernière balle ayant disparu pour de bon, le chasseur voyagea à travers de nombreux mondes. Parfois, il aidait ceux qui étaient dans le besoin ou combattait le mal, mais par impulsion, pas dans un geste de bonne volonté ou pour un idéal. Dans un monde, on l'appelait un chasseur juste, tandis que dans un autre, il était un tireur sanguinaire.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Un jour, le tireur d'élite a réalisé que le Diable ne le suivait plus. Il s'est demandé pourquoi, avant de réaliser que son âme était déjà tombée en Enfer depuis le début. Le contrat avait déjà été rempli, donc le Diable était parti.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Le tireur d'élite, à présent un démon lui-même, continue de presser la gâchette pour recueillir les âmes des autres. Comme l'a dit le Diable, les balles perforent tout ce que l’on souhaite. À jamais.}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Il est permis de demander de l’aide à $0. $0 a accepté d'exécuter la demande au prix de 10 % de notre énergie actuelle.</specialTip>
+      <specialTip openLevel="1" key="2">Cependant, les balles tirées par $0 peuvent traverser et endommager n’importe quoi. De plus, la 7ème balle de $0 ne tirera pas là où vous le voulez, donc prévoyez judicieusement.</specialTip>
+      <specialTip openLevel="1" key="3">Le Compteur Qliphoth a diminué lorsque #0, dont la Justice est inférieure au niveau 3, a terminé un travail avec $0.</specialTip>
+      <specialTip openLevel="1" key="4">Lorsque le résultat du travail est Normal, le Compteur Qliphoth a une probabilité normale de diminuer.</specialTip>
+      <specialTip openLevel="1" key="5">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth a une probabilité élevée de diminuer.</specialTip>
+      <specialTip openLevel="1" key="6">Lorsque le Compteur Qliphoth a atteint 0, $0 a délibérément tiré une balle dans une direction aléatoire.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100053">
+
+    <narration action="mover">
+      #0 va a entrar a la unidad de contencion de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="iniciar">
+      [
+      {Si #0 muestra competencia, entonces ese empleado puede ser capaz de llamar la atencion de $0 durante su contencion.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {La mayoría de los empleados desconocen el significado real de "El cuidado de las hadas."},
+      ]
+    </narration>
+  </info>
+  
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">F-04-83</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Fairy</portrait>
+
+      <name openLevel ="1">
+        Festival de hadas
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+
+      <openText>
+        Todo estará tranquilo mientras estés bajo el cuidado de las hadas.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {La anormalidad es similar a un hada, teniendo dos pares de alas grandes y un cuerpo pequeño con extremidades extras como cuatro brazos poco menores a la humana con amuletos de oro en cada brazo y una cola con una utilidad no especifico. Actúan como un grupo de pequeñas hadas a comparacion con la hada mas grande.  }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Usan un lenguaje que no podemos entender para comunicarnos. Siguen a unos pocos empleados que ingresan a la Instalación de contención y usan sus habilidades especiales para ayudar a curarlos. Los empleados llaman a este acto, "el cuidado de las hadas."   }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      { Las hadas protegen a nuestros empleados. Es decir, si a menudo actuabas fuera de la bondad de tu corazón, son un amante de la naturaleza, y son un ser competente, entonces las hadas con gusto te cuidarán. Todo estará tranquilo mientras estés bajo el cuidado de las hadas (además, Puedes disfrutar de la envidia de otros empleados. No es que sea importante pero...). Y si las hadas no se te acercan? Entonces deberías reflexionar sobre tu vida. Cuando Emil y yo tomamos turnos para ingresar a la Instalación de Contención de las hadas, Las hadas no dudaron en acercarme. Solo yo, y nunca a emil. (Todos ustedes conocen a Emil y cómo es él. El por que, Incluso ayer se negó a compartir sus bocadillos conmigo y estaba actuando alguien muy alto y poderoso.)&#13;&#10;Es sagrado estar protegido por hadas en cualquier mundo. Pero no entre en la Instalación de Contención solo por diversión. Si has leído algunos libros, Sabrás que a las hadas no les gustan las personas que aprovechan su amabilidad.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {&lt;color=#FF9E72FF&gt;El documento correspondiente solo está permitido para empleados de nivel 4 y superior.&lt;/color&gt; Cuando Walter, quien estaba bajo el cuidado de las hadas, murió en la facilidad de contención de otra anormalidad, encontramos algunas anomalías inusuales. Su estómago y cara fueron arrancados, Su estómago y cara fueron arrancados. Añadiendo algo, La Instalación de contención en la que se encontró a Walter era para Anormalídades que usan ataques mentales. Las hadas que se descubrieron en un área diferente tenían la sangre y la carne de alguien manchadas en la boca. No realizamos pruebas para averiguar de quién era la carne y la sangre.&#13;&#10;En nuestro mundo, Hay pocos resultados que se hacen debido a la amabilidad perfecta. Hacer que las hadas que viven en el bosque te visiten solo porque les gustas o hiciste muchas buenas acciones es algo que solo ocurre en los cuentos de hadas. Aunque conocemos esta verdad, a veces nos engañamos. Ese "El cuidado de las hadas está sucediendo debido a todas las buenas acciones que he hecho en mi vida, o que las hadas me están favoreciendo porque hay algo que me hace más especial que los demás empleados."}
+      ]
+    </desc>
+
+
+    <desc id="5" openLevel="2">
+      [
+      {sin embargo, las hadas son solo monstruos a los que les gusta la carne. Te protegieron porque querían mantener su comida fresca. Cuando el empleado comienza a trabajar en una instalación de contención diferente, engullen al empleado por temor a perder su comida por otra cosa.&#13;&#10;Pero la mayoría de los empleados que reciben atención de las hadas estaban muy satisfechos. También, la reducción de la tasa de accidentes mientras las hadas prestaban atención es un efecto positivo para la compañia; por lo tanto, se ha decidido que los empleados no serán informados de la verdad completa sobre la anormalidad.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Cuando el resultado del trabajo es Normal o superior, Pequeñas hadas nacerán alrededor del empleado.</specialTip>
+      <specialTip openLevel="2" key="2">Las hadas pequeñas curarán el PS del empleado con el tiempo por un tiempo limitado.</specialTip>
+      <specialTip openLevel="2" key="3">Si un empleado que está bajo el cuidado de pequeñas hadas y cuando hace un trabajo de administración diferente, entonces ese empleado morirá de inmediato y será comido por las hadas.</specialTip>
+    </specialTipSize>
+
+  </observe>
+</creature>

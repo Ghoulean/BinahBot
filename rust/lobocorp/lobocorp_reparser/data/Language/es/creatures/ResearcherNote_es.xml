@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300002">
+
+    <narration action="move">
+      #0 designado a la sala de contención de $0 para el trabajo.
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-78</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ResearcherNote</portrait>
+
+      <name openLevel ="1">
+        Nota de un Investigador Enloquecido
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <openText>
+        El capítulo final termina con una oración, "Nacido de nuevo."
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {La vieja nota está llena de incomprensible escritura cursiva.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Una vez perteneció a un investigador que se había vuelto loco durante la investigación. Sólo se ha descifrado parcialmente, donde la mayor parte se relaciona con varios experimentos que se realizaron en este lugar.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Comienza con la culpa y las confesiones de la experimentación no ética, pero termina con frases locas y rotas sobre la investigación.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+
+      [
+      {El capítulo final termina con una oración, "Nacido de nuevo."}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {La observación de un empleado aumentará simplemente equipando este artículo. Pero si se devuelve sin cumplir su deseo de conocimiento, el empleado incompetente explotará.}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Los sujetos que equipen $0 se beneficiarán de un fuerte aumento de estadísticas relacionadas con la Templanza.</specialTip>
+      <specialTip openLevel="2" key="2">Si se le ordena que devuelva $0 dentro de los 30 segundos posteriores a su equipo, la piel del usuario comenzará a hincharse y su cuerpo explotará en segundos.</specialTip>
+      <specialTip openLevel="3" key="3">Si se le ordena devolver $0 sin ningún trabajo administrativo, el usuario explotará.</specialTip>
+      <specialTip openLevel="4" key="4">Cuando el usuario recibe una cierta cantidad de daño de su PS o su SM, el usuario explotará y la explosión cubrirá toda la sección. La explosión causará un daño ROJO masivo a cualquiera que esté cerca.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

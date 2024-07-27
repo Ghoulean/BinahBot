@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300103">
+
+    <narration action="move">
+      #0 собирается в камеру содержания аномалии $0, чтобы начать задание.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-90</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ProphecyOfSkin</portrait>
+
+      <name openLevel ="1">
+        Пророчество кожи
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <openText>
+        Сохраняй нас сейчас и века спустя. Правда сделает нас свободными.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Старая религиозная книга на тонкой стойке. Множество страниц исписанной пергаментной бумаги.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Верующие молились, чтобы она вечно оставалось неприкосновенной, делая книгу из человеческой кожи.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Сотрудники, открывшие эту книгу будут просвещены невообразимыми истинами. Те, кто овладеют этими истинами, будут называться пророками и будут не в праве отвергать зов.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Сохраняй нас сейчас и века спустя. Правда сделает нас свободными.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Сотрудник, читающий эту книгу получит определённый уровень Мудрости.</specialTip>
+      <specialTip openLevel="2" key="2">Сотрудник может читать книгу до тех пор, пока его Мудрость не достигнет предела.</specialTip>
+      <specialTip openLevel="2" key="3">Чем больше сотрудник читает, тем сильнее он будет страдать от БЕЛОГО урона.</specialTip>
+      <specialTip openLevel="2" key="4">Любой сотрудник, который запаникует после прочтения книги, умрёт.</specialTip>
+    </specialTipSize>
+
+  </observe>
+</creature>

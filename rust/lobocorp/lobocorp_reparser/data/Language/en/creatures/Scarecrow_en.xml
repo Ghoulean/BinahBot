@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100050">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {We are still in the midst of our journey. We followed the yellow brick road to make our dreams come true.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {The treatment miraculously made everyone silent, even those who refused to be quiet after any other therapy.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 began to chase after smart brains instead of scaring away birds.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">F-01-87</codeNo>
+      <name openLevel="1">Scarecrow Searching for Wisdom</name>
+      <portrait openLevel="1">Sprites/Unit/creature/Scarecrow</portrait>
+      <riskLevel openLevel="2">HE</riskLevel>
+      <openText>The city still remained a beautiful place where the emerald roads sparkled bright as ever.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {An Abnormality taking the form of a straw scarecrow. The straw is stained with blood.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {The head is empty as if someone forcefully tore it off. It shows aggression towards certain employees, attempting to take their brains. These employees are those who scored "Excellent" on the intelligence test.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Each city needed to have its own unique technologies; that was the key to reinvigorating the city. There were numerous ones, but among them, one city saw advancements in technology for the replacement of body parts. It was possible to repair or augment body parts that were broken and malfunctioning, or simply undesirable. Every citizen was eligible for that treatment. However, rumors circulated. When a rich person looking to improve their eyesight approached a beggar with broken lungs struggling to breathe, they would transplant the beggar's eyes to the rich person. Then they would abandon the beggar's corpse somewhere along the outskirts, still with those rotting lungs. }
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {The city's representative reassured them, dismissing the rumors as nonsense. To put the rumors to rest, they announced that they would select a number of sick people from the outskirts and fix any body parts they wanted. Out of the lucky few who were chosen, one returned several days later. He had a visibly long scar on his head. People asked him how he felt and he responded that his head felt lighter. He was a man filled with sorrow who used to cry a lot, so everybody believed that the surgery was a success.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {However, when he was asked about the whereabouts of the others who went with him, he just smiled without uttering a word. Before long, even at his parents' funeral, he showed no emotion. All he did after the treatment was stare out the window and talk to himself. Eventually, he hung himself on the doorknob of his house. Some people thought that the treatment caused his troubles, but after a few days, he was completely forgotten. The city still remained a beautiful place where the emerald roads sparkled bright as ever. }
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">When an employee with Prudence Level 3 or higher finished their work, the Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="1" key="2">When the work result was Bad, the Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="2" key="3">When $0 was escaping and killed an employee, it sucked their brain out to recover its HP.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

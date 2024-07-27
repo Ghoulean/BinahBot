@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100027">
+    <narration action="move">
+     #0 está a caminho da Unidade de Contenção da $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {“Sabe, depois de me juntar a Corporação Lobotomy, eu realmente sinto que tenho novamente o controle da minha vida.”},
+      {#0 consegue sentir a tristeza da $0.},
+      {O pulso de #0 dói quando olha para a $0.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {“Depressão é uma doença da mente. Nós somos os primeiros doutores que descobriram como ser feliz.”},
+      {#0 olha fixamente para o desespero que flutua na banheira.},
+      {#0 sente tristeza e desespero esmagador.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {“Medicamentos para curar o corpo se desenvolveram em ritmo tremendo, enquanto tratamentos para a mente se manteram estagnados.”},
+      {#0 consegue ver a dificuldade e a falha que está por vir.},
+      {#0 consegue ver a dificuldade e várias provações no futuro. Não importa o que façam, somente resultará em falha.}
+      ]
+    </narration>
+    <narration action="special_ability">
+      [
+      {#0, privado de toda razão e esperança na vida, não resiste às mãos que o alcançam.},
+      {O desânimo de #0 se concentra em um único ponto.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-05-51</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/BloodBath</portrait>
+      <name openLevel="1">
+        Banheira de Sangue
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>Várias mãos flutuam na banheira. Elas são das pessoas que já amei.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Uma anormalidade que contém a dor de todos aqueles que não conseguiram suportar a própria tristeza.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Uma banheira de cor sombria, coberta de sangue. O sangue sempre é mantido em equilíbrio; ele nunca derrama. Somente desespero pode ser encontrado ao afundar nas profundidades. Depressão insuportável domina por completo aquele que olha para dentro da banheira.&#13;&#10;&#13;&#10;Em um instante, ela pode puxar uma pessoa que está perto para dentro dela. Ela não possui força considerável, mas aqueles que sofrem de sua forte depressão não resistem. Ela devora a vítima até sobrar nada exceto os pulsos. Todas as mãos que flutuam na banheira estão pálidas e ensanguentadas; elas se esticam e estendem como se estivessem pedindo ajuda. }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {&lt;i&gt;Não é uma tarefa fácil cortar o pulso com uma mente sã. Uma forte e determinada vontade é necessária para realizar múltiplas tentativas. Somente quando estiver cortada como se alguém estivesse simplesmente cortando um pedaço de carne, é que conseguirá alcançar o objetivo. Somente quando alguém deseja muito a morte, é que podem obter sucesso.&lt;/i&gt;}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;i&gt;Eu eternalmente me arrependo em não perguntar a ela por que precisava de uma faca industrial. Eu eternalmente me arrependo de não perceber que ela estava escondendo seus pulsos naquelas mangas longas. Eu eternalmente me arrependo de não perceber que ela sempre tinha maior cautela em escondê-los toda vez que falava com ela. Eu eternalmente me arrependo de não perceber que nunca mais ouvi seu riso cheio de ânimo, e que ela perambulava pela corporação com olhos vazios mais e mais vezes.&lt;/i&gt; }
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {&lt;i&gt;Não consigo imaginar a dor de cortar o próprio pulso. Eu descobri que a única razão dela conseguir fazer algo assim era que ela o cortava de uma só vez.&lt;/i&gt;}
+      ]
+    </desc>
+    <desc id="6" openLevel="4">
+      [
+      {&lt;i&gt;Nós sempre abríamos uma garrafa de vinho sempre que tínhamos sucesso. Acabou se tornando um de nossos hábitos. Ela nos disse que se continuássemos assim, precisaria somente de um passo mal dado para que se tornasse um hábito indiferente. Assim, nós devemos sempre sorrir, regozijar, e celebrar cada coisinha que nos leva ao sucesso. Além de nunca ignorar as falhas, já que o sucesso pode nascer de uma pilha de falhas.&#13;&#10;Quando eu vi o entrançado de cicatrizes no pulso dela, me lembrei de nosso armário de vinhos. Nós já tomamos tantas garrafas; que só tinha uma sobrando.&#13;&#10;
+      E naquele dia, eu estourei a rolha dessa última.&lt;/i&gt;}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="noRationalist">Quando #0, que tinha Fortitude de Nível 1, concluiu o processo de trabalho, uma mão esticou-se da $0 e puxou #0 para suas profundidades. O mesno fenômeno aconteceu com um Agente que tinha Temperança de Nível 1.</specialTip>
+      <specialTip openLevel="1" key="manyHands">Uma mão pálida foi à superfície da $0 após ter absorvido um Agente. Conforme o número de mãos aumentava, o número de Caixas de EP produzidas também aumentava.</specialTip>
+      <specialTip openLevel="1" key="threeHands">&lt;Cuidado&gt; Quando o $0 possui três mãos, a segurança do próximo Agente não é garantida. Parece que a $0 irá absorver os Agentes independentemente do resultado do trabalho ou seus níveis de virtude.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

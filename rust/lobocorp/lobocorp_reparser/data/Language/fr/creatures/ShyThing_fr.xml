@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등0000000000000000000
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id="100052">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {La lumière du soleil ne pénètre pas ce complexe, mais $0 sèche délicatement sa propre peau.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {La Cité a encouragé $0 à garder le sourire, mais lui qui était trop timide pour se révéler a plutôt choisi de…}
+      ]
+    </narration>
+  </info>
+  <observe level="3">
+    <collection>
+      <codeNo openLevel="0">O-01-92</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/ShyThing</portrait>
+      <name openLevel="1">
+        L’Air Intimidé du Jour
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>Quelle belle journée ! Toujours intimidé aujourd'hui ?</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Quelle belle journée ! Toujours intimidé aujourd'hui ?}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Un jour ensoleillé, alors qu'il séchait candidement le linge dans la cour, le chagrin l’a soudainement frappé.&#13;&#10;&#13;&#10;“Dans notre cité, les sacrifices pour les entreprises doivent être hautement révérés. Gloire à leur mort. Donc aucune raison de pleurer. Au contraire, tu devrais en être heureux.”&#13;&#10;“C'est quoi cette expression sur ton visage ? Ce genre de mimiques n'est pas recommandé dans notre cité.”&#13;&#10;“Mon Dieu, pourquoi fais-tu une tête pareille ? Tu rends tout le monde lugubre. Sois moins égoïste, tu n’es pas seul au monde après tout.”&#13;&#10;“Tu n’es pas très doué pour exprimer tes émotions. Tu dois être assez timide.”&#13;&#10;“Hé, essaye d'avoir l'air plus heureux, comme ça ceux qui vivent dans les Banlieues nous envieront encore plus.”&#13;&#10;“Fais un plus grand sourire sur ton visage ! Ce n'est pas si dur.”&#13;&#10;“La prochaine fois, essaye de t’exprimer plus clairement, c'est très important de s'exprimer dans cette société.”&#13;&#10;&#13;&#10;Un jour ensoleillé, identique au jour où ils séchait candidement le linge dans la cour, il a séché sa propre peau.}
+    ]
+  </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Tout le monde fut enfin satisfait quand il montra un sourire éclatant. S'il rencontrait des gens qui lui demandaient ce qui n'allait pas, il répondait : “Je suis juste timide, c'est tout. Juste timide…”}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Si l'on essaie de regarder le visage derrière la peau, le résultat ne sera pas joli. La zone derrière sa peau est le seul espace personnel qui lui reste. Le laisser intact est le dernier acte de générosité que la Cité peut offrir.}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Cette Anomalie change son expression faciale de temps en temps. Cependant, face à une autre personne, les changements s'arrêtent.</specialTip>
+      <specialTip openLevel="1" key="2">Du sourire à la colère, elle a 5 niveaux d'expressions faciales appelées Visages 1, 2, 3, 4 et 5.</specialTip>
+      <specialTip openLevel="1" key="3">Rien ne se passe devant le visage 3. Le visage 2 a octroyé un taux de réussite accru et l'employé a récupéré des PSM lorsque le travail était terminé avec succès.</specialTip>
+      <specialTip openLevel="1" key="4">Le visage 4 a octroyé 150% de dégâts infligés pendant le travail et le taux de réussite a diminué.</specialTip>
+      <specialTip openLevel="1" key="5">Le visage 5 a octroyé 200% de dégâts infligés pendant le travail et le taux de réussite a considérablement diminué.</specialTip>
+      <specialTip openLevel="1" key="6">Le visage 1 a octroyé 50% de dégâts infligés pendant le travail et le taux de réussite a considérablement augmenté. De plus, à chaque fois que le travail réussissait, les PV et PSM de l’employé se régénéraient.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

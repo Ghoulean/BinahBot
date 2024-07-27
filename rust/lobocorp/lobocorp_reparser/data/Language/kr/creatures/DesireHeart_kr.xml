@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300001">
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-77</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/DesireHeart</portrait>
+
+      <name openLevel ="1">
+        열망하는 심장
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>과한 열망은 그릇된 흥분을 초래했다.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {신체에서 분리되었음에도 박동을 멈추지 않는 주인 없는 심장이다. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {빌리는 동안만은 심작 박동수가 약 2배 이상 상승하며 강해진 체력과 공격력을 체감할 수 있다. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {과한 열망은 그릇된 흥분을 초래했다. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+ 
+      [
+      {누군가를 공격하지 않거나 30초 안에 심장을 돌려놓은 직원들은 그 강해진 체력을 발판삼아 의미없는 살인만을 반복하게 되었다.}
+      ]
+    </desc>
+
+     <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">$0을 장착한 대상은 체력과 공격속도가 상승한다.</specialTip>
+      <specialTip openLevel="2" key="2">$0을 장착한 이후 특정 대상을 공격하지 않고 반납을 명령할 경우 착용자는 이성을 잃음과 동시에 폭력성이 급격히 증가하여 주변 대상을 공격하려는 모습을 보인다.</specialTip>
+      <specialTip openLevel="2" key="3">$0를 장착한 직후 30초 이내에 반납을 명령할 경우에도 착용자에게 위와 동일한 현상이 나타났다.</specialTip>
+      </specialTipSize>
+
+
+  </observe>
+</creature>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id="100020">
+
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+
+    <narration action="mid1">
+      [
+      {実際には、その小さなサイズの$0が 踏まれるのを防ぐために止まり木があります。},
+      {実際には、とまり木の目的は その小さなサイズのために起こりうる 予期せぬ物理的な危険を防ぐことです。}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {ほとんどの場合、 普通の鳥のように振る舞い 収容室を飛びまわっています。},
+      {$0は決して鳴きません。 しかしその胃は 時々ぴくぴくと動きます。}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0に隠されている 秘密の歯を知っている職員は 多くありません。},
+      {$0のおぞましい肉が いくつかのパーツに分かれていることを どれくらいの職員が知っているでしょうか？}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="2">
+    <collection>
+      <codeNo openLevel ="0">O-02-56</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/SmallBird</portrait>
+
+      <name openLevel ="1">
+        小鳥
+      </name>
+
+      <name openLevel="2">
+        罰鳥
+      </name>
+      
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        処罰！
+      </specialName>
+
+      <openText>人々は大昔から罪を犯してきた。 『なぜ彼らはそのようなことをするのだろう？ それが悪いことだと知っているのに』</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {弱者、罪人、不敬者を罰する自信に満ちた小鳥。一部の職員は小さな翼の羽ばたきはかなりかわいく見えると述べている。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {人々は大昔から罪を犯してきた。『なぜ彼らはそのようなことをするのだろう？それが悪いことだと知っているのに』小鳥は不思議に思った。&#13;&#10;『悪いことをする人を罰する人がいないからだ。僕がその役割を果たすせば悪いことは起こらない！』小鳥は住んでいた森から離れ、二度と戻ってこなかった。}
+      ]
+    </desc>
+
+
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="NoWorking">他のアブノーマリティの収容室に職員が入ると一般的な確率でクリフォトカウンターが減少した。</specialTip>
+      <specialTip openLevel="2" key="PanicOut">職員#0がパニックに陥るとクリフォトカウンターが減少した。</specialTip>
+      <specialTip openLevel="2" key="comebackhome">$0はパニックを起こした職員が正気を取り戻したり、脱走から一定時間を過ぎると、自ら収容室へと戻っていった。</specialTip>
+      <specialTip openLevel="2" key="NoAccept">職員#0に、$0の鎮圧を指示し、該当職員が$0に攻撃を行うと、$0の腹部が裂けて［編集済］になった。その後、職員#0の死亡が確認された。鎮圧は失敗した。</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {鳥はあなたをじっと見つめる。}
+        {この鳥の名前は何ですか？}
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="小鳥" target="" isAnswer="false"/>
+        <node desc="罰鳥" target="" isAnswer="true"  message="「罰鳥」の 最終観測報告書の 入手に成功しました。"/>
+      </select>
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {「むかし むかし、 深く 暗い 森のどこかで 3羽の 鳥が 住んでいました。」}
+        {あなたが 好きだった 童話の 初めの 一節でした。}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+</creature>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300102">
+
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-86</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/HellTrian</portrait>
+
+      <name openLevel ="1">
+        黄泉列车
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>
+        时间一到，列车伴随着刺耳的汽笛&#13;&#10;声飞驰而过。
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {过度安静的售票员正售卖着没有标识终点站的车票。售票&#13;&#10;厅里没有张贴时刻表，取而代之的是一些闪烁的灯光。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {当一号和二号灯亮起时，员工会感到神清气爽。当三号灯&#13;&#10;亮起时，员工感到精神抖擞，身上的创口开始慢慢愈合。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {当四号灯亮起时，员工们听见远方传来响亮的汽笛声。所&#13;&#10;有员工的身体状态都有一定程度的好转。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {时间一到，列车伴随着刺耳的汽笛声飞驰而过。它会带走&#13;&#10;那些愿意了结自己性命的员工，穿过永无止境的隧道...}
+      ]
+    </desc>
+
+
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">每隔30秒，售票站就会亮起一盏灯，最多亮起四盏。当某位员工进入这&#13;&#10;间收容单元后，售票员会向其售出一张车票并熄灭所有的灯。</specialTip>
+      <specialTip openLevel="2" key="2">在亮起一盏灯的情况下售出一张车票时，持票的员工能够恢复生命值和&#13;&#10;精神值。</specialTip>
+      <specialTip openLevel="2" key="3">在亮起两盏灯的情况下售出一张车票时，持票的员工能够恢复更多的生&#13;&#10;命值和精神值。</specialTip>
+      <specialTip openLevel="2" key="4">在亮起三盏灯的情况下售出一张车票时，与持票员工同一部门的所有员&#13;&#10;工都能够恢复生命值和精神值。</specialTip>
+      <specialTip openLevel="2" key="5">在亮起四盏灯的情况下售出一张车票时，设施内所有的员工都能够恢复&#13;&#10;生命值和精神值。</specialTip>
+      <specialTip openLevel="2" key="6">在已经亮起四盏灯的情况下，如果30秒之内仍没有员工取票。那么黄泉&#13;&#10;列车将从远方驶来并对穿过的员工造成黑色伤害。列车驶过设施后，四&#13;&#10;盏灯都将熄灭。</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

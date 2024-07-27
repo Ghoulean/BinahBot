@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100042">
+
+    <narration action="move">
+      #0 designado a la sala de contención de $0.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 está buscando el olor del cuerpo con muchas sonrisas.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 espera a que llegue pronto el olor a sangre, manteniendo todas las risas de quienes no pudieron ser vistos aquí.},
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-01-75</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/DangoCreature</portrait>
+
+      <name openLevel ="1">
+        La Montaña de Cuerpos Sonrientes
+      </name>
+
+      <riskLevel openLevel ="1">
+        ALEPH
+      </riskLevel>
+
+
+      <openText>Las caras sonrientes son desconocidas pero tristes.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Siempre es así. Sin embargo, un día decenas de empleados murieron en un accidente. La razón es la misma que siempre. Algo rompe, intentan detenerlo, luego conduce a otra brecha...&#13;&#10;Afortunadamente, una cosa es que el departamento fue cerrado antes de que las cosas pudieran empeorar, por lo que todos murieron en el mismo lugar. Literalmente, se formó una montaña de cuerpos. Obviamente, nadie quería limpiar ese desastre. Normalmente, debería haber sido atendido dentro del día, pero debido a que el accidente fue tan horrible y todos estaban tan agotados que la limpieza se retrasó con la autorización del Sephirah del departamento. No me preguntes en qué departamento estaba, no recuerdo todos los detalles.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Cuando se deja a la intemperie, un cadáver comenzará a pudrirse en unas pocas horas. La mayoría de los cuerpos que mueren aquí están dañados de una manera u otra, por lo que se descomponen aún más rápido.&#13;&#10;Supongo que todavía no lo sabes, pero la mayoría de los empleados aquí son muy buenos para limpiar cadáveres. Limpiar una y otra vez hará que cualquier persona sea un experto, incluso si no quiere ser. Digamos que alguien con quien acabas de hablar sobre qué cenar para cenar murió de una manera horrible. Ahora, en lugar de huir y vomitar, todas las experiencias repetidas te ayudarán a limpiar.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {En circunstancias normales, la montaña se habría retirado rápidamente, pero permaneció en el departamento durante mucho tiempo. Así que decayó, se derritió, se corroó y se rompió siguiendo las leyes de la naturaleza.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Así comenzó la creación, desde la Montaña de Cuerpos, los muertos dieron vida a algo. Increíble, huh? Todavía tengo más que decirte. Los muertos se fusionaron entre sí, todos sonriendo. Compartiendo partes del cuerpo, al menos aquellas que aún estaban intactas, se convirtieron en piernas y bocas del otro. Eso no significa que su conciencia también haya sido restaurada. Solo quiere una cosa: nuestra carne empapada en sangre. Cuando hay un anuncio de la muerte de alguien, debe verificar si esta cosa ha sido puesta en cuarentena. Una vez que perciba el olor del aroma, nos perseguirá en un instante. Las caras sonrientes son desconocidas pero tristes.&#13;&#10;Cuantos más cuerpos se crucen, más definida se vuelve su forma. Y nunca está satisfecho.&#13;&#10;Te digo todo esto porque ya casi está aquí. Accidente siempre ocurre en este lugar. Algunos pueden dedicar un poco de su tiempo a un momento de silencio, pero la mayoría rechazará pensar "¿Otra vez?" Y les dará la espalda. Afortunadamente, una cosa es que el departamento ha sido cerrado. Soy el único que queda de todos modos. Aprendiste algo de mi historia? Qué clase de lección se puede aprender de una historia tan horrible como esta? Es similar a la mayoría de los cuentos de hadas. ''No seas perezoso'' es la lección. Cuando mi voz cese, ven aquí y limpia a tus colegas en exactamente 3 minutos, y deshazte de tus colegas. }
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Muy pronto no podré seguir hablando. Estoy a punto de tragar una gran bomba. El tiempo se acaba. La sangre fluye por todos lados. Estoy empezando a ver las caras sonrientes ahora... algo de lo que no ves mucho por aquí.&#13;&#10;No te sorprendas cuando escuches una fuerte explosión. Como he dicho, son precisamente 3 minutos. Estoy seguro de que una bomba de este tamaño será capaz de suprimirla. &#13;&#10;El último cuerpo que encuentre será mío.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">Cuando #0, quien trabajaba en la celda, muere, el Contador de Qlifot se reduce.</specialTip>
+      <specialTip openLevel="2" key="2">Cuando un empleado herido ingresó a la unidad de contención, el Contador Qlifot se reduce.</specialTip>
+      <specialTip openLevel="2" key="3">Cuando el resultado del trabajo fue malo, se redujo el contador Qlifot de $0.</specialTip>
+      <specialTip openLevel="2" key="4">Cuando 10 o más empleados mueran dentro de las instalaciones, el contador Qlifot disminuirá. Sin embargo, no reconoció la muerte de empleados que fueron eliminados con balas de ejecución.</specialTip>
+      <specialTip openLevel="2" key="5">Al escapar, se ve que $0 es sensible a los cadáveres. Al suprimir, se recomienda asegurarse de que nadie muera debido a $0. Si ocurren bajas, trata de mantener a $0 de pasar sobre los muertos.</specialTip>
+      <specialTip openLevel="1" key="6">Si la supresión de $0 no se ha completado en el nivel anterior, debe tener mucho cuidado para evitar cualquier muerte dentro de la sección donde se encuentra a $0.</specialTip>
+      <specialTip openLevel="1" key="7">Cuando otras entidades se originan en el cuerpo principal de $0 después de escapar, simplemente reducir su PS a 0 no lo suprimió completamente. $0 solo se eliminará atacando el cuerpo principal después de reducir continuamente su PS y eliminar todas las demás entidades generadas.</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300108">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-97</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/PromiseAndFaith</portrait>
+      <name openLevel="1">
+        Old Faith and Promise
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <openText>
+        Those betrayed hearts sank into the depths, slowly forgotten in the ever-lengthening corridors of time.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {A mysterious marble which hangs in the Containment Unit.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {We know of an ancient practice; the countless promises that were made, and the unending faith placed in them.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {However, all that they yielded was only hollowness and betrayal.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Those betrayed hearts sank into the depths, slowly forgotten in the ever-lengthening corridors of time.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {If you make an attempt with an austere heart devoid of desire or expectation, however, you may receive an unexpected reward.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Utilize the Abnormality to fortify an E.G.O Weapon. This will consume a small amount of the facility’s currently collected energy.</specialTip>
+      <specialTip openLevel="2" key="2">The fortified weapon will have higher Attack Power.</specialTip>
+      <specialTip openLevel="2" key="3">However, there is a possibility of losing the E.G.O during the fortification process.</specialTip>
+      <specialTip openLevel="2" key="4">The fortified weapon will lose the Abnormality’s power after the day has passed.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

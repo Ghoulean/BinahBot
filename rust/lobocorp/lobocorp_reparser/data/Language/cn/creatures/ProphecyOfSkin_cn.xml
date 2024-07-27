@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300103">
+
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-90</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ProphecyOfSkin</portrait>
+
+      <name openLevel ="1">
+        人皮启示录
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <openText>
+        请成为我们永远的救世主，真理将&#13;&#10;会解放这世间的所有人！
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {这是一本外表古旧的宗教书籍，它被安置在一个由人骨支&#13;&#10;起的书架上。厚实的人皮书页里承载着无法估量的信息。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {虔诚的信徒们用人皮装订圣籍，以此祈祷他们的神圣信仰&#13;&#10;永世长存。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {读过这本书的员工将会被难以想象的万千真理所启发，而&#13;&#10;真正理解了那些真理的人会被先知们召唤——你不能拒绝&#13;&#10;他们的召唤。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {请成为我们永远的救世主，真理将会解放这世间的所有人！}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">读过“$0”的员工会获得额外的精神值加成。</specialTip>
+      <specialTip openLevel="2" key="2">员工们随时都可以阅读“$0”，直到他们的精神值到达上限为&#13;&#10;止。</specialTip>
+      <specialTip openLevel="2" key="3">阅读“$0”的次数越多，对白色伤害的抗性就越低。</specialTip>
+      <specialTip openLevel="2" key="4">读过“$0”的员工一旦陷入恐慌，就会立刻死亡。</specialTip>
+    </specialTipSize>
+
+  </observe>
+</creature>
