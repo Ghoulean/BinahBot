@@ -8,15 +8,14 @@ pub struct Weapon<'a> {
     pub id: &'a str,
     pub name_id: &'a str,
     pub desc_id: &'a str,
+    pub special_desc_id: &'a str,
     pub risk: RiskLevel,
     pub range: WeaponRange,
-    pub attack_speed: WeaponAttackSpeed,
+    pub attack_speed: f64,
     pub damage_range: [i32; 2],
     pub damage_type: DamageType,
     pub max_collectable_amount: i32,
     pub cost: i32,
-    pub special_info_id: &'a str,
-    pub special_ability_id: &'a str,
     pub equip_requirements: &'a [EquipRequirement],
     pub observation_level: Option<i32>,
     pub image: &'a str,
@@ -57,15 +56,6 @@ pub enum WeaponRange {
     VeryShort,
 }
 
-#[derive(Debug, PartialEq, strum_macros::Display)]
-pub enum WeaponAttackSpeed {
-    VeryFast,
-    Fast,
-    Normal,
-    Slow,
-    VerySlow,
-}
-
 #[derive(Debug)]
 pub struct EquipRequirement(EquipRequirementKey, i32);
 
@@ -77,4 +67,13 @@ pub enum EquipRequirementKey {
 #[derive(Debug, PartialEq, strum_macros::Display)]
 pub enum Slot {
     Brooch, Cheek, Eye, Face, Hand1, Hand2, Hat, Helmet, LeftBack, Mouth1, Mouth2, Neckwear, RightBack, Special
+}
+
+#[derive(Debug, PartialEq, strum_macros::Display)]
+pub enum WeaponAttackSpeed {
+    VeryFast,
+    Fast,
+    Normal,
+    Slow,
+    VerySlow,
 }
