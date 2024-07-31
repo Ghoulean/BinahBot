@@ -82,3 +82,17 @@ impl TryFrom<i32> for RiskLevel {
         }
     }
 }
+
+impl TryFrom<&str> for DamageType {
+    type Error = String;
+
+    fn try_from(value: &str) -> Result<Self, Self::Error> {
+        match value.to_lowercase().as_str() {
+            "b" => Ok(DamageType::Black),
+            "r" => Ok(DamageType::Red),
+            "w" => Ok(DamageType::White),
+            "p" => Ok(DamageType::Pale),
+            _ => Err("invalid damage type".to_string())
+        }
+    }
+}

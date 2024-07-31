@@ -12,6 +12,12 @@ pub fn get_unique_node<'a>(node: &Node<'a, 'a>, element_name: &'a str) -> Result
     ret_val.ok_or("element_name not found")
 }
 
+pub fn get_first_node<'a>(node: &Node<'a, 'a>, element_name: &'a str) -> Result<Node<'a, 'a>, &'a str> {
+    node.descendants()
+        .find(|n| n.is_element() && n.has_tag_name(element_name))
+        .ok_or("element_name not found")
+}
+
 pub fn get_unique_node_text<'a>(node: &Node<'a, 'a>, element_name: &'a str) -> Result<&'a str, &'a str> {
     get_unique_node(node, element_name).and_then(|x| x.text().ok_or("element_name does not have text"))
 }

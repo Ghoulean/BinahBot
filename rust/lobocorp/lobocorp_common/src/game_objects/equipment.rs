@@ -66,7 +66,7 @@ pub struct EquipRequirement(pub EquipRequirementKey, pub i32);
 
 #[derive(Debug, PartialEq, strum_macros::Display)]
 pub enum EquipRequirementKey {
-    AgentLevel, Fortitude, Prudence, Temperance, Justice, AllStats
+    AgentLevel, Fortitude, Prudence, Temperance, Justice
 }
 
 #[derive(Debug, PartialEq, strum_macros::Display)]
@@ -98,6 +98,21 @@ impl From<u32> for WeaponRangeCategories {
             WeaponRangeCategories::Long
         } else {
             WeaponRangeCategories::VeryLong
+        }
+    }
+}
+
+impl TryFrom<&str> for EquipRequirementKey {
+    type Error = String;
+
+    fn try_from(value: &str) -> Result<Self, Self::Error> {
+        match value.to_lowercase().as_str() {
+            "b" => Ok(EquipRequirementKey::Temperance),
+            "r" => Ok(EquipRequirementKey::Fortitude),
+            "w" => Ok(EquipRequirementKey::Prudence),
+            "p" => Ok(EquipRequirementKey::Justice),
+            "level" => Ok(EquipRequirementKey::AgentLevel),
+            _ => Err("invalid damage type".to_string())
         }
     }
 }
