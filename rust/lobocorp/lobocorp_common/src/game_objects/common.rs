@@ -1,10 +1,13 @@
 #[derive(Debug)]
 pub struct Defenses {
-    red: Resistance,
-    white: Resistance,
-    black: Resistance,
-    pale: Resistance
+    pub red: Resistance,
+    pub white: Resistance,
+    pub black: Resistance,
+    pub pale: Resistance
 }
+
+#[derive(Debug)]
+pub struct DamageRange(pub i32, pub i32);
 
 #[derive(Debug, PartialEq, strum_macros::Display)]
 pub enum DamageType {
@@ -15,7 +18,7 @@ pub enum DamageType {
 }
 
 #[derive(Debug)]
-pub struct Resistance(f64);
+pub struct Resistance(pub f64);
 
 #[derive(Debug, PartialEq, strum_macros::Display)]
 pub enum ResistanceCategories {
@@ -38,7 +41,7 @@ pub enum RiskLevel {
 }
 
 #[derive(Debug)]
-pub struct StatBonus(Stat, i32);
+pub struct StatBonus(pub Stat, pub i32);
 
 #[derive(Debug, PartialEq, strum_macros::Display)]
 pub enum Stat {
@@ -61,6 +64,21 @@ impl From<f64> for ResistanceCategories {
             ResistanceCategories::Weak
         } else {
             ResistanceCategories::Vulnerable
+        }
+    }
+}
+
+impl TryFrom<i32> for RiskLevel {
+    type Error = String;
+    
+    fn try_from(value: i32) -> Result<Self, Self::Error> {
+        match value {
+            1 => Ok(RiskLevel::Zayin),
+            2 => Ok(RiskLevel::Teth),
+            3 => Ok(RiskLevel::He),
+            4 => Ok(RiskLevel::Waw),
+            5 => Ok(RiskLevel::Aleph),
+            _ => Err("invalid risk level".to_string())
         }
     }
 }
