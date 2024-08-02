@@ -27,11 +27,11 @@ pub struct Suit<'a> {
     pub id: u32,
     pub name_id: &'a str,
     pub desc_id: &'a str,
+    pub special_desc_id: &'a str,
+    pub risk: RiskLevel,
     pub defenses: Defenses,
     pub max_collectable_amount: i32,
     pub cost: i32,
-    pub special_info_id: &'a str,
-    pub special_ability_id: &'a str,
     pub equip_requirements: &'a [EquipRequirement],
     pub observation_level: Option<i32>,
     pub image: Option<&'a str>,
@@ -49,10 +49,10 @@ pub struct Gift<'a> {
     pub image: Option<&'a str>,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct WeaponRange(pub u32);
 
-#[derive(Debug, PartialEq, strum_macros::Display)]
+#[derive(Debug, Clone, PartialEq, strum_macros::Display)]
 pub enum WeaponRangeCategories {
     VeryLong,
     Long,
@@ -61,23 +61,23 @@ pub enum WeaponRangeCategories {
     VeryShort,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct EquipRequirement(pub EquipRequirementKey, pub i32);
 
-#[derive(Debug, PartialEq, strum_macros::Display)]
+#[derive(Debug, Clone, PartialEq, strum_macros::Display)]
 pub enum EquipRequirementKey {
     AgentLevel, Fortitude, Prudence, Temperance, Justice
 }
 
-#[derive(Debug, PartialEq, strum_macros::Display)]
+#[derive(Debug, Clone, PartialEq, strum_macros::Display)]
 pub enum Slot {
     Brooch, Cheek, Eye, Face, Hand1, Hand2, Hat, Helmet, LeftBack, Mouth1, Mouth2, Neckwear, RightBack, Special
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct WeaponAttackSpeed(pub f64);
 
-#[derive(Debug, PartialEq, strum_macros::Display)]
+#[derive(Debug, Clone, PartialEq, strum_macros::Display)]
 pub enum WeaponAttackSpeedCategories {
     VeryFast,
     Fast,

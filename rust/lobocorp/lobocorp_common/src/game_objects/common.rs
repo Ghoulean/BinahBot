@@ -1,4 +1,4 @@
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Defenses {
     pub red: Resistance,
     pub white: Resistance,
@@ -6,10 +6,10 @@ pub struct Defenses {
     pub pale: Resistance
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct DamageRange(pub i32, pub i32);
 
-#[derive(Debug, PartialEq, strum_macros::Display)]
+#[derive(Debug, Clone, PartialEq, strum_macros::Display)]
 pub enum DamageType {
     Red,
     White,
@@ -17,10 +17,10 @@ pub enum DamageType {
     Pale,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Resistance(pub f64);
 
-#[derive(Debug, PartialEq, strum_macros::Display)]
+#[derive(Debug, Clone, PartialEq, strum_macros::Display)]
 pub enum ResistanceCategories {
     Absorb,
     Immune,
@@ -31,7 +31,7 @@ pub enum ResistanceCategories {
     Vulnerable
 }
 
-#[derive(Debug, PartialEq, strum_macros::Display)]
+#[derive(Debug, Clone, PartialEq, strum_macros::Display)]
 pub enum RiskLevel {
     Zayin,
     Teth,
@@ -40,10 +40,10 @@ pub enum RiskLevel {
     Aleph,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct StatBonus(pub Stat, pub i32);
 
-#[derive(Debug, PartialEq, strum_macros::Display)]
+#[derive(Debug, Clone, PartialEq, strum_macros::Display)]
 pub enum Stat {
     Hp, Sanity, MovementSpeed, AttackSpeed, SuccessRate, WorkSpeed,
 }
@@ -94,5 +94,21 @@ impl TryFrom<&str> for DamageType {
             "p" => Ok(DamageType::Pale),
             _ => Err("invalid damage type".to_string())
         }
+    }
+}
+
+impl TryFrom<&str> for Stat {
+    type Error = String;
+
+    fn try_from(value: &str) -> Result<Self, Self::Error> {
+        Ok(match value {
+            "hp" => Stat::Hp,
+            "mental" => Stat::Sanity,
+            "workProb" => Stat::SuccessRate,
+            "attackSpeed" => Stat::AttackSpeed,
+            "movement" => Stat::MovementSpeed,
+            "cubeSpeed" => Stat::WorkSpeed,
+            _ => return Err("invalid stat".to_string())
+        })
     }
 }
