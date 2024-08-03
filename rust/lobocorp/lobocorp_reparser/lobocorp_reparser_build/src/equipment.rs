@@ -79,9 +79,9 @@ pub struct PartialGift {
 
 #[derive(Debug)]
 pub struct AllEquipment {
-    weapons: Vec<PartialWeapon>,
-    suits: Vec<PartialSuit>,
-    gifts: Vec<PartialGift>
+    pub weapons: Vec<PartialWeapon>,
+    pub suits: Vec<PartialSuit>,
+    pub gifts: Vec<PartialGift>
 }
 
 pub fn load_equipment() -> AllEquipment {

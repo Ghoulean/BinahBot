@@ -1,6 +1,5 @@
 use std::collections::HashMap;
 use std::fs;
-use std::os::linux::raw::stat;
 use std::path::PathBuf;
 
 use lobocorp_common::game_objects::abnormality::ToolType;
@@ -65,10 +64,11 @@ pub enum ObtainEquipmentNumber {
 
 #[derive(Debug)]
 pub struct PartialBreachingEntity {
+    pub id: String,
     pub hp: i32,
     pub speed: i32,
     pub defenses: Defenses,
-    pub damage_type: Option<DamageType>,
+    pub damage_type: DamageType,
     pub risk_level: RiskLevel
 }
 
@@ -81,7 +81,6 @@ pub struct PartialToolInfo {
 
 pub fn load_encyclopedia(list: &[ListEntry]) -> HashMap<ListEntry, PartialEncyclopediaInfo> {
     list.iter().map(|x| {
-        dbg!(&x);
         if x.stat == "DontTouchMe_stat" {
             return (x.clone(), PartialEncyclopediaInfo::DontTouchMe);
         }
@@ -90,11 +89,11 @@ pub fn load_encyclopedia(list: &[ListEntry]) -> HashMap<ListEntry, PartialEncycl
         let stat_str = fs::read_to_string(stat_path.as_path()).expect(&format!("cannot read {:?}", stat_path));
         let doc: Document = Document::parse(&stat_str).expect(&format!("failed parsing {:?}", stat_path));
 
-        (x.clone(), parse(&doc))
+        (x.clone(), parse(x.id, &doc))
     }).collect()
 }
 
-fn parse(doc: &Document) -> PartialEncyclopediaInfo {
+fn parse(id: u32, doc: &Document) -> PartialEncyclopediaInfo {
     let creature_node = get_unique_node(&doc.root(), "creature").expect("couldn't find creature");
     let is_tool = get_unique_node(&creature_node, "stat")
         .and_then(|x| get_unique_node(&x, "workType"))
@@ -103,11 +102,11 @@ fn parse(doc: &Document) -> PartialEncyclopediaInfo {
     if is_tool {
         PartialEncyclopediaInfo::Tool(parse_tool_abno(doc))
     } else {
-        PartialEncyclopediaInfo::Normal(parse_normal_abno(doc))
+        PartialEncyclopediaInfo::Normal(parse_normal_abno(id, doc))
     }
 }
 
-fn parse_normal_abno(doc: &Document) -> PartialNormalInfo {
+fn parse_normal_abno(id: u32, doc: &Document) -> PartialNormalInfo {
     let creature_node = get_unique_node(&doc.root(), "creature").expect("couldn't find creature");
     let stat_node = get_unique_node(&creature_node, "stat").expect("couldn't find stat node");
 
@@ -195,7 +194,7 @@ fn parse_normal_abno(doc: &Document) -> PartialNormalInfo {
 
     let related_equipment = get_nodes(&stat_node, "equipment").iter().map(|x| {
         let id = x.attribute("equipId").and_then(|x| x.parse::<u32>().ok()).expect("couldn't get equipment id");
-        let observation_level = x.attribute("level").and_then(|x| x.parse::<i32>().ok()).expect("couldn't get equipment id");
+        let observation_level = x.attribute("level").and_then(|x| x.parse::<i32>().ok()).expect("couldn't get equipment level");
         let obtain_number = x.attribute("cost")
             .and_then(|x| x.parse::<i32>().ok())
             .map(|x| ObtainEquipmentNumber::Cost(x))
@@ -223,9 +222,10 @@ fn parse_normal_abno(doc: &Document) -> PartialNormalInfo {
     let mut breaching_entities = Vec::new();
     if let (Some(hp), Some(speed), Some(defenses)) = (hp, speed, defenses.clone()) {
         breaching_entities.push(PartialBreachingEntity {
+            id: id.to_string(),
             hp, speed,
             defenses: defenses,
-            damage_type: Some(breaching_damage_type),
+            damage_type: breaching_damage_type,
             risk_level: risk.clone(),
         })
     };
@@ -237,10 +237,20 @@ fn parse_normal_abno(doc: &Document) -> PartialNormalInfo {
             let child_stat_path = PathBuf::from(format!("{}{}.xml", CHILD_CREATURE_DIR, child_abno_stat));
             let child_stat_str = fs::read_to_string(child_stat_path.as_path()).expect(&format!("cannot read {:?}", child_stat_path));
             let doc: Document = Document::parse(&child_stat_str).expect(&format!("failed parsing {:?}", child_stat_path));
-            let children = parse_child_abno(&doc);
+            let children = parse_child_abno(child_abno_stat, &doc);
             breaching_entities.extend(children);
         }
     };
+    if id == 100038 { // apo bird
+        let children = vec![
+            "BossGateWay_stat", "BigEgg_stat", "LongEgg_stat", "SmallEgg_stat"
+        ].into_iter().map(|x| {
+            let path_buf = PathBuf::from(format!("{}{}.xml", BASE_CREATURE_DIR, x));
+            let file_str = fs::read_to_string(path_buf.as_path()).expect("failed file read");
+            parse_egg(&x, &Document::parse(&file_str).expect("failed parse"))
+        }).collect::<Vec<_>>();
+        breaching_entities.extend(children);
+    }
 
     let image = None;
 
@@ -271,7 +281,7 @@ fn parse_tool_abno(doc: &Document) -> PartialToolInfo {
     }
 }
 
-fn parse_child_abno(doc: &Document) -> Vec<PartialBreachingEntity> {
+fn parse_child_abno(id: &str, doc: &Document) -> Vec<PartialBreachingEntity> {
     let creature_node = get_unique_node(&doc.root(), "creature").expect("couldn't find creature");
     let stat_node = get_unique_node(&creature_node, "stat").expect("couldn't find stat node");
 
@@ -297,15 +307,23 @@ fn parse_child_abno(doc: &Document) -> Vec<PartialBreachingEntity> {
             black: get_defense_val(&x, "B"),
             pale: get_defense_val(&x, "P"),
         };
+        // hardcode apostle damage type
+        let damage_type = if id == "DeathAngelApostle_stat" {
+            let defense_id = x.attribute("id").and_then(|x| x.parse::<usize>().ok()).expect("couldn't get apostle id");
+            [DamageType::Red, DamageType::Pale, DamageType::White, DamageType::Black][defense_id - 1].clone()
+        } else {
+            damage_type.clone().unwrap()
+        };
         PartialBreachingEntity {
             hp, speed, defenses,
-            damage_type: damage_type.clone(),
+            id: id.to_string(),
+            damage_type: damage_type,
             risk_level: risk_level.clone()
         }
     }).collect()
 }
 
-fn parse_egg(doc: &Document) -> PartialBreachingEntity {
+fn parse_egg(id: &str, doc: &Document) -> PartialBreachingEntity {
     let creature_node = get_unique_node(&doc.root(), "creature").expect("couldn't find creature");
     let stat_node = get_unique_node(&creature_node, "stat").expect("couldn't find stat node");
 
@@ -327,7 +345,8 @@ fn parse_egg(doc: &Document) -> PartialBreachingEntity {
 
     let damage_type = get_unique_node(&creature_node, "workDamage").ok()
         .and_then(|x| x.attribute("type"))
-        .and_then(|x| DamageType::try_from(x).ok());
+        .and_then(|x| DamageType::try_from(x).ok())
+        .expect("couldn't get damage_type");
 
     let risk_level = get_unique_node_text(&creature_node, "riskLevel").ok()
         .and_then(|x| x.parse::<i32>().ok())
@@ -335,7 +354,7 @@ fn parse_egg(doc: &Document) -> PartialBreachingEntity {
         .expect("couldn't get risk_level");
 
     PartialBreachingEntity {
-        hp, speed, defenses, damage_type, risk_level
+        id: id.to_string(), hp, speed, defenses, damage_type, risk_level
     }
 }
 

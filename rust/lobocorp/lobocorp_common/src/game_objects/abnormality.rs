@@ -31,8 +31,8 @@ pub struct NormalInfo<'a> {
     pub observation_level_bonuses: [StatBonus; 4],
     pub weapon: Option<Weapon<'a>>,
     pub suit: Option<Suit<'a>>,
-    pub gifts: Vec<Gift<'a>>,
-    pub breaching_entities: Vec<BreachingEntity<'a>>, // includes self if is_breachable == true
+    pub gifts: &'a [Gift<'a>],
+    pub breaching_entities: &'a [BreachingEntity<'a>], // includes self if is_breachable == true
     pub image: &'a str,
 }
 
@@ -50,6 +50,7 @@ pub struct BreachingEntity<'a> {
     pub hp: i32,
     pub speed: i32,
     pub defenses: Defenses,
+    pub damage_type: DamageType,
     pub risk_level: RiskLevel
 }
 

@@ -18,23 +18,23 @@ pub struct Weapon<'a> {
     pub max_collectable_amount: i32,
     pub cost: i32,
     pub equip_requirements: &'a [EquipRequirement],
-    pub observation_level: Option<i32>,
-    pub image: Option<&'a str>,
+    pub observation_level: i32,
+    pub image: &'a str,
 }
 
 #[derive(Debug)]
 pub struct Suit<'a> {
     pub id: u32,
     pub name_id: &'a str,
-    pub desc_id: &'a str,
-    pub special_desc_id: &'a str,
+    pub desc_id: Option<&'a str>,
+    pub special_desc_id: Option<&'a str>,
     pub risk: RiskLevel,
     pub defenses: Defenses,
     pub max_collectable_amount: i32,
     pub cost: i32,
     pub equip_requirements: &'a [EquipRequirement],
-    pub observation_level: Option<i32>,
-    pub image: Option<&'a str>,
+    pub observation_level: i32,
+    pub image: &'a str,
 }
 
 #[derive(Debug)]
@@ -44,9 +44,9 @@ pub struct Gift<'a> {
     pub desc_id: &'a str,
     pub slot: Slot,
     pub stat_bonuses: &'a [StatBonus],
-    pub obtain_probability: Option<f64>,
-    pub observation_level: Option<i32>,
-    pub image: Option<&'a str>,
+    pub obtain_probability: f64,
+    pub observation_level: i32,
+    pub image: &'a str,
 }
 
 #[derive(Debug, Clone)]
