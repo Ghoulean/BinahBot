@@ -98,7 +98,6 @@ pub fn load_equipment() -> AllEquipment {
 
     get_nodes(&equipment_list_node, "equipment").iter().for_each(|x| {
         let id: u32 = x.attribute("id").and_then(|y| y.parse::<u32>().ok()).expect("id parse failure");
-        dbg!(id);
         if DEBUG_IDS.contains(&id) {
             return;
         }
@@ -194,7 +193,7 @@ fn parse_suit(node: &Node) -> PartialSuit {
     }
 }
 
-fn get_defense_val(defense_node: &Node, str_code: &str) -> Resistance {
+pub fn get_defense_val(defense_node: &Node, str_code: &str) -> Resistance {
     Resistance(
         find_unique_node_with_attribute(&defense_node, "type", str_code).ok()
             .and_then(|x| x.text())

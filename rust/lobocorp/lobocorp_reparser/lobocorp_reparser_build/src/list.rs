@@ -9,7 +9,7 @@ use crate::xml::get_nodes;
 use crate::xml::get_unique_node;
 use crate::xml::get_unique_node_text;
 
-#[derive(Debug)]
+#[derive(Debug, Clone, PartialEq, Eq, Hash)]
 pub struct ListEntry {
     // pub name: String, // used with equipment, but ignored for our purposes
     pub src: String, // {src}_{locale_id}.xml for localization file
@@ -46,6 +46,18 @@ pub fn load_encyclopedia_list() -> Vec<ListEntry> {
     }).filter(|x| {
         // filter out apo bird gate and eggs
         x.id < 1000350 || x.id > 1000353
+    }).filter(|x| {
+        // filter out unused Orange Tree abno
+        x.id != 100010
+    }).filter(|x| {
+        // filter out unused Hammer of Light abno
+        x.id != 100025
+    }).filter(|x| {
+        // filter out unused Poor Screenwriter's Note abno
+        x.id != 100030
+    }).filter(|x| {
+        // filter out unused Price of Silence abno
+        x.id != 100101
     })
     .collect()
 }

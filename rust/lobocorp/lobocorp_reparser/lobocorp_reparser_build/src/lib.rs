@@ -1,3 +1,4 @@
+use abnormalities::load_encyclopedia;
 use equipment::load_equipment;
 use list::load_encyclopedia_list;
 
@@ -12,7 +13,9 @@ pub fn build() -> String {
     let abno_list = load_encyclopedia_list();
     let equipment_list = load_equipment();
 
-    format!("{:?}, {:?}", abno_list, equipment_list)
+    let encyclopedia = load_encyclopedia(&abno_list);
+
+    format!("{:?}, {:?}", encyclopedia, equipment_list)
 }
 
 #[cfg(test)]

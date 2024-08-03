@@ -8,23 +8,39 @@ use super::equipment::Suit;
 use super::equipment::Weapon;
 
 #[derive(Debug)]
-pub struct EncyclopediaInfo<'a> {
+pub enum EncyclopediaInfo<'a> {
+    Normal(NormalInfo<'a>),
+    Tool(ToolInfo<'a>),
+    DontTouchMe
+}
+
+#[derive(Debug)]
+pub struct NormalInfo<'a> {
     pub id: u32,
     pub risk: RiskLevel,
     pub work_probabilities: WorkProbabilities,
-    pub qliphoth_counter: i32,
+    pub qliphoth_counter: Option<i32>,
     pub work_damage_type: DamageType,
     pub work_damage_range: DamageRange,
     pub work_happiness_ranges: [i32; 3], // <= for :(, <= for :|, <= for :)
     pub work_speed: f64,
     pub work_cooldown: i32,
+    pub max_probability_reduction_count: i32,
     pub is_breachable: bool,
     pub defenses: Option<Defenses>, // can be None even if is_breachable == true
     pub observation_level_bonuses: [StatBonus; 4],
     pub weapon: Option<Weapon<'a>>,
     pub suit: Option<Suit<'a>>,
     pub gifts: Vec<Gift<'a>>,
-    pub breaching_entities: Vec<BreachingEntity<'a>>, // may include self, if is_breachable == true
+    pub breaching_entities: Vec<BreachingEntity<'a>>, // includes self if is_breachable == true
+    pub image: &'a str,
+}
+
+#[derive(Debug)]
+pub struct ToolInfo<'a> {
+    pub id: u32,
+    pub risk: RiskLevel,
+    pub tool_type: ToolType,
     pub image: &'a str,
 }
 
@@ -43,4 +59,22 @@ pub struct WorkProbabilities {
     pub insight: [f64; 5],
     pub attachment: [f64; 5],
     pub repression: [f64; 5],
+}
+
+#[derive(Debug)]
+pub enum ToolType {
+    Equippable, SustainedUse, SingleUse
+}
+
+impl TryFrom<&str> for ToolType {
+    type Error = String;
+    
+    fn try_from(value: &str) -> Result<Self, Self::Error> {
+        Ok(match value.to_lowercase().trim() {
+            "equip" => ToolType::Equippable,
+            "channel" => ToolType::SustainedUse,
+            "oneshot" => ToolType::SingleUse,
+            _ => return Err("invalid tool type".to_string())
+        })
+    }
 }

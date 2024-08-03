@@ -83,6 +83,21 @@ impl TryFrom<i32> for RiskLevel {
     }
 }
 
+impl TryFrom<&str> for RiskLevel {
+    type Error = String;
+    
+    fn try_from(value: &str) -> Result<Self, Self::Error> {
+        Ok(match value.to_lowercase().trim() {
+            "aleph" => RiskLevel::Aleph,
+            "he" => RiskLevel::He,
+            "waw" => RiskLevel::Waw,
+            "zayin" => RiskLevel::Zayin,
+            "teth" => RiskLevel::Teth,
+            _ => return Err("couldn't parse risklevel".to_string())
+        })
+    }
+}
+
 impl TryFrom<&str> for DamageType {
     type Error = String;
 
