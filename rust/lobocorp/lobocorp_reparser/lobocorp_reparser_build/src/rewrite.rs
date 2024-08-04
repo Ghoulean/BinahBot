@@ -1,9 +1,4 @@
 use std::collections::HashMap;
-use std::fmt;
-
-use lobocorp_common::game_objects::common::DamageType;
-use lobocorp_common::game_objects::common::Defenses;
-use lobocorp_common::game_objects::equipment::EquipRequirement;
 
 use crate::abnormalities::ObtainEquipmentNumber;
 use crate::abnormalities::PartialBreachingEntity;
@@ -15,6 +10,11 @@ use crate::equipment::PartialGift;
 use crate::equipment::PartialSuit;
 use crate::equipment::PartialWeapon;
 use crate::list::ListEntry;
+use crate::serde::defenses_serializer;
+use crate::serde::display_serializer;
+use crate::serde::serialize_option;
+use crate::serde::str_serializer;
+use crate::serde::write_vec;
 
 pub fn write_encyclopedia_info(partial_abnos: &HashMap<ListEntry, PartialEncyclopediaInfo>, partial_equipment: &AllEquipment) -> String {
 
@@ -128,37 +128,6 @@ fn write_tool_info(list_entry: &ListEntry, partial_encyclopedia_info: &PartialTo
         tool_type: ToolType::{tool_type:?},
         image: \"{image}\"
     }})")
-}
-
-fn serialize_option<T>(
-    option: &Option<T>,
-    serializer: fn(&T) -> String
-) -> String {
-    option.as_ref().map(|x| format!("Some({})", serializer(&x))).unwrap_or("None".to_string())
-}
-
-// Numbers and boolean
-fn display_serializer<T>(x: &T) -> String 
-where T: fmt::Display,
-{
-    x.to_string()
-}
-
-fn str_serializer(x: &String) -> String {
-    format!("\"{}\"", x)
-}
-
-fn defenses_serializer(x: &Defenses) -> String {
-    let red = x.red.0;
-    let white = x.white.0;
-    let black = x.black.0;
-    let pale = x.pale.0;
-    format!("Defenses {{
-        red: Resistance({red:?}),
-        white: Resistance({white:?}),
-        black: Resistance({black:?}),
-        pale: Resistance({pale:?})
-    }}")
 }
 
 fn write_weapon(info: &PartialNormalInfo, weapon: &PartialWeapon) -> String {
@@ -292,8 +261,4 @@ fn write_breaching_entity(info: &PartialBreachingEntity) -> String {
         damage_type: DamageType::{damage_type:?},
         risk_level: RiskLevel::{risk_level:?}
     }}")
-}
-
-fn write_vec(v: &[String]) -> String {
-    format!("[{}]", v.join(","))
 }

@@ -314,9 +314,15 @@ fn parse_child_abno(id: &str, doc: &Document) -> Vec<PartialBreachingEntity> {
         } else {
             damage_type.clone().unwrap()
         };
+        let differentiated_id = if id == "DeathAngelApostle_stat" {
+            let defense_id = x.attribute("id").and_then(|x| x.parse::<usize>().ok()).expect("couldn't get apostle id");
+            format!("{}-{}", id, defense_id)
+        } else {
+            id.to_string()
+        };
         PartialBreachingEntity {
             hp, speed, defenses,
-            id: id.to_string(),
+            id: differentiated_id,
             damage_type: damage_type,
             risk_level: risk_level.clone()
         }

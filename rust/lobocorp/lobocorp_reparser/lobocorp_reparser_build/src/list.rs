@@ -41,8 +41,11 @@ pub fn load_encyclopedia_list() -> Vec<ListEntry> {
         // todo: filter out ordeals; figure out how to parse later
         x.id <= 200000 || x.id > 299999
     }).filter(|x| {
+        // todo: more ideals; include eventually
+        x.id <= 2000000 || x.id > 2999999
+    }).filter(|x| {
         // todo: filter out gebura and binah; figure out how to parse later
-        x.id <= 400001 || x.id > 499999
+        x.id <= 400000 || x.id > 499999
     }).filter(|x| {
         // filter out apo bird gate and eggs
         x.id < 1000350 || x.id > 1000353

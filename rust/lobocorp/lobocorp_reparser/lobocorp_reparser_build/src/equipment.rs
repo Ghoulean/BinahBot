@@ -59,6 +59,7 @@ pub struct PartialSuit {
     pub name_id: Option<String>,
     pub desc_id: Option<String>,
     pub special_desc_id: Option<String>,
+    #[allow(dead_code)]
     pub armor_id: String,
     pub defenses: Defenses,
     pub risk: RiskLevel,

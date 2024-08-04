@@ -7,6 +7,7 @@ pub struct EncyclopediaInfoLocalization<'a> {
     pub selection_text: Option<&'a str>,
     pub managerial_guidances: &'a [&'a str],
     pub story: &'a [&'a str],
+    pub breaching_entity_localizations: &'a [BreachingEntityLocalization<'a>],
 }
 
 #[derive(Debug)]

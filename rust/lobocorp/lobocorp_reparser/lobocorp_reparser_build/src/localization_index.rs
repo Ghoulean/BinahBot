@@ -6,7 +6,6 @@ use lobocorp_common::localizations::common::Locale;
 use roxmltree::Document;
 use strum::IntoEnumIterator;
 
-use crate::equipment::AllEquipment;
 use crate::path::get_localized_equipment_file_path;
 use crate::xml::get_nodes;
 use crate::xml::get_unique_node;

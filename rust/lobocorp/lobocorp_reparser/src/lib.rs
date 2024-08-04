@@ -19,7 +19,10 @@ use lobocorp_common::game_objects::equipment::Suit;
 use lobocorp_common::game_objects::equipment::Weapon;
 use lobocorp_common::game_objects::equipment::WeaponAttackSpeed;
 use lobocorp_common::game_objects::equipment::WeaponRange;
-use lobocorp_common::localizations::equipment::LocalizationKey; 
+use lobocorp_common::localizations::abnormality::BreachingEntityLocalization;
+use lobocorp_common::localizations::abnormality::EncyclopediaInfoLocalization;
+use lobocorp_common::localizations::common::Locale;
+use lobocorp_common::localizations::equipment::LocalizationKey;
 
 include!(concat!(env!("OUT_DIR"), "/out.rs"));
 
@@ -31,6 +34,11 @@ pub fn get_encyclopedia_info(id: &u32) -> Option<&EncyclopediaInfo> {
 #[inline(always)]
 pub fn get_localization<'a>(key: &'a LocalizationKey<'a>) -> Option<&'a &'static str> {
     LOCALIZATION_INDEX.get(&&format!("{}#{:?}", key.0, key.1))
+}
+
+#[inline(always)]
+pub fn get_abno_localization<'a>(id: &'a u32, locale: &'a Locale) -> Option<&'a EncyclopediaInfoLocalization<'a>> {
+    ABNO_LOCALIZATIONS.get(format!("{}#{:?}", id, locale).as_str())
 }
 
 #[cfg(test)]
