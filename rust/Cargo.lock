@@ -1927,6 +1927,37 @@ dependencies = [
 ]
 
 [[package]]
+name = "lobocorp_index"
+version = "1.0.0"
+dependencies = [
+ "index_analyzer",
+ "lobocorp_common",
+ "lobocorp_index_builder",
+ "lobocorp_reparser",
+ "phf",
+ "serde",
+ "strum 0.26.2",
+ "strum_macros 0.26.2",
+]
+
+[[package]]
+name = "lobocorp_index_builder"
+version = "1.0.0"
+dependencies = [
+ "index_analyzer",
+ "lobocorp_common",
+ "lobocorp_reparser",
+ "phf",
+ "phf_codegen",
+ "rust-stemmers",
+ "serde",
+ "strum 0.26.2",
+ "strum_macros 0.26.2",
+ "toml",
+ "unic-langid",
+]
+
+[[package]]
 name = "lobocorp_reparser"
 version = "1.0.0"
 dependencies = [

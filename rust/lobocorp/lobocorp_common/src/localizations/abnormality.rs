@@ -3,6 +3,7 @@
 pub struct EncyclopediaInfoLocalization<'a> {
     pub id: &'a str,
     pub name: &'a str,
+    pub other_names: &'a [&'a str],
     pub code: &'a str,
     pub selection_text: Option<&'a str>,
     pub managerial_guidances: &'a [&'a str],

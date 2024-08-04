@@ -73,8 +73,8 @@ fn build_localization(entry: &ListEntry, partial_info: &PartialEncyclopediaInfo,
     let collection_node = get_unique_node(&observe_node, "collection").expect("no collection node");
 
     let id = entry.id;
-    // todo: several names support
     let name = get_nodes_text(&collection_node, "name").last().map(|x| format_story_data(x.trim())).expect("couldn't get name");
+    let other_names = get_nodes_text(&collection_node, "name").iter().rev().skip(1).rev().map(|x| format_story_data(x.trim())).collect::<Vec<_>>();
     let code = get_unique_node_text(&collection_node, "codeNo").map(|x| x.trim()).expect("couldn't get code");
     let selection_text = serialize_option(
         &get_unique_node_text(&collection_node, "openText").map(|x| format_story_data(x.trim()).to_string()).ok(),
@@ -107,6 +107,7 @@ fn build_localization(entry: &ListEntry, partial_info: &PartialEncyclopediaInfo,
     format!("EncyclopediaInfoLocalization {{
         id: \"{id}\",
         name: {name},
+        other_names: &{other_names:?},
         code: \"{code}\",
         selection_text: {selection_text},
         managerial_guidances: &{managerial_guidances},

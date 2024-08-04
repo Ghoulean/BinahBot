@@ -27,6 +27,11 @@ use lobocorp_common::localizations::equipment::LocalizationKey;
 include!(concat!(env!("OUT_DIR"), "/out.rs"));
 
 #[inline(always)]
+pub fn get_all_encyclopedia_ids() -> Vec<&'static u32> {
+    ENCYCLOPEDIA.keys().collect()
+}
+
+#[inline(always)]
 pub fn get_encyclopedia_info(id: &u32) -> Option<&EncyclopediaInfo> {
     ENCYCLOPEDIA.get(id)
 }
