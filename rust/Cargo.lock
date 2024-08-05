@@ -658,6 +658,7 @@ dependencies = [
  "hex",
  "http 1.1.0",
  "lambda_http",
+ "lobocorp",
  "phf",
  "reqwest",
  "ruina",
@@ -1915,6 +1916,8 @@ name = "lobocorp"
 version = "1.0.0"
 dependencies = [
  "lobocorp_common",
+ "lobocorp_index",
+ "lobocorp_reparser",
 ]
 
 [[package]]
@@ -2717,7 +2720,6 @@ checksum = "6c20b6793b5c2fa6553b250154b78d6d0db37e72700ae35fad9387a46f487c97"
 name = "ruina"
 version = "1.0.0"
 dependencies = [
- "index_analyzer",
  "ruina_common",
  "ruina_index",
  "ruina_reparser",
@@ -2768,7 +2770,6 @@ dependencies = [
  "ruina_common",
  "ruina_identifier",
  "ruina_reparser",
- "rust-stemmers",
  "serde",
  "strum 0.26.2",
  "strum_macros 0.26.2",

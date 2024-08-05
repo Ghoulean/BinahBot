@@ -12,6 +12,7 @@ use crate::deck::list_deck::list_my_decks;
 use crate::deck::read_deck::read_deck;
 use crate::deck::update_deck::update_deck;
 use crate::discord::delete_interaction;
+use crate::lc::command::lc_command;
 use crate::lor::autocomplete::lor_autocomplete;
 use crate::lor::command::lor_command;
 use crate::models::binahbot::BinahBotEnvironment;
@@ -26,6 +27,7 @@ use crate::models::discord::PingResponse;
 use crate::utils::DELETE_BUTTON_CUSTOM_ID;
 
 const ABOUT_COMMAND_NAME: &str = "about";
+const LC_COMMAND_NAME: &str = "lc";
 const LOR_COMMAND_NAME: &str = "lor";
 const CREATE_DECK_COMMAND_NAME: &str = "createdeck";
 const READ_DECK_COMMAND_NAME: &str = "deck";
@@ -60,6 +62,7 @@ async fn route(
                 _ => unreachable!()
             };
             Ok(DiscordInteractionResponse::Message(match data.name.as_str() {
+                LC_COMMAND_NAME => lc_command(discord_interaction, binahbot_env),
                 LOR_COMMAND_NAME => lor_command(discord_interaction, binahbot_env),
                 CREATE_DECK_COMMAND_NAME => create_deck(discord_interaction, binahbot_env).await,
                 READ_DECK_COMMAND_NAME => read_deck(discord_interaction, binahbot_env).await,

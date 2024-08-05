@@ -17,6 +17,17 @@ new DiscordStack(app, "DiscordStack", {
         C_BLUNT_EMOJI_ID: process.env["C_BLUNT_EMOJI_ID"],
         C_BLOCK_EMOJI_ID: process.env["C_BLOCK_EMOJI_ID"],
         C_EVADE_EMOJI_ID: process.env["C_EVADE_EMOJI_ID"],
+        INSTINCT_EMOJI_ID: process.env["INSTINCT_EMOJI_ID"],
+        INSIGHT_EMOJI_ID: process.env["INSIGHT_EMOJI_ID"],
+        ATTACHMENT_EMOJI_ID: process.env["ATTACHMENT_EMOJI_ID"],
+        REPRESSION_EMOJI_ID: process.env["REPRESSION_EMOJI_ID"],
+        RED_DAMAGE_EMOJI_ID: process.env["RED_DAMAGE_EMOJI_ID"],
+        WHITE_DAMAGE_EMOJI_ID: process.env["WHITE_DAMAGE_EMOJI_ID"],
+        BLACK_DAMAGE_EMOJI_ID: process.env["BLACK_DAMAGE_EMOJI_ID"],
+        PALE_DAMAGE_EMOJI_ID: process.env["PALE_DAMAGE_EMOJI_ID"],
+        GOOD_MOOD_EMOJI_ID: process.env["GOOD_MOOD_EMOJI_ID"],
+        NORMAL_MOOD_EMOJI_ID: process.env["NORMAL_MOOD_EMOJI_ID"],
+        BAD_EMOJI_ID: process.env["BAD_EMOJI_ID"],
     },
 });
 
