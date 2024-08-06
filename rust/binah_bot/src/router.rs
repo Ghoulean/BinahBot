@@ -2,8 +2,6 @@ use std::error::Error;
 use std::time::SystemTime;
 use std::time::UNIX_EPOCH;
 
-use aws_sdk_lambda::primitives::event_stream::Message;
-
 use crate::about_command::about_command;
 use crate::ddb::get_interaction_token;
 use crate::ddb::put_interaction_token;

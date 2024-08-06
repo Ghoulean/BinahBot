@@ -3,6 +3,7 @@ use std::collections::HashMap;
 
 use fluent_templates::fluent_bundle::FluentValue;
 use fluent_templates::Loader;
+use lobocorp::lobocorp_common::game_objects::abnormality::BreachingEntity;
 use lobocorp::lobocorp_common::game_objects::abnormality::DontTouchMeInfo;
 use lobocorp::lobocorp_common::game_objects::abnormality::EncyclopediaInfo;
 use lobocorp::lobocorp_common::game_objects::abnormality::NormalInfo;
@@ -17,7 +18,10 @@ use lobocorp::lobocorp_common::game_objects::common::Stat;
 use lobocorp::lobocorp_common::game_objects::common::StatBonus;
 use lobocorp::lobocorp_common::game_objects::equipment::EquipRequirement;
 use lobocorp::lobocorp_common::game_objects::equipment::EquipRequirementKey;
+use lobocorp::lobocorp_common::game_objects::equipment::Gift;
+use lobocorp::lobocorp_common::game_objects::equipment::Suit;
 use lobocorp::lobocorp_common::game_objects::equipment::Weapon;
+use lobocorp::lobocorp_common::localizations::abnormality::BreachingEntityLocalization;
 use lobocorp::lobocorp_common::localizations::abnormality::EncyclopediaInfoLocalization;
 use lobocorp::lobocorp_common::localizations::common::Locale;
 use lobocorp::lobocorp_common::localizations::equipment::LocalizationKey;
@@ -278,7 +282,7 @@ pub fn transform_weapon(
             inline: Some(true),
         },
         DiscordEmbedFields {
-            name: env.locales.lookup(&lang_id, "work_damage_header"),
+            name: env.locales.lookup(&lang_id, "weapon_damage_header"),
             value: format!(
                 "{} {} - {}",
                 get_damage_emoji(&weapon.damage_type, env).unwrap_or(&"-".to_string()),
@@ -344,6 +348,194 @@ pub fn transform_weapon(
         image: None, // todo: upload image
         footer: Some(DiscordEmbedFooter {
             text: weapon.id.to_string(),
+            icon_url: None,
+        }),
+        author: None,
+        url: None,
+        fields: Some(fields),
+    }
+}
+
+pub fn transform_suit(
+    suit: &Suit,
+    locale: &Locale,
+    request_locale: &BinahBotLocale,
+    env: &BinahBotEnvironment
+) -> DiscordEmbed {
+    let lang_id = LanguageIdentifier::from(request_locale);
+
+    let mut fields = vec![
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "risk_level_header"),
+            value: suit.risk.to_string(), // todo: localize
+            inline: Some(true),
+        },
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "equipment_cost_header"),
+            value: suit.cost.to_string(),
+            inline: Some(true),
+        },
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "equipment_max_amount_header"),
+            value: suit.max_collectable_amount.to_string(),
+            inline: Some(true),
+        },
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "equipment_observation_level_header"),
+            value: suit.observation_level.to_string(),
+            inline: Some(true),
+        },
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "defenses_header"),
+            value: format_defenses(&Some(suit.defenses.clone()), &lang_id, env),
+            inline: Some(true),
+        },
+    ];
+
+    if !suit.equip_requirements.is_empty() {
+        fields.push(
+            DiscordEmbedFields {
+                name: env.locales.lookup(&lang_id, "equipment_equip_requirement_header"),
+                value: format_equip_requirements(suit.equip_requirements, env),
+                inline: Some(true),
+            },
+        )
+    }
+
+    suit.desc_id.and_then(|x| {
+        get_localization(&LocalizationKey(x, locale.clone())).map(|x| x.to_string())
+    }).inspect(|x| {
+        fields.push(
+            DiscordEmbedFields {
+                name: env.locales.lookup(&lang_id, "equipment_description_header"),
+                value: x.to_string(),
+                inline: None,
+            },
+        )
+    });
+    suit.special_desc_id.and_then(|x| {
+        get_localization(&LocalizationKey(x, locale.clone())).map(|x| x.to_string())
+    }).inspect(|x| {
+        fields.push(
+            DiscordEmbedFields {
+                name: env.locales.lookup(&lang_id, "equipment_ability_description_header"),
+                value: x.to_string(),
+                inline: None,
+            },
+        )
+    });
+
+    DiscordEmbed {
+        title: get_localization(&LocalizationKey(suit.name_id, locale.clone())).map(|x| x.to_string()),
+        description: None,
+        color: Some(DiscordEmbedColors::from(&suit.risk) as i32),
+        image: None, // todo: upload image
+        footer: Some(DiscordEmbedFooter {
+            text: suit.id.to_string(),
+            icon_url: None,
+        }),
+        author: None,
+        url: None,
+        fields: Some(fields),
+    }
+}
+
+pub fn transform_gift(
+    gift: &Gift,
+    locale: &Locale,
+    request_locale: &BinahBotLocale,
+    env: &BinahBotEnvironment
+) -> DiscordEmbed {
+    let lang_id = LanguageIdentifier::from(request_locale);
+
+    let fields = vec![
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "gift_probability_header"),
+            value: format!("{}%", (gift.obtain_probability * 100.0).round()),
+            inline: Some(true),
+        },
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "gift_slot_header"),
+            value: gift.slot.to_string(), // todo: localize
+            inline: Some(true),
+        },
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "equipment_observation_level_header"),
+            value: gift.observation_level.to_string(),
+            inline: Some(true),
+        },
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "equipment_description_header"),
+            value: get_localization(&LocalizationKey(&gift.desc_id, locale.clone())).map(|x| x.to_string()).unwrap_or("-".to_string()),
+            inline: None,
+        },
+    ];
+
+    DiscordEmbed {
+        title: get_localization(&LocalizationKey(gift.name_id, locale.clone())).map(|x| x.to_string()),
+        description: None,
+        color: Some(DiscordEmbedColors::Default as i32),
+        image: None, // todo: upload image
+        footer: Some(DiscordEmbedFooter {
+            text: gift.id.to_string(),
+            icon_url: None,
+        }),
+        author: None,
+        url: None,
+        fields: Some(fields),
+    }
+}
+
+pub fn transform_breaching_entity(
+    breaching_entity: &BreachingEntity,
+    breaching_entity_localization: &BreachingEntityLocalization,
+    request_locale: &BinahBotLocale,
+    env: &BinahBotEnvironment
+) -> DiscordEmbed {
+    let lang_id = LanguageIdentifier::from(request_locale);
+
+    let fields = vec![
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "risk_level_header"),
+            value: breaching_entity.risk_level.to_string(), // todo: localize
+            inline: Some(true),
+        },
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "breaching_entity_health_header"),
+            value: breaching_entity.hp.to_string(),
+            inline: Some(true),
+        },
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "breaching_entity_movespeed_header"),
+            value: breaching_entity.speed.to_string(),
+            inline: Some(true),
+        },
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "defenses_header"),
+            value: format_defenses(&Some(breaching_entity.defenses.clone()), &lang_id, env),
+            inline: Some(true),
+        },
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "breaching_entity_damage_type_header"),
+            value: breaching_entity.damage_type.to_string(), // todo: localize
+            inline: Some(true),
+        },
+    ];
+
+    DiscordEmbed {
+        title: Some(env.locales.lookup_with_args(
+            &lang_id,
+            "encyclopedia_title_format",
+            &HashMap::from([
+                ("name", FluentValue::from(breaching_entity_localization.name)),
+                ("code", FluentValue::from(breaching_entity_localization.code)),
+            ])
+        )),
+        description: None,
+        color: Some(DiscordEmbedColors::from(&breaching_entity.risk_level) as i32),
+        image: None, // todo: upload image
+        footer: Some(DiscordEmbedFooter {
+            text: breaching_entity.id.to_string(),
             icon_url: None,
         }),
         author: None,
@@ -496,7 +688,7 @@ fn format_observation_level(observation_levels: &StatBonus, lang_id: &LanguageId
 fn format_equip_requirements(equip_requirements: &[EquipRequirement], env: &BinahBotEnvironment) -> String {
     equip_requirements.iter().map(|x| {
         format!("{} {}", get_equip_requirement_emoji(&x.0, env).unwrap_or(&"-".to_string()), x.1) 
-    }).collect::<Vec<_>>().join("\n")
+    }).collect::<Vec<_>>().join("; ")
 }
 
 impl From<RiskLevel> for DiscordEmbedColors {

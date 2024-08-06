@@ -28,7 +28,10 @@ use crate::models::discord::MessageResponse;
 use crate::utils::build_delete_button_component;
 use crate::utils::get_binahbot_locale;
 
+use super::transformers::transform_breaching_entity;
 use super::transformers::transform_encyclopedia_page;
+use super::transformers::transform_gift;
+use super::transformers::transform_suit;
 use super::transformers::transform_weapon;
 
 // format: lc#<code>#<id>#<locale>#<index>
@@ -64,24 +67,47 @@ pub fn lc_button(interaction: &DiscordInteraction, env: &BinahBotEnvironment) ->
     let (code, id, locale, index) = parse_custom_id(&custom_id);
     let entry = get_encyclopedia_info(&id).expect("couldn't find entry");
 
-    let embed = match code {
-        Code::Encyclopedia => {
+    let embed = match (&code, &entry) {
+        (Code::Encyclopedia, _) => {
             transform_encyclopedia_page(
                 &id, &locale, &binahbot_locale, env
             )
         },
-        Code::Weapon => {
-            match entry {
-                EncyclopediaInfo::Normal(x) => transform_weapon(
+        (Code::Weapon, EncyclopediaInfo::Normal(x)) => {
+            transform_weapon(
                     &x.weapon.as_ref().expect("no weapon"),
                     &locale,
                     &binahbot_locale,
                     env
-                ),
-                _ => unreachable!()
-            }
-        }
-        _ => panic!("encountered unexpected custom_id format")
+            )
+        },
+        (Code::Suit, EncyclopediaInfo::Normal(x)) => {
+            transform_suit(
+                &x.suit.as_ref().expect("no suit"),
+                &locale,
+                &binahbot_locale,
+                env
+            )
+        },
+        (Code::Gift, EncyclopediaInfo::Normal(x)) => {
+            transform_gift(
+                &x.gifts.get(index).expect("bad gift index"),
+                &locale,
+                &binahbot_locale,
+                env
+            )
+        },
+        (Code::BreachingEntity, EncyclopediaInfo::Normal(x)) => {
+            let localization = get_abno_localization(&id, &locale).expect("no localization found");
+            transform_breaching_entity(
+                &x.breaching_entities.get(index).expect("bad breaching entity index"),
+                &localization.breaching_entity_localizations.get(index).expect("bad breaching entity index"),
+                &binahbot_locale,
+                env
+            )
+        },
+        (Code::BreachingEntity, EncyclopediaInfo::Tool(_)) => todo!(), // yang
+        _ => panic!("encountered unexpected custom_id format"),
     };
 
     let components = build_buttons(

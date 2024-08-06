@@ -170,10 +170,12 @@ fn format_story_data(s: &str) -> String {
     let end = s.rfind("}");
 
     let x = if let (Some(a), Some(b)) = (start, end) {
-        &s[a..b]
+        &s[(a + "{".len())..b]
     } else {
         s
     };
+
+    let x = x.replace("&#13;&#10;", "\n");
 
     if !x.contains('\"') {
         format!("r\"{x}\"")

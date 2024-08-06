@@ -36,6 +36,11 @@ weapon_attack_speed_header = Attack speed
 weapon_attack_range_header = Attack range
 weapon_damage_header = Damage
 
+gift_slot_header = Slot
+
+breaching_entity_health_header = HP
+breaching_entity_movespeed_header = Movement speed
+breaching_entity_damage_type_header = Attack type
 
 breaching_button_label = Breaching
 breaching_child_button_label = { $name }
