@@ -15,10 +15,15 @@ use lobocorp::lobocorp_common::game_objects::common::ResistanceCategories;
 use lobocorp::lobocorp_common::game_objects::common::RiskLevel;
 use lobocorp::lobocorp_common::game_objects::common::Stat;
 use lobocorp::lobocorp_common::game_objects::common::StatBonus;
+use lobocorp::lobocorp_common::game_objects::equipment::EquipRequirement;
+use lobocorp::lobocorp_common::game_objects::equipment::EquipRequirementKey;
+use lobocorp::lobocorp_common::game_objects::equipment::Weapon;
 use lobocorp::lobocorp_common::localizations::abnormality::EncyclopediaInfoLocalization;
 use lobocorp::lobocorp_common::localizations::common::Locale;
+use lobocorp::lobocorp_common::localizations::equipment::LocalizationKey;
 use lobocorp::lobocorp_reparser::get_abno_localization;
 use lobocorp::lobocorp_reparser::get_encyclopedia_info;
+use lobocorp::lobocorp_reparser::get_localization;
 use unic_langid::LanguageIdentifier;
 
 use crate::models::binahbot::BinahBotEnvironment;
@@ -248,6 +253,105 @@ fn transform_donttouchme(
     }
 }
 
+pub fn transform_weapon(
+    weapon: &Weapon,
+    locale: &Locale,
+    request_locale: &BinahBotLocale,
+    env: &BinahBotEnvironment
+) -> DiscordEmbed {
+    let lang_id = LanguageIdentifier::from(request_locale);
+
+    let mut fields = vec![
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "risk_level_header"),
+            value: weapon.risk.to_string(), // todo: localize
+            inline: Some(true),
+        },
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "equipment_cost_header"),
+            value: weapon.cost.to_string(),
+            inline: Some(true),
+        },
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "equipment_max_amount_header"),
+            value: weapon.max_collectable_amount.to_string(),
+            inline: Some(true),
+        },
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "work_damage_header"),
+            value: format!(
+                "{} {} - {}",
+                get_damage_emoji(&weapon.damage_type, env).unwrap_or(&"-".to_string()),
+                &weapon.damage_range.0,
+                &weapon.damage_range.1
+            ),
+            inline: Some(true),
+        },
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "weapon_attack_speed_header"),
+            value: weapon.attack_speed.0.to_string(), // todo: add category
+            inline: Some(true),
+        },
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "weapon_attack_range_header"),
+            value: weapon.range.0.to_string(), // todo: add category
+            inline: Some(true),
+        },
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "equipment_observation_level_header"),
+            value: weapon.observation_level.to_string(),
+            inline: Some(true),
+        },
+    ];
+
+    if !weapon.equip_requirements.is_empty() {
+        fields.push(
+            DiscordEmbedFields {
+                name: env.locales.lookup(&lang_id, "equipment_equip_requirement_header"),
+                value: format_equip_requirements(weapon.equip_requirements, env),
+                inline: Some(true),
+            },
+        )
+    }
+
+    weapon.desc_id.and_then(|x| {
+        get_localization(&LocalizationKey(x, locale.clone())).map(|x| x.to_string())
+    }).inspect(|x| {
+        fields.push(
+            DiscordEmbedFields {
+                name: env.locales.lookup(&lang_id, "equipment_description_header"),
+                value: x.to_string(),
+                inline: None,
+            },
+        )
+    });
+    weapon.special_desc_id.and_then(|x| {
+        get_localization(&LocalizationKey(x, locale.clone())).map(|x| x.to_string())
+    }).inspect(|x| {
+        fields.push(
+            DiscordEmbedFields {
+                name: env.locales.lookup(&lang_id, "equipment_ability_description_header"),
+                value: x.to_string(),
+                inline: None,
+            },
+        )
+    });
+
+    DiscordEmbed {
+        title: get_localization(&LocalizationKey(weapon.name_id, locale.clone())).map(|x| x.to_string()),
+        description: None,
+        color: Some(DiscordEmbedColors::from(&weapon.risk) as i32),
+        image: None, // todo: upload image
+        footer: Some(DiscordEmbedFooter {
+            text: weapon.id.to_string(),
+            icon_url: None,
+        }),
+        author: None,
+        url: None,
+        fields: Some(fields),
+    }
+}
+
 fn get_portrait_url(id: u32, env: &BinahBotEnvironment) -> String {
     format!("https://{0}.s3.amazonaws.com/lc/portrait/{id}.png", env.s3_bucket_name)
 }
@@ -270,6 +374,16 @@ fn get_damage_emoji<'a>(damage_type: &'a DamageType, env: &'a BinahBotEnvironmen
         DamageType::White => env.emojis.white_damage.as_ref(),
         DamageType::Black => env.emojis.black_damage.as_ref(),
         DamageType::Pale => env.emojis.pale_damage.as_ref(),
+    }
+}
+
+fn get_equip_requirement_emoji<'a>(key: &'a EquipRequirementKey, env: &'a BinahBotEnvironment) -> Option<&'a String> {
+    match key {
+        EquipRequirementKey::AgentLevel => None, // todo: put in this emoji
+        EquipRequirementKey::Fortitude => env.emojis.instinct.as_ref(),
+        EquipRequirementKey::Prudence => env.emojis.insight.as_ref(),
+        EquipRequirementKey::Temperance => env.emojis.attachment.as_ref(),
+        EquipRequirementKey::Justice => env.emojis.repression.as_ref(),
     }
 }
 
@@ -377,6 +491,12 @@ fn format_observation_level(observation_levels: &StatBonus, lang_id: &LanguageId
             ("percentage", FluentValue::from(observation_levels.1)),
         ])
     )
+}
+
+fn format_equip_requirements(equip_requirements: &[EquipRequirement], env: &BinahBotEnvironment) -> String {
+    equip_requirements.iter().map(|x| {
+        format!("{} {}", get_equip_requirement_emoji(&x.0, env).unwrap_or(&"-".to_string()), x.1) 
+    }).collect::<Vec<_>>().join("\n")
 }
 
 impl From<RiskLevel> for DiscordEmbedColors {

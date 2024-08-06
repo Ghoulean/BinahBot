@@ -29,6 +29,7 @@ use crate::utils::build_delete_button_component;
 use crate::utils::get_binahbot_locale;
 
 use super::transformers::transform_encyclopedia_page;
+use super::transformers::transform_weapon;
 
 // format: lc#<code>#<id>#<locale>#<index>
 pub const LC_BUTTON_PREFIX: &str = "lc#";
@@ -69,17 +70,32 @@ pub fn lc_button(interaction: &DiscordInteraction, env: &BinahBotEnvironment) ->
                 &id, &locale, &binahbot_locale, env
             )
         },
+        Code::Weapon => {
+            match entry {
+                EncyclopediaInfo::Normal(x) => transform_weapon(
+                    &x.weapon.as_ref().expect("no weapon"),
+                    &locale,
+                    &binahbot_locale,
+                    env
+                ),
+                _ => unreachable!()
+            }
+        }
         _ => panic!("encountered unexpected custom_id format")
     };
+
+    let components = build_buttons(
+        id, &locale, &binahbot_locale, &(code, index), env
+    );
 
     MessageResponse {
         r#type: DiscordInteractionResponseType::UpdateMessage,
         data: Some(DiscordInteractionResponseMessage {
             allowed_mentions: Some(AllowedMentions { parse: Vec::new() }),
             content: None,
-            embeds: None,
+            embeds: Some(vec![embed]),
             flags: None, // todo
-            components: None,
+            components: Some(components),
         }),
     }
 }

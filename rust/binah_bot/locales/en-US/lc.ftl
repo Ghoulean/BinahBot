@@ -24,6 +24,19 @@ unknown_defenses_value = Unknown
 observation_level_success_rate = Success Rate +{ $percentage }%
 observation_level_speed_rate = Speed Rate +{ $percentage }%
 
+equipment_cost_header = Cost
+equipment_max_amount_header = Max amount
+equipment_observation_level_header = Observation level
+gift_probability_header = Probability
+equipment_equip_requirement_header = Equip requirements
+equipment_description_header = Description
+equipment_ability_description_header = Ability
+
+weapon_attack_speed_header = Attack speed
+weapon_attack_range_header = Attack range
+weapon_damage_header = Damage
+
+
 breaching_button_label = Breaching
 breaching_child_button_label = { $name }
 weapon_button_label = { $name } (weapon)
