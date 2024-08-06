@@ -1,6 +1,9 @@
+use std::collections::HashMap;
 use std::iter;
 use std::str::FromStr;
 
+use fluent_templates::fluent_bundle::FluentValue;
+use fluent_templates::Loader;
 use lobocorp::lobocorp_common::game_objects::abnormality::EncyclopediaInfo;
 use lobocorp::lobocorp_common::localizations::common::Locale;
 use lobocorp::lobocorp_common::localizations::equipment::LocalizationKey;
@@ -105,37 +108,82 @@ pub fn build_buttons(
             let mut vec = Vec::new();
             x.breaching_entities.iter().enumerate().for_each(|(i, _)| {
                 let breaching_locale = locale_info.breaching_entity_localizations.get(i).expect("couldn't get breaching entity locale");
+                let label = if i == 0 && x.is_breachable {
+                    env.locales.lookup(&lang_id, "breaching_button_label")
+                } else {
+                    env.locales.lookup_with_args(
+                        &lang_id,
+                        "breaching_child_button_label",
+                        &HashMap::from([
+                            ("name", FluentValue::from(breaching_locale.name)),
+                        ])
+                    )
+                };
+
                 vec.push(ButtonComponent {
                     r#type: DiscordComponentType::Button,
                     style: ButtonStyle::Primary,
-                    label: Some(breaching_locale.name.unwrap_or("?").to_string()), // todo: fill in names for all breaching locales
+                    label: Some(label),
                     custom_id: Some(build_custom_id(&Code::BreachingEntity, &id, abno_locale, &i)),
                     disabled: Some(current.0 == Code::BreachingEntity && current.1 == i),
                 })
             });
             x.weapon.as_ref().inspect(|x| {
+                let label = get_localization(&LocalizationKey(x.name_id, abno_locale.clone()))
+                    .map(|x| {
+                        env.locales.lookup_with_args(
+                            &lang_id,
+                            "weapon_button_label",
+                            &HashMap::from([
+                                ("name", FluentValue::from(*x)),
+                            ])
+                        )
+                    });
+                
                 vec.push(ButtonComponent {
                     r#type: DiscordComponentType::Button,
                     style: ButtonStyle::Primary,
-                    label: get_localization(&LocalizationKey(x.name_id, abno_locale.clone())).map(|x| x.to_string()),
+                    label: label,
                     custom_id: Some(build_custom_id(&Code::Weapon, &id, abno_locale, &0)),
                     disabled: Some(current.0 == Code::Weapon),
                 });
             });
             x.suit.as_ref().inspect(|x| {
+                let label = get_localization(&LocalizationKey(x.name_id, abno_locale.clone()))
+                    .map(|x| {
+                        env.locales.lookup_with_args(
+                            &lang_id,
+                            "suit_button_label",
+                            &HashMap::from([
+                                ("name", FluentValue::from(*x)),
+                            ])
+                        )
+                    });
+
                 vec.push(ButtonComponent {
                     r#type: DiscordComponentType::Button,
                     style: ButtonStyle::Primary,
-                    label: get_localization(&LocalizationKey(x.name_id, abno_locale.clone())).map(|x| x.to_string()),
+                    label: label,
                     custom_id: Some(build_custom_id(&Code::Suit, &id, abno_locale, &0)),
                     disabled: Some(current.0 == Code::Suit),
                 });
             });
             x.gifts.iter().enumerate().for_each(|(i, x)| {
+                let label = get_localization(&LocalizationKey(x.name_id, abno_locale.clone()))
+                    .map(|x| {
+                        env.locales.lookup_with_args(
+                            &lang_id,
+                            "gift_button_label",
+                            &HashMap::from([
+                                ("name", FluentValue::from(*x)),
+                            ])
+                        )
+                    });
+
                 vec.push(ButtonComponent {
                     r#type: DiscordComponentType::Button,
                     style: ButtonStyle::Primary,
-                    label: get_localization(&LocalizationKey(x.name_id, abno_locale.clone())).map(|x| x.to_string()),
+                    label: label,
                     custom_id: Some(build_custom_id(&Code::Gift, &id, abno_locale, &i)),
                     disabled: Some(current.0 == Code::Gift && current.1 == i),
                 })

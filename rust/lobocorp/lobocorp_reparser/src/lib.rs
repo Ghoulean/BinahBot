@@ -49,6 +49,9 @@ pub fn get_abno_localization<'a>(id: &'a u32, locale: &'a Locale) -> Option<&'a 
 
 #[cfg(test)]
 mod tests {
+    use std::collections::HashSet;
+
+    use strum::IntoEnumIterator;
     use lobocorp_common::localizations::common::Locale;
 
     use super::*;
@@ -67,5 +70,27 @@ mod tests {
             "&lt;i&gt;Behold: you stood at the door and knocked, and it was opened to you.&lt;/i&gt;&#13;&#10;&lt;i&gt;I come from the end, and I am here to stay for but a moment.&lt;/i&gt;&#13;&#10;&lt;i&gt;At the same time, I am the one who kindled the light to face the world.&lt;/i&gt;&#13;&#10;&lt;i&gt;My loved ones, who now eagerly desire the greater gifts; I will show you the most excellent way.&lt;/i&gt;",
             *result
         );
+    }
+
+    #[test]
+    #[ignore]
+    fn sanity_all_child_abnos_have_name() {
+        Locale::iter().for_each(|locale| {
+            get_all_encyclopedia_ids().iter().for_each(|x| {
+                dbg!(&x);
+                let binding = get_abno_localization(&x, &locale).expect("bad id-locale pair");
+                dbg!(&binding.name);
+
+                let mut hs = HashSet::new();
+                let mut count = 0;
+
+                binding.breaching_entity_localizations.iter().for_each(|x| {
+                    count += 1;
+                    hs.insert(format!("{}#{}", x.name, x.code));
+                });
+
+                assert!(hs.len() == count);
+            });
+        });
     }
 }

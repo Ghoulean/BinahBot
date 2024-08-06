@@ -14,6 +14,6 @@ pub struct EncyclopediaInfoLocalization<'a> {
 #[derive(Debug)]
 pub struct BreachingEntityLocalization<'a> {
     pub id: &'a str,
-    pub name: Option<&'a str>,
-    pub code: Option<&'a str>,
+    pub name: &'a str,
+    pub code: &'a str,
 }

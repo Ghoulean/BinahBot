@@ -1,5 +1,6 @@
 use std::collections::HashMap;
 use std::fs;
+use std::iter;
 
 use lobocorp_common::localizations::common::Locale;
 use roxmltree::Document;
@@ -11,8 +12,8 @@ use crate::list::ListEntry;
 use crate::path::get_localized_abno_file_path;
 use crate::serde::display_serializer;
 use crate::serde::serialize_option;
-use crate::serde::str_serializer;
 use crate::serde::write_vec;
+use crate::xml::find_unique_node_with_name_and_attribute;
 use crate::xml::get_nodes;
 use crate::xml::get_nodes_text;
 use crate::xml::get_unique_node;
@@ -98,8 +99,31 @@ fn build_localization(entry: &ListEntry, partial_info: &PartialEncyclopediaInfo,
         PartialEncyclopediaInfo::Tool(_) => None,
         PartialEncyclopediaInfo::DontTouchMe(_) => None,
     };
-    let breaching_entity_localizations = breaching_entities.map(|x| x.iter().map(|x| {
-        build_breaching_entity_localization(x, doc)
+
+    // apo bird egg localizations not in standard location
+    // todo: override for whitenight apostles
+    let default_name_code_vec: Vec<(String, String)> = if id == 100038 {
+        let etc_node = get_unique_node(&creature_node, "etc").expect("no etc node");
+        let binding = vec!["gateway", "bigBirdEgg", "longBirdEgg", "smallBirdEgg"];
+        let eggs = binding.iter().map(|x| {
+            find_unique_node_with_name_and_attribute(&etc_node, "param", "key", x).ok()
+                .and_then(|x| x.text())
+                .map(|x| x.trim())
+                .map(|x| format_story_data(x))
+                .expect(&format!("no name for {}", x))
+                .to_string()
+        }).map(|x| {
+            (x, "".to_string())  
+        });
+        iter::once((name.clone(), code.to_string())).chain(eggs).collect::<Vec<_>>()
+    } else {
+        let len = breaching_entities.map(|x| x.len()).unwrap_or(0);
+        vec![(name.clone(), code.to_string())].into_iter().cycle().take(len).collect()
+    };
+
+    let breaching_entity_localizations = breaching_entities.map(|x| x.iter().enumerate().map(|(i, x)| {
+        let (default_name, default_code) = default_name_code_vec.get(i).unwrap();
+        build_breaching_entity_localization(x, &default_name, &default_code, doc)
     }).collect::<Vec<_>>()).map(|x| {
         write_vec(&x)  
     }).unwrap_or("[]".to_string());
@@ -116,24 +140,27 @@ fn build_localization(entry: &ListEntry, partial_info: &PartialEncyclopediaInfo,
     }}")
 }
 
-fn build_breaching_entity_localization(breaching_entity: &PartialBreachingEntity, doc: &Document) -> String {
+fn build_breaching_entity_localization(
+    breaching_entity: &PartialBreachingEntity,
+    parent_name: &str,
+    parent_code: &str,
+    doc: &Document
+) -> String {
     let creature_node = get_unique_node(&doc.root(), "creature").expect("no creature node");
     let child_node = get_unique_node(&creature_node, "child").ok();
 
     let id = &breaching_entity.id;
-    let name = serialize_option(
-        &child_node.as_ref().and_then(|x| get_unique_node_text(&x, "name").ok()).map(|x| x.trim().to_string()),
-        str_serializer
-    );
-    let code = serialize_option(
-        &child_node.as_ref().and_then(|x| get_unique_node_text(&x, "codeId").ok()).map(|x| x.trim().to_string()),
-        str_serializer
-    );
+    let binding = child_node.as_ref()
+        .and_then(|x| get_unique_node_text(&x, "name").ok())
+        .map(|x| format_story_data(x))
+        .unwrap_or(parent_name.to_string());
+    let name = binding.trim();
+    let code = child_node.as_ref().and_then(|x| get_unique_node_text(&x, "codeId").ok()).unwrap_or(parent_code).trim().to_string();
 
     format!("BreachingEntityLocalization {{
         id: \"{id}\",
         name: {name},
-        code: {code}
+        code: \"{code}\"
     }}")
 }
 
