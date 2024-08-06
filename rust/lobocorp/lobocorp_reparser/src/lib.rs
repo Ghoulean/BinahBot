@@ -1,4 +1,5 @@
 use lobocorp_common::game_objects::abnormality::BreachingEntity;
+use lobocorp_common::game_objects::abnormality::DontTouchMeInfo;
 use lobocorp_common::game_objects::abnormality::EncyclopediaInfo;
 use lobocorp_common::game_objects::abnormality::NormalInfo;
 use lobocorp_common::game_objects::abnormality::ToolInfo;

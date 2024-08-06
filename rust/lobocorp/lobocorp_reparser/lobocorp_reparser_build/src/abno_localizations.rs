@@ -96,7 +96,7 @@ fn build_localization(entry: &ListEntry, partial_info: &PartialEncyclopediaInfo,
     let breaching_entities = match partial_info {
         PartialEncyclopediaInfo::Normal(x) => Some(&x.breaching_entities),
         PartialEncyclopediaInfo::Tool(_) => None,
-        PartialEncyclopediaInfo::DontTouchMe => None,
+        PartialEncyclopediaInfo::DontTouchMe(_) => None,
     };
     let breaching_entity_localizations = breaching_entities.map(|x| x.iter().map(|x| {
         build_breaching_entity_localization(x, doc)
@@ -129,7 +129,6 @@ fn build_breaching_entity_localization(breaching_entity: &PartialBreachingEntity
         &child_node.as_ref().and_then(|x| get_unique_node_text(&x, "codeId").ok()).map(|x| x.trim().to_string()),
         str_serializer
     );
-    
 
     format!("BreachingEntityLocalization {{
         id: \"{id}\",

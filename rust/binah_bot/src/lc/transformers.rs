@@ -1,7 +1,9 @@
+use std::cmp;
 use std::collections::HashMap;
 
 use fluent_templates::fluent_bundle::FluentValue;
 use fluent_templates::Loader;
+use lobocorp::lobocorp_common::game_objects::abnormality::DontTouchMeInfo;
 use lobocorp::lobocorp_common::game_objects::abnormality::EncyclopediaInfo;
 use lobocorp::lobocorp_common::game_objects::abnormality::NormalInfo;
 use lobocorp::lobocorp_common::game_objects::abnormality::ToolInfo;
@@ -25,8 +27,7 @@ use crate::models::binahbot::DiscordEmbedColors;
 use crate::models::discord::DiscordEmbed;
 use crate::models::discord::DiscordEmbedFields;
 use crate::models::discord::DiscordEmbedFooter;
-
-static NOT_FOUND_IMAGE_NAME: &str = "404_Not_Found";
+use crate::models::discord::DiscordEmbedImage;
 
 pub fn transform_encyclopedia_page(
     id: &u32,
@@ -36,12 +37,12 @@ pub fn transform_encyclopedia_page(
 ) -> DiscordEmbed {
     let encyclopedia = get_encyclopedia_info(id).expect("invalid id");
     let locale_info = get_abno_localization(id, abno_locale).expect("invalid id-locale pair");
-    let lang_id = abno_locale.into();
+    let lang_id = request_locale.into();
 
     match encyclopedia {
         EncyclopediaInfo::Normal(x) => transform_normal_info(&x, &locale_info, &lang_id, env),
         EncyclopediaInfo::Tool(x) => transform_tool_info(&x, &locale_info, &lang_id, env),
-        EncyclopediaInfo::DontTouchMe => todo!(),
+        EncyclopediaInfo::DontTouchMe(x) => transform_donttouchme(&x, &locale_info, &lang_id, env),
     }
 }
 
@@ -116,6 +117,8 @@ fn transform_normal_info(
         });
     });
 
+    let image_url = get_portrait_url(entry.id, env);
+
     DiscordEmbed {
         title: Some(env.locales.lookup_with_args(
             lang_id,
@@ -127,7 +130,9 @@ fn transform_normal_info(
         )),
         description: locale_info.selection_text.map(|x| x.to_string()),
         color: Some(DiscordEmbedColors::from(&entry.risk) as i32),
-        image: None, // todo: image
+        image: Some(DiscordEmbedImage {
+            url: image_url,
+        }),
         footer: Some(DiscordEmbedFooter {
             text: entry.id.to_string(),
             icon_url: None,
@@ -144,16 +149,107 @@ fn transform_tool_info(
     lang_id: &LanguageIdentifier,
     env: &BinahBotEnvironment
 ) -> DiscordEmbed {
+    let mut fields = vec![
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "risk_level_header"),
+            value: entry.risk.to_string(), // todo: localize
+            inline: Some(true),
+        },
+    ];
+
+    let entries = 0..cmp::max(
+        locale_info.story.len(),
+        locale_info.managerial_guidances.len()
+    );
+
+    entries.for_each(|i| {
+        let text = format!(
+            "{}\n{}",
+            locale_info.story.get(i).map(|x| x.replace("$0", locale_info.name)).unwrap_or("-".to_string()),
+            locale_info.managerial_guidances.get(i).map(|x| x.replace("$0", locale_info.name)).unwrap_or("-".to_string()),
+        );
+
+        fields.push(DiscordEmbedFields {
+            name: env.locales.lookup_with_args(
+                lang_id,
+                "managerial_guidance_header",
+                &HashMap::from([
+                    ("index", FluentValue::from(i + 1)),
+                ])
+            ),
+            value: text,
+            inline: Some(false),
+        });
+    });
+
+    let image_url = get_portrait_url(entry.id, env);
+
     DiscordEmbed {
-        title: Some(locale_info.name.to_string()),
+        title: Some(env.locales.lookup_with_args(
+            lang_id,
+            "encyclopedia_title_format",
+            &HashMap::from([
+                ("name", FluentValue::from(locale_info.name)),
+                ("code", FluentValue::from(locale_info.code)),
+            ])
+        )),
         description: locale_info.selection_text.map(|x| x.to_string()),
         color: Some(DiscordEmbedColors::from(&entry.risk) as i32),
-        image: todo!(),
-        footer: todo!(),
-        author: todo!(),
-        url: todo!(),
-        fields: todo!(),
+        image: Some(DiscordEmbedImage {
+            url: image_url,
+        }),
+        footer: Some(DiscordEmbedFooter {
+            text: entry.id.to_string(),
+            icon_url: None,
+        }),
+        author: None,
+        url: None,
+        fields: Some(fields),
     }
+}
+
+fn transform_donttouchme(
+    entry: &DontTouchMeInfo,
+    locale_info: &EncyclopediaInfoLocalization,
+    lang_id: &LanguageIdentifier,
+    env: &BinahBotEnvironment
+) -> DiscordEmbed {
+    let fields = vec![
+        DiscordEmbedFields {
+            name: env.locales.lookup(&lang_id, "risk_level_header"),
+            value: entry.risk.to_string(), // todo: localize
+            inline: Some(true),
+        },
+    ];
+
+    let image_url = get_portrait_url(entry.id, env);
+
+    DiscordEmbed {
+        title: Some(env.locales.lookup_with_args(
+            lang_id,
+            "encyclopedia_title_format",
+            &HashMap::from([
+                ("name", FluentValue::from(locale_info.name)),
+                ("code", FluentValue::from(locale_info.code)),
+            ])
+        )),
+        description: locale_info.selection_text.map(|x| x.to_string()),
+        color: Some(DiscordEmbedColors::from(&entry.risk) as i32),
+        image: Some(DiscordEmbedImage {
+            url: image_url,
+        }),
+        footer: Some(DiscordEmbedFooter {
+            text: entry.id.to_string(),
+            icon_url: None,
+        }),
+        author: None,
+        url: None,
+        fields: Some(fields),
+    }
+}
+
+fn get_portrait_url(id: u32, env: &BinahBotEnvironment) -> String {
+    format!("https://{0}.s3.amazonaws.com/lc/portrait/{id}.png", env.s3_bucket_name)
 }
 
 impl From<&RiskLevel> for DiscordEmbedColors {
@@ -226,7 +322,7 @@ fn format_defense(resistance: Option<&Resistance>, lang_id: &LanguageIdentifier,
     let label = resistance.as_ref().map(|x| ResistanceCategories::from(x.0))
         .map(|x| lookup_defenses_str(lang_id, &x, env))
         .unwrap_or(env.locales.lookup(&lang_id, "unknown_defenses_value"));
-    let val = resistance.as_ref().map(|x| x.0.to_string()).unwrap_or("-".to_string());
+    let val = resistance.as_ref().map(|x| format!("{:.1}", x.0)).unwrap_or("-".to_string());
 
     format!(
         "{} {}",

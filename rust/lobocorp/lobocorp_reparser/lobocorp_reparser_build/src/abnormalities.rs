@@ -27,7 +27,7 @@ use crate::xml::get_unique_node_text;
 pub enum PartialEncyclopediaInfo {
     Normal(PartialNormalInfo),
     Tool(PartialToolInfo),
-    DontTouchMe,
+    DontTouchMe(PartialDontTouchMeInfo),
 }
 
 #[derive(Debug)]
@@ -57,6 +57,12 @@ pub struct PartialRelatedEquipmentInfo {
 }
 
 #[derive(Debug)]
+pub struct PartialDontTouchMeInfo {
+    pub risk: RiskLevel,
+    pub image: Option<String>,
+}
+
+#[derive(Debug)]
 pub enum ObtainEquipmentNumber {
     Cost(i32),
     Probability(f64)
@@ -81,10 +87,6 @@ pub struct PartialToolInfo {
 
 pub fn load_encyclopedia(list: &[ListEntry]) -> HashMap<ListEntry, PartialEncyclopediaInfo> {
     list.iter().map(|x| {
-        if x.stat == "DontTouchMe_stat" {
-            return (x.clone(), PartialEncyclopediaInfo::DontTouchMe);
-        }
-
         let stat_path = PathBuf::from(format!("{}{}.xml", BASE_CREATURE_DIR, x.stat));
         let stat_str = fs::read_to_string(stat_path.as_path()).expect(&format!("cannot read {:?}", stat_path));
         let doc: Document = Document::parse(&stat_str).expect(&format!("failed parsing {:?}", stat_path));
@@ -99,8 +101,12 @@ fn parse(id: u32, doc: &Document) -> PartialEncyclopediaInfo {
         .and_then(|x| get_unique_node(&x, "workType"))
         .is_ok_and(|x| x.text() == Some("kit"));
 
-    if is_tool {
-        PartialEncyclopediaInfo::Tool(parse_tool_abno(doc))
+    if id == 100024 {
+        PartialEncyclopediaInfo::DontTouchMe(PartialDontTouchMeInfo {
+            risk: RiskLevel::Zayin, image: Some(id.to_string()),
+        })
+    } else if is_tool {
+        PartialEncyclopediaInfo::Tool(parse_tool_abno(id, doc))
     } else {
         PartialEncyclopediaInfo::Normal(parse_normal_abno(id, doc))
     }
@@ -252,7 +258,7 @@ fn parse_normal_abno(id: u32, doc: &Document) -> PartialNormalInfo {
         breaching_entities.extend(children);
     }
 
-    let image = None;
+    let image = Some(id.to_string());
 
     PartialNormalInfo {
         risk, work_probabilities, qliphoth_counter, work_damage_type, work_damage_range, work_happiness_ranges,
@@ -261,7 +267,7 @@ fn parse_normal_abno(id: u32, doc: &Document) -> PartialNormalInfo {
     }
 }
 
-fn parse_tool_abno(doc: &Document) -> PartialToolInfo {
+fn parse_tool_abno(id: u32, doc: &Document) -> PartialToolInfo {
     let creature_node = get_unique_node(&doc.root(), "creature").expect("couldn't find creature");
     let stat_node = get_unique_node(&creature_node, "stat").expect("couldn't find stat node");
 
@@ -274,7 +280,7 @@ fn parse_tool_abno(doc: &Document) -> PartialToolInfo {
         .and_then(|x| ToolType::try_from(x).ok())
         .expect("couldn't get tool type");
 
-    let image = None;
+    let image = Some(id.to_string());
 
     PartialToolInfo {
         risk, tool_type, image,

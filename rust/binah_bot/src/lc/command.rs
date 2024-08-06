@@ -2,6 +2,8 @@ use std::str::FromStr;
 
 use lobocorp::lobocorp_common::localizations::common::Locale;
 
+use crate::lc::button::build_buttons;
+use crate::lc::button::Code;
 use crate::lc::transformers::transform_encyclopedia_page;
 use crate::models::binahbot::BinahBotEnvironment;
 use crate::models::binahbot::BinahBotLocale;
@@ -51,13 +53,10 @@ pub fn lc_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -
     }).is_some_and(|x| *x);
 
     let flags = is_private.then_some(DiscordMessageFlag::EphemeralMessage as i32);
-/*
-    let components = (!is_private).then_some(vec![
-        DiscordComponent::ActionRow(ActionRowComponent {
-            r#type: DiscordComponentType::ActionRow,
-            components: vec![DiscordComponent::Button(build_delete_button_component(&lang_id, env))]
-        })
-    ]);*/
+
+    let components = build_buttons(
+        query, &locale, &binah_locale, &(Code::Encyclopedia, 0), env
+    );
 
     MessageResponse {
         r#type: DiscordInteractionResponseType::ChannelMessageWithSource,
@@ -66,7 +65,7 @@ pub fn lc_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -
             content: None,
             embeds: Some(vec![embed]),
             flags: flags,
-            components: None,
+            components: Some(components),
         }),
     }
 }

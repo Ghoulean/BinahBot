@@ -2,6 +2,8 @@ use std::error::Error;
 use std::time::SystemTime;
 use std::time::UNIX_EPOCH;
 
+use aws_sdk_lambda::primitives::event_stream::Message;
+
 use crate::about_command::about_command;
 use crate::ddb::get_interaction_token;
 use crate::ddb::put_interaction_token;
@@ -12,6 +14,8 @@ use crate::deck::list_deck::list_my_decks;
 use crate::deck::read_deck::read_deck;
 use crate::deck::update_deck::update_deck;
 use crate::discord::delete_interaction;
+use crate::lc::button::lc_button;
+use crate::lc::button::LC_BUTTON_PREFIX;
 use crate::lc::command::lc_command;
 use crate::lor::autocomplete::lor_autocomplete;
 use crate::lor::command::lor_command;
@@ -81,6 +85,7 @@ async fn route(
                 LOR_COMMAND_NAME => lor_autocomplete(discord_interaction, binahbot_env),
                 READ_DECK_COMMAND_NAME => list_deck(discord_interaction, binahbot_env).await,
                 UPDATE_DECK_COMMAND_NAME | DELETE_DECK_COMMAND_NAME => list_my_decks(discord_interaction, binahbot_env).await,
+                LC_COMMAND_NAME => todo!(), 
                 _ => unreachable!()
             }))
         },
@@ -89,43 +94,22 @@ async fn route(
                 DiscordInteractionData::MessageComponent(x) => x,
                 _ => unreachable!()
             };
-            match data.custom_id.as_str() {
-                DELETE_BUTTON_CUSTOM_ID => {
-                    let previous_interaction_id = &discord_interaction
-                        .message
-                        .as_ref()
-                        .expect("no message on this delete button interaction")
-                        .interaction_metadata
-                        .as_ref()
-                        .expect("no interaction_metadata field")
-                        .id;
-                    let user_id = discord_interaction.user.as_ref().unwrap_or(discord_interaction.member.as_ref().unwrap().user.as_ref().unwrap()).id.clone();
 
-                    let interaction_ttl = get_interaction_token(
-                        binahbot_env.ddb_client.as_ref().expect("no ddb client provided"),
-                        &binahbot_env.ddb_interaction_ttl_table_name,
-                        &previous_interaction_id
-                    ).await;
+            let custom_id = &data.custom_id;
 
-                    match interaction_ttl {
-                        Ok(x) => {
-                            if user_id == x.original_user_id {
-                                let _ = delete_interaction(
-                                    binahbot_env.reqwest_client.as_ref().expect("no http client provided"),
-                                    &binahbot_env.discord_secrets,
-                                    &x.token
-                                ).await;
-                            }
-                        },
-                        Err(_) => {}
-                    };
-                },
-                _ => unreachable!()
-            }
+            Ok(DiscordInteractionResponse::UpdateMessage(
+                if custom_id == DELETE_BUTTON_CUSTOM_ID {
+                    let _ = process_delete_button(discord_interaction, binahbot_env).await;
 
-            Ok(DiscordInteractionResponse::DeferredUpdateMessage(DeferredUpdateResponse {
-                r#type: DiscordInteractionResponseType::DeferredUpdateMessage
-            }))
+                    return Ok(DiscordInteractionResponse::DeferredUpdateMessage(DeferredUpdateResponse {
+                        r#type: DiscordInteractionResponseType::DeferredUpdateMessage
+                    }))
+                } else if custom_id.starts_with(LC_BUTTON_PREFIX) {
+                    lc_button(&discord_interaction, binahbot_env)
+                } else {
+                    unreachable!()
+                }
+            ))
         }
         _ => unreachable!(),
     }
@@ -156,4 +140,36 @@ async fn put_interaction_ttl(
         &binahbot_env.ddb_interaction_ttl_table_name,
         &interaction_ttl
     ).await
+}
+
+async fn process_delete_button(
+    discord_interaction: &DiscordInteraction,
+    binahbot_env: &BinahBotEnvironment
+) -> Result<(), Box<dyn Error + Send + Sync>> {
+    let previous_interaction_id = &discord_interaction
+        .message
+        .as_ref()
+        .expect("no message on this delete button interaction")
+        .interaction_metadata
+        .as_ref()
+        .expect("no interaction_metadata field")
+        .id;
+    let user_id = discord_interaction.user.as_ref().unwrap_or(discord_interaction.member.as_ref().unwrap().user.as_ref().unwrap()).id.clone();
+
+    let interaction_ttl = get_interaction_token(
+        binahbot_env.ddb_client.as_ref().expect("no ddb client provided"),
+        &binahbot_env.ddb_interaction_ttl_table_name,
+        &previous_interaction_id
+    ).await;
+
+    if interaction_ttl.as_ref().is_ok_and(|x| user_id == x.original_user_id) {
+        tracing::info!("Deleting interaction with id={}", previous_interaction_id);
+        let _ = delete_interaction(
+            binahbot_env.reqwest_client.as_ref().expect("no http client provided"),
+            &binahbot_env.discord_secrets,
+            &interaction_ttl.as_ref().unwrap().token
+        ).await;
+    };
+
+    Ok(())
 }

@@ -2,6 +2,7 @@ use std::collections::HashMap;
 
 use crate::abnormalities::ObtainEquipmentNumber;
 use crate::abnormalities::PartialBreachingEntity;
+use crate::abnormalities::PartialDontTouchMeInfo;
 use crate::abnormalities::PartialEncyclopediaInfo;
 use crate::abnormalities::PartialNormalInfo;
 use crate::abnormalities::PartialToolInfo;
@@ -22,7 +23,7 @@ pub fn write_encyclopedia_info(partial_abnos: &HashMap<ListEntry, PartialEncyclo
         (entry.id, match encyclopedia {
             PartialEncyclopediaInfo::Normal(x) => write_normal_info(entry, x, partial_equipment),
             PartialEncyclopediaInfo::Tool(x) => write_tool_info(entry, x),
-            PartialEncyclopediaInfo::DontTouchMe => "EncyclopediaInfo::DontTouchMe".to_string(),
+            PartialEncyclopediaInfo::DontTouchMe(x) => write_donttouchme_info(entry, x),
         })
     }).collect();
 
@@ -84,8 +85,7 @@ fn write_normal_info(list_entry: &ListEntry, partial_encyclopedia_info: &Partial
     let breaching_entities = write_vec(&partial_encyclopedia_info.breaching_entities.iter().map(|x| {
         write_breaching_entity(x)
     }).collect::<Vec<_>>());
-    // todo: force-assign image to all abnos
-    let image = partial_encyclopedia_info.image.clone().unwrap_or("".to_string());
+    let image = &partial_encyclopedia_info.image.as_ref().expect("no image");
 
     format!("EncyclopediaInfo::Normal(NormalInfo {{
         id: {id},
@@ -118,15 +118,26 @@ fn write_tool_info(list_entry: &ListEntry, partial_encyclopedia_info: &PartialTo
     let id = list_entry.id;
     let risk = &partial_encyclopedia_info.risk;
     let tool_type = &partial_encyclopedia_info.tool_type;
-    // todo: force-assign an image to all tool abnos
-    let binding = &"".to_string();
-    let image = &partial_encyclopedia_info.image.as_ref().unwrap_or(binding);
+    let image = &partial_encyclopedia_info.image.as_ref().expect("no image");
 
     format!("EncyclopediaInfo::Tool(ToolInfo {{
         id: {id},
         risk: RiskLevel::{risk:?},
         tool_type: ToolType::{tool_type:?},
         image: \"{image}\"
+    }})")
+}
+
+
+fn write_donttouchme_info(list_entry: &ListEntry, partial_encyclopedia_info: &PartialDontTouchMeInfo) -> String {
+    let id = list_entry.id;
+    let risk = &partial_encyclopedia_info.risk;
+    let image = partial_encyclopedia_info.image.as_ref().expect("no image");
+
+    format!("EncyclopediaInfo::DontTouchMe(DontTouchMeInfo {{
+        id: {id},
+        risk: RiskLevel::{risk:?},
+        image: \"{image}\",
     }})")
 }
 

@@ -11,7 +11,7 @@ use super::equipment::Weapon;
 pub enum EncyclopediaInfo<'a> {
     Normal(NormalInfo<'a>),
     Tool(ToolInfo<'a>),
-    DontTouchMe
+    DontTouchMe(DontTouchMeInfo<'a>)
 }
 
 #[derive(Debug)]
@@ -41,6 +41,13 @@ pub struct ToolInfo<'a> {
     pub id: u32,
     pub risk: RiskLevel,
     pub tool_type: ToolType,
+    pub image: &'a str,
+}
+
+#[derive(Debug)]
+pub struct DontTouchMeInfo<'a> {
+    pub id: u32,
+    pub risk: RiskLevel,
     pub image: &'a str,
 }
 

@@ -76,7 +76,7 @@ pub enum DiscordInteractionType {
     ModalSubmit = 5,
 }
 
-#[derive(Serialize_repr, Deserialize_repr, PartialEq, Debug)]
+#[derive(Serialize_repr, Deserialize_repr, PartialEq, Clone, Debug)]
 #[repr(i32)]
 pub enum DiscordComponentType {
     ActionRow = 1,
@@ -134,6 +134,7 @@ pub enum DiscordInteractionResponse {
     Autocomplete(AutocompleteResponse),
     Ping(PingResponse),
     DeferredUpdateMessage(DeferredUpdateResponse),
+    UpdateMessage(MessageResponse)
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -158,7 +159,7 @@ pub struct DeferredUpdateResponse {
     pub r#type: DiscordInteractionResponseType,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Clone, Debug)]
 #[serde(untagged)]
 pub enum DiscordComponent {
     ActionRow(ActionRowComponent),
@@ -166,14 +167,14 @@ pub enum DiscordComponent {
     // remaining are not used
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Clone, Debug)]
 pub struct ActionRowComponent {
     pub r#type: DiscordComponentType,
     // action row cannot contain another action row
     pub components: Vec<DiscordComponent>
 }
 
-#[derive(Serialize_repr, Deserialize_repr, PartialEq, Debug)]
+#[derive(Serialize_repr, Deserialize_repr, PartialEq, Clone, Debug)]
 #[repr(i32)]
 pub enum ButtonStyle {
     Primary = 1,
@@ -184,7 +185,7 @@ pub enum ButtonStyle {
     Premium = 6,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct ButtonComponent {
     pub r#type: DiscordComponentType,
     pub style: ButtonStyle,
