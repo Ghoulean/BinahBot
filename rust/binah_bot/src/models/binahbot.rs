@@ -6,6 +6,7 @@ use lobocorp::lobocorp_common::localizations::common::Locale as LobocorpLocale;
 use ruina::ruina_common::game_objects::combat_page::DieType;
 use ruina::ruina_common::game_objects::common::Rarity;
 use ruina::ruina_common::localizations::common::Locale as RuinaLocale;
+use unic_langid::LanguageIdentifier;
 
 #[derive(Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
@@ -132,6 +133,12 @@ impl From<&BinahBotLocale> for RuinaLocale {
 impl From<BinahBotLocale> for RuinaLocale {
     fn from(value: BinahBotLocale) -> Self {
         RuinaLocale::from(&value)
+    }
+}
+
+impl From<BinahBotLocale> for unic_langid::LanguageIdentifier {
+    fn from(value: BinahBotLocale) -> Self {
+        LanguageIdentifier::from(&value)
     }
 }
 

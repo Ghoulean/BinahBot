@@ -63,6 +63,7 @@ pub fn about_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment
         description: None,
         color: Some(DiscordEmbedColors::Default as i32),
         image: None,
+        thumbnail: None,
         footer: None,
         author: Some(DiscordEmbedAuthor {
             name: "ghoulean".to_string(),

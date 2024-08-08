@@ -66,6 +66,7 @@ pub async fn delete_deck(interaction: &DiscordInteraction, env: &BinahBotEnviron
                             )),
                             color: Some(DiscordEmbedColors::Default as i32),
                             image: None,
+                            thumbnail: None,
                             footer: None,
                             author: None,
                             url: None,

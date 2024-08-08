@@ -138,6 +138,7 @@ pub fn build_error_message_response(lang_id: &LanguageIdentifier, err_code: &str
                     description: Some(env.locales.lookup(lang_id, err_code)),
                     color: Some(DiscordEmbedColors::Default as i32),
                     image: None,
+                    thumbnail: None,
                     footer: None,
                     author: None,
                     url: None,

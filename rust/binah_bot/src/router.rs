@@ -12,6 +12,7 @@ use crate::deck::list_deck::list_my_decks;
 use crate::deck::read_deck::read_deck;
 use crate::deck::update_deck::update_deck;
 use crate::discord::delete_interaction;
+use crate::lc::autocomplete::lc_autocomplete;
 use crate::lc::button::lc_button;
 use crate::lc::button::LC_BUTTON_PREFIX;
 use crate::lc::command::lc_command;
@@ -83,7 +84,7 @@ async fn route(
                 LOR_COMMAND_NAME => lor_autocomplete(discord_interaction, binahbot_env),
                 READ_DECK_COMMAND_NAME => list_deck(discord_interaction, binahbot_env).await,
                 UPDATE_DECK_COMMAND_NAME | DELETE_DECK_COMMAND_NAME => list_my_decks(discord_interaction, binahbot_env).await,
-                LC_COMMAND_NAME => todo!(), 
+                LC_COMMAND_NAME => lc_autocomplete(discord_interaction, binahbot_env), 
                 _ => unreachable!()
             }))
         },

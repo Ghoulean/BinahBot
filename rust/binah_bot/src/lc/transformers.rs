@@ -5,7 +5,6 @@ use fluent_templates::fluent_bundle::FluentValue;
 use fluent_templates::Loader;
 use lobocorp::lobocorp_common::game_objects::abnormality::BreachingEntity;
 use lobocorp::lobocorp_common::game_objects::abnormality::DontTouchMeInfo;
-use lobocorp::lobocorp_common::game_objects::abnormality::EncyclopediaInfo;
 use lobocorp::lobocorp_common::game_objects::abnormality::NormalInfo;
 use lobocorp::lobocorp_common::game_objects::abnormality::ToolInfo;
 use lobocorp::lobocorp_common::game_objects::abnormality::WorkProbabilities;
@@ -22,11 +21,9 @@ use lobocorp::lobocorp_common::game_objects::equipment::Gift;
 use lobocorp::lobocorp_common::game_objects::equipment::Suit;
 use lobocorp::lobocorp_common::game_objects::equipment::Weapon;
 use lobocorp::lobocorp_common::localizations::abnormality::BreachingEntityLocalization;
-use lobocorp::lobocorp_common::localizations::abnormality::EncyclopediaInfoLocalization;
 use lobocorp::lobocorp_common::localizations::common::Locale;
 use lobocorp::lobocorp_common::localizations::equipment::LocalizationKey;
 use lobocorp::lobocorp_reparser::get_abno_localization;
-use lobocorp::lobocorp_reparser::get_encyclopedia_info;
 use lobocorp::lobocorp_reparser::get_localization;
 use unic_langid::LanguageIdentifier;
 
@@ -37,31 +34,18 @@ use crate::models::discord::DiscordEmbed;
 use crate::models::discord::DiscordEmbedFields;
 use crate::models::discord::DiscordEmbedFooter;
 use crate::models::discord::DiscordEmbedImage;
+use crate::models::discord::DiscordEmbedThumbnail;
 
-pub fn transform_encyclopedia_page(
-    id: &u32,
-    abno_locale: &Locale,
+pub fn transform_normal_info(
+    entry: &NormalInfo,
+    locale: &Locale,
     request_locale: &BinahBotLocale,
     env: &BinahBotEnvironment
 ) -> DiscordEmbed {
-    let encyclopedia = get_encyclopedia_info(id).expect("invalid id");
-    let locale_info = get_abno_localization(id, abno_locale).expect("invalid id-locale pair");
+    let locale_info = get_abno_localization(&entry.id, locale).expect("invalid id-locale pair");
     let lang_id = request_locale.into();
 
-    match encyclopedia {
-        EncyclopediaInfo::Normal(x) => transform_normal_info(&x, &locale_info, &lang_id, env),
-        EncyclopediaInfo::Tool(x) => transform_tool_info(&x, &locale_info, &lang_id, env),
-        EncyclopediaInfo::DontTouchMe(x) => transform_donttouchme(&x, &locale_info, &lang_id, env),
-    }
-}
-
-fn transform_normal_info(
-    entry: &NormalInfo,
-    locale_info: &EncyclopediaInfoLocalization,
-    lang_id: &LanguageIdentifier,
-    env: &BinahBotEnvironment
-) -> DiscordEmbed {
-    let mut fields = vec![
+    let fields = vec![
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "risk_level_header"),
             value: entry.risk.to_string(), // todo: localize
@@ -95,7 +79,7 @@ fn transform_normal_info(
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "defenses_header"),
             value: if entry.is_breachable {
-                format_defenses(&entry.defenses, lang_id, env)
+                format_defenses(&entry.defenses, &lang_id, env)
             } else {
                 env.locales.lookup(&lang_id, "non_breachable_entity_value")
             },
@@ -105,32 +89,18 @@ fn transform_normal_info(
             name: env.locales.lookup(&lang_id, "observation_level_header"),
             value: format_observation_levels(
                 &entry.observation_level_bonuses,
-                lang_id,
+                &lang_id,
                 env
             ),
             inline: Some(true),
         },
     ];
 
-    locale_info.managerial_guidances.iter().enumerate().for_each(|(i, x)| {
-        fields.push(DiscordEmbedFields {
-            name: env.locales.lookup_with_args(
-                lang_id,
-                "managerial_guidance_header",
-                &HashMap::from([
-                    ("index", FluentValue::from(i + 1)),
-                ])
-            ),
-            value: x.replace("$0", locale_info.name),
-            inline: Some(false),
-        });
-    });
-
     let image_url = get_portrait_url(entry.id, env);
 
     DiscordEmbed {
         title: Some(env.locales.lookup_with_args(
-            lang_id,
+            &lang_id,
             "encyclopedia_title_format",
             &HashMap::from([
                 ("name", FluentValue::from(locale_info.name)),
@@ -142,6 +112,7 @@ fn transform_normal_info(
         image: Some(DiscordEmbedImage {
             url: image_url,
         }),
+        thumbnail: None,
         footer: Some(DiscordEmbedFooter {
             text: entry.id.to_string(),
             icon_url: None,
@@ -152,12 +123,65 @@ fn transform_normal_info(
     }
 }
 
-fn transform_tool_info(
-    entry: &ToolInfo,
-    locale_info: &EncyclopediaInfoLocalization,
-    lang_id: &LanguageIdentifier,
+pub fn transform_normal_info_managerial_guidance(
+    entry: &NormalInfo,
+    locale: &Locale,
+    request_locale: &BinahBotLocale,
     env: &BinahBotEnvironment
 ) -> DiscordEmbed {
+    let locale_info = get_abno_localization(&entry.id, locale).expect("invalid id-locale pair");
+    let lang_id = request_locale.into();
+
+    let fields = locale_info.managerial_guidances.iter().enumerate().map(|(i, x)| {
+        DiscordEmbedFields {
+            name: env.locales.lookup_with_args(
+                &lang_id,
+                "managerial_guidance_header",
+                &HashMap::from([
+                    ("index", FluentValue::from(i + 1)),
+                ])
+            ),
+            value: x.replace("$0", locale_info.name),
+            inline: Some(false),
+        }
+    }).collect::<Vec<_>>();
+
+    let thumbnail_url = get_portrait_url(entry.id, env);
+
+    DiscordEmbed {
+        title: Some(env.locales.lookup_with_args(
+            &lang_id,
+            "encyclopedia_title_format",
+            &HashMap::from([
+                ("name", FluentValue::from(locale_info.name)),
+                ("code", FluentValue::from(locale_info.code)),
+            ])
+        )),
+        description: None,
+        color: Some(DiscordEmbedColors::from(&entry.risk) as i32),
+        image: None,
+        thumbnail: Some(DiscordEmbedThumbnail {
+            url: thumbnail_url,
+        }),
+        footer: Some(DiscordEmbedFooter {
+            text: entry.id.to_string(),
+            icon_url: None,
+        }),
+        author: None,
+        url: None,
+        fields: Some(fields),
+    }
+}
+
+pub fn transform_tool_info(
+    entry: &ToolInfo,
+    locale: &Locale,
+    request_locale: &BinahBotLocale,
+    env: &BinahBotEnvironment
+) -> DiscordEmbed {
+    let locale_info = get_abno_localization(&entry.id, locale).expect("invalid id-locale pair");
+    let lang_id = request_locale.into();
+
     let mut fields = vec![
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "risk_level_header"),
@@ -180,7 +204,7 @@ fn transform_tool_info(
 
         fields.push(DiscordEmbedFields {
             name: env.locales.lookup_with_args(
-                lang_id,
+                &lang_id,
                 "managerial_guidance_header",
                 &HashMap::from([
                     ("index", FluentValue::from(i + 1)),
@@ -195,7 +219,7 @@ fn transform_tool_info(
 
     DiscordEmbed {
         title: Some(env.locales.lookup_with_args(
-            lang_id,
+            &lang_id,
             "encyclopedia_title_format",
             &HashMap::from([
                 ("name", FluentValue::from(locale_info.name)),
@@ -207,6 +231,7 @@ fn transform_tool_info(
         image: Some(DiscordEmbedImage {
             url: image_url,
         }),
+        thumbnail: None,
         footer: Some(DiscordEmbedFooter {
             text: entry.id.to_string(),
             icon_url: None,
@@ -217,12 +242,15 @@ fn transform_tool_info(
     }
 }
 
-fn transform_donttouchme(
+pub fn transform_donttouchme(
     entry: &DontTouchMeInfo,
-    locale_info: &EncyclopediaInfoLocalization,
-    lang_id: &LanguageIdentifier,
+    locale: &Locale,
+    request_locale: &BinahBotLocale,
     env: &BinahBotEnvironment
 ) -> DiscordEmbed {
+    let locale_info = get_abno_localization(&entry.id, locale).expect("invalid id-locale pair");
+    let lang_id = request_locale.into();
+
     let fields = vec![
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "risk_level_header"),
@@ -235,7 +263,7 @@ fn transform_donttouchme(
 
     DiscordEmbed {
         title: Some(env.locales.lookup_with_args(
-            lang_id,
+            &lang_id,
             "encyclopedia_title_format",
             &HashMap::from([
                 ("name", FluentValue::from(locale_info.name)),
@@ -247,6 +275,7 @@ fn transform_donttouchme(
         image: Some(DiscordEmbedImage {
             url: image_url,
         }),
+        thumbnail: None,
         footer: Some(DiscordEmbedFooter {
             text: entry.id.to_string(),
             icon_url: None,
@@ -346,6 +375,7 @@ pub fn transform_weapon(
         description: None,
         color: Some(DiscordEmbedColors::from(&weapon.risk) as i32),
         image: None, // todo: upload image
+        thumbnail: None,
         footer: Some(DiscordEmbedFooter {
             text: weapon.id.to_string(),
             icon_url: None,
@@ -430,6 +460,7 @@ pub fn transform_suit(
         description: None,
         color: Some(DiscordEmbedColors::from(&suit.risk) as i32),
         image: None, // todo: upload image
+        thumbnail: None,
         footer: Some(DiscordEmbedFooter {
             text: suit.id.to_string(),
             icon_url: None,
@@ -476,6 +507,7 @@ pub fn transform_gift(
         description: None,
         color: Some(DiscordEmbedColors::Default as i32),
         image: None, // todo: upload image
+        thumbnail: None,
         footer: Some(DiscordEmbedFooter {
             text: gift.id.to_string(),
             icon_url: None,
@@ -534,6 +566,7 @@ pub fn transform_breaching_entity(
         description: None,
         color: Some(DiscordEmbedColors::from(&breaching_entity.risk_level) as i32),
         image: None, // todo: upload image
+        thumbnail: None,
         footer: Some(DiscordEmbedFooter {
             text: breaching_entity.id.to_string(),
             icon_url: None,

@@ -121,6 +121,7 @@ fn no_match_found(lang_id: &LanguageIdentifier, env: &BinahBotEnvironment) -> Me
                 description: Some(env.locales.lookup(&lang_id, "no_page_error_message")),
                 color: Some(DiscordEmbedColors::Default as i32),
                 image: None,
+                thumbnail: None,
                 footer: None,
                 author: None,
                 url: None,

@@ -1,10 +1,14 @@
 use std::str::FromStr;
 
+use lobocorp::lobocorp_common::game_objects::abnormality::EncyclopediaInfo;
 use lobocorp::lobocorp_common::localizations::common::Locale;
+use lobocorp::lobocorp_reparser::get_encyclopedia_info;
 
 use crate::lc::button::build_buttons;
 use crate::lc::button::Code;
-use crate::lc::transformers::transform_encyclopedia_page;
+use crate::lc::transformers::transform_donttouchme;
+use crate::lc::transformers::transform_normal_info;
+use crate::lc::transformers::transform_tool_info;
 use crate::models::binahbot::BinahBotEnvironment;
 use crate::models::binahbot::BinahBotLocale;
 use crate::models::discord::AllowedMentions;
@@ -38,14 +42,27 @@ pub fn lc_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -
     let query = get_option_value("query", command_args).map(|x| match x {
         DiscordInteractionOptionValue::String(y) => y,
         _ => unreachable!()
-    }).and_then(|x| x.parse::<u32>().ok()).expect("couldn't parse input");
+    }).and_then(|x| {
+        x.parse::<u32>().ok().or_else(|| lobocorp::lobocorp_index::query(x).first().copied())
+    });
+    let query = match query {
+        Some(x) => x,
+        None => todo!()
+    };
 
-    let embed: DiscordEmbed = transform_encyclopedia_page(
-        &query,
-        &locale,
-        &binah_locale,
-        env
-    );
+    let entry = get_encyclopedia_info(&query).expect("couldn't find entry");
+
+    let embed: DiscordEmbed = match &entry {
+        EncyclopediaInfo::Normal(x) => {
+            transform_normal_info(&x, &locale, &binah_locale, env)
+        },
+        EncyclopediaInfo::Tool(x) => {
+            transform_tool_info(&x, &locale, &binah_locale, env)
+        },
+        EncyclopediaInfo::DontTouchMe(x) => {
+            transform_donttouchme(&x, &locale, &binah_locale, env)
+        }
+    };
 
     let is_private = get_option_value("private", command_args).map(|x| match x {
         DiscordInteractionOptionValue::Bool(y) => y,

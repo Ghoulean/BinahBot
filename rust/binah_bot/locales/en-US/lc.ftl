@@ -42,6 +42,7 @@ breaching_entity_health_header = HP
 breaching_entity_movespeed_header = Movement speed
 breaching_entity_damage_type_header = Attack type
 
+managerial_guidance_button_label = Managerial guidances
 breaching_button_label = Breaching
 breaching_child_button_label = { $name }
 weapon_button_label = { $name } (weapon)

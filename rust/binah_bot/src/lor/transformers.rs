@@ -68,6 +68,7 @@ pub fn transform_abno_page(
         description: None,
         color: Some(embed_color as i32),
         image: Some(DiscordEmbedImage { url: img_url }),
+        thumbnail: None,
         footer: Some(DiscordEmbedFooter {
             text: internal_name.to_string(),
             icon_url: None,
@@ -188,6 +189,7 @@ pub fn transform_battle_symbol(
         description: None,
         color: Some(DiscordEmbedColors::Default as i32),
         image: Some(DiscordEmbedImage { url }),
+        thumbnail: None,
         footer: Some(DiscordEmbedFooter {
             text: internal_name.to_string(),
             icon_url: None,
@@ -267,6 +269,7 @@ pub fn transform_combat_page(
         description: None,
         color: Some(embed_color as i32),
         image: Some(DiscordEmbedImage { url }),
+        thumbnail: None,
         footer: Some(DiscordEmbedFooter {
             text: id.to_string(),
             icon_url: None,
@@ -401,6 +404,7 @@ pub fn transform_key_page(
         description: None,
         color: Some(embed_color as i32),
         image: Some(DiscordEmbedImage { url }),
+        thumbnail: None,
         footer: Some(DiscordEmbedFooter {
             text: id.to_string(),
             icon_url: None,
@@ -468,6 +472,7 @@ pub fn transform_passive(
         description: None,
         color: Some(embed_color as i32),
         image: None,
+        thumbnail: None,
         footer: Some(DiscordEmbedFooter {
             text: id.to_string(),
             icon_url: None,

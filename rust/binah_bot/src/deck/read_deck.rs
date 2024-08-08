@@ -224,6 +224,7 @@ async fn transform_deck(
         description: deck.description.clone(),
         color: Some(DiscordEmbedColors::Default as i32),
         image: Some(DiscordEmbedImage { url: deck_preview_img }),
+        thumbnail: None,
         footer: None,
         author: Some(DiscordEmbedAuthor {
             name: author_name,

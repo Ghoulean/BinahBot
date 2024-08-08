@@ -15,6 +15,7 @@ pub struct DiscordEmbed {
     pub description: Option<String>,
     pub color: Option<i32>,
     pub image: Option<DiscordEmbedImage>,
+    pub thumbnail: Option<DiscordEmbedThumbnail>,
     pub footer: Option<DiscordEmbedFooter>,
     pub author: Option<DiscordEmbedAuthor>,
     pub url: Option<String>,
@@ -23,6 +24,11 @@ pub struct DiscordEmbed {
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct DiscordEmbedImage {
+    pub url: String,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct DiscordEmbedThumbnail {
     pub url: String,
 }
 
