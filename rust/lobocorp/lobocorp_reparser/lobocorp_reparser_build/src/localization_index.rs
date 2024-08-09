@@ -42,7 +42,15 @@ fn build_localization_index() -> HashMap<OwnedLocalizationKey, String> {
             let start = x.first_child().unwrap().range().start;
             let end = x.last_child().unwrap().range().end;
             let binding = doc.input_text()[start..end].to_string();
-            let text = binding.trim();
+
+            // todo: more comprehensive parsing
+            let text = binding.trim().replace("&#13;", "")
+                .replace("&#10;", "\n")
+                .replace("&#34;", "\"")
+                .replace("&#60;", "<")
+                .replace("&lt;", "<")
+                .replace("&#62;", ">")
+                .replace("&gt;", ">");
 
             let localization_key = OwnedLocalizationKey(id.to_string(), locale.clone());
             hm.entry(localization_key).or_insert(format!("r#\"{}\"#", text));

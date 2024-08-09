@@ -370,11 +370,13 @@ pub fn transform_weapon(
         )
     });
 
+    let image_url = get_weapon_url(weapon.id, env);
+
     DiscordEmbed {
         title: get_localization(&LocalizationKey(weapon.name_id, locale.clone())).map(|x| x.to_string()),
         description: None,
         color: Some(DiscordEmbedColors::from(&weapon.risk) as i32),
-        image: None, // todo: upload image
+        image: Some(DiscordEmbedImage { url: image_url }),
         thumbnail: None,
         footer: Some(DiscordEmbedFooter {
             text: weapon.id.to_string(),
@@ -455,11 +457,13 @@ pub fn transform_suit(
         )
     });
 
+    let image_url = get_suit_url(suit.id, env);
+
     DiscordEmbed {
         title: get_localization(&LocalizationKey(suit.name_id, locale.clone())).map(|x| x.to_string()),
         description: None,
         color: Some(DiscordEmbedColors::from(&suit.risk) as i32),
-        image: None, // todo: upload image
+        image: Some(DiscordEmbedImage { url: image_url }),
         thumbnail: None,
         footer: Some(DiscordEmbedFooter {
             text: suit.id.to_string(),
@@ -502,11 +506,13 @@ pub fn transform_gift(
         },
     ];
 
+    let image_url = get_gift_url(gift.id, env);
+
     DiscordEmbed {
         title: get_localization(&LocalizationKey(gift.name_id, locale.clone())).map(|x| x.to_string()),
         description: None,
         color: Some(DiscordEmbedColors::Default as i32),
-        image: None, // todo: upload image
+        image: Some(DiscordEmbedImage { url: image_url }),
         thumbnail: None,
         footer: Some(DiscordEmbedFooter {
             text: gift.id.to_string(),
@@ -579,6 +585,18 @@ pub fn transform_breaching_entity(
 
 fn get_portrait_url(id: u32, env: &BinahBotEnvironment) -> String {
     format!("https://{0}.s3.amazonaws.com/lc/portrait/{id}.png", env.s3_bucket_name)
+}
+
+fn get_weapon_url(id: u32, env: &BinahBotEnvironment) -> String {
+    format!("https://{0}.s3.amazonaws.com/lc/weapon/{id}.png", env.s3_bucket_name)
+}
+
+fn get_suit_url(id: u32, env: &BinahBotEnvironment) -> String {
+    format!("https://{0}.s3.amazonaws.com/lc/suit/{id}.png", env.s3_bucket_name)
+}
+
+fn get_gift_url(id: u32, env: &BinahBotEnvironment) -> String {
+    format!("https://{0}.s3.amazonaws.com/lc/gift/{id}.png", env.s3_bucket_name)
 }
 
 impl From<&RiskLevel> for DiscordEmbedColors {
