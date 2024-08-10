@@ -32,6 +32,7 @@ pub struct Emojis {
     pub insight: Option<String>,
     pub attachment: Option<String>,
     pub repression: Option<String>,
+    pub agent: Option<String>,
     pub red_damage: Option<String>,
     pub white_damage: Option<String>,
     pub black_damage: Option<String>,
@@ -39,6 +40,11 @@ pub struct Emojis {
     pub good_mood: Option<String>,
     pub normal_mood: Option<String>,
     pub bad_mood: Option<String>,
+    pub risk_zayin: Option<String>,
+    pub risk_teth: Option<String>,
+    pub risk_he: Option<String>,
+    pub risk_waw: Option<String>,
+    pub risk_aleph: Option<String>,
 }
 
 pub struct BinahBotEnvironment {

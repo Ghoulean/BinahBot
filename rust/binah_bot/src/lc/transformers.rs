@@ -48,7 +48,7 @@ pub fn transform_normal_info(
     let fields = vec![
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "risk_level_header"),
-            value: entry.risk.to_string(), // todo: localize
+            value: format_risk_level(&entry.risk, env),
             inline: Some(true),
         },
         DiscordEmbedFields {
@@ -185,7 +185,7 @@ pub fn transform_tool_info(
     let mut fields = vec![
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "risk_level_header"),
-            value: entry.risk.to_string(), // todo: localize
+            value: format_risk_level(&entry.risk, env),
             inline: Some(true),
         },
     ];
@@ -254,7 +254,7 @@ pub fn transform_donttouchme(
     let fields = vec![
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "risk_level_header"),
-            value: entry.risk.to_string(), // todo: localize
+            value: format_risk_level(&entry.risk, env),
             inline: Some(true),
         },
     ];
@@ -297,7 +297,7 @@ pub fn transform_weapon(
     let mut fields = vec![
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "risk_level_header"),
-            value: weapon.risk.to_string(), // todo: localize
+            value: format_risk_level(&weapon.risk, env),
             inline: Some(true),
         },
         DiscordEmbedFields {
@@ -399,7 +399,7 @@ pub fn transform_suit(
     let mut fields = vec![
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "risk_level_header"),
-            value: suit.risk.to_string(), // todo: localize
+            value: format_risk_level(&suit.risk, env),
             inline: Some(true),
         },
         DiscordEmbedFields {
@@ -535,7 +535,7 @@ pub fn transform_breaching_entity(
     let fields = vec![
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "risk_level_header"),
-            value: breaching_entity.risk_level.to_string(), // todo: localize
+            value: format_risk_level(&breaching_entity.risk_level, env),
             inline: Some(true),
         },
         DiscordEmbedFields {
@@ -622,7 +622,7 @@ fn get_damage_emoji<'a>(damage_type: &'a DamageType, env: &'a BinahBotEnvironmen
 
 fn get_equip_requirement_emoji<'a>(key: &'a EquipRequirementKey, env: &'a BinahBotEnvironment) -> Option<&'a String> {
     match key {
-        EquipRequirementKey::AgentLevel => None, // todo: put in this emoji
+        EquipRequirementKey::AgentLevel => env.emojis.agent.as_ref(),
         EquipRequirementKey::Fortitude => env.emojis.instinct.as_ref(),
         EquipRequirementKey::Prudence => env.emojis.insight.as_ref(),
         EquipRequirementKey::Temperance => env.emojis.attachment.as_ref(),
@@ -738,8 +738,21 @@ fn format_observation_level(observation_levels: &StatBonus, lang_id: &LanguageId
 
 fn format_equip_requirements(equip_requirements: &[EquipRequirement], env: &BinahBotEnvironment) -> String {
     equip_requirements.iter().map(|x| {
-        format!("{} {}", get_equip_requirement_emoji(&x.0, env).unwrap_or(&"-".to_string()), x.1) 
+        format!("{} {}", get_equip_requirement_emoji(&x.0, env).unwrap_or(&"?".to_string()), x.1) 
     }).collect::<Vec<_>>().join("; ")
+}
+
+fn format_risk_level(risk_level: &RiskLevel, env: &BinahBotEnvironment) -> String {
+    let binding = match risk_level {
+        RiskLevel::Zayin => &env.emojis.risk_zayin,
+        RiskLevel::Teth => &env.emojis.risk_teth,
+        RiskLevel::He => &env.emojis.risk_he,
+        RiskLevel::Waw => &env.emojis.risk_waw,
+        RiskLevel::Aleph => &env.emojis.risk_aleph,
+    };
+    let binding2 = &"".to_string();
+    let emoji = binding.as_ref().unwrap_or(binding2);
+    format!("{}{}", emoji, risk_level.to_string())
 }
 
 impl From<RiskLevel> for DiscordEmbedColors {

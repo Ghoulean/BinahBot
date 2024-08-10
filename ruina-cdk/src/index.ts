@@ -20,6 +20,7 @@ new DiscordStack(app, "DiscordStack", {
         INSTINCT_EMOJI_ID: process.env["INSTINCT_EMOJI_ID"],
         INSIGHT_EMOJI_ID: process.env["INSIGHT_EMOJI_ID"],
         ATTACHMENT_EMOJI_ID: process.env["ATTACHMENT_EMOJI_ID"],
+        AGENT_EMOJI_ID: process.env["AGENT_EMOJI_ID"],
         REPRESSION_EMOJI_ID: process.env["REPRESSION_EMOJI_ID"],
         RED_DAMAGE_EMOJI_ID: process.env["RED_DAMAGE_EMOJI_ID"],
         WHITE_DAMAGE_EMOJI_ID: process.env["WHITE_DAMAGE_EMOJI_ID"],
@@ -27,7 +28,12 @@ new DiscordStack(app, "DiscordStack", {
         PALE_DAMAGE_EMOJI_ID: process.env["PALE_DAMAGE_EMOJI_ID"],
         GOOD_MOOD_EMOJI_ID: process.env["GOOD_MOOD_EMOJI_ID"],
         NORMAL_MOOD_EMOJI_ID: process.env["NORMAL_MOOD_EMOJI_ID"],
-        BAD_EMOJI_ID: process.env["BAD_EMOJI_ID"],
+        BAD_MOOD_EMOJI_ID: process.env["BAD_MOOD_EMOJI_ID"],
+        RISK_ZAYIN_EMOJI_ID: process.env["RISK_ZAYIN_EMOJI_ID"],
+        RISK_TETH_EMOJI_ID: process.env["RISK_TETH_EMOJI_ID"],
+        RISK_HE_EMOJI_ID: process.env["RISK_HE_EMOJI_ID"],
+        RISK_WAW_EMOJI_ID: process.env["RISK_WAW_EMOJI_ID"],
+        RISK_ALEPH_EMOJI_ID: process.env["RISK_ALEPH_EMOJI_ID"],
     },
 });
 
