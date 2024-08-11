@@ -760,3 +760,56 @@ impl From<RiskLevel> for DiscordEmbedColors {
         DiscordEmbedColors::from(&value)
     }
 }
+
+
+#[cfg(test)]
+mod tests {
+    use lobocorp::lobocorp_common::game_objects::abnormality::EncyclopediaInfo;
+    use lobocorp::lobocorp_reparser::get_all_encyclopedia_ids;
+    use lobocorp::lobocorp_reparser::get_encyclopedia_info;
+
+    use crate::test_utils::build_mocked_binahbot_env;
+
+    use super::*;
+
+    #[test]
+    fn correct_breachability_display() {
+        // normal abnos only
+        let env = &build_mocked_binahbot_env();
+        let non_breachable = [
+            100053, 100009, 100028, 100014, 100007, 100013, 100027, 100037, 100059, 100103, 100002, 100041,
+            100017, 100045
+        ];
+        let breaching_no_defenses = [
+            100005, 100019
+        ];
+        let breaching_with_defenses = [
+            100015, 100018, 100036, 100054, 100043, 100011, 100057, 100029, 100033, 100008, 100035, 100055,
+            100061, 100038, 100058, 100064, 100056, 100063, 100042
+        ];
+
+        get_all_encyclopedia_ids().iter().flat_map(|x| get_encyclopedia_info(&x)).flat_map(|x| {
+            match x {
+                EncyclopediaInfo::Normal(x) => Some(x),
+                _ => None
+            }
+        }).map(|x| {
+            (x, transform_normal_info(&x, &Locale::English, &BinahBotLocale::EnglishUS, env))
+        }).for_each(|(entry, embed)| {
+            let lang_id: LanguageIdentifier = BinahBotLocale::EnglishUS.into();
+            let id = entry.id;            
+            let name = env.locales.lookup(&lang_id, "defenses_header");
+            let binding = embed.fields.expect("no fields");
+            let defense_field = binding.iter().find(|x| x.name == name).expect("no defense field");
+            dbg!(&id);
+            if non_breachable.contains(&id) {
+                assert_eq!(env.locales.lookup(&lang_id, "non_breachable_entity_value"), defense_field.value);
+            } else if breaching_no_defenses.contains(&id) {
+                assert_eq!(4, defense_field.value.split("\n").collect::<Vec<_>>().len());
+                assert!(defense_field.value.contains(&env.locales.lookup(&lang_id, "unknown_defenses_value")));
+            } else if breaching_with_defenses.contains(&id) {
+                assert_eq!(4, defense_field.value.split("\n").collect::<Vec<_>>().len());
+            }
+        })
+    }
+}

@@ -86,3 +86,74 @@ pub fn lc_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -
         }),
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use lobocorp::lobocorp_reparser::get_abno_localization;
+    use lobocorp::lobocorp_reparser::get_all_encyclopedia_ids;
+    use strum::IntoEnumIterator;
+
+    use crate::models::discord::DiscordApplicationCommandInteractionData;
+    use crate::models::discord::DiscordInteractionOptions;
+    use crate::models::discord::DiscordInteractionType;
+    use crate::models::discord::DiscordUser;
+    use crate::test_utils::build_mocked_binahbot_env;
+
+    use super::*;
+
+    #[test]
+    fn check_no_crashing() {
+        let env = &build_mocked_binahbot_env();
+        Locale::iter().for_each(|locale| {
+            get_all_encyclopedia_ids().iter().flat_map(|x| {
+                get_encyclopedia_info(x)    
+            }).map(|x| {
+                let id = match x {
+                    EncyclopediaInfo::Normal(x) => &x.id,
+                    EncyclopediaInfo::Tool(x) => &x.id,
+                    EncyclopediaInfo::DontTouchMe(x) => &x.id
+                };
+                get_abno_localization(id, &locale).map(|x| x.name).expect("no name")
+            }).map(|name| {
+                build_discord_interaction(name.to_string(), locale.clone())
+            }).for_each(|interaction| {
+                let _does_not_crash = lc_command(&interaction, env);
+            })
+        });
+    }
+
+
+    fn build_discord_interaction(query_string: String, locale: Locale) -> DiscordInteraction {
+        DiscordInteraction {
+            id: "id".to_string(),
+            application_id: "app_id".to_string(),
+            r#type: DiscordInteractionType::ApplicationCommand,
+            data: Some(DiscordInteractionData::ApplicationCommand(DiscordApplicationCommandInteractionData {
+                id: "id".to_string(),
+                name: "lc".to_string(),
+                options: Some(vec![DiscordInteractionOptions {
+                    name: "query".to_string(),
+                    name_localizations: None,
+                    value: DiscordInteractionOptionValue::String(query_string),
+                    focused: None,
+                }, DiscordInteractionOptions {
+                    name: "locale".to_string(),
+                    name_localizations: None,
+                    value: DiscordInteractionOptionValue::String(locale.to_string()),
+                    focused: None,
+                }]),
+            })),
+            channel_id: None,
+            token: "token".to_string(),
+            locale: None,
+            guild_locale: None,
+            user: Some(DiscordUser {
+                id: "snowflake".to_string(),
+                username: "username".to_string(),
+                avatar: "hash".to_string(),
+            }),
+            member: None,
+            message: None,
+        }
+    }
+}
