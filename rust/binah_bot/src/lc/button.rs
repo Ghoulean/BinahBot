@@ -59,14 +59,30 @@ pub enum Code {
 
 const SEPERATOR: &str = "#";
 
-pub fn lc_button(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -> MessageResponse {
+pub fn lc_button(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -> Result<MessageResponse, ()> {
+    tracing::info!("Lc button: interaction={:#?}", interaction);
+
     let data = match interaction.data.as_ref().expect("no data") {
         DiscordInteractionData::MessageComponent(x) => x,
         _ => unreachable!()
     };
     let custom_id = &data.custom_id;
     if !custom_id.starts_with(LC_BUTTON_PREFIX) {
-        panic!("custom id did not start with {}", LC_BUTTON_PREFIX);
+        tracing::error!("custom id did not start with {}", LC_BUTTON_PREFIX);
+        return Err(());
+    };
+    let original_user_id = interaction.message.as_ref().and_then(|x| x.interaction_metadata.as_ref()).map(|x| &x.user.id);
+    let user_id = interaction.user.as_ref()
+        .map(|x| &x.id)
+        .unwrap_or_else(|| &interaction.member
+            .as_ref()
+            .and_then(|x| x.user.as_ref())
+            .map(|x| &x.id)
+            .unwrap()
+        );
+    if original_user_id.is_some_and(|x| x != user_id) {
+        tracing::error!("interaction author differs: user_id={}; original_user_id={:?}", user_id, original_user_id);
+        return Err(());
     };
 
     let binahbot_locale = get_binahbot_locale(&interaction);
@@ -127,7 +143,7 @@ pub fn lc_button(interaction: &DiscordInteraction, env: &BinahBotEnvironment) ->
         id, &locale, &binahbot_locale, &(code, index), env
     );
 
-    MessageResponse {
+    Ok(MessageResponse {
         r#type: DiscordInteractionResponseType::UpdateMessage,
         data: Some(DiscordInteractionResponseMessage {
             allowed_mentions: Some(AllowedMentions { parse: Vec::new() }),
@@ -136,7 +152,7 @@ pub fn lc_button(interaction: &DiscordInteraction, env: &BinahBotEnvironment) ->
             flags: None, // todo
             components: Some(components),
         }),
-    }
+    })
 }
 
 pub fn build_buttons(

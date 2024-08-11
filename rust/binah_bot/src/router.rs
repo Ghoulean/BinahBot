@@ -96,19 +96,24 @@ async fn route(
 
             let custom_id = &data.custom_id;
 
-            Ok(DiscordInteractionResponse::UpdateMessage(
-                if custom_id == DELETE_BUTTON_CUSTOM_ID {
-                    let _ = process_delete_button(discord_interaction, binahbot_env).await;
+            let result = if custom_id == DELETE_BUTTON_CUSTOM_ID {
+                let _ = process_delete_button(discord_interaction, binahbot_env).await;
 
-                    return Ok(DiscordInteractionResponse::DeferredUpdateMessage(DeferredUpdateResponse {
-                        r#type: DiscordInteractionResponseType::DeferredUpdateMessage
-                    }))
-                } else if custom_id.starts_with(LC_BUTTON_PREFIX) {
-                    lc_button(&discord_interaction, binahbot_env)
-                } else {
-                    unreachable!()
-                }
-            ))
+                return Ok(DiscordInteractionResponse::DeferredUpdateMessage(DeferredUpdateResponse {
+                    r#type: DiscordInteractionResponseType::DeferredUpdateMessage
+                }))
+            } else if custom_id.starts_with(LC_BUTTON_PREFIX) {
+                lc_button(&discord_interaction, binahbot_env)
+            } else {
+                unreachable!()
+            };
+
+            match result {
+                Ok(x) => Ok(DiscordInteractionResponse::UpdateMessage(x)),
+                Err(_) => Ok(DiscordInteractionResponse::DeferredUpdateMessage(DeferredUpdateResponse {
+                    r#type: DiscordInteractionResponseType::DeferredUpdateMessage
+                })),
+            }
         }
         _ => unreachable!(),
     }
