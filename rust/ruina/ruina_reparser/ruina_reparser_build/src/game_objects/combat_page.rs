@@ -1,16 +1,18 @@
 use std::collections::HashMap;
 
 use roxmltree::{Document, Node};
-use ruina_common::game_objects::common::Collectability;
+use ruina_common::game_objects::common::{Collectability, PageType};
 use ruina_common::game_objects::combat_page::{CombatRange, DieType};
 
 use crate::game_objects::common::CollectabilityMap;
 use crate::game_objects::common::ParserProps;
 use crate::serde::{
-    chapter_enum_serializer, display_serializer, get_chapter_from_str, get_rarity_from_str, serialize_option_2, str_array_serializer, string_literal_serializer
+    chapter_enum_serializer, display_serializer, get_rarity_from_str, serialize_option_2, str_array_serializer, string_literal_serializer
 };
 use crate::xml::get_nodes_text;
 use crate::xml::{get_nodes, get_unique_node, get_unique_node_text};
+
+use super::common::{from_chapter_map, ChapterMap};
 
 type CombatPageKey = String;
 type CombatPageValue = String;
@@ -20,7 +22,8 @@ pub fn reserialize_combat_pages(parser_props: &ParserProps) -> String {
         .iter()
         .flat_map(|document_string| process_combat_page_file(
             document_string.as_str(),
-            parser_props.collectability_map
+            parser_props.collectability_map,
+            parser_props.chapter_map
         ))
         .collect();
 
@@ -36,7 +39,8 @@ pub fn reserialize_combat_pages(parser_props: &ParserProps) -> String {
 
 fn process_combat_page_file(
     document_string: &str,
-    collectability_map: &CollectabilityMap
+    collectability_map: &CollectabilityMap,
+    chapter_map: &ChapterMap,
 ) -> HashMap<CombatPageKey, CombatPageValue> {
     let doc: Box<Document> = Box::new(Document::parse(document_string).unwrap());
     let xml_root_node = get_unique_node(doc.root(), "DiceCardXmlRoot").unwrap();
@@ -44,13 +48,14 @@ fn process_combat_page_file(
 
     combat_node_list
         .into_iter()
-        .map(|x| parse_combat_page(x, collectability_map))
+        .map(|x| parse_combat_page(x, collectability_map, chapter_map))
         .collect()
 }
 
 fn parse_combat_page(
     combat_node: Node,
-    collectability_map: &CollectabilityMap
+    collectability_map: &CollectabilityMap,
+    chapter_map: &ChapterMap,
 ) -> (CombatPageKey, CombatPageValue) {
     let id = combat_node.attribute("ID").unwrap();
     let artwork = serialize_option_2(
@@ -85,7 +90,7 @@ fn parse_combat_page(
         string_literal_serializer
     );
     let chapter = serialize_option_2(
-        get_unique_node_text(combat_node, "Chapter").map(get_chapter_from_str),
+        from_chapter_map(&id, &PageType::CombatPage, chapter_map),
         chapter_enum_serializer
     );
     let priority = serialize_option_2(

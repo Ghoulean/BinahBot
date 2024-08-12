@@ -39,7 +39,6 @@ pub enum Chapter {
     UrbanNightmare,
     StarOfTheCity,
     ImpuritasCivitatis,
-    None,
 }
 
 #[derive(Clone, Debug, Eq, PartialEq, strum_macros::Display)]
