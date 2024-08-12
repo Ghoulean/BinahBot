@@ -46,8 +46,6 @@ pub async fn list_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironme
             _ => unreachable!()
     });
 
-    tracing::info!("{:?}", get_option_value("author", command_args));
-
     let author_id_option = get_option_value("author", command_args).map(|x| match x {
             DiscordInteractionOptionValue::String(x) => x,
             _ => unreachable!()

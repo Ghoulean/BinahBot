@@ -15,6 +15,7 @@ use ed25519_dalek::{Signature, Verifier, VerifyingKey};
 use hex::FromHex;
 use http::HeaderMap;
 use lambda_http::{run, service_fn, tracing, Body, Request, Response};
+use ruina::ruina_common::game_objects::common::Chapter;
 use models::binahbot::BinahBotEnvironment;
 use models::binahbot::DiscordSecrets;
 use models::binahbot::Emojis;
@@ -32,6 +33,8 @@ fluent_templates::static_loader! {
         fallback_language: "en-US",
     };
 }
+
+include!(concat!(env!("OUT_DIR"), "/out.rs"));
 
 static TIMESTAMP_HEADER: &str = "x-signature-timestamp";
 static SIGNATURE_HEADER: &str = "x-signature-ed25519";
@@ -135,6 +138,7 @@ async fn main() -> Result<(), lambda_http::Error> {
         ddb_table_name: env::var("DECK_REPOSITORY_NAME").expect("no DECK_REPOSITORY_NAME"),
         ddb_interaction_ttl_table_name: env::var("INTERACTION_TTL_NAME").expect("no INTERACTION_TTL_NAME"),
         thumbnail_lambda_name: env::var("THUMBNAIL_LAMBDA_ARN").expect("no THUMBNAIL_LAMBDA_ARN"),
+        spoiler_config: &SPOILER_CONFIG,
         ddb_client: Some(ddb),
         lambda_client: Some(lambda),
         reqwest_client: Some(http)
@@ -179,6 +183,7 @@ pub mod test_utils {
     use crate::models::binahbot::DiscordSecrets;
     use crate::models::binahbot::Emojis;
     use crate::LOCALES;
+    use crate::SPOILER_CONFIG;
 
     pub fn build_mocked_binahbot_env() -> BinahBotEnvironment {
         BinahBotEnvironment {
@@ -223,6 +228,7 @@ pub mod test_utils {
             ddb_table_name: "table_name".to_string(),
             ddb_interaction_ttl_table_name: "interaction_ttl_table_name".to_string(),
             thumbnail_lambda_name: "thumb_lambda_name".to_string(),
+            spoiler_config: &SPOILER_CONFIG,
             ddb_client: None,
             lambda_client: None,
             reqwest_client: None,

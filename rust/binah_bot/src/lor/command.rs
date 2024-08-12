@@ -1,10 +1,16 @@
+use std::collections::HashMap;
 use std::str::FromStr;
 
+use fluent_templates::fluent_bundle::FluentValue;
 use fluent_templates::Loader;
 use lambda_http::tracing;
+use ruina::ruina_common::game_objects::common::Chapter;
 use ruina::ruina_common::game_objects::common::PageType;
 use ruina::ruina_common::localizations::common::Locale;
 use ruina::ruina_index::models::ParsedTypedId;
+use ruina::ruina_reparser::get_combat_page_by_id;
+use ruina::ruina_reparser::get_key_page_by_id;
+use ruina::ruina_reparser::get_passive_by_id;
 use unic_langid::LanguageIdentifier;
 
 use crate::lor::lookup::lookup;
@@ -66,9 +72,23 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
         }
     });
 
+
     let typed_id = match query {
         Some(x) => x,
         None => return no_match_found(&lang_id, env)
+    };
+
+    let max_spoiler_chapter = &interaction.channel_id.as_ref().and_then(|x| env.spoiler_config.get(&x));
+    let chapter = match typed_id.0 {
+        PageType::CombatPage => get_combat_page_by_id(&typed_id.1).and_then(|x| x.chapter.clone()),
+        PageType::KeyPage => get_key_page_by_id(&typed_id.1).and_then(|x| x.chapter.clone()),
+        PageType::Passive => get_passive_by_id(&typed_id.1).and_then(|x| x.chapter.clone()),
+        _ => None,
+    };
+    if let (Some(chapter), Some(max_spoiler_chapter)) = (chapter, max_spoiler_chapter) {
+        if chapter > **max_spoiler_chapter {
+            return spoiler_found(&typed_id.1, &chapter, max_spoiler_chapter, &lang_id, env);
+        }
     };
 
     let embed: DiscordEmbed = match typed_id.0 {
@@ -133,6 +153,45 @@ fn no_match_found(lang_id: &LanguageIdentifier, env: &BinahBotEnvironment) -> Me
     }
 }
 
+fn spoiler_found(
+    card_id: &str,
+    chapter: &Chapter,
+    configured_chapter: &Chapter,
+    lang_id: &LanguageIdentifier,
+    env: &BinahBotEnvironment
+) -> MessageResponse {
+    MessageResponse {
+        r#type: DiscordInteractionResponseType::ChannelMessageWithSource,
+        data: Some(DiscordInteractionResponseMessage {
+            allowed_mentions: Some(AllowedMentions { parse: Vec::new() }),
+            content: None,
+            embeds: Some(vec![DiscordEmbed {
+                title: None,
+                description: Some(
+                    env.locales.lookup_with_args(
+                        &lang_id,
+                        "spoiler_enforcement_message",
+                        &HashMap::from([
+                            ("card_id", FluentValue::from(card_id)),
+                            ("chapter", FluentValue::from(chapter.to_string())),
+                            ("configured_chapter", FluentValue::from(configured_chapter.to_string())),
+                        ])
+                    )
+                ),
+                color: Some(DiscordEmbedColors::Default as i32),
+                image: None,
+                thumbnail: None,
+                footer: None,
+                author: None,
+                url: None,
+                fields: None
+            }]),
+            flags: Some(DiscordMessageFlag::EphemeralMessage as i32),
+            components: None,
+        }),
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -142,6 +201,7 @@ mod tests {
     use ruina::ruina_reparser::get_all_combat_pages;
     use ruina::ruina_reparser::get_all_key_pages;
     use ruina::ruina_reparser::get_all_passives;
+    use unic_langid::langid;
     use crate::lor::lookup::is_collectable_or_obtainable;
     use crate::models::discord::DiscordApplicationCommandInteractionData;
     use crate::models::discord::DiscordInteractionOptions;
@@ -154,8 +214,8 @@ mod tests {
     #[test]
     fn sanity_weight_of_sin() {
         let weight_of_sin_id = "a#LongBird_Sin";
-        let interaction = build_discord_interaction(weight_of_sin_id.to_string(), Locale::English);
-        let interaction_kr = build_discord_interaction(weight_of_sin_id.to_string(), Locale::Korean);
+        let interaction = build_discord_interaction(weight_of_sin_id.to_string(), Locale::English, None);
+        let interaction_kr = build_discord_interaction(weight_of_sin_id.to_string(), Locale::Korean, None);
         let env = build_mocked_binahbot_env();
 
         let response = lor_command(&interaction, &env);
@@ -187,7 +247,7 @@ mod tests {
     #[test]
     fn sanity_degraded_pillar() {
         let degraded_pillar_id = "c#607204";
-        let interaction = build_discord_interaction(degraded_pillar_id.to_string(), Locale::English);
+        let interaction = build_discord_interaction(degraded_pillar_id.to_string(), Locale::English, None);
         let env = build_mocked_binahbot_env();
 
         let response = lor_command(&interaction, &env);
@@ -206,7 +266,7 @@ mod tests {
     #[ignore]
     fn regenerative_mimicry_passive_realization() {
         let regenerative = "p#605532";
-        let interaction = build_discord_interaction(regenerative.to_string(), Locale::English);
+        let interaction = build_discord_interaction(regenerative.to_string(), Locale::English, None);
         let env = build_mocked_binahbot_env();
 
         let response = lor_command(&interaction, &env);
@@ -228,7 +288,7 @@ mod tests {
         let env = build_mocked_binahbot_env();
 
         // "all" option is false
-        let interaction = build_discord_interaction(liu_section_1_enemy_query.to_string(), Locale::English);
+        let interaction = build_discord_interaction(liu_section_1_enemy_query.to_string(), Locale::English, None);
 
         let response = lor_command(&interaction, &env);
 
@@ -252,7 +312,7 @@ mod tests {
         // Enemy-only FMF contains a card script and a die script that doesn't have
         // an associated locale with it.
         let enemy_fourth_match_flame = "c#9901101";
-        let interaction = build_discord_interaction(enemy_fourth_match_flame.to_string(), Locale::English);
+        let interaction = build_discord_interaction(enemy_fourth_match_flame.to_string(), Locale::English, None);
         let env = build_mocked_binahbot_env();
 
         let response = lor_command(&interaction, &env);
@@ -265,6 +325,24 @@ mod tests {
                 .len(),
             1
         );
+    }
+
+    #[test]
+    fn spoiler_enforcement() {
+        let channel_id = "1234567890123456789".to_string();
+        let true_trigram_formation = "c#701001";
+        let interaction = build_discord_interaction(true_trigram_formation.to_string(), Locale::English, Some(channel_id));
+        let env = build_mocked_binahbot_env();
+
+        let response = lor_command(&interaction, &env);
+        
+        let expected = spoiler_found("701001", &Chapter::ImpuritasCivitatis, &Chapter::StarOfTheCity, &langid!("en-US"), &env);
+
+        let get_description = |x: &MessageResponse| -> String {
+            x.data.as_ref().and_then(|x| x.embeds.as_ref()).and_then(|x| x.first()).and_then(|x| x.description.clone()).expect("no description")
+        };
+
+        assert_eq!(get_description(&expected), get_description(&response));
     }
 
     #[test]
@@ -284,7 +362,7 @@ mod tests {
                 .filter(is_collectable_or_obtainable)
                 .filter(|x| get_display_name_locale(x, &locale).is_some())
                 .for_each(|x| {
-                    let interaction = build_discord_interaction(x.to_string(), locale.clone());
+                    let interaction = build_discord_interaction(x.to_string(), locale.clone(), None);
                     let env = build_mocked_binahbot_env();
 
                     let _does_not_crash = lor_command(&interaction, &env);
@@ -292,7 +370,7 @@ mod tests {
         });
     }
 
-    fn build_discord_interaction(query_string: String, locale: Locale) -> DiscordInteraction {
+    fn build_discord_interaction(query_string: String, locale: Locale, channel_id: Option<String>) -> DiscordInteraction {
         DiscordInteraction {
             id: "id".to_string(),
             application_id: "app_id".to_string(),
@@ -312,7 +390,7 @@ mod tests {
                     focused: None,
                 }]),
             })),
-            channel_id: None,
+            channel_id: channel_id,
             token: "token".to_string(),
             locale: None,
             guild_locale: None,

@@ -30,7 +30,7 @@ pub enum Floor {
     None,
 }
 
-#[derive(Debug, PartialEq, PartialOrd, strum_macros::Display)]
+#[derive(Debug, Clone, PartialEq, PartialOrd, strum_macros::Display)]
 pub enum Chapter {
     Canard,
     UrbanMyth,

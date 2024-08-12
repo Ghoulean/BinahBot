@@ -652,6 +652,7 @@ dependencies = [
  "aws-sdk-dynamodb",
  "aws-sdk-lambda",
  "aws-sdk-secretsmanager",
+ "binah_bot_spoiler",
  "ed25519-dalek",
  "fluent-templates",
  "futures",
@@ -672,6 +673,18 @@ dependencies = [
  "tracing-subscriber",
  "unic-langid",
  "xxhash-rust",
+]
+
+[[package]]
+name = "binah_bot_spoiler"
+version = "1.0.0"
+dependencies = [
+ "phf",
+ "phf_codegen",
+ "serde",
+ "strum 0.25.0",
+ "strum_macros 0.25.3",
+ "toml",
 ]
 
 [[package]]

@@ -1,4 +1,5 @@
 use fluent_templates::StaticLoader;
+use ruina::ruina_common::game_objects::common::Chapter;
 use serde::Deserialize;
 use serde::Serialize;
 
@@ -57,6 +58,7 @@ pub struct BinahBotEnvironment {
     pub ddb_table_name: String,
     pub ddb_interaction_ttl_table_name: String,
     pub thumbnail_lambda_name: String,
+    pub spoiler_config: &'static phf::Map<&'static str, Chapter>,
     pub ddb_client: Option<aws_sdk_dynamodb::Client>,
     pub lambda_client: Option<aws_sdk_lambda::Client>,
     pub reqwest_client: Option<reqwest::Client>,
