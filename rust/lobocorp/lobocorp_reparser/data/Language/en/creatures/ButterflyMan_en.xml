@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100042">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {Having someone to mourn for you after your death is a blessing.},
+      {Those who remain have no time to remember those who’ve died, all they can do is prepare for the next death.},
+      {$0 gazes upon #0 in still silence.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 dreams. The curtain draws down on the ideal born in vain, but it is without an accompanying conclusion.},
+      {The huge coffin isn’t nearly enough to substitute the hundreds of undug graves.},
+      {#0 witnesses the funeral procession of the butterflies.},
+      {The burdensome fluttering wings come closer in a familiar yet strange way.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {There are no flowers or trees in this place, so where do all these butterflies come from?},
+      {The employees cannot return to whence they came, and have no choice but to endlessly repeat the day.},
+      {The funeral procession never ends; #0 continues to calmly mourn.},
+      {#0 thinks about the end of one’s life.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Returning to whence one came in one piece is now a miracle that will never happen.},
+      {Peaceful death in one’s finest hour is an unexpected blessing.},
+      {In fact, most of the employees who’ve died here wanted to live as long as they could.},
+      {Some thought death would be a new beginning; however, there is nothing but the void after death.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0"></codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/ButterflyMan</portrait>
+      <name openLevel="1">
+       The Funeral of the Dead Butterflies
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <specialName openLevel="2"></specialName>
+      <openText>She was so sad that she had to leave her dear friends behind, so she came up with a brilliant idea!</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Where does one go when they die?&#13;&#10;&#13;&#10;Where did all the employees who worked here go?}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {- They must have returned home. To a haven where family and warmth await.&#13;&#10;&#13;&#10;The employees cannot leave; once they join the company, the only way to leave is to resign.&#13;&#10;&#13;&#10;- Then those "resigned" employees must have returned home, having earned what they wanted and being full of hope.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {We are the feathers of a Wing. Resignation isn't as simple as you think. Just like how a feather doesn't detach from a wing of its own will.&#13;&#10;&#13;&#10;- Then, where did all the resigned employees go?&#13;&#10;&#13;&#10;They're bound to the company the moment they enter. Even if they do resign, they are doomed to stay here forever.&#13;&#10;&#13;&#10;- Long ago, in some world, people believe that they would become beautiful beings with small wings when they died. It's a silly story. Nonsensical too.&#13;&#10;&#13;&#10;If we get wings, will we be able to leave this place? Do we get our wings only after we retire?}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {They say the mourner with a huge luggage on his back had come to be a savior to all.&#13;&#10;&#13;&#10;Eventually, he himself was trapped in this place, and now he wanders the company with only the memory of an empty faith.&#13;&#10;&#13;&#10;He's carrying a coffin. A large coffin to pay tribute to the employees who have nowhere else to go. However, it is still too small to comfort those innocent sacrifices.&#13;&#10;&#13;&#10;Inside it is a kaleidoscope of butterflies waiting for the moment to fall asleep. Until then, they flutter their wings uselessly. The wings that may have been many jumbled into one, or one split into many.&#13;&#10;&#13;&#10;Butterflies are supposed to pollinate flowers, but not a single proper flower blooms in this place.&#13;&#10;&#13;&#10;There is no choice but to wait. After all, there must be an end to every world.}
+      ]
+    </desc>
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="give">When employees of Justice Level 3 finished working with $0, the Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="2" key="gift">The above phenomenon also occurred when employees of Fortitude Level 3 finished working with $0.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

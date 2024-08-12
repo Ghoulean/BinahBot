@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300110">
+
+    <narration action="move">
+      #0正在前往“$0”的收容单元并准备执行任务 
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">D-09-104</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ReverseClock</portrait>
+
+      <name openLevel ="1">
+        回溯之钟
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>
+        如今正处人生低谷？&#13;&#10;感觉未来黯淡无光？
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {一台古旧的时钟，由某个不知名的公司制造。它的真空管&#13;&#10;蕴含着浓厚的复古工业风。早在很久以前，各大厂商便已&#13;&#10;停止制造此类产品了。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {...如今正处人生低谷？感觉未来黯淡无光？你是否曾有过&#13;&#10;这样的想法，如果我当初选择去做，或者不去做那件事，&#13;&#10;那么结果会不会更好？我们人类已经征服了疾病和自然。&#13;&#10;而现在，我们有足够的力量去利用时间本身。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {正如您所想的那样，我们能回溯您浪费在过去的时间。您&#13;&#10;只需旋紧发条，然后闭上眼睛，在心里默数到十。当您睁&#13;&#10;开眼睛的时候，就会置身于您希望返回的那一时刻。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {※使用前请仔细阅读说明书。我司尚不清楚本设备被错误&#13;&#10;使用后会造成什么样的后果。由于用户疏忽导致的意外，&#13;&#10;我司概不负责。本设备运转时需要消耗大量能源，因此充&#13;&#10;能时间较为长久，还望理解。}
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">每对“$0”完成一次工作，“$0”就会被充能并点亮一根真&#13;&#10;空管。</specialTip>
+      <specialTip openLevel="2" key="2">等级低于3级的员工不会对“$0”造成任何影响。</specialTip>
+      <specialTip openLevel="2" key="3">当四根真空管全部点亮时，您即可指派员工启动“$0”。</specialTip>
+      <specialTip openLevel="2" key="4">&lt;警告&gt;当“$0”完全充能后，非5级员工严禁接触此设备。</specialTip>
+      <specialTip openLevel="2" key="5">只有5级员工方可正确启动设备。“$0”会将除启动者外的其他&#13;&#10;员工回溯到一天中最安宁的时刻。</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

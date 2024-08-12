@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100036">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {We may only be able to understand the secrets of the universe once we enter $0’s domain.},
+      {The sight of crazed employees singing along with $0 appears as though they were performing a ritual to bring forth something or someone.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {One of the things $0 said to us was: “There is no such thing as coincidence in the universe.”},
+      {Many of our employees are understandably terrified when $0 attempts to mimic laughter.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {The purpose of $0’s tentacles is unclear, but it is certain that they can cause permanent damage to the human brain.},
+      {$0’s tentacles blur the barriers between reality and the unknown.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-03-60</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/GalaxyPiece</portrait>
+      <name openLevel="1">
+        Fragment of the Universe
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>You see a song in front of you. It's approaching, becoming more colorful by the second.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {An Abnormality that resembles a child's innocent doodles.&#13;&#10;
+      Originally, it had no stable form, its shape would continually morph. To this day its aspects still change, albeit at a much slower pace. Component analysis has revealed that the Abnormality consists of matter that does not exist on Earth. It is notable for its metaphysical appearance that one cannot explain with words.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {It often shows incomprehensible linguistic activity. One employee tried to decipher its speech (see Document #1 &lt;Employee David’s Song&gt;), but their mental contamination level rose beyond the limit within several days. They suffered severe psychosis and had to be quarantined.}
+      ]
+    </desc>
+    <desc id="3" openLevel="1">
+      [
+      {The Abnormality's tentacles (which are quite different from what we consider the average tentacle; for simplicity’s sake we’ve monickered them as “tentacles”) can pierce through the barrier of humanity. Employees impaled by the tentacles will suffer semi-permanent brain damage.}
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {When the Abnormality escapes its Containment Unit, it will emit noises in the corridor. As the sounds it makes have what could be considered a melody and syllables, we consider it “singing”. However, none of our staff can precisely remember it, given that most of the time they are unable to describe it due to their serious brain damage. Those who were within 100 meters of the “singing” called it a sound unheard of in this world. Because of these descriptions, we’ve titled it “Echoes from the Beyond”. (See Document #2 &lt;Singing&gt;)}
+      ]
+    </desc>
+    <desc id="5" openLevel="3">
+      [
+      {Experiment_1 &lt;The Possibility of Communication&gt;&#13;&#10;
+      We have determined that the Abnormality has an intelligence similar to (or even higher than) that of humans, and gave it a simple language learning course. As a result, a crude communication by combining words has become possible. The following is a segment of the communication record with the Abnormality.&#13;&#10;
+      Q: Are all of your kind similar in appearance?
+      A: Negative. Outside. Child. See. Picture. Face. Happy. Change. Form.&#13;&#10;
+      Q: Why have you come here?
+      A: Knowledge. Share. Human.&#13;&#10;
+      Q: Why do you want to share your knowledge with us?
+      A: Understanding. Knowledge. Moment. Know. Universe. Coincidence. Negative; None.&#13;&#10;&#13;&#10;This section is an attempt to decipher the conversation with the Abnormality.&#13;&#10;
+      1. It based its form on a picture drawn by a child. It changed its form because the child's expression while drawing it was happy.
+      2. It came here to share its species’ knowledge with us. The moment we fully understand that knowledge, we will know their ultimate goal.
+      3. There is no such thing as a coincidence in the universe.}
+      ]
+    </desc>
+    <desc id="6" openLevel="3">
+      [
+      {Experiment_2 &lt;An Experiment on Laughter&gt;&#13;&#10;
+      After watching a video about laughing for 30 minutes, the Abnormality understood the concept of “laughing”. After that, when employees entered its Containment Unit to work with it, it would sometimes emit a strange noise with what appeared to be the shape of a smile on its face. It looked like it was mimicking laughter.}
+      ]
+    </desc>
+    <desc id="7" openLevel="4">
+      [
+      {Experiment_3 &lt;Comprehension of Symbols&gt;&#13;&#10;
+      We taught it the meaning of various symbols along with language. Among them was the shape of a heart. This symbol provoked a distinct change from the Abnormality.&#13;&#10;
+      Q (Showing the Abnormality a picture of a heart): This is the symbol of the “heart”. Many people believe that emotions come from the heart, and this symbol is used to express positive emotions or a liking towards someone.
+      (Omitted)&#13;&#10;
+      Afterwards, several symbols resembling hearts were seen on the Abnormality’s body. It seemed to understand that the symbol could be used to express friendliness towards humans.&#13;&#10;
+      Combining the results of the previous two experiments, we can confirm that this Abnormality is non-hostile to humans, and wishes to become friends. }
+      ]
+    </desc>
+    <desc id="8" openLevel="4">
+      [
+      {Document #1 &lt;Employee David’s Song&gt;&#13;&#10;
+      David was famous in his department for his attempts to communicate with the 'Fragment of the Universe'. He was an intellectual who enjoyed reading philosophical books and gazing at the stars. He held interest in the Abnormality and as such he got the job; he researched its language and behaviour purely out of personal interest.&#13;&#10;
+      So what became of David? Eventually, he succeeded in entering the domain of the Fragment of the Universe. However, it was obvious that his small brain couldn't withstand it. He was transferred to the psychiatric ward, and died of starvation while singing an unrecognizable song. This is why the Abnormality’s voice cannot be revealed to the public.&#13;&#10;&#13;&#10;Audio Record : Echoes in the Universe (Currently Removed)}
+      ]
+    </desc>
+    <desc id="9" openLevel="4">
+      [
+      {Document #2 &lt;Singing&gt;&#13;&#10;
+      ...Why didn't you tell me earlier that the Abnormality was responsible for their condition? I have no idea if there’s any pattern, but they all show the same strange behavior on the exact same days. Can you imagine a group of patients staring at the sky with dazed faces, wailing strange noises in the corridor at night while everyone is asleep? I had such a difficult time persuading the other patients that they must have been practicing for the company’s upcoming Halloween event. Psychiatric treatment and medicine won't help. "Coming, coming, still coming," they keep repeating these words, and anything else they utter is not from any language we know. I think sending them to a general hospital was an unwise decision. &#13;&#10;
+      - Doctor from the (Record Deleted) Ward}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="escape">When the work result was Normal, the Qliphoth Counter lowered with a normal probability.</specialTip>
+      <specialTip openLevel="1" key="escape2">When the work result was Bad, the Qliphoth Counter lowered with a high probability.</specialTip>
+      <specialTip openLevel="1" key="escape3">When employee #0 panicked during work, the Qliphoth Counter lowered.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

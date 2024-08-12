@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300001">
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-77</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/DesireHeart</portrait>
+
+      <name openLevel ="1">
+        熱望する心臓
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>過度な熱望は誤った興奮を もたらしました。</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {体から分離してもなお、鼓動を止めない持ち主のいない心臓。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {装備中は心拍数が約2倍以上に上昇し、体力と攻撃力の強化を 体感することができます。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {過度な熱望は誤った興奮をもたらしました。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+ 
+      [
+      {誰も攻撃しない、 もしくは30秒以内に 心臓を返却した職員は、 強化された身体能力で 無意味な殺人だけを 繰り返すようになった。}
+      ]
+    </desc>
+
+     <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">$0を装備した職員は体力と攻撃速度が上昇する。</specialTip>
+      <specialTip openLevel="2" key="2">誰かを攻撃することのないまま$0を返却するように命じた場合、 装備者は理性を失うと同時に急激に暴力性が 増加し、周囲を攻撃しようとする素振りを見せる。</specialTip>
+      <specialTip openLevel="2" key="3">着用後30秒以内に$0を返却するよう命じられた職員にも、 上記と同様の現象が見られた。</specialTip>
+      </specialTipSize>
+
+
+  </observe>
+</creature>

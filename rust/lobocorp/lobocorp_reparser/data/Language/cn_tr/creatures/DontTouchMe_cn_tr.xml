@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100024">
+
+    <narration action="move">
+      指派 #0 至 $0 的收容室.
+    </narration>
+<!-- 돈터치미는 관리 로그가 존재하지 않는다..-->
+    <narration action="start">
+      [
+      {빛을 오래 보지 못한 죄수처럼 쇠사슬에 묶여 있는 망치가 있습니다. }
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {망치와 쇠사슬은 분리된 존재가 아니라 그 자체로 하나의 환상체입니다.}
+      {깊숙한 지하 던전에서 존재할 것 같은 범상함이 느껴집니다.}
+      {왠지 쇠사슬이 풀리지 않은 상태가 안전해 보이는 느낌입니다.}
+      {쇠사슬은 절대 망치를 꺼낼 수 없도록 아주 강하게 옭아매어져 있습니다.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 직원은 $0 를 관리하며 이러려고 회사에 취직을 했는지 자괴감을 느낍니다.}
+      {#0 직원은 $0 에 감긴 쇠사슬에 대해 호기심을 느낍니다.},
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 는 구속구가 풀릴 그 날을 기다립니다.},
+      ]
+    </narration>
+   
+  </info>
+
+  <observe level ="5">
+    <collection>
+      <codeNo openLevel ="0">O-05-47</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/DontTouchMe</portrait>
+
+      <name openLevel ="1">
+        別碰我
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <specialName openLevel ="1">
+      喔不, 別這麼幹
+      </specialName>
+
+      <openText>你已經按過它無數次了, 而你仍想從它身上知道些什麼?</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {一台帶有一個迷人大紅色按鈕的箱型機器. 周圍滿是老舊的塗鴉. 讀起來像是, “不要按下那個按鈕.”. 並不清楚寫下那些塗鴉的人是誰, 但好像是某個很久以前在這裡工作過的員工. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {此異常管理起來並不難, 但是許多的員工順從著自己的欲望按下了按鈕, 那欲望甚至強到讓他們輾轉難眠. 起初認為是他們太過誇大了. 然而, 自從抱怨受誘惑所苦的員工數量越來越多, 提出解決問題的方法已在進行中.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {定義此異常最重要的一面是 “自由意志”. 已確認此異常擁有一種能力會使周遭的人想按下那個按鈕. 因此, 將它歸類為一異常. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {當該按鈕被按下後, 會發生某種不該發生的事情. 災難會席捲整個區域, 落下彩虹色的光芒, 並從天上降下獨角獸. 謠言說在最後, 在設施下的巨大炸彈會被引爆並摧毀一切. 沒有方法去確認謠言的真假. }
+      ]
+    </desc>
+    
+    <desc id="5" openLevel="2">
+      [
+      {然而, 務必對該異常保持謹慎, 此異常有時會狡猾地改變該形狀讓人誤觸. }
+      ]
+    </desc>
+
+    <desc id="6" openLevel="2">
+      [
+      {員工證詞&#13;&#10;當我猛然回神時, 我就剛好要按下那該死的按鈕. 如果其他的員工沒把我從那狀態拉出來的話我一定會那麼幹. (該員工在接受許多的測試並診斷其正常後已再次回到崗位. 然而, 我們命令她去接受諮詢, 因為她似乎對沒有按下那按鈕而感到有點糟.)}
+      ]
+    </desc>
+
+      <specialTipSize size="5">
+      <specialTip openLevel="1" key="confessionIs">沒有人知道如果按下那按鈕的話會發生什麼.</specialTip>
+      <specialTip openLevel="2" key="confessionIsGood">不管那房間裡發生了什麼事, 此按鈕都不該被按下.</specialTip>
+      <specialTip openLevel="3" key="lightening1">住手! 你不能可憐可憐那些悲慘的員工嗎, 管理者?</specialTip>
+      <specialTip openLevel="4" key="lightening2">喔, 拜託, 不要碰那個按鈕.</specialTip>
+      <specialTip openLevel="5" key="lightening3">你已經按過它無數次了, 而你仍想從它身上知道些什麼?</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {내용 1}
+        {내용 2}
+        {내용 3}
+        <!--계속-->
+        ]
+      </desc>
+      
+      <!--선택지-->
+      <select id="1">
+        <node desc="선택지 1번" target="1" isAnswer="true" message="성공 메시지"/>
+        <node desc="선택지 2번" target="2" isAnswer="false"/>
+      </select>
+      
+      <desc id="1" select="0">
+        [
+        {내용 1}
+        {내용 2}
+        {내용 3}
+        <!--계속-->
+        ]
+      </desc>
+      
+      <desc id="2" select="0">
+        [
+        {내용 1}
+        {내용 2}
+        {내용 3}
+        <!--계속-->
+        ]
+      </desc>
+      
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {내용}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+</creature>

@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="200013">
+
+
+
+    <narration action="move">
+      #0 designado para $0 cuarto de contencion.
+    </narration>
+
+    <narration action="start">
+      [
+      {El momento en que entramos $0 universo, entonces finalmente entenderemos los secretos del universo.},
+      {$0 y otros empleados que se volvieron locos parecen estar pidiendo algo con su canción.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 una vez nos dijo, “No hay coincidencias en el universo.”},
+      {Los empleados se estremecen de miedo cuando $0 trata de reír.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {Cualquiera que sea su propósito original, esos tentáculos infligen un daño severo al cerebro humano.},
+      {Tentáculos de $0 desdibujan la línea entre la dimensión humana y extraterrestre. }
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">X</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/NoData</portrait>
+
+      <name openLevel ="0">
+        El amanecer verde
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        Ecos del más allá
+      </specialName>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Al principio, no tenía forma fija. Estaba cambiando su forma en una velocidad minúscula. La prueba del componente químico resultó que está hecha de material que no está presente en el planeta Tierra. Su forma metafísica difícilmente puede explicarse en lenguaje humano. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {A veces, se involucra en una actividad lingüística ininteligible. Un empleado trató de descifrar lo que está diciendo, pero resultó en un trastorno mental en el empleado. (Ver documento 1 &lt;Cancion de empleado David&gt;)
+      }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="1">
+      [
+      { Sus partes que parecen ser tentáculos pueden penetrar objetos, Si un empleado es atacado por estos tentáculos, sufren daño cerebral permanente. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      { Si esta anormalidad se escapa de su cámara, emite sonidos incomprensibles. Teniendo en cuenta que estos sonidos tienen algún tipo de melodía, están designados como una canción. Los empleados que estuvieron expuestos a la canción perdieron buena cantidad de recuerdos de 10 años de sus vidas y sufrieron daños mentales graves en todo su cerebro. Algunos testificaron que la canción era sonidos que no se pueden crear en este mundo o plano. Así, esta canción ha sido nombrada “Ecos del más allá.” (Ver documento 2 &lt;La cancion&gt;)}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {Experimento 1_&lt;Posibilidad de comunicacion&gt; &#13;&#10;
+      Hemos concluido que esta anomalía posee inteligencia equivalente o avanzada a la humana. Procedimos a dar conferencias sencillas sobre lenguaje humano. Como resultado, pudimos comunicarnos con él de alguna forma. Los siguientes son texto documentado del registro de conversación. &#13;&#10;
+      Q: Haz que tu carrera se vea igual que tu?&#13;&#10;
+      A: Negativo. Afuera. Niño. Ver. Retrato. Rostro. Felicidad. Cambio. Forma.&#13;&#10; &#13;&#10;
+      Q: Por qué estás aquí?&#13;&#10;
+      A: Conocimiento. Ofrecer. Humano. &#13;&#10;&#13;&#10;
+      Q: Por qué estás tratando de darnos el conocimiento?&#13;&#10;
+      A: Entender. Conocimiento. Momento. Saber. Universo. Coincidencia. Negativo. No.&#13;&#10;
+      Los siguientes son el resultado de los esfuerzos para comprender las palabras de la anormalidad.&#13;&#10;
+      1.	Tomó su forma haciendo referencia a la pintura de un niño, y como el niño se veía feliz, cambió la forma.&#13;&#10;
+      2.	Vino aquí para dar a la humanidad su conocimiento, en el momento en que entendamos este conocimiento, conoceremos el objetivo detrás de su acción. &#13;&#10;
+      3.	No hay coincidencias en el universo. &#13;&#10;}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="3">
+      [
+      {Experimento_2 &lt;Reacción a la risa&gt;&#13;&#10;
+      Después de estar expuesto al video de la risa durante 30 minutos, percibió la expresión facial de la risa. Después de este experimento, cuando un empleado entra en su cámara, a veces se rompe la parte inferior en longitudinal y hace un sonido misterioso. Se supone que es imitación de la risa humana.}
+      ]
+    </desc>
+
+    <desc id="7" openLevel="4">
+      [
+      {Experimento_3 &lt;Comprension de simbolos&gt;;&#13;&#10;
+      A medida que enseñábamos esta anormalidad en nuestro idioma, también dábamos conferencias sobre los significados de los símbolos. La anormalidad tuvo una reacción especial al símbolo del corazón. &#13;&#10;
+      Q: (Mostrando el símbolo del corazón) Este es un símbolo que representa un corazón. La gente piensa que las emociones provienen de los corazones, por lo que este símbolo se usa a menudo para expresar los sentimientos positivos de uno a los demás.&#13;&#10;
+      (Omitted)&#13;&#10;
+      Más tarde, vimos símbolos similares a “corazones” dibujados en este cuerpo anomala. Se supone que la anomalía entendió el significado del símbolo del corazón como un enfoque amistoso. &#13;&#10;
+      Considerando los resultados de los experimentos, la anormalidad no posee ninguna hostilidad hacia la humanidad, sino que trata de ser amigable. }
+      ]
+    </desc>
+
+    <desc id="8" openLevel="4">
+      [
+      {Documento 1 &lt;Cancion de empleado David&gt;&#13;&#10;
+      El empleado David era conocido como una persona que trata de comunicarse con el “Fragmento del Universo”. Sus aficiones extrañas incluían leer libros excéntricos y sospechosos, y observar estrellas a través de un telescopio. Estaba interesado en el “Fragmento del Universo” desde que se unió a la empresa, y más tarde se descubrió que había estado investigando el lenguaje y el patrón de comportamiento de la anormalidad por curiosidad personal.  &#13;&#10;
+      Lo que le sucedió es, para ser directo, que finalmente logró ingresar al plano del “Fragmento del Universo”. sin embargo, Su cerebro no era capaz de manejar tal carga de tanto conocimiento. Tuvo que ser trasladado al hospital psiquiátrico en la superficie. Allí, murió de hambre, después de sobrevivir durante unos días cantando algo ininteligible mientras se negaba a comer. Después de este incidente, decidimos guardar el archivo de audio en una memoria USB que contiene el sonido de la anormalidad. &#13;&#10;
+      Grabación de audio: Ecos del más allá (Actualmente borrado)}
+      ]
+    </desc>
+
+    <desc id="9" openLevel="4">
+      [
+      {Documento 2 &lt;La cancion&gt;&#13;&#10;
+      …..No te he dicho que estas personas se volvieron locas por esa anormalidad? Muestran comportamiento irregular en un determinado día. Sin embargo, no estoy seguro de que haya ninguna regla. En la noche, cuando todos están dormidos, estos tres chicos gritan hasta la parte superior de sus pulmones, mirando hacia el techo. Pasé por muchos problemas para explicarle a los otros pacientes que eso era solo una práctica para la etapa de Halloween. Ningún asesoramiento ni drogas ayudan a esto. Simplemente siguen repitiendo “Está viniendo. Está viniendo. Está viniendo.”. A veces dicen algo diferente, pero no creo que el lenguaje exista en este mundo. Creo que ponerlos en un instituto médico normal fue un error.&#13;&#10;
+      -	Carta de Dr. Alisha del hospital OO.}
+      ]
+    </desc>
+
+    <specialTipSize size="1">
+      <specialTip openLevel="1" key="escape">Como resultado de poner en un gran número de empleados, Los empleados con nivel de prudencia 1 no se vieron afectados por el $0 mira el trabajo. Por lo tanto, se solicitó un estudio psicoanalítico de empleado optimista.</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {Empezó a cantar.}
+        {Tu...}
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Escúchalo" target="1" isAnswer="true"  message="Has logrado obtener un informe final de observación sobre el Fragmento del Universo"/>
+        <node desc="Tapar las orejas" target="2" isAnswer="false"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {En silencio lo escuchas.}
+        {El universo permanece en tus oídos.}
+        {Ves la cancion. Glamorosa, se te acerca.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {Aún no estás preparado.}
+        {La canción paró cuando te tapaste los oídos.  }
+        ]
+      </desc>
+
+
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {No estarán interesados en nada en sus vidas, una vez que su tentáculo les penetre. }
+        {Los rumores dicen que algunos empleados anhelan ser penetrados por uno de los tentaculos.}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+</creature>

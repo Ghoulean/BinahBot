@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300108">
+
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-97</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/PromiseAndFaith</portrait>
+
+      <name openLevel ="1">
+        古い信念と約束
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <openText>
+        裏切られた心は深淵の中で ゆっくりと忘れ去られてゆきました。
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {収容室に吊り下げられている神秘的なガラス球。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {私たちは遥か昔から繰り返されてきた 無数の約束と信念を知っています。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {しかしながら、 彼らからは虚しさと裏切りだけが返されました。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {裏切られた心は深淵の中で ゆっくりと忘れ去られてゆきました。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {もし利益を 期待せずに試したなら、 もしかすると予期しない恩恵を 受け取ることになるかもしれません。}
+      ]
+    </desc>
+
+  
+     <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">対象を使用すると、E.G.O.武器を強化することができる。&#13;&#10;強化時に少量のエネルギーが消費される。</specialTip>
+      <specialTip openLevel="2" key="2">対象を介して強化された武器は攻撃力が増加する。</specialTip>
+      <specialTip openLevel="2" key="3">ただし、低確率で強化時にE.G.O.武器が消滅する。</specialTip>
+      <specialTip openLevel="2" key="4">強化された武器は翌日にはその効果を失い、元の攻撃力へと戻る。</specialTip>
+     </specialTipSize>
+
+
+
+  </observe>
+</creature>

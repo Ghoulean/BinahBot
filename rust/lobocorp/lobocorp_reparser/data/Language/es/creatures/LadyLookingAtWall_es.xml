@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<creature>
+  <info id="100022">
+
+
+    <narration action="move">
+      #0 va a la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="start">
+      [
+      {No se sabe mucho sobre $0, excepto que mira a la pared. },
+      {Nadie ha visto nunca la cara de $0. Esto no significa que nadie quiera ver su cara.},
+      {Después de escuchar murmullos de $0, uno puede suponer que anhela a alguien.},
+      {Es mejor dejarla pegada a la pared como está. }
+      {Solo espero que los empleados hayan traído tapones para los oídos.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 siempre se encuentra en la misma pose. Si no fuera por su balbuceo, uno podría creer que es una estatua.},
+      {#0 no parece preocuparse mucho por $0, porque ella solo se queda allí, sin importar quién ingrese a la unidad de contención.},
+      {#0 parece estar bien alrededor de $0.},
+      {El muro alrededor de $0 está mohoso, pero a nadie le importa hacer nada al respecto.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {Mientras #0 está trabajando, $0 suelta murmullos incomprensibles.},
+      {Mientras #0 esta trabajando, la unidad de contención está en silencio. $0 rompe el silencio susurrando frenéticamente. },
+      {$0 ni siquiera se contrae, pero parece sentir la presencia del #0 en la unidad de contención. },
+      {A pesar de que $0 no se ha movido, #0 la encuentra espeluznante.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {Las palabras son débiles y apagadas.},
+      {El susurro parece ser cada vez más fuerte.},
+      {Casi parece que uno podría entender lo que se dice si solo se concentran más, pero por supuesto, ningún empleado se atreve a hacerlo.},
+      {Como siempre, los susurros apagados son incomprensibles e ignorados por todos.}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {#0 intenta concentrarse en la tarea en cuestión.},
+      {#0 sabe que ignorarla es la mejor opción.},
+      {#0 no responde a lo que dice $0 y pretende ser sordo.},
+      {#0 se apresura a hacer el trabajo y salir de la habitación lo antes posible. }
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">F-01-18</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/LadyLookingAtWall</portrait>
+
+      <name openLevel ="1">La mujer ante la pared</name>
+
+      <riskLevel openLevel ="2">
+        TETH
+      </riskLevel>
+
+      <openText>Su insoportable pena creció con el tiempo, el cabello largo y la tristeza.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Anormalidad en la forma de una mujer frente a una pared. Su insoportable pena creció con el tiempo, el cabello largo y la tristeza.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Como ella siempre mira hacia la pared, nadie la ha visto. Mientras habla consigo misma y llora, es imposible tener una conversación significativa con ella. A pesar de su apariencia humana, es imposible discernir sus intenciones.}
+      ]
+    </desc>
+
+
+    <desc id="3" openLevel="2">
+      [
+      {La Anormalidad intenta hablar o aumentar el interés de los empleados que están a punto de abandonar la Unidad de Contención. Sin embargo, los empleados nunca deben mirar hacia atrás.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {&lt;Extracto del registro de observación 1-304&gt;&#13;&#10;&#13;&#10;Solo hay una regla: ignorarla. Ella siempre quiere llamar nuestra atención. Ella murmura incoherentemente en un intento de que los que están en la habitación le presten más atención. Incluso suplica o susurra maliciosamente cuando alguien está a punto de irse con la esperanza de que instintivamente mirarán hacia atrás. La subconsciencia es una amenaza para su propia salud en su presencia. Es importante tener siempre la guardia alta y estar al tanto de lo que sucede cuando estás en la habitación con ella. Si lo olvida incluso por un segundo y baja la guardia, puede encontrarse mirando hacia atrás. Aquí hay otra advertencia que dejo a todos los que lean esto: no dejen que esta anormalidad insidiosa aprenda su nombre. Si se entera de tu nombre, puede usarlo para engañarte para que te vuelvas hacia ella. No importa lo que escuches o con qué te tiente cuando estés en la habitación con ella, NO la mires.&lt;b&gt;La curiosidad es un lujo que NUNCA debes disfrutar cuando estás en la unidad de contención. &lt;/b&gt;}
+    ]
+  </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {&lt;Extracto del registro de asesoramiento #9-39&gt;&#13;&#10;&#13;&#10;Empleado F5004: &lt;Redactado&gt; era un colega a quien le importaba profundamente. Bueno, me preocupo por todos mis compañeros de trabajo, pero &lt;Redactado&gt; fue diferente. La cantidad de pasion &lt;Redactado&gt; vertido en el trabajo fue algo que rara vez he presenciado. De todos modos, no tengo idea de cómo aprendió &lt;Redactado&gt; nombre. Tal vez alguien llamó a &lt;Redactado&gt; mientras estaban dentro de la unidad de contención y ella lo escuchó. Deberíamos haber enviado dos. Es un procedimiento enviar un equipo de dos personas a la unidad de contención, pero como saben, siempre tenemos poca mano de obra. Y esta anormalidad era baja en la escala de amenazas. Incluso si seguimos el procedimiento y enviamos a dos adentro, los superiores no habrían estado contentos con eso. (Omitido)&#13;&#10;Well, you know the rest. The day the incident happened, &lt;Redactado&gt; fue enviado a la unidad de contención como de costumbre, pero no salió durante mucho tiempo. yo sabía &lt;Redactado&gt; Era un trabajador rápido y diligente, así que fui directamente a la unidad de contención temiendo lo peor. Afortunadamente, encontré &lt;Redactado&gt; sin siquiera un rasguño, pero el niño lo miró. Al igual que, si la salida. (Omitido)&#13;&#10;Al día siguiente, el niño fue "soltado." Escuché que enviaron al niño a un manicomio, pero nadie vio &lt;Redactado&gt; Otra vez. El niño seguía mirando la pared, murmurando y sin responder a nadie. Esa fue la última vez que vi &lt;Redactado&gt;. Nadie sabe lo que sucedió dentro de la unidad de contención. Tampoco lo oirás del niño.}
+    ]
+  </desc>
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="CCC">Los empleados con templanza de nivel 1 pueden volver la cabeza hacia atrás después de escuchar $0. Si lo hacen, estarán sujetos a un ataque de pánico.</specialTip>
+      <specialTip openLevel="3" key="possible">Un trabajo de Apego realizado en $0 disminuye el contador Qlifot.</specialTip>
+      <specialTip openLevel="3" key="possible2">Cuando el resultado del trabajo era Normal, el Contador Qlifot se redujo con una probabilidad Normal.</specialTip>
+      <specialTip openLevel="3" key="possible3">Cuando el resultado del trabajo era malo, el contador Qlifot se redujo con una alta probabilidad.</specialTip>
+      <specialTip openLevel="2" key="active">Cuando el contador Qliphoth de $0 llegue a 0, todos los empleados del departamento sufrirán daño blanco.</specialTip>
+    </specialTipSize>
+
+  </observe>
+
+</creature>

@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100105">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="mid1">
+      [
+      {#0 olha para o $0 que está meditando pacificamente.},
+      {O $0 nunca para de praticar autodisciplina, olhando longe na serenidade e com a ânsia de voltar ao caminho da justiça que perdeu em seus anos de vida.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {A miríade de angústia do $0, que uma vez falhou tragicamente em controlar, permeia a Unidade de Contenção.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {O $0 está desesperadamente segurando em mãos os pedaços quebrados de uma japamala.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {O que seria? Aquilo que não consigo obter ao sair, mas que eu deixo por ganhar.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">D-01-110</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/FengYun</portrait>
+      <name openLevel="1">
+        Monge Honrado
+      </name>
+      <name openLevel="3">
+        Monge Ensombrado
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>Entretanto, se Śarīra o suficiente for encontrada em você na qual todos olharão admirados, seu nome será cantado por gerações.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;Esta Anormalidade foi criada com as ideias providenciadas pelo Apoiador do Tumblbug 나준 (NaJun).&lt;/i&gt;&#13;&#10;&#13;&#10;No século (Omitido), um monge chamado (Omitido) da província de (Omitido) caminhava pelo caminho do Budismo, procurando libertação e verdadeiros esclarecimentos. Ele estava a caminho de seu país natal para compartilhar sua filosofia, quando ele ouviu que um velho monge estava sendo cremado em uma cidade próxima. Ele sentiu que deveria ir lá observar, porém, um homem o parou.&#13;&#10;&#13;&#10;“Com licença, senhor. Há um boato que um espírito maligno perdura na cidade para onde você está indo.”&#13;&#10;&#13;&#10;E o monge respondeu: “Espíritos malignos nascem naturalmente do coração de alguém. Como eu poderia perder a cremação de um grande monge só por causa de um boato?”&#13;&#10;&#13;&#10;E então, ele continuou indo em direção à cidade de (Omitido).}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Quando o monge chegou, as pessoas de toda a cidade estavam reunidas em uma celebração. Elas estavam olhando para o corpo do velho monge, cantando o nome do Guanshiyin.&#13;&#10;&#13;&#10;“Guanshiyin!”&#13;&#10;“Guanshiyin!”&#13;&#10;“Guanshiyin!”&#13;&#10;&#13;&#10;O canto nasceu mais de despespero por algo que ansiavam, do que de comemoração.&#13;&#10;A chama fúnebre começou a faiscar conforme foi sendo acendida. O som da percussão amadeirada ecoou e os cantos ficavam mais e mais altos.&#13;&#10;E mais cedo, a multidão começou a se movimentar em nervosismo.&#13;&#10;&#13;&#10;“...Algo não está certo.”&#13;&#10;&#13;&#10;As pessoas estavam muito decepcionadas pela quantidade de Śarīra que apareceu.&#13;&#10;Não tinha nada mais do que o equivalente a duas colheres cheias. Chocadas, as pessoas rapidamente se tornaram em uma multidão raivosa.&#13;&#10;&#13;&#10;“Não faz sentido um monge tão importante ter tão pouca Śarīra!”&#13;&#10;“Ele claramente não praticou ascetismo o suficiente!”&#13;&#10;“Talvez ele não tenha feito muitas boas ações.”&#13;&#10;&#13;&#10;O monge que estava visitando ficou perplexo. Ele nunca tinha visto tanta obsessão por Śarīra em uma cremação, e até ele estava esperando pela quantidade equivalente ao que merecia um grande monge.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {O monge falou com um homem que estava logo atrás dele na multidão.&#13;&#10;&#13;&#10;“Como eles estão tão aborrecidos com uma cerimônia tão sagrada?”&#13;&#10;&#13;&#10;Distante dele, um homem bastante velho acabara por respondê-lo.&#13;&#10;&#13;&#10;“Os pobres e famintos anseiam por milagres para salvá-los. Pelo jeito que você está vestido, eu deduziria que você também está no caminho Budista. E esse evento deve ter te preocupado.”&#13;&#10;&#13;&#10;O monge então respondeu em um tom meio perturbado.&#13;&#10;&#13;&#10;“Śarīra se forma quando um monge melhora o corpo e o espírito, para finalmente alcançar o nirvana. É um processo natural e que não deve ser desejado artificialmente. Como você pode chamar isso de milagre?”&#13;&#10;&#13;&#10;O homem velho começou a rir sem parar.&#13;&#10;&#13;&#10;“Esse monge era bem conhecido por suas boas ações. Ele compartilhava a comida com os famintos e roupas com aqueles que estavam com frio. Entretanto, como dizem, parece que ele não conseguiu alcançar o verdadeiro nirvana, já que somente o equivalente a duas colheres de Śarīra foram encontradas. Acabou sendo somente um velho monge miserável que não alcançou o nirvana mesmo sendo aclamado por todos e chamado de 'Santo Benevolente'. Você acha que com você será diferente?”&#13;&#10;“Eu… eu estive praticando com orgulho—”&#13;&#10;“Dizem que um monge do templo de (Omitido) conseguiu mais de trezentas colheres de Śarīra. Luzes coloridas faiscavam pelos céus enquanto a multidão dava orações devotas durante a cremação dele. As Śarīras dele eram tão redondas como pérolas. O próprio imperador ordenou que quatro templos fossem construídos com o nome daquele monge.”&#13;&#10;&#13;&#10;O monge não conseguia responder.&#13;&#10;&#13;&#10;“...Mas, a criação de Śarīra é um processo natural que passa por todo o—”&#13;&#10;“É bastante conhecido que a quantidade de Śarīra que o Buda forneceu quando foi cremado era suficiente para encher um grande palácio. Algum dia, seu corpo eventualmente falhará e você será levado ao céu eterno. Algum dia, as pessoas estarão aqui para sua cremação, assim como agora.”&#13;&#10;&#13;&#10;O monge estava em silêncio.&#13;&#10;&#13;&#10;“Se nada for encontrado de suas cinzas, você será um pecador de Trailokya e seu caminho finalmente não chegará a lugar algum. Entretanto, se Śarīra o suficiente for encontrada em você na qual todos olharão admirados, seu nome será cantado por gerações. O imperador ficará boquiaberto e construirá um enorme templo com seu nome e as pessoas irão cantar enquanto admiram o pagode daquele templo.”&#13;&#10;“...”&#13;&#10;“Esse velho e fraco homem está te contando tudo isso porque consigo ver você se tornando um dos maiores monges. Escute, a algumas horas de caminhada daqui há um monte que chamamos de (Omitido). Suba nele e você verá vários pagodes velhos. Dentro deles haverão caixas de Śarīra de grandes monges há muito tempo esquecidos. Elas somente retornarão ao solo caso nada aconteça com elas. Mas se você as consumisse, talvez você mostraria mais Śarīra que o próprio Buda…”&#13;&#10;&#13;&#10;O monge então percebeu que aquele homem velho era suspeito, e não soou como deveria soar um homem velho. Entretanto, ele sumiu em um piscar de olhos assim que tentou ver seu rosto de relance. O monge então concluiu que deveria ser uma pegadinha do demônio e tentou esquecer do que o velho homem disse. Mas a voz dele permaneceu em seus ouvidos mesmo quando tentou dormir. }
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {O monge se jogou, se mexeu e se revirou, mas não conseguia cair no sono.&#13;&#10;Então decidiu que a melhor maneira de limpar a mente era dando uma volta. Enquanto andava, de algum modo ele se encontrou por perto dos pagodes que aquele velho homem tinha mencionado. Era suposto que demoraria algumas horas de viagem do lugar de onde o monge estava.&#13;&#10;Por um longo tempo, somente o canto de “Om ami dewa hrih” ecoava ao redor dos pagodes.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {&lt;Trecho de uma História Popular da província de (Omitido)&gt;&#13;&#10;
+      Dizem que à noite, sons misteriosos podem ser escutados ao redor dos pagodes e estátuas na área de (Omitido). É dito que o origem desse som é uma "Preta": uma criatura demoníaca com longos braços, garras e uma boca anormalmente grande. Algumas pessoas dizem que essa criatura carrega um japamala quebrado, entretanto, os detalhes exatos não são confirmados. Após essa criatura ter aparecido, as pessoas começaram a encontrar caixas de Śarīra que foram forçadamente abertas e esvaziadas.&#13;&#10;
+      Além disso, monges que permanecem na província não devem dormir sozinhos e também devem visitar um templo por perto para receber um talismã que afasta espíritos malignos e ter certeza de carregá-lo consigo a todo momento.&#13;&#10;&#13;&#10;&#13;&#10;Este conto se tornou bastante popular pela região, e levou à tradição de cantar certas frases nos pagodes onde a Śarīra é guardada quando a cremação acontece:&#13;&#10;
+      亦僧子乎 (Yì sēng zi hū)
+      亦僧子乎 (Yì sēng zi hū)
+      今汝不必僧 (Jīn rǔ bùbì sēng)
+      魔羅汝不極樂往生 (Móluó rǔ bù jílè wǎngshēng)&#13;&#10;&#13;&#10;O canto pode ser traduzido assim:&#13;&#10;
+      “Você é um monge?”
+      “Você é um monge?”
+      “Você não é mais um monge.”
+      “Um demônio nunca poderá alcançar o céu.”&#13;&#10;
+      Esse canto é dito para o monge que ainda não percebeu que se tornou um demônio.}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">O PS do funcionário que efetuou o Trabalho de Percepção foi curado.</specialTip>
+      <specialTip openLevel="2" key="2">O Contador Qlifót reduzia a cada 10 mortes de funcionários. Entretanto, mortes causadas por Balas de Execução não eram reconhecidas.</specialTip>
+      <specialTip openLevel="2" key="3">Quando o resultado do trabalho era Neutro, o Contador Qlifót reduzia com baixa probabilidade.</specialTip>
+      <specialTip openLevel="2" key="4">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="2" key="5">O Contador Qlifót imediatamente reduziu para 0 quando O-05-102 passou por perto da Unidade de Contenção do $0.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

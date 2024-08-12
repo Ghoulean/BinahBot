@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100053">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {Si #0 peut montrer qu’il est compétent, alors il pourra peut-être attirer l’attention du $0.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {La plupart des employés ne comprennent pas la véritable signification du “Soin des Fées”.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">F-04-83</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Fairy</portrait>
+      <name openLevel="1">
+        Festival des Fées
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <openText>
+        Vous connaîtrez la paix tant que les fées s’occuperont de vous.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {L’Anomalie ressemble à une fée dotée de deux paires d’ailes et un petit corps. Elles agissent en groupe.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Elles emploient un langage que nous ne pouvons comprendre pour communiquer entre elles. Elles suivent certains employés lorsqu’ils entrent dans l’Unité de Confinement, usant de leurs capacités afin de soigner leurs blessures. Les employés appellent ceci le “Soin des Fées”.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Les fées protègent nos employés. Si vous agissez souvent selon la bonté de votre cœur, et êtes passionné de nature, alors les fées prendront soin de vous avec grand plaisir. Vous connaîtrez la paix tant que les fées s’occuperont de vous (vous pourrez aussi profiter des regards envieux des autres employés. Non pas que ce soit important, mais…). Que faire si les fées ne vous approchent pas ? Vous devriez alors méditer sur votre vie. Quand Emil et moi faisions équipe pour l’étude des fées, elles n’hésitaient jamais à m’approcher. Mais seulement moi, jamais Emil. (Vous connaissez tous Emil et vous savez comment il est. Hier encore, il a refusé de partager son en-cas avec moi, et il agissait d’un air suffisant et hautain.)&#13;&#10;&#13;&#10;C’est un acte sacré d’être protégé par les fées, et ce peu importe le monde. Cependant, n’entrez pas dans l’Unité de Confinement si vous voulez juste en profiter ; si vous avez lu un peu de livres à leur sujet, vous savez que les fées détestent que l’on abuse de leur gentillesse.}
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      <!-- 여기 번역 고치기 -->
+      [
+      {&lt;Le document suivant n’est disponible que pour les Employés de Niveau 4 et plus.&gt;&#13;&#10;
+      Quand Walter, dont les fées s’occupaient, mourut dans l’Unité de Confinement d’une autre Anomalie, nous avons remarqué quelques irrégularités. Son estomac et son visage étaient déchirés, et ses globes oculaires ainsi que ses organes ont subi des dommages, comme s’ils avaient été mangés par quelque chose. Cependant, l’Unité de Confinement dans laquelle Walter a été trouvé confinait une Anomalie qui utilisait des attaques psychiques. De plus, les fées avaient du sang et de la chair étalés autour de leur bouche. Nous avons jugé superflu de chercher à déterminer leur origine.&#13;&#10;
+      Dans notre monde, l’altruisme désintéressé n’apporte pas grand-chose. Que des fées vivant dans la forêt viennent vous voir juste parce qu’elles vous apprécient ou parce que vous avez réalisé un grand nombre de bonnes actions est quelque chose qui n’arrive que dans les contes. Nous continuons d’y croire même en sachant cela. Ainsi, nous nous convainquons que le “Soin des Fées” est une récompense des bonnes actions que l’on a faites ou que les fées nous font une “faveur” parce qu’on a quelque chose qui nous rend plus spécial que les autres employés.}
+      ]
+    </desc>
+    <desc id="5" openLevel="2">
+      [
+      {      Les fées ne sont rien de plus que des monstres carnivores, et leur “protection” n’est qu’un moyen de garder la viande fraîche. Quand un employé entre dans une autre Unité de Confinement, elles l’engloutissent de peur de perdre leur proie face à autre chose.&#13;&#10;
+      Cependant, les employés sont grandement satisfaits du “Soin des Fées”, et nous avons vu une baisse drastique du taux d’accidents, alors nous avons jugé inutile de dévoiler la vérité aux employés.}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Lorsque le résultat du travail est Normal ou Bon, de petites fées apparaissent autour de l’Intervenant.</specialTip>
+      <specialTip openLevel="2" key="2">Les petites fées soignent les PV de l’Intervenant durant une courte période de temps.</specialTip>
+      <specialTip openLevel="2" key="3">Si un Intervenant sous les soins des fées est assigné à une autre Unité de Confinement, il mourra immédiatement, dévoré par les fées.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

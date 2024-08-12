@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+
+  <!-- Attrbute "id " must equal to attribute "id" in CreatureList.xml -->
+  <info id ="100101">
+
+    <!-- $0 : Creature name, #0 : Agent name -->
+    <narration action="move">
+      #0 foi designado para a Unidade de Contenção de $0.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 pode ouvir o tempo fluindo.},
+      {$0 é de cor verde clara. As vezes se parece com olhos que estão encarando alguém.},
+      {Parece ser leve. Mas não se mexe mesmo você tentando com toda sua força.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {O amanhã de #0 pode vir ou não.}
+      {Ninguém sabe quem é esse -P que foi mencionado na frase. }
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {O boato diz que a maldição cairá sobre você se ouvir o décimo terceiro toque.}
+      {$0 é o único ser que conhece a completa solidão.}
+      {Você precisará pagar um preço se quiser parar o tempo.}
+      ]
+    </narration>
+  </info>
+
+  <!-- Maximum observation level. -->
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-05-65-H</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ScytheClock</portrait>
+
+      <name openLevel ="1">
+        O Preço do Silêncio
+      </name>
+      
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <specialName openLevel ="2">
+       O Décimo Terceiro Sino
+      </specialName>
+
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {Um velho relógio. O barulho das engrenagens pode ser escutado de perto. Uma frase dizendo “O tempo flui como a vida. A vida flui como o tempo.” está escrita na parte de trás. Ainda é incerto o que a frase está tentando dizer.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {&lt;Registro de Observação&gt;&#13;&#10;Há raros momentos em que nos sentimos como se o tempo tivesse parado. Um breve instante de silêncio total. Toda vez que esse momento chegava, um funcionário morria. Rick era meio covarde, mas não tinha nenhuma culpa pelo seu ataque cardíaco. Justin era só um pouco acima da média no teste físico, ele não tinha nenhum machucado mas seu coração parou de bater. Eles não tinham trabalhado demais e não tinham doença crônica. Eles simplesmente pararam de funcionar, como uma máquina que descarregou. Não conseguíamos nem adivinhar a causa disso. E só após 10 mortes é que tivemos a certeza de que não era só uma infeliz coincidência. E pensamos que era culpa de uma Anormalidade. &#13;&#10; Quando um sino tocando seguido por gritos foi escutado, eu pensei que o pesadelo feito de todas essas coincidências finalmente chegou. Aquela Anormalidade que se parece com um relógio, mas não nos mostra a hora, era como um poste de rua no meio do inferno. &#13;&#10; Eu então lembrei da frase escrita na parte de trás da Anormalidade, mesmo eu não lembrando o que era que estava dizendo. Eu ainda continuava a escutar aquele barulho infernal e então eu corri para a Unidade de Contenção do relógio.&#13;&#10;Quando o décimo terceiro sino bateu, aquele que eu pensava que nunca iria ouvir, eu freneticamente agarrei o relógio para virá-lo. Eu percebi que a frase tinha sumido. E no lugar, algo novo estava escrito, como se o barulho fosse a causa de alguma mudança.&#13;&#10;“Eu estou ciente da completa solidão. E cobro o preço da minha bênção de silêncio. Quando o dono original chegar, pagarei por esse preço. –P”'}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="payFor">Quando $0 estava em um estado ruim, você precisava pagar para usar a pausa.</specialTip>
+      <specialTip openLevel="3" key="ringMyBell">Após $0 tiver tocado 12 vezes, mais uma vez sua habilidade especial foi ativada, e a mesma quantidade de funcionários quanto as de toques morreu.</specialTip>
+    </specialTipSize>
+
+    <!-- Narration when observation level is maximum. -->
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {Está perdendo tempo, o tempo está acabando… Eles não são nada além birras sem sentido.}
+        {Este relógio não somente recuperará o tempo perdido, mas também lhe dará ainda mais tempo.}
+        {Você decidiu…}
+        <!--계속-->
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Usar o relógio." target="1" isAnswer="true"/>
+        <node desc="Não usar o relógio." target="2" isAnswer="false"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {O preço será seguido de sua decisão.}
+        {Ele foi feito dessa forma.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {Na verdade, você não tem escolha a não ser aceitar este presente.}
+        {Querendo ou não, todos nós sabemos que você precisa pegá-lo.}
+        ]
+      </desc>
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {O silêncio não está mais só trazendo a paz.}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+
+
+</creature>

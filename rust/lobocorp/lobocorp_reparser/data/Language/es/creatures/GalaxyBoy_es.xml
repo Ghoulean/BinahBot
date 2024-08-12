@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+    
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100031">
+
+
+
+    <narration action="move">
+      #0 designado para el cuarto de contencion de $0 para empezar el trabajo.
+    </narration>
+
+    <narration action="start">
+      [
+      {La noche en que las estrellas cayeron del cielo, un niño caminó. },
+      {$0 sabe todo acerca de #0. }
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {El anhelo se convierte en una lágrima, y cae como una estrella.},
+      {Los restos de anhelo florecen en el corazón dolorido.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 está haciendo que el empleado #0 prometa volver mañana.},
+      {$0 solloza. No parece que le guste que el empleado #0 se vaya.},
+      {El empleado #0 no puede dar un paso después de ver la cara de sollozo de $0.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-01-55</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/GalaxyBoy</portrait>
+
+      <name openLevel ="1">
+        El niño de la galaxia
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        Tu universo
+      </specialName>
+
+      <openText>
+        La lágrima del niño cayó, cuando una estrella bajó del cielo, el mundo cayó en un sueño, ya que estaba atrapado en una canción de cuna extática.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {Era la mitad de la noche cuando la niebla cubría el mundo con gracia.&#13;&#10;Un niño con los pies descalzos me miraba sin decir palabra. &#13;&#10;Me detuve, porque vi la tristeza colgando en su rostro.&#13;&#10;Estaba llorando, con sus ojos soñadores lleno de tristeza y gracia.&#13;&#10;Le di mi ayuda.,&#13;&#10;Él sonrió, y su tristeza se disuelve.&#13;&#10;La lágrima del niño cayó cuando una estrella descendió del cielo, &#13;&#10;el mundo cayó en un sueño, ya que estaba atrapado en una canción de cuna extática.&#13;&#10;La noche, cuando la galaxia descendió con los pies descalzos. &#13;&#10; -	Un extracto del diario de empleado &lt;REDACTADO&gt; quien se suicidó.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {Un niño con ojos grandes y una piel que se parece al cielo estrellado. Es bastante tímido, pero no muestra ningún temor u hostilidad hacia los demás. Se vuelve muy amigable después de formar un cierto nivel de amistad con alguien. Algunos empleados tienen una impresión puramente favorable sobre esta anormalídad. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Favorece en gran medida el consenso y la diversión. Muestra un fuerte apego al acto de contacto con los demás. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {Si el niño y un empleado alcanzan un cierto nivel de intimidad, le da una pequeña piedra resplandeciente a su amigo. El empleado siente felicidad y vigor mientras está en posesión de la piedra. Sin embargo, hará otra cosa que no sea buena si el empleado ingresa a otra cámara de contención que no sea la suya.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="2">
+      [
+      {Si un empleado con la pequeña piedra resplandeciente, que es el signo de su amistad, muere posiblemente un paro cardiaco espontaneo sin ninguna explicacion alguna, la Anormalídad muestra un profundo dolor por su muerte.}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="3">
+      [
+      {El diario del empleado &lt;REDACTADO&gt; &#13;&#10;0th, XX&#13;&#10;Lo miré a los ojos durante mucho tiempo. Me espacié un poco porque sus ojos eran tan maravillosos. Quería acariciarlo, pero mis compañeros de trabajo me dijeron que no tuviera sentimientos personales hacia las Anormalídades. &#13;&#10;0th, XX&#13;&#10;Le dije mi nombre. Lo repitió con los ojos más grandes de lo habitual, como si descubriera un gran secreto. Cuando llamó mi nombre, sentí que se convirtió en algo más que algo familiar con lo que había estado viviendo.  &#13;&#10;0th, XX&#13;&#10;Cuando alguien más entró en su habitación, no siguió a ese empleado y me buscó. Me sentí un poco victorioso después de escuchar esas noticias. Le gusto, no a ti.&#13;&#10;0th, XX&#13;&#10;En el momento en que entré en la habitación del niño, saltó a mis brazos mientras lloraba. Tuve que seguir diciéndole que volveré regularmente de ahora en adelante. Cuando finalmente lo saqué de mis brazos con un poco de lucha, una pequeña piedra blanca cayó en mi mano. “Por favor, no lo pierdas, y no se lo des a nadie más.” El niño murmuró.&#13;&#10;0th, XX&#13;&#10;“Te gusta esa Ave más que yo?” El chico preguntó en voz baja después de verme quién acaba de terminar un trabajo en el Gran Ave. Le pregunté cómo descubrió lo que estaba haciendo. “Lo sé. Lo se todo. Hagas lo que hagas, donde quiera que vayas.” Su mirada mentía por la piedra brillante, y sonrió. Sus ojos me dieron la piel de gallina.&#13;&#10;0th, XX&#13;&#10;Intenté tirar la piedra brillante pero no era algo que pudiera hacer. Ni siquiera entiendo lo que está pasando…… “Tu aun me amas, verdad?” El chico me sonrio. El sonrie, sonrie, sonrie, sonrie…….&#13;&#10;0th, XX&#13;&#10;No puedo quitar esta piedra de mi cuerpo. Mi única esperanza es que algún día el chico se canse de mí. Estoy esperando ese dia……pero vendrá alguna vez? La gente me dice que soy un excelente empleado. Ustedes idiotas no saben nada, cállate. &#13;&#10;La entrada final&#13;&#10;No puedo aguantar más. No puedo escapar de el. Pensé que estaba a cargo, pero la verdad es que solo fui un juguete en la mano del niño todo el tiempo. Cualquier cosa que haga, donde quiera que vaya, escucho sus susurros. Lo terminaré. Pero ni siquiera estoy seguro de poder terminarlo o no.  &#13;&#10;-- “Vine de lejos. Estoy muy contento de conocerte. Conviértete en una piedra, y caminemos por la galaxia conmigo……” Escucho sus susurros y suspiros. Lo que sigue es una oscuridad oscura. Como la noche en que lo conocí.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Gana una muestra de amistad completando el trabajo con éxito. Una Muestra de Amistad recuperará constantemente PS y SM en relación con su contador Qlifot.</specialTip>
+      <specialTip openLevel="2" key="2">El contador Qlifot aumentará cuando un empleado con una muestra de amistad complete su trabajo.</specialTip>
+      <specialTip openLevel="2" key="3">Cuando un empleado con una muestra de amistad realiza el trabajo de otra anormalidad, el empleado recibirá daño en relación con el contador Qlifot de $0 y y el contador Qlifot disminuirá.</specialTip>
+      <specialTip openLevel="2" key="4">Cuando un empleado con una muestra de amistad muere, el contador Qlifot disminuirá hasta 4.</specialTip>
+      <specialTip openLevel="2" key="5">Cuando el contador Qlifot alcanza a 0, El empleado con un token de amistad morirá.</specialTip>
+      <!--<specialTip openLevel="2" key="6">Cuando el contador Qlifot alcanza a 0, no se puede recolectar Caja-PE completamente en todos los tipos de trabajo.</specialTip>-->
+    </specialTipSize>
+
+   
+  </observe>
+  
+  <!-- 대사는 AgentLyrics_en.xml 에 있음 -->
+</creature>

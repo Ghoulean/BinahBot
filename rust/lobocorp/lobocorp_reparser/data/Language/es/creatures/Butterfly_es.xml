@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100043">
+
+    <narration action="mover">
+      #0 va a entrar a la unidad de contencion de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="iniciar">
+      [
+      {Tener a alguien que te llore después de tu muerte es una bendición.}
+      {Los que quedan atrás no tienen tiempo para recordar a los que murieron, pero se prepara para la próxima muerte.}
+      {$0 mira a #0 en silencio.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 tiene sueños. El telón se dibuja en una fe vacía sin salidas. },
+      {El enorme ataúd no es suficiente para reemplazar los cientos de tumbas.},
+      {#0 mira el proceso funeraria de las mariposas.}
+      {Las alas ondulantes se acercan de una manera familiar pero extraña.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Este lugar no tiene flores ni árboles, así que de dónde vienen todas esas mariposas?},
+      {Los empleados no pueden volver a donde vinieron y no tienen más remedio que repetir el día.},
+      {La procesión funeraria nunca termina, y #0 sigue llorando.}
+      {#0 piensa en el fin de la vida.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {Regresar a donde viniste es un milagro que nunca puede suceder.},
+      {La muerte en tu mejor momento es una bendición inesperada.},
+      {De hecho, La mayoría de los empleados que murieron aquí querían vivir el mayor tiempo posible.}
+      {Algunos pensaron que la muerte sería un nuevo comienzo, pero no hay nada más que vacío después de la muerte.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-01-68</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Butterfly</portrait>
+
+      <name openLevel ="1">
+        Funeral de las Mariposas Muertas
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+
+      <openText>Que pasa cuando la gente muere?</openText>
+
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Que pasa cuando la gente muere?&#13;&#10;Qué pasó con los que trabajaron aquí?}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {- Deben regresar a su casa, donde la familia y la calidez esperan.&#13;&#10;Pero todos saben que los empleados no pueden abandonar la compañia a menos que se retiren.&#13;&#10;-  Entonces deben tener el permiso de "retirarse" y regresaron a sus hogares, habiendo ganado lo que querían y llenos de esperanza.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Somos plumas del ala. Pero retirarse no es tan fácil como parece. Así como las plumas no caen por su propia voluntad.&#13;&#10;- Entonces a dónde fueron los empleados retirados?&#13;&#10;Están vinculados a la compañia desde el momento en que ingresan. No pueden irse aunque se retiren.&#13;&#10;-Hace mucho tiempo, en algun mundo, la gente cree que se convierten en seres hermosos con pequeñas alas cuando mueren. Qué absurdo.&#13;&#10;Si tenemos alas, podemos salir de aqui? Obtenemos alas después de retirarnos?}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Se dice que el doliente con el colosal equipaje en su espalda vino aquí para ser el salvador de todos.&#13;&#10;Pero ahora está atrapado como todos los demás, deambulan por la compañía con solo el recuerdo de la fe vacía.&#13;&#10;El equipaje que lleva es un ataúd. Un gran ataúd para rendir homenaje a los empleados que no tienen a dónde ir. Pero es demasiado pequeño para consolar a esos inocentes sacrificios.&#13;&#10;Dentro hay mariposas esperando el momento de dormir. Hasta entonces, agitan inútilmente sus alas.&#13;&#10;Se supone que las mariposas polinizan las flores, pero ni una sola flor florece en este lugar.&#13;&#10;No tienen más remedio que esperar. Después de todo, debe haber un fin del mundo.}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Cuando #0, un empleado con nivel de Justicia 2 o menos procedió el trabajo para $0, el contador Qlifot puede reducirse al finalizar el trabajo.</specialTip>
+      <specialTip openLevel="1" key="2">El mismo fenómeno ocurrió cuando otro empleado con nivel de Fortaleza 4 o superior procedió con el trabajo.</specialTip>
+      <specialTip openLevel="1" key="3">Cuando el resultado del trabajo fue malo, el contador Qlifot se puede reducir con una alta probabilidad.</specialTip>
+    </specialTipSize>
+
+  </observe>
+</creature>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100046">
+
+    <narration action="move">
+      #0 recebeu a ordem para ir para a unidade de contenção de $0.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {O ninho d'$0 é uma esfera lustrosa e molhada. Não seria irracional se ele confundir o cérebro de #0 com um ninho.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Se a pele de #0 se tornar um verde horrendo, já será tarde demais.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-02-74</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ViscusSnake</portrait>
+
+      <name openLevel ="1">
+        O Ninho Nu
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>Aquilo consegue entrar em qualquer buraco do teu corpo.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Se tu avistares um empregado no qual a cara está a tornar-se em um tom de verde-escuro, por favor os denuncie ao seu respetivo Sephirah imediatamente. Por favor também verifique que o motivo da descoloração não é uma simples dor de barriga. Ao serem aconselhados para irem para enfermaria, aqueles que com essas dores irão concordar, mas um empregado infetado irá agir como se nada estivesse errado. Se isso acontecer, não avise o infetado que tem alguma coisa incomum com ele ou ela. Se o hospedeiro ficar agitado, a infeção irá espalhar-se mais rapidamente. Se a pele começar a mudar ainda mais, é sinal que 30% do cérebro já foi consumido. Qualquer conversa a partir deste ponto será feita pela a Anormalidade, então não prestes muito atenção no que é dito.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {A entidade que reside no lobo frontal do hospedeiro e o mesmo não sentem qualquer tipo de sensações físicas. Tu podes tentar o provável infetado com algo afiado, fingindo ser um acidente, mas isto não é recomendado. Como já foi mencionado anteriormente, a partir do 30% de consumo a Anormalidade já se tornou parte do hospedeiro, então conversar torna-se impossível. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {A “Serpente Nua” pode entrar qualquer buraco no teu corpo.&#13;&#10; Isto não significa que cobrir os teus orifícios irá impedi-la de entrar.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Mas podes o fazer caso isso te ajude a ficar calmo.&#13;&#10;A paragem final da "Serpente Nua" é o lóbulo frontal.&#13;&#10;Tornarás-te em um ninho da serpente e atacarás tudo diante de ti.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Por favor entende que se tu te tornares um ninho, nós seremos forçados a te abater a tiro e a queimar o teu corpo.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Resultados de uma observação feita concluíram que empregados com baixo HP estão mais suscetíveis a sofrer da habilidade especial d' $0 enquanto trabalham. O mesmo pode acontecer se um indivíduo sofrer grandes quantidade de dano durante o trabalho.</specialTip>
+      <specialTip openLevel="2" key="2">Alguns empregados afetados por este fenómeno experienciaram os seguintes sintomas. &#13;&#10;1. Pele verde e erupções cutâneas pelo corpo.&#13;&#10;2. Redução drástica de velocidade.&#13;&#10;Se qualquer um dos sintomas mencionados a cima forem detetados em algum empregado, por favor os denuncie para a realização de uma remoção imediata.</specialTip>
+      <specialTip openLevel="2" key="3">Após sair da unidade de contenção, #0, que estava a sofrer os sintomas mencionados acima por um certo período de tempo, transformou-se em um ser semelhante à Anormalidade (nomeado O-02-74-1).</specialTip>
+      <specialTip openLevel="2" key="4">&lt;Aviso&gt; Todos os empregados que estiveram em contacto com o empregado afetado antes do mesmo se ter tornado no O-02-74-1 também poderão estar infetados. Todos os empregados no departamento deveram ser observados para caso hajam sintomas eles poderem ser detetados. Sintomas estão listados na Dica de Gerência #2.</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

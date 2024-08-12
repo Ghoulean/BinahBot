@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    5.28
+  -->
+  <info id="100039">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {When $0 assumes the form of an egg, you can faintly see a smiling girl inside it.},
+      {Some of our employees think that $0 is trapped inside this thing that resembles an egg, however, the truth is that she shut herself inside it.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {The glamorous amber pattern on $0 at times fascinates our workers.},
+      {$0’s color is that of a brilliant and lustrous gold.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {The world that $0 may have once loved is now being devoured by her.},
+      {$0 once had eyes as red as the setting sun, but greed has consumed all, leaving nothing behind.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 surrendered to hunger and started devouring itself.},
+      {The day $0’s hunger ceases will be the end of everything.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-01-64</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/MagicalGirl_2</portrait>
+      <name openLevel="1">
+        Magical Girl
+      </name>
+      <name openLevel="3">
+        The King of Greed
+      </name>
+      <riskLevel openLevel="2">
+        WAW
+      </riskLevel>
+      <openText>
+        “...Sadness says: ‘Begone, pass away!’ But greed seeks eternity—seeks deep, deep eternity.”
+      </openText>
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {“The first bit of humanity's desire started with the bite of a sweet apple.&#13;&#10;We've been banished from Eden for that sin.&#13;&#10;And now we're standing inside a vast orchard.&#13;&#10;My basket is so large, all the fruits of the world can't make it full.&#13;&#10;But, is it so bad to lust for honey when there are flowers?&#13;&#10;After all, we are born to pursue happiness.”}
+      ]
+    </desc>
+    <desc id="2" openLevel="2">
+      [
+      {Happiness became obsession, obsession became greed, and the greed forever solidified to become a golden amber. The happiness in the beginning, still holding a smile, dwells inside.&#13;&#10;&#13;&#10;The first seed of desire originated from the pure yearning for happiness. The tiny seed grew larger and larger, hungering for more. Over time, the seed hardened and turned into a piece of shiny gem. Enticed by its sheen, a starving fish swallowed it. But it only made the fish even hungrier.&#13;&#10;&#13;&#10;The desires of people usually go unfulfilled. Many desires are abandoned, but they are not completely gone. They hide deep in the subconscious, lurking at the bottom of the lake, ready to spring up at any moment.&#13;&#10;&#13;&#10;However, the yearning for happiness may also rear its head from time to time, darting its tongue like a snake.&#13;&#10;&#13;&#10;As soon as a tiny piece of bait falls into the river, the hungry fish will come up and snatch it in an instant. We delude ourselves to be highly rational beings who are in full control of these things, but it's such a preposterous belief, it's laughable. We don't have as much control over ourselves as we believe.&#13;&#10;&#13;&#10;The magical girl, who was no longer a magical girl, ate many things.&#13;&#10;&#13;&#10;Authority, money, fame, and many other forms of pleasure. She ended up eating away anything in her sight. Now, only visceral greed remains. }
+      ]
+    </desc>
+    <desc id="3" openLevel="3">
+      [
+      {&lt;Someone’s Diary&gt;&#13;&#10;
+      Many people have secretly wished for a hero.&#13;&#10;
+      They say there once was something called soul therapy. What does it feel like to have an ill soul? We are all healthy. But maybe all of this is a tragic illusion.&#13;&#10;
+      Once, there were people who tried to change the world. We all remember them. We remember how they met their downfall. Desires, I know of desires that ruin all things.&#13;&#10;
+      We no longer believe in something, nor do we entertain a hope for a miracle.&#13;&#10;
+      We don't think too much about why they've changed. And we don't blame them. For we have realized that endless desire brings despair.&#13;&#10;
+      I sometimes feel a terrible dejection, but I do not know where the pain comes from.&#13;&#10;
+      ...Many people have secretly wished for a hero.}
+    ]
+  </desc>
+    <desc id="4" openLevel="4">
+      [
+      {“Deep is the sorrow of the world. Greed—deeper still than agony. ...Sadness says: ‘Begone, pass away!’ But greed seeks eternity—seeks deep, deep eternity.”}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="monster">When the work result was Normal, the Qliphoth Counter lowered with a normal probability.</specialTip>
+      <specialTip openLevel="1" key="monster2">When the work result was Bad, the Qliphoth Counter lowered with a high probability.</specialTip>
+      <specialTip openLevel="2" key="swallow">$0’s behavioral pattern is to engulf anything that lies in her path when escaping. When suppressing her, please pay attention to which direction the Abnormality is moving.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id="100000">
+
+    <narration action="move">
+      #0 тръгва към камерата на $0, за да се залавя със задачата
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 е манекен, който се мисли за служител, който работи в съоръжението.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 изглежда харесва хората.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {$0 обикаля около #0, но той/тя е обзет/а от работата си.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {$0 мисли за центъра на света.}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {$0 се чувства зле, защото #0 си тръгва. Аномалията май иска да го/я последва.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">0-00-00</codeNo>
+      <name openLevel="1">Стандартен заешки манекен</name>
+      <portrait openLevel ="1">Sprites/CreatureSprite/Dummy</portrait>
+      <riskLevel openLevel ="1">TETH</riskLevel>
+      <openText>Аномалия манекен, която се използва за обучението на кандидат-управители.</openText>
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      Аномалия манекен, която се използва за обучението на кандидат-управители.
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      Носят се разни слухове, че Аномалията манекен се използва за обучения, защото е най-податлива и опитомена от всички други. Наричат я заек манекен, но тя не обича моркови. Тя харесва хора. Ако избяга, тя просто следва човека, който тъкмо е излязал от камерата.
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      <!--특수 상태-->
+    </desc>
+
+    <desc id="4" openLevel="3">
+      <!--특수 상태-->
+    </desc>
+
+    <record openLevel="1">
+      <!-- 관찰기록 -->
+    </record>
+
+    <record openLevel="2">
+      <!-- 관찰기록 -->
+    </record>
+
+    <record openLevel="3">
+      <!-- 관찰기록 -->
+    </record>
+
+    <specialTipSize size="1">
+      <specialTip openLevel="1" key="tutorial">При прилагане на Подход на потискане на $0, стойността на Клипот брояча й намалява.</specialTip>
+    </specialTipSize>
+
+  </observe>
+</creature>

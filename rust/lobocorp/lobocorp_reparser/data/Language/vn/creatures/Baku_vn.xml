@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id="100060">
+
+    <narration action="move">
+      #0 is going into $0's containment unit to begin the task.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 is always sleeping in the containment chamber.},
+
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0’s dream is sublime. It shows everything.},
+
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {$0 gives happy dreams, but this happiness is unreachable and chips away hope.},
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {“I always wanted to sleep. I want to have a happy dream.”},
+      ]
+    </narration>
+
+
+
+
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-02-99 </codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/VoidDream</portrait>
+
+      <name openLevel ="1">
+        Void Dream
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>Please, eat my dreams.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {“I desire to sleep forever.”&#13;&#10;“Do not awake me.”}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {An abnormality with goat’s fur and horns.&#13;&#10;It is not unique in regard of appearance aside from several eyes embedded on its body.&#13;&#10;Gaining information about this abnormality is deemed difficult due to its never-ending slumber. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {* This report illustrates how abnormality $0’s ability to make people fall asleep affects employees. It seems we cannot utilize $0’s ability to reduce mental damage of employees. Please read the followings.&#13;&#10;&#13;&#10;Vincent: Make it quick, please… I need to sleep.&#13;&#10;Counselor: Is it because of the abnormality?&#13;&#10;Vincent: Yes, something that looks like a sheep passed before my eyes and…I fell asleep. Since then, I’ve been like this.&#13;&#10;Counselor: Do you remember the dream you had back then?&#13;&#10;Vincent: I will never forget that dream.&#13;&#10;Counselor: Can you tell me about it as much as you can, please?&#13;&#10;&#13;&#10;Vincent: It was a happy, that’s all the words that I need to describe that dream. I even felt glad that I was working for this company. He, who I can’t see anymore, was with me…&#13;&#10;(Omitted)&#13;&#10;…I couldn’t get hold of myself after waking up because of that.&#13;&#10;Counselor: I see. I’ve been hearing about you from other employees recently. They say that all you do outside the working hour is sleeping. Can you tell me about it, please?&#13;&#10;Vincent: Didn’t you understand what I just said? I want to have that dream again. That dream where I was with him. Those happy moments… But I can’t no matter how I sleep. &#13;&#10;Counselor: …I see. I’d like to advise you to take some rest in your room. &#13;&#10;Vincent: …Every employee who woke up after hearing that abnormality’s sound went mad. People think it’s because they had a terrible nightmare, but it’s actually the other way around. &#13;&#10;깨어버린 현실이 너무나 끔찍해서 영혼이 현실을 포기한 거에요.&#13;&#10;알다시피 꿈이라는 건 현실의 시간과는 달라서 찰나의 순간도 그 속에서는 영원의 흐름처럼 느껴지죠. &#13;&#10;. As you know, the time flows differently in dream. A mere instant in reality equals eternity in dreams. If $0 puts me into sleep once again, then I may have that wonderful dream again.&#13;&#10;Counselor: …I’ll prescribe some medicine. You will fall asleep. Please, take some rest. Also, you are not allowed to enter containment chambers.&#13;&#10;&#13;&#10;After the session, employee Vincent disobeyed the safety order and was found dead in $0’s containment chamber.}
+      ]
+    </desc>
+
+
+    <desc id="4" openLevel="3">
+      [
+      {A demon must change its form to deceive.&#13;&#10;A demon must show sweet dreams to deceive.&#13;&#10;A crack is caused in human minds when they’re shown a dream they were yearning for. A demon doesn’t miss this chance and bring them to their doom.&#13;&#10;&#13;&#10;<i>Don’t say complicated things, don’t say such scary words.</i>&#13;&#10;<i>I just want to give people happy dreams,</i>&#13;&#10;<i>the dreams that they want.</i>&#13;&#10;<i>Those who had my dreams always return to me.</i>&#13;&#10;<i>So, close your eyes…</i>}
+      }
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {In the dream, you brightly smiled, and we chatted so lively.&#13;&#10;In the waking world, I realized that you no longer existed, and I was empty as much as I was happy.&#13;&#10;I forced myself to sleep, but every morning I realize that the world does not change.&#13;&#10;I think that’s when my soul started to crumble.&#13;&#10;I’ve been only acting to look okay, while my soul is shattered into pieces since that day. &#13;&#10;My yearning for you has become too big, I can’t go back to old myself again. &#13;&#10;Counseling, rest…All meaningless.&#13;&#10;I spent days agonizing until I came to realization. &#13;&#10;It baited me as a price of taking away my nightmares.&#13;&#10;It left me in the void, to make me return to it. &#13;&#10;Then I am lost to it. I don’t want to know anything anymore.&#13;&#10;Please, eat my dreams.}
+      ]
+    </desc>
+
+
+
+     <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">An employee with under temperance level 2 fell asleep after finishing the work and never woke up.</specialTip>
+      <specialTip openLevel="2" key="2">When the work result was bad, Qliphoth counter has decreased.</specialTip>
+      <specialTip openLevel="2" key="3">When escaped, $0’s light puts every employee who are exposed to it asleep. They woke up when the manager shook them.</specialTip>
+      <specialTip openLevel="2" key="4">$0 returned to its containment unit after a while.</specialTip>
+      <specialTip openLevel="2" key="5">&lt;Warning&gt;When this abnormality escaped, and suppression work was executed on it, it transformed and became extremely hostile. (This form is designated as $0-1.)</specialTip>
+      <specialTip openLevel="3" key="6">$0-1 roared and inflicted White damage to the entire department. The employees who were asleep because of the abnormality’s light woke up and panicked when they heard the roar. </specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+
+
+
+</creature>

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+  -->
+  <info id="100065">
+    <narration action="move"></narration>
+    <narration action="start">
+      [
+      {On peut sentir la passion et le feu émaner du plus profond de $0.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Même sans partition pour le guider, $0 permettra à quiconque de donner la plus belle représentation de sa vie.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {La sonate jouée par le musicien possédé par la lune est incroyablement séduisante au point d’en rompre les frontières entre les hommes.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {La musique nous libère tous sans exception.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">D-01-105</codeNo>
+      <portrait openLevel="0">Sprites/Unit/creature/Piano</portrait>
+      <name openLevel="1">
+        Il Pianto della Luna
+      </name>
+      <riskLevel openLevel="0">
+        WAW
+      </riskLevel>
+      <openText>“On raconte dans les histoires que la lune ensorcelle les hommes, mais en réalité, ce sont les hommes qui lui crient leur désespoir.”</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;Cette Anomalie a été créée à partir des idées du Donateur Tumblbug 에레 (Ere).&lt;/i&gt;&#13;&#10;&#13;&#10;Une vieille femme assise à un piano. Elle a le plus souvent les yeux fermés. Elle hoche la tête comme seule forme de communication, mais en de rares occasions, un fin sourire se dessine sur son visage.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {&lt;Extrait d’un Article de Journal&gt;&#13;&#10;
+      La meilleure pianiste du monde, (Expurgé), donnait toujours ses meilleures représentations lorsqu’elle jouait cette sonate, sa pièce préférée. Beaucoup faisaient l’éloge de sa technique incomparable. Certains étaient même incapables de rester assis lorsqu’elle jouait le troisième mouvement à cause de l’énergie débordante et de la folie qu’elle mettait dans sa performance.
+      
+      Dans sa résidence désormais vide qu’elle a quittée pour la lune, ne reste que le piano qu’elle utilisait depuis sa tendre enfance, ainsi que des têtes réduites nous permettant de plonger dans son esprit.}
+      ]
+
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Extrait d’un Enregistrement Audio d’une séance de Thérapie de l’Employé (Expurgé)&gt;&#13;&#10;
+      “Ce que je veux dire, c’est qu’on n’a rien vu de particulier quand on est allé la sécuriser. Il y avait juste une femme assise là. Comme si elle ne faisait qu’attendre notre venue.
+      Ce qu’il s’est passé quand l’un d’entre nous s’est approché d’elle ?
+      Eh bien, ce type n’avait aucune connaissance artistique ou musicale, et d’un coup il s’est mis à jouer le premier mouvement de cette sonate.
+      Et la femme s’est mise à sourire.
+      …Pour être parfaitement honnête, je ne pense pas que j’entendrai à nouveau une performance au piano aussi belle que celle-ci.
+      On n’a plus jamais revu ce gars.
+      C’est pour ça que vous aviez besoin de mon témoignage, non ?
+      Parce que j’ai joué le troisième mouvement.”
+      (Omis)}
+    ]
+  </desc>
+    <desc id="4" openLevel="3">
+      [
+      {“Je ne sais ni comment ni pourquoi ça nous fait jouer. Tes mains bougent juste, et tu te sens… euphorique en jouant. Tout autour de toi disparaît. C’est juste toi et le piano. Après avoir fini de jouer, épuisé, je me suis rendu compte que mes pieds n’appuyaient pas sur des pédales, mais sur des têtes coupées.”}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {“…La lune représente la psyché humaine.&#13;&#10;On dit souvent que la lune est belle.&#13;&#10;Mais après un certain temps à la regarder on peut voir son vrai visage…&#13;&#10;On se rend compte qu’on aimait désespérément quelque chose de si brisé.&#13;&#10;Au bout du compte, on finit tous comme la lune. Car on ne peut pas supporter sa propre personne.”}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Il est possible de jouer du piano en ordonnant à un Employé de Jouer. Cependant, rappelez-vous que le Compteur Qliphoth diminue lorsque la représentation prend fin.</specialTip>
+      <specialTip openLevel="1" key="2">La musique a légèrement augmenté la Tempérance et la Justice de tous les employés temporairement. Cependant, l’employé ayant joué a perdu la moitié de ses PV à l’issue de la représentation.</specialTip>
+      <specialTip openLevel="1" key="3">Lorsque le résultat du travail est Normal, le Compteur Qliphoth a une probabilité moyenne de diminuer.</specialTip>
+      <specialTip openLevel="1" key="4">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="1" key="5">Le Compteur Qliphoth tombe immédiatement à 0 lorsqu’un employé entre jouer pour la troisième fois dans l’Unité de Confinement.</specialTip>
+      <specialTip openLevel="1" key="6">Quand $0 s’échappe, elle retourne de son plein gré à son Unité de Confinement après la fin du troisième mouvement. Le mouvement s’est fini prématurément à la répression de $0.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <!--본체와 같아야 함-->
+    <name>El Llanto de la Luna</name>
+    <codeId>D-01-105</codeId>
+  </child>
+</creature>

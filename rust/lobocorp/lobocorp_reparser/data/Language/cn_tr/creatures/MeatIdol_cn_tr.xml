@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300004">
+
+    <narration action="move">
+      指派 #0 至 $0 的收容室.
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-79</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/MeatIdol</portrait>
+
+      <name openLevel ="1">
+        血肉偶像
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>而祈禱的結尾總是以人們吟唱的永恆絕望告終.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {一團混合著血肉與鋼鐵的東西. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {推測這是在淹水的地區發現到的宗教藝品. 在以前, 有些人希望透過信仰來尋找解答. 當員工對它祈禱時, 這堆血肉會出現動作, 就像是在回應呼喚般.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {祈禱的人會充滿痛苦, 像是它在測試他們一樣, 但是在附近的人將會恢復 HP 及 MP, 就像是獲得救贖似的.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      <!-- 여기 번역 고치기 -->
+      [
+      {而祈禱的結尾總是以人們吟唱的永恆絕望告終.}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">$0 能透過祈禱來產生影響. 對 $0 祈禱的目標將會受到隨機類型的傷害.</specialTip>
+      <specialTip openLevel="2" key="2">&lt;實驗 1&gt; 目標祈禱了 20 秒或更少. 目標死亡.</specialTip>
+      <specialTip openLevel="3" key="3">&lt;實驗 2&gt;目標祈禱了約 21 至 45 秒. 除了目標的所有員工在那段時間恢復了 HP.</specialTip>
+      <specialTip openLevel="4" key="4">&lt;實驗 3&gt;目標祈禱了約 46 至 90 秒. 結果跟實驗 2 一樣, 但目標也恢復了 SP.</specialTip>
+      <specialTip openLevel="5" key="5">&lt;實驗 4&gt; 目標祈禱了約超過 90 秒. 目標死亡, 但所有異常的逆卡巴拉計數器也降低至 0.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

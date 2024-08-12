@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등0000000000000000000
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id ="100021">
+
+    <narration action="move">
+      指派 #0 至 $0 的收容室.
+    </narration>
+
+    <narration action="start">
+      [
+      {對我們來說, $0 是個極為罕見的異常. 執行工作時必須非常謹慎. },
+      {$0 為一個會造成精神傷害的異常. 建議派遣精神狀態較佳的員工.}
+      {在任何的情況下 $0 都可能使 #0 發瘋, 但在長期的觀察下我們已經習慣了.}
+      {你準備好聆聽 $0 的故事了嗎?}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {在 $0 的房間裡, 令人窒息的寂靜充斥四周. },
+      {在被寂靜侵佔的房間之中傳出了陣陣可怕搖椅嘎嘎作響的搖晃聲.},
+      {搖椅, 在不自然發霉的地板上, 搖晃著.},
+      {像是再也受不了 $0 的故事般, 房中的牆壁與地板四處崩壞.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 的古老故事深陷於詛咒之中. 早已無人仔細傾聽她的故事了.},
+      {很久以前, $0 的靈魂便孤獨的消逝了.}
+      {她眾多的故事曾經使人駐足傾聽, 但現只剩詛咒留在故事之中.}
+      {她的故事是惡毒的. 它會滲入周遭的人裡, 並引領他們進入難以忍受的世界當中.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 沒有任何聽力, 且幾乎看不見, 但是卻能認出 #0 的存在.},
+      {突然之間, 嘎吱聲停止了. $0 開始默默地背誦著一首詩.}
+      {$0 沒有望向員工 #0. 一旦她開始了她的故事, 員工 #0 將會看著她.}
+      {與 $0 溝通是沒有意義的. 聽眾才是她要的, #0.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {#0 完成了工作. #0 快速的離開了房間.},
+      {#0 在完成工作後離開了房間. 她剩餘的孤獨將被那些故事給填滿.},
+      {獨特的陰鬱氣氛鑽入了員工 #0 的體內. #0 快速的完成了工作並離開房間.}
+      {就在那無盡的故事開始前, #0 成功的離開了房間.}
+      ]
+    </narration>
+
+    <narration action="special_ability_1">
+      [
+      {$0 開始與 #0 進行對話.}
+      ]
+    </narration>
+
+    <narration action="special_ability_2">
+      [
+      {“親愛的, 想聽個故事嗎?"}
+      ]
+    </narration>
+
+    <narration action="special_ability_3">
+      [
+      {“在柴堆附近, 靠近柴堆,”}
+      ]
+    </narration>
+
+    <narration action="special_ability_4">
+      [
+      {“你遇見你的父親,”}
+      ]
+    </narration>
+
+    <narration action="special_ability_6">
+      [
+      {“你扯下了他的頭並喝盡了他的血.”}
+      ]
+    </narration>
+
+    <narration action="special_ability_7">
+      [
+      {“你在星期五時殺了他, 在星期天時埋了他.”}
+      ]
+    </narration>
+
+
+
+    <narration action="panic">
+      [
+      {突然之間, 員工發現他/她的手上握著一把滿覆爛泥的鏟子. 雖然同事指出 #0 的手上並沒有任何東西, 但是 #0 卻不斷的尖叫著.}
+      {#0 的內心受不了那些其他世界的故事了. #0 在腦袋崩潰後被永遠地束縛在她的故事裡了.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-01-12</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/OldLady</portrait>
+
+      <name openLevel ="1">
+       老婆婆
+      </name>
+      
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        堆積如山的故事, 堆積出死亡.
+      </specialName>
+
+      <openText>起初她很健談. 但在最後, 孤寂成了她唯一的聽眾.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [{它的樣子如同一位老邁且虛弱的老人. 在任何人進入它的房間時, 該異常將會與其交談.}]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {雖然每次都不同, 但它的開頭總是說 ‘孩子啊, 孩子. 你想聽個故事嗎?’  故事的內容可能是一首搖籃曲, 一首不特定的詩, 一則常見的童話, 或是某個嶄新的事物.}
+      ]
+    </desc>
+
+
+    <desc id="3" openLevel="1">
+      [
+      {它知道每個童話, 且在聽眾離開前不會停止訴說那些故事.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+
+      {摘錄自訪談日誌&#13;&#10;員工 F5049: “或許在所有的異常當中, 她是最寂寞的. 那個生物全身上下都是寂寞. 她用說著那些故事來填補空虛. 一個故事需要一個聽眾. 當某人在她的房間裡面, 她就會試著填補那些空虛. 當然, 聆聽她是非常危險的. 她知道地球中所有的故事, 甚至是那些不曾存在的. 我們的大腦無法承受所有的故事. 她能在瞬間炸掉我們的大腦”}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="Godoku">在完成了 $0 以外的異常的工作之後, $0 的逆卡巴拉計數器減少了.</specialTip>
+      <specialTip openLevel="1" key="Attached">當 $0 的計數器歸零時, 收容室內形成了黑色的形狀. 在這個情況下, $0 的逆卡巴拉計數器減少了, 我們決定稱呼它為 "孤寂".</specialTip>
+      <specialTip openLevel="1" key="NoAttached">當孤寂堆積時, 進入收容室的員工會被孤寂給纏上. </specialTip>
+      <specialTip openLevel="1" key="NoAttached2">直到孤寂崩落之前, 員工 #0 會持續暴露在 W 傷害下. 直到它消失為止, 該員工將無法執行任何工作.</specialTip>
+    </specialTipSize>
+
+  
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {地板上有些裂痕.}
+        {木頭搖椅令人寒毛直豎的嘎吱聲充斥在空氣當中.}
+        {我不想踏進這間房子裡.}
+        {因為我不喜歡聽那些故事.}
+        {蟲子到處飛來飛去.}
+        {在我的腳踩到某個黏稠的東西時, 它發出了破掉的聲音.}
+        {我找到了.}
+        {每個在它臉上的洞裡, 全都是蟲子.}
+        {我不想待在這了.}
+        {我想要離開.}
+        {潮濕, 噁心, 糟糕. 我再也受不了了.}
+        <!--계속-->
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Get out." target="1" isAnswer="false" />
+        <node desc="Stay." target="2" isAnswer="true" message="You have succeeded to obtain final observation report on Old lady."/>
+      </select>
+      
+      <desc id="1" select="0">
+        [
+        {我轉身離開了這個地方.}
+        {又一次, 我在痛恨自我中咬著嘴唇逃走了.}
+        ]
+      </desc>
+      
+      <desc id="2" select="0">
+        [
+        {我留下來了, 忍受住那些不愉快.}
+        {起初她很健談. 但在最後, 孤寂成了她唯一的聽眾.}
+        {她呼喚了我, 用她的手指.}
+        {現在我已準備好聆聽她的故事了.}
+        ]
+      </desc>
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {“能讓我跟你說個故事嗎, 我親愛的寶貝?”}
+        {她跟我說了個故事.}
+        {而那個故事成了我的世界.}
+        ]
+      </angela>
+    </max>
+  </observe>
+</creature>

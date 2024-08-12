@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+  -->
+  <info id ="100065">
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+
+    <narration action="start">
+      [
+      {Pode-se sentir uma grande paixão vinda de dentro de $0.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Mesmo que não saibam saber tocar piano, $0 irá permitir a qualquer um realizar a mais grandiosa performance da sua vida.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {A sonata que é tocada por um pianista possuído pela lua é algo tão encantador que é capaz de quebrar a barreira entre a lua e o Homem.},
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {Música liberta todos sem discriminação. },
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">D-01-105</codeNo>
+      <portrait openLevel ="0">Sprites/Unit/creature/Piano</portrait>
+
+      <name openLevel ="1">
+        Il Pianto della Luna
+      </name>
+
+      <riskLevel openLevel ="0">
+        WAW
+      </riskLevel>
+
+
+      <openText>“Contos dizem que a lua encantou os homens. Mas, na verdade, o homem se desespera perante a lua.”</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;Esta Anormalidade é baseada na ideia do(a) apoiante '에레(Ere)' do Tumblbug.&lt;/i&gt;&#13;&#10;&#13;&#10;Uma velha senhora com um piano do lado dela, com os seus olhos fechados normalmente.&#13;&#10;Ela apenas abana a cabeça em vez de falar, mas às vezes ela chega a mostrar um leve sorriso. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {&lt;Excerto de um Artigo de Jornal&gt;&#13;&#10;&#13;&#10;A melhor pianista do mundo, (EDITADO) sempre realizava a melhor performance de todas enquanto tocava aquela sonata, a música favorita dela. Muitos a elogiaram pela sua técnica excelente, muitos nem conseguiam ficar sentados enquanto ela tocava o terceiro movimento por causa da imensa energia e loucura da performance dela.&#13;&#10;Agora neste lugar vazio, aonde ela costumava morar até que ela se foi para a lua, para trás foi deixado o piano que ela tocava desde que era pequena e as cabeças encolhidas que permitiam-nos adentrar a mente dela.}
+      ]
+
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Gravação de áudio da sessão de aconselhamento do empregado (EDITADO)&gt;&#13;&#10;&#13;&#10;“Nós não vimos nada de particular quando fomos ver se estava tudo certo. Dentro da sala tinha uma senhora sentada. Era como se ela estivesse à nossa espera.&#13;&#10;O quê que aconteceu quando um de nós se aproximou dela?&#13;&#10;Ele não sabia nada de arte ou música. Mas sem mesmo nos apercebemos, ele estava a tocar o primeiro movimento daquela sonata.&#13;&#10;E a senhora sorriu. &#13;&#10;….Sendo honesto, eu acho que nunca irei ouvir outra performance de piano tão bela quanto aquela.&#13;&#10;Nós nunca mais vimos ele novamente.&#13;&#10;É por isso que vós quereis o meu testemunho, não é?&#13;&#10;Porque fui eu quem tocou o terceiro movimento."&#13;&#10;(Omitido)}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {"Eu não sei como é que aquele piano te faz toca-lo e nem mesmo o porquê de o fazer. É como se as tuas mãos se movessem sozinhas e sentes aquela… euforia enquanto estás a tocar. Tudo ao teu redor desaparece, apenas tu e o piano permanecem. Quando eu terminei de tocar, mesmo estando exausto eu reparei que o que os meu pés estavam a premir não eram os pedais do piano, mas sim várias cabeças decepadas."}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {“…A lua representa a psique humana.&#13;&#10;As pessoas costumam dizer que ela é bela.&#13;&#10;Mas quando algum tempo se passa e tu a olhas novamente, tu finalmente irás ver a sua verdadeira face,&#13;&#10;tu irás ver que tinhas sido encantado por algo tão quebrado e rachado. &#13;&#10;No fim das contas, todos nos tornamos como a lua. Tudo isso pois não somos capazes de aguentar-nos a nós próprios."}
+      ]
+    </desc>
+
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">O piano pode ser tocado caso um trabalho de performance seja realizado. No entanto, o Qliphoth Counter irá diminuir quando o trabalho terminar.</specialTip>
+      <specialTip openLevel="1" key="2">A música temporariamente aumentou um pouco a Moderação e a Justiça dos empregados. No entanto, o empregado que realizou a performance teve o seu HP reduzido para 50%.</specialTip>
+      <specialTip openLevel="1" key="3">O Qliphoth Counter diminuiu com uma probabilidade Média quando o resultado do trabalho foi Normal.</specialTip>
+      <specialTip openLevel="1" key="4">O Qliphoth Counter diminuiu quando o resultado do trabalho foi Mau.</specialTip>
+      <specialTip openLevel="1" key="5">O Qliphoth Counter foi a 0 quando um empregado entrou na unidade de contenção para tocar o piano pela terceira vez.</specialTip>
+      <specialTip openLevel="1" key="6">Após escapar, $0 retornou para a sua unidade de contenção voluntariamente quando o terceiro movimento terminou. O terceiro movimento também irá terminar caso $0 seja suprimida.</specialTip>
+    </specialTipSize>
+    
+  </observe>
+  
+  <child>
+    <!--본체와 같아야 함-->
+    <name>La Luna</name>
+    <codeId>D-01-105</codeId>
+  </child>
+
+</creature>

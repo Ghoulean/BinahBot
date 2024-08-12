@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+  -->
+  <info id ="100063">
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 faz com que as pessoas que olham para ela sentir afeto por ela sem que se aperceberem.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {A gosma rosa da $0 escorre na unidade de contenção.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Se #0 negligenciar qualquer protocolo de segurança ou sanitário, o resultado vai ser um inferno gosmento.},
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Sem se saber, o exército da $0 cresce dia após dia.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">D-03-109</codeNo>
+      <portrait openLevel ="0">Sprites/Unit/creature/SlimeGirl</portrait>
+
+      <name openLevel ="1">
+        Amor Derretido
+      </name>
+
+      <riskLevel openLevel ="3">
+        ALEPH
+      </riskLevel>
+      
+      <openText>… e meus caros empregados, eu espero que todos ponham máscaras de gás que nós distribuímos antes de virem aqui.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {<i>Esta Anormalidade é baseada na ideia do(a) apoiante 'mul' do Tumblbug</i>&#13;&#10;&#13;&#10;Uma gosma que parece derreter. A mesma possuí uma forma que parece humana. A unidade de contenção está coberta com mucus secretados pela Anormalidade.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Nós gostaríamos de falar convosco sobre o recente incidente que aconteceu.&#13;&#10;Sim, foi uma terrível situação quando um exército de gosma tomou conta desta instalação por (EDITADO) minutos.&#13;&#10;Havia vários conteineres deixados no laboratório (EDITADO) que não foram processados corretamente durante o experimento relacionado com (EDITADO)&#13;&#10;Se estás ciente sobre o experimento (EDITADO), então sabes que o conteúdo dentro desses recipientes são apenas restos inúteis que provam que o experimento foi um fracasso. No entanto, pesquisadores não acham que havia motivo para os deitar fora. &#13;&#10;&#13;&#10;Era óbvio que a novata da equipa de pesquisa não sabia o que estava dentro desses conteineres. A empregada Maria encontrou a gosma rosa dentro de uns recipientes e assumiu que a substância era perigosa, e acreditamos que ela os selou e os manteve no status de (EDITADO).&#13;&#10;&#13;&#10;Se as nossa teoria estiver correta, o objeto derretido nos recipientes é (EDITADO) da (EDITADO).}
+      ]
+
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Eu não sei se tivemos sorte ou não, mas as suas memórias, incluindo aquelas sobre os experimentos, se foram completamente e não conseguia dizer uma palavra. Ela também parecia instável mentalmente, tornando-se extremamente nervosa quando Maria não estava presente.&#13;&#10;&#13;&#10;Irmão. Maria tinha um irmão que morreu quando ela era pequena. Tudo começou quando ela sentiu que ela tinha um laço com a gosma rosa que parecia uma criança que segui-a de um lado para o outro.&#13;&#10;&#13;&#10;Maria começou a mostrar uma taxa de contaminação mental de um nível sem precedente. Sim, era provável que a Anormalidade estava a afeta-la de algum modo, mas isso era tudo.&#13;&#10;&#13;&#10;Os colegas dela começaram a aperceberem-se dos comportamentos estranhos que ela exibia. Eles tentaram faze-la falar, era o correto a se fazer. Eles sabiam como contaminação mental se demonstra e que alguém desaparecer durante todos intervalos ou pausas era sinal de que algo estava errado. Mas mesmo assim Maria não lhes disse nada e ela acabou contida na sala do conselheiro até que ela contasse o que se estava a passar. &#13;&#10;&#13;&#10;Enquanto essa situação se desenrolava, a criatura gosmenta, que tinha se esquecido de tudo, lembrou-se de algo. Que ela tinha de sair desta instalação não importava o que fosse preciso fazer.&#13;&#10;&#13;&#10;A Anormalidade mais uma vez demonstrou extremo nervosismo quando Maria não foi ter com ela. Ela pensava que Maria estava em perigo. E foi aí que a criatura decidiu escapar COM a ela. &#13;&#10;&#13;&#10;Aquela ligação entre as duas era algo raro de se ver, elas importavam-se muito uma com a outra do fundo dos seus corações.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Trancada dentro da sala do conselheiro, Maria decidiu começar a falar e revelou o que ela tinha feito. Maria contou que ela guardou o que era mantido dentro dos recipientes e que tinha sido capaz de formar um laço com a gosma. No entanto, ela não chegou a contar tudo, pois ela derreteu em um piscar de olhos. Sim, ela literalmente derreteu por completo. E as coisas não acabaram por aí. A gosma que costumava ser Maria começou a mexer-se e não foi complicado para ela fugir pelas brechas na porta da sala. &#13;&#10;&#13;&#10;Aquela coisa tinha alguma racionalidade humana? Não. Assim como uma criatura recém-nascida que segue a sua mãe cegamente, a gosma foi ao encontro da Anormalidade.&#13;&#10;&#13;&#10;Maria não foi a única que se tornou em gosma, todos aqueles que estiveram em contacto com ela também derreterem. Aqueles empregados que a pressionaram, aqueles que almoçaram com ela.... todos eles sem exceção. &#13;&#10;&#13;&#10;Em pouco tempo, um exército de gosma começou a atacar os empregados, em nome da Anormalidade que amavam. Sim, eles mataram apenas com amor.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {… e meus caros empregados, eu espero que todos ponham máscaras de gás que nós distribuímos antes de virem aqui. Eu espero que ninguém as tire por qualquer motivo. &#13;&#10;&#13;&#10;Eu devo informar-vos que alguns de vós já foram infetados pela Anormalidade gosmenta que vos falei sobre. Nós não demos máscaras de gás a todos, nós também dissemos-vos que era porque não tínhamos mais, mas na verdade é para nós sermos capazes de destingir os infetados dos não-infectados. Vós podeis não sentir nada por agora, mas daqui a uma hora a vossa carne e ossos irão começar a derreter enquanto as vossas mentes se desintegram, depois disso ireis causar problemas na instalação. Matando todos empregados que vós encontrardes. &#13;&#10;&#13;&#10;Sim, eu sei, é difícil de acreditar. Vós deveis sentir-vos bem, mas sim vós irei-vos tornar em gosma. Não é vossa culpa. Vós apenas tivestes o azar de entrar em contacto com alguém que estava infetado. Já não adianta de nada procurar pelo primeiro que foi infetado. Eu duvido que ele ou ela saiba da catástrofe que as suas ações irão causar.&#13;&#10;&#13;&#10;E para os não-infetados que estão a usar máscaras, por favor tenham extra-atenção a vossa higiene e denuncie quaisquer empregados agindo estranho imediatamente. Tu também serás infetado se tentares ajuda-los. Agora, nas vossas mesas têm pistolas 9mm, todas carregadas.&#13;&#10;&#13;&#10;O que vós tereis de fazer é claro. Nós não iremos abrir as portas até que a situação… tenha sido resolvida. Se achais que isto é muito cruel, deixem-me relembrar-vos que este é o teu trabalho.&#13;&#10;&#13;&#10;Espero ver-vos novamente após tudo isto ter terminado.}
+      ]
+    </desc>
+
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">O Qliphoth Counter diminuiu quando o resultado do trabalho foi Mau ou Normal.</specialTip>
+      <specialTip openLevel="1" key="2">A $0 deu um pedaço de gosma para o primeiro empregado(D-03-109-1) que trabalhou com ela sem ser por Repressão. O pedaço regenerou a saúde mental do D-03-109-1 e aumentou a sua taxa de sucesso. No entanto, é necessária uma observação mais profunda para decidir-se como o efeito do pedaço afeta o estado da $0.</specialTip>
+      <specialTip openLevel="1" key="3">O Qliphoth Counter diminuiu quando D-03-109-1 realizou trabalhou de Repressão.</specialTip>
+      <specialTip openLevel="1" key="4">Empregados que se encontrem na mesma área que o D-03-109-1 podem ser infetados por gosma com Baixa probabilidade. Os empregados que foram infetados pela gosma (D-03-109-2) podem ser identificados pelas marcas de gosma nas suas bochechas. Empregados que entrem em contacto com o/os D-03-109-2 podem ser infetados com uma Baixa probabilidade. Após um certo período de tempo ter passado após a infestação, a pele do(s) D-03-109-2 fundiu-se com a gosma e os infetados tornaram-se em ████████.</specialTip>
+      <specialTip openLevel="1" key="5">O Qliphoth Counter atingiu 0 quando o número de D-03-109-2 tomou metade do departamento, isto caso o D-03-109-1 ainda estivesse vivo.</specialTip>
+      <specialTip openLevel="1" key="6">O Qlihpoth Counter atingiu 0 quando o D-03-109-1 morreu.</specialTip>
+      <specialTip openLevel="1" key="7">Após uma série de experimentos, foi descoberto que a gosma afeta e também é afetada por ondas eletromagnéticas. Se o D-03-109-1 realizar trabalho de Esclarecimento e produzir 24 PE-Boxes, a gosma não irá agarrar-se a outros empregados por 30 segundos. No entanto, se menos de 24 PE-Boxes forem produzidas, todos os D-03-109-2 transformarão-se em ████████.</specialTip>
+    </specialTipSize>
+  </observe>
+
+  <child>
+    <codeId>D-03-109-1</codeId>
+  </child>
+</creature>

@@ -19,6 +19,9 @@ use crate::models::binahbot::BinahBotEnvironment;
 use crate::models::binahbot::BinahBotLocale;
 use crate::models::binahbot::DiscordEmbedColors;
 use crate::models::discord::AllowedMentions;
+use crate::models::discord::ButtonComponent;
+use crate::models::discord::ButtonStyle;
+use crate::models::discord::DiscordComponentType;
 use crate::models::discord::DiscordEmbed;
 use crate::models::discord::DiscordInteraction;
 use crate::models::discord::DiscordInteractionOptions;
@@ -27,6 +30,9 @@ use crate::models::discord::DiscordInteractionResponseMessage;
 use crate::models::discord::DiscordInteractionResponseType;
 use crate::models::discord::DiscordMessageFlag;
 use crate::models::discord::MessageResponse;
+
+// todo: where to put this?
+pub const DELETE_BUTTON_CUSTOM_ID: &str = "delete";
 
 pub fn get_option_value<'a>(option_name: &'a str, options: &'a [DiscordInteractionOptions]) -> Option<&'a DiscordInteractionOptionValue> {
     options.iter()
@@ -132,14 +138,26 @@ pub fn build_error_message_response(lang_id: &LanguageIdentifier, err_code: &str
                     description: Some(env.locales.lookup(lang_id, err_code)),
                     color: Some(DiscordEmbedColors::Default as i32),
                     image: None,
+                    thumbnail: None,
                     footer: None,
                     author: None,
                     url: None,
                     fields: None
                 }
             ]),
-            flags: Some(DiscordMessageFlag::EphemeralMessage as i32)
+            flags: Some(DiscordMessageFlag::EphemeralMessage as i32),
+            components: None,
         })
+    }
+}
+
+pub fn build_delete_button_component(lang_id: &LanguageIdentifier, env: &BinahBotEnvironment) -> ButtonComponent {
+    ButtonComponent {
+        r#type: DiscordComponentType::Button,
+        style: ButtonStyle::Danger,
+        label: Some(env.locales.lookup(lang_id, "delete_message_button_text")),
+        custom_id: Some(DELETE_BUTTON_CUSTOM_ID.to_string()),
+        disabled: None,
     }
 }
 

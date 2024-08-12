@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300104">
+
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-91</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/OtherWorldPortrait</portrait>
+
+      <name openLevel ="1">
+        異界の肖像
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <openText>
+        この肖像画は今この瞬間を捉える。 いつか失うしかないものを。
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {時が経つにつれて、人は変わりゆく。 体は老い衰え、心を失うか、 抑えられなくない激情に飲み込まれ、 やがては消えていく。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {この肖像画は今この瞬間を捉える。 いつか失うしかないものを。 そして肖像画をみた職員は無意識的に望むことでしょう。 この肖像画のように、いつまでも変わらず笑みを浮かべる永遠を。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {職員は不思議に感じた。 どんな攻撃や事故でも 傷つかなかったからだ。 しかし、 そのすべての苦痛を 受けていたのは 彼の仲間たちだった。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {そして傷つき、老い、醜くなるのは自分ではなく肖像画の方だった。 職員はやがて絵を見なくなり、 幸運に恵まれ今を楽しむことにした。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {しかし、奇跡は永遠に続くことはない。 彼の代わりに死んでくれる仲間が誰もいなくなると、 幸運に恵まれたと思われた彼は死に、 肖像画は再び白紙へと戻った。}
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">このアブノーマリティは 最初に見た職員を キャンバスに描く。</specialTip>
+      <specialTip openLevel="2" key="2">描かれた職員の受けるダメージは、施設内の別の職員が代わりに受ける。 (ただし、描かれた職員の最大HPを超えるダメージには効果は適用されない) ダメージを代わりに受けた職員は 元のダメージより大きいダメージを受ける。</specialTip>
+      <specialTip openLevel="2" key="3">ダメージを代わった職員が死亡すると、 また別の職員がダメージを代わりに受けた。 代わってくれる職員がいなくなると、 肖像画に描かれた職員は死亡した。</specialTip>
+      <specialTip openLevel="2" key="4">新しい職員がキャンバスに 表示された場合、前の職員は殺されます。</specialTip>
+      <specialTip openLevel="2" key="5">描かれている職員が 肖像画以外で死亡した場合、 肖像画は元の状態に戻ります。</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

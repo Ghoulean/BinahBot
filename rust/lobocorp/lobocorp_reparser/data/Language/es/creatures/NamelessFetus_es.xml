@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100017">
+
+    <narration action="move">
+      #0 designado a la sala de contencion de $0 para comenzar el trabajo.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 ni siquiera tiene órganos formados adecuadamente.},
+      {$0 chupa su propio pulgar y llora de vez en cuando.},
+      {Hay una larga línea con aspecto de cicatriz en el abdomen de $0.},
+      {Si escuchas el llanto del bebé, significa que uno de nosotros va a desaparecer. }
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {A diferencia de otros bebés, $0 no vino ni busca a la madre .},
+      {Cubierto por una baba no identificado, $0 no es como otros bebés que están envueltos en una manta caliente, que sueñan felizmente. },
+      {Alrededor de $0, los objetos no identificables que se asemejan al cordón umbilical están dispersos. Es la “habitación de un bebé” pero no se oye ningún llanto. Solamente silencio.},
+      {#0 acaba de ingresar a la cámara pero $0 no responde, no como otros bebés.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {Grandes pupilas negras están mirando a ninguna parte. Ni siquiera parpadean.},
+      {Lo único que se asemeja a $0 de otros bebés es que se chupa la parte del cuerpo, que se supone que es un pulgar como si tuviera hambre, mostrando su triste deseo.},
+      {De vez en cuando, $0 ‘balbucea’ como cualquier otro bebé. Pero todos los empleados saben que esto no es solo un ‘balbuceo’.}
+      {$0 a menudo hace que suene igual que otros bebés balbuceando. No hay que preocuparse aún porque el deseo no esta sobrecargado.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {Mientras trabaja, el empleado #0 hace un sonido rítmico a $0 como si el/ella estuviera cuidando a un bebé.},
+      {#0 detiene el trabajo y se aproxima a $0, apenas haciendo sonreír a los empleados.}
+      {#0 mira hacia atrás para verificar $0. Afortunadamente, $0 soporta el trabajo de $0 sin llorar.}
+      {Preocupado por $0, #0 checa repetidamente a lo largo del trabajo. Todos sabemos de qué se preocupa el empleado.}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {$0 abre su boca y lame sus labios. Las pupilas de tono negro muestran en secreto su deseo instintivo.},
+      {$0 cierra sus ojos. Seguramente no es el acto de privación del sueño. $0 quiere una sola cosa.}
+      {De repente, $0 gira su cabeza y mira a #0 cuando casi ha terminado el trabajo. No hay mala intención en su vista en absoluto, pero seguramente no es la de la vista lo que está mirando a un ‘humano’.}
+      {$0 siente la inanición y, de repente, mira a #0. El mal puro de $0 penetra en el objeto.}
+      ]
+    </narration>
+
+    <narration action="special_ability1">
+      [
+      {El Grito sin fin de $0 llena toda la instalación. #0 que está cerca de la cámara de contención comienza a sentir que se está volviendo loco.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="5">
+    <collection>
+      <codeNo openLevel ="0">O-01-15</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/NamelessFetus</portrait>
+
+      <name openLevel ="1">
+        Feto Sin Nombre
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        Donde esta mami?
+      </specialName>
+
+      <openText>“Algún día, tal vez lo sepas. El significado de la desesperación en sus caras es cuando la ruleta gira.”</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {La criatura toma la forma de un feto nonato. Su piel está cubierta con un líquido pegajoso como baba y muchas pequeñas venas visibles. Los ojos anormalmente abultados de la criatura suelen estar cerrados. La criatura siempre parece insatisfecha, pero sus necesidades son indeterminadas. Tiene una gran obsesión por ser ‘alimentado’ y si no se lo ‘alimenta’ regularmente, sus niveles de estrés aumentan drásticamente. Cuando alcanza un cierto nivel de estrés, grita en voz alta con un grito que perjudica mentalmente a todos los que puedan estar alrededor de la criatura.  }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Extracto del registro de la entrevista #2-49#2-49 &#13;&#10;Empleado F2706 : “Nunca he visto su sonrisa. Siempre parece querer algo, pero nunca podemos cumplir su deseo. Supongo que la razón por la que su llanto es destructivo es porque sus necesidades insatisfechas son tan fuertes. Cuando era nuevo aquí, ninguno de mis colegas me decía exactamente qué era el ‘alimento’. Pensé que era leche o algo más que los bebés pequeños consumen. Es un bebé después de todo, incluso con toda esa grosería. Pero ese no fue el caso. Solo come carne humana. Puedes creerlo? Para evitar que llore, tenemos que hacer una lotería de vez en cuando. Sabes lo que eso significa?"}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Registro de observación 1-431 &#13;&#10;Cuando escuché por primera vez que el ‘Feto Sin Nombre necesitaba ser alimentado, pensé que necesitábamos alimentarlo como con una cuchara. Parecía demasiado débil para hacer cualquier cosa y su boca no estaba completamente desarrollada. Y cuando descubrí que la criatura come carne, pensé que primero tendría que ser masticada por alguien para que se ablandara. Cuando le pregunté a mi colega sobre eso, se rió y dijo: "no, eso es ridículo, solo tenemos que dejar la comida e irnos.’ Pero todavía me preguntaba cómo esa criatura puede comer cosas. Le servimos el tipo de suculento bistec que ni siquiera está disponible para nosotros en la cafetería? Por curiosidad, decidí echar un vistazo al proceso de alimentación. Solo los empleados de nivel 3 o superiores están asignados a ese proceso, pero puede acompañar con una excusa falsa para cubrír a alguien. Y miré nerviosamente. Valdría la pena mi mentira? Algunas personas vinieron con algunas bolsas de plástico grandes. Come tanto? Y cuando abrieron las bolsas, solo pude mirar con horror. Eran cadáveres humanos. Y el niño se lo comió. Como? No quiero ni siquiera querer imaginarlo. Tenía una gran cicatriz en su estómago; Realmente pensé que era una especie de cicatriz. Como una flor grande, su estómago se abriría, goteando con líquido viscoso. Era la criatura más codiciosa del mundo. Esa noche, me convertí en vegetariana. }
+      ]
+    </desc>
+
+
+    <desc id="4" openLevel="4">
+      [
+      {Yo soy Pauly. Empecé a trabajar para la compañia desde hace dos días. Mis padres están muy orgullosos de mí por entrar en una empresa tan grande. Mis amigos me tienen envidia. Estoy haciendo muchos problemas en este momento. Pero algún día, seré tan capaz como mis compañeros de trabajo.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Hay un evento especial en nuestra compañia celebrado solo para los empleados. Nadie sabe cuándo o por qué se celebra este evento. Aún mi compañero quien ha trabajado por 5 años ni siquiera sabe. Cuando comienza este evento, una ruleta gigante gira. Luego, todos dejan de hacer lo que estaban haciendo y miran la ruleta para ver quiénes serán seleccionados. Los nombres de todos los empleados están escritos en dicha ruleta. Nadie sabe quiénes serán seleccionados. Quienquiera que sea, son extremadamente afortunados. Su familia estará dotada de una fortuna inimaginable. Promueven y transfieren a otra rama de la compañia. Se llama “Sede central”. En la sede central, no tienes que preocuparte por ser atacado por monstruos o despedirte de tus compañeros de trabajo muertos. Mi jefe, &lt;REDACTADO&gt; espera desesperadamente que él sea el afortunado. Su padre tuvo un accidente. Se necesita mucho dinero para mantenerlo vivo y sano. Espero sinceramente que la ruleta elija &lt;REDACTADO&gt;.}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="4">
+      [
+      {Cuando la ruleta elija &lt;REDACTADO&gt;’s Nombre, lo felicité con todo mi corazón. Pero no se veía tan feliz. La gente se abrazaba &lt;REDACTADO&gt; uno por uno. Mientras llora, por alguna razón. Se despidió de mí, luchando por evitar que sus lágrimas se derramaran y con una sonrisa forzada. No lo he visto desde entonces. Creo que está trabajando en condiciones mucho mejores y pago. Pero cuando intento empezar una conversación sobre él, la gente simplemente deja de hablar y se mueve la cabeza con gesto de disgusto. Como si dijera algo que no debería. No puedo olvidar lo que me dijo antes de irse. &#13;&#10; “Algún día, tal vez lo sepas.” &#13;&#10;“El significado de la desesperación en sus caras es cuando la ruleta gira.”}
+      ]
+    </desc>
+
+    <desc id="7" openLevel="4">
+      [
+      {El gerente tiene derecho a realizar un evento especial para empleados sin una ocasión específica. Cuando comienza el evento, una ruleta gigante gira y selecciona uno de los nombres del empleado. El empleado seleccionado promueve, ser transferido a otra sucursal (Vea abajo para información detallada) y su familia recibirá pensión anual. Ningún personal está autorizado a invadir el derecho del administrador de celebrar el evento. A continuación se encuentra información estrictamente prohibida a ojo público.	&#13;&#10; Condición requerida para celebrar el evento. &#13;&#10; - Datos cerrados &#13;&#10; -	Datos cerrados &#13;&#10; -	Cuando el llanto de Feto Sin Nombre está en su apogeo.  &#13;&#10; 	La ruleta selecciona a un empleado que cumple con una de las condiciones a continuación. &#13;&#10; 1.	Uno que cuestiona el propósito de la empresa.  &#13;&#10; 2.	Uno que realizó o planificó un experimento no autorizado sobre las anormalídades.  &#13;&#10; 3.	Alguien que tenga una curiosidad excesiva por las anormalídades y haya realizado o planeado la observación no autorizada. &#13;&#10; 4.	Quien se volvió incapaz de trabajar debido a un daño físico o psicológico. &#13;&#10; * “No autorizado” significa “No autorizado por la compañía o por Angela”.&#13;&#10; -	Se realizan las siguientes acciones sobre el empleado seleccionado.  &#13;&#10; 1.	Eliminación de los registros que la empresa tiene sobre el empleado.  &#13;&#10; 2. Ceremonia de sacrificio del empleado a la anormalidad. &#13;&#10; 3.	Informar a la familia del empleado que él o ella ha sido transferido a otra rama.}
+      ]
+    </desc>
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="teeth">Cuando el resultado del trabajo fue normal, el contador Qlifot de $0 disminuye con una probabilidad baja.</specialTip>
+      <specialTip openLevel="2" key="cry">Cuando el resultado del trabajo fue malo, el contador Qlifot de $0 disminuye con una alta probabilidad.</specialTip>
+      <specialTip openLevel="2" key="cryEffect">Cuando el contador Qlifot de $0 llega a cero, $0 estalla en lágrimas. Los empleados que oyeron su llanto se quejaron de un dolor de cabeza. Además, el contador Qlifot de cada Anormalidad que escucha el llanto disminuye gradualmente con el tiempo.</specialTip>
+      <specialTip openLevel="3" key="sacrifice">Cuando $0 estaba llorando, solo &lt;Redactado&gt; se podría trabajar.</specialTip>
+      <specialTip openLevel="3" key="sacrifice">El empleado #0 es seleccionado para la ruleta para &lt;Redactado&gt; trabajo. El silenciosamente entró a la sala de contención de $0. Dejó de llorar tras un momento de agitación.</specialTip>
+    </specialTipSize>
+    
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {El bebe nunca llora.}
+        {Se mantuvo así para siempre. }
+        {Como la falta de palabras no significa necesariamente falta de emociones,}
+        {La falta de llanto no significa falta de deseo.}
+        {Desde tiempo desconocido, el bebé tiene boca.}
+        {En lugar del bebé que no sabe cómo, llorar, expresar hambre y causa dolor a los demás.}
+        {Tu……}
+        <!--계속-->
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Called the name." target="1" isAnswer="true" message="Has logrado obtener el informe final de observación sobre el Feto Sin Nombre."/>
+        <node desc="Didn’t call the name." target="2" isAnswer="fasle"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {Nadie más sabe el nombre del feto.}
+        {Pero tu sabes.}
+        {Tu llamaste su nombre.}
+        {El imparable deseo cierra su boca por un rato.}
+        {Incluso solo por poco tiempo, el deseo silenciado.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {El feto sigue llorando.}
+        {Te tapaste las orejas silenciosamente.}
+        {No se oye ningún sonido.}
+        ]
+      </desc>
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {Llamar su nombre es un precio tan barato,}
+        {En comparación, tuvimos que sacrificar una vida de un empleado para silenciarlo.}
+        {Creo que he elegido una excelente opción para seleccionarlo como gerente.}
+        {....}
+        {El significado del nombre es importante, no es así?}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+
+
+
+</creature>

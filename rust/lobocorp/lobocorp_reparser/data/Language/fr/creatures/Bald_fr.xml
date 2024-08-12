@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100034">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {#0 commence à sentir que les cheveux ne sont qu’un fardeau.},
+      {#0 commence à penser qu’avoir un tatouage sur un crâne chauve serait super cool.},
+      {#0 retire sa perruque car il est fier de sa calvitie partielle.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Vous pouvez ressembler à Bruce Willis si vous êtes chauve !},
+      {Curieusement, les gens chauves ont toujours l’air professionnels, peu importe ce qu’ils font !},
+      {Si vous êtes chauve, vous n’avez pas à vous inquiéter de boucher les canalisations !}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Alors vous avez toujours vos cheveux soyeux ?}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">Chauve-est-génial!</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Bald</portrait>
+      <name openLevel="1">
+        Vous êtes Chauve… 
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <openText>Vous allumez votre rasoir électrique…</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Attention : Vous avez été touché par l’attaque mentale chauvy-chauve. Si une personne non-chauve lit ceci, elle obtiendra le privilège de devenir chauve à une vitesse extrêmement rapide. Pour l’empêcher, vous devez travailler sur cette Anomalie. De plus, si vous trouvez 10 cheveux ou plus sur votre oreiller au matin, il est recommandé de lire avec attention cette page encyclopédique au moins trois fois.}
+      ]
+    </desc>
+    <desc id="2" openLevel="2">
+      [
+      {Bill : J’ai fait un rêve incroyable aujourd’hui !&#13;&#10;Brian : Quoi, tu as gagné au loto ou quelque chose du style ?&#13;&#10;Bill : Quand je suis allé travailler, tout le monde ici était chauve ! Tout le monde, même toi ! Peut-être même les gens en dehors de la corporation !&#13;&#10;Brian : Mmmh… Je pense que tu es assez stressé ces derniers temps. Pourquoi tu n’irais pas voir un psychologue ?&#13;&#10;&#13;&#10;L’employé Bill a souffert d’un malheureux accident avec la Machine Chantante ce jour-là. Juste après cet accident, l’Anomalie Chauve-est-génial! est apparue dans le complexe. Nous chérissons tous nos souvenirs de Bill le Chauve.}
+      ]
+    </desc>
+    <desc id="3" openLevel="3">
+      [
+      {Si quelqu’un entre en contact avec l’Anomalie, il parlera ou écrira à propos des effets positifs de la calvitie pendant une heure, avant de finalement se rendre chauve.&#13;&#10;&lt;i&gt;Si vous devenez chauve, vous pouvez gagner du temps car vous n’avez plus à vous laver et vous sécher les cheveux, vous permettant d’être plus riche que les autres.&lt;/i&gt;&#13;&#10;Aucune réaction négative n’aura lieu si un employé chauve est affecté à travailler avec l’Anomalie.&#13;&#10;&lt;i&gt;Le chauve n’a pas à s’inquiéter de la perte de cheveux.&lt;/i&gt;&#13;&#10;Si un employé non-chauve est affecté, il se rasera le crâne.&#13;&#10;&lt;i&gt;Les personnes chauves peuvent même réfléchir la lumière à l’aide de leur crâne et aveugler leurs adversaires comme une éruption solaire !&lt;/i&gt;&#13;&#10;Le but de cette Anomalie est de rendre chaque humain sur Terre chauve.&#13;&#10;&lt;i&gt;Nous n’aurons plus besoin d’ampoules dans notre complexe s’il y a plus d’employés chauves, puisqu’ils réfléchissent la lumière. Cela nous permettra d’économiser une part considérable de notre budget.&lt;/i&gt;&#13;&#10;Si une personne non-chauve est envoyée travailler avec l’Anomalie, cela produira moins d’énergie.&#13;&#10;&lt;i&gt;Saviez-vous qu’au Moyen-âge, tous les nobles en Europe étaient chauves ? Ils changeaient de perruque chaque jour !&lt;/i&gt;}
+      ]
+    </desc>
+    <desc id="4" openLevel="4">
+      [
+      {&lt;i&gt;Nous venons juste d’ajouter quelques nouvelles règles au code de conduite de la corporation :&lt;/i&gt;&#13;&#10;
+      + Si vous voyez un &lt;CENSURÉ&gt; se moquer d’un collègue atteint d'alopécie, il sera considéré comme un hirsute et banni de la salle de repos pour une période indéfinie. Il sera également interdit de rejoindre le club de débat de la corporation “Interrogation sur l’absence de Barbies chauves”, les rencontres de gourmet “Les poulpes avant les pieuvres”, et le groupe de protection de l’environnement “Sauvez les ibis chauves”. (Ces règles seront levées dès que le nombre de cheveux du contrevenant sera en-dessous de 1.)&#13;&#10;&#13;&#10;&lt;i&gt;Enfin, j’aimerais dédier cet article à l’employé T.H. qui est en train de calmement prendre des pilules rendant chauve à côté de moi.&lt;/i&gt;}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="memeriBeam">Il semble que vous ayiez toujours vos cheveux soyeux… Vous avez été frappé par le rayon Chauve-est-génial!.</specialTip>
+      <specialTip openLevel="2" key="memeriOnly">Si vous ne travaillez pas maintenant, chaque employé, vous inclus, perdra ses cheveux et deviendra chauve d’ici un mois.</specialTip>
+      <specialTip openLevel="3" key="memeriHurryUp">Il n’est pas trop tard. 30… 29… 28…</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

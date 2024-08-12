@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100011">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {$0 tourne autour de #0 mais ce dernier reste concentré sur sa tâche actuelle.},
+      {$0 est compétent dans toute tâche ménagère. Il a été conçu pour s’occuper d’un foyer familial à lui tout seul.},
+      {Quand il a été découvert que $0 souffrait d’un défaut critique, il avait déjà été vendu à une famille.},
+      {Du sang recouvrait le sol, des cris résonnaient, des gens fuyaient, et $0 apprenait joyeusement le concept de “ménage”.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Doté d’une surface d’un blanc pur aux lignes fines et de pattes courtes mais efficaces, $0 a été créé pour aider les gens.},
+      {XX Incorporated, le fabricant de $0, était fameux pour ses produits robotiques.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 dispose de nombreuses fonctions installées dans son corps. Des alarmes anti-intrusion au système de surveillance et de la cafetière au contrôle de l’éclairage, il contient tout ce dont un foyer a besoin.},
+      {Vous seriez surpris d’apprendre les nombreuses fonctionnalités que $0 contient dans un si petit corps. Si jamais vous le démontez, vous serez encore plus impressionné par l’efficacité avec laquelle tout l’équipement nécessaire a été compacté là-dedans.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Si $0 était capable de ressentir des émotions, il serait probablement très fier de lui pour toute l’aide qu’il a pu fournir.},
+      {$0 réfléchit toujours à comment il peut aider davantage.},
+      {La plupart des gens ne le savent pas, mais $0 fait un excellent café. Bien sûr, plus personne ne lui demandera de faire une telle chose désormais. }
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {#0 a décidé qu’il n'achètera jamais de robot aspirateur après avoir vu $0.},
+      {#0 espère seulement que le mode “nettoyage” de $0 ne soit jamais activé.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">T-05-41</codeNo>
+      <name openLevel="1">L’Assistant de Poche</name>
+      <name openLevel="3">L’Assistant-à-tout-faire</name>
+      <portrait openLevel="1">Sprites/Unit/creature/Helper</portrait>
+      <riskLevel openLevel="2">HE</riskLevel>
+      <openText>Du sang recouvrait le sol, des cris résonnaient, des gens fuyaient…</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Un robot de nettoyage blanc aux yeux rouges très distincts et ressemblant à deux boutons. Il garde son environnement propre et net.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {À l’origine, c’était un assistant robotique produit en masse et prévu pour l’utilisation domestique. L’inscription sur son dos indique : "Une invention innovante qui peut nettoyer, cuisiner, et même servir de dispositif de sécurité léger en utilisant les outils variés attachés à ses membres. Construit pour être performant, efficace et rapide ! Fabriqué par XX Inc."}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Il reconnaît la mauvaise humeur comme un signe que les environs sont sales, et entre alors rapidement dans son mode nettoyage. Il préviendra de son activation en disant quelque chose comme "Contamination détectée - Début du nettoyage."&#13;&#10;&#13;&#10;Cependant, les membres sont dotés d’objets pointus plutôt que d’ustensiles de nettoyage. La rumeur dit que ceux-ci devaient être utilisés pour couper la viande, mais répondent à la commande “nettoyage” par accident. Il y a aucun moyen de confirmer si celle-ci est vraie.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Il reconnaît les cris que les humains poussent après son “nettoyage” comme un signe de travail bien accompli et une invitation à poursuivre sa tâche.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {&lt;Un Enregistrement Audio trouvé dans le Robot&gt;&#13;&#10;
+      ??? : Oh~ C’est notre nouvel assistant robotique.
+      ??? : Laisse-moi voir ! Je veux voir !
+      ??? : Tu veux le toucher, ████ ? Alors essaie de l’allumer et de jouer avec.
+      (Un téléphone sonne)
+      ??? : Je reviens après avoir répondu au téléphone, d’accord ?
+      (Bruits de boutons pressés)
+      Assistant Robotique : Bonjour ! Je suis votre aimable Assistant Robotique. Comment puis-je vous être utile ?
+      ??? : Ménage ! Je veux aider maman à faire le ménage !
+      Assistant Robotique : Contamination de l’environnement 70%, niveau de saleté léger. Début du mode nettoyage.
+      ??? : Wouah ! Ça marche ! Ça mar…
+      Assistant Robotique : Rrrrrrrrrrrrrrrrrrr
+      
+      Après quelques secondes de hurlements, l’électricité coupe soudainement.}
+      ]
+    </desc>
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="Change">Lorsque le résultat du travail est Normal, le Compteur Qliphoth a une probabilité moyenne de diminuer..</specialTip>
+      <specialTip openLevel="1" key="Change2">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth a une probabilité élevée de diminuer.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

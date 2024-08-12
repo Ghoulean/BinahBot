@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300002">
+
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-78</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ResearcherNote</portrait>
+
+      <name openLevel ="1">
+        癫狂研究员的笔记本
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <openText>
+        最后一章仅以一个词作为结尾——&#13;&#10;“重生”。
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {这个异想体是一本老旧的笔记本，里面写满了晦涩难懂的&#13;&#10;草书。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {据说，它的主人曾是一名在实验过程中发疯的研究员。我&#13;&#10;们目前只破译了一小部分，其内容大多涉及到那名研究员&#13;&#10;在此地进行的各种实验。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {整本笔记本以那名研究员对“非人道实验”的控诉以及他心&#13;&#10;中无法承受的罪恶感作为开头。但是越往后，其内容就越&#13;&#10;是被他对研究的狂热和难以理解的词句所取代。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {最后一章仅以一个词作为结尾——“重生”。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {携带这个异想体的员工能够获得一定的能力提升。但是，&#13;&#10;倘若在没有满足求知欲的情况下就将其草草归还，那无能&#13;&#10;的员工就会被它引爆。}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">员工携带“$0”后，与自律相关的能力将大幅提高。</specialTip>
+      <specialTip openLevel="2" key="2">如果员工在携带“$0”后的30秒内被要求归还，携带&#13;&#10;者的皮肤就会开始膨胀并在数秒后发生爆炸。</specialTip>
+      <specialTip openLevel="3" key="3">如果员工在归还“$0”之前没有进行过任何工作，那&#13;&#10;么该员工同样会爆炸。</specialTip>
+      <specialTip openLevel="4" key="4">当携带者受到一定量的物理或精神伤害时，携带者将会爆炸，爆炸范&#13;&#10;围覆盖整个区域并会对所有目标造成大量红色伤害。</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

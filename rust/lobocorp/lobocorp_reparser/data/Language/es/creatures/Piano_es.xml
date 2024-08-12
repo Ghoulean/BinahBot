@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+  -->
+  <info id ="100065">
+
+    <narration action="move">
+      #0 va a ingresar a la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="start">
+      [
+      {Podemos sentir la pasión y el fuego que emerge desde lo profundo de $0.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Incluso sin un resultado, $0 le permitirá a cualquiera realizar el mejor desempeño en su vida.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {La sonata que se está reproduciendo mientras el artista está poseído por la luna es increíblemente atractiva hasta el punto en que rompe la pared entre los hombres.},
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {La música libera a todos sin prejuicios. },
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">D-01-105</codeNo>
+      <portrait openLevel ="0">Sprites/Unit/creature/Piano</portrait>
+
+      <name openLevel ="1">
+        La Luna
+      </name>
+
+      <riskLevel openLevel ="0">
+        WAW
+      </riskLevel>
+
+
+      <openText>“Los cuentos dicen que la luna hechiza al hombre. Pero, en realidad, el hombre se desespera por la luna.”</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {<i>Esta anormalidad se basa en la idea del patrocinador de Tumblbug backer '에레(Ere)'</i>&#13;&#10;&#13;&#10;Una anciana con un piano a su lado. Sus ojos suelen estar cerrados.&#13;&#10;Ella solo asiente en vez de hablar. Pero en raras ocasiones, ella sonríe levemente. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {&lt;Extracto de un artículo de periodico&gt;&#13;&#10;&#13;&#10;El mejor pianista del mundo, (Redactado) Siempre mostró la mejor interpretación cuando tocaba el Sonata, que es su favorita. Muchos elogiaron su excelente habilidad. Algunas personas ni siquiera pueden permanecer sentadas cuando toca el tercer movimiento debido a la energía desbordante y la locura de su actuacion.&#13;&#10;En su lugar ahora vacío, desde donde partió a la luna, están el piano que usó desde su infancia y Cabezas encogidas, que nos permiten profundizar en su mente.}
+      ]
+
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Asesoramiento del audio de grabación del empleado (Redactado)&gt;&#13;&#10;&#13;&#10;“No vimos nada peculiar cuando fuimos a asegurarlo. Había solo una señora sentada allí. Era como si ella estuviera esperando que nosotros vinieramos.&#13;&#10;Qué pasó cuando uno de nosotros se acercó a ella?&#13;&#10;No sabía nada de arte o musica. Pero antes de que lo supieramos, estaba tocando el primer movimiento de Sonata.&#13;&#10;Y la señora sonrio. &#13;&#10;….Para ser honesto, no creo que vuelva a escuchar una actuación de piano tan hermosa otra vez.&#13;&#10;No pudimos verlo de nuevo.&#13;&#10;Por eso necesitas mi testimonio, verdad?&#13;&#10;Porque jugue el tercer movimiento."&#13;&#10;(Omitido)}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {"No sé cómo ni por qué te hace tocar. Tus manos solo se mueven. Y te sientes… euforico mientras juegas. Todo a tu alrededor se desvanece. Solo eres tu y el piano. Después de que terminé de jugar, agotado, me di cuenta de que no estaba pisando pedales sino cabezas cortadas. "}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {“…La luna representa la psique humana.&#13;&#10;La gente suele decir que la luna es hermosa.&#13;&#10;Pero cuando pasa el tiempo suficiente, cuando lo miras y ves qué tipo de cara realmente tiene,&#13;&#10;te daras cuenta de que estabas locamente enamorado de algo tan roto y destrozado. &#13;&#10;Al final, todos nos convertimos en luna. Porque no podemos soportarnos de nosotros mismos."}
+      ]
+    </desc>
+
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">El piano se puede tocar con orden para ejecutarlo. Sin embargo, se debe tener en cuenta que el contador Qlifot disminuye cuando se finaliza el trabajo.</specialTip>
+      <specialTip openLevel="1" key="2">La música incremento temporalmente la templanza y la Justicia de los empleados en un pequeño grado. Sin embargo, el empleado que realizó gasto el 50% de su PS.</specialTip>
+      <specialTip openLevel="1" key="3">El contador Qlifot disminuyo por probabilidad media cuando el resultado del trabajo fue normal.</specialTip>
+      <specialTip openLevel="1" key="4">El Contador Qlifot disminuyo cuando el resultado del trabajo fue malo.</specialTip>
+      <specialTip openLevel="1" key="5">Cuando el Contador Qlifot alcanza a 0 un empleado ingresara a la unidad de contención para tocar por una tercera vez.</specialTip>
+      <specialTip openLevel="1" key="6">Cuando escapa, $0 regresara a su camara de contención voluntariamente cuando terminó el tercer movimiento. Ademas, el tercer movimiento termino cuando $0 es reprimido.</specialTip>
+    </specialTipSize>
+    
+  </observe>
+  
+  <child>
+    <!--본체와 같아야 함-->
+    <name>La Luna</name>
+    <codeId>D-01-105</codeId>
+  </child>
+
+</creature>

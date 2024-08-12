@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id="100049">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {O aviso para não olhar para o $0 deixou vários funcionários curiosos, levando a vários incidentes terríveis.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Quando você sentir um olhar impiedoso te encarando até mesmo quando estiver sozinho, já será tarde demais.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-05-76</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/LookAtMe</portrait>
+      <name openLevel="1">
+        Schadenfreude
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <openText>O olhar persistente de alguém dentro da máquina pode ser sentido através da fechadura.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Uma Anormalidade mecânica capaz de andar por conta própria.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {O olhar persistente de alguém pode ser sentido da fechadura que há dentro da máquina. Ele pisca, mas nunca fecha. O propósito do olho ou o que está observando ainda é desconhecido.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Após vários experimentos, foi descoberto que quando um ou mais funcionários olham para a Anormalidade, a situação fica muito pior.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;Experimento D-002&gt;&#13;&#10;
+      Um funcionário foi mandado lá após cobrir os olhos com um pano grosso. O pano precisa ser feito de um material opaco e de alta qualidade. Os testes precisam ser conduzidos para assegurar que o pano completamente bloqueia a visão do sujeito. Após entrar na Unidade de Contenção da Anormalidade, eles ficaram de frente para a Anormalidade por 10 segundos. Não houve reação.&#13;&#10;&#13;&#10;&lt;Experimento D-003&gt;&#13;&#10;
+      Similar ao Experimento D-002, um funcionário foi mandado com os olhos cobertos. O pano era idêntico ao que foi usado no D-002, mas permitia o funcionário a discernir algumas formas. Após entrar na Unidade de Contenção da Anormalidade, ele ficou de frente para a Anormalidade por 10 segundos. Após 5 segundos, ela agressivamente se aproximou do funcionário. O Experimento foi interrompido.&#13;&#10;&#13;&#10;&lt;Experimento D-004&gt;&#13;&#10;
+      Dessa vez, um funcionário^ cego foi mandado sem nada cobrindo os olhos. Ele ficou de frente com a Anormalidade por mais de 30 segundos. Não houve reação.&#13;&#10;
+      &lt;i&gt;^ Por favor, eliminem o sujeito usado no D-004 imediatamente.&lt;/i&gt;}
+    ]
+  </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Memorando:
+      Ao treinar funcionários que nunca trabalharam com essa Anormalidade, o que deverão fazer já deve ser óbvio, mas, por favor, tenha certeza de avisar para não olhar diretamente para a Anormalidade. Se alguém duvidar disso, conte o que aconteceu com a funcionária Yumi, que não seguiu as instruções e olhou diretamente para a Anormalidade.&#13;&#10;&#13;&#10;Memorando 2:
+      A funcionária Yumi não pode ficar mais encarregada dessa Anormalidade. Ela diz que está sob constante vigilância, mas isso é uma acusação ridícula e acreditamos que ela está com um severo transtorno de ilusão. Muito do que ela diz não faz sentido. Para simplificar, ela diz que alguém fica a vigiando, não importa se é enquanto come ou indo ao banheiro. Também, toda vez que ela vê algo como uma fechadura ou uma rachadura em uma porta, ela fica histérica e tenta cobrir qualquer buraco que vê. Mas o que é mais preocupante é que as leituras do nível de corrupção mental dela estão normais, o que torna difícil de substituí-la por meio de nosso sistema. Por favor, substituam ela logo… &#13;&#10;&#13;&#10;Memorando 3:
+      Oh, o pedido que fizemos foi resolvido. A funcionária Yumi foi encontrada em seu quarto. Ela cobriu todos os buracos no quarto com fita isolante, incluindo o de ventilação. Ela até apunhalou os olhos com uma caneta. O transtorno de ilusão parece ter sido resolvido também; ela não está mais resmungando baboseiras... Entretanto, eu não tenho ideia do porquê você quer mandar um funcionário cego para a Unidade de Contenção novamente. Eu não sei sobre o que se trata o Experimento D-004, mas eu não acho que vá fazer muita diferença...}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">O trabalho com a $0 precisa ser feito enquanto a Unidade de Contenção está fora do campo de visão do gerente.</specialTip>
+      <specialTip openLevel="1" key="2">Quando a Unidade de Contenção da $0 estava sendo vista por 5 segundos ou mais durante o trabalho, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="1" key="3">A $0 ficou completamente parada quando estava fora da visão do gerente. Por favor, lembre-se disso quando estiver realizando a supressão.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100025">
+
+    <narration action="move">
+      指派 #0 至 $0 的收容室.
+    </narration>
+
+    <narration action="start">
+      [
+      {一隻鐵鎚, 像一位永不見天日的囚犯般被鍊住.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {那鎚子跟鐵鍊分也分不開. 他們就是一個異常.}
+      {它讓人感覺像是它被放在一座深邃的地牢般.}
+      {它似乎是安全的, 因為它被這麼鍊著.}
+      {鍊子緊緊的綁著鐵鎚以確保沒人能夠拿走它.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {員工 #0 在管理 $0 的時候因為替公司工作而感到丟臉.},
+      {#0 對被鍊住的 $0 感到好奇.},
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 等待著從鍊子解開來的那一天.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-05-48-Z </codeNo>
+      <portrait openLevel ="2">Sprites/Unit/creature/LightHammer</portrait>
+
+      <name openLevel ="1">
+        熾光之鎚
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <specialName openLevel ="2">
+         夕日暮光
+      </specialName>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {一把被鍊子環繞的巨大鐵鎚. 通常來說, 要舉起那把鎚子是不可能的, 因為鐵鍊緊緊的鍊住了它. 這條鍊子就像是該異常的一部分. 在適當的情況下, 鐵鍊將會鬆開. 因此, 能確認該鍊子的目的是告訴鎚子使用的時機, 而不是將它鎖住.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {“可憐的員工 Eric. 他是這麼的愚鈍卻又如此努力. 他總是為了公司的利益賣力的工作. 有一天, 在一團混亂下, 他發現了 熾光之鎚 的鍊子比平時鬆了許多. Eric 舉起了鎚子. 他變得無人可擋. 他的眼裡目空一切. 白色了火焰從他的身體裡迸發而出. 即使火焰幾乎將他給吞噬殆盡, 他似乎也感受不到一絲痛苦. 他在最後結束了這團混亂. 當我伸手抱向他時, 他就像沙灘上的白沙般倒下了...}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {每個人都叫他英雄, 夜以繼日的讚美著他. 但我認識 Eric. 這並不是他的意願. 在他觸碰到那把鎚子的瞬間, 他的靈魂就被它給吃了. 我是著解釋那個異常是怎麼吃掉 Eric 的, 但沒有人聽的下我說的. 從那天開始, 再也沒有人能舉起那把鎚子. 或許它在等待著下一個 “混亂” 與 “英雄” 的出現.}
+      ]
+    </desc>
+
+   
+
+     <specialTipSize size="6">
+      <specialTip openLevel="0" key="peace">無法在設施處於和平時進入 $0 的房間裡</specialTip>
+      <specialTip openLevel="1" key="usable">$0 的封印只有在危急時才會解開. </specialTip>
+      <specialTip openLevel="2" key="grab">員工 #0 在他/她被送進 $0 的房間後撿起了閃閃發光的鐵鎚.</specialTip>
+      <specialTip openLevel="2" key="manypeople">當員工 #0 拿起鎚子後, 其他人跟著鎚子消失無蹤了.</specialTip>
+      <specialTip openLevel="3" key="uncontrol">與鎚子連結的員工無法被命令或傷害.</specialTip>
+      <specialTip openLevel="3" key="alldead">當情況穩定下來後, 其他人跟著鎚子, 包括員工 #0, 都消失了.</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {我是這個世界上最不幸的男人.}
+        {在我周遭的一切是這麼普通不過但卻毀了我的生活.}
+        {但我沒有任何力量去改變這個命運.}
+        {某一天, 某個人對我提出了一筆交易.}
+        {‘如果你接受它, 你的世界將會改變.’}
+        {多麼誘人的交易啊. 我能成為我朝思暮想的偉大人物.}
+        ]
+      </desc>
+      
+      <!--선택지-->
+      <select id="1">
+        <node desc="Accept the offer"  target="1" isAnswer="true" message="You have succeeded to obtain final observation report on Hammer of light."/>
+      </select>
+      
+      <desc id="1" select="0">
+        [
+        {我接受了這筆交易並付出了代價. }
+        {$0 發光了.}
+        ]
+
+      </desc>
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {$0 是個普通的異常.}
+        {它取走了相對於你得到的東西.}
+        {你支付了多少代價?}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+</creature>

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+  -->
+  <info id="100063">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção da $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {A $0 faz com que aqueles que a olham sintam afeição sem que percebam.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Composta inteiramente de gosma rosa, a $0 está deslizando pela Unidade de Contenção.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Se #0 sentir que quer ignorar alguns dos protocolos de segurança sanitária, resultará em um inferno gosmento.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Sem o conhecimento de todos, o exército da $0 cresce dia após dia.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">D-03-109</codeNo>
+      <portrait openLevel="0">Sprites/Unit/creature/SlimeGirl</portrait>
+      <name openLevel="1">
+        Amor em Derretimento
+      </name>
+      <riskLevel openLevel="3">
+        ALEPH
+      </riskLevel>
+      <openText>...e meus caros funcionários, eu realmente espero que todos vocês coloquem as máscaras de gás que foram distribuídas a vocês antes de entrarmos.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;Esta Anormalidade foi criada com as ideias fornecidas pelo Apoiador do Tumblbug mul.&lt;/i&gt;&#13;&#10;&#13;&#10;Uma gosma em derretimento com uma semelhança a humanos se inspecionada com atenção. Sua Unidade de Contenção está coberta com suas secreções mucosas.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Hoje, eu gostaria de falar sobre o recente incidente que todos ouviram falar.&#13;&#10;Isso mesmo, aquele terrível incidente onde um exército de gosmas tomaram toda a corporação por (Omitido) minutos.&#13;&#10;Haviam vários contêineres deixados no laboratório (Omitido) que não foram processados devidamente durante o experimento relacionado a (Omitido).&#13;&#10;Se você sabe sobre o experimento (Omitido), você já deve saber que os conteúdos desses contêineres são meramente restos inúteis que somente provam que o experimento falhou. Nossos pesquisadores acharam que não tinham necessidade de eliminá-los.&#13;&#10;Era óbvio que aquela novata da equipe de pesquisa não fazia ideia do que estava dentro dos contêineres. A Funcionária Marie encontrou os contêineres de gosma rosa e achou que eles poderiam ser uma ameaça. Então presume-se que ela os escondeu e os manteve em estado (Omitido).&#13;&#10;Se minha dedução estiver correta, o objeto derretido nesses contêineres é provavelmente o (Omitido) do (Omitido). Eu tive certeza disso quando eu li o trecho que descrevia sua aparência como a de um humano adolescente.}
+      ]
+
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Não tenho ideia se foi sorte nossa ou não. Mas todas as memórias, incluindo a dos experimentos foram completamente apagadas, além de não conseguir falar palavra alguma. Também estando mentalmente instável. Ficando extremamente nervosa toda vez que a Marie não estava presente.&#13;&#10;Um irmão. Marie tinha um irmão que ela perdeu durante a infância. Tudo começou quando ela sentiu uma afeição pela gosma rosa que seguia ela e que parecia uma criança .&#13;&#10;Marie mostrou um declínio sem precedentes em sua corrupção mental. De fato, era extremamente incomum. É claro, a certeza era de que a Anormalidade de alguma maneira a afetou de forma positiva, mas esse era o fim dos benefícios.&#13;&#10;Os colegas dela começaram a notar alguns comportamentos estranhos; eles tentaram perguntar a ela sobre seu comportamento, era a coisa certa a se fazer. Já que foram educados das principais consequências de um declínio brusco nos níveis de corrupção mental, e entendiam que uma pessoa desaparecendo todo intervalo era um sinal perigoso. Entretanto, Marie não falou nada para eles e acabou sendo detida na sala do conselheiro até que falasse.&#13;&#10;Enquanto isso, essa criatura gosmenta que tinha esquecido de tudo lembrou instintivamente de uma coisa: que devia sair das instalações não importasse como.&#13;&#10;A Anormalidade novamente ficou extremamente nervosa quando a Marie não apareceu na hora e pensou que ela estava em perigo; e foi aí que decidiu escapar COM ela.&#13;&#10;Um vínculo raro foi formado entre as duas. Elas se importavam uma com a outra do fundo de seus corações.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Confinada dentro da sala do conselheiro, Marie eventualmente desistiu de seu direito de permanecer calada e começou a revelar o que ela tinha feito. Como ela manteve os conteúdos dentro do contêiner e como ela conseguiu formar um vínculo com ela. Porém, ela foi incapacitada de terminar de falar. Isso aconteceu devido ao derretimento quase que instantâneo de seu corpo, quase como um piscar de olhos, momentos após sinais de uma anomalia aparecerem em sua pele. Sim, ela literalmente derreteu por completo. E não era só isso, a gosma que antes era a Marie alguns segundos atrás começou a se mover e não foi tarefa difícil para uma criatura líquida passar por baixo da porta da sala do conselheiro.&#13;&#10;Ela tinha alguma sobra de razão humana? Não. Agia igual a um patinho recém-nascido seguindo cegamente a própria mãe, simplesmente movendo-se em direção à Anormalidade.&#13;&#10;E não era só a Marie que se transformou em gosma. Todo funcionário que teve algum contato com ela, de alguma forma, começou a derreter também. Aqueles que estavam fazendo perguntas, aqueles que compartilharam lanche com ela, que trabalharam junto a ela…&#13;&#10;E mais cedo, esse exército de gosma começou a atacar outros funcionários. Tudo pela mãe gosma, a Anormalidade que eles amavam. Sim, tudo por amor e só por amor, eles matavam. }
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {...e meus caros funcionários, eu realmente espero que vocês não tenham esquecido de colocar as máscaras de gás distrubuídas antes de entrarmos, certo? Eu realmente espero que ninguém tenha tirado por causa de tédio ou por estar entupida.&#13;&#10;Preciso informar a todos vocês que alguns já estão infectados com a gosma que estava falando sobre. Nós não demos máscaras de gás para alguns de vocês, e falamos que era por causa que estavam em falta em nosso estoque. Mas, para falar a verdade, era só para distinguirmos os infectados daqueles que não estavam. Vocês podem estar se sentindo bem agora, mas antes que se passe uma hora, sua carne e seus ossos começarão a derreter, e sua mente se tornará um nada completamente escuro. Então, começarão a tentar causar estragos nas instalações e, provavelmente, como sua primeira ação na nova forma, pularão nos funcionários que estão sentados ao seu lado. Tudo pela bagunça gosmenta que adoram tanto.&#13;&#10;Sim, eu sei. Não dá para acreditar. Você se sente tão vivo e claro agora, como raios você poderia derreter em gosma? E mesmo assim você irá. É claro que não é sua culpa. Alguém de vocês fez contato com a Anormalidade gosmenta, e alguns só tiveram o azar de estar perto daquela pessoa. Agora é inútil achar o paciente zero. Eu duvido que ele sabia do quão catastrófico os resultados de suas ações iriam ser e mesmo assim o fez por pura afeição.&#13;&#10;E finalmente, os não infectados que estão vestindo máscaras, por favor, deem atenção extra para sua higiene e avisem imediatamente quando verem um funcionário agindo fora do normal. Você simplesmente será infectado caso tente ajudar. Agora em suas mesas, haverão pistolas de 9mm, todas perfeitamente armadas e carregadas.&#13;&#10;Acho que é bem claro o que você deve fazer. Nós não abriremos a porta até a que a situação seja… resolvida. Se você achar que isso é muito cruel, permita-me lembrá-lo que esse é &lt;i&gt;o seu&lt;/i&gt; trabalho.&#13;&#10;Espero vê-los novamente após as coisas terem sido resolvidas.}
+      ]
+    </desc>
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">Quando o resultado do trabalho era Ruim ou Neutro, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="1" key="2">A $0 deu um pedaço de gosma para o primeiro Agente (D-03-109-1) que efetuou qualquer tipo de trabalho que não seja Repressão com ela. Essa gosma curava o PS de D-03-109-1 e aumentava sua Taxa de Êxito. Porém, maiores observações precisam ser feitas para determinar como os efeitos desse pedaço de gosma mudam de acordo com o estado da $0.</specialTip>
+      <specialTip openLevel="1" key="3">Quando D-03-109-1 concluiu o trabalho de Repressão, o Contador Qlifót reduziu.</specialTip>
+      <specialTip openLevel="1" key="4">Funcionários que estão na mesma área que D-03-109-1 possuem uma baixa chance de serem infectados pela gosma. Aqueles que estão infectados pelo (D-03-109-2) podem ser detectados por estarem com uma mancha de gosma nas bochechas. Os funcionários que também fizeram contato com o D-03-109-2 também tinham uma chance baixa de serem infectados. Quando tempo o suficiente passa após a infecção, a pele do D-03-109-2 se fundiu completamente com a gosma e os funcionários infectados viraram ████████.</specialTip>
+      <specialTip openLevel="1" key="5">O Contador Qlifót caiu para 0 quando o número de D-03-109-2 tomou conta de mais de 50% do departamento enquanto D-03-109-1 ainda estava vivo.</specialTip>
+      <specialTip openLevel="1" key="6">O Contador Qlifót caiu para 0 quando D-03-109-1 morreu.</specialTip>
+      <specialTip openLevel="1" key="7">Após uma série de experimentos, foi encontrado que a propagação da gosma pode ser controlada por meio do Trabalho de Percepção. Se D-03-109-1 efetuar o Trabalho de Percepção e produzir 24 ou mais Caixas de EP como resultado, nenhum outro funcionário poderá ser infectado pela gosma por 30 segundos. Porém, seja cauteloso, já que se menos de 24 Caixas de EP forem produzidas, todos os D-03-109-2 podem se transformar em ████████.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <codeId>D-03-109-1</codeId>
+  </child>
+</creature>

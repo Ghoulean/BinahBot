@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100029" >
+
+
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+
+    <narration action="start">
+      [
+      {她生于虚无，亦归于虚无。},
+      {“$0”正由内而外地枯萎着。},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {也许我们是在试图创造一个没有心的人儿。},
+      {永不凋零的鲜花正在绽放。},
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {#0想躺在花床上来一场安逸的春眠。},
+      {#0被铺满整个收容单元的薰衣草深深地吸引住了。},
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {在轮回之中，她理解了重生的意义。一切都将消逝，曾经盛开，然后凋零。落叶归根，痕迹将会留存，一切又将回归原点。},
+      {#0的身上涌出了沁人的芳香，而非鲜血。}
+      {鲜花正在每个人的心头怒放。}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="5">
+    <collection>
+      <codeNo openLevel ="0">T-04-53</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Alriune</portrait>
+
+      <name openLevel ="1">
+        爱娜温
+      </name>
+      
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        生于尘土，归于尘土
+      </specialName>
+      
+       <openText>她希望归于尘土，于是所有渴望“生”&#13;&#10;的事物亦将归于尘土。</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {这个异想体的表面如同陶瓷一般光滑。她的眼窝是空的，里面长满了正在生长的翠绿植物。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {爱娜温，一个渴望成为人的娃娃，她有着一双深情的眼睛，正因如此，她被人们深爱着。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {爱娜温被遗弃在黑暗的森林之中。乌鸦们垂涎着她那双闪闪发亮的眼睛，最终偷走了它们。渐渐地，爱娜温的思想，她过去的回忆，还有她的心灵，慢慢地凋零了。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {爱娜温，一个渴望成为娃娃的人，用空洞的眼窝注视着一切。她希望归于尘土，于是所有渴望“生”的事物亦将归于尘土。}
+      ]
+    </desc>
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="PanicDeath">当工作结果为优时，“$0”的逆卡巴拉计数器有大概率在倒计时结束后减少。</specialTip>
+      <specialTip openLevel="1" key="PanicDeath2">当工作结果为差时，“$0”的逆卡巴拉计数器有大概率在倒计时结束后减少。</specialTip>
+    </specialTipSize>
+    
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {You told me, shedding petals instead of tears.  }
+        {"We were all nothing but soils once, so do not speak of  an end here."}
+        {You told me, blossoming flowers with body as if they are your last words.}
+        {"Soon..."}
+
+        <!--계속-->
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Spring will come." target="1" isAnswer="true" message="You have succeeded to obtain final observation report on Allione"/>
+        <node desc="Winter will come." target="2" isAnswer="true" message="You have succeeded to obtain final observation report on Allione"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {Spring is coming.}
+        {Slowly, rapturously,  my end began.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {Winter is coming.}
+        {Gradually, my exipation was drawing to an end hectically. }
+        ]
+      </desc>
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {Are your memories of love withering?}
+        {Or have they already withered to nothing?}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+
+
+
+</creature>

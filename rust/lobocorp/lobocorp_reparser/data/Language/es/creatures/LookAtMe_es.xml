@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100049">
+
+
+    <narration action="move">
+      #0 va a ingresar a la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="start">
+      [
+      {La advertencia de, “No mire a $0“ hizo que muchos empleados sintieran curiosidad y haya llevado a muchos incidentes terribles.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Cuando sientes una mirada fija incluso cuando estás solo, ya es demasiado tarde.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-05-76</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/LookAtMe</portrait>
+
+      <name openLevel ="1">
+        Schadenfreude
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+
+      <openText>La mirada persistente de alguien se puede sentir desde el ojo de la cerradura dentro de la máquina. </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Una Anormalidad mecánica que puede caminar de manera autonoma.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {La mirada persistente de alguien se puede sentir desde el ojo de la cerradura dentro de la máquina. Sus ojos parpadean, pero nunca se cierran. El propósito del ojo o lo que está observando es desconocido.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Después de varios experimentos, se descubrió que cuando hay uno o más empleados mirando la Anormalidad, la condición se vuelve mucho peor.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Experimento_D-002&#13;&#10;Un empleado fue enviado después de cubrir sus ojos con una tela gruesa y negra. La tela debe estar hecha de un material que no permita que la luz penetre. Las pruebas deben llevarse a cabo para asegurar que la luz no pueda penetrar a través de la tela. Después de entrar la celda contención de la anormalidad, miró hacia la posición de la anormalidad por 10 segundos. No hubo reaccion.&#13;&#10;Experimento_D-003&#13;&#10;Similar al experimento_D-002, otro empleado fue enviado con los ojos tapados, pero esta vez la tela le permite al empleado cierta vista para discernir las formas. Después de ingresar a la unidad de contención de la Anormalidad, se coloco en la dirección de la Anormalidad durante 10 segundos. Después de 5 segundos, la Anormalidad se acercó agresivamente al empleado. Experimento detenido.&#13;&#10;Experimento_D-004&#13;&#10;Esta vez no hay tela, sino un empleado ciego. Sin reacción durante más de 30 segundos. &#13;&#10;*Deseche el tema del experimento utilizado en el experimento D-004 inmediatamente.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Nota&#13;&#10;:Cuando se entrena a un empleado que nunca antes ha entrado en la unidad de contención de la Anormalidad, no hace falta decirlo, pero asegúrese de decirles que no miren la Anormalidad directamente. Si alguien es lo suficientemente estúpido, pregunte por qué no, infórmele de lo que le pasó al empleada, “Yumi” quien no leyó el manual y miró directamente a la Anormalidad.&#13;&#10;Nota 2&#13;&#10;: “Yumi,” quien estaba a cargo de la Anormalidad ya no puede estar a cargo de la Anormalidad. Ella dice que la vigilan constantemente, pero esta es una acusación absurda y creemos que tiene un trastorno delirante grave. La mayor parte de lo que dice es una tontería, pero en pocas palabras, ella dice que alguien la sigue mirando cuando está comiendo o al ir al baño. Además, cuando ve algo como un ojo de cerradura o una grieta entre una puerta, se pondrá histérica y tratará de sellar cualquier agujero que vea. Pero lo que es más agravante es que sus niveles de corrupción mental parecen normales! No se la puede poner a trabajar en este estado, pero sus niveles normales hacen que sea difícil que el sistema la procese... Por favor reemplazala pronto...&#13;&#10;Nota 3&#13;&#10;:Ah, la solicitud anterior ha sido resuelta. “Yumi" quien desapareció fue encontrado en su habitación. Cuando abrimos la puerta, todos los agujeros, incluida la rejilla de ventilación, estaban cubiertos con cinta negra. Ella también apuñaló sus ojos con una pluma. El trastorno delirante parece haber sido curado también. Ya no está balbuceando tonterías. Pero no entiendo por qué desea enviar a un empleado ciego a la unidad de contención nuevamente. No sé qué tipo de experimento es el D-004, pero no creo que haga mucho bien...}
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">El trabajo en $0 debe continuar mientras la unidad de contención está fuera de la vista de la cámara de vigilancia.</specialTip>
+      <specialTip openLevel="1" key="2">Durante el trabajo, al ver la unidad de contención de $0 durante 5 segundos o más, el contador Qlifot se reduce.</specialTip>
+      <specialTip openLevel="1" key="3">$0 inmediatamente dejó de moverse cuando se perdió de vista. Tenlo en cuenta al suprimirlo.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+
+
+
+</creature>

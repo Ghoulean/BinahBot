@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100042">
+
+    <narration action="move">
+      #0 designated to $0's containment room.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 is looking for the smell of the body with many smiles.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 waits for the smell of blood coming soon, keeping all the laughs of those who could not be seen here.},
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-01-75</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/DangoCreature</portrait>
+
+      <name openLevel ="1">
+        The Mountain of Smiling Bodies
+      </name>
+
+      <riskLevel openLevel ="1">
+        ALEPH
+      </riskLevel>
+
+
+      <openText>The smiling faces are eerie and full of sorrow.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {This place is always like this, but just like any day, an accident of mass casualties occurred here. The reason was the same as always. Someone escaped, and attempting to stop that escape brought on another escape and...&#13;&#10;Luckily the department was sealed off before it could get any worse, and everyone died in the same place. It became a mountain of bodies, literally. This was something no one wanted to clean up. Normally, it would have been taken care of within the day, but due to the horrific nature of the accident, the clean up was delayed with authorization from the department’s Sephirah. Don’t ask me which department it was, I don’t remember all the details.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Bodies left out in the open will begin to rot within a few hours. Most of the bodies were maimed one or another, so they rotted even faster.&#13;&#10;I guess you don’t know it yet, but most of the employees here are very good at cleaning up dead bodies. Cleaning up over and over will make anyone an expert, even if you don’t want to be. Let's say someone you were just talking to about what to have for dinner died in a horrific manner. Now rather than running away and vomiting, all that repeated experiences will help you clean up instead.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Well, the mountain should have been removed quickly, but it remained in the department for a long time. Nature had its way rotting, melting and corroding everything.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {That’s how it began. From the mountain of bodies. Amazing, huh? I got something else to tell you. The dead fused with one another, and they were all smiling. They shared body parts, at least those that were still intact, and became each other’s legs and mouths. But this didn't mean they regained their consciousness. They had only one thing on their mind; flesh. When there’s an announcement of someone’s death, you must check to see if this thing has been quarantined. Once it gets a whiff of the scent of death, it will move quickly towards the smell. The smiling faces are strange and yet sorrowful.&#13;&#10;The more bodies it has, the more defined its shape becomes. And it is never satisfied.&#13;&#10;I am telling you all of this because we're almost there. Accidents keep happening here. Some may take the time for a moment of silence when a death occurs, but most would only say, "Again?" and turn their backs. There's one thing we did well though, and that's quarantining the department. You see, I’m the only one left. Did you learn anything from this story? What kind of lesson can be learned from a story as horrible as this, you ask? It’s similar to most fairytales. The lesson is: Don't be lazy. When my voice stops, after exactly 3 minutes, come here and get rid of your colleagues. }
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {I'll probably won't be able to talk soon. I'm about to swallow a large bomb. Time’s running out. Blood is flowing all around here. I see all the smiling faces now... Something you don’t see much of around here.&#13;&#10;Don’t be surprised when you hear a loud explosion. Like I said, in precisely 3 minutes. I'm sure a bomb this size will be able to suppress it. &#13;&#10;The last body to fall will be mine.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">When #0 employee working inside dies, its Qliphoth counter will be reduced.</specialTip>
+      <specialTip openLevel="2" key="2">When a wounded employee enters the Containment Unit, its Qliphoth counter will be decreased.</specialTip>
+      <specialTip openLevel="2" key="3">When the work result was bad, its Qliphoth counter will be reduced.</specialTip>
+      <specialTip openLevel="2" key="4">When 10 or more employees die inside the facility, the Qliphoth counter will be decreased. However, it did not recognize the death of employees who were disposed of as execution bullets.</specialTip>
+      <specialTip openLevel="2" key="5">When escaping, $0 is sensitive to corpses. When suppressing, it is recommended to make sure no one dies because of $0. If casualties do happen, try to keep $0 from the dead.</specialTip>
+      <specialTip openLevel="1" key="6">If $0‘s suppression has been not completed on the previous level of management, you must be very careful to prevent any deaths inside the section of $0.</specialTip>
+      <specialTip openLevel="1" key="7">After escaping, when $0 spawned other entities, it won’t be completely suppressed by simply reducing its HP to 0. $0 will only be suppressed by reducing its HP and removing all other spawned entities.</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

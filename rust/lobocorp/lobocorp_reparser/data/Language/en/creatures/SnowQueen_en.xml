@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <!-- Attrbute "id " must equal to attribute "id" in CreatureList.xml -->
+  <info id="100102">
+    <!-- $0 : Creature name, #0 : Agent name -->
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {$0’s Containment Unit is storming with a frosty blizzard.},
+      {$0’s Containment Unit glims with ice and frost.},
+      {Kai would have been gifted with the world if he had failed to complete the sculpture of “eternity” with splinters of ice.}
+      ]
+    </narration>
+    <narrationa action="mid1">
+      [
+      {$0’s palace is cold and lonesome. #0 wants to leave this place as soon as they can.},
+      {The road to $0’s palace is freezing cold and still so long. #0 longs for warmth.}
+      ]
+    </narrationa>
+    <narration action="special_ability_1">
+      [
+      {Gerda was brave and stronger than anyone else, she’ll fight for Kai, who’s trapped in the Snow Palace.}
+      ]
+    </narration>
+    <narration action="win">
+      [
+      {Spring arrived with blossoming roses. Gerda and Kai held hands, and they walked home.}
+      ]
+    </narration>
+    <narration action="lose">
+      [
+      {Gerda and Kai couldn’t defeat $0. They became shards of ice in her hands and shall never leave the Snow Palace.}
+      ]
+    </narration>
+    <narration action="anotherWork">
+      [
+      {As long as Kai is trapped in the Snow Palace, Gerda will eventually have to engage in the inevitable duel with $0.}
+      ]
+    </narration>
+  </info>
+  <!-- Maximum observation level. -->
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">F-01-37</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/SnowQueen</portrait>
+      <name openLevel="1">
+        The Snow Queen
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <openText>“The snow is steadily melting... Perhaps because spring is coming, or it might be the palace collapsing.”</openText>
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {A queen lives alone in the frosty winter forest. }
+      ]
+    </desc>
+    <desc id="2" openLevel="2">
+      [
+      {Like how every story starts, Kai was a child with a kind heart. When the shards of a mirror made by an evil fairy were scattered on everyone's heart, Kai began to see things he didn't want to see, or need to see. He left the small village he grew up in.&#13;&#10;&#13;&#10;In an unforgiving blizzard, Kai met the Snow Queen. He became curious of the world beyond his knowledge. He felt as though everything he knew amounted to so little.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {The Snow Palace he reached was so cold, but the Snow Queen's kiss froze his heart, and he couldn't feel the cold anymore. There was no joy in the palace, only the long winter night.&#13;&#10;&#13;&#10;Gerda was strong enough to remain unpierced by the mirror, and brave enough to go on a journey to rescue Kai. So she set off towards the Snow Palace.&#13;&#10;&#13;&#10;The journey was agonizing. Gerda was hurt and pained, sometimes she cried.&#13;&#10;&#13;&#10;However, eventually, Gerda met Kai.&#13;&#10;&#13;&#10;Spring arrived with blossoming roses. Its warmth melted the Snow Queen's palace, and the piece of mirror in Kai's heart evaporated without a trace.&#13;&#10;&#13;&#10;Then, left all alone, the Snow Queen... (Omitted)}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;i&gt;I remember the day we put her in the cryo-coffin with our own hands. At some point, her joyous laughter was gone. She just cycled through laughing and crying, and eventually she was found in a bathtub soaked in red with her wrists cut.&#13;&#10;We did not believe in death. I will have her reconstructed from the "machines" I have detested for my entire life, but have become the only answer. She would have been disgusted by me for this, dying in that bathtub. However, we were too far down the road filled with remorse and regret to feel any sort of guilt.&#13;&#10;……&#13;&#10;One day, "it" spoke to me.&#13;&#10;“I remember you. You were a kindhearted person.”&#13;&#10;The moment I heard it, I was seized by the urge to destroy what I had created with my own hands.&lt;/i&gt;}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="3" key="kissProb1">When the work result was Normal, the employee was kissed by $0 with a normal probability.</specialTip>
+      <specialTip openLevel="3" key="kissProb2">When the work result was Bad, the employee was kissed by $0 with a high probability.</specialTip>
+      <specialTip openLevel="2" key="2kiss">The employee who received $0’s second kiss forgot everything and was trapped inside the Containment Unit.</specialTip>
+      <specialTip openLevel="3" key="3kiss">To avoid $0’s deadly third kiss, and to rescue the trapped employee, a duel with $0 must be commenced.</specialTip>
+      <specialTip openLevel="3" key="4kiss">Only those with a high Fortitude will be able to rescue the employee. Let’s make sure to rescue them before the day is over.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

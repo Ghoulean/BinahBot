@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300001">
+    <narration action="move">
+      指派 #0 至 $0 的收容室.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-77</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/DesireHeart</portrait>
+
+      <name openLevel ="1">
+        渴望的心
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>過度的渴望終將導致瘋狂.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {一顆沒有主人的心臟. 即使從身體裡取出後, 它仍不停的跳動著.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {裝備時, 心跳會提高一倍, 增加 HP 以及攻擊傷害. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {過度的渴望終將導致瘋狂.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+
+      [
+      {若有增加 HP 的員工在沒有攻擊過任何人或是 30 秒內歸還他們的心臟, 將會使他們盲目地殺害別人.}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">裝備了 $0 的目標將會享受到 HP 以及攻擊速度的增加.</specialTip>
+      <specialTip openLevel="2" key="2">在沒有攻擊過任何人的情況下收到了歸還 $0 的命令, 持有者失去了他們的理智並開始殘暴地攻擊任何在他附近的人.</specialTip>
+      <specialTip openLevel="2" key="3">若目標在裝備後的30 秒內收到歸還 $0 的命令, 它也會造成與上述同樣的影響.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

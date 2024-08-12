@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100035">
+
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務.
+    </narration>
+
+    <narration action="start">
+      [
+      {有句老話說到, "絕不要忘記那隻審判之鳥. 不管要它花上多少時間, 它最終還是找得到你."},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {長長鳥 從來不著急. },
+      {或許它已經在你的房子裡了. }
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {我們活在一個沒有寬恕的世界裡, 我們有如為了得到救贖般交出了我們的靈魂.},
+      {人類是狡猾的, 且能靠他們自己來拯救自己的靈魂. 這就是為什麼 長長鳥 來到了我們面前.}
+      {很少有人意識到自己的罪惡. 長長鳥 的天枰幫助他們來意識到自己的罪惡.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {長長鳥 是森林裡其中的守護者, 但是它保護森林的意志太過強烈了. 它忘記了當個守護者最重要的元素是什麼. },
+      {現在, 黑暗統治了森林.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-02-62</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/LongBird</portrait>
+
+      <name openLevel ="1">
+        長長鳥
+      </name>
+
+      <name openLevel="2">
+        審判鳥
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>它的天枰根據先前犯下的罪行傾倒.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {一隻鳥帶著一具不甚公平的天枰, 並審判著住在黑森林裡的動物.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {天枰總是往同個方向傾斜, 但是它並不知道, 因為它的眼睛已被遮住. 或是它其實知道只是對這個事實視而不見.  }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {很久以前, 那隻鳥曾經公平的審判著. 它的天枰根據先前犯下的罪行傾倒.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {長長鳥 做出一個能衡量任何罪惡的天枰來保護這座森林.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {在以前, 長長鳥 的眼睛能看到一切. 鳥兒的眼睛總是閃亮的, 目光炯炯有如夜裡的星星. 但是它將它明亮的雙眼交給了 大大鳥 來保護這座森林. 現在, 在它雙眼的地方已空無一物. }
+      ]
+    </desc>
+
+    <desc id="6" openLevel="3">
+      [
+      {繃帶在風中飄動, 就好像在任何時候都會被扯下一樣. 那隻鳥的臉上曾覆滿閃亮的羽毛, 但由於長期纏著繃帶, 所有的羽毛都掉光了. }
+      ]
+    </desc>
+
+    <desc id="7" openLevel="4">
+      [
+      {剩下來的只剩那不公平的天枰. 但長長鳥仍不停的審判著. }
+      ]
+    </desc>
+
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="MoodZero">當工作結果為普通時, $0 的逆卡巴拉計數器會以普通的機率減少.</specialTip>
+      <specialTip openLevel="1" key="MoodZero2">當工作結果為差時, $0 的逆卡巴拉計數器會以較高的機率減少.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

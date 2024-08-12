@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+  <!--
+  사실 있음
+  
+  직원 상황별 대사
+  
+  AgentNewgrade_XXX_Y_Z : XXX - 상황, Y - 직원 유형, Z - 텍스트 넘버
+  
+  Y : 0 ~ 4 (A,R,W,B,P 순. A는 모든 유형에 적용)
+  
+  -->
+
+  <category type="normal">
+    <grade level="1">
+      <lyrics rwbp="a">
+        <lyric>Je n'arrive pas à croire que je travaille désormais pour l’une des Ailes !</lyric>
+        <lyric>J'ai terminé l'entraînement de gestion, mais je n'ai pas encore pris la main…</lyric>
+        <lyric>Pourquoi tout le monde me dit d'être prudent avec les Anomalies ? Elles ne peuvent pas être dangereuses à ce point, si ?</lyric>
+        <lyric>J'espère juste que le travail ici n'est pas trop difficile.</lyric>
+        <lyric>Je ne peux imaginer l'expérience et le talent que l'Administrateur doit avoir pour être à ce poste.</lyric>
+        <lyric>Je peux désormais fièrement dire aux gens que j'ai rejoint une Aile.</lyric>
+      </lyrics>
+      <lyrics rwbp="r">
+        <lyric>Plus facile est le travail, plus vite on l’aura fini.</lyric>
+        <lyric>Une nouvelle dure journée de travail.</lyric>
+        <lyric>Je peux le faire !</lyric>
+        <lyric>Ainsi, nous devons satisfaire les désirs des Anomalies, tels que la faim, avec le travail d'Instinct.</lyric>
+        <lyric>Nous sommes arrivés jusqu'ici. Continuons ainsi.</lyric>
+      </lyrics>
+      <lyrics rwbp="w">
+        <lyric>J’ai entendu que même des gens des Banlieues peuvent obtenir un poste ici… Est-ce qu’ils embauchent n’importe qui ?</lyric>
+        <lyric>Je me demande à quoi sert cette puce dans nos brassards ?</lyric>
+        <lyric>Le type que j'ai rencontré hier a été remplacé par quelqu'un d'autre avant même que j’aie le temps de le connaître.</lyric>
+        <lyric>Nous devons analyser les Anomalies à l’aide du travail de Perspicacité, et créer l’environnement qu’elles préfèrent.</lyric>
+        <lyric>Je pense que la directive qui nous force à suivre tous les ordres quels qu'ils soient est trop stricte.</lyric> 
+      </lyrics>
+      <lyrics rwbp="b">
+        <lyric>Si je travaille dur, je pourrai amener ma famille au Nid.</lyric>
+        <lyric>Je sais qu'il y a des rumeurs sinistres sur les Ailes, mais je n'ai pas d’autre choix que de travailler ici. La paie est juste trop bonne et tout le monde m’admire.</lyric>
+        <lyric>Je n'arrive pas à croire qu'on puisse vraiment communiquer avec les Anomalies.</lyric>
+        <lyric>Peut-être est-il possible d’être ami avec les Anomalies ?</lyric>
+      </lyrics>
+      <lyrics rwbp="p">
+        <lyric>J'aime ce complexe mais l'air y est trop lourd.</lyric>
+        <lyric>J'ai l'impression d'être observé…</lyric>
+        <lyric>Le travail de Répression, celui qui réprime tout ce qui pourrait se produire…</lyric>
+        <lyric>C’est comme si les couloirs et les salles de ce complexe étaient marqués par la peur et le désespoir.</lyric>
+      </lyrics>
+    </grade>
+    <grade level="2">
+      <lyrics rwbp="a">
+        <lyric>Les Anomalies sont plus dangereuses que ce que je croyais.</lyric>
+        <lyric>Je n'arrive pas à croire que les gens puissent mourir si facilement.</lyric>
+        <lyric>Voici donc le véritable visage de la Lobotomy Corporation…</lyric>
+        <lyric>Je pensais que je ne pourrais jamais gagner face à une Anomalie auparavant, mais j'ai l'impression que j'en suis maintenant capable.</lyric>
+        <lyric>Travailler ici est mieux que tout ce qu’il se passe dans les Ruelles la nuit, je suppose…</lyric>
+      </lyrics>
+      <lyrics rwbp="r">
+        <lyric>Tu as juste besoin de suivre le courant du corps et de l'esprit quand tu utilises une arme.</lyric>
+        <lyric>La définition de "nourriture" est très ambiguë pour les Anomalies.</lyric>
+        <lyric>Assouvir les Anomalies consiste à bien plus que les nourrir, au final.</lyric>
+        <lyric>Ne soyons pas toujours moroses. Gardons la tête haute !</lyric>
+      </lyrics>
+      <lyrics rwbp="w">
+        <lyric>Est-ce que ce genre de choses arrive aussi dans les autres Ailes ?</lyric>
+        <lyric>Je pensais que la Lobotomy Corporation était juste une productrice d'énergie verte…</lyric>
+        <lyric>Il y a quelque chose de bizarre à propos de cet endroit.</lyric>
+        <lyric>C'est beaucoup trop inefficace. Pourquoi ces créatures dangereuses doivent être gérées par des humains ?</lyric>
+        <lyric>Il faut plus que de la connaissance pour analyser les Anomalies.</lyric>
+      </lyrics>
+      <lyrics rwbp="b">
+        <lyric>J'aimerais enfin prendre le coup de main.</lyric>
+        <lyric>Toutes les Anomalies ne sont pas méchantes…</lyric>
+        <lyric>Je commence à comprendre comment gérer les Anomalies.</lyric>
+        <lyric>Je sais qu’ils disent qu’il ne faut pas s’attacher personnellement aux Anomalies, mais…</lyric>
+      </lyrics>
+      <lyrics rwbp="p">
+        <lyric>L'équipement qui se trouve ici est fascinant… Il me rend nostalgique.</lyric>
+        <lyric>Je me demande ce que tous les autres pensent à propos de leur travail ici.</lyric>
+        <lyric>Quelque chose dans mon cœur faiblit chaque fois que je fais du travail de Répression.</lyric>
+        <lyric>J'ai l'impression que tout ce qui se passe ici sert un objectif précis.</lyric>
+      </lyrics>
+    </grade>
+    <grade level="3">
+      <lyrics rwbp="a">
+        <lyric>Ces nouveaux n'ont aucune idée de ce qu'ils vont affronter ici.</lyric>
+        <lyric>Je dois l'endurer. Ils paient les congés des employés qui ont travaillé 2 mois.</lyric>
+        <lyric>J'ai entendu des rumeurs à propos de monstres se trouvant dans les Ruelles la nuit. Ils ressemblent affreusement à des Anomalies.</lyric>
+        <lyric>Si je meurs, je serai juste remplacé par quelqu'un d'autre…</lyric>
+        <lyric>Aussi amère soit-elle, je commence à m'accoutumer à la vie ici.</lyric>
+        <lyric>Travailler ici reste mieux que de mourir dans les Ruelles.</lyric>
+      </lyrics>
+      <lyrics rwbp="r">
+        <lyric>Je suis maintenant capable de manger après avoir vu un corps dans la journée.</lyric>
+        <lyric>Je me déteste pour m'être habitué à voir la mort.</lyric>
+        <lyric>Le type de "nourriture" est différent selon le type d'Anomalies.</lyric>
+        <lyric>La puanteur du sang persiste dans mes narines. Je n’arrive pas à la faire partir avec de l’eau.</lyric>
+      </lyrics>
+      <lyrics rwbp="w">
+        <lyric>Est-ce que tout ça en vaut vraiment la peine ? Faire un tel travail dans un lieu pareil ?</lyric>
+        <lyric>J'ai vu ce qui arrive quand quelqu'un devient vraiment fou.</lyric>
+        <lyric>Et si les Anomalies étaient des sortes de Dieux ?</lyric>
+        <lyric>Plus j'en apprends sur les Anomalies grâce au travail de Perspicacité et plus je réalise que je comprends si peu.</lyric>
+      </lyrics>
+      <lyrics rwbp="b">
+        <lyric>Je commence à détester ces choses. Elles nous tuent sans pitié mais nous devons en prendre soin. N'est-ce pas injuste ?</lyric>
+        <lyric>Ne vous attachez pas personnellement à une Anomalie, même si vous faites du travail d'Attachement.</lyric>
+        <lyric>Les Anomalies sont si sélectives à propos de leurs jeux.</lyric>
+        <lyric>Se faire des amis est dénué de sens ici, mais en même temps, on ne peut pas survivre un jour sans des camarades à nos côtés.</lyric>
+      </lyrics>
+      <lyrics rwbp="p">
+        <lyric>J'ai parfois l'impression de me réveiller d'un long sommeil.</lyric>
+        <lyric>J'ai l'impression d'être coincé dans un rêve quand je fais face à une Anomalie.</lyric>
+        <lyric>Nous devons savoir ce qu'elles sont vraiment et les réprimer.</lyric>
+        <lyric>On dirait que les âmes des morts persistent en ces lieux.</lyric>
+      </lyrics>
+    </grade>
+    <grade level="4">
+      <lyrics rwbp="a">
+        <lyric>Je me demande combien de bleus vont mourir aujourd’hui ?</lyric>
+        <lyric>J’ai juré de faire tout ce que l’Administrateur me dit de faire.</lyric>
+        <lyric>Ne soyez pas trop dur envers vous-même au vu du travail ici.</lyric>
+        <lyric>Je suppose que j'achèterai le pack de voyage de la Corporation W lors de mes prochaines vacances.</lyric>
+        <lyric>Si je travaille un peu plus dur, ma famille pourra venir au Nid.</lyric>
+      </lyrics>
+      <lyrics rwbp="r">
+        <lyric>Ce n'est pas si différent, réprimer des Anomalies ou abattre des collègues paniqués…</lyric>
+        <lyric>J'espère que le travail est bientôt fini.</lyric>
+        <lyric>L'odeur du sang commence à me manquer.</lyric>
+        <lyric>Manger est la seule joie que l'on peut avoir ici.</lyric>
+      </lyrics>
+      <lyrics rwbp="w">
+        <lyric>L’esprit humain est simplement trop frêle.</lyric>
+        <lyric>On ne devrait pas essayer de comprendre ce qui ne peut être compris.</lyric>
+        <lyric>Nous perdrons tous notre humanité un jour en continuant à travailler ici.</lyric>
+        <lyric>Certaines personnes ont juste besoin de faire ce qu'on leur a dit de ne pas faire.</lyric>
+      </lyrics>
+      <lyrics rwbp="b">
+        <lyric>Chacun a sa manière de vivre.</lyric>
+        <lyric>Allons-y doucement. Ne réfléchissons pas trop.</lyric>
+        <lyric>Détends-toi et travaille. Tout se résoudra de soi-même.</lyric>
+        <lyric>Ne sois pas trop nerveux. On peut résoudre cela une étape après l’autre.</lyric>
+      </lyrics>
+      <lyrics rwbp="p">
+        <lyric>L'essence du travail de Répression est liée au sens de l'existence du sujet.</lyric>
+        <lyric>Nous sommes tous égaux face à la mort.</lyric>
+        <lyric>Nos âmes se répandront à travers le monde même si nous perdons nos corps.</lyric>
+      </lyrics>
+    </grade>
+    <grade level="5">
+      <lyrics rwbp="a">
+        <lyric>Tout le monde meurt un jour.</lyric>
+        <lyric>Mêmes conneries, jour différent. On suit juste les ordres.</lyric>
+        <lyric>Il n'y a pas beaucoup de sens à tout ça. Nous travaillons et sommes payés. C'est tout.</lyric>
+        <lyric>Ne t'inquiète pas trop, même si tu es nouveau ici. Tu t'y habitueras en un rien de temps.</lyric>
+        <lyric>Ne pense pas trop aux gens qui sont morts. Accepte-le et passe simplement à autre chose.</lyric>
+      </lyrics>
+      <lyrics rwbp="r">
+        <lyric>Nous ne sommes rien que de la chair et du sang, après tout.</lyric>
+        <lyric>Le sang s'écoule gracieusement dans chaque vie mortelle.</lyric>
+        <lyric>L'objectif du travail d'Instinct est seulement de les garder avec une forme tangible.</lyric>
+        <lyric>La vie est aussi belle qu’une bougie, car elle est faible, mais intense.</lyric>
+        <lyric>Nous devons faire ce que nous pouvons maintenant, pas nous préoccuper du futur.</lyric>
+      </lyrics>
+      <lyrics rwbp="w">
+        <lyric>Qu'est-ce qu’être humain signifie vraiment ? Est-ce humain de chercher la vérité ?</lyric>
+        <lyric>Nous devons voir les choses au-delà ce que nos yeux voient.</lyric>
+        <lyric>Tout le monde a sa propre mission, pour prouver son existence.</lyric>
+        <lyric>Nous recréons le monde en voyant la vérité avec l’œil de la sagesse.</lyric>
+      </lyrics>
+      <lyrics rwbp="b">
+        <lyric>Humains, Anomalies, ce n'est pas important. Ce qui compte vraiment est la résonance de l'existence.</lyric>
+        <lyric>Protéger les autres est le moins que je puisse faire.</lyric>
+        <lyric>Une relation est un chœur qui fleurit des connections, du contact entre les êtres.</lyric>
+        <lyric>Les coquilles sont simplement des coquilles. Nous ne devons pas oublier ce qu’elles couvrent.</lyric>
+        <lyric>Si nous pouvions nous unir et partager notre existence, ce serait fascinant.</lyric>
+      </lyrics>
+      <lyrics rwbp="p">
+        <lyric>La mort n'est pas la fin de tout.</lyric>
+        <lyric>La vie est splendide parce qu'elle luit au-travers des ténèbres de la nuit comme une étoile.</lyric>
+        <lyric>L'organisation des étoiles est vraiment magnifique à voir.</lyric>
+        <lyric>La vraie nature du travail de Répression est de nier le sens de l’existence.</lyric>
+        <lyric>Nous reviendrons après la mort, suivant la conduite de l’âme…</lyric>
+        <lyric>Les Anomalies ont des âmes, tout comme les humains…</lyric>
+      </lyrics>
+    </grade>
+  </category>
+
+  <category type="panic">
+    <grade level="1">
+      <lyrics rwbp="a">
+        <lyric>Veuillez me donner un ordre ! Veuillez me donner un ordre ! Veuillez me donner un ordre ! Veuillez me donner un ordre ! Veuillez me donner un ordre !</lyric>
+        <lyric>Laissez-moi rentrer, Administrateur… JE VEUX RENTRER CHEZ MOI !</lyric>
+        <lyric>Administrateur, veuillez faire quelque chose à propos de ma situation si vous voyez ça ! S’il vous plaît AIDEZ-MOI !</lyric>
+        <lyric>AAAAAAAAAAAAAAAAAAAHHHHHHHHHHHH !!!</lyric>
+      </lyrics>
+    </grade>
+    <grade level="2">
+      <lyrics rwbp="r">
+        <lyric>Je ne veux pas mourir seul…</lyric>
+        <lyric>Oui, c'est entièrement ta faute ! TU ES CELUI QUI A TOUT FOIRÉ !</lyric>
+        <lyric>Tu es celui à blâmer ! Pas moi ! PAS MOI !!!</lyric>
+      </lyrics>
+      <lyrics rwbp="w">
+        <lyric>C'est entièrement ma faute. C'est ma responsabilité…</lyric>
+        <lyric>Je ne vois aucun espoir dans cette situation…</lyric>
+        <lyric>Même si je survis, je continuerai à souffrir de cet instant pour le restant de mes jours…</lyric>
+      </lyrics>
+      <lyrics rwbp="b">
+        <lyric>Aidez-moi ! S’il vous plaît ! Je veux sortir d'ici ! Ouvrez la porte de secours !</lyric>
+        <lyric>Administrateur ?! Administrateur ! Ouvrez la porte de secours ! LAISSEZ-MOI SORTIR !</lyric>
+        <lyric>J-J'ai peur. Tout le monde est mort… Qu'est-ce que je fais ? Qu'est-ce que je fais…?</lyric>
+      </lyrics>
+      <lyrics rwbp="p">
+        <lyric>Regardez-moi, Administrateur ! Je n'ai pas échoué ! Je vous jure que je n’ai pas échoué !</lyric>
+        <lyric>Je ne suis pas comme tous ces idiots autour de moi ! REGARDEZ-MOI ! REGARDEZ CE QUE JE FAIS !</lyric>
+        <lyric>C'est quoi cette tête ? Ne t’inquiète pas, attends un peu ! Je vais te rendre heureux !</lyric>
+      </lyrics>
+    </grade>
+    <grade level="3">
+      <lyrics rwbp="r">
+        <lyric>Arrêtez-ça. Cette corporation, nous, vous… ARRÊTEZ ÇA !</lyric>
+        <lyric>Je peux le faire. J-Je peux tuer des humains comme ils l'ont fait.</lyric>
+        <lyric>VOUS M'AVEZ ABANDONNÉ !!!</lyric>
+      </lyrics>
+      <lyrics rwbp="w">
+        <lyric>Le couloir est couvert de sang et de fluides cérébraux… Tu peux le voir aussi, pas vrai ? Nous avons besoin d’une serpillière et d’un seau… Nous devons le nettoyer…</lyric>
+        <lyric>J'ai vu mon collègue mort hier. Nous avons dîné et bu un café ensemble. Il avait l'air d'aller bien. Je vais probablement aller le voir bientôt…</lyric>
+      </lyrics>
+      <lyrics rwbp="b">
+        <lyric>Nous allons tous mourir. Ils ravageront nos corps et âmes dans cet endroit misérable !</lyric>
+        <lyric>JE NE VEUX PAS MOURIR. NE LES LAISSEZ PAS ME TUER COMME LES AUTRES ! Ne me laissez pas mourir…</lyric>
+        <lyric>AHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA !!!</lyric>
+        <lyric>N-NE M'Y ENVOYEZ PAS !!!! NE ME TUEZ PAS !!!</lyric>
+      </lyrics>
+      <lyrics rwbp="p">
+        <lyric>AdministrateurJeVeuxJusteMExcuserAuprès DeMesAmisMortsJeSuisDésoléJeNeVeuxPasMourirCommeÇaPapaEtMamanMeManquentTellementAuSecoursSilVousPlaît</lyric>
+        <lyric>Laisse-moi te présenter mes amis imaginaires ! Ils m'ont demandé de le faire ! Ils hurlent qu'ils veulent sortir !</lyric>
+      </lyrics>
+    </grade>
+    <grade level="4">
+      <lyrics rwbp="r">
+        <lyric>CRÈVE ! TUE-LES TOUS ET CRÈVE !</lyric>
+        <lyric>L'odeur du sang m'appelle. Je veux du sang et de la chair.</lyric>
+        <lyric>Je tuerai tout le monde. Je détruirai tout. Rien n’a d’importance de toute façon.</lyric>
+      </lyrics>
+      <lyrics rwbp="w">
+        <lyric>J'entends quelqu'un. C'est le son de la maison. Je ne peux m'arrêter de l'entendre.</lyric>
+        <lyric>Il n'y a plus aucun espoir. Mon esprit s'effondre. Tout s'effondre…</lyric>
+        <lyric>Nous allons tous couler et périr, dévorés par la folie…</lyric>
+      </lyrics>
+      <lyrics rwbp="b">
+        <lyric>Je ne peux pas. J'ai essayé de m'y habituer, MAIS JE NE PEUX PAS !</lyric>
+        <lyric>Je vous en prie, laissez-moi sortir d'ici. J'ai essayé, j’ai vraiment essayé. J’ai fait de mon mieux. Mais je ne peux plus le supporter !</lyric>
+        <lyric>Personne ne veut mourir ainsi. Nous ne voulons pas mourir ainsi. Nous ne sommes pas ici pour mourir ainsi !</lyric>
+      </lyrics>
+      <lyrics rwbp="p">
+        <lyric>Trouvons la paix pour eux.</lyric>
+        <lyric>Je suis tellement navré mes chers amis, je vais vous libérer maintenant.</lyric>
+        <lyric>Sortez, tout le monde ! Sortez et libérez-nous de cet endroit maudit !</lyric>
+      </lyrics>
+    </grade>
+    <grade level="5">
+      <lyrics rwbp="r">
+        <lyric>Ça va être amusant. La déchirure de la chair créera une magnifique mélodie !</lyric>
+        <lyric>Pourquoi les humains meurent si facilement ? Les humains comme toi.</lyric>
+        <lyric>Ce sera vite terminé, alors du calme. Je te libérerai bientôt de cette prison que l’on appelle la chair.</lyric>
+      </lyrics>
+      <lyrics rwbp="w">
+        <lyric>Le murmure de la lune et le son des étoiles. Et la vérité au-delà…</lyric>
+        <lyric>Vers l'horizon du savoir, au-delà de la compréhension…</lyric>
+        <lyric>Leur hurlement. La résonance entre toi et moi. La sagesse incandescente…</lyric>
+      </lyrics>
+      <lyrics rwbp="b">
+        <lyric>Je ne sortirai jamais d'ici…</lyric>
+        <lyric>Nous finirons tous par nous unir à l’origine.</lyric>
+        <lyric>Perdre la tête collectivement est la seule rédemption atteignable ici.</lyric>
+      </lyrics>
+      <lyrics rwbp="p">
+        <lyric>Nous trouverons notre rédemption au travers des Anomalies.</lyric>
+        <lyric>Les Anomalies sont la véritable essence de l'humain. Atteignons-les et trouvons la rédemption.</lyric>
+        <lyric>Atteignons le paradis au-delà de la mort, ensemble avec les Anomalies.</lyric>
+      </lyrics>
+    </grade>
+  </category>
+
+  <category type="horror">
+    <grade level="0">
+      <lyrics rwbp="a">
+        <lyric>Pff. Ce n'est rien.</lyric>
+        <lyric>Je maîtrise.</lyric>
+        <lyric>C'est du gâteau.</lyric>
+        <lyric>Ça chatouille à peine.</lyric>
+        <lyric>Ennuyeux.</lyric>
+        <lyric>Ça ne me dérange même pas.</lyric>
+      </lyrics>
+    </grade>
+    <grade level="1">
+      <lyrics rwbp="a">
+        <lyric>Calme-toi, fais comme d’habitude.</lyric>
+        <lyric>Ne perds pas la tête et suis le manuel.</lyric>
+        <lyric>Nous devons juste faire ce que nous avons toujours fait.</lyric>
+        <lyric>Pas besoin d’être imprudent.</lyric>
+        <lyric>Concentre-toi…</lyric>
+      </lyrics>
+    </grade>
+    <grade level="2">
+      <lyrics rwbp="a">
+        <lyric>Hah, je commence à devenir nerveux.</lyric>
+        <lyric>Lentement, lentement…</lyric>
+        <lyric>Inspire, expire…</lyric>
+        <lyric>Il faut juste suivre le manuel.</lyric>
+        <lyric>Ça ira si on se concentre, je pense…</lyric>
+      </lyrics>
+    </grade>
+    <grade level="3">
+      <lyrics rwbp="a">
+        <lyric>Je ne peux pas faire d'erreur ici…</lyric>
+        <lyric>Mes jambes tremblent…</lyric>
+        <lyric>Bordel, ça fait flipper.</lyric>
+        <lyric>J'ai des frissons dans le dos.</lyric>
+        <lyric>Pitié, que rien n'arrive…</lyric>
+      </lyrics>
+    </grade>
+    <grade level="4">
+      <lyrics rwbp="a">
+        <lyric>PUTAIN DE MERDE !!!</lyric>
+        <lyric>Qu'est-ce qu'on fait ici ?</lyric>
+        <lyric>Que peut-on faire dans cette situation ?</lyric>
+        <lyric>Je ne peux pas bouger mes jambes…</lyric>
+        <lyric>À- À l'aide…</lyric>
+        <lyric>Je ne veux pas mourir !</lyric>
+        <lyric>Je dois courir. Je dois fuir…</lyric>
+      </lyrics>
+    </grade>
+    <grade level="5">
+      <lyrics rwbp="a">
+        <lyric>Ah…</lyric>
+        <lyric>Quoi…</lyric>
+        <lyric>Qu'est-ce que je vois…?</lyric>
+        <lyric>J-Je ne peux pas le supporter…</lyric>
+        <lyric>Je ne comprends pas…</lyric>
+        <lyric>…………………………………</lyric>
+        <lyric>Tout est fini…</lyric>
+      </lyrics>
+    </grade>
+    <grade level="6">
+      <lyrics rwbp="a">
+        <lyric>Voici donc Dieu…</lyric>
+        <lyric>Mon existence n'a aucun sens…</lyric>
+        <lyric>Nous sommes des êtres insignifiants…</lyric>
+        <lyric>Alors il y a bien une existence toute-puissante au-delà du royaume des êtres…</lyric>
+        <lyric>Ayez pitié…</lyric>
+        <lyric>Offrez-nous la salvation…</lyric>
+        <lyric>Je n'étais vraiment rien, après tout…</lyric>
+        <lyric>Admirons, bouche bée…</lyric>
+      </lyrics>
+    </grade>
+  </category>
+
+  <category type="otherdead">
+    <grade level="0">
+      <lyrics rwbp="a">
+        <lyric>Et voilà un autre qui mord la poussière.</lyric>
+        <lyric>Pauvre bougre.</lyric>
+        <lyric>On n'a pas le temps de le pleurer.</lyric>
+        <lyric>Ça arrive tout le temps.</lyric>
+        <lyric>Ceux qui doivent mourir, mourront.</lyric>
+        <lyric>Pauvre faible.</lyric>
+        <lyric>Je lui rendrai hommage, au moins.</lyric>
+      </lyrics>
+    </grade>
+    <grade level="1">
+      <lyrics rwbp="a">
+        <lyric>Rendons-lui hommage…</lyric>
+        <lyric>Un autre employé meurt.</lyric>
+        <lyric>Je dois m'habituer à tous ces morts…</lyric>
+        <lyric>Nous ne pouvons laisser le chagrin nous retenir.</lyric>
+        <lyric>Je me demande s'il y aura quelqu'un pour le pleurer.</lyric>
+      </lyrics>
+    </grade>
+    <grade level="2">
+      <lyrics rwbp="a">
+        <lyric>Fait chier, quelqu'un est mort.</lyric>
+        <lyric>Allié à terre ! Allié à terre !</lyric>
+        <lyric>Et le voilà parti à jamais…</lyric>
+        <lyric>Nous en avons perdu un. Soyez prudent !</lyric>
+        <lyric>Restons concentré. Je ne dois pas mourir…</lyric>
+      </lyrics>
+    </grade>
+    <grade level="3">
+      <lyrics rwbp="a">
+        <lyric>{0}…? Es-tu vraiment mort ?</lyric>
+        <lyric>Je n'arrive pas à croire que tu sois mort comme ça {0}…</lyric>
+        <lyric>Je ne peux pas les laisser me tuer aussi.</lyric>
+        <lyric>S'il vous plaît, s'il vous plaît, s'il vous plaît…</lyric>
+        <lyric>Est-ce que {0} est vraiment mort ? Est-ce que je suis le prochain ?</lyric>
+      </lyrics>
+    </grade>
+    <grade level="4">
+      <lyrics rwbp="a">
+        <lyric>Mon Dieu…</lyric>
+        <lyric>C’était un de mes collègues réguliers…</lyric>
+        <lyric>Que devons-nous faire…?</lyric>
+        <lyric>Si même {0} est mort, alors…</lyric>
+        <lyric>Je ne vais pas durer… Même {0} est mort…</lyric>
+      </lyrics>
+    </grade>
+    <grade level="5">
+      <lyrics rwbp="a">
+        <lyric>C’est fini pour moi…</lyric>
+        <lyric>Je n'arrive pas à croire que {0} soit mort… Comment…</lyric>
+        <lyric>NOUS ALLONS TOUS MOURIR !</lyric>
+        <lyric>{0} est mort. La même chose m’arrivera bientôt…</lyric>
+      </lyrics>
+    </grade>
+  </category>
+
+  <category type="otherpanic">
+    <grade level="0">
+      <lyrics rwbp="a">
+        <lyric>Un autre devient fou.</lyric>
+        <lyric>Le cœur est facilement brisable.</lyric>
+        <lyric>Les faibles d'esprit n'ont pas leur place ici.</lyric>
+        <lyric>Le son du désespoir, j'y suis habitué.</lyric>
+        <lyric>Même les hurlements me plaisent maintenant.</lyric>
+        <lyric>J'ai cru que j’allais devenir fou chaque fois que je voyais quelqu’un comme ça. Mais maintenant…</lyric>
+        <lyric>Ce sera de nouveau silencieux dans un instant…</lyric>
+      </lyrics>
+    </grade>
+    <grade level="1">
+      <lyrics rwbp="a">
+        <lyric>Un autre a perdu la foi.</lyric>
+        <lyric>Je ne deviendrai pas comme lui. Je ne peux pas.</lyric>
+        <lyric>Je m'habitue à voir le visage de la démence.</lyric>
+        <lyric>Les hurlements des fous me perturberont toujours.</lyric>
+        <lyric>Vais-je perdre la tête comme eux un jour ?</lyric>
+      </lyrics>
+    </grade>
+    <grade level="2">
+      <lyrics rwbp="a">
+        <lyric>Nous avons quelqu’un qui panique !</lyric>
+        <lyric>Quelqu'un vient d'atteindre le niveau maximal de contamination mentale !</lyric>
+        <lyric>Je ne peux pas perdre la tête ici.</lyric>
+        <lyric>Je dois rester concentré… Je ne peux pas perdre la tête.</lyric>
+        <lyric>C'est douloureux à voir. Ça va me rendre fou…</lyric>
+        <lyric>Je ne veux pas entendre ces hurlements de douleur à nouveau…</lyric>
+      </lyrics>
+    </grade>
+    <grade level="3">
+      <lyrics rwbp="a">
+        <lyric>Même les seniors peuvent devenir fou…</lyric>
+        <lyric>Je ne sais pas si je pourrai endurer toute la folie de cet endroit.</lyric>
+        <lyric>Veuillez ne pas abandonner votre esprit.</lyric>
+        <lyric>Reviens-nous, je t’en supplie !</lyric>
+        <lyric>Mais qu’as-tu vu ?</lyric>
+        <lyric>Oh {0}… S'il te plaît, reprend tes esprits…</lyric>
+      </lyrics>
+    </grade>
+    <grade level="4">
+      <lyrics rwbp="a">
+        <lyric>Les plus gradés deviennent fous aussi…</lyric>
+        <lyric>Combien de temps endurerai-je cette folie ?</lyric> <!-- *-->
+        <lyric>Personne n'est à l'abri ici.</lyric> <!-- *-->
+        <lyric>Qu'est-ce qui l’a rendu fou…?</lyric>
+        <lyric>{0}… a le niveau maximal de contamination mentale… Oh mon dieu…</lyric>
+      </lyrics>
+    </grade>
+    <grade level="5">
+      <lyrics rwbp="a">
+        <lyric>La folie gouverne cet endroit…</lyric>
+        <lyric>{0}…{0}…Pas vous… Vous deviez nous protéger…</lyric>
+        <lyric>CETTE PERSONNE NOUS TUERA TOUS ! CET ENDROIT SERA UN ENFER POUR NOUS !</lyric>
+        <lyric>NOUS DEVIENDRONS TOUS FOUS ET MOURRONS COMME LUI !!!</lyric>
+        <lyric>Il n'y a plus aucun espoir dans ce lieu… Tout le monde finira par devenir fou…</lyric>
+        <lyric>C'est seulement une question de temps avant que je devienne fou comme {0}…</lyric>
+      </lyrics>
+    </grade>   
+  </category>
+
+  <!--Tumblbug Agent Lyrics -->
+  <credit>
+    <category type="normal">
+      <unit id="0">
+        <!--미스터블랙 -->
+        <lyric>Le rire est le meilleur des médicaments. C’est bon pour toi, alors ris !</lyric>
+        <lyric>AHAHAHAHAHAHAHAHAHAHA !</lyric>
+        <lyric>Souris jusqu’aux oreilles ! Regarde, comme ça !~</lyric>
+      </unit>
+      <unit id="1">
+        <!-- 양치기 -->
+        <lyric>Un berger s'occupe des moutons pour en prendre la laine et la viande. C'est comme ce que nous faisons ici.</lyric>
+        <lyric>Ce genre de choses arrive trop souvent dans le monde. Même parmi les gens.</lyric>
+        <lyric>Mais au final, les Anomalies ne sont pas vraiment des moutons. Ça c'est sûr.</lyric>
+      </unit>
+      <unit id="2">
+        <!--김대리 -->
+        <lyric>Où… Où sont mes pilules pour l’estomac ?</lyric>
+        <lyric>*soupir* J'aimerais rentrer à la maison à l'heure aujourd'hui…</lyric>
+        <lyric>Non monsieur ! Je n'ai rien dit de mal, monsieur l’Administrateur !</lyric>
+      </unit>
+      <unit id="3">
+        <!--아란 -->
+        <lyric>Pff, qu'importe.</lyric>
+        <lyric>Hey, je fais toujours de mon mieux ici.</lyric>
+        <lyric>Agaçant.</lyric>
+      </unit>
+      <unit id="4">
+        <!--유메카 -->
+        <lyric>Oh, j'ai très envie de gâteau à la fraise…</lyric>
+        <lyric>Quel jour est-on aujourd'hui ? J'ai encore oublié.</lyric>
+        <lyric>Qu'est-ce que je dois faire déjà ? Ah, ouais, ça.</lyric>
+      </unit>
+      <unit id="5">
+        <!--이희창 -->
+        <lyric>Je fais ça pour l'argent, pas parce que ça me plaît.</lyric>
+        <lyric>Embêtant… Irritant… Une épine dans le pied…</lyric>
+        <lyric>Mon Dieu, je dois vraiment démissionner.</lyric>
+      </unit>
+      <unit id="6">
+        <!--전상민 -->
+        <lyric>Raaaah, je ne veux rien faire.</lyric>
+        <lyric>Je me demande combien mourront aujourd'hui ?</lyric>
+        <lyric>Peut-être que ma mort approche, sera-t-elle pour bientôt ?</lyric>
+      </unit>
+      <unit id="7">
+        <!--에피비네아 -->
+        <lyric>Oh, je me demande si je devrais faire un porte-bonheur pour tout le monde. Je l’accrocherai secrètement sur les gens, même s’ils refusent !</lyric>
+        <lyric>C'est un rapport d'observation d'Anomalie… En voilà un autre… Oh ! Le voilà ! Le rapport d'observation d'employé !</lyric>
+        <lyric>Ils disent qu’on doit utiliser nos pauses pour faire des choses bonnes pour nous. Donc, j'imagine que c'est bon d'espionner les gens pour vérifier qu’ils vont bien, non…? Ça me réconforte.</lyric>
+      </unit>
+      <unit id="8">
+        <!--PESCA -->
+        <lyric>*soupir* Il n'y a pas un seul type canon ici…</lyric>
+        <lyric>Je veux juste travailler peu et gagner beaucoup…</lyric>
+        <lyric>J'espère travailler sur une Anomalie mignonne ! Si c’est possible…</lyric>
+      </unit>
+      <unit id="9">
+        <!--SpeciaLee -->
+        <lyric>Encore des heures supplémentaires… Super…</lyric>
+        <lyric>Je veux rentrer chez moi.</lyric>
+        <lyric>Ah… J’ai pas envie.</lyric>
+      </unit>
+      <unit id="10">
+        <!--예띠 -->
+        <lyric>Je veux voir plus d'Anomalies quand je serai promu ! Je pourrai, pas vrai ?</lyric>
+        <lyric>J'ai le sentiment d’être assez compétent pour mériter un meilleur traitement, non ?</lyric>
+        <lyric>Mes proches seront super surpris quand ils entendront que je travaille ici ! Héhé !</lyric>
+      </unit>
+      <unit id="11">
+        <!--Alex-->
+        <lyric>Oh, désolé. Puis-je vous aider ?</lyric>
+        <lyric>Je prévois de manger des spaghettis ce soir.</lyric>
+        <lyric>Reste toujours concentré. Tu ne sais jamais ce qui peut arriver.</lyric>
+      </unit>
+    </category>
+
+    <category type="panic">
+      <unit id="0">
+        <lyric>SOURIS ! SOURIS ! SOURIS !</lyric>
+      </unit>
+      <unit id="1">
+        <lyric>Le bon vieux temps… C’était tellement mieux ! Gardes ! GAAAAARDES !</lyric>
+      </unit>
+      <unit id="2">
+        <lyric>YAY ! ENCORE DES HEURES SUP' !</lyric>
+      </unit>
+      <unit id="3">
+        <lyric>Aller en prépa était ma plus grande erreur !</lyric>
+      </unit>
+      <unit id="4">
+        <lyric>Ce n'est pas un lapin ! Hors de question ! Je ne le ferai pas !</lyric>
+      </unit>
+      <unit id="5">
+        <lyric>J'AURAIS DÛ DÉMISSIONNER IL Y A LONGTEMPS !!!! AAAAAAAAAAAAAAH !</lyric>
+      </unit>
+      <unit id="6">
+        <lyric>Je ne veux pas mourir de leurs mains !</lyric>
+      </unit>
+      <unit id="7">
+        <lyric>N-Non… Tout le monde va mourir…! Tout comme lui…!</lyric>
+      </unit>
+      <unit id="8">
+        <lyric>Oh, bonté divine ! Que quelqu'un m’aide !</lyric>
+      </unit>
+      <unit id="9">
+        <lyric>…</lyric>
+      </unit>
+      <unit id="10">
+        <lyric>Je n'aurais jamais dû venir ici pour commencer. J'étais un idiot… Je veux rentrer chez moi. Je veux rentrer chez moi, pitié…</lyric>
+      </unit>
+      <unit id="11">
+        <lyric>AHAHAHAHAHAHAHA ! Je ne me suis jamais senti aussi bien !!!</lyric>
+      </unit>
+    </category>
+
+    <category type="horror">
+      <unit id="0">
+        <lyric>Hey, mon vieux. Est-ce que tu souris comme un bon garçon ?</lyric>
+      </unit>
+      <unit id="1">
+        <lyric>Ces… Ces foutues choses…</lyric>
+      </unit>
+      <unit id="2">
+        <lyric>Je ne suis pas encore rentré à la maison !</lyric>
+      </unit>
+      <unit id="3">
+        <lyric>Le travail ne s'arrête jamais, huh…</lyric>
+      </unit>
+      <unit id="4">
+        <lyric>C'est un lapin… C'est un mignon lapin tout doux…</lyric>
+      </unit>
+      <unit id="5">
+        <lyric>Tout est fini maintenant…</lyric>
+      </unit>
+      <unit id="6">
+        <lyric>Nous sommes tous foutus.</lyric>
+      </unit>
+      <unit id="7">
+        <lyric>As-tu aussi perdu quelque chose qui t'était cher…?</lyric>
+      </unit>
+      <unit id="8">
+        <lyric>Wow, c'est merveilleux ! Je veux le toucher !!! ♡♡♡</lyric>
+      </unit>
+      <unit id="9">
+        <lyric>?!</lyric>
+      </unit>
+      <unit id="10">
+        <lyric>Wow ! Peut-être qu'on peut être amis ?</lyric>
+      </unit>
+      <unit id="11">
+        <lyric>… Okay, qui vivra verra.</lyric>
+      </unit>
+    </category>
+
+    <category type="otherdead">
+      <unit id="0">
+        <lyric>… Je ne verrai plus jamais ton sourire.</lyric>
+      </unit>
+      <unit id="1">
+        <lyric>Je t'avais dit qu'ils n'étaient ni des moutons ni des chiens de chasse…</lyric>
+      </unit>
+      <unit id="2">
+        <lyric>J-je dois sortir d-d'ici !</lyric>
+      </unit>
+      <unit id="3">
+        <lyric>Je n'ai pas eu mon diplôme pour ça !</lyric>
+      </unit>
+      <unit id="4">
+        <lyric>T-tu es mort ? Sérieusement ? Je ne comprends plus rien !</lyric>
+      </unit>
+      <unit id="5">
+        <lyric>Nous allons tous mourir…</lyric>
+      </unit>
+      <unit id="6">
+        <lyric>J'aurais pu finir comme ça si j'avais été un peu en retard…</lyric>
+      </unit>
+      <unit id="7">
+        <lyric>… Je pensais que je pourrais le protéger cette fois-ci.</lyric>
+      </unit>
+      <unit id="8">
+        <lyric>Je ne mourrai pas avant d'avoir rencontré un type canon…</lyric>
+      </unit>
+      <unit id="9">
+        <lyric>!!!</lyric>
+      </unit>
+      <unit id="10">
+        <lyric>J-je sais que je finirai comme ça un jour… Mais c'est…</lyric>
+      </unit>
+     <unit id="11">
+        <lyric>C'est pour ça que je ne fais aucune promesse.</lyric>
+      </unit>
+    </category>
+
+    <category type="otherpanic">
+      <unit id="0">
+        <lyric>Souris juste, mon ami ! Ça te calmera.</lyric>
+      </unit>
+      <unit id="1">
+        <lyric>Dégage de là, connard.</lyric>
+      </unit>
+      <unit id="2">
+        <lyric>E-encore des heures sup' ?!</lyric>
+      </unit>
+      <unit id="3">
+        <lyric>Que quelqu'un l'arrête !</lyric>
+      </unit>
+      <unit id="4">
+        <lyric>Encore ? J'imagine que je suis la seule personne saine ici.</lyric>
+      </unit>
+      <unit id="5">
+        <lyric>Huh ? Que se passe-t-il ? J'ai l'impression que je devrais courir.</lyric>
+      </unit>
+      <unit id="6">
+        <lyric>Occupons-nous de cet idiot avant que les choses ne soient hors de contrôle.</lyric>
+      </unit>
+      <unit id="7">
+        <lyric>J'aimerais pouvoir te calmer, mais…</lyric>
+      </unit>
+      <unit id="8">
+        <lyric>Reprends-toi ! Qu'est-ce qui t'est arrivé ?</lyric>
+      </unit>
+      <unit id="9">
+        <lyric>!</lyric>
+      </unit>
+      <unit id="10">
+        <lyric>Je ne peux pas croire que des gens puissent devenir ainsi… Je ne suis pas sûr que je m'en sortirai…</lyric>
+      </unit>
+      <unit id="11">
+        <lyric>C'est beaucoup plus triste que ce à quoi je m'attendais.</lyric>
+      </unit>
+    </category>
+  </credit>
+
+  
+  
+</root>

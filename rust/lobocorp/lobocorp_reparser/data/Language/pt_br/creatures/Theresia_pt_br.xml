@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300003">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção da $0 para iniciar o processo de trabalho.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-09</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Theresia</portrait>
+      <name openLevel="1">
+        Theresia
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>
+        “Você lembra dessa melodia? O professor costumava colocar essa música para tocar quando os estudantes estavam com sono. Feliz aniversário.”
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Uma caixinha de música com uma impressionante escultura de uma bailarina dançando.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Quando é dada a corda, uma melodia triste começa a tocar. Ninguém sabe quando ou quem a fez, mas não parece ser nova, julgando pelos pequenos pulos na melodia. }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Há algumas frases cravadas de maneira rudimentar em sua superfície: “Você lembra dessa melodia? O professor costumava colocar essa música para tocar quando os estudantes estavam com sono. Feliz aniversário.”}
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {Ouvir esta caixinha de música fará com que qualquer um sinta que tudo ficará bem no final, acabando com seu cansaço. Entretanto, caso escutado de maneira excessiva, fará com que o ouvinte perca noção da realidade e será levado à loucura.}
+      ]
+    </desc>
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="1">Aqueles que escutam a música da $0 recuperarão PS, incluindo o Agente que está usando a caixinha de som e todos em seu departamento onde a Anormalidade está localizada.</specialTip>
+      <specialTip openLevel="2" key="2">Quando 20 a 30 segundos terem passado após a caixinha de música ter começado a tocar, o PS do funcionário operando a caixa começará a cair rapidamente.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

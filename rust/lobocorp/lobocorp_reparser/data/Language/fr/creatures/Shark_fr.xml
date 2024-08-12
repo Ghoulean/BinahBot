@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    5.28
+  -->
+  <info id="100047">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {$0 rêve de courir hors de l’installation en toute liberté.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Comme tout le monde le voulait, $0 vivra ici pour toujours.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-02-71</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Shark</portrait>
+      <name openLevel="1">
+        Le Courant Rêveur
+      </name>
+      <riskLevel openLevel="2">
+        WAW
+      </riskLevel>
+      <openText>Dis au gamin que sa récompense d’aujourd’hui sera un bonbon au raisin. C’est ce qu’il préfère.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {“Contente-toi de… contente-toi de lui montrer le livre. Oh, et ça doit être une page avec des images, puisqu’il ne peut probablement pas lire.&#13;&#10;Si l’expérience semble s’étendre inutilement, essaie d’attirer son attention, en faisant des bruits, par exemple.&#13;&#10;Je n’ai pas besoin d’expliquer chaque détail, pas vrai ?}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Oui, je sais. C’est malheureux. Pitoyable et triste. Je ressens des émotions humaines, merci beaucoup.&#13;&#10;Cependant, il n’a survécu que grâce à cet endroit. J’espère qu’il continuera à vivre d’une façon ou d’une autre. Si tu penses la même chose, il serait mieux que tu arrêtes de t’en vouloir maintenant.&#13;&#10;…&#13;&#10;Dis au gamin que sa récompense d’aujourd’hui sera un bonbon au raisin. C’est ce qu’il préfère.”}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Extrait d’une Encyclopédie&gt;&#13;&#10;
+      Contrairement aux croyances populaires, la plupart des requins sont de petite taille. Il n’y a qu’une poignée d’espèces qui cause du tort aux humains… Quoi qu’on en dise, la plus grande force des requins réside dans leur puissante mâchoire et leurs redoutables dents. Un requin peut appliquer une force vingt fois supérieure à celle d’un humain adulte avec une simple morsure. De plus, leur vision et leur odorat sont extrêmement développés, ce qui leur permet de repérer leurs cibles aisément. Voici pourquoi les requins ont régné en tant que plus grands prédateurs des océans jusqu’à aujourd’hui.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Les parents avaient abandonné l’enfant depuis longtemps.&#13;&#10;Ils disaient que son ancienne infection tuerait l’enfant avant deux ans. Les chercheurs devinrent ainsi les nouveaux parents du jeune garçon. Il apprit à faire des bruits d’animaux et à marcher. Bien qu’incapable de parler normalement, l’enfant aimait l’océan. Mais au lieu de l’y amener, on lui donnait des bonbons lui permettant de le voir.&#13;&#10;De nombreuses nuits, et davantage de jours très colorés, passèrent de cette manière.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {L’enfant, qu’on ne pensait pas vivre plus de deux ans, survécut bien davantage. Et toujours, il adora les bonbons sucrés, les suivit, et aima l’endroit comme sa maison. Bien que la seule chose que l’enfant puisse faire, c’était de cavaler erratiquement dans un laboratoire étroit au lieu d’un champ verdoyant sous le soleil, ses pas étaient tremblants mais pleins d’enthousiasme. Il était excité en se demandant quel genre de bonbons il mangerait demain.}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Lorsque l’Intervenant #0 a paniqué au cours de son travail, le Compteur Qliphoth a baissé.</specialTip>
+      <specialTip openLevel="1" key="2">Lorsqu’un Intervenant de Tempérance 1 a terminé son travail, le Compteur Qliphoth a baissé.</specialTip>
+      <specialTip openLevel="2" key="3">Les flaques de liquide inondant certaines zones de l’installation alors que $0 était en brèche limitent drastiquement le mouvement des employés et leur infligent des dégâts ROUGE au fil du temps. Cependant, cela leur rend progressivement des PSM.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

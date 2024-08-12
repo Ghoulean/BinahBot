@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id="100061">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção de $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="mid1">
+      [
+      {A lenda diz que aqueles que encontraram a pena do Pássaro de Fogo foram concedidos com bênçãos e provações.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {As vezes, $0 cura funcionários feridos.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 pode ficar feliz se os funcionários agirem como se estivessem caçando por ele.}
+      ]
+    </narration>
+  </info>
+  <observe level="2">
+    <collection>
+      <codeNo openLevel="0">O-02-101</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/FireBird</portrait>
+      <name openLevel="1">
+        O Pássaro de Fogo
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>Aqueles que triunfarem na caça serão concedidos com uma das várias penas que incontáveis caçadores costumavam desejar.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Há muito, muito tempo atrás. Em uma floresta distante, vivia um pássaro magnífico. Suas penas eram maravilhosamente incandescentes como as chamas, e era dito poder iluminar até a escuridão mais profunda.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Vários caçadores desejavam obter ao menos uma de suas penas, já que se tornariam seu orgulho e honra. Existiram vários contos sobre o pássaro. Alguns diziam que aquele que conseguir capturá-lo teria a família próspera por várias gerações. Alguns até afirmavam que ninguém era um verdadeiro caçador até conseguir uma pena daquele pássaro. Outros acreditavam que uma só pena era tão forte que poderia levar seu dono a qualquer lugar em que sonhasse. Seja o que for, o pássaro era um símbolo de aventura para as pessoas.&#13;&#10;&#13;&#10;A floresta distante então ficou cheia de pessoas procurando pelo pássaro. Não somente caçadores, mas também aventureiros e viajantes...&#13;&#10;&#13;&#10;A floresta, antes silenciosa, acabou virando um lugar tumultuado. }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {As pessoas acabaram ficando cansadas dos rumores; elas não estavam mais interessadas em caçar. Menos e menos pessoas faziam qualquer tipo de visita à floresta distante. Quando o pássaro finalmente se tornou nada além de uma lenda, ele sofreu uma grande dor e ficou cego. Agora tudo o que sobrou dessa lenda foi um pássaro cego com penas brilhantes, sozinho em uma floresta abandonada.&#13;&#10;&#13;&#10;Após muito tempo ter passado, o pássaro encontrou uma nova floresta. Muitas pessoas estavam morando nela e ele só queria que a vontade de perseguí-lo voltasse novamente como as chamas ardentes de suas lindas penas.&#13;&#10;&#13;&#10;Aqueles que triunfarem na caça serão concedidos com uma das várias penas que incontáveis caçadores costumavam desejar.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Maior cautela é recomendada quando a temporada de Caça ao Pássaro de Fogo finalmente chegar. Ações precipitadas como tentar suprimí-lo não são recomendadas.&#13;&#10;Também não é recomendado simplesmente caçar o pássaro para provar a própria bravura. Por favor, lembre-se de todos os caçadores que voltaram com nada nas mãos.&#13;&#10;Todos falavam, “Eu consigo pegá-lo, só mais um pouquinho e vou conseguir…”. Porém, nesse caso. A verdadeira bravura é aquela de quem aceita a desistência.}
+      ]
+    </desc>
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">Quando outra Anormalidade no departamento em que $0 está fugiu, o Contador Qlifót reduziu.</specialTip>
+      <specialTip openLevel="2" key="2">Quando o resultado do trabalho era Bom, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="2" key="3">Quando o resultado do trabalho era Neutro, o Contador Qlifót reduzia com baixa probabilidade. Além disso, quanto menor for o Contador Qlifót, mais danos os Agentes tomam durante o trabalho com $0.</specialTip>
+      <specialTip openLevel="2" key="4">Quando o resultado do trabalho era Ruim, o Contador Qlifót aumentava.</specialTip>
+      <specialTip openLevel="2" key="5">$0 emitia uma luz para #0 que estava trabalhando com ele enquanto o Contador Qlifót estava em 1. O PV e PS de #0 foi recuperado, e curado continuamente por um tempo.</specialTip>
+      <specialTip openLevel="2" key="6">Quando um Agente tinha menos de 20% de seu PV faltando após completar o trabalho, $0  emitia a mesma luz.</specialTip>
+      <specialTip openLevel="2" key="7">Após escapar, $0 eventualmente voltava para a Unidade de Contenção por conta própria depois de um tempo. $0 somente mostrava agressão depois que era machucado. Os funcionários que tiveram o PV ou PS reduzido a 0 por causa dos ataques do Pássaro morreram instantaneamente. Quando $0 era atacado, os olhos daqueles que o machucaram foram queimados pela luz emitida pela Anormalidade. Funcionários que foram cegados pela luz trabalhavam 50% mais devagar. $0 curou a queimadura no olho de #0 quando ele terminou o processo de trabalho.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

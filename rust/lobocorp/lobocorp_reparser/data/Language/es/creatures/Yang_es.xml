@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="300109">
+
+    <narration action="move">
+      #0 va a entrar en la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-07-103</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Yang</portrait>
+
+      <name openLevel ="1">
+        Yang
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>Sin embargo, el mundo tiene más que calidez y luz.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Falta la otra mitad. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Disminuye el daño mental del portador. Debido a esto, se llama “Colgante de Bien” por los empleados. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Quienes se acercan quieren su energía. Dijeron que aclara sus mentes y da calidez a sus corazones. Además, temían el colgante negro. “Espero que cada anormalidad sea útil como esta.” Dijeron, mientras suspiraban. No podia entender. Nunca tuvo la intención de ayudar a los demás. Era así como funcionaba.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Sin embargo, el mundo tiene más que calidez y luz.&#13;&#10;El cielo existe porque la tierra existe, la oscuridad existe porque la luz sí existe. La vida existe porque la muerte existe, la esperanza existe porque la desesperación existe.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {La carpa negra nada hacia la armonía y la carpa blanca nada hacia el caos.&#13;&#10;Qué pasará cuando las dos carpas se encuentren?}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">$0’s el portador gana resistencia contra los daños mentales clase blanco. Sin embargo, cuando O-05-102 no esta en la instalación, no pasó nada.</specialTip>
+      <specialTip openLevel="2" key="2">$0 Curado periódicamente la salud mental del portador.</specialTip>
+      <specialTip openLevel="2" key="3">&lt;PRECAUCION&gt; No ponga al usuario de $0 en la cámara de contención de O-05-102.</specialTip>
+      <specialTip openLevel="2" key="4">&lt;PRECAUCION&gt; Tenga en cuenta que cuando O-05-102 escapa, $0 también escapa. (Se confirma que el mismo problema ocurre incluso cuando un empleado está usando uno de ellos.)</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

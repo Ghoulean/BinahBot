@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100002">
+
+
+
+    <narration action="mover">
+      #0 va a entrar a la Unidad de Contencion de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="iniciar">
+      [
+      {$0 parece un osito de peluche que todos tenían cuando eran jóvenes.},
+      {$0 siempre quiso abrazar a los niños.},
+      {$0 ama los abrazos. Su primer recuerdo parte de un cálido abrazo.},
+      {Un osito nace en la felicidad, por lo que debe ser feliz en todo momento.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 se pierde en el pensamiento, desolado mirando el relleno que sobresale de sus costuras.},
+      {La cinta sucia que rodea el cuello de $0 cuelga suavemente, aunque no haya viento. El nombre escrito en la cinta ahora es irreconocible.},
+      {$0 está mirando a la nada. Espera, es mirar una foto de una niña.},
+      {el ojo de plástico negro de $0 cuelga silenciosamente por un hilo en el lado izquierdo de su cara.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Mientras #0 esta ocupado trabajando, el oso de peluche sigue contemplando el marco de la imagen.},
+      {Incluso si hay una conmoción, el oso de peluche mira fijamente la imagen.},
+      {Parece que la imagen frente a él es lo único que le importa al oso.}
+      {#0 fue incapaz de distraer al oso.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Mientras trabajo, #0 se acerca al osito y vuelve a asar la cinta deshilachada.},
+      {#0 deja de funcionar para limpiar el marco de imagen que mira el osito de peluche.}
+      {#0 Empieza a reparar las lágrimas en el osito de peluche mientras trabajas. El osito no reacciona.}
+      {#0 pone en orden el oso de peluche, pero no reacciona.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {El osito recuerda una fiesta de cumpleaños de un niño de siete años. Estaba dentro de un gran caja de colores.},
+      {El osito recuerda unas maravillosas vacaciones con un niño. Su nombre era Bearly.},
+      {El osito recuerda numerosas noches con el niño. El niño se acurrucó en sus brazos.}
+      {El osito de peluche piensa en el niño de una vez que ahora ha crecido por completo. En algún lugar debajo del vestidor, bolas de polilla se están formando en su cuerpo.}
+      ]
+    </narration>
+
+    <narration action="special_ability">
+      [
+      {$0 extiende sus brazos, arrastrando #0 hacia a su cuerpo. #0 siendo estrangulado y el lo golpea, intentando liberarse.}
+      ]
+    </narration>
+
+    <narration action="dead">
+      [
+      {Los huesos de #0 comienzan a crujir entre los brazos del oso. Su piel huele a nostalgia.}
+      {No suelta sus brazos, manteniendo #0 a su cuerpo continuando asfixiandolo. El movimiento de #0 se vuelve lento. El oso todavía no suelta a #0 de su abrazo.}
+      ]
+    </narration>
+
+    <narration action="panic">
+      [
+      {#0 ahora se siente indefenso y deprimido. La vida no tiene sentido. #0 nada más que una mota de polvo.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-04-06</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Teddy</portrait>
+
+      <name openLevel ="1">
+        Oso de peluche
+      </name>
+
+      <name openLevel="2">
+        Feliz osito de peluche
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+
+      <openText>Su primer recuerdo fue parte de un cálido abrazo.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Una anormalidad que se asemeja a una gran, oso de peluche harapiento. Le falta algo de piel y solo tiene un ojo.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [A juzgar por el nombre escrito en la cinta desgastada alrededor de su cuello, su antiguo dueño debe amar al oso. La cinta está demasiado hecha jirones para distinguir el nombre. Parece que el oso sabe que ha sido abandonado y parece abatido.  }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Registro de Consejería 32_356&gt;&#13;&#10;&#13;&#10; Empleado M2434: &quot;Estaba de guardia de noche. El oso de peluche no requería mucha atención. Era inofensivo la mayor parte del tiempo. Simplemente miré dentro de la unidad de contención para verificarlo. Fue abrazar a alguien. Primero, pensé &lt;Redactado&gt; estaba trabajando hasta tarde. Pero algo estaba apagado. Le grite a &lt;Redactado&gt; para tomar un descanso. Entré en la unidad de contención, pero &lt;Redactado&gt; no contestó. Presioné el botón de emergencia y llamé a los refuerzos. &lt;Redactado&gt; habia muerto hace 8 horas. Y por todo ese tiempo, desde el momento en que comenzó la jornada laboral hasta que los encontré, el oso lo abrazó &lt;Redactado&gt;.&quot;}
+    ]
+  </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {&lt;Vieja carta con un "devuelto" en una estampa&gt; &#13;&#10;&#13;&#10;Recuerda el artículo 3 en el Manual del Empleado?&#13;&#10;"No te apegues a las Anormalidades."&#13;&#10;No pude entender lo que eso significaba al principio.&#13;&#10;Crees que empatizar con esos monstruos es incluso sea posible?&#13;&#10;Hey, Realmente son monstruos, ya sabes. Está bien llamarlos así cuando solo somos tú y yo.&#13;&#10;Feliz osito de peluche es tu segunda anomalía, cierto?&#13;&#10;Debes haber pensado que no todas las anomalías son monstruosas después de mirarlas.&#13;&#10;Un oso de peluche abandonado puede incluso haber despertado un largo recuerdo perdido del tuyo. Hey, Entiendo eso.&#13;&#10;De todas formas, Parece que a Teddy le gustó tu abrazo.&#13;&#10;Sip, produjo más energía cuando estabas alrededor.&#13;&#10;Y luego te ponen a cargo del oso, cierto?&#13;&#10;Debes haber sentido algún tipo de responsabilidad por ello, no lo hiciste?&#13;&#10;Me preocupé a medida que aumentaba el tiempo que pasabas en su unidad de contención.&#13;&#10;A mi, Parecía que estabas haciendo obras de caridad para un orfanato.&#13;&#10;...&#13;&#10; &lt;color=#FF9E72FF&gt;Parecía que el oso pensaba que eras su nuevo dueño.&#13;&#10;Tal vez te gustaría escuchar eso.&#13;&#10;Pero nunca más querrá separarse de su dueño.&lt;/color&gt;&#13;&#10;&#13;&#10;Sé que probablemente prometiste que regresarías,&#13;&#10;pero no entendió. No puede entender.&#13;&#10;Te oí milagrosamente haber sobrevivido a la prueba.&#13;&#10;Y pasaron una hora separándote de su mortal abrazo.&#13;&#10;Incluso si otros se olvidan de ti,&#13;&#10;Te prometo que siempre te recordaré.&#13;&#10;Te deseo lo mejor.&#13;&#10;- K. H.}
+    ]
+  </desc>
+
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="manyDead">#0 murió de asfixia después de intentar trabajar en $0 varias veces seguidas..</specialTip>
+      <specialTip openLevel="2" key="manyDead2">#0 fue encontrado en brazos de $0 con el cuello roto. Se cree que la visita $0 a la unidad de contención varias veces es la causa de este desafortunado incidente.&#13;&#10;Consulte la carta antigua con un sello "Devuelto" en una estampa.</specialTip>
+    </specialTipSize>
+
+  </observe>
+
+
+</creature>

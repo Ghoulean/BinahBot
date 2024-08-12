@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100002">
+
+
+
+    <narration action="move">
+      #0 is going into $0's containment unit to begin the task.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 looks like a teddy bear that everyone once had when they were young.},
+      {$0 always wanted to hug children.},
+      {$0 loves hugs. Its very first memory starts from a warm hug.},
+      {A teddy bear is born in happiness, so it must be happy at all times.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 is lost in thought, forlornly gazing at the stuffing that are poking out of its seams.},
+      {The dirty ribbon around $0's neck ruffles gently, even though there is no wind. The name written on the ribbon is unrecognizable now.},
+      {$0 is gazing up at nothing. Wait, it’s looking at a photo of a young girl.},
+      {$0's black plastic eye is silently dangling by a thread on the left side of its face.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {While #0 is busy working, the teddy bear continues to gaze upon the picture frame.},
+      {Even if there is a commotion, the teddy bear stares fixedly at the picture.},
+      {It seems the picture in front of it is the only thing matters to the bear.}
+      {#0 was unable to distract the bear.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {While working, #0 approaches the teddy bear and refastens the frayed ribbon.},
+      { #0 stops working to clean the picture frame that the teddy bear gazes upon.}
+      {#0 starts mending the tears on the teddy bear while working. The teddy bear does not react.}
+      {#0 tidies up the teddy bear, but it does not react.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {The teddy bear remembers a birthday party of a seven year old. It was inside a large, colorful box.},
+      {The teddy bear remembers of a wonderful vacation with a child. Its name was Bearly.},
+      {The teddy bear recalls numerous nights with the child. The child was snuggled up in its arms.}
+      {The teddy bear thinks of the once child who is now fully grown. Somewhere beneath the dresser, moth balls are forming in its body.}
+      ]
+    </narration>
+
+    <narration action="special_ability">
+      [
+      {$0 extends its arms, dragging #0 towards it. #0 chokes and thrashes, trying to free themselves.}
+      ]
+    </narration>
+
+    <narration action="dead">
+      [
+      {#0's bones start to crunch between the bear’s arms. Its fur smells of longing.}
+      {It does not release its arms, keeping #0 from getting out.#0's movement becomes sluggish. The bear still doesn’t release #0 from its embrace.}
+      ]
+    </narration>
+
+    <narration action="panic">
+      [
+      {#0 now feels helplessly depressed. Life is meaningless. He's nothing but a speck of dust.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-04-06</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Teddy</portrait>
+
+      <name openLevel ="1">
+        Teddy Bear
+      </name>
+
+      <name openLevel="2">
+        Happy Teddy Bear
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+
+      <openText>Its very first memory starts from a warm hug.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {An Abnormality that resembles a large, raggedy teddy bear. Its missing some fur and only has one eye.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [Judging from the name written on the worn ribbon around its neck, its former owner must loved the bear. The ribbon is too tattered to make out the name. It seems the bear knows that it has been abandoned and looks dejected.  }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Counseling Log 32_356&gt;&#13;&#10;&#13;&#10; Employee M2434: &quot;I was on night patrol duty. The teddy bear didn’t require much attention. It was harmless most of the time. I simply looked inside the containment unit to check on it. It was hugging someone. At first, I thought &lt;Redacted&gt; was working late. But something was off. I yelled at &lt;Redacted&gt; to take a break. I went inside the containment unit, but &lt;Redacted&gt; didn't answer. I pressed the emergency button and called in reinforcement. &lt;Redacted&gt; had been dead for 8 hours. And for all that time, from the moment the work day started until I found them, the bear hugged &lt;Redacted&gt;.&quot;}
+    ]
+  </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {&lt;Old Letter with a "Returned" Stamp&gt; &#13;&#10;&#13;&#10;Remember article 3 in the Employee Manual?&#13;&#10;"Do not be attached to the Abnormalities."&#13;&#10;I couldn’t understand what that meant at first.&#13;&#10;Do you think empathizing with those monsters is even possible?&#13;&#10;Hey, they really are monsters, you know. It's okay to call them that when it's just you and me.&#13;&#10;Happy Teddy Bear is your second Abnormality, right?&#13;&#10;You must have thought not all Abnormalities are monstrous after looking at it.&#13;&#10;An abandoned teddy bear may even have stirred up some long lost memory of yours. Hey, I understand that.&#13;&#10;Anyway, it seems Teddy liked your hug.&#13;&#10;Yup, it produced more energy when you were around.&#13;&#10;And then they put you in charge of the bear, right?&#13;&#10;You must have felt some kind of responsibility for it, didn’t you?&#13;&#10;I became worried as the time you spend in its containment unit increased.&#13;&#10;To me, it looked like you were doing charity work for an orphanage.&#13;&#10;...&#13;&#10; &lt;color=#FF9E72FF&gt;It seemed the bear thought you were its new owner.&#13;&#10;Maybe you’d be happy to hear that.&#13;&#10;But it never want to be separated from its owner ever again.&lt;/color&gt;&#13;&#10;&#13;&#10;I know you probably promised it that you'd return,&#13;&#10;but it didn't understand. It can't understand.&#13;&#10;I heard you miraculously survived the ordeal.&#13;&#10;And they spent an hour separating you from its deadly embrace.&#13;&#10;Even if others forget about you,&#13;&#10;I promise that I will always remember you.&#13;&#10;I wish you well.&#13;&#10;- K. H.}
+    ]
+  </desc>
+
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="manyDead">#0 died of asphyxiation after attempting to work on $0 multiple times in a row.</specialTip>
+      <specialTip openLevel="2" key="manyDead2">#0 was found in $0's arms with a broken neck. It is believed that visiting $0's containment unit several times is to be the cause of this unfortunate incident. Refer to "Old Letter with a "Returned" Stamp."</specialTip>
+    </specialTipSize>
+
+  </observe>
+
+
+</creature>

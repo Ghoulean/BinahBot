@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300003">
+
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-09</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Theresia</portrait>
+
+      <name openLevel ="1">
+        特蕾西娅
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <openText>
+       还记得这段旋律吗？每当学生们犯困时，教&#13;&#10;授就会把这段旋律放给他们听。生日快乐。
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {这个异想体是一台老旧的八音盒。八音盒上有一个小小的&#13;&#10;踮起脚尖跳舞的小芭蕾演员模型。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {上好发条后，八音盒将会播放一段悲伤的旋律。没有人知&#13;&#10;道是谁制作了这台八音盒，但是从时不时的卡顿中可以看&#13;&#10;出，它已经有一定的年岁了。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {八音盒上粗糙地刻着一行小字：“还记得这段旋律吗？每&#13;&#10;当学生们犯困时，教授就会把这段旋律放给他们听。生日&#13;&#10;快乐。”}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {聆听八音盒的旋律会使人感到“一切都会好起来的”，疲劳&#13;&#10;也会被一扫而空。但是过度的聆听将会导致人们失去对现&#13;&#10;实的把握，最终陷入疯狂。}
+      ]
+    </desc>
+
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="1">聆听“$0”的员工将会持续恢复精神值。</specialTip>
+      <specialTip openLevel="2" key="2">聆听“$0”的时间处于20-30秒时，员工会立刻陷入恐慌。</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

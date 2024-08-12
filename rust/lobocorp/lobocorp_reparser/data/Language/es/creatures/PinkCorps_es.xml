@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+  -->
+  <info id ="100064">
+
+    <narration action="move">
+      #0 va a ingresar a la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 le dice a los empleados todo sobre el amor.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {El objetivo de $0 es mantener a las personas de buen corazón seguras.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {El empleado #0 siente esperanza por el color rosa de $0 durante el trabajo.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">D-01-106</codeNo>
+      <portrait openLevel ="0">Sprites/Unit/creature/PinkCorps</portrait>
+
+      <name openLevel ="1">
+        Ejército Rosado
+      </name>
+
+      <name openLevel ="3">
+        Ejército Negro
+      </name>
+
+      <riskLevel openLevel ="0">
+        ZAYIN
+      </riskLevel>
+
+      <riskLevel openLevel ="3">
+        ALEPH
+      </riskLevel>
+
+      <openText>El color del corazón humano es rosa. Al usar el mismo color, podemos mezclarnos con la mente de la gente. </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {<i>Esta anormalidad se realiza en base a la idea de la Tumblbug backer '문정호(Moon Jungho)'</i>&#13;&#10;&#13;&#10;Criaturas humanoides armadas con equipo militar de color rosa. Su capacidad intelectual le permite conversar verbalmente con el ser humano. Parece amigable al menos durante la observación. Se identificó como una fuerza especial de (Redactado) y usa el pronombre ‘nosotros’ cuando se llama a sí mismo. Está continuamente mostrando intención de ayudar a los humanos.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Este es el registro de audio del primer contacto con esta anormalidad.&#13;&#10;(Omitido)&#13;&#10;&#13;&#10;Empleada Serena: Me siento amenazado porque estas armado. Y ese rosa brillante me molesta también. No pertenece aqui.&#13;&#10;&#13;&#10;- Cuál es tu opinión sobre la naturaleza del ser humano, empleada Serena?&#13;&#10;&#13;&#10;Empleada Serena: …Creo que depende de la experiencia de la persona. Por que lo preguntas?&#13;&#10;&#13;&#10;- Es un tema altamente discutible. Pero esto es lo que pensamos que deberíamos hacer. Si una persona es buena desde el principio, protegemos su buen corazón. Si una persona es mala desde el principio, le haremos un buen corazón y la protegeremos.&#13;&#10;&#13;&#10;Empleada Serena: Cómo vas a hacerlo?&#13;&#10;&#13;&#10;- Podemos ver el color del corazón. El color del corazón humano es rosa. Al usar el mismo color, podemos mezclarnos con la mente de la gente. Con gusto nos ensuciaremos para las personas de buen corazón.&#13;&#10;&#13;&#10;Empleada Serena: Espera, te ensuciarás en lugar de las personas? Es eso posible?&#13;&#10;&#13;&#10;- Lo es.&#13;&#10;&#13;&#10;Empleada Serena: Lo siento pero no puedo confiar en ti. Es muy sospechoso que puedas ver el color del corazón de la gente.&#13;&#10;&#13;&#10;- Si algo sucede, solo llámenos, señora. &#13;&#10;&#13;&#10;(Fin de la grabación)&#13;&#10;&#13;&#10;Según la grabación, la voluntad anormal de ayudar a los empleados es sólida.&#13;&#10;Aún tenemos que captar información detallada sobre esta anormalídad. Tal vez en realidad podriamos pedir ayuda ya que podría ayudarnos a obtener más información. Sin embargo, al igual que cualquier otra anormalídad, no podemos confiar ciegamente en ello. Estoy planeando tener un Escuadra militar listo mientras pretendo solicitar una ayuda. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Han pasado muchas cosas hasta ahora. Para resumir toda la historia, esta anormalidad es lo mejor que hemos tenido. Hace unos meses, intenté mi oportunidad pidiendo ayuda para esta anormalidad. Y lo he estado usando desde entonces. Recibí ayuda sobre los tiempos (Redactado). Mi eficiencia en el trabajo ha mejorado mucho. En este punto, solo mirar el color rosa tranquiliza mi mente. Esas criaturas se refuerzan de una manera que ni siquiera un gran líder puede. Esta anormalidad mejorará en gran medida la calidad de vida de nuestros empleados.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {(Grabación de audio)&#13;&#10;&#13;&#10;Empleada Serena: Puedes hacerlo de nuevo hoy, verdad?&#13;&#10;&#13;&#10;- Sí, el corazón humano es rosa, y usamos el mismo color. Vamos a alejar los malos pensamientos. &#13;&#10;&#13;&#10;Empleada Serena: Lo obtuviste? Sí, todavía está en las mejores condiciones. Podemos poner de nuevo esta anormalídad en nuestra próxima supresión. Son mucho mejores que los soldados humanos. Por favor considere designarlos oficialmente como una Escuadra militar de la compañía. Para una nota al margen, se puso un poco más oscuro pero no creo que sea un gran problema.&#13;&#10;&#13;&#10;- Corazón humano…. Solo…. nosotros debemos… limpiarlo….&#13;&#10;&#13;&#10;- Incluso… una pequeña mancha del mal… debe… limpiarse….&#13;&#10;&#13;&#10;Empleada Serena: Parece un poco… menos energético de lo habitual. Pero va a estar bien, creo. &#13;&#10;&#13;&#10;(Fin de la grabación)}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {&lt;Informe urgente sobre el incidente relacionado con el Ejercito en Rosa&gt;&#13;&#10;&#13;&#10;Estamos presentando este informe urgente relacionado con el drástico cambio en el Ejercito en Rosa.&#13;&#10;Todavía estamos tratando de comprender lo que sucedió exactamente. Tenemos un total de (Redactado) empleados han cesado. Esta es la grabación de audio de la primera víctima asumida, fue la empleada Serena. &#13;&#10;&#13;&#10;(Grabación de audio)&#13;&#10;&#13;&#10;Empleada Serena: Una anormalídad ha vuelto a estallar en el (Redactado) sección. Me gustaría pedirte ayuda de nuevo.&#13;&#10;&#13;&#10;-Sí, el Ejército Negro… nos mezclamos con los corazones humanos…y ahuyentamos los buenos pensamientos…&#13;&#10;&#13;&#10;Employee Serena: ….Que? Esa no es tu línea.&#13;&#10;&#13;&#10;- El corazón humano….es negro… debemos…regularmente…limpiarlo…..&#13;&#10;&#13;&#10;Empleada Serena: De qué estás hablando? Me estás asustando.&#13;&#10;&#13;&#10;- Te protegeremos con nuestro amor negro.&#13;&#10;&#13;&#10;Empleada Serena: Detente, llamaré al escuadra… si mueves un músculo allí…&#13;&#10;&#13;&#10;- Te saludo, señora…&#13;&#10;&#13;&#10;(La grabación se corta abruptamente después de un sonido de gran explosión)}
+      ]
+    </desc>
+
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">$0 se pueden ordenar para proteger a un empleado. Sin embargo, se debe tener en cuenta que el contador Qlifot disminuye cuando se da la orden.</specialTip>
+      <specialTip openLevel="1" key="2">$0 incrementa la defensa del empleado que protege mientras sana a todos en la misma área. Sin embargo, si el nivel del empleado que está siendo protegido es inferior a 3, el empleado pierde el control mientras está protegido. </specialTip>
+      <specialTip openLevel="1" key="3">El Contador Qlifot disminuye cuando se terminó el trabajo de represión en él.</specialTip>
+      <specialTip openLevel="1" key="4">El contador Qlifot recae por cada 5 empleados que hayan muerto en la instalación. Sin embargo, no reconoció la muerte de empleados que fueron dispuestos a las balas de ejecución.</specialTip>
+      <specialTip openLevel="1" key="5">El Contador Qlifot disminuye cuando el resultado del trabajo fue malo.</specialTip>
+      <specialTip openLevel="1" key="6">El Contador Qlifot aumenta cada vez que se suprime una anormalídad.</specialTip>
+      <specialTip openLevel="1" key="7">Cuando un empleado menor al nivel 3 se encuentra con $0, pierde el control y ataca a otros empleados. Lo mismo sucede con el empleado cuya salud mental alcanza a 0 por el ataque $0 si se le encuentra.</specialTip>
+    </specialTipSize>
+    
+  </observe>
+</creature>

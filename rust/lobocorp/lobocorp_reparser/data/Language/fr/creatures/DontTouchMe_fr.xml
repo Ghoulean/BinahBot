@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100024">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {빛을 오래 보지 못한 죄수처럼 쇠사슬에 묶여 있는 망치가 있습니다.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {망치와 쇠사슬은 분리된 존재가 아니라 그 자체로 하나의 환상체입니다.},
+      {깊숙한 지하 던전에서 존재할 것 같은 범상함이 느껴집니다.},
+      {왠지 쇠사슬이 풀리지 않은 상태가 안전해 보이는 느낌입니다.},
+      {쇠사슬은 절대 망치를 꺼낼 수 없도록 아주 강하게 옭아매어져 있습니다.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 직원은 $0 를 관리하며 이러려고 회사에 취직을 했는지 자괴감을 느낍니다.},
+      {#0 직원은 $0 에 감긴 쇠사슬에 대해 호기심을 느낍니다.},
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 는 구속구가 풀릴 그 날을 기다립니다.},
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-05-47</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/DontTouchMe</portrait>
+      <name openLevel="1">
+        Ne Me Touchez Pas
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <specialName openLevel="1">
+        Oh non, ne faites pas ça.
+      </specialName>
+      <openText>Vous avez beau l'avoir pressé maintes fois, vous pensez toujours qu'il y a quelque chose à en apprendre ?</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Un appareil qui a la forme d’une boîte avec un gros bouton rouge très attirant. D’anciens gribouillis sont écrits tout autour. Il s’agit surtout d’avertissements comme : “Ne pressez pas le bouton.”}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Beaucoup d’employés rapportent que la tentation d’appuyer sur le bouton est si forte qu’elle leur donne des insomnies. En raison du nombre d’employés déclarant subir cette attraction, une solution à ce problème est recherchée.}
+      ]
+    </desc>
+    <desc id="3" openLevel="1">
+      [
+      {L’un des aspects les plus importants pour définir une Anomalie est sa “volonté propre”. Il est confirmé que cette Anomalie possède une volonté suffisamment puissante pour donner envie à ceux autour d’elle d’appuyer dessus. En conséquence, elle est catégorisée comme une Anomalie.}
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {Lorsque le bouton est pressé, des choses qui ne devraient pas arriver arrivent. Certains racontent que l’apocalypse s’abattra, d’autres disent qu’une lumière arc-en-ciel nous illuminera et des licornes descendront du ciel, et d’autres encore disent qu’une bombe enterrée profondément sous le complexe explosera et anéantira tout. Cependant, aucune de ces rumeurs ne peut être confirmée.}
+      ]
+    </desc>
+    <desc id="5" openLevel="3">
+      [
+      {&lt;b&gt;Il est conseillé d’être prudent&lt;/b&gt; en raison de la capacité de l’Anomalie à provoquer la curiosité des gens à appuyer dessus. Parfois, elle change de forme pour tenter malicieusement de se faire appuyer dessus par accident.}
+      ]
+    </desc>
+    <desc id="6" openLevel="4">
+      [
+      {&lt;Extrait du Témoignage d’un Employé&gt;&#13;&#10;
+      "Lorsque je suis revenu à la réalité, j’étais debout devant l’Unité de Confinement, à deux doigts d’appuyer sur cette saleté de bouton. Je l’aurais fait s’il n’y avait pas eu d’autres employés pour me tirer de là…"&#13;&#10;&#13;&#10;L’employé est actuellement de retour sur le terrain après avoir passé de nombreux tests et été diagnostiqué comme normal. Cependant, nous avons conseillé à l’employé de suivre une thérapie puisqu’il manifeste encore expressément son insatisfaction de ne pas avoir pu appuyer sur le bouton.}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="confessionIs">Personne ne sait ce qui arrivera si ce bouton est pressé.</specialTip>
+      <specialTip openLevel="2" key="confessionIsGood">Peu importe ce qu’il arrive dans l’Unité de Confinement, ce bouton NE DOIT JAMAIS ÊTRE PRESSÉ.</specialTip>
+      <specialTip openLevel="3" key="lightening">Arrêtez ! Administrateur ! Pensez à ces pauvres employés. N’avez-vous aucune pitié envers eux ?</specialTip>
+      <specialTip openLevel="4" key="lightening1">Oh, s’il vous plaît, non, ne touchez pas ce bouton.</specialTip>
+      <specialTip openLevel="5" key="lightening2">Vous avez beau l'avoir pressé maintes fois, vous pensez toujours qu'il y a quelque chose à en apprendre ?</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

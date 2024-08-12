@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+    
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id ="100010">
+
+   <narration action="move">
+      #0 designado para el sector de aislamiento 'Mi Arbol de Naranjo Dulce'.
+    </narration>
+
+    <narration action="start">
+      [
+      {A pesar de que no tenga noúmeno, de alguna manera intentará mostrarse.},
+      {Cada uno tiene su propio naranjo dulce en su corazón.},
+      {Si te queda alguna pieza de inocencia de infancia.}
+      {“Por qué deberían crecer los niños?”}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Miles de partículas en el sector de aislamiento han penetrado en el centro nervioso del #0 de su cerebro},
+      {Parte del ‘Mi Arbol de Naranjo Dulce’ está ingresando a la memoria de #0 de inmediato.},
+      {La entidad ‘Mi Arbol de Naranjo Dulce’ es extremadamente pequeño que podría vagar por la mente de #0 sin darse cuenta.},
+      {‘Mi Arbol de Naranjo Dulce’ está vagando con #0 cuando pasa el tiempo.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {‘Mi Arbol de Naranjo Dulce’ visualiza lo que hemos soñado.},
+      {‘Mi Arbol de Naranjo Dulce’ recupera lo que hemos olvidado.},
+      {Numerosos empleados encuentran lo que han perdido antes.},
+      {#0 encontrarán su propio naranjo en ‘Mi Arbol de Naranjo Dulce’.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {#0 se ve agotado y cansado.},
+      {Lo que el #0 en este momento es muy diferente de lo que ellos imaginaron que serían en la infancia. },
+      {#0 solo está pensando en dejar el trabajo}
+      {#0 quería ser astronauta durante su infancia.}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {#0 han dejado de trabajar cuando #0 vio una vista increíble durante el trabajo. },
+      {#0 confronta lo que #0 había olvidado por mucho tiempo.}
+      {#0 puede ingresar al mundo que #0 creó en los primeros años de su vida.}
+      {#0 llega a disfrutar del paisaje justo en frente de uno mismo, ni siquiera piensa en salir del sector del aislamiento.}
+      ]
+    </narration>
+
+    <narration action="panic">
+      [
+      {#0 está atrapado en el mundo que ‘Mi Arbol de Naranjo Dulce’ ha mostrado. },
+      {#0 queda cautivado por la etapa de ‘Mi Arbol de Naranjo Dulce’ y comenzó a olvidar la realidad.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="2">
+    <collection>
+      <codeNo openLevel ="0">0-01-04-W</codeNo>
+      <portrait openLevel ="0"></portrait>
+
+      <name openLevel ="1">
+        Mi Arbol de Naranjo Dulce
+      </name>
+      
+      <riskLevel openLevel ="2">
+        WAW
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        Mandarake
+      </specialName>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {La criatura es un grupo de miles, si no cientos de millones de moléculas.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Esta anormalidad tiene una fuerte voluntad de regresar a su lugar original; La criatura causa daño psicológico no intencional debido a su deseo de pureza de un niño. Para especificar este fenómeno, se necesitan más estudios y experimentos, pero se confirma que las moléculas minúsculas tienen la capacidad de lavar el cerebro de los empleados.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Cuando la criatura se acerca al cerebro del sujeto, accede e intenta recrear la memoria infantil más pura. Las innumerables moléculas trabajan para recrear la memoria y, a través de esa experiencia, la criatura intenta volver a su existencia juvenil.}
+      ]
+    </desc>
+
+    <record openLevel="1">
+      [
+      {Extracto de un registro de entrevistas
+      Empleado F2-403: Cuando tenía 5 años, quería volar en aventuras con Peter Pan. En mis sueños, al igual que las historias, Peter Pan me tendía una mano para sostener, una que me llevaría al país de Nunca Jamás. Me había olvidado de todo eso, hasta que entré en esa habitación. Las cosas que describí estaban justo delante de mis ojos. Si nadie hubiera venido a buscarme, me habría quedado en esa habitación, sin siquiera darme cuenta del tiempo que pasaba.
+      ]
+    </record>
+
+    <record openLevel="1">
+      [
+      {Cuento de empleados
+      “Ni siquiera quiero hablar sobre los problemas por los que pasamos para poner a esta criatura en cuarentena. Este no era un tema. Esta criatura estaba hecha de millones de moléculas. Los empleados deberían recordar por mucho tiempo lo horriblemente delicado que era el trabajo.”
+      ]
+    </record>
+
+    <record openLevel="2">
+      ->[
+      {Extracto de un registro de investigación
+      Cuando se enviaba a un empleado a la habitación de dicha criatura, no salía durante 85 minutos, y el empleado estaba libre de la criatura solo cuando se enviaba a otro empleado para liberarlos. Durante una entrevista con el empleado asignado, la anormalídad tiene la capacidad de hacer que cualquier cosa sea real, incluso un sueño, siempre que la memoria sea lo más ‘inocente’ como sea posible. Por el momento, no ha habido víctimas causadas por la criatura, sin embargo, este estado es inestable e impredecible. Teniendo en cuenta sus habilidades, es imposible imaginar lo que la criatura creará y hará realidad. Esa es la razón para su nivel de amenaza clase WAW en la criatura.}
+      ]
+    </record>
+
+    <record openLevel="2">
+      [
+      {Extracto del especialista en anormalídades, material de investigación [Omitido] 
+      “Lo interesante de esta anormalidad es que no muestra ilusiones, actualiza ciertas escenas de nuestra memoria. Si podemos encontrar una manera de usar esta habilidad, podemos hacer que cualquier cosa se haga realidad. Estamos haciendo mucha investigación sobre esta criatura y continuaremos haciéndolo. Pero por qué se trata de la ‘inocencia’? Después de innumerables suposiciones y una cuidadosa investigación, aprendimos que podría definirse como [Redactado].”
+      }
+      ]
+    </record>
+
+
+    <specialTipSize size="0">
+    </specialTipSize>
+  </observe>
+</creature>

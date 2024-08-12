@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100045" >
+
+
+    <narration action="move">
+      #0 designated to $0 containment room.
+    </narration>
+
+    <narration action="start">
+      [
+      {#0's brothers just blink, as if it is the only thing they can do inside the Containment Unit.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {When her brothers show any sign of pain, #0 would approach them, dragging her tired body.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">F-02-70</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/BlackSwan</portrait>
+
+      <name openLevel ="1">
+        Dream of a Black Swan
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <specialName openLevel ="2">
+   
+      </specialName>
+
+      <openText>What happens when the black swan wakes up from the dream of being a white swan?</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Elijah had so much family to provide for.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Her parents were poor and always said their children this: "We have nothing to pass on to you children, but you have the gift of honesty and diligence. These gifts cannot be seen nor would they give you great help right this instant, but someday they will make you all happy."}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {One day, the city was covered by a dense fog.&#13;&#10;The grey fog, first thought to be a natural phenomenon, didn’t dissipate even after a few days.&#10;&#10;Some claimed it was making them feel nauseous or making them retch, but most people didn't think much of it. A lot of people still worked and went about their days in the fog.&#13;&#10;Eliya was one of those people. She inherited lots of debt and was the only one in her family with a job. She had many brothers, but their wills were broken after many failures.&#13;&#10;Elijah was tired but thought that if she just worked a little harder, things would work themselves out just like how her parents used to tell her and in fairy tales.&#13;&#10;Just like that bird who spread its white wings and eventually became the envy of all.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Some people left the city due to the fog.&#13;&#10;Others said the city was done for, but Elijah didn’t listen.&#13;&#10;She sometimes experienced nausea and her body would blister.&#13;&#10;Almost there. Just a little longer and the clothing made of nettle will be ready. If she gives it to her brothers she loves, that warm moment when her family talked happily about the future can be revived for just a brief second.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {One day after work, she collided with someone passing by. Even though it was the stranger who crashed into her while sprinting, this person was unable to get back up. So she offered to help him, extending out her hand.&#13;&#10;But he slapped her hand away and got up, but only managed a few steps before collapsing again. Elijah stopped, because the stranger seemed to be running from something and seemed worried that Elijah would cause harm to him.&#13;&#10;Elijah tried to ask what was wrong, but the stranger opened his mouth first. The simple act of opening his mouth seemed labored so she patiently waited for him to speak.&#13;&#10;However, the stranger did not open his mouth to speak. Instead, he vomited a mixture of blood and green goo.&#13;&#10;The gooey mixture started pouring from first his mouth, then nose, ears, and eyes. If the goo did not start pouring out from all of his orifices, then Elijah might have tried to help him.&#13;&#10;She thought heard a loud roaring off in the distance. She started to slowly walk away from the stranger.&#13;&#10;What happens when the black swan wakes up from the dream of being a white swan?&#13;&#10;Many people were lying down in the smoke. Some shouting, some laughing, some wielding clubs, and some curled up in despair. There was black, wet, and smelly debris all over the place, covered with footprints.&#13;&#10;She started looking for her brothers. Her family who needed to wear the clothing of nettle to become free from the curse. Her loved ones whom she shared happy dreams with.&#13;&#10;She saw her brothers off in the distance.&#13;&#10;Elijah fell to her knees and started to vomit along with everyone else.&#13;&#10;The lake rippled gently. As if a number of swans had just taken flight...}
+      ]
+    </desc>
+
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">When the results from work are Poor, the Qliphoth counter will be reduced and F-02-70-4’s appearance will be changed.</specialTip>
+      <specialTip openLevel="1" key="2">When the results from work are Medium, the Qliphoth counter will be reduced and F-02-70-5’s appearance will be changed.</specialTip>
+      <specialTip openLevel="1" key="3">When 5 or more employees die inside the facility, the Qliphoth counter will be reduced and F-02-70-1’s appearance will be changed. However, it did not recognize the death of employees who were disposed of as execution bullets.</specialTip>
+      <specialTip openLevel="1" key="4">When 5 or more employees inside the facility panic, the Qliphoth counter will be reduced and F-02-70-2’s appearance will be changed.</specialTip>
+      <specialTip openLevel="1" key="5">After 3 confirmed Abnormality escapes, the Qliphoth counter’s will be reduced and $0-3’s appearance change will be confirmed.</specialTip>
+      <specialTip openLevel="1" key="6">&lt;Warning&gt;Forceful reduction of the Qliphoth counter could also change $0.</specialTip>
+    </specialTipSize>
+
+  </observe>
+
+
+
+</creature>

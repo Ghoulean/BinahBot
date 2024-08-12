@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id ="100032">
+
+    <narration action="move">
+      #0 is going into “$0”'s containment unit to begin the task.
+    </narration>
+
+    <narration action="start">
+      [
+      {“$0”一如既往地等待着委托，等待着血的味道。},
+      {“如果你看见那个长毛的杂种，一定要告诉我。等我哪天把那混蛋的脑袋砍下之后，不收你的钱也没问题。”}
+      {实际上，“$0”比员工更有能力镇压异想体。}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {大多数的时间，“$0”都在那里磨她的斧头。},
+      {“$0”想找个能够练习射击的场地，但被员工们坚定地驳回了。}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {当“$0”加入战斗时，你能从那扬起的斗篷下，看到她的皮肤上布满了大大小小的伤疤。},
+      {许多员工都很好奇“$0”的伤疤是从何而来的，可是没人够胆去问她。}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {当她找到那匹狼后，一切都将结束。},
+      {这场斗争已经持续了很长时间，她的愤恨随着时间的流逝一点点加深着。}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">F-01-57</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/RedHood</portrait>
+
+      <name openLevel ="1">
+       小红帽雇佣兵
+      </name>
+      
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>我要把那杂种的脑袋挂在我的床头，&#13;&#10;只有这样我才能安心睡个好觉。</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {“我是个职业佣兵，如果你需要帮助的话，就来委托我吧。要是放在以前，雇佣我的费用会非常高，但在这种情况下，我会给你点儿优惠。不过我可得提个条件：如果你有看到那匹阴险的，该死的狗杂种，千万记得把它留给我。我要把那杂种的脑袋挂在我的床头，只有这样我才能安心睡个好觉。”}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {这个异想体是一位披着红色斗篷的女战士。她的斗篷磨损得很厉害，上面满是缝痕，已经无法辨认被修补过多少次了。有传闻说这件斗篷曾经是白色的，但被鲜血浸透过无数次后才变成了这样的红色。（→后来这个传闻被证实是假的。Michael，把这段去掉！）&#13;&#10;据说在来到这家公司之前，她一直在从事雇佣兵的工作。她四处流浪，居无定所，不信任他人，并且极端好斗。她对自己暴露在外的脸和皮肤感到非常不适，而且相当排斥照镜子。此外，我们从她的行为中也观察到了许多偏执的症状。&#13;&#10;如果收容单元外出现紧急情况，她会表现出“希望出面应对”的强烈意愿。她本人将这一行为称作“委托”。从结果上看，这一行为对公司的管理大有帮助，因此我们鼓励员工根据实际情况积极加以利用。&#13;&#10;※所有部门的员工都必须阅读以下内容！&#13;&#10;如果“F-01-57”遇到“F-02-58”，她会立刻失控。可能的状况有人格的突然改变、歇斯底里或是其他极度危险的心理疾病，这会造成非常严重的连带影响。因此无论如何绝不能让这两个异想体相遇。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="3">
+      [
+      {“我们之间的斗争不会有任何一方胜出，我满脑子想的都是如何更残忍地，更痛苦地撕烂那个狗杂种。在那之后，我既不会喝葡萄酒，也不会吃蛋糕。没错，我不会以任何方式庆祝的。当我习惯每天在花园里磨斧子而不是摘小花时，我才只有15岁。”}
+      ]
+    </desc>
+
+
+    <specialTipSize size="6">
+      <specialTip openLevel="0" key="1">如果有异想体突破收容或是发生了“考验”，您可以委托“$0”去应对。然而，委托需要花费一定的能源作为佣金。</specialTip>
+      <specialTip openLevel="1" key="2">曾对“F-02-58”进行过工作的员工完成了对“$0”的工作后，“$0”的逆卡巴拉计数器会在倒计时结束后减少。</specialTip>
+      <specialTip openLevel="2" key="3">每当有异想体突破收容时，“$0”的逆卡巴拉计数器都会立刻减少。（但“$0”并不会理睬异想体O-02-56的出逃）</specialTip>
+      <specialTip openLevel="2" key="4">当“F-02-58”在“$0”的收容单元附近嚎叫时，“$0”会直接突破收容。</specialTip>
+      <specialTip openLevel="2" key="5">当“$0”与“F-02-58”相遇后，双方会变得更具攻击性。</specialTip>
+      <specialTip openLevel="2" key="6">当“F-02-58”被其他单位镇压后，“$0”会陷入狂暴并开始无差别地攻击身边的目标。</specialTip>
+    </specialTipSize>
+
+   
+
+  </observe>
+</creature>

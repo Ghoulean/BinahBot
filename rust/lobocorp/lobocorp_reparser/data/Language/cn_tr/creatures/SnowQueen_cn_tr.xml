@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+
+  <!-- Attrbute "id " must equal to attribute "id" in CreatureList.xml -->
+  <info id ="100102">
+
+    <!-- $0 : Creature name, #0 : Agent name -->
+    <narration action="move">
+      指派 #0 至 $0 的收容室.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 的收容室正處在冰霜風暴當中.},
+      {$0 的收容室在冰雪寒霜中閃閃發亮.},
+      {如果他無法以冰塊來完成 “永恆” 的話, Kai 將會獲得整個世界.},
+      ]
+    </narration>
+
+    <narration action="special_ability_1">
+      [
+      {Gerda 比任何人都來的要勇敢強大. 她為了被囚禁在冬宮的 Kai 而戰.}
+      ]
+    </narration>
+
+    <narration action="win">
+      [
+      {春天到來玫瑰綻放. Gerda 與 Kai 直返家園, 牽著彼此的雙手.}
+      ]
+    </narration>
+
+    <narration action="lose">
+      [
+      {Gerda 與 Kai 無法擊敗 冰雪女王. 他們成了她的冰雕並永遠離不開收容室了.}
+      ]
+    </narration>
+    
+  
+    <narration action="anotherWork">
+      [
+      {Gerda 在 Kai 被囚禁在冬宮時已避免不了與 冰雪女王 的對決了.}
+      ]
+    </narration>
+
+  </info>
+
+  <!-- Maximum observation level. -->
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">F-01-37</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/SnowQueen</portrait>
+
+      <name openLevel ="1">
+        冰雪女王
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        第三次親吻
+      </specialName>
+
+      <openText>"寒冰正溶.... 我們無法得知是因為春天將要到來, 或是宮殿正在瓦解."</openText>
+    
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {一位住在寒冬冰雪森林的女王. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {就像是每個故事的開頭, Kai 是個有著善良心腸的小孩. 當一個邪惡妖精將鏡子的碎片散落在每個人的心中時, Kai 看到了他不想以及不該看到的東西, 並離開了他居住一生的村莊.&#13;&#10;在一場無情的暴風雪中, Kai 遇見了 冰雪女王. 他想要知道超過他知識所及的世界. 他覺得這一切就像是他不曾明白過得一樣.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {他抵達的冬宮是如此冰冷, 但是 冰雪女王 的吻冰凍了他的心, 並讓他再也感覺不到寒冷. 宮殿之中沒有任何的歡愉, 只有漫長的冬夜持續著.&#13;&#10;Gerda 夠強大以至於不被鏡子劃傷, 且夠勇敢踏上冒險去拯救 Kai.&#13;&#10;路途是多麼痛苦. Gerda 又傷又痛, 且不時落淚.&#13;&#10;但就在最後, Gerda 見到了 Kai. 春天帶著萌發的花朵來了.&#13;&#10;溫暖的春天不留痕跡的溶化了 冰雪女王 的宮殿以及 Kai 心中的鏡子碎片. &#13;&#10;所以, 又將獨自一人, 的 冰雪女王… }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {我們還記得用我們的雙手把她放進冰櫃的時候. 從某天開始, 她快樂的笑容就不見了. 她就只是不停重複著流淚, 乾笑, 流淚, 乾笑… 最後發現她在浴缸裡割腕了, 被她的血給染紅.&#13;&#10;我們不相信死亡. 我用了花了我一輩子去摧毀的那個 “機器” 來重建她, 但這是唯一的方法. 她可能會因為死在浴缸裡而對我感到厭惡. 但是我們已經走了太遠了.&#13;&#10;..&#13;&#10;有一天, “它” 說到.&#13;&#10;“A, 我還記得你. 你的心地非常善良.”&#13;&#10;在那一刻, 我感到一股衝動去摧毀那些我所創造的一切.}
+      ]
+    </desc>
+
+    <specialTipSize size="5">
+      <specialTip openLevel="3" key="kissProb1">當工作結果為普通時, $0 有普通的機率會親吻員工.</specialTip>
+      <specialTip openLevel="3" key="kissProb2">當工作結果為差時, $0 有較高的機率會親吻員工.</specialTip>
+      <specialTip openLevel="2" key="2kiss">員工在獲得第二次的親吻後會忘卻一切並囚禁在 $0 的收容室裡.</specialTip>
+      <specialTip openLevel="3" key="3kiss">要避免致命的第三次親吻, 並拯救被囚禁的員工, 就要開始與 $0 的對決. </specialTip>
+      <specialTip openLevel="3" key="4kiss">只有高度堅韌的人才能安全的拯救那些員工. 讓我們在今天結束前拯救他們吧.</specialTip>
+    </specialTipSize>
+    
+    <!-- Narration when observation level is maximum. -->
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {你還記得她.}
+        {她很容易受凍.}
+        {冰櫃一定非常的冷.}
+        {又凍又冷.}
+        {你想了很多, 看到了她被囚禁在冰裡, 永遠實現不了她的夢想.}
+        {勇敢的 Gerda 直直走向了冬宮…}
+        <!--계속-->
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Saved Kai" target="1" isAnswer="false"/>
+        <node desc="Met 冰雪女王" target="2" isAnswer="true"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {Gerda 拯救了 Kai 並返回家中.}
+        {從此以後, 他們幸福地生活在一起.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {冰雪女王 既冷酷卻美麗.}
+        {你聽見了冰雪融化的聲音.}
+        ]
+      </desc>
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {寒冰正溶....}
+        {我們無法得知是因為春天將要到來, 或是宮殿正在瓦解.}
+        ]
+      </angela>
+    </max>
+    
+  </observe>
+
+
+</creature>

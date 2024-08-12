@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100059">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {$0’s Containment Unit is bright, as if there were an incandescent source of light.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Petals shall fall like screams when everything is over.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {When the beauty is at its peak, the ritual of the end will come.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {All those who look at it in this sunless place feel pure peace.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-04-100</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Sakura</portrait>
+      <name openLevel="1">
+     Grave of Cherry Blossoms
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>The more blood it has, the more beautiful it is.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {A tree that stands in the middle of the Containment Unit. It never withers even if it is not given any form of nutrition.&#13;&#10;Some employees take time to rest near this tree.&#13;&#10;Employees sometimes enter its Containment Unit for leisure.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Pansy: Hey Xavier, did you see that new Abnormality? I think you got put in charge of it.&#13;&#10;Xavier: Yeah, I saw it alright. Just some tree with buds along its branches. I don’t think they’ll be able to blossom without sunlight.&#13;&#10;Pansy: Did you start making observations and writing reports yet?&#13;&#10;Xavier: Nah, I think I’ll get to it soon enough, though.&#13;&#10;Pansy: Alrighty, take care.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Pansy: Heya, long time no see. How’s it going lately?&#13;&#10;Xavier: Yo, get this! Y’know that Abnormality we talked about before? I don’t think it’s hostile. And guess what? It started blooming! It was so surreal looking at them, it felt like spring had come for the first time in this place.&#13;&#10;Pansy: Is that okay? Usually, any sort of change is a bad omen for something catastrophic here.&#13;&#10;Xavier: Don’t worry, it’s just some harmless little flowers. Thanks for worrying about me though!}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Pansy: Bonjour again. How’s work been going for you?&#13;&#10;Xavier: Golly, the flowers just keep blooming. I think it’ll fill up the whole unit at this rate. You should see it for yourself. It’s really beautiful. I don’t think I’d ever get sick of looking at it.&#13;&#10;Pansy: I’d love to, man, but I can’t. I’ve been so busy lately.&#13;&#10;Xavier: Really? Damn, what a shame… It’s absolutely magnificent, I’m telling ya.&#13;&#10;Pansy: Hmm… You doing alright by the way? You’ve been making a lotta mistakes these days… It seems like you’ve been spacing out a ton too.&#13;&#10;Xavier: Don’t worry, it’s nothing. I gotta head back now. Oh, I’ve been making a sketch of the tree, actually. I’ll let you be the first person to see it when I’m done.}
+      ]
+  </desc>
+    <desc id="5" openLevel="4">
+      [
+      {&lt;Audio Recording of Counseling Session&gt;&#13;&#10;
+      ...Yeah, I’ve been better recently. I got better at managing Abnormalities, too. Going to $0’s chamber makes me feel weirdly amazing, like you said. I never believed that mumbo-jumbo about flora giving out a good aura or whatever….&#13;&#10;
+      But I guess it was true. It’s such a shame I can’t see those cherry blossoms with Xavier. I got to see his work in progress sketch when I was rummaging through his stuff one time.&#13;&#10;
+      The actual tree was much more beautiful. It was more magnificent than everything he’d described it as. It’s such a tragedy that he went missing before seeing how it is now. If you find any Abnormality suspicious, please make sure you look into ‘em, alright?&#13;&#10;
+      ...Yep, I’m fine now. I shook off that feeling.&#13;&#10;
+      The cherry blossoms all fell after I saw it that time.&#13;&#10;
+      Yet, I saw buds poking out of the branches again.&#13;&#10;
+      ...Would it be alright if I oversaw the Abnormality from now on?&#13;&#10;
+      No, it’s no big deal. I just wanna see those flowers in full bloom again.&#13;&#10;
+      Yes, thank you.}
+      ]
+    </desc>
+    <desc id="6" openLevel="4">
+      [
+      {&lt;Notice of Advice&gt;&#13;&#10;
+      We’ve received reports about an alarming increase in the number of employees who want to view $0’s containment.&#13;&#10;
+      This fervent rush of requests is likely due to the absence of natural scenery in our facility.&#13;&#10;
+      However, I don’t think there is any need to make a rule against it. We’ve found that our staff’s mental contamination indices decreased when looking at $0.&#13;&#10;
+      The reason behind this is unimportant. It could be “flora giving out a good aura” for all anyone cares.&#13;&#10;
+      The only thing that’s certain is that $0 captivates our employees, and they don’t know what lies beneath its roots.&#13;&#10;
+      Did you realize that the cherry blossoms are strikingly crimson, and its unmatched beauty is caused by its color?&#13;&#10;
+      The more blood it has, the more beautiful it is. Our employees who are oblivious to it are drawn to it again and again…&#13;&#10;
+      Just keep everything hush-hush for now. It’s how things work in this place.}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">When the work result was Good, the Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="1" key="2">When an employee panicked in the Containment Unit, the Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="1" key="3">When the Qliphoth Counter reached 0, a few random employees in the facility began to move towards $0’s unit. (This status was designated as “Captivated”.)</specialTip>
+      <specialTip openLevel="2" key="4">When a captivated employee reached the Containment Unit, they were dragged into the tree.</specialTip>
+      <specialTip openLevel="2" key="5">After continuously attempting to select and converse with #0, who was captivated, they seemingly returned to normal. When all captivated employees returned to normal, the Qliphoth Counter returned to its maximum.</specialTip>
+      <specialTip openLevel="3" key="6">After dragging an employee in, when another employee commenced work with $0, its Qliphoth Counter returned to its maximum. Furthermore, the HP and SP of every employee in the facility was healed.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

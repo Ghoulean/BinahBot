@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100015">
+
+    <narration action="move">
+      指派 #0 至 $0 的收容室.
+    </narration>
+
+    <narration action="start">
+      [
+      {悔悟的員工 #0 進入了房間, 遵循著那神聖的光.}
+      {“汝為何在此猶豫? 我正在這奇蹟之地工作著.”}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 看起來像是個胎兒, 但它似乎看起來並不需要照料. }
+      {當鐘聲敲響了十二次之後, 這座設施將被盲目的光亮給吞噬. 這是他的門徒的救贖之光.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {空氣裡只剩寂靜圍繞在 $0 附近}
+      {$0 將它附近所有的聲音以及光線吸收殆盡.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {$0 來這救贖你並引領新世界的到來.}
+      {$0 來自世界終結的那一日. 並走向新世界的起點.}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {#0, 汝為何表現得如此害怕? 在吾等完成任務前吾將不會離開汝.}
+      {#0, 不要害怕. 吾為汝之救贖者, 吾亦與汝相伴.}
+      {吾等聞見汝的泣聲. 汝的內心與吾同在. #0, 汝呼喚了吾.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="5">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">T-03-46</codeNo>
+      <name openLevel="1">白夜</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/DeathAngel</portrait>
+      <riskLevel openLevel ="2">ALEPH</riskLevel>
+      <specialName openLevel ="3">Rapture</specialName>
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {此異常如同一個新生的胎兒. 不過稱呼他做一個胎兒還是非常奇怪的. 溝通是可能的, 但不是以正常的方式進行. 他說出來的每個字都會在房間裡迴響.  }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {吾的門徒, 吾所祝福的人, 一旦汝跟隨, 並找到了吾, 就遠離了邪惡的道路. 等到時候, 吾就要赦免汝的罪, 下到汝所居住之地.} <!-- 폰트!!! 바꿔야돼!!!!!!!!!!!!!!!!!!!!!!-->
+      ]
+    </desc>
+
+    <desc id="3" openLevel="3">
+      [
+      {在那些與他待過的員工裡, 有 12 個人在房間的周圍為每個設施裡的員工提供救贖. 翅膀從他們的背後伸出, 他們戴著鳥喙面具且背著赦免一切罪惡的十字架.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {遵照吾所授予你們的. 放棄你們的肉體, 並獲得重生.} <!-- 폰트!!! 바꿔야돼!!!!!!!!!!!!!!!!!!!!!!-->
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {他的門徒將重生成傳道者, 並將福音傳給那些需要幫忙的人. 他們…}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="5">
+      [
+      {時間到了. 鐘聲將響起. 新世界將到來. 起身吧, 吾的僕從. 起身並服侍吾. 吾即是死亡與生命. 黑暗與光芒.}
+      ]
+    </desc>
+
+   
+
+    <specialTipSize size="5">
+      <specialTip openLevel="0" key="1">若逆卡巴拉計數器歸零, $0 及它的使徒將會再次降臨.</specialTip>
+      <specialTip openLevel="0" key="2">&lt;注意&gt; $0, 不同於其他的異常, 會定期降低逆卡巴拉計數器. 建議經常造訪 $0 並檢查它的狀態.</specialTip>
+      <specialTip openLevel="1" key="3">當工作結果為良好時, 逆卡巴拉計數器增加了. 此外, 設施內的所有員工體力及精神力都恢復了.</specialTip>
+      <specialTip openLevel="2" key="4">當工作結果為普通時, 逆卡巴拉計數器會以通常的機率增加. 此外, 部屬在 $0 所屬部門的員工體力及精神力都恢復了.</specialTip>
+      <specialTip openLevel="3" key="5">當工作結果為差時, 逆卡巴拉計數器減少了. 此外, 所有在 $0 所屬部門的員工受到了 W 傷害.</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {汝敲了門, 現在它已打開.}
+        {汝帶著重擔, 來此尋找解答.}
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Who are you?" target="1" isAnswer="false" />
+        <node desc="Where have you come from?" target="2" isAnswer="false"/>
+        <node desc="Why have you come?" target="3" isAnswer="false"/>
+      </select>
+<!-- 이 아이는 선택지를 누르면 해당 선택지가 사라진다. 3->2->1 로 줄여지는 식. 세 번의 선택지를 모두 클릭해야 관찰 MAX가 완료된다.-->
+      <desc id="1" select="0">
+        [
+        {這個問題是空洞的, 吾無法回答.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {吾來自終末.}
+        ]
+      </desc>
+
+      <desc id="3" select="0">
+        [
+        {這個問題沒有回答的價值, 它的解答早已非常明顯.}
+        ]
+      </desc>
+
+      <desc id="4" select="0">
+        <!-- 관찰 성공시 나오는 대사, 즉 세번의 선택지를 다 눌러야만 나오는 대사 -->
+        [
+        {吾已經給予你三次的仁慈了, 卻在毫無意義之中結束.}
+        {然而, 汝來此見吾, 而吾當該回應召喚.}
+        {看著吾的眼睛.}
+        ]
+      </desc>
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {他的驕傲蠶食鯨吞著自己.}
+        {有道是, “驕傲從天而降, 在落至地面後持續, 最後在地獄中結束.”}
+        ]
+      </angela>
+    </max>
+  </observe>
+
+  <etc>
+    <!--UI막는 이벤트 때 띄울 대사-->
+    <param key="escape" index="0">
+      不要害怕, 因為吾正與汝相伴. 在吾允許之前汝不能離開.
+    </param>
+    <param key="time" index="1">
+      不要相信時間, 吾將引領汝.
+    </param>
+    <param key="manual0" index="2">
+      不要拒絕吾, 因為吾已在汝眼前.
+    </param>
+    <param key="manual1" index="3">
+      吾的故事已不再這世上, 亦無人知曉.
+    </param>
+  </etc>
+</creature>

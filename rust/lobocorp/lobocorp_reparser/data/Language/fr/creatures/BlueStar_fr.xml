@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id="100058">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {Parfois, certains de nos employés affirment être impatients à l’idée de se jeter dans $0.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Notre $0 est née dans un abysse de désespoir et flotte vers un nouveau départ.}
+      ]
+    </narration>
+  </info>
+  <observe level="3">
+    <collection>
+      <codeNo openLevel="0">O-03-93</codeNo>
+      <portrait openLevel="0">Sprites/Unit/creature/BlueStar</portrait>
+      <name openLevel="1">
+        Étoile Bleue
+      </name>
+      <riskLevel openLevel="1">
+        ALEPH
+      </riskLevel>
+      <openText>
+        Puissions-nous être réunis sous forme d'étoiles.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Annonce urgente à tout le personnel de la corporation : bien que la Lobotomy Corporation encourage toute activité de groupe promouvant la positivité, nous avons récemment reçu des signalements indiquant la planification collective de manigances malsaines. Au vu des allégations persistantes, nous n’avons pas d’autre choix que d’intervenir.&#13;&#10;&#13;&#10;Les règles de la corporation stipulent qu’il est interdit d'idolâtrer et/ou vénérer quelque Anomalie que ce soit. Rien ne doit être “sacré” ici.&#13;&#10;&#13;&#10;Les employés qui essaient d’entrer dans l’Unité de Confinement de certaines Anomalies sans autorisation seront punis, surtout s’ils ne sont pas en charge de ladite Anomalie.&#13;&#10;&#13;&#10;Si vous ressentez l’impulsion de vous jeter dans l’une des Anomalies ici, cela signifie que vous êtes “infectés”. Elle essaie de manipuler et perturber votre cerveau comme le font de nombreuses autres ici. Si cela se produit, veuillez arrêter ce que vous faites et cherchez immédiatement un soutien psychologique. Puisque vous avez tous réussi l’entraînement de base des Intervenants, nous espérons que personne ne sera suffisamment stupide pour être détourné du droit chemin.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Nous avons décidé de révéler publiquement la liste noire. Ceux qui y figurent doivent recevoir 3 jours de traitement psychologique par la corporation et recevront des punitions adaptées par leurs Sephiroth respectifs. Nous partageons cette liste pour démontrer le nombre stupéfiant d’employés infectés autour de vous.&#13;&#10;&#13;&#10;Veuillez prendre en considération qu’appeler Emily une “martyr” sous prétexte qu’elle s’est suicidée après avoir pénétré sans autorisation l’Unité de Confinement d’une certaine Anomalie, sera désormais considéré comme un non-respect des règles de la corporation.&#13;&#10;&#13;&#10;Accessoirement, nous aimerions féliciter l’Intervenant Dylan pour son courage dans le sauvetage de l’Intervenante Sophie qui allait, elle aussi, se jeter dans l'Anomalie.&#13;&#10;&#13;&#10;Si l’un de vos très chers collègues agit de la même façon, veuillez le signaler rapidement au Sephirah en charge de ce dernier.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {&lt;i&gt;Dylan.&#13;&#10;
+     Je ne pense pas que tu nous aies vendu volontairement. Je suis sûr que tu étais juste inquiet pour Sophie. Elle est enfermée maintenant ; j’ai entendu dire qu’elle a tant essayé de s’échapper qu’ils ont fini par l’attacher à son lit pour l’en empêcher.
+      Dis-moi, est-ce mal d’avoir la foi ?
+      Nous sommes tous des pécheurs et notre Étoile Bleue est le seul sanctuaire que nous ayons. Nous y serons purgés de nos péchés.
+      Nous y retournons tous un jour, c’est un instinct. Tu pensais qu’Emily est morte lorsqu’elle s’est jetée dans l’Étoile, mais elle a simplement retrouvé sa place. C’est une martyr. Elle est devenue une étoile éternelle.
+      La naissance d’une étoile est un tout nouveau départ. N'entends-tu pas le son des cuivres éternels ?
+      Lorsque tu te tiens près de l’Étoile, tu peux entendre les chants et encouragements accueillants.
+      Si chaque employé y retourne, il ne restera qu’Étoile Bleue.
+      Puissions-nous être réunis sous forme d'étoiles.&lt;/i&gt;}
+      ]
+    </desc>
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">Les Intervenants de Tempérance 3 ou moins se sont immédiatement jetés dans $0 lorsqu’ils l’ont rencontrée.</specialTip>
+      <specialTip openLevel="1" key="2">Lorsqu’un Intervenant de Prudence 4 ou moins a terminé son travail, le Compteur Qliphoth a diminué.</specialTip>
+      <specialTip openLevel="1" key="3">Lorsqu’un travail a duré plus de 60 secondes, le Compteur Qliphoth a diminué de 1 et l’Intervenant travaillant avec $0 s’y est jeté.</specialTip>
+      <specialTip openLevel="1" key="4">Les Employés de Tempérance 2 ou moins, ou Prudence 3 ou moins, ont automatiquement été aspirés dans l’Anomalie en brèche lorsqu’ils l’ont croisée.</specialTip>
+      <specialTip openLevel="1" key="5">Tant que $0 est hors de son confinement, tous les sons sont remplacés par un effet sonore persistant qui s’accompagne d’un effet visuellement perturbant.</specialTip>
+      <specialTip openLevel="1" key="6">Tant que $0 est hors de son confinement, tous les employés en panique au sein du complexe sont aspirés par l’Anomalie et disparaissent.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

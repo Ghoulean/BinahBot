@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300001">
+    <narration action="move">
+      #0 designated to $0's containment room.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-77</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/DesireHeart</portrait>
+
+      <name openLevel ="1">
+        The Heart of Aspiration
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>Excessive aspiration will result in a frenzy.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      { A heart without an owner. It still beats even after being removed from the body.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {When being borrowed, the heart beats will double, raising HP and Attack Power. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Excessive aspiration will result in a frenzy.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+
+      [
+      {
+      Employees who did not attack anyone or who have returned the heart within 30 seconds performed repeated mindless killings using the enhanced HP.}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Subjects who equip $0 will enjoy an increased HP and Attack Speed.</specialTip>
+      <specialTip openLevel="2" key="2">After being ordered to return $0 without attacking anyone, the wearer loses their mind and will attack anything nearby increasing their violent tendencies.</specialTip>
+      <specialTip openLevel="2" key="3"> If the subject is ordered to return $0 within 30 seconds after being equipped, it will have the same effect as above.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100046">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 appears to form a wet and sleek sphere. It is not unreasonable that it would mistake #0’s brain as a nest.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {If #0’s skin becomes a hideously green shade, it is already too late for them.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-02-74</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/ViscusSnake</portrait>
+      <name openLevel="1">
+        The Naked Nest
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>It can enter your body through any aperture.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {+ If you spot an employee whose face is turning dark green, please report it to the department’s Sephirah immediately. Be advised to verify that the cause of discoloration is not a simple stomachache. When suggested to visit the medical ward, those who have a stomachache would reluctantly agree, but an infected employee would try too hard to act as though nothing is wrong. In this situation, try not to alert the employee that anything is out of the ordinary. When the host becomes agitated, the infection will speed up. If the skin begins to change, that means at least 30% of the host's brain has already been consumed. Any conversation at this point is the Abnormality's attempt to mimic the host's behavior, so don't pay it any mind.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {The Abnormality resides inside the host's brain, and the host will not be able to feel any physical sensation. You can try stabbing the employee with something sharp, feigning it as a mistake, but this is not recommended. As mentioned before, the host should already be around 30% merged with the Abnormality, so conversing will be impossible. }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {! It can enter your body through any aperture.&#13;&#10;! This doesn't mean covering up your orifices will impede its entrance.}
+    ]
+  </desc>
+    <desc id="4" openLevel="3">
+      [
+      {!! But it will help ease your mind to cover up as much as possible when you enter the Containment Unit.&#13;&#10;!!! ‘The Naked Nest's’ final destination is the frontal lobe.&#13;&#10;!!! You will become the serpent's nest, attacking anything in sight.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {!!!! Please understand that we will be forced to fire on sight and burn your corpse should you become a nest.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">An observation has concluded that employees with low HP are more susceptible to $0’s special ability. In particular, taking higher damage during work raises the probability of it occurring. However, getting a Good work result prevented its special ability from occurring.</specialTip>
+      <specialTip openLevel="2" key="2">Some employees suffering from the phenomenon showed the following symptoms over time:&#13;&#10;1. Green skin and a rash on the body.&#13;&#10;2. Drastically reduced movement speed.&#13;&#10;If either of these symptoms is seen on any employee, handle them immediately.</specialTip>
+      <specialTip openLevel="2" key="3">When #0, who was suffering from the mentioned symptoms, was left alone for a certain time, they changed into a form akin to $0. (O-02-74-1)</specialTip>
+      <specialTip openLevel="2" key="4">&lt;Warning&gt; Any employee that has made contact with the infected employee prior to them turning into O-02-74-1 is likely to be infected as well. All employees in the department must be observed for any of the symptoms mentioned prior.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

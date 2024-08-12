@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100019">
+
+    <narration action="move">
+     #0被分配到“$0”的收容单元中
+    </narration>
+
+    <narration action="start">
+      [
+      {“$0”的指挥家正等待着属于它的演出。}
+      {“$0”的指挥家总是缄默不语，它的收容单元中没有半点声响。}
+      {指挥家是点燃生命的魔术师，是呼唤灵魂的萨满。}
+      {来自废墟的最华丽的演出，即将拉开帷幕！}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {“$0”正在为末日的乐章做最后的准备。}
+      {毫无疑问，“$0”是全公司最棒的乐团。}
+      {所有人都会沉浸在“$0”的绝美演奏中。}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {雷鸣般的掌声即是“$0”的存在意义。}
+      {一个指挥家的生命，在听众的掌声中诞生，亦由听众的掌声所终结。}
+      {起身鼓掌是听众们能够给予指挥家和演奏家的最为光荣的礼赞。}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {刚刚完成工作的#0很快就会成为“$0”的忠实听众。}
+      {#0不出差错地完成了对“$0”的工作。}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">T-01-31</codeNo>
+      <name openLevel="1">沉默乐团</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/silentOrchestra</portrait>
+      <riskLevel openLevel ="2">ALEPH</riskLevel>
+      <openText>来自废墟的最华丽的演出，即将拉&#13;&#10;开帷幕！</openText>
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {这是一个热爱艺术，并试图向公司演奏音乐的异想体。&#13;&#10;&lt;一名指挥家的职责并不仅仅是保证乐章的顺利进行，还要使整个乐团维持在最完美的状态。在舞台上，只需短短五分钟就可以看出指挥家的水平高低与好坏。在指挥家打开乐谱的那一瞬间，演奏家们会根据他的神态，举止和风度来评判他是否有资格领导他们。如果没有了指挥家与演奏家之间的协调和统一，那么这场演出就绝不可能向听众们传达音乐的真实内涵。因此，一名优秀的指挥家必须具备高超的指挥能力，一流的领导能力和绝对的说服能力...（省略）&gt;}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {&lt;第一乐章——Adagio&gt;&#13;&#10;乐团开始演奏末日的乐章。}
+      ]
+  </desc>
+
+    <desc id="3" openLevel="3">
+      [
+      {&lt;第二乐章——Sostenuto&gt;&#13;&#10;员工们逐渐丧失记忆，陶醉在乐团的演出之中。悠扬的乐声会唤醒心灵最深处的疯狂，促使员工们对眼前的一切活物发起攻击。&#13;&#10;&#13;&#10;&lt;第三乐章——Accelerando&gt;&#13;&#10;当乐章行进到这一步时，乐团加快了节奏，带领每一个部门走向毁灭。&#13;&#10;&#13;&#10;&lt;第四乐章——Stringendo&gt;&#13;&#10;当所有的演奏家聚集在一起时，乐团将会演奏除它们以外无人能够听闻的天籁之音。}
+      ]
+  </desc>
+
+    <desc id="4" openLevel="4">
+      [
+      {&lt;终章——Con Fuoco, Ma Non Troppo&gt;&#13;&#10;&lt;b&gt;这首乐章将会穿透你的灵魂。&lt;/b&gt;}
+      ]
+    </desc>
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="mood1">当工作结果为优时，“$0”的逆卡巴拉计数器将会在倒计时结束后减少。</specialTip>
+      <specialTip openLevel="1" key="mood2">当工作结果为差时，“$0”的逆卡巴拉计数器将会在倒计时结束后减少。</specialTip>
+      <specialTip openLevel="1" key="escape">突破收容后，“$0”将在该部门的主休息室进行一场演奏，演奏总共分为四个乐章。演奏的影响范围会随着乐章的行进而逐渐扩大，身处影响范围中的员工将持续受到白色伤害。</specialTip>
+      <specialTip openLevel="2" key="movement">“$0”的伤害抗性会随着乐章的行进而改变。第一乐章时，“$0”只会受到蓝色伤害；第二乐章时，“$0”只会受到黑色伤害；第三乐章时，“$0”只会受到白色伤害；第四乐章时，“$0”只会受到红色伤害。当“$0”开始演奏终章之时，将会免疫所有类型的伤害。</specialTip>
+    </specialTipSize>
+
+  </observe>
+
+  <etc>
+    <param key="movement1" index="1">
+      第一乐章 安静而舒缓
+    </param>
+
+    <param key="movement2" index="2">
+      第二乐章 压抑而优雅
+    </param>
+
+    <param key="movement3" index="3">
+      第三乐章 活泼而激烈
+    </param>
+
+    <param key="movement4" index="4">
+      第四乐章 快速而猛烈
+    </param>
+
+    <param key="movement5" index="5">
+      终乐 热情而奔放
+    </param>
+  </etc>
+</creature>

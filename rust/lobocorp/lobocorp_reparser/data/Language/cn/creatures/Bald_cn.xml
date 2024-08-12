@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100034">
+
+
+
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+
+    <narration action="start">
+      [
+      {#0开始把头发当成一种负担。},
+      {#0觉得秃头上的纹身超特么酷！}
+      {#0摘下了自己的假发，因为#0为变秃而自豪。}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {变秃后的你会像布鲁斯·威利斯一样帅气！},
+      {一位秃子干一件小事都能以一当十！}
+      {秃子不用担心掉发阻塞下水道！}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {你还留着那头秀发干嘛？},
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">秃头-真是-太棒啦！</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Bald</portrait>
+
+      <name openLevel ="1">
+        你是个秃子...
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        请保持镇定，然后变秃吧...
+      </specialName>
+
+      <openText>你打开了电推剪...</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {警告：你已经受到了秃秃的精神伤害！&#13;&#10;&#13;&#10;如果这篇文章正由非秃头人士阅读，那么你就有获得闪亮大秃头的特权！倘若你想阻止自己变秃，就必须和这个异想体进行互动。要是你清早醒来发觉枕头上有10缕或更多的头发，那么我建议您再通读这篇报告3遍以上。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {比尔：我昨晚做了一个超~棒的梦！&#13;&#10;XX：什么样的梦？你是...中彩票了？还是怎么了？&#13;&#10;比尔：我梦见大家都变成秃头啦！詹姆斯，你，还有这个设施里的所有人！也许这个设施外面的每一个人都变秃啦！&#13;&#10;XX：额...我觉得...你最近的工作压力是不是太大了？去申请一次心理咨询怎么样？&#13;&#10;那天，员工比尔牺牲在了“歌唱机”的工作进程中。许多员工向他致以了哀悼。事发之后，异想体“秃头-真是-太棒啦!”突然出现在设施之中。我们都非常怀念秃头比尔。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="3">
+      [
+      {一旦某人与这个异想体产生接触，他们就会花上一个多小时的时间谈论及写下“成为一个秃头是多么的赞！”最终，他们都会把自己搞成秃头。假如你是一个秃头，那样就可以节省很多时间，因为你再也不用洗头发啦！如果指派一名秃头员工对这个异想体进行工作，那么它不会产生任何特殊效应。假如你是一个秃头，那样就再也不用担心头发掉光光啦！换句话来说，如果指派一名有头发的员工对这个异想体进行工作，那么他们就会试着剃光自己的头发。秃顶的人能用他们光滑铮亮的大脑门反射光线来闪瞎敌人的狗眼✪ω✪，这不是超赞的吗！这个异想体的存在目的就是让地球上的每一个人都谢顶。假如这个世界上有很多~很多秃头的人，那就再也不需要灯泡啦，因为光线会在他们的头上闪来~闪去，这样你就可以节省很多很多的能源！如果不定期分配有头发的员工对这个异想体进行工作，那么它的情绪状态就会大幅降低。你造吗？中世纪的欧洲贵族全是秃头哦！他们每天都要换假发！}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="4">
+      [
+      {我们在《员工手册》中新增了一些规定：&#13;&#10;如果有人敢他妈了个逼的嘲笑那些秃头的同事，那么这个傻逼将被剥夺使用休息室的权力，并会被强制参与公司的辩论俱乐部“为什么没有秃顶的芭比娃娃？”，美食俱乐部“卡哇伊章鱼君”及环保运动俱乐部“我们担心秃头鹰的数量正在减少！”当这名员工的头发数量少于1根时，这项禁令才会被取消。&#13;&#10;&#13;&#10;顺带悼念一下员工T.H。因为这厮正在我旁边偷偷服用抗秃药！！！看我不把你头发拔个精光！！！}
+    ]
+  </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="memeriBeam">因为您的秀发依旧丝般柔顺，所以您获得了“秃头-真是-太棒啦!”</specialTip>
+      <specialTip openLevel="2" key="memeriOnly">如果不分配员工对“秃头-真是-太棒啦!”进行工作，那么所有员工的头发将会逐渐脱落，并在本月末成为秃头。</specialTip>
+      <specialTip openLevel="3" key="memeriHurryUp">现在动手还不迟！30...29...28...</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {This abnormality is filled with dreams of bald people.}
+        {Are you balding, or already bald?}
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Yes" target="1" isAnswer="true"  message="You're BALD"/>
+        <node desc="No" target="2" isAnswer="false"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {Lobotomy welcomes you.}
+        ]
+      </desc>
+
+      <desc id="2" select="2">
+        [
+        {Then do you wish to be bald?}
+        ]
+      </desc>
+
+      <select id="2">
+        <node desc="Yes" target="3" isAnswer="true" message="You're BALD"/>
+        <node desc="No" target="4" isAnswer="false"/>
+      </select>
+
+      <desc id="3" select="0">
+        [
+        {You turned on your electric hair clipper.}
+        {Lobotomy welcomes you.}
+        ]
+      </desc>
+
+      <desc id="4" select="0">
+        [
+        {Come back after watching 'Quick and Enraged 7' for more than five times. }
+        ]
+      </desc>
+
+
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {Oh, when did you shaved your hair, manager?}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+</creature>

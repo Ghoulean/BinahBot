@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100003">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {Les $0 sont placées sur un coussin rembourré, comme pour être mises en valeur.},
+      {S’il vous arrive de voir à l’intérieur des $0 quelque chose ressemblant à des dents, il est très probable que ce soient vos yeux qui vous jouent des tours.},
+      {Quiconque pose son regard sur les $0 ressentira un besoin irrésistible de les enfiler.},
+      {La fille supplia en pleurant. “Monsieur, pitié, tranchez-moi les pieds…”}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Laissant les $0 sur le coussin usé, #0 commence à travailler.},
+      {Comme si quelqu’un les avait récemment retirées, les $0 sont sur le sol.},
+      {Passant à côté des $0, qui sont parfaitement alignées, #0 continue son travail.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Le cuir rouge émaillé des $0 scintille à la lumière.},
+      {Les bracelets de cheville sur les $0 restent élégants, même s’ils sont usés.},
+      {Comme pour représenter une longue histoire, les talons des $0 sont usés.},
+      {La condition parfaite dans laquelle se trouve le cuir des $0 paraît invraisemblable.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {#0 jette de rapides regards vers les $0 pendant qu’il travaille.},
+      {#0 se contente de surveiller les $0.},
+      {Ayant du mal à se concentrer, #0 arrête de travailler et dirige son regard sur les $0.},
+      {Essayant de résister à l’envie de regarder à nouveau les $0, #0 se tourne vers la direction opposée, tentant de reprendre le travail.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {Les $0 ne sont clairement pas un organisme vivant, mais elles émettent une aura lugubre.},
+      {Les $0 ne sont peut-être pas une créature qui respire, mais l’aura unique qu’elles dégagent rappelle un passé sanglant à ceux qui sont proches.},
+      {La couleur sanguine des $0 semble étrangement familière.},
+      {Les $0 sont immobiles.}
+      ]
+    </narration>
+    <narration action="special_ability1">
+      [
+      {#0 ignore les ordres et fixe les $0. Il tend maintenant la main pour attraper les chaussures.}
+      ]
+    </narration>
+    <narration action="special_ability2">
+      [
+      {#0 retire ses chaussures et commence à enfiler les $0.}
+      ]
+    </narration>
+    <narration action="special_ability3">
+      [
+      {Les yeux de #0 semblent différents. Ses pupilles sont dilatées et son regard est vague.}
+      ]
+    </narration>
+    <narration action="special_ability4">
+      [
+      {#0 est satisfait de porter les $0 et savoure le bruit des talons claquant sur le sol.}
+      ]
+    </narration>
+    <narration action="dead">
+      [
+      {#0 erre dans le couloir, une hache à la main.},
+      {#0 utilise son arme contre #1, qui essaye de l’arrêter.},
+      {#1 est frappé à la tête par l’arme de #0 et meurt d’une hémorragie cérébrale.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-04-08</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/RedShoes</portrait>
+      <name openLevel="1">
+        Chaussures Rouges
+      </name>
+      <riskLevel openLevel="2">
+        HE
+      </riskLevel>
+      <openText>La fille supplia en pleurant. “Monsieur, pitié, tranchez-moi les pieds…”</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Une paire d’élégantes chaussures rouges féminines. Son style est dépassé, mais nul ne sait ni où ni comment elle a été créée.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Elles submergent l’esprit avec le besoin de les enfiler. Les changements provoqués en portant l’Anomalie sont tout d’abord visibles <i>via</i> les yeux du porteur.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Le changement observable suivant est le refus de retirer les chaussures. Il agira également en accord avec n’importe quels désirs qu’il a inconsciemment réprimé. Si quelqu’un essaye de l’entraver dans la satisfaction de ceux-ci ou cherche à lui retirer les chaussures, ces dernières contrôleront leur hôte, menant parfois au meurtre.}
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {Il est indéterminé si la volonté de l’hôte est impliquée dans cet acte, mais en prenant en considération l’augmentation majeure des désirs et de l'agressivité, les besoins primaires de l’hôte semblent rester intacts.}
+      ]
+    </desc>
+    <desc id="5" openLevel="1">
+      [
+      {&lt;Extrait d’une Séance de Thérapie&gt;&#13;&#10;
+      “&lt;Expurgé&gt; était une bonne personne. Enfin, c’était aussi une sorte de célébrité. Il nous disait toujours que notre travail est quelque chose dont nous devons être fiers. Il savait comment s’occuper de n’importe quel type d’Anomalie. Mais ce fut notre plus grande erreur de le laisser entrer dans cette Unité de Confinement. Parmi tout ce qui existe, nous n’avions jamais pensé qu’une paire de chaussures nous ferait du mal. À un moment, &lt;Expurgé&gt; portait les chaussures en souriant à pleines dents. C’était euh… c’était assez étrange. Ce n’était pas un sourire. C’était… (Omis). Il y avait du sang partout. Le claquement des chaussures résonnait dans le couloir. J’ai fermé les yeux et fait le mort. J’ai vu la tête d’un de mes collègues rouler sur le sol. Les chaussures se sont arrêtées juste devant moi et sont restées immobiles pendant un long moment. Elles ont fini par s’en aller au loin, et c’est à ce moment que je me suis évanoui. (Omis) J’ai entendu dire qu’ils ne pouvaient pas lui retirer les chaussures et qu’ils ont dû lui couper les jambes. Plus personne n’a revu &lt;Expurgé&gt; depuis ce jour, mais ceux qui sont là depuis assez longtemps se rappellent encore de l’incident.”}
+      ]
+    </desc>
+    <desc id="6" openLevel="2">
+      [
+      {&lt;Images de la Caméra du Couloir Z3_493&gt;&#13;&#10;
+      &lt;Expurgé 1&gt; : Du coup, tu as fini ton travail de ton côté hein ? Je viens de finir le mien. Cette petite fille à l’allumette est toujours pareille. C’est tellement frustrant. Ça te dit de prendre un café dans le salon ?
+      &lt;Expurgé 2&gt; : Tu sais, &lt;Expurgé 1&gt;, il y a quelque chose que je me dis depuis très longtemps.
+      &lt;Expurgé 1&gt; : Parlons une fois arrivés au salon. Je suis juste trop fatigué là. Hé, tu portes des chaussures ? Seules les chaussures du personnel sont autorisées pendant le travail.
+      &lt;Expurgé 2&gt; : Ce n’est pas important, &lt;Expurgé 1&gt;. Ce qui est important, c’est qu’à cet instant, nous ne sommes rien que tous les deux.
+      &lt;Expurgé 1&gt; : De quoi est-ce-que tu parles… Attends, qu’est-ce que tu portes exactement ? T-Tu ne les a pas mises, n’est-ce pas ?
+      &lt;Expurgé 2&gt; : &lt;Expurgé 1&gt;, je t’aime depuis si longtemps.
+      &lt;Expurgé 1&gt; : Retire-les, maintenant. Est-ce que tu te rends compte de ce que t’es en train de faire ?
+      &lt;Expurgé 2&gt; : Je me demande pourquoi tu ne m’aimes pas en retour. C’est à cause d’Emily, n’est-ce pas ? Tu étais tellement occupé à regarder Emily que tu ne m’as même pas remarquée, n’est-ce pas ?
+      &lt;Expurgé 1&gt; : E… Es-Est-ce que tu tiens une hache ? Et tu saignes des chevilles. &lt;Expurgé 2&gt;, je t’en supplie, retire-les s’il te plaît.
+      &lt;Expurgé 2&gt; : Donc tout ce que j’ai à faire, c’est de me débarrasser d’Emily ! Attends ici un instant, je ne serai pas longue. Tu ne dois pas bouger d’ici avant mon retour.
+      &lt;Expurgé 1&gt; : Pitié, reviens à toi. Pitié…
+      &lt;Expurgé 2&gt; : Si tu voulais m’arrêter, tu aurais dû le faire le jour où nous nous sommes rencontrés.&#13;&#10;&#13;&#10;&lt;Expurgé 2&gt; assomma &lt;Expurgé 1&gt; avec son arme et se dirigea vers le salon. Heureusement, aucun autre employé que &lt;Expurgé 1&gt; n’a été blessé, incluant Emily. &lt;Expurgé 2&gt; fut rapidement supprimée de la base de données de la corporation. Elle était parfaitement consciente de ce qu’elle faisait. Elle a admis que les chaussures n’avaient fait que l’encourager à faire ce qu’elle avait toujours désiré. Une équipe d’intervention s’est chargée de la répression de &lt;Expurgé 2&gt;. Après cela, les Chaussures Rouges se sont enfuies, arrachant au passage les chevilles de &lt;Expurgé 2&gt; Il aura fallu un total de 23 minutes pour qu’elles soient réprimées, enfermées et renvoyées dans leur Unité de Confinement. &lt;Expurgé 2&gt; est morte de perte excessive de sang. &lt;Expurgé 1&gt; n’a subi que de légères blessures, mais a choisi de démissionner suite à un trop grand trauma psychologique.}
+      ]
+  </desc>
+    <desc id="7" openLevel="3">
+      [
+      {&lt;Extrait d’un Journal de Recherche&gt;&#13;&#10;
+      &lt;i&gt;Nous avons reçu un rapport disant que &lt;Expurgé&gt; a été séduite par les chaussures et a erré dans les couloirs. Nous avons immédiatement ordonné à l’employé F3054 de la réprimer. Elle était une employée vétérane avec beaucoup d’expérience en répression, alors nous nous attendions à la voir réprimer une employée sans le moindre souci. Mais elle n’est pas revenue, et lorsque d’autres l’ont trouvé, l’employée F4002 était évanouie avec les chevilles arrachées, tandis que l’employée F3054 essayait frénétiquement de retirer les chaussures des pieds sectionnés.&lt;/i&gt;}
+      ]
+  </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="careful">Les employés avec une Tempérance de niveau 2 ou moins ne devraient pas travailler avec les $0, car à l’intérieur de leur Unité de Confinement, #0 est devenu fou. Les $0 se souviennent de leur précédent propriétaire.</specialTip>
+      <specialTip openLevel="2" key="Attract1">Lorsque le résultat du travail est Normal, le Compteur Qliphoth a une probabilité normale de diminuer.</specialTip>
+      <specialTip openLevel="2" key="Attract2">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth a une probabilité élevée de diminuer.</specialTip>
+      <specialTip openLevel="2" key="badAttract">Lorsque le Compteur Qliphoth atteint 0, un employé à basse Tempérance, #0, est entré en transe dans l’Unité de Confinement. Ce phénomène a été nommé “Séduction”.</specialTip>
+      <specialTip openLevel="3" key="clickClick">Après avoir tenté à répétition de sélectionner et converser avec #0, qui était séduit, il semble être revenu à la normale.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

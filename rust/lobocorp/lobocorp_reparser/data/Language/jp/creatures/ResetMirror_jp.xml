@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300007">
+
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+
+   
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-81</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ResetMirror</portrait>
+
+      <name openLevel ="1">
+        調整の鏡
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+
+      <openText>
+        「満足は一時的なものだろうに」
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {それは姿見のように見えますが、 実際には何も映していません。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {それが映すのは人だけです。 鏡の中で自分自身に向き合うと、 被験者は変化します。 平行世界の可能性の1つや、 魔法の力だと、多くの推測がありますが 確認する術がありません。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {鏡に面した人物は 外見は同じように見えるかもしれませんが、 中身はまったく異なる人物になります。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      <!-- 여기 번역 고치기 -->
+      [
+      {鏡を2回以上見ると、 被験者の人間性は取り除かれ、 歩く死体のように変わってしまいます。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {「おい、ブライアンが応答しない。何が起きた？」&#13;&#10;「ああ、彼は鏡を見たんだ」&#13;&#10;「あいつはいつも、もっと強くなりたいと言ってたが、&#13;&#10;ついに願いを叶えたんだろう」&#13;&#10;「満足は一時的なものだろうに」}
+      ]
+    </desc> 
+
+  
+
+     <specialTipSize size="2">
+      <specialTip openLevel="1" key="1">$0に対面した対象は全く新しい能力値を得る。</specialTip>
+      <specialTip openLevel="2" key="2">職員が1日1回を越えて$0に対面した場合、 対面するたびにすべての能力値が下げられる。</specialTip>
+      </specialTipSize>
+
+   
+
+  </observe>
+</creature>

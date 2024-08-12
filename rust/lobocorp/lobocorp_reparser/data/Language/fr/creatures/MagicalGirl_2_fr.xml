@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    5.28
+  -->
+  <info id="100039">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {Lorsque $0 prend la forme d’un œuf, vous pouvez discerner une fille souriante à l’intérieur.},
+      {Certains de nos employés pensent que $0 est emprisonnée dans cette chose qui ressemble à un œuf, mais en réalité, elle s'y est scellée d’elle-même.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Le magnifique motif ambré sur $0 fascine parfois nos employés.},
+      {$0 est d’une couleur or brillante et luisante.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 dévore désormais le monde qu’elle a sûrement aimé autrefois.},
+      {$0 avait autrefois des yeux aussi rouges que le soleil couchant, mais la cupidité a tout consumé, n’en laissant plus rien.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 s'est résignée à la faim et a commencé à se dévorer.},
+      {Le jour où $0 sera rassasiée marquera la fin de tout.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-01-64</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/MagicalGirl_2</portrait>
+      <name openLevel="1">
+        Magical Girl
+      </name>
+      <name openLevel="3">
+        Le Roi de l'Avidité
+      </name>
+      <riskLevel openLevel="2">
+        WAW
+      </riskLevel>
+      <openText>
+        “… La tristesse dit : Passe et finis ! Mais toute avarice veut l’éternité – veut la profonde éternité !”
+      </openText>
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {“Le premier désir de l’humanité a commencé avec la morsure d'une pomme sucrée.&#13;&#10;Nous avons été bannis d’Eden pour ce péché.&#13;&#10;Et maintenant, nous sommes à l'intérieur d'un vaste verger.&#13;&#10;Mon panier est si grand, tous les fruits du monde ne pourraient le remplir.&#13;&#10;Mais, est-ce si mauvais de désirer du miel quand il y a des fleurs ?&#13;&#10;Après tout, nous sommes nés pour rechercher le bonheur.”}
+      ]
+    </desc>
+    <desc id="2" openLevel="2">
+      [
+      {Le bonheur est devenu une obsession, l'obsession est devenue avidité, et l'avidité s'est à jamais solidifiée pour former une ambre dorée. Le bonheur initial, qui garde toujours le sourire, réside à l'intérieur.&#13;&#10;&#13;&#10;La première graine de désir est née de la pure aspiration au bonheur. La minuscule graine devint de plus en plus grosse, cherchant toujours plus. Avec le temps, la graine a durci et s'est transformée en un morceau de pierre précieuse brillante. Attiré par son éclat, un poisson vorace l'a avalée. Mais cela n'a fait que rendre le poisson encore plus affamé.&#13;&#10;&#13;&#10;Les désirs des gens restent généralement insatisfaits. De nombreux désirs sont abandonnés, mais ils ne disparaissent pas complètement. Ils se cachent au plus profond de l'inconscient, tapis au fond du lac, prêts à ressurgir à tout moment.&#13;&#10;&#13;&#10;Cependant, la quête du bonheur peut aussi se manifester de temps en temps, en dardant sa langue comme un serpent.&#13;&#10;&#13;&#10;Dès qu'un minuscule morceau d'appât tombera dans la rivière, le poisson affamé remontera et le happera en un instant. Nous nous imaginons être des êtres hautement rationnels qui contrôlent totalement ces choses, mais c'est une croyance tellement absurde qu'elle en est risible. Nous n'avons pas autant de contrôle sur nous-mêmes que nous le croyons.&#13;&#10;&#13;&#10;La magical girl, qui n’en n'était plus une, a mangé beaucoup de choses.&#13;&#10;&#13;&#10;Autorité, argent, célébrité et bien d'autres formes de plaisir. Elle a fini par dévorer tout ce qui se trouvait sous ses yeux. Maintenant, il ne reste plus que la cupidité viscérale.}
+      ]
+    </desc>
+    <desc id="3" openLevel="3">
+      [
+      {&lt;Journal de Quelqu’un&gt;&#13;&#10;
+      Beaucoup ont secrètement souhaité l’arrivée d’un héros.&#13;&#10;
+      On dit qu’il y avait autrefois une “thérapie de l’âme”. Qu’est-ce-que cela fait d’avoir une âme malade ? Nous sommes tous en bonne santé. Mais peut-être que tout cela n’est qu’une tragique illusion.&#13;&#10;
+      Autrefois, il y avait des gens qui essayaient de changer le monde. Nous nous souvenons tous d'eux. Nous nous rappelons comment ils ont fait face à leur chute. Les désirs, je connais des désirs qui ruinent tout.&#13;&#10;
+      Nous ne croyons plus en quoi que ce soit, pas plus que nous ne nourrissons l’espoir d’un miracle. &#13;&#10;
+      Nous ne réfléchissons plus vraiment à la raison pour laquelle ils ont changé. Et nous ne les blâmons pas. Car nous avons réalisé qu’un désir inépuisable entraîne le désespoir.&#13;&#10;
+      Je ressens parfois une terrible déception, mais je ne sais pas d'où vient la douleur.&#13;&#10;
+      … Beaucoup ont secrètement souhaité l’arrivée d’un héros.}
+    ]
+  </desc>
+    <desc id="4" openLevel="4">
+      [
+      {“Profonde est la douleur du monde. L'avidité – plus profonde que l’affliction . … La tristesse dit : Passe et finis ! Mais toute avarice veut l’éternité – veut la profonde éternité !”}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="monster">Lorsque le résultat du travail est Normal, le Compteur Qliphoth a une probabilité moyenne de diminuer.</specialTip>
+      <specialTip openLevel="1" key="monster2">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth a une probabilité élevée de diminuer.</specialTip>
+      <specialTip openLevel="2" key="swallow">$0 se contente d’engloutir tout ce qui se trouve sur son chemin lorsqu'elle s'échappe. Lorsque vous la réprimez, faites attention à la direction dans laquelle l'Anomalie se dirige.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300006">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-82</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Shelter</portrait>
+      <name openLevel="1">
+        Shelter from the 27th of March
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <openText>
+        It literally makes itself into “the safest place on Earth.”
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {A bomb shelter that completely protects its interior from all hazardous influences of the outside world, including light.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {The shelter still retains the memory of that day.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Company P wished to construct the safest place on Earth. As such, the interior of this shelter houses a large number of non-perishable goods, which would allow anyone who stayed inside to survive for an extremely long period of time.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      <!-- Translation has been fixed here ;) -->
+      [
+      {Thanks to this shelter, the selected refugees were safely shielded from the ocean of endless screams and bloodshed.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {However, this shelter, while perfectly safe on the inside, alters the reality of the outside to be even more hopeless. It literally makes itself into “the safest place on Earth.”}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Any subject who enters $0 will be immune to all forms of damage. (However, this does not apply to damage caused by O-09-91). Furthermore, the subject’s HP and SP will slowly recover starting the moment they enter $0.</specialTip>
+      <specialTip openLevel="2" key="2">If a subject enters $0 while being pursued by a hostile entity, the subject will become undetectable to the pursuer.</specialTip>
+      <specialTip openLevel="3" key="3">If any subject remains inside $0 for more than 30 seconds, the Qliphoth Counter of a randomly chosen Abnormality currently contained in the facility will fall to 0. Such a phenomenon will repeatedly occur to all Containment Units until the subject exits $0.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

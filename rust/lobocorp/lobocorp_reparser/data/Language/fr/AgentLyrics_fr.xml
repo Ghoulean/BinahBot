@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!-- 
+  대화의 상황 ex) 시작 시 인사, 잡담, 정보 등 마다 노드를 만들거에요
+  <normal type="1" id="1" desc="안녕하세요 관리자님"/> ->일상
+    ->type : 관리자 하루 시작할 때 같은 것들
+      id   : 걍 다른 숫자면 됨 증가하는 값으로 처리해버리세요
+      desc : 대화 내용
+  
+  <danger type="4" id="1" desc="일하기 싫당"/> ->혼파망
+  
+  
+  -->
+  <!--
+  <normal>
+    <type num="1">
+      <item id="1" desc=""/>
+      <item id="2" desc=""/>
+      <item id="3" desc=""/>
+    </type>
+    
+    <type num="2">
+      <item id="" desc=""/>
+    </type>    
+  </normal>
+
+  <danger>
+    <type num="1">
+      <item id="1" desc=""/>
+    </type>
+    
+    <type num="2">
+
+
+    </type>
+  </danger>-->
+  <!-- 
+chat type 1 : Day 1때 나오는 랜덤 대사>
+type 2 : Day 2부터 계급 없을 때 까지지
+type 3 : 떡밥 있는 대화. type 2와 같이 등장하되, 랜덤 빈도수는 더 적다
+type 4 : 직원들에게 대화 
+type 5 : 멘탈 안 좋은 직원들
+type 6 : 계급 올라간 직원들
+type 7 : 환상체 탈출했을 때 직원 멘붕
+type 8 : 동료가 직웠을 때 슬퍼하는 직원들-->
+
+  <!-- BEGIN dummy code. This code is old version. Do not tranlate "grade" tag. See AgentNewLyrics_xx.xml-->
+  <grade level="1">
+    <type num="1">
+      <item id="1" desc="J'ai entendu dire que le nouvel administrateur arrive aujourd'hui."/>
+      <item id="2" desc="Le nouvel administrateur doit être un abruti, c'est sûr."/>
+      <item id="3" desc="La dernière chose que je veuille faire c'est travailler. J'aimerais devenir un administrateur et superviser les employés."/>
+      <item id="4" desc="Hey, t'es au courant que le nouvel administrateur est arrivé ?"/>
+      <item id="5" desc="Je m'en fiche si le nouvel administrateur vient ou pas. Je veux juste une augmentation."/>
+      <item id="6" desc="C'est combien le salaire d'un administrateur ? Probablement plus que ce qu'on nous paie."/>
+      <item id="7" desc="Je veux que l'administrateur sache à quel point on se tue à la tâche."/>
+      <item id="8" desc="Les administrateurs, c'est pas eux qui restent assis à appuyer sur des boutons ? Ils devraient pas prendre plus soin des salariés?"/>
+      <item id="9" desc="J'aurais dû étudier et devenir un administrateur."/>
+      <item id="10" desc="Je veux voir le nouvel administrateur."/>
+      <item id="11" desc="Il n’y a pas de soirée de bienvenue prévue pour le nouvel administrateur ?"/>
+      <item id="12" desc="On va boire après le travail pour accueillir le nouvel administrateur ?"/>
+      <item id="13" desc="Pas de bizutage pour le nouvel administrateur ?"/>
+    </type>
+
+    <type num="2">
+      <item id="1" desc="Hey, ça te dit de boire après le boulot ?"/>
+      <item id="2" desc="Quel genre de travail stupide me fait faire ce nouvel administrateur."/>
+      <item id="3" desc="J'ai failli y passer aujourd'hui."/>
+      <item id="4" desc="Écrire l'encyclopédie est vraiment emmerdant. Personne ne remarquera si je le fais ou pas, hein ?"/>
+      <item id="5" desc="Les relations au travail ne sont pas recommandées, c'est ça…"/>
+      <item id="6" desc="Vu que le salaire est élevé, notre corporation n’est pas si mal… Excepté le fait qu'elle soit dangereuse, suspicieuse et exigeante."/>
+      <item id="7" desc="La salle de repos est trop petite. Je ne suis même pas sûr de si l’on est supposé s'y reposer ou non."/>
+      <item id="8" desc="Tu as entendu parler de l'employé de l'équipe de préparation d'urgence ? Celui qui a une jambe amputée ?"/>
+      <item id="9" desc="Faire ce job stupide et ennuyeux alors qu'il fait un temps parfait…"/>
+      <item id="10" desc="Je pourrais définitivement démissionner mais j'ai quatre bouches à nourrir."/>
+      <item id="11" desc="C'est vrai que l'administrateur est la seule personne utilisant un ascenseur à une place ?"/>
+      <item id="12" desc="Je suppose que l'administrateur n'est pas si mauvais, vu que la corporation semble fonctionner."/>
+      <item id="13" desc="La production d'énergie a augmenté. Mais pas nos salaires."/>
+      <item id="14" desc="Une opportunité de promotion pourrait venir si je travaille dur."/>
+      <item id="15" desc="La nourriture de la cafétéria est plutôt décente."/>
+      <item id="16" desc="Je suis trop stressé ces derniers jours."/>
+      <item id="17" desc="Ma mère ne sait pas exactement pour quel genre de compagnie je travaille."/>
+      <item id="18" desc="Les secteurs de commande et d'observation n'ont pas grand chose à faire, hein ?"/>
+      <item id="19" desc="D'un coup, je veux des hamburgers."/>
+      <item id="20" desc="Juste pour 10 minutes de retard, j'ai été engueulé par ma patronne. Elle était en retard de 20 minutes avant-hier."/>
+      <item id="21" desc="Le nouvel employé dans notre secteur est totalement indiscipliné. On doit lui dire nous-mêmes d'aller préparer le café !"/>
+      <item id="22" desc="Je ne veux pas travailler au secteur de gestion matérielle. J'ai entendu dire qu'on nous y bottait le cul."/>
+      <item id="23" desc="Mon superviseur avait l'habitude de dire que je m'en sortirai bien dans la vie si je suivais juste les instructions du manuel."/>
+      <item id="24" desc="Au moins, notre salle de repos est assez décente."/>
+      <item id="25" desc="Mais est-ce que ces Anomalies sont vraiment sûres ? Elles ont pas l'air sûres pour moi."/>
+      <item id="26" desc="Les Anomalies n'ont pas besoin d'avoir l'air vicieuses pour être dangereuses."/>
+      <item id="27" desc="Les gens ordinaires ne sont pas au courant de l'existence des Anomalies. Si l'information fuitait, tous les chefs de secteur se feraient décapiter."/>
+      <item id="28" desc="Il ne doit rien y avoir de plus ennuyeux que de rédiger une entrée d'encyclopédie."/>
+      <item id="29" desc="Même un employé qui travaille depuis le début ne serait pas capable de cacher la tension dans l'air."/>
+      <item id="30" desc="J'ai un truc coincé entre les dents… Sûrement le sandwich au poulet de ce midi."/>
+      <item id="31" desc="Demain, je fais un régime."/>
+      <item id="32" desc="Je me suis verni les ongles. T'en penses quoi ?"/>
+      <item id="33" desc="J'ai une de ces gueules de bois. J'ai trop bu hier soir !"/>
+      <item id="34" desc="Je veux pas aller travailler."/>
+      <item id="35" desc="Encore combien d'heures à faire avant que je puisse quitter le bureau ?"/>
+      <item id="36" desc="Je peux faire une petite sieste de 10 minutes dans la salle de repos ?"/>
+      <item id="37" desc="Pour l'instant, j'ai bu plus de 5 tasses de café."/>
+      <item id="38" desc="Apparemment, il y avait un truc pas normal avec le bacon que j'ai mangé tout à l'heure. J'ai passé une grande partie de la journée aux toilettes."/>
+      <item id="39" desc="Il y a une étagère remplie de toutes sortes de bières dans la salle de l'administrateur."/>
+      <item id="40" desc="J'ai l'impression que mes cheveux sont en train de tomber. J'espère que c'est juste une impression."/>
+    </type>
+
+    <type num="3">
+      <item id="1" desc="Tu ne devrais pas faire trop confiance à cette corporation."/>
+      <item id="2" desc="Les Anomalies existent depuis longtemps, mais ça ne fait pas si longtemps qu'elles sont enfermées."/>
+      <item id="3" desc="Il m'est arrivé de rêver de quelque chose de différent. Tu sais, nous voulons tous devenir quelque chose de mieux, de meilleur."/>
+      <item id="4" desc="C'est dur et fatiguant… C'est la vie."/>
+      <item id="5" desc="Nous ne pouvons rien faire. Il est trop tard pour changer."/>
+      <item id="6" desc="Parfois, j'aimerais pouvoir revenir à l'époque où j'étais plus jeune. Ce n'est que de la fantaisie, hélas."/>
+      <item id="7" desc="J'ai pensé une fois que je deviendrais quelqu'un de meilleur."/>
+      <item id="8" desc="Combien pourront dire fièrement qu'ils ont vécu une vie satisfaisante ?"/>
+      <item id="9" desc="Le travail n'est pas si différent d'un tapis de course. J'avais de la passion quand j'ai commencé à travailler."/>
+      <item id="10" desc="Qui penserait qu'une Anomalie est horrible ? Après une longue observation, n'importe qui peut savoir qu'elles le sont."/>
+      <item id="11" desc="J'ai voulu devenir un administrateur une fois, mais plus maintenant. Maintenant, je ressens de la sympathie."/>
+      <item id="12" desc="Tu n'obtiendras pas grand chose à parler à l’engrenage d'un mécanisme."/>
+    </type>
+
+    <type num="4" level="2">
+      <item id="1" desc="Bonjour administrateur !"/>
+      <item id="2" desc="Comment ça va, administrateur ?"/>
+      <item id="3" desc="Vous voulez une tasse de café, administrateur ?"/>
+      <item id="4" desc="Bonjour administrateur. On s'amuse au travail comme d'habitude, hahaha."/>
+      <item id="5" desc="Juste au cas où vous vous méprenez… La personne que j'ai appelée ‘Sac à merde’ n'a rien à voir avec vous, administrateur."/>
+      <item id="6" desc="Notre salle de repos a un nouveau café avec une bonne odeur. Vous êtes toujours le bienvenu, administrateur."/>
+      <item id="7" desc="Administrateur ! Bonjour !"/>
+      <item id="8" desc="Vous voulez nous rejoindre pour notre soirée rencontre après le travail, administrateur ?"/>
+      <item id="9" desc="Bonjour administrateur, est-ce-que c'est vrai qu'il y a une Anomalie mangeuse d'hommes ?"/>
+      <item id="10" desc="Voulez-vous une tasse de café, administrateur ?"/>
+      <item id="11" desc="Je parlais justement de vous aux nouveaux employés, d'à quel point vous êtes bon et intelligent."/>
+      <item id="12" desc="Ce que j'insulte en marmonnant n'a rien à voir avec vous, administrateur."/>
+      <item id="13" desc="Vous voulez m'exclure des tâches dangereuses, administrateur ?"/>
+      <item id="14" desc="Oh, vous êtes le nouvel administrateur ! J'ai beaucoup entendu parler de vous."/>
+      <item id="15" desc="Il n'y a que des compliments sur vous, administrateur."/>
+      <item id="16" desc="Administrateur, pouvez-vous éviter le travail de ‘Rien’ s'il vous plaît ?"/>
+      <item id="17" desc="Est-ce vrai que votre bureau est rempli de rafraîchissements et de boissons ?"/>
+      <item id="18" desc="Bonjour, administrateur ! Invitez-moi dans votre bureau un de ces jours."/>
+      <item id="19" desc="Administrateur, pensez-vous à améliorer le bien-être des employés ?"/>
+      <item id="20" desc="Et si vous installiez une machine à bière en salle de repos ? Je parie que le moral des employés va grimper en flèche !"/>
+      <item id="21" desc="Pouvez-vous réfléchir à changer le menu de la cafétéria pour en faire un buffet complet ?"/>
+      <item id="22" desc="Prenez une tasse de café glacé, administrateur. Je vais vous en faire une."/>
+      <item id="23" desc="Administrateur, j'étais pas là hier car j'ai eu un problème d'estomac en mangeant du saumon."/>
+      <item id="24" desc="Vous seriez prêt à considérer ma demande de démission si je m'absente un total de 3 fois ou plus ?"/>
+      <item id="25" desc="On ne le dit pas souvent, mais on vous admire tous, administrateur !"/>
+      <item id="26" desc="Que dites-vous d'une boisson après le travail, administrateur ?"/>
+      <item id="27" desc="Administrateur, est-ce que ‘Magical Girl’ est aussi dangereuse qu'on le dit ? Je commence à peine à travailler et ne l'ai pas encore vue."/>
+      <item id="28" desc="Administrateur, j'ai été mordu par une Anomalie il y a quelques jours, et mon doigt me fait encore mal. Est-ce que ça compte comme un accident de travail ?"/>
+      <item id="29" desc="N'attrapez pas froid, administrateur !"/>
+    </type>
+
+
+    <type num="6">
+      <item id="1" desc="Les anciens employés comme moi en savent beaucoup sur cette corporation. Même des choses que vous ne pouvez pas savoir."/>
+      <item id="2" desc="Certains d'entre nous ont commencé à travailler bien avant que vous ne commenciez à pouvoir travailler. Ne croyez pas tout ce que vous voyez."/>
+      <item id="3" desc="Connaissez-vous Angela ? Il s’agit d’une voix qui existe depuis la fondation de la corporation. La Lobotomy dit qu'elle a été enregistrée à l'avance, mais imaginez si ce n’était pas le cas ?"/>
+      <item id="4" desc="En excluant le fait que vous êtes un administrateur et moi un employé, nous sommes fondamentalement identiques. Les mêmes avec notre obligation à gérer des Anomalies et nos doutes sur cette corporation, hein ?"/>
+    </type>
+  </grade>
+
+  <grade level="2">
+    <type num="7">
+      <item id="1" desc="Tous le monde, courrez ! Dégagez juste d'ici !"/>
+      <item id="2" desc="Je ne veux pas mourir ! Ne me laissez pas derrière !"/>
+      <item id="3" desc="Aidez-moi !!!"/>
+      <item id="4" desc="Administrateur ! S'il vous plaît, aidez-moi !"/>
+      <item id="5" desc="Va te faire foutre ! Je vais pas mourir ici !"/>
+      <item id="6" desc="Administrateur ! Vous regardez, n'est-ce pas ? Sauvez-moi ! Débarrassez-vous de ces choses s'il vous plaît !"/>
+      <item id="7" desc="Que quelqu'un appelle l'équipe de planification d'urgence ! On va tous mourir ici !"/>
+      <item id="8" desc="Au secours !!!"/>
+      <item id="9" desc="Appelez d'autres employés, vite !"/>
+      <item id="10" desc="Au secours !! J'ai dit au secours !!!"/>
+      <item id="11" desc="Pourquoi personne ne vient !!! Est-ce qu'ils vont juste nous laisser mourir ici ?"/>
+      <item id="12" desc="Ils vont tous nous tuer ! Nous sommes tous fichus !"/>
+      <item id="13" desc="Tout est fini… Nous sommes tous morts…"/>
+      <item id="14" desc="Je ne mourrai pas !! Que quelqu'un fasse quelque chose !"/>
+      <item id="15" desc="Si je meurs, dites à mes parents que je suis désolé."/>
+      <item id="16" desc="Administrateur, si vous me voyez, rectifiez cette situation. Sauvez-moi s'il vous plaît."/>
+      <item id="17" desc="Je vais me marier bientôt. Je ne peux pas mourir comme ça."/>   
+    </type>
+
+    <type num="8">
+      <item id="1" desc="Je ne l'oublierai pas… C'était un bon collègue."/>
+      <item id="2" desc="Elle est morte ? Mon dieu… On a mangé ensemble il y a quelques jours."/>
+      <item id="3" desc="J'ai entendu qu'elle est morte, c'est ça ? Ils ont dit que c'était un accident."/>
+      <item id="4" desc="Mon collègue a vu son corps. Je me sens très triste."/>
+      <item id="5" desc="Je n'arrive pas à le croire…"/>
+      <item id="6" desc="Nous allons tous nous faire tuer par ce monstre…"/>
+      <item id="7" desc="Tu as entendu ? Il y a eu un accident terrible pendant le travail."/>
+      <item id="8" desc="C'est un événement très malchanceux, n'est-ce pas ?"/>
+      <item id="9" desc="C’était un très bon gars… J'avais l'habitude de me confier à lui, et il m'écoutait."/>
+      <item id="10" desc="Elle était une employée passionnée. La corporation devrait nous compenser."/>
+      <item id="11" desc="Comment la corporation peut-elle donner du travail alors qu'un employé vient de mourir ?"/>
+      <item id="12" desc="Il n'était pas juste un employé, il était notre collègue. Nous ne l'oublierons jamais."/>
+      <item id="13" desc="J'ai entendu dire qu'un employé est mort pendant le travail. C'est vrai ?"/>
+      <item id="14" desc="L'administrateur n'est-il pas partiellement responsable de la mort des employés ?"/>
+      <item id="15" desc="Ceci ne devrait plus jamais arriver. Comment peut-on travailler pour cette corporation ?"/>
+    </type>
+
+    <type num="9">
+      <item id="1" desc="Pourquoi je me sens si fatigué aujourd'hui…"/>
+      <item id="2" desc="Je ne me sens pas très bien aujourd'hui."/>
+      <item id="3" desc="Je ne veux pas travailler."/>
+      <item id="4" desc="Il y a longtemps, j'ai vu un employé qui était devenu fou. Vais-je finir comme cette personne ?"/>
+      <item id="5" desc="Je me sens malade aujourd'hui."/>
+      <item id="6" desc="J'arrive pas à me concentrer sur le travail… Je me sens pas bien."/>
+      <item id="7" desc="Je me sens pas bien… Les médicaments ne font pas effet."/>
+      <item id="8" desc="Je veux prendre une pause… Je me sens pas bien."/>
+      <item id="9" desc="Je ne me sens pas de travailler aujourd'hui."/>
+      <item id="10" desc="Tellement fatigué, je veux juste me reposer à la maison."/>
+    </type>
+
+  </grade>
+
+  <grade level="3">
+    <type num="5">
+      <item id="1" desc="Donnez un ordre, s'il vous plaît ! Donnez un ordre, s'il vous plaît ! Donnez un ordre, s'il vous plaît ! Donnez un ordre, s'il vous plaît !"/>
+      <item id="2" desc="J'espère que tout va disparaître. Cette corporation, nous, vous…"/>
+      <item id="3" desc="Administrateur ! Ne me renvoyez pas là-dedans s'il vous plaît ! Je ne veux pas mourir ! Je ne veux pas être découpé en pièces !"/>
+      <item id="4" desc="Le cerveau de mon collègue est ici et là… Vous l'avez vu aussi ? Il devrait être rapidement nettoyé… Il y a du sang sur tous les murs de la salle de confinement…"/>
+      <item id="5" desc="Nous allons tous mourir. Dans la misère, le corps mangé par ce monstre, tués."/>
+      <item id="6" desc="Nous allons tous mourir. Dans la misère, le corps mangé par ce monstre, tués."/>
+      <item id="7" desc="Pouvez-vous ordonner un ‘Suicide’? C'est ce dont j'ai le plus besoin."/>
+      <item id="8" desc="Donnez-moi des ordres s'il vous plaît ! Pourquoi ne pas écraser ces Anomalies avec la hache dans la réserve ?"/>
+      <item id="9" desc="Je ne veux pas mourir. Je ne veux pas mourir brutalement, comme mes collègues."/>
+      <item id="10" desc="Ahahahahahahahahahahahahahahahahahahahah"/>
+      <item id="11" desc="Ne m'y envoyez pas ! Ne me faites pas mourir !"/>
+      <item id="12" desc="J'ai l'impression que quelqu'un n’arrête pas de me parler. Qu'il me murmure de mourir, voulez-vous que je lui donne une leçon ?"/>
+      <item id="13" desc="J'ai l'impression qu'il y a quelqu'un d'autre dans ma tête. Il me dit des choses horribles et m'empêche de dormir."/>
+      <item id="14" desc="Jesuisdésolépourmescollèguesetmasantéetlesrésultatsdetravailquejefaisdanscettecorporationfleurissantedédiéeànepasminquiéter"/>
+      <item id="15" desc="Vous trouvez pas qu'il fait froid ? Vous voulez que j'allume le chauffage ? Il fait tellement froid que je transpire."/>
+      <item id="16" desc="J'ai vu des collègues morts hier. On a bu un café et mangé ensemble. Ça fait plaisir de voir qu'ils vont bien."/>
+      <item id="17" desc="Renvoyez-moi chez moi s'il vous plaît, administrateur. Je veux juste mourir…"/>
+      <item id="18" desc="Administrateur, si vous me voyez, rectifiez cette situation. Sauvez-moi."/>
+    </type>
+
+    <type num="10">
+      <!-- 합리주의자 패닉 (살인)-->
+      <item id="1" desc="Je ne mourrai pas seul.."/>
+      <item id="2" desc="Donc c'est de votre faute ! Si ce n'était pas de votre faute, ça n'aurait pas fini comme ça !"/>
+      <item id="3" desc="Vous êtes le problème. Pas moi, juste vous !"/>
+    </type>
+
+    <type num="11">
+      <!-- 평화주의자 패직 (배회) -->
+      <item id="1" desc="Aidez-moi, je veux rentrer à la maison, ouvrez la sortie de secours s'il vous plaît."/>
+      <item id="2" desc="Où dois-je aller ? C'est l'enfer ici."/>
+      <item id="3" desc="Administrateur, ouvrez la sortie de secours s'il vous plaît. Laissez-moi sortir."/>
+      <item id="4" desc="Je suis terrifié. Que devrais-je faire ?"/>
+    </type>
+
+    <type num="12">
+      <!-- 원칙주의자 패닉 (자살) -->
+      <item id="1" desc="Tout est de ma faute. Je suis entièrement responsable."/>
+      <item id="2" desc="C'est une situation sans espoir."/>
+      <item id="3" desc="Même si je survis ici, je souffrirai pour le reste de ma vie.."/>
+    </type>
+
+    <type num="13">
+      <!-- 낙관주의자 패닉 (격리실 테러)-->
+      <item id="1" desc="Administrateur, lâchez-moi un peu. Je suis le seul qui n'ait pas échoué !"/>
+      <item id="2" desc="Je ne suis pas comme ces idiots ! Regardez-moi. Regardez ce que je vais faire !"/>
+      <item id="3" desc="Pourquoi cette tête ? Je vais vous réconforter. Attendez !"/>
+    </type>
+  </grade>
+<!-- END dummy code. See AgentNewLyrics_xx.xml-->
+  
+  <creatureSay>
+    <!-- 환상체가 말한다 -->
+    <creature id ="100001">
+      <action type ="escape">
+        <!-- 탈출해서 세피라 쪽으로 향하고 있을 때 환상체 대사 -->
+        <desc>Personne…</desc>
+        <desc>Rire…</desc>
+        <desc>Joie… Chaleur…</desc>
+        <desc>Lumières…</desc>
+        <desc>Froid…</desc>
+      </action>
+    </creature>
+
+    <creature id = "100004">
+      <action type ="good">
+        <!-- 기분 좋을 때 -->
+        <desc>Cette journée va être magnifique. Je ne suis pas encore sortie, mais je peux toujours entendre les oiseaux chanter.</desc>
+        <desc>Savez-vous combien une victoire vous fait plaisir et combien le monde est magnifique ?</desc>
+        <desc>Tout le monde m'aime. Partout où je vais, les fleurs m'accueillent.</desc>
+        <desc>Vous savez quoi ? Dites-moi juste si vous avez besoin de mon aide. Je serai là.</desc>
+        <desc>On dit qu’il faut des qualités spéciales pour être Magical Girl. Elle doit être douce, juste, et aimer le monde pour être choisie comme Magical Girl.</desc>
+        <desc>J'ai toujours eu à porter un immense fardeau. Parfois c'est dur, mais je suis fière de moi.</desc>
+      </action>
+
+      <action type ="normal">
+        <!-- 기분 좋지 않을때 -->
+        <desc>Quelqu'un m'a dit que le mal n'existait pas. Est-ce vrai ?</desc>
+        <desc>Je n'aime pas cet endroit. Ils ne m'apprécient pas.</desc>
+        <desc>C'est trop calme. Il doit y avoir quelque chose de mal.</desc>
+        <desc>Sans ténèbres, il n'y a pas de lumière. Juste comme je ne suis pas là.</desc>
+        <desc>J'ai été choisi. Qui protégerait le monde sans moi ?</desc>
+        <desc>Je hais cet endroit silencieux. Le monde que j'ai connu n'était pas si calme.</desc>
+      </action>
+
+      <action type ="bad">
+        <!-- 기분 많이 좋지 않을 때 (변신 직전)-->
+        <desc>Ah… Je…</desc>
+        <desc>Veux disparaître…</desc>
+        <desc>Raison de vivre…</desc>
+        <desc>Laissez-moi partir…</desc>
+        <desc>Je n'en peux plus…</desc>
+        <desc>Je suis… Une Magical Girl…</desc>
+      </action>
+    </creature>
+
+    <creature id="100031">
+      <action type="good">
+        <desc>Je t'aime tellement. Ce galet m'est très cher ! Mais je t'aime donc je vais te le donner ! Garde-le sur toi tout le temps s'il te plaît.</desc>
+        <desc>Chéris-moi.</desc>
+        <desc>Je veux te tenir dans mes mains.</desc>
+      </action>
+      <action type="bad">
+        <desc>Je sais là où tu vas.</desc>
+        <desc>Je t'aime tellement mais pourquoi tu ne viens pas me voir ?</desc>
+        <desc>Pourquoi tu ne viens pas me parler ?</desc>
+        <desc>Pourquoi ne viens-tu pas pour moi ?</desc>
+        <desc>Est-ce plus important que moi ?</desc>
+        <desc>Pourquoi étais-tu là ? Tu aurais dû être ici. Pas ‘là’.</desc>
+      </action>
+    </creature>
+  </creatureSay>
+
+
+  <creatureAction>
+    <creature id="100002">
+      <!--
+      <item level="1" desc="그것은 더 이상 외로워하지 않는 것 같아!"/>
+      <item level="2" desc="기분이 조금 좋아보인다."/>
+      <item level="3" desc="아무런 반응을 보이지 않아."/>
+      <item level="4" desc="테디의 고개가 힘없이 떨궈진다."/>
+      <item level="5" desc="이 이상으로 나빠질 수 없겠군."/>
+      -->
+      <action type ="dead">
+        <!-- 포옹하기로 죽어갈 때 -->
+        <desc>Je peux pas respirer… Laissez-moi partir !</desc>
+        <desc>Mes os se font briser. Quelqu'un…</desc>
+        <desc>Mon corps se fait écraser…</desc>
+      </action>
+
+      <action type ="hug">
+        <!-- 직원이 특수작업 '포옹하기' 를 했을 때 -->
+        <desc>Pauvre Nounours. Je vais lui faire un câlin.</desc>
+        <desc>C'est doux.</desc>
+        <desc>Je n'ai jamais câliné un ours en peluche aussi gros.</desc>
+      </action>
+    </creature>
+
+    <creature id="100003">
+      <!-- 빨간구두 -->
+      <action type="start">
+        <desc>C'est à moi. Je ne la donnerai à personne.</desc>
+        <desc>Une hache, où se trouve une hache ?</desc>
+        <desc>C'est la plus belle paire de chaussures.</desc>
+      </action>
+
+      <action type="dead">
+        <desc>Rends-la moi !</desc>
+        <desc>Ne me l'enlève pas…</desc>
+        <desc>Ne la prends pas. Non !</desc>
+        <desc>Je suis désolé…</desc>
+      </action>
+
+      <action type="attack">
+        <desc>Tu es venu me prendre mes chaussures. J'ai tort ?</desc>
+        <desc>Meurs, meurs, meurs.</desc>
+        <desc>Je vais te casser ta jambe, pour que tu ne danses plus jamais.</desc>
+        <desc>Je vais te casser ton bras, pour que tu ne prennes plus mes choses.</desc>
+      </action>
+
+      <action type="walk">
+        <desc>Où est tout le monde ?</desc>
+        <desc>Les gars, regardez-moi. Je porte des chaussures très mignonnes.</desc>
+        <desc>Regardez mes chaussures.</desc>
+      </action>
+
+      <action type="kill">
+        <desc>Je te l'ai dit. Je ne peux pas te les donner.</desc>
+        <desc>Elles sont plus jolies avec du sang dessus.</desc>
+        <desc>Tu es déjà endormi ?</desc>
+      </action>
+
+    </creature>
+
+    <creature id="100036">
+      <!-- 우주의 조각 특수능력 받은 직원들 대사 꼭 구현되었으면 좋겠습니다!!!!!!!!!!!-->
+      <action type="Specialskill">
+        <desc>Les ombres engouffrées en moi sont enfin parties.</desc>
+        <desc>Je peux enfin tout voir et tout sentir.</desc>
+        <desc>Les étoiles chantent pour moi… Peux-tu l'entendre ?</desc>
+      </action>
+    </creature>
+
+
+    <creature id="100021">
+      <!-- 늙은 여인 -->
+      <action type="workAllocate">
+        <desc>Encore cette affreuse histoire ?</desc>
+        <desc>Hors de question. Elle me rend fou.</desc>
+        <desc>Je préfère devenir sourd que lire cette stupide histoire.</desc>
+      </action>
+    </creature>
+
+    <creature id="100006">
+      <!-- 노래하는 기계 -->
+      <action type="attack">
+        <desc>Désolé, mais je veux vraiment entendre cette chanson.</desc>
+        <desc>Ne bouge pas. Tu vas l'aimer aussi.</desc>
+        <desc>J'entendrai cette chanson à tout prix.</desc>
+      </action>
+
+      <action type="listen">
+        <!-- 노래하는 기계에서 직원을 가는 소리를 듣고 있을 때 -->
+        <desc>Je ne souhaite plus rien. Je suis totalement heureux..</desc>
+        <desc>Pour moi, ce moment c'est le paradis.</desc>
+        <desc>Je suis né pour ce moment.</desc>
+      </action>
+
+      <action type = "attract">
+        <!-- 노래하는 기계에게 홀릴 때 -->
+        <desc>Maintenant, je suis ressuscité.</desc>
+        <desc>Si je sacrifie mon bras, puis-je encore entendre cette chanson ?</desc>
+        <desc>Un corps, j'ai besoin d'un corps.</desc>
+      </action>
+
+      <action type="killed">
+        <!-- 노래하는 기계가 특수 공격 했을 때 -->
+        <desc>Nooooon ! Aidez-moi !</desc>
+        <desc>Non ! Aidez-moi s'il vous plaît !</desc>
+        <desc>Aidez-moi !</desc>
+      </action>
+
+    </creature>
+
+    <creature id ="100001">
+      <!-- 불타버린 소녀 -->
+      <action type ="hurt">
+        <!-- 공격받아서 불타고 있을 때 직원 대사 -->
+        <desc>Mes vêtements sont en feu !</desc>
+        <desc>Que quelqu'un amène un extincteur ! C'est trop chaud !</desc>
+        <desc>Éteignez-le s'il vous plaît !</desc>
+      </action>
+
+
+      <action type ="escaped">
+        <!-- 성냥팔이가 탈출했을 때 직원들 대사 -->
+        <desc>Si on ne fait rien, le Sephirah va exploser !</desc>
+        <desc>Une fois que “Fille brûlante” atteint le Sephirah, nous sommes finis !</desc>
+        <desc>La salle de confinement va brûler. Faites quelque chose !</desc>
+      </action>
+
+    </creature>
+
+    <creature id ="100009">
+      <!-- 단 한번의 악과 수백가지의 선행 -->
+      <action type ="confess">
+        <!-- 고해 대사 랜덤으로 나온다 -->
+        <desc>Quand j'avais 7 ans, près du ruisseau…</desc>
+        <desc>Je n'oublierai pas ce jour. C'était le 6 avril…</desc>
+        <desc>Un jour, je mangeais avec ma famille…</desc>
+        <desc>C'est arrivé quand je suis allé au parc d'attraction avec mon jumeau.</desc>
+        <desc>Ce jour là, il est devenu comme ça parce que…</desc>
+      </action>
+    </creature>
+  </creatureAction>
+
+</root>

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100019">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {The conductor of $0 is awaiting the musicians.},
+      {The conductor of $0 is usually quiet. The Containment Unit is also still.},
+      {A conductor is a magician that brings forth life; a shaman who evokes spirits.},
+      {From break and ruin, the most beautiful performance begins.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 prepares the music of the apocalypse. },
+      {It is without a doubt that $0 is the best ensemble in the company.},
+      {$0’s sensational performance shall mesmerize everyone.}
+      ]
+    </narration>
+    <narration action="mid2"> 
+      [
+      {Musicians live for the audience’s applause at the finale.},
+      {The life of a performer begins and ends with the audience’s clapping.},
+      {A standing ovation is the most honorable gift the audience can bestow upon the conductor.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {#0, who may soon become part of the audience for $0, has almost finished the work process.},
+      {#0 handles the task with $0 without any trouble.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">T-01-31</codeNo>
+      <name openLevel="1">The Silent Orchestra</name>
+      <portrait openLevel="1">Sprites/Unit/creature/silentOrchestra</portrait>
+      <riskLevel openLevel="2">ALEPH</riskLevel>
+      <openText>From break and ruin, the most beautiful performance begins.</openText>
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {An abnormality that loves art and tries to get the entire company to listen to its music.&#13;&#10;&#13;&#10;&lt;Excerpt from an Encyclopedia&gt;&#13;&#10;
+      The conductor not only corrects musical errors, but is also responsible for creating the best ensemble and taking command of the music. A conductor's skill can be determined within 5 minutes at the podium. The moment the conductor opens the score, the performers read the conductor's eyes, actions, and aura to see if the person is worthy to lead them. Without the understanding and harmony between them, the macroscopic significance contained in the score cannot be expressed. Therefore, an outstanding degree of influence, leadership, and eloquence are essential qualities for a conductor to have...(Omitted)}
+      ]
+    </desc>
+    <desc id="2" openLevel="2">
+      [
+      {&lt;1st Movement: Calm and Slow&gt;
+      The conductor begins to direct the apocalypse. }
+      ]
+    </desc>
+    <desc id="3" openLevel="3">
+      [
+      {&lt;Movements 2 through 4: Cheerful and Fast&gt;
+      Employees start to forget everything and show fervent adoration toward the symphony. The emotion soon turns into internal insanity, driving them to attack anyone near them. The orchestra gives impetus to the music, bringing the entire department to its demise. When all the performers have gathered, the music that no one can hear but everyone can listen to begins.}
+      ]
+    </desc>
+    <desc id="4" openLevel="4">
+      [
+      {&lt;Finale&gt;
+      &lt;b&gt;“The music shall perforate your entire being.”&lt;/b&gt;}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="mood1">When the work result was Good, the Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="1" key="mood2">When the work result was Bad, the Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="1" key="escape">The music that is played by $0 when it escapes consists of 4 Movements. As the piece progresses, the employees listening will suffer WHITE damage, meanwhile the size of the audible area of the music expands.</specialTip>
+      <specialTip openLevel="2" key="movement">For each Movement, the weakness of $0 changed. The 1st Movement was Pale, while the 2nd Movement was Black. For the 3rd Movement it was White, and lastly, during the 4th Movement, only Red type attacks were effective. When the music reached the climax, $0 became immune to all forms of attack.</specialTip>
+    </specialTipSize>
+  </observe>
+  <etc>
+    <param key="movement1" index="1">
+      1st Movement, Adagio e Tranquillo: Calm and slow
+    </param>
+    <param key="movement2" index="2">
+      2nd Movement, Sostenuto: With restrained speed
+    </param>
+    <param key="movement3" index="3">
+      3rd Movement, Accelerando e Crescendo: Gradually faster, growing
+    </param>
+    <param key="movement4" index="4">
+      4th Movement, Stringendo: Pressing ever forward, clutching
+    </param>
+    <param key="movement5" index="5">
+      Finale con fuoco, ma non troppo: Passionately like fire, yet refined.
+    </param>
+  </etc>
+</creature>

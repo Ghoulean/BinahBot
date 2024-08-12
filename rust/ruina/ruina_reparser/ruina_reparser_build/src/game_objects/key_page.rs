@@ -1,16 +1,18 @@
 use std::collections::HashMap;
 
 use roxmltree::{Document, Node};
-use ruina_common::game_objects::common::Collectability;
+use ruina_common::game_objects::common::{Collectability, PageType};
 use ruina_common::game_objects::key_page::{KeyPageRange, Resistance};
 
 use crate::game_objects::common::CollectabilityMap;
 use crate::game_objects::common::ParserProps;
 use crate::serde::{
-    chapter_enum_serializer, get_chapter_from_str, get_rarity_from_str, serialize_option_2, str_array_serializer, string_literal_serializer
+    chapter_enum_serializer, get_rarity_from_str, serialize_option_2, str_array_serializer, string_literal_serializer
 };
 use crate::xml::get_nodes_text;
 use crate::xml::{get_nodes, get_unique_node, get_unique_node_text};
+
+use super::common::{from_chapter_map, ChapterMap};
 
 type KeyPageKey = String;
 type KeyPageValue = String;
@@ -20,7 +22,8 @@ pub fn reserialize_key_pages(parser_props: &ParserProps) -> String {
         .iter()
         .flat_map(|document_string| process_key_page_file(
             document_string.as_str(),
-            parser_props.collectability_map
+            parser_props.collectability_map,
+            parser_props.chapter_map,
         ))
         .collect();
 
@@ -36,7 +39,8 @@ pub fn reserialize_key_pages(parser_props: &ParserProps) -> String {
 
 fn process_key_page_file(
     document_string: &str,
-    collectability_map: &CollectabilityMap
+    collectability_map: &CollectabilityMap,
+    chapter_map: &ChapterMap,
 ) -> HashMap<KeyPageKey, KeyPageValue> {
     let doc: Box<Document> = Box::new(Document::parse(document_string).unwrap());
     let xml_root_node = get_unique_node(doc.root(), "BookXmlRoot").unwrap();
@@ -44,13 +48,14 @@ fn process_key_page_file(
 
     key_page_node_list
         .into_iter()
-        .map(|x| parse_key_page(x, collectability_map))
+        .map(|x| parse_key_page(x, collectability_map, chapter_map))
         .collect()
 }
 
 fn parse_key_page(
     key_node: Node,
-    collectability_map: &CollectabilityMap
+    collectability_map: &CollectabilityMap,
+    chapter_map: &ChapterMap,
 ) -> (KeyPageKey, KeyPageValue) {
     let id = key_node.attribute("ID").unwrap();
     let text_id = serialize_option_2(get_unique_node_text(key_node, "TextId"), string_literal_serializer);
@@ -71,7 +76,7 @@ fn parse_key_page(
     let passive_ids = str_array_serializer(&get_nodes_text(equip_effect_node, "Passive"));
     let options = str_array_serializer(&get_nodes_text(key_node, "Option"));
     let chapter = serialize_option_2(
-        get_unique_node_text(key_node, "Chapter").map(get_chapter_from_str),
+        from_chapter_map(&id, &PageType::KeyPage, chapter_map),
         chapter_enum_serializer
     );
     let category = serialize_option_2(get_unique_node_text(key_node, "Category"), string_literal_serializer);

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300007">
+
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-81</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ResetMirror</portrait>
+
+      <name openLevel ="1">
+        转性魔镜
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+
+      <openText>
+        “满意只会是暂时的。”
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {这面镜子只能映照出人。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {当某个员工面对着镜中的自己时，他的性格会发生翻天覆&#13;&#10;地的变化。对此有许多猜测，有人说这面镜子能将平行世&#13;&#10;界中的两人互换、镜面被施加了奇异的模因...但这些都&#13;&#10;不能被证实。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {凝视镜子的人从外表上看可能没有变化，但实际上他已经&#13;&#10;变成了截然不同的另一个人。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      <!-- 여기 번역 고치기 -->
+      [
+      {如果某个员工过于频繁地凝视镜子，他的人性就会逐渐被&#13;&#10;掏空，最终变成一具行尸走肉。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {“布瑞恩刚才理都不理我就那样跑过去了，发生了什么？”&#13;&#10;“啊，他照过了那面镜子。”&#13;&#10;“他以前总是抱怨自己太过软弱，看来他终于下定决心了。”&#13;&#10;“满意只会是暂时的。”}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="1">当员工凝视“$0”时，其现有的能力数值会被随机分配。</specialTip>
+      <specialTip openLevel="2" key="2">如果某个员工每天凝视“$0”的次数超过1次，那么其所有的能&#13;&#10;力数值都会减少。</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

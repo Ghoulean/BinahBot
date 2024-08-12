@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <!-- Attrbute "id " must equal to attribute "id" in CreatureList.xml -->
+  <info id="100102">
+    <!-- $0 : Creature name, #0 : Agent name -->
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {Un blizzard glacial fait rage au sein de l’Unité de Confinement de $0.},
+      {La glace et le givre font scintiller l’Unité de Confinement de $0.},
+      {Kai se serait vu promis le monde s’il avait échoué à terminer la sculpture de “l’éternité” avec des éclats de glace.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Le palais de $0 est froid et désert. #0 veut quitter cet endroit au plus vite.},
+      {La route menant au palais de $0 est si longue et si froide. La sensation de chaleur manque à #0.}
+      ]
+    </narration>
+    <narration action="special_ability_1">
+      [
+      {Gerda était plus forte et plus courageuse que les autres ; elle se battra pour Kai, qui est emprisonné dans le Palais Enneigé.}
+      ]
+    </narration>
+    <narration action="win">
+      [
+      {Le printemps arriva avec ses roses bourgeonnantes. Gerda et Kai se tinrent les mains et prirent le chemin du retour.}
+      ]
+    </narration>
+    <narration action="lose">
+      [
+      {Gerda et Kai ne parvinrent à vaincre $0. Ils devinrent des éclats de glace dans ses mains et ne purent jamais quitter le Palais Enneigé.}
+      ]
+    </narration>
+    <narration action="anotherWork">
+      [
+      {Tant que Kai est emprisonné dans le Palais Enneigé, Gerda devra inéluctablement affronter $0 en duel.}
+      ]
+    </narration>
+  </info>
+  <!-- Maximum observation level. -->
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">F-01-37</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/SnowQueen</portrait>
+      <name openLevel="1">
+        La Reine des Neiges
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <openText>“La neige continue à fondre…  Peut-être que le printemps est arrivé, ou alors le palais doit être en train de s’effondrer.”</openText>
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {Une reine vit seule dans la forêt d’hiver givrée.}
+      ]
+    </desc>
+    <desc id="2" openLevel="2">
+      [
+      {Comme au début de toutes les histoires Kai était un enfant au grand cœur. Quand les éclats d’un miroir faits par une méchante fée se dispersèrent pour infecter les cœurs des hommes, Kai commença à voir des choses qu’il n’avait ni le besoin, ni l’envie de voir. Il quitta le petit village dans lequel il avait grandi.&#13;&#10;&#13;&#10;Dans un blizzard impitoyable, Kai rencontra la Reine des Neiges. Il devint curieux de ce qui se trouvait dans le monde au-delà de ce qu’il connaissait. Il sentait que l’étendue de ses connaissances n’étaient rien par rapport à tout ce qu’il pouvait en apprendre.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Le Palais Enneigé où il est arrivé était si froid, mais le baiser de la Reine des Neiges lui gela le cœur, si bien qu’il ne pouvait plus ressentir le froid. Il n’y avait pas de joie dans le palais, seulement la longue nuit hivernale.&#13;&#10;&#13;&#10;Gerda était suffisamment forte pour ne pas être affectée par le miroir, et suffisamment courageuse pour embarquer dans une quête pour sauver Kai. Elle prit alors la route du Palais Enneigé.&#13;&#10;&#13;&#10;Le périple fut atroce. Gerda était blessée et souffrante, parfois elle pleurait.&#13;&#10;&#13;&#10;Cependant, elle finit par retrouver Kai.&#13;&#10;&#13;&#10;Le printemps arriva avec ses boutons de rose. Sa chaleur fit fondre le palais de la Reine des Neiges, et le morceau de miroir dans le cœur de Kai s’évapora sans laisser de traces.&#13;&#10;&#13;&#10;Alors, laissée seule, la Reine des Neiges… (Omis)}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;i&gt;Je me souviens du jour où nous l’avons nous-même mise dans le cryo-cercueil. Après un temps, son rire joyeux disparut. Elle ne faisait qu’alterner entre rire et pleurer, jusqu’à ce qu’on la retrouve dans une baignoire, teinte de rouge et les poignets coupés.&#13;&#10;Nous ne croyions pas en la mort. Je l’ai ressuscitée à partir de ces “machines” que j’ai toujours détestées, mais qui sont désormais la seule solution. Je l’aurais probablement dégoûtée pour ça, elle qui était morte dans cette baignoire. Cependant, nous nous étions aventurés trop loin sur un chemin de remords et de regrets pour ressentir une quelconque culpabilité.&#13;&#10;……&#13;&#10;Un jour, "elle" m’a parlé.&#13;&#10;“Je me souviens de toi. Tu étais une personne au grand cœur.”&#13;&#10;En entendant ces paroles, l’envie irrépressible de détruire ce que j’avais créé m’a envahi.&lt;/i&gt;}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="3" key="kissProb1">Quand le résultat du Travail est Moyen, l’employé a une probabilité normale d’être embrassé par $0.</specialTip>
+      <specialTip openLevel="3" key="kissProb2">Quand le résultat du Travail est Mauvais, l’employé a une probabilité élevée d’être embrassé par $0.</specialTip>
+      <specialTip openLevel="2" key="2kiss">Un employé recevant le second baiser de $0 oublie tout et est enfermé dans l’Unité de Confinement.</specialTip>
+      <specialTip openLevel="3" key="3kiss">Pour éviter le troisième baiser mortel de $0, et sauver l’employé piégé, un duel contre $0 doit avoir lieu.</specialTip>
+      <specialTip openLevel="3" key="4kiss">Seuls ceux possédant une Fortitude élevée seront capables de secourir l’employé. Soyez sûrs de l’avoir sauvé avant la fin de la journée.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100013">
+    <narration action="move">
+      #0 se dirige vers l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {$0 cherche inlassablement quelqu'un qui puisse lever la malédiction.},
+      {$0 est tellement choqué par son apparence grotesque qu’il essaye régulièrement de se suicider.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Mais la malédiction perdure, jamais brisée.},
+      {La malédiction existe depuis des siècles, infligeant sa souffrance à de nombreuses victimes infortunées.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {La mort est une autre forme de joie amenée par la naissance.}
+      ]
+    </narration>
+    <narration action="dead">
+      [
+      {Des centaines d’yeux ont commencé à jaillir de la bouche de #0, tandis qu’une paire de cornes est sortie de l’orbite de ses yeux, se parant de fleurs. Maintenant la Bête, #0 cherche inlassablement quelqu'un qui puisse lever la malédiction.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">F-02-44</codeNo>
+      <name openLevel="1">La Belle et la Bête</name>
+      <portrait openLevel="2">Sprites/Unit/creature/BeautyBeast</portrait>
+      <riskLevel openLevel="1">TETH</riskLevel>
+      <openText>Mais la malédiction perdure, jamais brisée.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Une anomalie dégoûtée d’elle-même, et qui chaque jour laisse s’échapper des cris de lamentation. Elle souhaite briser le cycle de la malédiction, mais il n’y a aucun moyen de le faire.&#13;&#10;
+      Belle était, fut un temps, une jolie femme avec de charmants yeux verts. Un jour, cette pauvre dame eut vent d'un poste à pourvoir dans le manoir du comte, avec la promesse d'une paie conséquente.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Le comte avait une apparence monstrueuse. Les rumeurs disent que ceux qui osent entrer dans son manoir n’en reviennent jamais.}
+      ]
+    </desc>
+    <desc id="3" openLevel="1">
+      [
+      {“Ce doit être ce monstre hideux qui s’en prend aux gens.”&#13;&#10;
+      Avec cette idée en tête, elle emporta son plus tranchant couteau.}
+      ]    
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {La dame fut engagée et travailla au manoir. Contrairement aux rumeurs, elle ne trouva aucune trace du monstre. Parfois, la nuit, elle pouvait entendre une voix. Une voix douce qui ne cherchait qu'à l'aider à résoudre ses problèmes.}
+      ]
+    </desc>
+    <desc id="5" openLevel="2">
+      [
+      {À force de travailler dans ce manoir, la dame eut des pensées cupides.&#13;&#10;
+      “Si le comte est parti, je pourrais prendre tous ses biens!”}
+      ]
+    </desc>
+    <desc id="6" openLevel="3">
+      [
+      {Un jour, elle entra dans le bureau du comte, la salle où elle n'avait pas le droit d'entrer durant le jour. Elle y découvrit la véritable apparence du comte. C’était vraiment une créature hideuse, avec des centaines d'yeux, quatre jambes, il n’était ni humain, ni animal.}
+      ]
+    </desc>
+    <desc id="7" openLevel="3">
+      [
+      {La dame pensa : "Peut-être qu’un tel monstre mériterait de n’avoir jamais existé."&#13;&#10;
+      Elle poignarda la bête avec son couteau.}
+      ]
+    </desc>
+    <desc id="8" openLevel="4">
+      [
+      {Surprenamment, la bête ricana dans ses derniers moments.}
+      ]
+    </desc>
+    <desc id="9" openLevel="4">
+      [
+      {Avant même que la dame ne puisse lui demander des explications, elle commença à se transformer. Des centaines d'yeux se formèrent et un manteau de fourrure l'enveloppa. Bientôt, elle devint la bête.}
+      ]
+    </desc>
+    <desc id="10" openLevel="4">
+      [
+      {À présent, le manoir et toutes ses richesses lui appartenaient.}
+      ]
+    </desc>
+    <desc id="11" openLevel="4">
+      [
+      {… Les rumeurs disent que ceux qui osent entrer dans le manoir du comte n’en reviennent jamais.}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="hit">Réprimer $0 apporte significativement plus de Boîtes-EP mais affecte négativement la santé de $0.</specialTip>
+      <specialTip openLevel="2" key="noHit">Tout autre travail que ceux de Répression améliorent la santé de $0.</specialTip>
+      <specialTip openLevel="3" key="doubledHit">Après des travaux de Répression répétés. $0 s'est effondré au sol avec un faible gémissement. Une fois mort, #0, l'employé qui a réalisé la tâche, a souffert de symptômes impossibles à identifier. Rapidement, $0 était ressuscité.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

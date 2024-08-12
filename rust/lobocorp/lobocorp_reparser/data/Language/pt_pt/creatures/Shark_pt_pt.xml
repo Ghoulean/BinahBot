@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    5.28
+  -->
+  <info id ="100047">
+
+
+    <narration action="move">
+      #0 recebeu a ordem para ir para a unidade de contenção de $0.
+    </narration>
+
+    <narration action="start">
+      [
+      {A $0 sonha sobre fugir da companhia e correr livremente.},
+      ]
+    </narration>
+
+
+    <narration action="mid1">
+      [
+      {Assim como todos desejavam, a $0 pode viver neste lugar para sempre.},
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-02-71</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Shark</portrait>
+
+      <name openLevel ="1">
+        Correncia do Sonho
+      </name>
+
+
+      <riskLevel openLevel ="2">
+        WAW
+      </riskLevel>
+
+
+
+      <openText>Vai lá dizer lhe que hoje ele vai receber doces com sabor a uva, os favoritos dele.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Apenas... mostra-lhe aquele livro. Oh, eu acho tu que deves mostrar uma página que tenha imagens, já que ele parece não conseguir ler.&#13;&#10;Se for necessário o experimento continuar por mais algum tempo, tenta fazer algo que lhe chame à atenção, tipo imitar sons ou algo do tipo.&#13;&#10;Eu não preciso de explicar tudo, né?}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Sim, eu sei. A situação dele é triste e penosa. Eu também me sinto assim quanto a tudo isto.&#13;&#10;Mas pelo menos este lugar permite que ele sobreviva e seria bom deixá-lo viver aqui independentemente da forma que ele tenha. Se concordas, seria melhor para todos nós se tu deixasses essa culpa de lado por agora.&#13;&#10;....&#13;&#10;Vai lá dizer lhe que hoje ele vai receber doces com sabor a uva, os favoritos dele.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Excerto de uma Enciclopédia&gt;&#13;&#10;Ao contrário do que se pensa, a maioria dos tubarões são pequenos e poucas espécies atacam seres humanos... Não importa o que outras pessoas dizem, é mais que claro que os aspetos mais distintos de um tubarão são a sua forte mandíbula e os seus dentes. A mandíbula de um tubarão pode aplicar uma força cerca de 20 vezes mais forte do que um homem adulto, a sua visão e olfato são super avançados, facilitando a procura de presas. É assim que os tubarões sobreviveram como os maiores predadores do oceano.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Os seus pais já tinham desistido dele há muito tempo.&#13;&#10;Foi-lhes contado que a criança não sobreviria mais de 2 anos por causa da infeção. O seu pai e a sua mãe eram pesquisadores e ele aprendeu a andar e a murmurar em um laboratório. Apesar de ser incapaz de falar corretamente, a criança expressava amar o oceano. Em vez de ir visitar o oceano, ele apenas recebia doces que permitiam-lhe ver o oceano.&#13;&#10;Muitos dias e noites coloridas se passaram.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {A criança, a qual se pensava que apenas viveria por 2 anos, conseguiu viver uma longa vida. Ele continuou a ouvir e a obedecer, ele amava doces e esse lugar como se fosse a sua casa. Infelizmente, a criança apenas podia correr como um tubarão dentro de um laboratório apertado, em vez de correr em um campo esverdeado sobre a luz do sol, mas única preocupação que ele tinha era o tipo de doce que ele receberia amanhã.}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Quando #0 entrou em pânico durante o trabalho, o Qliphoth Counter diminuiu.</specialTip>
+      <specialTip openLevel="1" key="2">Quando um empregado de Moderação de nível 1 terminou o trabalho, o Qliphoth Counter diminuiu.</specialTip>
+      <specialTip openLevel="2" key="3">O líquido que $0 gera em certas regiões da instalação reduz a velocidade de movimento drasticamente e dano Vermelho irá ser sofrido com o tempo. No entanto, o SP dos empregados nessa regiões foi regenerado com o tempo.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100037">
+
+
+
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+
+    <narration action="start">
+      [
+      {胆小的员工在靠近“$0”时感到非常害怕。},
+      {将盔甲放在一旁时，#0总感觉有人在盯着他看。当然，盔甲里什么都没有。}
+      {有传闻称深更半夜时盔甲周围会传出“全军突击！！！”此类热血激昂的喊杀声。}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {这件盔甲已有上百年的历史。尽管有着些许破损，但整体竟被完好地保存至今。},
+      {曾有许多将领占有过这件盔甲。没人知道他们究竟是战死沙场，还是被这件盔甲夺走了性命。}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {盔甲右侧的臂板破裂了。调查后发现，破裂的原因竟来自它内部，而不是外界的攻击。},
+      {“$0”在数百年前被锻造出来。制作者的身份和动机尚不明确，不过至少有一点是可以肯定的——这名制作者相当痛恨懦夫。}
+      {这件盔甲依旧在等待那些匹夫，时刻准备着了结他们的性命。}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-05-61</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/SamuraiArmor</portrait>
+
+      <name openLevel ="1">
+        破裂盔甲
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        精神联结
+      </specialName>
+
+      <openText>“不畏死，方可生。”</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {这个异想体是一件在数百年前被锻造出来的盔甲，其底部雕刻着“不畏死，方可生。”六个字。公司明令禁止任何员工穿戴此盔甲。（近期有传闻说某些员工因为好玩称其曾穿戴过它，给我立刻彻查清楚！）}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {这件盔甲回收自一家博物馆。以下是部分有关盔甲的传说：&#13;&#10;&#13;&#10;（省略）...这件盔甲本属于XXXX将军，他曾参与过XXX年的XX之战。而这件盔甲是其家族的传家之宝，已经传了很多代族人。将军为了保护自己从未脱下此盔甲。但很不幸的是，在某场战斗中，一支流矢刺进盔甲的夹缝，使将军当场丧命。奇怪的是，这件盔甲没有受到任何损伤。&#13;&#10;&#13;&#10;在那之后，盔甲被移交给了XXX，他是OO营的一名指挥官。每次作战，他总是全副武装。在某场战斗中，XXX在逃离敌人的追击时从马上跌落，颅骨受到重伤而死。尽管如此，盔甲依然完好无损。&#13;&#10;&#13;&#10;后来，这件盔甲落到了许多人手中，可他们的下场全都是战死沙场，而盔甲总是维持在最完美的状态。&#13;&#10;&#13;&#10;多年以后，盔甲辗转到一名叫做XXX的武士手中。他以只收藏却不穿盔甲上战场，历经数十场战斗却从未受伤的事迹闻名于世，最后他寿终正寝。而在这段时间，盔甲的右侧臂板受到损坏并脱落，但这些伤害并不是从外部造成的。&#13;&#10;&#13;&#10;XXX的后人最终决定将盔甲捐赠给博物馆。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {经过几轮测试后，我们得出以下结论：&#13;&#10;当一名胆小的员工穿上这件盔甲后，其受到致命伤害甚至直接死亡的概率会急剧增加。&#13;&#10;相反地，当一名对死亡毫不畏惧的员工穿上这件盔甲后，其受伤或死亡的概率会大幅减少。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {一位人事部经理建议：在招募新员工时，增加一项入门测试——让新员工穿上这件盔甲步行10分钟。&#13;&#10;这项建议一经提出立即遭到拒绝。}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="NoPeace">勇气等级为1级的员工完成了对“$0”的工作后，会在瞬间被斩首。</specialTip>
+      <specialTip openLevel="2" key="GiveYou">对“$0”完成压迫工作的员工会被一块与“$0”成分相同的物件（“$0-01”）所附着。据这名员工反映，他有一种正被“$0”保护着的感觉。</specialTip>
+      <specialTip openLevel="3" key="Change">携带“$0-01”的员工被要求进行连续的压迫工作。每当工作完成后都会对其进行健康检查。检查结果是：“$0-01”所提供的增益效果会随着压迫次数的增加而增强。</specialTip>
+      <specialTip openLevel="4" key="KillPeace">&lt;警告&gt;我们曾指派一名携带“$0-01”的员工对其他异想体进行沟通工作。当他踏入收容单元的那一刻，“$0-01”在瞬间消失且这名员工被斩首，死亡。</specialTip>
+      <specialTip openLevel="4" key="NegativeChange">&lt;警告&gt;如果携带“$0-01”的员工进行过量的压迫工作，“$0-01”扣除生命值的效果将会越来越严重。</specialTip>
+    </specialTipSize>
+
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {The armor that took away many people’s lives is sitting in front of you. }
+        {You can put it on, if you wish.}
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Put it on" target="1" isAnswer="true"  message="You have succeeded to obtain final observation report on Crumbling Armor"/>
+        <node desc="Don’t put it on" target="2" isAnswer="false"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {It seems like you were not pacifist.}
+        {You feel the armor’s warm welcome.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {The armor waits for another reckless one.}
+        ]
+      </desc>
+
+
+
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {“Those who do not fear death.” It reminds me of Lobotomy’s slogan.}
+        {I don’t know if it is admirable mindset, though. }
+        ]
+      </angela>
+    </max>
+
+  </observe>
+</creature>

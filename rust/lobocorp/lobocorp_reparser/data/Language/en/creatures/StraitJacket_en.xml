@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100018">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {$0 stands like a statue in the corner of the Containment Unit.},
+      {At times, $0 murmurs while shaking.},
+      {$0 may scream from time to time, but as he’s tied up, there probably isn’t any need to worry.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {#0 senses despair.},
+      {#0 smells the unbearable odor of despair.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Why is this place always so dark and cold?},
+      {In the darkness, $0’s brain slowly rotted.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Forsaken even by death, $0 shall remain confined here till the end of time.},
+      {It was no longer rage, but a deeper and more twisted, maniacal abhorrence that found him.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">T-01-54</codeNo>
+      <name openLevel="1">Forsaken Murderer</name>
+      <portrait openLevel="1">Sprites/Unit/creature/StraitJacket</portrait>
+      <riskLevel openLevel="2">TETH</riskLevel>
+      <openText>“What's really pitiful is people like you dying to the likes of me.”</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {An Abnormality whose brain is imbued with rage, screams, and malicious cries.&#13;&#10;&#13;&#10;There is a wound on his forehead that never seems to heal. He hates everyone and everything. He wears a straitjacket, but is as free as any man. No amount of chains and restraints is enough to prevent him from committing violence.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {He always had to wear a straitjacket. Some say he was a death row inmate from a federal prison. The researchers were always cautious around him. They felt that the straitjacket couldn't contain him.&#13;&#10;&#13;&#10;The researchers wanted to study a murderer's brain to prove that innate evil existed. It was difficult to determine who was worse: A man who murdered the innocent with no remorse, or the researchers who wanted to open up his brain to satiate their curiosity.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {A wide range of medicine and chemicals were injected into him. Some were used for the sake of humanity's future, while others were for new medical techniques. They all had the potential of changing the world.&#13;&#10;&#13;&#10;The researchers were getting more and more excited. Although they didn't openly express so, it was almost palpable. They said they found a cure, but they never said what was cured.&#13;&#10;&#13;&#10;The prisoner spoke less and less. His aggressiveness was suppressed, but at the same time, he lost himself. After an extensive review, he was permitted to have the straitjacket removed. }
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {      “It feels like my head is turning into metal. I sometimes hear metallic creaks in my head...”&#13;&#10;&#13;&#10;As the days passed by, he began inflicting self-harm. He would continuously hit his head on the wall or hard surfaces. He insisted on checking if his head really was turning into metal.&#13;&#10;&#13;&#10;One day they eventually decided to leave him with the hope that he would stop once he was wounded. However, even with blood pouring down his face, he wouldn't stop until his wound was so deep the whites of his skull were peeking through. He had to wear the straitjacket again, but he was no longer feared or monitored like before.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {A researcher died. It would have been difficult to identify him without his ID card as his head was violently crushed. Lax security meant that the door was often left unlocked or unattended. The prisoner that everyone believed to be confined was moving around on his knees.&#13;&#10;
+      “My head... turning into metal... folds in my brain, being flattened...”&#13;&#10;&#13;&#10;He kept repeating strange words, and the final procedure was quickly put in place. Treatment was halted, and he was dissected so his brain could be used for research. How do I know? I sedated him myself. He kept muttering nonsense until the end.&#13;&#10;
+      “Ends, begins, ends, begins, end”}
+      ]
+    </desc>
+    <specialTipSize size="1">
+      <specialTip openLevel="1" key="badEscape">When the work result was Bad, the Qliphoth Counter lowered.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

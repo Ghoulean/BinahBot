@@ -30,6 +30,7 @@ impl From<&LanguageIdentifier> for Locale {
             "zh-CN" => Locale::Chinese,
             "zh-TW" => Locale::TraditionalChinese,
             "ko" => Locale::Korean,
+            "ja" => Locale::Japanese,
             _ => Locale::from_str(value.language.as_str()).unwrap_or(Locale::English)
         }
     }

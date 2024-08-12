@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100001">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {Please be advised that $0’s Encyclopedia is incomplete, so anything undocumented could occur.},
+      {The entries on $0 are almost complete, so as long as we remain cautious, work will successfully finish with her.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 hides in the corner as soon as #0 enters the unit.},
+      {$0 observes how #0 responds but backs up towards the wall.},
+      {$0 watches #0 work while standing in the corner.},
+      {$0 seems frightened and moves to one of the corners of the unit.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 stands perfectly still, as if the burning flames do not hurt her one bit.},
+      {Only the match piercing $0 burns wildly.},
+      {Unlike the fiery and vibrant match, $0 stands motionless in the Containment Unit.},
+      {The match burns ever brightly, but $0 does not move an inch.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {#0 closely examines the remaining length of the match.},
+      {If the match is almost burned through, it will be very dangerous. #0 tensely watches $0.},
+      {Fortunately, there’s still enough of the match left to burn. But when the flame’s fuel finally runs out…},
+      {Ashes scatter around the Containment Unit. Half of the match still seems unburnt.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {#0 completes their work while the fire gently flickers.},
+      {There is no one inside the fire, however, $0’s eyes gleam as if she sees someone.},
+      {There is nothing and nobody inside that flame.},
+      {Only the ashes of the burnt match scatter over $0.}
+      ]
+    </narration>
+    <narration action="special_ability_1">
+      [
+      {Only a small portion of the match lies unburnt now.}
+      ]
+    </narration>
+    <narration action="special_ability_2">
+      [
+      {#0 noticed that the match was running out and tried to do something, but it was too late.}
+      ]
+    </narration>
+    <narration action="special_ability_3">
+      [
+      {With the match completely burnt out, $0 laughs.}
+      ]
+    </narration>
+    <narration action="special_ability_4">
+      [
+      {After the explosion, only small bits of #0 can be found in the Containment Unit.}
+      ]
+    </narration>
+    <narration action="dead">
+      [
+      {Her flames flicker, blackening the floor and everything around her.},
+      {At the very least, #0’s final breath was a happy one.}
+      ]
+    </narration>
+    <narration action="panic">
+      [
+      {#0’s eyes are unfocused. The fire has long been extinguished from the match, but they remain unresponsive to any command.},
+      {#0 exits the unit, murmuring incoherently with their face scrunched up tight. No one in the halls dares to talk with them.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">F-01-02</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/matchgirl</portrait>
+      <name openLevel="1">
+        Scorched Girl
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>I am coming to you. You, who will be reduced to ash like me.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {It takes the form of a girl burnt to ashes. Even though there's nothing left to burn, the fire still doesn't extinguish.  }
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {A matchstick impales the girl's body like a stake. Usually, the match is always lit, while the Abnormality shows no sign of activity. Because of this, employees often speculate that the matchstick may be the Abnormality's true body. However, recently, the ashen figure was seen crying, according to witnesses.  }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Excerpt from Abnormality Specialist Doctor &lt;Redacted&gt;’s Research Log&gt;&#13;&#10;
+      “The charred body represents the child's crumbled hope, while the ever blazing flame represents the obsession for affection. It's always in conflict with the contradiction between these two.”&#13;&#10;
+      “We paid a boatload and that's all they have to say?”}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;Excerpt from Recorded Staff Conversation&gt;&#13;&#10;
+      “Well, she’s like a ticking time bomb. No one can tell if she’s in a good mood or not. We just hope that we won’t be the one blown up before entering the Containment Unit. She won’t get any better, we can only try and keep her from getting worse.”}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {&lt;Excerpt from Counseling Log&gt;&#13;&#10;
+      “I never thought the abnormality would be able to escape. Maybe we were getting careless, but it seemed that all it could do was burn up the match stuck in its body. Yes, our response was a bit late. (Omitted) Most Abnormalities that try to escape would attack the employees in front of them, but this one didn't show any aggression toward the nearby employees. Instead, it headed to a different department, the most crowded place in the company. If we didn't suppress it at the door, half of the people here wouldn't be in one piece.”}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="escape1">When the work result was Normal, the Qliphoth Counter lowered with a normal probability.</specialTip>
+      <specialTip openLevel="1" key="escape2">When the work result was Bad, the Qliphoth Counter lowered with a high probability.</specialTip>
+      <specialTip openLevel="3" key="explosionHallway">$0, who had escaped, exploded after being near their target for 5 seconds. Many of the staff nearby sustained burns from the incident.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

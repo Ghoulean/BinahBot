@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100009">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {#0 est logiquement terrifié à l’idée d’entrer dans l’Unité de Confinement.},
+      {Selon la situation, $0 peut avoir un effet positif sur les employés.},
+      {Il serait pertinent d’envoyer un employé “honnête” s’occuper de $0.},
+      {$0 voit en vous comme des livres ouverts.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 attend le péché de l’humanité.},
+      {Les péchés de #0 atteindront bientôt $0.},
+      {Parfois, $0 claque des dents d’un air menaçant, mais il ne faut pas s’en inquiéter.},
+      {$0 flotte doucement dans l’air, se déplaçant lentement.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Bien que $0 n’ait pas d’yeux, il perçoit la présence de #0 dans la pièce.},
+      {$0 est votre bourreau.},
+      {#0 admire et révère la solennité de $0.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {#0 a complété la tâche, mais $0 y était indifférent.},
+      {$0 n’a pas réagi au travail de #0..},
+      {#0 n’a pas réussi à obtenir de réponse de $0.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {Péché accepté, péché à moitié expié.},
+      {Seuls ceux qui se mentent peuvent véritablement vivre heureux. L’ignorance est une bénédiction.},
+      {Peut-on pardonner une seule mauvaise action si les intentions derrière étaient pures ?}
+      ]
+    </narration>
+    <narration action="special_ability1">
+      [
+      {#0 confesse avoir manqué une journée de travail à $0.},
+      {#0 confesse avoir menti à ses parents à $0.},
+      {#0 confesse être jaloux d’un ami à $0.},
+      {#0 se confesse au sujet de “l’incident de juillet dernier” à $0.}
+      ]
+    </narration>
+    <narration action="special_ability2">
+      [
+      {Les sentences pleuvront bientôt.}
+      ]
+    </narration>
+    <narration action="special_ability3">
+      [
+      {La culpabilité éternelle sera sûrement la plus grande punition de #0.}
+      ]
+    </narration>
+    <narration action="panic">
+      [
+      {Toutes les pensées de #0 sont annihilées. La torture et l’angoisse l’écrasent, sans échappatoire.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-03-03</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/OneBadManyGood</portrait>
+      <name openLevel="1">
+        Un Péché et des Centaines de Bonnes Actions
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <openText>
+        Il se nourrit du “mal” qui émerge des conversations entre les gens.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Une Anomalie silencieuse qui comprend le conflit entre le bien et le mal. Ses orbites vides fixent tous ceux qui la rencontrent.}
+      ]
+    </desc>
+    <desc id="2" openLevel="0">
+      [
+      {C’est un crâne géant accroché à une croix et portant une couronne d’épines. Il flotte à environ deux mètres au-dessus du sol.}
+      ]
+    </desc>
+    <desc id="3" openLevel="1">
+      [
+      {Bien que son apparence soit étrange, il est rare que les employés soient victimes de violence de sa part.}
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {Il se nourrit du “mal” qui émerge des conversations entre les gens. L’employé qui y est assigné doit s’agenouiller devant (bien que rester debout semble acceptable) et révéler son “mal” en lui confessant leurs péchés. La manière dont il se nourrit est inconnue.}
+      ]
+    </desc>
+    <desc id="5" openLevel="2">
+      [
+      {&lt;Extrait des Archives d’Expériences&gt;&#13;&#10;Nous avons catalogué les péchés qu’un individu peut commettre selon trois niveaux :
+      Niveau 1 : Un mensonge ou un acte mineur qui passera inaperçu et/ou sera partagé assez facilement.
+      Niveau 2 : Péchés plus sérieux partagés seulement avec ses amis les plus proches.
+      Niveau 3 : Des péchés si profonds qu’on ne les partage avec personne, préférant les emporter dans la tombe.&#13;&#10;
+      L’Intervenant &lt;Expurgé&gt; a reçu l’ordre de confesser un péché de Niveau 1.
+      La production d’énergie de l’Anomalie a augmenté de 12%.&#13;&#10;
+      L’Intervenante &lt;Expurgé&gt; a reçu l’ordre de confesser un péché de Niveau 2.
+      La production d’énergie de l’Anomalie a augmenté de 15%.&#13;&#10;
+      L’Intervenant &lt;Expurgé&gt; a reçu l’ordre de confesser un péché de Niveau 3.
+      1 minute et 48 secondes après que l’Intervenant ait été envoyé dans la salle, un intense flash lumineux a été observé. La lumière était si vive qu’elle pouvait être perçue depuis l’extérieur de la Salle de Confinement. Juste après cela, le complexe a été victime d’une panne d’électricité. Ce phénomène a duré 2 heures. L’Intervenant &lt;Expurgé&gt; a oublié 6 ans de sa vie. Les expériences suivantes ont été annulées. Il a été décidé que les enregistrements de tous ceux ayant participé à l’expérience resteraient scellés. Cependant, l’incident nous a forcé à regarder ce qu’il s’était passé dans l’Unité de Confinement.}
+    ]
+  </desc> --&gt;
+
+    <desc id="6" openLevel="3">
+      [
+      {Intervenant &lt;Expurgé&gt; :&#13;&#10;
+      “C’est arrivé durant &lt;Expurgé&gt; aux environs de 16 heures. Il y avait une voie ferrée à 20 minutes de chez moi. Pour nous y rendre, certains de mes amis et moi-même avons décidé d’y aller déguisés en animaux de la forêt. L’un d’entre nous a choisi un cerf. C’était un costume vraiment nul, on pouvait difficilement le considérer comme tel pour être franc. Juste une paire de “bois” assemblés maladroitement avec une tenue sombre portant des taches rappelant celles d’un cerf. (Omis) Je ne sais pas comment notre ami “cerf” s’est perdu dans les bois ; on ne s’en est même pas rendus compte pendant, quoi, une heure ? Nous l’avons cherché et retrouvé dans des buissons. Nous l’avons appelé, et je ne sais pas pourquoi… sûrement le soulagement de nous retrouver… il s’est mis à courir dans notre direction. Et c’est là qu’on a entendu les coups de feu.&lt;b&gt;Bang ! Bang ! Bang !&lt;/b&gt;Lorsque je suis revenu à mes sens, j’ai vu son sang éclaboussé jusqu’à mes pieds. Depuis, plus aucun de nous ne s’est déguisé en animaux. C’est tout. Mais sérieusement, c’est vraiment censé marcher ?”}
+      ]
+    </desc><desc id="7" openLevel="3">
+      [
+      {&lt;Journal d’Observation #4_435&gt;&#13;&#10;
+      Ses orbites sont vides. C’est un crâne après tout. Mais je ne crois pas qu’il soit aveugle. Il a sûrement son regard planté sur moi et je sens qu’il m’écoute. Me confesser à lui allège mon cœur, pour être franc.}
+    ]
+  </desc><desc id="8" openLevel="4">
+    [
+    {Pour mieux le comprendre, nous avons enquêté sur l’incident ayant eu lieu dans la ville natale de l’Intervenant. Nous avons appris qu’un garçon appelé Justin avait été tué par des chasseurs en cours de saison alors qu’il était déguisé en cerf. Il s’avère que l’adolescent était victime de harcèlement de la part de ses camarades. Des témoins affirment avoir entendu ces derniers l’encourager à courir dans la forêt juste avant les coups de feu. Peu après l’incident, les enfants impliqués auraient déménagé hors de la ville et la chasse au cerf a été interdite.}
+    ]
+  </desc><desc id="9" openLevel="4">
+      [
+      {&lt;Extrait du Journal de Recherche Anomalique X-392&gt;&#13;&#10;
+      Pour être franc, on ne doit pas s’attendre à ce que nos employés se confessent honnêtement à ce crâne. Environ un employé sur dix dira quelque chose qui n’est pas entièrement vrai. C’est un peu différent d’un mensonge… On peut dire qu’ils cherchent inconsciemment des excuses. Ils distordent les faits pour justifier leurs actes, même s’ils savent qu’ils devraient dire la vérité. Et lorsque cela se produit, leur confession n’en est plus vraiment une. Oui, je parle bien de toi qui essaie encore de justifier ton retard depuis cinq minutes !}
+	  ]
+    </desc>
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="confessionIs">$0 restaurera la santé mentale de l’employé lorsque le résultat du travail est bon. #0, qui a reçu cette bénédiction, l’a décrite comme rafraîchissante.</specialTip>
+      <specialTip openLevel="2" key="confessionIsGood">Après que le nombre maximal de Boites-EP ait été produit avec $0, la santé mentale de tous les employés du secteur a été restaurée.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id="100016">
+
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務.
+    </narration>
+
+    <narration action="start">
+      [
+      {當鏽蝕的鈴鐺作響時, 聖誕節開始了.}
+      {隨著一片空蕩的下顎以及死沉的舌頭, 話語在表達之中盡被吞噬.}
+      {帶來不幸的聖誕老人現在在哪呢?}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {七彩的光芒如同聖誕節般閃亮, 並如同孩童們夢魘般漆黑.}
+      {縫線非常的粗糙, 但卻極盡努力讓它能夠菱角分明.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {聖誕節, 喔這猙獰的狂歡節. 每到聖誕節, 我便渴望著拉出那些頌唱者的舌頭.}
+      {以我無盡的仇恨, 我贈與你們這些禮物.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {$0 似乎沒有生命, 但它仍然會不時的移動. 或許是由於它所產生的能量造成的.}
+      {$0 沒有目的的遊蕩著. 它想要分享它所有的禮物.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">F-02-49</codeNo>
+      <name openLevel="1">魯道塔</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/Rudolta</portrait>
+      <riskLevel openLevel ="2">HE</riskLevel>
+      <openText>以我無盡的仇恨, 我贈與你們這些禮物.</openText>
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {- 有張老舊的卡片附在它的身上.&#13;&#10;『聖誕快樂! 聖誕老人飛梭過夜空中將禮物遞送給那些沒有哭泣的幸福小孩們. 紅鼻子的馴鹿魯道夫在夜中的迷霧裡拖著滿是禮物的雪橇閃耀著光芒. 所有在世界上的幸福小孩都能拿到禮物!』}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {遠遠望去, 它看起來就像是駕著雪橇的聖誕老人, 但在靠近檢查後卻發現此異常跟跟童話故事截然不同. 與故事相反, 雪橇拖拽著它. 我們從三個不同的層面來觀察此異常.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {魯道夫: 一個綠色, 紅色, 以及白色相間的馬/鹿狀有機體. 肌肉似乎無法移動, 但許多的員工回報說看到它的眼睛動了一下, 甚至有些人說到曾與它有眼神的交會. 有個直徑 30 公分的洞在它的腹部上. 武裝過的員工在之後回報說到那個洞空空如也.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {聖誕老人: 在魯道夫上面的神秘透明有機體. 充滿了類似人類臟器的東西. 所有的器官似乎都能正常的運作.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {雪橇: 它的大小就跟小孩子的雪橇一樣. 外表有如有機體的皮膚, 以及白色的刀刃連接在底部. 雪橇的裝飾被僵硬的斷手所取代. 不明物品被細心的包裹在禮物當中. 許多員工試圖打開那些禮物, 卻失敗了. 謠言說那些禮物只有在聖誕節當天才能打開.}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="4">
+      [
+      {這三樣物品隨便的連接在一起. ████████ 博士猜測 "這三個東西或許是出自於同一個身體." "不管是誰做的, 一定非常怨恨聖誕節. 或是從來沒見過聖誕老人."}
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="comingTown">當工作結果為普通時, $0 的逆卡巴拉計數器會以普通的機率減少.</specialTip>
+      <specialTip openLevel="1" key="comingTown2">當工作結果為差時, $0 的逆卡巴拉計數器會以較高的機率減少.</specialTip>
+      <specialTip openLevel="2" key="horrorMoving">在突破收容後, $0 緩慢的遊蕩在設施中, 對員工造成 W 傷害.</specialTip>
+    </specialTipSize>
+  </observe>
+
+  <etc>
+    <!--특수 능력 발생할 때, 너프 특성 가진 직원에게 랜덤으로 뜨는 텍스트.-->
+    <param key="present1" index="0">
+      #0 的小女兒總是一個人過聖誕節, 因為要維持家計是很困難的事.
+    </param>
+    <param key="present2" index="1">
+      #0 會在重要的聖誕節裡吞下數十顆藥丸.
+    </param>
+    <param key="present3" index="2">
+      #0 在被至愛拋棄後獨自哭泣.
+    </param>
+    <param key="present4" index="3">
+      #0 會收到一則消息關於深愛的人被埋在璀璨的聖誕樹下.
+    </param>
+    <param key="present5" index="4">
+      #0 會在聖誕夜中被一台載滿禮物的貨車撞上, 並失去行走的能力.
+    </param>
+    <param key="present6" index="5">
+      #0 會被醫生告知罹患了絕症.
+    </param>
+    <param key="present7" index="6">
+      #0 的房子會因為被過重的雪給壓垮, 且無人生還. 這會在聖誕節過後的幾年內發生.
+    </param>
+  </etc>
+</creature>

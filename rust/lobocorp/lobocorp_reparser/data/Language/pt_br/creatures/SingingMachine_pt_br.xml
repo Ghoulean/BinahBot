@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100006">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção da $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {Ela pode parecer como um triturador comum, mas tome cuidado. Toda Anormalidade pode não ter uma razão para existir, mas todas elas possuem a vontade para persistir.},
+      {Sua força de sucção é extremamente poderosa.},
+      {A música que ela toca é dita ser terrivelmente bela.},
+      {O sangue de um fará maravilhosos acordes, e a carne de outro fará grandes harmonias.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {A $0 não será colocada em funcionamento se ninguém estiver por perto.},
+      {Antes de #0 entrar, nenhum movimento veio da $0. },
+      {Antes de que #0 entrasse na unidade, a $0 não era nada além de uma máquina desligada.},
+      {Se a $0 tivesse um botão de ligar, talvez #0 ficasse mais confortável ao trabalhar com ela.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 trabalha com a $0 o mais cautelosamente quanto possível.},
+      {#0 precisa sempre tomar cuidado ao trabalhar nessa unidade, já que a $0 pode ativar a qualquer momento.},
+      {A $0 não dá nenhuma forma de reposta ou reação para #0, como se estivesse digerindo pedaços de carne internamente. }
+      {#0 tenta terminar rapidamente o trabalho com a $0 enquanto ela não está se movendo.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {É bastante simples descobrir quando a $0 ativa; só abra a tampa e veja a quantidade de carne que já digeriu.},
+      {#0 não tem a coragem para abir a tampa que leva às entranhas mecânicas da $0 para verificar quando será a próxima vez que irá ativar.},
+      {Há boatos que dizem que quando qualquer funcionário abriu a tampa da $0, pediu depois por um atestado médico.},
+      {De fato, as partes interiores da $0 são ditas serem sofisticadas, mas nenhum funcionário ousa verificar isso com os próprios olhos.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {Hoje é o dia de sorte de #0; a $0 não ativou.},
+      {#0 dá graças a deus que a $0 está inativa, entretanto, ele dá suas maiores condolências para quem for o próximo Agente a trabalhar nela.},
+      {A $0 decidiu tirar o dia para folgar.},
+      {A $0 ainda não respondeu, já que ainda está terminando de comer os restos.}
+      ]
+    </narration>
+    <narration action="dead">
+      [
+      {A Unidade de Contenção se enche com a harmonia sem precendentes que vaza da $0.},
+      {Para dar origem às melhores obras-primas, sacrifícios devem ser feitos. A $0 é o exemplo perfeito dessa frase.},
+      {Tudo que restou de #0 são alguns pedaços de carne e ossos além de sua própria música que nunca será escutada novamente.}
+      ]
+    </narration>
+    <narration action="panic">
+      [
+      {#0 foi possuído pelo timbre da $0. E não responderá a comando algum.},
+      {#0 foi encantado pelos charmes da canção transmundana da $0. Sua mente está completamente paralisada.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-05-30</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/SingingMachine</portrait>
+      <name openLevel="1">
+        Máquina Cantora
+      </name>
+      <riskLevel openLevel="2">
+        HE
+      </riskLevel>
+      <openText>“Mas nada se comparava com a música que fazia quando devorava um humano.”</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Ela tem a forma de uma máquina longa e cubóide.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {A primeiro relance, parece ser um simples moedor industrial. Entretanto, a existência de algo como “vontade própria” nela satisfaz o critério para ser classificada como Anormalidade.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Quando aproximada ou tocada, o funcionário ficará delirante e se jogará dentro do corpo mecânico da Anormalidade. Após isso, a ventoinha de ventilação irá rapidamente desligar, fazendo com que o som da Anormalidade operando possa ser escutado de dentro. Esse processo leva mais ou menos 5 minutos.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Após alguns experimentos, concluímos que a Anormalidade deseja ganhar "música" com essa interação.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {&lt;i&gt;Não há pesquisas detalhadas sobre a “música” dessa Anormalidade, porém, há uma hipótese de que ela possui uma característica especial que atrai humanos com base em seus comportamentos específicos ou seus registros de aconselhamento psicológico. Se um de nossos funcionários for diagnosticado estar viciado pela música, ele precisará ser tratado rapidamente para prevenir qualquer dano colateral.&lt;/i&gt;}
+    ]
+  </desc>
+    <desc id="6" openLevel="1">
+      [
+      {&lt;Trecho de um Registro de Aconselhamento&gt;&#13;&#10;
+      Eu só queria escrever o relatório de observação e sair, mas ele estava agindo estranhamente.}
+      ]
+    </desc>
+    <desc id="7" openLevel="2">
+      [
+      {      Eu o avisei para não chegar muito perto, mas &lt;Omitido&gt; deu um passo para perto. Ele disse que iria me deixar ouvir uma fantasia, então ele abriu a tampa e pulou dentro da máquina. A tampa fechou e um barulho alto veio de dentro da criatura. Não havia maneira de saber o que estava acontecendo, mas eu estava muito assustado para fazer qualquer coisa. (Omitido)}
+      ]
+    </desc>
+    <desc id="8" openLevel="3">
+      [
+      {      Na escuridão, eu percebi que aquela coisa estava tocando um instrumento enquanto esmagava e cortava o corpo de &lt;Omitido&gt;, ela estava criando um ritmo. E enquanto eu estava contemplando a minha terrível compreensão, a tampa se abriu novamente. pedacinhos de &lt;Omitido&gt; estavam lá. Eram tão poucos que você imaginava o que tinha acontecido com o resto. (Omitido)}
+      ]
+    </desc>
+    <desc id="9" openLevel="4">
+      [
+      {&lt;AVISO, LEITURA OBRIGATÓRIA: Sintomas de vício pela música da ‘Máquina Cantora’&gt;&#13;&#10;
+      &lt;i&gt;1. Tentativas de levar outros funcionários para a Unidade de Contenção da ‘Máquina Cantora’ à força.
+      2. Pupilas dilatadas.
+      3. Concentração e capacidade cognitiva gravemente reduzida.
+      4. Rejeição a outras formas de música.&lt;/i&gt;&#13;&#10;&#13;&#10;Por favor, liste quaisquer sintomas adicionais que podem ser encontrados e reporte todos os funcionários que estão suspeitos de estarem com os sintomas descritos. }
+      ]
+    </desc>
+    <desc id="10" openLevel="4">
+      [
+      {&lt;Trecho dos Registros de Incidentes&gt;&#13;&#10;
+      Data: XX/XX/XXXX
+      Funcionário M1840 desapareceu da corporação. 2 dias depois, no dia XX, parte de um corpo foi encontrado dentro da ‘Máquina Cantora’. A análise genômica revelou que o corpo pertencia ao funcionário desaparecido. Esse funcionário foi recentemente contratado e só trabalhou por 3 meses, além de não ter relato algum de atribuição para trabalhar com a Anormalidade. O culpado foi descoberto ser o funcionário &lt;Omitido&gt;, que estava encarregado da Anormalidade. &lt;Omitido&gt; se entregou após investigações extensivas.&#13;&#10;
+      “Eu sei que é coisa de maluco, mas eu tinha que escutar aquela música novamente. Ela estava presa em minha cabeça faziam meses. Eu fiz todos os tipos de experimentos. Quando a máquina devora um gato, ela toca por 1 minuto, um cachorro grande, 2 minutos e 30 segundos. Mas nada se comparava com a música que fazia quando devorava um humano. ...Sei que pode soar ridículo, mas eu me sinto satisfeito de ter escutado ela novamente.”}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Um Agente com Fortitude de Nível 4 ou superior mergulhou dentro da $0 após concluir o trabalho.</specialTip>
+      <specialTip openLevel="2" key="2">Um Agente com Temperança de Nível 2 ou inferior mergulhou dentro da $0 após concluir o trabalho.</specialTip>
+      <specialTip openLevel="2" key="3">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="3" key="4">Quando o Contador Qlifót chegava a 0, o próximo Agente que entrou na unidade mergulhou dentro da $0 e a ativou.</specialTip>
+      <specialTip openLevel="3" key="5">Quando a $0 estava em operação, um funcionário que estava por perto reclamou de que podia escutar uma melodia contínua vinda do nada. Nós decidimos chamar esse fenômeno de “Vício”.</specialTip>
+      <specialTip openLevel="4" key="6">#1 perdeu a consciência devido a um ataque de #0. Depois disso, #0 arrastou #1 para a Unidade de Contenção da $0 para ser consumida e fazer música.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

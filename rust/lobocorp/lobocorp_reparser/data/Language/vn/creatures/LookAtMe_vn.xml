@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100049">
+
+
+    <narration action="move">
+      #0 is going into $0's containment unit to begin the task.
+    </narration>
+
+    <narration action="start">
+      [
+      {The warning of, “Do not look at #0“ made lots of employees curious and has lead to many terrible incidents.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {When you feel a gaze upon you even when you’re alone, it’s already too late.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-05-76</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/LookAtMe</portrait>
+
+      <name openLevel ="1">
+        Schadenfreude
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+
+      <openText>Someone's persistent gaze can be felt from the keyhole inside the machine. </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {A mechanical Abnormality that can walk on its own.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Someone's persistent gaze can be felt from the keyhole inside the machine. Its eyes blink, but never closes. The purpose of the eye or what it is observing is unknown.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {After several experiments, it has been discovered that when there are one or more employees staring at the Abnormality, the condition becomes far worse.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Experiment_D-002&#13;&#10;An employee was sent in after covering their eyes with a thick, black cloth. The cloth must be made from a material that does not allow light to penetrate. Tests must be conducted to ensure that no light could penetrate through the cloth. After entering the Containment Facility of the Abnormality, they faced towards the direction of the Abnormality for 10 seconds. No reaction.&#13;&#10;Experiment_D-003&#13;&#10;Similar to Experiment_D-002, another employee was sent with their eyes covered, but this time the cloth allows the employee some sight to discern forms. After entering the containment unit of the Abnormality, they stood toward the direction of the Abnormality for 10 seconds. After 5 seconds, the Abnormality aggressively approached the employee. Experiment halted.&#13;&#10;Experiment_D-004&#13;&#10;This time no cloth, but instead a blind employee. No reaction for over 30 seconds. &#13;&#10;*Please dispose of the experiment subject used in the D-004 experiment immediately.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Memo&#13;&#10;:When training an employee who has never entered the Abnormality’s containment unit before, it goes without saying but please make sure to tell them not to look at the Abnormality directly. If someone is stupid enough ask why not, please inform them of what happened to the employee, “Yumi” who didn’t read the manual and stared directly at the Abnormality.&#13;&#10;Memo 2&#13;&#10;: “Yumi,” who was in charge of the Abnormality can no longer be in charge of the Abnormality. She claims to be constantly watched over, but this is a preposterous accusation and we believe she has severe delusional disorder. Most of what she says is nonsense, but to put it simply, she claims that someone keeps watching her when she’s eating or going to the restroom. Also, when she sees something like a keyhole or a crack between a door, she will become hysterical and try to seal any hole that she sees. But what's more aggravating is that her mental corruption levels read normal! She can’t be put to work in this state, but her normal levels make her difficult to be processed by the system... Please replace her soon...&#13;&#10;Memo 3&#13;&#10;:Ah, the request before has been solved. “Yumi" who disappeared was found in her room. When we opened the door, every hole including the vent was covered with black tape. She also stabbed out her eyes with a pen. The delusional disorder seems to have been cured as well. She is no longer babbling nonsense. But I just don’t understand why you would want to send a blind employee into the containment unit again. I don’t know what kind of experiment D-004 is, but I don't think it will do much good...}
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Work on $0 must proceed while the Containment Unit is out of the surveillance camera’s sight.</specialTip>
+      <specialTip openLevel="1" key="2">When watching $0‘s Containment Unit for 5 seconds or more, Qliphoth counter will be lowered.</specialTip>
+      <specialTip openLevel="1" key="3">$0 will immediately stop moving when it is out of the camera’s sight. Take into account when suppressing it.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+
+
+
+</creature>

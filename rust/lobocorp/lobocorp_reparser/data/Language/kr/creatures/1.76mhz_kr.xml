@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100007">
+
+
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다.
+    </narration>
+
+    <narration action="start">
+      [
+      {#0 직원은 격리실 특유의 불길한 위압감을 느낍니다. },
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {#0 직원은 격리실을 가득 감싸고 있는 미미한 슬픔과 분노를 동시에 느낄 수 있습니다},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 직원은 어디선가 알 수 없는 비릿한 냄새가 난다고 생각하고 있습니다.},
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {#0 직원은 아주 멀리서 사람들의 절규하는 소리가 들린다는 착각을 했습니다. },
+      ]
+    </narration>
+   
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">T-06-27</codeNo>
+      <portrait openLevel ="0">Sprites/Unit/creature/1.76Mhz</portrait>
+
+      <name openLevel ="1">
+        1.76 MHz
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <openText>이건 우리가 절대 잊어서는 안 되는 그 날의 기록이다.</openText>
+
+
+     
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {가시적인 형태가 존재하지 않는 현상 환상체. 특정 공간에 들어간 직원들이 공통적으로 이상 증세를 호소함으로써 알려지게 되었다. 모두 특정 환각이나 환청을 겪었으며 정신 오염도가 상승한 결과를 보였다. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {라디오의 주파를 1.76mhz로 고정시킨 후 경과를 기다렸다. 12분 후, 잡음과 함께 누군가의 목소리가 들린다. 발음이 불명확한 탓에 알아들을 수가 없다. 매우 다급한 상황에 처해있으며 도움을 바라는 것으로 추정된다.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {17분 후, 목소리가 끊긴 후 커다란 폭발음이 3번, 작은 폭발음이 연달아 2번이 들린다. 여러 비명 소리가 섞여 매우 혼잡스러운 상황임을 짐작할 수 있다.&#13;&#10;23분 후, 모든 소음이 지나간 후 다시 정적.&#13;&#10;25분 후, 라디오 내에서부터 연기가 나오기 시작했다. 기계의 고장이라고 생각했지만, 예상과 달리 결함의 문제는 아니었다.&#13;&#10;30분 후, 해당 공간에 있는 모든 사람들이 집단 분노를 느끼며 과도한 공격성과 함께 동료들에게 공격을 개시하려는 현상을 보였다. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {이후 해당 증상을 보인 직원들은 모두 상담을 거절하였고 (인명 피해가 발생하지 않은 사건이기에 강제 상담은 실행할 수 없었다) 어떤 것이 직원들에게 있어서 집단적인 분노를 느끼게 한 건지는 알 수가 없었다.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {이후에는 격리소 주변 구역에는 알 수 없는 환청과 잡음들이 생긴다. 이건 우리가 절대 잊어서는 안 되는 그 날의 기록이다. 많은 사람들에겐 잊혀져갔지만, 결코 잊혀져서는 안되는 그 현장, 그 혼잡함 속으로 우리 모두를 데려간다. }
+      ]
+    </desc>
+    
+
+
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">용기가 높은 직원일수록 $0의 작업에 낮은 성공률을 보였다. $0의 영향을 과도하게 받아 폭력성이 급격하게 증가한 것이 주요 원인으로 판단된다.</specialTip>
+      <specialTip openLevel="1" key="2">작업 결과가 보통일 때 보통 확률로 클리포트 카운터가 감소하였다.</specialTip>
+      <specialTip openLevel="1" key="3">작업 결과가 나쁨일 때 높은 확률로 클리포트 카운터가 감소하였다.</specialTip>
+      <specialTip openLevel="1" key="4">작업을 진행하던 #0 직원이 패닉에 빠지자 클리포트 카운터가 감소하였다.</specialTip>
+      <specialTip openLevel="1" key="5">작업 결과가 좋음으로 나오자 클리포트 카운터가 상승하였다. 모든 E-Box를 PE-Box으로 생산하였을 때에는 클리포트 카운터가 2단계 상승한 모습을 보였다.</specialTip>
+      <specialTip openLevel="1" key="6">시설 곳곳에 노이즈가 생성된 것을 감시카메라의 화면을 통해 발견하였다. $0의 클리포트 카운터가 0이 된 이후부터 해당 현상이 나타난 것으로 보아 노이즈는 $0의 격리실에서부터 발생한 것으로 보인다.</specialTip>
+      <specialTip openLevel="1" key="7">노이즈가 나타난 구역의 수는 해당 환상체의 클리포트 카운터가 완전히 회복되기 전까지 지속적으로 증가하였다.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

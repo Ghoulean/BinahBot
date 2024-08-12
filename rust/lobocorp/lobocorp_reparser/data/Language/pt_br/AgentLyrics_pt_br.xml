@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!-- 
+  ===================== 현재 사용되지 않음 ======================
+  대화의 상황 ex) 시작 시 인사, 잡담, 정보 등 마다 노드를 만들거에요
+  <normal type="1" id="1" desc="안녕하세요 관리자님"/> ->일상
+    ->type : 관리자 하루 시작할 때 같은 것들
+      id   : 걍 다른 숫자면 됨 증가하는 값으로 처리해버리세요
+      desc : 대화 내용
+  
+  <danger type="4" id="1" desc="일하기 싫당"/> ->혼파망
+  
+  normal type num 1 = 일상
+  type num 2 = 에너지 절반 이상
+  type num 3 = 에너지 다 모았을 때
+  type num 4 = 환상체에게 작업을 시작할 때
+  type num 5 = 환상체에게 작업을 끝냈을 때
+  type num 6 = 직원들에게 명령을 내렸을 때
+  type num 7 = 작업을 성공했을 때
+  danger type num 1 = 에너지를 다 모으지 못했을 때
+  num 2 = 환상체의 기분이 좋지 않을 때
+  num 3 = 환상체의 작업이 실패했을 때
+  num 4 = 환상체가 탈출했을 때
+  num 5 = 직원들이 패닉에 빠졌을 때
+  num 6 = 직원들의 멘탈수치가 좋지 않아 졌을 때 경고
+  num 7 = 직원이 죽었을 때
+  =============================================================
+  -->
+
+
+  <!-- 이제 안 쓴다 힝힝 -->
+  <!-- 
+chat type 1 : Day 1때 나오는 랜덤 대사>
+type 2 : Day 2부터 그냥 평상시.
+type 3 : 떡밥 있는 대화. type 2와 같이 등장하되, 랜덤 빈도수는 더 적다
+type 4 : 직원들에게 대화 
+type 5 : 멘탈 안 좋은 직원들
+type 6 : 계급 올라간 직원들
+type 7 : 환상체 탈출했을 때 직원 멘붕
+type 8 : 동료가 직웠을 때 슬퍼하는 직원들-->
+  <!--
+  grade - 해당 대사의 위험 등급을 나타냄, 총 3단계
+          1 - 일상적인 대화
+          2 - 주의 및 경고에 관한 대화
+          3 - 패닉 등 최상위 중요도에 관련된 대화
+  
+  type - 해당 대사들의 종류
+         level - 같은 위험 등급 내에서의 중요도를 나타냄, 높을 수록 중요도 높음, 없을 경우 1로 처리
+-->
+
+  <!-- BEGIN dummy code. This code is old version. Do not tranlate "grade" tag. See AgentNewLyrics_xx.xml-->
+  <grade level="1">
+    <!--일상적인 대화-->
+    <type num="1">
+      <item id="1" desc="Ouvi dizer que o novo gerente virá hoje!"/>
+      <item id="2" desc="Aposto que o novo gerente vai ser um babaca, não preciso nem falar!"/>
+      <item id="3" desc="A última coisa que eu quero fazer é trabalhar. Ah, como eu queria ser um gerente e supervisionar meus próprios subordinados..."/>
+      <item id="4" desc="Ei, você ouviu? O novo gerente veio hoje."/>
+      <item id="5" desc="Não ligo pra esse novo gerente, eu só quero um aumento."/>
+      <item id="6" desc="Quanto é que pagam para o Gerente? Aposto que é muito mais do que nós ganhamos."/>
+      <item id="7" desc="Quero que o gerente saiba que trabalhamos tão duro que é de cair os dedos."/>
+      <item id="8" desc="O gerente não fica só sentado apertando botões o dia todo? Ele não deveria cuidar mais de nós, Agentes e Empregados?"/>
+      <item id="9" desc="Eu deveria ter estudado mais para virar um gerente."/>
+      <item id="10" desc="Seria legal ver como é a aparência do novo gerente."/>
+      <item id="11" desc="Então não estamos planejando uma festa de boas vindas para o novo gerente?"/>
+      <item id="12" desc="Que tal nós bebermos um pouco depois do trabalho para celebrar a vinda de nosso novo gerente?"/>
+      <item id="13" desc="Então não vamos fazer NENHUMA brincadeira com o novo gerente? Que chato."/>
+    </type>
+
+    <type num="2">
+      <item id="1" desc="Ei, que tal umas cervejinhas depois do trabalho?"/>
+      <item id="2" desc="Imagino qual trabalho estúpido nosso gerente preguiçoso vai me dar."/>
+      <item id="3" desc="Ah cara, quase virei um caso perdido."/>
+      <item id="4" desc="Escrever a Enciclopédia de Anormalidades é um completo incômodo. Ninguém vai saber se eu falsificar detalhes e inventar algumas coisas, certo?"/>
+      <item id="5" desc="Romance de escritório não é recomendado, certo?"/>
+      <item id="6" desc="Bem, o salário é alto, então nossa corporação não é tão ruim assim… tirando o perigo, a suspeita, o estresse, a matança..."/>
+      <item id="7" desc="A sala dos funcionários é pequena demais. É como se não fosse nem para ser usada."/>
+      <item id="8" desc="Você ouviu sobre aquele funcionário? Aquele na Equipe de Planejamento Emergencial... Ouvi dizer que a perna dele foi amputada..."/>
+      <item id="9" desc="Tendo que fazer trabalhos estupidamente entediantes quando o clima está perfeito lá fora…"/>
+      <item id="10" desc="Eu com certeza sairia se eu tivesse a chance. O único problema é que eu tenho 4 bocas em casa para alimentar."/>
+      <item id="11" desc="É verdade que o gerente é o único que pode usar o elevador exclusivo?"/>
+      <item id="12" desc="Bem, eu acho que o gerente não é tão cabeça de vento assim, considerando que a corporação parece estar indo bem."/>
+      <item id="13" desc="A produção de energia aumentou, mas nosso salário continua baixo como sempre."/>
+      <item id="14" desc="Uma promoção estará em meu caminho se eu trabalhar bastante."/>
+      <item id="15" desc="A comida do refeitóro é decente."/>
+      <item id="16" desc="Eu estive ficando muito estressado recentemente."/>
+      <item id="17" desc="Minha mãe meio que não sabe o tipo de corporação em que eu trabalho."/>
+      <item id="18" desc="A Equipe de Controle não faz muito, certo?"/>
+      <item id="19" desc="Cara, estou totalmente desejando comer uns hambúrgueres."/>
+      <item id="20" desc="Só cinco minutos de atraso, e minha chefe raspou meu rabo em cima de carvões. E olha só, ela esteve vinte minutos atrasada 2 dias atrás!"/>
+      <item id="21" desc="O novato em nosso departamento está muuuuito fora da linha. Devemos ter certeza de que ele aprenda que ele têm que preparar o café."/>
+      <item id="22" desc="A Gerência de Recursos é o único lugar em que eu iria dar o fora. Ouvi dizer que todo dia você tem que trabalhar até sua bunda cair."/>
+      <item id="23" desc="Meu supervisor costumava dizer que tudo ficaria bem enquanto eu seguir o que o manual nos diz."/>
+      <item id="24" desc="Pelo menos, a sala de funcionários é decente."/>
+      <item id="25" desc="Essas Anormalidades são realmente seguras? Elas realmente não parecem ser as coisas mais seguras do mundo para mim."/>
+      <item id="26" desc="Anormalidades não precisam parecer cruéis para serem perigosas."/>
+      <item id="27" desc="Pessoas normais nem sequer sabem que essas coisas existem. Se essas informações vazarem, bem, os capitães de todos os nossos departamentos vão ganhar uma viagem só de ida para a guilhotina."/>
+      <item id="28" desc="Meu deus, não tem nada mais entendiante do que escrever a Enciclopédia. "/>
+      <item id="29" desc="Até mesmo os funcionários que estiveram aqui desde o início não serão capazes de esconder a própria tensão."/>
+      <item id="30" desc="Tem algo preso em meus dentes… Deve ser daquele sanduíche de frango que comi no almoço."/>
+      <item id="31" desc="Acho que vou começar a fazer dieta amanhã."/>
+      <item id="32" desc="Lixei minhas unhas ontem à noite, como elas estão?"/>
+      <item id="33" desc="Estou com taaanta ressaca. Eu bebi demais ontem à noite!"/>
+      <item id="34" desc="Mas eu não quero trabalhar."/>
+      <item id="35" desc="Quanto tempo falta até nós podermos sair?"/>
+      <item id="36" desc="Pssiu, posso tirar um cochilo na sala de descanso?"/>
+      <item id="37" desc="Já tomei mais de cinco copos de café até agora."/>
+      <item id="38" desc="Parece que tinha algo errado com o bacon que eu comi mais cedo. Acabei passando a maior parte do dia no banheiro, nossa."/>
+      <item id="39" desc="Dizem que há uma estante com todos os tipos de vinho e champanhe na sala do gerente."/>
+      <item id="40" desc="Eu sinto que meu cabelo está caindo, ou é só minha imaginação?" />
+    </type>
+
+    <type num="3">
+      <item id="1" desc="Não confie demais nessa corporação."/>
+      <item id="2" desc="Anormalidades já existem há tempos. Mas não faz muito tempo que começamos a contê-las."/>
+      <item id="3" desc="Eu costumava sonhar em fazer algo diferente disso. Sabe, todos nós costumávamos querer se tornar algo maior."/>
+      <item id="4" desc="É tudo tão difícil e cansativo. Mas, ei, c’est la vie."/>
+      <item id="5" desc="Não podemos fazer nada. É tarde demais para mudar."/>
+      <item id="6" desc="As vezes eu gostaria de poder voltar para quando eu era mais jovem. Mas é só uma mera fantasia."/>
+      <item id="7" desc="Eu costumava pensar que eu iria acabar melhor do que isso."/>
+      <item id="8" desc="Quantos podem dizer que tiveram uma vida satisfatória?"/>
+      <item id="9" desc="Trabalhos como esse não são nada diferentes do que uma esteira. Eu costumava ter paixão também quando eu comecei a trabalhar."/>
+      <item id="10" desc="Ninguém inicialmente pensaria que as Anormalidades são coisas terríveis. Mas depois de longas observações, saberão o que elas são…"/>
+      <item id="11" desc="Eu já quis ser um gerente. Não mais, em vez disso, eu sinto simpatia."/>
+    </type>
+
+    <type num="4" level="2">
+      <item id="1" desc="Bom dia, gerente!"/>
+      <item id="2" desc="Gerente! Como é que tá?"/>
+      <item id="3" desc="Diga, gerente, quer tomar um copo de café comigo?"/>
+      <item id="4" desc="E aí gerente! Só me divertindo no trabalho como sempre, hahaha."/>
+      <item id="5" desc="Só caso você tenha me escutado errado, gerente, quando eu disse “Total Saco de merda” eu não estava me referindo a você, eu juro."/>
+      <item id="6" desc="A sala dos funcionários conseguiu um novo café com aroma divino. Você é sempre bem-vindo para tomar café com a gente, gerente!"/>
+      <item id="7" desc="Gerente! Hoje é um bom dia!"/>
+      <item id="8" desc="Me diga, você vai querer se juntar ao nosso encontro depois do trabalho, gerente? Será divertido!"/>
+      <item id="9" desc="Olá gerente! É verdade que nós temos uma Anormalidade devoradora de homens?"/>
+      <item id="10" desc="Gostaria de um copo de café, gerente?"/>
+      <item id="11" desc="Oh! Eu já estava contando a um dos novatos sobre você, você sabe, do quão grandioso e inteligente você é!"/>
+      <item id="12" desc="O que eu estava resmungando não tem nada haver com você, gerente."/>
+      <item id="13" desc="Você me deixaria fora das contenções perigosas, gerente?"/>
+      <item id="14" desc="Oh, então você é o novo gerente! Ouvi bastante sobre você."/>
+      <item id="15" desc="Todo mundo vem elogiando você esses dias, gerente."/>
+      <item id="16" desc="Ei gerente, poderia me manter longe daquela coisa chamada ‘Há Nada Aqui’?"/>
+      <item id="17" desc="É verdade que seu escritório está cheio de refrescos gelados?"/>
+      <item id="18" desc="Ei gerente! Que tal você me convidar para seu escritório alguma vez?"/>
+      <item id="19" desc="Gerente, você acha que vai melhorar o bem-estar dos funcionários em breve?"/>
+      <item id="20" desc="Que tal instalar uma máquina de venda de cervejas na sala dos funcionários? Aposto que a moral dos funcionários aumentaria bastante."/>
+      <item id="21" desc="Diga, como soa mudar o menu do refeitório para um jantar completo?"/>
+      <item id="22" desc="Você deveria provar esse novo café gelado, gerente! Vou preparar um pouco para tu!"/>
+      <item id="23" desc="Gerente, eu estive sumido ontem porque eu estava com dor de estômago, eu comi um salmão estragado…"/>
+      <item id="24" desc="Poderia considerar minha proposta de ordenar a renúncia de alguém que mata trabalho mais de 3 vezes?"/>
+      <item id="25" desc="Nós não falamos com muita frequência, mas nós te admiramos, gerente!"/>
+      <item id="26" desc="Quer tomar uma ou duas cervejinhas depois do trabalho, gerente?"/>
+      <item id="27" desc="Diga, gerente, a ‘Garota Mágica’ é realmente tão perigosa quanto dizem os boatos? Eu comecei a trabalhar aqui agora então ainda não vi ela."/>
+      <item id="28" desc="Gerente, eu sofri uma mordida de uma Anormalidade alguns dias atrás e meu dedo ainda dói. Acha que eu posso ser compensado por isso?"/>
+      <item id="29" desc="Espero que seu resfriado passe logo, gerente!"/>
+      <item id="30" desc="Ei, minha alma gêmea quer saber onde eu trabalho. Posso fazer um tour para ela?"/>
+    </type>
+
+    <type num="6">
+      <item id="1" desc="Sêniores como eu possuem um entendimento melhor dessa corporação. E, é claro, são coisas que até você não sabe."/>
+      <item id="2" desc="Alguns de nós já estávamos aqui antes de você sentar nessa sua mesa. Não acredite em tudo que vê."/>
+      <item id="3" desc="Você conhece a Angela? Ela é uma voz que existiu desde o início dessa corporação."/>
+      <item id="4" desc="Tirando o fato de que você é o gerente e eu um funcionário, você e eu somos iguais na maior parte. Iguais na obrigação de gerenciar as Anormalidades e também iguais na sensação de que algo suspeito está acontecendo aqui, certo?"/>
+    </type>
+  </grade>
+
+  <grade level="2">
+    <!--주의 및 경고-->
+    <type num="7" level="3">
+      <item id="1" desc="Fujam pessoal! Saiam logo daqui!"/>
+      <item id="2" desc="Eu não quero morrer! Não me deixem para trás!"/>
+      <item id="3" desc="Me ajude!!!!"/>
+      <item id="4" desc="Gerente! Por favor, ajude!"/>
+      <item id="5" desc="Vá se foder! Eu não vou morrer aqui!"/>
+      <item id="6" desc="Gerente! Você está observando, certo? Por favor, me salve! Nos livre dessas coisas, por favor!"/>
+      <item id="7" desc="Alguém chame a Equipe de Planejamento Emergencial! Todos nós vamos morrer aqui!"/>
+      <item id="8" desc="Ajuda, por favor!!!!"/>
+      <item id="9" desc="Rápido, chame reforços!!"/>
+      <item id="10" desc="Me ajude!! Eu disse, ME AJUDE!!"/>
+      <item id="11" desc="Por que não tem ninguém vindo??? Eles vão só deixar a gente morrer?!"/>
+      <item id="12" desc="Aquela coisa vai matar todos nós! Acabou para nós!"/>
+      <item id="13" desc="Agora tudo acabou… Estamos todos mortos…"/>
+      <item id="14" desc="Eu me recuso a morrer!! Alguém, por favor, faça algo!"/>
+      <item id="15" desc="Se eu acabar morrendo, diga a meus pais que eu sinto muito."/>
+      <item id="16" desc="Gerente, você pode me ver, certo? Por favor, ratifique a situação! Por favor, me salve!"/>
+      <item id="17" desc="Eu vou me casar em breve, não posso morrer assim!"/>
+    </type>
+
+    <type num="8" level="2">
+      <item id="1" desc="Eu não vou esquecê-los… Eles eram ótimos colegas de trabalho…"/>
+      <item id="2" desc="Eles estão mortos? Minha nossa… nós até comemos juntos alguns dias atrás!"/>
+      <item id="3" desc="Eu ouvi que eles morreram? Isso me deixa triste."/>
+      <item id="4" desc="Meu colega de trabalho viu os corpos. Oh… me sinto triste agora…"/>
+      <item id="5" desc="Simplesmente não posso acreditar…"/>
+      <item id="6" desc="Nós todos vamos ser mortos por aquela coisa…"/>
+      <item id="7" desc="Você ouviu? Houve um acidente terrível durante o trabalho…"/>
+      <item id="8" desc="É extremamente lamentável, não é?"/>
+      <item id="9" desc="Eles eram pessoas boas… escutavam até todos os meus problemas que eu tinha e me ajudavam com eles…"/>
+      <item id="10" desc="Eles eram funcionários cativantes. A corporação deve compensar bem as famílias."/>
+      <item id="11" desc="Um funcionário acabou de morrer, como a corporação continua a funcionar como se nada tivesse acontecido?"/>
+      <item id="12" desc="Eles não eram só uns funcionários. Eles eram parte de nossa equipe. Nós nunca os esqueceremos."/>
+      <item id="13" desc="Ouvi dizer que um funcionário morreu hoje. Isso é verdade?"/>
+      <item id="14" desc="O gerente não deveria ser um pouco responsabilizado pela morte daquele funcionário?"/>
+      <item id="15" desc="Não podemos deixar isso acontecer novamente. Como alguém conseguiria trabalhar para uma corporação assim?"/>
+    </type>
+
+    <type num="9">
+      <!--멘탈 나빠지기 직전에 경고-->
+      <item id="1" desc="Por que eu me sinto tão cansado?"/>
+      <item id="2" desc="Não me sinto tão bem hoje."/>
+      <item id="3" desc="Não quero trabalhar."/>
+      <item id="4" desc="Um tempo atrás, eu vi alguém enlouquecendo. Será que vou acabar como ela?"/>
+      <item id="5" desc="Tô sentindo umas tonturas."/>
+      <item id="6" desc="Não consigo me concentrar… Não estou me sentindo bem."/>
+      <item id="7" desc="Eu não me sinto bem… Meu remédio também não está ajudando."/>
+      <item id="8" desc="Eu só preciso de um breve descanso… Meu corpo não está bem…"/>
+      <item id="9" desc="Eu só estou sem vontade de trabalhar hoje."/>
+      <item id="10" desc="Que droga de cansaço, eu só quero poder dormir em casa."/>
+    </type>
+
+  </grade>
+
+  <grade level="3">
+    <!--패닉 등 위험상황-->
+    <type num="5">
+      <item id="1" desc="Por favor, me dê ordens! Por favor, me dê ordens! Por favor, me dê ordens! Por favor, me dê ordens! Por favor, me dê ordens!"/>
+      <item id="2" desc="Eu espero que tudo desapareça. Essa corporação, e você também…"/>
+      <item id="3" desc="Gerente! Não me mande de volta lá! Eu não quero morrer! Eu não quero ser feito em pedaços!"/>
+      <item id="4" desc="O cérebro do meu colega está espalhado por toda parte… Você viu né? Precisamos limpar isso rápido… Sangue está cobrindo toda a Unidade de Contenção…"/>
+      <item id="5" desc="Todos nós vamos morrer. Ficar presos na miséria, e seremos mortos por aquele monstro."/>
+      <item id="6" desc="Você pode me mandar fazer um trabalho de ‘Suicídio’? É o que eu mais preciso agora."/>
+      <item id="7" desc="Por favor, me dê ordens! Que tal esmagar essas Anormalidades com o machado que está no depósito?"/>
+      <item id="8" desc="Eu não quero morrer. Não quero morrer brutalmente como meus amigos morreram…"/>
+      <item id="9" desc="Hahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaha"/>
+      <item id="10" desc="Não me mande lá!!! Não me faça morrer!!!!"/>
+      <item id="11" desc="Eu sinto que alguém fica falando comigo. Eles ficam cochichando para eu morrer, pode ensinar a eles uma lição?"/>
+      <item id="12" desc="Eu sinto que alguém está dentro da minha cabeça. Ele fica me falando coisas terríveis, não consigo nem dormir…"/>
+      <item id="13" desc="MeDesculpaPelosMeusColegasEPorMinhaSaúdeRuimePelaMinhaEfetividadeBaixaEuSóEsperoQueACorporaçãoSejaPrósperaComBonsResultadosEuVouMeDedicarTotalmenteSemProblemaAlgumEuVouViverMuitoTenhoCerteza."/>
+      <item id="14" desc="Waaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!"/>
+      <item id="15" desc="Ontem eu vi meu colega morto. Nós almoçamos e tomamos café juntos. Fico feliz de ver que ele está bem."/>
+      <item id="16" desc="Deixa eu ir para casa, gerente… Por favor, deixa eu ir para casa."/>
+      <item id="17" desc="Por favor, abra a porta, gerente… Eu tenho que sair daqui…"/>
+      <item id="18" desc="Gerente, se você pode me ver, por favor, faça tudo ficar bem novamente. Por favor, me salve."/>
+    </type>
+
+    <type num="10">
+      <!-- 합리주의자 패닉 (살인)-->
+      <item id="1" desc="Eu não quero morrer sozinho…"/>
+      <item id="2" desc="Então a culpa é sua! Se não fosse por você, nada disso teria acontecido!"/>
+      <item id="3" desc="Você é o problema. Não eu, você!"/>
+    </type>
+
+    <type num="11">
+      <!-- 평화주의자 패직 (배회) -->
+      <item id="1" desc="Me ajude, quero voltar para casa, por favor, abra a porta de emergência."/>
+      <item id="2" desc="Para onde eu vou? Esse lugar é o inferno…"/>
+      <item id="3" desc="Gerente, por favor, abra a porta. Me deixe sair!"/>
+      <item id="4" desc="Estou com tanto medo… O que eu faço…?"/>
+    </type>
+
+    <type num="12">
+      <!-- 원칙주의자 패닉 (자살) -->
+      <item id="1" desc="É tudo minha culpa, é tudo minha culpa."/>
+      <item id="2" desc="Não há mais esperança."/>
+      <item id="3" desc="Mesmo que eu sobreviva a isso, o trauma ficará pelo resto da minha vida."/>
+    </type>
+
+    <type num="13">
+      <!-- 낙관주의자 패닉 (격리실 테러)-->
+      <item id="1" desc="Gerente, me dá um descanso. Fui o único que não falhou!"/>
+      <item id="2" desc="Não sou igual aos outros idiotas aqui! Só olhe. Olhe o que eu vou fazer!"/>
+      <item id="3" desc="O que há com a sua expressão?! Eu vou fazer tudo ficar melhor, então espere um pouco!"/>
+    </type>
+  </grade>
+  <!-- END dummy code. See AgentNewLyrics_xx.xml-->
+
+  <creatureSay>
+    <!-- 환상체가 말한다 -->
+    <creature id ="100001">
+      <action type ="escape">
+        <!-- 탈출해서 세피라 쪽으로 향하고 있을 때 환상체 대사 -->
+        <desc>Pessoas…</desc>
+        <desc>Risos…</desc>
+        <desc>Felicidade… Calor…</desc>
+        <desc>Fogueira…</desc>
+        <desc>Frio…</desc>
+      </action>
+    </creature>
+
+    <creature id = "100004">
+      <action type ="good">
+        <!-- 기분 좋을 때 -->
+        <desc>Mas que dia lindo! Eu ainda não fui para o lado de fora, mas percebo que os pássaros estão cantando cheios de felicidade!</desc>
+        <desc>Vocês sabem do valor da vitória e da beleza desse mundo?</desc>
+        <desc>Todo mundo me ama. Não importa onde eu vá, as flores me recebem~</desc>
+        <desc>Me diga se algo ruim acontecer, tudo bem? Eu sei que eu posso te ajudar!</desc>
+        <desc>Dizem que nem todo mundo pode virar uma Garota Mágica. Elas devem ter um coração gentil, devem ser justas, e amar o mundo! Então poderão virar uma garota mágica como eu.</desc>
+        <desc>Eu sempre tive que aguentar um fardo imenso. É difícil às vezes, mas estou orgulhosa de mim mesma por isso!</desc>
+      </action>
+      
+      <action type ="normal">
+        <!-- 기분 좋지 않을때 -->
+        <desc>Alguém me disse que não há mais caras maus… Isso é verdade?</desc>
+        <desc>Você não precisa mais de mim…?</desc>
+        <desc>Esse lugar é pacífico demais. Algo deve estar errado.</desc>
+        <desc>Não existe luz sem trevas, é como se eu nem estivesse aqui.</desc>
+        <desc>Eu sou a escolhida. Quem protegeria o mundo além de mim?</desc>
+        <desc>Eu odeio esse lugar silencioso. O mundo que eu conhecia não era tão “pacífico” assim.</desc>
+      </action>
+      
+      <action type ="bad">
+        <!-- 기분 많이 좋지 않을 때 (변신 직전)-->
+        <desc>Ah… Estou…</desc>
+        <desc>Eu quero desaparecer…</desc>
+        <desc>Por que estou aqui…?</desc>
+        <desc>Deixe-me ir…</desc>
+        <desc>Não consigo aguentar…</desc>
+        <desc>Eu sou… uma garota mágica…</desc>
+      </action>
+    </creature>
+
+    <creature id="100031">
+      <action type="good">
+        <desc>Eu gosto muito, muito de você! Essa pedrinha é super importante para mim! Mas eu te amo tanto, que eu vou dar ela para você! Por favor, fique com ela para sempre.</desc>
+        <desc>Por favor, me ame.</desc>
+        <desc>Eu quero te segurar com minhas mãos.</desc>
+      </action>
+      <action type="bad">
+        <desc>Eu sempre sei para onde você vai.</desc>
+        <desc>Eu te amo tanto, por que você não vem me visitar?</desc>
+        <desc>Por que você não está vindo me ver?</desc>
+        <desc>Por que você não está vindo até mim? </desc>
+        <desc>Será que há algo que você ama mais do que eu?</desc>
+        <desc>Por que você estava lá? Você deveria estar comigo, não lá.</desc>
+      </action>
+    </creature>
+  </creatureSay>
+
+  <creatureAction>
+    <creature id="100002">
+      <!--
+      <item level="1" desc="그것은 더 이상 외로워하지 않는 것 같아!"/>
+      <item level="2" desc="기분이 조금 좋아보인다."/>
+      <item level="3" desc="아무런 반응을 보이지 않아."/>
+      <item level="4" desc="테디의 고개가 힘없이 떨궈진다."/>
+      <item level="5" desc="이 이상으로 나빠질 수 없겠군."/>
+      -->
+      
+      <action type ="dead">
+        <!-- 포옹하기로 죽어갈 때 -->
+        <desc>N-Não consigo respirar. Me deixe sair...!</desc>
+        <desc>Meus ossos estão quebrando, alguém… por favor…</desc>
+        <desc>Ele está me achatando… ajuda…</desc>
+      </action>
+
+      <action type ="hug">
+        <!-- 직원이 특수작업 '포옹하기' 를 했을 때 -->
+        <desc>Oh, pobre ursinho, vou te dar um abraço.</desc>
+        <desc>Ele é tão macio…</desc>
+        <desc>Eu nunca abracei um ursinho de pelúcia tão grande assim!</desc>
+      </action>
+    </creature>
+
+    <creature id="100003">
+      <!-- 빨간구두 -->
+      <action type="start">
+        <desc>Eles são meus, não vou deixar ninguém tê-los.</desc>
+        <desc>Um machado, onde está um machado?</desc>
+        <desc>Esse par de saltos é o mais bonito que eu já vi.</desc>
+      </action>
+
+      <action type="dead">
+        <desc>Me devolvam… eles!</desc>
+        <desc>Não tire eles de mim…</desc>
+        <desc>Não, não, não! Não tire eles, não!</desc>
+        <desc>Me desculpa…</desc>
+      </action>
+
+      <action type="attack">
+        <desc>Você quer roubar meus saltos, não é?</desc>
+        <desc>Morrendo, morrendo, morrendo, morrendo.</desc>
+        <desc>Quebrarei suas pernas, então você nunca mais dançará.</desc>
+        <desc>Quebrarei seus braços, assim você não vai conseguir roubar minhas coisas.</desc>
+      </action>
+
+      <action type="walk">
+        <desc>Onde está todo mundo?</desc>
+        <desc>Pessoal, olhem para mim. Eu estou usando saltos tão bonitos.</desc>
+        <desc>Todos vocês precisam ver o quão adoráveis são meus saltos.</desc>
+      </action>
+
+      <action type="kill">
+        <desc>Eu te disse que não os devolveria.</desc>
+        <desc>Eles são muito mais bonitos cobertos de sangue.</desc>
+        <desc>Você já está dormindo?</desc>
+      </action>
+
+    </creature>
+
+
+    <creature id="100036">
+      <!-- 우주의 조각 특수능력 받은 직원들 대사 꼭 구현되면 좋겠습니다!!!!!!!!!!!-->
+      <action type="Specialskill">
+        <desc>As sombras que estavam me engolindo finalmente sumiram.</desc>
+        <desc>Finalmente posso ver e sentir novamente…</desc>
+        <desc>As estrelas estão cantando para mim… Você consegue escutar?</desc>
+      </action>
+    </creature>
+
+    <creature id="100021">
+      <!-- 늙은 여인 -->
+      <action type="workAllocate">
+        <desc>Espero que ela não me conte aquela história horrível novamente…</desc>
+        <desc>Droga, ela me deixa louco com aquelas histórias.</desc>
+        <desc>Prefiro ficar surdo do que ter que escutar aquelas fábulas novamente.</desc>
+      </action>
+    </creature>
+
+    <creature id="100006">
+      <!-- 노래하는 기계 -->
+      <action type="attack">
+        <desc>Me desculpe, mas eu tenho que escutar aquela música novamente.</desc>
+        <desc>Não lute, você também amará as melodias.</desc>
+        <desc>Vou escutar àquela música a qualquer custo.</desc>
+      </action>
+
+      <action type="listen">
+        <!-- 노래하는 기계에서 직원을 가는 소리를 듣고 있을 때 -->
+        <desc>Não tenho nada mais a desejar…</desc>
+        <desc>Para mim, esse momento é o paraíso mais puro.</desc>
+        <desc>Eu nasci só para ter esse momento.</desc>
+      </action>
+
+      <action type = "attract">
+        <!-- 노래하는 기계에게 홀릴 때 -->
+        <desc>Agora, eu renasço.</desc>
+        <desc>Se eu cortar fora meu braço, vou poder escutar aquela música novamente?</desc>
+        <desc>Um corpo, preciso de um corpo…</desc>
+      </action>
+
+      <action type="killed"> <!-- 노래하는 기계가 특수 공격 했을 때 -->
+      	<desc>AAAAAAAH! ME AJUDA!</desc>
+      	<desc>Não! Me ajuda, por favor!</desc>
+      	<desc>ME AJUDA! AJUDA!</desc>
+      </action>
+
+    </creature>
+
+    <creature id ="100001">
+      <!-- 불타버린 소녀 -->
+      <action type ="hurt">
+        <!-- 공격받아서 불타고 있을 때 직원 대사 -->
+        <desc>Merda! Minhas roupas estão pegando fogo!</desc>
+        <desc>Alguém pega um extintor! Está quente demais!</desc>
+        <desc>Apaga, por favor!</desc>
+      </action>
+
+
+      <action type ="escaped">
+        <!-- 성냥팔이가 탈출했을 때 직원들 대사 -->
+        <desc>Se não fizermos algo agora, o departamento estará ferrado!</desc>
+        <desc>Assim que aquela garota chegar à sala principal, acabou para nós!</desc>
+        <desc>A Sala de Contenção vai desabar em chamas! Faça algo!</desc>
+      </action>
+
+    </creature>
+
+    <creature id ="100009">
+      <!-- 단 한번의 악과 수백가지의 선행 -->
+      <action type ="confess">
+        <!-- 고해 대사 랜덤으로 나온다 -->
+        <desc>Quando era só uma criança de sete anos, pelo riacho…</desc>
+        <desc>Eu não vou esquecer daquele dia, 6 de Abril, sendo exato…</desc>
+        <desc>Um dia, nós estávamos jantando na mesa familiar como de costume…</desc>
+        <desc>Aconteceu no dia especial em que eu fui para o parque de diversões com meu irmão…</desc>
+        <desc>O dia que fez ele ficar assim…</desc>
+      </action>
+    </creature>
+  </creatureAction>
+</root>

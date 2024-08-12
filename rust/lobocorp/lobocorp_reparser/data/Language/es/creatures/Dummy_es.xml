@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id="100000">
+
+    <narration action="move">
+      #0 va a ingresar a la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 es un maniquí que cree que es un empleado de esta instalación.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 parece que le gusta la gente.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {$0 está dando vueltas alrededor de #0 pero #0 se absorbe en este trabajo.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {$0 piensa que en el centro del mundo.}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {$0 se siente triste por la partida del empleado #0. Parece querer seguirlos.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">0-00-00</codeNo>
+      <name openLevel="1">Conejo de Entrenamiento Estandar</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/DummyPortrait</portrait>
+      <riskLevel openLevel ="1">TETH</riskLevel>
+      <openText>Anormalidad ficticia utilizada para entrenar a futuros gerentes.</openText>
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      Una anormalídad ficticia usada para entrenar a futuros gerentes.
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      Algunos rumores dicen que se convirtió en una anormalidad del entrenamiento, ya que es más dócil y domesticado. Se llama conejo ficticio pero no parece que le gusten las zanahorias. Le gusta la gente. Si se escapa, es simplemente seguir a la persona que se está yendo.
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      <!--특수 상태-->
+    </desc>
+
+    <desc id="4" openLevel="3">
+      <!--특수 상태-->
+    </desc>
+
+    <record openLevel="1">
+      <!-- 관찰기록 -->
+    </record>
+
+    <record openLevel="2">
+      <!-- 관찰기록 -->
+    </record>
+
+    <record openLevel="3">
+      <!-- 관찰기록 -->
+    </record>
+
+    <specialTipSize size="1">
+      <specialTip openLevel="1" key="tutorial">Un trabajo de represión realizado en $0 disminuye el contador Qlifot.</specialTip>
+    </specialTipSize>
+
+  </observe>
+</creature>

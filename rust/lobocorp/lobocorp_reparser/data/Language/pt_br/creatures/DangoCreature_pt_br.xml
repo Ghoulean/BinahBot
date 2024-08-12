@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100042">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção da $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="mid1">
+      [
+      {A $0 está procurando pelo cheiro de um cadáver, enquanto carrega os sorrisos de vários outros.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {A $0 espera pelo cheiro de sangue que está por vir, enquanto segura todas as risadas daqueles que não podem ser vistos aqui.},
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-01-75</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/DangoCreature</portrait>
+      <name openLevel="1">
+        Montanha de Corpos Sorridentes
+      </name>
+      <riskLevel openLevel="1">
+        ALEPH
+      </riskLevel>
+      <openText>Os rostos sorridentes são desconhecidos, porém cheios de tristeza.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Não é como esses tipos de acontecimentos fossem incomuns por aqui, mas em certo dia, dezenas de funcionários foram mortos em um incidente. O motivo foi o mesmo de sempre. Algo escapou, tentamos parar essa coisa, e isso causa outra fuga...&#13;&#10;&#13;&#10;A única coisa boa é que o departamento foi selado antes que as coisas ficassem mais feias, por isso, todos morreram no mesmo lugar, e uma montanha de cadáveres literalmente se formou. Era óbvio que ninguém iria querer limpar aquela bagunça. Normalmente, levaria somente um dia para cuidar de coisas assim, mas por conta da gravidade do acidente e da exaustão dos funcionários, a limpeza foi adiada com a autorização do Sefirá do departamento. Não me pergunte em qual foi o departamento, eu não lembro dos detalhes. }
+    ]
+  </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Enquanto exposto, um cadáver começará a apodrecer em algumas horas. A maioria dos cadáveres que morrem aqui são danificados de alguma maneira, então apodrecem ainda mais rápido.&#13;&#10;&#13;&#10;Você provavelmente ainda não sabe, mas a grande maioria dos funcionários são bastante habilidosos em limpar cadáveres e, querendo ou não, ter que arrumar a bagunça repetidas vezes faz com que qualquer um fique extremamente experiente naquilo. Vamos supor que alguém que você estava planejando levar para jantar morreu horrivelmente. Graças a tal experiência, você não sentirá náuseas ou tentará fugir.}
+    ]
+  </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Opa, eu saí um pouco do assunto. De qualquer forma, em circunstâncias normais, a montanha teria sido removida rapidamente, mas permaneceu no departamento por um longo período. Então se deteriorou, derreteu, corroeu e se desmanchou seguindo as regras da natureza.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Das montanhas de cadáveres, os mortos deram vida a algo. E assim foi criada. Impressionante, não? Eu ainda tenho mais para falar. Enquanto os mortos fundiram-se um ao outro, todos estavam sorrindo. Compartilhando membros do corpo, pelo menos aqueles que ainda estavam intactos, tornando-se pernas e bocas. Mas isso não significa que foi capaz de recuperar a própria consciência. Afinal, ela só deseja por uma coisa: nossa carne coberta de sangue. Quando há um aviso de que alguém morreu, a primeira coisa que você deve fazer é olhar se essa coisa está contida. Já que assim que ela sentir um pouco do aroma de sangue, nos perseguirá incansavelmente. Os rostos sorridentes são desconhecidos, porém cheios de tristeza.&#13;&#10;&#13;&#10;Quanto mais cadáveres encontrava, mais definida sua forma ficava, além de nunca conseguir ficar satisfeita.&#13;&#10;&#13;&#10;Estou te dizendo tudo isso porque ela está quase aqui. Acidentes sempre acontecem nesse lugar. Alguns podem gastar um pouco do tempo para ficarem em um momento de silêncio, mas a maioria dará as costas pensando, "De novo?". Pelo menos, fizeram algo correto, que foi selar o departamento por completo. Eu sou a única pessoa que falta de qualquer jeito. Você aprendeu algo com minha história? Que tipo de lição pode ser aprendida de uma história tão horrível como essa? A mesma que a maioria dos contos de fada. "Não seja preguiçoso". Quando não conseguir mais ouvir minha voz, venha aqui e limpe os cadáveres de seus colegas em exatamente 3 minutos.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Daqui a pouco não vou mais poder continuar falando. Estou prestes a engolir uma enorme bomba. O tempo está acabando. Sangue está fluindo por toda a parte por aqui. Eu já estou começando a ver os rostos sorridentes... Algo que você não vê muito por aqui.&#13;&#10;&#13;&#10;Não se surpreenda caso ouça uma enorme explosão. Como eu disse, é precisamente em 3 minutos. Eu tenho certeza que uma bomba deste tamanho conseguirá suprimí-la.&#13;&#10;&#13;&#10;E o último cadáver que ela encontrará será o meu.}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">Quando #0 morreu enquanto trabalhava com a $0, o Contador Qlifót reduziu.</specialTip>
+      <specialTip openLevel="2" key="2">Quando um Agente ferido entrava na Unidade de Contenção, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="2" key="3">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="2" key="4">Quando 10 funcionários morreram nas instalações, o Contador Qlifót reduziu. Porém, mortes causadas por Balas de Execução não eram reconhecidas.</specialTip>
+      <specialTip openLevel="2" key="5">Enquanto a $0 está em fuga, ela mostrará reações sensíveis a cadáveres. Durante a supressão, certifique-se de que ninguém seja morto pela Anormalidade; se mortes acontecerem, tente manter a $0 longe dos cadáveres.</specialTip>
+      <specialTip openLevel="1" key="6">Se a supressão da $0 não puder ser concluída no departamento anterior, você precisará tomar maiores cautelas para prevenir qualquer outra morte no setor onde ela está localizada.</specialTip>
+      <specialTip openLevel="1" key="7">Após outras partes aparecerem do corpo principal da $0 enquanto escapava, reduzir o PV a 0 não a suprimia por completo. A $0 somente será reprimida ao atacar a parte principal após contiuamente ter reduzido seu PV a 0 e derrotado essas outras partes.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

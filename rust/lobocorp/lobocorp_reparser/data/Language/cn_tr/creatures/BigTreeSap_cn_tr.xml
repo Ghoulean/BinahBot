@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300005">
+
+    <narration action="move">
+      指派 #0 至 $0 的收容室.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-80</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/BigTreeSap</portrait>
+
+      <name openLevel ="1">
+        巨樹的汁液
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+
+      <openText>
+        "種什麼樹得什麼果.”
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {在世界的邊緣裡的不知名, 巨大樹木上萃取出來的樹液. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {根據調查小隊的說法, 有大量的綠色生物在那附近. 這樹液能餵飽它們且含有強大的治癒能力.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {某些喝下它的員工溶解了, 留下焦黑, 綠色的遺體.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      <!-- 여기 번역 고치기 -->
+      [
+      {許多的實驗證實, 液消耗的越多, 發生溶解的可能性就越高.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {“許多人臆測該怎麼在那貧擠的郊區種出這麼大棵的樹. 生命像是它的培養液般被吸收殆盡. 種什麼樹得什麼果.”}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="healthgood">目標攝取 $0 後能立即恢復所有的 HP. 此外, 目標的 HP 會在之後持續恢復一段時間.</specialTip>
+      <specialTip openLevel="2" key="boomDead">在目標攝取 $0 後發現了一個副作用. 攝取 $0 後產生副作用的目標在 20 到 30 秒後會發生爆炸並死去, 並對整個區域產生 W 傷害.</specialTip>
+      <specialTip openLevel="2" key="boomGood">實驗證實攝取 $0 的數量與爆炸的機率之間有正相關.</specialTip>
+    </specialTipSize>
+
+  </observe>
+</creature>

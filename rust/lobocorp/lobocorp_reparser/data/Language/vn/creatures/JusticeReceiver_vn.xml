@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300107">
+    <narration action="move">
+      #0 is going into $0's containment unit to begin the task.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-96</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/JusticeReceiver</portrait>
+
+      <name openLevel ="1">
+        Behavior Adjustment
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>Eventually they will lose all Prudence and even forget how to exist.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {An electronic device with a mysterious pattern carved into it.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {It readjusts everyone to become righteous no matter how wicked, evil, and arrogant they are.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {But users will become too dependent on the device and will lose power to think on their own.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+
+      [
+      {Eventually they will lose all Prudence and even forget how to exist.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Status regarding Justice will increase greatly when $0 is worn. However, all status regarding Prudence will drop at the same time.</specialTip>
+      <specialTip openLevel="2" key="2">Wearer will be in panic if ordered to return this equipment within 30 seconds of equipping it and die after showing abnormal actions.</specialTip>
+      <specialTip openLevel="2" key="3">If SP reaches 0 when $0 is worn, the wearer will die in panic.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

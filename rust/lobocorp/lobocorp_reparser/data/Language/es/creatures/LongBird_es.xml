@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100035">
+
+    <narration action="move">
+      #0 va a ingresar a la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="start">
+      [
+      {Hay un viejo dicho, "Nunca olvides el Ave del Juicio. No importa cuánto tarde, eventualmente te encontrará."},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 nunca tiene prisa. },
+      {Quizás ya esté en tu casa. }
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Los que vivimos en un mundo sin perdón ofrecemos nuestras almas como tributo a la redención.},
+      {La gente es astuta y no son capaces de salvar sus propias almas. Es por eso que $0 vino a nosotros.}
+      {Pocos se dan cuenta de sus propios pecados. La balanza de $0 les ayuda a darse cuenta de sus pecados.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 fue una vez el guardián del bosque. Pero olvidó lo más importante mientras estaba totalmente enfocado en proteger a las criaturas.},
+      {Ahora, la oscuridad reina en el bosque.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-02-62</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/LongBird</portrait>
+
+      <name openLevel ="1">
+        Ave Largo
+      </name>
+
+      <name openLevel="2">
+        Ave del Juicio
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>Su balanza se inclina según los pecados cometidos.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Es una Ave que transporta una balanza injusta y juzga a los vivos en un bosque oscuro.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {La escala siempre se inclina en la misma dirección, pero no lo sabe porque sus ojos están cubiertos. O lo sabe y es está simplemente ignorando el hecho. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Hace mucho tiempo, el ave fue una vez un juez justo. Su balanza se inclina según los pecados cometidos.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {$0 hizo una balanza que era capaz de pesar cualquier pecado para proteger el bosque.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {En el pasado, los ojos de, #0 podían ver a través de todo. Sus ojos brillaban siempre, como las estrellas en el cielo nocturno. Pero le dio sus ojos a Gran Ave para salvar el bosque. Ahora, sus cuencas son huecas. }
+      ]
+    </desc>
+
+    <desc id="6" openLevel="3">
+      [
+      {El vendaje se agita en el viento, como si se arrancara en cualquier segundo. La cara del ave estuvo alguna vez cubierta de plumas brillantes, pero ahora ya no están. }
+      ]
+    </desc>
+
+    <desc id="7" openLevel="4">
+      [
+      {Todo lo que queda es la balanza injusta. $0 continúa con el juicio. }
+      ]
+    </desc>
+
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="MoodZero">Cuando el resultado del trabajo era Normal, el Contador Qlifot se reduce con una probabilidad Normal.</specialTip>
+      <specialTip openLevel="1" key="MoodZero2">Cuando el resultado del trabajo fue malo, el Contador Qlifot se reduce con una probabilidad Alta.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

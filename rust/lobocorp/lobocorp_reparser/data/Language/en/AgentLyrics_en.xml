@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!-- 
+  ===================== 현재 사용되지 않음 ======================
+  대화의 상황 ex) 시작 시 인사, 잡담, 정보 등 마다 노드를 만들거에요
+  <normal type="1" id="1" desc="안녕하세요 관리자님"/> ->일상
+    ->type : 관리자 하루 시작할 때 같은 것들
+      id   : 걍 다른 숫자면 됨 증가하는 값으로 처리해버리세요
+      desc : 대화 내용
+  
+  <danger type="4" id="1" desc="일하기 싫당"/> ->혼파망
+  
+  normal type num 1 = 일상
+  type num 2 = 에너지 절반 이상
+  type num 3 = 에너지 다 모았을 때
+  type num 4 = 환상체에게 작업을 시작할 때
+  type num 5 = 환상체에게 작업을 끝냈을 때
+  type num 6 = 직원들에게 명령을 내렸을 때
+  type num 7 = 작업을 성공했을 때
+  danger type num 1 = 에너지를 다 모으지 못했을 때
+  num 2 = 환상체의 기분이 좋지 않을 때
+  num 3 = 환상체의 작업이 실패했을 때
+  num 4 = 환상체가 탈출했을 때
+  num 5 = 직원들이 패닉에 빠졌을 때
+  num 6 = 직원들의 멘탈수치가 좋지 않아 졌을 때 경고
+  num 7 = 직원이 죽었을 때
+  =============================================================
+  -->
+
+
+  <!-- 이제 안 쓴다 힝힝 -->
+  <!-- 
+chat type 1 : Day 1때 나오는 랜덤 대사>
+type 2 : Day 2부터 그냥 평상시.
+type 3 : 떡밥 있는 대화. type 2와 같이 등장하되, 랜덤 빈도수는 더 적다
+type 4 : 직원들에게 대화 
+type 5 : 멘탈 안 좋은 직원들
+type 6 : 계급 올라간 직원들
+type 7 : 환상체 탈출했을 때 직원 멘붕
+type 8 : 동료가 직웠을 때 슬퍼하는 직원들-->
+  <!--
+  grade - 해당 대사의 위험 등급을 나타냄, 총 3단계
+          1 - 일상적인 대화
+          2 - 주의 및 경고에 관한 대화
+          3 - 패닉 등 최상위 중요도에 관련된 대화
+  
+  type - 해당 대사들의 종류
+         level - 같은 위험 등급 내에서의 중요도를 나타냄, 높을 수록 중요도 높음, 없을 경우 1로 처리
+-->
+
+  <!-- BEGIN dummy code. This code is old version. Do not tranlate "grade" tag. See AgentNewLyrics_xx.xml-->
+  <grade level="1">
+    <!--일상적인 대화-->
+    <type num="1">
+      <item id="1" desc="I heard the new manager is coming today!"/>
+      <item id="2" desc="I bet the new manager’ll be a jerk, needless to say!"/>
+      <item id="3" desc="The last thing I wanna do is work. I sure wish I could be a manager and supervise my own subordinates..."/>
+      <item id="4" desc="Hey, did you hear? The new manager came today."/>
+      <item id="5" desc="I just want a raise, I don’t care about some new manager."/>
+      <item id="6" desc="How much does the manager get paid anyhow? It’d be higher than us by a long shot, right?"/>
+      <item id="7" desc="I want the manager to know how hard we work our fingers to the bone."/>
+      <item id="8" desc="Doesn’t the manager just sit around and push buttons all day? Shouldn’t they take care of us Agents and Clerks more?"/>
+      <item id="9" desc="I should’ve studied better to become a manager."/>
+      <item id="10" desc="It’d be neat to see what the new manager looks like."/>
+      <item id="11" desc="So we aren’t planning a welcome party for the new manager?"/>
+      <item id="12" desc="How about we pop over to get some drinks after work to celebrate the new manager?"/>
+      <item id="13" desc="So we AREN’T doing any hazing for the new manager? Lame."/>
+    </type>
+
+    <type num="2">
+      <item id="1" desc="Hey, how’s about we get a pint or two after work?"/>
+      <item id="2" desc="I wonder what stupid work our lazy-ass manager’s gunna give me."/>
+      <item id="3" desc="Oh man, I could have been a goner today."/>
+      <item id="4" desc="Writing the Abnormality Encyclopedia is a pain in the neck. Nobody’ll know if I just fudge the details and make some stuff up, right?"/>
+      <item id="5" desc="Office romance is not recommended, right?"/>
+      <item id="6" desc="I mean, the salary is high so our corporation isn’t that bad… besides the danger, suspicion, stress, killing..."/>
+      <item id="7" desc="The staff lounge is way too small. It’s like you’re not even intended to use it."/>
+      <item id="8" desc="Did you hear about that employee? The one in the Emergency Planning Team... I heard his leg got amputated..."/>
+      <item id="9" desc="Having to do stupidly boring work like this when there’s the perfect weather outside…"/>
+      <item id="10" desc="I’d totally quit if I had the chance. The only problem is I’ve got four mouths to feed back home."/>
+      <item id="11" desc="Is it true that the manager is the only one who gets to use the exclusive elevator?"/>
+      <item id="12" desc="I mean, I suppose the manager isn’t a total blockhead, considering that the company seems to be doing fine right now."/>
+      <item id="13" desc="Energy production’s increased, but our salary’s still low as ever."/>
+      <item id="14" desc="A promotion might come my way if I work hard."/>
+      <item id="15" desc="The cafeteria food’s decent."/>
+      <item id="16" desc="I’ve gotten way too stressed lately."/>
+      <item id="17" desc="My mom doesn’t exactly know what kinda company I work for."/>
+      <item id="18" desc="The Control Team doesn’t do much, right?"/>
+      <item id="19" desc="Man, I’m totally craving hamburgers right now."/>
+      <item id="20" desc="Just five minutes late, and my boss raked my ass over the coals. And get this, she was twenty minutes late two days ago!"/>
+      <item id="21" desc="The newbie in our department is waaay out of line. We gotta make sure they learn they’re supposed to get the coffee ready."/>
+      <item id="22" desc="Resource Management is the one place I know for a fact I’d dip out of. I heard you gotta bust your ass daily there."/>
+      <item id="23" desc="My supervisor used to say that I’d be alright here as long as I followed what the manual tells us."/>
+      <item id="24" desc="At the very least, the staff lounge is decent."/>
+      <item id="25" desc="Are these Abnormalities really safe? They don’t look safe in the slightest to me."/>
+      <item id="26" desc="Abnormalities don’t need to look vicious to be dangerous."/>
+      <item id="27" desc="Ordinary people don’t even know that these things exist. If that info got leaked, well the captains of all our departments would be stuck in the guillotine."/>
+      <item id="28" desc="Geez, there’s nothing more boring than writing the Encyclopedia. "/>
+      <item id="29" desc="Even employees who’ve been here since the start won’t be able to hide their tension."/>
+      <item id="30" desc="Something’s stuck between my teeth… Must be that chicken sandwich from lunch."/>
+      <item id="31" desc="I think I’ll start dieting tomorrow."/>
+      <item id="32" desc="Got my nails polished last night, how do they look?"/>
+      <item id="33" desc="I’m sooo hungover. I had way too much to drink last night!"/>
+      <item id="34" desc="But I don’t wanna work."/>
+      <item id="35" desc="How many hours left till we can leave?"/>
+      <item id="36" desc="Psst, can I take a quick little nap in the breakroom?"/>
+      <item id="37" desc="I’ve had more than five cups of coffee so far."/>
+      <item id="38" desc="‘Parrantly there was something wrong with the bacon I had earlier. Spent most of the day in the bathroom, whew."/>
+      <item id="39" desc="They say there’s a shelf with all sorts of wine and champagne in the manager’s room."/>
+      <item id="40" desc="I feel like my hair’s falling out, am I just imagining things?" />
+    </type>
+
+    <type num="3">
+      <item id="1" desc="Don’t trust this company too much."/>
+      <item id="2" desc="Abnormalities have existed for a long time. But it hasn’t been that long since we began containing them."/>
+      <item id="3" desc="I used to dream of doing something other than this. Y’know, we all used to want to become something greater."/>
+      <item id="4" desc="It’s all so hard and tiring. But hey, c’est la vie."/>
+      <item id="5" desc="We can’t do anything. It’s too late to change."/>
+      <item id="6" desc="Sometimes I wish I could go back to when I was younger. Just mere fantasy, though."/>
+      <item id="7" desc="I used to think I’d end up better than this."/>
+      <item id="8" desc="How many would proudly say that they’ve had a fulfilling life?"/>
+      <item id="9" desc="Work like this is nothing different than a treadmill now. I used to have passion too when I started working."/>
+      <item id="10" desc="No one would initially think Abnormalities are dreadful things. But after long observation, one will know that they are…"/>
+      <item id="11" desc="I once wanted to be a manager. Not anymore though, rather, I feel sympathy."/>
+    </type>
+
+    <type num="4" level="2">
+      <item id="1" desc="Good day, manager!"/>
+      <item id="2" desc="Manager! How’s it hanging?"/>
+      <item id="3" desc="Say, manager, You wanna share a cup of coffee?"/>
+      <item id="4" desc="Heyo manager! Just having fun at work as usual, hahaha."/>
+      <item id="5" desc="Just in case you misheard me manager, when I said “Total Shitbag” I wasn’t referring to you, I swear."/>
+      <item id="6" desc="The staff lounge just got some new coffee that smells divine. You’re always welcome to join us for a cup, manager!"/>
+      <item id="7" desc="Manager! Today’s a good day!"/>
+      <item id="8" desc="Say, you wanna join our get-together after work, manager? It’ll be fun!"/>
+      <item id="9" desc="Hello manager! Is it true that there’s a man-eating Abnormality?"/>
+      <item id="10" desc="Would you like a cup of coffee, manager?"/>
+      <item id="11" desc="Oh! I was just telling one of the newbies about you, y’know, how great and smart you are!"/>
+      <item id="12" desc="What I just swore about in my mumble had nothing to do with you, manager."/>
+      <item id="13" desc="Would you keep me out of the dangerous containments, manager?"/>
+      <item id="14" desc="Oh, so you’re the new manager! I’ve heard a lot about ya."/>
+      <item id="15" desc="Everyone’s been complimenting you these days, manager."/>
+      <item id="16" desc="Hey manager, could you keep me from dealing with that ‘Nothing There’ thing?"/>
+      <item id="17" desc="Is it true that your office has a ton of cool refreshments?"/>
+      <item id="18" desc="Heyo manager! How’s about you invite me over to your office sometime!"/>
+      <item id="19" desc="Manager, do you think you’ll improve the employee welfare anytime soon?"/>
+      <item id="20" desc="How about installing a beer vending machine in the staff lounge? I bet employee morale would skyrocket."/>
+      <item id="21" desc="Say, how’s it sound to change the cafeteria menu to a full-course buffet?"/>
+      <item id="22" desc="You should try out this new iced coffee, manager! I’ll prep some up for ya!"/>
+      <item id="23" desc="Manager, I was gone yesterday cause I had an upset stomach, had some bad salmon…"/>
+      <item id="24" desc="Could you consider my proposal for ordering resignation if someone skips out on work more than three times?"/>
+      <item id="25" desc="We don’t say it all too often, but we admire you, manager!"/>
+      <item id="26" desc="Wanna grab a drink or two after work, manager?"/>
+      <item id="27" desc="Say, manager, is ‘Magical Girl’ as dangerous as the rumors say? I just started working here so I haven’t seen her yet."/>
+      <item id="28" desc="Manager, I got bit by an Abnormality a few days ago, and my finger still hurts. Do you think I could get workers comp. for this?"/>
+      <item id="29" desc="I hope your cold goes away soon, manager!"/>
+      <item id="30" desc="Hey, my significant other wants to know about where I work. Could I take them on a tour?"/>
+    </type>
+
+    <type num="6">
+      <item id="1" desc="Seniors like me have a better understanding of this company. Of course, this is stuff like things that even you don’t know."/>
+      <item id="2" desc="Some of us have been here before you even sat down at that desk of yours. Don’t believe everything you see."/>
+      <item id="3" desc="Do you know Angela? She’s a voice that’s existed since the start of this company."/>
+      <item id="4" desc="Excluding the fact that you’re the manager and I’m an employee, you and I are both mostly the same. Same about the obligation that we have to manage Abnormalities and also about the sensation that something suspicious is going on here, right?"/>
+    </type>
+  </grade>
+
+  <grade level="2">
+    <!--주의 및 경고-->
+    <type num="7" level="3">
+      <item id="1" desc="Everyone, run! Just get out of here!"/>
+      <item id="2" desc="I don’t want to die! Don’t leave me behind!"/>
+      <item id="3" desc="Help me!!!!"/>
+      <item id="4" desc="Manager! Please help!"/>
+      <item id="5" desc="Fuck off! I won’t die here!"/>
+      <item id="6" desc="Manager! You’re watching, right? Please save me! Get rid of these things, please!"/>
+      <item id="7" desc="Someone call the Emergency Planning Team! We’re all going to die here!"/>
+      <item id="8" desc="Help, please!!!!"/>
+      <item id="9" desc="Call reinforcements, quick!!"/>
+      <item id="10" desc="Help!! I said HELP!!"/>
+      <item id="11" desc="Why isn’t anyone coming!!! Are they just going to let us die?!"/>
+      <item id="12" desc="That thing’s gonna kill us all! We’re done for!"/>
+      <item id="13" desc="It’s all over now… We’re all dead…"/>
+      <item id="14" desc="I refuse to die!! Someone, just do something!"/>
+      <item id="15" desc="If I end up dead, tell my parents I’m sorry."/>
+      <item id="16" desc="Manager, you can see me, right? Please rectify the situation! Please save me!"/>
+      <item id="17" desc="I’m going to get married soon, I can’t die like this!"/>
+    </type>
+
+    <type num="8" level="2">
+      <item id="1" desc="I won’t forget them… They were a great coworker…"/>
+      <item id="2" desc="They’re dead? Goodness… we ate together just a few days ago!"/>
+      <item id="3" desc="I heard they died? That makes me sad."/>
+      <item id="4" desc="My coworker saw their body. Oh… I feel rather sad now…"/>
+      <item id="5" desc="I just can’t believe it…"/>
+      <item id="6" desc="We’re all going to be killed by that thing…"/>
+      <item id="7" desc="Did you hear? There was a terrible accident during work…"/>
+      <item id="8" desc="It’s extremely unfortunate, isn’t it."/>
+      <item id="9" desc="They were a good person… They used to listen to any worry I had and would help me through it…"/>
+      <item id="10" desc="They were a passionate employee. The company should compensate their family well."/>
+      <item id="11" desc="An employee’s just died, how can the company keep ordering work as if nothing happened?"/>
+      <item id="12" desc="They weren’t just some employee. They were a part of our team. We’ll never forget them."/>
+      <item id="13" desc="I heard that an employee died today. Is that true?"/>
+      <item id="14" desc="Shouldn’t the manager at least be held a bit responsible for the death of that employee?"/>
+      <item id="15" desc="We can’t let this happen again. How could someone work for a company like this?"/>
+    </type>
+
+    <type num="9">
+      <!--멘탈 나빠지기 직전에 경고-->
+      <item id="1" desc="Why do I feel so tired."/>
+      <item id="2" desc="I don’t feel too good today."/>
+      <item id="3" desc="Don’t wanna work."/>
+      <item id="4" desc="A while back, I saw someone go crazy. Will I end up like them?"/>
+      <item id="5" desc="Feelin’ kinda dizzy right now."/>
+      <item id="6" desc="I just can’t concentrate… I ain’t feeling well."/>
+      <item id="7" desc="I don’t feel good… My medicine isn’t helping either."/>
+      <item id="8" desc="I just need a quick rest… My body’s not right currently…"/>
+      <item id="9" desc="I just don’t feel like working today."/>
+      <item id="10" desc="So damn tired, I just wanna sleep at home."/>
+    </type>
+
+  </grade>
+
+  <grade level="3">
+    <!--패닉 등 위험상황-->
+    <type num="5">
+      <item id="1" desc="Please give me an order! Please give me an order! Please give me an order! Please give me an order! Please give me an order!"/>
+      <item id="2" desc="I hope everything disappears. This company, and you too…"/>
+      <item id="3" desc="Manager! Don’t send me back there! I don’t want to die! I don’t wanna end up chopped to pieces!"/>
+      <item id="4" desc="My colleague’s brain is scattered all over the place… You’ve seen it, right? We need to clean it up quickly… Blood’s covering the whole Containment Unit…"/>
+      <item id="5" desc="We’re all going to die. Stuck in misery, with our whole bodies [e] by that monster. We’ll be killed."/>
+      <item id="6" desc="Can you order me to perform a ‘Suicide’ work? That’s what I need most right now."/>
+      <item id="7" desc="Please give me some orders! How about crushing up those Abnormalities with the ax that’s in storage?"/>
+      <item id="8" desc="I don’t want to die. I don’t wanna brutally like my friends did…"/>
+      <item id="9" desc="Hahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaha"/>
+      <item id="10" desc="Don’t send me in!!! Don’t make me die!!!!"/>
+      <item id="11" desc="I feel like someone keeps talking to me. They keep whispering to me to die, can you teach them a lesson?"/>
+      <item id="12" desc="I feel like someone else is inside my head. They keep telling me dreadful stuff, I can’t catch a wink of sleep…"/>
+      <item id="13" desc="I’mSoSorryForMyCoworkersAndMyBadHealthAndMyPoorWorkoutIJustHopeTheCompanyFlourishesWithAGoodOutcomeI’llDedicateMyselfTotallyWithNoWorriesI’llLiveALongTimeI’mSure."/>
+      <item id="14" desc="Waaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!"/>
+      <item id="15" desc="Yesterday I saw my dead colleague. We had some nice lunch and a spot of coffee together. I’m glad to see they’re doing well."/>
+      <item id="16" desc="Just let me go home, manager… Please let me go home."/>
+      <item id="17" desc="Please open the door manager… I have to get out of here…"/>
+      <item id="18" desc="Manager, if you can see me, please make everything right again. Please save me."/>
+    </type>
+
+    <type num="10">
+      <!-- 합리주의자 패닉 (살인)-->
+      <item id="1" desc="I won’t die alone…"/>
+      <item id="2" desc="So you’re to blame! If it weren’t for you, it wouldn’t have gone this way!"/>
+      <item id="3" desc="You’re the problem. Not me, you!"/>
+    </type>
+
+    <type num="11">
+      <!-- 평화주의자 패직 (배회) -->
+      <item id="1" desc="Help me, I wanna go home, please open the emergency door."/>
+      <item id="2" desc="Where do I go? This place is hell…"/>
+      <item id="3" desc="Manager, please open the door. Let me out!"/>
+      <item id="4" desc="I’m so scared… What do I do…?"/>
+    </type>
+
+    <type num="12">
+      <!-- 원칙주의자 패닉 (자살) -->
+      <item id="1" desc="It’s all my fault, I’m to blame."/>
+      <item id="2" desc="This is hopeless."/>
+      <item id="3" desc="Even if I live through this, I’ll be grieved for the rest of my life."/>
+    </type>
+
+    <type num="13">
+      <!-- 낙관주의자 패닉 (격리실 테러)-->
+      <item id="1" desc="Manager, gimme a break. I’m the only one who didn’t fail!"/>
+      <item id="2" desc="I’m not like the other idiots here! Just watch me. Watch what I’m going to do!"/>
+      <item id="3" desc="What’s with that look?! I’ll make you feel all better, so hold still!"/>
+    </type>
+  </grade>
+  <!-- END dummy code. See AgentNewLyrics_xx.xml-->
+
+  <creatureSay>
+    <!-- 환상체가 말한다 -->
+    <creature id ="100001">
+      <action type ="escape">
+        <!-- 탈출해서 세피라 쪽으로 향하고 있을 때 환상체 대사 -->
+        <desc>People…</desc>
+        <desc>Laughter…</desc>
+        <desc>Happiness… Warmth…</desc>
+        <desc>Fireplace…</desc>
+        <desc>Cold…</desc>
+      </action>
+    </creature>
+
+    <creature id = "100004">
+      <action type ="good">
+        <!-- 기분 좋을 때 -->
+        <desc>What a beautiful day it is! I haven’t been outside yet, but I can tell the birds are singing happily!</desc>
+        <desc>Do you all know about the worth of victory and the beauty of the world?</desc>
+        <desc>Everyone loves me. Wherever I go, the flowers welcome me~</desc>
+        <desc>Tell me if anything bad happens, okay? I know I can help you!</desc>
+        <desc>They say not just anyone can become a magical girl. They should be kind-hearted, just, and love the world! Then they may just become a magical girl like me.</desc>
+        <desc>I’ve always had to bear a tremendous burden. It’s hard sometimes, but I’m proud of myself for it!</desc>
+      </action>
+      
+      <action type ="normal">
+        <!-- 기분 좋지 않을때 -->
+        <desc>Someone told me that there are no bad guys anymore… Is that true?</desc>
+        <desc>Don’t you need me anymore…?</desc>
+        <desc>This place is too peaceful. Something must be wrong.</desc>
+        <desc>There’s no light without the darkness, it’s like I’m not even here.</desc>
+        <desc>I am the chosen one. Who would protect the world besides me?</desc>
+        <desc>I hate this silent place. The world I knew wasn’t “peaceful” like this.</desc>
+      </action>
+      
+      <action type ="bad">
+        <!-- 기분 많이 좋지 않을 때 (변신 직전)-->
+        <desc>Ah… I’m…</desc>
+        <desc>I want to disappear…</desc>
+        <desc>Why am I here…</desc>
+        <desc>Let me go…</desc>
+        <desc>I can’t take it…</desc>
+        <desc>I’m… a magical girl…</desc>
+      </action>
+    </creature>
+
+    <creature id="100031">
+      <action type="good">
+        <desc>I really, really like you! This pebble is super important to me! But I love you so much, so I’ll give it to you! Please keep it with you forever.</desc>
+        <desc>Please love me.</desc>
+        <desc>I want to hold you in my hands.</desc>
+      </action>
+      <action type="bad">
+        <desc>I always know where you go.</desc>
+        <desc>I love you so much, why won’t you visit me</desc>
+        <desc>Why aren’t you coming to see me?</desc>
+        <desc>Why won’t you come to me? </desc>
+        <desc>Is there something you love more than me?</desc>
+        <desc>Why were you there? You should have been with me, not there.</desc>
+      </action>
+    </creature>
+  </creatureSay>
+
+  <creatureAction>
+    <creature id="100002">
+      <!--
+      <item level="1" desc="그것은 더 이상 외로워하지 않는 것 같아!"/>
+      <item level="2" desc="기분이 조금 좋아보인다."/>
+      <item level="3" desc="아무런 반응을 보이지 않아."/>
+      <item level="4" desc="테디의 고개가 힘없이 떨궈진다."/>
+      <item level="5" desc="이 이상으로 나빠질 수 없겠군."/>
+      -->
+      
+      <action type ="dead">
+        <!-- 포옹하기로 죽어갈 때 -->
+        <desc>I— I can’t breathe. Let me go...!</desc>
+        <desc>My bones are crunching, someone… please…</desc>
+        <desc>I’m being flattened… help…</desc>
+      </action>
+
+      <action type ="hug">
+        <!-- 직원이 특수작업 '포옹하기' 를 했을 때 -->
+        <desc>Oh poor Teddy, I’ll give you a hug.</desc>
+        <desc>He’s so soft…</desc>
+        <desc>I’ve never gotten to hug a teddy bear this big!</desc>
+      </action>
+    </creature>
+
+    <creature id="100003">
+      <!-- 빨간구두 -->
+      <action type="start">
+        <desc>This is mine, I won’t let anyone have it.</desc>
+        <desc>An axe, where’s an axe?</desc>
+        <desc>These shoes are the most beautiful pair I’ve seen.</desc>
+      </action>
+
+      <action type="dead">
+        <desc>Give them… back to me!</desc>
+        <desc>Don’t take them away from me…</desc>
+        <desc>No no no! Don’t take them, no!</desc>
+        <desc>I’m sorry…</desc>
+      </action>
+
+      <action type="attack">
+        <desc>You want to steal my shoes, don’t you?</desc>
+        <desc>Dying, dying, dying, dying.</desc>
+        <desc>I’ll break your legs, then you won’t be able to dance ever again.</desc>
+        <desc>I’ll break your arms, then you won’t be able to steal my things.</desc>
+      </action>
+
+      <action type="walk">
+        <desc>Where is everyone?</desc>
+        <desc>Guys, look at me. I’ve got such nice shoes on.</desc>
+        <desc>You all need to see how lovely my shoes are.</desc>
+      </action>
+
+      <action type="kill">
+        <desc>I told you, I won’t give them away.</desc>
+        <desc>They’re much prettier with blood on them.</desc>
+        <desc>Are you already asleep?</desc>
+      </action>
+
+    </creature>
+
+
+    <creature id="100036">
+      <!-- 우주의 조각 특수능력 받은 직원들 대사 꼭 구현되면 좋겠습니다!!!!!!!!!!!-->
+      <action type="Specialskill">
+        <desc>The shadows engulfing me are finally gone.</desc>
+        <desc>Finally, I can see and feel again…</desc>
+        <desc>The stars are singing to me… Can you hear them?</desc>
+      </action>
+    </creature>
+
+    <creature id="100021">
+      <!-- 늙은 여인 -->
+      <action type="workAllocate">
+        <desc>I hope she doesn’t tell that awful story again…</desc>
+        <desc>Dammit, she drives me crazy with those tales.</desc>
+        <desc>I’d rather go deaf than have to listen to those fables again.</desc>
+      </action>
+    </creature>
+
+    <creature id="100006">
+      <!-- 노래하는 기계 -->
+      <action type="attack">
+        <desc>I’m sorry, but I have to hear that song again.</desc>
+        <desc>Don’t struggle, you’ll love its melodies too.</desc>
+        <desc>I’ll listen to that song at any cost.</desc>
+      </action>
+
+      <action type="listen">
+        <!-- 노래하는 기계에서 직원을 가는 소리를 듣고 있을 때 -->
+        <desc>I have nothing else to wish for now…</desc>
+        <desc>For me, this moment is pure heaven.</desc>
+        <desc>I was born just for right now.</desc>
+      </action>
+
+      <action type = "attract">
+        <!-- 노래하는 기계에게 홀릴 때 -->
+        <desc>Now, I am reborn.</desc>
+        <desc>If I chop off my arm, can I hear that song again?</desc>
+        <desc>A corpse, I need a corpse…</desc>
+      </action>
+
+      <action type="killed"> <!-- 노래하는 기계가 특수 공격 했을 때 -->
+      	<desc>AAAAAAAH! HELP ME!</desc>
+      	<desc>No! Help me, please!</desc>
+      	<desc>HELP ME! HELP!</desc>
+      </action>
+
+    </creature>
+
+    <creature id ="100001">
+      <!-- 불타버린 소녀 -->
+      <action type ="hurt">
+        <!-- 공격받아서 불타고 있을 때 직원 대사 -->
+        <desc>Shit! My clothes are on fire!</desc>
+        <desc>Someone get a fire extinguisher! It’s too hot!</desc>
+        <desc>Put it out, please!</desc>
+      </action>
+
+
+      <action type ="escaped">
+        <!-- 성냥팔이가 탈출했을 때 직원들 대사 -->
+        <desc>If we don’t do something now, the department is screwed!</desc>
+        <desc>Once that girl gets to the main room, we’re done!</desc>
+        <desc>The Containment Room will burn down! Do something!</desc>
+      </action>
+
+    </creature>
+
+    <creature id ="100009">
+      <!-- 단 한번의 악과 수백가지의 선행 -->
+      <action type ="confess">
+        <!-- 고해 대사 랜덤으로 나온다 -->
+        <desc>Back when I was just seven years old, by the brook…</desc>
+        <desc>I won’t forget that day, April 6th, to be exact…</desc>
+        <desc>One day, we were having dinner at the family table like usual…</desc>
+        <desc>It happened the special day I got to go to the amusement park with my sibling…</desc>
+        <desc>The day that caused him to end up like that…</desc>
+      </action>
+    </creature>
+  </creatureAction>
+</root>

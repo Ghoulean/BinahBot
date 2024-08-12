@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300103">
+
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-90</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ProphecyOfSkin</portrait>
+
+      <name openLevel ="1">
+        살갗 예언
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <openText>
+        다만 구원해주시옵소서. 진리가 우리를 자유롭게 하리라.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {오래되어 보이는 종교 서적이 앙상한 거치대 위에 놓여져 있다. 무수한 페이지는 낡은 양피지로 고정되어 있다.  }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {신도들은 살가죽으로 책을 엮어 그 거룩함이 영원히 바래지 않기를 기도했다.  }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {책의 겉표지를 넘기면 직원은 상상못할 진리를 깨우친다. 모든 진리의 말씀을 터득한 이들은 선지자로부터의 부름을 받으며 결코 거부할 수 없다. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {다만 구원해주시옵소서. 진리가 우리를 자유롭게 하리라.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">책을 읽은 직원은 즉시 지혜가 일정량 상승한다.</specialTip>
+      <specialTip openLevel="2" key="2">직원의 지혜가 한계에 달할 때 까지 책을 읽을 수 있다.</specialTip>
+      <specialTip openLevel="2" key="3">책을 읽은 횟수가 증가할수록 White 피해에 취약해진다.</specialTip>
+      <specialTip openLevel="2" key="4">책을 한번이라도 읽은 직원은 패닉에 빠질 경우 그 자리에서 소멸한다.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

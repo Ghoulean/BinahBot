@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300003">
+
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-09</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Theresia</portrait>
+
+      <name openLevel ="1">
+        テレジア
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <openText>
+        「この旋律を覚えていますか？ 生徒が眠りそうになると、先生はこの曲を演奏してくださいましたね。 お誕生日おめでとうございます。」
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {踊るバレリーナのオルゴール。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {ねじを回すと、悲しい旋律が流れ始めます。 誰が作ったのかは不明ですが、 時折音が途切れているため古い物のようです。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {それに刻まれた文章がありました。 「この旋律を覚えていますか？ 生徒が眠りそうになると、 先生はこの曲を演奏してくださいましたね。 お誕生日おめでとうございます。」}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {オルゴールを聴くことで 誰もが全てを順調に思い、 疲労が解消されるように 感じることができるが、 聴きすぎた場合、 職員は現実感を失い、 狂います。}
+      ]
+    </desc>
+
+  
+     <specialTipSize size="2">
+      <specialTip openLevel="1" key="1">対象が$0の音楽を聴きはじめると、 当該部署の職員たちの精神力が持続的に回復する。</specialTip>
+      <specialTip openLevel="2" key="2">20-30秒間オルゴールを聴くと、 被験者の精神力は急速に落ち、パニックに陥る。</specialTip>
+      </specialTipSize>
+
+
+
+  </observe>
+</creature>

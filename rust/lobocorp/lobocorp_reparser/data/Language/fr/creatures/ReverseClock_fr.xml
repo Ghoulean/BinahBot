@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300110">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">D-09-104</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/ReverseClock</portrait>
+      <name openLevel="1">
+        Horloge Inversée
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>
+        "… Votre futur est-il totalement sombre ? Avez-vous touché le fond, sans la moindre possibilité d’en ressortir ?"
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;Cette Anomalie a été créée à partir des idées du Donateur Tumblbug 정현교 (Jeong Hyeon-kyo).&lt;/i&gt;&#13;&#10;Une vieille horloge produite par une entreprise inconnue. Ses tubes électroniques lui donnent un air vintage. Le fabricant a arrêté de produire ces horloges il y a très longtemps.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {“… Votre futur est-il totalement sombre ? Avez-vous touché le fond, sans la moindre possibilité d’en ressortir ? Vous êtes-vous déjà dit: “Bon sang, et si j’avais fait ceci au lieu de cela ?”&#13;&#10;L’humanité a conquis les maladies et la nature. Désormais, nous sommes en mesure de maîtriser le temps lui-même.”}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {“Oui, nous pouvons remonter votre temps gâché.&#13;&#10;Remontez simplement la machine, fermez vos yeux, et comptez jusqu’à dix.&#13;&#10;Lorsque vous les ouvrirez, vous serez à l’endroit exact où vous souhaitez être !”}
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {+ Merci de lire attentivement le manuel. Nous ne savons pas ce que le très haut voltage déchargé par la machine peut faire si elle est mal utilisée. Nous ne sommes pas responsables en cas d’accident suite aux erreurs et à la négligence de l’utilisateur. Cette horloge nécessite une grande quantité d’énergie pour fonctionner. Merci de garder à l’esprit qu’il lui faudra un temps considérable pour se charger.}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">Pour chaque travail effectué avec l’$0, une lumière s’allume et de l’énergie est chargée.</specialTip>
+      <specialTip openLevel="2" key="2">Rien ne s’est passé lorsque des employés en-dessous du Niveau 3 ont essayé de travailler avec.</specialTip>
+      <specialTip openLevel="2" key="3">Une fois que toutes les lumières sont allumées, l’$0 peut être activée. Cependant, l’$0 ne peut être utilisée qu’une fois par jour, alors utilisez la judicieusement.</specialTip>
+      <specialTip openLevel="2" key="4">&lt;Attention&gt; Les employés en-dessous du Niveau 5 sont strictement interdits d’entrer en contact avec l’$0 après qu’elle soit entièrement chargée.</specialTip>
+      <specialTip openLevel="2" key="5">Seuls les employés de Niveau 5 peuvent faire fonctionner l’$0 normalement. L’$0 renverra tout le monde au moment le plus calme de la journée, excepté son opérateur.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300102">
+
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-86</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/HellTrian</portrait>
+
+      <name openLevel ="1">
+        地獄への急行列車
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>
+        時間が来ると、 高らかな警笛と共に列車が通過します。
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+       {駅の店員は最終目的地が分からない列車のチケットを 販売しています。 到着時間を知らせる時計の代わり にライトがつきます。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {第一灯と第二灯だけが点灯しているなら、心が澄み渡ります。&#13;&#10;第三灯が点灯しているなら、心が澄み傷が癒やされます。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {第四灯が点灯しているとき、警笛が遠くから聞こえはじめ、 全部門の職員の状態が良くなりました。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+       {時間が来ると、高らかな警笛と共に列車が通過します。 そして後ろに一歩下がっていない職員を乗せたままで 再びあてのないトンネルの中に直行するでしょう。}
+      ]
+    </desc>
+
+  
+     <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">30秒ごとに券売所の駅灯が1つ点灯します。 駅灯は最大4回まで点灯し、 券売所で職員がチケットを受け取ると、 点灯がリセットされます。</specialTip>
+      <specialTip openLevel="2" key="2">第一灯が点灯した時にチケットを受け取ると、 その職員は体力と精神力がやや回復します。</specialTip>
+      <specialTip openLevel="2" key="3">第二灯が点灯した時にチケットを受け取ると、 その職員は体力と精神力が回復します。</specialTip>
+      <specialTip openLevel="2" key="4">第三灯が点灯した時にチケットを受け取ると、 その職員の部門に所属するすべての職員の体力と精神力 が回復します。</specialTip>
+      <specialTip openLevel="2" key="5">第四灯が点灯した時にチケットを受け取ると、 施設内の全職員が体力と精神力を回復します。</specialTip>
+      <specialTip openLevel="2" key="6">第四灯が点灯した状態で、 次の点灯時間が来た場合、 施設内を駆け抜ける列車が出現し、 列車が進行上にいる すべての職員に BLACKダメージを与えます。 通過後、すべてのライトがリセットされます。</specialTip>
+     </specialTipSize>
+
+
+
+  </observe>
+</creature>

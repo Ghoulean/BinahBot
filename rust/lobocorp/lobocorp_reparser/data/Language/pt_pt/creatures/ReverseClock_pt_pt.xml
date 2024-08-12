@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300110">
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">D-09-104</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ReverseClock</portrait>
+
+      <name openLevel ="1">
+        Relógio Retrógrado
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>
+        Tu estás no fundo do poço mais fundo?
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {<i>Esta Anormalidade é baseada na ideia do(a) apoiante '정현교(Jung Hyunkyo)' do Tumblbug.</i>&#13;&#10;Um relógio fabricado por uma companhia desconhecida. As suas válvulas termiônicas dão-lhe uma sensação antiga. O fabricante parou de fazer estes relógios há muito tempo atrás.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {“…O teu futuro é completamente cruel? Tu estás no fundo do poço mais fundo? Já alguma vez pensaste que ‘O quê que aconteceria se eu tivesse ou não tivesse feito isso”?&#13;&#10;Nós, a humanidade, conquistamos doenças e a natureza. Agora, nós chegamos perto de conquistarmos o próprio tempo. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Sim, nós podemos rebobinar o seu tempo perdido.&#13;&#10;Rode a manivela, feche os seus olhos e conte até dez.&#13;&#10;Quando abrires os teus olhos, estarás no momento exato que desejavas estar."}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {* Lê o manual por completo. Nós não sabemos o que vai acontecer se a maquinaria for manuseada incorretamente. Nós não somos responsáveis por nenhum acidente causado pelo descuido do usuário. &#13;&#10; Este relógio necessita de grandes quantidades de energia para ficar operacional. Por favor entenda que vai levar uma considerável quantidade de tempo para carregar.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">Uma lâmpada liga-se e energia aumenta com cada trabalho realizado no $0.</specialTip>
+      <specialTip openLevel="2" key="2">Nada aconteceu quando um empregado, cujo o seu Nível era abaixo de 3, trabalhou na máquina.</specialTip>
+      <specialTip openLevel="2" key="3">Assim que todas as luzes estiverem ligadas, o $0 pode ser utilizado. No entanto, ele só pode ser ativado uma vez ao dia, então use-o com cautela.</specialTip>
+      <specialTip openLevel="2" key="4">&lt;Aviso&gt;Empregados abaixo do Nível 5 são estritamente proibidos de entrarem em contacto com o $0 assim que estive totalmente carregado.</specialTip>
+      <specialTip openLevel="2" key="5">Empregados com Nível 5 ou superior podem operar o $0 normalmente. $0 irá mandar todos, exceto o empregado que o ativou, para o momento mais pacífico do dia.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id="100005">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {$0’s appearance is just like that of a human being. However, employees with sharp eyes will notice a sense of incompatibility.},
+      {$0 is different from ordinary Abnormalities. The biggest difference between them is that it has never once shown its true nature.},
+      {Do you know the difference between the terms “shell” and “skin”?}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 meaninglessly grinds its teeth while staring at #0.},
+      {The bone, which appears to be a rib of $0, makes a crunching sound.},
+      {$0 gazes at #0, the twisted neck of its shell snapping and turning unnaturally.},
+      {The organ that’s something akin to a mouth belonging to $0 occasionally drips intestines that may have belonged to a human once.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 tries their best to avoid stepping on the unknown secretions of $0.},
+      {Even though $0 makes not a single threatening action towards #0, their entire body shivers in fear.},
+      {#0 is aware that the Abnormality is not going to attack them right away, but they are still extremely terrified of being in its containment.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {While #0 works, they find $0 to be somewhat familiar in an odd way.},
+      {#0 spots something from $0.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {“She” was #0’s senior. They had never spoken a word to each other, but they may have been good coworkers.},
+      {#0 had seen “her” employee profile. The reason why #0 could remember “her” is that she had a distinguishable mole on her face.}
+      ]
+    </narration>
+    <narration action="special_ability1">
+      [
+      {$0 has put on #0.}
+      ]
+    </narration>
+    <narration action="special_ability2">
+      [
+      {During the act of wearing on #0, their bones were scattered across the floor.}
+      ]
+    </narration>
+    <narration action="special_ability3">
+      [
+      {$0, now assuming the shape of #0, makes noises from its still displaced bones every time it takes a step.}
+      ]
+    </narration>
+    <narration action="panic">
+      [
+      {#0 feels a helpless disgust and dread coming off of $0. This innate hatred exuding from $0 strikes #0 to the core.}
+      ]
+    </narration>
+    <narration action="dead">
+      [
+      {Now #0 has become $0’s new shell. Perhaps the day will come when they may get a proper burial, like the “shell” $0 just molted.},
+      {#0 has now become $0’s new shell. Every employee in the facility will remember them; regardless if they wish not to do so, they will have to.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-06-20</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/NotThing</portrait>
+      <name openLevel="1">
+        Nothing There
+      </name>
+      <riskLevel openLevel="1">
+        ALEPH
+      </riskLevel>
+      <openText>And the many shells cried out one word, "Manager".</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {An Abnormality whose appearance resembles a human, but cannot and should not be human. It periodically devours employees and wears their shell. The skeleton and organs are misplaced during the process, so it takes a bizarre form. }
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {The Abnormality does have a tongue, however, it has no knowledge of speech and as such cannot talk; it can only make meaningless sounds. There is no telling what is inside its shell, but its skin continuously wears down, so there is a need to change and maintain the outer layer. It is insensible to pain; it may break its own bones or cut itself up to escape through a small crevice.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Bit by bit, we discovered that this Abnormality may be evolving. It demonstrates behaviour similar to the character of the person who used to be its shell. It even makes attempts to equate itself with human beings. }
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {When it escapes, it wears the skin of the person it killed and mimics them. Then, without any sign or forewarning, it reveals its true/second form. In its true/second form, its resemblance is much similar to that of humanity in comparison to its earlier form. The new form is confirmed to possess bipedalism, properly aligned organs, and the addition of greater physical strength. All the employees are afraid of this form. }
+      ]
+    </desc>
+    <desc id="5" openLevel="3">
+      [
+      {&lt;A Warning of Something&gt;&#13;&#10;
+      If it has been confirmed that it has escaped and stood on two feet, there is only one thing you can do. Straighten up your posture, gather your hands neatly, and pray to whatever you believe in and observe the situation as it unfolds.}
+      ]
+    </desc>
+    <desc id="6" openLevel="3">
+      [
+      {&lt;Excerpt from Counseling Log&gt;&#13;&#10;
+      “Just like how we observe Abnormalities as employees, ‘Nothing There’ observes us. Then it puts on the shell of an employee and thinks of itself as the employee that just died.&#13;&#10;
+      The sight of that thing eating one of us is horrifying beyond words, just trying to think about it might drive me mad. Heading to its containment to check the state of its shell is a toil on your mind, too. Imagine that a colleague of yours who you chatted with just a few days ago is now sitting in that room, neck snapped, guts exposed, walking on all fours, drooling like a beast. (Omitted)&#13;&#10;
+      That’s not all. When I was still a new employee, no one else was willing to enter its Containment Unit, so I was forced to go work with it. It looked even worse than it does now. It was in the shape of a horribly deformed human. What’s worse, it tried to mimic humans. Doing stuff like looking into a mirror, mumbling to itself, or trying to fix its skeletal structure; it’s as if it was trying to mimic ‘us’. Who knows, it might get good enough to casually walk among us one day.”}
+      ]
+    </desc>
+    <desc id="7" openLevel="4">
+      [
+      {&lt;Warning&gt; Only employees Level 3 and higher are permitted to read this document.&#13;&#10;(This recording is of a call from the Containment Unit’s emergency phone. Phone systems are installed in every room of Abnormalities of Risk Level HE or higher to enable quick threat response.)&#13;&#10;
+      Employee 1: Please pick up, please pick up. This is the Containment Unit of ‘Nothing There.’
+      The Emergency Response Department (ERD): Hello, this is the Emergency Response Team. What’s the problem?
+      Employee 1: I need a stun gun right now! There’s an emergency happening right now!
+      ERD: Can you please specify the reason?
+      Employee 1: The Abnormality… (the sounds of something breaking can be heard) It’s ripping up the employee.
+      ERD: Excuse me?
+      Employee 1: It’s killing my colleague!
+      ERD: We’ll respond immediately. Please identify the employee being attacked.
+      Employee 1: It’s uh… wait one sec. Their name’s &lt;Redacted&gt;. Control Team. I’m, &lt;Redacted&gt;. Also Control Team.
+      ERD: Confirmed. What’s currently happening to your colleague at this exact moment?
+      Employee 1: Yeah, just please hurry. We need a weapon to control the Abnormality.
+      (A loud noise can be heard, presumably the scream of the colleague)
+      Oh god, this is…
+      ERD: What’s happening?
+      Employee 1: The Abnormality is attacking my colleague. It’s literally ripping them apart, I can’t do anything. I repeat, we need a weapon to control the Abnormality.
+      ERD: The Emergency Response Team has been dispatched. They’ll arrive shortly.
+      (Omitted)
+      ERD: &lt;Redacted&gt;? What’s happening now? Is it still attacking your colleague?
+      Employee 1: Yeah, oh no. I think it’s done now.
+      ERD: Has it stopped attacking?
+      Employee 1: No, I mean. My colleague’s… He’s dead. Yeah, he’s dead alright.
+      ERD: How can you be so sure?
+      Employee 1: Well it’s because he looks… he’s…
+      ERD: Has he been ripped up somehow? What body parts are damaged?
+      Employee 1: All of them.}
+      ]
+    </desc>
+    <desc id="8" openLevel="4">
+      [
+      {&lt;Excerpt from Counseling Log&gt;&#13;&#10;
+      “Just like how we observe Abnormalities as employees, ‘Nothing There’ observes us.
+      Then it puts on the shell of an employee and thinks of itself as the employee that just died.
+      It mimics the employee's usual behaviour, the way they talk, likes and dislikes, and every other visible trait.
+      We can only guess how carefully, and for how long it has been observing the employees to imitate them.
+      What I’m trying to say is, we can’t just treat it like some ‘dumb scary monster’.
+      Even now, it could be strolling about wearing the shell of someone we know.
+      This Abnormality is becoming more and more like a human.
+      Its transformation is getting faster too. I get goosebumps just thinking about it.
+      If the time comes when we fail to recognize it, that will be the day the company falls.
+      We must stay ever vigilant when dealing with this Abnormality.”}
+      ]
+
+    </desc>
+    <desc id="9" openLevel="4">
+      [
+      {The following is a recording of the abnormal behavior an employee exhibited in their last moments after they became a shell of ‘Nothing There’.&#13;&#10;
+      Employee 1: Manager, manager!
+      Employee 2: Man, you've been looking for the manager for quite a while now. You've been acting really weird today y'know? With that weird smile and all.
+      Employee 1: ...
+      Employee 2: Anyhow, I sure hope we get pasta in the cafeteria for dinner today. I’d love some of that with thick bacon.
+      Employee 1: ...
+      Employee 2: Oh, we just got an emergency notice. It says the last employee to work with "Nothing There" should get to the counselor's office immediately.
+      Employee 1: ...
+      Employee 2: Wait... Wasn't that... You?
+      Employee 1: ...
+      Employee 2: Hey, say somethi—
+      Employee 1: Manager, manager! Manager!}
+      ]
+    </desc>
+    <desc id="10" openLevel="4">
+      [
+      {The second employee proceeded to take immediate action upon hearing that. However, ‘Nothing There’ tore out of the shell of the first employee, revealing its beginning form. The recording only includes audio files, so what exactly happened or what kind of behavior the employee exhibited still remains a mystery.&#13;&#10;&#13;&#10;The shell with ‘Nothing There’ inside tries its best to mimic the behavior of the employee it tried to kill moments ago. The actions of the last employee it eyed, their final words, those sort of things.&#13;&#10;&#13;&#10;And the many shells cried out one word, “Manager”.}
+      ]
+    </desc>
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="needKill">The lower the working employee’s Fortitude, the lower the success rate was and the less stable the work was.</specialTip>
+      <specialTip openLevel="2" key="justice">When an employee whose Justice was lower than Level 4 completed the work, the Qliphoth Counter decreased.</specialTip>
+      <specialTip openLevel="2" key="killUp">#0, who was in the Containment Unit, was killed by $0. Suddenly, $0 changed into #0. The same instance occurred when another employee had panicked.</specialTip>
+      <specialTip openLevel="2" key="panicUp">When the work result was Bad, #0 was attacked and turned into $0’s shell.</specialTip>
+      <specialTip openLevel="3" key="makePanic">Employees of Fortitude Level 3 or lower immediately panicked when entering $0’s unit. It is recommended that employees lower than Fortitude Level 4 never be sent to work with $0.</specialTip>
+      <specialTip openLevel="3" key="backMonster">When #0, who witnessed $0’s human appearance, fell into a panic, they became $0’s new shell. At the same time, the Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="4" key="needGun">When the Qliphoth Counter reached 0, $0, taking the appearance of the dead #0, disappeared from its Containment Unit. The manager must quickly find and kill $0’s disguised appearance.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

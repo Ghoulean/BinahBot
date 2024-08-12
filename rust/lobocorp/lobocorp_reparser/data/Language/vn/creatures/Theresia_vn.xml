@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300003">
+
+    <narration action="move">
+      #0 designated to $0's containment room.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-09</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Theresia</portrait>
+
+      <name openLevel ="1">
+        Theresia
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <openText>
+        "Remember this melody? The professor played this song when the students were sleepy. Happy birthday."
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {A music box with a dancing ballerina.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {When the spring is wound, a sad melody begins to play. No one knows when or who made it, but it doesn't seem new judging from the slight skips of the music.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {There’s a sentence carved crudely on it, "Remember this melody? The professor played this song when the students were sleepy. Happy birthday."}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {Listening to the music box makes anyone feel like everything’s going to be okay and their fatigue is lifted. But excessive listening will make the subject lose their grip on reality, driving them mad.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="1">When the subject begins listening to the $0 music, the SP of the departmental employee is constantly restored.</specialTip>
+      <specialTip openLevel="2" key="2">When listening to the music box for 20~30 seconds, the subject’s SP will fall rapidly, causing them to Panic.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

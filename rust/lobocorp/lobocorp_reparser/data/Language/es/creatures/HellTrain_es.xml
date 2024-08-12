@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300102">
+
+    <narration action="move">
+      #0 va a ingresar a la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-86</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/HellTrian</portrait>
+
+      <name openLevel ="1">
+        Tren Expreso al Infierno
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>
+        Cuando llega el momento, el tren baja por las vías y hace sonar su poderosa bocina.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {El empleado de la estación es excesivamente silencioso y vende boletos para un tren que no tiene un destino final. No hay relojes que alerten los tiempos de llegada. En cambio, hay algunas luces parpadeantes.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Las luces primera y segunda se encienden. Tu mente está despejada.&#13;&#10;La tercera luz se enciende. Tu mente se aclara y las heridas se curan.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {La cuarta luz se enciende. La condición de cada empleado en todos los departamentos mejora cuando se escucha la bocina del tren en la distancia.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {Cuando llega el momento, el tren baja por las vías y hace sonar su poderosa bocina. Sin duda se sumergirá en el túnel sin fin mientras recoge a los empleados que no han dado un paso atrás como sus pasajeros.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">Cada 30 segundos, la luz de la taquilla se encenderá una por una. La estación se iluminará hasta cuatro veces. Cuando el empleado de la estación recibe un boleto, las luces se reiniciarán.</specialTip>
+      <specialTip openLevel="2" key="2">Cuando se recibe un boleto cuando se enciende 1 luz, ese empleado recuperará ligeramente PS y SM.</specialTip>
+      <specialTip openLevel="2" key="3">Cuando se recibe un boleto cuando se encienden 2 luces, ese empleado recuperará PS y SM.</specialTip>
+      <specialTip openLevel="2" key="4">Cuando se recibe un boleto cuando se encienden 3 luces, todos los empleados dentro del departamento de ese empleado recuperarán PS y SM.</specialTip>
+      <specialTip openLevel="2" key="5">Cuando se recibe un boleto cuando se encienden 4 luces, todos los empleados dentro de la instalación recuperarán PS y SM.</specialTip>
+      <specialTip openLevel="2" key="6">Si se encienden 4 luces y se enciende una luz más, el tren pasará por las instalaciones y causará daño Negro a todos los empleados que crucen su camino. Después de pasar, todas las luces serán reiniciadas.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

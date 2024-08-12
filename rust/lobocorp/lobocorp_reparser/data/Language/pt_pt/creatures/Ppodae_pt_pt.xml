@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100106">
+
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+
+    <narration action="start">
+      [
+      {O pelo do $0 é fofinho e suave. É bom para a tua depressão.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Muitos empregados tem pelo menos 55 fotos diferentes tiradas de vários ângulos do $0.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Não gostar do $0 é uma boa razão para seres rebaixado ou despromovido.},
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Às vezes partes misteriosas de esqueletos humanos são encontrados perto do $0, mas quem é que se importa?},
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">D-02-107 </codeNo>
+      <portrait openLevel ="0">Sprites/Unit/creature/Ppodae</portrait>
+
+      <name openLevel ="1">
+        Ppodae
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>Senhor, o teu ‘anjinho’ está a mastigar o corpo do nosso colega.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;Esta Anormalidade é baseada na ideia do(a) apoiante '이은희(Lee Eunhee)' do Tumblbug.&lt;/i&gt;&#13;&#10;&#13;&#10;Um cãozinho fofo com pelo branco.&#13;&#10;Esta Anormalidade é tão fofa que apenas olhar para ela faz-te sentir bem.&#13;&#10;Ele tem olhos de um anjo e é a coisa mais pura deste mundo.&#13;&#10;(O resto desta descrição foi eliminado por ser redundante. Aquelas frases apenas diziam "é fofo" de várias maneiras.)}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Esta Anormalidade não causa qualquer tipo de má influência. O teu coração deve estar a doer porque tens estado a olhar por muito tempo para toda aquela fofura, é só isso. Empregados que entram nesta unidade de contenção tendem a perder o controlo e têm de ser removidos por outros empregados usando força física. É aconselhado ter cuidado para que não se tornem cativos da sua fofura.&#13;&#10;&#13;&#10;+ Tentativas de trazer a Anormalidade para fora da unidade de contenção podem ocorrer mas elas são suprimidas a maioria das vezes. &#13;&#10;&#13;&#10;+ Quando há muitos empregados a querer trabalhar nesta entidade, faz-se um sorteio para decidir quem vai.&#13;&#10;+ Alguns indivíduos mostram sinais de regressão mental como atraso verbal ao entrar na unidade de contenção, mas parece ser temporário. &#13;&#10;&#13;&#10;+ Muitos empregados referem-se a esta entidade como "O Bonito do Ppodae" mas a nominação oficial é "Ppodae". Tente não confundir estes termos. &#13;&#10;&#13;&#10;※Todos os empregados que entrem na sua unidade de contenção devem filmar um vídeo ou um fazer um relatório fotográfico desta Anormalidade. (Extremamente Importante)}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="1">
+      [
+      {Uma companhia deste tamanho sempre tem um mito ou dois.&#13;&#10;“Tu podes ouvir o som de ossos a seres quebrados quando passas pelos corredores durante a noite…”&#13;&#10;“Se tu fores ver o que é, tu irás ver um Yeti crépido comendo um empregado…!”&#13;&#10;“Mas não temos nenhuma Anormalidade que se pareça com um Yeti.”}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {&lt;Áudio Gravado&gt;&#13;&#10;&#13;&#10;John: Deves ficar agradecido. Esta é uma rara oportunidade para alguém como tu poder trabalhar no Bonitinho do Ppodae. &#13;&#10;&#13;&#10;Jacob: Uh, ele está a bater-me com as suas patas. Ele já a atacar-me?&#13;&#10;&#13;&#10;John: Ele quer que o alimentes. Não sabes que é tradição da companhia trazeres alguma comida de cão contigo?&#13;&#10;&#13;&#10;Jacob: Eu não gosto lá muito de animais… (Som de irritação incompreensível vindo de John)&#13;&#10;&#13;&#10;Outra coisa, este cão está todo musculoso. É assim que eles se parecem? Acho que este deve ter brincado muito de ir buscar a bola. &#13;&#10;&#13;&#10;John: Nós costumávamos jogar esse jogo. Mas nós paramos de o fazer, não sei por que motivo…&#13;&#10;&#13;&#10;Jacob: Hey, tu viste a cara que ele o fez quando o alimentei?! Que porra assustadora.&#13;&#10;&#13;&#10;John: Isso é a tua imaginação. Ele é um anjo. Nãoéminhafufura? &#13;&#10;&#13;&#10;Jacob: Esta coisa tem algum tipo de poder para manipulação mental?&#13;&#10;&#13;&#10;John: Não faço a menor ideia do quê que tu estas a falar. Tusabesdoquêqueeleestáfalarminhafufura? Sabes?}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {John: Tens estado a minha espera, Ppodae? &#13;&#10;&#13;&#10;Jacob: Hey, ele está a comer alguma cena. Mas nós somos os primeiros a vir aqui hoje. &#13;&#10;&#13;&#10;John: Meu bonzinho bonitinho estavas com fome, hmmmm? Meuuuuu Deeeus, ele é tão fofo. Olha só como ele está a morder aquilo.&#13;&#10;&#13;&#10;Jacob: O quê que é a coisa que ele está a comer… Jesus amado! Aquilo…aquilo é um dedo! Deve ser do James! Ele desapareceu no último turno de patrulha! Olha para a unha! Não te lembras de ele a gabar-se que ele tinha uma forma de coração nas unhas dele? Eu disse-te que este cão não é coisa boa!&#13;&#10;&#13;&#10;John: Eu…Não creio… quem é que….&#13;&#10;&#13;&#10;Jacob: A Anormalidade! Esta coisa é o assassino! Eu entendo que estás em choque, mas eu já te disse inúmeras vezes que não há nenhum animal inocente neste lugar. Felizmente, parece que tu já estás a entend…&#13;&#10;&#13;&#10;John: Quem…é que não o alimentou às horas certas?!&#13;&#10;&#13;&#10;Jacob: ………&#13;&#10;&#13;&#10;John: Coitadinho, deve ter ficado a morrer de fome a noite toda. Isto… parte-me o coração.&#13;&#10;&#13;&#10;Jacob: Uh… Eu acho que devíamos suprimi-lo, certo?&#13;&#10;&#13;&#10;John: Como é que tu podes pensar em fazer algo tão violento contra esta fofura? Olha para os olhos dele… animais são inocentes. Nãoésuaadorávelfufura?&#13;&#10;&#13;&#10;(A Anormalidade não reage. Apenas o som de ossos a ser ruídos pode ser ouvido.)&#13;&#10;&#13;&#10;Jacob: Olha, o teu ‘anjinho’ está a mastigar o corpo do nosso colega. &#13;&#10;&#13;&#10;John: És um quê, um imbecil? Um novato? Não sabes que as coisas fofas são sempre perdoadas neste lugar?&#13;&#10;&#13;&#10;Jacob: Nunca ouvi nada do género e eu não vou cair nessa. Nós temos de o tranquilizar. Já que tu não o vais fazer, eu cuido disto!&#13;&#10;&#13;&#10;(Tranquilizador disparado)&#13;&#10;&#13;&#10;John: NÃO!!&#13;&#10;&#13;&#10;(Ouvem-se gemidos da Anormalidade)&#13;&#10;&#13;&#10;(Gravação acaba bruscamente após uma gritaria)&#13;&#10;&#13;&#10;&#13;&#10;…..Então por isto eu peço que o empregado, que disparou o tranquilizador no Ppodae, seja despedido.&#13;&#10;Aqueles que abusam de animais não devem fazer parte da nossa companhia.&#13;&#10;O nosso querido Ppodae está em grande choque por causa deste incidente. Ele só comeu 5kg da comida preferida dele.0&#13;&#10;O que também me faz pedir por uma nova dieta para o Ppodae. ‘Salmão de grande qualidade s rico em Vitamina-B’. &#13;&#10;Esperarei por vossa resposta.}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="4">
+      [
+      {Resposta: &#13;&#10;Pedidos aceites.&#13;&#10;Nota: No teu próximo pedido, anexe 5 fotos diferentes do bonitinho do Ppodae. }
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">$0 prefer trabalho de instinto do que todos os outros. Quando outros trabalhos para além de instintos foram realizados, o Qliphoth Counter diminuiu com uma probabilidade Média.</specialTip>
+      <specialTip openLevel="1" key="2">O Qliphoth Counter diminuiu quando o resultado do trabalho foi Mau.</specialTip>
+      <specialTip openLevel="1" key="3">Após $0 ter fugido, voltou voluntariamente para a sua cela de contenção depois de atacar um empregado e ter arrancado █████ do cadáver dele.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

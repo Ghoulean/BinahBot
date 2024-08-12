@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300005">
+
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-80</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/BigTreeSap</portrait>
+
+      <name openLevel ="1">
+        巨树汁液
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+
+      <openText>
+       这棵树会夺回本就属于它的东西。
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {这瓶液体是一种从不知名的巨树中提取的树汁。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {据勘探小组报告，巨树周围环绕着绿色的薄雾，薄雾中混&#13;&#10;杂着未知的生命形态。饮用树汁会给人以舒适的饱腹感，&#13;&#10;并且树汁中含有大量促进伤口愈合的有效成分。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {但是，部分员工喝下树汁后觉得恶心难受，随后便发生了&#13;&#10;爆炸，只留下一滩绿色的残渣。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      <!-- 여기 번역 고치기 -->
+      [
+      {各项实验证明，喝下树汁后发生爆炸的概率会随着摄取量&#13;&#10;的增加而急剧提高。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {“许多人都感到好奇，这样的一棵巨树是如何在贫瘠的郊&#13;&#10;区中成长壮大起来的？其实它的养分来自于那些吸取过它&#13;&#10;精华的生物，这棵树会夺回本就属于它的东西。”}
+      ]
+    </desc>
+
+
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="healthgood">喝下“$0”的员工会立刻恢复所有的生命值。此外，这名员&#13;&#10;工的生命值还会在一定时间内持续恢复。</specialTip>
+      <specialTip openLevel="2" key="boomDead">我们从一名受试者身上发现了“$0”的副作用：受试者喝下&#13;&#10;“$0”后，在20到30秒内发生了爆炸，并对整个部门造成白&#13;&#10;色伤害。</specialTip>
+      <specialTip openLevel="2" key="boomGood">实验证明，员工喝下“$0”后发生爆炸的概率与饮用次数成&#13;&#10;正比。</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

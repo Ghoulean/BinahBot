@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+    
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100031">
+
+
+
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+
+    <narration action="start">
+      [
+      {在一个星星纷纷坠落的夜晚，那孩子悄悄走了过来。},
+      {“$0”知晓#0的一切。}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {漫长的等待化成了滴滴泪水，仿若繁星似的一颗一颗落下。},
+      {哀伤的心头绽出朵朵思念之花。}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0和“$0”约定好明天会再来看它。},
+      {“$0”抽泣着，它似乎不想让#0离开。},
+      {即便看到“$0”哭泣的模样，#0也无可奈何。}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-01-55</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/GalaxyBoy</portrait>
+
+      <name openLevel ="1">
+        银河之子
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        你自己的银河
+      </specialName>
+
+      <openText>
+        泪水一滴滴落下，就仿佛从云端坠落的繁星。那晚，&#13;&#10;世界陷入了酣睡，好似沉醉在了迷人的摇篮曲中。
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {那是一个被迷雾笼罩着的夜晚。&#13;&#10;一个光着脚的孩子默默地注视着我。&#13;&#10;我停下了脚步，因为我留意到他脸上的哀伤。&#13;&#10;他泪流满面，那梦幻的眼中充满了悲伤与迷茫。&#13;&#10;泪水一滴滴落下，就仿佛从云端坠落的繁星。&#13;&#10;“弄丢了什么重要的东西吗？我来帮你找吧？”&#13;&#10;那孩子露出了灿烂的笑容，悲伤随着喜悦慢慢消失不见。&#13;&#10;那一晚，世界陷入了酣睡，好似沉醉在了迷人的摇篮曲中。&#13;&#10;那一晚，银河光着小脚丫落到了地上。&#13;&#10;————摘录自员工████的日记，该员工已自杀身亡。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {这个异想体是一个有着大眼睛的男孩，它的皮肤如同星空般璀璨。它有些害羞，但并不会对他人表现出恐惧或是敌意。当与某人结下深厚的友谊时，它会变得非常友好。一些员工对这个异想体抱有纯粹的好感。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {这个异想体很喜欢和他人沟通及玩耍，它对与人交往的行为表现出强烈的依恋。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {在这个异想体和某个员工的亲密度达到一定程度后，它会送给这个员工一颗小小的鹅卵石。持有鹅卵石的员工会感到健康与幸福。然而，如果该员工进入了其他异想体的收容单元，它便会做出一些不太好的举动。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="2">
+      [
+      {持有鹅卵石的员工一旦死去，这个异想体会非常悲伤。}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="3">
+      [
+      {员工████的日记&#13;&#10;X月O日&#13;&#10;我盯着他的眼睛看了很久，我有些出神，因为他的眼睛是如此的梦幻...我很想好好地抚摸一下他的头发，可我的同事警告我不要对异想体抱有好感。&#13;&#10;X月O日&#13;&#10;我告诉了他我的名字。他的眼睛睁得大大的，就好像听到了什么大秘密一样。当他一遍又一遍地呼唤我的名字时，我感觉...他已不仅仅是我生命中的某个熟人了。&#13;&#10;X月O日&#13;&#10;当别的员工进入他的房间时，他并没有理会那家伙，而是询问我在哪。听到这则消息后，我有一股得胜的喜悦感。哈！那孩子喜欢的人是我，而不是你哦！&#13;&#10;X月O日&#13;&#10;当我走进他的房间时，他哭着扑进我的怀里。为了让他放开我，我不得不向他保证从现在开始，我会经常回来看他的。当我终于半强迫地挪开他的手时，一颗白色的鹅卵石落到了我的手上。“请不要丢掉它，也不要把它交给别人...”那孩子咕哝着...&#13;&#10;X月O日&#13;&#10;“比起我，你更喜欢那只鸟吗？”他这么问我...而在那之前，我刚刚完成了对“大鸟”的相关工作。我诧异地问他，你是怎么知道我干了些什么的。他的目光落在那颗鹅卵石上，笑着对我说：“我什么都知道，无论你做了些什么，无论你去了哪里...”那笑容...那眼睛...让我浑身直起鸡皮疙瘩...&#13;&#10;X月O日&#13;&#10;我试着丢掉那块石头，可...可我丢不掉...我不明白这是怎么一回事...“你还爱着我，对吗？”他冲我笑了笑...笑...那笑容...&#13;&#10;X月O日&#13;&#10;我无法摆脱这块石头...我唯一的希望就是等他哪天能够厌倦我...我等着...但...真的会有那一天吗？我的同事们都说我是一个优秀的员工...你们这些白痴屁都不懂，给我闭嘴！&#13;&#10;最后一篇日记&#13;&#10;我再也受不了了...我无法摆脱他。我自以为我是负责管理他的人，而实际上...我一直都是那男孩手里的玩具。不管我做了什么，不管我去到哪里，我都会听到他的低语...我要结束这一切...可...我甚至不确定我能不能结束...&#13;&#10;——“我来自很远很远的地方，见到你真高兴！请变成一颗鹅卵石，和我一起在银河漫步吧...”我听到了他的低语...和呼吸...接着就是一片漆黑...就像我第一次遇见他的那个夜晚...}
+      ]
+    </desc>
+
+
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">成功完成工作的员工会从“$0”那儿得到一颗象征着友谊的鹅卵石。鹅卵石将根据“$0”的逆卡巴拉计数器指数为该员工持续恢复生命值和精神值。</specialTip>
+      <specialTip openLevel="2" key="2">当某个持有鹅卵石的员工完成了对“$0”的工作后，“$0”的逆卡巴拉计数器会立刻增加。</specialTip>
+      <specialTip openLevel="2" key="3">当某个持有鹅卵石的员工进入其他异想体的收容单元后，鹅卵石将根据“$0”的逆卡巴拉计数器指数为对员工造成伤害。且“$0”逆卡巴拉计数器会立刻减少。</specialTip>
+      <specialTip openLevel="2" key="4">当某个持有鹅卵石的员工死亡时，“$0”的逆卡巴拉计数器会立刻减4。</specialTip>
+      <specialTip openLevel="2" key="5">当“$0”的逆卡巴拉计数器归零时，持有鹅卵石的员工会立刻死亡。</specialTip>
+      <!--<specialTip openLevel="2" key="6">当“$0”的逆卡巴拉计数器归零时，您将无法结束这一天。</specialTip>-->
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {You entered the containment chamber.}
+        {A child is standing there.}
+        {“I know who you are.”}
+        {“Of course. We were born from each other.”}
+        {You decided to…….}
+        <!--계속-->
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Exit the chamber" target="1" isAnswer="true" message="You have succeeded to obtain final observation report on The child of galaxy."/>
+        <node desc="Stay" target="2" isAnswer="false"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {You turned your back to the child and walked out.}
+        {The pebble in your hand sparkles, sways, tickles, }
+        {and it becomes the universe.}
+        {“Goodbye. I hope you never come back.”}
+        {He bid the cold farewell, and he was smiling.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {“Will you stay here with me?”}
+        {“If you won’t, I don’t need you.”}
+        ]
+      </desc>
+
+
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {There is a universe inside of the pebble.}
+        {When the boy cries, }
+        {A star borns in it.}
+        {Am I part of your universe?}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+  
+  <!-- 대사는 AgentLyrics_en.xml 에 있음 -->
+</creature>

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100012">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {$0 desires to stockpile food for the coming winter. Her children are always hungry.},
+      {The Containment Unit is one giant spiderweb. As soon as an employee enters it, the spider’s eyes are fixed on its prey.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Just as #0 realizes that the wires on the ceiling are longer than usual, one of them starts moving.},
+      {When #0 notices that the floor shouldn’t be black, a large shadow begins to move.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0’s numerous eyes track #0’s every movement.},
+      {$0 is likely able to hear, touch, smell, as well as see. And most importantly, taste.},
+      {Spiders have strong maternal instincts. They will defend their offspring at all costs.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Working inside the unit, #0 never looks up at the ceiling. Making eye contact with it will ruin their day.},
+      {At times, a few spiderlings may fall from the ceiling, but everything’ll be fine if you just ignore them. }
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {#0 makes sure to not forget to gently give themself a patdown before leaving, as to make sure no spiderlings are still clung to any piece of their clothing.},
+      {#0 managed to leave the containment without squashing any of the little ones.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">T-02-43</codeNo>
+      <name openLevel="1">Spider Bud</name>
+      <portrait openLevel="1">Sprites/Unit/creature/SpiderMom</portrait>
+      <riskLevel openLevel="1">TETH</riskLevel>
+      <openText>Unsurprisingly, not a single employee volunteered to retrieve the corpse of their cocooned colleague.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {An Abnormality that takes the form of a giant spider, guarding its domain in darkness. It's difficult to see the Abnormality with bare eyes. Small spiderlings skitter around the floor. }
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Our proud employee, Peter, entered the Abnormality’s Containment Unit one day. When he shone the flashlight on the floor, small little spiders skittered away from the light.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {When Peter squashed one of the spiderlings by accident, a giant spider descended from the ceiling. Peter was dragged to the ceiling in only a moment. The cocooned employee hanging off the ceiling of the Containment Unit will be a healthy meal for the spider's offspring.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Unsurprisingly, not a single employee volunteered to retrieve the corpse of their cocooned colleague. }
+      ]
+    </desc>
+    <desc id="5" openLevel="2">
+      [
+      {&lt;Excerpt from an Animal Encyclopedia&gt;&#13;&#10;
+      ...A fact often overlooked by many is that victims trapped in a spider's cocoon are actually not dead. The prey is in fact slowly dying within. Their death is postponed so they can be kept fresh for later consumption. A spider's poison contains a toxin that permanently damages the heart, eventually leading to death. Insects, trapped in the pitch-black cocoons, have no choice but to wait for the spiderlings to feed on them, feeling their heart beat slower and slower. (Omitted)}
+      ]
+    </desc>
+    <desc id="6" openLevel="3">
+      [
+      {&lt;Excerpt from the Head of the Welfare Department's Letter&gt;&#13;&#10;
+      We do appreciate your suggestion. However, our own research indicates that your concerns are unlikely to be true. Furthermore, it is proven that the presence of a cocoon in the Containment Unit increases the energy output. For these reasons, we will not implement a rescue procedure for employees who are caught by Spider Bud as it is against our interests. However, we will allocate more resources into researching this specimen in the future per your opinion. Please be advised that disrupting the atmosphere of our workspace by spreading unconfirmed rumors is against the code of conduct, and may even be subject to penalties including dismissal. Lobotomy always values the welfare and voices of its employees.&#13;&#10;
+      - Head of the Welfare Department, Lobotomy Corporation.}
+      ]
+    </desc>
+    <desc id="7" openLevel="4">
+      [
+      {There's an eerie rumor spreading among employees. It's not out of the ordinary for a rumor or two to spread in a company like this, but it is interesting that the number of alleged witnesses seems to multiply. The rumor says the following:&#13;&#10;“Whispers can be heard in the Containment Unit at night...”&#13;&#10;“It was the voice of Alex, who went missing a few days ago...”&#13;&#10;“They say the voice wept in terror, asking to be saved from the darkness...”}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="OneChick">Employees with Prudence Level 1 squashed the spiderlings. $0 turned those who harmed its children into cocoons.</specialTip>
+      <specialTip openLevel="2" key="Clean">When cleaning the unit due as a part of Insight Work, #0 was quickly turned into a cocoon by $0.</specialTip>
+      <specialTip openLevel="3" key="Cocoon">$0’s cocoons produce PE-Boxes. Additional cocoons mean a greater number of produced PE-Boxes.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

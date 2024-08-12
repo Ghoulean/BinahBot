@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100003">
+
+
+
+    <narration action="move">
+      #0 va a ingresar a la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 se colocan en un cojín relleno, como si estuviera en exhibición.},
+      {Si ves algo parecido a dientes dentro de $0, debe ser una ilusion optica.},
+      {Quien ve $0 siente una necesidad irresistible de ponerlos.},
+      {La niña entre lagrimas, "Señor, por favor corta mis pies..."}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Dejando a $0 en el sofá desgastado, #0 comienza a trabajar.},
+      {Como si alguien se lo hubiera quitado recientemente, $0 están tirados en el suelo.},
+      {Pasando los $0, #0 sigue trabajando.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {El esmalte rojo de $0 brilla bajo el sol.},
+      {Las correas del tobillo de $0 todavía se ven prestigiosas, incluso si están desgastadas.},
+      {Como si representara su larga historia, los tacones de $0 están desgastados.},
+      { El perfecto estado del cuero de $0 se ve fuera de lugar.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {#0 se cuela un par de miradas hacia $0 mientras trabaja.},
+      {#0 sigue mirando a $0.},
+      {No se puede concentrar, #0 deja de trabajar y se gira para mirar a $0.},
+      {Intentando resistirse a mirar $0 otra vez, #0 mira hacia una dirección diferente e intenta reanudar el trabajo en cuestión.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {$0 claramente no es un organismo vivo, pero emite un aura sombría.},
+      {Puede que $0 no sea un organismo vivo, pero su atmósfera distintiva les recuerda a los que lo rodean un pasado sangriento.},
+      {El color carmesí de $0 parece extrañamente familiar.},
+      {$0 permanece quieto.}
+      ]
+    </narration>
+
+    <narration action="special_ability1">
+      [
+      {#0 ignora el pedido y sigue mirando las zapatillas rojas. Ahora el empleado extiende su mano para agarrar los zapatos.}
+      ]
+    </narration>
+    <narration action="special_ability2">
+      [
+      {#0 se quita sus propios zapatos, comienza a usar los zapatos rojos.}
+      ]
+    </narration>
+    <narration action="special_ability3">
+      [
+      { los ojos de #0 se ven diferentes. Las pupilas están dilatadas y desenfocadas.}
+      ]
+    </narration>
+    <narration action="special_ability4">
+      [
+      {#0 está satisfecho con los zapatos rojos y saboreando el sonido de los tacones.}
+      ]
+    </narration>
+
+
+    <narration action="dead">
+      [
+      {#0 vaga por el pasillo con el arma de supresión en la mano.}
+      {#0 utiliza el arma contra el #1, que intentó intervenir.}
+      {El empleado #1 fue golpeado en la cabeza por el arma de #0 y murió de hemorragia cerebral.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-04-08</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/RedShoes</portrait>
+
+      <name openLevel ="1">
+        Los Zapatos Rojos
+      </name>
+
+      <riskLevel openLevel ="2">
+        HE
+      </riskLevel>
+
+
+      <openText>La niña rogó entre lagrimas. "Señor, por favor corta mis pies..."</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Elegantes zapatos rojos para mujer. El diseño es antiguo, pero no se sabe dónde y cómo se hicieron.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Se induce un fuerte impulso de probárselos. Los cambios que se producen al usar la Anormalidad se pueden ver primero en los ojos del usuario.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {El siguiente cambio observado es que la víctima no está dispuesta a quitarse los zapatos. También actuarán sobre todos y cualquier deseo que puedan tener. Si alguien trata de impedir que actúen según sus deseos o de quitarse los zapatos, los zapatos controlarán a su anfitrión, lo que a veces conduce al asesinato.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {Se desconoce si la voluntad del anfitrión está involucrada en el proceso, pero considerando el fuerte aumento del deseo y la agresividad, los impulsos primarios del anfitrión parecen permanecer intactos.}
+      ]
+    </desc>
+
+
+    <desc id="5" openLevel="1">
+      [
+      {&lt;Extracto del registro de consejería #043_3&gt;&#13;&#10;&#13;&#10;Empleado F1230: &quot;&lt;Redactado&gt; era una persona amable. Bueno, &lt;Redactado&gt; era una especie de celebridad en realidad. &lt;Redactado&gt; Siempre nos decía que nuestro trabajo era algo de lo que estar orgullosos. Y &lt;Redactado&gt; siempre supe cómo lidiar con las anormalídades... Pero fue nuestro mayor error dejar &lt;Redactado&gt; entrar a la unidad. No pensamos que un par de zapatos haría ningún daño. Lo siguiente que supimos, &lt;Redactado&gt; llevaba los zapatos, sonriendo de oreja a oreja. Fue extraño. La sonrisa no era real. Era... (Omitido) La sangre estaba por todo el lugar. El corredor resonaba con el sonido de los zapatos. Cerré los ojos y fingí estar muerta. Vi a una de las cabezas de mi colega rodar por el suelo. Los zapatos se detuvieron justo frente a mí y se quedaron quietos durante mucho tiempo. Y luego se movió más allá de mí, y fue entonces cuando dejé la inconsciencia. (Omitido) Escuché que tenían que cortar &lt;Redactado&gt; piernas para quitarlo. Nadie vio &lt;Redactado&gt; de nuevo, pero algunas personas que se quedaron aquí lo suficiente como para recordar ese incidente.&quot;}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="2">
+      [
+      {&lt;Video de la cámara del corredor Z3_493&gt;&#13;&#10;&#13;&#10;Empleado &lt;Redactado1&gt;: Así que el trabajo de allá está todo hecho? He terminado el mio ahora. La niña de los fósforos se encuentra todavía en el mismo estado. Es muy frustrante. Vamos a tomar una taza de café en el salón.&#13;&#10;Empleado &lt;Redactado2&gt;: Ya sabes, &lt;Redactado1&gt; He estado pensando en algo por mucho tiempo.&#13;&#10;&lt;Redactado1&gt;: Hablemos en el salon. Estoy cansado. Hey, porque llevas zapatos? Solo se permiten zapatos de trabajo durante el trabajo.&#13;&#10;&lt;Redactado2&gt;: Eso no es importante, &lt;Redactado1&gt;, Lo importante es que estamos solos ahora mismo.&#13;&#10;&lt;Redactado1&gt;: De qué diablos estás hablando! escucha, Voy a tomar un descanso en el salón ahora mismo. Espera, Qué llevas puesto? No lo usaste, lo hiciste?&#13;&#10;&lt;Redactado2&gt;: &lt;Redactado1&gt;, Me gustaste desde hace mucho tiempo.&#13;&#10;&lt;Redactado1&gt;: Maldita sea, quítatela ahora mismo. Te das cuenta de lo que estás haciendo ahora?&#13;&#10;&lt;Redactado2&gt;: Pensé en por qué no te gusto. Fue por culpa de Emily, no era? Estabas tan ocupada mirando a Emily que ni siquiera me habías notado, verdad?&#13;&#10;&lt;Redactado1&gt;: Es eso un arma que estás sosteniendo? Y tus tobillos están sangrando, &lt;Redactado2&gt;, por favor quitatelo ahora mismo!&#13;&#10;&lt;Redactado2&gt;: Así que todo lo que tengo que hacer es deshacerme de Emily! Espera un momento, no tardará mucho. Solo quédate aquí.&#13;&#10;&lt;Redactado1&gt;: Por favor, no hagas esto. No me hagas hacerte daño.&#13;&#10;&lt;Redactado2&gt;: Si quisieras detenerme, deberías haberlo hecho el día que nos conocimos.&#13;&#10;&#13;&#10;&lt;Redactado2&gt; aturdido &lt;Redactado1&gt; Con el arma y entró en el salón. Afortunadamente, nadie más resultó herido, incluida Emily. &lt;Redactado2&gt; pronto fue eliminado de la base de datos de la compañia. Ella era completamente consciente de lo que estaba haciendo. Ella admitió que los zapatos solo la animaron a hacer lo que siempre quiso. Cuando un equipo de respuesta la reprimió, los zapatos se escaparon y se cortaron los tobillos en el proceso. Tardó un total de 23 minutos en suprimirse, contenerse y devolverse a la unidad de contención. &lt;Redactado2&gt; Murió de una pérdida masiva de sangre. &lt;Redactado1&gt; Sólo sufrió lesiones leves, pero dejó el trabajo debido a un trauma.}
+    ]
+  </desc>
+
+    <desc id="7" openLevel="3">
+      [
+      {&lt;color=#FF9E72FF&gt; &lt;Extracto del registro de investigación_X3-39 &gt; &#13;&#10;Recibimos el informe de ese empleado F4002 Estaba encantado por los zapatos y vagaba por el pasillo. Inmediatamente ordenamos al empleado F3054 que la reprimiera. Era una empleada veterana con vasta experiencia en supresión. Esperábamos que ella reprimiera a una empleada sin ningún problema. Pero ella no regresó, y cuando otros la encontraron, la empleada F4002 estaba inconsciente con los dos tobillos cortados, mientras que la empleada F3054 intentaba quitarse los zapatos de los pies cortados. &lt;/color&gt;}
+    ]
+  </desc>
+
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="careful">Dentro de la unidad de contención de $0 durante el trabajo, #0 se ha vuelto loco. Recuerdan a su anterior dueño. Los empleados con nivel de Templanza 2 o menos no deben asignarse a $0.</specialTip>
+      <specialTip openLevel="2" key="Attract1">Cuando el resultado del trabajo fue normal, el Contador Qlifot se reduce con una probabilidad normal.</specialTip>
+      <specialTip openLevel="2" key="Attract2">Cuando el resultado del trabajo fue malo, el Contador Qlifot se reduce con una alta probabilidad.</specialTip>
+      <specialTip openLevel="2" key="badAttract">Cuando el contador Qlifot de $0 se convirtió en 0, el empleado #0, cuyo nivel de Templanza es bajo, entró en la unidad de contención de $0 en un trance. Nombramos este fenómeno, "Encantamiento." </specialTip>
+      <specialTip openLevel="3" key="clickClick">Después de intentar conversar continuamente con un empleado que había sido encantado por $0, el empleado pareció volver a la normalidad. </specialTip>
+    </specialTipSize>
+
+  </observe>
+
+
+</creature>

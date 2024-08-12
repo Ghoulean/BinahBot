@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100015">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {#0, repenti, pénètre l’Unité de Confinement, suivant Sa lumière divine.},
+      {“Qu’est-ce qui cause ton hésitation ? J’effectue ici des miracles.”}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 ressemble à un fœtus, mais Il ne semble pas avoir besoin de nourrice.},
+      {Lorsque la cloche sonna douze fois, le complexe fut englouti dans une vive lumière. C’était la lumière de la rédemption pour Ses disciples.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Seul le silence enveloppe $0.},
+      {$0 absorbe toute lumière et son qui L’entoure.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 est venu pour vous racheter et guider le nouveau monde.},
+      {$0 est venu de la fin du monde, et Il marche vers le commencement du nouveau monde.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {“#0, pourquoi es-tu apeuré ? Je ne te quitterai point tant que je n’aurai pas complété ma mission.”},
+      {“#0, ne sois pas effrayé. Je suis le sauveur et je serai avec toi.”},
+      {“J’entends les pleurs. Ton cœur m’a atteint. #0, tu m’as appelé.”}
+      ]
+    </narration>
+  </info>
+  <observe level="5">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">T-03-46</codeNo>
+      <name openLevel="1">NuitBlanche</name>
+      <portrait openLevel="1">Sprites/Unit/creature/DeathAngel</portrait>
+      <riskLevel openLevel="2">ALEPH</riskLevel>
+      <openText>“Levez-vous, mes serviteurs. Levez-vous et servez-moi.”</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Elle prend la forme d’un fœtus venant de naître bien que, puisque son apparence est grotesque, il est difficile de l’appeler un fœtus. Bien que la communication soit possible, elle ne s’effectue pas normalement. Chaque mot qu’Il prononce résonne dans l’Unité de Confinement entière.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {&lt;i&gt;“Mes disciples, que j’ai bénis, vous quitterez la voie du mal que vous avez autrefois suivie et me trouverez. Lorsque l’heure viendra, je pardonnerai vos péchés et descendrai sur la terre où vous vivez.”&lt;/i&gt;} <!-- 폰트!!! 바꿔야돼!!!!!!!!!!!!!!!!!!!!!!-->
+      ] <!-- 글씨체 교체--></desc>
+    <desc id="3" openLevel="2">
+      [
+      {Les douze employés qui furent bénis par Lui se transformeront et erreront à travers le complexe pour offrir la rédemption à chaque employé. Des ailes pousseront de leur dos, ils porteront des masques de la forme d’un bec et des croix pardonnant tout péché.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;i&gt;“Suivez mes enseignements comme je vous les ai contés. Vous abandonnerez la chair et renaîtrez.”&lt;/i&gt;} <!-- 폰트!!! 바꿔야돼!!!!!!!!!!!!!!!!!!!!!!-->
+      ] <!-- 글씨체 교체--></desc>
+    <desc id="5" openLevel="3">
+      [
+      {Ses disciples renaîtront en tant qu’êtres qui atteindront ceux éloignés de la lumière, les êtres qui étreindront leurs voisins, les missionnaires qui répandront le gospel à tous leurs confrères. Ils sont…}
+      ]
+    </desc>
+    <desc id="6" openLevel="4">
+      [
+      {&lt;i&gt;“L’heure est venue. Bientôt, la cloche sonnera. Un nouveau monde viendra. Levez-vous, mes serviteurs. Levez-vous et servez-moi. Je suis la mort et la vie. L’obscurité et la lumière.”&lt;/i&gt;}
+      ] <!-- 글씨체 교체--></desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="0" key="1">Une fois que le Compteur Qliphoth atteint 0, le second avènement de $0 et Ses disciples aura lieu.</specialTip>
+      <specialTip openLevel="0" key="2">&lt;Attention&gt; $0, contrairement aux autres Anomalies, diminue régulièrement Son Compteur Qliphoth. Il est recommandé de vérifier l’état de $0 fréquemment.</specialTip>
+      <specialTip openLevel="1" key="3">Lorsque le résultat du travail est Bon, le Compteur Qliphoth augmente ; la santé physique et mentale de tous les employés du complexe a été restaurée.</specialTip>
+      <specialTip openLevel="2" key="4">Lorsque le résultat du travail est Moyen, le Compteur Qliphoth a une probabilité moyenne d’augmenter ; la santé physique et mentale des employés présents dans le secteur où se trouve $0 a été restaurée.</specialTip>
+      <specialTip openLevel="3" key="5">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth diminue ; tous les employés présents dans le secteur où se trouve $0 ont subi des dégâts BLANC.</specialTip>
+    </specialTipSize>
+  </observe>
+  <etc>
+    <!--UI막는 이벤트 때 띄울 대사-->
+    <param key="escape" index="0">
+      Ne crains rien, car je suis à tes côtés.&#13;&#10;Tu ne partiras pas tant que je ne te l’aurai permis.
+    </param>
+    <param key="time" index="1">
+      N’aie point confiance en le temps.&#13;&#10;Je te guiderai.
+    </param>
+    <param key="manual0" index="2">
+      Ne me renie pas.&#13;&#10;Pourquoi dois-tu douter de moi lorsque je suis devant ton regard ?
+    </param>
+    <param key="manual1" index="3">
+      Mon histoire n’est nulle part, inconnue de tous.
+    </param>
+  </etc>
+</creature>

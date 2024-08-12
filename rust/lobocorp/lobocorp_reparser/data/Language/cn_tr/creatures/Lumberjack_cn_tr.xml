@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100051">
+
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務.
+    </narration>
+
+    <narration action="start">
+      [
+      {#0, 沒有必要害怕 $0, 如果你是個熱心的人.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 蒐集心臟. 它想說如果它修補了它的內心, 它就能夠去愛人了.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {某顆曾經是別人的心臟被隨意的塞進了 $0 之中.}
+      ]
+    </narration>
+
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">F-05-32</codeNo>
+      <name openLevel="1">熱心的樵夫</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/Lumberjack</portrait>
+      <riskLevel openLevel ="2">HE</riskLevel>
+      <openText>現在森林裡便充滿心臟, 森林將會依舊如故, 滿是樹木.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {此異常像個全身金屬外殼的人形機器. 它以雙手握著巨大的斧頭, 但文風不動. 就像是你也沒有做出任何動作一樣.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {在某一天, 這群朋友仍舊殘缺著什麼, 所以他們開始了一段旅程, 希望能讓他們的希望成真. 稻草人想要一個腦袋, 鐵皮人想要一顆心臟, 膽小的獅子想要勇氣, 而桃樂絲想要回家.&#13;&#10;鐵皮人最後終於找到了強大的巫師, 卻只得到了一顆毫無價值的鉛製內心.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {"但你是一台機器, 那是給人類用的. 你不明白嗎? 一台機器不需要心臟. 感謝你大老遠過來這裡. 拿著這個吧, 這是我所能給你的了. 請務必告訴大家你的夢想成真了."&#13;&#10;其他人滿意的離開了, 但是他卻沒辦法再見到他的朋友一面了. 他開始變得傷心難過, 因為在他內心的黑鉛又硬又冷.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {鐵皮人無法接受. 他帶著憤怒揮舞著他的斧頭, 並砍穿了巫師的胸膛. 他的心臟是這麼的溫暖, 並劇烈的跳動著. 他將黑鉛塞進了巫師的胸膛裡. 鐵皮人開始對這些壯擴的景象開懷大笑, 並且在第一次, 他感到一陣他從來沒感受過的歡愉.&#13;&#10;現在鐵皮人開始隨機將心臟塞到他的胸腔裡. 他對心臟感到無比的貪婪. 一旦鐵皮人開始將人類當成樹木砍伐. 現在森林裡便充滿心臟, 森林將會依舊如故, 滿是樹木.&#13;&#10;那些有著熱情腦袋的人, 也會擁有熱情的內心.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {如果鐵皮人失去了他的心臟, 他會在絕望中雙膝跪下. 他會變得毫無生氣. 你怎麼能拿走他僅剩的東西. }
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">當工作結果為差時, 逆卡巴拉計數器減少了.</specialTip>
+      <specialTip openLevel="1" key="2">自律超過等級 3 的員工完成了工作, 降低了逆卡巴拉計數器.</specialTip>
+      <specialTip openLevel="2" key="3">當員工在逆卡巴拉計數器歸零時進入收容室, 他會立即死去. 而該異常將會突破收容.</specialTip>
+    </specialTipSize>
+
+  </observe>
+
+
+</creature>

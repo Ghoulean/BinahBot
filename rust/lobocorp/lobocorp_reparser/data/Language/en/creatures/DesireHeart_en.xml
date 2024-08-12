@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300001">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-77</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/DesireHeart</portrait>
+      <name openLevel="1">
+        The Heart of Aspiration
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>Excessive aspiration would bring about unwarranted frenzy.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {A heart without an owner; it still beats even after being removed from its body. }
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {When borrowed, its rate of contraction will double, enhancing the borrower’s vigor and strength. }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Excessive aspiration would bring about unwarranted frenzy. }
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Employees who did not attack any targets before returning the heart, or those who returned the heart before 30 seconds had passed entered a state of derangement, repeating mindless killings with their enhanced strength.}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Those who equip $0 will benefit from increased HP and Attack Speed.</specialTip>
+      <specialTip openLevel="2" key="2">If one is ordered to return $0 without attacking, they will lose their mind and have an increase in violent tendencies; they will attempt to attack everything nearby.</specialTip>
+      <specialTip openLevel="2" key="3">If one is ordered to return $0 within 30 seconds of borrowing, the same result as above will occur.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300006">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para iniciar o processo de trabalho.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-82</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Shelter</portrait>
+      <name openLevel="1">
+        Abrigo do Dia 27 de Março
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <openText>
+        Ele literalmente se faz o “lugar mais seguro na Terra.”
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Um abrigo anti-bombas que completamente protege seu interior de todas as influências perigosas do mundo exterior, incluindo a luz.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {O abrigo ainda retém as memórias daquele dia.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {A companhia P desejava construir o lugar mais seguro na Terra. Assim, o interior desse abrigo guarda um número grande de produtos não perecíveis, que permitiriam a sobrevivência qualquer um que ficasse dentro por um período de tempo extremamente longo.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      <!-- Translation has been fixed here ;) -->
+      [
+      {Graças a este abrigo, os refugiados selecionados foram protegidos com total segurança do oceano de intermináveis gritos e banhos de sangue.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Entretanto, este abrigo, enquanto perfeitamente seguro por dentro, altera a realidade do mundo exterior para que seja ainda pior. Ele literalmente se faz o “lugar mais seguro na Terra.”}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Qualquer sujeito que entre no $0 ficará imune a qualquer forma de dano. (Isso não se aplica ao dano causado pela Anormalidade, O-09-91). Além disso, o PV e PS do sujeito será recuperado lentamente a partir do momento em que entra no abrigo.</specialTip>
+      <specialTip openLevel="2" key="2">Se um sujeito entra no $0 enquanto está sendo perseguido por uma entidade hostil, ele ficará indetectável ao perseguidor.</specialTip>
+      <specialTip openLevel="3" key="3">Se qualquer sujeito permanecer dentro do $0 por mais de 30 segundos, o Contador Qlifót de uma anormalidade aleatória cairá para 0. Esse fenômeno acontecerá repetidamente em todas as Unidades de Contenção até que o sujeito saia do abrigo.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

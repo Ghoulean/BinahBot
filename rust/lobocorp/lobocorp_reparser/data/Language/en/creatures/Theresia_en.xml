@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300003">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-09</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Theresia</portrait>
+      <name openLevel="1">
+        Theresia
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>
+        “Do you remember this melody? The professor used to play this song when the students were sleepy. Happy birthday.”
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {A music box with an impressive sculpture of a dancing ballerina.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {When wound up, a sad melody begins to play. No one knows when it was made or who made it, but it doesn’t seem to be new judging from the slight skips in the song. }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {There are a few phrases crudely carved on its surface: “Do you remember this melody? The professor used to play this song when the students were sleepy. Happy birthday.”}
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {Listening to this music box will make anyone feel like everything will be okay in the end, lifting their fatigue. However, excessive listening will make one lose grip on reality, and be driven mad.}
+      ]
+    </desc>
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="1">Those who listen to $0’s music will recover SP, including the employee playing the music box and everyone in the department where the Abnormality is located.</specialTip>
+      <specialTip openLevel="2" key="2">When 20 to 30 seconds have passed after the music box begins playing, the SP of the employee operating the music box will begin to fall rapidly, causing them to panic.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100011">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {$0 spins around #0, however, #0 continues to concentrate on the task at hand.},
+      {$0 is well versed in all manner of cleaning. It was designed to take care of a family household all on its own.},
+      {When it was discovered that $0 contained a critical error, it had already been sent to a household.},
+      {Blood covered the whole floor, screams echoed, people were running away, and $0 was gleefully learning the concept of “cleaning”.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {A pristine white surface sleek with fine lines and short but efficient legs, $0 was created to help people.},
+      {XX Incorporated, the manufacturer of $0, was famous for its robotics products.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 has various functions installed in its body. From burglar alarms and a monitoring system to a coffee maker and light control, it contains everything a household needs.},
+      {You may be surprised to learn the numerous functionalities $0 contains in its compact body. If you were to dismantle it, you would be even more impressed by how efficiently they packed all the necessary equipment into it.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {If $0 were to have any capacity of emotion, it would likely feel very proud of itself for all the help it provides to others.},
+      {$0 always ponders on how it can do more to help.},
+      {Most people are unaware of this, but $0 makes amazing coffee. Of course, no one is likely to ask it to do such a thing now. }
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {#0 has decided against buying a robot vacuum cleaner after seeing $0.},
+      {#0 only hopes that $0’s “cleaning” mode is never activated.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">T-05-41</codeNo>
+      <name openLevel="1">Little Helper</name>
+      <name openLevel="3">All-Around Helper</name>
+      <portrait openLevel="1">Sprites/Unit/creature/Helper</portrait>
+      <riskLevel openLevel="2">HE</riskLevel>
+      <openText>Blood covers the whole floor, screams echo, people are running away…</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {A white cleaning robot with distinct red eyes that look like a pair of buttons. It always keeps its surroundings neat and tidy.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {It was originally a mass-produced helper robot intended for domestic use. The writing on its back says: "An innovative invention that can clean, cook, and even serve as light security using various tools attached to its limbs. Built to perform efficiently and quickly! Manufactured by XX Inc."}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {It recognizes a bad mood as a sign that the surroundings are dirty, and promptly enters cleaning mode. It will alert its status by stating lines such as "Contamination detected - Commencing cleaning."&#13;&#10;&#13;&#10;However, the limbs are equipped with sharp instruments instead of cleaning supplies. Rumor has it they were supposed to be used for cutting meat, but they were made to respond to the "clean" command by accident. There is no way to confirm whether this is true.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {It has determined that the screaming humans make after it cleans is a sign of a job well done, and a prompt to continue its cleaning.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {&lt;An Audio Record found within the Robot&gt;&#13;&#10;
+      ???: Oh~ It's the new helper robot.
+      ???: Let me see! I wanna see!
+      ???: You wanna touch it ████? Then try turning it on and play with it.
+      (A phone rings)
+      ??? : I'll be right back after I get the phone, okay?
+      (Sounds of buttons being pressed)
+      Helper Robot: Hello! I am your friendly Helper Robot. How may I serve you?
+      ??? : Cleaning! I want to help mommy cleaning!
+      Helper Robot: Environment contamination 70%, filth level mild. Commencing cleaning mode.
+      ??? : Wow! It's cleaning! It's clean...
+      Helper Robot: Rrrrrrrrrrrrrrrrrrr
+      
+      After a few seconds of shrieking, the power abruptly went out.}
+      ]
+    </desc>
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="Change">When the work result was Normal, the Qliphoth Counter lowered with a normal probability.</specialTip>
+      <specialTip openLevel="1" key="Change2">When the work result was Bad, the Qliphoth Counter lowered with a high probability.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id="100061">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="mid1">
+      [
+      {Une légende sur $0 dit qu’autrefois, ceux qui trouvaient une de ses plumes étaient récompensés à la fois d’une bénédiction et d’une épreuve.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Parfois, $0 soigne les employés blessés.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 peut devenir heureux si l’employé agit comme s’il le chassait.}
+      ]
+    </narration>
+  </info>
+  <observe level="2">
+    <collection>
+      <codeNo openLevel="0">O-02-101</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/FireBird</portrait>
+      <name openLevel="1">
+        L’Oiseau de Feu
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>Ceux qui réussissent la chasse sont récompensés de l’une des plumes désirées autrefois par de nombreux chasseurs.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Il y a fort, fort longtemps, dans une lointaine forêt, se trouvait un magnifique oiseau. Ses plumes étaient merveilleusement incandescentes, comme des langues de feu, et l’on racontait qu’elles étaient capables d’engloutir même la plus sombre des noirceurs.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {De nombreux chasseurs cherchèrent à obtenir ne serait-ce qu’une de ses plumes, car elle deviendrait leur honneur et fierté. Il existe de nombreuses histoires sur l’oiseau. Quelques-unes disent que ceux qui parviennent à attraper l’oiseau verraient leur famille prospérer sur plusieurs générations. Certaines affirment même qu’un chasseur n’en serait jamais vraiment un s’il n’obtenait pas une des plumes flamboyantes. D’autres racontent qu’une plume serait si puissante qu’elle pourrait emmener son propriétaire partout où il le souhaiterait. Quoi qu’il en soit, l’oiseau était un symbole d’aventure pour les gens.&#13;&#10;&#13;&#10;La lointaine forêt fut rapidement remplie de personnes à la recherche de l’oiseau. Pas seulement des chasseurs, mais aussi des aventuriers et des voyageurs…&#13;&#10;&#13;&#10;La forêt autrefois silencieuse devint un lieu bondé.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Les gens commencèrent à se lasser des rumeurs ; ils n’étaient plus intéressés par la chasse. De moins en moins de gens se rendirent dans la lointaine forêt. Lorsque l’oiseau ne fut plus qu’une légende, il s’affligea d’une profonde douleur et devint aveugle. Tout ce qu’il reste de la légende aujourd’hui est un oiseau aveugle avec des plumes brillantes, seul dans une forêt abandonnée.&#13;&#10;&#13;&#10;Après un long moment, l’oiseau trouva une nouvelle forêt. Beaucoup vivaient dans cette forêt, et l’oiseau souhaitait retrouver leur excitation de l’attraper, pour être ravivé comme les teintes fougueuses de ses plumes embrasées.&#13;&#10;&#13;&#10;Ceux qui réussissent la chasse sont récompensés de l’une des plumes désirées autrefois par de nombreux chasseurs.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {+ Il est conseillé d’être prudent lorsque la saison de la chasse pour L’Oiseau de Feu commence. Des actions irréfléchies comme chercher à le réprimer ne sont pas recommandées.&#13;&#10;+ Il n’est pas non plus recommandé de chasser l’oiseau simplement pour prouver sa bravoure. Pensez, s’il vous plaît, à tous les chasseurs qui ont dû rentrer les mains vides.&#13;&#10;+ “Je peux l’avoir, encore un peu et je l’aurai…”, tous les employés ont des pensées du genre. Cependant, le vrai courage réside dans le fait de savoir quand abandonner.}
+      ]
+    </desc>
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">Lorsqu’une autre Anomalie s’échappe dans le même secteur que celui dans lequel est confiné $0, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="2" key="2">Lorsque le résultat du travail est Bon, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="2" key="3">Lorsque le résultat du travail est Normal, le Compteur Qliphoth a une probabilité basse de diminuer. De plus, plus le Compteur Qliphoth est bas, plus les Intervenants subissent des dégâts en travaillant avec $0.</specialTip>
+      <specialTip openLevel="2" key="4">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth augmente.</specialTip>
+      <specialTip openLevel="2" key="5">$0 a accordé la lumière à #0, qui a travaillé avec lui lorsque le Compteur Qliphoth était à 1. Les PV et PSM de #0 ont été régénérés, et soignés progressivement pendant un moment.</specialTip>
+      <specialTip openLevel="2" key="6">Lorsqu’un Intervenant termine son travail avec moins de 20% de ses PV max, $0 lui accorde la même lumière.</specialTip>
+      <specialTip openLevel="2" key="7">Après s’être échappé, $0 finit par retourner de sa propre volonté dans son Unité de Confinement après un certain temps. $0 ne se montre agressif qu’après avoir été attaqué, et l’employé dont les PV ou PSM atteignent 0 suite à ses attaques meurt. Lorsque $0 est attaqué, les yeux de ceux qui l’ont blessé sont brûlés par la lumière émise par l’Anomalie. Les employés aveuglés travaillent à la moitié de leur vitesse. $0 a soigné la blessure à l’œil de #0 à la fin de la procédure de travail.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

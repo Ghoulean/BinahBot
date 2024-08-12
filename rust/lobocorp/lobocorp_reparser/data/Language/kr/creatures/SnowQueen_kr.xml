@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+
+  <!-- Attrbute "id " must equal to attribute "id" in CreatureList.xml -->
+  <info id ="100102">
+
+    <!-- $0 : Creature name, #0 : Agent name -->
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0의 격리실에는 휘몰아치는 찬바람과 눈보라가 휘몰아칩니다.},
+      {$0의 격리실은 얼음과 서리들로 인해 간간히 반짝입니다.},
+      {카이가 얼음조각들로 ‘영원’ 이란 조각을 완성하지 못했더라면, 온 세상을 선물로 받았을 것입니다.},
+      ]
+    </narration>
+
+    <narrationa action="mid1">
+      [
+      {$0의 궁전은 춥고 외롭기에 $0 직원은 얼른 돌아가고 싶어 합니다.}
+      {$0의 궁전까지 가는 길은 너무나 춥고 멀기에 $0 직원은 온기를 그리워 합니다.}
+      ]
+    </narrationa>
+
+    <narration action="special_ability_1">
+      [
+      {겔다는 누구보다 용감하고 강인했기에 눈의 궁전에 갇힌 카이를 위해 맞서 싸우기 시작합니다}
+      ]
+    </narration>
+
+    <narration action="win">
+      [
+      {봄이 되었고 활짝 핀 장미들이 보입니다. 겔다와 카이는 서로의 손을 잡은 채 고향으로 향했습니다.}
+      ]
+    </narration>
+
+    <narration action="lose">
+      [
+      {눈의 여왕을 무찌르지 못한 카이와 겔다는 여왕의 얼음조각이 된 채 궁전에서 영원히 벗어나지 못할 것입니다.}
+      ]
+    </narration>
+
+    <narration action="anotherWork">
+      [
+      {카이가 눈의 궁전에 갇혀있는 동안 겔다는 눈의 여왕과의 결투를 피할 수 없습니다.}
+      ]
+    </narration>
+
+  </info>
+
+  <!-- Maximum observation level. -->
+  <observe level="4">
+    <collection>
+      <codeNo openLevel ="0">F-01-37</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/SnowQueen</portrait>
+
+      <name openLevel ="1">
+        눈의 여왕
+      </name>
+      
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+   
+      <openText>"눈이 서서히 녹고 있어요...그게 봄이 오고 있기 때문인지, 혹은 궁전이 부서지고 있는 중일지도 모르지만."</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {시린 겨울 숲에는 단 한 명의 여왕이 산다. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {모든 이야기의 시작이 그렇듯이 카이는 매우 따뜻한 마음을 지닌 아이였다. 사악한 요정이 만든 거울 조각들이 온 인류의 가슴에 뿌려진 날, 카이는 보고 싶지 않은 것들 혹은 보지 않아도 되는 것들까지 보게 되었고 일평생 지내왔던 조그만 마을에서부터 벗어나게 했다.&#13;&#10;시린 눈보라 속에서 눈의 여왕을 만난 카이는 자신이 알고 있는 것 이상의 세계가 궁금해졌다.그리고 나자 자신이 알고 있는 모든 것들이 마치 아무것도 아닌 것처럼 느껴지기 시작했다.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {카이가 당도한 눈의 궁전은 너무나 추웠지만, 눈의 여왕의 입맞춤으로 인해 그의 심장은 추위를 느낄 수 없을 정도로 차가워졌다. 그곳에서는 어떠한 즐거움도 없었고 길고 긴 겨울밤만 계속되었다.&#13;&#10;겔다는 거울 조각에 찔리지 않을 만큼 강인했고 카이를 구할 만큼 용감했기에 눈의 궁전을 향한 모험을 기꺼이 떠나기 시작했다.&#13;&#10;하지만 눈의 궁전을 향한 여정은 너무나 험난한 탓에 겔다는 상처를 입었고 고통스러워 했으며 때로는 울음을 터뜨렸다.&#13;&#10;드디어 겔다는 카이를 만났고 장미 꽃이 만발한 봄날이 되었다.&#13;&#10;봄이 되자 눈의 여왕이 살았던 궁전은 흔적도 없이 녹아 내렸고 카이의 가슴에 박혀 있던 유리 조각도 녹았다.&#13;&#10;그러자 홀로 남은 눈의 여왕은…. (누락)}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {<i>우리 손으로 그녀를 냉동 관에 넣은 날을 기억한다. 언제부턴가 그녀에게서는 만연하던 웃음이 사라져 있었고 울다가 웃다가 만을 반복하다 결국은 잘린 손목과 함께 붉게 변한 욕조에서 건져 올려졌지.&#13;&#10;우리는 죽음을 믿지 않았다. 나는 평생 경멸해 왔지만 유일한 해답이 되어버린 ‘기계’로부터 그녀를 재탄생시키게 될 것이었고, 아마 욕조 안에 죽어가던 그녀는 이런 나를 혐오스러워했을 게 분명하지만, 우리는 이미 너무 많은 길을 걸어왔기 때문에.&#13;&#10;..&#13;&#10;어느 날 ‘그것’이 말했다.&#13;&#10;“당신을 기억해요. 따뜻한 마음을 가진 사람이었죠.”&#13;&#10;그 말을 들은 순간 난 내 손으로 직접 만든 내 창조물을 그대로 부숴버리고 싶다는 충동에 휩싸였다.</i> }
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="3" key="kissProb1">작업 결과가 보통일 때 보통 확률로 직원이 $0에게 입맞춤을 받았다.</specialTip>
+      <specialTip openLevel="3" key="kissProb2">작업 결과가 나쁨일 때에는 높은 확률로 $0의 입맞춤을 받았다.</specialTip>
+      <specialTip openLevel="2" key="2kiss">두번째 입맞춤을 받은 직원은 $0의 격리소에 갇힌 채 모든 걸 잊어버렸다.</specialTip>
+      <specialTip openLevel="3" key="3kiss">죽음만을 선사하는 세번째 입맞춤을 받지 않기 위해서, 그리고 붙잡힌 직원을 구하기 위해서 $0과 결투를 해야 한다.</specialTip>
+      <specialTip openLevel="3" key="4kiss">오직 용기가 높은 자만이 붙잡힌 직원을 무사히 구할 수 있을 것이다. 날이 넘어가기 전에 서둘러 구출하도록 하자.</specialTip>
+    </specialTipSize>
+
+  
+
+  </observe>
+
+
+</creature>

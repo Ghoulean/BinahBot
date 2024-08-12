@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id="100054">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {$0 watches #0 with its mysteriously luminous organ protruding out of the ground.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Not a single employee has seen $0’s full form.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {If $0 completely gets out of its Containment Unit, our corporation may collapse.}
+      ]
+    </narration>
+  </info>
+  <observe level="5">
+    <collection>
+      <codeNo openLevel="0">O-04-84</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Bunny</portrait>
+      <name openLevel="1">
+        Meat Lantern
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>...That's not a flower. Order all the employees nearby to evacuate immediately.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {It's always under the floor of the Containment Unit, only showing its eyes and a mysterious luminous organ above the ground. }
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {There's no way to confirm what it looks like in its entirety. As it moves underground, not through the hallway, it is impossible to predict its path when breaching. For the same reason, its escape cannot be detected. }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Excerpt from Voice Records&gt;&#13;&#10;
+      Lloyd: You're located near the Information Team right? I've heard that some employees went missing around that area. Would you mind checking to see if there's any Abnormalities causing spatial interference?&#13;&#10;
+      Paul: What? But there's no such Abnormality around here. I don't detect any breaching Abnormalities either.&#13;&#10;
+      Lloyd: Look everywhere.&#13;&#10;
+      Paul: Well, Lloyd, there's no sign of any Abnormality, but I do see a small flower on the ground. &#13;&#10;
+      Lloyd: What are you on about? What flower?&#13;&#10;
+      Paul: The bud is glowing, it's amazing. It's strange finding something so green here, when we don't even get sunlight... It's so bright, other employees came over to look at the flower too. You need to come and see it... The light is so bright and warm... I feel like something good is about to happen...&#13;&#10;
+      Lloyd: ...That's not a flower. Order all the employees nearby to evacuate immediately. Do not run away in a group; you have to slowly escape one by one, with quiet steps...&#13;&#10;
+      Paul: What are you talking about, I thought I told you there's nothing nearby... Wait, I think I just felt a slight tremor beneath my feet. Is someone fixing the pipes today?&#13;&#10;
+      Lloyd: Ah, screw it. Just enjoy looking at that flower all you want... }
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">When the work result was Bad, the Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="1" key="2">When the work took less than 40 seconds to complete, the Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="1" key="3">The facility’s systems and the employees will be unable to detect the Abnormality when it escapes. Thus the manager will need to manually pinpoint it and order suppression directly.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

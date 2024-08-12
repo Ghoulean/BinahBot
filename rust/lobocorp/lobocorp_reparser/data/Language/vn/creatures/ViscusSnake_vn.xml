@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100046">
+
+    <narration action="move">
+      #0 designated to $0's containment room.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {#0's nest appears to form a wet and sleek sphere. It is not unreasonable to mistake $0's brain as a nest.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {When $0's skin becomes hideously green, it’s already too late.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-02-74</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ViscusSnake</portrait>
+
+      <name openLevel ="1">
+        The Naked Nest
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>It can enter any hole of your body.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {* When you spot any employee whose face is turning a dark green, please report them to the Sephirah of each department immediately. Please be advised to verify that the cause of the discoloration is not just a simple stomachache. When advised to visit the medical ward, those with a stomachache would agree, but an infected employee would try to act like nothing was wrong. If so, don’t alert the employee that anything is out of the ordinary. When the host becomes agitated, the infection will speed up. If the skin begins to change, then 30% of the brain has already been consumed. Any conversation at this point will be done by the Abnormality, so don’t pay it any mind.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {The Abnormality that is residing inside the host’s frontal lobe and the host will not feel any physical sensations. You can try stabbing the employee with something sharp, feigning as a mistake, but this is not recommended. As mentioned before, the host is already part of the Abnormality, around 30%, so conversing will be impossible. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {* “The Naked Serpent” can enter any hole of your body.&#13;&#10;* This doesn’t mean covering up your orifices will impede it from entering.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {** But it will help ease your mind if you cover up as much as possible.&#13;&#10;*** “The Naked Serpent’s” final destination is your frontal lobe.&#13;&#10;*** You will become the serpent’s nest, attacking anything in sight.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {**** Please understand, if you become a nest, we will be forced to shoot you on sight and burn your corpse.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">The observation suggests that employees with low HP are more susceptible to special ability while working. In particular, taking higher damage during work raises the probability of skill activation. However, when the result of work was good, special ability did not occur.</specialTip>
+      <specialTip openLevel="2" key="2">Some of the employees suffering from the phenomenon had the following symptoms.&#13;&#10;1.Green skin and a rash on the body.&#13;&#10;2.Drastically reduced movement speed.&#13;&#10;If any symptoms mentioned above are seen on any employee, remove them immediately.</specialTip>
+      <specialTip openLevel="2" key="3">After leaving employee #0 with similar symptoms for a certain time, it changed into a form similar to $0(hereby called O-02-74-1).</specialTip>
+      <specialTip openLevel="2" key="4">&lt;Warning&gt; Any employees that have been in contact with former employee, employee O-02-74-1 are likely to be infected as well. All employees in the department and section must be observed for any symptoms mentioned in management rule 2.
+      </specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

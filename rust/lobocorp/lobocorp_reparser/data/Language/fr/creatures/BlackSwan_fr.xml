@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id="100045">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {Les frères de $0 clignent des yeux ; comme si c’était la seule chose qu’ils pouvaient faire au sein de l’Unité de Confinement.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Quand ses frères montrent un quelconque signe de douleur, $0 d’approche d’eux, traînant son corps éreinté.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">F-02-70</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/BlackSwan</portrait>
+      <name openLevel="1">
+        Rêve d’un Cygne Noir
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>Que se passe-t-il lorsque le cygne noir cesse de rêver d’un cygne blanc ?</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Elijah devait subvenir aux besoins d’une famille nombreuse.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Ses parents démunis leur disaient toujours : “Bien que nous n’ayons rien dont vous puissiez hériter, nous possédons le trésor le plus précieux de tous ; l’honnêteté et la diligence. Celui-ci ne vous est peut-être pas utile aujourd’hui, mais il vous rendra tous heureux un jour.”}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Un jour, un brouillard dense recouvrit la ville.&#13;&#10;Cette épaisse brume, que l’on supposait être un phénomène naturel, ne s’est pas dissipée même après plusieurs jours.&#13;&#10;&#13;&#10;Certains affirmèrent qu’elle les rendait nauséeux ou les faisait vomir, mais la plupart des gens n’y accordèrent pas d’importance. Beaucoup continuèrent à aller au travail et à vivre leur vie dans le brouillard.&#13;&#10;Bien sûr, Elijah faisait partie de ceux qui devaient s’y habituer. Elle était la seule de sa famille à avoir un véritable travail, et la pauvreté dont ils avaient hérité leur avait laissé de lourdes dettes. Elijah avait plusieurs frères, mais leurs volontés s’effondrèrent face à de nombreux échecs.&#13;&#10;Elijah était toujours fatiguée, mais elle était convaincue que si elle travaillait un peu plus, les choses finiraient par s’arranger d’elles-mêmes. Tout comme ses parents le lui disaient, comme dans les contes de fée.&#13;&#10;Tout comme l’oiseau qui finit par étendre ses ailes blanches pour devenir jalousé de tous.}
+    ]
+  </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Certains commencèrent à fuir la ville pour échapper au brouillard.&#13;&#10;&#13;&#10;Ils disaient que la ville était fichue. Elijah ne les écouta pas.&#13;&#10;&#13;&#10;Elijah se sentait parfois nauséeuse. Elle sentait tout son corps se couvrir de cloques.&#13;&#10;&#13;&#10;Elle y était presque, encore un effort ; si elle endurait tout cela encore un peu, les habits d’ortie seraient enfin terminés ; et si elle les lançait alors à ses frères qu’elle adorait tant autrefois, les jours où sa famille vivait en harmonie reviendraient peut-être.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Un jour, en revenant du travail, elle percuta un piéton courant à toute vitesse. Bien que celui-ci eut été en train de courir à tout allure, il fut incapable de se relever, alors elle lui tendit la main afin de l’aider, tout en lui demandant s’il allait bien.&#13;&#10;&#13;&#10;Il donna une claque à sa main afin de la repousser et se releva de lui-même. Le passant avança de quelques pas hésitants avant de s’effondrer à nouveau. On aurait dit que l’homme cherchait à fuir quelque chose ; il avait l’air d’avoir peur qu’Elijah le blesse.&#13;&#10;&#13;&#10;Elijah essaya de lui demander ce qui n’allait pas. Cependant, l’inconnu ouvrit la bouche le premier. Le simple fait d’ouvrir la bouche sembla laborieux, alors elle attendit patiemment qu’il commence à parler.&#13;&#10;&#13;&#10;Le passant n’ouvrit pas sa bouche pour parler ; il commença à vomir un mélange de sang et de sécrétions.&#13;&#10;&#13;&#10;La mixture gluante se déversa d’abord de sa bouche, puis elle jaillit de son nez, ses oreilles et ses yeux. S’il n’avait pas été en train de se vider par tous ses orifices, alors Elijah aurait peut-être tenté de l’aider.&#13;&#10;&#13;&#10;Elijah crut entendre un cri dans le lointain. Elle laissa l’homme vomissant derrière elle, et commença à marcher lentement.&#13;&#10;&#13;&#10;Que se passe-t-il lorsque le cygne noir cesse de rêver d’un cygne blanc&#13;&#10;&#13;&#10;Il y avait de nombreuses personnes perdues dans le brouillard. Certaines criaient, certaines riaient. Certaines brandissaient des bâtons, d’autres étaient recroquevillées, leur corps couvert de blessures. Une lie sombre, humide et fétide était répandue partout sur le sol, couvertes d’empreintes de pas.&#13;&#10;&#13;&#10;Elle commença à chercher ses frères. Sa famille qui devait se vêtir des habits d’ortie pour se libérer de la malédiction. Ceux avec qui elle partageait des rêves heureux.&#13;&#10;&#13;&#10;Elle aperçut ses frères au loin.&#13;&#10;&#13;&#10;Elijah tomba à genoux et commença à évacuer ce que tout le monde vomissait à son tour.&#13;&#10;
+      Le lac ondulait doucement. Comme si plusieurs cygnes venaient de prendre leur envol.}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth diminue, et l’apparence de F-02-70-4 change.</specialTip>
+      <specialTip openLevel="1" key="2">Lorsque le résultat du travail est Normal, le Compteur Qliphoth diminue, et l’apparence de F-02-70-5 change.</specialTip>
+      <specialTip openLevel="1" key="3">Après la mort de 5 employés ou plus dans le complexe, le Compteur Qliphoth diminue et l’apparence de F-02-70-1 change. Cependant, les morts dues à des Tirs d’Exécution n’ont pas été prises en compte.</specialTip>
+      <specialTip openLevel="1" key="4">Lorsque 5 employés ou plus paniquent, le Compteur Qliphoth diminue et l’apparence de F-02-70-2 change.</specialTip>
+      <specialTip openLevel="1" key="5">Après l’entrée en brèche de 3 anomalies, le Compteur Qliphoth diminue et l’apparence de F-02-70-3 change.</specialTip>
+      <specialTip openLevel="1" key="6">&lt;Attention&gt; La réduction forcée du Compteur Qliphoth peut également changer $0.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <name>Cygne Noir</name>
+    <codeId>F-02-70-7</codeId>
+  </child>
+</creature>

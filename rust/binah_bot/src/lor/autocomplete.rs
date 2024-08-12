@@ -8,10 +8,12 @@ use crate::lor::lookup::lookup;
 use crate::models::binahbot::BinahBotEnvironment;
 use crate::models::binahbot::BinahBotLocale;
 use crate::models::discord::AutocompleteResponse;
+use crate::models::discord::DiscordInteractionData;
 use crate::models::discord::DiscordInteractionOptions;
 use crate::models::discord::DiscordInteractionOptionValue;
 use crate::models::discord::DiscordInteractionResponseAutocomplete;
 use crate::models::discord::DiscordInteractionResponseType;
+use crate::utils::get_binahbot_locale;
 use crate::utils::get_disambiguation_format;
 use crate::utils::get_option_value;
 use crate::DiscordInteraction;
@@ -19,7 +21,11 @@ use crate::DiscordInteraction;
 static MAX_AUTOCOMPLETE_OPTIONS: usize = 10;
 
 pub fn lor_autocomplete(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -> AutocompleteResponse {
-    let command_args = interaction.data.as_ref().unwrap().options.as_ref().unwrap();
+    let binding = match interaction.data.as_ref().expect("no data") {
+        DiscordInteractionData::ApplicationCommand(x) => x,
+        _ => unreachable!()
+    };
+    let command_args = binding.options.as_ref().unwrap();
 
     tracing::info!("Lor autocomplete: command args: {:#?}", command_args);
 
@@ -29,12 +35,7 @@ pub fn lor_autocomplete(interaction: &DiscordInteraction, env: &BinahBotEnvironm
         _ => unreachable!()
     }).unwrap_or(&binding);
 
-    let binah_locale: BinahBotLocale = interaction
-        .locale
-        .as_ref()
-        .or(interaction.guild_locale.as_ref())
-        .and_then(|x| BinahBotLocale::from_str(x).ok())
-        .unwrap_or(BinahBotLocale::EnglishUS);
+    let binah_locale: BinahBotLocale = get_binahbot_locale(interaction);
 
     let locale: Locale = get_option_value("locale", command_args).map(|x| match x {
         DiscordInteractionOptionValue::String(y) => y,
@@ -73,6 +74,7 @@ pub fn lor_autocomplete(interaction: &DiscordInteraction, env: &BinahBotEnvironm
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::models::discord::DiscordApplicationCommandInteractionData;
     use crate::models::discord::DiscordInteractionData;
     use crate::models::discord::DiscordInteractionType;
     use crate::models::discord::DiscordUser;
@@ -134,7 +136,7 @@ mod tests {
             id: "id".to_string(),
             application_id: "app_id".to_string(),
             r#type: DiscordInteractionType::ApplicationCommandAutocomplete,
-            data: Some(DiscordInteractionData {
+            data: Some(DiscordInteractionData::ApplicationCommand(DiscordApplicationCommandInteractionData {
                 id: "id".to_string(),
                 name: "lor".to_string(),
                 options: Some(vec![DiscordInteractionOptions {
@@ -148,7 +150,7 @@ mod tests {
                     value: DiscordInteractionOptionValue::Bool(is_all),
                     focused: None
                 }]),
-            }),
+            })),
             channel_id: None,
             token: "token".to_string(),
             locale: None,
@@ -158,7 +160,8 @@ mod tests {
                 username: "username".to_string(),
                 avatar: "hash".to_string(),
             }),
-            member: None
+            member: None,
+            message: None,
         }
     }
 }

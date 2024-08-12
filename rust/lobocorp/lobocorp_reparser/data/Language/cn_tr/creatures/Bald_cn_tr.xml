@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100034">
+
+
+
+    <narration action="move">
+      指派 #0 至 $0 的收容室.
+    </narration>
+
+    <narration action="start">
+      [
+      {員工 #0 開始感到頭髮只是個負擔.},
+      {員工 #0 開始覺得在光頭上刺青是一件很酷的事.}
+      {員工 #0 開始摘掉他/她的假髮, 因為他/她為那一部份的禿髮感到自豪.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {如果你禿掉的話你看起來就會像是布魯斯威力!},
+      {光頭的人普遍看起來都像是非常專業的, 即使他們只是做著瑣碎的事!}
+      {光頭的人就不用擔心水管阻塞了!}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {而你還保有你那柔滑的秀髮嗎?},
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">光頭超棒!</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Bald</portrait>
+
+      <name openLevel ="1">
+        你禿了…
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        放寬心去理光頭髮吧
+      </specialName>
+
+      <openText>你打開了你的推髮器.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      { 警告: 你將受到禿頭精神傷害. 如果這個工藝品被沒有禿頭的個體閱讀的話, 他們將會獲得禿頭的權利. 如果你想阻止這事發生的話, 你必須被指派來對此異常工作. 如果你早上起床時在枕頭上發現超過 10 根頭髮, 建議閱讀本文 3 次以上. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {Bill: 今天我做了一個超棒的夢. &#13;&#10;
+      XX : 什麼樣的夢? 你贏了樂透還是什麼嗎?&#13;&#10;
+      Bill : 大家全都禿頭了! James, 你, 以及其他在這座設施裡的人! 或許在設施外面的人也都是! &#13;&#10;
+      XX : 痾……我想最近你已經強調這件事很多次了. 為什麼你不去診斷一下? &#13;&#10;
+      當天, 員工 Bill 死於 唱歌的機器 之下. 許多員工為他哀悼. 就在意外發生後, 異常 光頭超棒! 出現了. 珍惜著我們與光頭 Bill 的回憶.
+      }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="3">
+      [
+      {如果有人接觸到此異常約 1 個小時, 他們會說著或寫到變成光頭有多麼棒, 而在最後, 他們會讓自己變成光頭. 如果你已經禿了, 那麼你就能省下很多時間, 因為你再也不用去清洗以及擰乾你的頭髮了. 如果指派一名禿頭的員工至該異常的房間內, 它不會表現出任何反應. 如果你已經是個光頭了那你就不用擔心會禿頭了. 另一方面, 如果指派一名秀髮茂密的員工至該異常的房間內, 他們就會開始理光他們的頭髮. 光頭的人能用他們光亮的頭皮反射光芒, 並閃瞎對手, 這不是超棒的嗎?! 此異常的最終目的是讓每一個在地球上的人類都變成光頭. 如果這裡有許多光頭的人你就不需要燈泡了, 因為光線會隨著他們的頭四處照映; 你能省下一大筆的電費! 如果沒有經常指派一名秀髮茂密的員工至該異常的房間內, 它的心情將會下降. 你知道中世紀的歐洲貴族們都是禿頭嗎? 他們每天都會變換他們的假髮!  }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="4">
+      [
+      {接著我們增加了一些新規章到公司的行為守則之中.&#13;&#10; 嘲笑同事變成禿頭的員工被永久禁止使用休息室, 以及參加公司的辯論社 “為什麼沒有光頭的芭比娃娃存在?”, 美食社 “可愛的章魚”, 以及環保運動社 “我們擔心白頭鷹的數量正在減少”. 如果該員工的頭髮數量少於 1 根的話將會解除此禁令. &#13;&#10; 為了紀念員工 T.H, 那個就在我身旁服用抗禿頭藥的傢伙. }
+    ]
+  </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="memeriBeam">你中了 光頭超棒! 射線, 因為你的頭髮還是這麼柔滑.</specialTip>
+      <specialTip openLevel="2" key="memeriOnly">除非中了 光頭超棒! 射線的員工與 $0 進行工作, 否則在這個月裡所有其他的員工的頭髮都會開始掉落.</specialTip>
+      <specialTip openLevel="3" key="memeriHurryUp">還不算太晚. 30... 29... 28...</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {此異常充滿了讓人禿頭的夢想.}
+        {你正在變禿嗎, 還是已經禿了?}
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Yes" target="1" isAnswer="true"  message="You're BALD"/>
+        <node desc="No" target="2" isAnswer="false"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {Lobotomy 歡迎你.}
+        ]
+      </desc>
+
+      <desc id="2" select="2">
+        [
+        {那麼, 你想要變禿嗎?}
+        ]
+      </desc>
+
+      <select id="2">
+        <node desc="Yes" target="3" isAnswer="true" message="You're BALD"/>
+        <node desc="No" target="4" isAnswer="false"/>
+      </select>
+
+      <desc id="3" select="0">
+        [
+        {你打開了你的推髮器.}
+        {Lobotomy 歡迎你.}
+        ]
+      </desc>
+
+      <desc id="4" select="0">
+        [
+        {在看過 '素肚與雞情 7' 超過五次以後再回來. }
+        ]
+      </desc>
+
+
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {喔, 你在什麼時候剃光了頭髮, 管理者?}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+</creature>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300105">
+
+    <narration action="move">
+      #0 is going into $0's containment unit to begin the task.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-94</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/YouMusHappy</portrait>
+
+      <name openLevel ="1">
+        You Must Be Happy.
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <openText>
+        Many of those who underwent an operation inside the machinery have found rest and became healthy again.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {A mysterious worn-out machinery used for operations. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {This machine was designed to lift back the skull and destroy nerve tissue safely and efficiently..}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Many of those who underwent an operation inside the machinery have found rest and became healthy again.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Those who answered "Yes" to the question, "Do you love your city?" were deemed cured. Those who answered "No," weren’t allowed to be discharged.&#13;&#10;The longer the machinery is used, the better the employees become.}
+    ]
+  </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Also, the longer you use it, the faster the question changes.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">An employee using the machinery will have all their abilities increased.</specialTip>
+      <specialTip openLevel="2" key="2">The longer the employee uses it, the higher the value of the rising ability</specialTip>
+      <specialTip openLevel="2" key="3">Be sure to stop the machinery only when the machine indicates Yes displayed at the top.If stopped using in NO state, all status will drop as much as they increased.</specialTip>
+      <specialTip openLevel="2" key="4">Increased status will return to normal in the next day. However, employese who’ve gained more than a 200 status increase due to the target’s influence vanish the next day.</specialTip>
+      <specialTip openLevel="2" key="5">&lt;Warning&gt; In the case an employee uses the target more than n times, exploding at the spot has been confirmed.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

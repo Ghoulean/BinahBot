@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300105">
+
+    <narration action="move">
+     #0被分配到“$0”的收容单元中
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-94</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/YouMusHappy</portrait>
+
+      <name openLevel ="1">
+        你必须要幸福
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <openText>
+        许多在这台机器内做完手术的人都&#13;&#10;已恢复健康，变得更加幸福了！
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {这是一台用于神秘手术的老旧机器。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {这台机器被设计成能够直接打开颅骨并安全有效地摧毁神&#13;&#10;经组织的结构。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {许多在这台机器内做完手术的人都已恢复健康，变得更加&#13;&#10;幸福了！}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {你爱你的城市吗？对于那些回答“爱”的人而言，他们会被&#13;&#10;认定为“已治愈”。而对于那些回答“不爱”的人而言，恐怕&#13;&#10;他们永远都不能出院了。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {使用机器的时间越长，员工就会变得越来越幸福。当然，&#13;&#10;使用机器的时间越长，您将要面临的问题也会变化得越来&#13;&#10;越快。}
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">正确使用这台机器的员工能够提升所有的能力数值。</specialTip>
+      <specialTip openLevel="2" key="2">使用机器的时间越长，能力数值的提升幅度就越高。</specialTip>
+      <specialTip openLevel="2" key="3">我们建议在机器顶部显示“YES”时停止机器。如果在显示“NO”时停&#13;&#10;止，那么员工的所有能力数值都将降低。</specialTip>
+      <specialTip openLevel="2" key="4">员工提升的能力数值将在第二天清空。然而，如果某一员工在机器中一&#13;&#10;次性提升了200以上的能力数值，那么这名员工将在当天结束时死亡。</specialTip>
+      <specialTip openLevel="2" key="5">&lt;注意事项&gt;一天之中使用这台机器超过5次的员工会当场爆炸。</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

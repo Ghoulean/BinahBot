@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100058">
+
+
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務.
+    </narration>
+    
+    <narration action="start">
+      [
+      {通常, 某些員工會急切的將他們自己投入 $0 之中.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {我們的 $0 誕生於絕望的深淵之中, 並在一個全新的開始中浮現而出. },
+      ]
+    </narration>
+
+
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-03-93</codeNo>
+      <portrait openLevel ="0">Sprites/Unit/creature/BlueStar</portrait>
+
+      <name openLevel ="1">
+        藍星
+      </name>
+
+      <riskLevel openLevel ="1">
+        ALEPH
+      </riskLevel>
+
+      <openText>
+        我們將會像晨星般再次相遇.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {對所有在 Lobotomy 的個人工作者的緊急通知. 我們支持任何能提昇積極性的公司方案. 但在最近, 我們獲得通報說到有個團體正在引發負面情緒. 由於大量的指控, 因此我們決定介入調查.&#13;&#10;依照公司政策, 你們不被允許崇拜以及/或是褻瀆某些異常. 在這裡 “崇拜” 任何東西是不被允許的.&#13;&#10;未被授權的員工擅自闖入收容單位裡將會受到懲罰.&#13;&#10;如果你有想把自己拋向某個特定異常的衝動, 你將被認定為 “受到感染”. 就如同某些在這裡的異常, 它正在掌控並誘導你的腦袋. 如果發生了, 請停下工作並盡速至精神治療求助. 致那些通過基本訓練的員工, 請依照你訓練的內容來防止被誤導.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {這裡有張黑名單. 出現在黑名單上的人必須在 3 天內接受公司提供的精神治療, 並由各自的 Sephirah 懲處. 我們發布這份名單是為了提醒你你們周遭有多少人正受到此感染.&#13;&#10;員工 Emily 在幾個月前闖進了某個異常的收容單位裡並害死了她自己. 將她封為 "烈士" 將不符合公司的規則.&#13;&#10;此外, 我們也要讚揚員工 Dylan 援救正要自殺的員工 Sophie 的英勇.&#13;&#10;如果你們有任何的同事開始出現怪異的行為, 請向你們的 Sephirah 回報他們.
+    }
+    ]
+  </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {親愛的 Dylan.&#13;&#10;我無法相信你會擁有糟糕的打算. 我知道你非常擔心 Sophie, 但是她已經被關起來了. 我知道她一直在試著逃跑, 所以他們把她綁在了床上.&#13;&#10;告訴我, 抱有信念是錯的嗎?&#13;&#10;我們都有罪, 而那個 藍星 是唯一會接受我們的地方. 我們能在那裡淨化我們的內心. &#13;&#10;我們都會回到那個地方. 那是種本能. 你覺得是 Emily 殺了她自己嗎? 她回到了那個她所歸屬的地方. 她是個烈士. 她變成了一顆恆星.&#13;&#10;一顆新星的出現也代表了一個全新的開始. 你沒聽見那永恆的號響嗎?&#13;&#10;靠近那顆星星你就能聽見歡迎我們的歡呼以及讚頌.&#13;&#10;如果我們回到那個地方, 那個只有 藍星 的地方.&#13;&#10;我們將會像晨星般再次相遇.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="1">
+      <specialTip openLevel="1" key="1">自律等級 3 以下的員工會立刻被吸入此異常之中.</specialTip>
+      <specialTip openLevel="1" key="2">當謹慎低於等級 4 的員工完成了工作, 逆卡巴拉計數器減少了.</specialTip>
+      <specialTip openLevel="1" key="3">當工作的時間超過 60 秒後, 它的逆卡巴拉計數器將會減少, 而在裡面工作的員工會立刻被吸入此異常之中死去.</specialTip>
+      <specialTip openLevel="1" key="4">低於自律等級 2, 謹慎等級 3 的員工在接觸到此突破收容的異常後會立刻死去.</specialTip>
+      <specialTip openLevel="1" key="5">當 $0 突破收容時, 所有的聲音都會變得安靜, 低沉並開始干擾視野.</specialTip>
+      <specialTip openLevel="1" key="6">當此異常突破收容時, 所有在設施內陷入恐慌的員工將會被吸入此異常之中死去.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100058">
+
+
+    <narration action="move">
+      #0 is going into $0's containment unit to begin the task.
+    </narration>
+    
+    <narration action="start">
+      [
+      {Often, some employees are eager to throw themselves into the $0.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Our $0 was born in an abyss of despair and floats towards a new beginning.},
+      ]
+    </narration>
+
+
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-03-93</codeNo>
+      <portrait openLevel ="0">Sprites/Unit/creature/BlueStar</portrait>
+
+      <name openLevel ="1">
+        Blue Star
+      </name>
+
+      <riskLevel openLevel ="1">
+        ALEPH
+      </riskLevel>
+
+      <openText>
+        We will meet again as stars.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Urgent announcement to all personnel working in Lobotomy. We support any company program that promotes positivity. But recently, we’ve gotten reports that there have been group activities that are planning conspiracies. Due to the many allegations, so we decided to investigate.&#13;&#10;By company policy, you are not allowed to idolize and/or worship certain Abnormalities. It is not allowed to “idolize” any being here.&#13;&#10;Employees who are caught trying to enter a Containment Facility without authorization will be punished.&#13;&#10;If you have an impulse to throw yourself toward a certain Abnormality, that means you are under the influence of a certain "infection." Just like some Abnormalities that are held here, it's part of the process of controlling and misleading your brain. If this happens, please stop working and immediately seek mental treatment. As you have all passed basic employee training, I hope no one will be foolish enough to be misled.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Here is the blacklist. Those who appear on this blacklist must take 3 days of mental treatment provided by the company and will receive punishment decided by their Sephirah. We are distributing this list in order to bring to your attention about the astonishing number of infected employees around you.&#13;&#10;Calling Emily, who broke into the Containment Facility of a certain Abnormality and killed herself a few months ago, a "martyr" will be considered as being non-compliant with the company rules.&#13;&#10;In addition, we would like to praise Dylan for his courage of rescuing employee Sophie, who was about to commit suicide.&#13;&#10;If any of your coworkers start showing behaviors similar to this, please report to them to your Sephirah in charge.}
+    ]
+  </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      { Dear Dylan.&#13;&#10;I don't believe you intentionally sold us and Sophie out. I'm sure you were just worried about Sophie. She's locked up now. I heard that she repeatedly tried to escape, so they tied her to her bed.&#13;&#10;Tell me, is it wrong to have faith?&#13;&#10;We are all sinners, and the Blue Star is the only place that accepts sinners. We will purify our sins there.&#13;&#10;We all go back to that place someday. It's an instinct. You may think Emily, who threw herself into the Blue Star, is dead, but she only returned to her rightful place. She’s a martyr. She became an eternal star.&#13;&#10;The rising of a star means a brand new start. Don’t you hear the sound the everlasting trumpet?&#13;&#10;When you are close to the star you can hear the welcoming cheers and singing.&#13;&#10;If we all return back to this place, only the Blue Star will remain.&#13;&#10;We will meet again as stars.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="1">
+      <specialTip openLevel="1" key="1">Employees under Temperance Level 3 immediately are sucked into the center of the Abnormality.</specialTip>
+      <specialTip openLevel="1" key="2">When an employee whose Prudence was less than level 4 completed the work, Qliphoth count is decreased.</specialTip>
+      <specialTip openLevel="1" key="3">When the work time is delayed by over 60 seconds, its Qliphoth Counter will be decreased and the employee who was working will be sucked into the center of the Abnormality and die.</specialTip>
+      <specialTip openLevel="1" key="4">Employees under Temperance Level 2, Prudence Level 3 and below will die as soon as they encounter the escaped Abnormality.</specialTip>
+      <specialTip openLevel="1" key="5">While $0 escapes, all the sounds will change to a quiet, low pitched tone and are interfered within the field of view.</specialTip>
+      <specialTip openLevel="1" key="6">While the Abnormality escapes, all panicking employees in the facility will be sucked into the center of Abnormality and die.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100012">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {O $0 deseja estocar comida para o inverno que está por vir. Pois as crianças dela estão sempre famintas.},
+      {A Unidade de Contenção é uma teia de aranha gigante. Assim que um Agente entra nela, as aranhas o encaram fixamente.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Assim que #0 percebe que os fios no teto são maiores que o normal, um deles começa a se mover.},
+      {Quando #0 percebe que o chão não deveria ser preto, uma grande sombra começa a se mexer.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Os númerosos olhos do $0 seguem todos os movimentos de #0.},
+      {É provável que o $0 tenha tato, olfato, visão, e o mais importante, paladar.},
+      {Aranhas têm instintos maternais fortes. Elas protegerão seus filhotes a todo custo.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Enquanto trabalha dentro da Unidade, #0 nunca olha para o teto. Fazer contato visual com aquela coisa arruinará seu dia.},
+      {As vezes, alguns filhotes de aranha podem cair do teto, mas tudo ficará bem se você ignorá-los. }
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {#0 certifica-se de não esquecer de dar um tapinha nas próprias costas antes de sair, só para ter certeza de que nenhuma aranhinha está presa em suas roupas.},
+      {#0 conseguiu sair da Unidade de Contenção sem esmagar uma das pequeninas.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">T-02-43</codeNo>
+      <name openLevel="1">Casulo Aracnídeo</name>
+      <portrait openLevel="1">Sprites/Unit/creature/SpiderMom</portrait>
+      <riskLevel openLevel="1">TETH</riskLevel>
+      <openText>E como já era esperado, nenhum funcionário se voluntariou para recuperar o corpo de seu colega encasulado.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Uma Anormalidade que tem a forma de uma aranha gigante, protegendo seu domínio na escuridão. É difícil vê-la a olho nu. Pequenas aranhinhas saltam pelo chão. }
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Nosso orgulhoso funcionário, Pedro, entrou na Unidade de Contenção da Anormalidade um dia. Quando ele iluminou o chão com sua lanterna, pequenas araninhas correram para longe da luz.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Quando Pedro esmagou uma delas por acidente, uma aranha gigante desceu do teto e o carregou para lá em um só momento. O funcionário encasulado no teto da Unidade de Contenção será uma refeição saudável para os filhotes da aranha.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {E como já era esperado, nenhum funcionário se voluntariou para recuperar o corpo de seu colega encasulado. }
+      ]
+    </desc>
+    <desc id="5" openLevel="2">
+      [
+      {&lt;Trecho de uma Enciclopédia de Animais&gt;&#13;&#10;
+      ...Um fato geralmente deixado de lado por muitos é que as vítimas presas em um casulo de aranha não estão mortas. A presa, na verdade, está morrendo lentamente dentro do casulo. Suas mortes são adiadas para que permaneçam frescos para consumo posterior. O veneno de uma aranha contém uma toxina que permanentemente prejudica o coração, eventualmente levando à morte. Insetos presos em casulos escuros não têm escolha a não ser esperar que as aranhinhas se alimentem deles, enquanto sentem seus corações baterem mais e mais devagar. (Omitido)}
+      ]
+    </desc>
+    <desc id="6" openLevel="3">
+      [
+      {&lt;Trecho da Carta do Líder do Departamento do Bem-estar&gt;&#13;&#10;
+      Nós agradecemos sua sugestão, porém, nossa pesquisa indica que o motivo de sua preocupação provavelmente não é real. Além disso, já foi provado que a presença de um casulo dentro da Unidade de Contenção aumenta a produção de energia. Por essas razões, não vamos implementar procedimentos de resgate para os funcionários que são pegos pelo Casulo Aracnídeo por ir contra nossos interesses. Entretanto, vamos atribuir mais recursos na pesquisa desse espécime no futuro por sua indicação. Lembre-se que prejudicar a atmosfera de nosso ambiente de trabalho ao espalhar rumores não confirmados é contra o código de conduta, e talvez seja até passível de punição, incluindo demissão. A Lobotomy sempre valoriza o bem-estar e as vozes de seus funcionários.&#13;&#10;
+      - Líder do Departamento do Bem-estar, Corporação Lobotomy.}
+      ]
+    </desc>
+    <desc id="7" openLevel="4">
+      [
+      {Há um boato tenebroso sendo espalhado entre os funcionários. Não é fora do normal para um ou dois boatos se espalharem em uma corporação assim, mas o interessante é que o número de supostas testemunhas parece se multiplicar. O boato era assim:&#13;&#10;“Sussurros podem ser escutados da Unidade de Contenção à noite...”&#13;&#10;“Era a voz de Alex, que desapareceu alguns dias atrás...”&#13;&#10;“Dizem que a voz chorava de medo, pedindo para ser salva da escuridão...”}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="OneChick">Agentes com Prudência de Nível 1 esmagavam as aranhinhas. Aqueles que machucassem suas crianças eram transformados em casulos.</specialTip>
+      <specialTip openLevel="2" key="Clean">Enquanto limpava a unidade devido ao Trabalho de Percepção, #0 foi rapidamente transformado em um casulo.</specialTip>
+      <specialTip openLevel="3" key="Cocoon">Os casulos do $0 produzem Caixas de EP. Casulos adicionais causam um aumento no número de Caixas produzidas.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

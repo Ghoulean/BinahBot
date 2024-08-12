@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300106">
+    <narration action="move">
+      #0 is going into $0's containment unit to begin the task.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-95 </codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/HealthBracelet</portrait>
+
+      <name openLevel ="1">
+        Luminous Bracelet
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>This bracelet does not forgive those with greed so it should be only be worn by those in need.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {A bracelet that emits a soft blue-green light.Many unexplainable things have been discovered from the outskirts.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+       {When equipped, all wounds are healed without any traces.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {But wearing this bracelet even when there are no wounds left is an act of greed.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+
+      [
+      {This bracelet does not forgive those with greed so it should be only be worn by those in need.}
+      ]
+    </desc>
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">>Status regarding Fortituse will increase greatly when $0 is worn.</specialTip>
+      <specialTip openLevel="2" key="2">$0 constantly recovers the wearer’s HP when it drops.</specialTip>
+      <specialTip openLevel="2" key="3">The wearer will die if any attempt to return it is made without full HP.</specialTip>
+      <specialTip openLevel="2" key="4">If wearer’s HP is not dropped after certain amount of time wearing it, then the wearer will also die.</specialTip>
+
+    </specialTipSize>
+
+
+  </observe>
+</creature>

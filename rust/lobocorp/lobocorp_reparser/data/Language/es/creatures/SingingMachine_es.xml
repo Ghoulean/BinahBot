@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100006">
+    
+    <narration action="move">
+      #0 va a entrar en la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+    <narration action="start">
+      [
+      {Tal vez delante de ti sea un Molinillo ordinario, pero por favor ten cuidado. Cada anormalidad puede no tener razón para existir, pero tiene intención de existir.},
+      {Tiene una fuerza de succión extremadamente poderosa.},
+      {La música que emite es terriblemente bella.},
+      {Tu sangre y tu carne, armonizaremos y melodizaremos.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 no está en movimiento si alguien no está cerca.},
+      {Antes de ingresar en #0, $0 no se movió en lo más mínimo.},
+      {Antes de que #0 ingresara a la cámara de contención, $0 no era más que una máquina normal que se apaga.},
+      {Si $0 tuviera un interruptor de encendido, #0 podría haber sido más cómodo trabajando.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 está trabajando en $0 con extrema precaución},
+      {#0 Siempre es cauteloso ya que $0 se puede activar en cualquier momento.},
+      {$0 no responde al #0 como si estuviera digiriendo partes de carne internamente.}
+      {#0 está trabajando en $0 mientras no está en movimiento }
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Es fácil averiguar cuándo $0 se activa; simplemente abre la tapa y comprueba cuánto se digieren los trozos de carne.},
+      {#0 no tiene suficientes agallas para abrir la tapa para comprobar a $0 para su próxima activación. .},
+      {Se rumorea que cualquier empleado que haya abierto la tapa de $0 más tarde se enferma.}
+      {En realidad, se sabe que el interior de $0 es sofisticado, pero ningún empleado se atreve a comprobarlo con sus propios ojos.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {Es un día de suerte para #0. $0 no ha sido activado.}
+      {Para #0, agradecen que $0 no esté activo. Pero condolencias a cualquier empleado que vaya a trabajar allí después.}
+      {$0 ha decidido tomarse un dia libre.}
+      {$0 no responde ya que todavía está terminando lo que le sobra. }
+      ]
+    </narration>
+    <narration action="dead">
+      [
+      {La cámara de contención está llena de una armonía sin precedentes hecha por $0.},
+      {Para generar la mejor obra maestra, se debe hacer un sacrificio. $0 es el mejor ejemplo de dicha frase.}
+      ]
+    </narration>
+    <narration action="panic">
+      [
+      {#0 está poseído por el timbre de $0. #0 no responderá a ningún comando.}
+      {#0 está encantado por la canción transmundana de $0. La mente de #0 está completamente paralizada.}
+      ]
+    </narration>
+    
+  </info>
+  
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-05-30</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/SingingMachine</portrait>
+     
+     
+
+      <name openLevel ="1">Maquina de cantar</name>
+      
+      <riskLevel openLevel ="2">HE</riskLevel>
+
+  
+        <openText>Pero nada era como una música que hace cuando se come a un humano.</openText>
+    
+     
+    </collection>
+    
+    <desc id="1" openLevel="0">
+    [
+    {La máquina toma la forma de un largo cuboide.}
+       ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Por lo que parece, puede parecer un simple molinillo, pero la existencia de la propia ‘voluntad’ de la cosa cumple los criterios de ser considerado como una anormalidad.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Cuando se acerco (Se necesitan experimentos adicionales para determinar cuántos metros es el perímetro realmente) O tocados, los empleados ponen sus cuerpos en la Anormalidad. Después, el ventilador de la máquina se apaga y la Anormalídad funciona en la “tarea”. La dura tarea aproximadamente 5 minutos.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Después de algunos experimentos, hemos concluido que la Anormalidad desea el resultado de ‘musica’ de esta interacción.}
+      ]
+    </desc>
+
+      <desc id="5" openLevel="4">
+    [
+        {&lt;color=#FF9E72FF&gt;No hay una investigación detallada de la 'Musica'. Sin embargo, existe la hipótesis de que la música tiene una característica especial que atrae a las personas según el comportamiento específico de algunos empleados o el registro de asesoramiento psicológico. Si se determina que un empleado es adicto a la música, deberá tratarse rápidamente para evitar cualquier daño secundario que el empleado pueda causar.&lt;/color&gt; }
+      ]
+    </desc>
+
+
+    <desc id="6" openLevel="1">
+     [
+        {&lt;Extracto del registro de la entrevista&gt;&#13;&#10;&#13;&#10;Se suponía que iba a ser enviado solo. La anormalidad parecía bastante modesta. Algo así como una máquina utilizada en una fábrica, ya que no reaccionaba a nada. Pero ese dia, &lt;Redactado&gt; insistió en que teníamos que ir allí. Continuó diciendo que “El Caballo Pálido” le ha respondido. No pensé que el ‘Caballo Palido’ estaba pensando en mí cuando respondió. La mayoría de las anormalídades que cuido son seguras. Ademas, tengo mucha suerte. Pensé que ese día sería el mismo. (Omitido)}
+      ]
+    </desc>
+
+    <desc id="7" openLevel="2">
+      [
+       {&lt;Redactado&gt; Observado de cerca la anormalidad. Solo quería escribir el informe rápidamente y salir, pero él estaba pensando diferente. Estaba seguro; no habría una anormalidad que no tenga poderes especiales. Le advertí que no se acercara demasiado, pero &lt;Redactado&gt; dio un paso más cerca. Y de repente, la cosa cobró vida, abrió su tapa y se lo tragó entero. Literalmente se lo tragó. La tapa se cerró y un fuerte ruido vino desde el interior de la criatura, no había forma de saber lo que estaba pasando, pero estaba demasiado aterrorizada para hacer algo. (Omitido)}
+    ]
+  </desc>
+
+    <desc id="8" openLevel="3">
+      [
+      {En la oscuridad, me di cuenta de que la cosa era tocar un instrumento. Por trituración y corte &lt;Redactado&gt; Cuerpo, estaba creando una melodía. Mientras contemplaba mis horribles realizaciones, la tapa se abrió de nuevo. Trozos y piezas de &lt;Redactado&gt; estaban ahí. Tan poco que tenías que preguntarte qué pasó con el resto. (Omitido)}
+      ]
+    </desc>
+
+    <desc id="9" openLevel="4">
+      [
+      {&lt;color=#FF9E72FF&gt; &lt;&lt;b&gt;DEBE LEER: Síntomas de intoxicación por ‘La máquina de cantar’&lt;/b&gt;&gt;&#13;&#10;&#13;&#10;1. Intenta llevar a otros empleados a la cámara de contención de ‘La máquina de cantar’ usando la fuerza fisica.&#13;&#10;2. El tamaño de las pupilas se agranda.&#13;&#10;3. La concentración y la capacidad cognitiva se reducen considerablemente.&#13;&#10;4. No intenta escuchar su música. &#13;&#10;Agregue cualquier síntoma adicional que se encuentre e informe de inmediato el caso si se sospecha que algún empleado tiene los síntomas anteriores. &lt;/color&gt;}
+      ]
+    </desc>
+
+    <desc id="10" openLevel="4">
+      [
+      {&lt;color=#FF9E72FF&gt; &lt;&lt;b&gt;Extracto del registro de incidentes&#13;&#10;&#13;&#10;XXXX XXth, hubo un incidente de desaparición del empleado M1840. 2 días después, en el XXth, parte del cuerpo fue encontrado dentro de la ‘La máquina de cantar’. El análisis de ADN ha encontrado que el cadáver es del empleado M1840. El empleado M1840 era un empleado nuevo que había trabajado en la compañía por solo 3 meses, el empleado no tenía registro de una asignación con la anormalidad. El empleado asignado a la ‘La máquina de cantar’, &lt;Redactado&gt; era el sospechoso. Después de una extensa investigación, &lt;Redactado&gt; confesó el crimen.&#13;&#10;&#13;&#10; “Sé que es una locura, pero tuve que escuchar esa música otra vez. No me saldría de la cabeza durante meses. Realicé todo tipo de experimentos. Cuando la máquina toma un gato, empezo a tocar durante 1 minuto. Un perro grande, 2 minutos y 30 segundos, &lt;Redactado&gt; la música vino de eso. Pero nada era como una música que hace cuando se come a un humano. Puede sonar ridículo, pero me siento satisfecho después de haberlo escuchado una vez más.”}
+      ]
+    </desc>
+
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">El empleado con Fortaleza de nivel 4 o más se sumerge en $0 para operarlo después de completar el trabajo.</specialTip>
+      <specialTip openLevel="2" key="2">El empleado con Templanza de nivel 2 o menos se sumerge en $0 para operarlo después de completar el trabajo.</specialTip>
+      <specialTip openLevel="2" key="3">Cuando el resultado del trabajo fue malo, Su contador Qlifot ha disminuye.</specialTip>
+      <specialTip openLevel="3" key="4">Cuando el contador Qlifot alcanzó a 0, el empleado que entró a la sala de contención se zambulló en $0 para hacerlo funcionar.</specialTip>
+      <specialTip openLevel="3" key="5">Cuando la máquina estaba trabajando, uno de los empleados cercanos se quejó de que podía escuchar la melodía continua de la nada. Hemos decidido llamar a este fenómeno 'Fascinado o embrujado'.</specialTip>
+      <specialTip openLevel="4" key="6">El empleado #1 se desmayó después de ser atacado por el empleado #0. Después del ataque, el empleado #0 hizo que otro empleado #1 inconsciente fuera absorbido por $0 produciendo su musica.</specialTip>
+    </specialTipSize>
+    
+  
+
+  </observe>
+</creature>

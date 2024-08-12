@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100012">
+
+
+    <narration action="move">
+      #0 va a entrar a la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 quiere comida para el invierno que viene. Sus hijos siempre tienen hambre.}
+      {La unidad de contención es una tela de araña gigante. Tan pronto como un empleado entra, los ojos de la araña se fijan en su presa.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {El momento #0 se da cuenta de que las telas en el techo son más largos de lo normal, una tela comienza a moverse.}
+      {Cuando #0 nota que el piso no debe ser negro, una gran sombra comienza a moverse.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {Los numeros ojos de $0 rastrean en silencio todos los movimientos de #0 siniestramente.}
+      {Es probable que $0 pueda oír, tocar, oler, así como ver.}
+      {Las arañas tienen fuertes instintos maternales. Defienden a su descendencia a toda costa.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {Trabajar con #0 por dentro se debe tomar la precaucion de nunca mira al techo. Hacer contacto visual con él arruinará el día del empleado.}
+      { Algunas veces varios arañas se caen del techo, pero todo estará bien si las ignoras.}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {#0 no olvides patear suavemente para asegurarte de que ninguna araña se aferre a cualquier prenda de su cuerpo antes de salir.}
+      {#0 logró dejar la unidad de contención sin aplastar a ninguna araña.}
+      ]
+    </narration>
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">T-02-43</codeNo>
+      <name openLevel="1">Brote Aracnido</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/SpiderMom</portrait>
+      <riskLevel openLevel ="1">TETH</riskLevel>
+      <openText>Como era de esperar, ni un solo empleado se ofreció como voluntario para recuperar el cadáver de su colega envuelto. </openText>
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      { Una anormalidad que toma la forma de una araña gigante, protegiendo su dominio en la oscuridad. Pequeñas arañas se deslizan por el piso, mientras que los cables no identificados cuelgan por todo el techo. Es difícil ver qué tipo de anormalidad es. Los cables que atraviesan el techo de la unidad de contención están dañados, lo que niega la iluminación.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Nuestro empleado orgulloso Peter entró en la unidad de contención de Anormalidades. Vio arañas dispersarse lejos de la luz en el suelo.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [{Tan pronto como el empleado aplastó a una de las arañas, sucedió algo horrible. Una araña gigante con muchos ojos descendió y tomó al empleado en cuestión de segundos. La araña alegremente puso al empleado en un capullo. El empleado envuelto en el techo de la unidad de contención será una comida saludable para su descendencia y el empleado enredados por las patas de la araña son mordidos aleatoriamente en su cuerpo por la gran araña.}]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [{Comprensiblemente, ningún empleado se ofreció como voluntario para recuperar el cuerpo de su colega capullo.  }]
+    </desc>
+
+    <desc id="5" openLevel="2">
+      [{La mayoría de la gente no lo sabe, pero los empleados de los capullos no están muertos. Mueren lentamente adentro. Se mantienen frescos para su posterior consumo. El veneno de araña contiene una toxina especial que daña permanentemente el corazón, y eventualmente conduce a la muerte. Los empleados atrapados dentro de un capullo no tienen más remedio que esperar en la oscuridad para ser consumidos por las arañas, escuchando los latidos de su propio corazón. (Omitido)}]
+    </desc>
+
+    <desc id="6" openLevel="3">
+      [{&lt;Extracto de la carta&gt;&#13;&#10;Gracias por compartir tu opinión. Sin embargo, nuestra propia investigación indica que sus preocupaciones son poco probables. Además, está comprobado que la presencia de un capullo en una unidad de contención aumenta la producción de energía. Por estas razones, no implementaremos un procedimiento de rescate para los empleados que sean atrapados por el Brote aracnido, ya que es contra nuestros intereses. Sin embargo, asignaremos más recursos en la investigación de este espécimen en el futuro según su opinión. Tenga en cuenta que sus acciones son contrarias al código de conducta y están sujetas a sanciones, incluido el despido. Lobotomy Corporation siempre valora el bienestar y las voces de sus empleados.&#13;&#10;- Jefe del Departamento de Bienestar, Lobotomy Corporation.}]
+  </desc>
+
+    <desc id="7" openLevel="4">
+      [{Hay un rumor espeluznante que se extiende entre los empleados. No es sorprendente que se difundan rumores en una empresa de este calibre, pero es interesante que el número de presuntos testigos parece multiplicarse. Estos son algunos de los rumores que están circulando: "Los susurros se escuchan en la unidad de contención en la noche." "Era la voz de Alex, que desapareció hace unos días..." "Dicen que la voz lloraba de terror, pidiendo ser salvada de la oscuridad."}]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="OneChick">Los empleados con nivel de Prudencia 1 pisotearon las arañas rastreras. $0 convirtió a los que hacían daño a sus bebés en capullos.</specialTip>
+      <specialTip openLevel="2" key="Clean">$0 rápidamente se convirtió en #0 en un capullo que estaba limpiando la unidad como parte de un trabajo de Percepción.</specialTip>
+      <specialTip openLevel="3" key="Cocoon">$0 de sus capullos produce Cajas-PE. Más capullos significa más Cajas-PE producido.</specialTip>
+    </specialTipSize>
+
+  </observe>
+
+
+</creature>

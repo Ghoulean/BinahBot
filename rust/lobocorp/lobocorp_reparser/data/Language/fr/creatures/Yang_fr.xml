@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300109">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-07-103</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Yang</portrait>
+      <name openLevel="1">
+        Yang
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>Cependant, le monde est bien plus que chaleur et lumière.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {La moitié d’une paire qui manque l’une à l’autre.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Il réduit les afflictions mentales accablant le porteur. De par cette propriété, il a été appelé “Le Pendentif Angélique.”}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Ceux qui s’en approchent désirent ardemment son énergie ; ils prétendent qu’elle a éclairé leur esprit et réchauffé leur cœur. Cependant, ils craignaient le pendentif noir. “Je souhaite que toutes les Anomalies soient aussi utiles que celle-ci.” soupiraient-ils. Pourtant, il ne comprenait pas. Il n’avait jamais eu l’intention d’aider les autres, c’était tout simplement ce qu’il faisait.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Cependant, le monde est bien plus que chaleur et lumière.&#13;&#10;Le ciel n’existerait pas, si ce n’était grâce à la terre ; les ténèbres n’existeraient pas, si ce n’était pas grâce à la lumière ; la vie n’existe que grâce à la mort ; l’espoir n’existe que grâce au désespoir.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {La carpe noire nage vers l’harmonie. La carpe blanche nage vers le chaos.&#13;&#10;Que se passe-t-il lorsque les deux poissons se croisent ?}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Le porteur de $0 obtient une résistance aux dégâts BLANC. Cependant, quand O-05-102 n’est pas dans le complexe, aucun bénéfice n’est visible.</specialTip>
+      <specialTip openLevel="2" key="2">$0 a soigné périodiquement les PSM du porteur.</specialTip>
+      <specialTip openLevel="2" key="3">&lt;Attention&gt; Assurez-vous que le porteur de $0 n’entre jamais dans l’unité de Confinement de O-05-102.</specialTip>
+      <specialTip openLevel="2" key="4">&lt;Attention&gt; Veuillez noter que quand O-05-102 s’échappe, $0 s’échappe aussi. (Nous avons eu la confirmation que ce problème a également lieu lorsque $0 est porté.)</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

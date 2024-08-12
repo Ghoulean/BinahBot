@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100009">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção de $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {#0 está compreensivelmente aterrorizado por entrar na Unidade de Contenção.},
+      {Dependendo da situação, $0 pode ter um efeito positivo nos funcionários.},
+      {Mandar um agente “honesto” para lidar com $0 deve ser a melhor opção.},
+      {$0 pode ver através de suas intenções.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 espera pelo pecado da humanidade.},
+      {Os pecados de #0 alcançarão $0 em breve.},
+      {Algumas vezes, $0 rangerá os dentes ameaçadoramente, mas não é nada para se preocupar.},
+      {$0 flutua gentilmente no ar, movendo-se lentamente.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Embora que $0 não tenha olhos, ele reconhece a presença de #0.},
+      {$0 é seu justiceiro.},
+      {#0 presencia a solenidade de $0 e o reverencia.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {#0 concluiu a tarefa, mas $0 estava indiferente.},
+      {Conforme o trabalho de #0 continuou, $0 não deu resposta alguma.},
+      {#0 falhou em obter alguma resposta de $0.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {Ter a vontade de carregar a dor é a metade da expiação.},
+      {Somente aqueles que enganam a si mesmos podem viver verdadeiramente felizes. A ignorância é uma bênção.},
+      {É possível perdoar um ato maléfico, quando havia intenções puras por trás dele?}
+      ]
+    </narration>
+    <narration action="special_ability1">
+      [
+      {#0 confessa-se para $0 sobre não ter ido trabalhar.},
+      {#0 confessa-se para $0 sobre ter mentido para seus pais.},
+      {#0 confessa-se para $0 sobre ter tido inveja de um amigo.},
+      {#0 confessa-se para $0 sobre o "Incidente do Último Mês de Julho".}
+      ]
+    </narration>
+    <narration action="special_ability2">
+      [
+      {A punição começará a cair dos céus.}
+      ]
+    </narration>
+    <narration action="special_ability3">
+      [
+      {A culpa eterna provavelmente será a maior de todas as punições para #0.}
+      ]
+    </narration>
+    <narration action="panic">
+      [
+      {Todos os pensamentos são eliminados de #0. Agonia e ansiedade o pressionam, sem ter fim.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-03-03</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/OneBadManyGood</portrait>
+      <name openLevel="1">
+        Um Pecado e Centenas de Boas Ações
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <openText>
+        Se alimenta do “mal” que escapa durante conversas entre pessoas.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Uma Anormalidade silenciosa que entende o conflito entre o bem e o mal. Suas vazias cavidades oculares encaram todos que a encontram.}
+      ]
+    </desc>
+    <desc id="2" openLevel="0">
+      [
+      {Um crânio gigante que está anexado a uma cruz, ela veste uma coroa de espinhos e flutua em torno de 2 metros acima do chão.}
+      ]
+    </desc>
+    <desc id="3" openLevel="1">
+      [
+      {Apesar de sua bizarra aparência, é raro gravar um incidente de violência contra os funcionários envolvendo essa Anormalidade.}
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {Ela se alimenta do “mal” que escapa durante conversas entre pessoas. O funcionário designado precisa se ajoelhar em frente dela (ficar de pé parece ser aceitável) e apresentar seu “mal” ao confessar seus pecados. A maneira que ela se alimenta é desconhecida.}
+      ]
+    </desc>
+    <desc id="5" openLevel="2">
+      [
+      {&lt;Resumo de Gravações Experimentais&gt;&#13;&#10;Nós catalogamos os pecados que uma pessoa pode cometer em três níveis.
+      Nível 1: Uma pequena mentira ou ação que passa despercebida ou pode ser compartilhada por brincadeira.
+      Nível 2: Pecados que são mais sérios e só podem ser compartilhados com os amigos mais próximos.
+      Nível 3: Pecados tão profundos que eles não podem ser compartilhados com ninguém. Esses serão levados para a cova.&#13;&#10;
+      Funcionário &lt;Omitido&gt; foi designado para confessar um pecado de Nível 1.
+      A produção de energia da Anormalidade aumentou em 12%.&#13;&#10;
+      Funcionário &lt;Omitido&gt; foi designado para confessar um pecado de Nível 2.
+      A produção de energia da Anormalidade aumentou em 15%.&#13;&#10;
+      Nós designamos o funcionário &lt;Omitido&gt;  para confessar um pecado de Nível 3.
+      1 minuto e 48 segundos depois que o funcionário foi mandado lá, um clarão de luz foi visto. A luz era tão brilhante que podia ser vista de fora da Unidade de Contenção. Imediatamente seguida da luz, houve uma queda de energia em toda a instalação. O fenônemo durou 2 horas. O funcionário &lt;Omitido&gt; perdeu 6 anos de memória. Experimentos adicionais foram cancelados. A Ética Científica decreta que todas as gravações daqueles que participaram no experimento fossem mantidas em completo sigilo. Entretanto, o incidente não nos deixou com outra escolha a não ser verificar a gravação da Unidade de Contenção.}
+    ]
+  </desc> --&gt;
+
+    <desc id="6" openLevel="3">
+      [
+      {Funcionário &lt;Omitido&gt;:&#13;&#10;
+      “Isso aconteceu durante &lt;Omitido&gt; em torno das 16:00 horas. Bem, tinha uma ferrovia 20 minutos da minha casa. Eu e alguns de meus bons amigos decidimos nos fantasiar de animais de floresta. Um de nós escolheu ir como um cervo. Era uma fantasia mal feita. Honestamente, mal poderia ser chamada de fantasia. Era só um par de galhadas mal feitas e uma roupa escura com algumas manchas parecidas com a de um cervo. (Omitido) Eu não sei como nosso amigo ‘cervo’ foi caminhar na floresta. Não tinhamos nem notado que ele tinha desaparecido por talvez uma hora. Procuramos por ele e finalmente o encontramos dentro de alguns arbustos. Nós chamamos pelo nome dele, e eu não tenho certeza se foi de alívio por finalmente ter encontrado ele ou algo assim, mas ele começou a correr em nossa direção. E foi aí que nós escutamos os tiros. &lt;b&gt;Bang! Bang! Bang!&lt;/b&gt; Quando eu voltei ao normal, eu vi o sangue dele espalhado por todo o lado até meus pés. Depois disso, nenhum de nós se fantasiou de animal novamente. E é isso. Aliás, isso vai realmente funcionar?”}
+      ]
+    </desc><desc id="7" openLevel="3">
+      [
+      {&lt;Registro de Observação #4_435&gt;&#13;&#10;
+      Suas cavidades oculares são vazias. É um crânio afinal. Mas duvido que seja cego. Ele certamente está me olhando intensamente, e de algum jeito eu consigo sentir que ele está me escutando. Devo admitir que me confessar para ele alivia meu coração.}
+    ]
+  </desc><desc id="8" openLevel="4">
+    [
+    {Após isso, investigamos o incidente na cidade natal do funcionário para entender melhor. Descobrimos que um garoto chamado Justin foi baleado e morreu por caçadores enquanto estava em uma fantasia de cervo durante a temporada de caça. Diferentemente da confissão do funcionário, Justin era repetidamente intimidado por outros garotos. Testemunhas disseram que ouviram os garotos gritarem “Corre Justin, corre!" logo antes dos tiros. Após o incidente, os garotos da cena se mudaram e caça a cervos foi banida na área.}
+    ]
+  </desc><desc id="9" openLevel="4">
+      [
+      {&lt;Resumo do Registro da Pesquisa de Anormalidades X-392&gt;&#13;&#10;
+      Honestamente, você não pode esperar que todos os nossos funcionários façam confissões honestas para aquele crânio. Por volta de um a cada dez funcionários tende a falar algo que não é completamente verdadeiro. É algo um pouco diferente que uma mentira. Você poderia dizer que é uma desculpa feita pelo subconsciente. Eles distorcem perspectivas para justificar suas ações mesmo que saibam que deviam estar falando a verdade. Quando isso acontece, a confissão não é mais uma confissão. Sim, estou falando de você tentando justificar seu atraso de 5 minutos!}
+    </desc>
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="confessionIs">$0 restaurará o estado mental do funcionário quando resultado do trabalho for Bom. #0, que recebeu essa bênção, comentou que ele se sentiu renovado.</specialTip>
+      <specialTip openLevel="2" key="confessionIsGood">Após o número máximo de Caixas de PE terem sido produzidas com $0, ele restaurou a saúde mental de todos os funcionários naquele departamento.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

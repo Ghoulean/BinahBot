@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100059">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {L’Unité de Confinement du $0 est lumineuse comme si une source incandescente s’y trouvait.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Lorsque tout sera terminé, les pétales tomberont comme des cris.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Quand la beauté sera à son apogée, le rituel de la fin viendra.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Tous ceux qui le regardent dans cet endroit dépourvu de soleil ressentent une paix profonde.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-04-100</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Sakura</portrait>
+      <name openLevel="1">
+     Tombeau des Fleurs de Cerisier
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>Plus il a de sang, plus il est beau.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Un arbre enraciné au centre de l’Unité de Confinement. Il ne dépérit jamais même lorsqu’aucune forme de nutrition ne lui est donnée.&#13;&#10;Certains employés prennent le temps de se reposer à proximité de l’arbre.&#13;&#10;Les employés viennent parfois dans l’Unité de Confinement pendant leur temps libre.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Pansy : Hé Xavier, tu as vu cette nouvelle Anomalie ? Je crois que tu en as été désigné responsable.&#13;&#10;Xavier : Ouais, je l’ai bien vue. Juste un arbre avec quelques bourgeons le long des branches. Je ne pense pas qu’ils puissent fleurir sans la lumière du soleil.&#13;&#10;Pansy : Tu as déjà commencé à faire des observations et écrire des rapports ?&#13;&#10;Xavier : Nan, mais je pense quand même m’y mettre rapidement.&#13;&#10;Pansy : Ok, prends soin de toi !}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Pansy : Coucou, ça fait un bail. Comment ça va depuis la dernière fois ?&#13;&#10;Xavier : Yo, mate un peu ça ! Tu vois l’Anomalie dont on parlait l’autre jour ? Je pense pas qu’elle soit hostile. Et devine quoi ? Elle a commencé à fleurir ! Ça semblait tellement irréel de les regarder, c’est comme si le printemps était arrivé pour la première fois dans cet endroit.&#13;&#10;Pansy : T’es sûr ? D’habitude, n’importe quel changement est présage d’une catastrophe ici.&#13;&#10;Xavier : T’inquiète, c’est juste quelques fleurs inoffensives. Merci quand même de t’inquiéter pour moi !}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Pansy : Rebonjour. Comment va ton travail ?&#13;&#10;Xavier : Mince, les bourgeons n’arrêtent pas de fleurir. Je pense que ça va finir par remplir toute l’unité à ce rythme. Tu devrais le voir par toi-même. C’est vraiment magnifique. Je pense que je ne me lasserai jamais du spectacle.&#13;&#10;Pansy : J’adorerais, mec, mais je peux pas. Je suis beaucoup trop occupée en ce moment.&#13;&#10;Xavier : Vraiment ? Mince, quel dommage… Je t’assure que c’est absolument splendide.&#13;&#10;Pansy : Hmm… T’es sûr que ça va d’ailleurs ? Tu as fait beaucoup d’erreurs ces derniers temps… Il semblerait que tu sois beaucoup plus souvent dans la lune aussi.&#13;&#10;Xavier : T’inquiète, c’est rien. Bon, je dois y retourner. Oh, j’ai commencé à faire un dessin de l’arbre, d’ailleurs. Tu seras la première personne à le voir lorsque je l’aurai fini.}
+      ]
+  </desc>
+    <desc id="5" openLevel="4">
+      [
+      {&lt;Enregistrement Audio d’une Session de Thérapie&gt;&#13;&#10;
+      … Ouais, je vais un peu mieux maintenant. Je me suis aussi améliorée dans la gestion d’Anomalies. Aller dans l’unité du $0 me fait vraiment me sentir bien, comme vous l’aviez dit. J’ai jamais cru en ce charabia qui dit que les fleurs dégagent une bonne aura et tout…&#13;&#10;
+      Mais je suppose que c’est vrai. Quel dommage que je n’ai pas pu voir ces fleurs de cerisier avec Xavier. J’ai pu voir le dessin qu’il avait commencé en fouillant dans ses affaires une fois.&#13;&#10;
+      Le véritable arbre était bien plus beau. Plus magnifique que tout ce qu’il m’avait décrit. C’est une tragédie qu’il ait disparu avant de le voir tel qu’il est actuellement. Si vous trouvez une quelconque Anomalie suspecte, assurez-vous de bien l’examiner en détail, d’accord ?&#13;&#10;
+      … Ouaip, je vais bien maintenant. Je me suis débarrassée de ce sentiment.&#13;&#10;
+      Les pétales de cerisier sont tous tombés après que je les ai vus cette fois.&#13;&#10;
+      Et pourtant, j’ai vu des bourgeons dépassant des branches à nouveau.&#13;&#10;
+      … Ça vous dérangerait de me nommer responsable de cette Anomalie à partir de maintenant ?&#13;&#10;
+      Non, ce n’est rien de grave. Je veux juste pouvoir voir ces fleurs en pleine floraison à nouveau.&#13;&#10;
+      Oui, merci.}
+      ]
+    </desc>
+    <desc id="6" openLevel="4">
+      [
+      {&lt;Avis d'Information&gt;&#13;&#10;
+      Nous avons eu vent d’une augmentation alarmante du nombre d’employés voulant visiter l’Unité de Confinement du $0.&#13;&#10;
+      Cette augmentation des requêtes est sûrement due à l’absence de paysages naturels au sein du complexe.&#13;&#10;
+      Cependant, je ne pense pas qu’il y ait besoin d’ériger une règle l’interdisant. Nous nous sommes rendus compte que les indices de contamination mentale du personnel diminuaient en regardant le $0.&#13;&#10;
+      La raison derrière cela n’est pas importante. On peut prétexter que “la flore dégage une bonne aura”, pour tout ce qu’on en a à faire.&#13;&#10;
+      La seule chose dont on est sûrs, c’est que le $0 fascine nos employés, et qu’ils ne savent pas ce qui se trouve sous ses racines.&#13;&#10;
+      Avez-vous remarqué que les pétales de cerisier étaient remarquablement écarlates, et que leur beauté inégalable est due à cette couleur ?&#13;&#10;
+      Plus il a de sang, plus il est beau. Nos employés qui en sont inconscients y sont attirés, encore et encore…&#13;&#10;
+      Gardez tout ça archi-secret pour le moment. C’est comme ça que les choses marchent ici.}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Lorsque le résultat du travail est Bon, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="1" key="2">Lorsqu’un employé panique dans l’Unité de Confinement, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="1" key="3">Lorsque le Compteur Qliphoth atteint 0, des employés au hasard dans le complexe commencent à se diriger vers l’Unité de Confinement du $0. (Leur statut est défini comme “Captivé”.)</specialTip>
+      <specialTip openLevel="2" key="4">Lorsqu’un employé captivé atteint l’Unité de Confinement, il est tiré dans l’arbre.</specialTip>
+      <specialTip openLevel="2" key="5">Après plusieurs tentatives de sélection et de conversation avec #0, qui était alors captivé, celui-ci est apparemment revenu à la normale. Quand tous les employés retournent à la normale, le Compteur Qliphoth retourne au maximum.</specialTip>
+      <specialTip openLevel="3" key="6">Après avoir tiré un employé en son sein, quand un autre employé commence à travailler avec le $0, son Compteur Qliphoth retourne au maximum. De plus, les PV et PSM de tous les employés du complexe ont été soignés.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

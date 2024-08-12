@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id="100106">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {$0 est si doux et moelleux. Il est si mignon qu’il pourrait soigner votre dépression.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Nombre de nos employés ont au moins 55 images différentes de $0 sous de nombreux angles sauvegardées dans leur téléphone.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Si vous n’aimez pas $0, sachez que c’est une raison suffisante pour vous rétrograder sur-le-champ.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Je veux dire, parfois on trouve des os bizarres ressemblant à ceux d’humains autour de $0, mais il est si mignon ! Donc franchement, qui en a quelque chose à faire ?}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">D-02-107</codeNo>
+      <portrait openLevel="0">Sprites/Unit/creature/Ppodae</portrait>
+      <name openLevel="1">
+       Ppodae
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>Mec… ton “petit ange” est en train de mâchouiller le doigt de notre collègue.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;Cette Anomalie a été créée à partir des idées du Donateur Tumblbug 이은희 (Lee Eun-hee).&lt;/i&gt;&#13;&#10;&#13;&#10;Un chiot super doux et ultra-mignon avec une fourrure blanche comme la neige fraîche.&#13;&#10;Cette Anomalie est si mignonne, n’y jeter ne serait-ce qu’un rapide coup d’œil te fera te sentir beaucoup mieux.&#13;&#10;Il a les yeux d’un ange et est la chose la plus pure en ce monde.&#13;&#10;(Les descriptions supplémentaires de cette créature ont été omises par souci de brièveté. Le reste des phrases consiste essentiellement à dire “Il est si mignon !” de toutes les manières possibles.)}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Cette petite Anomalie ne pourrait jamais faire du mal à qui que ce soit. La seule chose dont il faut s’inquiéter serait de voir son cœur se serrer si on la regarde trop longtemps car elle est vraiment trop mignonne. D’ailleurs, les employés entrant dans l’Unité de Confinement de cette Anomalie ont tendance à se déconcentrer suffisamment pour devoir être traînés de force hors de l’Unité de Confinement par d’autres employés. Des précautions doivent être prises car les employés envoyés en secours peuvent être captivés par sa mignonnerie à leur tour.&#13;&#10;
+      + Des tentatives d’emmener l’Anomalie hors de son Unité de Confinement peuvent avoir lieu de temps en temps, mais ce n’est pas un souci, car celles-ci sont souvent empêchées par d’autres employés.
+      + Quand trop d’employés veulent travailler avec cette Anomalie, un tirage au sort est organisé afin de savoir qui en aura le privilège.
+      + Nos employés ont tendance à montrer des symptômes de régression psychologique (tels qu’une élocution sur un ton inhabituel) en entrant dans l’Unité de Confinement, mais cela semble n’être que temporaire.
+      + Nombre de nos employés appellent cette Anomalie “Le Meilleur Chien du Monde Ppodae”, cependant, sa dénomination officielle est simplement “Ppodae”. Veuillez ne pas vous tromper.
+      ++++ Tout employé entrant dans son Unité de Confinement doit mettre en ligne un rapport photo ou une vidéo de l’Anomalie. (Ceci est d’une haute, extrême, MÉGA-importance ; veillez à ce que personne n’oublie cette étape.)}
+    ]
+  </desc>
+    <desc id="3" openLevel="1">
+      [
+      {Une entreprise de cette taille a toujours une ou deux rumeurs qui courent.&#13;&#10;“J’ai entendu dire que l’on peut entendre les os de quelqu’un se briser si tu te promènes dans les couloirs la nuit…”&#13;&#10;“Si tu essaies de traquer la source du son, tu trouveras un Yéti dévorant un employé…!”&#13;&#10;“Cependant, nous n’avons aucune Anomalie ressemblant de près ou de loin à un Yéti…”}
+    ]
+  </desc>
+    <desc id="4" openLevel="2">
+      [
+      {&lt;Extrait d’un Enregistrement Audio&gt;&#13;&#10;
+      John : Tu devrais être reconnaissant, mec. T’as vraiment de la chance de pouvoir travailler avec Le Meilleur Chien du Monde Ppodae.
+      Jacob : Euh… Il me frappe avec ses pattes. Est-ce une attaque ?
+      John : Il veut juste que tu lui donnes à manger. Tu ne savais pas que c’était normal dans notre corporation de toujours avoir un ou deux paquets de nourriture pour chien sur soi ?
+      Jacob : Eh bien… J’aime pas vraiment les animaux… (John laisse s’échapper un soupir irrité.)
+      D’ailleurs, ce p’tit chiot est plutôt costaud. Les chiens sont naturellement comme ça ? Je suppose que celui-ci a beaucoup joué à “Va chercher !”, hein ?
+      John : On y jouait souvent avec lui pour voir sa façon si mignonne de courir après la balle. Par contre, on s’est arrêté, bizarrement…
+      Jacob : Hé, t’as vu son visage quand je l’ai nourri ? C’était super flippant, je te jure…
+      John : C’est juste ton imagination, mec. Il reste notre petit ange. C’estPasVraiÇa ? QuiC’estLeBonChien ?
+      Jacob : Purée, est-ce que ce truc a un genre de pouvoir de manipulation mentale ? 
+      John : Je ne vois pas de quoi tu parles, Jacob. TuSaisDeQuoiIlParleToi ? MonPititBébéD’Amour ? TuSaisDeQuoiIlParle ?}
+      ]
+    </desc>
+    <desc id="5" openLevel="3">
+      [
+      {      John : Tu m’attendais, Ppodae ?
+      Jacob : Euh, hé, il est en train de manger quelque chose. On n’était pas censés être les premiers dans son Unité de Confinement aujourd’hui ?
+      John : Mon bon pitit chien adowé avait juste faim, mmh mmh ? Mec, il est juste si mignon… Regarde comme il grignote ce truc~
+      Jacob : Mais qu’est-ce qu’il mâchouille comme ça… Merde ! Je le savais ! C’est… C’est le doigt de James, mec ! Il a disparu lors de sa dernière ronde ! Tu ne peux pas voir son ongle ?! Tu te souviens qu’il se vantait d’avoir un cœur peint sur les ongles ? Je te l’avais dit, mec ! Ce truc ne veut pas notre bien !
+      John : Je… Je ne peux pas y croire… qui…
+      Jacob : C’est cette Anomalie qui l’a tué ! Je peux comprendre que tu sois sous le choc, mais je t’ai dit plusieurs fois qu’il n’y avait aucun moyen qu’un animal de compagnie “mignon” soit inoffensif ici. Bon sang, je suis content que tu reprennes enfin tes esp—
+      John : Qui… Qui ne lui donnerait pas à manger à temps ?!
+      Jacob : ………
+      John : Ce pauvre petit gars a dû être affamé toute la nuit ! C’est… C’est si déchirant…
+      Jacob : Eh bien, euh… Je suppose qu’on doit le réprimer ?
+      John : Comment peux-tu suggérer une chose si cruelle à l’encontre d’un bon chien aussi mignon que lui ? Regarde-le dans les yeux… Comment un animal aussi innocent pourrait-il faire du mal à une mouche ? C’estPasVraiÇaMonPititBébéD’Amour ?&#13;&#10;
+      (L’Anomalie ne montre aucune réaction. Seul le son d’un os se faisant ronger est audible.)&#13;&#10;
+      Jacob : Mec… ton “petit ange” est en train de mâchouiller le doigt de notre collègue.
+      John : T’es quoi, un bleu ? Tu ne sais pas que toutes les choses mignonnes sont pardonnées ici ?
+      Jacob : Je n’ai jamais entendu ça, et je pense sérieusement que c’est faux. Nous devons l’endormir. Et si tu ne veux pas le faire, et bien je le ferai seul.&#13;&#10;
+      (Le son d’une fléchette anesthésiante tirée d’un fusil hypodermique peut être entendue.)&#13;&#10;
+      John : NOOOON !!!!!
+      (L’Anomalie commence à gémir.)
+      (L’enregistrement se coupe après quelques cris.)&#13;&#10;&#13;&#10;…Suite aux preuves fournies par cet enregistrement, je demande à ce que Jacob soit immédiatement rétrogradé pour avoir tiré sur Ppodae avec un tel outil.&#13;&#10;Un auteur de maltraitance contre les animaux si terrible et malfaisant n’a pas sa place au sein de notre corporation.&#13;&#10;Notre Meilleur Chien du Monde Ppodae a été traumatisé. Traumatisé ! À cause de cet incident. Maintenant, il ne mange plus que 5 kg de ses friandises préférées.&#13;&#10;Pour l’aider à surmonter ce traumatisme, je suggère que l’on demande de nouvelles friandises pour Ppodae :
+      “Saumon de première qualité riche en vitamine B”.&#13;&#10;J’attends votre réponse.}
+      ]
+    </desc>
+    <desc id="6" openLevel="4">
+      [
+      {Réponse :&#13;&#10;
+      Vos demandes ont été acceptées.
+      
+      P.S. Dans votre prochain message, veuillez bien ajouter 5 photos différentes du Meilleur Chien du Monde Ppodae.&#13;&#10;
+     Merci d’avance.}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">$0 pwéfèwe les twavaux d’Instinct. Veuillez ne pas faire d’autres travaux que l’Instinct avec lui, ou le Compteur Qliphoth aura une probabilité moyenne de diminuer.</specialTip>
+      <specialTip openLevel="1" key="2">Quand le résultat du travail est Mauvais, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="1" key="3">Quand $0 s’est échappé, il est retourné de sa propre volonté dans sa cellule après avoir attaqué un employé et arraché █████ de son corps.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100042">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 is searching for the smell of a body, carrying the smiles of many.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 waits for the oncoming smell of blood, holding all of the laughter of those who cannot be seen here.},
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-01-75</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/DangoCreature</portrait>
+      <name openLevel="1">
+        Mountain of Smiling Bodies
+      </name>
+      <riskLevel openLevel="1">
+        ALEPH
+      </riskLevel>
+      <openText>The smiling faces are unfamiliar yet sorrowful.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {It's not like these kinds of happenings are uncommon here, but one day, dozens of employees were killed in an incident. The reason is the same as always. Something breaches, they attempt to stop it, then it leads to another breach...&#13;&#10;&#13;&#10;The one fortunate thing was that the department was sealed off before things could get any worse, so they all died in the same place. Literally, a mountain of bodies was formed. Obviously, no one wanted to clean up that mess. Normally, it should have been taken care of within the day, but because the accident was just so horrific and everyone was so exhausted, the clean up was delayed with authorization from the department’s Sephirah. Don't ask me which department it was in, I don't remember all the details. }
+    ]
+  </desc>
+    <desc id="2" openLevel="1">
+      [
+      {When left out in the open, a corpse will begin to rot within a few hours. Most of the bodies that die here are damaged in one way or another, so they decay even faster.&#13;&#10;&#13;&#10;You probably don’t know it yet, but most of the employees here are rather skilled at cleaning up dead bodies. Tidying up over and over will make anyone an expert at it, whether you want to or not. Let’s say someone you were just talking to about dinner plans died horrifically. With your repeated experience to help you, you won’t be vomiting or running away at least.}
+    ]
+  </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Whoops, I sidetracked a little there. Anyway, in normal circumstances, the mountain would have been removed quickly, but it remained in the department for quite a long time. So it decayed, melted, corroded, and broke down following the laws of nature.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {That's how its creation began, from the mountains of bodies. The dead gave life to something. Amazed yet? I've still got more to tell you. The dead fused with one another, all smiling. Sharing body parts, at least those that were still intact, they became each other's legs and mouths. That doesn't mean their consciousness has also been restored though. It only wants one thing: our flesh drenched in blood. When there’s an announcement of someone’s death, the first thing you should do is check if this thing’s quarantined. Once it gets a whiff of the scent, it will pursue us in an instant. The smiling faces are unfamiliar yet sorrowful.&#13;&#10;&#13;&#10;The more bodies it comes across, the more defined its shape becomes. And it is never satisfied.&#13;&#10;&#13;&#10;I'm telling you all this because it's almost here. Accidents always happen in this place. Some may spare a bit of their time for a moment of silence, but most will turn away thinking, "Again?". At the very least, one thing that was done right is that the department’s been sealed off. I'm the only one left anyways. Did you learn anything from my story? What kind of lesson can be learned from a story as horrible as this, you ask? It's similar to most fairy tales. "Don't be lazy" is the lesson. When my voice ceases, come here and clean up your colleagues in exactly 3 minutes.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Pretty soon I won't be able to keep talking. I'm about to swallow a large bomb. Time's running out. Blood is flowing all around here. I'm starting to see the smiling faces now... Something you don't see much of around here.&#13;&#10;&#13;&#10;Don't be surprised when you hear a loud explosion. Like I said, it's precisely 3 minutes. I'm sure a bomb this size will be able to suppress it.&#13;&#10;&#13;&#10;The last body it finds will be mine.}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">When #0 died while working with $0, the Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="2" key="2">When a wounded employee entered the Containment Unit, the Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="2" key="3">When the work result was Bad, the Qliphoth Counter decreased.</specialTip>
+      <specialTip openLevel="2" key="4">When 10 employees die inside the facility, the Qliphoth Counter will lower. However, deaths caused by Execution Bullets were not recognized.</specialTip>
+      <specialTip openLevel="2" key="5">While $0 is escaping, it will show sensitive reactions to corpses. During suppression, ensure that no one dies due to the Abnormality; if casualties do happen, try to keep $0 away from the dead.</specialTip>
+      <specialTip openLevel="1" key="6">If $0’s suppression could not be completed on the previous level, you must be very careful to prevent any death inside the section where $0 is located.</specialTip>
+      <specialTip openLevel="1" key="7">After other entities spawned from $0’s main body while escaping, reducing its HP to 0 did not fully suppress it. $0 will only be quelled by attacking the main body after continuously reducing its HP and defeating the other spawned entities.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

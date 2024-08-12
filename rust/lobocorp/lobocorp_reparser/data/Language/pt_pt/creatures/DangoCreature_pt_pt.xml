@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100042">
+
+    <narration action="move">
+      #0 recebeu a ordem para ir para a unidade de contenção de $0.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 procura pelo cheiro de corpos para os seus sorrisos.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 aguarda pelo cheiro do sangue que virá, mantendo neste lugar todos os risos daqueles que se foram.},
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-01-75</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/DangoCreature</portrait>
+
+      <name openLevel ="1">
+        A Montanha de Corpos Sorridentes
+      </name>
+
+      <riskLevel openLevel ="1">
+        ALEPH
+      </riskLevel>
+
+
+      <openText>As faces estranhas são sorridentes mas mesmo assim ainda cheias de tristeza.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Este lugar sempre foi assim, nós temos enormes incidentes como se fosse rotina e o porquê que eles acontecem são sempre os mesmos. Alguma coisa que fugiu, e mais fugas ocorreram quando tentaram resolver a primeira fuga e...&#13;&#10;Felizmente, aquele departamento foi selado antes ques as coisas piorassem e todos morreram naquele lugar. Literalmente tornou-se numa montanha de corpos e era algo que ninguém queria limpar. Normalmente, o assunto seria resolvido em um dia, mas por ser um incidente tão horrível, a autorização para a limpeza ser realizada foi adiada pelo Sephirah responsável pelo departamento.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Corpos deixados a céu aberto irão começar a apodrecer em algumas horas. A maioria deles estão mutilados, então apodrecem ainda mais rapidamente.&#13;&#10;Eu acho que ainda não sabes, mas a maioria dos empregados deste lugar são muito bons a limpar cadáveres. Limpar e limpar faz qualquer um um especialista, mesmo quando não o queres ser. Imaginemos que alguém com quem estavas a conversar sobre o que iam comer hoje acabou de morrer horrivelmente diante de ti. Agora em vez de fugires ou vomitares, todas as mortes que tu já testemunhaste irão fazer-te limpar aquele desastre como senão fosse nada.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Bem, a montanha devia ter sido removida rapidamente, mas ela foi deixada no departamento por muito tempo. E a natureza fez o seu trabalho, fazendo-os apodrecer, derreter e corroer.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {E foi assim que começou, de uma montanha de corpos. Incrível, né? Outra coisa que eu tenho que dizer-te é que os mortos fundiram-se uns aos outros, e todos sorriem. Eles partilharam as partes dos seus corpos que ainda estavam intactas, assim tornando-se as suas bocas e pernas, mas isso não significa que ainda têm consciência. Eles só querem uma coisa: carne. Quando a morte de alguém é anunciada, nós temos de verificar se aquela coisa foi posta em quarentena. Se conseguir inalar o odor da morte, ela virá de encontro ao cheiro rapidamente. As faces estranhas são sorridentes mas mesmo assim ainda cheias de tristeza.&#13;&#10; Quantos mais corpos adquire, mais definida é a sua forma, mas nunca está satisfeita.&#13;&#10;Estou a contar-te isto tudo já que estamos quase lá. Acidentes continuam a acontecer neste lugar. Alguns irão fazer um momento de silêncio quando uma morte ocorre, mas a maioria só irá dizer "Outra?" e dar meia volta. Se tem uma coisa que nós sabemos fazer é por o departamento em quarentena. Como podes ver, eu sou o único que restou. Será que aprendeste alguma coisa desta história? E eu sei que deves estar a perguntar-te, "Que tipo de lição de moral pode ser aprendida de uma história horrível como esta?". É mais simples do que tu pensas. A lição é: Não sejas preguiçoso. Daqui a três minutos vem aqui e livra-te dos corpos dos teus colegas.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Eu provavelmente não consegirei falar por muito mais tempo. Eu acabei de ser engolido junto esta bomba gigante. O tempo está a esgotar-se. Sangue anda de um lado para o outro por aqui. Tudo que eu vejo são caras sorridentes... Algo que não se vê muito por aqui.&#13;&#10;Não te assustes quando ouvires uma grande explosão. Como eu disse, precisamente daqui a 3 minutos. Eu tenho a certeza que uma bomba deste tamanho vai ser capaz de finalizar a supressão. &#13;&#10;O último corpo que irá cair será o meu.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">Quando #0 morreu durante o trabalho, o Qliphoth Counter diminuiu.</specialTip>
+      <specialTip openLevel="2" key="2">Quando um empregado ferido entrou na unidade de contenção, o Qliphoth Counter diminuiu.</specialTip>
+      <specialTip openLevel="2" key="3">Quando o resultado do trabalho foi Mau, o Qliphoth Counter d' $0 diminuiu.</specialTip>
+      <specialTip openLevel="2" key="4">Quando 10 ou mais empregados morreram na instalação, o Qliphoth Counter irá diminuir. No entanto, a Anormalidade não reconhece a morte de empregados por balas de execução.</specialTip>
+      <specialTip openLevel="2" key="5">Após escapar a Anormalidade parece ser sensitiva a corpos mortos. Durante a supressão, é recomendado fazer de tudo para que ninguém morra nas por causa d'$0. Se algum incidente ocorrer, tente manter os mortos longe da Anormalidade.</specialTip>
+      <specialTip openLevel="1" key="6">Se a supressão d'$0 não for completa no primeiro estágio, muita atenção é aconselhada para prevenir mortes na zona onde $0 se encontra.</specialTip>
+      <specialTip openLevel="1" key="7">Quando outras identidades aparecem a partir do corpo d' $0 enquanto se encontrava em fuga, simplesmente reduzir o seu HP à 0 não será o suficiente para a suprimir. $0 só será suprimida quando o HP do corpo principal chegar a 0 e depois de todas as outras identidades forem removidas.</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

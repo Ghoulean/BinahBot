@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300002">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-78</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/ResearcherNote</portrait>
+      <name openLevel="1">
+        Notes d’un Chercheur Fou
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <openText>Le dernier chapitre se termine sur les mots : “Nouvelle naissance.”
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Les vieilles notes sont pleines de lettres et d'écritures cursives incompréhensibles.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Elles appartenaient autrefois à un chercheur devenu fou au cours de ses travaux. Elles n'ont été que partiellement déchiffrées, mais il semble que la plupart d'entre elles concernent les différentes expériences qui ont été menées ici.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Elles commencent par des remords et des aveux d'expérimentations immorales, mais elles s'enfoncent progressivement dans la folie, envahies de phrases insensées et décousues évoquant des recherches sur la fin.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Le dernier chapitre se termine sur les mots : “Nouvelle naissance.”}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Le simple fait de tenir cet objet améliore le sens de l'observation. Cependant, s’il est rapporté sans avoir satisfait le désir de connaissance, l'incompétent explosera.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Ceux qui s'équipent de $0 bénéficient d'une forte hausse des statistiques liées à la Tempérance.</specialTip>
+      <specialTip openLevel="2" key="2">S’il lui est ordonné de rendre $0 dans les 30 secondes suivant l’emprunt, la peau de l’utilisateur commencera à gonfler et il explosera après quelques secondes.</specialTip>
+      <specialTip openLevel="3" key="3">S’il lui est ordonné de rendre $0 sans effectuer la moindre tâche de gestion, l’utilisateur explosera.</specialTip>
+      <specialTip openLevel="4" key="4">Si l’utilisateur encaisse un certain nombre de dégâts, il explosera en affectant la totalité de la section. L’explosion fera des dégâts ROUGE importants à toutes les personnes à proximité.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

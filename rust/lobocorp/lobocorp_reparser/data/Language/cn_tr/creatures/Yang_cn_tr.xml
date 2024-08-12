@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="300109">
+
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務.
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-07-103</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Yang</portrait>
+
+      <name openLevel ="1">
+        陽
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>然而, 世界得到了更多的溫暖以及光亮.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {它的另一半不見了. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {它會降低配戴者受到的精神傷害. 也因如此, 它被員工們稱呼為 “良善之墜”. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      那些人為了它的能量而靠近它. 他們說它清澈了他們的思緒並溫暖了他們的內心. 同時, 他們也畏懼那黑色吊墜. “我希望每個異常都像它一樣有用.” 他們感嘆的說到. 無法理解. 它幫助人們並非有意. 就只是它本來的能力罷了.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {然而, 世界得到了更多的溫暖以及光亮.&#13;&#10;天空之於地存在著, 黑暗之於光明存在著. 生命之於死亡存在著, 希望也之於絕望存在著.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {黑鯉魚游向了和諧, 而白鯉魚游向了混沌.&#13;&#10;若這兩條鯉魚遇見了彼此將會發生什麼事?}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">$0 的配戴者增加了 W 傷害的抵抗力. 然而, 若 O-05-102 不在設施裡, 什麼事都不會發生.</specialTip>
+      <specialTip openLevel="2" key="2">$0 會持續回復配戴者的 MP.</specialTip>
+      <specialTip openLevel="2" key="3">&lt;注意&gt; 不要把 $0 的配戴者派進 O-05-102 的收容室裡.</specialTip>
+      <specialTip openLevel="2" key="4">&lt;注意&gt; 請注意, 在 O-05-102 突破收容時, $0 也會突破收容. (已經證明即使在員工配戴它們其中之一時也會發生同樣的問題.)</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100036">
+
+
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+
+    <narration action="start">
+      [
+      {Aquele que entra no domínio do $0 pode aceder aos segredos do universo.},
+      {Ver $0 e os empregados loucos cantando parece que eles estão a realizar um ritual para alguma coisa ou para alguém.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Uma das palavras que o $0 nos disse fora "Não existem coincidências no universo".},
+      {As vezes o $0 tenta sorrir, mas isso só assusta os empregados.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {O propósito dos tentáculos do $0 é incerto, mas eles certamente podem causar graves danos.},
+      {Os tentáculos do $0 ocultam a barreira entre a realidade e o desconhecido.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-03-60</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/GalaxyPiece</portrait>
+
+      <name openLevel ="1">
+        Fragmento do Universo
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <openText>Tu vês uma 'canção' diante dos teus olhos. É esplêndida e cada vez mais colorida ao se aproximar de ti...</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Uma Anormalidade que se parece os rabiscos de uma criança. No começo a entidade não tinha uma forma estável. A sua forma ainda está em mudança, em um lento processo. Após analises feitas, foi confirmado que ela é constituída por materiais extraterrestriais. A sua forma era surreal, impossível de descrever com palavras.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Às vezes a Anormalidade fala em uma maneira misteriosa. Um empregado tentou decifrar a sua linguagem (ver documento 1, &lt;A Canção de David&gt;), mas após alguns dias a sua sanidade foi corrompida. Ele demonstrou psicose e teve que ser colocado em quarentena.
+      }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="1">
+      [
+      {Os tentáculos da Anormalidade (são um pouco diferentes dos tentáculos que conhecemos, mas decidimos chamá-los de tentáculos por ser mais conveniente) atravessam a barreira da realidade. Empregados que são empalados por eles sofrem dano cerebral permanente.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {Quando a Anormalidade foge da sua unidade de contenção, ela imite sons pelos lugares que passa. Porque há uma certa melodia e silabas nós consideramos essas emissões uma "canção", mas nenhum empregado se lembra dela com precisão, e na maioria das vezes eles são incapazes de a descrever devido ao dano cerebral que sofreram. Empregados que estavam a 100 metros de distância disseram que era um som que não podia ser deste mundo, então nós chamamos essa canção de "O Eco do Além". (ver documento 2 &lt;A Canção&gt;)}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {Experimento_1 &lt;Possibilidade de Comunicação&gt; &#13;&#10;Constatamos que a Anormalidade tem uma inteligência semelhante (ou talvez superior) à dos seres humanos, e demos-lhe um simples curso de línguas. Sendo assim, uma comunicação muito simples é possível. O seguinte é parte da gravação da conversa com a Anormalidade.&#13;&#10;Q: Todos da tua espécie são semelhantes à tua aparência?&#13;&#10;R: Negativo. Exterior. Criança. Ver. Desenho. Cara. Feliz. Mudar. Forma.&#13;&#10; &#13;&#10;Q: Porquê que tu vieste para cá?&#13;&#10;R: Conhecimento. Partilhar. Humano. &#13;&#10;&#13;&#10;Q: Porquê que tu queres partilhar o teu conhecimento connosco?&#13;&#10;R: Entender. Conhecimento. Momento. Saber. Universo. Coincidência. Negativo. Nulo.&#13;&#10;&#13;&#10;O seguinte é a tentativa de decifrar a conversa.&#13;&#10;1. A sua aparência foi baseada de um desenho feito por uma criança. O mesmo mudou a sua forma porque a criança tinha uma expressão feliz enquanto desenhava.&#13;&#10;2. A Anormalidade veio até nós para partilhar o seu conhecimento com os humanos. Quando entendermos completamente o seu conhecimento, nós iremos entender o seu objetivo principal.&#13;&#10;3. Não existem coincidências no universo.}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="3">
+      [
+      {Experimento_2 &lt;Experimento Sobre o Riso&gt;&#13;&#10;Após ver um vídeo de risos por 30 minutos, a Anormalidade entendeu o conceito de "rir". Mais tarde, quando empregados entraram na unidade de contenção a mesma emitiu um som estranho e algo parecido com um sorriso formou-se no seu "rosto". Parece que estava a imitar risos.}
+      ]
+    </desc>
+
+    <desc id="7" openLevel="4">
+      [
+      {Experimento_3 &lt;Entendimento de Simbolismo&gt;&#13;&#10;Nós ensinamos-lhe o significado de vários símbolos enquanto ensinavamos-lhe a falar. No meio dos símbolos que mostramos havia o símbolo de coração. Este em especifico provocou uma reação distinta na Anormalidade.&#13;&#10;Empregado(Mostrando foto com um símbolo de coração): Isto é um símbolo de 'coração'. Dizem que as emoções vêm do coração e este símbolo é usado para exprimir emoções positivas ou o gostar de algo ou de alguém.&#13;&#10;(Omitido)&#13;&#10;Momentos depois vários símbolos que se pareciam com corações começaram a aparecer no corpo da Anormalidade. A mesma deve ter entendido que o símbolo podia ser usado para expressar amizade para com os seres humanos.&#13;&#10;Combinando os resultados dos Experimento_1 e Experimento_2, foi confirmado que a Anormalidade não é hostil contra os seres humanos e que deseja que se tornem amigos.}
+      ]
+    </desc>
+
+    <desc id="8" openLevel="4">
+      [
+      {Documento 1 &lt;A Canção de David&gt;&#13;&#10;David era conhecido no seu departamento pelas suas tentativas de se comunicar com o Fragmento do Universo. Ele era um intelectual que gostava de ler livros de filosofia e observar as estrelas. Ele interessou-se pela Anormalidade desde que conseguiu o emprego, e pesquisou sobre a sua língua e comportamento por puro interesse próprio.&#13;&#10;E o quê que aconteceu com o David? Ele finalmente conseguiu entrar no domínio do Fragmento do Universo, mas é óbvio que o seu cérebro não conseguiu aguentar. Ele foi transferido para a unidade psiquiátrica e morreu de fome enquanto cantava uma canção irreconhecível. Essa é a razão que a verdadeira voz da Anormalidade não pode ser revelada a mais ninguém. &#13;&#10;Áudio Gravado: 'O Eco do Além' (Eliminado)}
+      ]
+    </desc>
+
+    <desc id="9" openLevel="4">
+      [
+      {Documento 2 &lt;A Canção&gt;&#13;&#10;Porquê que não me contaste que eles enlouqueceram por causa desta Anormalidade? Eu ainda não sei se há um padrão, mas todos mostraram comportamentos estranhos no mesmo dia. Consegues imaginar três pacientes olhando para o céu com expressões estranhas, fazendo sons nos corredores à noite enquanto todos estão a dormir? Eu demorei muito tempo até convencer os outros pacientes que eles estavam a praticar para o evento de Halloween que estava próximo de ser realizado. Tratamento psicológico ou medicação foram ineficazes. "Vindo, vindo, ainda vindo." é o que eles sempre dizem, mas às vezes também dizem palavras em uma lingua que não conhecemos. Eu acho que mandá-los para um hospital geral não é uma boa escolha.&#13;&#10;- Doutor do hospital (EDITADO).}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="escape">Quando o resultado foi Normal, o Qliphoth Counter diminuiu com uma probabilidade Média.</specialTip>
+      <specialTip openLevel="1" key="escape2">Quando o resultado do trabalho foi Mau, o Qliphoth Counter diminuiu com uma probabilidade Elevada.</specialTip>
+      <specialTip openLevel="1" key="escape3">Quando #0 entrou na unidade de contenção e entrou em pânico, o Qliphoth Counter diminuiu.</specialTip>
+    </specialTipSize>
+
+  </observe>
+</creature>

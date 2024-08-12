@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300108">
+
+    <narration action="move">
+      #0 собирается в камеру содержания аномалии $0, чтобы начать задание.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-97</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/PromiseAndFaith</portrait>
+
+      <name openLevel ="1">
+        Старые убеждения и обещания 
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <openText>
+        Обманутые сердца медленно забывались в бездне.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {В камере содержания висит мистический шар.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Нам известно о бесчисленных обещаниях и убеждениях, повторяющихся с давних времён.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Однако вместо их исполнения остались только пустота и предательство.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Обманутые сердца медленно забывались в бездне.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Если вы испытаете её не желая ничего взамен, то сможете получить неожиданную награду.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Воспользуйтесь аномалией для улучшения Э.П.О.С. вооружения цели. Во время процесса улучшения будет поглощено немного энергии.</specialTip>
+      <specialTip openLevel="2" key="2">Оружие, улучшенное аномалией, получит усиление силы атаки.</specialTip>
+      <specialTip openLevel="2" key="3">Однако, есть маленький шанс, что во время процесса улучшения Э.П.О.С. вооружение будет уничтожено.</specialTip>
+      <specialTip openLevel="2" key="4">На следующий день, характеристика силы атаки улучшенного оружия восстановится до исходного значения.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

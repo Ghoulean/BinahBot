@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300106">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-09-95</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/HealthBracelet</portrait>
+      <name openLevel="1">
+        Bracelet Lumineux
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>Ce bracelet n’épargne pas ceux dont le cœur est guidé par l’avidité ; c’est pourquoi il ne doit être porté que par ceux qui en ont nécessité.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Un bracelet dont émane une douce lumière turquoise. Beaucoup de choses inexplicables ont été découvertes dans les Banlieues.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Lorsqu’il est porté, toutes les blessures sont soignées sans laisser la moindre cicatrice.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Cependant, porter ce bracelet sans avoir la moindre égratignure sur le corps est un acte d’avarice.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Ce bracelet n’épargne pas ceux dont le cœur est guidé par l’avidité ; c’est pourquoi il ne doit être porté que par ceux qui en ont nécessité.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Les statistiques en rapport avec la Fortitude augmenteront considérablement tant que le $0 est porté.</specialTip>
+      <specialTip openLevel="2" key="2">Le $0 restaure progressivement les PV du porteur dès qu’ils diminuent.</specialTip>
+      <specialTip openLevel="2" key="3">Le porteur mourra si une tentative de rendre le $0 est faite avant qu’il ne soit totalement soigné.</specialTip>
+      <specialTip openLevel="2" key="4">Si les PV du porteur n’ont pas diminué depuis un certain temps, alors il mourra de régénération excessive.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

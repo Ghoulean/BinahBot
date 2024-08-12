@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100055">
+
+    <narration action="move">
+      #0 is going into $0's containment unit to begin the task.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Many employees are dying under the cognition of $0.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {The longer #0 stays, the worse the situation will become.},
+      ]
+    </narration>
+  
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-03-88</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Wraith</portrait>
+
+      <name openLevel ="1">
+        Dimensional Refraction Variant
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>The only advise that can be given is to be cautious and be aware of your surroundings. </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {It was a strange phenomenon. It was a phenomenon itself.  There was nothing inside that could be detected to the naked eye. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {And like those who made similar claims some time ago, just because it couldn't be seen, doesn't mean it doesn't exist. The Containment Facility's square length was XXX meters, and this is the cognitive range of the Abnormality. The only advise that can be given is to be cautious and be aware of your surroundings. Breathing will become impossible while within the range of the Abnormality. The area will be a vacuum. Strictly speaking, the Abnormality itself is the vacuum phenomenon. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Death Record of Employee Chomsky&gt;&#13;&#10;There was no way to check if the corresponding Abnormality escaped the Containment Facility or not. All of a sudden Chomsky stopped in the middle of the hallway and just stood there. The hallway was busy with people passing by, and many expressed their discontent towards Chomsky.&#13;&#10;Then, Chomsky’s body suddenly rose over 3 meters into the air. His arms and legs were awkwardly stretched out just like if he was performing a holy ritual. If his legs were on the ground, he might have looked like he was performing in an elegant play or doing ballet. Everybody stopped and looked at him. Chomsky started to scream. He screamed like a madman who witnessed something terrible. Nobody knew what to do. Some employees tried to pull Chomsky down by his legs. Chomsky did not move. Then, Chomsky stopped screaming. After a short silence, Chomsky opened his mouth and attempted to mutter something. The two employees who were trying to pull Chomsky down started to scream. Blood poured down from his body. His arms and legs separated, leaving the armless, legless body floating in the air. All hell broke loose in the hallway and everybody began running.}
+    ]
+  </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {How to recognize the Abnormality is a matter that needs to be discussed further. Currently, we are researching ultraviolet technology that can detect the Abnormalities using the eyes of shrimps, but performance has been far from satisfactory. For now, a good method is for employees going into the Containment Facility to bring a glass cup filled only halfway with water. They need to place the cup on the floor while they are working. If the water starts sloshing and threatening to spill over, the employee must stop working and leave the Containment Facility immediately.  }
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">When the work result was bad, Qliphoth counter has decreased.</specialTip>
+      <specialTip openLevel="2" key="2">When the work time was more than 40 seconds, Qliphoth Counter is decreased.</specialTip>
+      <specialTip openLevel="2" key="3">When the Abnormality escapes, all employees and the facility won’t be able to detect the Abnormality, therefore the Manager needs to order suppression directly.</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

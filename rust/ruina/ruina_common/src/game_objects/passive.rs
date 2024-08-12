@@ -1,3 +1,4 @@
+use crate::game_objects::common::Chapter;
 use crate::game_objects::common::Collectability;
 use crate::game_objects::common::Rarity;
 
@@ -10,4 +11,5 @@ pub struct Passive<'a> {
     pub transferable: Option<bool>,
     pub inner_type: Option<u32>,
     pub collectability: Collectability,
+    pub chapter: Option<Chapter>,
 }

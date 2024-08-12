@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100045" >
+
+
+    <narration action="move">
+      指派 #0 至 $0 的收容室.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 的兄弟們眨了眨眼, 彷彿這是他們在收容單位裡唯一能做的事.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {當她的兄弟露出疼痛的跡象時, $0 會靠近他們, 拽著她焦躁的身軀.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">F-02-70</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/BlackSwan</portrait>
+
+      <name openLevel ="1">
+        黑天鵝的夢
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <specialName openLevel ="2">
+   
+      </specialName>
+
+      <openText>當黑天鵝從變成白天鵝的夢中醒來後會發生什麼事?</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Eliya 的家庭有許多人要養.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {她貧困的父母總是告訴她他們已經沒有東西能給她了, 但她拿著一堆誠實與勤奮的寶石. 別人看不見這些寶石而且對現在毫無幫助, 但在最後一定能帶領她走向快樂...}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {有一天, 城市被一片濃霧籠罩住.&#13;&#10;灰暗的霧, 起初只被當成是自然現象, 在幾天後卻沒消散.&#10;&#10;有人宣稱在它之中迷失了方向, 但許多人只是充耳不聞. 人們仍繼續工作並在霧中過著他們的生活.&#13;&#10;Eliya 正是那些人之一. 她繼承了許多的債務而且是家中唯一有工作的人. 她有許多的兄弟, 但是他們的意志在許多的失敗後崩潰了.&#13;&#10;Eliya 非常的疲憊但仍想更加的努力些, 情況就會像那些童話故事般轉好, 就像她父母曾跟她說過的一樣.&#13;&#10;在最後如同一隻展開白色雙翼的鳥兒讓眾人羨慕.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {有些人在霧中離開了城市.&#13;&#10;其他人說到這座城市已經完蛋了, 但是 Eliya 沒有聽進去.&#13;&#10;她有時感到噁心, 而身體也冒起水泡.&#13;&#10;就快完成了. 再一點時間就能把蕁麻衣完成了. 將之送給她所愛著的兄弟們, 大家都會記得這一刻, 至少在一段時間內.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {在某天結束工作後, 她撞到某個經過的人. 陌生人倒下了, 而她上了前去, 伸出了她的手.&#13;&#10;但那人拒絕了她的幫助, 站了起身並在走了幾步後又倒了下去. Eliya 不再上前, 因為陌生人似乎在逃避著什麼.&#13;&#10;Eliya 試著問說發生了什麼, 但是陌生人勉強張了開嘴巴, 卻說不出話來. 她等待著回答.&#13;&#10;但是陌生人似乎無法回覆.&#13;&#10;接著, 一灘血水與綠色軟泥的黏稠混合物開始漏了出來.&#13;&#10;起初從嘴巴, 並接著從耳朵與眼睛當中. 如果軟泥只是從陌生人的嘴巴出來的話 Eliya 或許會上去幫忙.&#13;&#10;她從遠方聽見了巨大的咆嘯聲, 並從陌生人的身邊慢慢的走開了幾步.&#13;&#10;當黑天鵝從變成白天鵝的夢中醒來後會發生什麼事?&#13;&#10;在迷霧中許多的人倒在地上. 有些人嚎叫, 有些人大笑, 某些人揮舞著棍棒, 而有些人蜷縮在絕望之中. 又黑, 又濕, 又臭的穢土遍布在四處, 被腳印覆蓋著.&#13;&#10;她開始尋找她的兄弟們, 他們該穿著蕁麻衣來抵抗那些影響. 她的家庭夢想著能幸福的生活在一起.&#13;&#10;她看見她的兄弟們就在遠處.&#13;&#10;Eliya 跪倒在地並開始像其他人一樣嘔吐.&#13;&#10;一陣溫柔的漣漪捲過了湖面, 就像許多的天鵝飛過一樣...}
+      ]
+    </desc>
+
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">當工作的結果為差時, 逆卡巴拉計數器會減少且 F-02-70-4 的外觀會改變.</specialTip>
+      <specialTip openLevel="1" key="2">當工作的結果為普通時, 逆卡巴拉計數器會減少 F-02-70-5 的外觀會改變.</specialTip>
+      <specialTip openLevel="1" key="3">當 5 個以上的員工在設施裡死亡時, 逆卡巴拉計數器會減少且 F-02-70-1 的外觀會改變. 然而, 遭處決彈頭處理的員工並不在它的認知當中.</specialTip>
+      <specialTip openLevel="1" key="4">當 5 個以上的員工在設施裡恐慌時, 逆卡巴拉計數器會減少且 F-02-70-2 的外觀會改變.</specialTip>
+      <specialTip openLevel="1" key="5">在確認 3 個異常突破收容後, 逆卡巴拉計數器會減少且 F-02-70-3 的外觀會改變.</specialTip>
+      <specialTip openLevel="1" key="6">&lt;警告&gt;被強制減少的逆卡巴拉計數器也可能會改變 $0.</specialTip>
+    </specialTipSize>
+
+  </observe>
+
+  <child>
+    <name>Black Swan</name>
+    <codeId>F-02-70-7</codeId>
+  </child>
+
+</creature>

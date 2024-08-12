@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300002">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-78</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/ResearcherNote</portrait>
+      <name openLevel="1">
+        Notes from a Crazed Researcher
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <openText>The final chapter ends with the phrase: “Born again.”
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {The old notes are full of incomprehensible cursive letters and writings. }
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {They once belonged to a researcher who had gone mad during their work. It’s only been partially deciphered, but it seems most of it relates to the various experiments that were conducted in this place. }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {It begins with guilt and confessions of unethical experimentation but gradually spirals into madness, overrun with insane and broken up sentences about research toward the end.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+
+      [
+      {The final chapter ends with the phrase: “Born again.”}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {One’s observational skill will improve just by holding this item. However, if it is returned without fulfilling the yearning for knowledge, the incompetent shall explode. }
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Those who equip $0 will benefit from a sharp increase in the stats related to Temperance.</specialTip>
+      <specialTip openLevel="2" key="2">If ordered to return $0 within 30 seconds of equipping, the user’s skin will start to swell and their body will explode within seconds.</specialTip>
+      <specialTip openLevel="3" key="3">If ordered to return $0 without performing any sort of managerial work, the user will explode.</specialTip>
+      <specialTip openLevel="4" key="4">If the user receives a certain amount of damage, they will explode, and the explosion will cover the entire section. The explosion will deal massive RED damage to all nearby.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

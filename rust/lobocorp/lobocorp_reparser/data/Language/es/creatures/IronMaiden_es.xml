@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300101">
+
+    <narration action="move">
+      #0 va a ingresar a la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-85</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/IronMaiden</portrait>
+
+      <name openLevel ="1">
+        Podemos Cambiar Cualquier Cosa
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <openText>
+        Ahora todo va a estar bien.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Después de la popularidad del "Pequeño Ayudante" empezó a tener éxito, "Podemos Cambiar Cualquier Cosa" fue lanzado como la segunda entrega de la serie de robots domésticos.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Como era de esperar de un producto de la corporación xx, tiene varias funciones.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Su hijo causa problemas y llora todo el tiempo? Podemos cambiar eso!&#13;&#10;No te gusta tu cuerpo? Demasiado gordo, demasiado flaco? Podemos cambiar eso!&#13;&#10;No puede obtener la energía necesaria debido a su falta de hogar o dinero? Podemos cambiar eso!}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Es sencillo. Solo abre la máquina, entra y presiona el botón de cerrar. Ahora todo estará bien.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {La máquina producirá energía después de que el empleado entre. Al ver como una vez dentro, los empleados nunca salen, el interior de la máquina debe ser cómodo.}
+
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">La colocación de un empleado dentro de la máquina produce energía con el tiempo.</specialTip>
+      <specialTip openLevel="2" key="2">Una vez que el empleado está dentro de la máquina, el empleado sufrirá daño rojo. Y el empleado que está dentro no puede irse y eventualmente morirá.</specialTip>
+      <specialTip openLevel="2" key="3">La cantidad de energía producida aumentará a medida que pase el tiempo.</specialTip>
+      <specialTip openLevel="2" key="4">Esta anormalidad no se ve afectada por el Colapso del Qlifot.</specialTip>
+      </specialTipSize>
+
+
+
+  </observe>
+</creature>

@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+  -->
+  <info id="100062">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção da $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {#0 pode sentir o delicado aroma de grama abraçando o ar.},
+      {#0 sente uma brisa gentil, mesmo sendo impossível que tenha se originado dentro de uma Unidade de Contenção.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {O som do farfalhar de folhas é incrivelmente tranquilo.},
+      {Um aroma floral fica no nariz de #0.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {A maioria dos funcionários aqui estão descontentes; até mesmo a menor das bênçãos os dão grandes felicidades.}
+      ]
+    </narration>
+    <narration action="mid3">
+     [
+     {Uma bênção mais radiante que qualquer coisa se aproxima de #0.}
+     ]
+    </narration>
+    <narration action="mid4">
+      [
+      {Quando a flor da bênção finalmente florescer na $0, então…}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">D-04-108</codeNo>
+      <portrait openLevel="0">Sprites/Unit/creature/Yggdrasil</portrait>
+      <name openLevel="1">
+        Árvore do Mundo
+      </name>
+      <name openLevel="3">
+        Árvore Parasita
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>‘Se acalme, você não precisa da bênção?’</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;Esta Anormalidade foi criada com as ideias dadas pelo Apoiador do Tumblbug llooll530.&lt;/i&gt;&#13;&#10;&#13;&#10;Uma Anormalidade que toma forma de uma árvore cheia de folhas.&#13;&#10;As folhas são exuberantes com uma rica coloração verde, criando um ambiente confortante. Um refrescante odor de flores é carregado por uma brisa gentil. }
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Funcionários que fizeram contato com a Anormalidade disseram que ela os providenciava um significante conforto psicológico.&#13;&#10;Tais declarações foram consideradas verdadeiras, já que os funcionários mostraram uma visível melhora em sua eficiência, além de notável redução na corrupção mental. }
+      ]
+
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Um Trecho do Diário de um Funcionário&gt;&#13;&#10;
+      No começo, eu achava que era só a minha imaginação por ter ficado sem dormir. Mas conforme meu corpo e mente ficavam mais exaustos, a voz me chamando ficava mais e mais clara.
+      ‘Eu posso te ajudar com seu problema.’
+      É, é verdade. Você pode me ajudar.
+      Com o que eu estava me preocupando?
+      Eu consigo sentir um aroma floral…}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {      Importaram uma árvore.
+      Aquela árvore, no meio da Unidade de Contenção, era uma visão tão bonita de se ver. Eu pude sentir o aroma das flores esvoaçando pelo meu rosto mesmo sem haver brisa ou vento.
+      Cheirar aquele aroma até mesmo por um momento faz uma afeição cega pela árvore crescer. Eu era bastante intuitivo desde minha infância, então pude sentir que esse afeto artificial era perigoso.
+      Desde aquilo, eu tentei tudo que eu pudesse para evitar contato com a árvore, fazendo todo tipo de desculpa toda vez que eu era atribuído para trabalhar com ela.
+      "Bem, se você falar dessa maneira… só dessa vez, está bem? Nossa, aquela árvore fez algo com você?”
+      A brincadeira do meu colega fica presa em meus ouvidos. Ela fez alguma coisa? Sim, ela fez, e isso me assusta.
+      Alguns dias depois, o mesmo colega agora se tornou um trabalhador leal, com um constante sorriso em seu rosto. Eu sabia que ele sempre foi uma pessoa otimista, mas eu não pude deixar de me sentir mal, pois seu rosto parecia estranhamente confortável.
+      “Sério, eu pareço mais contente ultimamente?
+      Sim, bem, é porque a árvore está me ajudando.”
+      Ele respondeu despreocupadamente. Com meus anos de experiência, eu posso falar com certeza que pouquíssimas pessoas podem sorrir tão sinceramente enquanto trabalham nessa corporação. Isso significa que, quando alguém fica sorrindo durante o trabalho, é sinal que algo deu errado. Minha suspeita imediatamente me fez reportar esse comportamento a meu superior.
+      A resposta veio mais cedo do que eu esperava. Dizia que eu deveria observar a Anormalidade por conta própria e preencher um relatório de observação, pois aconteceram vários casos de comportamento anormal e que foram identificados em vários outros funcionários, não só no cara que eu reportei.
+      A ordem me fez finalmente confrontar essa árvore que eu estive evitando com todo meu esforço. Eu sabia que não poderia passar a tarefa para outra pessoa dessa vez.
+      Ela não era mais a mesma árvore nua e estéril que eu vi no dia que foi importada. No lugar disso, eu vi uma Unidade de Contenção coberta de grama que parecia se dispersar ao redor da árvore. O que era peculiar, pois não há como gramados crescerem em uma Unidade de Contenção, já que as instalações são completamente inorgânicas.
+      ‘Olá, você veio aqui para receber minha bênção também?’
+      No momento que eu senti que algo estava errado, uma voz ecoou em minha cabeça…}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {&lt;i&gt;(Foi difícil descrever os conteúdos do diário a partir desse ponto em diante, já que a escrita fica altamente distorcida)&lt;/i&gt;&#13;&#10;
+      Eu não sei como escrevi o relatório de observação, mas é certeza que eu só escrevi o que eu sentia sobre a árvore: Essa linda planta está trazendo felicidade para cada funcionário que visita sua Unidade de Contenção; e mais cedo irá contribuir na busca da humanidade por avanços e prosperidade.
+      Mas como uma Anormalidade teria tanta influência positiva na humanidade?
+      ‘Eu só quero te ajudar.’
+      Uma voz sem um pingo de intenção maligna ecoou novamente em minha cabeça. Sim, você está certa. Você só está me ajudando.
+      ‘E se não tiver problema, será que você poderia trazer todos os seus amigos que estão tendo problemas aqui também? Eu acho que também posso ajudá-los.’
+      Sim, esta árvore trará facilmente a paz para as mentes de todos. Falando nisso, aquela novata parecia estar bem deprimida ultimamente.
+      “Ei, eu sei de um lugar que fará você se sentir melhor. Venha comigo se você quiser.”
+      Ela me seguiu sem nenhuma suspeita. Não foi difícil levá-la para a Unidade de Contenção da árvore.
+      Eu a ofereci para a árvore. Ela podia melhorar; ela irá melhorar.
+      ‘Você trouxe um amigo. Você é uma boa criança. Deixe-me presenteá-lo com algo.’
+      Eu podia sentir algo germinando de meu corpo. Eu não conseguia mover meus membros. Não, isso não é algo ruim, estou renascendo com a árvore...
+      A árvore entrou em mim, me transfixou. Nós proliferamos e nos tornamos um só.
+      Ah, eu posso sentir ela completamente agora.}
+      ]
+    </desc>
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">Um broto germinou na parte superior da $0 quando #0 terminou o trabalho. E #0 foi abençoado pela $0. Ganhando um aumento na Velocidade de Trabalho e no PS.</specialTip>
+      <specialTip openLevel="1" key="2">Quando o trabalho de Repressão era feito, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="1" key="3">Quando outra Anormalidade escapava, o Contador Qlifót reduzia com baixa probabilidade.</specialTip>
+      <specialTip openLevel="1" key="4">Quando 5 trabalhos com outras Anormalidaeds eram concluídos enquanto a $0 não estava sendo trabalhada, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="1" key="5">Quando o Contador chegava a 0, a $0 chamava funcionários em sua Unidade de Contenção para abençoá-los.</specialTip>
+      <specialTip openLevel="1" key="6">Quando 5 brotos germinavam na $0, ela ficava escura e os funcionários abençoados entravam em pânico. Após passar algum tempo, caules brotavam de dentro deles e os tornavam em Mudas (D-04-108-1) que notavelmente se assemelhavam com a Anormalidade.</specialTip>
+      <specialTip openLevel="1" key="7">As D-04-108-1 secretam uma toxina altamente fatal e contagiosa. E precisam ser imediatamente removidas para descontaminar a área.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <name>Muda</name>
+    <codeId>D-04-108-1</codeId>
+  </child>
+</creature>

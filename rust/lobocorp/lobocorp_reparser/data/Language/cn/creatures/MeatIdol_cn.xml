@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300004">
+
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-79</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/MeatIdol</portrait>
+
+      <name openLevel ="1">
+        血肉偶像
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>纯洁的颂唱止于永恒而绝望的嘶喊。</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {这是一块由血肉与废铁所构成的物件。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {这个物件是从洪灾区被回收的，一些人推测它是一个神秘&#13;&#10;的宗教物件。当有员工向它祷告时，废铁上的血肉会开始&#13;&#10;蠕动，就好像是在对祷告做出回应。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {祷告者会遭受各种各样的折磨，如同在接受残酷的试炼。&#13;&#10;但是其周围的人会如获救赎一般恢复精神，治愈肉体。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      <!-- 여기 번역 고치기 -->
+      [
+      {纯洁的颂唱止于永恒而绝望的嘶喊。}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">您可以指派员工向“$0”祷告以触发它的特殊效果。祷告者每隔&#13;&#10;一段时间会受到随机类型的伤害。</specialTip>
+      <specialTip openLevel="2" key="2">&lt;实验-1&gt;如果祷告时间不满20秒就结束，那么祷告者会立刻死亡。</specialTip>
+      <specialTip openLevel="3" key="3">&lt;实验-2&gt;如果祷告时间在21秒至45秒内，那么除祷告者以外的所有&#13;&#10;员工会渐渐恢复生命值。</specialTip>
+      <specialTip openLevel="4" key="4">&lt;实验-3&gt;如果祷告时间在46秒至90秒内，实验结果与实验-2相近，&#13;&#10;区别在于祷告者会恢复一些精神值。</specialTip>
+      <specialTip openLevel="5" key="5">&lt;实验-4&gt;如果祷告时间超过90秒，那么祷告者会立刻死亡且设施内&#13;&#10;所有异想体的逆卡巴拉计数器都将归零。</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

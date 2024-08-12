@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100030">
+
+
+
+    <narration action="move">
+      #0 fue designado al cuarto de contencion de $0 para el trabajo.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Hay un libro hecho de pergaminos antiguos.},
+      {Es bastante grueso, pero todas las páginas del libro están en blanco.},
+      {Hay un libro que parece que la portada se rasgará si se maneja sin pensar. }
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {A pesar de su aspecto antiguo, no tiene polvo como si se manejara constantemente.},
+      {Parece que envejeció al menos varias décadas, pero no se amoldó un poco.},
+
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {#0 es una persona que lee a menudo, pero #0 siente que este no es el tipo de libro que uno debería leer.  },
+      {#0 no lee el libro tan a menudo, pero el impulso extraño atrapó el #0 para pasar las páginas.},
+      {#0 es una persona que no iría a la biblioteca, pero extraña urgencia atrapada #0 para pasar las páginas.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="1">
+    <collection>
+      <codeNo openLevel ="0">O-05-31-W</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/AuthorNote</portrait>
+
+      <name openLevel ="1">
+        Nota del guionista pobre
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <specialName openLevel ="1">
+      Como está escrito en el escenario
+      </specialName>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Es una libreta del tamaño de una palma. Cada página está llena de garabatos escritos a mano. El análisis determinó que los escritos son un guión utilizado en una obra de teatro. Por quien o cuando fue escrito es indeterminado. &#13;&#10; El escenario es sobre un chico que fue criado en una familia normal. Un día, recoge una máscara de la calle y continúa asesinando impulsivamente a todas las personas que conoce.  Cuando un sujeto entra en contacto con la criatura, la persona muestra exactamente el mismo comportamiento que el tipo del escenario mencionado anteriormente. Al igual que la historia, el individuo afectado puede intentar matar a los que lo rodean sea mujer o hombre. El sujeto se cree el protagonista de la historia. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="0">
+      [
+      {Título: Peccatum Proprium &#13;&#10; Hoy, actuamos para el rey. &#13;&#10;Personajes: Los fallidos, los abandonados, los quebrantados, los cobardes, y…….}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="1">
+      [
+      {ACTO I &#13;&#10;Una máscara se encuentra en medio del escenario. Es una máscara modesta, sin ningún patrón. La gente pasa la máscara sin darle un vistazo. Como si no fuera visto por ellos. Sin embargo, está mirando la máscara desde el principio. Eventualmente, lo toma y se lo pone en la cara. La máscara le cabe sorprendentemente en la cara. &#13;&#10; (Transición de música de fondo)&#13;&#10;A: (Con entusiasmo) Qué tonta y patética era. Para qué había hablado de la felicidad? Por lo que había aguantado todo el mérito?(Salida)&#13;&#10;El fallido: Soñamos con un futuro maravilloso, pero todo resultó ser en vano. Asi me llamo “El Fallido”&#13;&#10;A: (Escenario susurro) Es un tonto arrogante que solo piensa por sí mismo. (Acaricia la mascara) Lo supe desde el principio. La calamidad se repetirá sin cesar. (Golpea el fallido con un arma)&#13;&#10;El fallido: Ah, el resto anhelé! Finalmente ha llegado! (Collapsa al suelo) &#13;&#10; (Salida A) &#13;&#10;Omitido}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="1">
+      [
+      {ACTO 3 &#13;&#10;A: (Negándome a creer) He estado pensando que algún tipo de poder que posee esta máscara me estaba convirtiendo en un asesino. (Se levanta y recoge la máscara) Pero El Cobarde me dijo que es simplemente una máscara. &#13;&#10; (Se sienta mientras sostiene la máscara) Entonces soy yo quien ha sido el asesino. Fui yo quien se rió emocionantemente al escuchar el aliento moribundo. Fui yo quien sacudió el cuerpo con culpa mientras lavaba la sangre de un paño. (Se hunde la cara entre las manos, sollozando) &#13;&#10; (Ríe maníacamente) No no. Es solo una máscara, pero no para mí. ¡Tontos! Desde el principio, supe el poder que tiene esta máscara!  &#13;&#10;Omitido}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="1">
+      [
+      {ACTO 6 &#13;&#10; A: Es demasiado terrible para ser un error. Yo era el asesino sucio y vicioso. ¿Cómo podría culparlo a la máscara? Ah, el dolor me está haciendo pedazos. Nunca he deseado tanto la existencia de Dios en toda mi vida. Si el dios quiere castigarme, lo aceptaré. Incluso si me arroja a un fuego infernal insaciable, sucumbiré a él. &#13;&#10;(Disparos desde la distancia, A se derrumba)&#13;&#10; A: Una muerte no es más que un sueño. Eso es todo.&#13;&#10;(A ve a alguien apuntándole con un arma. Jadea sorprendido. Pronto, cae al suelo y mira al tirador. Todo parece estar detenido. En su conciencia desvanecida, justo antes de cerrar los ojos, ve la cara del tirador. El silencio continúa hasta que la audiencia sale. Cuando no queda nadie, finalmente cae el telón. )}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="1">
+      [
+      {Se encontró un cuerpo en el departamento [Redactado]. El culpable admitió inmediatamente el delito. Extrañamente, el único testigo del crimen no intentó detener el crimen o incluso llamar a las autoridades durante la muerte de A. Además, no había motivo aparente para el crimen. No hay mala sangre entre ellos. La víctima y el agresor eran amigos en el mismo departamento. Su testimonio fue tan extraño. El atacante no se dio cuenta de que estaba cometiendo un asesinato durante ese tiempo cuando estaba cometiendo el crimen. Afirmó haberlo pensado solo como un acto en una obra. El testimonio del testigo C fue que C sabía que A sería asesinado por B, pero afirmó que era inevitable para terminar la obra. &#13;&#10;Un lado argumentó que estaban realizando algún tipo de ritual religioso misterioso, mientras que el otro argumentó que ambos sufrían trastornos mentales. &#13;&#10;Durante un interrogatorio cuando el consejero preguntó “Pensaste que era una obra de teatro? Entonces, ¿para quién era?”, Ambos levantaron la vista al mismo tiempo. Este no fue un testimonio real, por lo tanto, no se registró oficialmente.  }
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="0" key="scenario">$0 prefiere que todo vaya de acuerdo con su propio escenario. El trabajo tampoco será una excepción.</specialTip>
+      <specialTip openLevel="1" key="nope">El empleado #0 fue a $0 por un trabajo que no figuraba en el escenario. El valor del estado de ánimo de $0 se redujo en una pequeña cantidad, lo que confirma que se produjo energía. Se descubrió que se formó una leve cortina en la sala de contención de $0.</specialTip>
+      <specialTip openLevel="1" key="curtain">Cuando la cortina se vació por completo en la sala de contención, se activó una habilidad especial de $0 cuando un empleado #0 fue enviado a la sala de contención. Debemos encontrar una manera de hacer que la cortina se debilite.</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {La obra comenzó hace mucho tiempo.}
+        {Aquí está el hombre que mató a muchos. }
+        {Y tu tienes un arma. }
+        <!--계속-->
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Shoot the man" target="1" isAnswer="true"  message="The curtain opens." />
+        <node desc="Wait and see" target="2" isAnswer="true" message="The curtain opens." />
+        <node desc="Shoot someone else" target="3" isAnswer="true" message="The curtain opens." />
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {Decidiste dispararle al hombre.}
+        {Finalmente cae el telón.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {La punta de la pistola perdió el rumbo. }
+        {La obra termina con tragedia.}
+        ]
+      </desc>
+
+      <desc id="3" select="0">
+        [
+        {Cuando mueren inocentes,}
+        {La obra termina como una comedia.}
+        ]
+      </desc>
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {“El pecador fue sacudido por la extraña atmósfera del escenario y confesó sus pecados. Un guión es lo que hace a las personas más honestas.” }
+        ]
+      </angela>
+    </max>
+
+  </observe>
+
+  <etc>
+    <param key="attack1" index="0">
+      <!--  -->
+      A: (Etapa susurro) Es un tonto arrogante que solo piensa por sí mismo. (Acaricia la máscara) Lo supe desde el principio. La calamidad se repetirá infinitamente. 
+    </param>
+    <param key="attack2" index="1">
+      A : (Etapa susurro) El Abandonado, le concederé la muerte. Me lo merezco. La sed insaciable vendrá.
+    </param>
+    <param key="attack3" index="2">
+      A : (Etapa susurro) A: Su desesperación ya se ha arraigado en lo más profundo de su mente, lentamente comiéndolo. Él siempre sonríe pero en el fondo, está empapado en un ardiente odio a sí mismo.
+    </param>
+    <param key="attack4" index="3">
+      A: (Etapa susurro) A: Es un cobarde que huyó de los fracasos. No puedo perdonarlo. ¡Puedo llevarte al cielo o al infierno, a donde quiera! Soy el hombre marca bien mis palabras con quien compartirás el cielo o el infierno!
+    </param>
+
+    <param key="kill1" index="4">
+      <!-- 각각 죽이고 나서 대사 으안안ㅁ아앜앜어안ㄴ앜 -->
+      (El Falló lento, matadero, se detiene y cae, )
+    </param>
+    <param key="kill2" index="5">
+      (El Abandonado lento, matadero, se detiene y cae, )
+    </param>
+    <param key="kill3" index="6">
+      (El roto lento, matadero, se detiene y cae, )
+    </param>
+    <param key="kill4" index="7">
+      (El cobarde lento, matadero, se detiene y cae, )
+    </param>
+
+
+    <param key="finale1" index="8">
+      <!-- 쥔공한테 총 쏠때-->
+      A :   Morir: dormir; No más;(Colapsa)
+    </param>
+
+    <param key="finale2" index="9">
+      <!--총 안쏠때-->
+      A :  Mis pecados han sido mostrados en líneas? (Luces fuera)
+    </param>
+
+    <param key="finale3" index="10">
+      <!-- 다른 사람한테 쏠때-->
+      A :  OH DIOS, AYÚDAME ALGO! POR FAVOR ALEJA EL DOLOR! (aun muerto)
+    </param>
+
+
+
+    <param key="special" index="11">
+      <!-- 특수공격 발동 되기 시작할때-->
+      Nadie puede ordenar el trabajo en #0, quién tiene la mente puesta en el libro. Comienza la etapa.
+    </param>
+
+
+    <param key="end" index="12">
+      <!-- 연출없이 끝날때-->
+      PERDIDO EN LA OSCURIDAD, EL SILENCIO TE RODEA. UNA VEZ POR LA MAÑANA - AHORA NOCHE SIN FIN. SI PODRÍA LLEGAR A TI, TE GUIARÍA Y TE ENSEÑARÉ. PARA CAMINAR DE LA OSCURIDAD DE NUEVO A LA LUZ.
+    </param>
+
+
+
+
+  </etc>
+
+
+</creature>

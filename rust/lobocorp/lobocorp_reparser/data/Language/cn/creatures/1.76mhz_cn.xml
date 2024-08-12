@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100007">
+
+
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+
+    <narration action="start">
+      [
+      {#0感到一股不详的压迫感。 },
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {#0感到轻微的悲伤与愤怒。},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0闻到一丝怪异的味道。},
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {#0总感觉有人在远处尖叫。},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">T-06-27</codeNo>
+      <portrait openLevel ="0">Sprites/Unit/creature/1.76Mhz</portrait>
+
+      <name openLevel ="1">
+        1.76兆赫
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <openText>这是我们绝对不能忘记的“那一天”&#13;&#10;的记录。</openText>
+
+
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {这个异想体是一种没有可见形态的怪异现象。在数名员工踏入某一特定区域并做出了相同的举动之后，我们才意识到它的存在。受影响的员工都经历了恐怖的幻视与幻听，他们的心智也受到了一定程度的损伤。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {测试人员将收音机的频率调整到1.76兆赫后静静等待。&#13;&#10;&#13;&#10;12分钟后，无线电噪声中突然出现了一个神秘的男声。由于噪音及干扰非常严重，导致我们很难听清对方说了些什么，但我们能理解他正深陷困境之中并在拼命寻求帮助。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {17分钟后，神秘的呼救声突然停止了，与此同时测试人员听到3声巨响，紧接着是2声较轻的爆炸及各式各样的惨叫与哭喊。我们推测，此刻另一头的局势相当混乱。&#13;&#10;&#13;&#10;23分钟后，除了嘈杂的无线电噪声以外，所有的声音都消失了。&#13;&#10;&#13;&#10;25分钟后，一丝白烟从收音机内部冒出。起初我们认为是收音机出现了故障，但和预想不同，冒烟并不是机器的问题。&#13;&#10;&#13;&#10;30分钟后，实验区域内的每一个人都莫名地充满了怒火，表现出极端的攻击性并开始殴打对方。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {事故发生后，涉事人员拒绝接受心理咨询。（因为没有人员伤亡，所以不能对他们进行强制咨询。）究竟是什么引起了他们的愤怒？我们暂时无法得知。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {此后，收容单元的周边区域开始陆续出现神秘的幻象和噪音。&#13;&#10;这是我们绝对不能忘记的“那一天”的记录。这个神秘的波动频率把我们带回了那片已被许多人遗忘的混乱之地，可它本身绝不能被忘却。}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">员工的勇气等级越高，对“$0”进行工作的成功率就越低。究其原因是由于“$0”的异常效应会使员工的暴力倾向急剧增长。</specialTip>
+      <specialTip openLevel="1" key="2">当工作结果为良时，“$0”的逆卡巴拉计数器有小概率立刻减少。</specialTip>
+      <specialTip openLevel="1" key="3">当工作结果为差时，“$0”的逆卡巴拉计数器有大概率立刻减少。</specialTip>
+      <specialTip openLevel="1" key="4">当对“$0”进行工作的员工陷入恐慌时，“$0”的逆卡巴拉计数器会立刻减少。</specialTip>
+      <specialTip openLevel="1" key="5">当工作结果为优时，“$0”的逆卡巴拉计数器会立刻加一。如果员工在一次工作中成功产出了所有的PE-BOX，那么“$0”的逆卡巴拉计数器会立刻加二。</specialTip>
+      <specialTip openLevel="1" key="6">智能监控摄像头探测到设施中出现了大量的噪音。鉴于这种情况只会发生在“$0”的逆卡巴拉计数器归零之后，因此我们假定噪音来源于“$0”的收容单元。</specialTip>
+      <specialTip openLevel="1" key="7">噪音会逐渐覆盖越来越多的区域，直到“$0”的逆卡巴拉计数器恢复到最大值后，噪音才会消失。</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

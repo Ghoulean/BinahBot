@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100028">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="mid1">
+      [
+      {The vending machine overwhelms #0 with its shiny neon lighting.},
+      {Upbeat music can be heard, emitted from the inside of the vending machine.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Shrimp are delicious no matter how you cook them. Boil ‘em, fry ‘em, whatever!},
+      {You’re really missing out on life if you’ve never tried shrimp.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {There’s a rumor floating about that people have been abducted onto a fishing boat after drinking an open can of grape-flavored soda.},
+      {Rumor says that you might get one of your organs removed after drinking an open can of grape-flavored soda.},
+      {If someone ever offers you an already opened can of grape-flavored soda, you most definitely should not drink it.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">F-05-52</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/WellCheers</portrait>
+      <name openLevel="1">
+        WellCheers
+      </name>
+      <name openLevel="2">
+        Opened Can of WellCheers
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <openText>Somewhere in the distance, you can hear seagulls.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;Employees’ Records (Source Unknown)&gt;&#13;&#10;
+      Hey have you guys ever been to one of those Lobotomy meetups??
+      Mind you, it took a lot of courage for me to bring this up again…
+      You see, there’s a bunch of clubs in this company where employees gather up. I once attended some kinda ping-pong group event thing but there weren’t any girls there so I pulled out real quick lol. So like, one day I saw this announcement for some weird get-together on the corp message board. I got interested so I called up the group leader and he introduced himself as &lt;Redacted&gt; from Safety. I asked if there were any girls in the group, and he told me there were a ton of female employees. Now that got me super interested so I signed up right away for the upcoming meetup. So I showed up, got a name tag like everyone else. I don’t remember everything, but I think I saw like three people from Training and two from Information. About maybe half an hour later, the leader brought in dozens of cans of WellCheers on a tray and gave one to each of us… I should have realized something was wrong cause the can was already opened, but I’m a sucker for soda and I just gulped the damn thing down my throat the moment he passed me a can lmaooo}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {      Now after that the leader told us it’s time to move, and he said he got a van rented for us. We all thought he was an awesome guy for that. I hopped in the van with two employees from the horde and one guy from the same dept as me. Leader said it was gunna take about an hour drive so we could just nap if we wanted, so we did. Weird thing was though, I went to sleep real fast, like real fast. Like, the moment I shut my eyes I was out like a light. I have insomnia but for whatever reason I fell asleep so fast then. Sigh...that was my big mistake. Anyways, I was sound asleep, but then I heard seagulls, and was like, Wtf??? Seagulls??????? Yeah, at first I thought it was someone’s phone alarm, but then I heard waves crashing. I was like, “man this is way too real to be a phone alarm,” so I opened my eyes to find myself…
+      …lying on a deck. I was on a goddamn boat, lmfao. AN ACTUAL, REAL-LIFE BOAT. I knew I was screwed the moment I saw shrimp hopping around. Sent chills down my spine. I wanted to believe it was all a dream but I swear that shrimp’s realistic flopping was a sobering sight. The realization crushed me like a hammer. And I was surrounded by people who looked like they were the crew. They were all beefed up, it felt like they’d put me back to sleep with force if I said something wrong. One slip and I’d be swimming with sharks.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {      The crew was something around 10 people including the captain, boatswain, cook and all that. They all chuckled at me while I was spacing out. The guy who looked like the captain walked towards me and asked me about my height and weight. I asked him when the ship goes to port. He told me it’d be about a month but that I shouldn’t try and run away or anything cause they already made a deal with “my people”. I had no damn idea who “my people” were but I was too scared to ask. Then the other crew members called me over for lunch. They were making instant ramen, putting shrimp, crabs, clams, and all sorts of other stuff in it. They told me to stop acting like I was about to jump into the sea and to try their ramen. I said no at first, but they laughed at me again saying there weren’t any sleeping pills or stuff like that in it and gave me some anyway. A man’s gotta live, so I ate it. It tasted better than I expected it to. As soon as we finished lunch they told me they were going to teach me how to adjust the ropes. I pretty much gave up at that point, so I just simply answered “sure…”. All I could see anyways was these little islands that no one would have a chance at surviving on. For a month, I learned how to pull up fish traps, fill bait boxes, repair fishing nets, cook some ramen, get coffee, and all sorts of stuff. I kept getting better and I got to the point where I could prepare mackerel sashimi and fish stew for the crew. Everyone complimented it. Said I could open a restaurant with that stew. Later on, we went through a couple of typhoons. Them and I started forming some kind of bond. A companionship. Whales were becoming a common sight at that point. Two weeks in, the captain told me I was pretty good and asked me if I was interested in officially joining the crew. When I thought about it, I would have been fired from the Corp anyway, so this seemed like a legit opportunity to make a living. This was the first time I ever got a compliment after all. What am I doing now? Well, I’ve been promoted and now I’m living fine. I’ve found true happiness in cracking open a cold one after a hard day’s work, covered in sea water and sweat. I’m at the port now but we gotta take off soon to catch some more shrimp. Never know what your future holds, bros. Sometimes I think about those other folk who were at the meetup that day. Not that I really wanna snoop around to find out though, I just try to keep a positive mind. I wanna say they’re hopefully doing good just like me.&#13;&#10;
+      Oh, it’s time to sail out, see you guys.}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="0" key="specialCan">Upon completion of the work process, a canned beverage is discharged from the vending machine. The type of beverage that is emitted seems to vary in correlation with the work type.</specialTip>
+      <specialTip openLevel="2" key="healthCan">&lt;Test Result W-1&gt; A red drink can is emitted. The employee who ingested the beverage said it had a distinctive aroma and sweetness, and expressed a feeling of heightened energy after. Following the test, the physical health of the subject was confirmed.</specialTip>
+      <specialTip openLevel="2" key="metalCan">&lt;Test Result W-2&gt; A blue drink can is emitted. It contains an odorless liquid that is highly carbonated. It has been found to be effective in restoring mental strength.</specialTip>
+      <specialTip openLevel="3" key="wellCheersCan">&lt;Text Result W-3; W-4&gt; A purple drink can is emitted. Its appearance, composition, and taste are exactly the same as other grape flavored carbonated beverages. It has been found that the physical fortitude and mental strength of the ingester both recovered.</specialTip>
+      <specialTip openLevel="4" key="goToSea">&lt;CAUTION&gt; When the work result with $0 is Bad, do not take any drink provided by the vending machine.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

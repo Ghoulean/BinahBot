@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100019">
+
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+
+    <narration action="start">
+      [
+      {$0の指揮者は 演奏者を待ちます。},
+      {通常、$0の指揮者と 収容室は静かです。},
+      {指揮者は物事に生命を吹き込む魔術師であり、 魂を求める巫女でもあります。},
+      {世界で最も美しい演奏は 壊れたものから始まります。}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0は 黙示録の曲に備えます。},
+      {$0は施設内で 最高の合唱曲を持っています。},
+      {$0の指揮者の素晴らしい姿に 誰もが魅了されます。}
+      ]
+    </narration>
+
+    <narration action="mid2"> 
+      [
+      {演奏者は聴衆の拍手で生きています。},
+      {拍手は演奏者の命を牽引するものです。},
+      {万雷の拍手は観客が素晴らしい作品を 聴いたときに提供できる最高の賛辞です。}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {$0の聴衆となる#0は 作業をほとんど終えました。},
+      {#0は難なく $0の作業を終えようとしています。}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">T-01-31</codeNo>
+      <name openLevel="1">静かなオーケストラ</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/silentOrchestra</portrait>
+      <riskLevel openLevel ="2">ALEPH</riskLevel>
+      <openText>壊れたものたちから 世の中で一番美しい演奏が始まる。</openText>
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {&lt;指揮者の役割は単に音楽の誤りを修正することではありません。最高のオーケストラ・アンサンブルを形成し、演奏者を音楽的に導くことは彼らの義務です。指揮者の実力は指揮台に立ってから5分の内に決まります。指揮者が楽譜をスタンドに置いた瞬間、演奏者は、彼の目つき、態度、雰囲気を通して彼に服従する価値があるかどうかを決定します。彼らの間に妥協と調和がなければ、音楽はその意味と意図を決して表現しません。したがって、指揮官は卓越した統率力、指導力、説得力が要求されます…（省略）&gt;}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {&lt;第一楽章：柔らかく、ゆるやかに &gt; &#13;&#10;指揮者は黙示録の演奏を始める。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="3">
+      [
+      {&lt;第二楽章～第四楽章：速く、活発に&gt;&#13;&#10;職員は徐々に記憶を失い熱烈にオーケストラを賞賛し始める。賞賛はすぐに狂気に変わり、目に映るすべてに暴力行為を働く。これが発生するとオーケストラは音楽の強さを高め、セフィラ全体を破滅に導く。すべての演奏者がそろうと、耳を塞ぎたくなるような音楽が始まる。しかし、誰もがそれを聴いている。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="4">
+      [
+      {&lt;終楽章&gt; &lt;b&gt;「音楽はあなたのすべてに響き渡る」&lt;/b&gt;}
+      ]
+    </desc>
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="mood1">作業結果が良い場合、クリフォトカウンターが減少した。</specialTip>
+      <specialTip openLevel="1" key="mood2">作業結果が悪い場合、クリフォトカウンターが減少した。</specialTip>
+      <specialTip openLevel="1" key="escape">脱走すると、$0が奏でる楽章は合計4つで構成されている。楽章が進行するに連れて職員たちは持続的にWHITE属性のダメージを受け、音楽の影響の範囲は徐々に拡大した。</specialTip>
+      <specialTip openLevel="2" key="movement">楽章が変わるごとに$0に対して有効な攻撃属性が変化した。第1楽章ではPALE属性、第2楽章ではBLACK属性、第3楽章ではWHITE属性、第4楽章ではRED属性の攻撃のみ$0に有効だった。演奏がピークを迎えると、$0にはいかなる属性の攻撃も有効ではなくなった。</specialTip>
+    </specialTipSize>
+    
+  </observe>
+
+  <etc>
+    <param key="movement1" index="1">
+      第一楽章 アダージョ：よりゆっくり、ゆったりと優雅に。
+    </param>
+
+    <param key="movement2" index="2">
+      第二楽章 ソステヌート：音を保持して、伸ばすように
+    </param>
+
+    <param key="movement3" index="3">
+      第三楽章 アッチェレランド：だんだん速く
+    </param>
+
+    <param key="movement4" index="4">
+      第四楽章 ストリンジェンド：だんだん速く、強く
+    </param>
+    
+    <param key="movement5" index="5">
+      終楽章 コン・フオーコ、マ・ノン・トロッポ：火のように、しかしほどよく
+    </param>
+  </etc>
+</creature>

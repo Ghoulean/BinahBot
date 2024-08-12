@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+  -->
+  <info id ="100065">
+  
+    <narration action="move">
+	 #0 está a caminho da Unidade de Contenção de $0 para iniciar o processo de trabalho.
+	</narration>
+	
+    <narration action="start">
+      [
+      {Conseguimos sentir o fogo da paixão que emerge profundamente de $0.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Mesmo sem uma partitura para seguir, $0 permitirá qualquer um fazer o maior espetáculo de sua vida.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {A sonata tocada pela intérprete possuída pela lua era incrivelmente atraente ao ponto de poder quebrar os limites da humanidade.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {A música liberta a todos sem prejudicar.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">D-01-105</codeNo>
+      <portrait openLevel="0">Sprites/Unit/creature/Piano</portrait>
+      <name openLevel="1">
+        Il Pianto della Luna
+      </name>
+      <riskLevel openLevel="0">
+        WAW
+      </riskLevel>
+      <openText>“Contos dizem que a lua encanta o homem, mas na realidade, é o homem que se desespera pela lua.”</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;Esta Anormalidade foi criada com as ideias dadas pelo Apoiador do Tumblbug 에레 (Ere).&lt;/i&gt;&#13;&#10;&#13;&#10;Uma velha mulher com um piano ao seu lado. Os olhos dela estão normalmente fechados. Ela somente move a cabeça ao invés de falar, mas em raras ocasiões, ela dará um leve sorriso.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {&lt;Trecho de um Artigo de Jornal&gt;&#13;&#10;
+      A maior pianista do mundo, (Omitido), sempre dava suas melhores apresentações ao tocar aquela sonata, sua peça favorita. Várias pessoas a elogiavam por sua excelente habilidade. Alguns não conseguiam nem se manter sentados quando ela tocava o terceiro movimento devido a energia abundante e a loucura que acontecia durante sua apresentação.
+      
+      Em sua agora vazia residência em que ela deixou para ir a lua, permanece o piano que ela tocou desde sua infância e cabeças encolhidas que nos permitem mergulhar na mente dela.}
+      ]
+
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Trecho da Gravação de Áudio do Aconselhamento do Funcionário (Omitido)&gt;&#13;&#10;
+      “Tipo, não vimos nada de relevante quando fomos pegá-la. Era só uma senhora sentada lá. Parecia que estava esperando nós chegarmos.
+      O que aconteceu quando um de nós se aproximou dela?
+      Bem, aquele cara não sabia nada sobre arte ou música, mas antes que nós percebêssemos, ele estava tocando o primeiro movimento daquela sonata.
+      E a moça sorriu.
+      …Honestamente, eu acho que nunca mais vou escutar uma performance de piano tão bonita quanto aquela novamente.
+      Nunca mais vimos aquele cara novamente.
+      É por isso que você precisa do meu testemunho, certo?
+      Porque eu toquei o terceiro movimento.”
+      (Omitido)}
+    ]
+  </desc>
+    <desc id="4" openLevel="3">
+      [
+      {“Eu não sei o que faz você tocar. Suas mãos simplesmente se movem e você se sente… eufórico enquanto toca. Tudo ao seu redor vai sumindo. É só você e o piano. Após eu ter terminado de tocar, exausto, percebi que não haviam pedais, e sim mãos humanas.”}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {“…A lua representa o psicológico humano.&#13;&#10;Ela geralmente é dita ser bonita.&#13;&#10;Mas quando tempo suficiente passa, quando você olhar para ela e ver que tipo de face ela realmente tem…&#13;&#10;Você perceberá que estava louco de amor por algo bastante quebrado e fragmentado.&#13;&#10;No fim de tudo, todos nós nos tornamos como a lua. Tudo porque não conseguimos aguentar a nós mesmos.”}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">O piano pode ser tocado ao ordernar um Agente para 'Tocar'. Porém, perceba que o Contador Qlifót reduzirá assim que o espetáculo acabar.</specialTip>
+      <specialTip openLevel="1" key="2">A música temporariamente aumentou em baixo grau a Temperança e a Justiça de todos os funcionários. Porém, aquele que estava tocando perdeu metade de seu PV até o final do espetáculo.</specialTip>
+      <specialTip openLevel="1" key="3">Quando o resultado do trabalho era Neutro, o Contador Qlifót reduzia com uma probabilidade mediana.</specialTip>
+      <specialTip openLevel="1" key="4">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="1" key="5">O Contador Qlifót caia para 0 quando um Agente entrava na Unidade de Contenção para tocar pela terceira vez.</specialTip>
+      <specialTip openLevel="1" key="6">Quando $0 escapou, ela voluntariamente voltou para a Unidade de Contenção após o término do terceiro movimento. O movimento podia ser prematuramente terminado ao suprimir $0.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <!--본체와 같아야 함-->
+    <name>Il Pianto della Luna</name>
+    <codeId>D-01-105</codeId>
+  </child>
+</creature>

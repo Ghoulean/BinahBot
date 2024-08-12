@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100019">
+
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다
+    </narration>
+
+    <narration action="start">
+      [
+      {$0의 지휘자는 자신의 연주자들을 기다리고 있는 중입니다. }
+      {평소에 $0의 지휘자는 고요합니다. 격리실 안도 평화롭습니다.}
+      {지휘자는 생명을 불어넣는 마술사입니다. 영혼을 불러오는 무당입니다. }
+      {망가진 것들에게서부터 세상에서 가장 아름다운 연주가 시작된다.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 는 종말의 노래를 준비합니다. }
+      {단연컨데, $0 는 회사 내 최고의 앙상블을 자랑합니다.}
+      {$0의 지휘자의 센세이션한 모습은 모든 사람들을 매료시킬 것입니다.}
+      ]
+    </narration>
+
+    <narration action="mid2"> 
+      [
+      {연주자들은 관중들의 박수를 받으며 살아갑니다.}
+      {연주자들의 생명력은 관중들의 박수 갈채입니다.}
+      {기립박수를 친다는 것은 그만큼 경이로운 음악을 들었을 때 청중으로부터 나오는 최고의 찬사입니다.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {곧 $0의 관객이 될 #0 직원은 자신이 맡은 일을 거의 다 끝내가고 있습니다. }
+      {#0 직원은 무난하게 $0의 작업을 마쳐갑니다.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">T-01-31</codeNo>
+      <name openLevel="1">고요한 오케스트라</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/silentOrchestra</portrait>
+      <riskLevel openLevel ="2">ALEPH</riskLevel>
+      <openText>망가진 것들에게서부터 세상에서 가장 아름다운 연주가 시작된다.</openText>
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {예술을 사랑하며 회사 전체에 자신의 음악을 들려주고자 하는 환상체.  &lt;백과사전 일부 발췌&gt;지휘자는 단순히 음악적인 오류를 바로잡아주는 역할이 아니다. 최고의 앙상블을 끌어내고 음악의 쟁탈권을 바로 쥐어야 하는 임무를 가지고 있다. 지휘자의 실력은 지휘대에 선 지 5분 안에 판가름 날 수 있다. 지휘자가 악보를 펴는 그 짧은 순간, 그의 눈빛, 행동, 분위기를 통하여 연주자들은 그에게 복종하기 알맞은 대상인지를 곧바로 간파한다. 그들 간의 타협과 조화가 없다면 악보에 담은 거시적인 의미는 밖으로 드러날 수 없다. 따라서 그만큼 지휘자는 탁월한 통솔력과 지도력, 설득력이 필수적으로 요구된다….(중략) }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {&lt;1악장 : 침착하면서도, 느리게. &gt; &#13;&#10;지휘관은 종말을 연주하기 시작한다. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="3">
+      [
+      {&lt;2~4악장 : 유쾌하고, 빠르게 &gt; &#13;&#10;  직원들은 서서히 모든 것을 잊어버리기 시작하며 교향곡을 향한 열렬한 감동을 한다. 그리고 그건 곧 내면의 광기로 바뀌어 눈앞에 있는 상대들에게 공격을 가하려 한다. 이때 오케스트라의 음악은 더욱 박차를 가해 부서 전체를 종말로 이끌어간다. 연주자들이 전부 모였을 때, 아무도 들을 수 없지만, 모두가 들을 수 있는 음악이 시작된다. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="4">
+      [
+      {&lt;피날레&gt; <b>“음악이 너의 모든 것을 관통할 것이다.”</b>}
+      ]
+    </desc>
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="mood1">작업 결과가 좋음일 때 클리포트 카운터가 감소하였다.</specialTip>
+      <specialTip openLevel="1" key="mood2">작업 결과가 나쁨일 때 클리포트 카운터가 감소하였다.</specialTip>
+      <specialTip openLevel="1" key="escape">탈출 시 $0가 연주하는 악장은 총 4악장으로 구성되어 있다. 악장이 진행됨에 따라 직원들은 지속적으로 White 속성의 피해를 받았으며, 음악의 영향범위는 점차 확대되었다.</specialTip>
+      <specialTip openLevel="2" key="movement">악장이 바뀔 때마다 $0에게 유효한 공격 속성이 변화했다. 1악장 때에는 Pale 속성, 2악장 때에는 Black 속성, 3악장 때에는 White 속성, 4악장 때에는 Red 속성의 공격만이 $0에게 유효했다. 연주가 절정을 맞이할 때 $0은 모든 속성의 공격이 유효하지 않은 상태가 되었다.</specialTip>
+    </specialTipSize>
+    
+  </observe>
+
+  <etc>
+    <param key="movement1" index="1">
+      1악장 아다지오 : 침착하면서도 느리게
+    </param>
+
+    <param key="movement2" index="2">
+      2악장 소스테누토 : 억제하는듯한 빠르기로
+    </param>
+
+    <param key="movement3" index="3">
+      3악장 아첼레란도 : 점점 빠르고 세게
+    </param>
+
+    <param key="movement4" index="4">
+      4악장 스트린젠도 : 점점 급하게
+    </param>
+    
+    <param key="movement5" index="5">
+      피날레 콘 푸오코, 마논트로포 : 정열적으로, 그러나 너무 지나치지 않게
+    </param>
+  </etc>
+</creature>

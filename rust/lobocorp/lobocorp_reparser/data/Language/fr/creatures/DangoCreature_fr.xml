@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+   <info id="100042">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="mid1">
+      [
+      {La $0 recherche l’odeur d’un cadavre tout en portant les sourires de beaucoup d’autres.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {La $0 attend l’odeur du sang qui approche, retenant tous les rires de ceux qui ne peuvent être vus ici.},
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-01-75</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/DangoCreature</portrait>
+      <name openLevel="1">
+        Montagne des Corps Souriants
+      </name>
+      <riskLevel openLevel="1">
+        ALEPH
+      </riskLevel>
+      <openText>Les visages souriants sont méconnaissables mais élégiaques.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Ce n’est pas comme si c’était rare ici, mais un jour, des dizaines d’employés ont été tués dans un incident. La raison est la même que d’habitude : quelque chose s’échappe de son confinement, ils essaient de l’arrêter, ce qui entraîne une autre brèche, et ainsi de suite…&#13;&#10;&#13;&#10;Au moins, une chose de bien, c’est que le secteur a été condamné avant que les choses n’empirent, donc tout le monde est mort au même endroit. De façon très littérale, une montagne de cadavres s’y est ainsi formée. Évidemment, personne ne voulait nettoyer tout ce chaos. Habituellement, on s’en serait occupé dans la journée, mais puisque l’accident était horrible et que tout le monde était à bout de forces, le nettoyage a été délayé par autorisation du Sephirah du secteur concerné. Ne me demande pas duquel il s’agissait, je ne me rappelle pas de tous les détails.}
+    ]
+  </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Quand il est laissé à l’air libre, un cadavre commence à pourrir en quelques heures. La plupart des gens qui meurent ici sont altérés d’une façon ou d’une autre donc ils se décomposent encore plus vite.&#13;&#10;&#13;&#10;Tu ne le sais probablement pas encore, mais la plupart des employés ici sont assez doués pour le nettoyage des cadavres. S’en occuper encore et encore finit par faire de toi un expert que tu le veuilles ou non. Disons que si quelqu’un auquel tu parles de tes plans pour le dîner vient tout juste de mourir de façon horrible, ton expérience est la seule chose qui t’empêche de vomir ou de t’enfuir.}
+    ]
+  </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Oups, j’ai un peu dérivé du sujet. Quoi qu’il en soit, dans des circonstances normales, la montagne aurait été rapidement nettoyée, mais elle est restée dans le secteur pendant pas mal de temps. Donc elle s’est décomposée, a fondu, s’est désagrégée puis effondrée suivant les lois de la nature.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {C’est comme ça qu’elle a commencé à se former ; à partir de la montagne de corps. Les morts ont donné vie à quelque chose. Impressionné ? J’en ai encore beaucoup à te dire. Les morts ont fusionné les uns avec les autres, souriant tous ensemble. Partageant des parties de leurs corps, au moins celles qui étaient encore en état, ils devinrent les bouches et les jambes les uns des autres. Ce qui ne voulait pas dire qu’ils avaient récupéré leur conscience. Cette chose ne veut que notre chair couverte de sang. Dès que quelqu’un meurt, il faut vérifier qu’elle est toujours confinée. Il suffit qu’elle sente ne serait-ce que l’effluve d’un cadavre pour qu’elle se mette à nous poursuivre sur-le-champ. Les visages souriants sont méconnaissables mais élégiaques.&#13;&#10;&#13;&#10;Plus elle trouve de cadavres, plus sa forme s’affine. Et elle n’est jamais satisfaite.&#13;&#10;&#13;&#10;Je te dis tout ça parce qu’elle sera bientôt là. Il y a toujours des incidents ici. Certains utilisent de leur temps pour un moment de silence, mais la plupart détournent le regard en pensant “Encore ?”. Au moins, s’il y a eu une bonne chose de faite, c’est que le secteur a été condamné. Je suis le dernier ici de toute façon. As-tu appris quoi que ce soit de mon histoire ? Quel genre de leçons peuvent être apprises d’une histoire aussi sordide, te demandes-tu ? C’est la même chose que la plupart des contes de fée. “Ne sois pas fainéant” est sa morale. Quand j’arrêterai de parler, viens ici et nettoie les corps de tes collègues dans exactement trois minutes.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Bientôt, je ne pourrai plus parler. Je vais avaler une bombe. Je n’ai bientôt plus de temps. Le sang s’écoule partout autour de moi. Je commence à voir les visages souriants… Quelque chose qu’on ne voit pas souvent par ici.&#13;&#10;&#13;&#10;Ne sois pas surpris quand tu entendras une grosse explosion. Comme je l’ai dit, elle dure précisément trois minutes. Je suis sûr qu’une bombe de cette taille sera capable de la réprimer.&#13;&#10;&#13;&#10;Le dernier cadavre qu’elle trouvera sera le mien.}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">Lorsque #0 est mort en travaillant avec la $0, le Compteur Qliphoth a diminué.</specialTip>
+      <specialTip openLevel="2" key="2">Lorsqu’un employé blessé est entré dans l’Unité de Confinement, le Compteur Qliphoth a diminué.</specialTip>
+      <specialTip openLevel="2" key="3">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="2" key="4">Lorsque 10 employés meurent dans le complexe, le Compteur Qliphoth diminue. Cependant, les morts par Tir d’Exécution n’ont pas été reconnues.</specialTip>
+      <specialTip openLevel="2" key="5">Tant que la $0 est en brèche, elle fait usage des cadavres. Au cours de sa répression, assurez-vous qu’il n’y ait aucun mort ; sinon, empêchez-la de s’en approcher autant que possible.</specialTip>
+      <specialTip openLevel="1" key="6">Si vous n’êtes pas parvenu à supprimer la $0, veuillez éviter tout mort dans la section où elle se trouve.</specialTip>
+      <specialTip openLevel="1" key="7">Après que d’autres parties du corps de la $0 se soient formées, réduire ses PV à zéro ne l’a pas réprimée. Il faut, pour cela, détruire son corps principal, donc supprimer chacun de ses nouveaux appendices jusqu’à ce qu’elle n’en ait plus.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

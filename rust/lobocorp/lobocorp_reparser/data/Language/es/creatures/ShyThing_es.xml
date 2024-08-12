@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등0000000000000000000
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id ="100052">
+
+
+    <narration action="move">
+      #0 va a entrar a la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="start">
+      [
+      {No hay luz solar en la instalación de contención, pero $0 se está secando delicadamente su propia piel.},
+
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {La ciudad alentó $0 para continuar sonriendo, pero el ser que era demasiado tímido para revelarse... },
+
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-01-92</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ShyThing</portrait>
+
+      <name openLevel ="1">
+        Mirada tímida
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>Buen día hoy! Todavía eres tímido hoy?</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [{Buen día hoy! Todavía eres tímido hoy?}]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Un día soleado, cuando ella estaba secando cuidadosamente la ropa en el patio, la tristeza vino repentinamente.&#13;&#10;"En nuestra ciudad, debemos celebrar sacrificios por la ciudad, por la compañía a un valor muy alto. No hay razón para llorar. Más bien, deberíamos regocijarnos."&#13;&#10;“Qué es esa mirada en tu cara? Esta ciudad no fomenta ese tipo de expresión.”&#13;&#10;&#13;&#10;“Dios mío, por qué haces esa cara? También harás a los demás tristes. Por favor sea mas considerado. No vives solo en este mundo.”&#13;&#10;“No eres bueno expresando tus sentimientos, debes ser tímido.”&#13;&#10;“Debes verte más complacido. De esa manera los que viven en las afueras serán más envidiosos de nosotros.”&#13;&#10;&#13;&#10;“Pon una sonrisa más grande en tu cara, vamos! No es tan dificil.”&#13;&#10;“Exprésate más claramente. Expresarse es muy importante en esta sociedad.”&#13;&#10;En otro día soleado, se secó la piel con delicadeza, como una vez que secó la ropa.}
+      ]
+    </desc>
+
+
+    <desc id="3" openLevel="2">
+      [
+      {Ella sonrió ampliamente para hacer que todos estuvieran satisfechos. Si se encuentra con gente que pregunta qué sucede, responde diciendo, "Solo soy tímido, eso es todo. Simplemente tímido..."}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {No trates de ver su cara real detrás de su piel. El resultado no será bonito. El espacio detrás de su piel es el único espacio personal que le queda. Dejarlo sin invadir es la última generosidad que esta ciudad puede ofrecer.}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Esta anormalidad cambia su expresión facial en ciertos momentos. Sin embargo, cuando se enfrenta a alguien, deja de cambiar su cara.</specialTip>
+      <specialTip openLevel="1" key="2">Desde una cara sonriente a una cara enojada, tiene cinco niveles de expresiones faciales llamadas caras 1, 2, 3, 4, y 5.</specialTip>
+      <specialTip openLevel="1" key="3">No se detectaron características especiales en el rostro numero 3. Debajo de la cara 2, la tasa de éxito del trabajo del empleado aumentó y el SM del empleado se recuperó ligeramente cada vez que el trabajo fue un éxito.</specialTip>
+      <specialTip openLevel="1" key="4">Cuando el trabajo se realizó con la cara numero 4, esto aumentó el daño causado al empleado por 1.5, y la tasa de éxito en el trabajo disminuye.</specialTip>
+      <specialTip openLevel="1" key="5">Cuando el trabajo se realizó con cara numero 5, esto duplicó el daño infligido al empleado y la tasa de éxito en el trabajo disminuye drásticamente.</specialTip>
+      <specialTip openLevel="1" key="6">Cuando el trabajo se realizó con cara numero 1, Esto redujo el daño causado al empleado por 0.5, y la tasa de éxito en el trabajo aumenta. Además, cada vez que un trabajo fue exitoso, el PS y el SM del empleado puede recuperarlo.</specialTip>
+    </specialTipSize>
+
+
+ 
+  </observe>
+</creature>

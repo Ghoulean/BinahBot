@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300110">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">D-09-104</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/ReverseClock</portrait>
+      <name openLevel="1">
+        Relógio do Regresso
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>
+        "...Seu futuro é totalmente sombrio? Você chegou no fundo do poço, sem ter nenhuma saída a vista?"
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;Esta anormalidade foi criada com as ideias dadas pelo Apoiador do Tumblbug 정현교 (Jeong Hyeon-kyo).&lt;/i&gt;&#13;&#10;Um velho relógio produzido por uma companhia desconhecida. Os tubos a vácuo os dão uma certa impressão de estar envelhecido. O produtor parou de fazer esses relógios há muito tempo.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {“…Seu futuro é totalmente sombrio? Você chegou no fundo do poço, sem ter nenhuma saída a vista? Você já alguma vez pensou: ‘Ah cara, e se eu tivesse feito isso no lugar de ter feito aquilo?’&#13;&#10;A humanidade conquistou as doenças e a natureza. Agora vamos ainda mais além para também nos aproveitar do próprio tempo.”}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {“Sim, nós podemos retroceder o seu tempo desperdiçado.&#13;&#10;Só dê a corda, feche seus olhos e conte até dez.&#13;&#10;Quando você abrí-los, já estará de pé exatamente no momento em que desejava estar.”}
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {+ Por favor, leia o manual com atenção. Nunca se sabe o que a voltagem extremamente alta descarregada do maquinário pode fazer se manuseado de forma incorreta. Não seremos responsáveis por qualquer acidente que pode ocorrer por erro dos usuários e falta de atenção. Esse relógio requer uma quantidade alta de energia para operar. Por favor, entenda que tomará uma quantidade considerável de tempo para carregá-lo.}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">Por cada trabalho concluído com o $0, uma luz acende e um pouco de energia é carregada. </specialTip>
+      <specialTip openLevel="2" key="2">Nada aconteceu quando Agentes com menos de Nível 3 tentaram trabalhar nele.</specialTip>
+      <specialTip openLevel="2" key="3">Após todas a luzes terem ligado, o $0 pode ser ativado. Entretanto, ele só pode ser utilizado uma vez por dia, então o use com sabedoria.</specialTip>
+      <specialTip openLevel="2" key="4">&lt;Cuidado&gt; Agentes de Nível menor que 5 estão proibidos de fazer qualquer tipo de contato com o $0 após ter sido completamente carregado.</specialTip>
+      <specialTip openLevel="2" key="5">Somente Agentes de Nível 5 podem usar o $0 normalmente. O relógio mandará todos para a hora mais pacifica que tenha acontecido no dia, porém matará quem o usou.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

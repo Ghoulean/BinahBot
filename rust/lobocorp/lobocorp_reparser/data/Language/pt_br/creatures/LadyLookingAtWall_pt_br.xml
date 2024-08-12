@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<creature>
+  <info id="100022">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção de $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {Não se sabe muito sobre $0, exceto de que ela encara a parede.},
+      {Ninguém nunca viu o rosto dela. Mas isso não significa que há alguém que queira vê-lo.},
+      {Após escutar os murmúrios dela, pode-se pensar que ela está com saudade de alguém.},
+      {É melhor simplesmente deixá-la encostada naquela parede.},
+      {Só podemos esperar que #0 tenha lembrado de levar tampões de ouvido.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 sempre se mantém na mesma posição. Se não fosse pelo seu balbuciar, poderíamos acreditar que ela era uma estátua.},
+      {#0 não parece se preocupar muito com $0. É provável que ela queira somente ficar enconstada na parede não importando quem entre na Unidade de Contenção.},
+      {#0 parece estar bem ao trabalhar perto dela. É provável que o motivo é dela ficar parada como se estivesse fixada na parede toda vez que alguém entra na Unidade de Contenção.},
+      {A parede perto dela está coberta de mofo, mas ninguém se importa em fazer algo.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Enquanto #0 trabalha, $0 deixa sair murmurros incompreensíveis.},
+      {Enquanto #0 está trabalhando, a Unidade de Contenção está completamente silenciosa. $0 quebra esse silêncio ao sussurrar freneticamente. },
+      {$0 nem sequer se mexe, porém, parece que ela pode sentir a presença de #0 na Unidade de Contenção. },
+      {Mesmo quando $0 sequer se move, #0 ainda acha ela angustiante.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {As palavras dela são leves e abafadas.},
+      {Os sussurros dela parecem estar ficando mais alto.},
+      {Até parece que alguém poderia entender o que ela está falando ao se concentrar um pouco mais, mas é claro, ninguém ousa fazer isso.},
+      {Como sempre, os sussurros abafados dela são incompreensíveis e ignorados por todos.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {#0 tenta se concentrar no trabalho que precisa fazer.},
+      {#0 sabe que ignorar $0 é a melhor escolha. },
+      {#0 não responde nada que $0 diz; enquanto finge ter surdez.},
+      {#0 se apressa em terminar o trabalho para sair de lá o mais rápido possível.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">F-01-18</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/LadyLookingAtWall</portrait>
+      <name openLevel="1">Encaradora de Paredes</name>
+      <name openLevel="3">A Mulher Que Encara a Parede</name>
+      <riskLevel openLevel="2">
+        TETH
+      </riskLevel>
+      <openText>Com o passar do tempo, a tristeza insuportável dela tornou-se uma infeliz obsessão coberta em incontáveis cabelos longos.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Uma Anormalidade com o formato de uma mulher encostando na parede. Com o passar do tempo, a tristeza insuportável dela tornou-se uma infeliz obsessão coberta em incontáveis cabelos longos.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Como ela está sempre encarando a parede, nenhuma pessoa viu seu rosto. Enquanto ela ocasionalmente fala consigo mesma e chora quietamente, é impossível engajar em alguma conversa relevante. Apesar de ter uma aparência humana, é impossível discernir o que ela está verdadeiramente olhando e suas verdadeiras intenções.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Ela tentará conversar ou atiçar o interesse daqueles que estão prestes a sair da Unidade de Contenção. Entretanto, ninguém deve olhar para trás quando isso acontecer, já que pode causar danos mentais.&#13;&#10;&#13;&#10;Alguns boatos insistem que quem olhar para trás virará pedra, mas isso claramente não é verdade.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;Trecho do Registro de Observação 1-304&gt;&#13;&#10;
+      Há somente uma regra importante a ser seguida: Ignore-a. Ela sempre tenta pegar nossa atenção. Enquanto murmura incoerentemente na tentativa de fazer com que aqueles que estiverem em sua sala prestem mais atenção nela. Ela até irá implorar ou sussurrar maliciosamente quando alguém está prestes a sair da Unidade de Contenção, na espera de que olhe de volta instintivamente. Seu subconsciente é uma ameaça para sua própria saúde enquanto estiver na presença dela; é importante manter-se atento e prestar atenção no que acontece na sala enquanto estiver com ela. Se você esquecer dos avisos até mesmo por um segundo e deixar sua guarda cair, você talvez se encontre olhando de volta para ela. Eu tenho outro aviso para deixar a todos que lerem isso: Não deixe essa Anormalidade traiçoeira aprender seu nome. Se isso acontecer, ela pode usá-lo para te enganar e fazer você olhar de volta. Não importa o que você ouça ou o que ela tente enquanto você estiver na sala com ela, NÃO, e eu repito NÃO, sob nenhuma circustância olhe para ela. &lt;b&gt;A curiosidade é um luxo que você NUNCA deve satisfazer enquanto estiver naquela Unidade de Contenção.&lt;/b&gt;}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {&lt;Trecho do Registro de Aconselhamento #9-39&gt;&#13;&#10;
+      Funcionário F5004: &lt;Omitido&gt; era um colega meu no qual eu me importava profundamente. Bem, eu me importava com todos os meus colegas de trabalho, mas &lt;Omitido&gt; era diferente. A quantidade de paixão que ele colocava no trabalho era algo que eu raramente presenciava em minha vida. De qualquer jeito, eu não tenho ideia de como ela, a Anormalidade, aprendeu o nome de &lt;Omitido&gt;. Talvez alguém o chamou enquanto ele estava dentro da Unidade de Contenção e ela ouviu. Nós deveríamos ter mandado dois para trabalhar com ela. O procedimento comum era de ter um time de dois sendo mandado para a Unidade de Contenção, mas como você sabe, nós sempre estamos com poucos disponíveis. Além disso, aquela Anormalidade estava baixa na escala de perigo. Se nós tivéssemos seguido o procedimento e mandado dois lá dentro, os poderes constituídos não teriam ficado nem um pouco felizes com isso. (Omitido)
+      Bem, você sabe do resto. No dia em que o incidente aconteceu, &lt;Omitido&gt; foi mandado para a Unidade de Contenção como normalmente, mas não saiu por um tempão. Eu sei, &lt;Omitido&gt; era um trabalhador leal e pontual, então eu fui direto para Unidade de Contenção esperando pelo pior. Felizmente, eu o encontrei sem ter um arranhão, mas o garoto parecia estar fora de si. Tipo, bem fora de si. (Omitido)
+      No dia seguinte, o garoto resignou. Eu ouvi dizer que foi mandado para um asilo, mas ninguém nunca mais o viu &lt;Omitido&gt; novamente. O garoto só ficava encarando a parede, sussurrando e não respondendo a ninguém. Essa foi a última vez em que o vi &lt;Omitido&gt;. Ninguém sabe o que aconteceu dentro da Unidade de Contenção. Você também não vai descobrir caso tente perguntar ao garoto.}
+    ]
+  </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="CCC">Agentes com Temperança de Nível 1 podem olhar de volta após ouvir $0. Se fizerem isso, ficarão sujeitos a um ataque de pânico.</specialTip>
+      <specialTip openLevel="3" key="possible">Quando o Trabalho de Afeição era feito com $0, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="3" key="possible2">Quando o resultado do trabalho era Neutro, o Contador Qlifót reduzia com baixa probabilidade.</specialTip>
+      <specialTip openLevel="3" key="possible3">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia com alta probabilidade.</specialTip>
+      <specialTip openLevel="2" key="active">Quando o Contador Qlifót de $0 chegou a 0, todos os funcionários no departamento sofreram dano BRANCO.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

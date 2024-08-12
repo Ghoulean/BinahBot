@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300002">
+
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-78</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ResearcherNote</portrait>
+
+      <name openLevel ="1">
+        狂研究者のノート
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <openText>最終章は 「生まれ変わる」 という一文で終わります。
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {この古いノートは理解できない筆記体で書かれています。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {それは研究中に狂ったある研究者のものでした。 それは部分的にのみ解読されており、 そのほとんどは様々な実験に関わるものです。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {それは非倫理的な実験の告白から始まり、 しかしながら研究に狂い壊れた文章で締めくくられます。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+
+      [
+      {最終章は「生まれ変わる」という一文で終わります。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {職員の観察力は、これを身につけるだけで上昇します。 しかし、それが知識の欲求を満たさずに返却されるなら、 無能な職員は爆発するでしょう。}
+      ]
+    </desc> 
+
+
+
+     <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">$0を所持している被験者は 自制に関する能力値の 急激な増加の恩恵を受けるだろう。</specialTip>
+      <specialTip openLevel="2" key="2">所持後30秒以内に$0を返却するよう指示された場合、 所持者の肌は膨らみ始め、 身体は数秒以内に爆発するだろう。</specialTip>
+      <specialTip openLevel="3" key="3">管理作業を行わずに$0を返却するよう指示された場合、 所持者は爆発するだろう。</specialTip>
+      <specialTip openLevel="4" key="4">所持者が一定量以上の体力もしくは精神力にダメージを負った場合、 所持者は部門全体を巻き込んで爆発する。 この爆発は近くの誰かに大きなRedダメージを与えるだろう。</specialTip>
+      </specialTipSize>
+
+  
+
+  </observe>
+</creature>

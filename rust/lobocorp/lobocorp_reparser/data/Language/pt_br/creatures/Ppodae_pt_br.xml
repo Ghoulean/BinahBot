@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id="100106">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {$0 é tão macio e fofinho. É tão fofucho que poderia curar sua depressão.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Vários de nossos funcionários têm até 55 fotos do $0 salvas no celular em vários ângulos diferentes.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Se você não gosta do $0, bem, já é motivo o suficiente para imediatamente te rebaixar.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Tipo, as vezes nós encontrávamos alguns ossos estranhos que pareciam ser de esqueletos humanos perto do $0, mas ele é tão fofinho! Então quem se importa?}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">D-02-107 </codeNo>
+      <portrait openLevel="0">Sprites/Unit/creature/Ppodae</portrait>
+      <name openLevel="1">
+       Ppodae
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>Cara... seu “anjinho” está roendo o dedo do nosso colega.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;Esta Anormalidade foi criada com as ideias dadas pelo Apoiador do Tumblbug 이은희 (Lee Eun-hee).&lt;/i&gt;&#13;&#10;&#13;&#10;Um cachorrinho super ultra fofinho com pelos brancos como a neve fresca.&#13;&#10;Essa Anormalidade é tão fofa que só de olhar para ela é o suficiente para você se sentir muito melhor.&#13;&#10;Ele tem os olhos de um anjo e é a coisinha mais pura desse mundo.&#13;&#10;(Outras descrições dessa criatura foram omitidas para resumir. O resto das frases estão basicamente dizendo “É tão fofo!” em várias maneiras diferentes.)}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Não tem como essa pequena Anormalidade ser malvada. A única coisa que você tem que se preocupar é com seu coração doendo se você olhar demais para ele, já que é simplesmente fofo demais. Na verdade, funcionários que entram na Unidade de Contenção dessa Anormalidade costumam perder a noção das coisas e frequentemente precisam ser removidos forçadamente de lá. É preciso ter maior cautela, já que os funcionários que realizarão a remoção também podem ser cativados pela fofura da Anormalidade, perdendo também a noção do que estava fazendo.&#13;&#10;
+      + Tentativas de levar a Anormalidade para fora de sua unidade podem ocorrer de vez em quando, mas isso não é uma preocupação por ser tipicamente prevenida por outros funcionários.
+      + Quando muitos funcionários querem trabalhar com essa Anormalidade ao mesmo tempo, um sorteio decidirá quem terá tal privilégio.
+      + Nossos funcionários costumam mostrar sintomas de regressão mental como falar com um tom agudo estranho após entrarem na Unidade de Contenção, mas parece que é só um problema temporário.
+      + Vários de nossos funcionários chamam essa Anormalidade de “Ppodae, o Melhor Garoto do Mundo”, porém, seu nome oficial é simplesmente ‘Ppodae’. Por favor, tenha certeza de não confundí-los.
+      ++++ Todo funcionário que entra na Unidade de Contenção precisa mandar um relatório em forma de vídeo ou foto dessa Anormalidade. (Isso é altamente, extremamente, SUPER importante; tenha certeza de que ninguém se esqueça de cumprir esse passo.)}
+    ]
+  </desc>
+    <desc id="3" openLevel="1">
+      [
+      {Uma corporação desse tamanho sempre terá um ou dois boatos circulando por aí.&#13;&#10;“Eu ouvi dizer que você pode escutar o som dos ossos de alguém sendo quebrados quando você anda pelos corredores à noite…”&#13;&#10;“Se você tentar acompanhar o som, encontrará um Iéti devorando um funcionário...!”&#13;&#10;“Porém, nós não temos uma anormalidade que se pareça com um Iéti…”}
+    ]
+  </desc>
+    <desc id="4" openLevel="2">
+      [
+      {&lt;Trecho de uma Gravação de Áudio&gt;&#13;&#10;
+      John: Você deveria agradecer, cara. Você conseguiu uma chance de sorte para trabalhar com o Ppodae, o Melhor Garoto do Mundo.
+      Jacob: Uh… Ele está me batendo com as patas. Isso é um ataque?
+      John: Ele só quer que você o alimente. Você não sabia que é comum em nossa corporação de sempre carregar um ou dois pacotes de comida pra cachorro?
+      Jacob: Bem… eu não gosto muito de animais… (John resmunga irritado.)
+      Aliás, esse carinha aqui é bem forte. Cachorros costumam ser assim? Eu acho que esse aqui brincou bastante de pegar, hein?
+      John: Nós costumávamos brincar de pegar frequentemente só para ver o quão fofo ele era indo atrás da bola. Mas, nós paramos de fazer isso por alguma razão…
+      Jacob: Ei, você viu a cara dele quando eu o alimentei? Eu juro que era super bizarra…
+      John: É só sua imaginação, cara. Ele é sempre nosso anjinho. naumé? Queméumbomgaroto?
+      Jacob: Minha nossa, essa coisa tem algum tipo de poder para manipular mentalmente as pessoas?
+      John: Não tenho ideia do que você esteja falando, Jacob. E VocêAmiguinho? HeinCoisinhaFofucha? VocêTemVocêTem?}
+      ]
+    </desc>
+    <desc id="5" openLevel="3">
+      [
+      {      John: Você esperou por mim, Ppodae meu garoto?
+      Jacob: Uh, ei, ele está comendo algo. Não éramos para ser as primeiras pessoas nessa Unidade hoje?
+      John: Meu garotinhozinho-bonzinho só estava estava com fomie, aham aham. Cara, ele é tão fofo. Olhe só ele mordiscando aquilo~
+      Jacob: O que diabos ele está mastigando… Merda! Eu sabia! É o... dedo do James, cara! Ele desapareceu durante a última patrulha! Não consegue ver a unha?! Lembra dele se gabar por ter um coração pintado nelas? Eu te disse, cara! Essa coisa está escondendo algo ruim!
+      John: Eu… eu não consigo acreditar… quem…
+      Jacob: Essa Anormalidade é assassina! Eu entendo que esteja chocado, mas eu te falei várias vezes que não há como um mascote “fofo” ser inofensivo nesse lugar. Cara, fico feliz que você finalmente voltou a raz—
+      John: Quem… quem não o alimentou na hora correta?!
+      Jacob: ……..
+      John: O pobre pequenino esteve faminto a noite toda! Isso… isso fere meu coração…
+      Jacob: Bem, é… eu acho que devemos suprimí-lo?
+      John: Como você consegue sugerir algo tão cruel a um garoto fofinho e bondoso como ele? Só olhe para seus olhinhus… Como um animal inocente faria algo errado? NauÉMesmuSeuGarotinwuFofucho.&#13;&#10;
+      (A Anormalidade não mostra reação. Só o som de um osso sendo mastigado pode ser escutado.)&#13;&#10;
+      Jacob: Cara... seu “anjinho” está roendo o dedo do nosso colega.
+      John: O que você é, um novato? Você não sabia que tudo que é fofo é perdoado aqui?
+      Jacob: Eu nunca ouvi falar disso, e eu seriamente não acho que seja verdade. Precisamos tranquilizá-lo. E se você não o fizer, então eu mesmo faço!&#13;&#10;
+      (O som de um tiro de tranquilizador pode ser escutado.)&#13;&#10;
+      John: NÃÃÃÃÃÃÃO!!!!!
+      (A Anormalidade começa a ficar fraca.)
+      (A gravação corta após alguns gritos.)&#13;&#10;&#13;&#10;...Com base na evidência na gravação, eu peço que Jacob seja imediatamente rebaixado por atirar tal coisa em Ppodae.&#13;&#10;Um terrível e maléfico abusador de animais não tem lugar em nossa corporação.&#13;&#10;O Ppodae, o Melhor Garoto do Mundo ficou traumatizado. TRAUMATIZADO! Por esse incidente. Ele agora só está comendo 5kg de seu lanche favorito.&#13;&#10;Para ajudá-lo a suportar o trauma, eu sugiro pedir um novo tipo de lanche para o Ppodae:
+      “Salmão da melhor qualidade rico em Vitamina B”.&#13;&#10;Eu estarei no aguardo por sua resposta.}
+      ]
+    </desc>
+    <desc id="6" openLevel="4">
+      [
+      {Resposta:&#13;&#10;
+      Seus pedidos foram aceitos.
+      
+      P.S. Em sua próxima mensagem, tenha certeza de anexar 5 diferentes fotos do Ppodae, o Melhor Garoto do Mundo.&#13;&#10;
+      Agradeço antecipadamente.}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">O $0 adowwa o Trabalho de Instinto. Por favor, não faça nenhum trabalho além de Instinto com ele, ou o Contador Qlifót terá uma chance mediana de reduzir.</specialTip>
+      <specialTip openLevel="1" key="2">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="1" key="3">Quando $0 escapou, ele voluntariamente voltou para a Unidade de Contenção após atacar um funcionário e roubar o █████ de seu corpo.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

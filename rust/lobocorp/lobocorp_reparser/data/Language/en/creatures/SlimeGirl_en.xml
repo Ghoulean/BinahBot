@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+  -->
+  <info id="100063">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {$0 makes those who look at it feel affection without realizing it.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Composed entirely of pink slime, $0 is sliding around its Containment Unit.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {If #0 feels like they may want to ignore some of the safety and sanitary protocols, it will result in a slimy hell.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Unbeknownst to all, $0’s army grows day by day.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">D-03-109</codeNo>
+      <portrait openLevel="0">Sprites/Unit/creature/SlimeGirl</portrait>
+      <name openLevel="1">
+        Melting Love
+      </name>
+      <riskLevel openLevel="3">
+        ALEPH
+      </riskLevel>
+      <openText>...and my dear employees, I do hope you all put on the gas masks we distributed to you before we enter.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;This Abnormality was created with the ideas provided by Tumblbug Backer mul.&lt;/i&gt;&#13;&#10;&#13;&#10;A melting slime with a resemblance to humans when inspected closely. Its Containment Unit is covered in its mucus secretions.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Today, I’d like to talk about the recent incident everyone has heard of.&#13;&#10;That’s right, that dreadful incident when an army of slimes took over our facility for (Redacted) minutes.&#13;&#10;There were several containers left in the (Redacted) lab which were not processed properly during the experiment related to (Redacted).&#13;&#10;If you know about the (Redacted) experiment, you would already know that the contents of those containers are merely useless leftovers that only prove the experiment has failed. Our researchers felt there was no need to dispose of them.&#13;&#10;It was obvious that one newbie to the research team had no idea what was inside those containers. Employee Marie found the containers of pink slime and felt that they could pose a threat. It is assumed that she thoroughly concealed and kept them in (Redacted) status.&#13;&#10;If my assumption is correct, the melted object in those containers was probably the (Redacted) of (Redacted). I became sure of this when I read the passage that described its appearance as that of an adolescent human.}
+      ]
+
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {I dunno if it was fortunate for us or not, but its memories, including those of the experiments, were completely gone; it could barely speak a word or two. It was also mentally unstable. It became extremely nervous whenever Marie was not present.&#13;&#10;A brother. Marie had a brother whom she lost during her childhood. It all started when she felt an attachment to the childlike pink slime that followed her around.&#13;&#10;Marie showed an unprecedented level of decrease in her mental corruption. Indeed, it was extremely unusual. Of course, it was certain that the Abnormality somehow affected her in a positive way, but that was the end of the benefits.&#13;&#10;Her colleagues started noticing her odd behaviors; they tried to ask her about them, it was the right thing to do. They were educated about the potential implications of a steep decrease in mental corruption levels, and understood that a person disappearing every single break time is a dangerous sign. However, Marie didn’t say a word to them and ended up detained in the counseling room until she opened up.&#13;&#10;Meanwhile, this slimy creature that had forgotten everything instinctively remembered one thing: it had to get out of the facility no matter what.&#13;&#10;This Abnormality once again felt extremely nervous when Marie didn’t show up on time. It thought that she was in danger; it was then that it decided to escape WITH her.&#13;&#10;A rare bond had formed between the two. They cared about each other from the bottoms of their hearts.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Confined within the counseling room, Marie eventually gave up her right to remain silent and began to reveal what she had done. How she kept the contents inside the container, and how she was able to form a bond with it. However, she couldn’t finish her words. This was because she melted in the blink of an eye, moments after signs of an anomaly showed up on her skin. Yes, she quite literally melted, melted in her entirety. And that wasn’t the end of it. The slime that once was Marie a few seconds ago began to move. It wasn’t a difficult task for a fluid creature to slide under the door of the counseling room.&#13;&#10;Did it have a speck of human rationality? No. Just like a newborn duckling blindly follows its mother, it simply moved towards the Abnormality.&#13;&#10;And it wasn’t just Marie that turned to slime. Every single employee who had made contact with her in some way began to melt too. Those who were questioning her, who had shared a meal with her, who had worked together…&#13;&#10;Soon, this army of slime began to attack other employees. All for the mother slime, the Abnormality they loved. Yes, out of love and love alone, they killed. }
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {...and my dear employees, I do hope you all didn’t forget to put on the gas masks we distributed to you before we entered, did you? I do hope that no one took it off out of boredom or stuffiness.&#13;&#10;I must inform you all that some of you are already infected by the slime I told you about. We did not give gas masks to some of you, and we did say that it was because we were out of stock. Though, to be truthful, it was just so we could distinguish between those who are infected and those who are not. You may feel fine now, but before an hour passes, your flesh and bones will start to melt, and your mind will disintegrate into pitch-black nothingness. Then you will begin trying to wreak havoc on the facility. You’ll probably, as your first action in your new form, jump at the employees sitting right next to you. All for the mess of slime you so adore.&#13;&#10;Yes, I know. It’s unbelievable. You feel so alive and clear now, just how on Earth could you melt down into slime? And yet you will. It’s not your fault of course. Someone among you made contact with the slime Abnormality, and you were just the unlucky sap who happened to be around that person. It’s meaningless now to determine patient zero. I doubt they had any idea how catastrophic the results of their actions would be. I doubt they had any idea how catastrophic the results of their actions would be. They did it out of pure affection, after all.&#13;&#10;Finally, those uninfected who are wearing masks, please ensure you pay extra attention to your hygiene and immediately report when you see an employee acting out of the ordinary. You’ll simply be infected as well if you attempt to help them. Now, in your desks, there will be 9mm pistols, all perfectly locked and loaded.&#13;&#10;What you must do now should be clear. We will not open the doors until the situation is… taken care of. If you think this too cruel, allow me to remind you that this &lt;i&gt;is&lt;/i&gt; your job.&#13;&#10;I hope to see you again once everything has been handled.}
+      ]
+    </desc>
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">When the work result was Bad or Normal, the Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="1" key="2">$0 gave a lump of slime to the first employee (D-03-109-1) who performed any work other than Repression with it. The lump healed D-03-109-1’s SP and raised their work success rate. However, further observation is needed to determine how the lump’s effects change according to the state of $0.</specialTip>
+      <specialTip openLevel="1" key="3">When D-03-109-1 completed Repression Work, the Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="1" key="4">Employees who are in the same area as D-03-109-1 have a low chance of being infected by the slime. Those who are infected by the slime (D-03-109-2) can be distinguished with a trace of slime on their cheeks. Employees who made contact with D-03-109-2 also had a low chance of infection. When enough time passed after infection, D-03-109-2’s skin was completely merged with the slime, and infected employees turned into ████████.</specialTip>
+      <specialTip openLevel="1" key="5">The Qliphoth Counter dropped to 0 when the number of D-03-109-2 took up more than 50% of the department while D-03-109-1 was still alive.</specialTip>
+      <specialTip openLevel="1" key="6">The Qliphoth Counter dropped to 0 when D-03-109-1 died.</specialTip>
+      <specialTip openLevel="1" key="7">After a series of experiments, it has been found that the spread of the slime can be controlled through Insight Work. If D-03-109-1 performs Insight Work and produces 24 or more PE-Boxes as a result, the slime will not infect other employees for 30 seconds. However, please be cautious as if less than 24 PE-Boxes are produced, every single D-03-109-2 may transform into ████████.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <codeId>D-03-109-1</codeId>
+  </child>
+</creature>

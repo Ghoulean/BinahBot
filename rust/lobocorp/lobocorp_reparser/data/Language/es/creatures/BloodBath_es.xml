@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100027">
+
+    <narration action="move">
+      #0 designado a la sala de contención de $0.
+    </narration>
+
+    <narration action="start">
+      [
+      {“Sabes, siento que tengo mi vida nuevamente unida después de unirme a la corporación.”},
+      {Empleado #0 siente tristeza desde $0.},
+      {Al empleado #0 le duele la muñeca mirando a $0.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {“La depresión es una enfermedad de la mente. Somos los primeros doctores quienes han descubrido cómo estar feliz.”},
+      {El empleado #0 mira las desesperaciones que flotan en el baño.},
+      {El empleado #0 siente una depresión abrumadora y tristeza.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {“La medicina para el cuerpo avanzó a una velocidad inimaginable, pero la medicina para la mente no lo hizo.”},
+      {El empleado #0 ve dificultades y fallas en el futuro.},
+      {El empleado #0 ve dificultades y sufrimiento en el futuro. Lo que sea que él/ella haga, solo resultará en un fracaso.}
+      ]
+    </narration>
+
+    <narration action="special_ability">
+      [
+      {El empleado #0, privado de razones y con la esperanza de vivir, no se resiste a que las manos lo alcancen.}
+      {La tristeza del empleado #0 se concentra en un solo lugar.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-05-51</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/BloodBath</portrait>
+
+      <name openLevel ="1">
+        Baño de Sangre
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        Cosas que has Abandonado.
+      </specialName>
+
+      <openText>Muchas manos flotan en el baño. Estas son las manos de personas que una vez amé.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Un baño lleno de sangre. La sangre siempre se mantiene en equilibrio. Nunca se desborda. Contiene desesperacion. .&#13;&#10;La depresión insoportable te abruma cuando miras el baño. En un momento, atrae a los empleados hacia él. No tiene una fuerza considerable, pero los empleados que sufren una depresión aplastante no se resisten. Devora al empleado hasta que no deja nada más que las muñecas. Las manos que flotan en el baño están pálidas. Intentan llegar a ti como si estuvieran pidiendo ayuda. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {No es fácil cortarte la muñeca con la mente sana. Se necesita mucha fuerza de voluntad, ya que se requiere varios intentos. Solo cuando la troceas como si estuvieras cortando un trozo de carne, sólo así tendrás éxito. Solo cuando anhelas tanto la muerte, sólo así tendrás éxito.  }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Lamento que no pregunté por qué cuando me pidió ella un cuchillo. Lamento no darme cuenta de que estaba escondiendo su muñeca con el reloj. Lamento no darme cuenta de que ella siempre esconde su muñeca cuando hablo con ella. Lamento no darme cuenta de que no pude escuchar su risa en algún momento.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="1">
+      [
+      {Ni siquiera puedo imaginar lo doloroso que es cortar la muñeca. Me di cuenta de que la única razón por la que podía tener éxito era porque se había cortado la muñeca literalmente. }
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {Siempre sacábamos una botella de vino cada vez que teníamos éxito. Se convirtió en una de nuestras costumbres. Ella nos dijo que solo toma un pequeño paso en falso en caer en el manierismo si nos acostumbramos al éxito. Por lo tanto, tenemos que ser felices con cada pequeña cosa. Y no debemos descuidar las fallas porque el éxito se puede lograr en la pila de fallas. &#13;&#10;Cuando vi las cicatrices en su muñeca cortada, pensé en nuestra bodega. Muchas botellas de vino se habían ido. Solo quedaba una botella. &#13;&#10;Ese día, hice estallar la última botella.}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="noRationalist">Cuando el empleado del nivel 1 de Fortaleza completó el trabajo, la mano se estiró del $0 y se llevó al empleado. El mismo fenómeno ocurrió cuando el empleado del Nivel 1 de Templanza estaba trabajando.</specialTip>
+      <specialTip openLevel="1" key="manyHands">Una mano blanca apareció sobre la superficie de $0 para absorber al empleado. A medida que aumentaba el número de manos, las CAJAS-PE producidos por $0 aumentan.</specialTip>
+      <specialTip openLevel="1" key="threeHands">>&lt;Precaución al Comando&gt; Cuando $0 tiene tres manos, no puede garantizar la vida del empleado. Parece absorber al empleado independientemente de las condiciones y resultados del trabajo.</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {La cura de encefalina afectó no solo a la mente, sino también al cuerpo.}
+        {El problema es que el suministro de cura se volvió tremendamente enorme para controlar cuando nos dimos cuenta del problema. }
+        {Uno de los problemas fue adormecer. }
+        {La gente creía poder vivir una vida feliz.}
+        {La gente creía que podían comprar la tristeza y vender la felicidad con dinero.}
+        {Cuando ocurrió el primer suicidio, deberíamos haber sabido que estas creencias habían sido destrozadas.}
+        {Many hands float in the bath.}
+        {Manos que querían agarrar algo pero no pudieron.}
+        {Tu……}
+        <!--계속-->
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Grabbed a hand." target="1" isAnswer="true" message="Has conseguido obtener un informe final de observación sobre Baño de Sangre." />
+        <node desc="Did not grab a hand." target="2" isAnswer="false"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {Siento frialdad y rigidez. }
+        {Conozco estas manos.}
+        {Estas son las manos de personas que una vez amé.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {Apartaste la mirada.}
+        {Esta no es la primera vez que los ignoras.}
+        {Será lo mismo después.  }
+        ]
+      </desc>
+
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {A veces crees que los recuerdos olvidados pueden ser más hermosos?}
+        {Yo creo.}
+        {Me estas mostrando ahora.}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+
+
+</creature>

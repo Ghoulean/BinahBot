@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100050">
+
+    <narration action="move">
+      #0 va a entrar en la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="start">
+      [
+      {Todavía estamos en medio de nuestro viaje. Caminamos por el camino de ladrillos amarillos para hacer realidad nuestros sueños.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Este tratamiento dejó a todos en silencio, incluidos aquellos que se negaron a guardar silencio independientemente del tratamiento. }
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {El $0 persiguió a los cerebros inteligentes en lugar de ahuyentar a los pajaros.  }
+      ]
+    </narration>
+
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">F-01-87</codeNo>
+      <name openLevel="1">Espantapájaros Buscando Sabiduría</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/Scarecrow</portrait>
+      <riskLevel openLevel ="2">HE</riskLevel>
+      <openText> La ciudad seguía siendo hermosa y los caminos esmeralda brillaban más que nunca.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Una anormalidad con forma de espantapájaros de paja. Su pajita está manchada de sangre por todas partes.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Su cabeza está vacía, como si alguien lo haya arrancado a la fuerza. Muestra agresión al intentar tomar el cerebro de los empleados. Los empleados a los que muestra agresión son los que obtuvieron una calificación de “Excelente” en la prueba IQ. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      { Cada ciudad requería su propia tecnología. Esa fue la clave para revivir su ciudad. Hubo numerosas tecnologías, pero entre ellas, había una ciudad que poseía la tecnología de reemplazo avanzado del cuerpo. Podría arreglar, cambiar o reemplazar una parte del cuerpo defectuosa o no deseada. Todos los que vivían en la ciudad pudieron recibir el tratamiento. Sin embargo, hubo un rumor. Si hubiera una persona pobre cuyos pulmones están fallando y una persona rica que deseaba una mejor vista, entonces sacaban los ojos de los pobres y se lo daban a los ricos. El cadáver de la persona pobre sería llevado a las afueras para pudrirse.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {El portavoz de la ciudad tranquilizó a la gente, diciendo que los rumores eran falsos. Para acabar con los rumores, anunció que unos pocos enfermos elegidos de las afueras tendrían cualquier parte del cuerpo que quisieran arreglar. De los pocos afortunados que fueron elegidos, finalmente uno regresó muchos días después. Tenía una cicatriz visiblemente larga en la cabeza. La gente le preguntó cómo se sentía y él respondió que su cabeza se sentía más ligera. Era un hombre triste que solía llorar mucho, así que todos creían que la cirugía fue un éxito.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Sin embargo, cuando se le preguntó sobre los otros elegidos, él solo sonrió sin decir una palabra. Más tarde, el día del funeral de sus padres, no mostró ninguna emoción. Después del tratamiento, todo lo que hizo fue mirar por la ventana y hablar solo. Finalmente, se colgó en el pomo de su casa. Algunas personas creyeron que el tratamiento causó todos sus problemas, pero después de unos días se olvidó por completo. La ciudad seguía siendo hermosa y las carreteras esmeralda brillaban más que nunca. }
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Cuando un empleado con nivel de Prudencia 3 o superior terminó el trabajo, el contador Qlifot puede disminuirse</specialTip>
+      <specialTip openLevel="1" key="2">Cuando el resultado del trabajo fue malo, el contador Qlifot se reduce.</specialTip>
+      <specialTip openLevel="2" key="3">Cada vez que la Anormalidad escapa y mata a un empleado, arranca su cerebro de un empleado debil para recuperar su salud.</specialTip>
+    </specialTipSize>
+  
+  </observe>
+
+
+
+</creature>

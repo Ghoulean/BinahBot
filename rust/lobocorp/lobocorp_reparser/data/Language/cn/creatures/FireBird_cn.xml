@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id="100061">
+
+    <narration action="move">
+      #0正在前往“$0”的收容单元并准备执行任务
+    </narration>
+
+    <narration action="mid1">
+      [
+      {曾有这么一个传说：得到“$0”羽毛的人会获得荣华富贵，也会付出代价。},
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {有时，“$0”会治愈受伤的员工。},
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {如果员工表现出想要狩猎“$0”的样子，“$0”会很高兴的。},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="2">
+    <collection>
+      <codeNo openLevel ="0">O-02-101</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/FireBird</portrait>
+
+      <name openLevel ="1">
+        炎雀
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>而真正的猎手将被授予那众生渴求&#13;&#10;的闪耀之羽。</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {很久很久以前，某个大陆的某片森林里住着一只神奇的鸟儿。它的羽毛闪耀着璀璨的光芒，足以照亮每一片黑暗的角落。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {许多猎人都想得到它的羽毛，因为这羽毛象征着财富与荣耀。关于鸟儿的传闻数不胜数。比如，曾有人说，捕获到此鸟的人，他的家族将世代繁荣昌盛；另一个传说则是，只有得到了这片羽毛的人才有资格被称为真正的猎手；更有甚者传闻，这羽毛拥有不可思议的强大力量，可以使持有者随心所欲地去往任何地方。总而言之，它早已是所有冒险者心中的神圣目标。&#13;&#10;很快，森林里便满是寻找那只不可思议之鸟的人——猎手，商人，探险家甚至是旅行者。&#13;&#10;曾经寂静的森林一度被喧嚣所淹没。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {但很快，人们就对这些天花乱坠的传说厌倦了，他们也不再热衷于狩猎，造访森林的人也变得越来越少。最终，那鸟儿完全成为了传说中的存在...它的双眼因剧痛而失明，瞎眼的鸟儿随后便带着炫丽夺目的羽毛离开了这片被遗忘的森林。&#13;&#10;无数个日月过去，鸟儿终于找到了新的森林，一片住着许多人的森林——说到底，鸟儿仅仅只是想点燃人们心中狩猎的欲望罢了，那熊熊燃烧的欲望之火将犹如它的羽毛一样夺目闪耀。&#13;&#10;而真正的猎手将被授予那众生渴求的闪耀羽毛。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {&lt;color=#FF9E72FF&gt; &lt;&lt;b&gt;警示：关于狩猎炎雀的建议&lt;/b&gt;&gt;&#13;&#10;尽量不要做出会惊吓到它的举动。&#13;&#10;同样也不推荐只是为了证明自己的勇气而去猎捕炎雀，想想那些空手而归的猎人吧，想想他们有着怎样的下场。&#13;&#10;每个人都曾懊悔过：“就差一点！就差一点我就能抓住它了...”——要知道，在恰当的时机收手，也是需要勇气的。&lt;/color&gt;}
+      ]
+    </desc>
+
+
+
+
+   
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">当与“$0”同一部门的异想体突破收容时，“$0”的逆卡巴拉计数器将会减少。</specialTip>
+      <specialTip openLevel="2" key="2">当工作结果为优时，“$0”的逆卡巴拉计数器将会减少。</specialTip>
+      <specialTip openLevel="2" key="3">当工作结果为良时，“$0”的逆卡巴拉计数器有小概率减少。此外，这个异想体的逆卡巴拉计数器越低，就会对正在进行工作的员工造成越高的伤害。</specialTip>
+      <specialTip openLevel="2" key="4">当工作结果为差时，“$0”的逆卡巴拉计数器将会增加。</specialTip>
+      <specialTip openLevel="2" key="5">当“$0”的逆卡巴拉计数器为1时，它会把光之祝福赠予正在进行工作的员工，使其立刻恢复一定的生命值和精神值并能在一段时间内持续恢复。</specialTip>
+      <specialTip openLevel="2" key="6">当员工的生命值低于20％时，“$0”同样会赠予员工光之祝福。</specialTip>
+      <specialTip openLevel="2" key="7">在“$0”突破收容一段时间后，“$0”会欣然地飞回收容单元。当有员工伤害“$0”时，“$0”会进入攻击模式，因“$0”的攻击而导致生命值或精神值归零的员工将会死亡。此外，受到“$0”攻击的员工可能会被致盲，失明的员工只能以一半的速度进行工作。当失明的员工完成了对“$0”的工作后，“$0”会治愈他们的双眼。</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

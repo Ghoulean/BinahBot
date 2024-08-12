@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100041">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção da $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="mid1">
+      [
+      {A $0 é uma garotinha bastante tímida e pode dar uma surpresa feita à mão para #0 em segredo.},
+      {A $0 vem de um lugar bem, bem distante e gosta de risadas alegres.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {A $0 gosta de ter amigos.},
+      {Ela realmente espera que #0 fique feliz com o sincero presente.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Imaginando a grande surpresa que o presente dará ao rosto de #0, $0 olha alegre.},
+      {Seria maravilhoso se as pessoas aceitassem este pequeno, porém precioso presente.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {O “amigo” da $0 está dormindo dentro do presente dela, esperando pelo destinatário.},
+      {#0 não faz ideia do que está dentro do presente que tem forma de um coraçãozinho fofo.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-01-67</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/LittleWitch</portrait>
+      <name openLevel="1">
+        Uma Bruxinha
+      </name>
+      <name openLevel="4">
+        Laetitia
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <specialName openLevel="2">
+        Presente Surpresa
+      </specialName>
+      <openText>Ela estava tão triste por ter que deixar seus amigos para trás, então teve uma brilhante ideia!</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;Com o tamanho parecido com o de uma criança e sempre mantendo um sorriso brilhante…&lt;/i&gt;&#13;&#10;É uma criancinha beeeeeeeeeeem adorável.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Me chamam de criancinha adorável porque eu sou uma criança pequena e amável!&#13;&#10;A criança vem de um lugar bem, bem distante!&#13;&#10;Quando ela gosta de alguém, dará um presente completamente feito por ela.&#13;&#10;Mas o conteúdo do presente é um segredo, hein!}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Há outro segredo bem, bem importante. A criança tem vários talentos!&#13;&#10;Essa garota tem muitos amigos, mas disseram que ela não podia trazê-los aqui.&#13;&#10;Ela estava tão triste por ter que deixar seus amigos para trás, então teve uma brilhante ideia!}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Se eu cobrir bem meus amigos e fazê-los parecer como um presente, todos ficarão surpresos!&#13;&#10;E todos eles vão rir da minha pegadinha!&#13;&#10;Opa, lá se vai o segredo do presente.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Eu espero encontrar muitos amigos aqui também!&#13;&#10;A criança é tímida, então o presente será dado em segredo!&#13;&#10;Despedidas são tristes, espero que possamos brincar mais! E as pessoas aqui não sorriem!&#13;&#10;Isso parece ser tão triste!&#13;&#10;Então essa pequena moça aqui se decidiu! Ela ficará aqui e nunca sairá até que o riso seja restaurado nesse lugar!&#13;&#10;Eu ficarei feliz se todos gostarem de minhas pegadinhas!}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="give">Quando o resultado do trabalho era Neutro, $0 deu um presente para #0.</specialTip>
+      <specialTip openLevel="2" key="gift">Quando #0 foi atribuído para trabalhar em uma Anormalidade diferente, ao invés de $0, um ███████ eventualmente explodiu para fora de seu corpo.</specialTip>
+      <specialTip openLevel="2" key="cancle">Quando a atribuição foi cancelada antes que ███████ nascesse, nada de estranho ocorreu com o corpo do Agente.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <name>O Amigo da Bruxinha</name>
+    <codeId>O-01-67-1</codeId>
+  </child>
+</creature>

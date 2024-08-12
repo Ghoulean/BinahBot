@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100000">
+    <narration action="move">
+      #0 is going to $0’s Containment Unit to practice working with Abnormalities.
+    </narration>
+    <narration action="start">
+      [
+      {$0 is a training dummy who sincerely believes he’s an employee of our facility.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {It seems $0 likes people.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 circles around and around #0, however #0 is completely absorbed in their work.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 is thinking about the center of the Earth.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {$0 is very sad that #0 has to leave so soon. It seems that he wants to follow them.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">0-00-00</codeNo>
+      <name openLevel="1">Standard Training-Dummy Rabbit</name>
+      <portrait openLevel="1">Sprites/Unit/creature/DummyPortrait</portrait>
+      <riskLevel openLevel="1">TETH</riskLevel>
+      <openText></openText>
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {An Abnormality in the shape of a training dummy used to train up-and-coming managers.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Rumor has it this Abnormality was chosen to be used for training as it is the most docile and tame of any that we have extracted. It’s called a training dummy “rabbit”, but it doesn’t seem to enjoy carrots. It likes people. If it escapes, it is merely following the employee as they leave its Containment Unit.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      <!--특수 상태-->
+    </desc>
+    <desc id="4" openLevel="3">
+      <!--특수 상태-->
+    </desc>
+    <record openLevel="1">
+      <!-- 관찰기록 -->
+    </record>
+    <record openLevel="2">
+      <!-- 관찰기록 -->
+    </record>
+    <record openLevel="3">
+      <!-- 관찰기록 -->
+    </record>
+    <specialTipSize size="1">
+      <specialTip openLevel="1" key="tutorial">When Repression work was performed with $0, the Qliphoth Counter lowered.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

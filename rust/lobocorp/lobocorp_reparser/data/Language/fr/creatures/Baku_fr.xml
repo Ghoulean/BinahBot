@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100060">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {$0 est toujours endormi dans l’Unité de Confinement.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Le rêve de $0 est grandiose et montre tout.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 garantit à chacun de doux rêves ; mais en réalité, cette douceur est inatteignable et ronge l’espoir du rêveur.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {“J’ai toujours voulu dormir. Je veux juste avoir un rêve joyeux.”}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-02-99 </codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/VoidDream</portrait>
+      <name openLevel="1">
+        Rêve Vide
+      </name>
+      <riskLevel openLevel="1">
+      TETH
+      </riskLevel>
+      <openText>S’il te plaît, mange mes rêves.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {“J’ai souhaité dormir éternellement.”&#13;&#10;“Alors n’essayez plus de me réveiller.”}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Une Anomalie qui arbore la fourrure et les cornes d’un mouton.&#13;&#10;Il n’y a rien d’unique quant à son apparence, à l’exception de plusieurs yeux de différentes couleurs enfoncés dans son corps.&#13;&#10;Obtenir des informations sur cette Anomalie sera sûrement compliqué puisqu’elle dort sans cesse.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {+ La retranscription suivante illustre comment la capacité d’endormissement de $0 affecte le mental des employés. Les résultats indiquent que nous ne pouvons pas utiliser cette capacité pour réduire la corruption mentale de notre personnel. Merci de vous référer à cette retranscription avant d’approfondir les recherches.&#13;&#10;
+      Vincent : S’il vous plaît, faites vite… Je dois dormir…&#13;&#10;
+      Thérapeute : Est-ce à cause de l’Anomalie ?&#13;&#10;
+      Vincent : Ouais, je me rappelle de quelque chose qui ressemblait à un mouton passer à côté de moi, puis… ben, je me suis endormi. Depuis, je suis comme ça.&#13;&#10;
+      Thérapeute : Vous rappelez-vous du rêve que vous avez eu lorsque c’est arrivé ?&#13;&#10;
+      Vincent : Oh, je ne pourrai jamais oublier ce rêve…&#13;&#10;
+      Thérapeute : Pouvez-vous m’en parler autant que vous le pouvez ?&#13;&#10;&#13;&#10;
+      Vincent : C’était un doux rêve, joyeux, magnifique. Ce sont tous les mots dont j’ai besoin pour le décrire. Mince, je me suis même senti content de travailler pour cette corporation. Et j’ai vu un gars qui n’est plus avec moi, il était juste à côté de moi…&#13;&#10;
+      (Omis)&#13;&#10;
+      …À cause de ça, je n’ai pas pu garder mon calme quand je me suis réveillé.&#13;&#10;&#13;&#10;
+      Thérapeute : Je vois. J’ai récemment entendu parler de vous par les autres employés. Ils disent que tout ce que vous faites en-dehors des heures de travail, c’est dormir. Pouvez-vous me dire pourquoi ?&#13;&#10;
+      Vincent : Ne comprenez-vous pas ce que je veux dire ? Je veux juste revivre ce rêve. Le rêve où j’étais là, avec lui. Me rappeler de ces souvenirs joyeux… Mais je n’y suis jamais retourné, peu importe combien de fois j’ai dormi. J’ai dormi, et dormi, et dormi, et dormi, et dormi, et dormi, et pourtant…!&#13;&#10;
+      Thérapeute : … Je vois. Je vous conseille d’aller vous reposer dans votre chambre.&#13;&#10;
+      Vincent : … On raconte que tous ceux qui se sont réveillés après avoir entendu le bruit de cette Anomalie sont devenus fous. Les gens pensent que c’est parce qu’ils ont tous eu un horrible cauchemar qu’ils ne pouvaient pas supporter, mais en réalité c’est l’inverse.&#13;&#10;
+      La réalité dans laquelle ils ont dû se réveiller était si terrible que leur âme a abandonné sa vie éveillée.&#13;&#10;
+      Comme vous le savez, le temps s’écoule différemment dans les rêves. Un simple instant d’une vie éveillée constitue une éternité dans le monde des rêves.&#13;&#10;
+      Si $0 m’endormait de nouveau, peut-être que je pourrais revivre ce rêve merveilleux…&#13;&#10;
+      Thérapeute : … Je vais vous prescrire des somnifères. Je vous assure que cela va vous aider à dormir. Pour le moment, veuillez vous reposer.&#13;&#10;
+      Enfin, désormais il vous sera interdit d’accéder à l’Unité de Confinement de l’Anomalie.}
+    ]
+  </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Un démon doit se métamorphoser pour tromper les autres.&#13;&#10;Un démon doit accorder de doux rêves pour tromper les autres.&#13;&#10;Une fissure se crée dans l’esprit humain lorsqu’on lui montre le rêve auquel il aspire.&#13;&#10;Un démon ne ratera jamais la chance de mener quelqu’un à sa perte.&#13;&#10;&#13;&#10;&lt;i&gt;Ne dites pas de choses si compliquées, ne dites pas ces mots effrayants.&#13;&#10;Je veux juste donner de doux rêves aux gens.&#13;&#10;Leur accorder le rêve fascinant qu’ils souhaitent.&#13;&#10;Ceux qui ont reçu mes rêves sont destinés à me revenir.&#13;&#10;Contentez-vous de fermer les yeux…&lt;/i&gt;}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Dans le rêve, ton sourire était rayonnant, et nous avons discuté avec tant d’entrain.&#13;&#10;Lorsque je suis revenu à ma vie éveillée, j’ai réalisé que j’étais de retour dans un monde où tu n’existais plus ; j’ai senti un vide aussi grand que la brève joie que j’ai ressentie dans le rêve remplir mon cœur.&#13;&#10;J’ai fermé les yeux et me suis forcé à dormir, mais le matin venait toujours peu importe ce qu’il se passait.&#13;&#10;Je pense que c’est là que mon âme a commencé à s’effondrer.&#13;&#10;En fait, je suis brisé depuis le jour où je t’ai perdu, mais j’ai fait semblant d’aller bien. Mon âme se fragmentait toujours plus depuis.&#13;&#10;Lorsque je t’ai vu à nouveau, le besoin de te revoir était trop lourd, je ne pouvais plus revenir à qui j’étais avant.&#13;&#10;La thérapie… Le repos… Tout cela était inutile.&#13;&#10;J’ai passé des journées seul, à me tourmenter jusqu’à enfin comprendre.&#13;&#10;Il m’a attiré avec un appât inoubliable.&#13;&#10;C’était le prix à payer pour avoir mangé mes cauchemars. Et après, il ne m’a laissé avec rien d’autre que du vide, pour que mon seul choix soit de retourner le voir.&#13;&#10;Puis… J’ai perdu face à lui. Je ne veux plus rien savoir.&#13;&#10;&#13;&#10;S’il te plaît, mange mes rêves.}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Tout employé dont la Tempérance est en-dessous du niveau 2 s’endormira après avoir travaillé avec l’Anomalie et ne se réveillera jamais.</specialTip>
+      <specialTip openLevel="2" key="2">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="2" key="3">Lorsque $0 brèche, sa lumière endort chaque employé avec lequel elle entre en contact. Ils se sont réveillés lorsque l’Administrateur les a secoués.</specialTip>
+      <specialTip openLevel="2" key="4">$0 a fini par retourner dans son Unité de Confinement de sa propre volonté.</specialTip>
+      <specialTip openLevel="2" key="5">&lt;ATTENTION&gt; Les tentatives de réprimer l’Anomalie la transforment en une entité extrêmement hostile. (Cette seconde forme est désignée $0-1).</specialTip>
+      <specialTip openLevel="3" key="6">$0-1 chante occasionnellement, infligeant des dégâts BLANC à un secteur entier. Les employés qui étaient endormis à cause de la lumière de l’Anomalie se sont réveillés et ont paniqué après avoir entendu le son de $0-1.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

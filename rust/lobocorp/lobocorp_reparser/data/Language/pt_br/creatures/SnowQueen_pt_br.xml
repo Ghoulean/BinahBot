@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <!-- Attrbute "id " must equal to attribute "id" in CreatureList.xml -->
+  <info id="100102">
+    <!-- $0 : Creature name, #0 : Agent name -->
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção de $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {A Unidade de Contenção de $0 está tendo uma nevasca gélida.},
+      {A Unidade de Contenção de $0 vislumbra com gelo e geada.},
+      {Kai teria sido presenteado com o mundo se ele tivesse falho em completar a escultura da “eternidade” com lascas de gelo.}
+      ]
+    </narration>
+    <narrationa action="mid1">
+      [
+      {O palácio de $0 é frio e solitário. #0 quer sair desse lugar o mais rápido que conseguir.},
+      {O caminho para o palácio de $0 é congelante e ainda é muito longo. #0 anseia por calor.}
+      ]
+    </narrationa>
+    <narration action="special_ability_1">
+      [
+      {Gerda era corajosa e mais forte que qualquer um, ela lutará por Kai, que está preso no Palácio das Neves.}
+      ]
+    </narration>
+    <narration action="win">
+      [
+      {A primavera apareceu com rosas a florescer. Gerda e Kai deram as mãos, e voltaram andando para casa.}
+      ]
+    </narration>
+    <narration action="lose">
+      [
+      {Gerda e Kai não puderam derrotar $0. Eles se tornaram fragmentos de gelo nas mãos dela e nunca sairão do Palácio das Neves.}
+      ]
+    </narration>
+    <narration action="anotherWork">
+      [
+      {Enquanto Kai estiver preso no Palácio das Neves, Gerda inevitavelmente terá que enfrentar $0 em um duelo.}
+      ]
+    </narration>
+  </info>
+  <!-- Maximum observation level. -->
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">F-01-37</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/SnowQueen</portrait>
+      <name openLevel="1">
+        A Rainha da Neve
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <openText>“A neve está constantemente derretendo... Talvez seja porque a primavera está chegando, ou talvez seja o palácio desmoronando.”</openText>
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {Uma rainha vive sozinha na gelada floresta invernal. }
+      ]
+    </desc>
+    <desc id="2" openLevel="2">
+      [
+      {Assim como começa toda história, Kai era uma criança com um coração gentil. Quando os pedaços de um espelho feito por uma fada malvada foram espalhados no coração de todos, Kai começou a ver coisas que não queria ou precisava ver. Ele deixou o pequeno vilarejo em que cresceu.&#13;&#10;&#13;&#10;Em uma implacável nevasca, Kai conheceu a Rainha da Neve e ficou curioso sobre o mundo além de seu conhecimento. Ele sentiu como se tudo que ele soubesse equivalia a muito pouco.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {O Palácio das Neves em que ele chegou era tão frio, mas como o beijo da Rainha da Neve congelou seu coração, ele não mais o sentia. Não havia felicidade no palácio, somente a longa noite de inverno.&#13;&#10;&#13;&#10;Gerda era forte o suficiente para não ter sido perfurada pelo espelho, e corajosa o suficiente para ir em uma jornada para resgatar Kai. Então ela foi em direção ao Palácio da Neve.&#13;&#10;&#13;&#10;A jornada foi agonizante. Gerda estava machucada e com dores, e as vezes, chorava.&#13;&#10;&#13;&#10;Porém, eventualmente, Gerda encontrou Kai.&#13;&#10;&#13;&#10;A primavera chegou com rosas a florescer. Seu calor derretou o Palácio da Rainha do Gelo, e o pedaço do espelho que estava no coração de Kai evaporou sem deixar rastros.&#13;&#10;&#13;&#10;Então, deixada completamente sozinha, a Rainha da Neve... (Omitido)}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;i&gt;Eu lembro do dia em que colocamos ela no caixão criogênico com nossas próprias mãos. E em certo momento, seu riso animado sumiu. Ela só sorria ou chorava. Ela eventualmente foi encontrada dentro de uma banheira pintada de vermelho com seus pulsos cortados.&#13;&#10;Nós não acreditávamos na morte. Eu vou ter ela reconstruída como as "máquinas" que eu detestei por toda minha vida, mas era a única resposta. Ela ficaria revoltada comigo por causa disso, morrendo naquela banheira. Porém, nós já estávamos muito longe no caminho cheio de remorso e arrependimento para sentir qualquer tipo de culpa.&#13;&#10;……&#13;&#10;Um dia, "aquilo" falou para mim.&#13;&#10;“Eu lembro de você. Você era uma pessoa de bom coração.”&#13;&#10;No momento que escutei isso, fui tomado pelo impulso de destruir aquilo que eu tinha criado com minhas próprias mãos.&lt;/i&gt;}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="3" key="kissProb1">Quando o resultado do trabalho era Neutro, $0 beijava o Agente com uma probabilidade mediana.</specialTip>
+      <specialTip openLevel="3" key="kissProb2">Quando o resultado do trabalho era Ruim, $0 beijava o Agente com uma alta probabilidade.</specialTip>
+      <specialTip openLevel="2" key="2kiss">O Agente que recebeu o segundo beijo esqueceu de tudo e ficou preso dentro da Unidade de Contenção.</specialTip>
+      <specialTip openLevel="3" key="3kiss">Para evitar o terceiro beijo e salvar o Agente preso, um duelo contra $0 precisa acontecer.</specialTip>
+      <specialTip openLevel="3" key="4kiss">Somente aqueles com alta Fortidude conseguirão salvar o Agente preso. Vamos nos certificar de salvá-lo antes do dia acabar.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

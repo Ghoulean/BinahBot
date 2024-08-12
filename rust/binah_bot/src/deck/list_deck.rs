@@ -12,6 +12,7 @@ use crate::models::binahbot::BinahBotEnvironment;
 use crate::models::binahbot::BinahBotLocale;
 use crate::models::discord::AutocompleteResponse;
 use crate::models::discord::DiscordInteraction;
+use crate::models::discord::DiscordInteractionData;
 use crate::models::discord::DiscordInteractionOptionValue;
 use crate::models::discord::DiscordInteractionOptions;
 use crate::models::discord::DiscordInteractionResponseAutocomplete;
@@ -21,7 +22,11 @@ use crate::utils::get_focused_option;
 use crate::utils::get_option_value;
 
 pub async fn list_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -> AutocompleteResponse {
-    let command_args = interaction.data.as_ref().unwrap().options.as_ref().unwrap();
+    let binding = match interaction.data.as_ref().expect("no data") {
+        DiscordInteractionData::ApplicationCommand(x) => x,
+        _ => unreachable!()
+    };
+    let command_args = binding.options.as_ref().unwrap();
 
     let binah_locale: BinahBotLocale = interaction
         .locale
@@ -40,8 +45,6 @@ pub async fn list_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironme
             DiscordInteractionOptionValue::String(x) => x,
             _ => unreachable!()
     });
-
-    tracing::info!("{:?}", get_option_value("author", command_args));
 
     let author_id_option = get_option_value("author", command_args).map(|x| match x {
             DiscordInteractionOptionValue::String(x) => x,
@@ -90,7 +93,11 @@ pub async fn list_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironme
 }
 
 pub async fn list_my_decks(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -> AutocompleteResponse {
-    let command_args = interaction.data.as_ref().unwrap().options.as_ref().unwrap();
+    let binding = match interaction.data.as_ref().expect("no data") {
+        DiscordInteractionData::ApplicationCommand(x) => x,
+        _ => unreachable!()
+    };
+    let command_args = binding.options.as_ref().unwrap();
 
     let binah_locale: BinahBotLocale = interaction
         .locale
@@ -180,12 +187,12 @@ async fn get_choices_by_deck_name(
     tracing::info!("got decks={:?}", decks);
 
     let binding = &"".to_string();
-    let query = query.unwrap_or(binding);
+    let query = query.unwrap_or(binding).to_lowercase();
 
     match decks {
         Ok(results) => {
             let mut closeness = results.iter().map(|x| {
-                (x, longest_common_subsequence(&x.name, query))
+                (x, longest_common_subsequence(&x.name.to_lowercase(), &query))
             }).collect::<Vec<_>>();
             closeness.sort_by(|a, b| b.1.partial_cmp(&a.1).unwrap());
 

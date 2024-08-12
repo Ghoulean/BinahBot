@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100050">
+
+    <narration action="move">
+       #0被分配到“$0”的收容单元中
+    </narration>
+
+    <narration action="start">
+      [
+      {我们仍在旅途当中，为了实现各自的梦想，我们会沿着黄砖路继续走下去。}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {这种疗法迫使每个人沉默不语，包括那些不顾自身安危拒绝沉默的人。}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {“$0”不再恐吓田中的鸟儿，而是向人索求充满智慧的大脑。}
+      ]
+    </narration>
+
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">F-01-87</codeNo>
+      <name openLevel="1">索求智慧的稻草人</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/Scarecrow</portrait>
+      <riskLevel openLevel ="2">HE</riskLevel>
+      <openText>那座城市依然美丽，翡翠所铺就的&#13;&#10;道路比以往更加闪耀。</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {从外表上看，这个异想体是一个沾满血迹的稻草人。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {稻草人的头部是中空的，疑似被人强行撕开过。它会袭击在IQ测试中获取优秀成绩的员工，然后夺走他们的大脑。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {每一座城市都需要一项只属于自己的科技，而这就是复兴城市的关键。在那数不胜数的科技中，有这么一项神奇的技术，其名为“身体置换术”。这项技术能够修复，改造，甚至替换那些已经开始衰竭的，或是不再想要的身体部件。每一位居住在城市里的人都能得到这种治疗。然而有传言说，如果某个穷人的内脏开始衰竭，而此时某个富人想要拥有更好的视力，那么他们就会夺走穷人的双眼交于富人。之后，穷人的尸体会被随意地扔到郊区，任由其腐烂。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {城市的发言人向民众保证，那不过是毫无根据的造谣罢了。为了平息谣言，发言人宣布他们将从郊区中选出几名病人，并承诺会帮助他们修复任何想要修复的身体部件。&#13;&#10;&#13;&#10;过了好几天后，某个被选中的幸运儿终于回来了。他的头上有一道明显的长疤。人们问他感觉如何，他回答说感觉自己的脑袋轻飘飘的。由于他曾经是个成天痛哭流涕，郁郁寡欢的人，所以大家都相信手术非常成功。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {然而，当他被问及“和你一起被选中的其他人怎么样了？”的时候，他只是微微一笑，然后就陷入了沉默。后来，他去参加父母的葬礼，可他脸上什么表情也没有。在接受治疗后，他终日碌碌无为，只会盯着窗外自言自语。最后，他在他家门口上吊自杀了。人们认为他的不幸都是那手术所引起的，可没过几天，这件事就被所有人忘记了。&#13;&#10;&#13;&#10;那座城市依然美丽，翡翠所铺就的道路比以往更加闪耀。}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">谨慎等级高于2级的员工完成了对“$0”的工作后，“$0”会在倒计时结束后突破收容。</specialTip>
+      <specialTip openLevel="1" key="2">当工作结果为差时，“$0”会在倒计时结束后突破收容。</specialTip>
+      <specialTip openLevel="2" key="3">突破收容后，“$0”每杀死一名职员，就会吸走这名职员的大脑并恢复一定的生命值。</specialTip>
+    </specialTipSize>
+  
+  </observe>
+
+
+
+</creature>

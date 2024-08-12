@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100048">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 verse parfois des larmes désespérées tandis que le travail continue, sans dire un mot à #0.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 continue de ressasser ses gloires passées, tout comme ses sœurs.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-01-73</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/KnightOfDespair</portrait>
+      <name openLevel="1">
+        Magical Girl
+      </name>
+      <name openLevel="3">
+        La Chevaleresse de la Désillusion
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>Il ne reste plus que la vaine fierté d’une chevaleresse flétrie.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Une Anomalie de désespoir qui a enduré un cercle vicieux de confiance et d’abandon, ne laissant plus, à la fin, que l’émotion exprimée par des larmes noires.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Une héroïne du passé qui était autrefois gardienne de la justice. Elle dédia sa vie entière à protéger le roi, l’état, la ville et les faibles.&#13;&#10;&#13;&#10;La chevaleresse devait faire respecter les lois de Dieu et valoir l’honneur, la chevalerie et la justice. Cependant, après une longue histoire pleine de difficultés et de conflits, elle réalisa, en rétrospective, qu’elle n’avait rien vraiment accompli. La vérité changea beaucoup de monde.&#13;&#10;&#13;&#10;Celle qui se battait pour le bien devint le mal en réalisant qu’il n’y en avait plus en ce monde. Celle qui rêvait d’un monde où tout le monde pourrait être heureux fut corrompue par l’avidité et commença à tout dévorer. Comme elles, tant de choses qu’elle pensait éternelles finirent par changer et périr.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Qui a dit qu’un chevalier ne pleurait jamais ? Avez-vous déjà vu des larmes nées du désespoir, et non de la tristesse ? Cet interminable flot de chagrin a fini par transformer ses orbites en coquilles vides. En leur sein, des diamants noirs tombent parfois comme des cendres.&#13;&#10;&#13;&#10;Son désir de protéger reste inchangé malgré tout ce temps ; bien que confinée, elle reste obsédée par cette idée. Il ne reste plus que la vaine fierté d’une chevaleresse flétrie. La ténacité de l’héroïne incapable de renoncer au passé est une vision vraiment pitoyable.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Lorsque la Justice finira par l’abandonner une fois de plus, plusieurs dizaines de lames se trouveront alors sans but. Honteuse d’avoir encore échoué à protéger, et enragée contre le monde, ses épées se tourneront alors vers ceux qu’elle n’avait pu protéger.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {La chevaleresse qui voulait se faire pardonner en sauvant les autres était désormais appelée la Chevaleresse de la Désillusion ; oubliée de tous, comme les autres.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Le premier Intervenant complétant son travail avec un Bon résultat obtiendra la Bénédiction de $0. (Il sera dès lors désigné O-01-73-1.)</specialTip>
+      <specialTip openLevel="2" key="2">O-01-73-1 ne peut que réprimer les Anomalies. De plus, grâce à la bénédiction, les dégâts ROUGE, BLANC et NOIR qu’il subit sont divisés par deux mais les P LE sont doublés.</specialTip>
+      <specialTip openLevel="2" key="3">La bénédiction de $0 se dissipe lorsque O-01-73-1 panique ou meurt. Après cela, un nouvel employé peut la recevoir.</specialTip>
+      <specialTip openLevel="1" key="4">Lorsque O-01-73-1 panique, $0 brèche de son Unité de Confinement. La même chose se produit si O-01-73-1 meurt.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

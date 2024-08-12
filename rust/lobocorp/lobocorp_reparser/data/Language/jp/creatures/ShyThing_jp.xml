@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등0000000000000000000
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id ="100052">
+
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+
+    <narration action="start">
+      [
+      {収容室に 日の光が照らされることは はありませんが、 $0は 自分の皮を丁寧に 干してします。},
+
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {町は$0に笑顔を求め続け、 恥ずかしさで 自分をさらけ出すことが できなかった者はついに…},
+
+      ]
+    </narration>
+   
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-01-92</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ShyThing</portrait>
+
+      <name openLevel ="1">
+        今日は恥ずかしがり屋
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      
+      <openText>今日は良い日！ あなたはまだ恥ずかしがり屋なの？</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [{今日は良い日！あなたはまだ恥ずかしがり屋なの？}]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {庭で丁寧に洗濯物を干していた とても日差しの温かいある晴れた日に、 突然悲しみがやってきました。&#13;&#10;「我々の都市では、 企業での犠牲を高く評価しなければなりません。 彼らの死に祝杯を！ 貴方が泣く理由などないのです。 むしろ喜ばないと。」&#13;&#10;「なんですかその表情は？ 我々の都市では そんな表情を奨励していません。」&#13;&#10;「なんてことだ！ 何なんですかその表情は！ 見ている他の人まで憂うつになるじゃないですか。 ここはあなただけが生きてるわけじゃなのですよ！」&#13;&#10;「あなたは感情を表現するのが下手ですね。 恥ずかしがり屋なのでしょうか？」&#13;&#10;「さあ、もっと嬉しい表情をしなさい。 そうすれば 外郭の人たちが もっと我々を羨むはずです。」&#13;&#10;「さあ、もっと笑って！ 簡単なことでしょ？」&#13;&#10;「次からはもっと自分の感情を表現するようにしてください。  この社会では、自分の感情を表すのは とっても大事なことです！」&#13;&#10;そして、温かい日差しが再びやってきたある日、 かつて洗濯物を干していたように、自分の顔の皮を丁寧に干していた。}
+    ]
+  </desc>
+
+
+    <desc id="3" openLevel="2">
+      [
+      {満面の笑みを見せると、 やっと人々は満足しました。 なぜそんな事をするのかと聞く人がいたら、 こう答えました。 「私は恥ずかしがり屋なので…」}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {皮膚の裏にある顔を見ようとした場合、 それは良くない結果を招くことでしょう。 皮膚の裏はただそれだけの空間。 誰からも侵されることのない、 この都市に残された 最後の思いやりなのですから。}
+      ]
+    </desc>
+
+
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">このアブノーマリティは常に表情を変えます。 しかし、それは誰かに直面するとき、顔の変更を停止します。</specialTip>
+      <specialTip openLevel="1" key="2">笑顔から怒った顔まで、表情1,2,3,4,5と呼ばれる5段階の表情があります。</specialTip>
+      <specialTip openLevel="1" key="3">3つ目の顔には特別な機能はありません。 2つ目の顔では、作業の成功率が向上し、作業が成功するたびにSPがわずかに回復します。</specialTip>
+      <specialTip openLevel="1" key="4">4つ目の顔は、職員のダメージを1.5倍に増加させます。 また、作業の成功率も低下します。</specialTip>
+      <specialTip openLevel="1" key="5">5つ目の顔は、仕事中に職員のダメージを2倍に増加させ、作業の成功率を大幅に低下させます。</specialTip>
+      <specialTip openLevel="1" key="6">1つ目の顔では、仕事中に受ける職員のダメージが0.5倍減少し、作業の成功率が高まります。 また、作業が成功するたびに、HPとSPが回復されます。</specialTip>
+    </specialTipSize>
+
+
+   
+  </observe>
+</creature>

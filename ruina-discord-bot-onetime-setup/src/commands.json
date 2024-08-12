@@ -6,9 +6,9 @@
                 "en-US": "lor"
             },
             "type": 1,
-            "description": "Search for information about combat pages, key pages, abno pages, passives, and battle symbols",
+            "description": "Search for combat pages, key pages, abno pages, passives, and battle symbols from Library of Ruina",
             "descriptions": {
-                "en-US": "Search for information about combat pages, key pages, abno pages, passives, and battle symbols"
+                "en-US": "Search for combat pages, key pages, abno pages, passives, and battle symbols from Library of Ruina"
             },
             "options": [
                 {
@@ -86,6 +86,103 @@
             ]
         },
         {
+            "name": "lc",
+            "names": {
+                "en-US": "lc"
+            },
+            "type": 1,
+            "description": "Search for information about abnormalities and EGO equipment from Lobotomy Corporation",
+            "descriptions": {
+                "en-US": "Search for information about abnormalities and EGO equipment from Lobotomy Corporation"
+            },
+            "options": [
+                {
+                    "type": 3,
+                    "name": "query",
+                    "names": {
+                        "en-US": "query"
+                    },
+                    "description": "What to search for",
+                    "descriptions": {
+                        "en-US": "What to search for"
+                    },
+                    "required": true,
+                    "max_length": 100,
+                    "autocomplete": true
+                },
+                {
+                    "type": 3,
+                    "name": "locale",
+                    "names": {
+                        "en-US": "locale"
+                    },
+                    "description": "Get information in this locale instead (BinahBot locale will remain the same)",
+                    "descriptions": {
+                        "en-US": "Get information in this locale instead (BinahBot locale will remain the same)"
+                    },
+                    "required": false,
+                    "choices": [
+                        {
+                            "name": "en",
+                            "value": "en"
+                        },
+                        {
+                            "name": "kr",
+                            "value": "kr"
+                        },
+                        {
+                            "name": "jp",
+                            "value": "jp"
+                        },
+                        {
+                            "name": "cn",
+                            "value": "cn"
+                        },
+                        {
+                            "name": "cn_tr",
+                            "value": "cn_tr"
+                        },
+                        {
+                            "name": "ru",
+                            "value": "ru"
+                        },
+                        {
+                            "name": "bg",
+                            "value": "bg"
+                        },
+                        {
+                            "name": "es",
+                            "value": "es"
+                        },
+                        {
+                            "name": "fr",
+                            "value": "fr"
+                        },
+                        {
+                            "name": "pt_br",
+                            "value": "pt_br"
+                        },
+                        {
+                            "name": "pt_pt",
+                            "value": "pt_pt"
+                        }
+                    ]
+                },
+                {
+                    "type": 5,
+                    "name": "private",
+                    "names": {
+                        "en-US": "private"
+                    },
+                    "description": "Response will only be visible to you",
+                    "descriptions": {
+                        "en-US": "Response will only be visible to you"
+                    },
+                    "required": false
+                }
+            ]
+        },
+        {
             "name": "deck",
             "names": {
                 "en-US": "deck"
@@ -107,7 +204,7 @@
                         "en-US": "Name of deck"
                     },
                     "required": true,
-                    "max_length": 50,
+                    "max_length": 80,
                     "autocomplete": true
                 },
                 {
@@ -137,6 +234,18 @@
                     "required": false,
                     "max_length": 50,
                     "autocomplete": true
+                },
+                {
+                    "type": 5,
+                    "name": "private",
+                    "names": {
+                        "en-US": "private"
+                    },
+                    "description": "Response will only be visible to you",
+                    "descriptions": {
+                        "en-US": "Response will only be visible to you"
+                    },
+                    "required": false
                 }
             ]
         },
@@ -176,7 +285,7 @@
                         "en-US": "Name of deck"
                     },
                     "required": true,
-                    "max_length": 50,
+                    "max_length": 80,
                     "autocomplete": false
                 },
                 {
@@ -217,7 +326,7 @@
                         "en-US": "Name of deck"
                     },
                     "required": true,
-                    "max_length": 50,
+                    "max_length": 80,
                     "autocomplete": true
                 },
                 {
@@ -231,7 +340,7 @@
                         "en-US": "Deck code from Tiphereth (Zasz)'s deck editor"
                     },
                     "required": false,
-                    "max_length": 50,
+                    "max_length": 80,
                     "autocomplete": false
                 },
                 {
@@ -272,7 +381,7 @@
                         "en-US": "Name of deck"
                     },
                     "required": true,
-                    "max_length": 50,
+                    "max_length": 80,
                     "autocomplete": true
                 }
             ]

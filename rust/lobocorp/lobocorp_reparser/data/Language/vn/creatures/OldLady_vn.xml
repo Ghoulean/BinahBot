@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등0000000000000000000
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id ="100021">
+
+    <narration action="move">
+      #0 designated to $0's containment room.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 is unfamiliar abnormality for us. Work instructions must be designated with utmost caution. },
+      {$0 is an abnormality which can inflict psychological damage. It is recommended to send in employee with high mental stats.}
+      {$0 can drive #0 into panic by any possibility, but we are used to her throughout long observation.}
+      {Are you ready to listen to story of $0?}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {From the room of $0, suffocating silence is drawing near. },
+      {The silence encroaching the room is horribly broken by the creak of rocking chair.},
+      {Rocking chair, on unnaturally molded floor, is creaking.},
+      {Not being able to bear the stories of $0, wall and the floor in the room have cracks here and there.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Old stories of $0 is soaked with curse. Now people have to listen closely to her stories.},
+      {$0’s soul could have solitarily faded long time ago.}
+      {Her numerous stories had fascinated people, but all its left is curse in her stories.}
+      {Her stories are poisonous. It infiltrates surrounding people and lead them into unbearable world.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 is deaf and almost blind but recognizes the presence of #0.},
+      {All of the sudden, creaking stops. $0 starts reciting a phrase of a poem quietly.}
+      {$0 doesn’t look at employee #0. Employee #0 will look at her once she starts her story anyway.}
+      {Conversation is meaningless to $0. All she needs is an audience, #0.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {#0 has finished the work. #0 exits the chamber in hurry.},
+      {#0 exits the chamber after finishing the work. Her leftover solitary will be filled with stories.},
+      {Unique dismal atmosphere creeps into employee #0. #0 finishes the work and exits the chamber in hurry.}
+      {Before the everlasting story starts, #0 successfully exits the chamber.}
+      ]
+    </narration>
+
+    <narration action="special_ability_1">
+      [
+      {$0 initiates a conversation with #0.}
+      ]
+    </narration>
+
+    <narration action="special_ability_2">
+      [
+      {“Honey, do you want to listen to a story?"}
+      ]
+    </narration>
+
+    <narration action="special_ability_3">
+      [
+      {“Near by a woodpile, near by a woodpile,”}
+      ]
+    </narration>
+
+    <narration action="special_ability_4">
+      [
+      {“There you have met your father,”}
+      ]
+    </narration>
+
+    <narration action="special_ability_6">
+      [
+      {“You tore off his head and drank his blood.”}
+      ]
+    </narration>
+
+    <narration action="special_ability_7">
+      [
+      {“You killed him Friday, buried Sunday.”}
+      ]
+    </narration>
+
+
+
+    <narration action="panic">
+      [
+      {All of the sudden, employee finds him/herself holding a muddy shovel in hand. Coworkers reminded #0 that there is nothing in his/her hand, but #0 constantly screams.}
+      {#0’s mind couldn’t bear otherworldly story. #0’s brain has melted and he/she is now trapped in her stories eternally.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-01-12</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/OldLady</portrait>
+
+      <name openLevel ="1">
+       Old lady
+      </name>
+      
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        Piling Story, Piling deaths.
+      </specialName>
+
+      <openText>She was so talkative before. In the end, loneliness was the only listener.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [{It takes the shape of an old and feeble elderly person. When anyone enters its chamber, the abnormality would talk to that person.}]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {It differs from time to time but it always starts with ‘Child, child. Do you want to hear an old story?’  The story could be a lullaby, an unspecified poem, a common child story, or something entirely new.}
+      ]
+    </desc>
+
+
+    <desc id="3" openLevel="1">
+      [
+      {It knows every child story and does not stop telling stories until its listener leaves.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+
+      {Excerpt from Interview Log&#13;&#10;Employee F5049: “She may be the loneliest creature of all abnormalities. The creature is filled with loneliness. She is telling those tales to fill the void. A story needs a listener. When someone is in her room, she will try to fill that void. Of course, listening to her is very dangerous. She knows all the stories on earth and even the ones that don’t exist. Our mind wouldn’t be able to cope with all that. She could fry our brain in a mere instant”}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="Godoku">After completing the work of a Abnormality other than $0, $0's Qliphoth counter has decreased.</specialTip>
+      <specialTip openLevel="1" key="Attached">When $0's counter reaches zero, black shapes were formed inside the containment room.Under the condition that $0's Qliphoth counter decreases, we decided to call it "solitude".</specialTip>
+      <specialTip openLevel="1" key="NoAttached">When solitude was piled up, solitude stuck to the employee who entered the containment room. </specialTip>
+      <specialTip openLevel="1" key="NoAttached2">Employee #0 is exposed to a continuous White damage until the solitude was chipped off. Until it disappeared, the employee could not do any work.</specialTip>
+    </specialTipSize>
+
+  
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {There was some cracking along the floor.}
+        {Hair-raising screeching of wooden rocking chair filled the air.}
+        {I did not want to enter this house.}
+        {Because I don’t like to listen to a story.}
+        {Bugs were buzzing around here and there.}
+        {Something slimy popped as I set my foot on it.}
+        {I found it.}
+        {Every hole on its face, was swarming bugs.}
+        {I don’t want to stay here.}
+        {I want to get out.}
+        {Damp, nasty, awful. I can’t stand it anymore.}
+        <!--계속-->
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Get out." target="1" isAnswer="false" />
+        <node desc="Stay." target="2" isAnswer="true" message="You have succeeded to obtain final observation report on Old lady."/>
+      </select>
+      
+      <desc id="1" select="0">
+        [
+        {I turned around to get out of this place.}
+        {Once again, I bit lips in self-hatred while escaping.}
+        ]
+      </desc>
+      
+      <desc id="2" select="0">
+        [
+        {I stayed, bearing the unpleasantness.}
+        {She was so talkative before. In the end, loneliness was the only listener.}
+        {She called me, with her finger.}
+        {I am now ready to listen to her story.}
+        ]
+      </desc>
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {“Shall I tell you a story, my sweetheart?”}
+        {She told me stories.}
+        {And the stories built my world.}
+        ]
+      </angela>
+    </max>
+  </observe>
+</creature>

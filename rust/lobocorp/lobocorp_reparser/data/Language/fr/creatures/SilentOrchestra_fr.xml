@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100019">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {Le chef de $0 attend les musiciens.},
+      {Le chef de $0 est habituellement aussi calme que son Unité de Confinement.},
+      {Un chef d’orchestre est un magicien qui invoque la vie ; un chaman qui évoque les esprits.},
+      {De la ruine et la fracture, la plus belle des prestations commence.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 prépare la musique de l’apocalypse.},
+      {Il ne fait aucun doute que $0 soit le meilleur ensemble de l’entreprise.},
+      {La performance sensationnelle de $0 subjuguera tout le monde.}
+      ]
+    </narration>
+    <narration action="mid2"> 
+      [
+      {Les musiciens vivent pour les applaudissements du public lors du final.},
+      {La vie d’un interprète commence et se termine avec les applaudissements du public.},
+      {Une standing ovation est le plus bel honneur qu’un public puisse décerner au chef d’orchestre.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {#0, qui deviendra peut-être bientôt un membre du public de $0, a bientôt fini son travail.},
+      {#0 s’occupe de la tâche avec $0 sans aucun problème.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">T-01-31</codeNo>
+      <name openLevel="1">L’Orchestre Silencieux</name>
+      <portrait openLevel="1">Sprites/Unit/creature/silentOrchestra</portrait>
+      <riskLevel openLevel="2">ALEPH</riskLevel>
+      <openText>De la ruine et la fracture, la plus belle des prestations commence.</openText>
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {Une Anomalie qui aime l’art et essaie de faire en sorte que toute la corporation écoute sa musique.&#13;&#10;&#13;&#10;&lt;Extrait d’une Encyclopédie&gt;&#13;&#10;
+      Le chef d’orchestre ne fait pas que corriger les erreurs musicales ; il est responsable de la création du meilleur ensemble possible et commande la musique. Sa compétence peut être déterminée en moins de cinq minutes sur scène. Au moment où il donne le tempo, les interprètes lisent ses yeux, ses actions et son aura pour voir si cet individu est capable de les mener. Sans compréhension ou harmonie entre eux, le sens macroscopique de la partition ne peut être exprimé. De fait, il faut, pour un chef d’orchestre, une incroyable quantité d’influence, de leadership et d’éloquence… (Omis)}
+      ]
+    </desc>
+    <desc id="2" openLevel="2">
+      [
+      {&lt;1er Mouvement: Lent et Posé&gt;
+      Le chef d’orchestre commence à mener l’apocalypse.}
+      ]
+    </desc>
+    <desc id="3" openLevel="3">
+      [
+      {&lt;Mouvements 2 à 4 : Enthousiaste et Rapide&gt;
+      Les employés finissent par tout oublier et montrent une fervente adoration envers la symphonie. Leur émoi devient bientôt une folie les poussant à attaquer tous ceux qui sont à proximité. L’orchestre donne ensuite l’élan à la musique, menant ainsi tout le secteur à sa chute. Lorsque tous les interprètes sont réunis, la musique que personne ne peut entendre, mais tous peuvent écouter, commence.}
+      ]
+    </desc>
+    <desc id="4" openLevel="4">
+      [
+      {&lt;Final&gt;
+      &lt;b&gt;“La musique transpercera votre être tout entier.”&lt;/b&gt;}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="mood1">Lorsque le résultat du travail est Bon, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="1" key="mood2">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="1" key="escape">La musique qui est jouée par $0 quand il s’échappe est composée de 4 Mouvements. Tant que le morceau est joué, les employés qui l’écoutent subissent des dégâts BLANC pendant que la zone d’audition augmente.</specialTip>
+      <specialTip openLevel="2" key="movement">À chaque Mouvement, la faiblesse de $0 change. Le premier est faible aux dégâts Pâles, le second aux Noirs, le troisième aux Blancs et enfin le quatrième et dernier, aux Rouges. Lorsque la musique a atteint son climax, $0 est devenu immunisé à toutes formes d’attaques.</specialTip>
+    </specialTipSize>
+  </observe>
+  <etc>
+    <param key="movement1" index="1">
+      1er Mouvement, Adagio e Tranquilo : Lent et tranquille
+    </param>
+    <param key="movement2" index="2">
+      2nd Mouvement, Sostenuto : Soutenu, bien lié
+    </param>
+    <param key="movement3" index="3">
+      3ème Mouvement, Accelerando e Crescendo : De plus en plus vite, de plus en plus fort
+    </param>
+    <param key="movement4" index="4">
+      4ème Mouvement, Stringendo : Toujours plus vite, en serrant
+    </param>
+    <param key="movement5" index="5">
+      Finale con fuoco, ma non troppo : Avec ardeur et passion, mais pas trop
+   </param>
+  </etc>
+</creature>

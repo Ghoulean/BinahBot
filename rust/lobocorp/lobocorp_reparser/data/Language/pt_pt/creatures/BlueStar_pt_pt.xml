@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100058">
+
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+    
+    <narration action="start">
+      [
+      {Muitas vezes, alguns empregados têm vontade de se atirarem para a $0.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {A nossa $0 nasceu no abismo do desespero e agora flutua para um novo começo.},
+      ]
+    </narration>
+
+
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-03-93</codeNo>
+      <portrait openLevel ="0">Sprites/Unit/creature/BlueStar</portrait>
+
+      <name openLevel ="1">
+        Estrela Azul
+      </name>
+
+      <riskLevel openLevel ="1">
+        ALEPH
+      </riskLevel>
+
+      <openText>
+        Nós vamos nos encontrar novamente como estrelas.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Anuncio urgente para todos os funcionários da Lobotomy. Nós apoiamos qualquer programa que promova positividade para a companhia. Mas recentemente, recebemos relatórios sobre atividades em grupo que criam e alimentam teorias da conspiração. Devido as várias alegações, nós decidimos investigar.&#13;&#10;Segundo as regras da companhia, não é permitido o endeusamento e/ou culto às Anormalidades. Não é permitido 'idolatrar' nada deste lugar.&#13;&#10;Empregados que sejam apanhados a tentar entrar dentro de uma unidade de contenção sem autorização serão punidos.&#13;&#10;Se tu tens o impulso para te atirares para Anormalidade, isso significa que estás sobre a influência de uma certa "infeção". Muitas Anormalidades que são contidas neste lugar conseguem controlar e enganar o teu cérebro. Se isso acontecer, pare de trabalhar e vá procurar tratamento psicológico. Como todos conseguiram passar pelo treino básico, eu espero que ninguém seja idiota o suficiente para ser enganado.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Agora há uma lista negra. Aqueles que aparecerem na lista negra deverão ter 3 dias de tratamento mental que a corporação providência e serão punidos pelo seu Sephirah. Nós estamos a distribuir essa lista para chamar à atenção de todos o enorme número de empregados infetados que te cercam.&#13;&#10;Chamar a Emily, que invadiu uma unidade de contenção e se matou alguns meses atrás, de "mártir" será considerado como não estar a seguir as regras da companhia.&#13;&#10;Além disso, nós queremos dizer que estamos agradecidos ao Dylan que com a sua coragem resgatou a Sophie, que estava prestes a cometer suicídio na unidade de contenção.&#13;&#10;Se algum dos teus colegas começar a comportar-se assim, por favor denuncie-os ao vosso Sephirah.}
+    ]
+  </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {&lt;i&gt;Caro Dylan.&#13;&#10;Eu não creio que tu intencionalmente nos tramaste. Eu tenho a certeza que tu só estavas preocupado com a Sophie. Ela está contida agora. Eu ouvi que ela tentou fugir várias vezes, então ela foi amarrada à própria cama.&#13;&#10;Diz-me, é errado ter fé?&#13;&#10;Somos todos pecadores, e a Estrela Azul é o único lugar que aceita os pecadores. Nós purificamos dos nossos pecados lá.&#13;&#10;Nós vamos todos voltar para lá algum dia. É instintivo. Tu deves pensar que Emily, aquela que se atirou para a Estrela Azul, está morta, mas ela apenas voltou para o lugar onde ela devia estar. Emily é uma mártir. Ela tornou-se uma estrela eterna.&#13;&#10;Quando uma estrela se ergue, significa que há um novo começo. Não consegues ouvir o som da trombeta eterna?&#13;&#10;Quando se está perto da estrela tu podes ouvir aplausos e cantorias.&#13;&#10;Se todos nós voltarmos à aquele lugar, apenas a Estrela Azul sobrará.&#13;&#10;Nós vamos nos encontrar novamente como estrelas.&lt;/i&gt;}
+      ]
+    </desc>
+
+
+    <specialTipSize size="1">
+      <specialTip openLevel="1" key="1">Empregados com nível 3 de Moderação ou inferior são imediatamente sugados para a Anormalidade.</specialTip>
+      <specialTip openLevel="1" key="2">Quando um empregado com nível 4 de Prudência ou inferior termina o trabalho, o Qliphoth Counter diminui.</specialTip>
+      <specialTip openLevel="1" key="3">Quando o trabalho durou mais de 60, o Qliphoth Counter foi reduzido por 1, e o empregado que estava a trabalhar foi sugado para 'dentro' da Anormalidade e morreu.</specialTip>
+      <specialTip openLevel="1" key="4">Empregados com Moderação Level 2, Prudência Level 3 e inferior morreram imediatamente assim que encontraram a Anormalidade fora de cela de contenção.</specialTip>
+      <specialTip openLevel="1" key="5">Quando a Anormalidade se encontra fora da sua cela, todos os sons irão mudar para um tom baixo e a visiblidade será dificultada.</specialTip>
+      <specialTip openLevel="1" key="6">Quando a Anormalidade se encontra fora da sua cela, todos os empregados na instalação que entrem em pânico serão sugados para a Anormalidade e morrerão.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

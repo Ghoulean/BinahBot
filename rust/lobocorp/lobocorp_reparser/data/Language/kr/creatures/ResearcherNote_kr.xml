@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300002">
+
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-78</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ResearcherNote</portrait>
+
+      <name openLevel ="1">
+        미쳐버린 연구원의 수첩
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <openText>'다시 거듭나’ 라는 문장으로 마지막 장은 마쳐있다.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {낡은 수첩엔 알아보기 힘든 필기체가 가득하다. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {한 때 연구에 몰입하던 중 미쳐버린 이곳 연구원의 소지품이었다고 한다. 부분적인 해석만 이뤄졌는데 주로 이 곳에서 있었던 갖가지 실험들에 대한 내용이다. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {죄책감과 실험의 비윤리성에 대한 자기고백의 내용으로 시작하지만 끝으로 갈 수록 연구에 대한 광기와 와해된 문장들로 덮혀간다.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+
+      [
+      {‘다시 거듭나’ 라는 문장으로 마지막 장은 마쳐있다.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {직원은 소지하는 행위 만으로도 관찰력이 상승한다. 하지만 지적 탐구심을 충족시켜주지 못한 채 돌려놓는다면, 무능한 직원을 그대로 폭발시킨다. }
+      ]
+    </desc> 
+
+
+
+     <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">$0을 장착한 대상은 절제와 관련된 능력치가 크게 상승한다.</specialTip>
+      <specialTip openLevel="2" key="2">$0을 장착한 직후 30초 이내에 반납을 명령할 경우 착용자의 피부가 부풀어오르기 시작하며, 수 초 내에 착용자의 신체가 폭발한다.</specialTip>
+      <specialTip openLevel="3" key="3">$0을 장착한 이후 관리 작업을 진행하지 않은 상태에서 반납을 명령할 경우에도 착용자의 폭발이 확인되었다.</specialTip>
+      <specialTip openLevel="4" key="4">착용자가 일정량 이상의 체력 또는 정신력 피해를 받게되면 구역 전체를 감싸는 폭발이 착용자에게서 발생한다. 해당 폭발은 착용자 주위의 대상에게도 강한 Red 피해를 입혔다.</specialTip>
+      </specialTipSize>
+
+  
+
+  </observe>
+</creature>

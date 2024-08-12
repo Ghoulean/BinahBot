@@ -1,4 +1,4 @@
-use crate::DiscordSecrets;
+use crate::models::binahbot::DiscordSecrets;
 
 pub async fn get_discord_secrets(
     client: &aws_sdk_secretsmanager::Client,

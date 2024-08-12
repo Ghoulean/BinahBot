@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id ="100032">
+
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 總是等待著合約. 等待著聞到鮮血的那一刻.},
+      {如果你看見那頭濃毛怪獸的話務必要告訴我. 當那該死的東西被我砍下頭的那天到來時, 這點舉手之勞的價格我一毛都不收. }
+      {事實上, $0 在鎮壓異常上比起員工還要厲害的多.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 花費大量的時間在磨利她的斧頭上. },
+      {$0 想要找個地方來練習她的射擊技巧. 但員工們強烈的反對了這事.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {在她戰鬥時你能看到飛舞的兜帽底下那大小參差的傷疤.},
+      {許多員工都想過 $0 是怎麼弄出那些傷疤的. 但沒人有膽去過問.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {當它終於見到了那頭狼的時候, 一切都結束了.},
+      {戰鬥持續了很長一段時間, 而她的厭惡正逐漸加深.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">F-01-57</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/RedHood</portrait>
+
+      <name openLevel ="1">
+       小紅帽雇傭兵
+      </name>
+      
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>我會把他的頭掛在我的床頭上. 只有這樣我才能不受夢魘侵擾的安然入睡.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {“我是專家. 我的價碼通常都所費不貲, 但是我會給你一些折扣, 只有一個條件. 如果你看見那頭怪物的話, 把那狡猾的傢伙交給我. 我會把他的頭掛在我的床頭上. 只有這樣我才能不受夢魘侵擾的安然入睡."}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {穿戴著矚目紅色兜帽的女性戰士. 她那磨損, 無數補丁的兜帽上繡著一個縮寫, 卻因為受到太多損傷而無法辨識. 謠言說她的兜帽曾是白色的, 卻因為滲入了太多鮮血而變成紅. → 這是不正確的. 校正它, Michael! &#13;&#10; 在來到這座設施之前, 她是一位傭兵, 居無定所到處徘徊. 她從不相信其他人, 且對戰鬥有極大的愛好. 她對露出她的外表感到非常討厭, 還有看見鏡子. 從她的行為中能觀察到許多偏執的跡象. &#13;&#10; 如果有任何人逃脫的話, 她會有非常強烈的欲望去解決那些緊急狀況. 她稱呼那為 “契約”. 既然這種行為在管理過程中能有所幫助, 公司建議將它作為使用.&#13;&#10;※ 以下為所有層級的員工必讀的.&#13;&#10;如果她見到了 “又大又壞的狼...大概啦”, 她會失去控制. 她將經歷極端的人格轉變, 隱匿障礙, 以及其他導致嚴重附帶損害的心理危險疾病. 因此, 在 小紅帽雇傭兵 工作時務必極其小心. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="3">
+      [
+      {我們的戰鬥不會有任何的勝利. 我腦袋裡只有想著我該用多殘忍的方式來殺掉那頭混蛋. 因此, 我不會祝酒. 我不會以任何方式來慶祝. 在花園裡採花的習慣變成打磨斧頭的時候, 那時我 15 歲.  }
+      ]
+    </desc>
+
+
+    <specialTipSize size="6">
+      <specialTip openLevel="0" key="1">要求 $0 去鎮壓突破收容的異常或是其他的問題是個不錯的方法. 然而, 提出要求是要付出代價的.</specialTip>
+      <specialTip openLevel="1" key="2">當在 F-02-58 房間裡工作的員工 #0 完成了工作, 逆卡巴拉計數器減少了.</specialTip>
+      <specialTip openLevel="2" key="3">逆卡巴拉計數器在每次有異常突破收容時都會減少. 然而, 它對突破收容的 O-02-56 沒有反應.</specialTip>
+      <specialTip openLevel="2" key="4">當 $0 的收容室附近發出 F-02-58 的嚎叫聲時, 逆卡巴拉計數器歸零了.</specialTip>
+      <specialTip openLevel="2" key="5">當 $0 接觸到 F-02-58 時, $0 的敵意增加了.</specialTip>
+      <specialTip openLevel="2" key="6">在 $0 以外的人鎮壓 F-02-58 時, $0 陷入狂暴並開始胡亂攻擊周遭的目標.</specialTip>
+    </specialTipSize>
+
+   
+
+  </observe>
+</creature>

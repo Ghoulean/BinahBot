@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300108">
+
+    <narration action="move">
+      #0正在前往“$0”的收容单元并准备执行任务
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-97</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/PromiseAndFaith</portrait>
+
+      <name openLevel ="1">
+        古老的信念与承诺
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <openText>
+        被辜负的心，长眠于哀伤的谷底，&#13;&#10;渐渐被世人所遗忘...
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {这个异想体是一颗神秘的大理石球体，它被悬挂在收容单&#13;&#10;元的天花板上。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {我们都知道，在岁月的长河中，曾有过无数的承诺，与信&#13;&#10;念...}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {然而它们换来的，唯有深深的失望，与背叛...}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {被辜负的心，长眠于哀伤的谷底，渐渐被世人所遗忘...}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {如果你原本就没有期待着回报，那么或许能得到意料之外&#13;&#10;的收获吧？}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">员工可以使用“$0”来强化自己的E.G.O武器，强化时&#13;&#10;需要花费少量的能源。</specialTip>
+      <specialTip openLevel="2" key="2">强化后的E.G.O武器会具有更高的攻击力。</specialTip>
+      <specialTip openLevel="2" key="3">然而，在强化过程中，E.G.O武器有小概率被毁坏。</specialTip>
+      <specialTip openLevel="2" key="4">强化后的E.G.O武器会在下一天失去所有加成，恢复原本的攻击力。</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

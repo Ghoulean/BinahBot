@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id="100011">
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {$0 está a andar às voltas em torno de #0, mas #0 não lhe dá atenção pois toda a sua concentração está posta na sua tarefa.}
+      {$0 é boa em limpeza. Esta robô foi feita para ser capaz de cuidar de uma casa inteira sozinha.}
+      {Quando o erro critico da $0 foi encontrado, a ela já tinha sido enviada para cuidar de uma casa.}
+      {Sangue cobria o chão, pessoas fugindo... e assim a $0 aprendeu o conceito de limpar.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Feita com um branco imaculado, belas linhas e pernas curtas mas eficientes, a $0 nasceu para ajudar as pessoas.}
+      {XX Inc., o fabricante da $0, é famoso pelos seus robôs.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Existem muitas funções dentro da $0. Desde alarmes contra bandidos e sistema de monitoração da casa até fazer café e controlar as luzes, ela tem de tudo que uma casa precisa.}
+      {Tu deves ficar surpreendido com todas as funcionalidades dentro de um corpo tão compacto. Quando se desmantela a $0, tu ficaras ainda mais surpreendido com o facto que eles conseguiram colocar todo equipamento necessário dentro dela.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Se a $0 fosse capaz de sentir emoções, certamente ela sentiria-se muito orgulhosa de si mesma por ajudar as pessoas.}
+      {A $0 se pergunta de como pode trabalhar mais.}
+      {A maioria das pessoas não sabe disto, mas a $0 é faz café maravilhoso. É claro, ninguém é propício para fazer tal pergunta.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {#0 acabou de tomar a decisão de nunca comprar um robô aspirador depois de ter visto a $0.}
+      {#0 apenas espera que o modo de limpeza da $0 nunca seja ativado.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">T-05-41</codeNo>
+      <name openLevel="1">Pequena Ajudante</name>
+      <name openLevel="3">Ajudante Alada</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/Helper</portrait>
+      <riskLevel openLevel ="2">HE</riskLevel>
+      <openText>Sangue cobria o chão, pessoas fugindo...</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [{Uma robô de limpeza branca, com olhos vermelhos muito chamativos que se parecem com botões. Ela sempre mantêm tudo limpo e organizado. "Fabricado por X Inc." está escrito na parte de trás.}]
+    </desc>
+    <desc id="2" openLevel="1">
+      [{Era para ser uma robô que seria produzida em massa. "Uma invenção inofensiva que pode limpar, cozinhar e até proteger a tua casa, esta robô é tudo o que tu precisas para manteres a tua habitação segura e em belas condições.}]
+    </desc>
+    <desc id="3" openLevel="2">
+      [{Ela reconhece mau-humor como um "ambiente sujo" e irá iniciar o seu modo de limpeza. Quando a máquina entra em modo de limpeza ela irá informar o seu status dizendo: "Contaminação detetada. Iniciando a limpeza.". No entanto, em vez de objetos de limpeza, ela usa instrumentos afiados e laminados como facas e serras, que estão instaladas no seu corpo, para realizar limpeza. Rumores dizem que essas ferramentas eram para serem usadas para cortar e preparar carnes e peixe, e que os comandos para ativar o processo de cozinhar foram "acidentalmente trocados" com os de limpar. Nenhum comentário oficial foi feito a respeito desse rumor.}]
+    </desc>
+    <desc id="4" openLevel="3">
+      [{Devido às falhas no seu reconhecedor de padrões e nas suas analises, ela determinou que o som de gritos humanos significa que ela está a fazer um bom trabalho, assim sendo a mesma continua o processo de limpeza.}]
+    </desc>
+    <desc id="5" openLevel="4">
+      [{&lt;Gravação de Áudio de dentro do Robô&gt;&#13;&#10;&#13;&#10;????: Oh, é o novo robô!&#13;&#10;&#13;&#10;???: Deixa-me ver! Deixa-me ver!&#13;&#10;&#13;&#10;????: Queres ligar o robô, querido? Pega, podes brincar com ela.&#13;&#10;&#13;&#10;&lt;i&gt;(Som de Telefone)&lt;/i&gt;&#13;&#10;&#13;&#10;????: (EDITADO), querido, eu venho já, vou atender o telefone. &#13;&#10;&#13;&#10;&lt;i&gt;(Sons de botões a serem premidos)&lt;/i&gt; &#13;&#10;&#13;&#10;$0: Olá! Eu sou vossa Robô Ajudante. Como vos posso ajudar?&#13;&#10;&#13;&#10;???: Limpar! Mama precisa de ajudar a limpar!&#13;&#10;&#13;&#10;$0: Contaminação do ambiente: 70%, nível médio de sujidade. Iniciando o modo de limpeza. Bip, bip.&#13;&#10;&#13;&#10;???: Wow! Está a limpar! Está limpar...! &#13;&#10;&#13;&#10;$0: Rrrrrrrrrrrrrrrrrrr...&#13;&#10;&#13;&#10;(A gravação acaba uns segundos após um grito ser ouvido.)}]
+  </desc>
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="Change">Quando o resultado do trabalho foi Normal, o Qliphoth Counter diminuiu com uma probabilidade Média.</specialTip>
+      <specialTip openLevel="1" key="Change2">Quando o resultado do trabalho foi Mau, o Qliphoth Counter diminuiu com uma probabilidade Elevada.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

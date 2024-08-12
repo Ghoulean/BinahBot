@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300006">
+
+    <narration action="move">
+      #0 designated to $0's containment room.
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-82</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Shelter</portrait>
+
+      <name openLevel ="1">
+        Shelter from the 27th of March
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+      <openText>
+        It literally becomes, "The safest place on Earth."
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {A shelter that fully shields from the outside world, including light.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {The shelter still remembers that day.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {The P company wished to build the safest place on Earth. As such, the interior housed a large amount of long lasting supplies, which would allow anyone who stayed inside to survive for a very long period of time.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Thanks to the shelter, the selected refugees were shielded from the ocean of screaming and bloodshed.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {But the shelter, while perfectly safe inside, alters the perception of the outside to be even more hopeless. It literally becomes, "The safest place on Earth."}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">The subject who enters the $0 becomes Immune to all types of damage. (However, the effect does not apply to damage caused by O-09-91.) Also, their HP and SP will slowly heal from the moment they enter the $0.</specialTip>
+      <specialTip openLevel="2" key="2">If the subject enters the $0 and was being pursued, they will become undetectable to the pursuer.</specialTip>
+      <specialTip openLevel="3" key="3">If a subject remains inside the $0 for longer than 30 seconds, the Cliport counter of Abnormality inside the facility will become 0. Such a phenomenon will repeatedly happen around other Containment Units until the subject leaves the $0.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

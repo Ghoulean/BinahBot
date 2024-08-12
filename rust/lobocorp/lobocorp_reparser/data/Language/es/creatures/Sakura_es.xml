@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id="100059">
+
+    <narration action="move">
+      #0 va a entrar en la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="start">
+      [
+      {La cámara de contención de $0 es brillante como si hubiera una fuente de luz incandescente.},
+
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Los pétalos caerán como gritos cuando todo termine.},
+
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {Cuando la belleza está en su apogeo, llega el ritual del fin.},
+      ]
+    </narration>
+
+
+    <narration action="mid3">
+      [
+      {Todos los que lo miran en este lugar sin sol sienten la paz pura.},
+      ]
+    </narration>
+
+
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-04-100</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Sakura</portrait>
+
+      <name openLevel ="1">
+        Tumba de los Flores de Cerezo
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>Cuanta más sangre tiene, más hermoso es. </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Es un árbol parado en medio de la cámara de contención perteneciente de la familia Prunus serrulata del género Prunus. Nunca se marchita, incluso si no se le da ningún nutriente.&#13;&#10;Algunos empleados descansan junto a este árbol.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Pansy: Viste esa nueva anormalidad? Creo que estás a cargo de ello.&#13;&#10;Xavier: Sí, lo vi. Era solo un árbol con algunos capullos a lo largo de las ramas. No creo que vayan a florecer sin luz solar. &#13;&#10;Pansy: Comenzaste la observación todavía? &#13;&#10;Xavier: Nah, apenas lo voy hacer ahora.&#13;&#10;Pansy: Esta bien, cuídate.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Pansy: Oye, mucho tiempo sin verte. Cómo te va?&#13;&#10;Xavier: Oye, escucha, esa anormalidad de la que hablamos antes, no creo que sea hostil para nosotros. Y sus brotes empezaron a florecer. Fue extraño mirarlos. Sentí que la primavera ha llegado por primera vez en este lugar.&#13;&#10;Pansy: Estas bien? Por lo general, cualquier tipo de cambio es un mal presagio de algo catastrófico aquí.&#13;&#10;Xavier: Son solo unas flores. Pero gracias por preocuparte por mi.}
+      ]
+    </desc>
+
+
+    <desc id="4" openLevel="3">
+      [
+      {Pansy: Hola de nuevo! Como va el trabajo?&#13;&#10;Xavier: Las flores siguen floreciendo. Creo que va a llenar toda la cámara de contención. Por qué no vienes y lo ves? Es realmente bello. Nunca me cansare de eso.&#13;&#10;Pansy: Me encantaría, pero no puedo. Estoy ocupado últimamente. &#13;&#10;Xavier: Enserio? Qué lástima… Es magnífico para mirarlo.&#13;&#10;Pansy: Hmm…estás bien? Has estado cometiendo muchos errores estos días. También te he estado viendo como te distancias de nosotros. &#13;&#10;Xavier: No es nada. Tengo que volver. He estado haciendo un bosquejo del árbol. Te mostraré primero cuando esté completo. }
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Grabación sonora de la sesión de asesoramiento&#13;&#10;…Si, He estado mejor. También he mejorado en el manejo de las anormalidades. Fui a la cámara de anormalidad $0 como dijiste, y me hizo sentir extrañamente increíble. Nunca creí que las flores dieran una buena aura… pero supongo que era verdad.&#13;&#10;Pero es una pena que no pueda ver esos cerezos en flor con Xavier. Vi su bosquejo mientras revolvía sus cosas.&#13;&#10;El árbol real era mucho más hermoso. Fue más magnífico que cómo me lo contó. Es una tragedia que desapareció antes de ver esa vista. Si encuentra alguna anormalidad sospechosa, investigue a fondo.&#13;&#10;… Si, estoy bien ahora. Sacudí ese sentimiento.&#13;&#10;Las flores de cerezo cayeron después de que vi.&#13;&#10;Pero vi los brotes subiendo de nuevo la última vez que lo vi.&#13;&#10;… Entonces puedo supervisar esta anormalidad?&#13;&#10;No, no es gran cosa. Solo quiero ver esas flores en plena floración de nuevo.&#13;&#10;Si, gracias.}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="4">
+      [
+      {Noticia&#13;&#10;Nos han informado sobre un aumento alarmante de empleados que quieren ver $0.&#13;&#10;Esta fiebre es probablemente causada debido a la ausencia de paisajes naturales en esta instalación. &#13;&#10;Sin embargo, no creo que tengamos que hacer una regla en contra. Descubrimos que el índice de contaminación mental de los empleados se reduce al observar $0.&#13;&#10;La razón detrás de esto no es importante. Puede ser “floras dan un buen aura” para todo lo que me importa.&#13;&#10;Lo que es seguro es que $0 cautiva a los empleados, y no saben qué hay debajo de sus raíces.&#13;&#10;Te diste cuenta de que sus flores de cerezo son sorprendentemente carmesí y su belleza inigualable se debe a su color?&#13;&#10;Cuanta más sangre tiene, más hermoso es. Los empleados, que son ajenos a ella, son atraídos hacia ella una y otra vez…&#13;&#10;Solo callate por ahora. Es como funcionan las cosas en este lugar.}
+      ]
+    </desc>
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Cuando el resultado del trabajo fue bueno, el Contador Qlifot disminuye.</specialTip>
+      <specialTip openLevel="1" key="2">Cuando el empleado #0 entra en pánico en la sala de contención, se reducirá el contador Qlifot</specialTip>
+      <specialTip openLevel="1" key="3">Cuando el contador Qlifot alcanza a 0, algunos empleados al azar en la instalación se movilizaran a la unidad de contención de $0 de manera insconciente. (Este estado se designa como “Cautivado”.)</specialTip>
+      <specialTip openLevel="2" key="4">Cuando un empleado cautivado llegó a la cámara de contención, fueron absorbidos por el árbol. </specialTip>
+      <specialTip openLevel="2" key="5">Después de intentar conversar continuamente con un empleado que había sido encantado por $0, El empleado parecía volver a la normalidad otra vez. Cuando los empleados ya no estaban cautivados, el Contador Qlifot se restaura al máximo.</specialTip>
+      <specialTip openLevel="3" key="6">Después de absorber a un empleado, cuando otro empleado comenzó un trabajo sobre la anormalidad, su Contador Qlifot se restaura al máximo. Además, sana la salud física y mental de todos los empleados en las instalaciones.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+
+
+
+</creature>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등0000000000000000000
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id="100052">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {There’s no sunlight to be found inside this facility, yet $0 delicately dries their own skin.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {The City encouraged $0 to keep smiling, but they who were too shy to reveal themself instead chose to...}
+      ]
+    </narration>
+  </info>
+  <observe level="3">
+    <collection>
+      <codeNo openLevel="0">O-01-92</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/ShyThing</portrait>
+      <name openLevel="1">
+        Today’s Shy Look
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>It's a good day! Are you still shy today?</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {It's a good day! Are you still shy today?}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {One sunny day, when they were sincerely drying the laundry in the yard, sadness struck suddenly.&#13;&#10;&#13;&#10;“In our city, sacrifices for corporates must be highly praised. Honor for their deaths. No reason for you to cry either. Rather, you should be glad.”&#13;&#10;“What's with that look on your face? That kind of facial expression isn't recommended in our city.”&#13;&#10;“Goodness, why are you making such a face? You're making others feel gloomy too. Please be more considerate, you don't live in this world alone after all.”&#13;&#10;“You are very poor at expressing your emotions. You must be quite shy.”&#13;&#10;“Hey, try to look more pleased, that way those living in the Outskirts will be more envious of us.”&#13;&#10;“Put a bigger smile on your face! It's not that hard.”&#13;&#10;“Next time, try to express yourself more clearly, it's very important to express oneself in this society.”&#13;&#10;&#13;&#10;One sunny day, just like that day they sincerely dried the laundry, they dried their own skin.}
+    ]
+  </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Everyone was finally satisfied when they showed a bright smile. If they met people who asked what was wrong, they would respond: “I'm just shy, that's all. Just shy...”}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {If one tries to look at the face behind the skin, the result will not be pretty. The space behind their skin is the only personal space they have left. Leaving it uninvaded is the last bit of generosity the City can offer.}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">This Abnormality changes their facial expression at certain intervals. However, when faced with another person, their changes halt.</specialTip>
+      <specialTip openLevel="1" key="2">From smiles to anger, they have 5 levels of facial expression dubbed Faces 1, 2, 3, 4, and 5.</specialTip>
+      <specialTip openLevel="1" key="3">No special circumstances came from Face 3. Face 2 showed an increased success rate and the employee healed SP when work was successfully completed.</specialTip>
+      <specialTip openLevel="1" key="4">Face 4 showed 150% damage dealt during work, and the success rate declined.</specialTip>
+      <specialTip openLevel="1" key="5">Face 5 showed 200% damage dealt during work, and the success rate drastically declined.</specialTip>
+      <specialTip openLevel="1" key="6">Face 1 showed 50% damage dealt during work, and the success rate increased. In addition, each time work was successful, the employee’s HP and SP recovered.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

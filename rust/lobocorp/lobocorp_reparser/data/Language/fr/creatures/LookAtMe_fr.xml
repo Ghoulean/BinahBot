@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id="100049">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {L’avertissement de ne pas regarder $0 a rendu de nombreux employés curieux et mené à beaucoup d’accidents atroces.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Si tu as l’impression d’être observé sans arrêt, même lorsque tu es seul, il est déjà trop tard.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-05-76</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/LookAtMe</portrait>
+      <name openLevel="1">
+        Schadenfreude
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <openText>Quelqu’un épie incessamment à travers la serrure de la machine.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Une Anomalie mécanique pouvant se déplacer d’elle-même.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Quelqu’un épie incessamment à travers la serrure de la machine. Il cligne de l’œil mais ne le ferme jamais. Sa fonction et son sujet de fixation restent inconnus.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Après plusieurs expériences, il a été découvert que, lorsqu’un ou plusieurs employés regardent l’Anomalie, leur état empire progressivement.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;Expérience D-002&gt;&#13;&#10;
+      Un employé a été envoyé chez $0 en couvrant ses yeux avec un tissu fait d’un fin matériau opaque. Le test devait être conduit de telle façon que le tissu obstruait intégralement son champ de vision. Après être entré dans l’Unité de Confinement de l’Anomalie, il s’est tourné vers l’Anomalie pendant 10 secondes. Aucune réaction.&#13;&#10;&#13;&#10;&lt;Expérience D-003&gt;&#13;&#10;
+      Comme pour l’Expérience D-002, un employé a été envoyé avec ses yeux recouverts. Le tissu était identique au précédent, mais permettait de discerner quelques silhouettes. Après être entré dans l’Unité de Confinement de l’Anomalie, il s’est tourné vers l’Anomalie pendant 10 secondes. Après 5 secondes, elle s’est agressivement approchée de l’employé. L’expérience a été interrompue.&#13;&#10;&#13;&#10;&lt;Expérience D-004&gt;&#13;&#10;
+      Cette fois-ci, un employé aveugle* a été envoyé sans aucune protection. Après être entré dans l’Unité de Confinement de l’Anomalie, il s’est tourné vers l’Anomalie plus de 30 secondes. Il n’y a eu aucune réaction.&#13;&#10;
+      &lt;i&gt;^ Veuillez vous débarrasser du sujet utilisé pour D-004 immédiatement.&lt;/i&gt;}
+    ]
+  </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Note :
+      Lorsque vous entraînez des employés qui n’ont jamais travaillé avec cette Anomalie auparavant, même si cela paraît évident, rappelez-vous de leur dire de ne jamais regarder l’Anomalie. Si qui que ce soit émet des doutes à ce sujet, expliquez-leur ce qui est arrivé à l’employée Yumi, qui n’a pas suivi les instructions et regardé directement l’Anomalie.&#13;&#10;&#13;&#10;Note 2 :
+      L’employée Yumi ne peut désormais plus s’occuper de cette Anomalie. Elle affirme qu’elle est constamment surveillée, mais c’est une accusation absurde et nous pensons qu’elle souffre de délires sévères. La majorité de ce qu’elle dit est insensé, mais pour faire simple, elle déclare que quelqu’un l’observe sans arrêt, qu’elle mange ou qu’elle aille aux toilettes. De plus, dès qu’elle voit quelque chose comme une serrure ou une fissure sur une porte, elle devient hystérique et essaie de combler chaque trou qu’elle peut voir. Mais le plus irritant, c’est que ses niveaux de corruption mentale sont normaux, ce qui rend difficile la tâche de s’en débarrasser normalement. Remplacez-la vite, s’il vous plaît…&#13;&#10;&#13;&#10;Note 3 :
+      Oh, notre requête précédente a été résolue. L’employée Yumi a été retrouvée dans sa chambre. Elle a recouvert tous les trous de sa chambre avec du scotch, ventilations comprises. Elle s’est même arraché les yeux en utilisant un stylo. Ses délires semblent s’être résolus par la même occasion ; elle ne marmonne plus de non-sens… Cependant, je me demande pourquoi vous voulez encore envoyer un employé aveugle dans cette Unité de Confinement. Je ne sais pas quel est le sujet de l’Expérience D-004, mais je ne pense pas qu’il lui fera beaucoup de bien...}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Tout travail avec $0 doit avoir lieu tandis que l’Unité de Confinement est hors du champ de vision de l’Administrateur.</specialTip>
+      <specialTip openLevel="1" key="2">Tant que l’Unité de Confinement de $0 est visible pendant 5 secondes ou plus durant le travail, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="1" key="3">Tant qu’il était hors du champ de vision de l’Administrateur, $0 est resté immobile. Veuillez le prendre en compte en cas de répression.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

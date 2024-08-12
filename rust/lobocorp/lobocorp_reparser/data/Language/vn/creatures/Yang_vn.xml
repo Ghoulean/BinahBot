@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="300109">
+
+    <narration action="move">
+      #0 is going into $0's containment unit to begin the task.
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-07-103</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Yang</portrait>
+
+      <name openLevel ="1">
+        Yang
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>However, the world has more than warmth and light.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Its other half is missing. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {It decreases the mental damage of the wearer. Because of this, it is called “Pendant of Good” by the employees. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      Those who come near it wanted its energy. They said it clarifies their minds and give warmth to their hearts. Also, they feared the black pendant. “I hope every abnormality is helpful like this one.” They said, while sighing. It couldn’t understand. It never intended to help others. It was just the way it worked.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {However, the world has more than warmth and light.&#13;&#10;The sky exists because the land does, darkness exists because light does. Life exists because death does, hope exists because despair does.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {The black carp swims towards the harmony and the white carp swims towards the chaos.&#13;&#10;What will happen when the two carps meet?}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">$0’s wearer gains resistance against White damages. However, when O-05-102 was not in the facility, nothing happened.</specialTip>
+      <specialTip openLevel="2" key="2">$0 periodically healed the wearer’s mental health.</specialTip>
+      <specialTip openLevel="2" key="3">&lt;Caution&gt; Do not put $0’s wearer in the containment chamber of O-05-102.</specialTip>
+      <specialTip openLevel="2" key="4">&lt;Caution&gt; Be noted that when O-05-102 escapes, $0 also escapes. (It is confirmed that the same problem occurs even when an employee is wearing one of them.)</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    5.28
+  -->
+  <info id ="100047">
+
+
+    <narration action="move">
+      #0 designado a la sala de contención de $0 para el trabajo.
+    </narration>
+
+    <narration action="start">
+      [
+      {Sueña con un feliz sueño de quedarse sin compañía en total libertad.},
+      ]
+    </narration>
+
+
+    <narration action="mid1">
+      [
+      {Como cuando todos quisieron, $0 pueden vivir aquí para siempre.},
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-02-71</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Shark</portrait>
+
+      <name openLevel ="1">
+        La Corriente de Ensueño
+      </name>
+
+
+      <riskLevel openLevel ="2">
+        WAW
+      </riskLevel>
+
+
+
+      <openText>Dile al niño que hoy va a ser un caramelo con sabor a uva. Es su favorito.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      { Solo... sigue mostrando ese libro. Oh, debe ser una página con una foto ya que no puede leer las palabras.&#13;&#10;Si el experimento se prolonga un poco más, intente llamar su atención, como imitar sonidos.&#13;&#10;No necesito explicar cada detalle, verdad?}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Sí, lo sé. Es tan triste y lamentable. También siento las mismas emociones, gracias.&#13;&#10;Pero, en consecuencia, este lugar permitió su supervivencia y será bueno dejar que continúe viviendo aquí, independientemente de la forma que tome. Si piensas lo mismo,&#13;&#10;será mejor para todos nosotros que dejemos esa culpa que están sintiendo ahora.&#13;&#10;....&#13;&#10;Dile al niño que hoy va a ser un caramelo con sabor a uva. Es su favorito.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Algunos extractos de la enciclopedia&gt; Contrariamente a la creencia popular, la mayoría de los tiburones son de tamaño pequeño. Muy pocas especies dañan a los humanos... No importa lo que diga la gente, el aspecto más distintivo de un tiburón es su fuerte mandíbula y dientes. La mandíbula de un tiburón puede aplicar una fuerza intensa, aproximadamente 20 veces la de un humano adulto. Además, su visión y su sentido del olfato son súper avanzados, lo que le permite localizar fácilmente a sus presas. Así es como los tiburones sobrevivieron como los depredadores más grandes del océano.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Los padres abandonaron por mucho tiempo al niño.&#13;&#10;Les dijeron que el niño no sobreviviría más de 2 años debido a la infección. Los investigadores fueron la madre y el padre del niño. Aprendió a arrullar y caminar allí. Aunque no puede hablar correctamente, el niño prefiere el océano. En lugar de visitar el océano, el niño recibió caramelos que le permitieron ver el océano.&#13;&#10;Muchas noches y días coloridos pasaron.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {El niño, que se pensaba que iba a morir dentro de 2 años, logró vivir durante mucho tiempo. Continuó escuchando y obedeciendo, amaba los dulces dulces y amaba este lugar como su hogar. Desafortunadamente, el niño solo podía correr temblorosamente dentro de un pequeño laboratorio en lugar de un campo de hierba bajo el sol. Su única preocupación era qué tipo de dulces comeria mañana.}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Cuando #0 cae en pánico durante el trabajo, el Contador Qliphoth se reduce.</specialTip>
+      <specialTip openLevel="1" key="2">Cuando un empleado con Templanza Nivel 1 terminó el trabajo, el Contador Qlifot se reduce.</specialTip>
+      <specialTip openLevel="2" key="3">El líquido de $0 genera en una sección específica mientras escapaba redujo drásticamente la velocidad de movimiento de los empleados y causó daño rojo con el tiempo. Sin embargo, el SM de los empleados en la sección se cura con el tiempo.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

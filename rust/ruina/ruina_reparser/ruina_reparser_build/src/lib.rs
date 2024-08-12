@@ -1,6 +1,7 @@
 use std::collections::HashMap;
 use std::path::PathBuf;
 
+use game_objects::common::ChapterMap;
 use paths::BATTLE_SYMBOL_LOCALIZE_DIR;
 use paths::CARD_EFFECT_LOCALIZE_DIR;
 use paths::COMBAT_PAGE_LOCALIZE_DIR;
@@ -68,11 +69,16 @@ pub fn build_reparser() -> String {
         collectability_toml_str
     ).unwrap();
 
-    let abno_pages = reparse(ABNO_PAGE_PATH_STR, &collectability_toml_map, reserialize_abno_pages);
-    let battle_symbols = reparse(BATTLE_SYMBOL_PATH_STR, &collectability_toml_map, reserialize_battle_symbols);
-    let combat_pages = reparse(COMBAT_PAGE_PATH_STR, &collectability_toml_map, reserialize_combat_pages);
-    let key_pages = reparse(KEY_PAGE_PATH_STR, &collectability_toml_map, reserialize_key_pages);
-    let passives = reparse(PASSIVE_PATH_STR, &collectability_toml_map, reserialize_passives);
+    let chapter_toml_str = include_str!("../data/chapter.toml");
+    let chapter_toml_map: ChapterMap = from_str(
+        chapter_toml_str
+    ).unwrap();
+
+    let abno_pages = reparse(ABNO_PAGE_PATH_STR, &collectability_toml_map, &chapter_toml_map, reserialize_abno_pages);
+    let battle_symbols = reparse(BATTLE_SYMBOL_PATH_STR, &collectability_toml_map, &chapter_toml_map, reserialize_battle_symbols);
+    let combat_pages = reparse(COMBAT_PAGE_PATH_STR, &collectability_toml_map, &chapter_toml_map, reserialize_combat_pages);
+    let key_pages = reparse(KEY_PAGE_PATH_STR, &collectability_toml_map, &chapter_toml_map, reserialize_key_pages);
+    let passives = reparse(PASSIVE_PATH_STR, &collectability_toml_map, &chapter_toml_map, reserialize_passives);
 
     let abno_page_locales = reparse_locale(ABNO_LOCALIZE_DIR, reserialize_abno_locales);
     let battle_symbol_locales = reparse_locale(BATTLE_SYMBOL_LOCALIZE_DIR, reserialize_battle_symbol_locales);
@@ -97,7 +103,7 @@ pub fn build_reparser() -> String {
     .join("\n")
 }
 
-fn reparse(path_str: &str, collectability_map: &CollectabilityMap, reserializer: fn(&ParserProps) -> String) -> String {
+fn reparse(path_str: &str, collectability_map: &CollectabilityMap, chapter_map: &ChapterMap, reserializer: fn(&ParserProps) -> String) -> String {
     let parser_props = ParserProps {
         document_strings: read_xml_files_in_dir(&PathBuf::from(path_str))
             .into_iter()
@@ -105,7 +111,8 @@ fn reparse(path_str: &str, collectability_map: &CollectabilityMap, reserializer:
                 x.1
             })
             .collect::<Vec<_>>(),
-        collectability_map
+        collectability_map,
+        chapter_map
     };
 
     reserializer(&parser_props)

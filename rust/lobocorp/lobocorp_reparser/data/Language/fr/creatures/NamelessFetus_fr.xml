@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100017">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {Le $0 est tellement prématuré que ses organes ne sont même pas encore proprement formés.},
+      {Le $0 suce son pouce et pleure de temps en temps.},
+      {Il y a une espèce de longue cicatrice qui traverse l’abdomen du $0.},
+      {Si vous entendez un enfant pleurer, cela veut dire que l’un d’entre nous va bientôt nous quitter.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Contrairement aux autres bébés, le $0 ne gémit ni ne cherche sa mère.},
+      {Recouvert d’un mucus non identifiable, le $0 est complètement différent des autres bébés, qui eux sont enroulés dans des couvertures chaudes, gazouillant et rêvant joyeusement.},
+      {Autour du $0, des objets méconnaissables mais semblables à des cordons ombilicaux sont éparpillés de manière désordonnée. Bien qu’il s’agisse d’une salle dans laquelle vit un “bébé”, elle est sinistrement silencieuse, dénuée de gémissements ou de pleurs.},
+      {#0 est entré dans l’Unité de Confinement mais le $0 ne réagit pas à son arrivée comme le feraient les autres bébés.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {De grandes pupilles noires fixent le vide. Elles ne clignent même pas.},
+      {La seule chose qui fait que le $0 ressemble aux bébés normaux, c’est qu’il suce une partie de son corps (que nous supposons être son pouce) comme s’il avait faim, révélant un lugubre désir.},
+      {De temps à autres, le $0 “babille” comme n’importe quel bébé. Cependant, tous les employés s’accordent à dire que ce n’est pas un simple “babillement”.},
+      {Le $0 produit parfois un son similaire à un babillement ordinaire de bébé. Il n’y a pas à s’en inquiéter pour l’instant puisque son désir n’est pas encore écrasant.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Pendant son travail, #0 chantonne une sorte de berceuse pour le $0, comme s’il s’occupait lui-même d’un enfant.},
+      {#0 arrête un instant son travail pour s’approcher du $0, contenant à peine un sourire pour ne pas alerter le “fœtus”.},
+      {#0 se retourne pour jeter un œil au $0. Heureusement, le $0 n’a pas pleuré durant le travail de #0.},
+      {Inquiété par le $0, #0 le regarde plusieurs fois durant son travail. Cependant, nous savons tous ce dont il s’inquiète vraiment.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {Le $0 ouvre sa bouche et se lèche les lèvres. Ses pupilles noires révèlent secrètement ses besoins primaires.},
+      {Le $0 ferme ses yeux. Cette action n’est certainement pas due à la fatigue, le $0 ne désire qu’une seule chose.},
+      {Soudainement, le $0 tourne la tête pour fixer #0 qui a presque fini son travail. Il n’y a aucune mauvaise intention dans son regard mais ce n’est clairement pas celui d’une créature qui considère son objet d’intérêt comme “humain”.},
+      {Le $0 a faim, et soudainement, il fixe #0. Le mal absolu contenu dans le regard du $0 transperce l’employé.}
+      ]
+    </narration>
+    <narration action="special_ability1">
+      [
+      {Le gémissement sans fin du $0 envahit le complexe entier. #0, qui est proche de l’Unité de Confinement, commence à sombrer dans la folie.}
+      ]
+    </narration>
+  </info>
+  <observe level="5">
+    <collection>
+      <codeNo openLevel="0">O-01-15</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/NamelessFetus</portrait>
+      <name openLevel="1">
+        Fœtus Innommable
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <openText>“Un jour tu comprendras. La signification du désespoir sur leurs visages lorsque la roulette tourne.”</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Cette Anomalie prend la forme d’un fœtus à naître. Sa peau est recouverte d’un liquide collant et muqueux. De petites veines sont visibles ça et là. Les yeux anormalement bossus de l’Anomalie sont habituellement fermés. Elle semble toujours insatisfaite, mais ce dont elle a exactement besoin reste indéterminé. Elle possède une grande obsession sur le fait d’être “nourrie”, et si elle n’est pas régulièrement “nourrie”, son niveau de stress augmente considérablement. Une fois qu’elle atteint un certain niveau de stress, elle pleure bruyamment d’une manière qui affecte mentalement tous ceux aux alentours.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {&lt;Extrait du Journal d’Entretien #2-49&gt;&#13;&#10;
+      Employé F2706: “Je ne l’ai jamais vue sourire. Elle semble avoir toujours envie de quelque chose, mais on n’arrive jamais à combler son désir. Je suppose que si ses cris sont si destructeurs, c’car ses besoins insatisfaits sont très puissants. Quand j’étais un bleu ici, aucun de mes collègues ne me disaient ce qu’on utilisait exactement pour la nourrir. Je pensais que c’était juste du lait bizarre ou un truc que mangeraient les autres bébés. Après tout, sous toute cette crasse c’est un bébé. Mais ce n’était pas le cas, elle ne mange que de la chair humaine. Vous y croyez vous ? Pour qu’elle arrête de pleurer, on doit faire un tirage au sort de temps à autres. Vous comprenez ce que ça veut dire ?”}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Extrait d’un Journal d’Observation Archivé&gt;&#13;&#10;
+      La première fois que j’ai entendu qu’il fallait nourrir le “Fœtus Innommable”, j’ai cru qu’on allait le nourrir avec genre une cuillère, ou quelque chose. Il semblait trop faible pour faire quoique ce soit et sa bouche n’est pas totalement formée non plus. Plus tard, j’ai découvert qu’il mangeait de la viande, je pensais qu’il fallait qu’elle soit prémâchée par quelqu’un d’abord pour que ce soit facile à manger. Lorsque j’ai demandé à un collègue de travail, il a ri et m’a dit: “Pas du tout, c’est ridicule. On doit juste laisser la nourriture dans son Unité et partir.” Je continuais de réfléchir à comment ce fœtus était capable de manger. Je me demandais si on lui servait un genre de steak ultra succulent que même nous n’avons pas le droit de manger dans la cafétéria. Par curiosité, j’ai décidé de jeter un œil à la procédure de nutrition du “Fœtus Innommable”. Seuls les employés de niveau 3 et plus sont assignés à cette procédure, mais j’ai réussi à y participer en faisant croire que je remplaçais quelqu’un. Pendant que je regardais nerveusement, me demandant si mon mensonge en valait le coup, des personnes nous ont rejoints avec de grands sacs plastique. Est-ce qu’il mange autant ? Lorsqu’ils ont ouvert les sacs, l’horreur m’a laissé bouche bée. C’étaient des corps humains. Et le bébé les a mangés. Comment ? Je ne veux même pas y repenser. Il avait une longue cicatrice sur son estomac ; j’ai toujours pensé que c’était juste un genre de cicatrice. Comme une grande fleur, son estomac s’est ouvert, dégoulinant d’un liquide visqueux. C’était la créature la plus goinfre du monde. Depuis ce jour, je suis végétarien.}
+      ]
+    </desc>
+    <desc id="4" openLevel="4">
+      [
+      {&lt;Extrait du Journal d’un Employé&gt;&#13;&#10;
+      Je m’appelle Pauly. Je travaille pour la Lobotomy depuis maintenant un mois. Mes parents sont très fiers de moi pour avoir réussi à rejoindre une Aile comme celle-ci, et tous mes amis en sont jaloux. Je fais encore beaucoup d’erreurs, mais un jour, je serai aussi compétente que mes collègues.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {      Il existe un événement spécial organisé par la corporation qui est réservé uniquement aux employés. Personne ne sait quand ni pourquoi il  a lieu. Même mon collègue qui travaille ici depuis 5 ans ne sait pas. Lorsque ça commence, une roulette géante commence à tourner. Tout le monde arrête ce qu’il est en train de faire pour regarder qui est l’heureux gagnant, mais avec des visages désespérés. Le nom de chaque employé est écrit sur la roulette. Celui qui est sélectionné est quelqu’un d’extrêmement chanceux. Il est promu et transféré dans une autre branche de la corporation, le “Quartier Général”. En plus de ça, sa famille est gratifiée d’une fortune inimaginable. Au quartier général, il n’y a pas à craindre de se faire attaquer par des Anomalies, ou de devoir faire le deuil de ses collègues décédés. Mon supérieur, (Expurgé), espère vraiment être sélectionné un jour. En fait, son père a subi un accident un jour, et ça coûte beaucoup d’argent de le maintenir en vie. Du coup, j’espère vraiment qu’un jour la roulette choisira (Expurgé).}
+      ]
+    </desc>
+    <desc id="6" openLevel="4">
+      [
+      {      Lorsque le nom de mon supérieur est apparu sur la roulette, je l’ai félicité de tout mon cœur. Mais, il ne semblait pas très heureux, bizarrement. D’autres l’ont pris dans leurs bras, les uns après les autres. Tout le monde pleurait, je ne sais pas pourquoi. Il m’a dit au revoir, il pleurait en essayant de garder le sourire. Je ne l’ai plus jamais revu depuis. Je suis sûre qu’il travaille dans de meilleurs conditions et avec un bien meilleur salaire ! Mais lorsque j'essaye d’en parler, les gens s’arrêtent soudainement, comme si je venais de briser un genre de tabou. Je me rappelle encore de la dernière chose qu’il m’a dite avant de partir.
+
+      “Un jour tu comprendras. La signification du désespoir sur leurs visages lorsque la roulette tourne.”}
+      ]
+    </desc>
+    <desc id="7" openLevel="4">
+      [
+      {Seul l’Administrateur détient le droit de lancer un événement spécial pour tous les employés du complexe sans avoir besoin d’une raison à cette occasion. Lorsqu’il commence, une roulette géante se mettra à tourner et choisira le nom d’un employé très chanceux. Celui-ci sera promu, transféré dans une autre branche, et sa famille recevra une pension annuelle. Aucun membre du personnel n’a le droit d’empiéter sur le droit de l’Administrateur d’organiser cet événement. Les informations suivantes sont interdites au public :&#13;&#10;&#13;&#10;&lt;Conditions requises pour organiser l’événement&gt;&#13;&#10;
+      - Accès aux Données Restreint
+      - Accès aux Données Restreint
+      - Les pleurs du “Fœtus Innommable” ont atteint leur paroxysme.&#13;&#10;&#13;&#10;&lt;La roulette va choisir un employé à sacrifier remplissant l’une des conditions suivantes :&gt;&#13;&#10;
+      1. Remet en question le véritable but de la corporation.
+      2. Mène ou prépare des expériences non autorisées^ avec des Anomalies.
+      3. A une curiosité excessive envers les Anomalies, et mène ou prépare des observations non autorisées sur elles.
+      4. Est incapable de travailler suite à un trauma physique ou psychologique.
+      
+      ^ “Non autorisées” signifie qui n’est “Pas autorisé par la corporation ou Angela”.&#13;&#10;&#13;&#10;&lt;Les actions suivantes seront effectuées avec l’employé choisi par la roulette :&gt;&#13;&#10;
+      1. Expurgation de toutes les archives de la corporation sur cet employé.
+      2. Sacrifice de l’employé à l’Anomalie.
+      3. Notification à la famille du transfert de l’employé dans une autre branche.}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="teeth">Lorsque le résultat du travail est Normal, le Compteur Qliphoth a une probabilité basse de diminuer.</specialTip>
+      <specialTip openLevel="2" key="cry">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth a une probabilité élevée de diminuer.</specialTip>
+      <specialTip openLevel="2" key="cryEffect">Lorsque le Compteur Qliphoth atteint 0, le $0 commence à pleurer. Les employés qui ont entendu ses gémissements se sont plaints de maux de tête. De plus, les Compteurs Qliphoth des Anomalies environnantes ont progressivement baissé avec le temps.</specialTip>
+      <specialTip openLevel="3" key="sacrifice">Pendant que le $0 était en train de pleurer, seul du Travail &lt;Expurgé&gt; peut être effectué.</specialTip>
+      <specialTip openLevel="3" key="sacrifice">#0 a été sélectionné par la roulette pour le Travail &lt;Expurgé&gt;. Il se dirigea silencieusement vers l’Unité de Confinement du $0. Après un moment d’agitation, les pleurs ont cessé.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

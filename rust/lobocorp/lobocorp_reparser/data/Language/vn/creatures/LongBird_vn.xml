@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100035">
+
+    <narration action="move">
+      #0 is going into $0's containment unit to begin the task.
+    </narration>
+
+    <narration action="start">
+      [
+      {There’s an old saying, "Never forget the Bird of Judgment. No matter how long it takes, it will eventually find you."},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 is never in a hurry. },
+      {Perhaps it is already in your house. }
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {We who live in a world without forgiveness offer our souls as tribute for redemption.},
+      { People are sly and they are unable to save their own souls. That’s why $0 came to us.}
+      {Few realize their own sins. $0’s scale helps them realize their sins.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 was once the guardian of the forest. But it forgot the most important thing as it was single-minded in protecting its creatures.},
+      {Now, darkness reigns the forest.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-02-62</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/LongBird</portrait>
+
+      <name openLevel ="1">
+        Long Bird
+      </name>
+
+      <name openLevel="2">
+        Bird of Judgement
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>Its scale tilted according to the sins committed.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {It’s a bird that carries around an unfair scale and judges the living in a dark forest.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {The scale always tilts to the same direction, but it doesn't know this because its eyes are covered. Or it knows and is just ignoring the fact. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {A long time ago, the bird was once a fair judge. Its scale tilted according to the sins committed.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {$0 made a scale that was capable of weighing any sin to protect the forest.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {In the past, #0’s eyes could see through everything. Its eyes were always shining, like the stars in the night sky. But it gave its eyes to Big Bird in order to save the forest. Now, its eye sockets are hollow. }
+      ]
+    </desc>
+
+    <desc id="6" openLevel="3">
+      [
+      {The bandage flutters in the wind, as if it would rip off at any second. The bird's face was once covered in gleaming feathers, but they are all gone now. }
+      ]
+    </desc>
+
+    <desc id="7" openLevel="4">
+      [
+      {All that remains is the unfair scale. $0 continues on with the judgment. }
+      ]
+    </desc>
+
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="MoodZero">When the work result was normal, $0's Qliphoth counter has decreased with a normal probability.</specialTip>
+      <specialTip openLevel="1" key="MoodZero2">When the work result was bad, $0's Qliphoth counter has decreased with a high probability.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

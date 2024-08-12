@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300005">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção da $0 para começar o processo de trabalho.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-80</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/BigTreeSap</portrait>
+      <name openLevel="1">
+        Seiva da Árvore Gigante
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <openText>
+        “A árvore simplesmente ceifava o que semeava.”
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {A seiva de uma árvore gigante e sem nome que se enraizou na borda do mundo.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {De acordo com a Equipe de Exploração, havia um vasto número de formas de vida com uma tintura verde escaldante ao redor da árvore. Isso era causado porque a seiva as deixavam saciadas e continham agentes curativos potentes.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Porém, alguns de nossos funcionários que tomaram a seiva derreteram, deixando restos verdes ardentes.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      <!-- 여기 번역 고치기 -->
+      [
+      {Outros vários experimentos confirmam que a probabilidade de derretimento aumenta conforme mais seiva é consumida.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {“Muitos imaginaram como uma árvore tão grande poderia prosperar lá nos subúrbios áridos. As formas de vida que consumiram a seiva se tornaram nutrientes para ela mais cêdo ou mais tarde. A árvore simplesmente ceifava o que semeava.”}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="healthgood">Sujeitos que consumiram a $0 recuperaram-se instantaneamente. Além disso, continuaram a ser curados ao decorrer do tempo.</specialTip>
+      <specialTip openLevel="2" key="boomDead">Alguns sujeitos que consumiram a $0 sofreram um efeito colateral, que os faziam explodir dentro de 20 a 30 segundos após o consumo da seiva; Todos que estavam na mesma sala da explosão sofreram dano BRANCO.</specialTip>
+      <specialTip openLevel="2" key="boomGood">Experimentos confirmaram que há uma relação positiva entre a frequência de consumo da $0 e a probabilidade de explosão.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

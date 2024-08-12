@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300001">
+    <narration action="move">
+    #0被分配到“$0”的收容单元中
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-77</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/DesireHeart</portrait>
+
+      <name openLevel ="1">
+        渴望之心
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>过度的渴望会使人发狂。</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {这是一颗无主的心脏。尽管已经从肉体上摘除，它也从未&#13;&#10;停止过跳动。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {被员工携带时，心脏的跳动频率将会加倍，并能提高携带&#13;&#10;者的生命值和攻击能力。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {过度的渴望会使人发狂。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {如果携带者在归还心脏前没有进行过攻击，或是在携带后&#13;&#10;30秒内就归还的话，他会失去理智并对看到的一切发起攻&#13;&#10;击。}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">携带“$0”的员工会获得额外的生命值与攻击速度加成。</specialTip>
+      <specialTip openLevel="2" key="2">如果携带者在没有进行过攻击的情况下被要求归还“$0”，便会立&#13;&#10;刻陷入恐慌并对附近的目标发起攻击。</specialTip>
+      <specialTip openLevel="2" key="3">如果携带者在携带“$0”后的30秒内被要求归还，携带者也会出现&#13;&#10;相同的症状。</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

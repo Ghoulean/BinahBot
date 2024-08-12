@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300101">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-85</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/IronMaiden</portrait>
+      <name openLevel="1">
+        Nous Pouvons Tout Changer
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <openText>
+        Tout ira bien désormais.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Après l’incroyable succès de l’“Assistant de Poche”, “Nous Pouvons Tout Changer” est sorti en tant que second produit de la série des robots domestiques XX Inc.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Comme on peut s’y attendre d’un produit issu des usines XX Inc., il inclut une grande variété de fonctionnalités.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Votre enfant vous cause-t-il du souci à brailler à longueur de journée ? Nous pouvons changer cela !&#13;&#10;Vous n’aimez pas votre allure ? Êtes-vous trop gros ? Trop maigrichon ? Nous pouvons changer cela !&#13;&#10;Vous venez de subir une coupure de courant car vous n’avez plus assez d’argent pour payer vos factures ? Nous pouvons changer cela !}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {C’est très simple. Il vous suffit d’ouvrir la machine, d’y entrer, puis d’appuyer sur le bouton pour la refermer. Tout ira bien désormais.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {La machine produira de l’énergie tant qu’un employé s’y trouvera. Étant donné que personne n’en ressort une fois à l’intérieur, ce doit être bien confortable.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Placer un employé dans de la machine produira de l’énergie au fil du temps.</specialTip>
+      <specialTip openLevel="2" key="2">Une fois que l’employé est à l’intérieur, il subira des dégâts ROUGE. Il sera incapable de sortir et finira par mourir</specialTip>
+      <specialTip openLevel="2" key="3">La quantité d’énergie générée augmentera avec le temps.</specialTip>
+      <specialTip openLevel="2" key="4">Cette anomalie n’est pas affectée par l’Effondrement Qliphoth.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

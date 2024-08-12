@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100000">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para praticar o trabalho com Anormalidades.
+    </narration>
+    <narration action="start">
+      [
+      {$0 é um boneco de treinamento que realmente acredita que é um de nossos funcionários.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Parece que o $0 gosta de pessoas.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {O $0 circula ao redor de #0, porém #0 está completamente focado no trabalho.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {O $0 está pensando sobre o centro da Terra.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {O $0 está bastante triste que #0 precisa ir embora cedo. Parece que o $0 quer seguir esse funcionário.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">0-00-00</codeNo>
+      <name openLevel="1">Coelho Padrão de Ensino</name>
+      <portrait openLevel="1">Sprites/Unit/creature/DummyPortrait</portrait>
+      <riskLevel openLevel="1">TETH</riskLevel>
+      <openText></openText>
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {Uma Anormalidade na forma de um boneco de treinamento usado para treinar os gerentes.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Há boatos de que essa Anormalidade foi escolhida para treinamento por ser a mais dócil e inofensiva de todas que já extraímos. Apesar do nome ser "Coelho" Padrão de Ensino, ele não demonstra gostar de cenouras e sim de pessoas. Se ele escapar, não fará nada além de seguir o Funcionário enquanto ele sai da Unidade de Contenção.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      <!--특수 상태-->
+    </desc>
+    <desc id="4" openLevel="3">
+      <!--특수 상태-->
+    </desc>
+    <record openLevel="1">
+      <!-- 관찰기록 -->
+    </record>
+    <record openLevel="2">
+      <!-- 관찰기록 -->
+    </record>
+    <record openLevel="3">
+      <!-- 관찰기록 -->
+    </record>
+    <specialTipSize size="1">
+      <specialTip openLevel="1" key="tutorial">Quando o Trabalho de Repressão era feito no $0, o Contador Qlifót reduzia.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300001">
+    <narration action="move">
+      #0 е изпратен/а до камерата на $0.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-77</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/DesireHeart</portrait>
+
+      <name openLevel ="1">
+        Сърце на Стремежа
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>Твърде много устрем може да доведе до безумно поведение.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Сърце без притежател. Все още бие, дори след като е извадено от тялото на притежателя си.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Когато е взето "назаем", сърцето бие двойно по-силно, покачвайки HP и Сила на атаката.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Твърде много устрем може да доведе до безумно поведение.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+
+      [
+      {
+      Служители, които не са нападнали никого или са върнали сърцето до 30 секунди извършват няколко безмислени убийства с увеличените си HP.}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Служители, които вземат $0 със себе си, се облагодетелстват от увеличени HP и Скорост на атаката.</specialTip>
+      <specialTip openLevel="2" key="2">След като на служител му е заповядано да върне $0 без да напада никого, той губи ума си и опустошава всичко около себе си, като с времето става все по-агресивен.</specialTip>
+      <specialTip openLevel="2" key="3">Ако на служител му бъде заповядано да върне $0 до 30 секунди след като го е взел, се наблюдават същите последствия като при горния случай.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

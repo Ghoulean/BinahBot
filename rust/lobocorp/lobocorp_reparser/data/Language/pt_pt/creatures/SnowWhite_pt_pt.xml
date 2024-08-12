@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100023">
+
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+
+    <narration action="start">
+      [
+      {"Espelho meu, espelho meu, quem é mais bonita do que eu?" A bruxa perguntou ao espelho em um quarto que mais ninguém visitava.},
+      {O espelho ficou em silêncio, mas a bruxa ouviu a resposta.},
+      {No dia em que uma maçã caiu da árvore no jardim onde a princesa e o rei estavam, o coração da bruxa foi despedaçado.},
+      {A bruxa enfeitiçou a maçã com o feitiço mais poderoso que ela conhecia, assim sacrificando-se a si própria.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {#0 consegue ver ramos cobrindo a unidade de contenção.},
+      {A unidade de contenção d'$0 está cheia de folhas e ramos crescendo dentro dela.},
+      {Quando chegares perto da unidade de contenção d'$0, tu vais ver ramos entrelaçado-a.},
+      {Sons de folhas podem ser ouvidos na unidade de contenção d'$0.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {Se tu olhares bem de perto, pode-se ver que os ramos estão murchos.},
+      {Os ramos estão tão podres que com um único toque eles se desfazem e se tornam em pó, é difícil de chamar-lhes de plantas.},
+      {Apesar de murchos, os ramos e as folhas ainda estão a crescer.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {Os olhos d'$0 se foram há muito tempo atrás - Pássaros e insetos os devoraram. $0 cresceu após consumir as suas carcaças.},
+      {$0 sempre esteve sozinha. Em volta d'$0, os restos dos pássaros e dos insetos, que morreram depois de a consumirem, estavam espelhados pelo chão.}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {$0 pensa sobre a princesa e o príncipe que caminharam por um caminho de flores sendo abençoados por todos.},
+      {$0 foi amaldiçoada pela bruxa, e a princesa que desmaiou por causa d'$0 viveu feliz para sempre.}
+      {$0 cresceu na inveja, raiva e na solidão.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">F-04-42</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/SnowWhite</portrait>
+
+      <name openLevel ="1">
+        A Maçã da Branca de Neve
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>No dia em que uma maçã caiu da árvore no jardim onde a princesa e o rei estavam, o coração da bruxa foi despedaçado.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Quando o príncipe beijou a princesa, ela tossiu e os pedaços de maçã que estavam dentro da garganta dela saíram. Os anões choraram de alegria. A Branca de Neve e o príncipe se dirigiram em direção do reino por um caminho coberto com flores e viveram felizes para sempre.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Havia uma maçã criada através da raiva e da maldição da bruxa, que era uma parte dela. A maçã, que caiu da mão da Branca de Neve após uma única mordida, nunca seria feliz. A maçã, cheia de ódio pela princesa e solidão, esperou pelo dia em que voltaria ao solo.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Nós não sabemos se foi o feitiço ou raiva que distorceu as leias da natureza. Mas mesmo depois de muito tempo (tempo suficiente para que ela apodrecesse e as suas sementes darem frutos), a maçã não apodreceu. Metade esmagada, metade coberta de buracos de inseto.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Carcaças de pássaros e de insetos amontoavam-se à volta da maçã. A mesma refletiu sobre a sua existência no meio dos mortos. Um dia, um ramo nasceu dela. As folhas e ramos nasciam já mortos, mas mesmo assim continuavam a crescer.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Depois de muito tempo, durante a tarde, a maça foi capaz de se mover e ela pensou sobre o príncipe e a princesa que eram felizes. A Branca de Neve tinha dormido por muito tempo até ao dia que um príncipe acordou-a. A maça, que agora se tinha tornado numa princesa, começou a sua jornada para encontrar o seu príncipe. &#13;&#10;   ―Excerto do livro &lt;i&gt;"As Histórias Escondidas Dos Contos De Fadas"&lt;/i&gt; (Autor Desconhecido).}
+      ]
+    </desc>
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="Escape">Quando o resultado do trabalho foi Normal, o Qliphoth Counter diminuiu com uma probabilidade Média.</specialTip>
+      <specialTip openLevel="1" key="Escape2">Quando o resultado do trabalho foi Mau, o Qliphoth Counter diminuiu com uma probabilidade Elevada.</specialTip>
+      <specialTip openLevel="2" key="Making">Após escapar da sua unidade de contenção, $0 espalhou as suas raízes pelo chão, e lançou ramos pelo mesmo chão. As raízes fazem os empregados andar mais devagar.</specialTip>
+      <specialTip openLevel="3" key="NotDisappear">Após o corredor estar cheio de raízes, $0 foi para outro lugar para espalhar mais as suas raízes. $0 foi suprimida e está de volta a sua unidade de contenção, mas as suas raízes não iram desaparecer até o próximo dia.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+
+
+
+</creature>

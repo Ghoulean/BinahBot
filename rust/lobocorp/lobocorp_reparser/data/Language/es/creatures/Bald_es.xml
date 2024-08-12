@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100034">
+
+
+
+    <narration action="move">
+      #0 designado a $0 en su sala de contención.
+    </narration>
+
+    <narration action="start">
+      [
+      {El empleado #0 comienza a sentir que el cabello es solo una carga.},
+      {El empleado #0 empieza a pensar que el tatuaje en la cabeza calva se vería realmente genial.}
+      {El empleado #0 comienza a quitarse la peluca porque se siente orgulloso de una calvicie parcial sea mujer o hombre.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Puedes lucir como Bruce Willis si eres calvo!},
+      {Las personas calvas tienen un aspecto profesional, aunque solo estén haciendo cosas triviales!}
+      {Las personas calvas no tienen que preocuparse por tapar el drenaje de una bañera!}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Y aun tienes tu pelo sedoso?},
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">Bald-is-awesome!</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Bald</portrait>
+
+      <name openLevel ="1">
+        Eres calvo…
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        MANTENGA LA CALMA Y QUEDASE CALVO
+      </specialName>
+
+      <openText>Encendiste tu cortadora de cabello eléctrica..</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      { Advertencia: Has sufrido un daño mental calvo-calvo. Si este artículo es leído por un individuo no calvo, tendrá el privilegio de ser calvo. Si desea evitar que esto suceda, debe ser asignado a trabajar en esta anormalidad. Si encuentra más de 10 mechones de cabello en la almohada por la mañana, se recomienda leer este artículo 3 o más veces. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {Bill: Tuve un sueño increíble hoy. &#13;&#10;
+      XX : Que clase de sueño? Ganaste una lotería o algo así??&#13;&#10;
+      Bill : Todos aquí eran calvos! James, usted y todos los demás en esta instalación! Y tal vez todos fuera de esta instalación! &#13;&#10;
+      XX : Uh…… Creo que has estado muy estresado recientemente. Por qué no tomas asesoramiento? &#13;&#10;
+      El empleado Bill fue sacrificado a La maquina de cantar ese día. Muchos empleados lloraron por él. Justo después del incidente de esa Anormalidad, Calvo-Es-Impresionante! ha aparecido. Todos apreciamos los recuerdos de Calvo Bill.
+      }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="3">
+      [
+      {Si una persona se contacta con esta anormalidad, durante 1 hora, habla o escribe sobre lo bueno que es ser calvo y, finalmente, se vuelven calvos. Si eres calvo, puedes ahorrar tiempo porque ya no tienes que lavar y secar tu cabello. Si se asigna un empleado calvo a esta Anormalídad, no mostrará ninguna reacción. No tienes que preocuparte por la calvicie si eres calvo. Por otro lado, si se asigna un empleado con a esta Anormalídad, comenzarán a afeitarse su propio cabello. Las personas calvas pueden reflejar la luz en su cabeza lisa y sus oponentes ciegos, no es asombroso?! El objetivo final de esta anormalídad es hacer que cada ser humano en esta tierra sea calvo. No hay bombillas si hay mucha gente calva porque las luces se reflejan en sus cabezas; puedes ahorrar factura de electricidad! Si los empleados con no son asignados regularmente a esta anormalidad, su estado de ánimo disminuirá. Sabes que los nobles en la Europa media eran calvos? Se cambiaban la peluca todos los días!  }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="4">
+      [
+      {Y agregamos algunas nuevas reglas al código de conducta de la compañía.&#13;&#10; Los empleados cabrones que se burlan de sus compañeros de trabajo por ser calvos tendrán prohibido usar el salón, y unirse al club de debate de la compañia “Por qué no existen barbies calvas?”, Club gourmet “Pulpo encantador”, y club de movimiento ambiental “Nos preocupa la disminución del número de águila calva”. La prohibición se levantará si el número de hebras de cabello del empleado es inferior a 1. &#13;&#10; En memoria de empleado T.H, Quién está tomando medicamentos contra la calvicie a mi lado ahora mismo. }
+    ]
+  </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="memeriBeam">Tienes un calvo que es increíble!, porque tu cabello sigue siendo sedoso.</specialTip>
+      <specialTip openLevel="2" key="memeriOnly">A menos que los empleados de Calvo es impresionante! estén trabajando en el $0, todo el cabello de los otros empleados se caerá y quedará calvo este mes.</specialTip>
+      <specialTip openLevel="3" key="memeriHurryUp">No es demasiado tarde. 30... 29... 28...</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {Esta anormalidad está llena de sueños de personas calvas.}
+        {Estás calvo, o ya calvo?}
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Yes" target="1" isAnswer="true"  message="Eres calvo"/>
+        <node desc="No" target="2" isAnswer="false"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {Lobotomy Corporation te da la bienvenida.}
+        ]
+      </desc>
+
+      <desc id="2" select="2">
+        [
+        {Entonces, quieres ser calvo?}
+        ]
+      </desc>
+
+      <select id="2">
+        <node desc="Yes" target="3" isAnswer="true" message="Eres calvo"/>
+        <node desc="No" target="4" isAnswer="false"/>
+      </select>
+
+      <desc id="3" select="0">
+        [
+        {Encendiste tu cortadora de cabello eléctrica.}
+        {Lobotomy Corporation te da la bienvenida.}
+        ]
+      </desc>
+
+      <desc id="4" select="0">
+        [
+        {Vuelve después de ver 'Rápidos y furiosos 7' por más de cinco veces. }
+        ]
+      </desc>
+
+
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {Oh, cuando te afeitaste el pelo, gerente?}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+</creature>

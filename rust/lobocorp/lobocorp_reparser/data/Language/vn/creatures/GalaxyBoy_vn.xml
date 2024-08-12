@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+    
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100031">
+
+
+
+    <narration action="move">
+      #0 designated to $0's containment room.
+    </narration>
+
+    <narration action="start">
+      [
+      {The night when the stars showered down from the sky, a child walked. },
+      {$0 knows everything about #0. }
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {The longing becomes a tear, and drops like a star.},
+      {The remnants of longing blossom on the sorrowing heart.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 is making employee #0 to promise to come back again tomorrow.},
+      {$0 sobs. He doesn’t seem to like that employee #0 is leaving.},
+      {Employee #0 can’t take a step after seeing $0’s sobbing face.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-01-55</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/GalaxyBoy</portrait>
+
+      <name openLevel ="1">
+        The Child of Galaxy
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        Your universe
+      </specialName>
+
+      <openText>
+        The child’s tear dropped, as a star came down from the sky, The world fell into a sleep, as it was trapped in ecstatic lullaby.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {It was a middle of the night when fog was gracefully covering the world.&#13;&#10;A child with bare feet was gazing me without a word. &#13;&#10;I stopped, because I saw the sadness hanging on his face.&#13;&#10;He was crying, with his dreamy eyes filled with sorrow and grace.&#13;&#10;I gave him my help.,&#13;&#10;He smiled, and his sorrow melt.&#13;&#10;The child’s tear dropped, as a star came down from the sky, &#13;&#10;The world fell into a sleep, as it was trapped in ecstatic lullaby.&#13;&#10;The night, when the galaxy descended with bare feet. &#13;&#10; -	An excerpt from the diary of employee &lt;REDACTED&gt; who committed suicide.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {A boy with big eyes and a skin that resembles starry night sky. He is fairly shy, but doesn’t show any fear or hostility towards others. He becomes very friendly after forming a certain level of friendship with someone. Some employees have purely favorable impression on this abnormality. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {He largely favors consensus and amusement. He shows a strong attachment towards act of contacting with others. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {If the boy and an employee reaches a certain level of intimacy, he gives a small pebble to his friend. The employee feels happiness and vigor while in possession of the pebble. However, it will do something else other than good, if the employee enters any other containment chamber than his.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="2">
+      [
+      {If an employee with the pebble, which is the sign of his friendship, dies, the abnormality shows deep grief to his or her death.}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="3">
+      [
+      {The diary of employee &lt;REDACTED&gt; &#13;&#10;0th, XX&#13;&#10;I looked into his eyes for a long time. I spaced out a little bit because his eyes were so dreamy. I wanted to pet him, but my co-workers told me not to have personal feeling towards the abnormalities. &#13;&#10;0th, XX&#13;&#10;I told him my name. He repeated it with his eyes bigger than usual as if he found out a big secret. When he called my name, it felt like it became something more than just a familiar thing that I had been living with.  &#13;&#10;0th, XX&#13;&#10;When someone else entered his chamber, he did not follow that employee and looked for me. I felt somewhat basely victorious after hearing that news. He likes me, not you.&#13;&#10;0th, XX&#13;&#10;The moment I entered the boy’s room, he jumped into my arms while crying. I had to keep telling him that I will come back regularly from now on. When I finally put him out of my arms with a little bit of struggle, a small, white pebble dropped into my hand. “Please don’t lose it, and don’t give it to anyone else.” The boy mumbled.&#13;&#10;0th, XX&#13;&#10;“Do you like that bird more than me?” The boy quietly asked after seeing me who just finished a work on Big Bird. I asked him how did he find out what I was doing. “I know. I know everything. Whatever you do, wherever you go.” His gaze lied on the pebble, and he smiled. His eyes gave me goosebumps.&#13;&#10;0th, XX&#13;&#10;I tried to throw away the pebble but it was not something I could do. I don’t even understand what is going on…… “You still love me, right?” The boy smiled at me. He smiles, smiles, smiles, smiles…….&#13;&#10;0th, XX&#13;&#10;I can’t get this pebble off of my body. My only hope is that someday the boy will get tired of me. I’m waiting for that day……but will it ever come? People tell me I am an excellent employee. You idiots don’t know anything, shut up. &#13;&#10;The Final Entry&#13;&#10;I can’t take it anymore. I can’t escape from him. I thought I was in charge but the truth is that I was just a plaything in the boy’s hand the whole time. Whatever I do, wherever I go, I hear his whispers. I will end it. But I am not even sure if I can end it or not.  &#13;&#10;-- “I came from afar. I am so glad to meet you. Become a pebble, and let’s walk the galaxy with me……” I hear his whispers and breath. What follows is a pitch black darkness. Like the night when I met him.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Earn a Token of Friendship by completing tasks successfully. A Token of Friendship will constantly recover HP and SP regarding Abnormality’s Qliphoth Counter.</specialTip>
+      <specialTip openLevel="2" key="2">Qliphoth Counter will increase when an employee with a Token of Friendship completes a task.</specialTip>
+      <specialTip openLevel="2" key="3">When an employee with a Token of Friendship carries out task of another Abnormality, the employee will receive damage regarding $0‘s Qliphoth Counter and Qliphoth Counter will decrease.</specialTip>
+      <specialTip openLevel="2" key="4">When an employee with a Token of Friendship dies, Qliphoth Counter will decrease by 4.</specialTip>
+      <specialTip openLevel="2" key="5">When Qliphoth Counter reaches 0, employee with a Token of Friendship will die.</specialTip>
+      <!--<specialTip openLevel="2" key="6">When Qliphoth Counter reaches 0, energy can’t be collected completely in all tasks.</specialTip>-->
+    </specialTipSize>
+
+   
+  </observe>
+  
+  <!-- 대사는 AgentLyrics_en.xml 에 있음 -->
+</creature>

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    5.28
+  -->
+  <info id="100039">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção de $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {Quando $0 toma forma de um ovo, você quase pode ver uma garota sorrindo dentro dele.},
+      {Alguns de nossos funcionários acham que $0 está preso dentro dessa coisa que se parece com um ovo, porém, a verdade é que ela que se colocou dentro dele.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {O glamoroso padrão de âmbar em $0 as vezes fascina nossos funcionários.},
+      {A cor de $0 é a de ouro brilhante e lustroso.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {O mundo que talvez foi amado por $0 agora está sendo devorado por ela.},
+      {$0 já teve olhos vermelhos iguais ao do pôr do sol, mas a ganância consumiu tudo, deixando nada para trás.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 se rendeu a fome e começou a se devorar.},
+      {O dia em que a fome de $0 acabar será quando tudo tiver fim.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-01-64</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/MagicalGirl_2</portrait>
+      <name openLevel="1">
+        Garota Mágica
+      </name>
+      <name openLevel="3">
+        O Rei da Ganância
+      </name>
+      <riskLevel openLevel="2">
+        WAW
+      </riskLevel>
+      <openText>
+        “...A tristeza diz: ‘Vá embora, morra!’ Mas a ganância procura eternidade profunda, profunda eternidade.”
+      </openText>
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {“O primeiro pedaço do desejo da humanidade começou com a mordida em uma doce maçã.&#13;&#10;Nós fomos banidos do Éden por aquele pecado.&#13;&#10;E agora estamos em pé dentro de um vasto pomar.&#13;&#10;Minha cesta é tão larga que todas as frutas do mundo não a enchem.&#13;&#10;Mas, é tão ruim desejar por mel quando há flores?&#13;&#10;Afinal, nós nascemos para buscar a felicidade.”}
+      ]
+    </desc>
+    <desc id="2" openLevel="2">
+      [
+      {A felicidade se tornou obsessão, obsessão se tornou ganância, e a ganância para sempre se solidificou tornando-se uma âmbar dourada. Aquela felicidade do início, ainda mantendo um sorriso, perambula por dentro.&#13;&#10;&#13;&#10;A primeira semente do desejo se originou do puro anseio pela felicidade. A sementinha cresceu maior e maior, faminta por mais. Com o tempo, a semente endureceu e se tornou em um pedaço de gema brilhante. Seduzido por seu lustro, um peixe faminto a engoliu. Mas só fez o peixe ficar ainda mais faminto.&#13;&#10;&#13;&#10;Os desejos das pessoas geralmente não são cumpridos. Vários são abandonados, mas não completamente perdidos. Pois se escondem profundamente no subconsciente, se espreitando no fundo do lago, pronto para brotar a qualquer momento.&#13;&#10;&#13;&#10;Porém, a ânsia por felicidade pode também empinar sua cabeça de vez em quando, mexendo a língua como uma cobra.&#13;&#10;&#13;&#10;Assim que um pequeno pedaço de isca cair no rio, o peixe faminto aparecerá para capturá-la em um instante. Iludimos a nós mesmos dizendo que somos seres altamente racionais que estão em total controle dessas coisas, mas é uma crença tão absurda que chega a ser ridícula. Nós não temos tanto controle sobre nós mesmos como acreditamos ter.&#13;&#10;&#13;&#10;A garota mágica, que não era mais uma garota mágica, devorou várias coisas.&#13;&#10;&#13;&#10;Autoridade, dinheiro, fama e várias outras formas de prazer. E acabara por consumir tudo em sua vista. Agora, somente uma ganância visceral permanece. }
+      ]
+    </desc>
+    <desc id="3" openLevel="3">
+      [
+      {&lt;O Diário de Alguém&gt;&#13;&#10;
+      Várias pessoas secretamente desejavam por um herói.&#13;&#10;
+      Eles dizem que antes havia algo chamado de terapia da alma. Como alguém se sente ao ter uma alma doente? Todos nós somos saudáveis. Mas talvez tudo isso é uma trágica ilusão.&#13;&#10;
+      Uma vez, houveram pessoas que tentaram mudar o mundo. Todos nós nos lembramos delas. Lembramos como encontraram seu declínio. Desejos, eu conheço desejos que arruinam todas as coisas.&#13;&#10;
+      Não mais acreditamos em algo ou mantemos a esperança por um milagre.&#13;&#10;
+      Nós não pensamos muito sobre o porquê de terem mudado tanto. E não os culpamos. Já que percebemos que ter desejos sem fim sempre traz desespero.&#13;&#10;
+      As vezes eu sinto uma terrível tristeza, mas eu não sei de onde é que vem a dor.&#13;&#10;
+      ...Várias pessoas secretamente desejavam por um herói.}
+    ]
+  </desc>
+    <desc id="4" openLevel="4">
+      [
+      {“Profundo é o sofrimento do mundo. Ganância profunda tão presente quanto agonia. ...A tristeza diz: ‘Vá embora, morra!’ Mas a ganância procura eternidade profunda, profunda eternidade.”}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="monster">Quando o resultado do trabalho era Neutro, o Contador Qlifót reduzia com probabilidade mediana.</specialTip>
+      <specialTip openLevel="1" key="monster2">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia com alta probabilidade.</specialTip>
+      <specialTip openLevel="2" key="swallow">O padrão comportamental de $0 é de devorar tudo que está no caminho dela enquanto escapa. Ao suprimí-la, preste atenção em qual direção a Anormalidade está se movendo.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<creature>
+  <info id ="100014">
+
+    <narration action="move">
+      指派 #0 至 $0 的收容室.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 說他依照他自己的意願來到這座設施裡.}
+      {$0 將自由施予那些囚禁自我以及傷心的人.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 造訪過一座遭受未知疾病侵襲的小鎮.}
+      {在黎明時, 這位不具名的醫生, 出現了. }
+      {當大家都被希望屏棄時, 那位稱呼自己為醫生的面具男出現了.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {#0 在拜訪 $0 的房間時感到相當自在.}
+      {#0 在進入 $0 的房間時感到相當放鬆.}
+      {#0 希望所有的異常就跟 $0 一樣既安靜又冷靜.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {$0 擁有沉著冷靜的聲音, 並喜歡照護那些受傷的人.}
+      {$0 想要治療或是一直照顧其他人.}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {$0 說, “我來到這裡治癒病痛. 當那天到來, 過來我這. 我會非常樂意幫助你們.”}
+      {$0 說, “沒有任何東西藏在面具之後, 血肉被牽扯在時間的洪流中, 但是靈魂卻是永恆的.”}
+      {$0 說, “我將從毀滅以及世界末日之中救贖你們. 將你的信任交給我.”}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">O-01-45</codeNo>
+      <name openLevel="1">疫醫</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/PlagueDoctor</portrait>
+      <riskLevel openLevel ="3">ZAYIN</riskLevel>
+      <specialName openLevel ="3">紫羅蘭色的洗禮</specialName>
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {黑色的軟尼帽以及鳥喙面具. 巨大的黑色雙翼代替了手臂或是雙腿. 擁有與人類溝通的能力, 猜測它並不喜多言. 它自行來到了這座設施, 宣稱這個世界感染了一種只有它才能治癒的可怕疾病. 但我們卻找不出關於任何它所提到的 “疾病”.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {它似乎很喜歡照顧那些受傷或是生病的員工. 它在幫助他們時會露出相當滿意的樣子, 而且似乎對他們相當同情和仁慈. 甚至在經過觀察後的一週, 我們也沒發現到它有任何侵犯, 暴力或是試圖逃脫的行為. 只能認定此異常是非常 “溫和的” (12 名員工使用這個詞來形容這個生物) 且對我們有相當的幫助.}
+      ]
+    </desc>
+
+    <desc id ="3" openLevel="2">
+      [
+      {員工 Alex, 在鎮壓 魔法少女 時讓他的額頭弄出一片嚴重的疤痕, 帶著他還沒治癒的疤痕走進了此異常的收容室. 這個異常, 如同以往的寡言, 卻在看見該員工的傷疤後開始談論了起來.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {觀察紀錄_1&#13;&#10;該異常問到.為什麼你不去治療這片傷疤?”&#13;&#10;Alex 說到.&#13;&#10;我沒有什麼時間, 所以我只好快速的處理了它一下.” &#13;&#10;接著 疫醫 回覆.&#13;&#10;“我應該將你治好, 奪走你所擁有的疾病以及傷痛.”&#13;&#10;Alex 從收容室出來後傷疤也完全癒合了.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">當工作的結果為差時, 逆卡巴拉計數器降低了.</specialTip>
+      <specialTip openLevel="3" key="2">當工作的結果為優良時, 逆卡巴拉計數器降低了. 接著 $0 為前來工作的員工受洗了.</specialTip>
+      <specialTip openLevel="3" key="3">在發出 2 級緊急警報時, 逆卡巴拉計數器降低了.</specialTip>
+      <specialTip openLevel="3" key="4">當逆卡巴拉計數器歸零時, 聽見它招喚的員工走進了它的收容室裡並受洗了.</specialTip>
+      <specialTip openLevel="3" key="5">受 $0 親吻的員工會在祝福中重生.</specialTip>
+    </specialTipSize>
+      
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {戴著面具的男人正看著我.}
+        {事實上, 我看不出他在看著什麼, 但我的直覺卻告訴我在我進來之前他已經在等待我的到來了.}
+        {他的翅膀, 代替著雙腿, 靜靜的擺動著.}
+        {“我不需要雙腿.”}
+        {“我並不屬於這個地球. 我只是待在這裡罷了.”}
+        {他就像是讀到了我的內心般說著. 我對他的印象感到奇怪, 因為他是如此的冷靜又輕鬆.}
+        {“我聽說你是這座設施的管理者. 員工總是談論到你. 也許你有什麼想和我討論的東西?}
+        ]
+      </desc>
+
+      <select id="1">
+        <node desc="Who are you?" target="1" isAnswer="false"/>
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {“我是那位點燃油燈來迎接新世界降臨的人. 我是那位帶來解藥來治癒你們的醫生. 我是那位跟隨蹤跡前去朝拜的人.”}
+        {疫醫 不再說話.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {“我知道你為何來到這裡. 然而, 我還沒準備好與你交談. 我是如此殘缺.” }
+        {疫醫 不再說話.}
+        ]
+      </desc>
+
+      <angela>
+        [
+        {역병의사 임시}
+        ]
+      </angela>
+     
+    </max>
+  </observe>
+
+  <etc>
+    <param key="first" index="1">
+      '然後我告訴你, 你就是那名 #1 使徒, 而我會在這磐石上建立起我的教堂, 且地獄之門將戰勝不了它.'
+    </param>
+
+    <param key="second" index="2">
+      '告訴我們, 何時將會發生, 而你到來的跡象以及這個時代的結束將會是什麼?'
+    </param>
+
+    <param key="third" index="3">
+      '你想要我們從天堂上招喚火焰來摧毀他們嗎?'
+    </param>
+
+    <param key="fourth" index="4">
+      '他贈與了 #3 使徒以及 #4 使徒波阿內格的名字, 意思是 “雷霆之子."'
+    </param>
+    
+    <param key="fifth" index="5">
+      '#5 使徒說到, “將天父示於我們, 這對我們來說便已足夠.'
+    </param>
+    
+    <param key="sixth" index="6">
+      '他看見一位叫做 #6 的使徒. "跟隨我,” 他這麼說, 而 #6 便起身隨了他.'
+    </param>
+    
+    <param key="seventh" index="7">
+      '在某些時候叫做 #7 的使徒操弄著熟練的巫術並嚇壞了所有的人.'
+    </param>
+    
+    <param key="eighth" index="8">
+      接著 #8 使徒向其他的門徒說到, “也我們去吧, 如此我們或方能隨他同死.”
+    </param>
+    
+    <param key="ninth" index="9">
+
+      然後 #9 使徒宣告, “你是他的兒, 你才是那王.”
+    </param>
+    
+    <param key="tenth" index="10">
+      然後 #10 使徒說到, “但為何你只向我們顯現你自己, 而不是這個世界?”
+    </param>
+    
+    <param key="eleventh" index="11">
+      '從此之後, 不再讓任何人陷我於麻煩之中, 因為我的身上留下了他的痕跡.'
+    </param>
+    
+    <param key="twelveth" index="12">
+      '我沒選擇你, 為那第十二位? 惡魔在你們其中之一裡'
+    </param>
+  </etc>
+</creature>

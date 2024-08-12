@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100000">
+    <narration action="move">
+      #0 approche de l’Unité de Confinement de $0 afin de s’entraîner à travailler avec les anomalies.
+    </narration>
+    <narration action="start">
+      [
+      {$0 est un mannequin d’entraînement qui croit sincèrement être un employé du complexe.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Il semblerait que $0 aime bien les gens.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 tourne autour de #0 mais ce dernier est complètement absorbé dans son travail.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 pense au centre de la Terre.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {$0 est très triste de voir #0 partir si tôt. On dirait qu’il a envie de le suivre.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">0-00-00</codeNo>
+      <name openLevel="1">Mannequin d’Entraînement Lapinesque Standard</name>
+      <portrait openLevel="1">Sprites/Unit/creature/DummyPortrait</portrait>
+      <riskLevel openLevel="1">TETH</riskLevel>
+      <openText></openText>
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {Une Anomalie prenant la forme d’un mannequin d’entraînement utilisé afin d’entraîner les Administrateurs prometteurs.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Selon les rumeurs, cette Anomalie a été choisie pour l’entraînement car il s’agit de l’Anomalie la plus docile et domestiquée de celles que nous avons extraites. C’est un Mannequin d’Entraînement “Lapinesque”, mais il n’a pas l’air d’apprécier les carottes. Il aime les gens. S’il s’échappe, c’est seulement pour suivre les employés lorsqu’ils quittent l’Unité de Confinement.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      <!--특수 상태-->
+    </desc>
+    <desc id="4" openLevel="3">
+      <!--특수 상태-->
+    </desc>
+    <record openLevel="1">
+      <!-- 관찰기록 -->
+    </record>
+    <record openLevel="2">
+      <!-- 관찰기록 -->
+    </record>
+    <record openLevel="3">
+      <!-- 관찰기록 -->
+    </record>
+    <specialTipSize size="1">
+      <specialTip openLevel="1" key="tutorial">Lorsque un travail de répression est réalisé sur $0, le Compteur Qliphoth diminue.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

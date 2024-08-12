@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    5.28
+  -->
+  <info id="100047">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção da $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {Os sonhos de $0 são de correr pelo lado de fora das instalações em total liberdade.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Assim como todos desejaram, $0 pode viver aqui para sempre.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-02-71</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Shark</portrait>
+      <name openLevel="1">
+        A Correnteza Sonhadora
+      </name>
+      <riskLevel openLevel="2">
+        WAW
+      </riskLevel>
+      <openText>Diga ao garoto que a guloseima de hoje será de sabor uva. É o favorito dele.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {“Só... Só fique mostrando o livro para ele. Ah, e precisa ser uma página com figuras, já que ele provavelmente não consegue ler.&#13;&#10;Quando o experimento parecer estar dando certo, tente chamar a atenção dele, faça algo como imitar algum som.&#13;&#10;Eu não preciso explicar cada detalhe, certo?}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Sim, eu sei. É lamentável, triste e patético. Mas eu sinto emoções humanas, obrigado.&#13;&#10;Porém, ele conseguiu sobreviver graças a esse lugar. Eu espero que continue vivendo, de qualquer forma. Se você está pensando na mesma coisa, é melhor que você jogue essa culpa fora agora mesmo.&#13;&#10;....&#13;&#10;Diga para o garoto que a guloseima de hoje será doce sabor uva. É o favorito dele.”}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Trecho de uma Enciclopédia&gt;&#13;&#10;
+      Ao contrário do conhecimento popular, a maior parte dos tubarões são pequenos. Só existem poucas espécies que causam problemas a humanos... Após tudo ser dito e feito, os maiores atrativos em tubarões são a mandíbula e seus dentes fortes. A mandíbula de um tubarão pode aplicar uma força imensa, quase 20 vezes do que a força de um humano adulto. Além disso, sua visão e olfato são extremamente bem desenvolvidos, permitindo a fácil localização de alvos. É por isso que os tubarões reinavam como os maiores predadores do oceano até hoje. }
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Os pais há muito tempo abandonaram a criança.&#13;&#10;Disseram que aquela velha infecção o mataria antes que dois anos se passassem. Os pesquisadores então viraram os novos pais da criança. Ele aprendeu a murmurar e andar. Mesmo incapaz de falar propriamente, a criança gostava do oceano. Mas no lugar de visitar o oceano, a criança era dada doces que permitiam que ela visse o oceano.&#13;&#10;Vários dias e noites coloridas se passaram.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {A criança, que pensavam que iria morrer dentro de 2 anos, conseguiu viver por um longo tempo. E como sempre, ele gostava de doces, os seguia, e amava o lugar como sua casa. Mas a única coisa que a criança conseguia fazer era correr pelo laboratório apertado ao invés de um gramado debaixo do sol, seus passos tremiam, mas eram cheios de entusiasmo. Animado para saber que tipo de doce iria comer no dia seguinte. }
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Quando #0 entrou em pânico durante o trabalho, o Contador Qlifót reduziu.</specialTip>
+      <specialTip openLevel="1" key="2">Quando um Agente com Temperança de Nível 1 terminava o trabalho, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="2" key="3">As poças de líquido que estavam em certas seções das instalações quando $0 escapou reduzia drasticamente o movimento dos funcionários e causava dano VERMELHO contínuo. Entretanto, o PS dos funcionários era continuamente curado.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

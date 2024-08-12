@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100028">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="mid1">
+      [
+      {Le distributeur submerge #0 avec ses néons brillants.},
+      {De la musique joyeuse peut être entendue depuis l’intérieur du distributeur.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Les crevettes sont délicieuses quelle que soit la façon dont tu les cuisines. Fais-les frire, fais-les bouillir, peu importe !},
+      {Tu as vraiment raté ta vie si tu n’as jamais goûté de crevettes.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Il y a une rumeur selon laquelle des gens ont été enlevés par un bateau de pêche après avoir bu une canette ouverte de soda au raisin.},
+      {Les rumeurs disent que tu perdrais l’un de tes organes après avoir bu une canette ouverte de soda au raisin.},
+      {Si quelqu’un t’offre une canette de soda au raisin déjà ouverte, tu ne dois absolument pas la boire.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">F-05-52</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/WellCheers</portrait>
+      <name openLevel="1">
+        WellCheers
+      </name>
+      <name openLevel="2">
+        Canette Ouverte de WellCheers
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <openText>Quelque part au loin, vous pouvez entendre les mouettes.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;Journal d’un employé (Source Inconnue)&gt;&#13;&#10;
+     Hé, avez-vous déjà été à l’une de ces réunions de Lobotomy ??
+     Sachez qu’il m'a fallu beaucoup de courage pour en parler à nouveau…
+     Vous voyez, il y a des tas de clubs dans cette corporation où les employés se réunissent. Une fois, j’ai participé à une activité du club de ping-pong, mais il n’y avait aucune fille donc je suis très vite parti mdr. Donc, ben, un jour, j'ai vu cette annonce étrange pour des speed-datings sur le tableau de la compagnie. Ça m’intéressait alors j'ai appelé le chef du groupe et il s'est présenté comme &lt;Expurgé&gt; de Sécurité. J'ai demandé s'il y avait des fille dans le groupe, et il m'a dit qu'il y avait des tas d'employées. À partir de là, j’étais super intéressé, alors je me suis inscris tout de suite pour la prochaine rencontre. Puis je suis venu, j'ai reçu une étiquette avec mon nom comme tout le monde. Je ne me souviens pas de tout, mais je pense avoir vu trois personnes de l’équipe d’Entraînement et deux de l’Information. Environ une demi-heure plus tard, le chef a apporté des dizaines de canettes de WellCheers sur un plateau et en a donné une à chacun… J'aurais dû me rendre compte que quelque chose n'allait pas parce que la canette était déjà ouverte, mais je suis un drogué du soda et je me suis descendu cette putain de chose dès le moment où il m'a passée une canette ptdr}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {      Après cela, le chef nous a dit qu’il était temps de bouger et qu’il nous avait loué une camionnette. On s’est tous dit que c’était un gars génial. J'ai sauté dans la camionnette avec deux employés de la cohue et un gars du même département que moi. Le chef a dit que ça prendrè environ une heure de route et qu’on pouvait faire une sieste si on le voulait, ce qu’on a fait. Ce qui était étrange en revanche, c’est que je me suis vite endormi, genre TRÈS vite. Genre, au moment où j'ai fermé les yeux, je me suis éteint comme une lumière. Je suis insomniaque, mais pour je-ne-sais-quelle raison, je me suis endormi super vite. (Soupir) …Ce fut ma plus grosse erreur. Bref, J'étais profondément endormi, mais là j’ai entendu des mouettes, j’étais genre, Wtf ??? Des mouettes ??????? Ouais, au début, je pensais que c’était l’alarme du téléphone de quelqu'un, mais après, j’ai entendu des vagues se briser. J'étais genre, "mec c'est bien trop réel pour être une alarme de téléphone", alors j'ai ouvert les yeux pour me retrouver…
+      …couché sur un pont. J'étais sur un putain de bateau, ptdr. UN VRAI PUTAIN DE BATEAU. Je savais que j'étais foutu au moment où j'ai vu des crevettes sautiller. J’en avais des frissons. Je voulais croire que tout ça n’était qu’un rêve, mais je jure que le flop-flop réaliste des crevettes était un spectacle édifiant. La réalisation m'a écrasé comme un marteau. Et j'étais entouré de gens qui semblaient être l'équipage. Ils étaient tous musclés, c'était comme s'ils allaient m’assomer si je disais quelque chose de mal. Un mot et je nagerais avec les requins.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {      L'équipage était composé d'environ 10 personnes, dont le capitaine, le maître d'équipage, le cuisinier et le reste. Ils ont tous ri de moi pendant que je rêvassais. Le gars qui ressemblait au capitaine s'est dirigé vers moi et m'a demandé ma taille et mon poids. Je lui ai demandé quand le navire irait au port. Il m'a dit que ça prendrait environ un mois, mais que je ne devrais pas essayer de m'enfuir ou quoi que ce soit parce qu'ils ont déjà conclu un accord avec «les miens». Je n'avais aucune idée de qui était «les miens» mais j'avais trop peur pour demander. Puis les autres membres de l'équipage m'ont appelé pour le déjeuner. Ils faisaient des ramens instantanés, y mettant des crevettes, des crabes, des palourdes et toutes sortes de choses. Ils m'ont dit d'arrêter d'agir comme si j'étais sur le point de sauter dans la mer et d'essayer leurs ramens. J'ai dit non au début, mais ils se sont encore moqués de moi en disant qu'il n'y avait pas de somnifères ou de trucs comme ça dedans et m'en ont quand même donné. Un homme doit vivre, alors je l’ai mangé. C'était meilleur que ce à quoi je m'attendais. Dès que nous avons fini le déjeuner, ils m'ont dit qu'ils allaient m'apprendre à ajuster les cordes. J'ai pratiquement abandoné à ce moment-là, alors j'ai simplement répondu «bien sûr…». Tout ce que je pouvais voir de toute façon, c'était ces petites îles sur lesquelles personne n'avait aucune chance de survivre. Pendant un mois, j'ai appris à remonter des pièges à poissons, à remplir des boîtes à appâts, à réparer des filets de pêche, à cuisiner des ramens, à prendre du café et toutes sortes de choses. Je continuais à m'améliorer et j’en suis arrivé à un point où je pouvais préparer du sashimi de maquereaux et du ragoût de poisson pour l'équipage. Tout le monde m'a félicité. Ils disaient que je pourrais ouvrir un restaurant avec ce ragoût. Plus tard, nous avons traversé quelques typhons. Nous avons commencé à former une sorte de lien. Une camaraderie. Les baleines devenaient un spectacle courant à ce stade. Deux semaines plus tard, le capitaine m'a dit que j'étais plutôt bon et m'a demandé si j'étais intéressé à rejoindre officiellement l'équipage. Quand j'y ai réfléchi, j'aurais été viré de la Corp de toute façon, donc ça semblait être une opportunité légitime de gagner ma vie. C'était la première fois que je recevais un compliment après tout. Qu'est ce que je fais maintenant ? Eh bien, j'ai été promu et maintenant je vis bien. J'ai trouvé le vrai bonheur en ouvrant une ptite bière après une dure journée de travail, couvert d'eau de mer et de sueur. Je suis au port maintenant mais nous devons bientôt décoller pour attraper encore des crevettes. On ne sait jamais ce que nous réserve l’avenir, les gars. Parfois, je pense à ces autres personnes qui étaient à la rencontre ce jour-là. Non pas que je veuille vraiment fouiner pour le découvrir, j'essaie juste de rester positif. J'espère qu'ils vont bien comme moi.&#13;&#10;
+      Oh, il est temps de prendre le large, à bientôt les gars.}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="0" key="specialCan">À la fin de la procédure de travail, une boisson en conserve est déchargée du distributeur automatique. Le type de boisson produit semble varier en fonction du type de travail.</specialTip>
+      <specialTip openLevel="2" key="healthCan">&lt;Résultat du Test W-1&gt; Une canette de boisson rouge est produite. L'employé qui a ingéré la boisson a déclaré qu'elle avait un arôme et une douceur distinctifs et a exprimé une sensation d'énergie accrue après. Suite au test, une restauration de la santé physique du sujet a été confirmée.</specialTip>
+      <specialTip openLevel="2" key="metalCan">&lt;Résultat du Test W-2&gt; Une canette de boisson bleue est produite. Elle contient un liquide inodore hautement gazéifié. Il s'est avéré efficace pour restaurer la santé mentale.</specialTip>
+      <specialTip openLevel="3" key="wellCheersCan">&lt;Résultat du Test W-3; W-4&gt; Une canette de boisson violette est produite. Son apparence, sa composition et son goût sont exactement les mêmes que ceux des autres boissons gazeuses aromatisées au raisin. Il a été constaté que la force physique et la force mentale du consommateur se sont toutes deux rétablies.</specialTip>
+      <specialTip openLevel="4" key="goToSea">&lt;ATTENTION&gt; Lorsque le résultat du travail avec la $0 est mauvais, ne prenez aucune boisson fournie par le distributeur automatique.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

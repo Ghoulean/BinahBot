@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100048">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção de $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="mid1">
+      [
+      {A $0 ocasionalmente derrama lágrimas enquanto o trabalho está sendo feito, não dizendo nada a #0.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {A $0 ainda habita nas glórias do passado, assim como suas irmãs.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-01-73</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/KnightOfDespair</portrait>
+      <name openLevel="1">
+        Garota Mágica
+      </name>
+      <name openLevel="3">
+        Dama do Desespero
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>Tudo o que sobrou foi o orgulho vazio de uma dama desgastada.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Uma Anormalidade do despero que passou através de um ciclo repetitivo de fé e traição, deixando somente a emoção que é expressa através de lágrimas escuras.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Uma heroína do passado que costumava ser a guardiã da justiça. Ela dedicou sua vida para proteger o rei, o estado, a cidade e os mais fracos.&#13;&#10;&#13;&#10;A dama tinha que defender as leis de Deus e a busca por valores, cavalheirismo e justiça. Porém, após uma longa história repleta de dificuldades e conflitos, a dama compreendeu em retrospecto que nada realmente era defendido em sua vigia. A verdade mudou várias pessoas.&#13;&#10;&#13;&#10;Ela que lutava pelo bem se tornou maléfica após entender que não havia mais o mal no mundo. Aquela que sonhava com um mundo onde todos poderíam ser felizes foi matizada com a ganância e começou a devorar tudo. Como elas, tantas coisas que imaginávamos ser para sempre constantes sofreram mudanças e pereceram.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Quem disse que uma dama nunca chora? Você já viu alguma vez lágrimas trazidas por puro desespero e não tristeza? A corrente sem fim de dor e sofrimento já há muito tempo tornou as cavidades oculares em cascas vazias. Dentro, diamantes negros as vezes caem como cinzas.&#13;&#10;&#13;&#10;A vontade de proteger ainda permanece igual após todo esse tempo; mesmo em contenção, ela ainda é obcecada com o ato de proteger. Tudo o que sobrou foi o orgulho vazio da dama desgastada. A tenacidade da heroína que não consegue deixar o passado para trás é uma visão de dar dó.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Quando a justiça novamente dar as costas, dezenas de lâminas irão vagar sem razão. Em vergonha de terem falhado em defender novamente, e enfurecidas com o mundo, as espadas eventualmente apontarão naqueles que ela não pôde proteger.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {A dama que queria se redimir ao salvar os outros agora era desonrosamente chamada de Dama do Desespero; esquecida da memória das pessoas, igual aos outros.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">O primeiro Agente que completar o trabalho com resultado Bom receberá a bênção da $0. (A partir daí, o agente será referido como O-01-73-1.)</specialTip>
+      <specialTip openLevel="2" key="2">O-01-73-1 podia somente ajudar na supressão de Anormalidades. Além disso, graças a bênção, dano VERMELHO, BRANCO e PRETO causados a ele eram reduzidos pela metade, porém, dano PÁLIDO causado contra ele era dobrado.</specialTip>
+      <specialTip openLevel="2" key="3">A bênção da $0 se dissipou quando O-01-73-1 morreu ou entrou em pânico. Após a bênção ter sumido, um novo Agente poderia recebê-la.</specialTip>
+      <specialTip openLevel="1" key="4">Quando O-01-73-1 entrou em pânico, $0 escapou da Unidade de Contenção. Os mesmos resultados ocorreram quando O-01-73-1 morreu.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

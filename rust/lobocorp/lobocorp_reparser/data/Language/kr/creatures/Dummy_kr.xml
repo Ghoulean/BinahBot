@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id="100000">
+
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0는 자신이 이곳 직원 인 줄 아는 오뚜기입니다.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0는 사람을 유독 좋아하는 것 같습니다.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {$0가 #0의 주위를 계속 빙빙 맴돌지만 #0 직원은 자신의 할 일에만 열중합니다.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {$0는 세상의 중심에 대해서 생각하고 있습니다.}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {$0는 #0 직원이 가는 것을 굉장히 아쉬워합니다. 마치 금방이라도 따라 나갈 것 같은 느낌입니다.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">0-00-00</codeNo>
+      <name openLevel="1">교육용 오뚜기 토끼</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/DummyPortrait</portrait>
+      <riskLevel openLevel ="1">TETH</riskLevel>
+      <openText></openText>
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      예비 관리자들의 교육을 위해 제공된 더미 환상체다.
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      사실 환상체들 중에 성격이 가장 온순하고 말을 잘 들어서 더미용으로 된 거라는 설도 있다. 이름은 오뚜기 토끼지만 당근을 싫어한다. 사람들을 좋아한다. 탈출을 하는 건 그저 사람을 따라가려고 나선 것뿐이다.
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      <!--특수 상태-->
+    </desc>
+
+    <desc id="4" openLevel="3">
+      <!--특수 상태-->
+    </desc>
+
+    <record openLevel="1">
+      <!-- 관찰기록 -->
+    </record>
+
+    <record openLevel="2">
+      <!-- 관찰기록 -->
+    </record>
+
+    <record openLevel="3">
+      <!-- 관찰기록 -->
+    </record>
+
+    <specialTipSize size="1">
+      <specialTip openLevel="1" key="tutorial">$0에게 억압 작업을 진행하자 작업 완료 시 클리포트 카운터가 감소하였다.</specialTip>
+    </specialTipSize>
+
+  </observe>
+</creature>

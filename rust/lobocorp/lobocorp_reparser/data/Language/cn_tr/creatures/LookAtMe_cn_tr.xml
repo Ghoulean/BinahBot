@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100049">
+
+
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務.
+    </narration>
+
+    <narration action="start">
+      [
+      {“不要看著 $0“ 的警告標語讓許多的員工感到好奇並導致了許多可怕的意外.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {即使你隻身一人卻感到有人盯著你看時, 就已經太晚了.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-05-76</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/LookAtMe</portrait>
+
+      <name openLevel ="1">
+        幸災樂禍
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+
+      <openText>在那機器上的鑰匙孔之中藏匿著某人孜孜不倦的目光.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {一個機械型態, 能行走的異常.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {在那機器上的鑰匙孔之中藏匿著某人孜孜不倦的目光. 它的目光閃爍, 卻從沒眨過眼. 不知道那個眼睛的目的或是目標到底是什麼.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {經過許多實驗後, 發現到當一個以上的員工盯著此異常時, 它的狀態會變得更糟.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {D-002 號實驗&#13;&#10;送入一名被厚重, 黑色能夠阻擋光線的布料遮住雙眼的員工. 確認過沒有一絲光線能夠穿透那層布料. 在進入此異常的收容單位後, 他面對著此異常的方向 10 秒鐘. 沒有反應.&#13;&#10;D-003 號實驗&#13;&#10;與 D-002 號實驗相同, 其他員工在眼睛被遮住下進入, 但這次的布料並不能完全地遮住光線. 在進入此異常的收容單位後, 他們面對著此異常的方向 10 秒鐘. 在 5 秒後, 該異常侵略性的接近了員工. 終止實驗.&#13;&#10;D-004 號實驗&#13;&#10;這次以一名眼盲的員工, 沒有布料. 超過了 30 秒也沒有反應. &#13;&#10;*請立即處置被用於 D-004 號實驗的實驗項目.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {筆記&#13;&#10;:當命令員工進入此異常的收容單位時, 請務必確實的告知他們不得直視此異常. 如果他們提出疑問, 請向他們述說員工 “Yumi” 在沒有閱讀那手冊並直視了此異常後發生了什麼事.&#13;&#10;筆記 2&#13;&#10;:“Yumi” 在接觸到此異常後再也無法工作了. 她宣稱自己被不時的盯著, 但我們覺得這只是嚴重的妄想罷了. 大多時間裡她胡言亂語的說到在她吃飯或是上廁所時總被某人看著. 某些時候在她看到像是鑰匙孔或是門縫之類的, 她會感到非常的焦躁並試圖封住它... 而最糟糕的部份是她的大腦活動水平卻呈現出正常! 她不能在這個狀態下回到崗位, 且很難透過一般程序來讓她回到正常... 請將她盡速替換掉...&#13;&#10;筆記 3&#13;&#10;:啊, 這個問題已經解決了. 在她的房間裡發現了消失的 “Yumi". 當我們打開門時, 每個洞口, 包括通風口都被黑色膠帶給封住了. 她甚至拿筆戳掉了她的眼睛, 並說到她的幻覺已經消失了. 而她也不再胡言亂語了. 我只是不知道為什麼你會想要把一個瞎掉的員工再丟進去那個收容單位裡. 我不知道 D-004 號實驗是在搞什麼, 但我不覺得能起到什麼作用就是了...}
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">對 $0 進行工作時該收容單位必須遠離監控攝影機的視線.</specialTip>
+      <specialTip openLevel="1" key="2">當看著 $0 的收容單位超過 5 秒, 逆卡巴拉計數器將會下降.</specialTip>
+      <specialTip openLevel="1" key="3">當 $0 在鏡頭的視線外時它會立刻停止行動. 請依此來鎮壓它.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+
+
+
+</creature>

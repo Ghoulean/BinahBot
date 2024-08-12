@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300105">
+
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-94</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/YouMusHappy</portrait>
+
+      <name openLevel ="1">
+        你一定會快樂
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <openText>
+     許多人在接受了這種手術後已經獲得了休息並恢復了健康.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {為了進行神秘手術的老舊機械. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {這個機械被設計來抬起顱骨並安全且有效的破壞神經組織.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {許多人在接受了這種手術後已經獲得了休息並恢復了健康.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {你喜歡你的城市嗎? 回答是的人, 他們被治癒了. 回答不的人, 他們就不怎麼幸運了.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {你使用機械的時間越長, 員工恢復的就越多. 你使用它的時間越常, 問題改變的速度就越快.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">員工使用這台機器後會增加他所有的能力.</specialTip>
+      <specialTip openLevel="2" key="2">員工使用它的時間越久, 增加的能力就越多</specialTip>
+      <specialTip openLevel="2" key="3">請確認只有在機器的頂部顯示 YES 的時候停止使用這台機器.如果在 NO 的時候停止, 所有狀態將會下降得比提昇的還多.</specialTip>
+      <specialTip openLevel="2" key="4">提昇的狀態會在隔一天恢復到正常. 然而, 狀態提昇總和超過 200 的員工在隔一天會整個消失.</specialTip>
+      <specialTip openLevel="2" key="5">&lt;警告&gt; 使用該目標超過 n 次的員工, 被確認到立刻在當場爆炸了.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

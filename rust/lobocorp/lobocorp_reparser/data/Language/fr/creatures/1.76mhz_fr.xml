@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id="100007">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 pour commencer le travail.
+    </narration>
+    <narration action="start">
+      [
+      {#0 sent la sinistre pression de l’Unité de Confinement.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {#0 ressent le tiraillement entre le chagrin et la rage planant sur toute l’Unité de Confinement.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 flaire une odeur suspecte venant d’on ne sait où.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {#0 a cru, à tort, qu’il entendait des hurlements plaintifs provenir d’un horizon lointain.}
+      ]
+    </narration>
+  </info>
+  <observe level="3">
+    <collection>
+      <codeNo openLevel="0">T-06-27</codeNo>
+      <portrait openLevel="0">Sprites/Unit/creature/1.76Mhz</portrait>
+      <name openLevel="1">
+        1.76 MHz
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <openText>Voici le vestige du jour que nous ne devons jamais oublier.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Cette Anomalie est un phénomène sans forme perceptible. Elle fut découverte lorsque plusieurs employés ont manifesté des symptômes similaires après être entrés dans une certaine zone du complexe. Ils ont tous souffert d’hallucinations similaires et leur corruption mentale a augmenté.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Après avoir mis une radio sur la fréquence 1.76 MHz, nous avons patienté. Il a fallu 12 minutes pour qu’une voix mystérieuse puisse être perçue au-travers des grésillements. Il était difficile de décrypter ce qu’elle disait, mais elle semblait paniquée et appelait au secours.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Après 17 minutes, la voix s’est arrêtée et 3 puissantes explosions furent entendues, suivies de 2 plus petites. Il semble que la situation où se trouvait la voix était chaotique au vu des nombreux hurlements que nous entendîmes alors.&#13;&#10;&#13;&#10;Après 23 minutes, tout redevint silencieux.&#13;&#10;&#13;&#10;Lorsque 25 minutes furent passées, la radio a commencé à fumer. Nous pensions que l’instrument avait grillé, mais aucun défaut ne fut trouvé.&#13;&#10;&#13;&#10;Au-delà de 30 minutes, tous les individus de la zone furent soudainement pris d’une rage intense et cherchèrent à s’agresser brutalement entre eux.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Tous les employés victimes de cet incident refusèrent tout accompagnement psychologique ultérieur -nous n’avons pas pu le rendre obligatoire puisque personne ne fut blessé. Nous ne savons toujours pas ce qui a causé l’hystérie collective.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Depuis, des bruits inconnus et des hallucinations sont signalés près de l’Unité de Confinement. Voici le vestige du jour que nous ne devons jamais oublier. Il nous ramène dans un endroit chaotique, oublié par beaucoup, qui ne doit jamais être oublié.}
+      ]
+    </desc>
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">Plus la Fortitude de l’Intervenant est élevée et moins les Chances de Succès sont élevées avec $0. Il semblerait que ce soit à cause des tendances violentes qui s’embrasent plus rapidement sous l’influence de $0.</specialTip>
+      <specialTip openLevel="1" key="2">Lorsque le résultat du travail est Normal, le Compteur Qliphoth a une probabilité moyenne de diminuer.</specialTip>
+      <specialTip openLevel="1" key="3">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth a une probabilité élevée de diminuer.</specialTip>
+      <specialTip openLevel="1" key="4">Le Compteur Qliphoth a diminué lorsque #0 a paniqué au cours de son travail.</specialTip>
+      <specialTip openLevel="1" key="5">Lorsque le résultat du travail est Bon, le Compteur Qliphoth augmente. Lorsque le maximum de Boîtes-EP est produit, le Compteur augmente de 2.</specialTip>
+      <specialTip openLevel="1" key="6">Les caméras de surveillance ont détecté de nombreux bruits suspects un peu partout dans le complexe après que le Compteur Qliphoth de $0 ait atteint 0. Il semblerait que les perturbations viennent donc de son Unité de Confinement.</specialTip>
+      <specialTip openLevel="1" key="7">Le nombre de sections affectées par ces perturbations n’a cessé d’augmenter jusqu’à ce que le Compteur de $0 soit revenu au maximum.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id ="100005">
+
+
+   <narration action="move">
+     #0 va a ingresar a la unidad de contención de $0 para comenzar la tarea.
+   </narration>
+
+    <narration action="start">
+      [
+      {La aparición de $0 es como un ser humano. Sin embargo, los empleados con ojos agudos sentirán una sensación de incompatibilidad},
+      {$0 es diferente de la anormalídad ordinaria. La mayor diferencia es que nunca ha mostrado su verdadera naturaleza.},
+      {‘Nada’ no tiene un concepto de ‘estres’. Simplemente ‘existe’},
+      {Conoce la diferencia entre la ‘cascara’ y ‘piel'}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 rechina sus dientes mientras mira fijamente a #0.},
+      {El hueso que parece una ruptura de $0 hace un sonido crujiente .},
+      {La cascara de $0 en el cuello retorcido se rompe de forma poco natural mientras mira a #0.},
+      {El órgano que parece una boca de $0 ocasionalmente gotea un órgano humano. }
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {#0 no está tratando de pisar una secreción desconocida de esta Anormalidad.},
+      {A pesar de que esta Anormalidad no está realizando ninguna acción amenazadora hacia #0, todo el cuerpo de #0 está temblando.},
+      {#0 entiende que este con $0 no va a atacar en este momento, pero el hecho de estar en este sector de aislamiento está causando que [Empleado] sienta un temor intenso.}
+      ]
+      {#0 intenta lo mejor para no mirar a $0}
+    </narration>
+
+    <narration action="mid3">
+      [
+      {Mientras trabaja, #0 encuentra un aspecto un tanto familiar de $0},
+      {#0 encuentra algo desde $0.}
+      {Finalmente, #0 descubre la verdad detrás de la cáscara de $0 durante el trabajo.}
+      {El pobre #0 finalmente ha visto lo que lleva $0 en su interior.}
+    </narration>
+
+    <narration action="mid4">
+      [
+      {Ella era el superior de #0 de la compañia. Nunca se habían dicho una palabra, pero podrían haber sido grandes compañeros de trabajo.},
+      {#0 había visto su perfil de empleado. La razón por la que #0 podría recordarla es que tiene una mancha negra en su cara.}
+      {Ella fue empleada más de #0, se unió a la compañía hace unos cuatro años. #0 recurrió a lo que otros empleados que han hablado de ella.}
+      ]
+    </narration>
+
+    <narration action="special_ability1">
+      [
+      {$0 usa a #0.}
+      ]
+    </narration>
+
+    <narration action="special_ability2">
+      [
+      {Durante el procedimiento de uso, los huesos de #0 están dispersos por el piso.}
+      ]
+    </narration>
+
+    <narration action="special_ability3">
+      [
+      {El brazo derecho está en un lugar diferente, pero $0 no lo sabe.}
+      ]
+    </narration>
+
+    <narration action="special_ability3_3">
+      [
+      {Ahora, mientras #0 trabaja, $0 hace ruidos de grietas de huesos inestables cuando se mueve.}
+      ]
+    </narration>
+
+    <narration action="panic">
+      [
+      {#0 ya no puede enfrentar a $0 despues de su fracaso. $0 no es nada para #0, lo que significa que nada es nada…},
+      {#0 siente temor y repugnancia indefensos hacia $0. El disgusto innato de $0 se infiltra en todo el cuerpo.}
+      ]
+    </narration>
+
+
+    <narration action="dead">
+      [
+      {Ahora #0 es la nueva cascara de $0 luego de que muriera. Como que $0 se perdio, un día uno podría tener un funeral.},
+      {#0 ahora es la cascara de $0 al pasar el tiempo. Cada empleado recordará a #0. Aunque no quieran, tendrán que aceptarlo.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-06-20</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/NotThing</portrait>
+
+      <name openLevel ="1">
+        Nada Esta Ahí
+      </name>
+      
+      <riskLevel openLevel ="1">
+        ALEPH
+      </riskLevel>
+
+     
+      <openText>Y mucho de sus pieles gritaron una sola palabra. “Gerente”</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Tiene la forma de un humano, pero seguramente no lo es. En un determinado período de tiempo devora a un empleado y viste su piel. Durante ese proceso, la estructura ósea y los órganos se vuelven un desastre, por lo que toma esa forma extraña. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {La criatura tiene lengua, pero no sabe hablar, por lo tanto, solo puede hacer sonidos sin sentido. No se sabe qué hay dentro de la carcasa, pero su piel se desgasta continuamente, por lo que es necesario cambiar y mantener la piel exterior. No siente un dolor regular por lo que no se preocupa por los huesos rotos. La criatura puede romper sus propios huesos y cortarse para escapar por una pequeña ruta.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Cada vez más, se descubrío que esta anormalídad podría estar evolucionando. Muestra el acto de seguir el carácter de la persona que era el propietario de la carcasa. Y trata de hacer un intento de equipararse a si mismo con los seres humanos.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Cuando escapó, usa la piel del empleado que mató e imita a esa persona. Entonces, sin ningún signo, revela la verdadera forma. Se muestra más parecido con el ser humano en comparación con la forma temprana. Ahora se confirma que la anormalídad posee bipedalismo, los órganos están en la posición adecuada. Con fuerza física adicional. Los empleados tienen miedo de esta forma.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {Advertencia de algo&#13;&#10;Si se ha confirmado que se ha escapado y se ha mantenido en dos pies, entonces solo hay una cosa que puedes hacer. Colóquese en una postura adecuada y junte sus manos cuidadosamente, luego ore al Dios en el que cree y observe la situación.}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="3">
+      [
+      {Extracto del registro de la entrevista #4-593 &#13;&#10; Empleada F4055 : “Si alguno de nosotros se vuelve loco, el 80% de la culpa es de esa criatura. Como la mayoría de las anormalídades de aquí, nadie sabe la razón de su existencia. No sé lo que está dentro que hace que se cubre con piel humana, y no sé cómo la piel se gasta tan rápido. No sé por qué no cuidaría de su propia piel, (Omitido) &#13;&#10;Cuando nos está comiendo a uno de nosotros, es tan desagradable que es psicológicamente perjudicial solo pensar en ello. De todos modos, ir a la zona de confinamiento para verificar el estado de la piel es un verdadero trabajo. Solo piénsalo. Un colega con el que hablas y te reíste hace unos días, ahora tiene el cuello roto y los órganos sobresalen mientras se arrastra con cuatro patas. (Omitido) &#13;&#10;Eso no es todo lo que hace la criatura. Cuando era nuevo aquí, nadie quería ir a esa habitación, así que me enviaron. Fue peor que ahora. Tomó la forma de un humano, retorcido en algo que sólo Dios sabe lo que es. Intentó actuar como un humano y trató de hablarse en el espejo. Intentó recuperar su estructura propia. Sus acciones se sintieron como si imitaran ‘nuestro’ comportamiento. Nunca se sabe, podría estar alrededor de nosotros fingiendo ser un humano."}
+      ]
+    </desc>
+
+    <desc id="7" openLevel="3">
+      [
+      {&lt;ADVERTENCIA&gt; La autorización del personal debe ser de nivel 3 o superior para leer este documento&#13;&#10; (Esta grabación es de una llamada del teléfono de emergencia del área de confinamiento de criaturas. Los teléfonos se instalan en habitaciones de criaturas clase HE o nivel de amenaza más alto para permitir una respuesta rápida en una situación urgente)&#13;&#10;Empleado M3120 : Responde, responde. Esto es la zona de confinamiento de ‘Nada Esta Ahi’&#13;&#10;Departamento de Respuesta a Emergencias(DRE) : Este es el equipo de respuesta a emergencias. Como puedo ayudarte?&#13;&#10;Empleada M3120: Necesito una pistola paralizante ahora mismo! Tengo una situación de emergencia aquí!&#13;&#10;DRE : Puede especificar el motivo, por favor?&#13;&#10;Empleada M3120: La Abnormalidad...(Se produce un ruido, algo rompiendose) Está destripando al empleado. &#13;&#10;DRE : Perdón?&#13;&#10;Empleada M3120: Está matando a mi colega!&#13;&#10;DRE : Nosotros responderemos immediatamente. Por favor identifique al empleado que está siendo atacado. &#13;&#10;Empleada M3120: Uh… es el empleado M2658, no M26850. Nombre, &lt;Redactado&gt;. Soy la empleada M3120 &lt;Redactado&gt;.&#13;&#10;DRE : ID confirmado. Qué le está pasando a tu colega en este momento? &#13;&#10;Empleada M3120 : Sí, por favor apresúrate. Necesitamos un arma para controlar a la criatura. (sale un ruido – probablemente el grito de M2658 en la transmision) Oh dios, esto es…&#13;&#10;DRE : Puedes decirme qué está pasando?&#13;&#10;Empleada M3120 : La anormalidad está atacando a mi colega. Está literalmente destrozando a mi colega. No puedo hacer nada. Repito. Necesito un arma para controlar a la criatura. &#13;&#10;DRE : El equipo de respuesta de emergencia ha sido enviado. Ellos llegarán en breve.&#13;&#10;(Omitido) &#13;&#10;DRE : &lt;Redactado&gt;, Qué esta pasando? Sigue atacando a tu colega?&#13;&#10;Empleada M3120: Si, oh no. Creo que ya esta hecho.&#13;&#10;DRE : Ha dejado de atacar a tu colega?&#13;&#10;Empleada M3120 : No. Mi colega es... está muerto. Repito, el esta muerto.&#13;&#10;DRE : Como puedes estar seguro?&#13;&#10;Empleada M3120 : Porque se ve… él es…&#13;&#10;DRE : Ha sido arrancado? Qué partes están dañadas del empleado?&#13;&#10;Empleada M3120 : Todo.}
+      ]
+    </desc>
+
+    <desc id="8" openLevel="3">
+      [
+      {Registro de entrevistas&#13;&#10;Como la forma en que nuestros empleados observan las anormalídades, ‘Nada Esta Ahi’ también nos está observando. &#13;&#10;Y después de usar la carcasa del empleado, se considera a sí mismo como el empleado muerto. &#13;&#10;A continuación, imita el comportamiento habitual del empleado, los hábitos de hablar, lo que le gusta y lo que no le gusta y todo lo que pueda ver. &#13;&#10;No sabemos qué tan cuidadosamente, y por cuánto tiempo ha estado observando a los empleados para imitarlos. &#13;&#10;Lo que estoy diciendo es que no podemos tratarlo como ‘un monstruo aterrador sin inteligencia’.&#13;&#10;Incluso ahora, puede que deambule dentro de una carcasa de alguien que conocemos.&#13;&#10;Y se vuelve cada vez más como humano. &#13;&#10;La transformación también es cada vez más rápida. Me está dando la piel de gallina.&#13;&#10;Cuando llegue el día en que no podamos distinguirlo de los seres humanos, será el día de la destrucción de la compañia. &#13;&#10;Necesitamos estar atentos a esta anormalidad.}
+      ]
+
+    </desc>
+
+    <desc id="9" openLevel="3">
+      [
+      {Lo siguiente es una grabación de comportamientos inusuales de un empleado que se convirtió en la piel de “Nada Esta Ahi.”.&#13;&#10;F2930 : Gerente, Gerente!&#13;&#10;M2023 :Hey, has estado llamando al gerente desde la mañana. Qué sucede contigo? Con esa sonrisa y todo.&#13;&#10;F2930:…&#13;&#10; M2023 : De todos modos, espero que tengamos pasta para la cena. Con tocino grueso.&#13;&#10;F2930:… &#13;&#10;M2023 : Oh, tengo una alarma. “El último empleado que trabajó en 'Nada Esta Ahi’ en la oficina del consejero inmediatamente.” &#13;&#10;F2930:… &#13;&#10;M2023 : No es eso...tu?&#13;&#10; F2930 : ...&#13;&#10; M2023 : Oye, di algo. &#13;&#10;F2930 : Gerente! Gerente! ████████!!! }
+      ]
+    </desc>
+
+    <desc id="10" openLevel="3">
+      [
+      {El empleado B procedió a tomar medidas inmediatamente después de escuchar la palabra. Sin embargo, "Nada Esta Ahi." Mientras va arrancado del empleado A, revelando la primera forma. La grabación fue solo de audio, dejando de misterios exactamente lo que sucedió.  &#13;&#10;La piel que contiene “Nada Esta Ahi” trata de hacerse pasar por el empleado que intentó matar. Imita los comportamientos o palabras del empleado que vio por última vez. &#13;&#10;Y muchos de sus pieles gritaron una sola palabra. “Gerente”.}
+      ]
+    </desc>
+
+     <specialTipSize size="7"> 
+      <specialTip openLevel="1" key="needKill">Cuanto más bajo sea el nivel de Fortaleza del empleado, menor será la tasa de éxito del trabajo de $0 y menos estable será el trabajo.</specialTip>
+      <specialTip openLevel="2" key="justice">Cuando un empleado cuya Justicia era inferior al nivel 4 completó el trabajo, la cuenta Qlifot de $0 disminuye.</specialTip>
+      <specialTip openLevel="2" key="killUp">El empleado #0 en la sala de contención sea asesinado por el ataque de $0 durante el trabajo. De repente, $0 cambió como el empleado #0 tras ser asesinado. El mismo caso se produjo cuando estaba en pánico el empleado.</specialTip>
+      <specialTip openLevel="2" key="panicUp">Cuando se determina que el resultado del trabajo era malo, $0 atacara al empleado y lo convirtieron en su nueva carcasa.</specialTip>
+      <specialTip openLevel="3" key="makePanic">Los empleados con nivel de Fortaleza 3 entraron en panico de inmediato cuando entraron en la sala de contención. Se recomienda que los empleados con un nivel de fortaleza inferior a 4 no se envíen a una sala de contención de $0 por el bien del personal.</specialTip>
+      <specialTip openLevel="3" key="backMonster">Cuando el empleado que vio la apariencia humana de $0 entro en el panico, solo hizo que lo convirtiera en su cáscara. En ese momento, el contador Qlifot de $0 también disminuyó.</specialTip>
+      <specialTip openLevel="4" key="needGun">Cuando el contador de $0 llega a cero el $0, que parecía un empleado #0 del trabajo, desaparece de la sala de contención. Encuentra y mata rápidamente a $0 con la apariencia del empleado.</specialTip>
+    </specialTipSize>
+
+   
+
+  </observe>
+</creature>

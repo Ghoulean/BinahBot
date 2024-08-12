@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100040">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção de $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {#0 percebe pequenos esporos sendo cuspidos pra fora de $0.},
+      {#0 se sente um pouco desnorteado por causa de $0.},
+      {$0 parece revoltante, mesmo assim canta.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {A raposa disse: “O essencial é invisível ao olho.”}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 veio de muito longe, de um lugar que não conhecemos.},
+      {Talvez $0 não seja o que nós vemos com nossos olhos.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Os finais de vários funcionários que $0 domou sempre foram trágicos.},
+      {Todos os funcionários que se transformaram em monstros por causa dos esporos de $0 andam pela Unidade de Contenção.},
+      {Vários de nossos funcionários que trabalharam com $0 diziam que se recusaram a comer cogumelo por um tempo.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {Diferentemente de várias das Anormalidades que nós temos contido, somente um funcionário foi responsável pelo nome de $0.},
+      {#0 lembra de um pedaço de estrela.}
+      ]
+    </narration>
+    <narration action="special_ability_1"> 
+      [
+      {Dezenas de frutos dos esporos começam a crescer no corpo de #0; eles não podem ser parados… A mente de #0 está ansiosamente desesperada para ter consenso com $0.},
+      {Com a estrela de $0 sendo mantida em seu corpo, #0 lentamente começa a perder sua mente, sendo incapaz de se controlar.}
+      ]
+    </narration>
+    <narration action="special_ability_2">
+      [
+      {O próprio preço a ser pago pela ânsia de algo maior que nós mesmos por si só era ótimo.},
+      {#0 escuta a voz de um amigo chamá-lo enquanto perde a consciência.}
+      ]
+    </narration>
+    <narration action="special_ability_3"> 
+      [
+      {#0 escuta a voz de um amigo chamá-lo enquanto perde a própria consciência.},
+      {#0, que viu estrelas em seus sonhos, ficou continuamente com mais saudade de $0.},
+      {#0 não pôde permanecer no mundo de $0. O trágico fim de #0, agora exilado, se inicia.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">O-04-66</codeNo>
+      <name openLevel="1">Pedaço de Cogumelo Gigante</name>
+      <name openLevel="4">O Pequeno Príncipe</name>
+      <portrait openLevel="1">Sprites/Unit/creature/YoungPrince</portrait>
+      <riskLevel openLevel="2">WAW</riskLevel>
+      <openText>
+       Mesmo que isso acabe sendo uma maldição, eu a amarei como uma bênção.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Entre os funcionários, ela era originalmente chamada de ‘Pedaço de Cogumelo Gigante.’ Ela realmente se parece com um e possui semelhanças com mofo; No geral, sua aparência é semelhante a de um fungo. Que continuamente solta esporos pelo ar que são visíveis a olho nu.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {A maioria de nossos funcionários não gostam dessa Anormalidade. Poucos têm a mente aberta o suficiente para gostar de trabalhar com cogumelos gigantes que preenchem metade da Unidade de Contenção, cuspindo esporos desconhecidos; e ainda tendo mais coisas com que se preocupar, incluindo o trabalho com outras Anormalidades.}
+      ]
+    </desc>
+    <desc id="3" openLevel="1">
+     [
+     {Já que tão poucos de nossos funcionários se voluntariavam, nós só conseguimos gravar as informações mais básicas. Originalmente, nós utilizávamos um sistema de turnos para designar quais Anormalidades nossos funcionários iriam trabalhar. Entretanto, após o “Incidente das Garotas Mágicas” alguns anos atrás, começamos a considerar as opiniões de nossos funcionários quando atribuímos seus trabalhos.}
+     ]
+    </desc>
+    <desc id="4" openLevel="1">
+      [
+      {A Anormalidade produz esporos microscópicos que se movem pelo ar. Eles principalmente se proliferam ao invadir outros organismos através do sistema respiratório. É difícil detectar os sintomas iniciais da invasão, porque eles são somente uma leve dispnéia e uma garganta seca e arenosa. Por isso, é obrigatório usar uma máscara de gás enquanto estiver trabalhando com essa Anormalidade.}
+      ]
+    </desc>
+    <desc id="5" openLevel="1">
+       [
+       {Quando um funcionário inala esporos o suficiente, cistos bizarros vão começar a crescer em seu corpo, os tecidos ficarão corroídos. E finalmente, se tornará em uma criatura dismórfica, na qual sua forma original é dificilmente percebida. Enquanto está nesse estado, mostrará hostilidade. Então deve ser eliminado assim que for visto. }
+       ]
+     </desc>
+    <desc id="6" openLevel="2">
+       [
+       {&lt;Trecho de um Registro de Aconselhamento - Funcionário John&gt;&#13;&#10;
+       Havia esse cara que era terrivelmente quieto. Ele era aquele tipo de pessoa que olharia de lado para gente como se fosse uma raposa, como se estivesse esperando que a gente fosse falar com ele. Uma coisa peculiar sobre ele é que se voluntariava para trabalhar com o pedaço de cogumelo gigante, uma Anormalidade que todos odiavam visitar. E também era perturbador o fato dele gastar muito tempo naquela Unidade de Contenção.&#13;&#10;
+       Quem sabe que tipo de monstruosidade pode ter crescido no corpo dele? Quando nós decidimos chamar a Anormalidade de "Pedaço de Cogumelo Gigante", aquele cara falou pela primeira vez. Dizendo que ele que a viu por mais tempo. Ele disse um monte de bobagem, como que a Anormalidade não merecia ser chamada de pedaço de cogumelo. Todo mundo riu da cara dele.&#13;&#10;
+       Nós finalmente decidimos que ele enlouqueceu quando ele começou a falar coisas sobre como ele se tornou amigo daquela maldita coisa. Digo, é uma coisa comum de acontecer aqui, várias outras coisas acabam acontecendo por causa disso. Uma pessoa ficando doida não é algo tão grande assim. Nós tentamos aconselhar ele para fazer o teste psicológico, mas ele só nos deu aquele olhar condescendente de como soubesse algo que não sabíamos.&#13;&#10;
+       E alguns dias depois, ele chutou o balde, como todos nós sabemos. Eu mencionei que fui eu que o reconheceu na carcaça daquela criatura de esporos e mofo? Só consegui por causa da marca de nascença na testa dele. Se não tivéssemos encontrado aquela marca naquele caroço de esporos, nós nunca nem teríamos descoberto que era ele. Ninguém sabia dessa marca de nascença exceto eu. Já que, né? Ninguém do departamento queria ser amigo dele.&#13;&#10;
+       Após se tornar aquele monstro, ele só perambulou perto da Unidade de Contenção do Cogumelo. Nós tentamos atraí-lo para um lugar menos movimentado porque ele estava atacando tudo à vista. Mas ele não se movia mais do que 10 metros de distância do cogumelo até ele morrer. &#13;&#10;
+       É por isso que nós decidimos renomear a Anormalidade. Por razões complexas como pena pelo cara que se tornou amigo de um cogumelo, e a lembrança de sua trágica morte.&#13;&#10;
+       Falando a verdade, ele precisava de um amigo. Foi por isso que ele se deixou ser infectado, ficando maluco com as alucinações, não sabendo que estava se tornando em um monstro. O cogumelo domou o pobre desgraçado simplesmente para reproduzir; ele domou o Alex, aquele em que o nome não era conhecido por ninguém...}
+       ]
+     </desc>
+    <desc id="7" openLevel="3">
+      [
+      {&lt;Anotações do Funcionário Alex&gt;&#13;&#10;
+      A mente humana é frágil demais para visualizar algo em sua verdadeira forma. Você sabia que as tamarutacas podem ver centenas de cores que humanos não conseguem? Esse simples fato é suficiente para ilustrar meu ponto de que é prejudicial acreditar e julgar tudo só com base no que você vê.&#13;&#10;
+      Eu não tenho muitos amigos, não me entenda mal. Eu não quero fazer amigos, eu escolhi isso; não é porque eu não consigo. Mas sim porque não iremos nos entender. Uma pessoa pensa de si mesma como uma entidade completamente isolada, tornando impossível compreender os outros por completo. Mas, ironicamente, um instinto inerente de psicologia de bando sobreviveu ao longo de nossa evolução.&#13;&#10;
+      Nós repetidamente jogamos um jogo de risco, andando em corda bamba, tentando entender os outros em vão enquanto estamos fora de nosso território. Na verdade, eu já estava há muito tempo cansado desse jogo inútil. Eu me voluntariei para observar o cogumelo gigante por uma causa similar. Ninguém queria chegar perto daquela Anormalidade. Deve ter sido por causa de algumas razões insignificantes como a que a aparência dela é nojenta para os olhos. O fato de sua aparência ser um pouco estranha não iria me parar. Sinceramente, eu me senti um pouco superior quando todos pareciam estar supresos após eu falar que iria trabalhar com ela.&#13;&#10;
+      (Omitido) A Anormalidade não mostrou nenhuma atividade notável. Eu gravei e observei o silêncio com paciência. Um dia, após ter espalhado pós de cores encantadoras, eu passei por uma mudança especial. Eu pude perceber a "hiperrealidade", um plano maior do que a realidade. Essa era a mão que Ele extendeu para mim. Eu a segurei firme e fui recompensado com o convite para um lugar muito especial. Era algo que somente eu podia alcançar, ele me disse isso por meio de telepatia.&#13;&#10;
+      Ele então me deu as boas-vindas, já que eu era o único que podia perceber sua essência. Eu estive imaginando, com a ânsia pelo momento de conversar através de minha mente. De ser completamente entendido; o sentimento de unificação, era tão estimulante, eu mal podia esconder minha felicidade.&#13;&#10;
+      (Omitido) Eu quero ficar mais próximo Dele. Eu quero me tornar parte Dele. Eu sempre pensava Nele. Eu queria pertencer a Ele e entender seu mundo. Como um broto de flor prestes a florescer, minha mente foi invadida... e pouco a pouco eu estava sendo domado...}
+      ]
+    </desc>
+    <desc id="8" openLevel="4">
+      [
+      {&lt;Trechos de uma Gravação de Áudio&gt;&#13;&#10;
+      Isso é a parte de uma cena gravada por uma câmera de segurança na Unidade de Contenção. Já que os esporos completamente obscuresceram as imagens, somente o áudio podia ser extraído. Julgando pelo conteúdo da conversa, tivemos a certeza em confirmar que os esporos da Anormalidade contém agentes alucinógenos. Porque mesmo após uma análise completa da gravação, nenhuma voz além da do funcionário era detectada. O funcionário, infectado pelos esporos, sofreu um estado severo de frenesi antes de ser eliminado por outro funcionário assim que foi visto.&#13;&#10;
+      -	Não, eu não tenho nenhum amigo. Como eu já tinha dito, eu não gosto muito de relacionamentos contraditórios. Mas ao menos, eu acho que você poderia ser meu amigo. A língua humana é muito simples para ilustrar esse relacionamento, mas eu acho que podemos ficar como "amigos".&#13;&#10;
+      -	… Sim, eu sou seu único amigo.&#13;&#10;
+      -	Eu devo aceitá-lo. Minha vida mudou bastante desde que te conheci. Passei minha vida toda me sentindo deprimido, sem ter uma razão, sem falar com ninguém, só trabalhando o dia inteiro. Mas você me redimiu, uma pessoa que se abandonou. Assim como eu pude perceber sua verdadeira essência, você viu através da minha. É realmente uma experiência arrebatadora. E eu gostaria de entendê-lo; gostaria de me tornar um ser como você e te amar. Eu nasci como humano, vivi uma vida entediante e com certeza continuaria assim se não tivesse te conhecido. Eu fiquei tão feliz em te conhecer.&#13;&#10;
+      -	Lembre-se de mim; por favor, lembre-se da flor sem nome que floresceu só para você.&#13;&#10;
+      -	Mesmo que isso acabe sendo uma maldição, eu a amarei como uma bênção. Eu vou estar pensando em você até o dia em que minha mente cair e se despedaçar. Eu fecharei meus olhos pensando somente no meu único amigo que veio de um universo distante… (Após isso, um leve som de ar vazando da Anormalidade pôde ser escutado antes de tudo ficar em silêncio.)}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">O Contador Qlifót dimiuiu após terem sido realizados 3 trabalhos em sequência que não eram de Percepção.</specialTip>
+      <specialTip openLevel="1" key="2">Agentes que trabalharam com $0 tinham uma chance de serem infectados pelos esporos. Mande-os para trabalhar com outras Anormalidades regularmente para impedir que sejam completamente infectados.</specialTip>
+      <specialTip openLevel="1" key="3">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="2" key="4">#0, que constantemente trabalhou com $0, mostrou sinais de dor aguda dentro da Unidade de Contenção. Após isso, tecidos similares ao de $0 emergiram de seu corpo, e #0 começou a se transformar em $0-1.</specialTip>
+      <specialTip openLevel="3" key="5">$0 atraía um funcionário para sua unidade de contenção quando seu Contador Qlifót chegava a 0. Quando o funcionário atraído entrava na Unidade de Contenção, o mesmo fenômeno descrito anteriormente acontecia.</specialTip>
+      <specialTip openLevel="4" key="6">Ao suprimir $0-1, preste atenção nos esporos que são soltos de seu corpo após a morte. Esses esporos causarão dano mental contínuo, e os funcionários que entrarem em pânico por conta dos esporos podem tentar entrar na Unidade de Contenção de $0. Por isso, devem ser imediatamente eliminados.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <codeId>O-04-66-1</codeId>
+  </child>
+</creature>

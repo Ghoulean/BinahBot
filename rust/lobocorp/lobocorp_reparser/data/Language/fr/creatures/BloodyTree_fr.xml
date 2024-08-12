@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100044">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 vit dans les yeux de sa cible.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 fait croître des épines qui visent le paradis que voit #0.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-04-72</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/BloodyTree</portrait>
+      <name openLevel="1">
+        Le Paradis Enraciné
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>Ne détournez pas le regard, gardez vos yeux dessus. Confinez-le dans votre champ de vision.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Une Anomalie épineuse se nourrissant du regard des autres et déployant parfois ses ailes.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Ne détournez pas le regard, gardez vos yeux dessus.&#13;&#10;&#13;&#10;Il vit dans votre regard. Son confinement n’est rien d’autre qu’une façade.&#13;&#10;&#13;&#10;Confinez-le dans votre champ de vision.&#13;&#10;&#13;&#10;Cligner des yeux est accepté. Il tolérera un si bref instant de perturbation.&#13;&#10;&#13;&#10;Cependant, dès qu’il constate avoir perdu votre attention et votre intérêt…&#13;&#10;&#13;&#10;Il déploiera ses ailes.&#13;&#10;&#13;&#10;Oui, ses ailes.&#13;&#10;&#13;&#10;Comme s’il faisait l’éloge d’un dieu oublié depuis longtemps, ses ailes allongées et sanglantes s’étendront et couvriront l’entièreté du couloir.&#13;&#10;&#13;&#10;Ses ailes continuent de donner des fruits, usant de cadavres frais comme nourriture.&#13;&#10;&#13;&#10;Si cela ne suffit pas à gagner votre attention, les tiges perceront alors le complexe et pousseront vers un endroit ensoleillé.&#13;&#10;&#13;&#10;Tel un ange, ses ailes atteindront les cieux et se prolongeront jusqu’au sol, finissant par bloquer toute lumière du soleil.&#13;&#10;&#13;&#10;Mais il reste de l’espoir. Lorsque vous finirez par tourner votre regard et le ferez de nouveau entrer dans votre champ de vision…&#13;&#10;&#13;&#10;Il retournera dans son domaine souterrain, sombre et profond.&#13;&#10;&#13;&#10;Du moins, si vous avez réussi à survivre jusque là.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Voilà ce qu’est un regard. De l’attention. Un lien invisible qui nous relie tous. Le centre d’attention.&#13;&#10;&#13;&#10;Ne viens pas ici, car il n’y a pas d’endroit pour toi où te reposer.&#13;&#10;&#13;&#10;Est-ce là ce que tu voulais voir ?&#13;&#10;&#13;&#10;Lorsque tes larmes auront enfin séché, donne-moi ta réponse.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Les travaux sur $0 doivent être conduits lorsque l’Administrateur a l’Unité de Confinement dans son champ de vision.</specialTip>
+      <specialTip openLevel="1" key="2">Durant la procédure de travail, lorsque l’Unité de Confinement sort du champ de vision des caméras, le Compteur Qliphoth diminue. Quand l’Unité de Confinement de $0 reste non surveillée après cette première instance, le Compteur continue de baisser.</specialTip>
+      <specialTip openLevel="1" key="3">Quand le résultat du travail est Normal ou Bon, le Compteur Qliphoth augmente. Il semblerait qu’il puisse augmenter jusqu’à 3 niveaux à la fois, selon le résultat du travail.</specialTip>
+      <specialTip openLevel="1" key="4">&lt;ATTENTION&gt; Gardez toujours l’Anomalie dans votre champ de vision lorsque sa répression est en cours.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300108">
+
+    <narration action="move">
+      #0 va a ingresar a la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-97</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/PromiseAndFaith</portrait>
+
+      <name openLevel ="1">
+        Antigua Creencia y Promesa 
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <openText>
+        Los corazones traicionados fueron lentamente olvidados en las profundidades.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Un misterioso mármol colgado en la unidad de contención.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Sabemos de innumerables promesas y creencias que se han repetido desde hace siglos.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Sin embargo, solo el vacío y la traición regresaron de ellos.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Los corazones traicionados fueron lentamente olvidados en las profundidades.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Si lo intentas sin querer nada a cambio, puedes recibir una recompensa inesperada.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Usa el objetivo para mejorar un arma E.G.O. Se consumirá poca energía al actualizarlo.</specialTip>
+      <specialTip openLevel="2" key="2">El arma mejorada a través del objetivo tendrá un poder de ataque más fuerte.</specialTip>
+      <specialTip openLevel="2" key="3">Sin embargo, existe la posibilidad de que el arma E.G.O perezca durante la actualización.</specialTip>
+      <specialTip openLevel="2" key="4">El arma mejorada perderá la influencia del objetivo y volverá a su poder de ataque original después de un día.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

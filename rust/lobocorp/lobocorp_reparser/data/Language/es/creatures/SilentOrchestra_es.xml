@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100019">
+
+    <narration action="move">
+      #0 va a entrar en la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="start">
+      [
+      {El conductor $0 está esperando a los músicos.}
+      {El conductor $0 suele ser silencioso. La unidad de contención también es pacífica.}
+      {El conductor es un mago que trae vida; un chamán que llama espíritus. }
+      {El concierto más hermoso del mundo comienza en las ruinas.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Prepara la música del apocalipsis. }
+      {Es sin duda que $0 tiene el mejor conjunto de la compañia.}
+      {El sensacional rendimiento de $0 fascinará a todos.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {Los músicos viven para el aplauso del público.}
+      {La vida de un músico comienza y termina con los aplausos del público.}
+      {Una ovación de pie es el regalo más honorable que el público puede dar al director.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {Pronto para convertirse en la audiencia de $0, #0 casi ha terminado el trabajo del día.  }
+      {#0 se ocupa de la tarea en $0 sin ningún problema.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">T-01-31</codeNo>
+      <name openLevel="1">La Orquesta Silenciosa</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/silentOrchestra</portrait>
+      <riskLevel openLevel ="2">ALEPH</riskLevel>
+      <openText>El concierto más hermoso del mundo comienza en las ruinas.</openText>
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      {Una anormalidad que ama el arte y trata de tocar su música para la compañía. &lt;El director no solo corrige los errores musicales, sino que también es responsable de crear el mejor conjunto y dirigir la orquesta. Las habilidades de un conductor se pueden determinar en 5 minutos. En el momento en que el conductor abra la partitura, los músicos juzgarán sus ojos, su comportamiento y su ambiente. Los músicos decidirán si el director es digno de dirigirlos. Sin su armonía y cooperación, el verdadero mensaje de la música no se puede expresar. Por lo tanto, el conductor debe mantener un excelente dominio, liderazgo y excelente poder de persuasión…. (Omitido) &gt;}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="2">
+      [
+      {&lt;Movimiento 1: Tranquilo y lento. &gt; &#13;&#10;El conductor comienza el apocalipsis. }
+    ]
+  </desc>
+
+    <desc id="3" openLevel="3">
+      [
+      {&lt;Movimiento 2 a 4: Alegre y rapido &gt; &#13;&#10; Los empleados empiezan a olvidarse de todo y son movidos por la sinfonía. Su emoción se convierte en una de locura, y tratan de atacar a los que están cerca. La música de la orquesta se acelera, llevando a todos los departamentos a sus propias destrucciones. Cuando todos los músicos se han reunido, comienza algo de música que nadie puede escuchar, pero que todos pueden escuchar. }
+    ]
+  </desc>
+
+    <desc id="4" openLevel="4">
+      [
+      {&lt;Finale&gt; <b>"La música te atravesará."</b>}
+      ]
+    </desc>
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="mood1">Cuando el resultado del trabajo fue bueno, el contador Qlifot se reduce.</specialTip>
+      <specialTip openLevel="1" key="mood2">Cuando el resultado del trabajo fue malo, el contador Qlifot se reduce.</specialTip>
+      <specialTip openLevel="1" key="escape">La música que toca cuando $0 escapa consiste en 4 movimientos. A medida que avanza el movimiento, los empleados sufren daño blanco (daño mental) y el área audible de la música continúa expandiéndose.</specialTip>
+      <specialTip openLevel="2" key="movement">Con cada movimiento, la debilidad de $0 cambió. Para el movimiento 1, provoca daño Palido, mientras que para el movimiento 2, provoca daño tipo Negro. Para el movimiento 3 era blanco, y durante el movimiento 4, solo los ataques rojos o fisicos fueron efectivos contra $0. Cuando la música estaba en su punto máximo, $0 se volvió inmune a todo tipo de ataques.</specialTip>
+    </specialTipSize>
+
+  </observe>
+
+  <etc>
+    <param key="movimiento1" index="1">
+      Movimiento 1, Adagio: Tranquilo y lento
+    </param>
+
+    <param key="movimiento2" index="2">
+      Movimiento 2, Sostenuto: Restringido pero rápido
+    </param>
+
+    <param key="movimiento3" index="3">
+      Movimiento 3, Accelerando: Gradualmente más rápido y más fuerte
+    </param>
+
+    <param key="movimiento4" index="4">
+      Movimiento 4, Stringendo: Poco a poco mas rapido
+    </param>
+
+    <param key="movimiento5" index="5">
+      Finale con fuoco, ma non troppo: Apasionadamente, pero refinado
+    </param>
+  </etc>
+</creature>

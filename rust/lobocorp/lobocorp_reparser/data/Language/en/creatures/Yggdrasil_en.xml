@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+  -->
+  <info id="100062">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {#0 can feel the delicate scent of grass embracing the air.},
+      {#0 feels a gentle breeze, which couldn’t possibly originate inside a Containment Unit.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {The sound of rustling leaves is incredibly tranquil.},
+      {A flowery scent lingers in #0’s nose.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {A majority of the employees here are discontent; even the smallest blessing gives them great happiness.}
+      ]
+    </narration>
+    <narration action="mid3">
+     [
+     {A blessing more radiant than anything approaches employee #0.}
+     ]
+    </narration>
+    <narration action="mid4">
+      [
+      {When the flower of blessing finally blooms from $0, then…}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">D-04-108</codeNo>
+      <portrait openLevel="0">Sprites/Unit/creature/Yggdrasil</portrait>
+      <name openLevel="1">
+        World Tree
+      </name>
+      <name openLevel="3">
+        Parasite Tree
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>‘Ease yourself, do you not have need of the blessing?’</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;This Abnormality was created with the ideas provided by Tumblbug Backer llooll530.&lt;/i&gt;&#13;&#10;&#13;&#10;An Abnormality taking the form of a tree with plentiful leaves.&#13;&#10;The leaves are lush with a rich green color, creating a comforting ambience. A refreshing flowery scent is carried by a gentle breeze. }
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Employees who made contact with the Abnormality stated that it provided them a significant psychological comfort.&#13;&#10;Such statements were deemed truthful as the employees displayed a visible increase in work efficiency, along with a notable decrease in mental corruption. }
+      ]
+
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {&lt;An Excerpt From an Employee’s Diary&gt;&#13;&#10;
+      At first, I thought it was just my imagination from being sleep deprived. But as my body and mind got more and more exhausted, the voice calling me got clearer and clearer.
+      ‘I can help you with your problem.’
+      Yeah, that’s right. You can help me.
+      What was I worrying about?
+      I can smell a flowery scent…}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {      They imported a tree.
+      That tree, standing in the middle of the Containment Unit, was such a beautiful sight to behold. I could feel the scent of flowers flit across my face even though there was no breeze or wind.
+      Smelling that scent for even just a moment makes my attachment for the tree blindly grow. I was very intuitive since my childhood, so I could sense that this artificial attachment was hazardous.
+      Ever since then, I tried everything I could to avoid contact with that tree, making all kinds of excuses whenever I was assigned to work on it.
+      “Well, if you put it that way… just this once, okay? Geez, did that tree do something to you?”
+      My colleague’s banter gets stuck in my ears. Did it do something? Yes, it did, and it scares me.
+      A few days later, the same colleague has now become a staunch worker, wearing a constant smile on his face. I knew he’s always been an optimistic person, but I couldn’t help but feel uneasy because his face seemed strangely comfortable.
+      “Really, do I seem content lately?
+      Yeah, well, that’s because the tree is helping me out.”
+      He answered light-heartedly. From my years of experience, I can say for certain that few people can smile so sincerely while working for this company. That means, when someone keeps smiling at work, it’s a sign that something went wrong. My suspicion immediately led me to report this behavior to my superior.
+      The answer came sooner than I thought. It said that I am to observe the Abnormality myself and file an observation report because there have been several abnormal behaviors related to this tree which were identified in several other employees, not just the guy I reported.
+      The order forced me to finally confront this tree that I had been avoiding as best I could. I knew I couldn’t pass it over to someone else this time.
+      It was no longer a barren, naked tree that I saw the day it was imported. Instead, I saw a Containment Unit covered in grass that seemed to be sprawling around the tree. Which was peculiar, since there’s no way grass can grow in a Containment Unit. This facility is completely inorganic.
+      ‘Hello, have you come here to receive my blessing, too?’
+      The moment I felt that something was wrong, a voice echoed in my head…}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {&lt;i&gt;(It was difficult to decrypt the contents of the diary from this point onward as the writing becomes heavily distorted)&lt;/i&gt;&#13;&#10;
+      I don’t know how I wrote the observation report, all that’s certain is I just wrote what I felt about the tree: This beautiful plant is bringing happiness to every employee who visits its Containment Unit; it will soon greatly contribute to humanity’s quest for prosperity and advancement.
+      But how could an Abnormality be such a good influence on humanity?
+      ‘I just want to help you.’
+      A voice without a single speck of malicious intent echoed again in my head. Yes, you’re right. You’re just helping me.
+      ‘And if you’re okay with it, could you bring all your friends who are having a hard time here? I believe I can help them.’
+      Yes, this tree will easily bring peace to their mind. Speaking of which, that newbie seemed to be pretty depressed lately.
+      “Hey, I know a place that’ll make you feel better. Come along if you want to.”
+      She followed me without any suspicion. It wasn’t hard to bring her to the tree’s Containment Unit.
+      I offered her to the tree. She could get better; she will get better.
+      ‘You’ve brought your friend. You are a good child. Let me gift you with something.’
+      I could feel something sprouting from my body. I couldn’t move my limbs. No, this isn’t a bad thing, I am being reborn with the tree...
+      The tree has entered me, transfixed me. We proliferate and become whole.
+      Ah, I can completely feel it now.}
+      ]
+    </desc>
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">A bud sprouted on the upper part of $0 when #0 finished work with it. #0 was blessed by $0 and enjoyed increased Work Speed and SP.</specialTip>
+      <specialTip openLevel="1" key="2">When Repression work was performed, the Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="1" key="3">When another Abnormality escaped, the Qliphoth Counter lowered with a low probability.</specialTip>
+      <specialTip openLevel="1" key="4">When 5 works with other Abnormalities were completed while $0 was not being worked with, the Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="1" key="5">When the Qliphoth Counter hit 0, $0 summoned employees to its Containment Unit to bless them.</specialTip>
+      <specialTip openLevel="1" key="6">When 5 buds had sprouted on $0, it turned dark and its blessed employees panicked. After some time passed, stems ripped through them and turned them into saplings (D-04-108-1) which strikingly resemble the Abnormality.</specialTip>
+      <specialTip openLevel="1" key="7">D-04-108-1 secretes a contagious and highly fatal toxin. They need to be immediately removed to decontaminate the area.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <name>Sapling</name>
+    <codeId>D-04-108-1</codeId>
+  </child>
+</creature>

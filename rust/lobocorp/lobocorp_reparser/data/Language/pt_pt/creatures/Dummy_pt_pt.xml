@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id="100000">
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+
+    <narration action="start">
+      [
+      {O $0 é um boneco que pensa que é um empregado desta instalação.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {O $0 parece gostar de pessoas.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {O $0 está circulando #0, mas #0 está com toda a sua atenção posta no seu trabalho.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {O $0 está pensando sobre o centro do mundo.}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {O $0 ficou triste quando #0 saiu. Ele parece querer seguir #0.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">0-00-00</codeNo>
+      <name openLevel="1">Boneco Coelho Padrão para Treino</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/DummyPortrait</portrait>
+      <riskLevel openLevel ="1">TETH</riskLevel>
+      <openText>Uma anormalidade com forma de boneco usado para treinar os aspirantes a gerentes.</openText>
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      Uma Anormalidade com forma de boneco usado para treinar os aspirantes a gerentes.
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      Rumores dizem que este boneco se tornou uma anormalidade de treino, pois é o mais dócil e calmo de todos. Ele é chamado de Boneco Coelho, mas não parece gostar de cenouras. Mas ele adora de pessoas. Em caso de fuga, ele vai apenas seguir o indivíduo que acabou de sair.
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      <!--특수 상태-->
+    </desc>
+
+    <desc id="4" openLevel="3">
+      <!--특수 상태-->
+    </desc>
+
+    <record openLevel="1">
+      <!-- 관찰기록 -->
+    </record>
+
+    <record openLevel="2">
+      <!-- 관찰기록 -->
+    </record>
+
+    <record openLevel="3">
+      <!-- 관찰기록 -->
+    </record>
+
+    <specialTipSize size="1">
+      <specialTip openLevel="1" key="tutorial">Se trabalho de Repreensão for feito o Qliphoth Counter do $0 vai descer.</specialTip>
+    </specialTipSize>
+
+  </observe>
+</creature>

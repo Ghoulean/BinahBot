@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id="100038">
+    <narration action="move"></narration>
+    <!-- 짱새는 작업로그 없다-->
+    <narration action="start">
+      [
+      {}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {}
+      ]
+    </narration>
+    <narration action="death">
+      [
+      {}
+      ]
+    </narration>
+  </info>
+  <observe level="3">
+    <collection>
+      <codeNo openLevel="0">O-02-63</codeNo>
+      <!-- 안나오겠지만 혹시 몰라서 넣어봐씀-->
+      <portrait openLevel="0">Sprites/Unit/creature/BossBird</portrait>
+      <name openLevel="0">
+        Pássaro do Apocalipse
+      </name>
+      <riskLevel openLevel="0">
+        ALEPH
+      </riskLevel>
+      <specialName openLevel="0">
+        O Monstro da Floresta Negra
+      </specialName>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Conhecido por vir quando o mundo está cheio de pecados, vários funcionários temem a chegada dessa Anormalidade.&#13;&#10;&#13;&#10;Para falar desse pássaro, primeiro é preciso contar sobre a história da Floresta Negra. É necessário lembrarmos da floresta em que uma vez era tão pacífica e bonita…&#13;&#10;&#13;&#10;E o apocalipse então deve seguir.}
+      ]
+    </desc>
+    <desc id="2" openLevel="0">
+      [
+      {&lt;O Conto da Floresta Negra&gt;&#13;&#10;&#13;&#10;Era uma vez, três pássaros felizes que viviam em uma floresta quente e exuberante.&#13;&#10;&#13;&#10;Os pássaros não tinham nomes, mas as criaturas da floresta os chamavam de Pássaro Grande, Pássaro Longo e Pássaro Pequeno.&#13;&#10;&#13;&#10;Todos viviam livres e felizes juntos na floresta pacífica. Os pássaros queriam que a floresta fosse segura mais do que o resto do mundo, assim as criaturas de fora poderiam visitar e se divertir também.&#13;&#10;&#13;&#10;Era numa tarde quente e ensolarada quando um estranho visitou a pacífica floresta. Ele era um viajante, pioneiro e profeta, mas ao mesmo tempo, ele era um ninguém. Ele queria entrar na floresta, mas os pássaros o acharam suspeito, por conta da suspeição, não deixaram o homem entrar. Ele, enraivecido, disse para os pássaros enquanto ia embora:&#13;&#10;&#13;&#10;“Em breve, uma tragédia assolará a floresta. Ela será manchada com crimes e malvadeza, e haverão constantes conflitos. As tragédias só pararão quando uma fera terrível aparecer e devorar tudo. O sol e a lua não brilharão mais sobre a floresta; e ela nunca voltará a ser como era antes.”&#13;&#10;&#13;&#10;Os pássaros, preocupados com a profecia, pensaram: “E se os conflitos realmente acontecerem e a fera aparecer para destruir a floresta assim como o homem disse?” E foi aí que os pássaros decidiram se tornar os guardiões da floresta. Eles a amavam mais do que qualquer um, por isso queriam proteger todas as criaturas que viviam nela enquanto mantinham a paz.&#13;&#10;&#13;&#10;O Pássaro Grande, com seus vários olhos, decidiu observar a floresta na busca de intrusos, já que seus olhos eram capazes de ver grandes distâncias e também coisas que não podemos ver. Então alguém disse, “Mas e se a fera aparecer no meio da noite, quando o céu está escuro e todos estão dormindo?” Preocupado, o Pássaro Grande queimou todas as próprias penas para fazer uma lâmpada inapagável. Agora, as criaturas da floresta estavam sob constante vigia do Pássaro Grande, dia e noite.&#13;&#10;&#13;&#10;Para manter a paz na floresta, o Pássaro Longo pesava os pecados daqueles que entravam nela, já que sua balança era justa e podia pesar todo e qualquer tipo de pecado. Então alguém perguntou: “E se algum dia a balança não ir para direção alguma?” Preocupado, o Pássaro Longo fez uma balança que sempre ia para uma só direção, dessa forma, cada julgamento teria um claro veredito.&#13;&#10;&#13;&#10;O Pássaro Pequeno decidiu punir as infrações das criaturas com o próprio bico. Então alguém disse, “Mas seu bico é pequeno demais, ninguém sentiria dor.” Preocupado, O Pássaro Pequeno rasgou a própria boca para que pudesse engolir qualquer criatura em uma só mordida.&#13;&#10;&#13;&#10;Ninguém mais conseguia visitar a floresta e boatos ruins sobre ela começaram a se espalhar. “Eu ouvi dizer que coisas terríveis acontecem com qualquer criatura que entra na floresta.”&#13;&#10;
+      “O Pássaro Grande está sempre observando as criaturas da floresta. Não há liberdade.”
+      “A Balança do Pássaro Longo sequer é justa.”
+      “A Punição do Pássaro Pequeno é assustadora demais.”&#13;&#10;&#13;&#10;Os pássaros ficaram aborrecidos. “Nós trabalhamos tão duro para proteger a floresta; por que ninguém aprecia nosso esforço?”&#13;&#10;&#13;&#10;Menos e menos visitantes iam para a floresta, mais e mais criaturas estavam reclamando, lutas aconteciam todo dia, e mesmo assim, os pássaros trabalhavam duro para tornar a floresta pacífica novamente, mas...&#13;&#10;
+      “Não, essa floresta é tão vasta e grande, não conseguiremos proteger ela toda sozinhos.”
+      “Mas não há outra criatura para proteger essa floresta além de nós.”
+      “Se nós combinássemos nosso poder, poderíamos ficar mais fortes.”&#13;&#10;&#13;&#10;No dia em que os olhos do Pássaro Grande que podiam ver a centenas de quilômetros de distância, o Pássaro Longo que podia julgar qualquer pecado e a Boca do Pássaro Pequeno que podia devorar tudo uniram-se numa só criatura, a escuridão tomou conta da floresta. As outras criaturas gritavam em terror e medo só de olhar para o pássaro. A floresta logo entrou em completo caos.&#13;&#10;&#13;&#10;Então, no meio de gritos caóticos, alguém gritou:&#13;&#10;&#13;&#10;“É a fera! Um grande e assustador monstro vive na Floresta Negra!”&#13;&#10;&#13;&#10;“A fera está aqui?” Os três pássaros, agora como um só, olharam ao redor, mas não havia ninguém para ser visto. O pássaro então começou a vagar pela floresta, procurando pela fera. A floresta ficaria com problemas se ela realmente aparecesse.&#13;&#10;&#13;&#10;Mas não havia nada. Não haviam criaturas, não havia sol, nem lua, e sequer havia a fera. Tudo que havia sobrado era um pássaro e a Floresta Negra.&#13;&#10;&#13;&#10;Desde então, só houveram noites tão escuras quanto o breu.&#13;&#10;&#13;&#10;Boatos dizem que há uma fera terrível na Floresta Negra na qual ninguém mora.}
+      ]
+    </desc>
+    <desc id="3" openLevel="0">
+      [
+      {&lt;Testemunha de um Sobrevivente&gt;&#13;&#10;
+      Todas as luzes na instalação ficaram malucas. Elas ficavam piscando e piscando. Eu não conseguia nem usar meu isqueiro. Então, essa luz quente brilhou por todo lugar. Ela parecia com um crepúsculo minguante, ou um nascer do sol crescente. Mas, como todos nós já sabemos, a luz do sol não alcança nossas instalações. Todos silenciosamente olharam para a luz. Uma Escuridão repentina e um raio de luz esquisito foram razões o suficiente para se ter medo. Era mais assustador que qualquer coisa sangrenta que já vimos por aqui. Nunca tivemos tanto medo do desconhecido…&#13;&#10;
+      (Omitido) …Algo de longe está vindo em nossa direção. Luzes incandescentes como estrelas do espaço sideral estão marchando até nós. Elas se pareciam com os olhos do Pássaro Grande, mas não era aquela Anormalidade. Eu pude ouvir esses longos braços arranhando o chão.&#13;&#10;
+      Alguém quebrou o silêncio com um sussurro: “Aquele cara ali não conseguiu fugir a tempo...”&#13;&#10;
+      Havia um funcionário com joelhos no chão; talvez ele não conseguia sentir o perigo que se aproximava atrás dele, e quando ele percebeu, já era tarde. Ele não conseguiu nem gritar. Ninguém conseguia. Ele só se debateu inutilmente para mover suas pernas, desesperado para fugir da fera. Não houve nenhum ato heróico de alguém enfrentando aquele monstro, nem mesmo um grito de aviso. Todos só estavam observando, esperando pela coisa terrível que estava para acontecer.&#13;&#10;
+      Cada passo fazia as instalações tremerem. O monstro estava se movendo a passos tão lentos, mas parecia ser tão rápido.&#13;&#10;
+      Em um piscar de olhos, ela devorou o funcionário sem nome em uma só mordida e, logo após isso, todos começaram a gritar caoticamente. Eu já cuidei de incontáveis supressões, mas naquele dia, pela primeira vez eu me arrependi de me juntar a essa corporação. Eu estava certo de que não sairia dali vivo. Essa impotência me preencheu. Não conseguia nem pensar em lutar contra aquele monstro, e eu não era o único que estava se sentindo assim.&#13;&#10;
+      Eu acho que entre os sobreviventes, eu fui o único que se manteve são para escrever isso. A corporação nunca contará aos novatos sobre a existência daquele monstro. Entretanto, eu gostaria ao menos de deixá-los um aviso. É por essa razão que estou escrevendo isso.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="0" key="bigBirdEgg">Os olhos do Pássaro Grande aprisionavam a luz.</specialTip>
+      <specialTip openLevel="0" key="longBirdEgg">Os braços do Pássaro Longo ocultavam o tempo.</specialTip>
+      <specialTip openLevel="0" key="littleBirdEgg">E o bico do Pássaro Pequeno sussurrava sem parar…</specialTip>
+      <specialTip openLevel="0" key="eggExist">Enquanto eles existirem, o Pássaro do Apocalipse não desaparecerá.</specialTip>
+    </specialTipSize>
+  </observe>
+  <etc>
+    <param key="Escape" index="0">
+      Era uma vez, três pássaros felizes que viviam em uma floresta quente e exuberante.
+    </param>
+    <param key="BigBirdArrive" index="1">
+      O Pássaro Grande, com seus vários olhos, decidiu observar a floresta na busca de intrusos.&#13;&#10;Já que seus olhos eram capazes de ver grandes distâncias.
+    </param>
+    <param key="LongBirdArrive" index="2">
+      Para manter a paz na floresta, o Pássaro Longo pesava os pecados daqueles que entravam nela.&#13;&#10;Já que sua balança era justa e podia pesar todo e qualquer tipo de pecado.
+    </param>
+    <param key="SmallBirdArrive" index="3">
+      O Pássaro Pequeno decidiu punir as infrações das criaturas com o próprio bico.
+    </param>
+    <param key="BossBirdAppear" index="4">
+      Então, no meio de gritos caóticos, alguém gritou:&#13;&#10;“É a fera! Um grande e assustador monstro vive na floresta negra!”
+    </param>
+    <param key="BigBirdBreak" index="5">
+      Os olhos do Pássaro Grande que viam por qualquer distância foram cegados,
+    </param>
+    <param key="LongBirdBreak" index="6">
+      A cabeça que sempre se elevava ao cosmo foi abaixada, 
+    </param>
+    <param key="SmallBirdBreak" index="7">
+      A boca do Pássaro Pequeno que poderia devorar tudo foi fechada,
+    </param>
+    <param key="Suppressed" index="8">
+      O pássaro então começou a vagar pela floresta, Mas não havia nada.&#13;&#10;Não haviam criaturas. Não havia sol, não havia lua, e sequer havia a fera. Tudo que havia sobrado era um pássaro e a Floresta Negra.
+    </param>
+    <param key="gateway" index="9">
+      Portão para a Floresta Negra
+    </param>
+    <param key="bigBirdEgg" index="10">
+      Grandes Olhos
+    </param>
+    <param key="longBirdEgg" index="10">
+      Longos Braços
+    </param>
+    <param key="smallBirdEgg" index="10">
+      Bico Pequeno
+    </param>
+  </etc>
+</creature>

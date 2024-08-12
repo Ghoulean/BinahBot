@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id="100038">
+    <narration action="move"></narration>
+    <!-- 짱새는 작업로그 없다-->
+    <narration action="start">
+      [
+      {}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {}
+      ]
+    </narration>
+    <narration action="death">
+      [
+      {}
+      ]
+    </narration>
+  </info>
+  <observe level="3">
+    <collection>
+      <codeNo openLevel="0">O-02-63</codeNo>
+      <!-- 안나오겠지만 혹시 몰라서 넣어봐씀-->
+      <portrait openLevel="0">Sprites/Unit/creature/BossBird</portrait>
+      <name openLevel="0">
+        Oiseau de l’Apocalypse
+      </name>
+      <riskLevel openLevel="0">
+        ALEPH
+      </riskLevel>
+      <specialName openLevel="0">
+        Le Monstre dans la Forêt Noire
+      </specialName>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Connue pour venir lorsque le monde est noyé de péchés, de nombreux employés craignent la venue de cette Anomalie.&#13;&#10;&#13;&#10;Pour parler de cet oiseau, nous devons d’abord raconter l’histoire de la Forêt Noire. Nous devons nous rappeler de la forêt qui était autrefois si paisible et calme…&#13;&#10;&#13;&#10;Et l’apocalypse suivra.}
+      ]
+    </desc>
+    <desc id="2" openLevel="0">
+      [
+      {&lt;Le Conte de la Forêt Noire&gt;&#13;&#10;&#13;&#10;Il était une fois, trois joyeux oiseaux qui vivaient dans une forêt chaleureuse et luxuriante.&#13;&#10;&#13;&#10;Les oiseaux n’avaient pas de noms, mais les créatures de la forêt les appelaient Gros Oiseau, Long Oiseau et Petit Oiseau.&#13;&#10;&#13;&#10;Tous vivaient libres et heureux dans la paisible forêt. Les oiseaux voulaient plus que quiconque que la forêt soit sûre, ainsi les créatures de l’extérieur pourraient venir visiter et s’amuser.&#13;&#10;&#13;&#10;C’est lors d’un après-midi chaleureux et ensoleillé qu’un étranger vint visiter la paisible forêt. Il était un voyageur, un pionnier, et un prophète, mais en même temps, il n’était personne. Il voulait entrer dans la forêt, mais les oiseaux le trouvèrent suspect, alors l’entrée lui fut refusée. L’étranger, en colère, dit ceci aux oiseaux en partant :&#13;&#10;&#13;&#10;“Bientôt, une tragédie s’abattra sur la forêt. Elle sera souillée par les méfaits et le mal, et les conflits seront sans fin. Les tragédies ne cesseront que lorsqu’une terrible bête apparaîtra pour tout dévorer. Le soleil et la lune ne brilleront plus sur les bois. La forêt ne redeviendra jamais comme avant.”&#13;&#10;&#13;&#10;Les oiseaux s’inquiétèrent de la prophétie. Et si les conflits éclataient et qu’une bête venaient faire du mal à la forêt comme l’a dit l’homme ? C’est alors que les oiseaux décidèrent de devenir les gardiens de la forêt. Ils aimaient cette forêt plus que quiconque, et voulaient protéger les créatures y vivant tout en maintenant la paix.&#13;&#10;&#13;&#10;Gros Oiseau, avec ses nombreux yeux, décida de surveiller la forêt à la recherche d’intrus ; car les yeux de Gros Oiseau pouvaient voir de très loin, et voir des choses que nous ne voyons pas. On lui fit alors remarquer “Mais… Et si la bête se montrait au milieu de la nuit, lorsque le ciel est sombre et que tout le monde dort ?”. Inquiet, Gros Oiseau brûla toutes ses plumes pour créer une lampe inextinguible. Maintenant, les créatures de la forêt étaient sous le regard constant de Gros Oiseau, de jour comme de nuit.&#13;&#10;&#13;&#10;Pour maintenir la paix de la forêt, Long Oiseau pesa les péchés de ceux qui pénétraient dans la forêt ; car la balance de Long Oiseau était juste et impartiale, et pouvait peser tout type de péchés. On lui fit alors remarquer “Mais… Et si un jour la balance ne penchait d’aucun côté ?”. Inquiet, Long Oiseau créa une balance qui penche toujours d’un côté. Ainsi, tous les jugements résulteraient en un verdict clair.&#13;&#10;&#13;&#10;Petit Oiseau décida de punir les méfaits des créatures à l’aide de son bec. On lui fit alors remarquer “Mais ton bec est si petit, personne ne le trouverait douloureux.”. Inquiet, Petit Oiseau se déchira la bouche pour pouvoir avaler n’importe quelle créature en une bouchée.&#13;&#10;&#13;&#10;Personne ne pouvait plus visiter la forêt, et de mauvaises rumeurs se propagèrent à l’extérieur à son sujet. “J’ai entendu dire que des choses terribles arrivaient à toutes créatures pénétrant dans la forêt.”&#13;&#10;
+      “Le Gros Oiseau surveille toujours les créatures de la forêt, il n’y a pas de liberté.”
+      “La balance du Long Oiseau n’est pas du tout impartiale.”
+      “La punition du Petit Oiseau est si effrayante.”&#13;&#10;&#13;&#10;Les oiseaux s’énervèrent. “Nous travaillons si dur pour protéger la forêt, pourquoi personne n’apprécie nos efforts ?”&#13;&#10;&#13;&#10;De moins en moins de visiteurs venaient dans la forêt, de plus en plus de créatures se plaignèrent, des bagarres éclataient quotidiennement, et pourtant les oiseaux continuaient de travailler dur pour rendre la forêt paisible à nouveau, mais…&#13;&#10;
+      “Non, cette forêt est si vaste et large, nous trois ne suffisons pas pour la protéger entièrement.”
+      “Mais il n’y a pas d’autres créatures que nous pour protéger cette forêt !”
+      “Si nous combinons nos pouvoirs, nous pouvons être plus forts.”&#13;&#10;&#13;&#10;Le jour où les yeux de Gros Oiseau qui pouvaient voir sur des kilomètres, Long Oiseau qui pouvait juger tous péchés, et la bouche de Petit Oiseau qui pouvait tout dévorer fusionnèrent, les ténèbres s’abattirent sur la forêt. Les créatures criaient de terreur et d’effroi à la vision de l’oiseau, et la forêt sombra dans le chaos.&#13;&#10;&#13;&#10;Puis, au milieu de tous les cris, quelqu’un s’écria :&#13;&#10;&#13;&#10;“C’est la bête ! Un gros monstre effrayant vit dans la sombre forêt noire !”&#13;&#10;&#13;&#10;La bête est là ? Les trois oiseaux, maintenant unis, regardèrent autour mais personne n’était à l’horizon. L’oiseau commença à rôder dans la forêt, à la recherche de la bête. La forêt serait en danger si la bête se montrait vraiment.&#13;&#10;&#13;&#10;Mais il n’y avait rien. Il n’y avait pas de créatures, pas de soleil ni de lune, et pas de bête. Tout ce qu’il restait était l’oiseau et la Forêt Noire.&#13;&#10;&#13;&#10;Depuis, il n’y eut que des nuits complètement noires.&#13;&#10;&#13;&#10;Les rumeurs disent qu’une terrible bête vit dans la Forêt Noire où personne ne vit.}
+      ]
+    </desc>
+    <desc id="3" openLevel="0">
+      [
+      {&lt;Témoignage d’un Survivant&gt;&#13;&#10;
+      Toutes les lumières du complexe sont devenues folles. Elles n’arrêtaient pas de clignoter encore et encore. Je ne pouvais même pas utiliser mon briquet. Puis, cette lumière chaleureuse s’est mise à briller. On aurait dit un coucher, ou un lever de soleil. Même si, comme tout le monde le sait, les rayons du soleil ne peuvent pas pénétrer dans ce complexe. Tout le monde regardait silencieusement la lumière. Une obscurité soudaine et un rayon de lumière étrange étaient des raisons suffisantes d’être effrayé. C’était plus effrayant que toutes les choses glauques que l’on pourrait voir ici. C’était la peur de l’inconnu elle-même…&#13;&#10;
+      (Omis) …Quelque chose au loin venait vers nous. Des lumières incandescentes, comme des étoiles dans l’espace, s’avançaient. On aurait dit les yeux de Gros Oiseau, mais ce n’était pas cette Anomalie. Je pouvais entendre ces longs bras qui grattaient le sol.&#13;&#10;
+      Quelqu’un a brisé le silence en murmurant :: “Ce type n’a pas pu s’enfuir à temps…”&#13;&#10;
+      Il y avait un employé agenouillé au sol, peut-être qu’il n’avait pas senti le danger derrière lui, mais une fois qu’il l’a remarqué, il était trop tard. Il n’a même pas pu crier. Personne n’en aurait été capable. Il débattait inutilement ses jambes, essayant désespérément de fuir la bête. Il n’y pas eu d’acte héroïque pour se dresser devant le monstre, pas même un cri pour l’avertir. Tout le monde ne faisait que le regarder, attendant la chose terrible qui allait se passer.&#13;&#10;
+      Chaque pas provoquait un tremblement dans tout le complexe. Le monstre bougeait avec des pas si lents, mais il semblait si rapide…&#13;&#10;
+      En un clin d’œil, elle a dévoré l’employé inconnu en une bouchée, et juste après ça tout le monde s’est mis à crier dans la panique. J’ai participé à d’innombrables répressions, mais ce jour-là, pour la première fois, j’ai regretté d’avoir rejoint cette corporation. J’étais certain que je ne m’en sortirais pas vivant. Cette impuissance m’a envahi. Je ne pouvais même pas penser à aller affronter le monstre, et beaucoup d’autres ressentaient la même chose.&#13;&#10;
+      Je pense être le seul parmi les survivants à être resté suffisamment sensé pour écrire ceci. La corporation ne parlera jamais aux nouveaux de l’existence de ce monstre. Cependant, je voulais au moins leur laisser un avertissement. C’est pourquoi j’écris ceci.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="0" key="bigBirdEgg">Les yeux du Gros Oiseau emprisonnèrent la lumière,</specialTip>
+      <specialTip openLevel="0" key="longBirdEgg">Les bras du Long Oiseau occultèrent le temps,</specialTip>
+      <specialTip openLevel="0" key="littleBirdEgg">Et le bec du Petit Oiseau murmura indéfiniment…</specialTip>
+      <specialTip openLevel="0" key="eggExist">Aussi longtemps qu’ils existent, l’Oiseau de l’Apocalypse ne disparaîtra pas.</specialTip>
+    </specialTipSize>
+  </observe>
+  <etc>
+    <param key="Escape" index="0">
+      Il était une fois, trois joyeux oiseaux qui vivaient dans une forêt chaleureuse et luxuriante.
+    </param>
+    <param key="BigBirdArrive" index="1">
+      Gros Oiseau, de ses nombreux yeux, se mit à surveiller la forêt à la recherche d’intrus.&#13;&#10;Car les yeux de Gros Oiseau voyaient très loin, discernant des choses qui nous échappent.
+    </param>
+    <param key="LongBirdArrive" index="2">
+      Pour maintenir la paix de la forêt, Long Oiseau pesa les péchés de ceux qui la pénétraient.&#13;&#10;Car la balance de Long Oiseau était juste et impartiale, pesant tous les péchés existants.
+    </param>
+    <param key="SmallBirdArrive" index="3">
+      Petit Oiseau décida de punir les méfaits des créatures à l’aide de son bec.
+    </param>
+    <param key="BossBirdAppear" index="4">
+      Puis, au milieu de tous les cris, quelqu’un s’écria :&#13;&#10;“C’est la bête ! Un gros monstre effrayant vit dans la sombre forêt noire !”
+    </param>
+    <param key="BigBirdBreak" index="5">
+      Les yeux clairvoyants du Gros Oiseau furent aveuglés,
+    </param>
+    <param key="LongBirdBreak" index="6">
+      La tête qui surveillait le cosmos fut abaissée, 
+    </param>
+    <param key="SmallBirdBreak" index="7">
+      La bouche qui pouvait tout dévorer du Petit Oiseau fut fermée,
+    </param>
+    <param key="Suppressed" index="8">
+      L’oiseau commença à rôder dans la forêt, mais il n’y avait rien.&#13;&#10;Il n’y avait pas de créatures, pas de soleil ni de lune, et pas de bête. Tout ce qu’il restait était un oiseau et la Forêt Noire.
+    </param>
+    <param key="gateway" index="9">
+      Entrée de la Forêt Noire
+    </param>
+    <param key="bigBirdEgg" index="10">
+      Gros Yeux
+    </param>
+    <param key="longBirdEgg" index="10">
+      Longs Bras
+    </param>
+    <param key="smallBirdEgg" index="10">
+      Petit Bec
+    </param>
+  </etc>
+</creature>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100041">
+
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+
+    <narration action="mid1">
+      [
+      {恥ずかしがり屋の子どもの$0は #0に驚くような贈り物を手渡すかもしれません。},
+      {とても遠い所から来た$0は 愉快な笑い声を楽しいと感じます。}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0は友達が好きです。},
+      {真心のこもったこの贈り物で #0が浮かれることを望んでいます。}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {受ける人が驚くことを想像をして $0は嬉しい心で #0を見ます。}},
+      {この小さいけれど大切な贈り物を喜んでくれるでしょう。}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {$0の「友達」はギフトの中に眠ったまま 受取人を待っています。},
+      {ハート模様のかわいい贈り物の中に何があるか、 #0は考えもつきません。}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-01-67</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/LittleWitch</portrait>
+
+      <name openLevel ="1">
+        恥ずかしがりの子ども
+      </name>
+
+      <name openLevel="4">
+        レティシア
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <specialName openLevel ="2">
+        箱の中のジャック
+      </specialName>
+
+      <openText>だから、ちびはすごいアイディアを 思いついたの！</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {<i>子どもの大きさと類似しており、明るい笑顔をいつでも維持します。</i> &#13;&#10;…すごくすごく可愛いちびっ子である。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {ちびって意味は小さくて可愛い子どもらしいよ！&#13;&#10;ちびはとても遠い所から来た！&#13;&#10;そして、お気に入りの人を見つけたら、手作りのプレゼントをあげるんだ。&#13;&#10;ただ、プレゼントの内容が何かは秘密だよ！}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {これはもう一つの大事な秘密なんだけどね、ちびはたくさんの「術」を知ってるの！&#13;&#10;少女にはたくさんの友達がいるけど、ここに友達を連れて来てはいけない言っていたの&#13;&#10;だからちびはすごいアイディアを思いついたの！}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {ちびの友達をカチカチにして箱の中に隠して、それをプレゼントとしてあげるの、たぶんみんなビックリするよね？&#13;&#10;そして、私のいたずらにみんな大げさに笑うんだ！&#13;&#10;あ、ちびの秘密言っちゃった。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {ここでもたくさん友達が見つけることができたらいいな！&#13;&#10;ちびは恥ずかしがり屋だから、秘密のプレゼントなんだ。&#13;&#10;あなたたちともっと一緒に遊べたらいいな！ここの人笑顔じゃないから。&#13;&#10;暗い顔してる。&#13;&#10;だから、小さいお嬢さんはここに笑い声を取り戻すまでここにいることを決めたの！&#13;&#10;誰もが私のいたずらに満足してるならとってもうれしい！}
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="give">作業結果が普通の時、$0は#0に贈り物を渡した。</specialTip>
+      <specialTip openLevel="2" key="gift">$0の代わりに、#0が他のアブノーマリティの作業が割り当てられると、#0が██████により破裂しました。</specialTip>
+      <specialTip openLevel="2" key="cancle">██████が生まれる前に割り当てをキャンセルすれば、職員に特別なことは何も起こりません。</specialTip>
+    </specialTipSize>
+  </observe>
+  
+  <child>
+    <name>小さな魔女の友達</name>
+    <codeId>O-01-67-1</codeId>
+  </child>
+</creature>

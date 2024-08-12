@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id ="100033">
+
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務.
+    </narration>
+
+    <narration action="start">
+      [
+      {#0, #0, 有沒有一隻胖呼呼的小小豬住在這裡呢? 喔, 沒什麼. 他是我的朋友啦. 我只是想看看他現在在做什麼.},
+      {#0, 你能打開這扇門嗎, 拜託了? 我不會傷害任何人, 我只是有一點餓罷了.}
+      {#0, 如果你讓我出去的話我會給你某些不錯的東西!}
+      {我是頭大壞狼. 我會把你們全吃了並走出這裡!}
+      {#0, 我只跟你說這些. 如果你要蓋一間房子, 要用堅實的磚塊來蓋.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 鮮明的記得當它肚子被撕開的瞬間, 內臟全都灑了出來.},
+      {$0 喜歡肉. 它以前總是餓著肚子, 現在它總是能得到它想要的了.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 正處於一種長期性的消化不良. 問題的來源要追溯到很久, 很久以前…...},
+      {根據一位曾掉到 $0 胃裡的員工所述. 那是個漆黑, 空虛, 又寂寞的地方.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {“我有著一副巨大的牙齒.”},
+      {“我能一口氣吹走這個房間!”}
+      {“把門打開, 小甜心. 我從森林裡帶了禮物過來.”}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">F-02-58</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/BigBadWolf</portrait>
+
+      <name openLevel ="1">
+        又大又壞的狼...大概啦
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>實際上我並沒有真的很在意. 我得被叫成大壞狼. </openText>
+
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {一頭毛皮稀疏的狼. 能用兩腳站立, 並擁有一定的溝通能力. 它總是試圖吞下員工並突破收容. 很容易預防這動作, 因為它要這麼做之前會在行為與對話間露出明顯的跡象, 使此異常相當容易管理.(“…這就是為什麼我能切開那頭狼的肚子並安然無恙的跑回來!” )}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {這意外發生在 ██ 月 ██ 日, 受到了員工們相當的關注. 情況在 小紅帽雇傭兵 以及 又大又壞的狼...大概啦 接觸後逐漸失去控制. 不惜一切代價來避免他們有所接觸. 考慮到潛在的危害, 用一些員工作為活餌來分散它們的注意力讓他們看不見彼此.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {鮮肉, 我渴望它非常久了. 它是如此的美味. 我看到某件衣服的紅色邊邊從衣櫃裡漏了出來. 我或許在某處看過它, 或是沒有, 實際上我並沒有真的很在意. 我必須被叫成大壞狼. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {這個世界上有許多的故事. 但沒有一個比這頭狼的故事來的要令人厭惡. 狼群伴著罪惡而生. 它們沒有名字. 人們稱呼它們 "大壞狼". 所有的狼都會長成巨大, 兇猛, 以及帶著濃毛的怪物. 狼群即使在飢餓時也不該獵食其他的動物. 狼在做著壞事時也不該跨過那條線. 狼群應該受到懲罰. 狼群應該被當成案例. 狼群不該交到朋友……(省略)}
+      ]
+    </desc>
+
+
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">當在 F-01-57 工作的員工 #0 完成了工作時, 逆卡巴拉計數器減少了. 然後 $0 吃掉了該員工.</specialTip>
+      <specialTip openLevel="2" key="2">當工作結果為差時, 逆卡巴拉計數器減少了. 然後 $0 吃掉了該員工.</specialTip>
+      <specialTip openLevel="2" key="3">當員工在 $0 被餵飽時完成直覺工作後, $0 吐出所有之前吃掉的員工.</specialTip>
+      <specialTip openLevel="3" key="4">當因 F-01-57 攻擊而流血的目標進入 $0 收容室前面的走廊時, 逆卡巴拉計數器會減少.</specialTip>
+      <specialTip openLevel="3" key="5">當 F-01-57 進入 $0 收容室前面的走廊時, 逆卡巴拉計數器會降至零.</specialTip>
+      <specialTip openLevel="4" key="6">某些員工報告說他們從 $0 的胃裡聽見一個聲音. 我們應該鎮壓突破收容的 $0 來拯救他們. 或許有可能跟 F-01-57 達成契約.</specialTip>
+    </specialTipSize>
+
+   
+
+  </observe>
+</creature>

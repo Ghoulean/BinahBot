@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300110">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">D-09-104</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/ReverseClock</portrait>
+      <name openLevel="1">
+        Backward Clock
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>
+        "...Is your future totally grim? Have you hit absolute rock bottom, not a single way out in sight?"
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;This Abnormality was created with the ideas provided by Tumblbug Backer 정현교 (Jeong Hyeon-kyo).&lt;/i&gt;&#13;&#10;An old clock manufactured by an unknown company. Its vacuum tubes give off a vintage vibe. The manufacturer stopped making these clocks a long time ago.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {“…Is your future totally grim? Have you hit absolute rock bottom, not a single way out in sight? Have you ever thought: ‘Oh man, what if I’d done this instead of that?’&#13;&#10;Humanity has conquered disease and nature. Now we have come far enough to harness time itself.”}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {“Yes, we can rewind your wasted time.&#13;&#10;Just wind it up, close your eyes, and count to ten.&#13;&#10;When you open them, you will be standing at the exact moment you wished to be in.”}
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {+ Please read the manual thoroughly. You never know what the extremely high voltage discharged from the machinery could do if it is handled poorly. We are not responsible for any accidents that may occur from user error and carelessness. This clock requires a high amount of energy to operate. Please understand that it will take a considerable amount of time to charge.}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">One light turns on and energy is charged for each work done with $0. </specialTip>
+      <specialTip openLevel="2" key="2">Nothing happened when employees lower than Level 3 attempted to work with it.</specialTip>
+      <specialTip openLevel="2" key="3">After all the lights have been turned on, $0 can be activated. However, $0 can only be utilized once a day, so please use it wisely.</specialTip>
+      <specialTip openLevel="2" key="4">&lt;Caution&gt; Employees under Level 5 are strictly forbidden from making any contact with $0 after it has been fully charged.</specialTip>
+      <specialTip openLevel="2" key="5">Only Level 5 employees can operate $0 normally. $0 will send all except the operator to the most peaceful time of the day.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

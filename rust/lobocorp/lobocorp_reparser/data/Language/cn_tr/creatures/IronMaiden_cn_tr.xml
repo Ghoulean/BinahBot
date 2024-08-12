@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300101">
+
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-85</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/IronMaiden</portrait>
+
+      <name openLevel ="1">
+        我們能改變一切
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <openText>
+        從現在起一切都將更美好.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {這是 “我們能幫到忙” 第二個熱門家事機器人的系列.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {包含了 XX 公司的許多功能.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {你的小孩老是鬧出許多問題並總是哭個不停嗎? 我們能改變這個情況!&#13;&#10;不喜歡你的身體嗎? 太胖, 太瘦? 我們能改變這個情況!&#13;&#10;老是感到筋疲力盡又荷包空空嗎? 我們能改變這個情況!}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {使用方法非常容易. 打開這個機器, 進到裡面後按下闔上按鈕. 從現在起一切都將更美好.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {這個機器會在員工進入裡面後產出能源. 一旦進去, 就再也沒見過那位員工了.}
+      
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">安置一名員工進入該機器裡面, 而它便會持續的生產能源.</specialTip>
+      <specialTip openLevel="2" key="2">一旦員工進入此機器, 該員工將會受到 R 傷害. 員工在進入裡面後將無法出來且會永遠的死去.</specialTip>
+      <specialTip openLevel="2" key="3">隨著時間的推移, 能源會逐漸的增加.</specialTip>
+      <specialTip openLevel="2" key="4">這個異常不會受到逆卡巴拉熔燬的影響.</specialTip>
+      </specialTipSize>
+
+
+
+  </observe>
+</creature>

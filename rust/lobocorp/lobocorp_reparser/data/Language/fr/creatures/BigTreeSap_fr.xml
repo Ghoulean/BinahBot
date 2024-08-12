@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300005">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-80</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/BigTreeSap</portrait>
+      <name openLevel="1">
+        La Sève d’un Arbre Géant
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <openText>
+        “L’arbre récoltait simplement ce qu’il avait semé.”
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {La sève d’un arbre gigantesque et sans-nom qui prend racine aux confins du monde.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {D’après l’équipe d’exploration, il y avait un grand nombre de formes de vie d’une teinte verte légèrement calcinée. C’était parce que la sève les rassasiait et contenait des agents curatifs puissants.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Cependant, certains de nos employés qui ont bu la sève ont fondu, laissant derrière des flaques de bouillie verte.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      <!-- 여기 번역 고치기 -->
+      [
+      {D’autres expériences ont confirmé que la probabilité de fondre augmente proportionnellement à la quantité de sève consommée.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {“Beaucoup se demandaient comment un si grand arbre pouvait prospérer aussi profondément dans les Banlieues arides. Les formes de vie qui consommaient sa sève finissaient par devenir ses nutriments tôt ou tard. L’arbre récoltait simplement ce qu’il avait semé.”}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="healthgood">Les sujets qui ont consommé $0 se sont instantanément régénérés. De plus, ils ont continué à guérir au fil du temps.</specialTip>
+      <specialTip openLevel="2" key="boomDead">Certains sujets qui ont consommé $0 ont souffert d’un effet secondaire. Ceux qui l’ont subi ont explosé et sont morts dans les 20 à 30 secondes suivant la consommation de  $0 ; la section dans laquelle ils se trouvaient a subi des dégâts BLANC.</specialTip>
+      <specialTip openLevel="2" key="boomGood">Les expériences ont confirmé qu’il y a une corrélation positive entre la fréquence de consommation de $0 et la probabilité d’exploser.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

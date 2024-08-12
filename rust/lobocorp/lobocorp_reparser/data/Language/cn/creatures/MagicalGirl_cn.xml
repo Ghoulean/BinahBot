@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    5.28
+  -->
+  <info id ="100004">
+
+
+    <narration action="move">
+      #0 designated to $0's quarantine room.
+    </narration>
+
+    <narration action="start">
+      [
+      {“$0”是所有异想体中表现得最活跃，最欢快的。但实际上她可能不止如此。},
+      {迄今为止，“$0”看起来对我们很友善，但仍需谨慎对待她。},
+      {“$0”的潜在威胁众所周知，因此请时刻对她保持警惕。},
+      {事实上，“和平”并不是“$0”所期待的结果。}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {“$0”正哼着小调，凝望窗外，看起来心情很不错。},
+      {“$0”用一个灿烂的微笑迎接刚进收容单元工作的#0。},
+      {“今天也是完美的一天！”“$0”向#0问好。},
+      {“$0”显然很高兴看见#0。}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {“$0”正得意地向#0讲述她一个人放倒三个坏蛋的故事。},
+      {#0静静听着“$0”的故事。尽管这些故事已经被她讲了好多好多遍了，但她完全讲不腻。},
+      {“$0”讲到曾经有个坏人在她的引导下洗心革面。#0赞赏了她，她笑得可开心了。}
+      {“$0”还想再说说世界是如何因为她而变得更加和平的。}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {她的“魔法战靴”有时敲击在一起，发出欢快的声音。},
+      {她脖子上的“魔法首饰”在灯光下闪闪发亮。},
+      {她那华丽的“魔法蕾丝裙”正充满活力地摆动着。}
+      {在念着自己的“变身魔咒”时，她突然开心地放声大笑。}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {“$0”对#0谈起了“职责”，她低声说道自己的职责是十分重要而神秘的。},
+      {“$0”对#0谈起了“正义”，她低声说自己的工作本身即代表着正义。}
+      ]
+    </narration>
+
+    <narration action="reverse1">
+      [
+      {当#0走进收容单元时，“$0”正忧郁地低声细语。},
+      {不像之前，这次“$0”没有看向刚进入收容单元的#0。}
+      ]
+    </narration>
+
+    <narration action="reverse2">
+      [
+      {#0靠近“$0”检查她的状态。“和平正在逐渐减弱...”她喃喃自语。},
+      {她嘟哝着“今天也是个好天气呢...可我觉得这一点儿都不好...”}
+      ]
+    </narration>
+
+    <narration action="reverse3">
+      [
+      {她的“魔法战靴”轻轻敲击地面，打破了收容单元的寂静。},
+      {她的眼神飘忽不定，脸上挂着沉闷的苦笑。}
+      ]
+    </narration>
+
+    <narration action="reverse4">
+      [
+      {“$0”神情愤恨地盯着#0，嘴上喃喃着含糊不清的话语。久未打理的头发略显松散。},
+      {“$0”的眼中充满憎恨。此时的她已不再是个“女孩”。}
+      ]
+    </narration>
+
+
+    <narration action="special_ability1">
+      [
+      {不再是魔法少女的“$0”，正用充满杀意的眼神紧紧盯着#0。}
+      ]
+    </narration>
+
+    <narration action="special_ability2">
+      [
+      {“$0”发现#0想要麻醉她，于是愤怒地发起了进攻。}
+      ]
+    </narration>
+
+    <narration action="special_ability3">
+      [
+      {“$0”尖锐的毒牙贯穿了#0的肩膀。}
+      ]
+    </narration>
+
+    <narration action="dead">
+      [
+      {“$0”把#0的尸体甩在一边，冲出了收容单元。它在寻找下一个受害者。},
+      {断气之前，#0试图拼尽全力说服“$0”。可它早已听不进任何东西。}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-01-04</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/MagicalGirl</portrait>
+
+      <name openLevel ="1">
+        魔法少女
+      </name>
+
+      <name openLevel="3">
+        憎恶女王
+      </name>
+      
+      <riskLevel openLevel ="2">
+        WAW
+      </riskLevel>
+
+      <openText>以爱与正义之名，魔法少女❤&#13;&#10;——闪亮登场！！！</openText>
+ 
+
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {这个异想体有着一位少女的外表，她总是以和平与正义为名，时刻准备着与恶人战斗。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {通常情况下，这个异想体对员工十分礼貌友好，可以随意同她交谈。她一直坚信着自己是个拯救世界的大英雄，并引以为豪。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {当这个异想体变得“焦虑”或“多疑”时，她的性格与行为会在2-4天内发生剧变。此症状类似于“分离性障碍”（注：歇斯底里症）}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {这个异想体的善恶价值观过于绝对。据调查，当人们对她信仰中的“邪恶存在”抱有疑问时，她便会化身为“恶”来物理否定一切猜疑。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {在“愤怒”的行为结束之后，她不会留有当时的记忆。所以也没必要刻意提醒她干了些什么。}
+      ]
+    </desc>
+
+
+    <desc id="6" openLevel="1">
+      [
+      {员工代号M4032：那么，你今天感觉如何？&#13;&#10;魔法少女：超棒~！这里很安静，也很和平。和平可重要了，这意味着再也没有坏蛋窜来窜去了，对吧？}
+      ]
+    </desc>
+
+    <desc id="7" openLevel="2">
+      [
+      {员工代号M4032：你看起来心情不大好呢？&#13;&#10;魔法少女：还好吧，世界依旧很和平...这里也是...（她突然沉默了）&#13;&#10;（省略）&#13;&#10;员工代号M4032：嘿，你还好吗？&#13;&#10;魔法少女：为什么这里还是那么和平啊！我可是为了打败坏蛋而诞生的！这可恶的世界根本就不需要我的存在，是不是啊！喂，我有告诉过你我是一个魔法少女吗？我明明是被选中的救世主，为世界带来和平的人！可是今天，这里还是这么安静！实在是太安静了！...（她不断自言自语着令人费解的话）}
+      ]
+    </desc>
+
+    <desc id="8" openLevel="3">
+      [
+      {（这个异想体持续表现出狂躁和强迫症的症状，她甚至没有注意到进入收容单元的员工。）&#13;&#10;魔法少女：世界划分为正义与邪恶两派，而我站在正义这边！如果我是个好人，这里就肯定有坏蛋存在！如果没有坏蛋，那我的存在还有什么意义！如果这样的话谁来拯救世界啊啊啊啊！！！&#13;&#10;在这些症状出现之后，我们连续3天为她注射了大剂量的镇静剂。}
+      ]
+    </desc>
+
+    <desc id="9" openLevel="4">
+      [
+      {访谈记录S3-4921&#13;&#10;&lt;警告&gt;该文档仅向3级以上员工开放。&#13;&#10;这是一份████的音频记录，事件发生在████，这个异想体使用收容单元内的电话联系到了一位紧急反应部的员工。&#13;&#10;魔法少女：（抽泣声）&#13;&#10;员工：这里是紧急反应部门，请表明你的身份。&#13;&#10;魔法少女：我...是我干的...有人...死在了我身边...我的手上...沾着他们的血...我...是我毁了这一切...我辜负了那些善良的人们...可是我...可是我什么都不记得了...什么都...&#13;&#10;员工：到底发生了什么？&#13;&#10;魔法少女：我不知道...他们就这样不动了...到处都是...血...对不起...我真的很对不起...&#13;&#10;（省略）&#13;&#10;随后我们在这个异想体的收容单元内发现了三具员工的尸体，这些员工是被派来预防潜在事故的。再后来，魔法少女失去了对这整件事的记忆。}
+      ]
+    </desc>
+
+
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">当工作结果为差时，“$0”的逆卡巴拉计数器会立刻减少。</specialTip>
+      <specialTip openLevel="2" key="2">每当发生逆卡巴拉能量熔毁时，如果在先前的熔毁等级中死亡的人员数量不足3名，那么“$0”的逆卡巴拉计数器会立刻减少。</specialTip>
+      <specialTip openLevel="1" key="3">当“$0”的逆卡巴拉计数器为最大值时，员工对其完成工作后能够恢复生命值和精神值。</specialTip>
+      <specialTip openLevel="2" key="4">发生二级警报时，“$0”会自愿协助您镇压异想体。在“$0”协助镇压期间，如果设施内的人员死亡率超过了20%，“$0”会改变形态并变得极度危险，需要立刻镇压。</specialTip>
+      <specialTip openLevel="3" key="5">当“$0”的逆卡巴拉计数器降为1时，“$0”会陷入歇斯底里的状态。此状态会减少对其所有工作的基础成功率。</specialTip>
+      <specialTip openLevel="4" key="6">在“$0”处于歇斯底里状态时派遣员工对其进行工作，如果这次工作能够提取出16个或更多的PE-BOX，那么“$0”的逆卡巴拉计数器会立刻加一。</specialTip>
+      <specialTip openLevel="4" key="7">在“$0”处于歇斯底里状态时派遣员工对其进行工作，如果这次工作提取出的PE-BOX少于16个，那么“$0”的逆卡巴拉计数器会立刻减少。</specialTip>
+    </specialTipSize>
+  </observe>
+
+
+  <etc>
+
+    <!-- 격리실 내 보통 -->
+    <param key="Default_Hero_0" index="0">这里是什么地方呀？</param>
+    <param key="Default_Hero_1" index="1">当你陷入危险时，记得向我呼救噢！</param>
+    <param key="Default_Hero_2" index="2">我是...怎么到这里来的？</param>
+    <param key="Default_Hero_3" index="3">昨晚发生了什么...我不记得了...</param>
+    <param key="Default_Hero_4" index="4">你知道胜利意味着什么吗？哎嘿嘿~世界真是美好！</param>
+    <param key="Default_Hero_5" index="5">有什么需要尽管通知我！我可以帮上忙的！</param>
+
+    <!-- 격리실 내 히스테리 -->
+    <param key="Default_Hysteric_0" index="6">你不再需要我了吗...</param>
+    <param key="Default_Hysteric_1" index="7">我到底为何而存在...</param>
+    <param key="Default_Hysteric_2" index="8">不要再吵了！我不想听！！！</param>
+    <param key="Default_Hysteric_3" index="9">轮到我了...吗？</param>
+    <param key="Default_Hysteric_4" index="10">我讨厌这个安静的地方，世界不可能这么和平...</param>
+    <param key="Default_Hysteric_5" index="11">我是被选中的...除了我还有谁能守护世界...</param>
+    <param key="Default_Hysteric_6" index="12">没有黑暗就没有光明，我在这里根本没有意义...</param>
+    <param key="Default_Hysteric_7" index="13">有人告诉我，世界上已经没有坏蛋了，这是真的吗...</param>
+
+    <!-- 출동 -->
+    <param key="Hero_Appear_0" index="14">交给我吧！</param>
+    <param key="Hero_Appear_1" index="15">以爱与正义之名，魔法少女❤——闪亮登场！！！</param>
+
+    <!-- teth 조우 -->
+    <param key="Meeting_Teth_0" index="16">小菜一碟！</param>
+    <param key="Meeting_Teth_1" index="17">别担心！我会助你一臂之力的！</param>
+    <param key="Meeting_Teth_2" index="18">解决这些小坏蛋不费吹灰之力！</param>
+
+    <!-- he 조우 -->
+    <param key="Meeting_He_0" index="19">呼，好像有点麻烦了！</param>
+    <param key="Meeting_He_1" index="20">我必须做点什么！</param>
+
+    <!-- waw 조우 -->
+    <param key="Meeting_Waw_0" index="21">异界...？这里也充满了魔法吗？</param>
+    <param key="Meeting_Waw_1" index="22">前辈们做不到的事，我可以做到！</param>
+
+    <!-- aleph 조우 -->
+    <param key="Meeting_Aleph_0" index="23">大家！快离开这里！</param>
+    <param key="Meeting_Aleph_1" index="24">即使牺牲自己，我也要守护大家！</param>
+    <param key="Meeting_Aleph_2" index="25">好...好强...！但是，哪怕只有我一个人，我也绝不会逃跑的！！！</param>
+
+    <!-- 탐욕의 왕 조우 -->
+    <param key="Meeting_Greed_0" index="26">前辈...对不起！我必须阻止您！</param>
+
+    <!-- 절망의 기사 조우 -->
+    <param key="Meeting_Despair_0" index="27">就连您...也被吞噬了...这是我们永远摆脱不了的宿命吗...</param>
+
+    <!-- 사망 -->
+    <param key="Dead_0" index="28">我会...为了每一个人...奋战到最后一刻...</param>
+
+    <!-- 제압 완료 -->
+    <param key="Suppress_0" index="28">~\(≧▽≦)/~耶！我们做到啦！</param>
+    <param key="Suppress_1" index="30">任何时候都可以向我求助噢~！</param>
+
+    <!-- 탐욕의 왕 제압 -->
+    <param key="Suppress_Greed_0" index="31">如果，我是在外面遇见前辈您的话...我很可能已经死了...</param>
+
+    <!-- 절망의 기사 제압 -->
+    <param key="Suppress_Despair_0" index="32">您...已经竭尽全力了...但是...</param>
+
+    <!-- 탈출 후 히스테릭 -->
+    <param key="Be_Hysteric_0" index="33">太过分了...</param>
+    <param key="Be_Hysteric_1" index="34">这一切...都是谎言吗？</param>
+    <param key="Be_Hysteric_2" index="35">我保护不了大家...我做不到...我不能像她那样...</param>
+    <param key="Be_Hysteric_3" index="36">不...我和她是一样的...</param>
+    <param key="Be_Hysteric_4" index="37">啊啊啊！从我脑子里滚出去！！！</param>
+    <param key="Be_Hysteric_5" index="38">是时候...付出代价了...吗？</param>
+
+    <!-- 영웅 기본공격 -->
+    <param key="Hero_Attack_0" index="39">以爱的名义！</param>
+    <param key="Hero_Attack_1" index="40">以正义之名！</param>
+
+    <!-- 영웅 손가락 총 -->
+    <param key="Hero_Skill_1_0" index="41">魔法❤之力！！！</param>
+    <param key="Hero_Skill_1_1" index="42">磅磅~滚粗！！！</param>
+
+    <!-- 주문 시작 ~ 끝 (순서대로) -->
+    <param key="Hero_Skill_2_0_0" index="43">噢！蔚蓝的正义，深红的爱！</param>
+    <param key="Hero_Skill_2_1_0" index="44">为了被命运吞没的人而战！</param>
+    <param key="Hero_Skill_2_2_0" index="45">向光明宣誓！!</param>
+    <param key="Hero_Skill_2_3_0" index="46">邪恶的坏蛋不能阻挡我们！!</param>
+    <param key="Hero_Skill_2_4_0" index="47">爱之力量守护我们！！！</param>
+    <param key="Hero_Skill_2_5_0" index="48">魔法❤之刃！！！</param>
+  </etc>
+  
+</creature>

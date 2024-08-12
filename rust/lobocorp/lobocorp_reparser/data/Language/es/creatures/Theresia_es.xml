@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300003">
+
+    <narration action="move">
+      #0 designado para la sala de contención de $0 para el trabajo.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-09</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Theresia</portrait>
+
+      <name openLevel ="1">
+        Theresia
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <openText>
+        "Recuerdas esta melodía? El profesor tocó esta canción cuando los estudiantes tenían sueño. Feliz cumpleaños."
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Es una caja de música con una bailarina que baila.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Cuando la primavera está herida, una melodía triste comienza a tocar. Nadie sabe cuándo o quién lo hizo, pero no parece nuevo a juzgar por los pequeños saltos de la música.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Hay una frase tallada crudamente en ella, "Recuerda esta melodía? El profesor tocó esta canción cuando los alumnos tenían sueño. Feliz cumpleaños."}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {Escuchar la caja de música hace que cualquiera sienta que todo va a estar bien y que su fatiga ha desaparecido. Pero la escucha excesiva hará que el sujeto pierda el control de la realidad, volviéndolos locos.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="1">Los sujetos que escuchen la música de $0 se recuperarán su SM.</specialTip>
+      <specialTip openLevel="2" key="2">Al escuchar la caja de música durante 20 a 30 segundos, El SM del sujeto caerá rápidamente, causandole pánico.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

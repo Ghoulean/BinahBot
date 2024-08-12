@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300001">
+    <narration action="move">
+      #0 está designado a la celda contención de $0.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-77</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/DesireHeart</portrait>
+
+      <name openLevel ="1">
+        El Corazón de la Aspiración
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>La aspiración excesiva dará lugar a un frenesí.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Un corazón sin dueño. Todavía late incluso después de ser removido del cuerpo.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Cuando se toma prestado, los latidos del corazón se duplicarán, aumentando el PS y el poder de ataque.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {La aspiración excesiva dará lugar a un frenesí.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+
+      [
+      {
+      Los empleados que no atacaron a nadie o que le devolvieron el corazón en 30 segundos realizaron asesinatos sin sentido repetidos con el PS mejorado.}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Los sujetos que equipen $0 disfrutarán de un aumento de PS y velocidad de ataque.</specialTip>
+      <specialTip openLevel="2" key="2">Si se le ordena devolver $0 sin atacar a nadie, el usuario pierde la razón y tiene un aumento en las tendencias violentas, e intentará atacar cualquier cosa cercana.</specialTip>
+      <specialTip openLevel="2" key="3">Si se ordena al sujeto que devuelva $0 dentro de los 30 segundos de haber sido equipado, tendrá el mismo efecto que el anterior.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300006">
+
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-82</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Shelter</portrait>
+
+      <name openLevel ="1">
+        3月27日のシェルター
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+      <openText>
+        言葉通りの「世界で一番安全な場所」に なっていくでしょう。
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {外の世界の環境全て、光さえも遮断するシェルターです。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {シェルターはその日の記憶を今でも大切にしています。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {P社は、世界で最も安全な場所を作ろうとしました。 その内部には大量の保存食量が備蓄されており、 非常に長い年月の間、 内部に滞在することができます。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      <!-- 여기 번역 고치기 -->
+      [
+      {そのおかげで、 選ばれた避難民たちは 後を絶たない悲鳴と血の海から 逃れることができました。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {内部は完全に安全であるシェルターは、 外部の現実に対する認識を より絶望的なものにします。 内部は、言葉通りの「世界で一番安全な場所」 になっていくでしょう。}
+      ]
+    </desc> 
+
+  
+
+     <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">$0の中に入った職員は、 あらゆるダメージに対して免疫状態になります。 (ただし、O-09-91によるダメージはこれに該当しない) $0の中に到着してからは、 対象のHP/SPが少量ずつ回復する。</specialTip>
+      <specialTip openLevel="2" key="2">別のオブジェクトに追われていた職員が $0の内部へ到達すると、 職員はそのオブジェクトの認識範囲から外れる。</specialTip>
+      <specialTip openLevel="3" key="3">職員が30秒間以上$0の内部へ留まった際、 施設内のアブノーマ リティのクリフォトカウンターが 0になる現象が発生した。 職員が$0の外へ出るまで、 クリフォトカウンターの減少が 定期的に繰り返された。</specialTip>
+      </specialTipSize>
+
+  
+
+  </observe>
+</creature>

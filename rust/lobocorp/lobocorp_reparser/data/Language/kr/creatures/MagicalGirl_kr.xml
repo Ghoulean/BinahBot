@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    5.28
+  -->
+  <info id="100004">
+
+   
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0는 아마 모든 환상체들 중에 활발하고 쾌활한 성격을 지닌 소녀일 것입니다. 그러나 과연 그 뿐일지는 모르는 일입니다. },
+      {$0는 아직까진 우리들에게 괜찮지만, 여전히 유의해야 할 것입니다.},
+      {$0의 잠재적 위험성에 대해 대부분의 직원들은 다 알 것입니다. 경계를 게을리 하지 마세요.},
+      {사실  $0가 원하는 것은 ‘평화’가 아닙니다. }
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 는 기분 좋은 듯 창 밖을 바라보며 콧노래를 흥얼거립니다. },
+      {$0 는 밝은 미소로 방으로 들어온 #0 직원을 맞이합니다. },
+      {$0 는 #0에게 먼저 인사합니다. ‘오늘은 날씨가 정말 좋아요!’},
+      {$0 는 #0 직원을 눈에 띄게 반가워합니다. }
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {$0가 #0에게 지난 번 악당과 3:1 로 싸워 이긴, 그녀의 영웅담을 이야기해주며 자랑스러워 하고 있습니다.  },
+      {#0 직원이 $0의 이야기를 듣고 있습니다. 벌써 여러 번도 더 해준 이야기지만 그녀는 계속해서 말하고 싶어합니다.},
+      {#0 직원이 칭찬을 해주자 그녀가 기분 좋은 듯 웃습니다. }
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {그녀의 ‘마법구두’ 가 이따금씩 또각 거리며 유쾌한 소리를 냅니다. },
+      {그녀의 목에 달린 ‘마법 보석’이 햇빛에 반짝이며 빛을 냅니다. },
+      {그녀의 풍성한 마법복의 레이스가 풍성하게 흔들립니다. }
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {그녀는 #0에게 ‘사명감’에 대하여 이야기 합니다. 자신의 사명은 대단히 중요하고 비밀스러운 것이라고 속삭입니다. },
+      {그녀는 #0에게 ‘정의’ 에 대하여 이야기 합니다. 자신이 하는 일 자체가 곧 정의라고 속삭입니다.  }
+      ]
+    </narration>
+
+    <narration action="reverse1">
+      [
+      {$0는 울적한 목소리로 방에 들어온 #0에게 중얼거리지만 잘 들리지 않습니다.},
+      {$0 는 #0 직원이 방에 들어왔음에도 전과 달리 돌아보지는 않습니다. }
+      ]
+    </narration>
+
+    <narration action="reverse2">
+      [
+      {#0 직원이 $0의 상태를 확인 하기 위해 그녀에게 다가갑니다. ‘평화가 질려가고 있어요.'},
+      {그녀가 또박 또박 중얼거립니다. ‘오늘은 날씨가 좋네요. 기쁘지는 않아요.’}
+      ]
+    </narration>
+
+    <narration action="reverse3">
+      [
+      {그녀의 ‘마법구두’가 조용히 또각 거리며 침묵을 깨뜨립니다.},
+      {그녀의 눈빛에는 초점이 없고 입가엔 평소엔 본 적 없던 음산한 미소가 지어집니다.  }
+      ]
+    </narration>
+
+    <narration action="special_ability1">
+      [
+      {더 이상 $0가 아니게 된 $0는 #0 직원에게 살의를 담긴 눈빛을 보입니다}
+      ]
+    </narration>
+
+    <narration action="special_ability2">
+      [
+      {$0는 #0 직원이 마취주사를 놓는다는 걸 눈치채고 먼저 공격을 가했습니다.}
+      ]
+    </narration>
+
+    <narration action="special_ability3">
+      [
+      {#0에게 마법적인 힘을 가했습니다. }
+      ]
+    </narration>
+    
+    <narration action="dead">
+      [
+      {$0는 쓰러진 #0 직원을 그대로 밟은 채 방을 빠져 나갑니다. 그녀는 다른 희생자들을 찾아 건물 구석 구석을 헤맬 것입니다. },
+      {숨이 끊어지기 직전에 #0 직원은 있는 힘을 다 짜내어 $0 에게 말을 걸어 보려 합니다. $0는 아무 것도 들리지 않는 다는 듯 격리실의 문을 열었습니다.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-01-04</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/MagicalGirl</portrait>
+
+      <name openLevel ="1">
+        마법소녀
+      </name>
+
+      <name openLevel="3">
+        증오의 여왕
+      </name>
+      
+      <riskLevel openLevel ="2">
+        WAW
+      </riskLevel>
+
+      <openText>사랑과 정의의 이름으로~ 지금 이 곳에 등장!</openText>
+
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {당장이라도 정의와 평화를 위해 악당을 무찌를 것 같은 인간 형태의 환상체.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {모든 직원에게 친절한 모습을 보이며 일상적인 대화를 오가는 등의 행동이 가능하다. 자신이 세계를 구하기 위해 태어난 영웅이라고 믿고 있으며 이에 대해 자부심도 커 보인다.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {직원들과의 대화 중 불안함이나 회의감이 나타날 경우 최소 4일 내에는 외형과 성격이 역변하며 해리성 장애와 유사한 행동을 띤다. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {선과 악에 대한 정의가 너무나 철저한 나머지, 악이 없다는 것에 대하여 커다란 공포와 회의를 느껴 스스로가 악이 되는 걸 선택한 것 같다는 추측이 있다.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {역변이 끝난 후에는 모든 수치가 정상으로 돌아오며 환상체는 해당 행위에 대해 기억을 하지 못한다. }
+      ]
+    </desc>
+
+
+    <desc id="6" openLevel="1">
+      [
+      {&lt;녹음기록_1&gt;&#13;&#10;직원: 그래서, 오늘은 기분이 어때?&#13;&#10;마법 소녀 : 좋아요. 세상은 평화롭고, 이곳은 조용하네요. 평화롭다는 건 참 좋은 것이죠. 악당들이 없다는 뜻이잖아요. 안 그래요?}
+      ]
+    </desc>
+
+    <desc id="7" openLevel="2">
+      [
+      {&lt;녹음기록_1&gt;&#13;&#10;직원: 오늘은 좀 우울해 보이네.&#13;&#10;마법 소녀 : 여전히 좋아요. 세상은 평화롭고, 이곳은.. (더 이상 말을 하려 하지 않았다)&#13;&#10;(중략)&#13;&#10;&lt;녹음기록_3&gt;&#13;&#10;&#13;&#10;직원 : ….괜찮은 거야?&#13;&#10;마법 소녀 : 왜 여전히 평화로운 걸까요? 제가 존재하는 이유는 말이죠, 악당들을 무찌르기 위한 것인데요. 이건 마치 제가, 필요없다는 것 같아요. 왜 계속 조용하기만 하죠? 아, 제가 마법 소녀 라는 말을 당신에게 했었나요? 세상을 평화롭게 지키기 위해 저는 선택받은 아이로 태어났죠. 오늘은 근데, 조용하네요. (이 후로 알아들을 수 없는 혼잣말을 계속 중얼거렸다)}
+      ]
+    </desc>
+
+    <desc id="8" openLevel="3">
+      [
+      {(&lt;녹음기록_4&gt;&#13;&#10;직원이 들어왔다는 것 조차 인지하지 못할 만큼 어딘가에 굉장히 불안해하고, 강박적인 증세를 보이며 혼잣말을 끝 없이 중얼거렸다)&#13;&#10;마법 소녀 : 세상은 선과 악 두 가지로 구분할 수 있어. 나는 정의의 편에 속해. 내가 선에 있다면 악 이라는 것도 있어야 해. 악당의 역할이 없다면 나도 없는 거야. 세상은 그럼 누가 지켜주지?&#13;&#10;&lt;기록 끊김&gt;}
+      ]
+    </desc>
+
+    <desc id="9" openLevel="4">
+      [
+      {녹음기록_5 : 3등급 이상의 관계자들만 열람 가능&#13;&#10;&#13;&#10; 이 자료는 &lt;데이터말소&gt; 날에 해당 환상체의 &lt;데이터말소&gt; 횟수의 폭주 중 얻은 녹취록 일부다. 해당 환상체는 시설에 갖춰져 있던 무전기를 사용하여 비상계획팀의 직원에게 전화를 걸었다.&#13;&#10;- (계속해서 흐느끼는 소리)&#13;&#10;직원 : 비상계획팀입니다. 신원을 말씀해주세요.&#13;&#10;- 내가, 내가.. 그런 것 같아요. 나는, 나를 멈출 수가 없었어요. 제 탓이에요. 내가 모든 걸 망쳤어요. 내게 친절하게 대해준 사람들에게 배신했어요. 왜 그랬는지는 기억이 나지 않아요.&#13;&#10;직원 : 주위에 어떤 일이 일어났나요?&#13;&#10;- 모르겠어요. 아무도 움직이지 않아요. 피가 엄청 많이 흘러요. 죄송해요. 미안해요 정말. &#13;&#10;(중략)&#13;&#10;이후 해당 환상체의 격리실에서는 세 구에 시신이 발견되었다. 이후 환상체는 해당 사건에 대한 모든 기억을 잃었다.}
+      ]
+    </desc>
+
+     <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">작업 결과가 나쁨일 경우 클리포트 카운터가 감소하였다.</specialTip>
+      <specialTip openLevel="2" key="2">클리포트 폭주 경보가 발생하기 전까지 직원이 3명 이상 사망하지 않자 클리포트 카운터가 감소하였다.</specialTip>
+      <specialTip openLevel="1" key="3">클리포트 카운터가 최대 상태일 때 작업을 완료한 직원의 체력과 정신력이 회복되었다.</specialTip>
+      <specialTip openLevel="2" key="4">비상 상황 2단계가 되자 환상체가 스스로 격리실에서 나와 직원들의 제압 작업을 도왔다. 단, 탈출 중 직원이 전체의 20% 이상 사망할 경우 환상체의 상태가 변화하며, 이후 즉시 제압을 진행해야 한다.</specialTip>
+      <specialTip openLevel="3" key="5">클리포트 카운터가 1이 되자 $0의 상태가 변화하였다. 해당 상태에서는 $0의 작업 성공률이 감소하였다. 우리는 그녀의 불안 및 강박 증세에서 기인하여 해당 상태를 ‘히스테릭 상태’라고 명명하였다. </specialTip>
+      <specialTip openLevel="4" key="6">히스테릭 상태에서 PE-BOX를 16개 이상 생산하자 클리포트 카운터가 증가하였다.</specialTip>
+      <specialTip openLevel="4" key="7">히스테릭 상태에서 PE-BOX를 16개 미만으로 생산하자 클리포트 카운터가 감소하였다.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+
+  <etc>
+
+    <!-- 격리실 내 보통 -->
+    <param key="Default_Hero_0" index="0">여긴 어떤 곳이야?</param>
+    <param key="Default_Hero_1" index="1">있지 혹시 위험이 생긴다면 불러줘~</param>
+    <param key="Default_Hero_2" index="2">내가 어떻게 여기로 오게 되었지?</param>
+    <param key="Default_Hero_3" index="3">어제는 무슨일이 있었더라...</param>
+    <param key="Default_Hero_4" index="4">너는 승리의 보람과 세상의 
+    아름다움에 대해 알고 있니?</param>
+    <param key="Default_Hero_5" index="5">무슨 일이 생기면 바로 나한테 알려줘야 해? 
+    틀림없이 도움을 줄 수 있을거야.</param>
+
+    <!-- 격리실 내 히스테리 -->
+    <param key="Default_Hysteric_0" index="6">더 이상 날 필요로 하지 않는거야...?</param>
+    <param key="Default_Hysteric_1" index="7">내 존재 이유는 대체 뭐야..?</param>
+    <param key="Default_Hysteric_2" index="8">제발 이 목소리들을 멈춰줘...</param>
+    <param key="Default_Hysteric_3" index="9">이제 내 차례인거야...?</param>
+    <param key="Default_Hysteric_4" index="10">조용한 이 곳이 싫어.
+    내가 알던 세상은 이렇게 평화롭지 않았어</param>
+    <param key="Default_Hysteric_5" index="11">나는 선택받았어. 
+    내가 없으면 세상은 누가 지키지?</param>
+    <param key="Default_Hysteric_6" index="12">어둠이 없으면 빛도 없는거야, 
+    나는 지금 이 곳에 없는 것처럼.</param>
+    <param key="Default_Hysteric_7" index="13">누군가 그러더라고. 이 곳에 
+    '악당' 이라는 건 더 이상 없다고.. 정말이야?</param>
+
+    <!-- 출동 -->
+    <param key="Hero_Appear_0" index="14">맡겨둬!</param>
+    <param key="Hero_Appear_1" index="15">사랑과 정의의 이름으로~
+    지금 이 곳에 등장!</param>
+
+    <!-- teth 조우 -->
+    <param key="Meeting_Teth_0" index="16">이 정도 쯤이야!</param>
+    <param key="Meeting_Teth_1" index="17">걱정마~ 내가 도와줄게!</param>
+    <param key="Meeting_Teth_2" index="18">약한 악당들은 쉽게 물리칠 수 있다구!</param>
+
+    <!-- he 조우 -->
+    <param key="Meeting_He_0" index="19">흐음 만만치 않겠는데</param>
+    <param key="Meeting_He_1" index="20">내가 어떻게든 해볼게!</param>
+
+    <!-- waw 조우 -->
+    <param key="Meeting_Waw_0" index="21">마이너 아르카나 정도라니...
+    여기 혹시 악당 아지트 정도 되는 곳이야?</param>
+    <param key="Meeting_Waw_1" index="22">선배들은 해내지 못했더라도
+    난 해낼 수 있어!</param>
+
+    <!-- aleph 조우 -->
+    <param key="Meeting_Aleph_0" index="23">모두 어떻게 해서든
+    이 곳을 벗어나!</param>
+    <param key="Meeting_Aleph_1" index="24">내 목숨을 바쳐서라도
+    사람들을 지켜내고 말거야!</param>
+    <param key="Meeting_Aleph_2" index="25">강력함은 메이저...
+    그리고 난 혼자....
+    그래도 도망치진 않아!</param>
+
+    <!-- 탐욕의 왕 조우 -->
+    <param key="Meeting_Greed_0" index="26">미안해 선배!
+    하지만 지금 내가 할 수 있는 건
+    당신을 막아내는 것 뿐이야!</param>
+
+    <!-- 절망의 기사 조우 -->
+    <param key="Meeting_Despair_0" index="27">당신도 결국 먹혀 버렸어... 
+    이건 벗어날 수 없는 굴레인거야?</param>
+
+    <!-- 사망 -->
+    <param key="Dead_0" index="28">끝까지 내가 모두를 지켜낼거야...</param>
+
+    <!-- 제압 완료 -->
+    <param key="Suppress_0" index="28">해냈네!</param>
+    <param key="Suppress_1" index="30">다음에도 맡겨줘!</param>
+
+    <!-- 탐욕의 왕 제압 -->
+    <param key="Suppress_Greed_0" index="31">밖에서 선배를 만났다면 
+    난 지금쯤 죽어있었겠지....</param>
+
+    <!-- 절망의 기사 제압 -->
+    <param key="Suppress_Despair_0" index="32">당신...
+    그래도 최대한 참고있었구나...</param>
+
+    <!-- 탈출 후 히스테릭 -->
+    <param key="Be_Hysteric_0" index="33">너무해...</param>
+    <param key="Be_Hysteric_1" index="34">결국 거짓말이었던거야..?</param>
+    <param key="Be_Hysteric_2" index="35">나도 그녀처럼 결국 지켜내지 못한거야...</param>
+    <param key="Be_Hysteric_3" index="36">나도 똑같구나...</param>
+    <param key="Be_Hysteric_4" index="37">내 머릿속에서 나가줘...</param>
+    <param key="Be_Hysteric_5" index="38">대가를 치룰 때 인거야...?</param>
+
+    <!-- 영웅 기본공격 -->
+    <param key="Hero_Attack_0" index="39">사랑으로!</param>
+    <param key="Hero_Attack_1" index="40">정의의 이름으로!</param>
+
+    <!-- 영웅 손가락 총 -->
+    <param key="Hero_Skill_1_0" index="41">아르카나 비트~!</param>
+    <param key="Hero_Skill_1_1" index="42">사라져라~</param>
+
+    <!-- 주문 시작 ~ 끝 (순서대로) -->
+    <param key="Hero_Skill_2_0_0" index="43">정의보다도 푸른 자여
+    사랑보다 붉은 자여</param>
+    <param key="Hero_Skill_2_1_0" index="44">운명 속에 파묻힌 그대의 이름을 걸고</param>
+    <param key="Hero_Skill_2_2_0" index="45">나 여기서 빛에 맹세한다</param>
+    <param key="Hero_Skill_2_3_0" index="46">우리 앞을 막는 증오스런 존재들에게</param>
+    <param key="Hero_Skill_2_4_0" index="47">나와 그대의 힘을 합쳐 
+    위대한 사랑의 힘을 보여 줄 것을</param>
+    <param key="Hero_Skill_2_5_0" index="48">아르카나 슬레이브!</param>
+  </etc>
+</creature>

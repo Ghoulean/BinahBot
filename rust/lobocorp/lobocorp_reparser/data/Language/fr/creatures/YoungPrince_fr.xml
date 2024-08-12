@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100040">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {#0 peut sentir de petites spores être crachées par $0.},
+      {#0 sent sa vision se troubler légèrement à cause de $0.},
+      {$0 a une apparence écœurante, et pourtant enchantante.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Le renard lui dit : “L’essentiel est invisible avec les yeux.”}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 vient de très loin, d’un endroit que nous ne connaissons pas.},
+      {Peut-être que $0 n’est pas vraiment ce que nous pensons voir.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {La fin des nombreux employés ayant été apprivoisés par $0 est toujours tragique.},
+      {Tous les employés transformés en monstres par les spores produites par $0 errent près de son Unité de Confinement.},
+      {Il nous a été rapporté qu’un grand nombre de nos employés ayant travaillé avec $0 ont refusé de manger des champignons pendant un certain temps.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {Contrairement à beaucoup d’Anomalies que nous avons contenues, le nom de “$0” a été trouvé par une unique employée.},
+      {#0 se souvient d’un morceau d’étoile.}
+      ]
+    </narration>
+    <narration action="special_ability_1"> 
+      [
+      {Des dizaines de spores commencent à pousser sur le corps de #0 ; on ne peut pas les arrêter… L’esprit de #0 cherche désespérément un consensus avec $0.},
+      {Avec l’étoile que $0 a gardée dans son corps, #0 perd lentement l’esprit, incapable de se contrôler.}
+      ]
+    </narration>
+    <narration action="special_ability_2">
+      [
+      {Le prix à payer pour avoir désiré quelque chose de plus grand que soi est lourd.},
+      {#0 entend la voix d’un ami l’appeler au loin alors qu’il perd connaissance.}
+      ]
+    </narration>
+    <narration action="special_ability_3"> 
+      [
+      {#0 entend la voix d’un ami l’appeler au loin alors qu’il perd connaissance.},
+      {#0, qui a vu des étoiles dans ses rêves, voit son envie pour $0 s’intensifier perpétuellement.},
+      {#0 ne pouvait pas rester dans le monde de $0. La fin tragique de #0, maintenant exilé, commence.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">O-04-66</codeNo>
+      <name openLevel="1">Gros Morceau de Champignon</name>
+      <name openLevel="4">Le Petit Prince</name>
+      <portrait openLevel="1">Sprites/Unit/creature/YoungPrince</portrait>
+      <riskLevel openLevel="2">WAW</riskLevel>
+      <openText>
+       Même s’il s’avère que c’est une malédiction, je l’adorerai telle une bénédiction.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Parmi les employés, il était auparavant appelé le “Gros Morceau de Champignon.” On dirait effectivement que c’est un champignon gigantesque, et il a aussi quelques ressemblances avec une moisissure ; dans l’ensemble, il a bien une apparence fongique. Il relâche constamment des spores dans les airs, visibles même à l’œil nu.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Une grande majorité de nos employés n’aiment pas beaucoup cette Anomalie. Rares sont ceux à l’esprit suffisamment ouvert pour vouloir travailler avec un champignon géant qui prend la moitié d’une Unité de Confinement et crache des spores aux propriétés inconnues ; il y a des dizaines d’autres choses pouvant les préoccuper, comme d’autres Anomalies par exemple.}
+      ]
+    </desc>
+    <desc id="3" openLevel="1">
+     [
+     {Étant donné que trop peu d’employés sont volontaires pour travailler avec cette Anomalie, nous n’avons pu récolter que les informations les plus rudimentaires. Avant, on utilisait un système de rotation pour désigner qui allait travailler sur telle Anomalie. Cependant, suite à “l’Incident de la Magical Girl” il y a quelques années, on a commencé à prendre les opinions des employés en compte lors de l’affectation des travaux.}
+     ]
+    </desc>
+    <desc id="4" openLevel="1">
+      [
+      {Cette Anomalie produit des spores microscopiques mobiles qui restent en suspension dans l’air. Elles prolifèrent principalement en envahissant d’autres organismes, passant par leurs voies respiratoires. Il est difficile de repérer les premiers symptômes de cette infestation car les seuls ressentis sont une légère dyspnée et une gorge sèche grattant un peu. Par conséquent, il est obligatoire de porter un masque lorsqu’on travaille sur cette Anomalie.}
+      ]
+    </desc>
+    <desc id="5" openLevel="1">
+       [
+       {Lorsqu’un employé inhale suffisamment de spores, des kystes étranges commencent à pousser sur son corps et les tissus commencent à fondre. À terme, il devient une créature dysmorphique dont la forme originelle est difficile à deviner. Il devient très hostile dans cet état et doit donc être supprimé à vue.}
+       ]
+    </desc>
+    <desc id="6" openLevel="2">
+       [
+       {&lt;Extrait d’un Enregistrement d’une séance de Psychothérapie - Employé John&gt;&#13;&#10;
+       Il y avait ce type qui était toujours silencieux. Ce genre de gars qui te glisse un regard en coin tel un renard, comme s’il attendait de nous qu’on lui parle. Un truc bizarre avec lui c’est qu’il s’était porté volontaire pour bosser sur le morceau de champignon, une Anomalie que tout le monde détestait visiter. Ce qui était tout aussi dérangeant, c’est qu’il passait beaucoup de temps dans l’Unité de Confinement.&#13;&#10;
+       Qui sait le genre de monstruosités qui ont pu pousser sur son corps ? Quand on a décidé d’appeler cette Anomalie le “Gros Morceau de Champignon” entre nous, ce mec a parlé pour la première fois. Il disait qu’il était celui qui l’avait le plus vu. Il baragouinait des choses incompréhensibles, disant qu’il ne méritait pas d’être appelé morceau de champignon. Tout le monde s’est moqué de lui.&#13;&#10;
+       On s’est dit qu’il était devenu complètement maboul quand il a commencé à dire qu’il avait fait copain-copain avec ce truc. Je veux dire, c’est normal ici, il se passe beaucoup de choses. Une personne qui devient folle c’est pas grand chose. On a essayé de lui faire subtilement comprendre qu’il devrait aller passer un test psychiatrique mais il nous a juste lancé un regard condescendant, comme s’il savait quelque chose que nous ignorions.&#13;&#10;
+       Et quelques jours plus tard, il a cassé sa pipe, comme on le sait tous. Je vous ai dit que c’était moi qui l’avait reconnu dans cette carcasse de créature-spore-moisissure ? La tache de naissance sur son front. Si on n’avait pas trouvé cette tache de naissance sur ce tas de spores, on n’aurait jamais pu deviner que c’était lui. Personne ne savait qu’il avait une tache de naissance à part moi. Vu que, vous savez, il n’avait pas d’amis dans le secteur.&#13;&#10;
+       Après être devenu ce monstre, il errait bêtement près de l’Unité de Confinement du champignon. On a essayé de l’attirer à un endroit moins fréquenté parce qu’il attaquait tout ce qui passait dans son champ de vision. Mais il ne voulait pas s’éloigner de plus de 10 mètres de l’Anomalie jusqu’à sa mort.&#13;&#10;
+       C’est pour ça qu’on a décidé de renommer l’Anomalie. Pour des raisons complexes, par pitié pour l’homme qui est devenu ami avec un champignon de tous les trucs qu’il aurait pu choisir, et en mémoire de sa mort tragique.&#13;&#10;
+       Pour être honnête, il avait besoin d’un ami. C’est pour ça qu’il s’est laissé infecter, s’est lâché dans les hallucinations, ignorant qu’il devenait un monstre. Ce champignon, il a apprivoisé ce pauvre bougre simplement pour se reproduire ; il a pris Alex dont le nom était inconnu de tous…}
+       ]
+    </desc>
+    <desc id="7" openLevel="3">
+      [
+      {&lt;Notes de l’Employé Alex&gt;&#13;&#10;
+      L’esprit humain est trop fragile pour visualiser quelque chose dans sa forme véritable. Saviez-vous que les stomatopodes peuvent voir des centaines de couleur dont les humains n’ont aucune connaissance ? Cette simple anecdote est un exemple suffisant pour montrer qu’il est préjudiciable de se fier uniquement à ce que l’on voit.&#13;&#10;
+      Je n’ai pas vraiment beaucoup d’amis. Ne vous méprenez pas. Je ne veux pas d’amis, j’ai choisi de ne pas avoir d’amis ; c’est pas que je ne peux pas. C’est parce qu’on est incapable de se comprendre. On se considère souvent comme une entité complètement isolée et incapable de comprendre pleinement les autres. Mais ironiquement, un instinct intrinsèque de psychologie des foules a subsisté au long de notre évolution.&#13;&#10;
+      On joue continuellement à un jeu à risques, à faire les funambules, à essayer vainement de nous comprendre les uns les autres en sortant de notre zone de confort. De fait, j’en ai fini depuis longtemps avec ce jeu inutile. Je me suis porté volontaire pour étudier le champignon géant pour une raison similaire. Personne ne voulait s’approcher de cette Anomalie. C’est sans doute pour des raisons insignifiantes, comme le fait qu’elle soit trop repoussante à leurs yeux. Son apparence légèrement étrangère n’allait pas m’arrêter. De fait, je me suis senti légèrement supérieur devant la surprise générale lorsque j’ai dit que je travaillerais avec.&#13;&#10;
+      (Omis) L’Anomalie n’a pas montré d’activité particulière. J’ai enregistré et étudié le silence avec patience. Un jour, après avoir propagé des poudres aux couleurs enchanteresses, j’ai ressenti un changement spécial. Je pouvais percevoir une “hyper-réalité”, un plan plus élevé que la réalité. C’est une main qu’Il m’a tendue. Je l’ai prise et il m’a remercié d’une invitation à un endroit si spécial. C’était quelque chose que moi seul pouvais accomplir. Il m’a parlé par télépathie.&#13;&#10;
+      Il m’a accueilli car j’étais le seul à pouvoir me rendre compte de Son essence. J’ai imaginé, et désiré cet instant de m’entretenir avec Lui grâce à mon esprit. D’être pleinement compris ; ce sentiment d’union. C’était si grisant, je pouvais à peine cacher ma joie.&#13;&#10;
+      (Omis) Je voulais me rapprocher de Lui. Je voulais être une part de Lui. Je ne faisais que penser à Lui. Je voulais Lui appartenir et comprendre Son monde. Comme un bouton de rose sur le point d’éclore, mon esprit était imprégné… Je me faisais apprivoiser, petit à petit…}
+      ]
+    </desc>
+    <desc id="8" openLevel="4">
+      [
+      {&lt;Extrait d’un Enregistrement Audio&gt;&#13;&#10;
+      Ceci fait partie d’un enregistrement pris par une caméra de surveillance au sein de l’Unité de Confinement. Les spores de l’Anomalie ayant complètement obscurci le champ de vision, seul l’enregistrement audio a pu être extrait. À en juger par le contenu des discussions enregistrées, nous en avons conclu qu’il est fortement probable que les spores de l’Anomalie contiennent un agent hallucinogène, étant donné que même après une analyse profonde de l’enregistrement, aucune voix autre que celle de l’employé n’a pu être entendue. Celui-ci, infecté par les spores, a souffert d’une folie sévère avant d’être abattu sur le champ par un de ses collègues.&#13;&#10;
+      -	Non, je n’ai pas d’amis. Comme je vous l’ai dit, je n’aime pas les relations si contradictoires. Au moins, je pense que vous pouvez être mon ami. Le langage humain est bien trop simple pour illustrer cette relation, mais je pense qu’on peut se contenter de “amis”.&#13;&#10;
+      -	… Oui, je suis votre seul et unique ami.&#13;&#10;
+      -	Je vous accepte. Ma vie est refaite depuis que je vous ai rencontré. J’ai passé ma vie à être déprimé, sans aucun but, sans parler à qui que ce soit, à ne faire que travailler toute la journée. Mais vous m’avez sauvé, une personne qui s’était abandonnée. Tout comme j’ai pu percevoir votre véritable essence, vous avez vu à travers la mienne. C’est vraiment une expérience euphorique. J’aimerais vous comprendre ; j’aimerais devenir un être comme vous et vous adorer. Je suis né humain, j’ai vécu une vie pénible et j’aurais probablement continué si ce n’avait été pour vous. Je suis si heureux d’avoir pu vous rencontrer.&#13;&#10;
+      -	S’il vous plaît, souvenez-vous de moi ; souvenez vous de la fleur sans nom qui a éclos juste pour vous.&#13;&#10;
+      -	Même si cela s’avère être une malédiction, je l’adorerai telle une bénédiction. Je penserai à vous jusqu’au jour où mon esprit s'effondrera et se désagrégera. Je fermerai les yeux en pensant à mon seul ami venu d’un univers lointain… (Après ça, un faible son d’air s’échappant de l’Anomalie peut être entendu avant que ne retombe le silence)}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Le Compteur Qliphoth diminue si 3 Travaux autres que Perspicacité sont conduits à la suite.</specialTip>
+      <specialTip openLevel="1" key="2">Les employés qui ont travaillé avec $0 ont une probabilité d’être infecté par ses spores. Envoyez-les travailler avec d’autres Anomalies régulièrement pour empêcher l’infection complète.</specialTip>
+      <specialTip openLevel="1" key="3">Lorsque le résultat du Travail est Mauvais, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="2" key="4">#0, qui travaillait constamment avec $0, a commencé à montrer des signes de douleurs aiguës au sein de l’Unité de Confinement. Après cela, des tissus semblables à ceux de $0 ont émergé de son corps, et #0 a commencé à se transformer en $0-1.</specialTip>
+      <specialTip openLevel="3" key="5">$0 a attiré un employé à son Unité de Confinement lorsque son Compteur Qliphoth a atteint 0. Quand l’employé attiré atteint l’Unité de Confinement, le même phénomène que décrit ci-dessus se déroule.</specialTip>
+      <specialTip openLevel="4" key="6">Pendant la suppression de $0-1, veuillez prendre garde aux spores relâchées par son corps au moment de la mort. Ces spores causeront des dégâts mentaux continus, et les employés qui en paniquent pourraient vouloir entrer dans l’Unité de Confinement de $0, ce qui doit être empêché immédiatement.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <codeId>O-04-66-1</codeId>
+  </child>
+</creature>

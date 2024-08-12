@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100043">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção de $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {Ter alguém para lamentar sua morte é uma bênção.},
+      {Aqueles que permanecem não tem tempo para lembrar daqueles que morreram, tudo o que podem fazer é se preparar para a próxima morte.},
+      {$0 encara #0 em completo silêncio.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 sonha. A cortina se fecha no ideal nascido em vão, mas sem acompanhar uma conclusão. },
+      {O grande caixão não chega perto do suficiente para substituir as centenas de covas não cavadas.},
+      {#0 presencia a procissão fúnebre das borboletas.},
+      {O bater de asas oneroso chega mais perto de uma maneira familiar, porém estranha.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Não há flores ou árvores neste lugar, então de onde é que as borboletas estão vindo?},
+      {Os funcionários não podem retornar donde vieram, e não possuem escolha alguma a não ser repetir o dia infinitamente.},
+      {A procissão fúnebre nunca termina; #0 continua a calmamente lamentar.},
+      {#0 pensa sobre o fim da vida de alguém.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Retornar inteiro ao lugar donde um veio agora é um milagre que nunca acontecerá.},
+      {Morte pacífica na melhor hora de alguém é uma bênção inesperada.},
+      {De fato, a maior parte dos funcionários que morreram aqui queriam viver suas vidas ao máximo.},
+      {Alguns pensavam que a morte traria um novo início; porém, não há nada além do vazio após a morte.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-01-68</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Butterfly</portrait>
+      <name openLevel="1">
+        O Funeral das Borboletas Mortas
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <openText>Para onde alguém vai quando morre?</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Para onde alguém vai quando morre?&#13;&#10;
+      Para onde todos os funcionários que trabalhavam aqui foram?}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {- Eles devem ter voltado para casa. Para um paraíso onde a família e calor os esperam.&#13;&#10;&#13;&#10;Assim que se juntam a corporação, os funcionários não podem mais sair. A única forma de sair é resignando.&#13;&#10;&#13;&#10;- Então esses funcionários "resignados" devem ter voltado para casa, tendo conseguido o que queriam e estando cheios de esperança.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Nós somos as penas de uma Asa. A Resignação não é tão simples quanto acha. Assim como uma pena não se separa da asa por conta própria.&#13;&#10;&#13;&#10;- Então, para onde foram todos os funcionários resignados?&#13;&#10;&#13;&#10;Eles estão atrelados à corporação no momento que entram. Mesmo que sejam resignados, estão fadados a ficar aqui para sempre.&#13;&#10;&#13;&#10;- Há muito tempo atrás em algum mundo, as pessoas acreditavam que se tornariam seres bonitos com pequenas asas após a morte. É uma história boba. Sem sentido também.&#13;&#10;&#13;&#10;Se conseguirmos asas, vamos conseguir sair desse lugar? Só conseguimos nossas asas depois de nos aposentarmos?}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Dizem que o lamentador com uma grande bagagem nas costas veio para salvar a todos.&#13;&#10;&#13;&#10;Eventualmente, ele se encontrou preso nesse lugar, somente andando pela corporação com a memória de uma fé vazia.&#13;&#10;&#13;&#10;Ele carrega um caixão. Um largo caixão para pagar tributos aos funcionários que não tem lugar algum para ir. Porém, ainda é pequeno demais para confortar todos esses sacríficios de inocentes.&#13;&#10;&#13;&#10;Dentro dele há um caleidoscópio de borboletas esperando pelo momento de cair no sono. Até lá, elas batem as asas inutilmente. As asas que talvez eram somente uma, ou uma separada em várias.&#13;&#10;&#13;&#10;As borboletas devem polinizar flores, mas nenhuma flor cresce nesse lugar.&#13;&#10;&#13;&#10;Não há escolha a não ser esperar. Afinal, todo mundo tem seu fim.}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Quando Agentes com Justiça de Nível 2 ou inferior terminavam de trabalhar com $0, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="1" key="2">O fenômeno acima também acontecia quando Agentes com Fortitude de Nível 4 ou superior terminavam o trabalho.</specialTip>
+      <specialTip openLevel="1" key="3">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia com alta probabilidade.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

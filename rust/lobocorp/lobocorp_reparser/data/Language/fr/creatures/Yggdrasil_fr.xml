@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+  -->
+  <info id="100062">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {#0 peut percevoir la douce odeur d’herbe fraîche qui flotte dans l’air.},
+      {#0 ressent une douce brise qui ne peut pas provenir de l’Unité de Confinement.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Le son du bruissement des feuilles est extrêmement apaisant.},
+      {Un parfum fleuri chatouille les narines de #0.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {La majorité des employés est mécontente ; même la plus petite bénédiction leur procure un grand bonheur.}
+      ]
+    </narration>
+    <narration action="mid3">
+     [
+     {Une bénédiction plus radieuse que tout s'approche de l'employé #0.}
+     ]
+    </narration>
+    <narration action="mid4">
+      [
+      {Lorsque la fleur de la bénédiction éclot finalement sur l’$0, alors…}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">D-04-108</codeNo>
+      <portrait openLevel="0">Sprites/Unit/creature/Yggdrasil</portrait>
+      <name openLevel="1">
+        Arbre Monde
+      </name>
+      <name openLevel="3">
+        Arbre Parasite
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>“Détendez-vous, n'avez-vous pas besoin de la bénédiction ?”</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;Cette Anomalie a été créée à partir des idées du Donateur Tumblbug llooll530.&lt;/i&gt;&#13;&#10;&#13;&#10;Une Anomalie ayant la forme d'un arbre aux feuilles abondantes.&#13;&#10;Les feuilles sont luxuriantes et d'un vert intense, créant une ambiance réconfortante. Une douce brise porte un parfum fleuri rafraîchissant.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Les employés entrés en contact avec l'Anomalie ont déclaré qu'elle leur avait apporté un réconfort psychologique important.&#13;&#10;Ces déclarations ont été jugées véridiques en se basant sur l’augmentation visible de l’efficacité des employés au travail et une diminution notable de leur corruption mentale.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Extrait du Journal d’un Employé&gt;&#13;&#10;
+      Au début, je pensais que c’était juste mon imagination à cause du manque de sommeil. Mais à mesure que mon corps et mon esprit s'épuisaient, la voix qui m'appelait devenait de plus en plus claire.
+      “Je peux t’aider avec ton problème.”
+      Oui, c’est vrai. Tu peux m’aider.
+    De quoi est-ce-que je m’inquiétais ?
+    Je sens une odeur de fleurs…}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {      Ils ont fait venir un arbre.
+      Cet arbre dressé au milieu de l'Unité de Confinement était un spectacle magnifique. Je pouvais sentir l'odeur des fleurs sur mon visage même s'il n'y avait pas de brise ou de vent.
+      Sentir cette odeur même pour un instant faisait grandir aveuglément mon attachement à l'arbre. J'étais très perspicace depuis mon enfance donc je sentais que ce lien artificiel était dangereux.
+      Depuis, j'ai fait tout mon possible pour éviter tout contact avec cet arbre, en trouvant toutes sortes d'excuses chaque fois que j’y étais affecté.
+      "Eh bien, vu comme ça… juste cette fois-ci, d'accord ? Bon sang, est-ce que cet arbre t'a fait quelque chose ?"
+      La banalité de mon collègue me reste en tête. A-t-il fait quelque chose ? Oui, et ça me fait peur.
+      Quelques jours plus tard, le même collègue était devenu un travailleur acharné, avec un sourire aux lèvres en permanence. Je savais qu'il avait toujours été optimiste, mais je ne pouvais pas m'empêcher de me sentir mal à l'aise parce qu’il semblait étrangement détendu.
+      “Vraiment, j'ai l'air content ces derniers temps ?
+  	     Oui, eh bien, c'est parce que l'arbre m'aide.”
+      Il a répondu le cœur léger. Avec mes années d’expérience, je peux affirmer que peu de gens sourient aussi sincèrement dans cette corporation. Je veux dire, quand quelqu’un sourit en travaillant, c’est que quelque chose cloche. Mes doutes m’ont amené à en parler aussitôt avec mon supérieur.
+      La réponse est arrivée plus vite que ce à quoi je m’attendais. Je devais observer l’Anomalie moi-même et remplir un rapport d’observation car d’autres comportements anormaux liés à cet arbre avaient été notés chez d’autres employés, pas que chez le gars que j’avais rapporté.
+      L’ordre m’a finalement forcé à confronter cet arbre que j’ai évité de mon mieux tout ce temps. Je savais que je ne pouvais pas y échapper en le passant à quelqu’un d’autre cette fois.
+      Ce n'est plus l'arbre nu et stérile que j'ai vu le jour où il a été amené. Au lieu de ça, j'ai trouvé une Unité de Confinement couverte d'herbe qui semblait s'étendre autour de l'arbre. Chose étrange, car il n'y a aucune chance que de l'herbe pousse dans une Unité de Confinement. Cette installation est totalement inorganique.
+      “Bonjour… Es-tu venu recevoir ma bénédiction également ?”
+      Au moment où j'ai senti que quelque chose n'allait pas, une voix résonnait dans ma tête…}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {&lt;i&gt;(Il devient difficile de déchiffrer le contenu du journal à partir de ce point, car l’écriture est fortement déformée.)&lt;/i&gt;&#13;&#10;
+      Je ne sais pas comment j'ai rédigé le rapport d'observation, mais ce qui est certain, c'est que j'ai juste écrit ce que je ressentais à propos de l'arbre : ce magnifique arbre apporte le bonheur à chaque employé qui visite son unité de confinement ; il contribuera bientôt grandement à la quête de prospérité et d'avancement de l'humanité.
+      Mais comment une Anomalie peut-elle avoir une si bonne influence sur l’humanité ?
+      “Je veux juste t’aider.”
+      Une voix sans une once de malveillance résonnait à nouveau dans ma tête. Oui, tu as raison. Tu m'aides, c'est tout.
+      “Et si tu es d'accord, pourrais-tu amener tous tes amis qui ont des problèmes ici ? Je crois que je peux les aider.”
+      Oui, cet arbre leur apportera la paix intérieure. D’ailleurs, cette nouvelle venue semblait plutôt déprimée ces derniers temps.
+      “Hé, je connais un endroit qui te fera te sentir mieux. Viens si tu veux.”
+      Elle m’a suivi sans suspicion. Ce n’était pas compliqué de l’amener dans l’Unité de Confinement de l’arbre.
+      Je l'ai offerte à l'arbre. Elle pourrait aller mieux, elle va aller mieux.
+  	    “Tu as amené ton amie. Tu es un bon enfant. Laisse-moi te donner quelque chose.”
+      Je pouvais sentir quelque chose émerger de mon corps. Je ne pouvais plus bouger mes membres. Non, ce n'est pas une mauvaise chose, je suis en train de renaître avec l'arbre…
+      L'arbre m'a pénétré, m'a subjugué. Nous proliférons et devenons entiers.
+      Ah, je peux le sentir entièrement maintenant.}
+      ]
+    </desc>
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">Un bourgeon a germé sur l’$0 lorsque #0 a terminé son travail avec lui. #0 a été béni par l’$0, et a profité d’une hausse de sa Vitesse de Travail et de ses PSM.</specialTip>
+      <specialTip openLevel="1" key="2">Lorsqu’un travail de Répression est effectué, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="1" key="3">Lorsqu’une autre Anomalie s’échappe, le Compteur Qliphoth a une probabilité basse de diminuer.</specialTip>
+      <specialTip openLevel="1" key="4">Lorsque 5 travaux sont faits avec une Anomalie autre que l’$0, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="1" key="5">Lorsque le Compteur Qliphoth tombe à 0, l’$0 appelle des employés à son Unité de Confinement pour les bénir.</specialTip>
+      <specialTip openLevel="1" key="6">Lorsque 5 bourgeons ont germé sur l’$0, il est devenu noir et ses employés bénis ont paniqué. Après un certain temps, des tiges les ont transpercés et transformés en jeunes pousses (D-04-108-1) qui ressemblent de façon frappante à l'Anomalie.</specialTip>
+      <specialTip openLevel="1" key="7">Les D-04-108-1 sécrètent une toxine contagieuse et hautement fatale. Ils doivent être immédiatement retirés afin de décontaminer la zone.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <name>Pousse</name>
+    <codeId>D-04-108-1</codeId>
+  </child>
+</creature>

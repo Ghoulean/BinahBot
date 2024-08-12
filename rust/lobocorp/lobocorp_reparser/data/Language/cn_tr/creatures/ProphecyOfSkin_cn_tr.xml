@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300103">
+
+    <narration action="move">
+      #0 進入了 $0 的收容單位並開始進行任務.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-90</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ProphecyOfSkin</portrait>
+
+      <name openLevel ="1">
+        肌膚的預言
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>
+        從現在與永恆中拯救我們. 真相將解放我們.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {一本老舊的宗教書籍靜靜的放在堤岸上. 老舊的羊皮紙上寫下了許多頁面.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {信徒們用人類的皮膚編織出這本書, 祈禱著永恆的神聖.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {打開這本書的員工也開啟了無法想像的真相. 掌握真相的人將被先知召喚, 且無法拒絕.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {從現在與永恆中拯救我們. 真相將解放我們.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">閱讀此書的員工將會增加一定等級的謹慎.</specialTip>
+      <specialTip openLevel="2" key="2">員工能閱讀此書, 直到員工的謹慎到達上限.</specialTip>
+      <specialTip openLevel="2" key="3">員工讀取的越多, 員工越容易受到 W 傷害.</specialTip>
+      <specialTip openLevel="2" key="4">任何在閱讀此書後恐慌的員工將會死去.</specialTip>
+    </specialTipSize>
+
+  </observe>
+</creature>

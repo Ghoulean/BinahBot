@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100048">
+
+    <narration action="move">
+      指派 #0 至 $0 的收容室.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 有時會留下無助的眼淚, 看著 #0 一言不語.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 活在過去, 就跟她的姊妹一樣.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-01-73</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/KnightOfDespair</portrait>
+
+      <name openLevel ="1">
+       魔法少女
+      </name>
+
+      <name openLevel ="3">
+        絕望騎士
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>所剩無幾的是那風化騎士的空洞自尊.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {一個絕望的異常, 在漆黑眼淚中反覆遭受背叛是它唯一的情感.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {一位退任的英雄, 以前曾是正義的守護者. 它護衛著國王, 國家, 城市, 和那些有需要的人.&#13;&#10;一名騎士必須堅守上帝的律法, 並追求勇氣, 騎士的精神, 以及正義. 但在經過悠久的衝突後, 騎士意識到沒有任何東西是真的得堅持的. 真相將人們改變了.&#13;&#10;在那位為了正義戰鬥之人意識到邪惡是唯一僅存的, 自己也跟著變成了邪惡. 而那位夢想著世界和平之人現在也轉變成邪惡, 順從著他的貪婪吞噬著一切.&#13;&#10;無獨有偶, 曾經有許多純潔的人也轉向黑暗並消失了.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {誰說騎士就不會哭? 你曾看過在絕望或悲傷中落下的淚水嗎? &#13;&#10;那不停滴落的哀傷將眼窩變成了空殼. 一顆漆黑的鑽石像塵埃般落下.&#13;&#10;有如它守護的意志仍舊還在, 即使受到囚禁, 它對守護也依舊癡迷. 所剩無幾的是那風化騎士的空洞自尊. 人們看見悲哀填滿了那不願放棄過去的英雄.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {當正義背叛你時, 數十把利刃便毫無目的的到處徘徊. 對另一個失敗感到悲哀, 對世界感到憤怒, 最終導致他們背叛那些有需要的人. }
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {一名想要藉著拯救別人來救贖自我的騎士, 現在被稱呼為絕望的騎士, 已被曾受他守護過的眾人給忘卻.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">第一個以良好結果完成工作的員工會得到 $0 的祝福. (從那時起, 該員工將稱為 O-01-73-1.)</specialTip>
+      <specialTip openLevel="2" key="2">O-01-73-1 只能執行鎮壓工作. 此外, 多虧了那祝福,  O-01-73-1 受到的 R, W, 以及 B 類型的傷害將會減半. 只有 P 類型的傷害會加倍.</specialTip>
+      <specialTip openLevel="2" key="3">祝福只會在 O-01-73-1 死亡或是恐慌時消散. 在祝福消逝後, 其他的員工才能受到新的祝福.</specialTip>
+      <specialTip openLevel="1" key="4">當 O-01-73-1 恐慌時, 該異常會從收容室裡突破收容. 在 O-01-73-1 死亡時也會導致相同的結果.</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

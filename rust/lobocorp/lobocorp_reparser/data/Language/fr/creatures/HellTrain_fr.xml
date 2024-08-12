@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300102">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-86</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/HellTrian</portrait>
+      <name openLevel="1">
+        Enfer Express
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>
+        Le moment venu, le train parcourra les rails et fera retentir son puissant sifflet.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Le guichetier, qui reste terriblement silencieux, vend des billets pour un train sans terminus. Il n'y a pas d'horloge pour signaler les heures d'arrivée, seulement des lumières clignotantes.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Les deux premières lumières se mettent à briller ; votre esprit s'éclaircit.&#13;&#10;La troisième lumière se met à briller ; votre esprit s'éclaircit et vos blessures se referment.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {La quatrième lumière se met à briller ; l'état de tous les employés de chaque secteur s'améliore alors que vous entendez le sifflet du train au loin.}
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {Le moment venu, le train parcourra les rails et fera retentir son puissant sifflet. Il ne fait aucun doute qu'il plongera dans un tunnel sans fin tout en embarquant les employés qui ne se sont pas éloignés des rails.}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Toutes les 30 secondes, une lumière de la billetterie se met à briller jusqu’à un maximum de quatre, et lorsqu'un employé reçoit un billet du guichetier, elles se réinitialisent.</specialTip>
+      <specialTip openLevel="2" key="2">Lorsqu'un billet est reçu avec 1 lumière allumée, l'employé récupère quelques PV et PSM.</specialTip>
+      <specialTip openLevel="2" key="3">Lorsqu'un billet est reçu avec 2 lumières allumées, l'employé récupère de manière conséquente des PV et PSM.</specialTip>
+      <specialTip openLevel="2" key="4">Lorsqu'un billet est reçu avec 3 lumières allumées, tous les employés du secteur récupèrent des PV et PSM.</specialTip>
+      <specialTip openLevel="2" key="5">Lorsqu'un billet est reçu avec 4 lumières allumées, tous les employés de l’installation récupèrent des PV et PSM.</specialTip>
+      <specialTip openLevel="2" key="6">Si 4 lumières sont allumées et qu'une autre s’illumine, le train traversera l'installation et causera des dégâts NOIR à tous les employés se trouvant sur son chemin. Une fois qu'il aura effectué son passage, les lumières du guichet reviendront à leur état initial.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

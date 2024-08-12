@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300007">
+
+    <narration action="move">
+      #0 designated to $0's containment room.
+    </narration>
+
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-81</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ResetMirror</portrait>
+
+      <name openLevel ="1">
+        Mirror of Adjustment
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+
+      <openText>
+        “Satisfaction is only temporary.”
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {The only thing it shows are people. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {When facing oneself in the mirror, the subject changes. There are numerous suggestions like it is a possibility of a parallel universe, it's from magical powers, but none of this can be confirmed.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {The person who faces the mirror may look the same, but actually becomes a totally different person. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      <!-- 여기 번역 고치기 -->
+      [
+      {When looking into the mirror more than once, the subject's humanity gets removed, turning them into a walking corpse.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {"Hey, Brian just ignored me and walked right past. What’s going on?”&#13;&#10;“Ah, he stared in the mirror.”&#13;&#10;“He always complained about being born too weak. I guess he finally made up his mind.”&#13;&#10;“Satisfaction is only temporary.”}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="1">Subjects who face the $0 will get completely new stats.</specialTip>
+      <specialTip openLevel="2" key="2">If an employee faces the $0 more than once a day, all stats will be lowered whenever facing it.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

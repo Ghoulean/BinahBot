@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등0000000000000000000
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id ="100052">
+
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+
+    <narration action="start">
+      [
+      {Não há luz do sol nesta instalação, mas mesmo assim a $0 está a secar a sua pele delicadamente.},
+
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {A Cidade encorajou a $0 a sorri, mas sendo muito tímida para se revelar..... },
+
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-01-92</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ShyThing</portrait>
+
+      <name openLevel ="1">
+        Expressão Tímida de Hoje
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>Este é um belo dia! Ainda estás tímida hoje?</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Este é um belo dia! Ainda estás tímida hoje?}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Em um dia de sol, quando ela estava a secar as roupas delicadamente no jardim, a tristeza veio de repente.&#13;&#10;"Nesta cidade, sacrificarmo-nos pelas corporações é algo de grande respeito. Honrar vidas perdidas. Não há motivos para tu chorares, acho que devias estar feliz."&#13;&#10;“Que cara é essa? Esse tipo de expressão não é recomendada nesta cidade.”&#13;&#10;&#13;&#10;“Ó minha nossa! Porquê que estás a fazer essa cara? Se continuares assim vais fazer com que os outros fiquem tristes também. Tem mais consideração pelos outros, não vives neste mundo sozinha.”&#13;&#10;“Tu não sabes exprimir os teus sentimentos. Deves ser tímida.”&#13;&#10;“Hey, devias aparentar estar mais agradecida, assim as pessoas que têm de morar nos Subúrbios terão mais inveja de nós.”&#13;&#10;&#13;&#10;“Anda lá! Põem um sorriso nesse rosto! Não é assim tão difícil.”&#13;&#10;“Exprime-te mais claramente na próxima, exprimirmo-nos é algo muito importante nesta sociedade.”&#13;&#10;Em outro dia de sol, ela estava a secar delicadamente a sua própria pele, do mesmo jeito que ela secava as suas roupas.}
+      ]
+    </desc>
+
+
+    <desc id="3" openLevel="2">
+      [
+      {Todos finalmente estavam satisfeitos quando ela mostrou aquele grande sorriso. Se alguém lhe pergunta-se se tinha algo de errado, ela só respondia: "Eu só sou tímida, é só isso mesmo. Apenas tímida..."}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Não tentes ver por-de-traz da pele dela, vai-te custar caro. Aquele é o único espaço pessoal que ela ainda tem, não o invadir é a última coisa que a Cidade por fazer por ela.}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Esta Anormalidade muda a sua expressão facial com o tempo. No entanto, quando alguém entra em contacto com ela, ela para de mudar a sua expressão.</specialTip>
+      <specialTip openLevel="1" key="2">De uma cara sorridente para uma cara zangada, ela tem cinco níveis de expressões faciais chamadas Faces 1, 2, 3, 4, e 5.</specialTip>
+      <specialTip openLevel="1" key="3">Nada de especial na Face 3. Na 2, a taxa de sucesso do trabalho do empregado aumentou e o SP do empregado foi um pouco recuperado todas as vezes que o trabalho teve sucesso.</specialTip>
+      <specialTip openLevel="1" key="4">Quando trabalho ocorreu com a Face 4, o dano recebido pelo empregado aumenta por 1.5, e a taxa de sucesso do trabalho diminuiu.</specialTip>
+      <specialTip openLevel="1" key="5">Quando trabalho ocorreu com a Face 5, o dano recebido pelo empregado dobra, e a taxa de sucesso do trabalho diminuiu drasticamente.</specialTip>
+      <specialTip openLevel="1" key="6">Quando trabalho ocorreu com a Face 1, o dano recebido pelo empregado irá ser reduzido por 0.5, e a taxa de sucesso do trabalho aumentou. O HP e SP do empregado foi recuperado todas as vezes que o trabalho teve sucesso.</specialTip>
+    </specialTipSize>
+
+
+ 
+  </observe>
+</creature>

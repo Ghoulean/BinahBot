@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300005">
+
+    <narration action="move">
+       #0は、作業をするために$0の収容室に入ります。
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-80</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/BigTreeSap</portrait>
+
+      <name openLevel ="1">
+        巨木の樹液
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+     
+      <openText>
+        「木はただ与えていたものを 返してもらっただけなのですよ」
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {世界の外れで育つ、 名前のない巨木から採取した樹液です。 }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {探索隊によると、 巨木の周りには緑の粉まみれで、 多くの生命体が生息したと言う。 巨木の樹液には満腹感を与え 傷を治療するのに優れた成分が 含まれているためだ。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {樹液を飲んだ職員の中には、 体が緑に溶け出し、 粉になった者もいた。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      <!-- 여기 번역 고치기 -->
+      [
+      {実験を重ねた結果、 摂取量に比例して融解の確率が 急激に上昇するということが判明した。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {「多くの人は、あの巨木が何も残されてない外郭でどうやって 成長しているのか疑問に思っていました。結局のところ、 巨木の栄養となっていたのは その樹液を吸って育っていた生命体でした。 木は、ただ与えていたものを 返してもらっただけなのですよ」}
+      ]
+    </desc> 
+
+    
+
+     <specialTipSize size="3">
+      <specialTip openLevel="1" key="healthgood">$0を摂取した対象は 直ちに体力が回復する。 また、対象の体力が 一定時間 持続的に回復します。</specialTip>
+      <specialTip openLevel="2" key="boomDead">$0を摂取した複数の対象から副作用が確認された。 副作用が発生した対象は、$0を摂取後 20-30秒後に区域全体にWhiteダメージを与え 爆死した。</specialTip>
+      <specialTip openLevel="2" key="boomGood">実験の結果、$0の使用頻度に応じて対象の回復量、爆発率が上昇 するという事実が明らかになった。</specialTip>
+      </specialTipSize>
+
+   
+
+  </observe>
+</creature>

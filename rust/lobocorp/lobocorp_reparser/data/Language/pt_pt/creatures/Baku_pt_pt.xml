@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id="100060">
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+
+    <narration action="start">
+      [
+      {$0 está sempre a dormir na sua sala de contenção.},
+
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {O sonho do $0 é sublime. Ele mostra tudo.},
+
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {$0 dá sonhos felizes, mas esta felicidade é inalcançável e leva embora a esperança.},
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {“Eu quero estar sempre a dormir. Eu quero ter sonhos felizes.”},
+      ]
+    </narration>
+
+
+
+
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-02-99 </codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/VoidDream</portrait>
+
+      <name openLevel ="1">
+        Sonho Vazio
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>Por favor, coma os meus sonhos.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {“Eu desejo dormir para sempre.”&#13;&#10;“Não me acordes.”}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Uma anormalidade com pelo de cabra e chifres.&#13;&#10;A única coisa estranha sobre a sua aparência são os inúmeros olhos embutidos no seu corpo.&#13;&#10;Dizem que conseguir informações sobre esta Anormalidade é difícil já que se encontra em um sono sem fim.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {+ (Este documento ilustra como a habilidade de pôr os empregados a dormir da Anormalidade $0 os afeta. Parece que não podemos usa-la para reduzir a corrupção mental dos empregados. Por favor leia o seguinte.)&#13;&#10;&#13;&#10;&#13;&#10;Vicente: Podes despachar-te, por favor… Eu preciso de ir dormir.&#13;&#10;&#13;&#10;Conselheiro: É por causa da Anormalidade?&#13;&#10;&#13;&#10;Vicente: Sim, algo que parecia uma ovelha passou por mim e…eu adormeci. Desde então eu fiquei assim.&#13;&#10;&#13;&#10;Conselheiro: Tu lembraste do sonho que tiveste?&#13;&#10;&#13;&#10;Vicente: Eu nunca irei esquecer esse sonho.&#13;&#10;&#13;&#10;Conselheiro: Podes descrevê-lo, por favor?&#13;&#10;&#13;&#10;Vicente: Era um sonho feliz, isso é tudo que eu consigo dizer para descreve-lo. Eu até sentia-me bem a trabalhar para esta companhia. Ele, aquele que eu não posso mais ver, estava comigo…&#13;&#10;&#13;&#10;(Omitido)&#13;&#10;&#13;&#10;…Depois disso eu nunca mais consegui-me conter, eu quero sonhar com aquilo novamente.&#13;&#10;&#13;&#10;Conselheiro: Entendo. Eu tenho ouvido algumas coisas estranhas que outros empregados têm dito sobre de ti. Eles dizem que tudo que tu fazes depois de trabalhares é dormir. Porquê que fazes isso?&#13;&#10;&#13;&#10;Vicente: Não ouviste o que eu te disse? Eu quero ter aquele sonho novamente. O sonho onde eu estava com ele. Aqueles momentos felizes… Mas não consigo ter aquele sonho novamente não importa quantas vezes eu durma. &#13;&#10;&#13;&#10;Conselheiro: …Entendo. Eu aconselho-te a descansares um bocado no teu quarto. &#13;&#10;&#13;&#10;Vicente: …Já me disseram que todos os empregados que acordaram depois de ouvirem o cantar da Anormalidade enlouqueceram. Eles pensam que isso aconteceu-lhes porque eles tiveram um horrível pesadelo, mas eu acho que é exatamente o oposto disso. &#13;&#10;&#13;&#10;O despertar para a realidade foi tão terrível que a alma deles desistiu de tudo. &#13;&#10;Como tu já sabes, o tempo não se move da mesma maneira em um sonho. Um mero instante no mundo real pode igualar uma eternidade no mundo dos sonhos. Se o $0 pôr-me a dormir novamente, eu acho que eu poderei ter esse sonho maravilhoso novamente.&#13;&#10;&#13;&#10;Conselheiro: …Eu vou prescrever-te uns remédios para dormires. Por favor, descansa, e estás proibido de entrar na unidade de contenção dessa Anormalidade.&#13;&#10;&#13;&#10;Após esta sessão, Vicente desobedeceu às ordens de segurança e foi encontrado morto na unidade de contenção do $0.}
+      ]
+    </desc>
+
+
+    <desc id="4" openLevel="3">
+      [
+      {Um demónio deve mudar a sua forma para enganar os humanos.&#13;&#10;Um demónio deve mostrar doces sonhos para enganar os humanos.&#13;&#10;Uma fenda é aberta nas mentes humanas quando elas veem um sonho de algo que elas desejam.&#13;&#10;Um demonio não iria perder essa chance então traz-lhes a destruição.&#13;&#10;&#13;&#10;&lt;i&gt;Não digas coisas complicadas, não digas essas palavras assustadoras.&#13;&#10;Eu só quero dar sonhos felizes às pessoas,&#13;&#10;os sonhos que eles querem.&#13;&#10;Aqueles que receberam os meus sonhos sempre viram até mim.&#13;&#10;Então, fecha os teus olhos…&lt;/i&gt;}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Naquele sonho o teu sorriso era tão brilhante e nós conversamos tanto.&#13;&#10;Quando eu voltei para o mundo real, eu apercebi-me que voltei ao mundo aonde tu não existes mais, eu senti o vazio preencher o meu coração.&#13;&#10;Eu fechava os meus olhos e obrigava-me a dormir, mas a manhã sempre viria.&#13;&#10;Acho que foi apartir daí que a minha alma começou a colapsar.&#13;&#10;Eu só tenho fingindo estar bem, mas eu sei que eu já tinha sido despedaçado no dia em que e perdi. &#13;&#10;Quando te vi novamente naquele sonho, o meu desejo por ti começou a pesar tanto dentro de mim que eu já não consigo mais ser o meu velho eu. &#13;&#10;O aconselhamento, descansar…Isso foi tudo inútil.&#13;&#10;Eu passei dias agonizando até que eu finalmente entendi o que aconteceu. &#13;&#10;Aquela criatura criou esse sonho para ser uma isca como pagamento por devorar os meus pesadelos.&#13;&#10;Esse ser deixou-me vazio, para que eu voltasse para ele e mordesse a isca. &#13;&#10;Eu já perdi contra essa criatura. Eu não quero mais nada.&#13;&#10;Por favor, coma os meus sonhos.}
+      ]
+    </desc>
+
+
+
+     <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Um empregado com nível de Moderação inferior a 2 terminou o trabalho, adormeceu e nunca mais acordou.</specialTip>
+      <specialTip openLevel="2" key="2">Quando o resultado do trabalho foi Mau, o Qliphoth Counter diminuiu.</specialTip>
+      <specialTip openLevel="2" key="3">Após ter escapado, a luz do $0 irá fazer adormecer todos que sejam expostos a ela. Os afetados acordaram quando o gerente os abanou.</specialTip>
+      <specialTip openLevel="2" key="4">O $0 retornou a sua sala de contenção após algum tempo.</specialTip>
+      <specialTip openLevel="2" key="5">&lt;Aviso&gt;Quando esta Anormalidade sofre dano graças ao trabalho de supressão, ela tornou-se hostil. (Esta forma é designada de $0-1.)</specialTip>
+      <specialTip openLevel="3" key="6">$0-1 cantar e infligia dano Branco no departamento inteiro. Empregados que estavam adormecidos entraram em pânico quando ouviram o rugido da Anormalidade.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+
+
+
+</creature>

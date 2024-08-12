@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100015">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {#0, arrependeu-se e entrou na Unidade de Contenção, seguindo a luz divina Dele.},
+      {“O que faz tu hesitar? Eu faço milagres.”}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {O $0 se parece com um feto, mas parece que Ele não precisa de babá.},
+      {Quando o sino bateu as doze, as instalações foram consumidas por uma luz cegante. Era a luz da redenção para os discípulos Dele.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Somente o silêncio permeia o ar perto do $0.},
+      {O $0 absorve toda a luz e som ao redor Dele.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {O $0 veio aqui para redimí-lo e levá-lo ao novo mundo.},
+      {O $0 chegou do fim do mundo, e Ele caminha em direção ao começo de um novo mundo.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {“#0, por que estais com medo? Não deixarei a ti até que eu complete minha missão.”},
+      {“#0, não tenha medo. Eu sou o Senhor teu salvador e ficarei junto a ti.”},
+      {“Eu ouvi seus lamentos. Teu coração me alcançou. #0, tu tens me chamado.”}
+      ]
+    </narration>
+  </info>
+  <observe level="5">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">T-03-46</codeNo>
+      <name openLevel="1">NoiteBranca</name>
+      <portrait openLevel="1">Sprites/Unit/creature/DeathAngel</portrait>
+      <riskLevel openLevel="2">ALEPH</riskLevel>
+      <openText>“Levantem, meus servos. Levantem e me sirvam.”</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Ele tem a forma de um feto recém nascido, apesar de sua grotesca aparência, é difícil até chamá-lo de feto. Mesmo que a comunicação seja possível, ela não acontece de forma normal. Toda palavra que Ele diz ecoa por toda a Unidade de Contenção.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {&lt;i&gt;“Meus discípulos, a quem vos abençoei, vocês deverão deixar o caminho do mal que estavam seguindo e encontrar a mim. Quando a hora chegar, vos perdoarei seus pecados e descerei à terra em que estão vivendo.”&lt;/i&gt;} <!-- 폰트!!! 바꿔야돼!!!!!!!!!!!!!!!!!!!!!!-->
+      ] <!-- 글씨체 교체--></desc>
+    <desc id="3" openLevel="2">
+      [
+      {Os doze funcionários que foram abençoados por Ele se transformarão e andarão pelas instalações para entregar redenção para todos os outros funcionários. Asas crescerão nas costas de cada um e usarão máscaras com formato de bico, além de carregar cruzes que perdoam todos os pecados.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;i&gt;“Siga meus ensinamentos como eu vos disse. Tu irás abandonar a carne e nascerá novamente.”&lt;/i&gt;} <!-- 폰트!!! 바꿔야돼!!!!!!!!!!!!!!!!!!!!!!-->
+      ] <!-- 글씨체 교체--></desc>
+    <desc id="5" openLevel="3">
+      [
+      {Os discípulos Dele nascerão como aqueles que tentarão alcançar os que estão distantes da luz, aqueles que abraçarão seus vizinhos, missionários que espalharão o evangelho para todos os seus companheiros. Eles são…}
+      ]
+    </desc>
+    <desc id="6" openLevel="4">
+      [
+      {&lt;i&gt;“A hora chegou. Em breve o sino tocará. Um novo mundo chegará. Levantem, meus servos. Levantem e me sirvam. Eu sou vida e morte. Luz e escuridão.”&lt;/i&gt;}
+      ] <!-- 글씨체 교체--></desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="0" key="1">Assim que o Contador Qlifót chega a 0, $0 e seus discípulos surgirão novamente.</specialTip>
+      <specialTip openLevel="0" key="2">&lt;Cuidado&gt; O $0, diferentemente de outras Anormalidades, periodicamente reduzirá o próprio Contador Qlifót. Então é recomendado olhar Ele com frequência.</specialTip>
+      <specialTip openLevel="1" key="3">Quando o resultado do trabalho era Bom, o Contador Qlifót aumentava; então, a saúde física e mental de cada funcionário nas instalações era recuperada.</specialTip>
+      <specialTip openLevel="2" key="4">Quando o resultado do trabalho era Neutro, o Contador Qlifót aumentava com probablidade mediana; então, a saúde física e mental dos funcionários que estavam no departamento em que a Unidade de Contenção do $0 está foi curada. </specialTip>
+      <specialTip openLevel="3" key="5">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia; todos os funcionários no departamento em que a Unidade de Contenção do $0 está sofreram dano BRANCO.</specialTip>
+    </specialTipSize>
+  </observe>
+  <etc>
+    <!--UI막는 이벤트 때 띄울 대사-->
+    <param key="escape" index="0">
+      Não tenhais medo, já que agora estou contigo.&#13;&#10;Você não sairá até que eu o permita.
+    </param>
+    <param key="time" index="1">
+      Não confie no tempo.&#13;&#10;Eu o guiarei.
+    </param>
+    <param key="manual0" index="2">
+      Não tentes me negar.&#13;&#10;Por que tu duvidas de mim mesmo quando estou em frente de teus olhos?
+    </param>
+    <param key="manual1" index="3">
+      Minha história não é desconhecida para ninguém.
+    </param>
+  </etc>
+</creature>

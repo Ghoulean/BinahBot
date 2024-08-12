@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id ="100043">
+
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+
+    <narration action="start">
+      [
+      {Ter alguém para ficar de luto por ti depois que tu morres é uma benção.}
+      {Aqueles que foram deixados para trás não têm tempo para relembrar aqueles que morreram, mas preparam-se para a próxima morte.}
+      {O $0 observa #0 em silêncio.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {O $0 sonha. A cortina é desenhada em uma fé vazia sem saídas.},
+      {Um enorme caixão não é suficiente para preencher as centenas de covas.},
+      {#0 assiste a procissão funerária das borboletas.}
+      {As penosas asas esvoaçantes se aproximam de um modo estranho mas familiar.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Este lugar não tem flores ou árvores, então de onde é que todas estas borboletas vêm?},
+      {Os empregados não podem retornar ao lugar de onde vieram e eles não têm escolha a não ser repetir o dia.},
+      {A procissão funerária nunca acaba, e o $0 continua o seu luto.}
+      {#0 pensa sobre o fim da vida.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {Retornar ao lugar de onde vieste é um milagre que nunca irá acontecer.},
+      {A morte na melhor altura possível é uma benção inesperada.},
+      {De facto, a maioria dos empregados que morreram neste lugar queriam viver o máximo que era possível.}
+      {Alguns pensam que a morte é um novo começo, mas não há nada para além do vazio após a morte.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-01-68</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Butterfly</portrait>
+
+      <name openLevel ="1">
+        O Funeral das Borboletas Mortas
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+
+      <openText>O quê que acontece quando as pessoas morrem?</openText>
+
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {O quê que acontece quando as pessoas morrem?&#13;&#10;O quê que acontece com aqueles que trabalharam aqui?}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {"Eles devem voltar a casa, onde as suas famílias e conforto-lhes esperam."&#13;&#10;&#13;&#10;"Mas todos sabem que nós empregados não podemos voltar a casa a menos que nos aposentemos."&#13;&#10;&#13;&#10;"Então eles devem 'se aposentar' e voltar a casa, tendo conseguido o que queriam e cheios de esperança."}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {"Nós somos as penas desta Asa. Aposentar-nos não é tão fácil quanto parece. Assim como as penas de um pássaro não caiem por vontade própria."&#13;&#10;&#13;&#10;"Então para onde os empregados que se aposentam vão?"&#13;&#10;&#13;&#10;"Estamos ligados à companhia no momento em que entramos. Nós não podemos sair mesmo depois de nós aposentarmos."&#13;&#10;&#13;&#10;"Há muito tempo atrás, em algum mundo, as pessoas acreditavam que elas se tornariam belos seres com asas quando morressem. Que idiotice."&#13;&#10;&#13;&#10;"Se nós tivessemos asas, poderiamos sair daqui? Nós ganharemos essas asas quando nos aposentamos?"}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Um homem em luto que trazia um enorme caixão consigo disse que veio para cá para ser o salvador de todos.&#13;&#10;Mas agora ele está preso como todos os outros, vagando pela companhia apenas com a memória de uma fé vazia.&#13;&#10;O grande caixão que ele traz é para homenagear os empregados que não têm mais para onde ir, mas é demasiado pequeno para confortar todos aqueles sacrifícios inocentes.&#13;&#10;Dentro dele há borboletas que aguardam a hora de ir dormir. Enquanto esse momento não chega, elas irão agitar as suas asas inutilmente.&#13;&#10;Borboletas supostamente polinizam as flores, mas nem uma única flor floresce neste lugar.&#13;&#10;Elas não têm escolha a não ser esperar. Afinal, até o mundo terá um fim.}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Quando #0, que possuía Justiça de nível 2 ou alguém de nível inferior trabalha com $0, o Qliphoth Counter diminuiu após completar o trabalho.</specialTip>
+      <specialTip openLevel="1" key="2">O mesmo fenómeno ocorreu quando outro empregado de nível 4 de Fortaleza ou acima procedeu com o trabalho.</specialTip>
+      <specialTip openLevel="1" key="3">Quando o resultado do trabalho foi Mau, o Qliphoth Counter diminuiu com uma probabilidade Elevada.</specialTip>
+    </specialTipSize>
+
+  </observe>
+</creature>

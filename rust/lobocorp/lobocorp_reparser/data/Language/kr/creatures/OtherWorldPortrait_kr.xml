@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300104">
+
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다.
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-91</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/OtherWorldPortrait</portrait>
+
+      <name openLevel ="1">
+        이계의 초상
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+
+      <openText>
+        초상화는 한 때의 찰나를 담아낸다. 우리가 잃을 수 밖에 없는 것.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {매 순간이 지날 때마다 우리는 변해간다. 불구가 되거나 정신이 돌아버리거나 도가 지나친 폭력성에 먹혀버린다거나 다시는 보지 못하게 된다거나. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {초상화는 한 때의 찰나를 담아낸다. 우리가 잃을 수 밖에 없는 것. 자신의 건강함을 본 직원은 무의식적으로 갈망하게 된다. 항상 지금과 같을 수만 있다면, 초상화의 모습 대로 내가 언제나 밝게 미소 짓고 있는 지금처럼만 된다면.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {직원은 이상함을 느낀다. 어떤 공격이나 피해에도 그는 다치지 않았다. 대신에 모든 고통을 느껴야 했던건 동료들이었다. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {점점 흉물스러워지고 추악해져 가는 건 자신이 아니라 그림이었다. 직원은 결국 자신의 초상화를 보는 행위를 그만두고 현재의 행운을 즐기기로 한다.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {하지만 어떻게 기적이 영원일 수 있겠는가. 그를 대신해서 죽어가던 동료들이 더 이상 남아 있지 않게 되었을 때, 최고의 행운아일 줄 알았던 그는 죽었고 초상화는 다시 하얀 백지가 되었다. }
+      ]
+    </desc>
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">처음 대상을 바라본 직원은 캔버스에 모습이 새겨진다.</specialTip>
+      <specialTip openLevel="2" key="2">캔버스에 새겨진 직원이 받는 피해는 시설 내의 다른 한 직원이 받게된다. (단, 캔버스에 새겨진 직원의 최대 체력을 초과하는 피해에는 대상의 효과가 적용되지 않았다.) 피해를 대신 받는 직원은 원래보다 강한 피해를 받게 된다. </specialTip>
+      <specialTip openLevel="2" key="3">피해를 받던 직원이 사망할 경우 다른 직원이 이어서 대신 피해를 받게 된다. 더 이상 피해를 받아줄 직원이 없을 경우 캔버스에 새겨진 직원은 사망한다.</specialTip>
+      <specialTip openLevel="2" key="4">캔버스에 새로운 직원의 모습이 새겨질 경우, 이전의 직원은 사망한다.</specialTip>
+      <specialTip openLevel="2" key="5">모습이 새겨진 직원이 일반적인 피해가 아닌 다른 원인으로 사망할 경우 캔버스는 본래의 상태로 돌아온다.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

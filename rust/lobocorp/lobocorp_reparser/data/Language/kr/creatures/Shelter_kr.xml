@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300006">
+
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-82</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Shelter</portrait>
+
+      <name openLevel ="1">
+        3월 27일의 방공호
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+      <openText>
+        말 그대로 ‘이 세상에서 제일 안전한 장소’가 되어가는 것이다.
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {빛을 포함해, 바깥의 모든 환경들을 차단해주는 방공호다.  }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {방공호는 여전히 그 날의 기억을 간직하고 있다.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {P사는 세상에서 가장 안전한 장소를 만들길 원했다. 그 포부답게 내부에는 많은 양의 영구식량들이 비축되어 있어 버티고자만 한다면 꽤 오랜 세월을 안에서 머물 수 있다.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      <!-- 여기 번역 고치기 -->
+      [
+      {그 덕분에 선택받은 피난민들은  끊이지 않는 비명과 살점의 바다로부터 격리될 수 있었다.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {하지만 내부는 완벽히 안전했던 방공호는 외부의 현실을 더 큰 절망으로 조정시킨다. 말 그대로 ‘이 세상에서 제일 안전한 장소’가 되어가는 것이다.}
+      ]
+    </desc> 
+
+  
+
+     <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">$0의 내부에 투입된 대상은 피해로부터 면역인 상태가 된다. (단, O-09-91으로 인해 발생하는 피해에는 대상의 효과가 적용되지 않는다.) 또한 $0의 안에 도착한 이후부터 대상의 체력과 정신력이 소량씩 회복된다.</specialTip>
+      <specialTip openLevel="2" key="2">이전에 다른 개체에게 쫓기고 있던 대상이 $0의 안에 들어오면 대상은 해당 개체의 인식 범위에서 벗어나게 된다.</specialTip>
+      <specialTip openLevel="3" key="3">특정 대상이 30초 이상 $0의 내부에 머물렀을 때, 시설 내의 환상체의 클리포트 카운터가 0이 되는 현상을 발견했다. 대상이 $0의 밖으로 나가기 전까지 클리포트 카운터 감소 현상이 주기적으로 반복되었다.</specialTip>
+      </specialTipSize>
+
+  
+
+  </observe>
+</creature>

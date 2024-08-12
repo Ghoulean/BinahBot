@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<root>
+<!--
+  Sefira Index : 세피라 인덱스
+  1 : 말쿠트 (Malkut)
+  2 : 네짜흐 (Netzach)
+  3 : 호드 (Hod)
+  4 : 예소드 (Yesod)
+  5 : 티페리트1 (Tiphereth1)
+  6 : 티페리트2 (Tiphereth2)
+  7 : 게부라 (Geburah)
+  8 : 헤세드 (Chesed)
+  9 : 비나 (Binah)
+  10: 호크마 (Hokma)
+  11:
+  12:
+
+  Type Num
+  0 : 직원 패닉
+  1 : 직원 사망
+  2 : 환상체 탈출
+  3 : 직원 전멸
+  
+  Item ID : 구분용 인덱스 (1~2 : 보통 상태, 3~4 : 보스(boss)전 이후)
+  Item Desc : 대사
+  
+  Variable
+  #0 : Agent
+  $0 : Creature
+-->
+  
+  <!-- 말쿠트 (Malkut)-->
+  <Sefira Index="1">
+    <Type Num="0">
+      <Item ID="1" Desc ="Administrateur ! #0 est devenu fou, s'il vous plaît, chargez-vous en rapidement !"/>
+      <Item ID="2" Desc ="Je suppose que l'esprit de #0 était plus faible que ce que j'avais évalué, s'il vous plaît, occupez-vous-en rapidement !"/>
+      <Item ID="3" Desc="Administrateur, l'employé #0 est actuellement en panique. S'il vous plaît, chargez-vous de lui rapidement."/>
+      <Item ID="4" Desc="Peut-être que ce n'est pas entièrement de la faute de #0 s'il est devenu fou, Administrateur."/>
+    </Type>
+    <Type Num="1">
+      <Item ID="1" Desc ="#0 a cessé de bouger. Nous devrions améliorer le programme d'entraînement combiné !"/>
+      <Item ID="2" Desc ="Je sais que #0 est mort, Administrateur, mais accomplissez votre devoir, s’il vous plaît !"/>
+      <Item ID="3" Desc="#0 ne bouge plus. Je suis sûre que sa mort n'était pas vaine. Nous avons fait de notre mieux."/>
+      <Item ID="4" Desc="#0 est peut-être mort, mais je sais que vous pouvez finir cette journée, Administrateur."/>
+    </Type>
+    <Type Num="2">
+      <Item ID="1" Desc ="$0 s'est échappé de son confinement. Quels sont vos ordres ? "/>
+      <Item ID="2" Desc ="Administrateur, $0 s'est échappé. Pouvez-vous déployer des agents pour vous en occuper ?"/>
+      <Item ID="3" Desc="Une fois que vous aurez confirmé que $0 s'est échappé et que vous vous en occuperez en conséquence, cet endroit redeviendra calme."/>
+      <Item ID="4" Desc="$0 s'est échappé. Tout le monde, soyez prudents."/>
+    </Type>
+    <Type Num="3">
+      <Item ID="1" Desc ="L'Équipe de Contrôle a été balayée. Vous ai-je surestimé, Administrateur ?"/>
+      <Item ID="2" Desc ="L'Équipe de Contrôle a été complètement annihilée. Êtes-vous sûr d'avoir fait de votre mieux ?"/>
+      <Item ID="3" Desc="Tous les employés de mon secteur sont morts, Administrateur. Je suis sûre que tout le monde a fait de son mieux."/>
+      <Item ID="4" Desc="L'Équipe de Contrôle a été annihilée."/>
+    </Type>
+  </Sefira>
+
+  <!-- 네짜흐 (Netzach) -->
+  <Sefira Index="2">
+    <Type Num="0">
+      <Item ID="1" Desc ="Hey, Administrateur ? #0 de l'Équipe de Sécurité a pété un câble, vous pouvez aller voir ça ?"/>
+      <Item ID="2" Desc ="Je crois que l'employé #0 de l'Équipe de Sécurité est un peu instable. Vous pouvez l'surveiller un peu ? Même s'il va sûrement redevenir fou de toute façon…"/>
+      <Item ID="3" Desc="Administrateur, la condition mentale de #0 de l'Équipe de Sécurité n'est pas la plus idéale. Allez vérifier si l'employé va bien, s'il vous plaît."/>
+      <Item ID="4" Desc="Même si ce n'est qu'une solution temporaire, allez voir si $0 va bien."/>
+    </Type>
+    <Type Num="1">
+      <Item ID="1" Desc ="#0 est mort… On dirait que l'Équipe de Sécurité n'est pas si sécurisée après tout…"/>
+      <Item ID="2" Desc ="#0 de l'Équipe de Sécurité est mort… Je suppose que sa vie 'sécurisée' s'achève aujourd'hui."/>
+      <Item ID="3" Desc="#0 est maintenant mort, mais je pense que vous ne devriez pas encore abandonner, Administrateur."/>
+      <Item ID="4" Desc="Je pense que #0 méritait de rester dans ce monde plus que moi."/>
+    </Type>
+    <Type Num="2">
+      <Item ID="1" Desc ="Vous voulez probablement savoir que $0 s'est échappé… Je sais que c'est fatiguant, mais s'il vous plaît, essayez de vous en occuper rapidement."/>
+      <Item ID="2" Desc ="$0 s'est échappée. Bon sang, est-il possible d'être encore plus impuissant ?"/>
+      <Item ID="3" Desc="S'il vous plaît, faites attention à $0. Vous savez le genre de désastre qui peut arriver, Administrateur."/>
+      <Item ID="4" Desc="$0 s'est échappé. Faites un effort s'il vous plaît, que tout espoir ne soit pas perdu."/>
+    </Type>
+    <Type Num="3">
+      <Item ID="1" Desc ="L'Équipe de Sécurité a été balayée. Si vous avez quelque chose à dire, je vous écoute."/>
+      <Item ID="2" Desc ="Mon équipe a été complètement annihilée. Je vois ça souvent… mais ça me fait toujours sentir impuissant…"/>
+      <Item ID="3" Desc="Tous les employés de l'Équipe de Sécurité sont morts… Je vous ai vu essayer de faire de votre mieux cependant, Administrateur."/>
+      <Item ID="4" Desc="Tous les employés de mon secteur sont morts.. Je ne m'y habituerai jamais."/>
+    </Type>
+  </Sefira>
+
+  <!-- 호드 (Hod) -->
+  <Sefira Index="3">
+    <Type Num="0">
+      <Item ID="1" Desc ="Uhm… Administrateur ? #0 de l'Équipe d'Entraînement agit bizarrement ! S'il vous plaît, faites attention à lui !"/>
+      <Item ID="2" Desc ="Hey, Administrateur ? #0 a l'air actuellement très fragile. J'espère qu'il s'en remettra bientôt…"/>
+      <Item ID="3" Desc="Administrateur, #0 de mon équipe semble paniquer."/>
+      <Item ID="4" Desc="L'état mental de #0 semble très instable. S'il vous plaît, assurez-vous que cela n'empire pas."/>
+    </Type>
+    <Type Num="1">
+      <Item ID="1" Desc ="#0 est mort… Avez-vous vu sa tête ? J'ai… J'ai vu son expression de désespoir…"/>
+      <Item ID="2" Desc ="Administrateur, #0 est mort… Je savais que j'aurais dû travailler plus…"/>
+      <Item ID="3" Desc="#0 est mort. Je suis sûre que vous vous sentez coupable mais n'abandonnez pas."/>
+      <Item ID="4" Desc="Administrateur, #0 est mort. Vous et moi, nous… Nous avons fait de notre mieux, mais avons échoué…"/>
+    </Type>
+    <Type Num="2">
+      <Item ID="1" Desc ="Administrateur ! S'il vous plaît, vérifiez la position de $0 ! Dépêchez-vous, beaucoup vont être blessés !"/>
+      <Item ID="2" Desc ="$0 s'est échappé. Vous devez le réprimer aussi vite que possible, Administrateur !"/>
+      <Item ID="3" Desc="Administrateur, si l'on ne réprime pas $0 bientôt, beaucoup de nos employés risquent d'être blessés."/>
+      <Item ID="4" Desc="Hum, s'il vous plaît, occupez-vous de $0."/>
+    </Type>
+    <Type Num="3">
+      <Item ID="1" Desc ="I-Ils sont tous morts ? Ça ne peut pas être possible… J'ai travaillé si dur pour eux…"/>
+      <Item ID="2" Desc ="…… J-Je n'ai pas pu les aider… Que dois-je faire…"/>
+      <Item ID="3" Desc="Tous mes collègues de travail sont morts…"/>
+      <Item ID="4" Desc="… Je vais continuer de travailler dur… Je n'abandonnerai pas, même si une telle chose arrive à nouveau…"/>
+    </Type>
+  </Sefira>
+
+  <!-- 예소드 (Yesod) -->
+  <Sefira Index="4">
+    <Type Num="0">
+      <Item ID="1" Desc ="Administrateur, #0 a perdu la tête suite à une rapide augmentation de sa corruption mentale. S'il vous plaît, évaluez la situation avant que d'autres problèmes n’aient lieu."/>
+      <Item ID="2" Desc ="Mon subordonné, #0, a paniqué suite à un stress excessif. S'il vous plaît, occupez-vous-en rapidement au nom du reste de notre force de travail."/>
+      <Item ID="3" Desc="Administrateur, occupez vous de l'état mental de #0 avant qu'il ne cause d'autres incidents."/>
+      <Item ID="4" Desc="#0 est devenu fou à cause d’un excès de stress. Dépêchez-vous s'il vous plaît, il doit rester un peu de temps pour le sauver."/>
+    </Type>   
+    <Type Num="1">
+      <Item ID="1" Desc ="#0 de l'Équipe d'Information est mort. S'il vous plaît, faites plus attention à nos employés, Administrateur."/>
+      <Item ID="2" Desc ="#0, mon subordonné, est mort à cause de votre incompétence. Rien ne peut compenser la mort de cet employé."/>
+      <Item ID="3" Desc="Je viens de confirmer que #0 de mon équipe est mort."/>
+      <Item ID="4" Desc="#0 est mort. C'est malheureux, cependant, rappelez-vous que ce lieu n'est pas un paradis contrôlable."/>
+    </Type>
+    <Type Num="2">
+      <Item ID="1" Desc ="$0 s'est échappé de son unité de confinement. Nous devons le réprimer et le contenir aussi vite que possible."/>
+      <Item ID="2" Desc ="Étiez-vous au courant que $0 s'est échappé de son confinement ? Si ce n'est pas le cas, laissez-moi dire que votre capacité d’Administrateur devrait être remise en question."/>
+      <Item ID="3" Desc="$0 s'est échappé de son unité de confinement. S'il vous plaît, réprimez-la dès que possible, comme toujours."/>
+      <Item ID="4" Desc="$0 s'est échappé de son unité de confinement. Réfléchissons à comment surmonter cette situation."/>
+    </Type>
+    <Type Num="3">
+      <Item ID="1" Desc ="… L'Équipe d'Information a perdu tout son personnel disponible, demande de renforts."/>
+      <Item ID="2" Desc ="Clairement, votre mauvais jugement est ce qui a mené à l'annihilation totale du Secteur d'Information."/>
+      <Item ID="3" Desc="Tous les employés de l'Équipe d'Information sont morts."/>
+      <Item ID="4" Desc="Des renforts d'autres secteurs sont requis. Tout le personnel de l'Équipe d'Information est mort."/>
+    </Type>
+  </Sefira>
+
+  <!-- 티페리트 (Tiphereth 1) -->
+  <Sefira Index="5">
+    <Type Num="0">
+      <Item ID="1" Desc ="Est-ce que vous avez les yeux ouverts au moins ? Vous ne voyez pas que la corruption mentale de #0 a crevé le plafond ?"/>
+      <Item ID="2" Desc ="#0 n'a pas l'air bien mentalement. Vous avez encore le temps de sauver cet employé si vous vous y mettez dès maintenant."/>
+      <Item ID="3" Desc="#0 de mon secteur a atteint un niveau dangereux de corruption mentale."/>
+      <Item ID="4" Desc="#0 n'a pas l'air bien. Vous avez encore le temps de ramener cet employé à la normale si vous vous y mettez dès maintenant."/>
+    </Type>
+    <Type Num="1">
+      <Item ID="1" Desc ="Je ne m'attendais pas à ce que vous soyiez pire que les Sephiroth d'au-dessus. Vous auriez pu empêcher la mort de #0 si vous aviez fait plus attention."/>
+      <Item ID="2" Desc ="#0 du Secteur de Liaison Centrale est mort. Voir de tels incidents me rend triste."/>
+      <Item ID="3" Desc="#0 est mort. Courage. J'attends encore de grandes choses de vous."/>
+      <Item ID="4" Desc="#0 de mon Équipe de Liaison Centrale est mort. Voir quelqu'un mourir ainsi me rend triste."/>
+    </Type>
+    <Type Num="2">
+      <Item ID="1" Desc ="Clairement, vos prédécesseurs géraient les Anomalies bien mieux que vous ! $0 est en liberté !"/>
+      <Item ID="2" Desc ="$0 s'est échappé de son unité de confinement. Vous feriez mieux de le réprimer avant qu'il ne fasse des ravages."/>
+      <Item ID="3" Desc="$0 s'est échappé. Je crois que vous pouvez faire mieux que vos prédécesseurs."/>
+      <Item ID="4" Desc="$0 s'est échappé de son unité de confinement. Nous ferions mieux de le réprimer avant que la situation empire."/>    
+    </Type>
+    <Type Num="3">
+      <Item ID="1" Desc ="Ils auraient dû me nommer Administratrice… Le Secteur de Liaison Centrale n'est plus."/>
+      <Item ID="2" Desc ="Mon secteur entier est parti, j'espère que vous avez fait de votre mieux."/>
+      <Item ID="3" Desc="Le Secteur de Liaison Centrale tout entier a été annihilé. Il est trop tôt pour désespérer, cependant. Nous avons vécu pire."/>
+      <Item ID="4" Desc="Mon équipe entière est partie, mais je pense quand même que vous avez fait de votre mieux."/>
+    </Type>
+  </Sefira>
+  
+  <!--티페리트2 (Tiphereth 2)-->
+  <Sefira Index="6">
+    <Type Num="0">
+      <Item ID="1" Desc ="Est-ce que vos yeux sont ouverts ? Ne voyez-vous pas que la corruption mentale de #0 est immense ?"/>
+      <Item ID="2" Desc ="#0 n'a pas l'air bien. Vous avez encore le temps de sauver cet employé."/>
+      <Item ID="3" Desc="#0 de mon secteur a atteint de dangereux niveaux de corruption mentale."/>
+      <Item ID="4" Desc="#0 n'a pas l'air bien. Vous avez encore le temps de ramener cet employé à la normale."/>
+    </Type>
+    <Type Num="1">
+      <Item ID="1" Desc ="Je ne pensais pas que vous seriez pire que les Sephiroth d'au-dessus. Vous auriez pu empêcher la mort de #0."/>
+      <Item ID="2" Desc ="#0 du Secteur Centrale est mort. Voir de tels incidents m'attriste."/>
+      <Item ID="3" Desc="#0 est mort. Courage. J'attends encore beaucoup de choses de vous."/>
+      <Item ID="4" Desc="#0 de mon Équipe de Liaison Centrale est mort. Voir quelqu'un mourir ainsi m'attriste."/>
+    </Type>
+    <Type Num="2">
+      <Item ID="1" Desc ="Vos prédécesseurs géraient les Anomalies mieux que vous ! $0 est en liberté !"/>
+      <Item ID="2" Desc ="$0 s'est échappé. Vous feriez mieux de le recontenir avant qu'il ne cause des dégâts."/>
+      <Item ID="3" Desc="$0 s'est échappé. Je sais que vous pouvez faire mieux que vos prédécesseurs."/>
+      <Item ID="4" Desc="$0 s'est échappé de son unité de confinement. Nous devrions aller le réprimer avant que la situation ne s'aggrave."/>
+    </Type>
+    <Type Num="3">
+      <Item ID="1" Desc ="Ils auraient dû me désigner Administrateur… Le Secteur de Liaison Central n'est plus."/>
+      <Item ID="2" Desc ="Mon secteur entier est mort, j'espère que vous avez fait de votre mieux."/>
+      <Item ID="3" Desc="Le Secteur de Liaison Central tout entier a été détruit. Il est trop tôt pour désespérer, cependant. Nous avons vécu pire."/>
+      <Item ID="4" Desc="Mon équipe entière est morte, mais je pense quand même que vous avez fait de votre mieux."/>
+    </Type>
+  </Sefira>
+
+  <!--게부라 (Geburah)-->
+  <Sefira Index="7">
+    <Type Num="0">
+      <Item ID="1" Desc ="On ne dirait pas que #0 est en mauvais état ?"/>
+      <Item ID="2" Desc ="#0 est devenu fou. Clairement, nous avons accidentellement accepté un lâche dans notre secteur."/>
+      <Item ID="3" Desc="#0 doit avoir des problèmes mentaux. Dépêchez-vous et allez voir ça."/>
+      <Item ID="4" Desc="#0 est devenu fou. Je suis sûre que l'employé s'est battu jusqu'au bout, n'est-ce pas ?"/>
+    </Type>
+    <Type Num="1">
+      <Item ID="1" Desc ="#0 est mort. C'était un employé vaillant."/>
+      <Item ID="2" Desc ="#0 est mort. Prêt à le venger ?"/>
+      <Item ID="3" Desc="#0 est mort. Cet employé fut courageux jusqu'au bout."/>
+      <Item ID="4" Desc="#0 est mort. Ne laissez pas la colère vous envahir."/>
+    </Type>
+    <Type Num="2">
+      <Item ID="1" Desc ="C'est l'heure de montrer de quoi on est faits. $0 s'est échappé. Il est temps de donner une leçon à cette saleté."/>
+      <Item ID="2" Desc ="Vous êtes prêt, Administrateur? Il est l'heure d'abattre $0."/>
+      <Item ID="3" Desc="$0 s'est échappé !… Pas besoin de paniquer, prenons un moment pour réfléchir à un plan d'action."/>
+      <Item ID="4" Desc="Administrateur, dites-moi quand vous êtes prêt. Vous savez, pour s'occuper de la fuite de $0. J'attendrai."/>
+    </Type>
+    <Type Num="3">
+      <Item ID="1" Desc ="Les employés du Secteur Disciplinaire ont été balayés. Ils ont eu une mort honorable dans mon secteur, tragique bien sûr, mais je suis sûre qu'ils ont fait de leur mieux."/>
+      <Item ID="2" Desc ="Tous les employés de mon secteur ont été massacrés. N’oublions jamais ce qu'il s'est passé aujourd'hui. La prochaine fois, ne montrons aucune pitié pour ces saloperies."/>
+      <Item ID="3" Desc="Tous les employés de mon équipe sont morts. Leurs morts ont été nobles."/>
+      <Item ID="4" Desc="Mon équipe entière a été annihilée. Soyez sûr de vous rappeler de leurs visages et histoires."/>
+    </Type>
+  </Sefira>
+
+  <!--헤세드 (Chesed)-->
+  <Sefira Index="8">
+    <Type Num="0">
+      <Item ID="1" Desc ="Mon Dieu, Administrateur. Dois-je vraiment vous signaler que #0 est devenu fou pour que vous le remarquiez ?"/>
+      <Item ID="2" Desc ="#0 a perdu la raison. Vraiment, vous devriez faire plus attention à eux."/>
+      <Item ID="3" Desc="Hey Administrateur, la santé mentale de #0 n'est pas au plus haut."/>
+      <Item ID="4" Desc="#0 semble souffrir d'une sale dépression nerveuse. Donnez-lui le soin dont il a besoin, Administrateur."/>
+    </Type>
+    <Type Num="1">
+      <Item ID="1" Desc ="#0 est mort. Vous prêtez attention à tout ça, n'est-ce pas ?"/>
+      <Item ID="2" Desc ="#0 est mort… Bon sang, j'ai besoin d'une autre tasse de café."/>
+      <Item ID="3" Desc="#0 est mort, l'heure d'aller prendre un peu de café. Je reviens vite, Administrateur."/>
+      <Item ID="4" Desc="#0 est mort. Faisons plus attention la prochaine fois."/>
+    </Type>
+    <Type Num="2">
+      <Item ID="1" Desc ="Hey Administrateur, $0 est en liberté en ce moment. D'horribles choses auront lieu si vous ne le réprimez pas rapidement."/>
+      <Item ID="2" Desc ="Vous faites une sieste, n'est-ce pas, Administrateur ? $0 s'est échappé de son unité de confinement."/>
+      <Item ID="3" Desc="Hey Administrateur, $0 est en liberté en ce moment. D'horribles choses auront lieu si vous ne le réprimez pas rapidement."/>
+      <Item ID="4" Desc="Administrateur ? $0 s'est échappé de son unité de confinement. Vous devriez le réprimer aussi vite que possible avant qu'il ne cause des dégâts irréversibles."/>
+    </Type>
+    <Type Num="3">
+      <Item ID="1" Desc ="Bon, tous mes employés compétents sont maintenant morts. Comment allez-vous compenser de tout cela ?"/>
+      <Item ID="2" Desc ="Bon sang, comment êtes-vous devenu Administrateur en premier lieu ? Le secteur tout entier est mort. Tout est fini." />
+      <Item ID="3" Desc="Tous mes employés sont morts. Je savais qu'ils finiraient par mourir un jour, mais cela me reste quand même en travers de la gorge."/>
+      <Item ID="4" Desc="Ne vous en faites pas, Administrateur. Je vous ai vu faire de votre mieux."/>
+    </Type>
+  </Sefira>
+
+  <!-- 비나(Binah) -->
+  <Sefira Index="9">
+    <Type Num="0">
+      <Item ID="1" Desc="L'esprit de #0 est maintenant perdu dans le monde des rêves."/>
+      <Item ID="2" Desc="Les limites de #0 se sont effondrées. Cet employé ne reviendra pas facilement."/>
+    </Type>
+    <Type Num="1">
+      <Item ID="1" Desc="Je peux entendre le son palpitant de la vie s'éteindre pour #0."/>
+      <Item ID="2" Desc="La mort prématurée de #0 deviendra une des nombreuses tombes de ce lieu."/>
+    </Type>
+    <Type Num="2">
+      <Item ID="1" Desc="$0 s'est échappé de son unité de confinement et vagabonde à travers le complexe. Peut-être verrons-nous quelque chose d'intéressant pour une fois."/>
+      <Item ID="2" Desc="$0 a quitté son unité de confinement. Peut-être était-elle trop petite pour le contenir ?"/>
+    </Type>
+    <Type Num="3">
+      <Item ID="1" Desc="Ah, le silence, l'un de mes plus fidèles compagnons. Il ne reste plus personne."/>
+      <Item ID="2" Desc="Après le dernier souffle, seul le silence reste."/>
+    </Type>
+  </Sefira>
+
+  <!-- 호크마(Chokhmah - hokma) -->
+  <Sefira Index="10">
+    <Type Num="0">
+      <Item ID="1" Desc="Il semblerait que l'état mental de #0 soit instable."/>
+      <Item ID="2" Desc="#0 est en train d'errer dans les environs, cherchant à regagner la santé mentale qu'il a perdue."/>
+    </Type>
+    <Type Num="1">
+      <Item ID="1" Desc="Un nouvel employé viendra et remplacera à nouveau le désormais décédé #0. Le cycle continue."/>
+      <Item ID="2" Desc="Il n'y a pas à souffrir de la perte de #0."/>
+    </Type>
+    <Type Num="2">
+      <Item ID="1" Desc="$0 s'est échappé. Je ne veux pas vous voir souffrir pour la mort d'employés."/>
+      <Item ID="2" Desc="La mort suit l'échappée de #0. S'il vous plaît, soyez prudent."/>
+    </Type>
+    <Type Num="3">
+      <Item ID="1" Desc="Ce n'est pas grave. Si une nouvelle chance se présente à vous, utilisez cet échec et ces pertes comme un piédestal pour faire mieux la prochaine fois."/>
+      <Item ID="2" Desc="Nul besoin de s'accrocher à eux. Réessayons une nouvelle fois."/>
+    </Type>
+  </Sefira>
+</root>

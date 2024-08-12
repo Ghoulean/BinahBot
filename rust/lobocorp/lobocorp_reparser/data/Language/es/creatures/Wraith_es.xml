@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100055">
+
+    <narration action="move">
+      #0 va a entrar en la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Muchos empleados están muriendo bajo el conocimiento de $0.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Cuanto más tiempo permanezca el #0, peor será la situación.},
+      ]
+    </narration>
+  
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-03-88</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Wraith</portrait>
+
+      <name openLevel ="1">
+        Variante de Refracción Dimensional
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>El único consejo que se puede dar es ser cauteloso y estar atento a su entorno. </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Fue un fenómeno extraño. Era un fenómeno en sí mismo. No había nada dentro que pudiera ser detectado a simple vista. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Y como aquellos que hacen reclamos similares hace algún tiempo, solo porque no se pudo ver, no significa que no exista. La longitud cuadrada de la Instalación de Contención era de XXX metros, y este es el rango cognitivo de la Anormalidad. El único consejo que se puede dar es ser cauteloso y estar atento a su entorno. Respirar se volverá imposible mientras se encuentre dentro del rango de la Anormalidad. El área será un vacío. Estrictamente hablando, la Anormalidad misma es un fenómeno del vacío. }
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Registro de defunción del empleado Chomsky&gt;&#13;&#10;o había forma de verificar si la Anormalidad correspondiente escapó de la Instalación de Contención o no. De repente, Chomsky se detuvo en medio del pasillo y se quedó allí. El pasillo estaba ocupado con gente que pasaba, y muchos expresaron su descontento hacia Chomsky.&#13;&#10;Entonces, el cuerpo de Chomsky de repente se elevó más de 3 metros en el aire. Sus brazos y piernas estaban estirados torpemente como si estuviera realizando un ritual sagrado. Si sus piernas estuvieron en el suelo, podría haber parecido que estaba actuando en una obra elegante o haciendo ballet. Todos se detuvieron y lo miraron. Chomsky comenzó a gritar. Gritó como un loco que presenció algo terrible. Nadie sabía qué hacer. Algunos empleados trataron de jalar a Chomsky por las piernas. Chomsky no se movió. Entonces, Chomsky dejó de gritar. Después de un breve silencio, Chomsky abrió la boca e intentó murmurar algo. Los dos empleados que intentaban derribar a Chomsky comenzaron a gritar. La sangre brotó de su cuerpo. Sus brazos y piernas se separaron, dejando el cuerpo sin brazos y sin piernas flotando en el aire. Todo el infierno se desató en el pasillo y todos empezaron a correr.}
+    ]
+  </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Cómo reconocer la anormalidad es un asunto que necesita ser discutido más a fondo. Actualmente, estamos investigando la tecnología ultravioleta que puede detectar las anomalías utilizando los ojos de los camarones, Pero el rendimiento ha estado lejos de ser satisfactorio. Por ahora, un buen método es que los empleados que ingresen a la Instalación de contención traigan una taza de vidrio llena hasta la mitad con agua. Necesitan colocar la taza en el suelo mientras trabajan. Si el agua comienza a salpicar y amenaza con derramarse, el empleado debe dejar de trabajar y abandonar la Instalación de contención de inmediato.  }
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Cuando el resultado del trabajo fue malo, el contador Qlifot puede reducirse.</specialTip>
+      <specialTip openLevel="2" key="2">Cuando el tiempo de trabajo llega a los 40 segundos o más, se reduce el contador Qlifot.</specialTip>
+      <specialTip openLevel="2" key="3">Todos los empleados y las instalaciones no pueden detectar la Anormalídad cuando se escapa. Por lo tanto el gerente necesita ordenar la supresión directamente.</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

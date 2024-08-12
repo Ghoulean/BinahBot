@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id="100061">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="mid1">
+      [
+      {A legend of $0 says that once upon a time, those who came across its feather were granted with both blessing and ordeal.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {At times, $0 heals wounded employees.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 may become happy if the employees act as though they are hunting for it.}
+      ]
+    </narration>
+  </info>
+  <observe level="2">
+    <collection>
+      <codeNo openLevel="0">O-02-101</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/FireBird</portrait>
+      <name openLevel="1">
+        The Firebird
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>Those who succeed in the hunt are granted with one of the very feathers that countless hunters once yearned for.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {A long, long time ago in a faraway forest there lived a magnificent bird. Its feathers were wonderfully incandescent, like the tongues of flames, and it was said that they could swallow the blackest of darkness.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Many hunters longed to obtain even one of its feathers, as it would be their pride and honor. There were many tales about the bird. Some said that those who caught the bird would see their families prosper for many generations. A few even claimed that one wasn’t a true hunter until they had gotten one of the flamelike feathers. Others believed that one feather was so strong it could take the owner anywhere they dreamed of. Be what it may, the bird was a symbol of adventure to people.&#13;&#10;&#13;&#10;The faraway forest was soon filled with people looking for the bird. Not only hunters, but adventurers and travelers too...&#13;&#10;&#13;&#10;The once silent forest became a crowded place. }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {People soon became bored with the rumors; they were no longer interested in the hunt. Fewer and fewer people paid any sort of visit to the faraway forest. When the bird finally became nothing but a legend, it experienced a great pain, being blinded. Now all that was left of this legend was a blind bird with bright feathers, alone in an abandoned forest.&#13;&#10;&#13;&#10;After a long time had passed, the bird found a new forest. Many people lived in that forest, and the bird just wanted their eagerness to pursue it to once again be stoked like the fiery hues of its blazing feathers.&#13;&#10;&#13;&#10;Those who succeed in the hunt are granted with one of the very feathers that countless hunters once yearned for.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {+ Caution is advised when the hunting season for The Firebird finally arrives. Rash action such as suppressing it is not recommended.&#13;&#10;+ It is also not recommended to simply hunt the bird to prove one’s bravery. Please remember all the hunters who had to return empty-handed.&#13;&#10;+ “I can catch it, just a little bit more and I’ll get it…”, every employee has thoughts like this. However, it takes true courage to accept when to give up.}
+      ]
+    </desc>
+    <specialTipSize size="7">
+      <specialTip openLevel="1" key="1">When another Abnormality escaped in the department in which $0 was contained, the Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="2" key="2">When the work result was Good, the Qliphoth Counter lowered.</specialTip>
+      <specialTip openLevel="2" key="3">When the work result was Normal, the Qliphoth Counter lowered with a low probability. Furthermore, the lower the Qliphoth Counter, the more damage Agents take while working with $0.</specialTip>
+      <specialTip openLevel="2" key="4">When the work result was Bad, the Qliphoth Counter increased.</specialTip>
+      <specialTip openLevel="2" key="5">$0 granted light to #0 who worked with it when the Qliphoth Counter was 1. #0’s HP and SP were recovered, and healed over time for a while.</specialTip>
+      <specialTip openLevel="2" key="6">When an Agent had less than 20% of their max HP remaining after completing the work process, $0 granted the same light.</specialTip>
+      <specialTip openLevel="2" key="7">After escaping, $0 eventually willingly returned to its Containment Unit after a short while. $0 only displayed aggression after it was damaged, and the employee whose HP or SP reached 0 from its attacks died. When $0 was attacked, the eyes of those who injured it were scorched by the light emitted by the Abnormality. Blinded employees worked at half-speed. $0 cured #0’s eye injury when they finished the work process.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

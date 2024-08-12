@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100042">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {Avoir quelqu’un pour pleurer notre mort est une bénédiction.},
+      {Ceux qui restent n’ont pas le temps de se souvenir de ceux qui sont morts ; tout ce qu’ils peuvent faire, c’est se préparer au prochain décès.},
+      {$0 fixe #0 dans un silence pesant.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 rêve. Le rideau tombe sur l’idéal né en vain, mais il n’a aucune conclusion pour l’accompagner.},
+      {Le grand cercueil n’est largement pas suffisant pour remplacer les centaines de tombes qui n’ont pas été creusées.},
+      {#0 assiste à la procession funéraire des papillons.},
+      {Les pesantes ailes battantes se rapprochent d’un air familier mais étrange.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Il n’y a pas de fleurs ou d’arbres ici, alors d’où viennent tous ces papillons ?},
+      {Les employés ne peuvent retourner là d’où ils viennent et n’ont d’autre choix que de recommencer la même journée éternellement.},
+      {La procession funéraire ne s’achève jamais ; #0 continue son deuil calmement.},
+      {#0 réfléchit à la vie après la mort.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Retourner là d’où l’on vient en un seul morceau est désormais un miracle qui n’arrivera jamais.},
+      {Mourir paisiblement au cours d’une merveilleuse journée est une bénédiction inattendue.},
+      {En vérité, la plupart des employés qui sont morts ici voulaient vivre aussi longtemps qu’ils le pouvaient.},
+      {Certains pensaient que la mort serait un nouveau départ ; mais il n’y a rien d’autre que le vide après celle-ci.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-01-68</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Butterfly</portrait>
+      <name openLevel="1">
+        La Funéraille des Papillons Morts
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <openText>Où va-t-on lorsqu’on meurt ?</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Où va-t-on lorsqu’on meurt ?&#13;&#10;
+      Où sont passés tous les employés qui travaillaient ici ?}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {- Ils doivent être rentrés chez eux. Dans un havre de paix où leur famille et la chaleur d’un foyer les attendent.&#13;&#10;&#13;&#10;Les employés ne peuvent pas partir ; une fois qu’ils ont rejoint la corporation, le seul moyen de la quitter est de démissionner.&#13;&#10;&#13;&#10;- Ces employés ayant “démissionné” doivent être rentrés chez eux ensuite, ayant obtenu ce qu’ils voulaient, pleins d’espoir.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Nous sommes les plumes d’une Aile. Démissionner n’est pas aussi simple que tu le penses, tout comme une plume ne se détache pas d’une aile de sa propre volonté…&#13;&#10;&#13;&#10;- Mais alors, où sont allés tous ceux ayant démissionné ?&#13;&#10;&#13;&#10;Ils sont enchaînés à la corporation dès le moment où ils y entrent. Même s’ils démissionnent, ils sont condamnés à y rester éternellement.&#13;&#10;&#13;&#10;- Il y a longtemps, quelque part, les gens croyaient qu’ils deviendraient de magnifiques créatures avec de petites ailes lorsqu’ils mourraient. C’est une histoire stupide. Insensée, en plus.&#13;&#10;&#13;&#10;Si nous obtenons des ailes, pourrons-nous quitter cet endroit ? Obtenons-nous nos ailes seulement si l’on démissionne ?}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {On dit que le lamenteur avec le grand bagage sur son dos est venu pour être notre sauveur à tous.&#13;&#10;&#13;&#10;Mais il a fini coincé ici lui aussi et erre désormais dans la corporation avec pour seul souvenir une croyance creuse.&#13;&#10;&#13;&#10;Il porte un grand cercueil. Un grand cercueil pour rendre hommage aux employés qui n’ont plus aucun endroit où aller. Cependant, il est toujours trop petit pour réconforter ces sacrifices innocents.&#13;&#10;&#13;&#10;Au sein de celui-ci se trouve une nuée de papillons attendant le moment de s’endormir. Dans l’intervalle, ils battent leurs ailes vainement. Ces ailes qui peuvent avoir fusionné en une seule ou s’être fragmentées en une infinité.&#13;&#10;&#13;&#10;Les papillons sont censés polliniser les fleurs, mais pas une seule ne peut prospérer ici.&#13;&#10;&#13;&#10;L’on ne peut qu’attendre. Après tout, il y a une fin à tout monde.}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Lorsque des employés de Justice 2 ou moins ont terminé leur travail avec $0, le Compteur Qliphoth a diminué.</specialTip>
+      <specialTip openLevel="1" key="2">Le phénomène sus-cité s’est également produit lorsque des employés de Fortitude 4 ou plus ont terminé leur travail avec $0.</specialTip>
+      <specialTip openLevel="1" key="3">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth a une probabilité élevée de diminuer.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

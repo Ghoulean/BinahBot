@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id="100045">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {$0’s brothers just blink; it's as if that’s the only thing they can do inside the Containment Unit.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {When her brothers show any sign of pain, $0 will approach them, dragging her exhausted body.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">F-02-70</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/BlackSwan</portrait>
+      <name openLevel="1">
+        Dream of a Black Swan
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>What happens when the black swan wakes up from dreaming of a white swan?</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Elijah had a large family to provide for.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Her impoverished parents would always say: “Although we don't have anything to pass onto you, we have the most valuable treasure, honesty and diligence. These may not be of great help to you now, but they will make all of you happy someday.”}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {One day, a dense fog covered the city.&#13;&#10;The hazy fog, thought to be a natural phenomenon at first, didn't dissipate even after a few days had passed.&#13;&#10;&#13;&#10;Some claimed it was making them feel nauseous or making them retch, but most people thought nothing of it. A lot of people continued to work and go about their days in the fog.&#13;&#10;Of course, Elijah was one of the people who had to be okay with it. She was the only family member with a proper job, and the inheritance of poverty had left them in huge debt. Elijah had several brothers, but their wills were broken after being faced with several failures.&#13;&#10;Elijah was always tired, but she thought if she just worked a little harder, things would work themselves out. Just like what her parents used to say to her, and just like in fairy tales.&#13;&#10;Just like that bird who eventually spread its white wings and became the envy of all.}
+    ]
+  </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Some people left the city to escape the fog.&#13;&#10;&#13;&#10;They said the city was done for. Elijah didn't listen.&#13;&#10;&#13;&#10;Elijah felt queasy at times. She felt her whole body blistering.&#13;&#10;&#13;&#10;Almost there, just a little more; if she held out just a little longer, the clothes made of nettles would be complete, and if she threw them to her brothers she once loved dearly, then the days when her family lived harmoniously could be restored.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {One day, on the way home after work, she bumped into a pedestrian running at full speed. Though the pedestrian who crashed into her was at a full sprint, he was unable to get back up, so she offered him a helping hand, asking if he was alright.&#13;&#10;&#13;&#10;He slapped her hand away and got up on his own. The pedestrian took a few faltering steps before collapsing again. The man seemed like he was running away from something; he seemed worried that Elijah would hurt him.&#13;&#10;&#13;&#10;Elijah tried to ask him what was wrong. However, the pedestrian opened his mouth first. The simple act of opening his mouth seemed labored, so she patiently waited for him to talk.&#13;&#10;&#13;&#10;The pedestrian didn’t open his mouth to speak; he began to vomit a mixture of blood and waste.&#13;&#10;&#13;&#10;The gooey mixture poured from his mouth at first, then it gushed out from his nose, ears, and eyes. If he hadn’t been expelling from all of his orifices, then Elijah might have tried to help him.&#13;&#10;&#13;&#10;Elijah thought she heard a shout in the distance. She left the vomiting man behind and started to walk slowly.&#13;&#10;&#13;&#10;What happens when the black swan wakes up from dreaming of a white swan?&#13;&#10;&#13;&#10;There were many people amidst the fog. Some screaming, some laughing. Some wielding clubs, some curled up; bodies covered in wounds. Dark, wet, and fetid dregs were scattered all over the ground, covered in footprints.&#13;&#10;&#13;&#10;She began to look for her brothers. Her family who needed to wear the nettle clothing to be free from the curse. Ones whom she shared happy dreams with.&#13;&#10;&#13;&#10;She saw her dear brothers in the distance.&#13;&#10;&#13;&#10;Elijah fell to her knees and finally started to puke up the thing everyone else was vomiting.&#13;&#10;
+      The lake ripples gently. As if a number of swans just took flight.}
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">When the work result was Bad, the Qliphoth Counter lowered, and F-02-70-4’s appearance changed.</specialTip>
+      <specialTip openLevel="1" key="2">When the work result was Normal, the Qliphoth Counter lowered, and F-02-70-5’s appearance changed.</specialTip>
+      <specialTip openLevel="1" key="3">When 5 or more employees died within the facility, the Qliphoth Counter lowered and F-02-70-1’s appearance changed. However, deaths caused by Execution Bullets were not recognized.</specialTip>
+      <specialTip openLevel="1" key="4">When 5 or more employees within the facility panicked, the Qliphoth Counter lowered and F-02-70-2’s appearance changed.</specialTip>
+      <specialTip openLevel="1" key="5">When 3 Abnormality escapes were confirmed, the Qliphoth Counter lowered and F-02-70-3’s appearance changed.</specialTip>
+      <specialTip openLevel="1" key="6">&lt;Warning&gt; Forceful reduction of the Qliphoth Counter can also change $0.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <name>Black Swan</name>
+    <codeId>F-02-70-7</codeId>
+  </child>
+</creature>

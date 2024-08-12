@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="300109">
+
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+ 
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-07-103</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Yang</portrait>
+
+      <name openLevel ="1">
+        陽
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>しかし、どうして世界が明るさと暖かさだけで 成り立つことができようか。</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {対をなす部分は失われたまま安置されています。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {着用した場合には精神汚染を軽減してくれる効果があり、 職員からは善意のペンダントと呼ばれています。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {ここを訪れる者たちは、我が持つ気を望んでいた。彼らの言葉によれば 心が澄み暖かさを感じるという。加えて黒の部分のペンダントは恐れて いた。「これほど役立つアブノーマリティーが存在するのなら、どうす ればいいのだ」と言って嘆息した。理解していないのか。助けようとす る意図など初めから無い。ただ我は存在しているだけだった。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {しかし、どうして世界が 明るさと暖かさだけで成り立つことができようか。 地があるために天はあり、 闇があるために光がある。 死があるために生はあり、 絶望があるために希望はあるのだ。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {黒い鯉は調和に向かって泳ぎ、&#13;&#10;白い鯉は混沌に向かって泳ぐ。&#13;&#10;ならば二尾が出会うとき、&#13;&#10;何が起こるのだろうか。}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">$0を装着した対象は、WHITE属性のダメージに対する耐性を持つようになる。 ただし、O-05-102が施設内に存在しない場合には、何も起こらなかった。</specialTip>
+      <specialTip openLevel="2" key="2">$0は装着者の精神力を一定周期ごとに回復させた。</specialTip>
+      <specialTip openLevel="2" key="3">&lt;注意&gt;このアブノーマリティーを装着した職員をO-05-102の 作業に投入しないこと。</specialTip>
+      <specialTip openLevel="2" key="4">&lt;注意&gt;O-05-102が脱走した場合、$0もまた脱走アブノーマリ ティーとなるので留意すること。（職員がこれを装着している場 合にも、同じ問題が発生することが確認されている）</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

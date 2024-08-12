@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300007">
+
+    <narration action="move">
+      #0 recebeu a ordem para ir para a unidade de contenção de $0.
+    </narration>
+
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-81</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/ResetMirror</portrait>
+
+      <name openLevel ="1">
+        Espelho de Ajuste
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+
+      <openText>
+        “Satisfação é apenas temporária.”
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {A única coisa que reflete são seres humanos.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Ao olhar-se no espelho, o indivíduo muda. Há várias teorias sobre o porquê que isso acontece, como a possibilidade de uma troca entre universos paralelos, graças aos seus poderes mágicos, mas nada disto foi confirmado.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {A pessoa que encara o espelho pode parecer a mesma, mas na verdade ela tornou-se em alguém completamente diferente.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      <!-- 여기 번역 고치기 -->
+      [
+      {Ao se encarar o espelho mais do que uma vez, o indivíduo tem a sua humanidade retirada, tornando-os em um cadáver ambulante.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {—Hey, passei pelo o Brian e ele ignorou-me totalmente. O quê que se passa?&#13;&#10;—Ah, ele olhou-se no espelho.&#13;&#10;—Ele reclamava de ser muito fraco. Acho que ele já fez a sua escolha.&#13;&#10;—Satisfação é apenas temporária.}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="1">O indivíduo que se encare no $0 irá ter os seus status ajustados aleatoriamente.</specialTip>
+      <specialTip openLevel="2" key="2">Se um empregado encarar o $0 mais do que uma vez no mesmo dia, todos os status irão ser diminuídos cada vez que o sujeito se olhar.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

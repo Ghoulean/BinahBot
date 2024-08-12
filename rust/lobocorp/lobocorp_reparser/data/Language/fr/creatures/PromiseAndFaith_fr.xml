@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300108">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">T-09-97</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/PromiseAndFaith</portrait>
+      <name openLevel="1">
+        Croyance d’Autrefois et Promesse Oubliée
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <openText>
+        Ces cœurs trahis sombrèrent dans les abysses, lentement oubliés dans les couloirs du temps s’allongeant sans cesse.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Une bille mystérieuse suspendue dans l’Unité de Confinement.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Nous connaissons une ancienne coutume ; et les innombrables promesses qui furent prononcées, et la foi infinie qui fut placée en elles.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Cependant, elles ne renfermaient que du vide et des trahisons.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Ces cœurs trahis sombrèrent dans les abysses, lentement oubliés dans les couloirs du temps s'allongeant sans cesse.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Si vous essayez avec un cœur austère dénué de désir ou d’attente, en revanche, vous recevrez peut-être une récompense inattendue.}
+      ]
+    </desc>
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">Utilisez l’Anomalie pour fortifier une arme E.G.O.. Cela consommera une partie de l’énergie déjà récupérée par le complexe.</specialTip>
+      <specialTip openLevel="2" key="2">L’arme ainsi fortifiée aura une Puissance d’Attaque plus élevée.</specialTip>
+      <specialTip openLevel="2" key="3">Cependant, il y a également une probabilité non nulle que l’E.G.O. soit perdu durant le processus de fortification.</specialTip>
+      <specialTip openLevel="2" key="4">L’arme fortifiée perdra les effets de l’Anomalie à la fin de la journée.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

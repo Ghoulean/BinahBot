@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300107">
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-96</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/JusticeReceiver</portrait>
+
+      <name openLevel ="1">
+        행동교정
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>마침내는 존재의 방식 조차 잊어버릴만큼 지혜는 그 의미가 없어져버린다. </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {신비로운 문양이 새겨진 전파장치.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {악한 이, 오만한 이, 파렴치한 이 가리지 않고 모든 사람들이 정의로워질 수 있게금 교정해준다.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {하지만 교정기에 너무나 의지한 나머지 스스로 생각하는 힘은 멈추게 된다.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+
+      [
+      {마침내는 존재의 방식 조차 잊어버릴만큼 지혜는 그 의미가 없어져버린다. }
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">$0을 장착한 대상은 정의와 관련된 능력치가 상승한다. 단, 동시에 지혜와 관련된 능력치가 감소한다.</specialTip>
+      <specialTip openLevel="2" key="2">장착 직후 30초 이내에 반납을 명령할 경우 착용자는 패닉에 빠지며, 이상행동을 보인 이후 사망한다.</specialTip>
+      <specialTip openLevel="2" key="3">$0를 장착한 상태에서 정신력이 0이 될 경우 착용자는 패닉 상태에서 그대로 사망한다.</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

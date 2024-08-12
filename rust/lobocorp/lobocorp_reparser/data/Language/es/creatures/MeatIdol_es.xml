@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300004">
+
+    <narration action="move">
+      #0 designado en el cuarto de contencion de $0.
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-79</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/MeatIdol</portrait>
+
+      <name openLevel ="1">
+        Ídolo de la carne
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+
+      <openText>Y la oración siempre termina con la eterna desesperación del adorador.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Un trozo de carne que cubre los brazos de la cruz y esta hecho de hierro oxidado.  }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Se especula que es un artefacto religioso que se encontró en la sección inundada. En el pasado, algunas personas buscaban respuestas de la religión. Cuando un empleado ofrece oración enfrente del artefacto en un rango de 2 metros, la carne comienza a moverse, como respondiendo a la oración.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {La persona que ora sufrirá varias pruebas o fases al exponerse esa anormalidad, como si estuviera siendo examinada, pero otras personas a su alrededor recuperarán PS y SM como una redención.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+    
+      [
+      {Y la oración siempre termina con la eterna desesperación del adorador.}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">$0's el efecto puede manifestarse a través de la oración. El sujeto que reza a $0 recibirá un daño de tipo aleatorio.</specialTip>
+      <specialTip openLevel="2" key="2">&lt;Experimento 1&gt; El sujeto oró por 20 segundos o menos. El sujeto de pruebas murio.</specialTip>
+      <specialTip openLevel="3" key="3">&lt;Experimento 2&gt; El sujeto oró por una duración de entre 21 y 45 segundos. Todos los empleados excepto el sujeto recuperaron PS con el tiempo.</specialTip>
+      <specialTip openLevel="4" key="4">&lt;Experimento 3&gt; El sujeto oró por una duración de entre 46 y 90 segundos. El resultado fue similar a experimento 2, pero tambien se recuperaro su SM.</specialTip>
+      <specialTip openLevel="5" key="5">&lt;Experimento 4&gt; El sujeto oró por más de 90 segundos. El sujeto murio, pero el contador Qlifot de todas las anormalídades se redujo a 0 y se desconoce por que se produce esos efectos caoticos.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

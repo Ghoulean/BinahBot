@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100014">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {$0 affirme être venu dans ce complexe de sa propre volonté.},
+      {$0 apaise les sinistrés de leurs tortures, libérant ceux qui sont enfermés en eux-mêmes et s’occupant des brisés.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 a un jour visité un village souffrant d’une maladie inconnue.},
+      {C’était l’aube lorsque ce mystérieux docteur, qui ne se présenta jamais, fit son apparition.},
+      {Lorsqu’ils eurent tous perdu espoir, l’homme masqué se déclarant docteur arriva.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 ne voit aucun problème à se rendre dans l’Unité de Confinement de $0.},
+      {#0 est très apaisé dès qu’il entre dans l’Unité de Confinement de $0.},
+      {#0 aimerait que toutes les Anomalies soient aussi calmes et sereines que $0.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 a une voix agréable et chantante, appréciant de s’occuper de ceux qui sont blessés.},
+      {$0 souhaite seulement méditer en solitaire ou s’occuper des autres.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {$0 dit : “Je suis ici pour soigner les maladies. Lorsque le jour viendra, venez me chercher. Je serai plus que prêt à vous aider.”},
+      {$0 annonce : “Il n’y a rien sous mon masque ; la chair est attachée au flot du temps mais l’âme est immortelle.”},
+      {$0 déclare : “Je sauverai votre vie de la destruction et vous élèverai loin de la fin du monde. Ayez confiance en moi.”}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">O-01-45</codeNo>
+      <name openLevel="1">Docteur de Peste</name>
+      <portrait openLevel="1">Sprites/Unit/creature/PlagueDoctor</portrait>
+      <riskLevel openLevel="3">ZAYIN</riskLevel>
+      <openText>“Je te soignerai, guérissant toute maladie ou blessure que tu pourrais avoir.”</openText>
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {Il porte un fedora noir et un masque à bec. Il a de grandes ailes noires au lieu de bras ou de jambes. Il est capable de communiquer avec des humains mais parle assez peu. Il est venu dans ce complexe de lui-même, affirmant que le monde souffre d’une maladie épouvantable qu’il est le seul à pouvoir guérir. Nous n’avons rien trouvé au sujet de ce fameux “mal”.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Il semble apprécier de s’occuper des employés blessés ou malades. Il montre de la satisfaction en aidant les autres et semble assez sympathique et bienveillant. Après une semaine d’observation continue, nous n’avons constaté aucune agression, violence ou tentative de s’échapper. Nous n’avons que des témoignages contribuant à l’idée que cette Anomalie est “gentille” (12 de nos employés ont utilisé ce terme) et bénéfique à la corporation.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Alex, un Intervenant portant une profonde cicatrice sur le front depuis une répression, est entré dans l’Unité de Confinement de l’Anomalie alors que son traitement était inachevé. L’Anomalie, qui usuellement ne parle pas beaucoup, s’est exprimée dès qu’elle a vu la cicatrice.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;Archive d’Observation_1&gt;&#13;&#10;
+      L’Anomalie a demandé :
+      “Pourquoi n’as-tu pas soigné cette cicatrice ?”&#13;&#10;
+      Alex a répondu :
+      “Je n’ai pas eu le temps, alors j’ai simplement appliqué les premiers soins.”&#13;&#10;
+      Alors le Docteur de la Peste a dit :
+      “Je te soignerai, guérissant toute maladie ou blessure que tu pourrais avoir.”&#13;&#10;
+      Alex est sorti du Confinement sans la moindre cicatrice.}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="3" key="2">Lorsque le résultat du travail est Bon, le Compteur Qliphoth diminue. $0 bénit ensuite l’Intervenant travaillant avec lui.</specialTip>
+      <specialTip openLevel="3" key="3">Lorsqu’une Alarme de Niveau 2 résonne, le Compteur Qliphoth diminue.</specialTip>
+      <specialTip openLevel="3" key="4">Lorsque le Compteur Qliphoth a atteint 0, certains employés ont entendu l’appel de $0 et sont allés dans son unité de confinement pour être bénis.</specialTip>
+      <specialTip openLevel="3" key="5">Ceux qui ont été embrassés par $0 renaîtront bientôt.</specialTip>
+    </specialTipSize>
+  </observe>
+  <etc>
+    <param key="first" index="1">
+      “Et moi, je te dis que tu es #1, et que sur cette pierre je bâtirai mon église, et que les portes du séjour des morts ne prévaudront point contre elle.”
+    </param>
+    <param key="second" index="2">
+      “Dis-nous, quand cela arrivera-t-il ?”
+    </param>
+    <param key="third" index="3">
+      “Seigneur, veux-tu que nous commandions que le feu descende du ciel et les consume ?”
+    </param>
+    <param key="fourth" index="4">
+      “Et #3 et #4 ; auxquels il donna le nom de Boanergès, qui signifie fils du tonnerre.” 
+    </param>
+    <param key="fifth" index="5">
+      “#5 lui dit : Seigneur, montre-nous le Père, et cela nous suffit.”
+    </param>
+    <param key="sixth" index="6">
+      “De là étant allé plus loin, il vit un homme assis au lieu des péages, et qui s'appelait #6. Il lui dit : Suis-moi. Cet homme se leva, et le suivit.”
+    </param>
+    <param key="seventh" index="7">
+      “Il y avait auparavant dans la ville un homme nommé #7, qui, se donnant pour un personnage important, exerçait la magie et provoquait l'étonnement du peuple.”
+    </param>
+    <param key="eighth" index="8">
+      “Sur quoi #8, dit aux autres disciples : Allons aussi, afin de mourir avec lui.”
+    </param>
+    <param key="ninth" index="9">
+      “#9 répondit et lui dit : tu es le Fils de Dieu, tu es le roi d'Israël.”
+    </param>
+    <param key="tenth" index="10">
+      “#10 lui dit : Seigneur, d'où vient que tu te feras connaître à nous, et non au monde ?” 
+    </param>
+    <param key="eleventh" index="11">
+      “Que personne désormais ne me fasse de la peine, car je porte sur mon corps Ses marques.”
+    </param>
+    <param key="twelveth" index="12">
+      “Il leur répondit : N'est-ce pas moi qui vous ai choisis, vous les douze ? Et l'un de vous est un démon !”
+    </param>
+  </etc>
+</creature>

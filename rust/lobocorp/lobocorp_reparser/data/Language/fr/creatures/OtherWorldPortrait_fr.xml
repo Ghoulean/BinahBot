@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300104">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-09-91</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/OtherWorldPortrait</portrait>
+      <name openLevel="1">
+        Portrait d’un Autre Monde
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <openText>
+        Ce portrait capture un instant ; il représente ce que nous sommes destinés à perdre.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Au fil du temps, les gens changent. Nous pouvons devenir handicapés, perdre la tête, être dévorés par une violence écrasante, ou bien souhaiter disparaître et ne plus jamais être vus.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Ce portrait capture un instant ; il représente ce que nous sommes destinés à perdre. Ceux qui se voient en bonne santé vont inconsciemment ressentir un manque. “Si la vie pouvait toujours être comme ça. Si seulement je pouvais avoir à jamais un sourire éclatant comme dans ce portrait.”}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {On commence à se sentir bizarre. On est immunisé contre toute forme d'attaque, mais les autres endurent la douleur à notre place. }
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Petit à petit, le portrait devient de plus en plus laid. On finit par arrêter de le regarder et on se contente de profiter de sa chance inespérée.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Cependant, aucun miracle ne dure éternellement. Lorsque tous ceux qui endurent la douleur périssent, c'est à son propre tour de mourir. Une fois que la personne qui se croyait la plus chanceuse du monde connaît sa fin, le portrait redevient blanc.}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="1">La première personne à utiliser l'Anomalie sera peinte sur la toile.</specialTip>
+      <specialTip openLevel="2" key="2">Tous les dégâts qui devraient être infligés à la personne peinte seront subis par une autre personne au sein du complexe. (Toutefois, l'effet de l'Anomalie ne s'appliquera pas aux dégâts qui dépassent les PV maximaux de la personne peinte.) Celle-ci subira également des dégâts augmentés.</specialTip>
+      <specialTip openLevel="2" key="3">Une fois que celui qui subit la douleur de la peinture est mort, un autre prendra sa place. Lorsqu'il ne reste plus personne, l’employé peint mourra.</specialTip>
+      <specialTip openLevel="2" key="4">Si le portrait d’une nouvelle personne est esquissé sur la toile, la précédente sera tuée.</specialTip>
+      <specialTip openLevel="2" key="5">Si la personne dessinée est tuée autrement que par des dégâts normaux, alors le portrait retournera à son état d’origine.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

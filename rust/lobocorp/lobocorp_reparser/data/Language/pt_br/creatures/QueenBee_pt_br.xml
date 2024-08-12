@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100026">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção da $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {Para as abelhas, uma colmeia danificada é algo que não pode ser tolerado.},
+      {Dizem que as abelhas operárias de uma colméia passam a vida inteira providenciando comida para a rainha.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {A maior prioridade para as abelhas é a segurança da própria colméia.},
+     {Se alguém acabar causando danos à $0, até mesmo por acidente, algo que nunca poderá ser desfeito poderá acontecer.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Se #0 sentir uma dor abdominal e um formigamento no pescoço, a única opção que teria é de olhar para o grande céu azul uma última vez.},
+      {#0 se esforça para respirar o mínimo possível do ar da Unidade de Contenção.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {A $0 quer ter mais e mais e mais e mais abelhas operárias; eles trarão prosperidade para o reino.},
+      {A $0 será concluída pelo trabalho de suas abelhas operárias… E assim será o início de seu reinado.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">T-04-50</codeNo>
+      <name openLevel="1">Abelha Rainha</name>
+      <portrait openLevel="1">Sprites/Unit/creature/QueenBee</portrait>
+      <riskLevel openLevel="1">WAW</riskLevel>
+      <openText>Se você sentir uma dor abdominal e uma sensação de formigamento no pescoço, a melhor coisa que você pode fazer agora é olhar para o grande céu azul que você nunca verá novamente.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {A aparência dela parece ser um amalgamado de uma colméia de abelhas gigantesca e uma abelha. Uma parte transversal do interior mostra uma superfície vermelha-escura com partículas aqui e ali, muito parecida com carne crua. O segmento que parece ser o rosto está altamente distorcido. Ela possui asas, mas já perderam a capacidade de voar. O único olho que se mantém relativamente intacto mostra movimentos pupilares, como se servissem somente para observar intrusos que se aproximam. (A Anormalidade sempre permanece parada, então consideramos que ela não se move.) }
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Quando certas condições são cumpridas, ela solta esporos. Gerando bilhões de partículas em um raio de 20 metros. A existência de formas de vida nessas proximidades parece ser um dos requerimentos necessários.}
+      ]
+    </desc>
+    <desc id="3" openLevel="1">
+      [
+      {Quando expelia os esporos, não ocorriam mudanças imediatas nos funcionários que os inalaram, e nenhum sinal anômalo podia ser detectado no exame que foi feito em seguida. }
+      ] 
+    </desc>
+    <desc id="4" openLevel="2">
+      [
+      {Depois de mais algum tempo ter passado, os funcionários sofreram severas dores em seu lobo occipital e abdômen. Então, após um certo tempo, suas cabeças se deslocaram do corpo, e uma Abelha Operária emergiu de cada corpo separado.}
+      ]
+    </desc>
+    <desc id="5" openLevel="2">
+      [
+      {Foi confirmado que os esporos carregam ovos de abelhas operárias que chocam dentro de um hospedeiro vivo. Com base nas descobertas de uma autópsia feita em um funcionário morto pela Anormalidade, acreditamos que a larva irá subsistir em qualquer parte do corpo, seja no sangue, órgãos, ou gordura. Ela se moverá livremente no corpo quando está neste estágio. Quando ela se torna grande demais para se mover, ela cria um casulo perto dos intestinos. O hospedeiro sente extrema fome nesse estágio, comendo muito mais que o normal. Esse casulo se move para cima através do corpo conforme cresce, eventualmente danificando as artérias da garganta e o músculo cricotireóideo com suas mandíbulas enquanto separa a cabeça do hospedeiro de seu corpo. Após isso, irá emergir do corpo, agravando ainda mais o ferimento do hospedeiro.}
+      ]
+    </desc>
+    <desc id="6" openLevel="3">
+      [
+      {&lt;Trecho de um Registro de Aconselhamento&gt;&#13;&#10;
+      &lt;Omitido&gt; já anda me falando de seu pescoço pruriginoso faz um tempo. Ele reclamou de indigestão também; uma vez eu vi ele tomar um monte de digestórios. Quem imaginaria que seria um problema tão sério? Não sabia que eu seria aquele que testemunharia esse momento horrível.&#13;&#10;
+      (Omitido)&#13;&#10;
+      &lt;Omitido&gt; e eu estávamos só conversando, mas ,de repente, ele parou de falar. Ele ainda estava coçando seu pescoço. Estava ficando tão vermelho que eu comecei a ficar preocupado. Então o pescoço dele começou a tomar um ângulo tão estranho. Foi naquele momento que percebi a severidade da situação. De jeito nenhum que ele conseguiria colocar o pescoço daquele jeito sozinho. Parecia como se alguém estivesse forçadamente torcendo o pescoço dele...}
+      ]
+  </desc>
+    <desc id="7" openLevel="3">
+      [
+      {      E então, eu escutei um 'zip', como o barulho de rasgar papel, um som desconhecido de algo rasgando. A cabeça dele caiu no chão e eu escutei um barulho enfadonho.}
+      ]
+    </desc>
+    <desc id="8" openLevel="4">
+      [
+      {      E como se já não tivesse acontecido o suficiente, algo começou a rastejar fora de seu pescoço. Assim como uma borboleta emergindo do casulo, rompendo todo seu corpo sem cabeça; as asas, a traseira amarela, os dentes que roeram seu corpo; é algo que eu nunca mais quero ver novamente, um ser que eu odiaria descrever como algo vivo...}
+      ]
+    </desc>
+    <desc id="9" openLevel="4">
+      [
+      {      (Omitido) parecia que estava ciente de que eu estava lá. Mas parece que não tinha razão para me atacar naquele momento. Ela pegou o crânio dele e voou para longe, como uma abelha operária levando mel.}
+      ]
+    </desc>
+    <desc id="10" openLevel="4">
+      [
+      {      ...Eu ainda ouço os ruídos de sua mandíbula e suas asas batendo.}
+      ]
+    </desc>
+    <desc id="11" openLevel="3">
+      [
+      {&lt;Abelha Operária&gt;&#13;&#10;
+      Sua aparência é claramente diferente da Abelha Rainha, além de sua cor. É capaz de alçar voo, mas só consegue planar em até 1 metro acima do chão. Não tem antenas ou olhos. Um longo apêndice que parece ser um intestino em sua traseira é arrastado pelo chão.&#13;&#10;
+      Abelhas Operárias somente mostram duas formas de comportamento: Entregar nutrientes à Rainha e proliferar. Ao encontrar um funcionário, ele o ataca usando a mandíbula para esmagar a cabeça e então prossegue a injetar uma pupa dentro do corpo de sua vítima.}
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="badMood">Quando o resultado do trabalho era Neutro, o Contador Qlifót reduzia com probabilidade mediana.</specialTip>
+      <specialTip openLevel="1" key="badMood2">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia com alta probabilidade.</specialTip>
+      <specialTip openLevel="2" key="beeComing">Quando o Contador Qlifót chegava a 0, a $0 emitia esporos por volta de todo o departamento.</specialTip>
+      <specialTip openLevel="1" key="spore">Após observar a Anormalidade, foi confirmado que os esporos ficavam anexados aos funcionários por um certo período de tempo e causavam dano VERMELHO. Além disso, funcionários infestados de esporos tiveram uma significante redução na velocidade e não podiam ser curados pelo regenerador ou por Balas Gerenciais.</specialTip>
+      <specialTip openLevel="3" key="beeing">Quando o PV de um funcionário infectado com os esporos chegava a 0, uma abelha operária gigante explodia para fora de seu corpo. A abelha operária atacava indiscriminadamente funcionários por perto. E daqueles que foram mortos, mais abelhas operárias emergiam.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <name>Abelha Operária</name>
+    <codeId>T-04-50-1</codeId>
+  </child>
+</creature>

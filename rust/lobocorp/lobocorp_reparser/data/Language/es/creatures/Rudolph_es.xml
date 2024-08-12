@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <info id="100016">
+
+    <narration action="move">
+      #0 va a entrar en la unidad de contención de $0 para comenzar la tarea.
+    </narration>
+
+    <narration action="start">
+      [
+      {Cuando suena la campana oxidada, comienza la navidad.}
+      {Con una mandíbula desplazada y una lengua sin vida, las palabras se tragan en lugar de expresarse.}
+      {Dónde está Santa para los infelices?}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Las luces de colores eran brillantes como la Navidad y oscuras como la pesadilla de todos los niños.}
+      {La costura parece rudimentaria, pero el esfuerzo que se hizo para hacerla es casi obsesivo.}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {Navidad, oh el carnaval horrible. En cada Navidad, quiero sacar las lenguas de los que cantan villancicos.}
+      {Con mi odio infinito, te doy este regalo.}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {$0 no muestra ningún signo de vida, pero se mueve. Esto puede ser debido a la energía que produce.}
+      {Deambulan sin un propósito. Quiere repartir su pila de regalos.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel ="0">F-02-49</codeNo>
+      <name openLevel="1">Rudolta</name>
+      <portrait openLevel ="1">Sprites/Unit/creature/Rudolta</portrait>
+      <riskLevel openLevel ="2">HE</riskLevel>
+      <openText>Con mi odio infinito, te doy este regalo.</openText>
+    </collection>
+
+    <desc id="1" openLevel="1">
+      [
+      { - Hay una tarjeta vieja que se atribuye.&#13;&#10;'Feliz Navidad! Papá Noel corre por el cielo nocturno para entregar regalos a los niños felices que no lloran. Rudolfo, El reno de nariz roja, ilumina una luz a través de la niebla de la noche mientras tira de un trineo lleno de regalos. Todos los niños felices del mundo merecen un regalo!'}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Mirando desde lejos, se asemeja a Papá Noel en trineo, pero después de una inspección más cercana, la Anormalidad es totalmente diferente del cuento de hadas. Al contrario del personaje popular, el trineo lo arrastra. Observamos la anormalidad desde tres puntos diferentes.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Rudolfo: Una entidad orgánica similar a un caballo con colores verde, rojo y blanco. Sus músculos no parecen moverse, pero muchos empleados informan el movimiento de sus ojos, y algunos incluso dicen que han hecho contacto visual con ellos. Hay un agujero con un diámetro de 30cm en su vientre. Empleados armados informaron posteriormente que el agujero estaba vacío.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Santa: Una misteriosa entidad orgánica transparente sobre Rudolfo. Se muestra lleno de lo que parecen ser órganos. Todos los órganos parecen funcionar normalmente.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="3">
+      [
+      {Trineo: Su tamaño es similar al de un niño. El revestimiento se parece a la piel orgánica, y hay hojas blancas adheridas en la parte inferior. Los accesorios del trineo son reemplazados por manos rígidas y cortadas. Objetos desconocidos son cuidadosamente envueltos en regalos. Muchos empleados intentaron abrir los regalos, pero fallaron. Los rumores dicen que los regalos solo se pueden abrir en Navidad.}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="4">
+      [
+      {Los tres están cosidos crudamente juntos. Dr.████████ sugirió que "Los tres pueden estar hechos de un solo cuerpo. Quien haya hecho esto, debe tener un gran odio contra la Navidad. O nunca ha visto a santa claus."}
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="comingTown">Cuando el resultado del trabajo fue normal, existe una posibilidad normal que el Contador Qlifot se reduzca.</specialTip>
+      <specialTip openLevel="1" key="comingTown2">Cuando el resultado del trabajo fue malo, el Contador Qlifot se reduce con una alta probabilidad.</specialTip>
+      <specialTip openLevel="2" key="horrorMoving">Despues de escape, $0 deambula lentamente por las instalaciones, lo que inflige daño blanco a los empleados.</specialTip>
+    </specialTipSize>
+  </observe>
+
+  <etc>
+    <!--특수 능력 발생할 때, 너프 특성 가진 직원에게 랜덤으로 뜨는 텍스트.-->
+    <param key="present1" index="0">
+      La hija menor de #0 pasaría la Navidad sola porque se ganaría la vida sola.
+    </param>
+    <param key="present2" index="1">
+      #0 consumiría docenas de píldoras en un fatídico día de Navidad.
+    </param>
+    <param key="present3" index="2">
+      #0 lloraría solo como su ser querido los dejó.
+    </param>
+    <param key="present4" index="3">
+      #0 recibiría la noticia de la muerte del ser amado bajo el árbol de Navidad espléndidamente decorado.
+    </param>
+    <param key="present5" index="4">
+      #0 sería atropellado por un camión lleno de regalos en la víspera de Navidad, y nunca podría volver a caminar.
+    </param>
+    <param key="present6" index="5">
+      El empleado #0 escucha la opinión del médico de que ha vivido una vida de tiempo limitado en Nochebuena.
+    </param>
+    <param key="present7" index="6">
+      La casa de #0 se derrumbaría bajo el peso de la nieve en el techo y ninguna sobreviviría. Todo esto sucedería unos años más tarde el día de Navidad.
+    </param>
+  </etc>
+</creature>

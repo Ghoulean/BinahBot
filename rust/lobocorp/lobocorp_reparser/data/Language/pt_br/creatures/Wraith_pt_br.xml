@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100055">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="mid1">
+      [
+      {Vários funcionários estão morrendo sob a cognição do $0.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Quanto mais tempo #0 fica, pior a situação se torna.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-03-88</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Wraith</portrait>
+      <name openLevel="1">
+        Variante de Refração Dimensional
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>Os únicos conselhos que podem ser dados é de manter a cautela e ficar atento a seus arredores.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Era um fenômeno estranho. Ele mesmo era um fenômeno por si só. Não havia nada na unidade de contenção que pudesse ser visto a olho nu.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Exatamente como aqueles que fizeram declarações similares, só porque algo não pode ser visto, não significa que não exista. A Unidade de Contenção tem XXX metros quadrados, e esse era o alcance cognitivo da Anormalidade. Os únicos conselhos que podem ser dados é de manter a cautela e ficar atento a seus arredores. Respirar se tornará impossível no alcance da Anormalidade, já que a área se tornará um vácuo. Precisamente falando, a Anormalidade por si só é o fenômeno de vácuo. }
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {&lt;Relatório da Morte do Funcionário Chomsky&gt;&#13;&#10;
+      Não havia maneira de confirmar se a Anormalidade tinha saído de sua Unidade de Contenção ou não. De repente, Chomsky parou no meio do corredor e só ficou de pé lá. O corredor estava bastante movimentado com várias pessoas passando. E é claro que muitas dessas pessoas expressaram seu descontentamento por ter parte do corredor bloqueada.&#13;&#10;
+      Então, de repente, o corpo do Chomsky subiu 3 metros no ar. Seus braços e pernas foram estranhamente esticados como se ele estivesse sendo crucificado. Se suas pernas tivessem ficado no chão, pareceria como se ele estivesse apresentando uma peça elegante ou praticando balé. Todo mundo no corredor parou para olhá-lo. Então, Chomsky começou a gritar. Ele gritou como um louco que tinha testemunhado algo horripilante. Ninguém sabia o que fazer. Alguns de nossos funcionários tentaram puxar Chomsky pra baixo por suas pernas. Nem se mexeu. Após isso, Chomsky parou de gritar. Aconteceu um breve silêncio, e Chomsky abriu a boca, tentando murmurar algo. Os dois funcionários que estavam tentando puxar Chomsky para baixo começaram a gritar. Sangue derramou de seu corpo. Seus braços e pernas foram separados, deixando somente um corpo desmembrado flutuando no ar. O mundo desabou naquele corredor e todos começaram a correr.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Como reconhecer essa Anormalidade é um problema que precisa ser discutido. Atualmente, estamos pesquisando tecnologia ultravioleta que talvez seja capaz de detectar a Anormalidade usando os olhos de um camarão, mas a eficiência até então está longe de satisfatória. Por enquanto, um bom método é ter Agentes entrando na Unidade de Contenção com um copo d'água preenchido até a metaded. Eles precisarão colocar esse copo no chão enquanto trabalham. Se o copo começar a salpicar, ameaçando cair e derramar, o funcionário deve parar de trabalhar e imediatamente sair da unidade de contenção. }
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Quando o resultado do trabalho era Ruim, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="2" key="2">Quando o trabalho demorava mais de 40 segundos para ser concluído, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="2" key="3">Nada era capaz de detectar a Anormalidade em fuga. Portanto, o gerente deve localizá-la manualmente e ordernar a supressão diretamente.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

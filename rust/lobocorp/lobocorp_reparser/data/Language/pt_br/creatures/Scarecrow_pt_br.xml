@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <info id="100050">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {Nós ainda estamos no meio de nossa jornada. Nós seguimos a estrada de tijolos amarelos para tornar nossos sonhos realidade.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {O tratamento miraculosamente deixou todos silenciosos, até mesmo aqueles que se recusaram ficar quietos após qualquer outra terapia.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {O $0 começou a perseguir cérebros espertos no lugar de assustar pássaros.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <!--level은 관찰 최대 레벨-->
+    <collection>
+      <codeNo openLevel="0">F-01-87</codeNo>
+      <name openLevel="1">Espantalho em Busca de Sabedoria</name>
+      <portrait openLevel="1">Sprites/Unit/creature/Scarecrow</portrait>
+      <riskLevel openLevel="2">HE</riskLevel>
+      <openText>E a cidade ainda permaneceu um lugar bonito onde as estradas esmeraldinas brilhavam como sempre.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Uma Anormalidade com a forma de um espantalho de palha. A palha está manchada de sangue.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {A cabeça é vazia como se alguém tivesse arrancado o que havia dentro. Ele demonstra ser agressivo com certos funcionários, tentando arrancar fora seus cérebros. Esses funcionários são aqueles que conseguiram a nota "Excelente" no teste de inteligência.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Cada cidade precisava ter suas próprias tecnologias; essa era a chave para a revigoração. Haviam várias cidades, mas entre elas, uma viu avanços em tecnologia de substituição de partes corporais. Era possível consertar ou melhorar partes do corpo que estavam quebradas ou com mal funcionamento. Ou até mesmo simplesmente indesejadas. Todos os cidadãos estavam aptos para esse tratamento. Entretanto, certos boatos circulavam. Quando uma pessoa rica procurando melhorar a própria visão se aproximava de um mendigo com pulmões debilitados sofrendo para respirar, eles iriam transplantar os olhos do mendigo na pessoa rica e então, abandonavam o corpo do mendigo em algum lugar do subúrbio, ainda com os pulmões apodrecidos. }
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {O representante da cidade tranquilizou as pessoas, jogando de lado os boatos como teoria da conspiração. Para dar fim aos boatos de uma vez, eles anunciaram que iriam selecionar um número de pessoas doentes dos subúrbios para que pudessem consertar qualquer parte do corpo que quisessem. Dos afortunados que foram escolhidos, um retornou vários dias depois. Ele tinha uma longa cicatriz na cabeça, o que fez as pessoas perguntaram como ele estava se sentindo. Mas ele somente respondeu que sua cabeça estava mais leve. Ele era um homem cheio de tristeza que costumava chorar bastante, então todos acreditavam que a cirurgia foi um sucesso.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {Porém, quando ele era perguntado sobre o que aconteceu com os outros que foram com ele, ele só sorria sem falar palavra alguma. Pouco tempo depois, até mesmo no funeral dos próprios pais, ele não mostrou emoção alguma. Tudo que ele fez após o tratamento era encarar o mundo fora da janela e falar consigo mesmo. Eventualmente, ele se enforcou na maçaneta de sua casa. Algumas pessoas pensaram que foi o tratamento que causou os problemas, mas após alguns dias, ele foi completamente esquecido. E a cidade ainda permaneceu um lugar bonito, onde as estradas esmeraldinas brilhavam como sempre. }
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Quando um Agente com o Nível 3 ou maior de Prudência terminava o trabalho, o Contador Qlifót reduzia.</specialTip>
+      <specialTip openLevel="1" key="2">Quando o resultado do trabalho era Ruim, o Contador Qlifót Reduzia.</specialTip>
+      <specialTip openLevel="2" key="3">Quando o $0 estava em fuga e matava um funcionário, ele sugava o cérebro da vítima e recuperava PV.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

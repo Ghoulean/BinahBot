@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100048">
+
+    <narration action="move">
+      #0 직원이 작업을 시작하러 $0의 방에 들어갑니다.
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0는 #0에게 어떤 말조차 건네지 않은 채 때때로 무력한 눈물만 흘립니다.},
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0는 그녀의 모든 자매들이 그렇듯 영광이었던 과거의 기억 속에 머물러 있습니다.},
+      ]
+    </narration>
+   
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-01-73</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/KnightOfDespair</portrait>
+
+      <name openLevel ="1">
+        마법소녀
+      </name>
+
+      <name openLevel ="3">
+        절망의 기사
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <openText>남은 건 닳디 닳은 기사 라는 볼품없는 긍지 하나 뿐이다.</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {믿음과 배신의 굴레를 반복하며 검은 눈물만이 감정의 전부가 된, 절망의 환상체.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {한 때 정의를 위해 수호자의 역할을 했던 과거의 영웅이다. 일평생 왕을, 국가를, 도시를, 약자를 지켜냈다. &#13;&#10;기사는 신의 법도를 지키고 용맹함과 동시에 선과 정의를 추구해야 했다. 그러나 기나긴 풍파를 겪은 후 문득 뒤를 돌아보니 뭣 하나 제대로 지킨 게 없다는 사실을 깨달았다. 진실은 많은 이들을 변화시켰다.&#13;&#10;선을 지키고자 한 어떤 이는 더는 이 세계에 악이 없다는 사실에 스스로가 악이 되어버렸고, 모두가 행복한 세상을 꿈꾸었던 이는 탐욕으로 물든 채 모든 걸 먹어 치우기 시작했다. 이들과 마찬가지로 변하지 않으리라 생각되었던 많은 것들이 변했고 사라졌다.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {기사는 울지 않는다고 누가 말했던가. 슬픔이 아닌, 절망에서부터 흐르는 눈물을 본 적이 있는가. 끊임없이 흐르는 비통함으로 한때 눈구멍이었던 건 빈 껍질이 되어버린 지가 오래다. 그 속에서 때로는 검은 다이아몬드가 재처럼 떨어진다.&#13;&#10;지키고 싶어 하는 마음은 옛날처럼 매한가지인지 갇혀버린 지금도 보호하는 행위에 끊임없이 집착한다. 남은 건 닳디 닳은 기사라는 볼품없는 긍지 하나뿐이다. 과거의 미련은 저버리지 못한 채 집념만 남아있는 영웅의 모습은 보는 이 마저 안타깝게 한다.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {만약 정의가 또 한 번 배반이 되는 순간, 수십 개의 칼날은 목적없이 떠돌게 될 것이다. 또 다시 지키지 못했다는 자괴감에, 세상에 대한 분노에, 결국 칼끝이 향하는 건 보호해 주지 못한 모든 이들.  }
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {다른 이를 구함으로써 자신을 구하고 싶었던 기사는, 이제 절망의 기사라는 불명예로 불린 채, 다른 이들과 마찬가지로 사람들의 기억 속에서 사라져갔다.}
+      ]
+    </desc>
+
+
+    <specialTipSize size="4">
+      <specialTip openLevel="1" key="1">가장 처음 좋음으로 작업을 완료한 직원은 $0의 가호를 받을 수 있다. (가호를 받은 순간부터 해당 직원을 O-01-73-1으로 명명한다.)</specialTip>
+      <specialTip openLevel="2" key="2">O-01-73-1은 제압 작업만을 진행할 수 있었다. 또한 가호의 효과로  O-01-73-1이 Red, White, Black 속성으로 받는 피해량이 절반으로 감소하였다. 그러나 Pale 속성의 경우에는 받는 피해량이 2배로 증가하였다.</specialTip>
+      <specialTip openLevel="2" key="3">가호는 O-01-73-1이 사망하거나 패닉에 빠지면 소멸하였다. 가호가 사라진 이후에는 새로운 직원에게 가호를 받게할 수 있었다.</specialTip>
+      <specialTip openLevel="1" key="4">O-01-73-1이 패닉에 빠지자 $0가 격리실에서 탈출했다. O-01-73-1이 사망한 경우에도 동일한 현상이 발생했다.</specialTip>
+    </specialTipSize>
+  </observe>
+
+</creature>

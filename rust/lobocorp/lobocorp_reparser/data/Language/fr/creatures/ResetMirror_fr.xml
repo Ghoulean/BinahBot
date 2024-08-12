@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300007">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-09-81</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/ResetMirror</portrait>
+      <name openLevel="1">
+        Miroir des Ajustements
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <openText>
+        “Mais la satisfaction n'est que temporaire.”
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Il a la forme d’un miroir sur pied, mais rien ne s’y reflète.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {La seule chose qu'il montre, ce sont les individus. Se regarder dans le miroir nous change. Les théories  sont nombreuses, comme la possibilité d'un lien avec un univers parallèle ou des pouvoirs magiques, mais rien de tout cela ne peut être confirmé.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Ceux qui se regardent dans le miroir peuvent paraître les mêmes, mais en réalité ils sont devenus des personnes totalement différentes. }
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      <!-- 여기 번역 고치기 -->
+      [
+      {Regarder dans le miroir à plusieurs reprises rongera progressivement l’humanité de la personne, jusqu’à ce qu’elle soit indiscernable d’une coquille vide. La prudence est donc de mise.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {“Hey, Brian vient juste de me passer devant sans dire un mot. Qu’est-ce-qui lui prend ?”&#13;&#10;“Oh, il a jeté un coup d’œil au miroir.”&#13;&#10;“Tu sais, il se plaignait toujours d’être né trop faible. J’imagine qu’il a enfin accepté ça, eh.”&#13;&#10;“Mais la satisfaction n'est que temporaire.”}
+      ]
+    </desc>
+    <specialTipSize size="2">
+      <specialTip openLevel="1" key="1">Ceux qui font face au $0 verront leurs statistiques réajustées aléatoirement.</specialTip>
+      <specialTip openLevel="2" key="2">Si une personne fait face au $0 plus d’une fois dans la journée, toutes ses statistiques diminueront à chaque fois qu'elle y sera confrontée.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

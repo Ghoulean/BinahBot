@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100001">
+
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+
+    <narration action="start">
+      [
+      {请注意，“$0”的观察记录目前尚不完整，所以任何事情都有可能发生。},
+      {“$0”的观察记录已经基本完成，只要稍加注意，就能顺利完成工作。},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {“$0”一看到#0就躲进了角落里。},
+      {“$0”一边退到墙边，一边观察着#0的动作。},
+      {“$0”站在角落里注视着#0的工作。},
+      {“$0”看起来很害怕，它把头转向墙角。}
+      ]
+    </narration>
+
+    <narration action="mid2">
+      [
+      {“$0”一动不动地站着，就仿佛身上燃烧的火焰一点儿也不痛。},
+      {贯穿“$0”的火柴正在剧烈地燃烧。},
+      {与火柴上疯狂燃烧的火焰不同，“$0”一动不动地站在收容单元中。}
+      {火柴燃烧着，但女孩丝毫不为所动。}
+      ]
+    </narration>
+
+    <narration action="mid3">
+      [
+      {#0正仔细检查着火柴仍未燃烧的部分。},
+      {如果火柴近乎烧光，那就会发生非常危险的事件。#0正紧张地看着“$0”。}
+      {幸运的是，火柴还能烧上一段时间。但是当它烧尽的时候...}
+      {灰烬四散，一半的火柴似乎仍未燃烧。}
+      ]
+    </narration>
+
+    <narration action="mid4">
+      [
+      {#0完成了工作，火柴上的火焰正在轻轻地摇曳着。},
+      {火焰中没有任何东西，但“$0”的眼睛闪烁着光芒，就仿佛看到了某人。},
+      {火中，空无一物。}
+      {只有火柴燃烧后的余烬散落在“$0”周围。}
+      ]
+    </narration>
+
+    <narration action="special_ability_1">
+      [
+      {Only a small portion of the match is left unburnt now.}
+      ]
+    </narration>
+
+    <narration action="special_ability_2">
+      [
+      {#0 noticed this and tried to do something, but it was too late.}
+      ]
+    </narration>
+
+    <narration action="special_ability_3">
+      [
+      {The match burned out, and the girl laughed.}
+      ]
+    </narration>
+
+    <narration action="special_ability_4">
+      [
+      {After the explosion, only a few parts of #0's body are discovered in the containment unit.}
+      ]
+    </narration>
+
+    <narration action="dead">
+      [
+      {Flames leap around, blackening the floor and all around it.}
+      {At least #0's final breath was a happy one.}
+      ]
+    </narration>
+
+
+    <narration action="panic">
+      [
+      {#0's eyes are unfocused. The fire has long been extinguished from the match, but #0 remains unresponsive to commands.}
+      {Mummering incoherently and face all scrunched up, #0 and leaves the room. No one dares to talk to #0.}
+      ]
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">F-01-02</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/matchgirl</portrait>
+
+      <name openLevel ="1">
+        焦化少女
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+      <openText>我来...找你了...你会...化为...&#13;&#10;灰烬...就和我...一样...</openText>
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {这个异想体的外貌宛如一位彻底烧焦的少女。少女身上的火焰从未熄灭，即便已经完全没有东西可供它继续燃烧。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {一根木桩般的火柴贯穿了这个异想体的身体。尽管火柴总是燃烧着，可它从未对此表露出痛苦的迹象。正因如此，部分员工推测也许火柴才是这个异想体的本体。然而，最近有目击者称，他们看到少女做出了类似哭泣的动作。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {&lt;摘录自异想体研究专家████的研究日志&gt;&#13;&#10;...那焦黑的身体象征着她支离破碎的希望...那永恒的烈焰却象征着她对爱的渴望...啊！可怜的少女一直在二者之间苦苦挣扎！&#13;&#10;&#13;&#10;操！看在我们付出了这么多的份上，你就整出这么些垃圾！？}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {&lt;员工的传闻&gt;&#13;&#10;她就像一枚定时炸弹，很难知道她是高兴还是悲伤。我们只能向上帝祷告，乞求被她炸死的永远不会是自己。她可能不会好起来，但至少我们不能让她更加难过。}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {&lt;咨询记录████&gt;&#13;&#10;员工代号M3923&#13;&#10;我从没想过那个异想体居然会逃出来。它看上去唯一能做的事就是烧光身上的火柴，正因如此我们有些粗心大意了。的确，我承认我们的反应速度有点慢...（省略）...大多数试图逃跑的异想体都会袭击它们面前的员工。可这个异想体并没有对收容单元附近的员工表现出敌意。相反地，它径直走向公司内聚集着最多人的一处办公室。要不是我们及时把它镇压在门前，今天这里一半的人就不复存在了。}
+      ]
+    </desc>
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="escape1">当工作结果为良时，“$0”的逆卡巴拉计数器有小概率在倒计时结束后减少。</specialTip>
+      <specialTip openLevel="1" key="escape2">当工作结果为差时，“$0”的逆卡巴拉计数器有大概率在倒计时结束后减少。</specialTip>
+      <specialTip openLevel="2" key="explosionMain">突破收容后，“$0”会缓慢靠近被她标记的员工，并在遇到目标的5秒之后爆炸，对当前区域造成巨量红色伤害。</specialTip>
+
+    </specialTipSize>
+  </observe>
+
+
+
+</creature>

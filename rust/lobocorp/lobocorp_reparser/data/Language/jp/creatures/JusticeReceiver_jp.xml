@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300107">
+    <narration action="move">
+      #0は、作業をするために$0の収容室に入ります。
+    </narration>
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">O-09-96</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/JusticeReceiver</portrait>
+
+      <name openLevel ="1">
+        行動矯正
+      </name>
+
+      <riskLevel openLevel ="1">
+        TETH
+      </riskLevel>
+
+
+      <openText>最終的には存在理由さえも忘れるほど、 知恵はその意味を失くしてしまう。</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {神秘的な模様が彫られた電波装置。}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {悪しき者、傲慢な者、破廉恥な者。 あらゆる不届き者を区別なく正しく矯正する。}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {しかし使用者があまりにもこの機械に頼りすぎると、 自らの思考力を失うことになる。}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+
+      [
+      {最終的には存在理由さえも忘れるほど、 知恵はその意味を失くしてしまう。}
+      ]
+    </desc>
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">$0を装着した者は正義と関わる能力値が上昇する。 ただし、慎重に関わる能力値は減少する。</specialTip>
+      <specialTip openLevel="2" key="2">着用者は30秒以内にこの装置を 返却するよう命じられた場合、 パニックに陥り異常な行動を起こしたのちに 死亡する。</specialTip>
+      <specialTip openLevel="2" key="3">$0を装着した状態で 着用者の精神力が0になった場合、 着用者はパニック状態のまま死亡する。</specialTip>
+    </specialTipSize>
+
+
+  </observe>
+</creature>

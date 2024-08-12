@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100041">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="mid1">
+      [
+      {$0, who is a very shy girl, may just give #0 a personally prepared surprise present in secret.},
+      {$0 comes from a place far far away and enjoys jolly laughter.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 really likes having friends.},
+      {She really hopes that #0 will be happy with her heartfelt gift.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Imagining the great surprise the gift will bring to #0’s face, $0 looks at them happily.},
+      {It would be wonderful if people accept this small but precious gift.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {$0’s “friend” is asleep inside her present, waiting for the receiver.},
+      {#0 has no idea what is inside the gift shaped like a cute lil’ heart.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-01-67</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/LittleWitch</portrait>
+      <name openLevel="1">
+        A Wee Witch
+      </name>
+      <name openLevel="4">
+        Laetitia
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <specialName openLevel="2">
+        Surprise Present
+      </specialName>
+      <openText>She was so sad that she had to leave her dear friends behind, so she came up with a brilliant idea!</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {&lt;i&gt;Similar to a child in size, and always maintaining a bright smile…&lt;/i&gt;&#13;&#10;A very very adoooorable little kid.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {They call me an adorable little kid because I am a small and lovely child!&#13;&#10;The kid comes from a place far far away!&#13;&#10;And when the kid meets someone she likes, she will give them a gift made all by herself.&#13;&#10;The gift's content is a secret though!}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {This is another really really important secret, but the kid has lots of talents!&#13;&#10;This girl has many friends, but they said she can't bring them here.&#13;&#10;She was so sad that she had to leave her dear friends behind, so she came up with a brilliant idea!}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {If I cover up my friends nicely and make it look like a gift, everyone will be surprised!&#13;&#10;And they'll all laugh together over my prank!&#13;&#10;Whoops, there goes the secret of the gift.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {I hope to find lots of friends here too!&#13;&#10;The kid is shy, so the gift will be given in secret!&#13;&#10;Farewells are sad, I hope we can play more! And people here don't smile!&#13;&#10;That looks so gloomy!&#13;&#10;So this little lady has made a decision! To stay here and never leave until laughter is restored to this place!&#13;&#10;I will be happy if everyone is pleased with my pranks!}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="give">When the work result was Normal, $0 gave a heartfelt gift to #0.</specialTip>
+      <specialTip openLevel="2" key="gift">When #0 was assigned to work with a different Abnormality instead of $0, a ███████ eventually burst out of their body at a certain point.</specialTip>
+      <specialTip openLevel="2" key="cancle">When the assignment was canceled before the ███████ was born, nothing strange occurred to the employee’s body.</specialTip>
+    </specialTipSize>
+  </observe>
+  <child>
+    <name>The Wee Witch's Friend</name>
+    <codeId>O-01-67-1</codeId>
+  </child>
+</creature>

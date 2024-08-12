@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id ="100045" >
+
+
+    <narration action="move">
+      #0 designado al cuarto de contencion de $0.
+    </narration>
+
+    <narration action="start">
+      [
+      {Los hermanos de $0 simplemente parpadean, como si fuera lo único que pueden hacer dentro de la Unidad de Contención.},
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {Cuando sus hermanos muestran algún signo de dolor, $0 se acercarían a ellos, arrastrando su cuerpo cansado.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">F-02-70</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/BlackSwan</portrait>
+
+      <name openLevel ="1">
+        El Sueño de un Cisne Negro
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <specialName openLevel ="2">
+   
+      </specialName>
+
+      <openText>Qué sucede cuando el cisne negro se despierta del sueño de ser un cisne blanco?</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Elijah tenía tanta familia para proveer.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {Sus padres eran pobres y siempre decían a sus hijos esto: "No tenemos nada que transmitirles, hijos, pero tienen el don de la honestidad y la diligencia. Estos regalos no se pueden ver ni te darán una gran ayuda en este instante, pero algún día te harán feliz."}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Un día, la ciudad fue cubierta por una densa niebla.&#13;&#10;La niebla gris, que se pensó primero que era un fenómeno natural, no se disipó ni siquiera después de unos días.&#10;&#10;Algunos afirmaron que les hacía sentir náuseas o que volvían a vomitar, pero la mayoría de la gente no pensaba mucho en eso. Mucha gente todavía trabajaba y pasaba sus días en la niebla.&#13;&#10;Eliya era una de esas personas. Ella heredó muchas deudas y era la única en su familia con un trabajo. Ella tenía muchos hermanos, pero sus voluntades se rompieron después de muchos fracasos.&#13;&#10;Elijah estaba cansada, pero pensó que si solo trabajaba un poco más, las cosas se resolverían igual que sus padres solían contarle y en cuentos de hadas.&#13;&#10;Al igual que ese pájaro que extendió sus alas blancas y eventualmente se convirtió en la envidia de todos.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Algunas personas abandonaron la ciudad debido a la niebla.&#13;&#10;Otros dijeron que la ciudad estaba terminado, pero Elijah no escuchó.&#13;&#10;A veces experimentaba náuseas y su cuerpo se ampolla.&#13;&#10;Ya casi. Solo un poco más y la ropa hecha de ortiga estará lista. Si se lo da a sus hermanos que ama, ese momento cálido en que su familia habló felizmente sobre el futuro se puede revivir por solo un breve segundo.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Un día después del trabajo, ella chocó con alguien que pasaba por allí. A pesar de que fue el extraño quien se estrelló contra ella mientras corría, esta persona no pudo volver a levantarse. Así que ella se ofreció a ayudarlo, extendiendo su mano.&#13;&#10;Pero él le dio una palmada en la mano y se levantó, pero solo logró unos pocos pasos antes de desplomarse de nuevo. Elijah se detuvo, porque el extraño parecía estar huyendo de algo y parecía preocupado de que Elijah le causara daño.&#13;&#10;Elijah trató de preguntar qué estaba mal, pero el extraño abrió su boca primero. El simple hecho de abrir la boca parecía laborioso, así que ella esperó pacientemente a que él hablara.&#13;&#10;Sin embargo, el desconocido no abrió la boca para hablar. En su lugar, vomitó una mezcla de sangre y baba verde.&#13;&#10;La mezcla pegajosa comenzó a brotar primero de su boca, luego de nariz, orejas y ojos. Si la baba no comenzó a derramarse por todos sus orificios, entonces Elijah podría haber tratado de ayudarlo.&#13;&#10;Ella creyó oír un fuerte rugido en la distancia. Ella comenzó a alejarse lentamente del extraño.&#13;&#10;Qué sucede cuando el cisne negro se despierta del sueño de ser un cisne blanco?&#13;&#10;Mucha gente estaba acostada en el humo. Algunos gritos, otros riendo, algunos palos blandos y otros acurrucados en la desesperación. Había restos negros, húmedos y malolientes por todo el lugar, cubiertos con huellas.&#13;&#10;Ella comenzó a buscar a sus hermanos. Su familia que necesitaba usar la ropa de ortiga para liberarse de la maldición. Sus seres queridos con los que compartió felices sueños.&#13;&#10;Ella vio a sus hermanos en la distancia.&#13;&#10;Elijah cayó de rodillas y comenzó a vomitar junto con todos los demás.&#13;&#10;El lago onduló suavemente. Como si una serie de cisnes acabara de tomar vuelo...}
+      ]
+    </desc>
+
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Cuando se determinó que los resultados del trabajo eran Malos, el contador Qlifot se redujo y la apariencia de F-02-70-4 cambia.</specialTip>
+      <specialTip openLevel="1" key="2">Cuando se determinó que los resultados del trabajo eran Normales, el contador Qlifot se redujo y la apariencia de F-02-70-5 cambia.</specialTip>
+      <specialTip openLevel="1" key="3">Cuando 5 o más empleados murieron dentro de las instalaciones, el contador Qlifot se redujo y la apariencia de F-02-70-1 cambia. Sin embargo, no reconoció la muerte de empleados que fueron eliminados con balas de ejecución.</specialTip>
+      <specialTip openLevel="1" key="4">Cuando 5 o más empleados dentro de las instalaciones quedaron sujetos a un ataque de pánico, el contador Qlifot se redujo y la apariencia de F-02-70-2 cambia.</specialTip>
+      <specialTip openLevel="1" key="5">Una vez que el escape de la Anormalidad se ha confirmado 3 veces, se redujo el cambio de apariencia del contador Qlifot y se confirmó el cambio de F-02-70-3.</specialTip>
+      <specialTip openLevel="1" key="6">&lt;ADVERTENCIA&gt; La reducción contundente del contador Qlifot también puede cambiar $0.</specialTip>
+    </specialTipSize>
+
+  </observe>
+
+  <child>
+    <name>Cisne Negro</name>
+    <codeId>F-02-70-7</codeId>
+  </child>
+
+
+</creature>

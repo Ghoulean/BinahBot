@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+              
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+
+  -->
+  <info id="100103">
+    <narration action="move">
+      #0 is on their way to $0’s Containment Unit to begin the work process.
+    </narration>
+    <narration action="start">
+      [
+      {$0 does not remember anything positive, such as the sparks of love or the joy of doing a good deed. He only reacts to dying things.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Long ago, $0’s heart was pierced by the magic bullet, which always hits its mark.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {As with all pacts made with the Devil, $0’s request will not end peacefully.}
+      ]
+    </narration>
+  </info>
+  <observe level="3">
+    <collection>
+      <codeNo openLevel="0">F-01-69 </codeNo>
+      <portrait openLevel="0">Sprites/Unit/creature/Freischutz</portrait>
+      <name openLevel="1">
+       Der Freischütz
+      </name>
+      <riskLevel openLevel="1">
+        HE
+      </riskLevel>
+      <openText>"This magical bullet can truly hit anyone, just like you say."</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {The Devil ultimately wished for despair.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {For despair wears down the mind and drains one's will to go forward. When one feels there's nothing left to go for, their soul falls down to Hell, the Devil's domain. This is why the Devil finds it more entertaining to watch people fall to despair, rather than to simply kill them. We describe it as "selling one's soul to the Devil."}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {When a marksman received a gun from the Devil, the Devil proposed a childish contract: The last bullet would puncture the head of his beloved. The moment he heard that, he sought and shot all the people he loved. Then he told the Devil, "This magical bullet can truly hit anyone just like you say."&#13;&#10;&#13;&#10;With the last bullet gone for good, the hunter traveled to numerous worlds. Sometimes he helped those in need or fought evil, but it was all done on impulse, not a gesture of goodwill or ideals. In one world, he was called a righteous hunter, while in another, he was a bloodstained gunman.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {One day, the marksman realized the Devil no longer followed him. He pondered why, then realized that his soul had already fallen to Hell from the beginning. The contract had already been fulfilled, so the Devil had left.}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {The marksman, now a devil himself, continues to pull the trigger to gather the souls of others. Just as the Devil said, the bullets will puncture anything you please. Forever. }
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">Requesting aid from $0 is permitted. $0 agreed to perform the request at the expense of 10% of our current energy.</specialTip>
+      <specialTip openLevel="1" key="2">However, the bullets that $0 fires can penetrate and damage anything. Furthermore, $0’s 7th bullet will not fire where you desire, so you must plan ahead wisely.</specialTip>
+      <specialTip openLevel="1" key="3">The Qliphoth Counter lowered when #0, whose Justice was lower than Level 3, completed work with $0.</specialTip>
+      <specialTip openLevel="1" key="4">When the work result was Normal, the Qliphoth Counter lowered with a normal probability.</specialTip>
+      <specialTip openLevel="1" key="5">When the work result was Bad, the Qliphoth Counter lowered with a high probability.</specialTip>
+      <specialTip openLevel="1" key="6">When the Qliphoth Counter hit 0, $0 willfully fired a bullet towards a random location.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

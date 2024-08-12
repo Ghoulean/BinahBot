@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100024">
+
+    <narration action="move">
+      #0 designated to $0 containment room.
+    </narration>
+<!-- 돈터치미는 관리 로그가 존재하지 않는다..-->
+    <narration action="start">
+      [
+      {빛을 오래 보지 못한 죄수처럼 쇠사슬에 묶여 있는 망치가 있습니다. }
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {망치와 쇠사슬은 분리된 존재가 아니라 그 자체로 하나의 환상체입니다.}
+      {깊숙한 지하 던전에서 존재할 것 같은 범상함이 느껴집니다.}
+      {왠지 쇠사슬이 풀리지 않은 상태가 안전해 보이는 느낌입니다.}
+      {쇠사슬은 절대 망치를 꺼낼 수 없도록 아주 강하게 옭아매어져 있습니다.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 직원은 $0 를 관리하며 이러려고 회사에 취직을 했는지 자괴감을 느낍니다.}
+      {#0 직원은 $0 에 감긴 쇠사슬에 대해 호기심을 느낍니다.},
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {$0 는 구속구가 풀릴 그 날을 기다립니다.},
+      ]
+    </narration>
+   
+  </info>
+
+  <observe level ="5">
+    <collection>
+      <codeNo openLevel ="0">O-05-47</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/DontTouchMe</portrait>
+
+      <name openLevel ="1">
+        Don't Touch Me
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <specialName openLevel ="1">
+      Oh no, Don't do that
+      </specialName>
+
+      <openText>You’ve been pressing it for numerous times and you still have something you want to know about it?</openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {A machine in shape of a box with a tempting big red button. Old scribblings are around it. They read, “Don’t push the button.”. It is not clear who wrote these scribblings but it is likely to be one of the employees who were working here for a long time ago. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {The abnormality is not hard to manage, but many employees filed their temptation to push the button which is so strong to the point it gives them insomnia. It was taken as an exaggeration at first. However, since the number of employees claiming they are suffering from this temptation was too big, solution to this problem is being worked on now.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {One of the most important aspect of defining abnormality is “free will”. This abnormality is confirmed to possess an ability and will to make anyone around it want to push the button. Thus, it is categorized as abnormality. }
+      ]
+    </desc>
+
+    <desc id="4" openLevel="2">
+      [
+      {When the button is actually pressed, things that are not supposed to happen, will happen. Disasters sweeping the area, rainbow-colored light shines down and unicorns descend from the sky. The rumor says in the end, the giant bomb underneath the facility that will destroy everything will detonate. There is no way to confirm this rumor. }
+      ]
+    </desc>
+    
+    <desc id="5" openLevel="2">
+      [
+      {Also, caution is advised for this abnormality sometimes cunningly changes its shape to be mistakenly pushed. }
+      ]
+    </desc>
+
+    <desc id="6" openLevel="2">
+      [
+      {Employee testimony&#13;&#10;When I snapped back to reality, I was just about to press that damn button. I would have if other employees did not drag me out from the situation. (The employee is back on duty again since she went through various tests and diagnosed as normal. However, we ordered her to take counseling since she seemed to feel a little bit bad for not pressing the button.)}
+      ]
+    </desc>
+
+      <specialTipSize size="5">
+      <specialTip openLevel="1" key="confessionIs">No one knows what will happen if this button is pressed.</specialTip>
+      <specialTip openLevel="2" key="confessionIsGood">No matter what happens in the room, this button should not be pressed.</specialTip>
+      <specialTip openLevel="3" key="lightening1">Stop! Don’t you pity those poor employees, manager?</specialTip>
+      <specialTip openLevel="4" key="lightening2">Oh, please, don’t touch that button.</specialTip>
+      <specialTip openLevel="5" key="lightening3">You’ve been pressing it for numerous times and you still have something you want to know about it?</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {내용 1}
+        {내용 2}
+        {내용 3}
+        <!--계속-->
+        ]
+      </desc>
+      
+      <!--선택지-->
+      <select id="1">
+        <node desc="선택지 1번" target="1" isAnswer="true" message="성공 메시지"/>
+        <node desc="선택지 2번" target="2" isAnswer="false"/>
+      </select>
+      
+      <desc id="1" select="0">
+        [
+        {내용 1}
+        {내용 2}
+        {내용 3}
+        <!--계속-->
+        ]
+      </desc>
+      
+      <desc id="2" select="0">
+        [
+        {내용 1}
+        {내용 2}
+        {내용 3}
+        <!--계속-->
+        ]
+      </desc>
+      
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {내용}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+</creature>

@@ -1,0 +1,17 @@
+[package]
+name = "lobocorp_index_builder"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+phf = { version = "0.11.2", default-features = false }
+phf_codegen = "0.11.2"
+index_analyzer = { path = "../../../index_analyzer", version = "1.0.0" }
+lobocorp_common = { path = "../../lobocorp_common", version = "1.0.0" }
+lobocorp_reparser = { path = "../../lobocorp_reparser", version = "1.0.0" }
+rust-stemmers = "1.2.0"
+serde = { version = "1.0", features = ["derive"] }
+strum = "0.26.0"
+strum_macros = "0.26.0"
+toml = "0.8.13"
+unic-langid = "0.9.5"

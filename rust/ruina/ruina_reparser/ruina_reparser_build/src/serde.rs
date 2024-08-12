@@ -12,8 +12,8 @@ pub fn get_rarity_from_str(str: &str) -> Rarity {
     }
 }
 
-pub fn get_chapter_from_str(str: &str) -> Chapter {
-    match str {
+pub fn _get_chapter_from_str(str: &str) -> Option<Chapter> {
+    Some(match str {
         "1" => Chapter::Canard,
         "2" => Chapter::UrbanMyth,
         "3" => Chapter::UrbanLegend,
@@ -21,9 +21,9 @@ pub fn get_chapter_from_str(str: &str) -> Chapter {
         "5" => Chapter::UrbanNightmare,
         "6" => Chapter::StarOfTheCity,
         "7" => Chapter::ImpuritasCivitatis,
-        "0" => Chapter::None,
+        "0" => return None,
         _ => panic!("unexpected incorrect chapter entry: {}", str),
-    }
+    })
 }
 
 pub fn serialize_option_2<T>(

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100025">
+
+    <narration action="move">
+      #0 foi designado para a Unidade de Contenção do $0.
+    </narration>
+
+    <narration action="start">
+      [
+      {Há um martelo, acorrentado como um prisioneiro que não viu a luz do sol por um longo tempo.}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {O martelo e as correntes não são separados. Eles são uma só anormalidade.}
+      {Ele dá um sentimento extraordinário como se devesse ser colocado em uma masmorra fantástica.}
+      {Ele parece seguro, já que está acorrentado.}
+      {As correntes estão prendendo o martelo firmemente para ter certeza de que ninguém poderá levantá-lo.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {#0 sente vergonha por trabalhar na corporação enquanto gerencia o $0.},
+      {#0 está com curiosidade sobre as correntes que prendem o $0.},
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {O $0 espera pelo dia que pode ser liberto dessas correntes.},
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="3">
+    <collection>
+      <codeNo openLevel ="0">O-05-48-Z </codeNo>
+      <portrait openLevel ="2">Sprites/Unit/creature/LightHammer</portrait>
+
+      <name openLevel ="1">
+        Martelo da Luz
+      </name>
+
+      <riskLevel openLevel ="1">
+        ZAYIN
+      </riskLevel>
+
+      <specialName openLevel ="2">
+         Crepúsculo Noturno
+      </specialName>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Martelo enorme enrolado com uma corrente. Normalmente, é impossível levantar o martelo já que as correntes estão o prendendo com força. Essas correntes são provavelmente partes da Anormalidade. Quando a situação adequada chegar, as correntes são soltas. Assim, é confirmado que as correntes não servem para trancar o martelo, e sim para mostrar a hora certa de usá-lo.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {“Pobre Eric. Ele era desastrado mas assíduo. Ele sempre trabalhava duro para contribuir para a companhia. Um dia, quando uma enorme fuga aconteceu, ele descobriu que as correntes do Martelo da Luz estavam mais frouxas que o normal. Eric levantou o martelo. Nada pôde pará-lo. Seus olhos estavam olhando para lugar nenhum. Chamas brancas ardiam de seu corpo. Ele não parecia sentir dor mesmo quando foi quase consumido pelas chamas. Ele finalmente acabou com a situação. Quando eu toquei no ombro dele para abraçá-lo, ele quebrou como a areia branca da praia..}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Todos o chamaram de herói, nunca pararam de elogiá-lo. Mas eu conheço o Eric. Não era a vontade dele. No momento em que ele tocou no martelo, sua alma foi devorada por ele. Eu tentei explicar como a Anormalidade sacrificou o Eric mas ninguém me escuta. Desde aquele dia, ninguém conseguiu levantar o martelo. Talvez ele está esperando por outro “caos” e outro “heroí” aparecerem.}
+      ]
+    </desc>
+
+   
+
+     <specialTipSize size="6">
+      <specialTip openLevel="0" key="peace">A câmara do $0 é inacessível quando as instalações estão em paz.</specialTip>
+      <specialTip openLevel="1" key="usable">O selo do $0 é quebrado somente em situações de emergência. </specialTip>
+      <specialTip openLevel="2" key="grab">#0 pegou o martelo quando foi para a sala do $0, que estava brilhando.</specialTip>
+      <specialTip openLevel="2" key="manypeople">Quando #0 pegou o martelo, outros seres com martelos apareceram do nada.</specialTip>
+      <specialTip openLevel="3" key="uncontrol">Um funcionário com o martelo em mãos não seguia ordens ou era machucado.</specialTip>
+      <specialTip openLevel="3" key="alldead">Quando a situação se acalmava, esses seres com martelos, incluindo #0, desapareceram.</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {Eu era o homem mais azarado do mundo.}
+        {Tudo ao meu redor só arruinava minha vida.}
+        {Mas eu não tinha poderes o suficiente para mudar esse destino.}
+        {Um certo dia, alguém me fez uma oferta.}
+        {‘Se você aceitar, todo o seu mundo irá mudar.’}
+        {Uma oferta bastante tentadora. Eu poderia me tornar algo que eu só desejava ser.}
+        ]
+      </desc>
+      
+      <!--선택지-->
+      <select id="1">
+        <node desc="Accept the offer"  target="1" isAnswer="true" message="You have succeeded to obtain final observation report on Hammer of light."/>
+      </select>
+      
+      <desc id="1" select="0">
+        [
+        {Eu aceitei a oferta e paguei o preço. }
+        {O $0 brilhou.}
+        ]
+
+      </desc>
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {O $0 é uma anormalidade tão simples.}
+        {Ele toma na mesma quantidade que te dá.}
+        {Que preço você pagou a ele?}
+        ]
+      </angela>
+    </max>
+
+  </observe>
+</creature>

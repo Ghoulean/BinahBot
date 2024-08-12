@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100053">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção do $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {Se #0 puder mostrar a própria competência, talvez assim conseguirá a atenção do $0.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {A maioria dos funcionários não sabem o verdadeiro significado do “Cuidado das Fadas”.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">F-04-83</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/Fairy</portrait>
+      <name openLevel="1">
+        Festival das Fadas
+      </name>
+      <riskLevel openLevel="1">
+        ZAYIN
+      </riskLevel>
+      <openText>
+        Tudo ficará bem enquanto você estiver sob os cuidados das fadas.
+      </openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {A Anormalidade é similar a uma fada, tendo dois pares de asas e um corpo pequeno. Elas agem em conjunto. }
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Elas usam um idioma que não podemos compreender para se comunicar umas com as outras. Alguns Agentes são seguidos por elas quando entram na Unidade de Contenção. Enquanto seguem, usam habilidades especiais para curar ferimentos daquele Agente. Todos chamam isso de "O Cuidado das Fadas".}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {As fadas protegem nossos funcionários. Se você age com frequência por meio da bondade de seu coração e é um amante da natureza, então as fadas terão prazer em cuidar de você. Tudo ficará bem enquanto você estiver sob os cuidados das fadas (Você também pode achar graça dos olhares cheios de inveja que os outros Agentes mostrarão. Não que seja importante, mas...). E se as fadas não se aproximarem de você? Então você deveria refletir na própria vida. Quando Emil e eu tivemos nossos turnos para entrar na Unidade de Contenção das fadas, elas não hesitaram em se aproximar de mim. Somente a mim, não queriam saber do Emil. (Todos vocês conhecem o Emil e sabem como ele é. Porque ontem mesmo ele se recusou em dividir o lanche dele comigo e estava agindo como se fosse o maioral.)&#13;&#10;&#13;&#10;A proteção por fadas em qualquer mundo é algo sagrado. Porém, não entre na Unidade de Contenção só para se divertir um pouco, se você tiver lido alguns livros sobre fadas, saberá que elas não gostam daqueles que tiram vantagem da gentileza delas. }
+      ]
+    </desc>
+    <desc id="4" openLevel="2">
+      <!-- 여기 번역 고치기 -->
+      [
+      {&lt;O documento a seguir é somente acessível por Agentes de Nível 4 ou maior&gt;&#13;&#10;
+      Quando Walter, que estava sob os cuidados das fadas, morreu na sala de outra Anormaliade, nós percebemos algumas anomalias. O rosto e estômago foram arrancados fora, os globos oculares e órgãos foram danificados como se algo tivesse os comido. Além disso, a Unidade de Contenção em que Walter foi encontrado era de uma Anormalidade que usava ataques psicológicos. Enquanto isso, as fadas tinham o sangue e a carne de alguém manchando toda a boca. Mas não nos importamos em examiná-las para descobrir a quem pertencia.&#13;&#10;
+      Em nosso mundo, há poucos resultados que se dão através da gentileza perfeita. Ter fadas que vivem em uma floresta e que te visitam só porque gostam de você ou porque você tem feito muitas coisas boas é somente algo que acontece em contos de fada. Mesmo nós sabendo dessa verdade, as vezes ainda somos iludidos. Como achar que o "Cuidado das Fadas" acontece por conta de todas as boas ações que fizemos ou que as fadas estão nos "favorecendo" porque há algo que nos faz mais especial que os outros Agentes.  }
+      ]
+    </desc>
+    <desc id="5" openLevel="2">
+      [
+      {      As fadas não eram nada além de monstros carnívoros, e sua "proteção" não passava do método de manter fresca a futura refeição. Quando um Agente entra em outra Unidade de Contenção, elas o devoram com medo de perder a refeição para outra coisa.&#13;&#10;
+      Porém, os Agentes estavam bastante satisfeitos pelos cuidados das fadas e vimos uma drástica redução na taxa de acidentes, assim, consideramos desnecessário contar a verdade para eles.}
+      ]
+    </desc>
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">Quando o resultado do trabalho era Neutro ou Bom, pequenas fadas apareceram ao redor do Agente.</specialTip>
+      <specialTip openLevel="2" key="2">As pequenas fadas curarão o PV do Agente por um curto período de tempo.</specialTip>
+      <specialTip openLevel="2" key="3">Se um Agente sob o cuidado das fadas é atribuído para outra Unidade de Contenção, ele automaticamente morrerá e será devorado pelas fadas.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

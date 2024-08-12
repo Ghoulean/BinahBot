@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id="100032">
+    <narration action="move">
+      #0 está a caminho da Unidade de Contenção da $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {A $0 sempre está esperando por um chamado. Ela está esperando pelo cheiro de sangue fresco.},
+      {“Me avise se você ver aquele desgraçado peludo. O preço do meu trabalho será completamente gratuito no dia que eu conseguir cortar fora a maldita cabeça daquela coisa.”},
+      {Ao que parece, a $0 é muito mais eficiente em suprimir Anormalidades que a grande maioria de nossos funcionários.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {A $0 tende a passar o dia inteiro afiando seu machado caso nada de importante aconteça.},
+      {A $0 pediu por um lugar em que pudesse praticar sua pontaria, mas o pessoal responsável rejeitou isso fortemente.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Quando a $0 entra em combate, você poderá ver numerosos ferimentos pequenos e cicatrizes largas toda vez que o capuz dela balança.},
+      {Vários de nossos funcionários imaginam como a $0 conseguiu suas cicatrizes; poucos são corajosos os suficiente para perguntar.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Tudo acabará quando ela finalmente enfrentar o lobo.},
+      {A luta já estava acontecendo por muito, muito tempo. E a aversão dela ao lobo só aumentava a cada segundo.}
+      ]
+    </narration>
+  </info>
+  <observe level="3">
+    <collection>
+      <codeNo openLevel="0">F-01-57</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/RedHood</portrait>
+      <name openLevel="1">
+        Chapeuzinho Vermelho Mercenária
+      </name>
+      <riskLevel openLevel="1">
+        WAW
+      </riskLevel>
+      <openText>“Eu vou pendurar a cabeça dele em cima da minha cama. Somente assim eu poderei acordar de manhã sem ter tido um pesadelo.”</openText>
+    </collection>
+    <desc id="1" openLevel="1">
+      [
+      {“Sou uma profissional. Se você me fizer um pedido, talvez eu vou ajudá-lo. Eu costumava custar caro, mas vou te dar uma ajudinha aqui sob uma condição. Entregue aquele desgraçado astuto para mim se você o ver. Eu vou pendurar a cabeça dele em cima da minha cama. Somente assim eu poderei acordar de manhã sem ter tido um pesadelo.”
+      ]
+    </desc>
+    <desc id="2" openLevel="2">
+      [
+      {Uma Anormalidade imponente que toma forma de uma guerreira com um notável capuz vermelho. O capuz, bastante desgastado, possui iniciais bordadas nele, ilegíveis devido ao dano que já tomou. Vários remendos podem ser vistos nele também, sugerindo que está realmente bastante desgastado.&#13;&#10;&#13;&#10;De acordo com as próprias alegações dela, ela costumava ser uma mercenária antes de vir aqui, andando por aí sem uma residência fixa. Ela não confia nos outros facilmente e possui uma enorme afeição por batalhas. Ela fica estranhamente desconfortável caso partes de seu rosto e corpo sejam expostas ou se ela se ver em um espelho. Outros sintomas de paranóia também foram observados em seu comportamento.&#13;&#10;&#13;&#10;Ela possui um desejo enorme de resolver situações de emergência quando elas acontecem. Ela chama isso de “um pedido” de algum tipo. Já que este comportamento consequentemente ajuda a gerência, a corporação recomendou a colocar em uso dependendo da situação.&#13;&#10;&#13;&#10;※ A informação a seguir é importante para funcionários de todos os níveis.&#13;&#10;Porém, quando ela se encontra com o “Grande Lobo Mau”, a situação mudará drásticamente. Ela passará por diversas transições psicológicas incluindo a despersonalização súbita e também transtorno explosivo intermitente. Esse encontro causará sérios danos colaterais, então é recomendado que seja evitado qualquer instância em que esses dois possam se encontrar.}
+      ]
+    </desc>
+    <desc id="3" openLevel="3">
+      [
+      {“Entre nós, não há vitória a ser conquistada. Tudo que eu penso é em como vou matar aquele desgraçado da maneira mais dolorosa e terrível do que da última vez. Por isso, não há brindes para levantar. Não há bolos deliciosamente assados para comer ou vinho para beber. Aos 15 anos eu já estava acostumada a afiar o machado no lugar de pegar flores.” }
+      ]
+    </desc>
+    <specialTipSize size="6">
+      <specialTip openLevel="0" key="1">Pedir para a $0 suprimir Anormalidades em fuga ou Provações que se manifestaram é um recurso bastante útil. Porém, fazer tal pedido não sai de graça.</specialTip>
+      <specialTip openLevel="1" key="2">Quando #0, que anteriormente trabalhou com F-02-58 concluiu o Processo de Trabalho com a $0, o Contador Qlifót reduziu.</specialTip>
+      <specialTip openLevel="2" key="3">O Contador Qlifót reduzia toda vez que uma Anormalidade escapava. Porém, não houve respostas quando O-02-56 escapou.</specialTip>
+      <specialTip openLevel="2" key="4">Quando F-02-58 uivou próximo a Unidade de Contenção da $0 o Contador Qlifót imediatamente caiu para 0.</specialTip>
+      <specialTip openLevel="2" key="5">A $0 ficou enraivecida e mostrou comportamentos muito mais agressivos que o normal quando encontrou-se com F-02-58.</specialTip>
+      <specialTip openLevel="2" key="6">Quando alguém suprimiu F-02-58 sem ter deixado a $0 dar o último golpe, ela começou a atacar todos ao seu redor indiscriminadamente.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

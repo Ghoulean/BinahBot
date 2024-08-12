@@ -1,6 +1,8 @@
 mod about_command;
 mod ddb;
 mod deck;
+mod discord;
+mod lc;
 mod lor;
 mod models;
 mod router;
@@ -13,16 +15,17 @@ use ed25519_dalek::{Signature, Verifier, VerifyingKey};
 use hex::FromHex;
 use http::HeaderMap;
 use lambda_http::{run, service_fn, tracing, Body, Request, Response};
+use ruina::ruina_common::game_objects::common::Chapter;
+use models::binahbot::BinahBotEnvironment;
+use models::binahbot::DiscordSecrets;
+use models::binahbot::Emojis;
+use models::discord::DiscordInteraction;
+use models::discord::DiscordInteractionValidationData;
 use router::get_response;
 use secrets::get_discord_secrets;
 use std::env;
 use std::error::Error;
 use std::ops::Deref;
-
-use crate::models::binahbot::DiscordSecrets;
-use crate::models::binahbot::Emojis;
-use crate::models::discord::DiscordInteractionMetadata;
-use models::{binahbot::BinahBotEnvironment, discord::DiscordInteraction};
 
 fluent_templates::static_loader! {
     static LOCALES = {
@@ -30,6 +33,8 @@ fluent_templates::static_loader! {
         fallback_language: "en-US",
     };
 }
+
+include!(concat!(env!("OUT_DIR"), "/out.rs"));
 
 static TIMESTAMP_HEADER: &str = "x-signature-timestamp";
 static SIGNATURE_HEADER: &str = "x-signature-ed25519";
@@ -43,7 +48,7 @@ async fn function_handler(
     let request_body: String = String::from_utf8(event.body().deref().to_vec()).unwrap();
     let request_headers: &HeaderMap = event.headers();
 
-    let event_metadata = DiscordInteractionMetadata {
+    let event_metadata = DiscordInteractionValidationData {
         timestamp: get_header(request_headers, TIMESTAMP_HEADER),
         signature: get_header(request_headers, SIGNATURE_HEADER),
         json_body: request_body.clone(),
@@ -51,6 +56,7 @@ async fn function_handler(
 
     tracing::info!("request_body={:?}", request_body);
 
+    // header validation must complete first due to `get_response` causing potential side effects
     let validate_headers_result = validate_headers(&binahbot_env.discord_secrets, &event_metadata);
     if validate_headers_result.is_err() {
         tracing::info!("Failed header validation");
@@ -63,11 +69,9 @@ async fn function_handler(
     }
 
     let discord_interaction: DiscordInteraction = serde_json::from_str(request_body.as_str())?;
-
     tracing::info!("discord_interaction={:?}", discord_interaction);
 
     let response = get_response(&discord_interaction, binahbot_env).await?;
-
     tracing::info!("Returning response={:?}", response);
 
     let resp = Response::builder()
@@ -102,20 +106,39 @@ async fn main() -> Result<(), lambda_http::Error> {
         discord_client_id: env::var("CLIENT_ID").expect("no CLIENT_ID"),
         s3_bucket_name: env::var("S3_BUCKET_NAME").expect("no S3_BUCKET_NAME"),
         emojis: Emojis {
-            slash_emoji_id: env::var("SLASH_EMOJI_ID").ok(),
-            pierce_emoji_id: env::var("PIERCE_EMOJI_ID").ok(),
-            blunt_emoji_id: env::var("BLUNT_EMOJI_ID").ok(),
-            block_emoji_id: env::var("BLOCK_EMOJI_ID").ok(),
-            evade_emoji_id: env::var("EVADE_EMOJI_ID").ok(),
-            c_slash_emoji_id: env::var("C_SLASH_EMOJI_ID").ok(),
-            c_pierce_emoji_id: env::var("C_PIERCE_EMOJI_ID").ok(),
-            c_blunt_emoji_id: env::var("C_BLUNT_EMOJI_ID").ok(),
-            c_block_emoji_id: env::var("C_BLOCK_EMOJI_ID").ok(),
-            c_evade_emoji_id: env::var("C_EVADE_EMOJI_ID").ok(),
+            slash: env::var("SLASH_EMOJI_ID").ok(),
+            pierce: env::var("PIERCE_EMOJI_ID").ok(),
+            blunt: env::var("BLUNT_EMOJI_ID").ok(),
+            block: env::var("BLOCK_EMOJI_ID").ok(),
+            evade: env::var("EVADE_EMOJI_ID").ok(),
+            c_slash: env::var("C_SLASH_EMOJI_ID").ok(),
+            c_pierce: env::var("C_PIERCE_EMOJI_ID").ok(),
+            c_blunt: env::var("C_BLUNT_EMOJI_ID").ok(),
+            c_block: env::var("C_BLOCK_EMOJI_ID").ok(),
+            c_evade: env::var("C_EVADE_EMOJI_ID").ok(),
+            instinct: env::var("INSTINCT_EMOJI_ID").ok(),
+            insight: env::var("INSIGHT_EMOJI_ID").ok(),
+            attachment: env::var("ATTACHMENT_EMOJI_ID").ok(),
+            repression: env::var("REPRESSION_EMOJI_ID").ok(),
+            agent: env::var("AGENT_EMOJI_ID").ok(),
+            red_damage: env::var("RED_DAMAGE_EMOJI_ID").ok(),
+            white_damage: env::var("WHITE_DAMAGE_EMOJI_ID").ok(),
+            black_damage: env::var("BLACK_DAMAGE_EMOJI_ID").ok(),
+            pale_damage: env::var("PALE_DAMAGE_EMOJI_ID").ok(),
+            good_mood: env::var("GOOD_MOOD_EMOJI_ID").ok(),
+            normal_mood: env::var("NORMAL_MOOD_EMOJI_ID").ok(),
+            bad_mood: env::var("BAD_MOOD_EMOJI_ID").ok(),
+            risk_zayin: env::var("RISK_ZAYIN_EMOJI_ID").ok(),
+            risk_teth: env::var("RISK_TETH_EMOJI_ID").ok(),
+            risk_he: env::var("RISK_HE_EMOJI_ID").ok(),
+            risk_waw: env::var("RISK_WAW_EMOJI_ID").ok(),
+            risk_aleph: env::var("RISK_ALEPH_EMOJI_ID").ok(),
         },
         locales: &LOCALES,
         ddb_table_name: env::var("DECK_REPOSITORY_NAME").expect("no DECK_REPOSITORY_NAME"),
+        ddb_interaction_ttl_table_name: env::var("INTERACTION_TTL_NAME").expect("no INTERACTION_TTL_NAME"),
         thumbnail_lambda_name: env::var("THUMBNAIL_LAMBDA_ARN").expect("no THUMBNAIL_LAMBDA_ARN"),
+        spoiler_config: &SPOILER_CONFIG,
         ddb_client: Some(ddb),
         lambda_client: Some(lambda),
         reqwest_client: Some(http)
@@ -140,7 +163,7 @@ fn get_header(header_map: &HeaderMap, header_key: &str) -> String {
 
 fn validate_headers(
     discord_secrets: &DiscordSecrets,
-    metadata: &DiscordInteractionMetadata,
+    metadata: &DiscordInteractionValidationData,
 ) -> Result<(), Box<dyn Error + Send + Sync>> {
     let public_key_bytes = <[u8; 32]>::from_hex(&discord_secrets.public_key)?;
     let public_key = VerifyingKey::from_bytes(&public_key_bytes)?;
@@ -160,6 +183,7 @@ pub mod test_utils {
     use crate::models::binahbot::DiscordSecrets;
     use crate::models::binahbot::Emojis;
     use crate::LOCALES;
+    use crate::SPOILER_CONFIG;
 
     pub fn build_mocked_binahbot_env() -> BinahBotEnvironment {
         BinahBotEnvironment {
@@ -172,23 +196,42 @@ pub mod test_utils {
             discord_client_id: "id".to_string(),
             s3_bucket_name: "bucket_name".to_string(),
             emojis: Emojis {
-                slash_emoji_id: None,
-                pierce_emoji_id: None,
-                blunt_emoji_id: None,
-                block_emoji_id: None,
-                evade_emoji_id: None,
-                c_slash_emoji_id: None,
-                c_pierce_emoji_id: None,
-                c_blunt_emoji_id: None,
-                c_block_emoji_id: None,
-                c_evade_emoji_id: None,
+                slash: None,
+                pierce: None,
+                blunt: None,
+                block: None,
+                evade: None,
+                c_slash: None,
+                c_pierce: None,
+                c_blunt: None,
+                c_block: None,
+                c_evade: None,
+                instinct: None,
+                insight: None,
+                attachment: None,
+                repression: None,
+                agent: None,
+                red_damage: None,
+                white_damage: None,
+                black_damage: None,
+                pale_damage: None,
+                good_mood: None,
+                normal_mood: None,
+                bad_mood: None,
+                risk_zayin: None,
+                risk_teth: None,
+                risk_he: None,
+                risk_waw: None,
+                risk_aleph: None,
             },
             locales: &LOCALES,
             ddb_table_name: "table_name".to_string(),
+            ddb_interaction_ttl_table_name: "interaction_ttl_table_name".to_string(),
             thumbnail_lambda_name: "thumb_lambda_name".to_string(),
+            spoiler_config: &SPOILER_CONFIG,
             ddb_client: None,
             lambda_client: None,
-            reqwest_client: None
+            reqwest_client: None,
         }
     }
 }

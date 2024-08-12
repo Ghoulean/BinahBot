@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="300006">
+
+    <narration action="move">
+      #0 designado a la sala de contención de $0 para el trabajo.
+    </narration>
+
+  </info>
+
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">T-09-82</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/Shelter</portrait>
+
+      <name openLevel ="1">
+        Refugio del 27 de marzo
+      </name>
+
+      <riskLevel openLevel ="1">
+        HE
+      </riskLevel>
+      <openText>
+        Se convierte literalmente, "El lugar más seguro en la Tierra."
+      </openText>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Un refugio que protege completamente del mundo exterior, incluida la luz.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {El refugio aún recuerda aquel día.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {La compañía P quería construir el lugar más seguro en la Tierra. Como tal, el interior albergaba una gran cantidad de suministros de larga duración, lo que permitiría a cualquier persona que se quedara adentro sobrevivir por un período de tiempo muy largo.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Gracias al refugio, los refugiados seleccionados fueron protegidos del océano de gritos y derramamiento de sangre.}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="4">
+      [
+      {Pero el refugio, aunque está perfectamente seguro por dentro, altera la percepción de que el exterior es aún más desesperanzador. Se convierte literalmente, "El lugar más seguro en la Tierra."}
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="1" key="1">El sujeto que ingresa al $0 se vuelve inmune a todo tipo de daño. (Sin embargo, el efecto no se aplica al daño causado por O-09-91.) Además, su PS y SM sanarán lentamente desde el momento en que ingresen al $0.</specialTip>
+      <specialTip openLevel="2" key="2">Si el sujeto ingresa el $0 mientras está siendo perseguido, será indetectable para el perseguidor.</specialTip>
+      <specialTip openLevel="3" key="3">Si un sujeto permanece dentro del $0 por 30 segundos o más, el contador Qlifot de cada anormalídad dentro de la instalación se convertirá en 0. Tal fenómeno ocurrirá repetidamente alrededor de otras unidades de contención hasta que el sujeto abandone el $0.</specialTip>
+    </specialTipSize>
+
+
+
+  </observe>
+</creature>

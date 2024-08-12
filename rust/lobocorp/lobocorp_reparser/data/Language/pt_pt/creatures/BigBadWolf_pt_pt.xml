@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+
+    <feeling max="100" downProb="0.44" downValue="1">
+      <section feelingValue="50" state="good" energy="0.5"/>
+      <section feelingValue="30" state="normal" energy="0.3"/>
+      <section feelingValue="0" state="bad" energy="-1.3"/>
+    </feeling>
+  -->
+  <info id ="100033">
+    <narration action="move">
+      #0 está a dirigir-se à unidade de contenção de $0 para realizar o trabalho.
+    </narration>
+    <narration action="start">
+      [
+      {“#0, #0, tu por acaso sabes se há um porquinho gordinho neste lugar? Oh, não é nada. Ele é meu amigo. Eu só quero ver como ele está agora.”},
+      {“#0, podes abrir a porta, por favor? Eu não vou magoar ninguém, eu só estou com um pouquinho de fome.”}
+      {“#0, eu vou dar-te uma coisa muito boa se deixares-me sair daqui!”}
+      {“Eu sou o Lobo Mau. Eu vou comer-vos a todos e sair deste lugar!”}
+      {“#0, eu vou contar-te isto apenas a ti. Se alguma vez construires uma casa, fa-la de tijolos.”}
+      ]
+    </narration>
+
+    <narration action="mid1">
+      [
+      {$0 lembra-se vividamente os momentos em que teve a sua barriga aberta e as suas entranhas espalhadas.},
+      {$0 gosta de carne. Ele costumava estar sempre com fome, agora ele quer estar sempre cheio.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {$0 sobre de indigestão crónica. A origem desse problema aconteceu há muito, muito tempo atrás...},
+      {Segundo empregados que estiveram dentro da barriga d'$0; É um lugar escuro, vazio e solitário.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {“Eu tenho dentes grandes.”},
+      {“Eu posso soprar esta sala embora só com um sopro!”}
+      {“Abre a porta, minha doçura. Eu trouxe-te presentes da floresta.”}
+      ]
+    </narration>
+  </info>
+  <observe level ="4">
+    <collection>
+      <codeNo openLevel ="0">F-02-58</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/BigBadWolf</portrait>
+      <name openLevel ="1">
+        O Lobo (provavelmente) Mau
+      </name>
+      <name openLevel="3">
+        O Lobo (certamente) Mau
+      </name>
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+      <openText>Mas isso também não importava para ele. Ele estava "destinado" a ser um lobo mau.</openText>
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {Um lobo cheio de ferimentos e pouco pelo. Ele é bípede e capaz de se comunicar até um certo ponto. Ele está sempre a tentar devorar empregados e fugir. Esses problemas são previsíveis já que ele mostra sinais óbvios no seu comportamento de que ele vai tomar tais ações, o que ajuda na gerência desta Anormalidade.}
+      ]
+    </desc>
+
+    <desc id="2" openLevel="1">
+      [
+      {O acidente que aconteceu no dia X de XX alertou os empregados para que tivessem mais cuidado. A situação ficou fora de controlo quando a F-01-57 e $0 se encontraram. Não permita que eles entrem em contacto a todo custo. Considerando os danos potenciais, é melhor usar alguns empregados como isca humana para os distrair do que deixá-los encontrarem-se.}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="2">
+      [
+      {Ele devorou carne pela primeira vez há muito tempo atrás, o seu sabor era delicioso. Pelo canto do olho ele viu um pedaço de pano vermelho familiar do lado de fora de um armário. Ele poderia já o tinha visto antes, ou talvez não, não lhe fazia diferença. Desde daquele dia, não devorar outras criaturas tornou-se algo extremamente difícil. Mas isso também não importava para ele. Ele estava "destinado" a ser um lobo mau.}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="3">
+      [
+      {Existem muitas histórias neste mundo. Mas nenhuma delas é tão nojenta quanto a história do lobo. Lobos nascem com pecado. Eles não têm nomes. As pessoas chamam-lhes de "Lobo Mau". Todos os lobos crescem e tornam-se ferozes monstros peludos gigantes. Lobos não devem comer outros animais mesmo que eles estejam com fome. Lobos não devem passar da linha quando fazem coisas más. Lobos devem ser punidos. Lobos devem ser exemplos. Lobos não devem fazer amigos……(Omitido)}
+      ]
+    </desc>
+
+
+    <specialTipSize size="6">
+      <specialTip openLevel="1" key="1">#0 anteriormente trabalhou com F-01-57, e quando completou o trabalho n' $0 o Qliphoth counter diminuiu. E $0 devorou #0.</specialTip>
+      <specialTip openLevel="2" key="2">Quando o resultado do trabalho foi Mau, o Qliphoth counter diminuiu. E o empregado foi devorado pelo $0.</specialTip>
+      <specialTip openLevel="2" key="3">Quando um empregado terminou o trabalho de Instinto quando $0 estava cheio, $0 vomitou todos os empregados que tinham sido devorados.</specialTip>
+      <specialTip openLevel="3" key="4">O Qliphoth counter diminuiu quando um empregado que sangrava por causa do ataque de F-01-57 entrou no corredor da unidade de contenção d' $0.</specialTip>
+      <specialTip openLevel="3" key="5">Quando F-01-57 entrou no corredor da unidade de contenção d' $0, o Qliphoth counter foi a 0.</specialTip>
+      <specialTip openLevel="4" key="6">Alguns empregados reportaram que eles ouviram as vozes de empregados dentro do estômago d'$0. Eles tinham de ser resgatados através da supressão d' $0 que se encontra em fuga. Isto talvez seja possível através de um contrato com F-01-57.</specialTip>
+    </specialTipSize>
+
+   
+
+  </observe>
+</creature>

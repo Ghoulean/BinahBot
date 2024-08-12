@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<root>
+<!--
+  Sefira Index : 세피라 인덱스
+  1 : 말쿠트 (Malkut)
+  2 : 네짜흐 (Netzach)
+  3 : 호드 (Hod)
+  4 : 예소드 (Yesod)
+  5 : 티페리트1 (Tiphereth1)
+  6 : 티페리트2 (Tiphereth2)
+  7 : 게부라 (Geburah)
+  8 : 헤세드 (Chesed)
+  9 : 비나 (Binah)
+  10: 호크마 (Hokma)
+  11:
+  12:
+
+  Type Num
+  0 : 직원 패닉
+  1 : 직원 사망
+  2 : 환상체 탈출
+  3 : 직원 전멸
+  
+  Item ID : 구분용 인덱스 (1~2 : 보통 상태, 3~4 : 보스(boss)전 이후)
+  Item Desc : 대사
+  
+  Variable
+  #0 : Agent
+  $0 : Creature
+-->
+  
+  <!-- 말쿠트 -->
+  <Sefira Index="1">
+    <Type Num="0">
+      <Item ID="1" Desc ="Quản lý! #0 đã hóa điên, ngài phải xử lý nhanh!"/>
+      <Item ID="2" Desc ="#0‘s tinh thần yếu hơn tôi nghĩ, xin hãy xử lý nhanh!"/>
+      <Item ID="3" Desc="Quản lý, xin hãy phục hồi sự hóa điên của #0 nhanh."/>
+      <Item ID="4" Desc="Có lẽ #0 không phải là người duy nhất đang hóa điên, thưa quản lý."/>
+    </Type>
+    <Type Num="1">
+      <Item ID="1" Desc ="#0 is no longer moving. We should improve the combined training program!"/>
+      <Item ID="2" Desc ="#0 is dead, but you, as a quản lý, must complete your duty!"/>
+      <Item ID="3" Desc="#0 isn’t moving anymore. I’m sure their death wasn’t in vain."/>
+      <Item ID="4" Desc="#0 is dead but I hope you finish your day, Quản lý."/>
+    </Type>
+    <Type Num="2">
+      <Item ID="1" Desc ="$0 has escaped the Containment Facility. What are your orders? "/>
+      <Item ID="2" Desc ="Quản lý, $0 has escaped. Can you send a response team?"/>
+      <Item ID="3" Desc="This place will become more peaceful if you confirm that Abnormality $0 has left the Containment Facility."/>
+      <Item ID="4" Desc="$0 has escaped. Everyone, be careful."/>
+    </Type>
+    <Type Num="3">
+      <Item ID="1" Desc ="The team has been wiped out. Did I overestimate you?"/>
+      <Item ID="2" Desc ="The Control Team has been annihilated. Did you really do your best?"/>
+      <Item ID="3" Desc="All the employees in my department died, Quản lý. I’m sure everyone did their best."/>
+      <Item ID="4" Desc="The Control Team has been annihilated."/>
+    </Type>
+  </Sefira>
+
+  <!-- 네짜흐 -->
+  <Sefira Index="2">
+    <Type Num="0">
+      <Item ID="1" Desc ="Ah, Quản lý? #0 from the Security Team has gone nuts, can you check it out?"/>
+      <Item ID="2" Desc ="I think #0 from the Security Team is unstable. Please pay attention to the employee, although it could get worse anytime soon."/>
+      <Item ID="3" Desc="Quản lý, the mental condition of #0 from the Security Team is not well. Please go and confirm."/>
+      <Item ID="4" Desc="Please check on #0 even if anything goes wrong again."/>
+    </Type>
+    <Type Num="1">
+      <Item ID="1" Desc ="#0 is dead... Looks like the Security Team is not in control after all..."/>
+      <Item ID="2" Desc ="#0 from the Security Team has died... The daily life of survival is over. "/>
+      <Item ID="3" Desc="#0 is dead but I’m thinking that you should not give up, Quản lý."/>
+      <Item ID="4" Desc="I think #0 wanted to stay in this world more than me."/>
+    </Type>
+    <Type Num="2">
+      <Item ID="1" Desc ="Urgent! $0 has escaped. We need to immediately suppress it."/>
+      <Item ID="2" Desc ="$0 has escaped. I keep feeling more and more hopeless."/>
+      <Item ID="3" Desc="Please show concern for Abnormality $0‘s escape. You know what kind of disaster it could lead to, Quản lý."/>
+      <Item ID="4" Desc="$0 has escaped. Please show effort so not all hope is lost."/>
+    </Type>
+    <Type Num="3">
+      <Item ID="1" Desc ="The Security Team has been annihilated. If you have anything to say, I can listen."/>
+      <Item ID="2" Desc ="My team has been wiped out. I see it often, but it always makes me feel helpless."/>
+      <Item ID="3" Desc="All employees from the Security Team are dead. ...I did see you try, Quản lý."/>
+      <Item ID="4" Desc="All employees from my department are dead.. I can never get used to this."/>
+    </Type>
+  </Sefira>
+
+  <!-- 호드 -->
+  <Sefira Index="3">
+    <Type Num="0">
+      <Item ID="1" Desc ="Uh... Quản lý? #0 from the Training Team is acting weird! Please pay close attention!"/>
+      <Item ID="2" Desc ="Quản lý, #0 looks pretty fragile. I hope the employee recovers soon..."/>
+      <Item ID="3" Desc="Quản lý, Looks like #0 from our Training Team is in a panic. "/>
+      <Item ID="4" Desc="The mental state of #0 looks very unstable. Please make sure it doesn’t get any worse."/>
+    </Type>
+    <Type Num="1">
+      <Item ID="1" Desc ="#0 has died... I saw the employee’s desperate expression... Did you see it as well?"/>
+      <Item ID="2" Desc ="Quản lý, #0 has died... I should have worked harder..."/>
+      <Item ID="3" Desc="#0 is dead. I’m sure you’re feeling guilty but don’t give up."/>
+      <Item ID="4" Desc="Quản lý, #0 is dead. You and I tried hard but we failed..."/>
+    </Type>
+    <Type Num="2">
+      <Item ID="1" Desc ="Quản lý! Please check $0's location! Many will get hurt!"/>
+      <Item ID="2" Desc ="$0 has escaped, please suppress it right now!"/>
+      <Item ID="3" Desc="Quản lý, if you don’t suppress escaped Abnormality $0, many employees might get hurt."/>
+      <Item ID="4" Desc="Please suppress Abnormality $0."/>
+    </Type>
+    <Type Num="3">
+      <Item ID="1" Desc ="All of them are dead? That can’t be true... All my efforts..."/>
+      <Item ID="2" Desc =".....I couldn't help them... What should I do..."/>
+      <Item ID="3" Desc="All employees from my department are dead..."/>
+      <Item ID="4" Desc="...I’m going to continue to try hard... I won’t give up even if this continues..."/>
+    </Type>
+  </Sefira>
+
+  <!-- 예소드 -->
+  <Sefira Index="4">
+    <Type Num="0">
+      <Item ID="1" Desc ="Quản lý, #0 has gone crazy due to a rapid increase of mental corruption. Please check the situation with haste before it leads to more problems."/>
+      <Item ID="2" Desc ="#0 has panicked due to excessive stress. Please suppress the employee for the sake of others."/>
+      <Item ID="3" Desc="Quản lý, please check before #0‘s abnormal mental state causes another accident."/>
+      <Item ID="4" Desc="#0 went crazy due to too much stress. Please hurry, there might be still some time."/>
+    </Type>   
+    <Type Num="1">
+      <Item ID="1" Desc ="#0 from the Information Team is dead. Quản lý, please pay more attention."/>
+      <Item ID="2" Desc ="#0 has died because of your incompetence. Nothing can compensate the employee's death. "/>
+      <Item ID="3" Desc="Death of #0 from the Information Team has been confirmed."/>
+      <Item ID="4" Desc="#0 is dead. It’s unfortunate but this place isn’t perfect."/>
+    </Type>
+    <Type Num="2">
+      <Item ID="1" Desc ="$0 has escaped the Containment Facility. We must contain the situation as soon as possible."/>
+      <Item ID="2" Desc ="Are you aware of $0‘s escape? If not, your ability as a Quản lý should be questioned."/>
+      <Item ID="3" Desc="$0 has escaped from the Containment Facility. Please suppress it ASAP as always."/>
+      <Item ID="4" Desc="$0 has escaped from the Containment Facility. Let’s figure out how to overcome this situation."/>
+    </Type>
+    <Type Num="3">
+      <Item ID="1" Desc ="The Information Team has been wiped out, requesting reinforcements."/>
+      <Item ID="2" Desc ="The Information Team has been annihilated due to your poor judgement."/>
+      <Item ID="3" Desc="All employees from the Information Team are dead. "/>
+      <Item ID="4" Desc="Reinforcements from another department is required. All employees from the Information Team are dead."/>
+    </Type>
+  </Sefira>
+
+  <!-- 티페리트 -->
+  <Sefira Index="5">
+    <Type Num="0">
+      <Item ID="1" Desc ="Are you doing your job? Can’t you see #0‘s mental corruption is high?"/>
+      <Item ID="2" Desc ="#0 does not look good. You still have time to salvage that employee if you pay attention right now."/>
+      <Item ID="3" Desc="Mental corruption level of #0 in my department has decreased."/>
+      <Item ID="4" Desc="#0 does not look good. You still have time to salvage that employee if you pay attention right now."/>
+    </Type>
+    <Type Num="1">
+      <Item ID="1" Desc ="I just thought you were worse than the upper Sephirahs. You could have prevented the death of #0 if you paid more attention."/>
+      <Item ID="2" Desc ="#0 from the Central Team has died. Seeing such incidents makes me so sad."/>
+      <Item ID="3" Desc="#0 has died. Cheer up. We are still expecting a lot from you."/>
+      <Item ID="4" Desc="#0 from the Central Team has died. Seeing such incidents makes me so sad."/>
+    </Type>
+    <Type Num="2">
+      <Item ID="1" Desc ="Your predecessors managed the Abnormalities way better than you! $0 is on the loose!"/>
+      <Item ID="2" Desc ="$0 has escaped the Containment Facility. You'd better suppress it before it wreaks havoc."/>
+      <Item ID="3" Desc="$0 has escaped. I believe you can do better than the previous managers."/>
+      <Item ID="4" Desc="$0 has escaped the Containment unit. We better go suppress it before the situation gets worse."/>    
+    </Type>
+    <Type Num="3">
+      <Item ID="1" Desc ="Maybe I should have been the Quản lý... the Central Team is no more. "/>
+      <Item ID="2" Desc ="The whole team is gone. I hope you did your best."/>
+      <Item ID="3" Desc="The entire Central Team has been annihilated, but it's too soon to despair. I’ve been through worst."/>
+      <Item ID="4" Desc="The whole team is gone. I hope you did your best."/>
+    </Type>
+  </Sefira>
+  
+  <!--티페리트2 (임시)-->
+  <Sefira Index="6">
+    <Type Num="0">
+      <Item ID="1" Desc ="are you doing your job? Can’t you see #0‘s mental corruption is high?"/>
+      <Item ID="2" Desc ="#0 does not look good. You still have time to salvage that employee."/>
+      <Item ID="3" Desc="Mental contamination level of employee #0 in my department has decreased."/>
+      <Item ID="4" Desc="Employee #0‘s condition doesn’t look good, go and take care of him."/>
+    </Type>
+    <Type Num="1">
+      <Item ID="1" Desc ="I just thought you were worse than the upper Sephirahs. You could have prevented the death of #0 if you paid more attention."/>
+      <Item ID="2" Desc ="#0 from the Central Team has died. Seeing such incidents makes me so sad."/>
+      <Item ID="3" Desc="Employee #0 has died. Cheer up? We are still expecting a lot from you."/>
+      <Item ID="4" Desc="Employee #0 from the Central Team has died. It fills me with despair whenever these situations occur."/>
+    </Type>
+    <Type Num="2">
+      <Item ID="1" Desc ="Your predecessors managed the Abnormalities way better than you! $0 is on the loose!"/>
+      <Item ID="2" Desc ="$0 has escaped. You'd better contain it before it wreaks havoc."/>
+      <Item ID="3" Desc="$0 has escaped. I believe you can do better than the previous Managers."/>
+      <Item ID="4" Desc="$0 has escaped the Containment Unit. We better go suppress it before the situation gets worse."/>
+    </Type>
+    <Type Num="3">
+      <Item ID="1" Desc ="Maybe I should have been the Quản lý... the Central Team is no more."/>
+      <Item ID="2" Desc ="The whole team is gone. I hope you did your best."/>
+      <Item ID="3" Desc="The entire Central Team has been annihilated, but I won’t give up. I’ve been through worst."/>
+      <Item ID="4" Desc="The whole Central Team has died. Can I say you tried your best?"/>
+    </Type>
+  </Sefira>
+
+  <!--게부라 (임시)-->
+  <Sefira Index="7">
+    <Type Num="0">
+      <Item ID="1" Desc ="Doesn’t #0's condition look a bit bad? "/>
+      <Item ID="2" Desc ="#0 has gone mad. I see there was a coward in our department."/>
+      <Item ID="3" Desc="#0 must be having mental problems. Please take a look."/>
+      <Item ID="4" Desc="#0 went crazy. I'm sure that employee fought till the end."/>
+    </Type>
+    <Type Num="1">
+      <Item ID="1" Desc ="#0 has died, but was a valiant employee.  "/>
+      <Item ID="2" Desc ="#0 is dead. Ready for revenge?"/>
+      <Item ID="3" Desc="#0 has died. That employee was brave until the end."/>
+      <Item ID="4" Desc="#0 is dead. Don’t get too upset by this."/>
+    </Type>
+    <Type Num="2">
+      <Item ID="1" Desc ="It’s our time now. $0 has escaped. Time to teach it a lesson."/>
+      <Item ID="2" Desc ="You ready, Quản lý? Time to suppress $0. "/>
+      <Item ID="3" Desc="$0 has escaped!... Don’t panic, let’s just take it easy."/>
+      <Item ID="4" Desc="Quản lý, tell me when you’re ready. You know, for the suppression of Abnormality $0. I'll be waiting."/>
+    </Type>
+    <Type Num="3">
+      <Item ID="1" Desc ="Our employees have been wiped out; a noble death. Tragic, but I believe they’ve tried their best."/>
+      <Item ID="2" Desc ="The employees are all dead. Never forget what happened here today. Next time, show no mercy. "/>
+      <Item ID="3" Desc="All the employees in my department have died. What noble deaths."/>
+      <Item ID="4" Desc="The whole department was annihilated. Remember their stories. "/>
+    </Type>
+  </Sefira>
+
+  <!--헤세드 (임시)-->
+  <Sefira Index="8">
+    <Type Num="0">
+      <Item ID="1" Desc ="Really, Quản lý? Do I really have to tell you that #0 has gone mad?"/>
+      <Item ID="2" Desc ="#0 has lost it. Please pay attention."/>
+      <Item ID="3" Desc="Quản lý, #0 is showing signs of insanity."/>
+      <Item ID="4" Desc="#0 seems to be suffering a mental break. Quản lý, care is needed."/>
+    </Type>
+    <Type Num="1">
+      <Item ID="1" Desc ="#0 is dead, are you following this?"/>
+      <Item ID="2" Desc ="#0 has died... I want to get another cup of coffee. "/>
+      <Item ID="3" Desc="#0 has died. Time to grab some coffee, I'll be back soon, Quản lý."/>
+      <Item ID="4" Desc="#0 has died. Let’s be more careful next time. "/>
+    </Type>
+    <Type Num="2">
+      <Item ID="1" Desc ="Quản lý, Abnormality $0 is on the loose. Horrible things will happen if you don’t suppress it soon."/>
+      <Item ID="2" Desc ="Are you sleeping, Quản lý? Abnormality $0 has broken out of the Containment Facility.  "/>
+      <Item ID="3" Desc="Quản lý, Abnormality $0 is on the loose. Horrible things will happen if you don’t suppress it soon."/>
+      <Item ID="4" Desc="Hey, Quản lý? $0 has escaped from the Containment Facility. Suppress it as soon as possible before the damage gets worse."/>
+    </Type>
+    <Type Num="3">
+      <Item ID="1" Desc ="All my competent employees are dead. How are you going to compensate me for all of this? "/>
+      <Item ID="2" Desc ="Hey, how did you become Quản lý in the first place? They’re all dead. It’s over." />
+      <Item ID="3" Desc="All of my employees have died. I prepared myself for their deaths, but it still leaves a bad taste."/>
+      <Item ID="4" Desc="I know you tried your best, Quản lý."/>
+    </Type>
+  </Sefira>
+
+  <!-- 비나(Binah) -->
+  <Sefira Index="9">
+    <Type Num="0">
+      <Item ID="1" Desc="#0‘s mind is wandering in dreams."/>
+      <Item ID="2" Desc="#0‘s boundary has crumbled. This employee won’t return easily."/>
+    </Type>
+    <Type Num="1">
+      <Item ID="1" Desc="I can hear the sound of #0‘s life ending."/>
+      <Item ID="2" Desc="#0‘s early demise will become one of many graves here."/>
+    </Type>
+    <Type Num="2">
+      <Item ID="1" Desc="$0 has escaped from the containment unit and is wandering around. I might see something interesting."/>
+      <Item ID="2" Desc="Abnormality $0 is out of the containment unit. Maybe it was too small to hold it?"/>
+    </Type>
+    <Type Num="3">
+      <Item ID="1" Desc="It’s quiet. No one is left."/>
+      <Item ID="2" Desc="After the last breath, only silence remains."/>
+    </Type>
+  </Sefira>
+
+  <!-- 호크마(Chokhmah - hokma) -->
+  <Sefira Index="10">
+    <Type Num="0">
+      <Item ID="1" Desc="#0‘s mental state looks unstable."/>
+      <Item ID="2" Desc="#0 is wandering around, looking to regain sanity."/>
+    </Type>
+    <Type Num="1">
+      <Item ID="1" Desc="New employees will come in and replace the now deceased #0. The cycle continues."/>
+      <Item ID="2" Desc="You don’t need to suffer for the death of #0."/>
+    </Type>
+    <Type Num="2">
+      <Item ID="1" Desc="$0 has escaped. I don’t want to see you suffer for the death of employees."/>
+      <Item ID="2" Desc="Escape of Abnormality $0 will bring death. Be careful."/>
+    </Type>
+    <Type Num="3">
+      <Item ID="1" Desc="That’s okay. If there’s another chance, use this failure to do it better next time."/>
+      <Item ID="2" Desc="No need to hold onto them. Now, let’s try again."/>
+    </Type>
+  </Sefira>
+</root>

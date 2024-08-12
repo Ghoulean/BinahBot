@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<creature>
+  <info id="100022">
+    <narration action="move">
+      #0 se rend dans l’Unité de Confinement de $0 afin de commencer à travailler.
+    </narration>
+    <narration action="start">
+      [
+      {L’on ne sait pas grand-chose sur $0 en-dehors du fait qu’elle fixe le mur.},
+      {Personne n’a jamais vu le visage de $0. Cela ne veut pas dire que quiconque en ait vraiment envie, ceci dit.},
+      {En écoutant les murmures de $0, on peut supposer que quelqu’un lui manque beaucoup.},
+      {Il vaut simplement mieux la laisser attachée au mur.},
+      {L’on ne peut qu’espérer que #0 n’ait pas oublié ses bouchons d’oreille.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {$0 reste toujours dans la même pose. Sans ses murmures, on pourrait la prendre pour une statue.},
+      {#0 ne s’inquiète pas trop de $0. Sûrement parce qu’elle reste au mur peu importe qui entre dans l’Unité de Confinement.},
+      {#0 travaille sans problèmes avec $0. Sûrement parce qu’elle reste immobile comme si elle était épinglée au mur quand quelqu’un entre dans l’Unité de Confinement.},
+      {Le mur près de $0 est complètement moisi mais personne ne compte s’en occuper.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Tandis que #0 travaille, $0 laisse échapper des murmures incompréhensibles.},
+      {Tandis que #0 travaille, l’Unité de Confinement est parfaitement silencieuse. $0 brise ce silence en murmurant frénétiquement.},
+      {$0 n’a pas un tressaillement mais elle semble ressentir la présence de #0 dans la salle.},
+      {Bien que $0 n’ait pas bougé d’un pouce, #0 la trouve bien irritante.}
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {Ses mots sont faibles et étouffés.},
+      {Son chuchotement ne fait que s’amplifier.},
+      {On dirait presque que quelqu’un pourrait comprendre ce qu’elle dit en se concentrant un minimum, mais évidemment, personne n’ose le faire.},
+      {Comme toujours, ses murmures étouffés sont incompréhensibles et ignorés par tout le monde.}
+      ]
+    </narration>
+    <narration action="mid4">
+      [
+      {#0 essaie de se concentrer sur la tâche en cours.},
+      {#0 sait qu’ignorer $0 est la meilleure option.},
+      {#0 ne répond à aucun propos de $0 ; il fait même semblant d’être sourd.},
+      {#0 se dépêche de terminer son travail pour quitter la salle aussi vite que possible.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">F-01-18</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/LadyLookingAtWall</portrait>
+      <name openLevel="1">Fixeuse de Mur</name>
+      <name openLevel="3">La Dame Fixant le Mur</name>
+      <riskLevel openLevel="2">
+        TETH
+      </riskLevel>
+      <openText>Au fil du temps, son chagrin insupportable devint une obsession lugubre couverte d’innombrables et interminables cheveux.</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Une Anomalie prenant l’apparence d’une femme appuyée au mur. Au fil du temps, son chagrin insupportable devint une obsession lugubre couverte d’innombrables et interminables cheveux.}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Puisqu’elle fait toujours face au mur, personne n’a jamais vu son visage. Bien qu’elle soit de temps en temps en train de se parler ou de pleurer doucement, il est impossible d’avoir une conversation sensée avec elle. En dépit de son apparence humaine, il est impossible de discerner ce qu’elle regarde ou ses véritables intentions.}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Elle essaiera de parler ou de piquer l’intérêt de ceux qui s’apprêtent à sortir de l’Unité de Confinement. Cependant, il ne faut surtout pas se retourner, cela pouvant entraîner des dégâts mentaux.&#13;&#10;&#13;&#10;Certaines rumeurs disent qu’on se changerait en pierre en se retournant, mais ce n’est absolument pas vrai.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {&lt;Extrait du Journal d’Observation 1-304&gt;&#13;&#10;
+      Il n’y a qu’une seule règle essentielle à suivre : ignorez-la. Elle essaie toujours d’attirer l’attention. Elle murmure de façon incohérente pour qu’on s’intéresse plus en détail à ce qu’elle dit. Elle va même supplier ou chuchoter malicieusement lorsque quelqu’un s’apprête à sortir dans l’espoir qu’il se retourne instinctivement. Votre subconscient est une menace pour votre propre santé en sa présence ; il est essentiel d’être toujours sur ses gardes et conscient de ce qu’il se passe tant que vous êtes dans la même pièce qu’elle. Si vous oubliez les avertissements ne serait-ce qu’un instant et laissez votre garde retomber, vous pourriez vous retourner pour lui faire face. J’ai un autre avertissement pour ceux qui lisent ceci : ne laissez pas cette Anomalie insidieuse apprendre votre nom. Si elle le connaît, elle l’utilisera pour que vous vous retourniez par réflexe. Peu importe ce que vous entendez ou ce que vous serez tenté de faire tant que vous êtes dans la même salle qu’elle, SURTOUT et je le répète SURTOUT ne la regardez pas, quelles que soient les circonstances. &lt;b&gt;La curiosité est un luxe dont vous ne devez JAMAIS profiter tant que vous êtes dans son Unité de Confinement.&lt;/b&gt;}
+      ]
+    </desc>
+    <desc id="5" openLevel="4">
+      [
+      {&lt;Extrait du Journal de Thérapie #9-39&gt;&#13;&#10;
+      Employé F5004 : &lt;Expurgé&gt; était un des collègues auquel j’étais très attaché. Enfin, je veux dire, j’étais attaché à tous mes collègues, mais &lt;Expurgé&gt; était différent. L’enthousiasme fou qu’il mettait dans son travail est quelque chose que j’ai rarement vu dans ma vie. Quoi qu’il en soit, j’ignore comment l’Anomalie a appris le nom de &lt;Expurgé&gt;. Peut-être que quelqu’un l’a appelé pendant qu’il était dans l’Unité de Confinement et elle l’a entendu ? Nous aurions dû envoyer deux personnes pour travailler avec elle. La procédure nécessite de ne pas être seul dans son Unité de Confinement, mais comme vous le savez nous manquons toujours de monde. De plus, cette Anomalie était considérée comme une menace faible. Si nous avions suivi la procédure, nos supérieurs n’auraient pas été contents du tout. (Omis)
+      Du reste, vous connaissez la suite… le jour de l’incident, &lt;Expurgé&gt; a été envoyé dans l’Unité de Confinement comme d’habitude, mais il y est resté beaucoup plus longtemps que d’habitude. Je savais que &lt;Expurgé&gt; était un employé appliqué et ponctuel donc j’ai fini par aller voir de moi-même ce qu’il se passait, craignant le pire. Je l’ai heureusement retrouvé sans une égratignure, mais il semblait complètement ailleurs. Genre, complètement à côté de la plaque. (Omis)
+      Le lendemain, le gamin a été renvoyé. J’ai entendu dire qu’ils l’ont envoyé dans un asile mais personne ne l’a jamais revu depuis. Il regardait simplement le mur, chuchotant sans répondre à qui que ce soit… C’est la dernière chose que j’ai vu de &lt;Expurgé&gt;. Personne ne sait ce qu’il s’est passé au sein de cette Unité de Confinement et on ne l’apprendra pas de sa part non plus.}
+    ]
+  </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="CCC">Les Intervenants de Tempérance 1 peuvent se retourner vers $0 en l’entendant. Si cela se produit, ils seront victimes d’une crise de panique.</specialTip>
+      <specialTip openLevel="3" key="possible">Lorsqu’un Travail d’Attachement a été réalisé avec $0, le Compteur Qliphoth a diminué.</specialTip>
+      <specialTip openLevel="3" key="possible2">Lorsque le résultat du travail est Normal, le Compteur Qliphoth a une probabilité moyenne de diminuer.</specialTip>
+      <specialTip openLevel="3" key="possible3">Lorsque le résultat du travail est Mauvais, le Compteur Qliphoth a une probabilité élevée de diminuer.</specialTip>
+      <specialTip openLevel="2" key="active">Lorsque le Compteur Qliphoth de $0 a atteint 0, tous les employés du Secteur ont subi des dégâts BLANC.</specialTip>
+    </specialTipSize>
+  </observe>
+</creature>

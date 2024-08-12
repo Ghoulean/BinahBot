@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id ="100030">
+
+
+
+    <narration action="move">
+      #0被分配到“$0”的收容单元中
+    </narration>
+
+    <narration action="mid1">
+      [
+      {There is a book made of antique parchments.},
+      {It is quite thick, but the book’s every single page is blank.},
+      {There is a book which seems like the cover is going to be torn if handled thoughtlessly. }
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {Despite its old appearance, there are no dust on it as if it’s managed constantly.},
+      {It seems it aged at least several decades, but it didn’t mold a bit.},
+
+      ]
+    </narration>
+    <narration action="mid3">
+      [
+      {#0 is a person who often reads, but #0 feels that this is not the kind of book that one should read.  },
+      {#0 doesn’t read book that often, but strange urge caught #0to turn the pages.},
+      {#0 is a person who would not go to library, but strange urge caught #0 to turn the pages.}
+      ]
+    </narration>
+
+  </info>
+
+  <observe level ="1">
+    <collection>
+      <codeNo openLevel ="0">O-05-31-W</codeNo>
+      <portrait openLevel ="1">Sprites/Unit/creature/AuthorNote</portrait>
+
+      <name openLevel ="1">
+        Poor Screenwriter’s Note
+      </name>
+
+      <riskLevel openLevel ="1">
+        WAW
+      </riskLevel>
+
+      <specialName openLevel ="1">
+      As written in the scenario
+      </specialName>
+
+    </collection>
+
+    <desc id="1" openLevel="0">
+      [
+      {It is a palm-sized notebook.  Every page is filled with handwritten scrawls.  Analysis determined that the writings are a script used in a play.  By who or when it was written is undetermined. &#13;&#10; The scenario is about a guy who was raised in a normal family. One day, he picks up a mask from the street and goes on to impulsively murder all the people that he knows.  When a subject comes into contact with the creature, the person shows the exact same behavior as the guy from the aforementioned scenario. Like the story, the afflicted individual may attempt to kill those around him/her.  The subject believes him or herself to be the protagonist of the story. }
+      ]
+    </desc>
+
+    <desc id="2" openLevel="0">
+      [
+      {Title: Peccatum Proprium &#13;&#10; Today, we perform for the king. &#13;&#10;Characters :  A, The Failed, The Abandoned, The Broken, The Coward, and…….}
+      ]
+    </desc>
+
+    <desc id="3" openLevel="1">
+      [
+      {ACT I &#13;&#10;A mask is lying in the middle of the stage. It is a modest mask, without any pattern. People walk past the mask without giving it a look. As if it is not seen by them. However, A is staring at the mask from the beginning. Eventually, he picks it up and put it on his face. The mask surprisingly fits into his face. &#13;&#10; (Background music transition)&#13;&#10;A: (Rapturously) How foolish and pathetic I was. For what had I talked about happiness? For what had I put up with all the meretriciousness?(Exit)&#13;&#10;The Failed: We dreamed of wondrous future but everything turned out to be in vain. Thus, I call myself “The Failed”&#13;&#10;A: (Stage whisper) He is an arrogant fool who only thinks for himself. (Strokes the mask) I knew it from the beginning. The calamity will repeat itself endlessly. (Strikes The Failed with a weapon)&#13;&#10;The Failed: Ah, the rest I yearned! It has finally come! (Collapses) &#13;&#10; (Exit A) &#13;&#10;Omitted}
+      ]
+    </desc>
+
+    <desc id="4" openLevel="1">
+      [
+      {ACT 3 &#13;&#10;A: (Refusing to believe) I have been thinking that some sort of power this mask possesses was turning me into a killer. (Stands up and picks up the mask) But The Coward told me, it is merely a mask. &#13;&#10; (Sits down while holding the mask) Then it is I who has been the killer. It was me who exhilaratingly laughed to the sound of dying breath. It was me who was shaking body in guiltiness while washing blood off of a cloth. (Sinks his face into his hands, sobbing) &#13;&#10; (Manically laughs) No, no. It is just a mask, but not for me. Fools! From the beginning, I knew the power that this mask has!  &#13;&#10;Omitted}
+      ]
+    </desc>
+
+    <desc id="5" openLevel="1">
+      [
+      {ACT 6 &#13;&#10; A: It is too terrible to be a mistake. I was the dirty, vicious killer. How could I blame it on the mask? Ah, the pain is tearing me into pieces. I have never wished for the existence of god this much in my entire life. If the god wills to punish me, I shall accept it. Even if he throws me into unquenchable hellfire, I will succumb to it. &#13;&#10;(Gunfire from a distance, A collapses)&#13;&#10; A: A death is nothing but a sleep. That is all.&#13;&#10;(A sees someone pointing a gun at him. He gasps in surprise. Soon, he collapses to the ground and looks at the shooter. Everything seems to be stopped. In his fading consciousness, just before his eyes close, he sees the shooter’s face. The silence continues until the audiences exit. When no one is left, the curtain finally falls. )}
+      ]
+    </desc>
+
+    <desc id="6" openLevel="1">
+      [
+      {A body was found in the [Redacted] department. The culprit immediately admitted to the crime. Strangely, the one witness in the crime did not try to stop the crime from taking place or even call the authorities during A’s death. Furthermore, there was no apparent motive for the crime. No bad blood between them. The victim and the assailant were friends in the same department. Their testimony was so bizarre. The attacker did not realize that he was committing murder during that time when he was committing the crime.  He claimed to have thought it only as an act in a play. The witness C’s testimony was that C was aware that A would be murdered by B but claimed that it was inevitable in order to finish the play. &#13;&#10;One side argued that they were performing some kind of mysterious religious ritual while the other argued that they were both suffering from mental disorders. &#13;&#10;During an interrogation when counselor asked “You thought it was a play? Then who was it for?”, they both looked up simultaneously. This was not an actual testimony thus it was not officially recorded.  }
+      ]
+    </desc>
+
+
+
+    <specialTipSize size="3">
+      <specialTip openLevel="0" key="scenario">$0 prefers that everything goes according to its own scenario. Work will also not be an exception.</specialTip>
+      <specialTip openLevel="1" key="nope">The #0 employee went to $0 for a job that was not listed in the scenario. $0's mood value was reduced by a small amount, confirming that energy was produced. It was found that a faint curtain was formed in the $0’s containment room.</specialTip>
+      <specialTip openLevel="1" key="curtain">When the curtain was completely drained at the containment room, a special ability of $0 was activated when a #0 employee was sent to the containment room. We must find a way to make the curtain faint.</specialTip>
+    </specialTipSize>
+
+    <max>
+      <!--기본 선택지-->
+      <desc id="0" select="1">
+        [
+        {The play started long ago.}
+        {Here is the man who killed many. }
+        {And you are holding a gun. }
+        <!--계속-->
+        ]
+      </desc>
+
+      <!--선택지-->
+      <select id="1">
+        <node desc="Shoot the man" target="1" isAnswer="true"  message="The curtain opens." />
+        <node desc="Wait and see" target="2" isAnswer="true" message="The curtain opens." />
+        <node desc="Shoot someone else" target="3" isAnswer="true" message="The curtain opens." />
+      </select>
+
+      <desc id="1" select="0">
+        [
+        {You decided to shoot the man.}
+        {The curtain finally falls.}
+        ]
+      </desc>
+
+      <desc id="2" select="0">
+        [
+        {The gunpoint lost its way. }
+        {The play ends with tragedy.}
+        ]
+      </desc>
+
+      <desc id="3" select="0">
+        [
+        {When innocents die,}
+        {The play ends as a comedy.}
+        ]
+      </desc>
+
+      <!--스토리 파트에서 출력될 부분-->
+      <angela>
+        [
+        {“The sinner was shaken to the bizarre atmosphere of the stage, and confessed his sins. A screenplay is what makes people more honest.” }
+        ]
+      </angela>
+    </max>
+
+  </observe>
+
+  <etc>
+    <param key="attack1" index="0">
+      <!--  -->
+      A: (Stage whisper) He is an arrogant fool who only thinks for himself. (Strokes the mask) I knew it from the beginning. The calamity will repeat itself endlessly. 
+    </param>
+    <param key="attack2" index="1">
+      A : (Stage whisper) The Abandoned, I will grant him death. I deserve to. The unquenchable Thirst will come.
+    </param>
+    <param key="attack3" index="2">
+      A : (Stage whisper) A: His despair has already rooted deep inside of his mind, slowly eating him away. He always smiles but deep down, he is drenched in burning self-hatred.
+    </param>
+    <param key="attack4" index="3">
+      A: (Stage whisper) A: He is a coward who ran from failures. I cannot forgive him. I can bring you to heaven or hell, to wherever I like! I am the man mark my words well with whom you will share heaven or hell!
+    </param>
+
+    <param key="kill1" index="4">
+      <!-- 각각 죽이고 나서 대사 으안안ㅁ아앜앜어안ㄴ앜 -->
+      (The Failed slow, slagger, stops and falls, )
+    </param>
+    <param key="kill2" index="5">
+      (The Abandoned slow, slagger, stops and falls, )
+    </param>
+    <param key="kill3" index="6">
+      (The Broken slow, slagger, stops and falls, )
+    </param>
+    <param key="kill4" index="7">
+      (The Coward slow, slagger, stops and falls, )
+    </param>
+
+
+    <param key="finale1" index="8">
+      <!-- 쥔공한테 총 쏠때-->
+      A :   To die: to sleep; No more;(Collapses)
+    </param>
+
+    <param key="finale2" index="9">
+      <!--총 안쏠때-->
+      A :  Have my sins been shown in lines? (Lights off)
+    </param>
+
+    <param key="finale3" index="10">
+      <!-- 다른 사람한테 쏠때-->
+      A :  OH GOD,  HELP ME SOMEHOW!  PLEASE TAKE THE PAIN AWAY! (dead still)
+    </param>
+
+
+
+    <param key="special" index="11">
+      <!-- 특수공격 발동 되기 시작할때-->
+      No one can order work to #0, who’s whole mind is set to the book. The stage begins.
+    </param>
+
+
+    <param key="end" index="12">
+      <!-- 연출없이 끝날때-->
+      LOST IN THE DARKNESS, SILENCE SURROUNDS YOU. ONCE THERE WAS MORNING - NOW ENDLESS NIGHT. IF I COULD REACH YOU, I'D GUIDE YOU AND TEACH YOU. TO WALK FROM THE DARKNESS BACK INTO THE LIGHT.
+    </param>
+
+
+
+
+  </etc>
+
+
+</creature>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<creature>
+  <!--
+    info - 관찰 레벨과는 관련 없는 정보들 ex)데미지, id, 이미지 소스 등
+    
+    observe - 관찰 정도에 따라 제공되는 정보들
+              각 정보들에는 정보가 제공되는 레벨을 표기
+              ex) <desc id="1" openLevel="1">"openLevel이 1일 때 이 정보가 제공됨"</desc>
+              
+              observe 노드 안의 level 은 관찰 단계의 갯수를 나타냄
+  -->
+  <info id="100037">
+    <narration action="move">
+      #0 está a caminho da unidade de contenção da $0 para iniciar o processo de trabalho.
+    </narration>
+    <narration action="Começar">
+      [
+      {Agentes covardes sentem algo sinistro vindo da $0.},
+      {A sós com a armadura, #0 sente o olhar penetrante da Anormalidade vigiando. Claro, não há nada vivo dentro dela.},
+      {Há boatos que impetuosos gritos de guerra ou berros como “ATAQUEM!” podem ser escutados vindos da armadura à meia-noite.}
+      ]
+    </narration>
+    <narration action="mid1">
+      [
+      {Apesar de um pouco quebrada, esta armadura está em um estado de preservação inacreditável. Considerando que é um artefato que foi forjado centenas de anos atrás.},
+      {Vários generais já possuíram essa armadura. Ninguém sabe se foram guerras ou a própria armadura que tirou suas vidas.}
+      ]
+    </narration>
+    <narration action="mid2">
+      [
+      {O braço direito do traje da armadura está quebrado. Depois de uma breve investigação, a conclusão foi que o dano foi devido a fatores internos, não externos.},
+      {A $0 foi forjada centenas de anos atrás. O artesão que a criou permanece não indentificado, mas ao menos a certeza é de que ele odiava covardes.},
+      {A armadura ainda espera por aqueles que são ousados e aqueles que desistiram da vida.}
+      ]
+    </narration>
+  </info>
+  <observe level="4">
+    <collection>
+      <codeNo openLevel="0">O-05-61</codeNo>
+      <portrait openLevel="1">Sprites/Unit/creature/SamuraiArmor</portrait>
+      <name openLevel="1">
+        Armadura Decadente
+      </name>
+      <riskLevel openLevel="1">
+        TETH
+      </riskLevel>
+      <specialName openLevel="2">
+        O Espírito do Faça ou Morra
+      </specialName>
+      <openText>“A vida é somente garantida para aqueles que não temem a morte.”</openText>
+    </collection>
+    <desc id="1" openLevel="0">
+      [
+      {Uma armadura que parece ter sido usada por centenas de anos atrás. Uma marcação em baixo dela diz: “A vida é somente garantida para aqueles que não temem a morte..” Obviamente, colocar essa armadura é proibido pelas regulações da corporação.&#13;&#10;&#13;&#10;&lt;i&gt;Nota: Houve boatos de funcionários fingindo colocar a armadura por diversão. Por favor, dê uma olhada imediatamente!&lt;/i&gt;}
+      ]
+    </desc>
+    <desc id="2" openLevel="1">
+      [
+      {Ela foi obtida de um museu. As informações abaixo são fragmentos de sua lenda.&#13;&#10;
+      &lt;i&gt;…Essa armadura já pertenceu ao General XXXX, que participou da Guerra de XX durante o ano de XXX. Foi uma herança de família passada por várias gerações. Ele sempre vestia essa armadura para se manter protegido. Mas por um golpe de azar, foi atingido por uma flecha que entrou em uma abertura na armadura, o matando na hora. Mas de alguma forma, a armadura não sofreu um arranhão sequer.&#13;&#10;
+      Após a morte do General XXXX, a armadura foi apresentada ao Comandante XXX do Batalhão 00. Ele sempre era visto completamente blindado toda vez que saía em batalha. Durante uma de suas lutas, o comandante caiu de seu cavalo enquanto fugia do inimigo e morreu devido a um ferimento fatal em seu crânio. Mesmo assim, a armadura continou sem sofrer danos. Ainda há vários outros ao decorrer da história dessa armadura que também já colocaram as mãos nela, e cada um deles morreu em batalha. Enquanto isso, a armadura continuou praticamente intocada.&#13;&#10;
+      Ao decorrer dos anos, a armadura chegou nas mãos de um guerreiro chamado XXX. Ele era conhecido por simplesmente manter a armadura guardada, não vestindo ela por nenhuma batalha. Eventualmente, XXX morreu de velhice após participar de dezenas de guerras sem sofrer um ferimento sequer. Durante seu tempo de vida, o braço direito da armadura ficou danificado, mas sem nenhuma indicação de impacto vindo do exterior. A família de XXX mais tarde doou a armadura a um museu.&lt;/i&gt;}
+      ]
+    </desc>
+    <desc id="3" openLevel="2">
+      [
+      {Após terem sido feitos alguns testes na armadura, conseguimos chegar nas seguintes conclusões: Se esta armadura for vestida por um funcionário covarde, as chances dele sofrer um ferimento fatal e acabar morrendo são drasticamente aumentadas. Inversamente, quando um funcionário que não teme a morte a veste, suas chances de sofrer ferimentos ou morrer são extremamente reduzidas.}
+      ]
+    </desc>
+    <desc id="4" openLevel="3">
+      [
+      {Um de nossos gerentes sugeriu um teste onde os funcionários vestiam a armadura e andavam por aí com ela por dez minutos. Essa sugestão foi imediatamente rejeitada. }
+      ]
+    </desc>
+    <specialTipSize size="5">
+      <specialTip openLevel="1" key="NoPeace">Um Agente com Fortitude de Nível 1 foi colocado dentro da Unidade de Contenção da $0. Após o Processo de Trabalho ter terminado, o Agente foi encontrado com sua cabeça decapitada com um corte perfeito. </specialTip>
+      <specialTip openLevel="2" key="GiveYou">Um Agente que fez Trabalho de Repressão com a Anormalidade foi encontrado com um artefato ($0-01), que tinha a mesma composição química que a $0. O Agente disse que o artefato o fez sentir-se como se a $0 estivesse lhe protegendo.</specialTip>
+      <specialTip openLevel="3" key="Change">Um Agente com a $0-01 em posse foi pedido para continuar exercendo Trabalhos de Repressão com outras Anormalidades. A cada vez que o Processo de Trabalho terminava, um exame físico era feito no Agente. Os resultados dos exames mostram que o efeito dado ao Agente pela $0-01 mudaram conforme o número de vezes que o Trabalho foi efetuado.</specialTip>
+      <specialTip openLevel="4" key="KillPeace">&lt;CUIDADO&gt; Não deixe o Agente que está segurando a $0-01 fazer Trabalho de Afeição. Caso aconteça, a $0-01 decapitará o Agente assim que ele entrar na Unidade de Contenção, resultando em morte instantânea.</specialTip>
+      <specialTip openLevel="4" key="NegativeChange">&lt;CUIDADO&gt; Se um Agente que está segurando a $0-01 fazer uma quantidade excessiva de Trabalhos de Repressão, o efeito que o artefato fornece ficará gradualmente negativo. </specialTip>
+    </specialTipSize>
+  </observe>
+</creature>
