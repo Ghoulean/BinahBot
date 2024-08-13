@@ -8,6 +8,8 @@ use crate::models::deck::DeckData;
 use crate::models::deck::TiphDeck;
 
 static BASE_TIPH_URL: &str = "https://tiphereth.zasz.su";
+static USER_AGENT_HEADER: &str = "User-Agent";
+static USER_AGENT_VALUE: &str = "BinahBot/1.0.0";
 
 #[derive(Serialize, Deserialize, Debug)]
 struct TiphDeckDecodeData {
@@ -36,6 +38,7 @@ pub async fn decode(
 ) -> Result<DeckData, Box<dyn Error + Send + Sync>> {
     tracing::info!("Decoding tiph deck={}", tiph.0);
     let txt = client.post(format!("{}{}{}", BASE_TIPH_URL, "/internal/dvi_decode/?d=", tiph.0))
+        .header(USER_AGENT_HEADER, USER_AGENT_VALUE)
         .send()
         .await?
         .text()
@@ -63,7 +66,8 @@ pub async fn _encode(
             &format!("{}{}", BASE_TIPH_URL, "/internal/dvi_encode/"),
             query_params.iter().flatten().collect::<Vec<_>>()
         )?
-    ).send()
+    ).header(USER_AGENT_HEADER, USER_AGENT_VALUE)
+        .send()
         .await?
         .text()
         .await?;
