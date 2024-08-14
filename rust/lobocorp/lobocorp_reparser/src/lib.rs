@@ -67,7 +67,7 @@ mod tests {
         let result = get_localization(&paradise_lost_desc).expect("couldn't find");
 
         assert_eq!(
-            "&lt;i&gt;Behold: you stood at the door and knocked, and it was opened to you.&lt;/i&gt;&#13;&#10;&lt;i&gt;I come from the end, and I am here to stay for but a moment.&lt;/i&gt;&#13;&#10;&lt;i&gt;At the same time, I am the one who kindled the light to face the world.&lt;/i&gt;&#13;&#10;&lt;i&gt;My loved ones, who now eagerly desire the greater gifts; I will show you the most excellent way.&lt;/i&gt;",
+            "<i>Behold: you stood at the door and knocked, and it was opened to you.</i>\n<i>I come from the end, and I am here to stay for but a moment.</i>\n<i>At the same time, I am the one who kindled the light to face the world.</i>\n<i>My loved ones, who now eagerly desire the greater gifts; I will show you the most excellent way.</i>",
             *result
         );
     }
@@ -92,5 +92,50 @@ mod tests {
                 assert!(hs.len() == count);
             });
         });
+    }
+
+
+    #[test]
+    fn correct_breachability_display() {
+        let non_breachable = [
+            100053, 100009, 100028, 100014, 100007, 100013, 100027,
+            100037, 100059, 100103, 100002, 100041, 100017, 100045
+        ];
+        let breaching_no_defenses = [
+            100005, 100019
+        ];
+        let breaching_with_defenses = [
+            100015, 100018, 100036, 100054, 100043, 100011, 100057,
+            100029, 100033, 100008, 100035, 100055, 100061, 100038,
+            100058, 100064, 100056, 100063, 100042
+        ];
+
+        non_breachable.iter().for_each(|x| {
+            let encyclopedia_info = get_encyclopedia_info(&x).expect("invalid id");
+            let info = match encyclopedia_info {
+                EncyclopediaInfo::Normal(x) => x,
+                _ => panic!()
+            };
+            assert!(!info.is_breachable);
+            assert!(info.defenses.is_none());
+        });
+        breaching_no_defenses.iter().for_each(|x| {
+            let encyclopedia_info = get_encyclopedia_info(&x).expect("invalid id");
+            let info = match encyclopedia_info {
+                EncyclopediaInfo::Normal(x) => x,
+                _ => panic!()
+            };
+            assert!(info.is_breachable);
+            assert!(info.defenses.is_none());
+        });
+        breaching_with_defenses.iter().for_each(|x| {
+            let encyclopedia_info = get_encyclopedia_info(&x).expect("invalid id");
+            let info = match encyclopedia_info {
+                EncyclopediaInfo::Normal(x) => x,
+                _ => panic!()
+            };
+            assert!(info.is_breachable);
+            assert!(info.defenses.is_some());
+        })
     }
 }

@@ -12,10 +12,9 @@ pub fn get_unique_node<'a>(node: &Node<'a, 'a>, element_name: &'a str) -> Result
     ret_val.ok_or("element_name not found")
 }
 
-pub fn get_first_node<'a>(node: &Node<'a, 'a>, element_name: &'a str) -> Result<Node<'a, 'a>, &'a str> {
+pub fn get_first_node<'a>(node: &Node<'a, 'a>, element_name: &'a str) -> Option<Node<'a, 'a>> {
     node.descendants()
         .find(|n| n.is_element() && n.has_tag_name(element_name))
-        .ok_or("element_name not found")
 }
 
 pub fn get_unique_node_text<'a>(node: &Node<'a, 'a>, element_name: &'a str) -> Result<&'a str, &'a str> {

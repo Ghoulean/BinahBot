@@ -176,9 +176,11 @@ fn parse_normal_abno(id: u32, doc: &Document) -> PartialNormalInfo {
             .expect("couldn't get max probability_work_count")
         );
 
-    let is_breachable = get_unique_node_text(&stat_node, "escapeable").is_ok_and(|x| x.to_lowercase().trim() == "true");
+    // missing escapable tag defaults to TRUE
+    // missing OR equal to true => not (present AND not equal to true)
+    let is_breachable = !get_unique_node_text(&stat_node, "escapeable").is_ok_and(|x| x.to_lowercase().trim() != "true");
 
-    let defense_node = get_unique_node(&stat_node, "defense");
+    let defense_node = if is_breachable { get_unique_node(&stat_node, "defense") } else { Err("") };
     let defenses = defense_node.map(|x| {
         Defenses {
             red: get_defense_val(&x, "R"),
@@ -220,7 +222,7 @@ fn parse_normal_abno(id: u32, doc: &Document) -> PartialNormalInfo {
     let hp = get_unique_node_text(&stat_node, "hp").ok().and_then(|x| x.parse::<i32>().ok());
     let speed = get_unique_node_text(&stat_node, "speed").ok().and_then(|x| x.parse::<i32>().ok());
     let breaching_damage_type = get_unique_node(&stat_node, "specialDamage").ok()
-        .and_then(|x| get_first_node(&x, "damage").ok())
+        .and_then(|x| get_first_node(&x, "damage"))
         .and_then(|x| x.attribute("type"))
         .and_then(|x| DamageType::try_from(x).ok())
         .unwrap_or(work_damage_type.clone());
