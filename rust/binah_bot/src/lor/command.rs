@@ -83,7 +83,8 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
         PageType::CombatPage => get_combat_page_by_id(&typed_id.1).and_then(|x| x.chapter.clone()),
         PageType::KeyPage => get_key_page_by_id(&typed_id.1).and_then(|x| x.chapter.clone()),
         PageType::Passive => get_passive_by_id(&typed_id.1).and_then(|x| x.chapter.clone()),
-        _ => None,
+        // todo: fine-grained spoilers for abnos and battle symbols
+        _ => Some(Chapter::Canard),
     };
     if let Some(max_spoiler_chapter) = max_spoiler_chapter {
         let effective_chapter = chapter.unwrap_or(Chapter::ImpuritasCivitatis);
@@ -344,6 +345,22 @@ mod tests {
         };
 
         assert_eq!(get_description(&expected), get_description(&response));
+    }
+
+    #[test]
+    fn no_spoiler_enforcement() {
+        let channel_id = "1234567890123456789".to_string();
+        let pale_hands = "a#Bloodbath_Hands";
+        let interaction = build_discord_interaction(pale_hands.to_string(), Locale::English, Some(channel_id));
+        let env = build_mocked_binahbot_env();
+
+        let response = lor_command(&interaction, &env);
+
+        let get_description = |x: &MessageResponse| -> Option<String> {
+            x.data.as_ref().and_then(|x| x.embeds.as_ref()).and_then(|x| x.first()).and_then(|x| x.description.clone())
+        };
+
+        assert_eq!(None, get_description(&response));
     }
 
     #[test]
