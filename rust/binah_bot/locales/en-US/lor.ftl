@@ -39,3 +39,4 @@ passive_not_transferable_display = false
 
 no_page_error_message = *No page found*
 spoiler_enforcement_message = Cannot display `card_id={ $card_id }` because its chapter is { $chapter }, but this channel only allows { $configured_chapter } and below
+deck_spoiler_enforcement_message = Cannot show `{ $deck_name }` because its chapter is { $chapter }, but this channel only allows { $configured_chapter } and below

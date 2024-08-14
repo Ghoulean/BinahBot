@@ -1,18 +1,23 @@
 use std::collections::HashMap;
 use std::collections::HashSet;
 use std::error::Error;
+use std::iter;
 
 use fluent_templates::Loader;
 use fluent_templates::fluent_bundle::FluentValue;
+use ruina::ruina_common::game_objects::common::Chapter;
 use ruina::ruina_common::localizations::common::Locale;
+use ruina::ruina_reparser::get_combat_page_by_id;
 use ruina::ruina_reparser::get_combat_page_locales_by_id;
 use ruina::ruina_reparser::get_key_page_by_id;
 use ruina::ruina_reparser::get_key_page_locales_by_text_id;
+use ruina::ruina_reparser::get_passive_by_id;
 use ruina::ruina_reparser::get_passive_locales_by_id;
 use unic_langid::LanguageIdentifier;
 
 use crate::ddb::get_deck;
 use crate::deck::deck_utils::get_user;
+use crate::models::deck::DeckData;
 use crate::models::discord::ActionRowComponent;
 use crate::models::discord::DiscordComponent;
 use crate::models::discord::DiscordComponentType;
@@ -82,6 +87,14 @@ pub async fn read_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironme
 
     match deck_result {
         Ok(x) => {
+            let max_spoiler_chapter = &interaction.channel_id.as_ref().and_then(|x| env.spoiler_config.get(&x));
+            let chapter = calculate_deck_chapter(&x.deck_data);
+            if let Some(max_spoiler_chapter) = max_spoiler_chapter {
+                if chapter > **max_spoiler_chapter {
+                    return spoiler_found(&x.name, &chapter, max_spoiler_chapter, &lang_id, env);
+                }
+            };
+
             let embed = transform_deck(&x, &request_locale, env).await.expect("failed deck processing");
             MessageResponse {
                 r#type: DiscordInteractionResponseType::ChannelMessageWithSource,
@@ -258,6 +271,67 @@ fn dedup_preserve_order<T: AsRef<str> + Eq + std::hash::Hash + Clone>(v: &mut Ve
     let mut set = HashSet::new();
     
     v.retain(|x| set.insert(x.clone()));
+}
+
+fn calculate_deck_chapter(deck: &DeckData) -> Chapter {
+    let mut passive_costs = 0;
+    let keypage_chapter = deck.keypage_id.as_ref()
+        .and_then(|x| get_key_page_by_id(&x))
+        .and_then(|x| x.chapter.as_ref())
+        .unwrap_or(&Chapter::ImpuritasCivitatis);
+    let passive_chapters = deck.passive_ids.iter().flat_map(|x| {
+        get_passive_by_id(&x)
+    }).flat_map(|x| {
+        passive_costs += x.cost.unwrap_or(0);
+        &x.chapter
+    });
+    let combat_page_chapters = deck.combat_page_ids.iter().flat_map(|x| {
+        x
+    }).flat_map(|x| {
+        get_combat_page_by_id(&x)  
+    }).flat_map(|x| {
+        &x.chapter    
+    });
+    combat_page_chapters.chain(passive_chapters).chain(iter::once(keypage_chapter)).max().unwrap_or(&Chapter::ImpuritasCivitatis).clone()
+}
+
+fn spoiler_found(
+    deck_name: &str,
+    chapter: &Chapter,
+    configured_chapter: &Chapter,
+    lang_id: &LanguageIdentifier,
+    env: &BinahBotEnvironment
+) -> MessageResponse {
+    MessageResponse {
+        r#type: DiscordInteractionResponseType::ChannelMessageWithSource,
+        data: Some(DiscordInteractionResponseMessage {
+            allowed_mentions: Some(AllowedMentions { parse: Vec::new() }),
+            content: None,
+            embeds: Some(vec![DiscordEmbed {
+                title: None,
+                description: Some(
+                    env.locales.lookup_with_args(
+                        &lang_id,
+                        "deck_spoiler_enforcement_message",
+                        &HashMap::from([
+                            ("deck_name", FluentValue::from(deck_name)),
+                            ("chapter", FluentValue::from(chapter.to_string())),
+                            ("configured_chapter", FluentValue::from(configured_chapter.to_string())),
+                        ])
+                    )
+                ),
+                color: Some(DiscordEmbedColors::Default as i32),
+                image: None,
+                thumbnail: None,
+                footer: None,
+                author: None,
+                url: None,
+                fields: None
+            }]),
+            flags: Some(DiscordMessageFlag::EphemeralMessage as i32),
+            components: None,
+        }),
+    }
 }
 
 #[cfg(test)]

@@ -85,9 +85,10 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
         PageType::Passive => get_passive_by_id(&typed_id.1).and_then(|x| x.chapter.clone()),
         _ => None,
     };
-    if let (Some(chapter), Some(max_spoiler_chapter)) = (chapter, max_spoiler_chapter) {
-        if chapter > **max_spoiler_chapter {
-            return spoiler_found(&typed_id.1, &chapter, max_spoiler_chapter, &lang_id, env);
+    if let Some(max_spoiler_chapter) = max_spoiler_chapter {
+        let effective_chapter = chapter.unwrap_or(Chapter::ImpuritasCivitatis);
+        if effective_chapter > **max_spoiler_chapter {
+            return spoiler_found(&typed_id.1, &effective_chapter, max_spoiler_chapter, &lang_id, env);
         }
     };
 
