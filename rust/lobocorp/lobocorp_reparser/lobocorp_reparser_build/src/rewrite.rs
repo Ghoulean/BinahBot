@@ -1,5 +1,7 @@
 use std::collections::HashMap;
 
+use lobocorp_common::game_objects::equipment::WeaponDamageType;
+
 use crate::abnormalities::ObtainEquipmentNumber;
 use crate::abnormalities::PartialBreachingEntity;
 use crate::abnormalities::PartialDontTouchMeInfo;
@@ -58,7 +60,16 @@ fn write_normal_info(list_entry: &ListEntry, partial_encyclopedia_info: &Partial
         format!("StatBonus(Stat::{:?}, {})", x.0, x.1)
     }).collect::<Vec<_>>());
     
-    let equipment_ids = partial_encyclopedia_info.related_equipment.iter().map(|x| x.id).collect::<Vec<_>>();
+    let mut equipment_ids = partial_encyclopedia_info.related_equipment.iter().map(|x| x.id).collect::<Vec<_>>();
+    if id == 100061 { // Firebird weapon
+        equipment_ids.push(200061);
+    } else if id == 100015 { // WhiteNight Paradise Lost weapon
+        equipment_ids.push(200015);
+    } else if id == 100102 { // Snow queen gift
+        equipment_ids.push(1023);
+    } else if id == 100033 { // Big bad wolf special gift
+        equipment_ids.push(1033);
+    };
 
     let weapon_entry = partial_equipment.weapons.iter().filter(|x| {
         equipment_ids.contains(&x.id)
@@ -143,8 +154,7 @@ fn write_donttouchme_info(list_entry: &ListEntry, partial_encyclopedia_info: &Pa
 
 fn write_weapon(info: &PartialNormalInfo, weapon: &PartialWeapon) -> String {
     let equipment_entry = info.related_equipment.iter()
-        .find(|x| x.id == weapon.id)
-        .expect("couldn't refind equipment entry");
+        .find(|x| x.id == weapon.id);
 
     let id = weapon.id;
     let name_id = weapon.name_id.as_ref().expect("no name id");
@@ -155,18 +165,23 @@ fn write_weapon(info: &PartialNormalInfo, weapon: &PartialWeapon) -> String {
     let attack_speed = &weapon.attack_speed.0;
     let damage_range_min = &weapon.damage_range.0;
     let damage_range_max = &weapon.damage_range.1;
-    let damage_type = &weapon.damage_type;
+    let damage_type = match &weapon.damage_type {
+        WeaponDamageType::Of(x) => format!("WeaponDamageType::Of(DamageType::{x:?})"),
+        WeaponDamageType::All => "WeaponDamageType::All".to_string(),
+    };
     let max_collectable_amount = weapon.max_collectable_amount;
-    let cost = match equipment_entry.obtain_number {
+    let cost = equipment_entry.map(|x| match x.obtain_number {
         ObtainEquipmentNumber::Cost(x) => x,
         ObtainEquipmentNumber::Probability(_) => unreachable!(),
-    };
+    });
+    let cost = serialize_option(&cost, display_serializer);
     let equip_requirements = write_vec(&weapon.equip_requirements.iter().map(|x| {
         format!("EquipRequirement(EquipRequirementKey::{:?}, {})", x.0, x.1)
     }).collect::<Vec<_>>());
-    let observation_level = equipment_entry.observation_level;
-    // todo: force image
-    let image = weapon.image.clone().unwrap_or("".to_string());
+    let observation_level = equipment_entry.map(|x| x.observation_level);
+    let observation_level = serialize_option(&observation_level, display_serializer);
+    // todo: deprecate field
+    let image = "".to_string();
 
     format!("Some(Weapon {{
         id: {id},
@@ -177,7 +192,7 @@ fn write_weapon(info: &PartialNormalInfo, weapon: &PartialWeapon) -> String {
         range: WeaponRange({range}),
         attack_speed: WeaponAttackSpeed({attack_speed:?}),
         damage_range: DamageRange({damage_range_min}, {damage_range_max}),
-        damage_type: DamageType::{damage_type:?},
+        damage_type: {damage_type},
         max_collectable_amount: {max_collectable_amount},
         cost: {cost},
         equip_requirements: &{equip_requirements},
@@ -206,8 +221,8 @@ fn write_suit(info: &PartialNormalInfo, suit: &PartialSuit) -> String {
         format!("EquipRequirement(EquipRequirementKey::{:?}, {})", x.0, x.1)
     }).collect::<Vec<_>>());
     let observation_level = equipment_entry.observation_level;
-    // todo: force image
-    let image = suit.image.clone().unwrap_or("".to_string());
+    // todo: deprecate field
+    let image = "".to_string();
 
     format!("Some(Suit {{
         id: {id},
@@ -226,8 +241,7 @@ fn write_suit(info: &PartialNormalInfo, suit: &PartialSuit) -> String {
 
 fn write_gift(info: &PartialNormalInfo, gift: &PartialGift) -> String {
     let equipment_entry = info.related_equipment.iter()
-        .find(|x| x.id == gift.id)
-        .expect("couldn't refind equipment entry");
+        .find(|x| x.id == gift.id);
 
     let id = gift.id;
     let name_id = gift.name_id.as_ref().expect("no name id");
@@ -236,13 +250,15 @@ fn write_gift(info: &PartialNormalInfo, gift: &PartialGift) -> String {
     let stat_bonuses = write_vec(&gift.stat_bonuses.iter().map(|x| {
         format!("StatBonus(Stat::{:?}, {})", x.0, x.1)
     }).collect::<Vec<_>>());
-    let prob = match equipment_entry.obtain_number {
-        ObtainEquipmentNumber::Probability(x) => x,
+    let prob = equipment_entry.map(|x| match x.obtain_number {
+        ObtainEquipmentNumber::Probability(x) => format!("{:?}", x),
         ObtainEquipmentNumber::Cost(_) => unreachable!(),
-    };
-    let observation_level = equipment_entry.observation_level;
-    // todo: force image
-    let image = gift.image.clone().unwrap_or("".to_string());
+    });
+    let prob = serialize_option(&prob, display_serializer);
+    let observation_level = equipment_entry.map(|x| x.observation_level);
+    let observation_level = serialize_option(&observation_level, display_serializer);
+    // todo: deprecate field
+    let image = "".to_string();
 
     format!("Gift {{
         id: {id},
@@ -250,7 +266,7 @@ fn write_gift(info: &PartialNormalInfo, gift: &PartialGift) -> String {
         desc_id: \"{desc_id}\",
         slot: Slot::{slot:?},
         stat_bonuses: &{stat_bonuses},
-        obtain_probability: {prob:?},
+        obtain_probability: {prob},
         observation_level: {observation_level},
         image: \"{image}\",
     }}")

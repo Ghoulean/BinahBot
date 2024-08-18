@@ -14,11 +14,11 @@ pub struct Weapon<'a> {
     pub range: WeaponRange,
     pub attack_speed: WeaponAttackSpeed,
     pub damage_range: DamageRange,
-    pub damage_type: DamageType,
+    pub damage_type: WeaponDamageType,
     pub max_collectable_amount: i32,
-    pub cost: i32,
+    pub cost: Option<i32>,
     pub equip_requirements: &'a [EquipRequirement],
-    pub observation_level: i32,
+    pub observation_level: Option<i32>,
     pub image: &'a str,
 }
 
@@ -44,8 +44,8 @@ pub struct Gift<'a> {
     pub desc_id: &'a str,
     pub slot: Slot,
     pub stat_bonuses: &'a [StatBonus],
-    pub obtain_probability: f64,
-    pub observation_level: i32,
+    pub obtain_probability: Option<f64>,
+    pub observation_level: Option<i32>,
     pub image: &'a str,
 }
 
@@ -76,6 +76,12 @@ pub enum Slot {
 
 #[derive(Debug, Clone)]
 pub struct WeaponAttackSpeed(pub f64);
+
+#[derive(Debug, Clone)]
+pub enum WeaponDamageType {
+    Of(DamageType),
+    All
+}
 
 #[derive(Debug, Clone, PartialEq, strum_macros::Display)]
 pub enum WeaponAttackSpeedCategories {

@@ -20,6 +20,7 @@ use lobocorp::lobocorp_common::game_objects::equipment::EquipRequirementKey;
 use lobocorp::lobocorp_common::game_objects::equipment::Gift;
 use lobocorp::lobocorp_common::game_objects::equipment::Suit;
 use lobocorp::lobocorp_common::game_objects::equipment::Weapon;
+use lobocorp::lobocorp_common::game_objects::equipment::WeaponDamageType;
 use lobocorp::lobocorp_common::localizations::abnormality::BreachingEntityLocalization;
 use lobocorp::lobocorp_common::localizations::common::Locale;
 use lobocorp::lobocorp_common::localizations::equipment::LocalizationKey;
@@ -302,7 +303,7 @@ pub fn transform_weapon(
         },
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "equipment_cost_header"),
-            value: weapon.cost.to_string(),
+            value: weapon.cost.map(|x| x.to_string()).unwrap_or("-".to_string()), // todo: N/A string
             inline: Some(true),
         },
         DiscordEmbedFields {
@@ -314,7 +315,7 @@ pub fn transform_weapon(
             name: env.locales.lookup(&lang_id, "weapon_damage_header"),
             value: format!(
                 "{} {} - {}",
-                get_damage_emoji(&weapon.damage_type, env).unwrap_or(&"-".to_string()),
+                get_weapon_damage_emoji(&weapon.damage_type, env).unwrap_or("-".to_string()),
                 &weapon.damage_range.0,
                 &weapon.damage_range.1
             ),
@@ -332,7 +333,7 @@ pub fn transform_weapon(
         },
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "equipment_observation_level_header"),
-            value: weapon.observation_level.to_string(),
+            value: weapon.observation_level.map(|x| x.to_string()).unwrap_or("-".to_string()), // todo: N/A string
             inline: Some(true),
         },
     ];
@@ -486,7 +487,7 @@ pub fn transform_gift(
     let fields = vec![
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "gift_probability_header"),
-            value: format!("{}%", (gift.obtain_probability * 100.0).round()),
+            value: gift.obtain_probability.map(|x| (x * 100.0).round()).map(|x| format!("{}%", x)).unwrap_or("-".to_string()), // todo: N/A string
             inline: Some(true),
         },
         DiscordEmbedFields {
@@ -496,7 +497,7 @@ pub fn transform_gift(
         },
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "equipment_observation_level_header"),
-            value: gift.observation_level.to_string(),
+            value: gift.observation_level.map(|x| x.to_string()).unwrap_or("-".to_string()), // todo: N/A string
             inline: Some(true),
         },
         DiscordEmbedFields {
@@ -617,6 +618,18 @@ fn get_damage_emoji<'a>(damage_type: &'a DamageType, env: &'a BinahBotEnvironmen
         DamageType::White => env.emojis.white_damage.as_ref(),
         DamageType::Black => env.emojis.black_damage.as_ref(),
         DamageType::Pale => env.emojis.pale_damage.as_ref(),
+    }
+}
+
+fn get_weapon_damage_emoji<'a>(damage_type: &'a WeaponDamageType, env: &'a BinahBotEnvironment) -> Option<String> {
+    match damage_type {
+        WeaponDamageType::Of(x) => get_damage_emoji(&x, env).cloned(),
+        WeaponDamageType::All => if let (Some(r), Some(w), Some(b), Some(p))
+            = (&env.emojis.red_damage, &env.emojis.white_damage, &env.emojis.black_damage, &env.emojis.pale_damage) {
+            Some(format!("{}{}{}{}", r, w, b, p))
+        } else {
+            None
+        },
     }
 }
 

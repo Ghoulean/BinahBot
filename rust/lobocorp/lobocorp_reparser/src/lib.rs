@@ -19,6 +19,7 @@ use lobocorp_common::game_objects::equipment::Slot;
 use lobocorp_common::game_objects::equipment::Suit;
 use lobocorp_common::game_objects::equipment::Weapon;
 use lobocorp_common::game_objects::equipment::WeaponAttackSpeed;
+use lobocorp_common::game_objects::equipment::WeaponDamageType;
 use lobocorp_common::game_objects::equipment::WeaponRange;
 use lobocorp_common::localizations::abnormality::BreachingEntityLocalization;
 use lobocorp_common::localizations::abnormality::EncyclopediaInfoLocalization;
@@ -67,7 +68,7 @@ mod tests {
         let result = get_localization(&paradise_lost_desc).expect("couldn't find");
 
         assert_eq!(
-            "<i>Behold: you stood at the door and knocked, and it was opened to you.</i>\n<i>I come from the end, and I am here to stay for but a moment.</i>\n<i>At the same time, I am the one who kindled the light to face the world.</i>\n<i>My loved ones, who now eagerly desire the greater gifts; I will show you the most excellent way.</i>",
+            "*Behold: you stood at the door and knocked, and it was opened to you.*\n*I come from the end, and I am here to stay for but a moment.*\n*At the same time, I am the one who kindled the light to face the world.*\n*My loved ones, who now eagerly desire the greater gifts; I will show you the most excellent way.*",
             *result
         );
     }
@@ -93,7 +94,6 @@ mod tests {
             });
         });
     }
-
 
     #[test]
     fn correct_breachability_display() {
@@ -137,5 +137,44 @@ mod tests {
             assert!(info.is_breachable);
             assert!(info.defenses.is_some());
         })
+    }
+
+    #[test]
+    fn special_obtain_equipment_have_correct_cost_and_observability() {
+        let firebird = get_encyclopedia_info(&100061).expect("no firebird entry");
+        let firebird = match firebird {
+            EncyclopediaInfo::Normal(x) => x,
+            _ => panic!()
+        };
+        let feather_of_honor = firebird.weapon.as_ref().expect("no firebird weapon");
+        assert_eq!(None, feather_of_honor.cost);
+        assert_eq!(None, feather_of_honor.observation_level);
+
+        let wn = get_encyclopedia_info(&100015).expect("no whitenight entry");
+        let wn = match wn {
+            EncyclopediaInfo::Normal(x) => x,
+            _ => panic!()
+        };
+        let paradise_lost = wn.weapon.as_ref().expect("no whitenight weapon");
+        assert_eq!(None, paradise_lost.cost);
+        assert_eq!(None, paradise_lost.observation_level);
+
+        let snow_queen = get_encyclopedia_info(&100102).expect("no snow queen entry");
+        let snow_queen = match snow_queen {
+            EncyclopediaInfo::Normal(x) => x,
+            _ => panic!()
+        };
+        let kiss = snow_queen.gifts.get(0).expect("no snow queen gift");
+        assert_eq!(None, kiss.obtain_probability);
+        assert_eq!(None, kiss.observation_level);
+
+        let bbw = get_encyclopedia_info(&100033).expect("no bigbadwolf entry");
+        let bbw = match bbw {
+            EncyclopediaInfo::Normal(x) => x,
+            _ => panic!()
+        };
+        let sheepskin = bbw.gifts.get(1).expect("no bigbadwolf gift");
+        assert_eq!(None, sheepskin.obtain_probability);
+        assert_eq!(None, sheepskin.observation_level);
     }
 }

@@ -9,7 +9,7 @@ pub fn serialize_option<T>(
     option.as_ref().map(|x| format!("Some({})", serializer(&x))).unwrap_or("None".to_string())
 }
 
-// Numbers, boolean, raw strings
+// Integers, boolean, raw strings
 pub fn display_serializer<T>(x: &T) -> String 
 where T: fmt::Display,
 {

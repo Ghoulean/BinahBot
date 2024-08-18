@@ -13,6 +13,7 @@ use lobocorp_common::game_objects::equipment::EquipRequirement;
 use lobocorp_common::game_objects::equipment::EquipRequirementKey;
 use lobocorp_common::game_objects::equipment::Slot;
 use lobocorp_common::game_objects::equipment::WeaponAttackSpeed;
+use lobocorp_common::game_objects::equipment::WeaponDamageType;
 use lobocorp_common::game_objects::equipment::WeaponRange;
 use roxmltree::Document;
 use roxmltree::Node;
@@ -47,7 +48,7 @@ pub struct PartialWeapon {
     pub range: WeaponRange,
     pub attack_speed: WeaponAttackSpeed,
     pub damage_range: DamageRange,
-    pub damage_type: DamageType,
+    pub damage_type: WeaponDamageType,
     pub max_collectable_amount: i32,
     pub equip_requirements: Vec<EquipRequirement>,
     pub image: Option<String>,
@@ -136,7 +137,12 @@ fn parse_weapon(node: &Node) -> PartialWeapon {
         damage_node.attribute("min").and_then(|x| x.trim().parse().ok()).expect("couldn't get min damage"),
         damage_node.attribute("max").and_then(|x| x.trim().parse().ok()).expect("couldn't get max damage")
     );
-    let damage_type = damage_node.attribute("type").and_then(|x| DamageType::try_from(x).ok()).expect("couldn't get damage type");
+
+    let damage_type = if id == 200004 || id == 200038 { // In the name of love and hate, Twilight
+        WeaponDamageType::All
+    } else {
+        WeaponDamageType::Of(damage_node.attribute("type").and_then(|x| DamageType::try_from(x).ok()).expect("couldn't get damage type"))
+    };
 
     let max_collectable_amount = get_unique_node_text(node, "maxNum").ok()
         .and_then(|x| x.parse::<i32>().ok())
@@ -164,11 +170,20 @@ fn parse_suit(node: &Node) -> PartialSuit {
     let armor_id = get_unique_node_text(node, "armorId").map(|x| x.to_string()).expect("couldn't find armorId");
 
     let defense_node = get_unique_node(node, "defense").expect("no defense node");
-    let defenses = Defenses {
-        red: get_defense_val(&defense_node, "R"),
-        white: get_defense_val(&defense_node, "W"),
-        black: get_defense_val(&defense_node, "B"),
-        pale: get_defense_val(&defense_node, "P"),
+    let defenses = if id == 300015 { // Paradise Lost
+        Defenses {
+            red: Resistance(0.5),
+            white: Resistance(0.5),
+            black: Resistance(0.5),
+            pale: Resistance(0.3)
+        }
+    } else { 
+        Defenses {
+            red: get_defense_val(&defense_node, "R"),
+            white: get_defense_val(&defense_node, "W"),
+            black: get_defense_val(&defense_node, "B"),
+            pale: get_defense_val(&defense_node, "P"),
+        }
     };
 
     let risk = get_unique_node_text(node, "grade").ok()

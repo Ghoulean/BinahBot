@@ -50,7 +50,9 @@ fn build_localization_index() -> HashMap<OwnedLocalizationKey, String> {
                 .replace("&#60;", "<")
                 .replace("&lt;", "<")
                 .replace("&#62;", ">")
-                .replace("&gt;", ">");
+                .replace("&gt;", ">")
+                .replace("<i>", "*")
+                .replace("</i>", "*");
 
             let localization_key = OwnedLocalizationKey(id.to_string(), locale.clone());
             hm.entry(localization_key).or_insert(format!("r#\"{}\"#", text));
