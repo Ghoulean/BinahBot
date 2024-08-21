@@ -10,7 +10,6 @@ use ruina::ruina_common::localizations::common::Locale;
 use ruina::ruina_index::models::ParsedTypedId;
 use ruina::ruina_reparser::get_combat_page_by_id;
 use ruina::ruina_reparser::get_key_page_by_id;
-use ruina::ruina_reparser::get_passive_by_id;
 use unic_langid::LanguageIdentifier;
 
 use crate::lor::lookup::lookup;
@@ -82,7 +81,8 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
     let chapter = match typed_id.0 {
         PageType::CombatPage => get_combat_page_by_id(&typed_id.1).and_then(|x| x.chapter.clone()),
         PageType::KeyPage => get_key_page_by_id(&typed_id.1).and_then(|x| x.chapter.clone()),
-        PageType::Passive => get_passive_by_id(&typed_id.1).and_then(|x| x.chapter.clone()),
+        // todo: fix passive chapter mappings. seems to be a lot of mistakes
+        // PageType::Passive => get_passive_by_id(&typed_id.1).and_then(|x| x.chapter.clone()),
         // todo: fine-grained spoilers for abnos and battle symbols
         _ => Some(Chapter::Canard),
     };
