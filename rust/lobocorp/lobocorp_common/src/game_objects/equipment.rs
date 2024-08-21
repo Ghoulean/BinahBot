@@ -108,6 +108,46 @@ impl From<u32> for WeaponRangeCategories {
     }
 }
 
+impl From<&WeaponRange> for WeaponRangeCategories {
+    fn from(value: &WeaponRange) -> Self {
+        WeaponRangeCategories::from(value.0)
+    }
+}
+
+impl From<WeaponRange> for WeaponRangeCategories {
+    fn from(value: WeaponRange) -> Self {
+        WeaponRangeCategories::from(&value)
+    }
+}
+
+impl From<f64> for WeaponAttackSpeedCategories {
+    fn from(value: f64) -> Self {
+        if value <= 1.0 {
+            WeaponAttackSpeedCategories::VeryFast
+        } else if value < 2.0 {
+            WeaponAttackSpeedCategories::Fast
+        } else if value < 3.0 {
+            WeaponAttackSpeedCategories::Normal
+        } else if value < 5.0 {
+            WeaponAttackSpeedCategories::Slow
+        } else {
+            WeaponAttackSpeedCategories::VerySlow
+        }
+    }
+}
+
+impl From<&WeaponAttackSpeed> for WeaponAttackSpeedCategories {
+    fn from(value: &WeaponAttackSpeed) -> Self {
+        WeaponAttackSpeedCategories::from(value.0)
+    }
+}
+
+impl From<WeaponAttackSpeed> for WeaponAttackSpeedCategories {
+    fn from(value: WeaponAttackSpeed) -> Self {
+        WeaponAttackSpeedCategories::from(&value)
+    }
+}
+
 impl TryFrom<&str> for EquipRequirementKey {
     type Error = String;
 

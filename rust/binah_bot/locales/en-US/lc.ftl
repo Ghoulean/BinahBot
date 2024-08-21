@@ -36,7 +36,33 @@ weapon_attack_speed_header = Attack speed
 weapon_attack_range_header = Attack range
 weapon_damage_header = Damage
 
+weapon_range_verylong = Very Long ({ $range })
+weapon_range_long = Long ({ $range })
+weapon_range_medium = Medium ({ $range })
+weapon_range_short = Short ({ $range })
+weapon_range_veryshort = Very Short ({ $range })
+
+weapon_attack_speed_veryfast = Very Fast ({ $speed })
+weapon_attack_speed_fast = Fast ({ $speed })
+weapon_attack_speed_normal = Normal ({ $speed })
+weapon_attack_speed_slow = Slow ({ $speed })
+weapon_attack_speed_veryslow = Very Slow ({ $speed })
+
 gift_slot_header = Slot
+slot_brooch = Brooch
+slot_cheek = Cheek
+slot_eye = Eye
+slot_face = Face
+slot_hand1 = Hand 1
+slot_hand2 = Hand 2
+slot_hat = Hat
+slot_helmet = Helmet
+slot_leftback = Left Back
+slot_mouth1 = Mouth 1
+slot_mouth2 = Mouth 2
+slot_neckwear = Neckwear
+slot_rightback = Right Back
+slot_special = Special
 
 breaching_entity_health_header = HP
 breaching_entity_movespeed_header = Movement speed

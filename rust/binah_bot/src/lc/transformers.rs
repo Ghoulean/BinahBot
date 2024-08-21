@@ -18,9 +18,14 @@ use lobocorp::lobocorp_common::game_objects::common::StatBonus;
 use lobocorp::lobocorp_common::game_objects::equipment::EquipRequirement;
 use lobocorp::lobocorp_common::game_objects::equipment::EquipRequirementKey;
 use lobocorp::lobocorp_common::game_objects::equipment::Gift;
+use lobocorp::lobocorp_common::game_objects::equipment::Slot;
 use lobocorp::lobocorp_common::game_objects::equipment::Suit;
 use lobocorp::lobocorp_common::game_objects::equipment::Weapon;
+use lobocorp::lobocorp_common::game_objects::equipment::WeaponAttackSpeed;
+use lobocorp::lobocorp_common::game_objects::equipment::WeaponAttackSpeedCategories;
 use lobocorp::lobocorp_common::game_objects::equipment::WeaponDamageType;
+use lobocorp::lobocorp_common::game_objects::equipment::WeaponRange;
+use lobocorp::lobocorp_common::game_objects::equipment::WeaponRangeCategories;
 use lobocorp::lobocorp_common::localizations::abnormality::BreachingEntityLocalization;
 use lobocorp::lobocorp_common::localizations::common::Locale;
 use lobocorp::lobocorp_common::localizations::equipment::LocalizationKey;
@@ -323,12 +328,12 @@ pub fn transform_weapon(
         },
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "weapon_attack_speed_header"),
-            value: weapon.attack_speed.0.to_string(), // todo: add category
+            value: lookup_weapon_attack_speed_str(&lang_id, &weapon.attack_speed, env),
             inline: Some(true),
         },
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "weapon_attack_range_header"),
-            value: weapon.range.0.to_string(), // todo: add category
+            value: lookup_weapon_range_str(&lang_id, &weapon.range, env),
             inline: Some(true),
         },
         DiscordEmbedFields {
@@ -492,7 +497,7 @@ pub fn transform_gift(
         },
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "gift_slot_header"),
-            value: gift.slot.to_string(), // todo: localize
+            value: lookup_slot_str(&lang_id, &gift.slot, env),
             inline: Some(true),
         },
         DiscordEmbedFields {
@@ -766,6 +771,62 @@ fn format_risk_level(risk_level: &RiskLevel, env: &BinahBotEnvironment) -> Strin
     let binding2 = &"".to_string();
     let emoji = binding.as_ref().unwrap_or(binding2);
     format!("{}{}", emoji, risk_level.to_string())
+}
+
+fn lookup_weapon_range_str(lang_id: &LanguageIdentifier, weapon_range: &WeaponRange, env: &BinahBotEnvironment) -> String {
+    let category = WeaponRangeCategories::from(weapon_range);
+    let key = match category {
+        WeaponRangeCategories::VeryLong => "weapon_range_verylong",
+        WeaponRangeCategories::Long => "weapon_range_long",
+        WeaponRangeCategories::Medium => "weapon_range_medium",
+        WeaponRangeCategories::Short => "weapon_range_short",
+        WeaponRangeCategories::VeryShort => "weapon_range_veryshort"
+    };
+    env.locales.lookup_with_args(
+        lang_id,
+        key,
+        &HashMap::from([
+            ("range", FluentValue::from(weapon_range.0)),
+        ])
+    )
+}
+
+fn lookup_weapon_attack_speed_str(lang_id: &LanguageIdentifier, weapon_attack_speed: &WeaponAttackSpeed, env: &BinahBotEnvironment) -> String {
+    let category = WeaponAttackSpeedCategories::from(weapon_attack_speed);
+    let key = match category {
+        WeaponAttackSpeedCategories::VeryFast => "weapon_attack_speed_veryfast",
+        WeaponAttackSpeedCategories::Fast => "weapon_attack_speed_fast",
+        WeaponAttackSpeedCategories::Normal => "weapon_attack_speed_normal",
+        WeaponAttackSpeedCategories::Slow => "weapon_attack_speed_slow",
+        WeaponAttackSpeedCategories::VerySlow => "weapon_attack_speed_veryslow",
+    };
+    env.locales.lookup_with_args(
+        lang_id,
+        key,
+        &HashMap::from([
+            ("speed", FluentValue::from(weapon_attack_speed.0)),
+        ])
+    )
+}
+
+fn lookup_slot_str(lang_id: &LanguageIdentifier, slot: &Slot, env: &BinahBotEnvironment) -> String {
+    let key = match slot {
+        Slot::Brooch => "slot_brooch",
+        Slot::Cheek => "slot_cheek",
+        Slot::Eye => "slot_eye",
+        Slot::Face => "slot_face",
+        Slot::Hand1 => "slot_hand1",
+        Slot::Hand2 => "slot_hand2",
+        Slot::Hat => "slot_hat",
+        Slot::Helmet => "slot_helmet",
+        Slot::LeftBack => "slot_leftback",
+        Slot::Mouth1 => "slot_mouth1",
+        Slot::Mouth2 => "slot_mouth2",
+        Slot::Neckwear => "slot_neckwear",
+        Slot::RightBack => "slot_rightback",
+        Slot::Special => "slot_special",
+    };
+    env.locales.lookup(lang_id, key)
 }
 
 impl From<RiskLevel> for DiscordEmbedColors {
