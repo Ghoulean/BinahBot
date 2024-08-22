@@ -51,7 +51,6 @@ pub struct PartialWeapon {
     pub damage_type: WeaponDamageType,
     pub max_collectable_amount: i32,
     pub equip_requirements: Vec<EquipRequirement>,
-    pub image: Option<String>,
 }
 
 #[derive(Debug, Clone)]
@@ -66,7 +65,6 @@ pub struct PartialSuit {
     pub risk: RiskLevel,
     pub equip_requirements: Vec<EquipRequirement>,
     pub max_collectable_amount: i32,
-    pub image: Option<String>,
 }
 
 #[derive(Debug, Clone)]
@@ -76,7 +74,6 @@ pub struct PartialGift {
     pub desc_id: Option<String>,
     pub slot: Slot,
     pub stat_bonuses: Vec<StatBonus>,
-    pub image: Option<String>,
 }
 
 #[derive(Debug)]
@@ -154,11 +151,9 @@ fn parse_weapon(node: &Node) -> PartialWeapon {
         EquipRequirement(key, val)
     }).collect::<Vec<_>>();
 
-    let image = get_unique_node_text(node, "sprite").map(|x| x.to_string()).ok();
-
     PartialWeapon {
         id, name_id, desc_id, special_desc_id, risk, range, attack_speed,
-        damage_range, damage_type, max_collectable_amount, equip_requirements, image,
+        damage_range, damage_type, max_collectable_amount, equip_requirements,
     }
 }
 
@@ -201,11 +196,9 @@ fn parse_suit(node: &Node) -> PartialSuit {
         EquipRequirement(key, val)
     }).collect::<Vec<_>>();
 
-    let image = None;
-
     PartialSuit {
         id, name_id, desc_id, special_desc_id, armor_id, defenses,
-        risk, max_collectable_amount, equip_requirements, image,
+        risk, max_collectable_amount, equip_requirements,
     }
 }
 
@@ -238,10 +231,8 @@ fn parse_gift(node: &Node) -> PartialGift {
         }).collect::<Vec<_>>()
     }).unwrap_or(binding);
 
-    let image = get_unique_node_text(node, "sprite").map(|x| x.to_string()).ok();
-
     PartialGift {
-        id, name_id, desc_id, slot, stat_bonuses, image
+        id, name_id, desc_id, slot, stat_bonuses
     }
 }
 

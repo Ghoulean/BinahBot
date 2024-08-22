@@ -13,6 +13,7 @@ mod localization_index;
 mod path;
 mod rewrite;
 mod serde;
+mod whitenight_apostles;
 mod xml;
 
 pub fn build_reparser() -> String {

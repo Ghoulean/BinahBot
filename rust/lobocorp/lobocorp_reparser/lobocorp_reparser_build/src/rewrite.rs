@@ -69,7 +69,12 @@ fn write_normal_info(list_entry: &ListEntry, partial_encyclopedia_info: &Partial
         equipment_ids.push(1023);
     } else if id == 100033 { // Big bad wolf special gift
         equipment_ids.push(1033);
-    };
+    } else if id == 100037 { // Crumbling armor gifts
+        equipment_ids.push(4000371);
+        equipment_ids.push(4000372);
+        equipment_ids.push(4000373);
+        equipment_ids.push(4000374);
+    }
 
     let weapon_entry = partial_equipment.weapons.iter().filter(|x| {
         equipment_ids.contains(&x.id)
@@ -283,7 +288,7 @@ fn write_breaching_entity(info: &PartialBreachingEntity) -> String {
     format!("BreachingEntity {{
         id: \"{id}\",
         hp: {hp},
-        speed: {speed},
+        speed: {speed:?},
         defenses: {defenses},
         damage_type: DamageType::{damage_type:?},
         risk_level: RiskLevel::{risk_level:?}

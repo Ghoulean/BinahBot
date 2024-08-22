@@ -12,7 +12,9 @@ use crate::list::ListEntry;
 use crate::path::get_localized_abno_file_path;
 use crate::serde::display_serializer;
 use crate::serde::serialize_option;
+use crate::serde::str_serializer;
 use crate::serde::write_vec;
+use crate::whitenight_apostles::get_apostle_names;
 use crate::xml::find_unique_node_with_name_and_attribute;
 use crate::xml::get_nodes;
 use crate::xml::get_nodes_text;
@@ -64,11 +66,11 @@ fn build_abno_localizations(list_entries: &[ListEntry], partial_abnos: &HashMap<
 
         let partial_info = partial_abnos.get(x).expect("tried to get nonexistent abno");
 
-        (x.id, build_localization(x, &partial_info, &doc))
+        (x.id, build_localization(x, &partial_info, &doc, &locale))
     }).collect()
 }
 
-fn build_localization(entry: &ListEntry, partial_info: &PartialEncyclopediaInfo, doc: &Document) -> String {
+fn build_localization(entry: &ListEntry, partial_info: &PartialEncyclopediaInfo, doc: &Document, locale: &Locale) -> String {
     let creature_node = get_unique_node(&doc.root(), "creature").expect("no creature node");
     let observe_node = get_unique_node(&creature_node, "observe").expect("no observe node");
     let collection_node = get_unique_node(&observe_node, "collection").expect("no collection node");
@@ -100,9 +102,8 @@ fn build_localization(entry: &ListEntry, partial_info: &PartialEncyclopediaInfo,
         PartialEncyclopediaInfo::DontTouchMe(_) => None,
     };
 
-    // apo bird egg localizations not in standard location
-    // todo: override for whitenight apostles
-    let default_name_code_vec: Vec<(String, String)> = if id == 100038 {
+    let default_name_vec: Vec<String> = if id == 100038 {
+        // apo bird egg localizations not in standard location
         let etc_node = get_unique_node(&creature_node, "etc").expect("no etc node");
         let binding = vec!["gateway", "bigBirdEgg", "longBirdEgg", "smallBirdEgg"];
         let eggs = binding.iter().map(|x| {
@@ -113,17 +114,20 @@ fn build_localization(entry: &ListEntry, partial_info: &PartialEncyclopediaInfo,
                 .expect(&format!("no name for {}", x))
                 .to_string()
         }).map(|x| {
-            (x, "".to_string())  
+            x  
         });
-        iter::once((name.clone(), code.to_string())).chain(eggs).collect::<Vec<_>>()
-    } else {
+        iter::once(name.clone()).chain(eggs).collect::<Vec<_>>()
+    } else if id == 100015 {
+        // whitenight apostle names are only nicknames
+        iter::once(name.clone()).chain(get_apostle_names(locale).map(|x| format_story_data(&x))).collect::<Vec<_>>()
+     } else {
         let len = breaching_entities.map(|x| x.len()).unwrap_or(0);
-        vec![(name.clone(), code.to_string())].into_iter().cycle().take(len).collect()
+        vec![name.clone()].into_iter().cycle().take(len).collect()
     };
 
     let breaching_entity_localizations = breaching_entities.map(|x| x.iter().enumerate().map(|(i, x)| {
-        let (default_name, default_code) = default_name_code_vec.get(i).unwrap();
-        build_breaching_entity_localization(x, &default_name, &default_code, doc)
+        let default_name = default_name_vec.get(i).unwrap();
+        build_breaching_entity_localization(x, &default_name, doc)
     }).collect::<Vec<_>>()).map(|x| {
         write_vec(&x)  
     }).unwrap_or("[]".to_string());
@@ -143,7 +147,6 @@ fn build_localization(entry: &ListEntry, partial_info: &PartialEncyclopediaInfo,
 fn build_breaching_entity_localization(
     breaching_entity: &PartialBreachingEntity,
     parent_name: &str,
-    parent_code: &str,
     doc: &Document
 ) -> String {
     let creature_node = get_unique_node(&doc.root(), "creature").expect("no creature node");
@@ -155,12 +158,13 @@ fn build_breaching_entity_localization(
         .map(|x| format_story_data(x))
         .unwrap_or(parent_name.to_string());
     let name = binding.trim();
-    let code = child_node.as_ref().and_then(|x| get_unique_node_text(&x, "codeId").ok()).unwrap_or(parent_code).trim().to_string();
+    let code = child_node.as_ref().and_then(|x| get_unique_node_text(&x, "codeId").ok()).map(|x| x.trim().to_string());
+    let code = serialize_option(&code, str_serializer);
 
     format!("BreachingEntityLocalization {{
         id: \"{id}\",
         name: {name},
-        code: \"{code}\"
+        code: {code}
     }}")
 }
 
@@ -174,8 +178,6 @@ fn format_story_data(s: &str) -> String {
     } else {
         s
     };
-
-    let x = x.replace("&#13;&#10;", "\n");
 
     if !x.contains('\"') {
         format!("r\"{x}\"")

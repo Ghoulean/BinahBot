@@ -55,7 +55,7 @@ pub struct DontTouchMeInfo<'a> {
 pub struct BreachingEntity<'a> {
     pub id: &'a str,
     pub hp: i32,
-    pub speed: i32,
+    pub speed: f64,
     pub defenses: Defenses,
     pub damage_type: DamageType,
     pub risk_level: RiskLevel

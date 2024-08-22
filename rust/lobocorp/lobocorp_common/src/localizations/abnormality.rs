@@ -15,5 +15,5 @@ pub struct EncyclopediaInfoLocalization<'a> {
 pub struct BreachingEntityLocalization<'a> {
     pub id: &'a str,
     pub name: &'a str,
-    pub code: &'a str,
+    pub code: Option<&'a str>,
 }

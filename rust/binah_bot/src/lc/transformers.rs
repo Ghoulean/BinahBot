@@ -561,20 +561,24 @@ pub fn transform_breaching_entity(
         },
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "breaching_entity_damage_type_header"),
-            value: breaching_entity.damage_type.to_string(), // todo: localize
+            value: get_damage_emoji(&breaching_entity.damage_type, env).unwrap_or(&breaching_entity.damage_type.to_string()).clone(),
             inline: Some(true),
         },
     ];
 
-    DiscordEmbed {
-        title: Some(env.locales.lookup_with_args(
+    let title = breaching_entity_localization.code.map(|x| {
+        env.locales.lookup_with_args(
             &lang_id,
             "encyclopedia_title_format",
             &HashMap::from([
                 ("name", FluentValue::from(breaching_entity_localization.name)),
-                ("code", FluentValue::from(breaching_entity_localization.code)),
+                ("code", FluentValue::from(x)),
             ])
-        )),
+        )
+    }).unwrap_or(breaching_entity_localization.name.to_string());
+
+    DiscordEmbed {
+        title: Some(title),
         description: None,
         color: Some(DiscordEmbedColors::from(&breaching_entity.risk_level) as i32),
         image: None, // todo: upload image

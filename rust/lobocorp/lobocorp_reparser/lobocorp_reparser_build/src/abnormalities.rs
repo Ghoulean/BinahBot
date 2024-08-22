@@ -72,7 +72,7 @@ pub enum ObtainEquipmentNumber {
 pub struct PartialBreachingEntity {
     pub id: String,
     pub hp: i32,
-    pub speed: i32,
+    pub speed: f64,
     pub defenses: Defenses,
     pub damage_type: DamageType,
     pub risk_level: RiskLevel
@@ -220,7 +220,7 @@ fn parse_normal_abno(id: u32, doc: &Document) -> PartialNormalInfo {
     }).collect::<Vec<_>>();
 
     let hp = get_unique_node_text(&stat_node, "hp").ok().and_then(|x| x.parse::<i32>().ok());
-    let speed = get_unique_node_text(&stat_node, "speed").ok().and_then(|x| x.parse::<i32>().ok());
+    let speed = get_unique_node_text(&stat_node, "speed").ok().and_then(|x| x.parse::<f64>().ok());
     let breaching_damage_type = get_unique_node(&stat_node, "specialDamage").ok()
         .and_then(|x| get_first_node(&x, "damage"))
         .and_then(|x| x.attribute("type"))
@@ -240,7 +240,7 @@ fn parse_normal_abno(id: u32, doc: &Document) -> PartialNormalInfo {
 
     let child_abno_stat_id = get_unique_node_text(&creature_node, "child").ok();
     if let Some(child_abno_stat) = child_abno_stat_id {
-        // remodel apo bird as its own top-level entry
+        // not apo bird -- apo bird is a top-level entry, not a child of small/long/big birds
         if child_abno_stat != "BossBird_stat" {
             let child_stat_path = PathBuf::from(format!("{}{}.xml", CHILD_CREATURE_DIR, child_abno_stat));
             let child_stat_str = fs::read_to_string(child_stat_path.as_path()).expect(&format!("cannot read {:?}", child_stat_path));
@@ -298,7 +298,7 @@ fn parse_child_abno(id: &str, doc: &Document) -> Vec<PartialBreachingEntity> {
         .expect("couldn't get hp");
 
     let speed = get_unique_node_text(&stat_node, "speed").ok()
-        .and_then(|x| x.parse::<i32>().ok())
+        .and_then(|x| x.parse::<f64>().ok())
         .expect("couldn't get hp");
 
     let damage_type = get_unique_node_text(&creature_node, "attackType").ok()
@@ -346,7 +346,7 @@ fn parse_egg(id: &str, doc: &Document) -> PartialBreachingEntity {
         .expect("couldn't get hp");
 
     let speed = get_unique_node_text(&stat_node, "speed").ok()
-        .and_then(|x| x.parse::<i32>().ok())
+        .and_then(|x| x.parse::<f64>().ok())
         .expect("couldn't get hp");
 
     let defense_node = get_unique_node(&stat_node, "defense").expect("couldn't find stat node"); 

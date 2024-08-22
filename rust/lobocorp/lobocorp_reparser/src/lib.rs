@@ -28,22 +28,18 @@ use lobocorp_common::localizations::equipment::LocalizationKey;
 
 include!(concat!(env!("OUT_DIR"), "/out.rs"));
 
-#[inline(always)]
 pub fn get_all_encyclopedia_ids() -> Vec<&'static u32> {
     ENCYCLOPEDIA.keys().collect()
 }
 
-#[inline(always)]
 pub fn get_encyclopedia_info(id: &u32) -> Option<&EncyclopediaInfo> {
     ENCYCLOPEDIA.get(id)
 }
 
-#[inline(always)]
 pub fn get_localization<'a>(key: &'a LocalizationKey<'a>) -> Option<&'a &'static str> {
     LOCALIZATION_INDEX.get(&&format!("{}#{:?}", key.0, key.1))
 }
 
-#[inline(always)]
 pub fn get_abno_localization<'a>(id: &'a u32, locale: &'a Locale) -> Option<&'a EncyclopediaInfoLocalization<'a>> {
     ABNO_LOCALIZATIONS.get(format!("{}#{:?}", id, locale).as_str())
 }
@@ -74,6 +70,28 @@ mod tests {
     }
 
     #[test]
+    fn sanity_whitenight_display_names() {
+        let whitenight = get_abno_localization(&100015, &Locale::English).unwrap();
+        let names = whitenight.breaching_entity_localizations.into_iter().map(|x| {
+            x.name    
+        });
+        let expected = ["WhiteNight", "Scythe Apostle", "Guardian Apostle", "Staff Apostle", "Spear Apostle"];
+        names.enumerate().for_each(|(i, x)| {
+            assert_eq!(expected[i], x);
+        });
+    }
+
+    #[test]
+    fn sanity_censored_correct_breaching_number() {
+        let censored = get_encyclopedia_info(&100056).unwrap();
+        let censored = match censored {
+            EncyclopediaInfo::Normal(x) => x,
+            _ => unreachable!()
+        };
+        assert_eq!(2, censored.breaching_entities.len());
+    }
+
+    #[test]
     #[ignore]
     fn sanity_all_child_abnos_have_name() {
         Locale::iter().for_each(|locale| {
@@ -87,7 +105,8 @@ mod tests {
 
                 binding.breaching_entity_localizations.iter().for_each(|x| {
                     count += 1;
-                    hs.insert(format!("{}#{}", x.name, x.code));
+                    dbg!(&x.name);
+                    hs.insert(x.name);
                 });
 
                 assert!(hs.len() == count);
