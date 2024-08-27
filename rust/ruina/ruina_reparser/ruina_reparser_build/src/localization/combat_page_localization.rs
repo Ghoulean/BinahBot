@@ -65,7 +65,6 @@ fn parse_combat_page_locale(node: Node) -> (CombatPageLocaleKey, CombatPageLocal
         .collect();
     let some_max_index = dice_desc_overrides_vec.iter().map(|x| x.0).max();
     let dice_desc_overrides_str = if let Some(max_index) = some_max_index {
-        dbg!(max_index, &dice_desc_overrides_vec);
         let mut dice_desc_vec_2 = Vec::new();
         for _ in 0..max_index + 1{
             dice_desc_vec_2.push("None".to_string());

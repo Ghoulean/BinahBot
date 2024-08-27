@@ -247,11 +247,11 @@ pub fn transform_combat_page(
 
     let page_desc = page.script_id.and_then(|x| {
         get_card_effect_locales_by_id(x).get(card_locale).map(|y| y.desc.join("\n").to_string())
-    });
+    }).or(page_locale.as_ref().and_then(|x| x.card_effect).map(|x| x.to_string()));
 
     if let Some(desc) = page_desc {
         fields.push(DiscordEmbedFields {
-            name: "Page Description".to_string(),
+            name: env.locales.lookup(&lang_id, "combat_page_description_header"),
             value: desc,
             inline: Some(true)
         })
@@ -529,6 +529,8 @@ fn format_to_indented_list(v: &[String]) -> String {
 
 #[cfg(test)]
 mod tests {
+    use unic_langid::langid;
+
     use crate::test_utils::build_mocked_binahbot_env;
 
     use super::*;
@@ -575,4 +577,21 @@ mod tests {
         ));
     }
 
+    #[test]
+    fn combat_page_desc_override() {
+        let env = build_mocked_binahbot_env();
+
+        let binding = get_combat_page_locales_by_id("9910108");
+        let self_loathing_locale = binding.get(&Locale::English).unwrap();
+
+        let page_desc_header = env.locales.lookup(&langid!("en-US"), "combat_page_description_header");
+        let embed = transform_combat_page("9910108", &Locale::English, &BinahBotLocale::EnglishUS, &env);
+        let binding = embed.fields.unwrap();
+        let page_desc_field = binding.iter().find(|x| {
+           x.name == page_desc_header 
+        }).expect("couldn't find page description field");
+
+        assert_eq!(self_loathing_locale.card_effect.unwrap(), page_desc_field.value)
+        
+    }
 }
