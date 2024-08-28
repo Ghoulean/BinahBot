@@ -41,6 +41,7 @@ pub struct ToolInfo<'a> {
     pub id: u32,
     pub risk: RiskLevel,
     pub tool_type: ToolType,
+    pub breaching_entities: &'a [BreachingEntity<'a>],
     pub image: &'a str,
 }
 

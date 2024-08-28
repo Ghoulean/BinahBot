@@ -8,13 +8,14 @@ use strum::IntoEnumIterator;
 
 use crate::abnormalities::PartialBreachingEntity;
 use crate::abnormalities::PartialEncyclopediaInfo;
+use crate::hardcoded_names::get_apostle_names;
+use crate::hardcoded_names::get_nothing_there_names;
 use crate::list::ListEntry;
 use crate::path::get_localized_abno_file_path;
 use crate::serde::display_serializer;
 use crate::serde::serialize_option;
 use crate::serde::str_serializer;
 use crate::serde::write_vec;
-use crate::whitenight_apostles::get_apostle_names;
 use crate::xml::find_unique_node_with_name_and_attribute;
 use crate::xml::get_nodes;
 use crate::xml::get_nodes_text;
@@ -92,13 +93,14 @@ fn build_localization(entry: &ListEntry, partial_info: &PartialEncyclopediaInfo,
             .collect::<Vec<_>>());
     let story = write_vec(
         &get_nodes(&observe_node, "desc").iter()
+            .map(|x| x.children().filter(|y| y.is_text()).collect::<Vec<_>>().last().expect("no text nodes").clone())
             .map(|x| format_story_data(x.text().expect("no text")))
             .collect::<Vec<_>>()
     );
 
     let breaching_entities = match partial_info {
         PartialEncyclopediaInfo::Normal(x) => Some(&x.breaching_entities),
-        PartialEncyclopediaInfo::Tool(_) => None,
+        PartialEncyclopediaInfo::Tool(x) => Some(&x.breaching_entities),
         PartialEncyclopediaInfo::DontTouchMe(_) => None,
     };
 
@@ -120,7 +122,10 @@ fn build_localization(entry: &ListEntry, partial_info: &PartialEncyclopediaInfo,
     } else if id == 100015 {
         // whitenight apostle names are only nicknames
         iter::once(name.clone()).chain(get_apostle_names(locale).map(|x| format_story_data(&x))).collect::<Vec<_>>()
-     } else {
+    } else if id == 100005 {
+        // Nothing There names are also only nicknames
+        get_nothing_there_names(locale).iter().map(|x| format_story_data(&x)).collect::<Vec<_>>()
+    } else {
         let len = breaching_entities.map(|x| x.len()).unwrap_or(0);
         vec![name.clone()].into_iter().cycle().take(len).collect()
     };
@@ -187,5 +192,31 @@ fn format_story_data(s: &str) -> String {
         format!("r##\"{x}\"##")
     } else {
         format!("r#\"{x}\"#")
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use roxmltree::Document;
+    use roxmltree::NodeType;
+
+    #[test]
+    fn sanity_xml_parsing() {
+        let doc = Document::parse(r#"<desc id="3" openLevel="2">[ {Company P } ]</desc>"#).unwrap();
+
+        assert_eq!(Some("[ {Company P } ]"), doc.root().first_child().unwrap().text());
+        assert_eq!(Some("[ {Company P } ]"), doc.root().first_child().unwrap().last_child().unwrap().text());
+        assert_eq!(NodeType::Element, doc.root().first_child().unwrap().node_type());
+        assert_eq!(1, doc.root().first_child().unwrap().children().collect::<Vec<_>>().len());
+
+        let doc = roxmltree::Document::parse(r#"<desc id="4" openLevel="3">
+<!-- Translation has been fixed here ;) -->
+[ {Thanks to this shelter, the selected refugees were safely shielded from the ocean of endless screams and bloodshed.} ]
+</desc>"#).unwrap();
+
+        assert_eq!(NodeType::Element, doc.root().first_child().unwrap().node_type());
+        assert_eq!(3, doc.root().first_child().unwrap().children().collect::<Vec<_>>().len());
+        assert_eq!(2, doc.root().first_child().unwrap().children().filter(|x| x.is_text()).collect::<Vec<_>>().len());
+        assert_eq!(Some("\n[ {Thanks to this shelter, the selected refugees were safely shielded from the ocean of endless screams and bloodshed.} ]\n"), doc.root().first_child().unwrap().last_child().unwrap().text());
     }
 }

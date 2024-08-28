@@ -8,12 +8,12 @@ use rewrite::write_encyclopedia_info;
 mod abno_localizations;
 mod abnormalities;
 mod equipment;
+mod hardcoded_names;
 mod list;
 mod localization_index;
 mod path;
 mod rewrite;
 mod serde;
-mod whitenight_apostles;
 mod xml;
 
 pub fn build_reparser() -> String {

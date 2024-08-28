@@ -135,7 +135,15 @@ pub fn lc_button(interaction: &DiscordInteraction, env: &BinahBotEnvironment) ->
                 env
             )
         },
-        (Code::BreachingEntity, EncyclopediaInfo::Tool(_), _) => todo!(), // yang
+        (Code::BreachingEntity, EncyclopediaInfo::Tool(x), _) => { // yang
+            let localization = get_abno_localization(&id, &locale).expect("no localization found");
+            transform_breaching_entity(
+                &x.breaching_entities.get(index).expect("bad breaching entity index"),
+                &localization.breaching_entity_localizations.get(index).expect("bad breaching entity index"),
+                &binahbot_locale,
+                env
+            )
+        },
         _ => panic!("encountered unexpected custom_id format"),
     };
 
@@ -188,7 +196,7 @@ pub fn build_buttons(
 
             x.breaching_entities.iter().enumerate().for_each(|(i, _)| {
                 let breaching_locale = locale_info.breaching_entity_localizations.get(i).expect("couldn't get breaching entity locale");
-                let label = if i == 0 && x.is_breachable {
+                let label = if i == 0 && x.is_breachable && breaching_locale.name == locale_info.name {
                     env.locales.lookup(&lang_id, "breaching_button_label")
                 } else {
                     env.locales.lookup_with_args(
@@ -269,6 +277,18 @@ pub fn build_buttons(
                 })
             });
             vec
+        },
+        EncyclopediaInfo::Tool(x) => {
+            // Only Yang
+            x.breaching_entities.iter().enumerate().map(|(i, _)| {
+                ButtonComponent {
+                    r#type: DiscordComponentType::Button,
+                    style: ButtonStyle::Primary,
+                    label: Some(env.locales.lookup(&lang_id, "breaching_button_label")),
+                    custom_id: Some(build_custom_id(&Code::BreachingEntity, &id, abno_locale, &i)),
+                    disabled: Some(current.0 == Code::BreachingEntity && current.1 == i),
+                }
+            }).collect::<Vec<_>>()
         },
         _ => vec![]
     };

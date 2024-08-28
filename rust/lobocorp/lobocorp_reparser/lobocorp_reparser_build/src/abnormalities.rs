@@ -7,6 +7,7 @@ use lobocorp_common::game_objects::abnormality::WorkProbabilities;
 use lobocorp_common::game_objects::common::DamageRange;
 use lobocorp_common::game_objects::common::DamageType;
 use lobocorp_common::game_objects::common::Defenses;
+use lobocorp_common::game_objects::common::Resistance;
 use lobocorp_common::game_objects::common::RiskLevel;
 use lobocorp_common::game_objects::common::Stat;
 use lobocorp_common::game_objects::common::StatBonus;
@@ -83,6 +84,7 @@ pub struct PartialToolInfo {
     pub risk: RiskLevel,
     pub tool_type: ToolType,
     pub image: Option<String>,
+    pub breaching_entities: Vec<PartialBreachingEntity>, // literally Yang only
 }
 
 pub fn load_encyclopedia(list: &[ListEntry]) -> HashMap<ListEntry, PartialEncyclopediaInfo> {
@@ -228,7 +230,32 @@ fn parse_normal_abno(id: u32, doc: &Document) -> PartialNormalInfo {
         .unwrap_or(work_damage_type.clone());
 
     let mut breaching_entities = Vec::new();
-    if let (Some(hp), Some(speed), Some(defenses)) = (hp, speed, defenses.clone()) {
+    // Nothing there
+    if id == 100005 {
+        let binding = get_nodes(&stat_node, "defense");
+        let defenses = binding.iter().map(|x| {
+            Defenses {
+                red: get_defense_val(&x, "R"),
+                white: get_defense_val(&x, "W"),
+                black: get_defense_val(&x, "B"),
+                pale: get_defense_val(&x, "P"),
+            }
+        });
+        let hp = [2000, 2000, 2000].iter();
+        let speed = [80.0, 0.0, 50.0].iter();
+        let iter = hp.zip(speed).zip(defenses).map(|((x, y), z)| (x, y, z));
+
+        iter.for_each(|(hp, speed, defenses)| {
+            breaching_entities.push(PartialBreachingEntity {
+                id: id.to_string(),
+                hp: hp.clone(),
+                speed: speed.clone(),
+                defenses: defenses,
+                damage_type: DamageType::Red,
+                risk_level: risk.clone(),
+            })            
+        });
+    } else if let (Some(hp), Some(speed), Some(defenses)) = (hp, speed, defenses.clone()) {
         breaching_entities.push(PartialBreachingEntity {
             id: id.to_string(),
             hp, speed,
@@ -282,10 +309,33 @@ fn parse_tool_abno(id: u32, doc: &Document) -> PartialToolInfo {
         .and_then(|x| ToolType::try_from(x).ok())
         .expect("couldn't get tool type");
 
+    let breaching_entities = if id == 300109 { // Yang
+        let hp = get_unique_node_text(&stat_node, "hp").ok().and_then(|x| x.parse::<i32>().ok()).expect("yang has hp");
+        let speed = get_unique_node_text(&stat_node, "speed").ok().and_then(|x| x.parse::<f64>().ok()).expect("yang has speed");
+
+        vec![PartialBreachingEntity {
+            id: id.to_string(),
+            hp, speed,
+            // Both defenses and damage type are "unspecified" in the in-game UI,
+            // but here is their observed values
+            defenses: Defenses {
+                red: Resistance(1.0),
+                white: Resistance(1.0),
+                black: Resistance(1.0),
+                pale: Resistance(1.0)
+            },
+            damage_type: DamageType::White,
+            // Technically doesn't have a risk level. This is taken from the English localization file.
+            risk_level: RiskLevel::Waw,
+        }]
+    } else {
+        vec![]
+    };
+
     let image = Some(id.to_string());
 
     PartialToolInfo {
-        risk, tool_type, image,
+        risk, tool_type, image, breaching_entities
     }
 }
 

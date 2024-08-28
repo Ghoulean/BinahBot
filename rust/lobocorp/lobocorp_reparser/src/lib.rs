@@ -92,6 +92,38 @@ mod tests {
     }
 
     #[test]
+    fn sanity_nothing_there_correct_breaching_number() {
+        let nothing_there = get_encyclopedia_info(&100005).unwrap();
+        let nothing_there = match nothing_there {
+            EncyclopediaInfo::Normal(x) => x,
+            _ => unreachable!()
+        };
+        // dog, egg, man
+        assert_eq!(3, nothing_there.breaching_entities.len());
+    }
+
+    #[test]
+    fn sanity_yang_correct_breaching_number() {
+        let yang = get_encyclopedia_info(&300109).unwrap();
+        let yang = match yang {
+            EncyclopediaInfo::Tool(x) => x,
+            _ => unreachable!()
+        };
+        assert_eq!(1, yang.breaching_entities.len());
+    }
+
+    #[test]
+    fn sanity_shelter_has_all_guidances() {
+        let shelter = get_abno_localization(&300006, &Locale::English).unwrap();
+        shelter.managerial_guidances.iter().for_each(|x| {
+            assert!(!x.trim().is_empty());    
+        });
+        shelter.story.iter().for_each(|x| {
+            assert!(!x.trim().is_empty());    
+        });
+    }
+
+    #[test]
     #[ignore]
     fn sanity_all_child_abnos_have_name() {
         Locale::iter().for_each(|locale| {
