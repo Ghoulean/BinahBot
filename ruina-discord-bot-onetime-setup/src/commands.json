@@ -387,6 +387,91 @@
             ]
         },
         {
+            "name": "rollcalc",
+            "names": {
+                "en-US": "rollcalc"
+            },
+            "type": 1,
+            "description": "Compare roll probabilities",
+            "descriptions": {
+                "en-US": "Compare roll probabilities"
+            },
+            "options": [
+                {
+                    "type": 4,
+                    "name": "min1",
+                    "names": {
+                        "en-US": "min1"
+                    },
+                    "description": "Minroll of first die",
+                    "descriptions": {
+                        "en-US": "Minroll of first die"
+                    },
+                    "required": true,
+                    "min_value": 1,
+                    "max_value": 65536,
+                    "autocomplete": true
+                },
+                {
+                    "type": 4,
+                    "name": "max1",
+                    "names": {
+                        "en-US": "max1"
+                    },
+                    "description": "Maxroll of first die",
+                    "descriptions": {
+                        "en-US": "Maxroll of first die"
+                    },
+                    "required": true,
+                    "min_value": 1,
+                    "max_value": 65536,
+                    "autocomplete": true
+                },
+                {
+                    "type": 4,
+                    "name": "min2",
+                    "names": {
+                        "en-US": "min2"
+                    },
+                    "description": "Minroll of second die",
+                    "descriptions": {
+                        "en-US": "Minroll of second die"
+                    },
+                    "required": true,
+                    "min_value": 1,
+                    "max_value": 65536,
+                    "autocomplete": true
+                },
+                {
+                    "type": 4,
+                    "name": "max2",
+                    "names": {
+                        "en-US": "max2"
+                    },
+                    "description": "Maxroll of second die",
+                    "descriptions": {
+                        "en-US": "Maxroll of second die"
+                    },
+                    "required": true,
+                    "min_value": 1,
+                    "max_value": 65536,
+                    "autocomplete": true
+                },
+                {
+                    "type": 5,
+                    "name": "private",
+                    "names": {
+                        "en-US": "private"
+                    },
+                    "description": "Response will only be visible to you",
+                    "descriptions": {
+                        "en-US": "Response will only be visible to you"
+                    },
+                    "required": false
+                }
+            ]
+        },
+        {
             "name": "about",
             "names": {
                 "en-US": "about"

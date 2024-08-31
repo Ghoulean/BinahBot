@@ -27,6 +27,7 @@ use crate::models::discord::DiscordInteractionResponse;
 use crate::models::discord::DiscordInteractionResponseType;
 use crate::models::discord::DiscordInteractionType;
 use crate::models::discord::PingResponse;
+use crate::rollcalc_command::rollcalc_command;
 use crate::utils::DELETE_BUTTON_CUSTOM_ID;
 
 const ABOUT_COMMAND_NAME: &str = "about";
@@ -36,6 +37,7 @@ const CREATE_DECK_COMMAND_NAME: &str = "createdeck";
 const READ_DECK_COMMAND_NAME: &str = "deck";
 const UPDATE_DECK_COMMAND_NAME: &str = "updatedeck";
 const DELETE_DECK_COMMAND_NAME: &str = "deletedeck";
+const ROLLCALC_COMMAND_NAME: &str = "rollcalc";
 
 pub async fn get_response(
     discord_interaction: &DiscordInteraction,
@@ -72,6 +74,7 @@ async fn route(
                 UPDATE_DECK_COMMAND_NAME => update_deck(discord_interaction, binahbot_env).await,
                 DELETE_DECK_COMMAND_NAME => delete_deck(discord_interaction, binahbot_env).await,
                 ABOUT_COMMAND_NAME => about_command(discord_interaction, binahbot_env),
+                ROLLCALC_COMMAND_NAME => rollcalc_command(discord_interaction, binahbot_env),
                 _ => unreachable!()
             }))
         }

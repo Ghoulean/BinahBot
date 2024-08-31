@@ -654,7 +654,7 @@ dependencies = [
  "aws-sdk-secretsmanager",
  "binah_bot_spoiler",
  "ed25519-dalek",
- "fluent-templates",
+ "fluent-templates 0.10.1",
  "futures",
  "hex",
  "http 1.1.0",
@@ -1190,6 +1190,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "fluent-template-macros"
+version = "0.10.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b86ebacac709a063f57ee83d37c451d60dc873554f9bd828531fd1ec43209c80"
+dependencies = [
+ "flume",
+ "ignore",
+ "once_cell",
+ "proc-macro2",
+ "quote",
+ "syn",
+ "unic-langid",
+]
+
+[[package]]
 name = "fluent-templates"
 version = "0.9.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1200,7 +1215,7 @@ dependencies = [
  "fluent-bundle",
  "fluent-langneg",
  "fluent-syntax",
- "fluent-template-macros",
+ "fluent-template-macros 0.9.4",
  "flume",
  "heck 0.5.0",
  "ignore",
@@ -1208,6 +1223,25 @@ dependencies = [
  "log",
  "once_cell",
  "serde_json",
+ "thiserror",
+ "unic-langid",
+]
+
+[[package]]
+name = "fluent-templates"
+version = "0.10.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f339cc149c01ba2f7b0feba2acde6dd6e4a48472daffe2ddfdd6073e564c60b3"
+dependencies = [
+ "fluent-bundle",
+ "fluent-langneg",
+ "fluent-syntax",
+ "fluent-template-macros 0.10.1",
+ "flume",
+ "ignore",
+ "intl-memoizer",
+ "log",
+ "once_cell",
  "thiserror",
  "unic-langid",
 ]
@@ -2777,7 +2811,7 @@ dependencies = [
 name = "ruina_index_builder"
 version = "1.0.0"
 dependencies = [
- "fluent-templates",
+ "fluent-templates 0.9.4",
  "index_analyzer",
  "phf",
  "phf_codegen",

@@ -5,6 +5,7 @@ mod discord;
 mod lc;
 mod lor;
 mod models;
+mod rollcalc_command;
 mod router;
 mod secrets;
 mod thumbnail;
