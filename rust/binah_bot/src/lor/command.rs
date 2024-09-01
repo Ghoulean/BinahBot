@@ -71,6 +71,10 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
         }
     });
 
+    let is_private = get_option_value("private", command_args).map(|x| match x {
+        DiscordInteractionOptionValue::Bool(y) => y,
+        _ => unreachable!()
+    }).is_some_and(|x| *x);
 
     let typed_id = match query {
         Some(x) => x,
@@ -88,7 +92,7 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
     };
     if let Some(max_spoiler_chapter) = max_spoiler_chapter {
         let effective_chapter = chapter.unwrap_or(Chapter::ImpuritasCivitatis);
-        if effective_chapter > **max_spoiler_chapter {
+        if !is_private && effective_chapter > **max_spoiler_chapter {
             return spoiler_found(&typed_id.1, &effective_chapter, max_spoiler_chapter, &lang_id, env);
         }
     };
@@ -105,11 +109,6 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
         &binah_locale,
         env
     );
-
-    let is_private = get_option_value("private", command_args).map(|x| match x {
-        DiscordInteractionOptionValue::Bool(y) => y,
-        _ => unreachable!()
-    }).is_some_and(|x| *x);
 
     let flags = is_private.then_some(DiscordMessageFlag::EphemeralMessage as i32);
 

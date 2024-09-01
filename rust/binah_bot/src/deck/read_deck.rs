@@ -90,7 +90,7 @@ pub async fn read_deck(interaction: &DiscordInteraction, env: &BinahBotEnvironme
             let max_spoiler_chapter = &interaction.channel_id.as_ref().and_then(|x| env.spoiler_config.get(&x));
             let chapter = calculate_deck_chapter(&x.deck_data);
             if let Some(max_spoiler_chapter) = max_spoiler_chapter {
-                if chapter > **max_spoiler_chapter {
+                if !is_private && chapter > **max_spoiler_chapter {
                     return spoiler_found(&x.name, &chapter, max_spoiler_chapter, &lang_id, env);
                 }
             };
@@ -138,14 +138,6 @@ async fn transform_deck(
     let tiph_deck_url = deck.tiph_deck.as_ref().map(|x| {
         format!("https://tiphereth.zasz.su/u/decks/{}/", x.0)
     });
-
-    let _combat_page_names = deck.deck_data.combat_page_ids.iter().map(|x| {
-        x.as_ref().and_then(|y| {
-            get_combat_page_locales_by_id(y).get(&Locale::from(request_locale)).map(|z| {
-                z.name    
-            })
-        }).unwrap_or("-")
-    }).collect::<Vec<_>>();
 
     // todo: pass in thumbnail dir as env var
     let deck_preview_img = format!(
