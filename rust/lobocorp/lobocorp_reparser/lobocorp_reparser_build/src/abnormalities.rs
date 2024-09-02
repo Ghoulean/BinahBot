@@ -118,10 +118,15 @@ fn parse_normal_abno(id: u32, doc: &Document) -> PartialNormalInfo {
     let creature_node = get_unique_node(&doc.root(), "creature").expect("couldn't find creature");
     let stat_node = get_unique_node(&creature_node, "stat").expect("couldn't find stat node");
 
-    let risk = get_unique_node_text(&stat_node, "riskLevel").ok()
-        .and_then(|x| x.parse::<i32>().ok())
-        .and_then(|x| RiskLevel::try_from(x).ok())
-        .expect("couldn't get risk level");
+    let risk = if id == 100022 {
+        // Game files say riskLevel=1 but Lady Facing the Wall is a Teth
+        RiskLevel::Teth
+    } else {
+        get_unique_node_text(&stat_node, "riskLevel").ok()
+            .and_then(|x| x.parse::<i32>().ok())
+            .and_then(|x| RiskLevel::try_from(x).ok())
+            .expect("couldn't get risk level")
+    };
 
     let work_probabilities = WorkProbabilities {
         instinct: find_unique_node_with_name_and_attribute(&stat_node, "workProb", "type", "R").ok()
