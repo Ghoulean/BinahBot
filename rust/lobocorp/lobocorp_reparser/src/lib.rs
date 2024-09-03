@@ -227,5 +227,14 @@ mod tests {
         let sheepskin = bbw.gifts.get(1).expect("no bigbadwolf gift");
         assert_eq!(None, sheepskin.obtain_probability);
         assert_eq!(None, sheepskin.observation_level);
+
+        let apobird = get_encyclopedia_info(&100038).expect("no apo bird entry");
+        let apobird = match apobird {
+            EncyclopediaInfo::Normal(x) => x,
+            _ => panic!()
+        };
+        let wing = apobird.gifts.get(0).expect("no apo bird gift");
+        assert_eq!(None, wing.obtain_probability);
+        assert_eq!(None, wing.observation_level);
     }
 }

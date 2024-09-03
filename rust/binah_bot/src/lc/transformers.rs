@@ -598,7 +598,7 @@ fn get_portrait_url(id: u32, env: &BinahBotEnvironment) -> String {
 }
 
 fn get_weapon_url(id: u32, env: &BinahBotEnvironment) -> String {
-    format!("https://{0}.s3.amazonaws.com/lc/weapon/{id}.png", env.s3_bucket_name)
+    format!("https://{0}.s3.amazonaws.com/lc/weapon/{id}.png?1", env.s3_bucket_name)
 }
 
 fn get_suit_url(id: u32, env: &BinahBotEnvironment) -> String {

@@ -74,6 +74,8 @@ fn write_normal_info(list_entry: &ListEntry, partial_encyclopedia_info: &Partial
         equipment_ids.push(4000372);
         equipment_ids.push(4000373);
         equipment_ids.push(4000374);
+    } else if id == 100038 { // Apo bird gift
+        equipment_ids.push(400038);
     }
 
     let weapon_entry = partial_equipment.weapons.iter().filter(|x| {
