@@ -1,5 +1,7 @@
 use crate::game_objects::common::Floor;
 
+use super::common::Chapter;
+
 #[derive(Debug, PartialEq)]
 pub enum AbnoTargetting {
     SelectOne,
@@ -7,7 +9,7 @@ pub enum AbnoTargetting {
     AllIncludingEnemy, // Obsession only afaik
 }
 
-#[derive(Debug, PartialEq)]
+#[derive(Debug, Clone, PartialEq)]
 pub enum Abno {
     // Malkuth
     ScorchedGirl,
@@ -78,7 +80,7 @@ pub enum Abno {
     SilentGirl,
 
     // Other
-    None,
+    EnemyOnly,
 }
 
 #[derive(Debug)]
@@ -93,4 +95,60 @@ pub struct AbnoPage<'a> {
     pub abno: Abno,
     pub is_positive: bool,
     pub targetting: AbnoTargetting,
+}
+
+impl From<Abno> for Chapter {
+    fn from(value: Abno) -> Self {
+        match value {
+            Abno::ScorchedGirl => Chapter::Canard,
+            Abno::HappyTeddyBear => Chapter::UrbanLegend,
+            Abno::FairyFestival => Chapter::UrbanPlague,
+            Abno::QueenBee => Chapter::UrbanNightmare,
+            Abno::SnowWhitesApple => Chapter::UrbanNightmare,
+            Abno::ForsakenMurderer => Chapter::UrbanMyth,
+            Abno::AllAroundHelper => Chapter::UrbanLegend,
+            Abno::SingingMachine => Chapter::UrbanPlague,
+            Abno::FuneralOfTheDeadButterflies => Chapter::UrbanNightmare,
+            Abno::DerFreischutz => Chapter::UrbanNightmare,
+            Abno::TodaysShyLook => Chapter::UrbanMyth,
+            Abno::RedShoes => Chapter::UrbanLegend,
+            Abno::SpiderBud => Chapter::UrbanPlague,
+            Abno::Laetitia => Chapter::UrbanNightmare,
+            Abno::DreamOfABlackSwan => Chapter::UrbanNightmare,
+            Abno::FragmentOfTheUniverse => Chapter::UrbanLegend,
+            Abno::ChildOfTheGalaxy => Chapter::UrbanLegend,
+            Abno::Porccubus => Chapter::UrbanPlague,
+            Abno::Alriune => Chapter::UrbanNightmare,
+            Abno::TheSilentOrchestra => Chapter::UrbanNightmare,
+            Abno::QueenOfHatred => Chapter::UrbanPlague,
+            Abno::KnightOfDespair => Chapter::UrbanPlague,
+            Abno::KingOfGreed => Chapter::UrbanNightmare,
+            Abno::ServantOfWrath => Chapter::StarOfTheCity,
+            Abno::JesterOfNihil => Chapter::StarOfTheCity,
+            Abno::LittleRedRidingHoodedMercenary => Chapter::UrbanNightmare,
+            Abno::BigAndWillBeBadWolf => Chapter::UrbanNightmare,
+            Abno::MountainOfSmilingBodies => Chapter::StarOfTheCity,
+            Abno::Nosferatu => Chapter::StarOfTheCity,
+            Abno::NothingThere => Chapter::StarOfTheCity,
+            Abno::ScarecrowSearchingForWisdom => Chapter::UrbanNightmare,
+            Abno::WarmHeartedWoodsman => Chapter::UrbanNightmare,
+            Abno::RoadHome => Chapter::StarOfTheCity,
+            Abno::Ozma => Chapter::StarOfTheCity,
+            Abno::AdultWhoTellsLies => Chapter::StarOfTheCity,
+            Abno::BigBird => Chapter::StarOfTheCity,
+            Abno::PunishingBird => Chapter::StarOfTheCity,
+            Abno::JudgementBird => Chapter::StarOfTheCity,
+            Abno::ApocalypseBird => Chapter::ImpuritasCivitatis,
+            Abno::BurrowingHeaven => Chapter::StarOfTheCity,
+            Abno::PriceOfSilence => Chapter::StarOfTheCity,
+            Abno::BlueStar => Chapter::StarOfTheCity,
+            Abno::WhiteNight => Chapter::ImpuritasCivitatis,
+            Abno::Bloodbath => Chapter::Canard,
+            Abno::HeartOfAspiration => Chapter::UrbanLegend,
+            Abno::Pinocchio => Chapter::UrbanNightmare,
+            Abno::SnowQueen => Chapter::StarOfTheCity,
+            Abno::SilentGirl => Chapter::ImpuritasCivitatis,
+            Abno::EnemyOnly => Chapter::Canard,
+        }
+    }
 }

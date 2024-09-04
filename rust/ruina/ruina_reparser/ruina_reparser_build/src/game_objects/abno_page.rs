@@ -108,7 +108,7 @@ fn get_abno_from_str(str: &str) -> Abno {
         .next()
         .expect("couldn't parse prefix from internal name");
     match abno_prefix {
-        "Enemy" => Abno::None,
+        "Enemy" => Abno::EnemyOnly,
         "Bloodbath" => Abno::Bloodbath,
         "HeartofAspiration" => Abno::HeartOfAspiration,
         "Pinocchio" => Abno::Pinocchio,

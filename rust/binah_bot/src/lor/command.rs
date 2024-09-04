@@ -8,6 +8,7 @@ use ruina::ruina_common::game_objects::common::Chapter;
 use ruina::ruina_common::game_objects::common::PageType;
 use ruina::ruina_common::localizations::common::Locale;
 use ruina::ruina_index::models::ParsedTypedId;
+use ruina::ruina_reparser::get_abno_page_by_internal_name;
 use ruina::ruina_reparser::get_combat_page_by_id;
 use ruina::ruina_reparser::get_key_page_by_id;
 use unic_langid::LanguageIdentifier;
@@ -85,9 +86,10 @@ pub fn lor_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) 
     let chapter = match typed_id.0 {
         PageType::CombatPage => get_combat_page_by_id(&typed_id.1).and_then(|x| x.chapter.clone()),
         PageType::KeyPage => get_key_page_by_id(&typed_id.1).and_then(|x| x.chapter.clone()),
+        PageType::AbnoPage => get_abno_page_by_internal_name(&typed_id.1).map(|x| x.abno.clone().into()),
         // todo: fix passive chapter mappings. seems to be a lot of mistakes
         // PageType::Passive => get_passive_by_id(&typed_id.1).and_then(|x| x.chapter.clone()),
-        // todo: fine-grained spoilers for abnos and battle symbols
+        // todo: fine-grained spoilers for battle symbols
         _ => Some(Chapter::Canard),
     };
     if let Some(max_spoiler_chapter) = max_spoiler_chapter {
@@ -332,7 +334,7 @@ mod tests {
     fn spoiler_enforcement() {
         let channel_id = "1234567890123456789".to_string();
         let true_trigram_formation = "c#701001";
-        let interaction = build_discord_interaction(true_trigram_formation.to_string(), Locale::English, Some(channel_id));
+        let interaction = build_discord_interaction(true_trigram_formation.to_string(), Locale::English, Some(channel_id.clone()));
         let env = build_mocked_binahbot_env();
 
         let response = lor_command(&interaction, &env);
@@ -343,6 +345,15 @@ mod tests {
             x.data.as_ref().and_then(|x| x.embeds.as_ref()).and_then(|x| x.first()).and_then(|x| x.description.clone()).expect("no description")
         };
 
+        assert_eq!(get_description(&expected), get_description(&response));
+
+        let the_beast = "a#ApocalypseBird_Apocalypse";
+        let interaction = build_discord_interaction(the_beast.to_string(), Locale::English, Some(channel_id.clone()));
+        let env = build_mocked_binahbot_env();
+
+        let response = lor_command(&interaction, &env);
+
+        let expected = spoiler_found("ApocalypseBird_Apocalypse", &Chapter::ImpuritasCivitatis, &Chapter::StarOfTheCity, &langid!("en-US"), &env);
         assert_eq!(get_description(&expected), get_description(&response));
     }
 
