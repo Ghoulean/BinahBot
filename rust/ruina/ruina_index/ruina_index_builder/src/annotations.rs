@@ -2,6 +2,7 @@ use std::collections::HashMap;
 use std::str::FromStr;
 use fluent_templates::Loader;
 use fluent_templates::StaticLoader;
+use ruina_common::game_objects::common::Chapter;
 use ruina_common::game_objects::common::Collectability;
 use ruina_common::game_objects::common::PageType;
 use ruina_common::localizations::common::Locale;
@@ -10,6 +11,7 @@ use serde::Deserialize;
 use strum::IntoEnumIterator;
 use toml::from_str;
 
+use crate::heuristics::create_chapter_heuristic;
 use crate::heuristics::create_obtainability_heuristic;
 use crate::heuristics::create_pagetype_heuristic;
 use crate::heuristics::get_disambiguations_for_uniqueness_heuristic;
@@ -70,12 +72,29 @@ pub fn precompute_disambiguations_map<'a>() -> AnnotationMapping<'a> {
     let obtainable_heuristic = create_obtainability_heuristic(&LOCALES, &Collectability::Obtainable, "availability_obtainable");
     let enemyonly_heuristic = create_obtainability_heuristic(&LOCALES, &Collectability::EnemyOnly, "availability_enemy");
 
+    let canard_heuristic = create_chapter_heuristic(&LOCALES, &Chapter::Canard, "chapter_canard");
+    let um_heuristic = create_chapter_heuristic(&LOCALES, &Chapter::UrbanMyth, "chapter_urban_myth");
+    let ul_heuristic = create_chapter_heuristic(&LOCALES, &Chapter::UrbanLegend, "chapter_urban_legend");
+    let up_heuristic = create_chapter_heuristic(&LOCALES, &Chapter::UrbanPlague, "chapter_urban_plague");
+    let un_heuristic = create_chapter_heuristic(&LOCALES, &Chapter::UrbanNightmare, "chapter_urban_nightmare");
+    let sotc_heuristic = create_chapter_heuristic(&LOCALES, &Chapter::StarOfTheCity, "chapter_star_of_the_city");
+    let ic_heuristic = create_chapter_heuristic(&LOCALES, &Chapter::ImpuritasCivitatis, "chapter_impuritas_civitatis");
+
     let pagetype_heuristics = PageType::iter().map(|x| create_pagetype_heuristic(&LOCALES, &x)).collect::<Vec<_>>();
 
     let manual_mappings = parse_manual_mappings(&LOCALES, &manual_disambiguation_toml);
 
     let mut heuristics = Vec::new();
     heuristics.extend(pagetype_heuristics);
+    heuristics.extend(vec![
+        canard_heuristic,
+        um_heuristic,
+        ul_heuristic,
+        up_heuristic,
+        un_heuristic,
+        sotc_heuristic,
+        ic_heuristic
+    ]);
     heuristics.extend(vec![
         collectable_heuristic,
         obtainable_heuristic,

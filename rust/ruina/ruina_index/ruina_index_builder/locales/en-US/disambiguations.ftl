@@ -8,6 +8,14 @@ availability_collectible = collectable
 availability_obtainable = obtainable
 availability_enemy = enemy
 
+chapter_canard = Canard
+chapter_urban_myth = Urban Myth
+chapter_urban_legend = Urban Legend
+chapter_urban_plague = Urban Plague
+chapter_urban_nightmare = Urban Nightmare
+chapter_star_of_the_city = Star of the City
+chapter_impuritas_civitatis = Impuritas Civitatis
+
 ego_page = EGO page
 
 unused = unused

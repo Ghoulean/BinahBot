@@ -2,6 +2,7 @@ use std::collections::HashMap;
 
 use fluent_templates::Loader;
 use fluent_templates::StaticLoader;
+use ruina_common::game_objects::common::Chapter;
 use ruina_common::game_objects::common::Collectability;
 use ruina_common::game_objects::common::PageType;
 use ruina_common::localizations::common::Locale;
@@ -110,6 +111,25 @@ pub fn create_obtainability_heuristic(
     })
 }
 
+pub fn create_chapter_heuristic(
+    locales: &'static StaticLoader,
+    chapter: &Chapter,
+    disambiguation_key: &str
+) -> HeuristicFunction {
+    let binding = chapter.clone();
+    let binding2 = disambiguation_key.to_owned();
+
+    Box::new(move |typed_id: &TypedId, locale: &Locale| {
+        if get_collectability(typed_id) != Collectability::Collectable && get_chapter(typed_id).is_some_and(|x| x == binding) {
+            let lang_id = LanguageIdentifier::from(locale);
+            let str = locales.lookup(&lang_id, &binding2);
+            Some(str.clone())
+        } else {
+            None
+        }
+    })
+}
+
 fn get_collectability(typed_id: &TypedId) -> Collectability {
     match typed_id.0 {
         PageType::AbnoPage => Some(Collectability::Collectable),
@@ -124,6 +144,20 @@ fn get_collectability(typed_id: &TypedId) -> Collectability {
             get_passive_by_id(&typed_id.1).map(|x| x.collectability.clone())
         },
     }.unwrap()
+}
+
+fn get_chapter(typed_id: &TypedId) -> Option<Chapter> {
+    match typed_id.0 {
+        PageType::AbnoPage => None, // not useful
+        PageType::BattleSymbol => None, // not useful
+        PageType::CombatPage => {
+            get_combat_page_by_id(&typed_id.1).and_then(|x| x.chapter.clone())
+        },
+        PageType::KeyPage => {
+            get_key_page_by_id(&typed_id.1).and_then(|x| x.chapter.clone())   
+        },
+        PageType::Passive => None, // passive mappings not entirely correct; maybe enable after fixing
+    }
 }
 
 fn get_display_names_for_locale(locale: &Locale) -> HashMap<TypedId, String> {
