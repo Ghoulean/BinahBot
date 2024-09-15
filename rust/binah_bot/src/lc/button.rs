@@ -328,7 +328,41 @@ fn build_custom_id(code: &Code, id: &u32, locale: &Locale, index: &usize) -> Str
 
 #[cfg(test)]
 mod tests {
+    use lobocorp::lobocorp_reparser::get_all_encyclopedia_ids;
+    use strum::IntoEnumIterator;
+
+    use crate::test_utils::build_mocked_binahbot_env;
+
     use super::*;
+
+    #[test]
+    fn check_button_formatting() {
+        let env = &build_mocked_binahbot_env();
+        Locale::iter().for_each(|locale| {
+            get_all_encyclopedia_ids().iter().flat_map(|x| {
+                get_encyclopedia_info(x)    
+            }).map(|x| {
+                match x {
+                    EncyclopediaInfo::Normal(x) => &x.id,
+                    EncyclopediaInfo::Tool(x) => &x.id,
+                    EncyclopediaInfo::DontTouchMe(x) => &x.id
+                }
+            }).map(|id| {
+                build_buttons(*id, &locale, &BinahBotLocale::EnglishUS, &(Code::Encyclopedia, 0), env)
+            }).for_each(|v| {
+                assert!(v.len() > 0);
+                for i in 0..v.len() - 1 {
+                    let action_row = v.get(i).unwrap();
+                    let action_row = match action_row {
+                        DiscordComponent::ActionRow(x) => x,
+                        DiscordComponent::Button(_) => unreachable!(),
+                    };
+                    assert_eq!(DiscordComponentType::ActionRow, action_row.r#type);
+                    assert_eq!(5, action_row.components.len());
+                }
+            })
+        });
+    }
 
     #[test]
     fn sanity_parse_custom_id() {
