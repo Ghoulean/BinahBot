@@ -1,12 +1,10 @@
 version: 2.1
 jobs:
-  build:
+  build-and-test:
     docker:
       - image: cimg/rust:1.81.0-node
     steps:
       - checkout
-      - attach_workspace:
-          at: ~/workspace
       - add_ssh_keys:
           fingerprints:
             - "SHA256:jL0sv9h2M5JzXUxPtOvH/VeYCxY6wZPVXt8v9I+QYD4"
@@ -19,33 +17,41 @@ jobs:
             git clone git@github.com:Ghoulean/BinahBotConfig.git ~/BinahBotConfig
       - run:
           name: Copy CDK env to the respective location
-          command: cp ~/BinahBotConfig/cdk.env ~/workspace/ruina-cdk
+          command: cp ~/BinahBotConfig/cdk.env ~/ruina-cdk
       - run:
           name: Copy channel configuration to the respective location
-          command: cp ~/BinahBotConfig/channel_config.toml ~/workspace/rust/binah_bot/binah_bot_spoiler/src/channel_config.toml
+          command: cp ~/BinahBotConfig/channel_config.toml ~/rust/binah_bot/binah_bot_spoiler/src/channel_config.toml
       - run:
           name: cargo build BinahBot
-          command: cd ~/workspace/rust/binah_bot && cargo bb
+          command: cd ~/rust/binah_bot && cargo bb
       - run:
           name: cargo build Thumbnail Lambda
-          command: cd ~/workspace/rust/thumbnail && cargo bb
+          command: cd ~/rust/thumbnail && cargo bb
       - run:
           name: cdk build
-          command: cd ~/workspace/ruina-cdk && npm run build
-  test:
-    docker:
-      - image: cimg/rust:1.81.0-node
-    steps:
+          command: cd ~/ruina-cdk && npm run build
+      - run:
+          name: Onetime setup build
+          command: cd ~/ruina-discord-bot-onetime-setup && npm run build
       - run:
           name: Run all tests
-          command: cd ~/workspace/rust && cargo test --all-targets
+          command: cd ~/rust && cargo test --all-targets
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ruina-cdk
+            - ruina-discord-bot-onetime-setup
+            - rust/target/lambda/binah_bot/bootstrap.zip
+            - rust/target/lambda/thumbnail/bootstrap.zip
   onetime-setup:
     docker:
       - image: cimg/rust:1.81.0-node
     steps:
+      - attach_workspace:
+          at: /tmp/workspace
       - run:
           name: Ensure commands for BinahBot are up to date
-          command: cd ~/workspace/ruina-discord-bot-onetime-setup && npm run discord:write    
+          command: cd /tmp/workspace/ruina-discord-bot-onetime-setup && npm run discord:write    
   deploy-to-aws:
     # This is an example deploy job, not actually used by the workflow
     docker:
@@ -58,22 +64,19 @@ jobs:
 workflows:
   deploy-to-prod:
     jobs:
-      - build
-      - test:
-          requires:
-            - build
+      - build-and-test
       - onetime-setup:
           filters:
             branches:
               only:
                 - main
           requires:
-            - test
+            - build-and-test
       - deploy-to-aws:
           filters:
             branches:
               only:
                 - main
           requires:
-            - test
+            - build-and-test
 
