@@ -1,16 +1,18 @@
 version: 2.1
 orbs:
-  python: circleci/python@2.1.1
+  aws-cli: circleci/aws-cli@5.1.0
 jobs:
   build-and-test:
     docker:
       - image: cimg/rust:1.81.0-node
-    executor: python/default
     working_directory: ~/BinahBot
     steps:
       - run:
           name: Set up Cargo Lambda
-          command: pip install cargo-lambda
+          command: >-
+            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+            brew tap cargo-lambda/cargo-lambda
+            brew install cargo-lambda
       - checkout
       - add_ssh_keys:
           fingerprints:
@@ -36,10 +38,10 @@ jobs:
           command: cd ~/BinahBot/rust/thumbnail && cargo bb
       - run:
           name: cdk build
-          command: cd ~/BinahBot/ruina-cdk && npm run build
+          command: cd ~/BinahBot/ruina-cdk && npm i && npm run build
       - run:
           name: Onetime setup build
-          command: cd ~/BinahBot/ruina-discord-bot-onetime-setup && npm run build
+          command: cd ~/BinahBot/ruina-discord-bot-onetime-setup && npm i && npm run build
       - run:
           name: Run all tests
           command: cd ~/BinahBot/rust && cargo test --all-targets
