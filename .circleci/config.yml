@@ -8,13 +8,11 @@ jobs:
     working_directory: ~/BinahBot
     steps:
       - run:
-          name: Set up Cargo Lambda
-          command: >-
-            CI=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" &&
-            (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> ~/.profile &&
-            eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" &&
-            brew tap cargo-lambda/cargo-lambda &&
-            brew install cargo-lambda
+          name: Install python3 and pip3
+          command: sudo apt update && sudo apt -y install python3
+      - run:
+          name: Install cargo lambda
+          command: sudo pip3 install cargo-lambda
       - checkout
       - add_ssh_keys:
           fingerprints:
