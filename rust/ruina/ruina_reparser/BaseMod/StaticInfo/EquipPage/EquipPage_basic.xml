@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<BookXmlRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Book ID="1">
+		<Name>말쿠트</Name>
+    <TextId>1</TextId>
+		<Option>Basic</Option>
+		<EquipEffect>
+			<HP>30</HP>
+			<Break>15</Break>
+      <SpeedMin>1</SpeedMin>
+      <Speed>4</Speed>
+      <SResist>Normal</SResist>
+      <PResist>Vulnerable</PResist>
+      <HResist>Weak</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Vulnerable</PBResist>
+      <HBResist>Weak</HBResist>
+		</EquipEffect>
+		<Rarity>Common</Rarity>
+		<CharacterSkin>Malkuth</CharacterSkin>
+	</Book>
+	<Book ID="2">
+		<Name>예소드</Name>
+    <TextId>2</TextId>
+		<Option>Basic</Option>
+		<EquipEffect>
+      <HP>30</HP>
+      <Break>15</Break>
+      <SpeedMin>1</SpeedMin>
+      <Speed>4</Speed>
+      <SResist>Normal</SResist>
+      <PResist>Vulnerable</PResist>
+      <HResist>Weak</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Vulnerable</PBResist>
+      <HBResist>Weak</HBResist>
+		</EquipEffect>
+		<Rarity>Common</Rarity>
+		<CharacterSkin>Yesod</CharacterSkin>
+	</Book>
+	<Book ID="3">
+		<Name>호드</Name>
+    <TextId>3</TextId>
+		<Option>Basic</Option>
+		<EquipEffect>
+      <HP>30</HP>
+      <Break>15</Break>
+      <SpeedMin>1</SpeedMin>
+      <Speed>4</Speed>
+      <SResist>Normal</SResist>
+      <PResist>Vulnerable</PResist>
+      <HResist>Weak</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Vulnerable</PBResist>
+      <HBResist>Weak</HBResist>
+		</EquipEffect>
+		<Rarity>Common</Rarity>
+		<CharacterSkin>Hod</CharacterSkin>
+	</Book>
+	<Book ID="4">
+		<Name>네짜흐</Name>
+    <TextId>4</TextId>
+		<Option>Basic</Option>
+		<EquipEffect>
+      <HP>30</HP>
+      <Break>15</Break>
+      <SpeedMin>1</SpeedMin>
+      <Speed>4</Speed>
+      <SResist>Normal</SResist>
+      <PResist>Vulnerable</PResist>
+      <HResist>Weak</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Vulnerable</PBResist>
+      <HBResist>Weak</HBResist>
+		</EquipEffect>
+		<Rarity>Common</Rarity>
+		<CharacterSkin>Netzach</CharacterSkin>
+	</Book>
+
+  <!--6/17 티페리트 새로추가 스킨 능력치 상세정보 변경해주어야함-->
+  <Book ID="5">
+    <Name>티페리트</Name>
+    <TextId>5</TextId>
+    <Option>Basic</Option>
+    <EquipEffect>
+      <HP>30</HP>
+      <Break>15</Break>
+      <SpeedMin>1</SpeedMin>
+      <Speed>4</Speed>
+      <SResist>Normal</SResist>
+      <PResist>Vulnerable</PResist>
+      <HResist>Weak</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Vulnerable</PBResist>
+      <HBResist>Weak</HBResist>
+    </EquipEffect>
+    <Rarity>Common</Rarity>
+    <CharacterSkin>Tiphereth</CharacterSkin>
+  </Book>
+  <Book ID="6">
+    <Name>게부라</Name>
+    <TextId>6</TextId>
+    <Option>Basic</Option>
+    <EquipEffect>
+      <HP>30</HP>
+      <Break>15</Break>
+      <SpeedMin>1</SpeedMin>
+      <Speed>4</Speed>
+      <SResist>Normal</SResist>
+      <PResist>Vulnerable</PResist>
+      <HResist>Weak</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Vulnerable</PBResist>
+      <HBResist>Weak</HBResist>
+
+      <Passive Level="90">10005</Passive>
+    </EquipEffect>
+    <Rarity>Common</Rarity>
+    <CharacterSkin>Gebura</CharacterSkin>
+  </Book>
+
+  <Book ID="7">
+    <Name>헤세드</Name>
+    <TextId>7</TextId>
+    <Option>Basic</Option>
+    <EquipEffect>
+      <HP>30</HP>
+      <Break>15</Break>
+      <SpeedMin>1</SpeedMin>
+      <Speed>4</Speed>
+      <SResist>Normal</SResist>
+      <PResist>Vulnerable</PResist>
+      <HResist>Weak</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Vulnerable</PBResist>
+      <HBResist>Weak</HBResist>
+    </EquipEffect>
+    <Rarity>Common</Rarity>
+    <CharacterSkin>Chesed</CharacterSkin>
+  </Book>
+
+  <Book ID="8">
+    <Name>비나</Name>
+    <TextId>8</TextId>
+    <Option>Basic</Option>
+    <Category>DeckFixed</Category>
+    <EquipEffect>
+      <HP>100</HP>
+      <Break>55</Break>
+      <SpeedMin>2</SpeedMin>
+      <Speed>7</Speed>
+      
+      <StartPlayPoint>4</StartPlayPoint>
+      <MaxPlayPoint>4</MaxPlayPoint>
+      
+      <SResist>Endure</SResist>
+      <PResist>Normal</PResist>
+      <HResist>Normal</HResist>
+      <SBResist>Resist</SBResist>
+      <PBResist>Normal</PBResist>
+      <HBResist>Normal</HBResist>
+
+      <Passive>10008</Passive>
+      <Passive>10010</Passive>
+      <Passive>10011</Passive>
+    </EquipEffect>
+    <Rarity>Unique</Rarity>
+    <CharacterSkin>Binah</CharacterSkin>
+  </Book>
+  
+    <Book ID="9">
+    <Name>호크마</Name>
+    <TextId>9</TextId>
+    <Option>Basic</Option>
+    <EquipEffect>
+      <HP>30</HP>
+      <Break>15</Break>
+      <SpeedMin>1</SpeedMin>
+      <Speed>4</Speed>
+      <SResist>Normal</SResist>
+      <PResist>Vulnerable</PResist>
+      <HResist>Weak</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Vulnerable</PBResist>
+      <HBResist>Weak</HBResist>
+    </EquipEffect>
+    <Rarity>Common</Rarity>
+    <CharacterSkin>Hokma</CharacterSkin>
+  </Book>
+  
+	<Book ID="10">
+		<Name>롤랑</Name>
+    <TextId>10</TextId>
+		<Option>Basic</Option>
+		<EquipEffect>
+      <HP>30</HP>
+      <Break>15</Break>
+      <SpeedMin>1</SpeedMin>
+      <Speed>4</Speed>
+      <SResist>Normal</SResist>
+      <PResist>Vulnerable</PResist>
+      <HResist>Weak</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Vulnerable</PBResist>
+      <HBResist>Weak</HBResist>
+		</EquipEffect>
+		<Rarity>Common</Rarity>
+		<CharacterSkin>Roland</CharacterSkin>
+	</Book>
+	<Book ID="11">
+		<Name>말쿠트 사서복</Name>
+    <TextId>11</TextId>
+		<Option>Basic</Option>
+		<EquipEffect>
+      <HP>30</HP>
+      <Break>15</Break>
+			<SpeedMin>1</SpeedMin>
+			<Speed>4</Speed>
+      <SResist>Normal</SResist>
+      <PResist>Vulnerable</PResist>
+      <HResist>Weak</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Vulnerable</PBResist>
+      <HBResist>Weak</HBResist>
+		</EquipEffect>
+		<Rarity>Common</Rarity>
+		<CharacterSkin>MalkuthLibrarian</CharacterSkin>
+	</Book>
+	<Book ID="12">
+		<Name>예소드 사서복</Name>
+    <TextId>12</TextId>
+		<Option>Basic</Option>
+		<EquipEffect>
+      <HP>30</HP>
+      <Break>15</Break>
+      <SpeedMin>1</SpeedMin>
+      <Speed>4</Speed>
+      <SResist>Normal</SResist>
+      <PResist>Vulnerable</PResist>
+      <HResist>Weak</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Vulnerable</PBResist>
+      <HBResist>Weak</HBResist>
+		</EquipEffect>
+		<Rarity>Common</Rarity>
+		<CharacterSkin>YesodLibrarian</CharacterSkin>
+	</Book>
+	<Book ID="13">
+		<Name>호드 사서복</Name>
+    <TextId>13</TextId>
+		<Option>Basic</Option>
+		<EquipEffect>
+      <HP>30</HP>
+      <Break>15</Break>
+      <SpeedMin>1</SpeedMin>
+      <Speed>4</Speed>
+      <SResist>Normal</SResist>
+      <PResist>Vulnerable</PResist>
+      <HResist>Weak</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Vulnerable</PBResist>
+      <HBResist>Weak</HBResist>
+		</EquipEffect>
+		<Rarity>Common</Rarity>
+		<CharacterSkin>HodLibrarian</CharacterSkin>
+	</Book>
+	<Book ID="14">
+		<Name>네짜흐 사서복</Name>
+    <TextId>14</TextId>
+		<Option>Basic</Option>
+		<EquipEffect>
+      <HP>30</HP>
+      <Break>15</Break>
+      <SpeedMin>1</SpeedMin>
+      <Speed>4</Speed>
+      <SResist>Normal</SResist>
+      <PResist>Vulnerable</PResist>
+      <HResist>Weak</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Vulnerable</PBResist>
+      <HBResist>Weak</HBResist>
+		</EquipEffect>
+    
+		<Rarity>Common</Rarity>
+		<CharacterSkin>NetzachLibrarian</CharacterSkin>
+	</Book>
+
+  <Book ID="15">
+    <Name>티페리트 사서복</Name>
+    <TextId>15</TextId>
+    <Option>Basic</Option>
+    <EquipEffect>
+      <HP>30</HP>
+      <Break>15</Break>
+      <SpeedMin>1</SpeedMin>
+      <Speed>4</Speed>
+      <SResist>Normal</SResist>
+      <PResist>Vulnerable</PResist>
+      <HResist>Weak</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Vulnerable</PBResist>
+      <HBResist>Weak</HBResist>
+    </EquipEffect>
+    <Rarity>Common</Rarity>
+    <CharacterSkin>TipherethLibrarian</CharacterSkin>
+  </Book>
+
+  <!--6/29 티페리트 새로추가 스킨 능력치 상세정보 변경해주어야함-->
+
+  <Book ID="16">
+    <Name>게부라 사서복</Name>
+    <TextId>16</TextId>
+    <Option>Basic</Option>
+    <EquipEffect>
+      <HP>30</HP>
+      <Break>15</Break>
+      <SpeedMin>1</SpeedMin>
+      <Speed>4</Speed>
+      <SResist>Normal</SResist>
+      <PResist>Vulnerable</PResist>
+      <HResist>Weak</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Vulnerable</PBResist>
+      <HBResist>Weak</HBResist>
+    </EquipEffect>
+    <Rarity>Common</Rarity>
+    <CharacterSkin>GeburaLibrarian</CharacterSkin>
+  </Book>
+  <Book ID="17">
+    <Name>헤세드 사서복</Name>
+    <TextId>17</TextId>
+    <Option>Basic</Option>
+    <EquipEffect>
+      <HP>30</HP>
+      <Break>15</Break>
+      <SpeedMin>1</SpeedMin>
+      <Speed>4</Speed>
+      <SResist>Normal</SResist>
+      <PResist>Vulnerable</PResist>
+      <HResist>Weak</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Vulnerable</PBResist>
+      <HBResist>Weak</HBResist>
+    </EquipEffect>
+    <Rarity>Common</Rarity>
+    <CharacterSkin>ChesedLibrarian</CharacterSkin>
+  </Book>
+
+  <Book ID="18">
+    <Name>비나 사서복</Name>
+    <TextId>18</TextId>
+    <Option>Basic</Option>
+    <EquipEffect>
+      <HP>30</HP>
+      <Break>15</Break>
+      <SpeedMin>1</SpeedMin>
+      <Speed>4</Speed>
+      <SResist>Normal</SResist>
+      <PResist>Vulnerable</PResist>
+      <HResist>Weak</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Vulnerable</PBResist>
+      <HBResist>Weak</HBResist>
+    </EquipEffect>
+    <Rarity>Common</Rarity>
+    <CharacterSkin>BinahLibrarian</CharacterSkin>
+  </Book>
+
+  <Book ID="19">
+    <Name>호크마 사서복</Name>
+    <TextId>19</TextId>
+    <Option>Basic</Option>
+    <EquipEffect>
+      <HP>30</HP>
+      <Break>15</Break>
+      <SpeedMin>1</SpeedMin>
+      <Speed>4</Speed>
+      <SResist>Normal</SResist>
+      <PResist>Vulnerable</PResist>
+      <HResist>Weak</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Vulnerable</PBResist>
+      <HBResist>Weak</HBResist>
+    </EquipEffect>
+    <Rarity>Common</Rarity>
+    <CharacterSkin>HokmaLibrarian</CharacterSkin>
+  </Book>
+
+
+
+  <!-- ge 만들 때 주의 !!!!-->
+	<Book ID="20">
+		<Name>케테르 사서복</Name>
+    <TextId>20</TextId>
+		<Option>Basic</Option>
+		<EquipEffect>
+      <HP>30</HP>
+      <Break>15</Break>
+      <SpeedMin>1</SpeedMin>
+      <Speed>4</Speed>
+      <SResist>Normal</SResist>
+      <PResist>Vulnerable</PResist>
+      <HResist>Weak</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Vulnerable</PBResist>
+      <HBResist>Weak</HBResist>
+		</EquipEffect>
+		<Rarity>Common</Rarity>
+		<CharacterSkin>KetherLibrarian</CharacterSkin>
+	</Book>
+	<Book ID="31">
+		<Name>기본 책</Name>
+    <TextId>1</TextId>
+		<Option>Basic</Option>
+		<EquipEffect>
+			<HP>30</HP>
+			<Break>20</Break>
+			<BreakGrowth>0.6</BreakGrowth>
+      <SpeedMin>1</SpeedMin>
+      <Speed>4</Speed>
+    </EquipEffect>
+    <Rarity>Common</Rarity>
+    <CharacterSkin></CharacterSkin>
+    <Chapter>1</Chapter>
+  </Book>
+  <Book ID="32">
+    <Name>장착 해제</Name>
+    <Option>Basic</Option>
+    <EquipEffect>
+      <HP>30</HP>
+      <Break>20</Break>
+      <BreakGrowth>0.6</BreakGrowth>
+      <SpeedMin>1</SpeedMin>
+      <Speed>4</Speed>
+		</EquipEffect>
+		<Rarity>Common</Rarity>
+		<CharacterSkin></CharacterSkin>
+		<Chapter>1</Chapter>
+	</Book>
+  <Book ID="101">
+    <Name>비나 조율자 - 안씀</Name>
+    <Option>Basic</Option>
+    <EquipEffect>
+      <HP>90</HP>
+      <Break>50</Break>
+      <SpeedMin>1</SpeedMin>
+      <Speed>7</Speed>
+      <SResist>Endure</SResist>
+      <PResist>Normal</PResist>
+      <HResist>Normal</HResist>
+      <SBResist>Endure</SBResist>
+      <PBResist>Normal</PBResist>
+      <HBResist>Normal</HBResist>
+    </EquipEffect>
+    <Rarity>Unique</Rarity>
+    <CharacterSkin></CharacterSkin>
+    <Chapter>1</Chapter>
+  </Book>
+  <Book ID="102">
+		<Name>롤랑-검은침묵</Name>
+    <TextId>102</TextId>
+		<Option>Basic</Option>
+    <Category>DeckFixed</Category>
+		<EquipEffect>
+      <HP>106</HP>
+      <Break>56</Break>
+      <SpeedMin>2</SpeedMin>
+      <Speed>7</Speed>
+      
+      <StartPlayPoint>4</StartPlayPoint>
+      <MaxPlayPoint>4</MaxPlayPoint>
+      
+      <SResist>Normal</SResist>
+      <PResist>Normal</PResist>
+      <HResist>Endure</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Normal</PBResist>
+      <HBResist>Endure</HBResist>
+    
+      <Passive>10008</Passive>
+      <Passive>10012</Passive>
+      <Passive>10013</Passive>
+		</EquipEffect>
+    <BookIcon>BlackSilence</BookIcon>
+    <Chapter>7</Chapter>
+		<Rarity>Unique</Rarity>
+		<CharacterSkin>BlackSilence</CharacterSkin>
+	</Book>
+
+  <Book ID="99999">
+    <Name>뒤틀림의 책</Name>
+    <TextId>47</TextId>
+    <EquipEffect>
+      <HP>30</HP>
+      <Break>20</Break>
+      <BreakGrowth>0.6</BreakGrowth>
+      <SpeedMin>1</SpeedMin>
+      <Speed>4</Speed>
+    </EquipEffect>
+    <Rarity>Common</Rarity>
+    <CharacterSkin></CharacterSkin>
+    <Grade>2</Grade>
+  </Book>
+</BookXmlRoot>

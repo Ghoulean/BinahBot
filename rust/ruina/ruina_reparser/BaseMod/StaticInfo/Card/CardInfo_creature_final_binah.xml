@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- 큰새 -->
+  <Card ID="9908111">
+    <Name>구원</Name>
+    <Artwork>Bigbird_Save</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="25" Dice="25" Type="Standby" Detail="Slash" Motion="Z" EffectRes="" Script="Final_BigBird_Redemption" ActionScript="bigbird_redemption" Desc="" />
+      <Behaviour Min="20" Dice="20" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="9908112">
+    <Name>방어</Name>
+    <Artwork>Bigbird_Eye</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="22" Dice="22" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="22" Dice="22" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="22" Dice="22" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9908113">
+    <Name>물어뜯기</Name>
+    <Artwork>Bigbird_Eye</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="25" Dice="25" Type="Standby" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="25" Dice="25" Type="Standby" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9908114">
+    <Name>암흑</Name>
+    <Artwork>BigBird_EGO</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="FarArea" Cost="0" Affection="Team"/>
+    <Script>Final_BigBird_Darkness</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="15" Dice="15" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="" ActionScript="Final_BigBird_Darkness" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="9908121">
+    <Name>눈알 후벼파기</Name>
+    <Artwork>BigBird_Eyebird</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="binding4atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9908122">
+    <Name>쪼아대기</Name>
+    <Artwork>BigBird_Eyebird</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="5" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="bigbird_2" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="5" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="bigbird_2" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="bigbird_2" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9908123">
+    <Name>주시</Name>
+    <Artwork>Bigbird_Eye</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="bigbird_3" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9908124">
+    <Name>뜀박질</Name>
+    <Artwork>BigBird_Eyebird</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="bigbird_4" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="bigbird_4" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9908131">
+    <Name>이끌림</Name>
+    <Artwork>Bigbird_Lamp</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="1" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>999</Priority>
+  </Card>
+  
+  
+  <!-- 작은새 -->
+  <Card ID="9908211">
+    <Name>쪼아대기</Name>
+    <Artwork>SmallBird_Beak</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="3" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="3" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="3" Type="Standby" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+     </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="9908212">
+    <Name>재빠른 비행</Name>
+    <Artwork>Smallbird_Fly</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="powerUpNext1pw" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="strength1pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+
+  <Card ID="9908213">
+    <Name>징벌1</Name>
+    <Artwork>SmallBird_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="9" Dice="9" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="smallbird_break_final" ActionScript="smallbird_ego" Desc="" />
+    </BehaviourList>
+    <Priority>50</Priority>
+  </Card>
+  
+  <Card ID="9908214">
+    <Name>징벌2</Name>
+    <Artwork>SmallBird_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="8" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="smallbird_debuf_final" ActionScript="smallbird_ego" Desc="" />
+      <Behaviour Min="10" Dice="10" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="smallbird_debuf_final" ActionScript="smallbird_ego_final" Desc="" />
+    </BehaviourList>
+    <Priority>50</Priority>
+  </Card>
+
+  <!-- 작은새 : 숲지기 -->
+  <Card ID="9908221">
+    <Name>후려치기</Name>
+    <Artwork>Smallbird_SubAtk</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="3"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="7" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="smallbird_guard_break_final" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="9908222">
+    <Name>울리기</Name>
+    <Artwork>Smallbird_SubAtk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="3"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="smallbird_guard_break2_final" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9908223">
+    <Name>찌르기</Name>
+    <Artwork>Smallbird_SubAtk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="3"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="smallbird_guard_debuf_final" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="smallbird_guard_debuf_final" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="smallbird_guard_debuf_final" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9908224">
+    <Name>평타</Name>
+    <Artwork>Smallbird_SubAtk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9908225">
+    <Name>막기</Name>
+    <Artwork>Smallbird_Lock</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+
+  <!-- 긴새 -->
+  <Card ID="9908311">
+    <Name>심판</Name>
+    <Artwork>LongBird_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>longbird_simpan_final</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="longbird_hit_final" ActionScript="longbird_simpan_final" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+
+  <Card ID="9908312">
+    <Name>광역 심판</Name>
+    <Artwork>LongBird_Judgement</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarArea" Cost="0" Affection="Passive"/>
+    <Script>longbird_simpan_area_final</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="15" Dice="15" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="longbird_hit_area_final" ActionScript="longbird_simpan_area_final" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  
+  <Card ID="9908313">
+    <Name>일반 공격 카드1</Name>
+    <Artwork>LongBird_Scale</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>10</Priority>
+  </Card>
+
+  <Card ID="9908314">
+    <Name>일반 공격 카드2</Name>
+    <Artwork>LongBird_Scale</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="quickness1atk" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="quickness1atk" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="7" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9908315">
+    <Name>일반 공격 카드3</Name>
+    <Artwork>LongBird_Scale</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="8" Dice="10" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="longbird_atk2_final" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9908316">
+    <Name>가드</Name>
+    <Artwork>LongBird_Scale</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>50</Priority>
+  </Card>
+
+  <!-- 긴새 : 도망치는새 -->
+  <Card ID="9908321">
+    <Name>공포에 질린 날갯짓</Name>
+    <Artwork>LongBird_Sin</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="vulnerable1atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="vulnerable1atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="vulnerable1atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>10</Priority>
+  </Card>
+
+  <Card ID="9908322">
+    <Name>찢어지는 비명</Name>
+    <Artwork>LongBird_Sin</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="longbird_child_hit_special_final" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="longbird_child_hit_special_final" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+
+  <!-- 종말새 -->
+  <Card ID="9908511">
+    <Name>종말새 약한 평타</Name>
+    <Artwork>ApocalypseBird_Atk</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9908512">
+    <Name>종말새 평타</Name>
+    <Artwork>ApocalypseBird_Atk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Slash" Motion="Z" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9908513">
+    <Name>종말새 순간이동</Name>
+    <Artwork>ApocalypseBird_Gate</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="Final_ApocalypseBird_RecoverHp7Atk" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="9" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="Final_ApocalypseBird_RecoverHp7Atk" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="7" Type="Standby" Detail="Slash" Motion="Z" EffectRes="" Script="strength1pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9908514">
+    <Name>종말새 레이저</Name>
+    <Artwork>ApocalypseBird_Apocalypse</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script>Final_ApocalypseBird_Laser</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="10" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="EGO_ApcBird_FarLaserAtk_NotWin" Script="" ActionScript="Final_ApcBird_Laser" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9908515">
+    <Name>종말새 강평타</Name>
+    <Artwork>ApocalypseBird_Atk</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="7" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="break3atk" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="12" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="break5atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9908516">
+    <Name>종말새 광역 내려찍기</Name>
+    <Artwork>ApocalypseBird_EGO_Laser</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarArea" Cost="0" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="18" Dice="18" Type="Atk" Detail="Hit" Motion="S5" EffectRes="" Script="" ActionScript="Final_ApcBird_PutDownArea" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9908521">
+    <Name>큰새 광역 매혹 </Name>
+    <Artwork>BigBird_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarArea" Cost="0" Affection="Passive"/>
+    <Script>Final_ApocalypseBird_GiveCharm</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="" ActionScript="Final_ApcBird_CharmArea" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9908522">
+    <Name>큰새 광역 레이저</Name>
+    <Artwork>ApocalypseBird_EGO_Laser</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="Final_ApocalypseBird_DecreaseLight1Atk" ActionScript="Final_ApcBird_LaserArea" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="Final_ApocalypseBird_DecreaseLight1Atk" ActionScript="Final_ApcBird_LaserArea" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="" ActionScript="Final_ApcBird_LaserArea" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9908531">
+    <Name>긴새 평타</Name>
+    <Artwork>LongBird_Sin</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>negatePower</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="Final_ApocalypseBird_GiveSin1Atk" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="Final_ApocalypseBird_GiveSin2Atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9908532">
+    <Name>긴새 광역 심판</Name>
+    <Artwork>LongBird_Judgement</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection="Team"/>
+    <Script>negatePower</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="Final_ApocalypseBird_AbsoluteDmg" ActionScript="Final_ApcBird_JudgementArea" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="Final_ApocalypseBird_AbsoluteDmg" ActionScript="Final_ApcBird_JudgementArea" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9908541">
+    <Name>작은새 평타</Name>
+    <Artwork>SmallBird_Beak</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="Z" EffectRes="" Script="bleeding2atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="Z" EffectRes="" Script="bleeding2atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Slash" Motion="Z" EffectRes="" Script="bleeding2atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9908542">
+    <Name>작은새 단일 극딜</Name>
+    <Artwork>SmallBird_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>Final_ApocalypseBird_MaxUpBySin</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="Final_ApocalypseBird_PowerUpLastDice" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="Z" EffectRes="" Script="Final_ApocalypseBird_PowerUpLastDice" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="ApcBird_Punishment_BloodEffect" Script="Final_ApocalypseBird_RecoverHpAndBleed" ActionScript="Final_ApcBird_Punishment" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  
+  
+</DiceCardXmlRoot>

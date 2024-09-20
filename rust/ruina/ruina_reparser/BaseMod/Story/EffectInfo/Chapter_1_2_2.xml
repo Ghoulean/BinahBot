@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SceneEffect xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Dialogue ID="0">
+    <Bg Src="ch1_library_inside" />
+    <Filter Src="Continue" />
+    <Bgm Src="Lobby" Effect="On" PrevBgm="Off" />
+    <CharacterList>
+      <Character Name="롤랑" Face="nomal" Body="nomal" Pos="L2" Emotion="NONE" Telling="false">
+        <Active Effect="NORMAL" Ratio="0" />
+      </Character>
+      <Character Name="앤젤라" Face="normal" Body="nomal" Pos="R2" Emotion="QUESTION" Telling="false">
+        <Active Effect="NORMAL" Ratio="0" />
+      </Character>
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="1">
+    <Bg Src="None" />
+    <Filter Src="1" />
+    <Bgm Src="None" Effect="None" PrevBgm="None" />
+    <CharacterList>
+      <Character Name="롤랑" Face="sigh" Body="nomal" Pos="L2" Emotion="NONE" Telling="false" />
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <CG Src="쥐" />
+  <storyBranch>None</storyBranch>
+</SceneEffect>

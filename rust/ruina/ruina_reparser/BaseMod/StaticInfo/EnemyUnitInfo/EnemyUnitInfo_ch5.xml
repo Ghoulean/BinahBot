@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+모든 적 캐릭터 각각에 대한 정의
+-->
+<EnemyUnitClassRoot>
+  <Enemy ID="40001">
+    <!--유진-->
+    <NameID>88</NameID>
+    <MinHeight>175</MinHeight>
+    <MaxHeight>175</MaxHeight>
+
+    <BookId>140001</BookId>
+
+    <Emotion>1</Emotion>
+    <Emotion>2</Emotion>
+    <Emotion>3</Emotion>
+
+    <DropTable Level="0">
+      <DropItem Prob="1.6">240001</DropItem>
+      <DropItem Prob="0.4">240002</DropItem>
+    </DropTable>
+
+    <DropTable Level="1">
+      <DropItem Prob="0.8">240001</DropItem>
+      <DropItem Prob="1.2">240002</DropItem>
+    </DropTable>
+
+    <DropTable Level="2">
+      <DropItem Prob="2">240002</DropItem>
+    </DropTable>
+
+    <Exp>100</Exp>
+  </Enemy>
+
+  <Enemy ID="40002">
+    <!--발렌틴-->
+    <NameID>89</NameID>
+    <MinHeight>183</MinHeight>
+    <MaxHeight>183</MaxHeight>
+
+    <BookId>140002</BookId>
+    
+    <Emotion>1</Emotion>
+    <Emotion>2</Emotion>
+    <Emotion>3</Emotion>
+
+    <DropTable Level="0">
+      <DropItem Prob="1.6">240001</DropItem>
+      <DropItem Prob="0.4">240003</DropItem>
+    </DropTable>
+
+    <DropTable Level="1">
+      <DropItem Prob="0.8">240001</DropItem>
+      <DropItem Prob="1.2">240003</DropItem>
+    </DropTable>
+
+    <DropTable Level="2">
+      <DropItem Prob="2">240003</DropItem>
+    </DropTable>
+
+    <Exp>80</Exp>
+  </Enemy>
+
+  <Enemy ID="40003">
+    <!--텐마-->
+    <NameID>90</NameID>
+    <MinHeight>146</MinHeight>
+    <MaxHeight>146</MaxHeight>
+
+    <BookId>140003</BookId>
+
+    <Emotion>1</Emotion>
+    <Emotion>2</Emotion>
+    <Emotion>3</Emotion>
+
+    <DropTable Level="0">
+      <DropItem Prob="1.6">240001</DropItem>
+      <DropItem Prob="0.4">240004</DropItem>
+    </DropTable>
+
+    <DropTable Level="1">
+      <DropItem Prob="0.8">240001</DropItem>
+      <DropItem Prob="1.2">240004</DropItem>
+    </DropTable>
+    
+    <DropTable Level="2">
+      <DropItem Prob="2">240004</DropItem>
+    </DropTable>
+
+    <Exp>80</Exp>
+  </Enemy>
+
+  <Enemy ID="40004">
+    <!-- 빠른 인형 -->
+    <NameID>92</NameID>
+    <MinHeight>190</MinHeight>
+    <MaxHeight>190</MaxHeight>
+
+    <BookId>140004</BookId>
+
+    <Emotion>1</Emotion>
+    <Emotion>4</Emotion>
+
+    <DropTable Level="0">
+      <DropItem Prob="2">240005</DropItem>
+    </DropTable>
+
+    <Exp>80</Exp>
+  </Enemy>
+
+  <Enemy ID="40005">
+    <!-- 무거운 인형 -->
+    <NameID>93</NameID>
+    <MinHeight>220</MinHeight>
+    <MaxHeight>220</MaxHeight>
+
+    <BookId>140005</BookId>
+
+    <Emotion>1</Emotion>
+    <Emotion>4</Emotion>
+
+    <DropTable Level="0">
+      <DropItem Prob="2">240006</DropItem>
+    </DropTable>
+
+    <Exp>100</Exp>
+  </Enemy>
+
+  <Enemy ID="40006">
+    <!-- 기본 인형 1 -->
+    <NameID>94</NameID>
+    <MinHeight>180</MinHeight>
+    <MaxHeight>180</MaxHeight>
+
+    <BookId>140006</BookId>
+
+    <DropTable Level="0">
+      <DropItem Prob="1">240005</DropItem>
+    </DropTable>
+    <DropTable Level="2">
+      <DropItem Prob="1.2">240005</DropItem>
+    </DropTable>
+
+    <Exp>35</Exp>
+  </Enemy>
+  <Enemy ID="40007">
+    <!-- 기본 인형 2 -->
+    <NameID>94</NameID>
+    <MinHeight>180</MinHeight>
+    <MaxHeight>180</MaxHeight>
+
+    <BookId>140007</BookId>
+
+    <DropTable Level="0">
+      <DropItem Prob="1">240005</DropItem>
+    </DropTable>
+
+    <DropTable Level="2">
+      <DropItem Prob="1.2">240005</DropItem>
+    </DropTable>
+
+    <Exp>35</Exp>
+  </Enemy>
+
+  <Enemy ID="40008">
+    <!-- 에마/노아 -->
+    <NameID>95</NameID>
+    <MinHeight>278</MinHeight>
+    <MaxHeight>278</MaxHeight>
+
+    <BookId>140008</BookId>
+    
+    <DropTable Level="0">
+      <DropItem Prob="0.4">240008</DropItem>
+      <DropItem Prob="1.6">240009</DropItem>
+    </DropTable>
+
+    <DropTable Level="1">
+      <DropItem Prob="1.5">240008</DropItem>
+      <DropItem Prob="1.5">240009</DropItem>
+    </DropTable>
+		
+		<DropTable Level="2">
+      <DropItem Prob="2">240008</DropItem>
+      <DropItem Prob="2">240009</DropItem>
+    </DropTable>
+
+		<DropTable Level="3">
+			<DropItem Prob="2.3">240008</DropItem>
+			<DropItem Prob="2.3">240009</DropItem>
+		</DropTable>
+
+    <Exp>350</Exp>
+  </Enemy>
+  <Enemy ID="40009">
+    <!-- 에마? -->
+    <NameID>96</NameID>
+    <MinHeight>218</MinHeight>
+    <MaxHeight>218</MaxHeight>
+
+    <BookId>140009</BookId>
+
+    <DropTable Level="0">
+      <DropItem Prob="2">240008</DropItem>
+    </DropTable>
+
+    <Exp>350</Exp>
+  </Enemy>
+  <Enemy ID="40010">
+    <!-- 노아 -->
+    <NameID>97</NameID>
+    <MinHeight>153</MinHeight>
+    <MaxHeight>153</MaxHeight>
+
+    <BookId>140010</BookId>
+
+    <Exp>70</Exp>
+  </Enemy>
+  
+  
+  <Enemy ID="40011">
+    <!-- 서커스 사자 -->
+    <NameID>98</NameID>
+    <MinHeight>180</MinHeight>
+    <MaxHeight>180</MaxHeight>
+
+    <BookId>140011</BookId>
+
+    <Exp>70</Exp>
+  </Enemy>
+  <Enemy ID="40012">
+    <!-- 서커스 원숭이 -->
+    <NameID>99</NameID>
+    <MinHeight>235</MinHeight>
+    <MaxHeight>235</MaxHeight>
+
+    <BookId>140012</BookId>
+
+    <Exp>70</Exp>
+  </Enemy>
+  <Enemy ID="40013">
+    <!-- 서커스 코끼리 -->
+    <NameID>100</NameID>
+    <MinHeight>218</MinHeight>
+    <MaxHeight>218</MaxHeight>
+
+    <BookId>140013</BookId>
+
+    <Exp>70</Exp>
+  </Enemy>
+
+  <Enemy ID="40015">
+    <!-- 안톤 -->
+    <NameID>101</NameID>
+    <MinHeight>158</MinHeight>
+    <MaxHeight>158</MaxHeight>
+
+    <BookId>140015</BookId>
+
+    <DropTable Level="0">
+      <DropItem Prob="0.8">240010</DropItem>
+      <DropItem Prob="1.2">240011</DropItem>
+    </DropTable>
+
+    <DropTable Level="1">
+      <DropItem Prob="0.4">240010</DropItem>
+      <DropItem Prob="1.6">240011</DropItem>
+    </DropTable>
+
+    <DropTable Level="2">
+      <DropItem Prob="2">240011</DropItem>
+    </DropTable>
+
+    <Exp>70</Exp>
+  </Enemy>
+  <Enemy ID="40016">
+    <!-- 라일라 -->
+    <NameID>102</NameID>
+    <MinHeight>192</MinHeight>
+    <MaxHeight>192</MaxHeight>
+
+    <BookId>140016</BookId>
+
+    <DropTable Level="0">
+      <DropItem Prob="0.8">240010</DropItem>
+      <DropItem Prob="1.2">240012</DropItem>
+    </DropTable>
+
+    <DropTable Level="1">
+      <DropItem Prob="0.4">240010</DropItem>
+      <DropItem Prob="1.6">240012</DropItem>
+    </DropTable>
+
+    <DropTable Level="2">
+      <DropItem Prob="2">240012</DropItem>
+    </DropTable>
+
+    <Exp>70</Exp>
+  </Enemy>
+  <Enemy ID="40017">
+    <!-- 발레리 -->
+    <NameID>103</NameID>
+    <MinHeight>177</MinHeight>
+    <MaxHeight>177</MaxHeight>
+
+    <BookId>140017</BookId>
+
+    <DropTable Level="0">
+      <DropItem Prob="0.8">240010</DropItem>
+      <DropItem Prob="1.2">240013</DropItem>
+    </DropTable>
+
+    <DropTable Level="1">
+      <DropItem Prob="0.4">240010</DropItem>
+      <DropItem Prob="1.6">240013</DropItem>
+    </DropTable>
+
+    <DropTable Level="2">
+      <DropItem Prob="2">240013</DropItem>
+    </DropTable>
+
+    <Exp>70</Exp>
+  </Enemy>
+
+  <Enemy ID="40018">
+    <!-- 검지 수행자-->
+    <NameID>105</NameID>
+    <MinHeight>165</MinHeight>
+    <MaxHeight>185</MaxHeight>
+
+    <BookId>140018</BookId>
+
+    <DropTable Level="0">
+      <DropItem Prob="2">240014</DropItem>
+    </DropTable>
+
+    <Emotion>1</Emotion>
+    <Emotion>4</Emotion>
+
+    <AiScript>theIndex</AiScript>
+    
+    <Exp>110</Exp>
+  </Enemy>
+
+  <Enemy ID="40019">
+    <!-- 로즈 -->
+    <NameID>106</NameID>
+    <MinHeight>178</MinHeight>
+    <MaxHeight>178</MaxHeight>
+
+    <BookId>140019</BookId>
+
+    <DropTable Level="0">
+      <DropItem Prob="0.8">240015</DropItem>
+      <DropItem Prob="1.2">240018</DropItem>
+    </DropTable>
+
+    <DropTable Level="1">
+      <DropItem Prob="1.6">240015</DropItem>
+      <DropItem Prob="0.4">240018</DropItem>
+    </DropTable>
+
+    <DropTable Level="2">
+      <DropItem Prob="2">240015</DropItem>
+    </DropTable>
+
+    <Emotion>1</Emotion>
+    <Emotion>4</Emotion>
+
+    <Exp>110</Exp>
+  </Enemy>
+  <Enemy ID="40020">
+    <!-- 센 -->
+    <NameID>107</NameID>
+    <MinHeight>180</MinHeight>
+    <MaxHeight>180</MaxHeight>
+
+    <BookId>140020</BookId>
+
+    <DropTable Level="0">
+      <DropItem Prob="0.8">240016</DropItem>
+      <DropItem Prob="1.2">240018</DropItem>
+    </DropTable>
+
+    <DropTable Level="1">
+      <DropItem Prob="1.6">240016</DropItem>
+      <DropItem Prob="0.4">240018</DropItem>
+    </DropTable>
+
+    <DropTable Level="2">
+      <DropItem Prob="2">240016</DropItem>
+    </DropTable>
+
+    <Emotion>1</Emotion>
+    <Emotion>4</Emotion>
+    
+    <Exp>110</Exp>
+  </Enemy>
+  <Enemy ID="40021">
+    <!-- 레스티 -->
+    <NameID>108</NameID>
+    <MinHeight>165</MinHeight>
+    <MaxHeight>165</MaxHeight>
+
+    <BookId>140021</BookId>
+
+    <DropTable Level="0">
+      <DropItem Prob="0.8">240017</DropItem>
+      <DropItem Prob="1.2">240018</DropItem>
+    </DropTable>
+
+    <DropTable Level="1">
+      <DropItem Prob="0.8">240017</DropItem>
+      <DropItem Prob="0.2">240018</DropItem>
+    </DropTable>
+
+    <DropTable Level="2">
+      <DropItem Prob="1">240017</DropItem>
+    </DropTable>
+
+    <Emotion>1</Emotion>
+    <Emotion>4</Emotion>
+
+    <Exp>110</Exp>
+  </Enemy>
+  <Enemy ID="40022">
+    <!-- 워프정리요원 -->
+    <NameID>109</NameID>
+    <MinHeight>165</MinHeight>
+    <MaxHeight>180</MaxHeight>
+
+    <BookId>140022</BookId>
+
+    <DropTable Level="0">
+      <DropItem Prob="2">240018</DropItem>
+    </DropTable>
+
+    <Exp>110</Exp>
+  </Enemy>
+  <Enemy ID="40023">
+    <!-- 왕 -->
+    <NameID>110</NameID>
+    <MinHeight>178</MinHeight>
+    <MaxHeight>178</MaxHeight>
+
+    <BookId>140023</BookId>
+
+    <DropTable Level="0">
+      <DropItem Prob="0.8">240019</DropItem>
+      <DropItem Prob="1.2">240022</DropItem>
+    </DropTable>
+
+    <DropTable Level="1">
+      <DropItem Prob="1.6">240019</DropItem>
+      <DropItem Prob="0.4">240022</DropItem>
+    </DropTable>
+
+    <DropTable Level="2">
+      <DropItem Prob="2">240019</DropItem>
+    </DropTable>
+
+    <AiScript>smilingFaces</AiScript>
+
+    <Exp>110</Exp>
+  </Enemy>
+  <Enemy ID="40024">
+    <!-- 진 -->
+    <NameID>111</NameID>
+    <MinHeight>183</MinHeight>
+    <MaxHeight>183</MaxHeight>
+
+    <BookId>140024</BookId>
+
+    <DropTable Level="0">
+      <DropItem Prob="0.8">240020</DropItem>
+      <DropItem Prob="1.2">240022</DropItem>
+    </DropTable>
+
+    <DropTable Level="1">
+      <DropItem Prob="1.6">240020</DropItem>
+      <DropItem Prob="0.4">240022</DropItem>
+    </DropTable>
+
+    <DropTable Level="2">
+      <DropItem Prob="2">240020</DropItem>
+    </DropTable>
+
+    <AiScript>smilingFaces</AiScript>
+
+    <Exp>110</Exp>
+  </Enemy>
+  <Enemy ID="40025">
+    <!-- 미 -->
+    <NameID>112</NameID>
+    <MinHeight>190</MinHeight>
+    <MaxHeight>190</MaxHeight>
+
+    <BookId>140025</BookId>
+
+    <DropTable Level="0">
+      <DropItem Prob="0.8">240021</DropItem>
+      <DropItem Prob="1.2">240022</DropItem>
+    </DropTable>
+
+    <DropTable Level="1">
+      <DropItem Prob="1.6">240021</DropItem>
+      <DropItem Prob="0.4">240022</DropItem>
+    </DropTable>
+
+    <DropTable Level="2">
+      <DropItem Prob="2">240021</DropItem>
+    </DropTable>
+
+    <AiScript>smilingFaces</AiScript>
+
+    <Exp>110</Exp>
+  </Enemy>
+  <Enemy ID="40026">
+    <!-- 얼굴 잡몹 -->
+    <NameID>113</NameID>
+    <MinHeight>178</MinHeight>
+    <MaxHeight>185</MaxHeight>
+
+    <BookId>140026</BookId>
+
+    <DropTable Level="0">
+      <DropItem Prob="2">240022</DropItem>
+    </DropTable>
+
+    <AiScript>smilingFaces</AiScript>
+
+    <Exp>110</Exp>
+  </Enemy>
+  
+
+
+
+  <Enemy ID="41001">
+    <!-- 시 협회 해결사 -->
+    <NameID>91</NameID>
+    <MinHeight>160</MinHeight>
+    <MaxHeight>180</MaxHeight>
+    <BookId>141001</BookId>
+    <DropTable Level="0">
+      <DropItem Prob="2">240001</DropItem>
+    </DropTable>
+
+    <Emotion>1</Emotion>
+    <Emotion>2</Emotion>
+    
+    <Emotion>3</Emotion>
+    
+    <Exp>60</Exp>
+  </Enemy>
+  <Enemy ID="41002">
+    <!-- 청소부 -->
+    <NameID>104</NameID>
+    <MinHeight>150</MinHeight>
+    <MaxHeight>170</MaxHeight>
+
+    <BookId>141002</BookId>
+
+    <DropTable Level="0">
+      <DropItem Prob="1">240010</DropItem>
+    </DropTable>
+    <DropTable Level="1">
+      <DropItem Prob="1.2">240010</DropItem>
+    </DropTable>
+
+    <Exp>30</Exp>
+  </Enemy>
+
+  <Enemy ID="43001">
+    <!--세븐 협회 단테-->
+    <NameID>1004</NameID>
+    <MinHeight>161</MinHeight>
+    <MaxHeight>161</MaxHeight>
+    <BookId>143001</BookId>
+    <DropTable Level="0">
+      <DropItem Prob="1.2">243001</DropItem>
+    </DropTable>
+    <DropTable Level="1">
+      <DropItem Prob="1.6">243001</DropItem>
+    </DropTable>
+    <DropTable Level="2">
+      <DropItem Prob="2">243001</DropItem>
+    </DropTable>
+    <DropTable Level="3">
+      <DropItem Prob="2.2">243001</DropItem>
+    </DropTable>
+  </Enemy>
+
+  <Enemy ID="43002">
+    <!--세븐 협회 조직원-->
+    <NameID>1005</NameID>
+    <MinHeight>173</MinHeight>
+    <MaxHeight>183</MaxHeight>
+    <BookId>143002</BookId>
+    <DropTable Level="0">
+      <DropItem Prob="2">243002</DropItem>
+    </DropTable>
+  </Enemy>
+
+  <Enemy ID="43003">
+    <!--김삿갓-->
+    <NameID>1006</NameID>
+    <MinHeight>183</MinHeight>
+    <MaxHeight>183</MaxHeight>
+    <BookId>143003</BookId>
+    <DropTable Level="0">
+      <DropItem Prob="2">243003</DropItem>
+    </DropTable>
+  </Enemy>
+
+  <Enemy ID="43004">
+    <!--검계 조직원-->
+    <NameID>1007</NameID>
+    <MinHeight>173</MinHeight>
+    <MaxHeight>183</MaxHeight>
+    <BookId>143004</BookId>
+    <DropTable Level="0">
+      <DropItem Prob="2">243004</DropItem>
+    </DropTable>
+  </Enemy>
+
+  <Enemy ID="43005">
+    <!--매우 강한 1급 해결사-->
+    <NameID>1008</NameID>
+    <MinHeight>179</MinHeight>
+    <MaxHeight>179</MaxHeight>
+    <BookId>143005</BookId>
+    <DropTable Level="0">
+      <DropItem Prob="2">243005</DropItem>
+    </DropTable>
+  </Enemy>
+</EnemyUnitClassRoot>

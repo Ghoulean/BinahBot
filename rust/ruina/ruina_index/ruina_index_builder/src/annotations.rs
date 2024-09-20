@@ -87,6 +87,11 @@ pub fn precompute_disambiguations_map<'a>() -> AnnotationMapping<'a> {
     let mut heuristics = Vec::new();
     heuristics.extend(pagetype_heuristics);
     heuristics.extend(vec![
+        collectable_heuristic,
+        obtainable_heuristic,
+        enemyonly_heuristic
+    ]);
+    heuristics.extend(vec![
         canard_heuristic,
         um_heuristic,
         ul_heuristic,
@@ -94,11 +99,6 @@ pub fn precompute_disambiguations_map<'a>() -> AnnotationMapping<'a> {
         un_heuristic,
         sotc_heuristic,
         ic_heuristic
-    ]);
-    heuristics.extend(vec![
-        collectable_heuristic,
-        obtainable_heuristic,
-        enemyonly_heuristic
     ]);
 
     let mut vec = heuristics.into_iter().map(|x| get_disambiguations_for_uniqueness_heuristic(x)).collect::<Vec<_>>();
@@ -214,13 +214,29 @@ mod tests {
     fn obtainable_disambiguation() {
         let disambiguation_map = precompute_disambiguations_map();
 
+        let tao_tie = TypedId(PageType::CombatPage, "610022".to_string());
+
+        assert_eq!(
+            "obtainable",
+            disambiguation_map.get(&tao_tie).unwrap().get(&Locale::English).unwrap()
+        );
+    }
+
+    #[test]
+    fn ego_page_disambiguation() {
+        let disambiguation_map = precompute_disambiguations_map();
+
         let fourth_match_flame = TypedId(PageType::CombatPage, "910001".to_string());
         let sound_of_a_star = TypedId(PageType::CombatPage, "910048".to_string());
 
-        assert!(disambiguation_map.get(&fourth_match_flame)
-            .is_some_and(|x| x.get(&Locale::English).unwrap() == "obtainable"));
-        assert!(disambiguation_map.get(&sound_of_a_star)
-            .is_some_and(|x| x.get(&Locale::English).unwrap() == "obtainable"));
+        assert_eq!(
+            "EGO page",
+            disambiguation_map.get(&fourth_match_flame).unwrap().get(&Locale::English).unwrap()
+        );
+        assert_eq!(
+            "EGO page",
+            disambiguation_map.get(&sound_of_a_star).unwrap().get(&Locale::English).unwrap()
+        );
     }
 
     #[test]

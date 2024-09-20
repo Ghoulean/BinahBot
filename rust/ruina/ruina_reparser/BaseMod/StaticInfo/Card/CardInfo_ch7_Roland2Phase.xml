@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Card ID="702101">
+    <Name>휘두르기</Name>
+    <Artwork>Roland2Phase6</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <!--사용시 이 책장의 모든 주사위가 적중 체력 3회복을 얻음-->
+  <Card ID="702102">
+    <Name>살점 뜯기</Name>
+    <Artwork>Roland2Phase2</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>addRecoverHp3Atkalldice</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="S2" EffectRes="" Script="roland2phaseenemys1" ActionScript="RolandGrab" Desc="" />
+      <!--적중 원래 주사위 값이 8이면 이주사위를 재사용(최대 4번사용)-->
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Slash" Motion="S3" EffectRes="" Script="rolandcontinuousDice" ActionScript="RolandEat" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="702103">
+    <Name>꼬리 휘두르기</Name>
+    <Artwork>Roland2Phase5</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <!--적중 출혈 3 부여-->
+      <Behaviour Min="9" Dice="14" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="bleeding3atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="702104">
+    <Name>엉겨 붙은 살덩이</Name>
+    <Artwork>Roland2Phase3</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Far" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <!--적중 허약 1 부여-->
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="roland2phaseFar" ActionScript="Roland2FarAtk" Desc="" />
+      <!--적중 허약 1 부여-->
+      <Behaviour Min="4" Dice="5" Type="Atk" Detail="Slash" Motion="F" EffectRes="" Script="weak2atk" ActionScript="Roland2FarAtk_SecondDamaged" Desc="" />
+      <!--적중 독한 연기 1 부여-->
+      <Behaviour Min="4" Dice="5" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="heavysmoke1atk" ActionScript="Roland2FarAtk_SecondDamaged" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+
+  <Card ID="702105">
+    <Name>가시 촉수</Name>
+    <Artwork>Roland2Phase4</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <!--적중 출혈 5 부여-->
+      <Behaviour Min="4" Dice="12" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="bleeding5atkarea" ActionScript="Roland2_FarArea_TentacleDamaged" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+    <Priority>200</Priority>
+  </Card>
+
+  <!--독한연기 3부여-->
+  <Card ID="702106">
+    <Name>연기 방사</Name>
+    <Artwork>Roland2Phase1</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarArea" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="20" Dice="25" Type="Atk" Detail="Penetrate" Motion="S6" EffectRes="" Script="heavysmoke3atkarea" ActionScript="Roland2_FarArea_SmokeArea" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+    <Priority>200</Priority>
+  </Card>
+
+
+
+  <!--잡몹 : 연기 부산물 -->
+  <Card ID="702107">
+    <Name>휘두르기</Name>
+    <Artwork>Roland2Phase6</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="9" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="702108">
+    <Name>뜯어 먹기</Name>
+    <Artwork>Roland2Phase2</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+      <!--적중 : 다음 주사위 사용 대상의 다음 주사위 파괴-->
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="roland2phaseenemys1" ActionScript="Roland2EnemyGrab" Desc="" />
+      <!--적중: 원래 주사위 값이 4이면 이주사위를 재사용(최대 4번 재사용)-->
+      <Behaviour Min="1" Dice="3" Type="Atk" Detail="Slash" Motion="S2" EffectRes="" Script="roland2phaseenemys2" ActionScript="Roland2EnemyEat" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+
+  <Card ID="702109">
+    <Name>촉수 찌르기</Name>
+    <Artwork>Roland2Phase4</Artwork>
+    <Rarity>Unique</Rarity>
+    <Keyword>Pluto_Contracted_4</Keyword>
+
+    <Spec Range="Far" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <!--적중: 연기 전쟁의 연기 1부여-->
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="heavysmoke1atk" ActionScript="Roland2Enemy_Tentacle" Desc="" />
+      <!--적중: 연기 전쟁의 연기 1부여-->
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="heavysmoke1atk" ActionScript="Roland2Enemy_Tentacle" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+
+</DiceCardXmlRoot>

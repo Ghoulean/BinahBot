@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GroupName>Workshop</GroupName>
+  <Character ID="Named">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">テストする準備はできた？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">適正圧力…よし。煙の濃度……適切！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">最近身体がちょっとなまってたけど……ちょうどよかった！</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">わ～お！今回の新作は凄いことになりそう！</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">ちょうど気になることが沢山あったんだよね。本はどこにあるんだろ？</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">完全に失敗しちゃった……・</BattleDialog>
+      <BattleDialog ID="DEATH_1">だめ……やっと分かったと思ったのに……。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">ギリギリになるほどビリビリするんだよね！</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">もう使えないよね？この部品ちょっと借りるね！</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">心配しないで！次は失敗しないと思うから！</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">こんな技術は初めてね！どうやったの？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">あんたたち本当に面白いね！他に何か見せてくれない？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">いいね。後もうちょっとだね？</BattleDialog>
+    </Type>
+  </Character>
+
+  <Character ID="Workshop">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">はい、問題ありません！すぐにやりましょう。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">実戦投入したことはないんですけど……大丈夫ですよね？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">相手も当たり障り無さそうですね！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">問題ないかだけ確認すればすぐに納品できそうですね。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">どれどれ……ちゃんと補充されてるかな？</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">お疲れさまでした！帰りましょうか？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">なかなか使えますね？帰って納品しても良さそうですね！</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">ここで何の本がもらえるんですかね？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">色んな情報を得られたら良いのに……。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">どうせなら他の組織に関する情報なら良いですね。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">そんな…どこか設計ミスしたかな……。</BattleDialog>
+      <BattleDialog ID="DEATH_1">そんなわけない…どこを間違えたんだろう……？</BattleDialog>
+      <BattleDialog ID="DEATH_2">違う……間違えたわけない！</BattleDialog>
+      <BattleDialog ID="DEATH_3">……失敗しないように祈ってたのに。</BattleDialog>
+      <BattleDialog ID="DEATH_4">このまま終わりたくない……。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">どれどれ……振るときちょっと重かったかな。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">ここは他の部品に変えないと……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">どこが問題か分かりましたか？</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">特に武器自体には大して問題無さそうです。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">早く終わらせるのに集中しましょうかぁ～。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">良い武器なのにまともに扱えないんですね……。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">勉強になりそうですね？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">どんだけ大きな秘密を隠してるんだ！</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">そろそろ片付けちゃいますか？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">やっぱり私の選択は間違ってなかった！</BattleDialog>
+    </Type>
+  </Character>
+  
+</BattleDialogRoot>

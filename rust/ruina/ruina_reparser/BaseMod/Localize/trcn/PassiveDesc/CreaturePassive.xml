@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <PassiveDesc ID="1001011">
+    <Name>疤痕</Name>
+    <Desc>被斬擊骰子擊中時所受傷害-1~5</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1001012">
+    <Name>鮮血</Name>
+    <Desc>速度-3
+使自身的“防禦型”骰子最大值+3</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1002021">
+    <Name>渴望</Name>
+    <Desc>每一幕結束時若未造成傷害，則失去4點體力</Desc>
+  </PassiveDesc>
+  <!-- 피노키오 : 거짓말쟁이 -->
+  <PassiveDesc ID="1003011">
+    <Name>模仿學習</Name>
+    <Desc>複製並使用指定司書的牌組
+每一幕開始時恢復所有光芒</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1003012">
+    <Name>撒謊</Name>
+    <Desc>每2~3幕使用1張標有錯誤訊息的“謊言書頁”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1003014">
+    <Name>謊言揭穿</Name>
+    <Desc>使用“謊言書頁”與“說謊不好！”拼點時自身的所有骰子威力-4</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1003015">
+    <Name>撒謊超開心</Name>
+    <Desc>使用“謊言書頁”與其他書頁拼點時自身的所有骰子威力+4</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1003016">
+    <Name>有什麼不好？</Name>
+    <Desc>若謊言被揭穿，則下一幕中所有“皮諾丘”將獲得2層“虛弱”與“破綻”且所有混亂攻擊抗性變為“脆弱”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1003018">
+    <Name>啦啦啦~</Name>
+    <Desc>若謊言未被揭穿，則下一幕中所有“皮諾丘”將獲得4層“強壯”與“忍耐”</Desc>
+  </PassiveDesc>
+  <!-- 피노키오 : 호기심쟁이 -->
+  <PassiveDesc ID="1003021">
+    <Name>模仿學習</Name>
+    <Desc>複製並使用第1名助理司書的牌組</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1003023">
+    <Name>顛倒之歌</Name>
+    <Desc>若自身存活，則每一幕開始時隨機調整所有司書手中書頁的費用(僅調整0~3費書頁)</Desc>
+  </PassiveDesc>
+  <!-- 피노키오 : 따라쟁이 -->
+  <PassiveDesc ID="1003031">
+    <Name>模仿學習</Name>
+    <Desc>複製並使用第2名助理司書的牌組</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1003033">
+    <Name>為了全人類的歌謠</Name>
+    <Desc>若自身存活，則每一幕開始時所有“皮諾丘”將隨機獲得2層“強壯”或“忍耐”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="101011">
+    <Name>熄滅的火花</Name>
+    <Desc>友方角色死亡時自身將失去50%的體力並陷入混亂</Desc>    
+  </PassiveDesc>
+  <PassiveDesc ID="101012">
+    <Name>灰燼</Name>
+    <Desc>陷入混亂時失去所有光芒</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="102011">
+    <Name>愛意</Name>
+    <Desc>每進行1次拼點便使特殊書頁-“思念過去的懷抱”費用-1</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="201011">
+    <Name>憤怒</Name>
+    <Desc>擊中目標時造成雙倍混亂傷害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="201012">
+    <Name>恐懼</Name>
+    <Desc>擁有負面狀態時(如麻痺，流血等)自身的所有骰子威力-4</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="202011">
+    <Name>反覆識別模式</Name>
+    <Desc>若在1幕之內至少造成10點傷害，則恢復1點光芒</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="301011">
+    <Name>神情</Name>
+    <Desc>骰子威力取決於下令戰鬥時的表情</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="302021">
+    <Name>吸引</Name>
+    <Desc>優先將處於“流血”狀態的司書指定為攻擊目標</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="401011">
+    <Name>無法理解</Name>
+    <Desc>造成混亂傷害時傷害翻倍</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="402011">
+    <Name>卵石</Name>
+    <Desc>每一幕開始時恢復20%的體力(若體力為1，則無法生效)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="402012">
+    <Name>不要離開我</Name>
+    <Desc>承受致死傷害時將陷入“假死”，保留1點體力並在下2幕中陷入混亂，2幕之後將體力恢復至與另一名友方角色相同
+每一幕開始時若所有我方角色的體力均為1點，則司書方贏得勝利</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="402013">
+    <Name>離別之淚</Name>
+    <Desc>每一幕開始時若舞臺中存在體力為1的我方角色，則使所有角色失去10%的體力</Desc>
+  </PassiveDesc>
+
+  <!-- 요정 -->
+  <PassiveDesc ID="103011">
+    <Name>片刻的饕足</Name>
+    <Desc>每一幕開始時吞噬體力為1的“儲備糧食”並獲得10層“易損”，“虛弱”與“破綻”</Desc>
+  </PassiveDesc>
+  <!-- 요정 -->
+  <PassiveDesc ID="103012">
+    <Name>饑餓狂暴</Name>
+    <Desc>體力不高於25%時若仍有友方角色存活，則將其全部吞噬
+每一幕開始時若已無友方角色存活，則獲得30層“強壯”與“迅捷”</Desc>
+  </PassiveDesc>
+  <!-- 요정 -->
+  <PassiveDesc ID="103021">
+    <Name>饑腸轆轆</Name>
+    <Desc>每一幕開始時若體力不高於50%，則失去6點體力並獲得2層“強壯”</Desc>
+  </PassiveDesc>
+  <!-- 요정 -->
+  <PassiveDesc ID="103022">
+    <Name>悉心照料</Name>
+    <Desc>每一幕開始時恢復10點體力
+在“精靈女王”被鎮壓前，承受致死傷害時將保留1點體力</Desc>
+  </PassiveDesc>
+
+  <!-- 거미봉오리 -->
+  <PassiveDesc ID="303011">
+    <Name>冷血追擊</Name>
+    <Desc>優先將擊殺“小蜘蛛”的司書指定為攻擊目標</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="303012">
+    <Name>開始狩獵</Name>
+    <Desc>“小蜘蛛”死亡後，自身可在下2幕中行動並可被指定為攻擊目標</Desc>
+  </PassiveDesc>
+  <!-- 거미봉오리 -->
+  <PassiveDesc ID="303021">
+    <Name>開飯囉！</Name>
+    <Desc>優先將處於“繭縛”狀態的司書指定為攻擊目標</Desc>
+  </PassiveDesc>
+
+  <!-- 포큐버스 -->
+  <PassiveDesc ID="403011">
+    <Name>歡樂棘刺</Name>
+    <Desc>擊中目標時使其獲得2點“正面情感”</Desc>
+  </PassiveDesc>
+  <!-- 포큐버스 -->
+  <PassiveDesc ID="403012">
+    <Name>清音柔體</Name>
+    <Desc>無法被遠程書頁傷害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="403013">
+    <Name>難以忍受的快感</Name>
+    <Desc>每一幕開始時為所有司書恢復光芒，恢復量等於各司書手中的“快感”數
+擊中目標時若其所持“快感”數達到3，則追加20點傷害並摧毀這些“快感”</Desc>
+  </PassiveDesc>
+
+  <!-- 노래하는 기계 -->
+  <PassiveDesc ID="203011">
+    <Name>會唱歌的機器</Name>
+    <Desc>無法被指定為攻擊目標
+無法行動
+免疫所有傷害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="203012">
+    <Name>演奏</Name>
+    <Desc>被動能力“我渴望那段旋律！”生效後，切割機器內的角色以進行“演奏”
+被切割的角色將失去30%的體力並在這一幕中暫時移出戰鬥
+“演奏”期間所有角色的混亂攻擊抗性將變為“致命”並獲得5層“強壯”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="203021">
+    <Name>我渴望那段旋律！</Name>
+    <Desc>自第3幕起，每4幕臨時獲得1顆速度骰子並使用特殊書頁
+若在此狀態下陷入混亂，則下一幕開始時自身將被扔進“歌唱機”
+  </Desc>
+  </PassiveDesc>
+
+  <!-- 증오의 여왕 -->
+  <PassiveDesc ID="501011">
+    <Name>逆變</Name>
+    <Desc>每一幕結束時恢復所有光芒並抽取2張書頁
+當歇斯底里計量表充滿時自身將轉變形態
+拼點失敗/被擁有“標記”的司書擊中時將提升計量表數值
+拼點勝利/擊中擁有“標記”的司書時將降低計量表數值
+計量表越趨於充滿，畫面便愈加猩紅
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="501012">
+    <Name>以憎之名</Name>
+    <Desc>每2幕使用1張“標記書頁”
+優先將被“標記”的司書指定為攻擊目標
+被“標記”司書的所有攻擊抗性將變為“脆弱”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="501013">
+    <Name>魔法之力</Name>
+    <Desc>每4幕使用1張以所有司書為目標的群體攻擊書頁
+若該角色已變身，則下一幕開始時陷入混亂</Desc>
+  </PassiveDesc>
+
+  <!-- 절망의 기사 본체-->
+  <PassiveDesc ID="502011">
+    <Name>庇護</Name>
+    <Desc>無法被指定為攻擊目標
+無法行動</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="502012">
+    <Name>悲慟</Name>
+    <Desc>每3幕為1把“遺忘騎士之劍”賦予“淚滴”效果
+若陷入混亂，則延後一幕賦予</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="502013">
+    <Name>絕望</Name>
+    <Desc>若擁有“淚滴”效果的“遺忘騎士之劍”承受致死傷害，則自身將在下一幕中陷入“絕望”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="502014">
+    <Name>絕望的加護</Name>
+    <Desc>陷入“絕望”時3把“遺忘騎士之劍”將恢復所有體力與混亂抗性並使用特殊書頁</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="502015">
+    <Name>破碎的心</Name>
+    <Desc>若3把“遺忘騎士之劍”全部刺入自身，則自身將在下一幕中陷入混亂並可被指定為攻擊目標</Desc>
+  </PassiveDesc>
+  <!-- 절망의 기사 칼 -->
+  <PassiveDesc ID="502021">
+    <Name>淚滴</Name>
+    <Desc>擁有“淚滴”效果時將額外獲得1顆速度骰子，改變所有攻擊抗性並使用特殊書頁</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="502022">
+    <Name>暫息</Name>
+    <Desc>承受致死傷害時將陷入“假死”並在2幕之後復活</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="502023">
+    <Name>刺穿絕望之劍</Name>
+    <Desc>當“絕望騎士”處於“絕望”狀態時若自身未對司書造成傷害，則刺入“絕望騎士”並使其失去一定體力</Desc>
+  </PassiveDesc>
+
+  <!-- 여왕벌 -->
+  <PassiveDesc ID="104011">
+    <Name>孢子</Name>
+    <Desc>每一幕開始時若自身在上一幕中承受傷害，則對所有司書施加1層“孢子”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="104012">
+    <Name>擴張</Name>
+    <Desc>每一幕開始時若“工蜂”數量不足3隻，則對所有司書施加2層“孢子”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="104013">
+    <Name>變態</Name>
+    <Desc>擁有“孢子”的司書死亡後將在下一幕中生成1隻“工蜂”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="104014">
+    <Name>費洛蒙</Name>
+    <Desc>每3幕使用1張強化所有友方角色的特殊書頁</Desc>
+  </PassiveDesc>
+  <!-- 일벌-->
+  <PassiveDesc ID="104021">
+    <Name>忠誠</Name>
+    <Desc>優先將上一名擊中“蜂后”的司書指定為攻擊目標</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="104022">
+    <Name>死亡之擁</Name>
+    <Desc>若“蜂后”的體力不高於20%，則將“蜂后”指定為攻擊目標</Desc>
+  </PassiveDesc>
+
+  <!-- 붉은 두건의 용병 : 용병-->
+  <PassiveDesc ID="601011">
+    <Name>噩夢的盡頭</Name>
+    <Desc>若“小紅帽”親手擊殺“大壞狼”，則司書方贏得勝利
+若“小紅帽”死亡時“大壞狼”依然存活，則司書方輸掉戰鬥</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="601012">
+    <Name>決然一擊</Name>
+    <Desc>每2~3幕使用1張群體攻擊書頁</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="601013">
+    <Name>暴怒</Name>
+    <Desc>當憤怒計量表充滿時自身將獲得“暴怒”效果
+被“大壞狼”擊中時將提升憤怒值
+擊中“大壞狼”時將降低憤怒值
+計量表越趨於充滿，畫面便愈加猩紅
+(暴怒: 2幕之內，每一幕開始時獲得2層“強壯”並使用群體攻擊書頁)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="601014">
+    <Name>無處宣洩的怒火</Name>
+    <Desc>司書擊殺“大壞狼”時自身將獲得“無處宣洩的怒火”效果，體力上限與混亂攻擊抗性也將進一步提高，隨後恢復50%的體力與所有混亂抗性
+(無處宣洩的怒火: 每一幕開始時獲得5層“強壯”與“迅捷”並使用群體攻擊書頁)</Desc>
+  </PassiveDesc>
+  <!-- 붉은 두건의 용병 : 늑대 -->
+  <PassiveDesc ID="601021">
+    <Name>噩狼咆哮</Name>
+    <Desc>若體力高於50%，則每3~4幕使用1張群體攻擊書頁</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="601022">
+    <Name>嗥叫的噩夢</Name>
+    <Desc>若體力不高於50%，則額外獲得1顆速度骰子且每一幕使用1張群體攻擊書頁</Desc>
+  </PassiveDesc>
+
+  <!-- 허수아비 -->
+  <PassiveDesc ID="701011">
+    <Name>收割智慧</Name>
+    <Desc>每3幕臨時獲得1顆速度骰子並使用1張能在命中時恢復體力並奪取目標手中書頁的特殊書頁
+若目標手中已無書頁可奪取，則追加5~20點傷害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="701012">
+    <Name>索得智慧的寧靜</Name>
+    <Desc>使用“收割智慧”與“智慧”拼點時，自身將承受20點混亂傷害並在下一幕中獲得3層“虛弱”與“束縛”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="701013">
+    <Name>索求智慧的掙扎</Name>
+    <Desc>使用“收割智慧”奪取非“智慧”書頁後，自身將在下一幕中獲得等同於吸取書頁數的“強壯”與“忍耐”並使用1張被吸取的書頁</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="701014">
+    <Name>腦袋空空</Name>
+    <Desc>每一幕開始時手中沒有書頁的司書將陷入混亂</Desc>
+  </PassiveDesc>
+
+  <!-- 나무꾼 -->
+  <PassiveDesc ID="702011">
+    <Name>蔥郁之森</Name>
+    <Desc>每一幕開始時若自身擁有“溫暖的心”，則為所有司書恢復所有光芒</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="702012">
+    <Name>遠遠不夠</Name>
+    <Desc>優先將光芒上限最高的司書指定為攻擊目標</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="702013">
+    <Name>想要一顆心</Name>
+    <Desc>觸發戰鬥時目標每剩餘1點光芒便使自身的所有骰子威力+1</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="702014">
+    <Name>暴跳之心</Name>
+    <Desc>擊殺目標時恢復20%的體力並獲得3層“溫暖的心”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="702015">
+    <Name>空洞之心</Name>
+    <Desc>若自身“溫暖的心”層數為0，則陷入混亂</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="702021">
+    <Name>心臟</Name>
+    <Desc>每一幕開始時若“熱心的樵夫”沒有“溫暖的心”，則體力最低的“樹木”將被其直接擊殺</Desc>
+  </PassiveDesc>
+
+  <!-- 죽나장 -->
+  <PassiveDesc ID="204011">
+    <Name>救贖之手</Name>
+    <Desc>優先將當前體力最低的司書指定為攻擊目標
+若舞臺中存在被“封印”的速度骰子，則轉而將其指定為攻擊目標</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="204012">
+    <Name>安寧祥和</Name>
+    <Desc>若自身的所有速度骰子皆被“封印”，則陷入混亂</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="204013">
+    <Name>沉痛哀悼</Name>
+    <Desc>每一幕開始時若有司書陷入混亂，則使用1張群體攻擊書頁</Desc>
+  </PassiveDesc>
+  <!-- 죽나장 나비-->
+  <PassiveDesc ID="204021">
+    <Name>徒勞振翅</Name>
+    <Desc>優先將當前體力最低的司書指定為攻擊目標
+“亡蝶葬儀”被鎮壓時自身將被一同鎮壓</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="602011">
+    <Name>狼的角色</Name>
+    <Desc>每2幕使用1張能在命中時生吞司書的特殊書頁
+被生吞的司書將在下一幕中暫時移出戰鬥</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="602012">
+    <Name>懲惡揚善</Name>
+    <Desc>生吞司書後，下一幕中自身的混亂攻擊抗性將變為“致命”
+若陷入混亂，則吐出肚內的司書，使其失去25%的體力並陷入混亂</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="602013">
+    <Name>生來註定</Name>
+    <Desc>生吞司書後，若自身未在下一幕中陷入混亂，則擊殺肚內的司書並轉變為更加強大的形態
+每一幕開始時若體力不高於50%也將發生轉變。
+轉變前體力無法低於30%</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="602021">
+    <Name>轉變</Name>
+    <Desc>轉變時提高混亂抗性上限並恢復所有混亂抗性</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="602022">
+    <Name>遁入黑暗</Name>
+    <Desc>若在1幕之內承受超出“自身體力上限x25%”的傷害，則自身將在下2幕中進入“潛狼”狀態</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="602023">
+    <Name>暗影伏擊</Name>
+    <Desc>處於“潛狼”狀態時未被自身指定為攻擊目標的司書將無法行動</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="602024">
+    <Name>虛脫</Name>
+    <Desc>解除“潛狼”狀態時自身的所有混亂攻擊抗性將變為“致命”</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="503010">
+    <Name>金色琥珀</Name>
+    <Desc>無法行動
+若在這一幕中承受致死傷害便以“魔法少女”的形態蘇醒
+否則以“貪婪國王”的形態蘇醒</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503011">
+    <Name>閃爍的欲望</Name>
+    <Desc>若體力減至50%，則下一幕開始時變身為“貪婪國王”
+變身前體力無法低於50%</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503012">
+    <Name>閃金之路</Name>
+    <Desc>每3幕生成4顆“閃耀的幸福”，此時自身將無法被指定為攻擊目標且無法行動
+下一幕使用1張以所有司書為目標的群體攻擊書頁</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503013">
+    <Name>自我陶醉</Name>
+    <Desc>若群體攻擊書頁至少命中1名司書，則下一幕中使自身獲得3層“強壯”與“迅捷”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503014">
+    <Name>刹那的幸福</Name>
+    <Desc>若群體攻擊書頁未命中任何司書，則下一幕中使自身陷入混亂</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503021">
+    <Name>貪婪國王</Name>
+    <Desc>更換牌組，擊中目標時追加等同於目標“流血”層數的傷害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503022">
+    <Name>暴君之路</Name>
+    <Desc>每3幕生成4顆“閃耀的幸福”，此時自身將無法被指定為攻擊目標且無法行動
+下一幕中隨機對1名司書使用2張特殊書頁</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503023">
+    <Name>暴食</Name>
+    <Desc>若特殊書頁的攻擊全部命中，則對所有司書造成15點傷害並為自身恢復25點體力</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503024">
+    <Name>刹那的幸福</Name>
+    <Desc>若特殊書頁的攻擊全部未命中，則下一幕中使自身陷入混亂</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503031">
+    <Name>閃耀的幸福</Name>
+    <Desc>只存活1幕，若被司書破壞，則將1張特殊書頁置入其手中</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="304011">
+    <Name>禮物送給你！</Name>
+    <Desc>優先將手中“禮物”數最少的司書指定為攻擊目標</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="304012">
+    <Name>想和我玩嗎？</Name>
+    <Desc>目標手中每有1張“禮物”，便使自身的招架骰子威力-4</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="304013">
+    <Name>一個人好寂寞</Name>
+    <Desc>若友方角色全部死亡，則自身的所有攻擊抗性將變為“致命”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="304021">
+    <Name>哩…嗚…</Name>
+    <Desc>優先將手中“禮物”數最多的司書指定為攻擊目標</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="304022">
+    <Name>砰！</Name>
+    <Desc>若已累計存活3幕，則使用1張能將3張“禮物”置入目標手中的“自爆書頁”
+該特殊書頁使用完畢後自身將直接死亡</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="304023">
+    <Name>驚喜登場！</Name>
+    <Desc>自身死亡後將在下一幕中生成1隻“小魔女的朋友”
+若在使用“自爆書頁”前被鎮壓，則使生成的“小魔女的朋友”失去20%的體力</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="304031">
+    <Name>哩…嗚…</Name>
+    <Desc>優先將手中“禮物”數最多的司書指定為攻擊目標</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="304032">
+    <Name>交出來！</Name>
+    <Desc>目標手中每有1張“禮物”，便使自身的“進攻型”骰子威力+1</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="404015">
+    <Name>土制人偶</Name>
+    <Desc>免疫“燒傷”與“流血”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="404012">
+    <Name>馨香氣息</Name>
+    <Desc>只造成混亂傷害
+本場戰鬥中陷入混亂的司書將直接死亡並在下一幕中生成1名“生於塵土之人”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="404011">
+    <Name>窒息的贖罪</Name>
+    <Desc>只有獲得“贖罪之冠”的司書可對自身造成傷害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="404013">
+    <Name>不凋花</Name>
+    <Desc>自第2幕起，每一幕開始時獲得1朵“花瓣”，若“花瓣”數達到3，則將其移除並使用1張群體攻擊書頁</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="404014">
+    <Name>花之淚</Name>
+    <Desc>若陷入混亂，則失去40點體力並在下一幕開始時移除所有“花瓣”，隨後為所有司書恢復50%的混亂抗性</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="404021">
+    <Name>歸於…塵土…</Name>
+    <Desc>陷入混亂時直接死亡</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="404023">
+    <Name>土制人偶</Name>
+    <Desc>免疫“燒傷”與“流血”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="404022">
+    <Name>馨香氣息</Name>
+    <Desc>只造成混亂傷害
+本場戰鬥中陷入混亂的司書將直接死亡並在下一幕中生成1名“生於塵土之人”</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="801011">
+    <Name>監視之眼</Name>
+    <Desc>自身的攻擊目標無法被轉移</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="801012">
+    <Name>永燃燈</Name>
+    <Desc>每3幕使用1張“魅惑書頁”
+每一幕開始時若舞臺中存在處於“魅惑”狀態的司書，則向所有神智正常的司書手中各置入1張“鳥籠”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="801021">
+    <Name>睡眼惺忪</Name>
+    <Desc>若被司書鎮壓，則將1張可使“大鳥”陷入混亂的特殊書頁置入其手中</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="801022">
+    <Name>追隨</Name>
+    <Desc>無法將處於“魅惑”狀態下的司書指定為攻擊目標</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="901011">
+    <Name>完全集中</Name>
+    <Desc>舞臺中不存在“天堂之刺”時蘇醒並使用群體攻擊書頁</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="901012">
+    <Name>面向古神之翼</Name>
+    <Desc>蘇醒後若未陷入“混亂”，則每一幕開始時對所有司書施加10層“虛弱”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="901013">
+    <Name>它在你的視線中</Name>
+    <Desc>承受雙倍反震傷害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="901014">
+    <Name>認知之中</Name>
+    <Desc>若已累計蘇醒3幕，則下一幕開始時生成1根“天堂之刺”並以3幕為一週期重複生成“天堂之刺”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="901021">
+    <Name>不要轉移視線</Name>
+    <Desc>若某司書與另一友方角色觸發戰鬥，則使其餘司書承受等同於“自身體力上限x40%”的傷害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="901022">
+    <Name>無形之連接</Name>
+    <Desc>司書每對自身使用1張書頁，便在下一幕中獲得1層“虛弱”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="901023">
+    <Name>它在你的視線中</Name>
+    <Desc>承受雙倍反震傷害</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="1004011">
+    <Name>刺骨寒霜</Name>
+    <Desc>每一幕開始時使所有司書失去5%的體力</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1004012">
+    <Name>孤傲的嚴寒</Name>
+    <Desc>在所有“冰獄”被摧毀前免疫“燒傷”與“流血”及所有傷害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1004013">
+    <Name>霜凍</Name>
+    <Desc>速度骰子數及光芒上限與被摧毀的“冰獄”數成正比
+若被摧毀的“冰獄”數達到2，則開始使用近戰書頁</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1004014">
+    <Name>深諳嚴冬殘酷與玫瑰芬芳之人</Name>
+    <Desc>若“冰獄”被全部摧毀，則下一幕開始時所有司書將恢復50%的體力且“冰雪女王”將使用群體攻擊書頁</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1004021">
+    <Name>凱與格爾達</Name>
+    <Desc>承受致死傷害後，下一幕開始時喚醒1名受困的司書</Desc>
+  </PassiveDesc>
+  
+    <PassiveDesc ID="603011">
+    <Name>尋找死屍</Name>
+    <Desc>優先對友方角色使用“吸收”
+擊殺友方角色時恢復30%的體力</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="603012">
+    <Name>溶解的死屍</Name>
+    <Desc>每失去25%的體力(62/87/112)，便在下一幕中生成1灘“溶解的死屍”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="603111">
+    <Name>分裂</Name>
+    <Desc>承受致死傷害時分裂為4灘“溶解的死屍”
+若死屍在3幕之內被全部鎮壓，則進入下一階段
+若未被全部鎮壓，則自身將恢復為第1形態 (復活時的體力等同於所有“溶解的死屍”的剩餘體力之和)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="603112">
+    <Name>融合</Name>
+    <Desc>體力恢復至上限時轉變為第2形態</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="603211">
+    <Name>分裂與融合</Name>
+    <Desc>承受致死傷害時轉變為第1形態
+體力恢復至上限時轉變為第3形態</Desc>
+  </PassiveDesc>  
+  <PassiveDesc ID="603212">
+    <Name>慘叫</Name>
+    <Desc>每一幕開始時獲得1層“強壯”
+每2幕使用“慘叫”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="603311">
+    <Name>分裂</Name>
+    <Desc>承受致死傷害時轉變為第2形態</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="603312">
+    <Name>嘔吐</Name>
+    <Desc>每一幕開始時獲得2層“強壯”
+每2幕使用“嘔吐”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="603021">
+    <Name>腐爛</Name>
+    <Desc>若被司書擊中，則對其造成8點傷害並在下一幕中施加1層“易損”</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="703021">
+    <Name>一起去看看吧……</Name>
+    <Desc>戰鬥開始時生成“家”並使用能夠施加“黃磚路”狀態的群體攻擊書頁</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="703022">
+    <Name>朋友呀！一起回家吧~！</Name>
+    <Desc>第2幕中對處於“黃磚路”狀態的角色使用特殊書頁“朋友呀！一起回家吧~！”
+若該書頁未擊中任何處於“黃磚路”狀態的司書，則其第3次攻擊將被“打斷”。
+若第3次攻擊未被“打斷”且成功擊中“家”，則司書方輸掉戰鬥</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="703023">
+    <Name>你這個……壞巫師……！</Name>
+    <Desc>若特殊書頁“朋友呀！一起回家吧~！”的第3次攻擊累計被“打斷”2次，則下一幕開始時使用1張群體攻擊書頁
+若該書頁至少擊中1名司書，則下一幕開始時重新生成“家”
+若未擊中任何司書，則自身將陷入混亂並延後一幕生成“家”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="703031">
+    <Name>勇氣</Name>
+    <Desc>在“歸家的路途”被鎮壓前，自身的所有攻擊抗性均為“免疫”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="703032">
+    <Name>膽小</Name>
+    <Desc>若“歸家的路途”被鎮壓，則自身的所有攻擊抗性將變為“致命”，體力上限與速度大幅減少並使用特殊書頁</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="504011">
+    <Name>今日的演劇</Name>
+    <Desc>若“憤怒侍從”親手打倒“青林隱士”，則司書方贏得勝利</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504012">
+    <Name>盲眼怒火</Name>
+    <Desc>優先將“隱士之杖”指定為攻擊目標
+若舞臺中不存在“隱士之杖”，則轉而將“青林隱士”指定為攻擊目標</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504013">
+    <Name>異界的罪人！</Name>
+    <Desc>若舞臺中存在“隱士之杖”且自身已累計承受30點傷害，則下一幕中使用群體攻擊書頁“邪惡的化身！！！”
+(使用後重置計數)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504014">
+    <Name>怒火中燒</Name>
+    <Desc>開始攻擊“青林隱士”時將使用群體攻擊書頁“邪惡的化身！！！”
+此後每2幕使用1張“邪惡的化身！！！”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504021">
+    <Name>被利用之人</Name>
+    <Desc>司書的攻擊無法使該角色的體力低於30點
+每一幕結束時若體力不高於30點，則恢復50%的體力</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504022">
+    <Name>親愛的朋友</Name>
+    <Desc>與“憤怒侍從”拼點時自身的所有骰子威力+5
+免疫“燒傷”，“流血”與“腐蝕”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504023">
+    <Name>異界的訪客</Name>
+    <Desc>若舞臺中存在“隱士之杖”，則每2幕使用1張群體攻擊書頁“老實待著”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504024">
+    <Name>兩個世界的相遇</Name>
+    <Desc>若舞臺中不存在“隱士之杖”，則集中攻擊“憤怒侍從”
+2幕之後使用可生成3根“隱士之杖”的群體攻擊書頁“起來吧！”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504031">
+    <Name>隱士之杖</Name>
+    <Desc>優先將“憤怒侍從”指定為攻擊目標</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="902011">
+    <Name>流逝的時間</Name>
+    <Desc>無法被指定為攻擊目標
+每一幕的戰前準備階段僅有30秒，時間一到立即下令戰鬥
+每一幕開始時使除自身外的所有友方角色獲得“拼點時所有骰子威力+3”或“單方面攻擊時所有骰子威力+3”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="902012">
+    <Name>積累的時間</Name>
+    <Desc>每一幕開始時生成1個“時間的痕跡”
+若舞臺中已存在4個“時間的痕跡”，則直接摧毀體力最低的“時間的痕跡”並將其剩餘體力轉化為傷害等量施於所有司書</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="902013">
+    <Name>無法停止的時間</Name>
+    <Desc>若在第13幕開始前被摧毀的“時間的痕跡”數已達到12個，則下一幕中陷入混亂並可被指定為攻擊目標
+若未達到12個，則第13幕中使用群體攻擊書頁</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="902014">
+    <Name>沉默的代價</Name>
+    <Desc>每一幕開始時向所有司書手中各置入1張“沉默”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="902021">
+    <Name>您的時間</Name>
+    <Desc>複製特定司書的速度骰子數，速度與傷害抗性
+使用特定司書在上一幕中使用的書頁</Desc>
+  </PassiveDesc>
+
+
+  <PassiveDesc ID="802011">
+    <Name>不准幹壞事！</Name>
+    <Desc>與“進攻型”骰子拼點時自身的骰子威力+50(包含“進攻型”反擊骰子)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="802012">
+    <Name>懲戒！</Name>
+    <Desc>若承受傷害，則下一幕中對最後攻擊自身的司書使用“懲戒！”(該書頁的攻擊目標無法被改變)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="802013">
+    <Name>搖晃的鳥籠</Name>
+    <Desc>特殊書頁“懲戒！”與“守林鳥之鎖”拼點後將摧毀1根鳥籠鏈
+若3根鳥籠鏈被全部摧毀，則司書方贏得勝利</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="802021">
+    <Name>守林鳥</Name>
+    <Desc>優先將處於“混亂”狀態的司書指定為攻擊目標
+若速度高於目標，則使自身的“進攻型”骰子威力+2</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="802022">
+    <Name>被奪之鎖</Name>
+    <Desc>若被司書鎮壓，則將1張特殊書頁置入其手中</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="803011">
+    <Name>不公正的天秤</Name>
+    <Desc>每一幕開始時使除“審判鳥”外的所有角色獲得1層“罪孽”
+“罪孽”可透過擊中友方角色進行轉移(每張書頁至多轉移1層)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="803012">
+    <Name>罪孽的分量</Name>
+    <Desc>目標每有1層“罪孽”便使自身的所有骰子威力+1</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="803013">
+    <Name>審判</Name>
+    <Desc>每一幕開始時若舞臺中存在“罪孽”層數不低於5的角色，則對其使用“審判”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="803014">
+    <Name>永恆的審判</Name>
+    <Desc>每一幕開始時若至少存在3名“罪孽”層數不低於3的角色，則使用群體攻擊書頁“永恆的審判”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="803015">
+    <Name>惡貫滿盈</Name>
+    <Desc>使用“審判”或“永恆的審判”後，自身將失去25%的混亂抗性</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="803021">
+    <Name>好可怕！好害怕！</Name>
+    <Desc>擊中目標時向其轉移1層“罪孽”(每張書頁至多轉移1層)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="803022">
+    <Name>淒慘悲鳴</Name>
+    <Desc>若承受傷害，則下一幕中使用“淒慘悲鳴”</Desc>
+  </PassiveDesc>
+	
+  <PassiveDesc ID="604011">
+    <Name>恐水症</Name>
+    <Desc>每一幕開始時若“鮮血”層數不高於4，則獲得數層“強壯”(至多3層)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="604012">
+    <Name>乾渴</Name>
+    <Desc>若“鮮血”層數不高於2，則每2幕使用“乾渴”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="604013">
+    <Name>血宴</Name>
+    <Desc>若“鮮血”層數不低於5，則使用群體攻擊書頁“血宴”
+戰鬥開始後若4幕之內未使用“血宴”，則自第5幕起每3幕使用“血宴”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="604014">
+    <Name>變身</Name>
+    <Desc>若體力減至50%，則當幕免疫所有傷害並在下一幕中變身</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="604021">
+    <Name>恐水症</Name>
+    <Desc>每一幕開始時若“鮮血”層數不高於1，則獲得2層“強壯”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="604031">
+    <Name>恐水症</Name>
+    <Desc>每一幕開始時若“鮮血”層數不高於4，則獲得數層“強壯”(至多3層)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="604032">
+    <Name>流淌的鮮血</Name>
+    <Desc>每一幕開始時失去1層“鮮血”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="604033">
+    <Name>無法忍受的饑渴</Name>
+    <Desc>若“鮮血”層數不高於2，則每2幕使用“無法忍受的饑渴”</Desc>
+  </PassiveDesc>	
+  <PassiveDesc ID="604034">
+    <Name>極度渴血</Name>
+    <Desc>若“鮮血”層數為0，則使用群體攻擊書頁“極度渴血”
+變身後若3幕之內未使用“極度渴血”，則自第4幕起每3幕使用“極度渴血”</Desc>
+  </PassiveDesc>
+
+  <!-- 오즈마-->
+  <PassiveDesc ID="704011">
+   <Name>復生</Name>
+   <Desc>第1幕中使用1張能喚醒所有“傑克”的書頁及對特定司書施加“遺忘”的書頁
+此後每4幕使用1張</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704012">
+  <Name>被掠奪之人的苦痛</Name>
+  <Desc>“遺忘司書”被復原後，下一幕開始時自身的混亂攻擊抗性將變為“致命”並使用1張群體攻擊書頁</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704013">
+  <Name>被掠奪之人的悲愴</Name>
+  <Desc>被動能力“復生”累計觸發2次後，下一幕開始時自身的混亂攻擊抗性將變為“致命”並使用1張強力群體攻擊書頁</Desc>
+</PassiveDesc>
+  <!--잭-->
+    <PassiveDesc ID="704021">
+    <Name>奪來的力量</Name>
+    <Desc>奪走並使用“遺忘司書”的牌組</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704022">
+    <Name>哪個是真的？</Name>
+    <Desc>蘇醒的“傑克”中只有1個“真傑克”
+“真傑克”被“遺忘司書”擊中時將隨機歸還1張書頁
+“真傑克”被擊中時畫面將會閃爍</Desc>
+  </PassiveDesc>
+   <PassiveDesc ID="704023">
+  <Name>奪還是被奪</Name>
+  <Desc>若“遺忘司書”累計擊中“真傑克”9次，則所有“傑克”將直接死亡
+若“遺忘司書”在3幕之內未能擊中“真傑克”9次，則下一幕開始時該司書將變成“南瓜”
+此後“真傑克”將轉變為“復生的傑克”並永久使用該“南瓜司書”的核心書頁與牌組</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704024">
+    <Name>南方的傑克</Name>
+    <Desc>每一幕開始時獲得2層“強壯”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704025">
+    <Name>西方的傑克</Name>
+    <Desc>每一幕開始時獲得2層“忍耐”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704026">
+    <Name>北方的傑克</Name>
+    <Desc>每一幕開始時獲得2層“迅捷”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704027">
+    <Name>東方的傑克</Name>
+    <Desc>擊中目標時混亂傷害+3</Desc>
+  </PassiveDesc>
+  <!--되살아난 잭-->
+  <PassiveDesc ID="704031">
+    <Name>全是我的啦！</Name>
+    <Desc>複製並使用“南瓜司書”的核心書頁與牌組</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704032">
+    <Name>復生的傑克</Name>
+    <Desc>每一幕開始時獲得2層“強壯”，“忍耐”與1層“迅捷”且擊中目標時混亂傷害+3</Desc>
+  </PassiveDesc>
+  <!--기억을 잃은 호박-->
+  <PassiveDesc ID="704041">
+    <Name>丟失的記憶</Name>
+    <Desc>被動能力無法生效
+使用特殊書頁
+屬性值全部改變</Desc>
+  </PassiveDesc>
+
+  <!--푸른별의 제단-->
+  <PassiveDesc ID="903011">
+    <Name>神聖？</Name>
+    <Desc>無法被指定為攻擊目標
+免疫所有負面狀態</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="903012">
+    <Name>新星之聲</Name>
+    <Desc>每3幕使用1張群體攻擊書頁</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="903013">
+    <Name>回歸星之懷抱</Name>
+    <Desc>若有角色陷入混亂，則直接將其擊殺並承受“自身體力上限x10%”的傷害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="903014">
+    <Name>希望的藍光</Name>
+    <Desc>若被動能力“回歸星之懷抱”導致信徒死亡，則為所有司書恢復一定混亂抗性並對所有信徒造成一定混亂傷害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="903015">
+    <Name>絕望的藍光</Name>
+    <Desc>若被動能力“回歸星之懷抱”導致司書死亡，則為所有信徒恢復一定混亂抗性並對所有司書造成一定混亂傷害</Desc>
+  </PassiveDesc>
+
+  <!--푸른별의 신도-->
+  <PassiveDesc ID="903021">
+    <Name>我聽見星之聲了！</Name>
+    <Desc>“藍星祭壇”使用群體攻擊書頁時自身將使用特殊書頁
+此時若混亂抗性不足40%，則改為使用“自爆書頁”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="903022">
+    <Name>殉教者</Name>
+    <Desc>每一幕開始時若存活信徒數不足4名，則召喚1名信徒</Desc>
+  </PassiveDesc>
+</PassiveDescRoot>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+모든 적 캐릭터 각각에 대한 정의
+-->
+<EnemyUnitClassRoot>
+  
+  <!-- 하나협회 해결사 -->
+  <Enemy ID="60001">
+    <NameID>151</NameID>
+    <MinHeight>160</MinHeight>
+    <MaxHeight>180</MaxHeight>
+
+    <BookId>160001</BookId>
+
+    <DropTable Level="0">
+      <DropItem Prob="1.2">260001</DropItem>
+    </DropTable>
+    <DropTable Level="1">
+      <DropItem Prob="1.6">260001</DropItem>
+    </DropTable>
+    <DropTable Level="2">
+      <DropItem Prob="2">260001</DropItem>
+    </DropTable>
+  </Enemy>
+  <Enemy ID="60101">
+    <NameID>151</NameID>
+    <MinHeight>160</MinHeight>
+    <MaxHeight>180</MaxHeight>
+
+    <BookId>160101</BookId>
+
+    <DropTable Level="0">
+      <DropItem Prob="1.2">260001</DropItem>
+    </DropTable>
+    <DropTable Level="1">
+      <DropItem Prob="1.6">260001</DropItem>
+    </DropTable>
+    <DropTable Level="2">
+      <DropItem Prob="2">260001</DropItem>
+    </DropTable>
+  </Enemy>
+  
+  <!-- 미리내 -->
+  <Enemy ID="60002">
+    <NameID>152</NameID>
+    <MinHeight>160</MinHeight>
+    <MaxHeight>160</MaxHeight>
+
+    <BookId>160002</BookId>
+
+    <DropTable Level="0">
+			<DropItem Prob="1.4">260001</DropItem>
+			<DropItem Prob="0.6">260002</DropItem>
+		</DropTable>
+		
+		<DropTable Level="1">
+			<DropItem Prob="1">260001</DropItem>
+			<DropItem Prob="1">260002</DropItem>
+		</DropTable>
+
+		<DropTable Level="2">
+			<DropItem Prob="2">260002</DropItem>
+		</DropTable>
+
+		<DropTable Level="3">
+			<DropItem Prob="2.2">260002</DropItem>
+		</DropTable>
+  </Enemy>
+  
+  <!-- 해롤드 -->
+  <Enemy ID="60003">
+    <NameID>153</NameID>
+    <MinHeight>173</MinHeight>
+    <MaxHeight>173</MaxHeight>
+
+    <BookId>160003</BookId>
+
+    <DropTable Level="0">
+      <DropItem Prob="1.4">260001</DropItem>
+      <DropItem Prob="0.6">260003</DropItem>
+    </DropTable>
+
+    <DropTable Level="1">
+      <DropItem Prob="1">260001</DropItem>
+      <DropItem Prob="1">260003</DropItem>
+    </DropTable>
+
+    <DropTable Level="2">
+      <DropItem Prob="2">260003</DropItem>
+    </DropTable>
+
+    <DropTable Level="3">
+      <DropItem Prob="2.2">260003</DropItem>
+    </DropTable>
+  </Enemy>
+  <!-- 올리비에 -->
+  <Enemy ID="60004">
+    <NameID>154</NameID>
+    <MinHeight>188</MinHeight>
+    <MaxHeight>188</MaxHeight>
+
+    <BookId>160004</BookId>
+    
+    <DropTable Level="0">
+			<DropItem Prob="1.4">260001</DropItem>
+			<DropItem Prob="0.6">260004</DropItem>
+		</DropTable>
+
+      
+    <DropTable Level="1">
+			<DropItem Prob="1">260001</DropItem>
+			<DropItem Prob="1">260004</DropItem>
+		</DropTable>
+
+		<DropTable Level="2">
+			<DropItem Prob="2">260004</DropItem>
+		</DropTable>
+
+		<DropTable Level="3">
+			<DropItem Prob="2.2">260004</DropItem>
+		</DropTable>
+  </Enemy>
+
+  <!-- 검은 침묵-->
+  <Enemy ID="60005">
+    <NameID>155</NameID>
+    <MinHeight>180</MinHeight>
+    <MaxHeight>180</MaxHeight>
+    <BookId>170001</BookId>    
+  </Enemy>
+
+  <!-- 검은 침묵 2Phase 테스트용-->
+  <Enemy ID="60006">
+    <NameID>10</NameID>
+    <MinHeight>800</MinHeight>
+    <MaxHeight>800</MaxHeight>
+    <BookId>170101</BookId>
+  </Enemy> 
+  <!--연기 부산물 2페이즈 잡몹-->
+  <Enemy ID="60106">
+    <NameID>170</NameID>
+    <MinHeight>160</MinHeight>
+    <MaxHeight>160</MaxHeight>
+    <BookId>170102</BookId>
+  </Enemy>
+  
+  <!-- 검은 침묵 3페이즈 -->
+  <Enemy ID="60007">
+    <NameID>157</NameID>
+    <MinHeight>200</MinHeight>
+    <MaxHeight>200</MaxHeight>
+    <BookId>170201</BookId>
+  </Enemy>
+  <Enemy ID="60107">
+    <NameID>158</NameID>
+    <MinHeight>200</MinHeight>
+    <MaxHeight>200</MaxHeight>
+    <BookId>170202</BookId>
+  </Enemy>
+
+  <!-- 검은 침묵 4페이즈 -->
+  <Enemy ID="60008">
+    <NameID>159</NameID>
+    <MinHeight>200</MinHeight>
+    <MaxHeight>200</MaxHeight>
+    <BookId>170301</BookId>    
+  </Enemy>
+  <!-- 롤랑 무기 -->
+  <Enemy ID="60108">
+    <NameID>160</NameID>
+    <MinHeight>185</MinHeight>
+    <MaxHeight>185</MaxHeight>
+    <BookId>170311</BookId>    
+  </Enemy>
+  <Enemy ID="60118">
+    <NameID>161</NameID>
+    <MinHeight>185</MinHeight>
+    <MaxHeight>185</MaxHeight>
+    <BookId>170312</BookId>
+  </Enemy>
+  <Enemy ID="60128">
+    <NameID>162</NameID>
+    <MinHeight>130</MinHeight>
+    <MaxHeight>130</MaxHeight>
+    <BookId>170313</BookId>
+  </Enemy>
+  <Enemy ID="60138">
+    <NameID>163</NameID>
+    <MinHeight>130</MinHeight>
+    <MaxHeight>130</MaxHeight>
+    <BookId>170314</BookId>
+  </Enemy>
+  <Enemy ID="60148">
+    <NameID>164</NameID>
+    <MinHeight>260</MinHeight>
+    <MaxHeight>260</MaxHeight>
+    <BookId>170315</BookId>
+  </Enemy>
+  <Enemy ID="60158">
+    <NameID>165</NameID>
+    <MinHeight>185</MinHeight>
+    <MaxHeight>185</MaxHeight>
+    <BookId>170316</BookId>
+  </Enemy>
+  <Enemy ID="60168">
+    <NameID>166</NameID>
+    <MinHeight>185</MinHeight>
+    <MaxHeight>185</MaxHeight>
+    <BookId>170317</BookId>
+  </Enemy>
+  <Enemy ID="60178">
+    <NameID>167</NameID>
+    <MinHeight>260</MinHeight>
+    <MaxHeight>260</MaxHeight>
+    <BookId>170318</BookId>
+  </Enemy>
+  <Enemy ID="60188">
+    <NameID>168</NameID>
+    <MinHeight>185</MinHeight>
+    <MaxHeight>185</MaxHeight>
+    <BookId>170319</BookId>
+  </Enemy>
+  <!-- 롤랑 잔상 -->
+  <Enemy ID="60208">
+    <NameID>169</NameID>
+    <MinHeight>200</MinHeight>
+    <MaxHeight>200</MaxHeight>
+    <BookId>170321</BookId>
+  </Enemy>
+  <Enemy ID="60218">
+    <NameID>169</NameID>
+    <MinHeight>200</MinHeight>
+    <MaxHeight>200</MaxHeight>
+    <BookId>170322</BookId>
+  </Enemy>
+  <Enemy ID="60228">
+    <NameID>169</NameID>
+    <MinHeight>200</MinHeight>
+    <MaxHeight>200</MaxHeight>
+    <BookId>170323</BookId>
+  </Enemy>
+  <Enemy ID="60238">
+    <NameID>169</NameID>
+    <MinHeight>200</MinHeight>
+    <MaxHeight>200</MaxHeight>
+    <BookId>170324</BookId>
+  </Enemy>
+  
+  <!-- 머눈발 -->
+  <!-- 제나 -->
+  <Enemy ID="80001">
+    <NameID>401</NameID>
+    <MinHeight>164</MinHeight>
+    <MaxHeight>164</MaxHeight>
+    <BookId>180001</BookId>
+  </Enemy>
+  <!-- 바랄 -->
+  <Enemy ID="80002">
+    <NameID>402</NameID>
+    <MinHeight>184</MinHeight>
+    <MaxHeight>184</MaxHeight>
+    <BookId>180002</BookId>
+  </Enemy>
+  
+</EnemyUnitClassRoot>

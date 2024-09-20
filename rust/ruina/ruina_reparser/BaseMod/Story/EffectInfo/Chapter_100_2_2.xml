@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SceneEffect xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Dialogue ID="0">
+    <Bg Src="Yesod" />
+    <Filter Src="Continue" />
+    <Bgm Src="ch8_Yesod" Effect="On" PrevBgm="Off" />
+    <CharacterList>
+      <Character Name="롤랑" Face="worry" Body="nomal" Pos="L2" Emotion="NONE" Telling="false">
+        <Active Effect="NORMAL" Ratio="0" />
+      </Character>
+      <Character Name="예소드" Face="nomal" Pos="R2" Emotion="NONE" Telling="false">
+        <Active Effect="NORMAL" Ratio="0" />
+      </Character>
+    </CharacterList>
+  </Dialogue>
+  <Dialogue ID="2">
+    <Bg Src="None" />
+    <Filter Src="1" />
+    <Bgm Src="None" Effect="None" PrevBgm="Continue" />
+    <CharacterList />
+    <EffectSound>ch8_YesodNeckTie</EffectSound>
+  </Dialogue>
+  <Dialogue ID="7">
+    <Bg Src="None" />
+    <Filter Src="1" />
+    <Bgm Src="None" Effect="None" PrevBgm="None" />
+    <CharacterList>
+      <Character Name="롤랑" Face="nomal" Body="nomal" Pos="L2" Emotion="NONE" Telling="false" />
+    </CharacterList>
+  </Dialogue>
+  <Dialogue ID="10">
+    <Bg Src="None" />
+    <Filter Src="1" />
+    <Bgm Src="None" Effect="None" PrevBgm="None" />
+    <CharacterList>
+      <Character Name="롤랑" Face="oh" Body="nomal" Pos="L2" Emotion="NONE" Telling="false" />
+    </CharacterList>
+  </Dialogue>
+  <Dialogue ID="23">
+    <Bg Src="None" />
+    <Filter Src="1" />
+    <Bgm Src="None" Effect="None" PrevBgm="None" />
+    <CharacterList>
+      <Character Name="롤랑" Face="sigh" Body="nomal" Pos="L2" Emotion="DOT" Telling="false" />
+    </CharacterList>
+  </Dialogue>
+  <Dialogue ID="24">
+    <Bg Src="None" />
+    <Filter Src="1" />
+    <Bgm Src="None" Effect="None" PrevBgm="None" />
+    <CharacterList>
+      <Character Name="롤랑" Face="nomal" Body="nomal" Pos="L2" Emotion="NONE" Telling="false" />
+    </CharacterList>
+  </Dialogue>
+  <Dialogue ID="27">
+    <Bg Src="None" />
+    <Filter Src="1" />
+    <Bgm Src="None" Effect="None" PrevBgm="None" />
+    <CharacterList>
+      <Character Name="롤랑" Face="sorry" Body="nomal" Pos="L2" Emotion="EXCLAIN" Telling="false" />
+    </CharacterList>
+  </Dialogue>
+  <Dialogue ID="30">
+    <Bg Src="None" />
+    <Filter Src="1" />
+    <Bgm Src="None" Effect="None" PrevBgm="Continue" />
+    <CharacterList>
+      <Character Name="예소드" Face="angry" Pos="C" Emotion="NONE" Telling="false">
+        <Deactive Effect="NORMAL" Ratio="0" />
+      </Character>
+      <Character Name="롤랑" Face="sigh" Body="nomal" Pos="L2" Emotion="ANNOY" Telling="false" />
+    </CharacterList>
+    <EffectSound>ch8_YesodWalk</EffectSound>
+  </Dialogue>
+</SceneEffect>

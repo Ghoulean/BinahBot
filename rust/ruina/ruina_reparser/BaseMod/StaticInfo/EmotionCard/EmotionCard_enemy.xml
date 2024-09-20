@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EmotionCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- EmotionCardXmlInfo -->
+  <EmotionCard ID="1">
+    <Name>Enemy_Fight</Name>
+    <State>Positive</State>
+    <Sephirah>None</Sephirah>
+
+    <TargetType>SelectOne</TargetType>
+    
+    <Script>fight</Script>
+  </EmotionCard>
+
+  <EmotionCard ID="2">
+    <Name>Enemy_Gloom</Name>
+    <State>Negative</State>
+    <Sephirah>None</Sephirah>
+
+    <TargetType>SelectOne</TargetType>
+
+    <Script>gloom</Script>
+  </EmotionCard>
+
+  <EmotionCard ID="3">
+    <Name>Enemy_Friend</Name>
+    <State>Positive</State>
+    <Sephirah>None</Sephirah>
+
+    <TargetType>SelectOne</TargetType>
+
+    <Script>friend</Script>
+  </EmotionCard>
+
+  <EmotionCard ID="4">
+    <Name>Enemy_Bind</Name>
+    <State>Negative</State>
+    <Sephirah>None</Sephirah>
+    
+    <TargetType>SelectOne</TargetType>
+
+    <Script>bind</Script>
+  </EmotionCard>
+
+  <EmotionCard ID="71">
+    <Name>Enemy_Liu1atkFire</Name>
+    <State>Positive</State>
+    <Sephirah>None</Sephirah>
+
+    <TargetType>SelectOne</TargetType>
+
+    <Script>liu1_atk</Script>
+  </EmotionCard>
+  <EmotionCard ID="72">
+    <Name>Enemy_Liu1addFire</Name>
+    <State>Negative</State>
+    <Sephirah>None</Sephirah>
+
+    <TargetType>All</TargetType>
+
+    <Script>liu1_fire</Script>
+  </EmotionCard>
+</EmotionCardXmlRoot>

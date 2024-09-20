@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- 파고드는 천국-->
+  <Card ID="980101">
+    <Name>파천 핵  - 가드 평타</Name>
+    <Artwork>Bloodytree_Gaze</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Penetrate" Motion="Z" EffectRes="" Script="bleeding3atk" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="980102">
+    <Name>파천 핵  - 평타</Name>
+    <Artwork>Bloodytree_Gaze</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Standby" Detail="Penetrate" Motion="Z" EffectRes="" Script="bleeding3atk" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="2" Dice="6" Type="Standby" Detail="Penetrate" Motion="Z" EffectRes="" Script="bleeding3atk" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="980103">
+    <Name>파천 핵  - 강공격</Name>
+    <Artwork>Bloodytree_Gaze</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Standby" Detail="Penetrate" Motion="Z" EffectRes="" Script="bleeding6atk" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="980104">
+    <Name>파천 핵 - 광역</Name>
+    <Artwork>Bloodytree_Wing</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection ="Team"/>
+    <Script>hokmaArea</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="hokma1Area1" ActionScript="hokma1area1" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="hokma1Area2" ActionScript="hokma1area2" Desc="" />
+      <!--<Behaviour Min="3" Dice="8" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="hokma1Area2" ActionScript="hokma1area3" Desc="" />-->
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>100</Priority>
+  </Card>
+  
+  
+  <Card ID="980111">
+    <Name>파천 잡몹 - 가드 평타</Name>
+    <Artwork>Bloodytree_Forcus</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>bloodbath_scar</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Penetrate" Motion="Z" EffectRes="" Script="bleeding3atk" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="980112">
+    <Name>파천 잡몹 - 평타</Name>
+    <Artwork>Bloodytree_Forcus</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script>bloodbath_scar</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Standby" Detail="Penetrate" Motion="Z" EffectRes="" Script="bleeding3atk" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Standby" Detail="Penetrate" Motion="Z" EffectRes="" Script="bleeding3atk" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="980113">
+    <Name>파천 잡몹 - 강공격</Name>
+    <Artwork>Bloodytree_Forcus</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script>bloodbath_scar</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Penetrate" Motion="Z" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+  
+  <!-- 침묵의 대가 -->
+  <Card ID="990201">
+    <Name>침묵의 대가 광역기 </Name>
+    <Artwork>Clock_Thirteen</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="13" Dice="13" Type="Atk" Detail="Slash" Motion="S" EffectRes="" Script="kod_dmg_by_percent" ActionScript="thepriceofsilence_areaatk1" Desc="" />
+      <Behaviour Min="13" Dice="13" Type="Atk" Detail="Slash" Motion="S" EffectRes="" Script="kod_dmg_by_percent" ActionScript="thepriceofsilence_areaatk2" Desc="" />
+      <Behaviour Min="13" Dice="13" Type="Atk" Detail="Slash" Motion="S" EffectRes="" Script="kod_dmg_by_percent" ActionScript="thepriceofsilence_areaatk3" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>200</Priority>
+  </Card>  
+  <!-- 침묵의 대가 쫄 -->
+  <Card ID="990202">
+    <Name>막기</Name>
+    <Artwork>Clock_Time</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="990203">
+    <Name>베기</Name>
+    <Artwork>Clock_Time</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="3" Dice="9" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="990204">
+    <Name>특수</Name>
+    <Artwork>Clock_Kill</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>hokma2_librarian</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="8" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <!-- 푸른 별 : 제단 -->
+  <Card ID="990311">
+    <Name>푸른 별 광역기</Name>
+    <Artwork>BlueStar_Atonement</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarArea" Cost="0" Affection="Team"/>
+    <Script>bluestar_area</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="20" Dice="20" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="bluestar_area_hit1" ActionScript="bluestar_area" Desc="" />
+        </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <!-- 푸른 별 : 신도 -->
+  <Card ID="990321">
+    <Name>평타</Name>
+    <Artwork>BlueStar_Melody</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>10</Priority>
+  </Card>
+  <Card ID="990322">
+    <Name>강한 평타</Name>
+    <Artwork>BlueStar_Melody</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="7" Dice="9" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="bluestar_child_strhit" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>50</Priority>
+  </Card>
+  <Card ID="990323">
+    <Name>가드 평타</Name>
+    <Artwork>BlueStar_Melody</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="7" Dice="9" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="bluestar_child_guard_counter" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>50</Priority>
+  </Card>
+  <Card ID="990324">
+    <Name>별의 소리를 들어봐!</Name>
+    <Artwork>BlueStar_martyrdom</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="bluestar_child_special_hit1" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="bluestar_child_special_hit2" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="990325">
+    <Name>곧 별이 되어서 만나자!</Name>
+    <Artwork>BlueStar_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>bluestar_child_suicide</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="12" Dice="12" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="bluestar_child_suicide" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>150</Priority>
+  </Card>
+</DiceCardXmlRoot>  

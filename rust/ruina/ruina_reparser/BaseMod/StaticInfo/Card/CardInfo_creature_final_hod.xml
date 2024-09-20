@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- 호드 층 최종전 [99][01~10][001~999] -->
+  <!-- 수줍은 오늘의 표정 페이즈 -->
+  <Card ID="9903101">
+    <Name>기쁜 표정</Name>
+    <Artwork>ShyLookToday_Face</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="20" Type="Def" Detail="Guard" Motion="G" EffectRes="EGO_ShyLookToday_G" Script="hod_final_shylooktoday_1" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="20" Type="Def" Detail="Guard" Motion="G" EffectRes="EGO_ShyLookToday_G" Script="hod_final_shylooktoday_1" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9903102">
+    <Name>미소짓는 표정</Name>
+    <Artwork>ShyLookToday_Face</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="20" Type="Atk" Detail="Hit" Motion="Z" EffectRes="EGO_ShyLookToday_Z" Script="hod_final_shylooktoday_2" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="20" Type="Def" Detail="Guard" Motion="G" EffectRes="EGO_ShyLookToday_G" Script="hod_final_shylooktoday_2" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9903103">
+    <Name>무표정</Name>
+    <Artwork>ShyLookToday_Normalface</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="20" Type="Atk" Detail="Hit" Motion="Z" EffectRes="EGO_ShyLookToday_Z" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="20" Type="Atk" Detail="Hit" Motion="Z" EffectRes="EGO_ShyLookToday_Z" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="20" Type="Standby" Detail="Guard" Motion="G" EffectRes="EGO_ShyLookToday_G" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9903104">
+    <Name>슬픈 표정</Name>
+    <Artwork>ShyLookToday_Shy</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="20" Type="Def" Detail="Guard" Motion="G" EffectRes="EGO_ShyLookToday_G" Script="hod_final_shylooktoday_3" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="20" Type="Def" Detail="Guard" Motion="G" EffectRes="EGO_ShyLookToday_G" Script="clockEgoDice" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="20" Type="Atk" Detail="Hit" Motion="Z" EffectRes="EGO_ShyLookToday_Z" Script="vulnerable5atk" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9903105">
+    <Name>화난 표정</Name>
+    <Artwork>ShyLookToday_Shy</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="20" Type="Atk" Detail="Hit" Motion="Z" EffectRes="EGO_ShyLookToday_Z" Script="hod_final_shylooktoday_5" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="20" Type="Atk" Detail="Hit" Motion="Z" EffectRes="EGO_ShyLookToday_Z" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="20" Type="Atk" Detail="Hit" Motion="Z" EffectRes="EGO_ShyLookToday_Z" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9903106">
+    <Name>필살</Name>
+    <Artwork>ShyLookToday_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="20" Type="Def" Detail="Guard" Motion="S1" EffectRes="EGO_ShyLookToday_SG" Script="hod_final_shylooktoday_6" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="10" Type="Atk" Detail="Hit" Motion="S2" EffectRes="EGO_ShyLookToday_S2" Script="hod_final_shylooktoday_7" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <!-- 빨간 구두 페이즈 -->
+  <Card ID="9903201">
+    <Name>RedShoes_Cut</Name>
+    <Artwork>RedShoes_Cut</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="EGO_RedShoes_Atk" Script="hod_final_redshoes_1" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="7" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="EGO_RedShoes_Atk" Script="hod_final_redshoes_2" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9903202">
+    <Name>앤젤라 강공</Name>
+    <Artwork>RedShoes_Desire</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="6" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="5" Dice="10" Type="Atk" Detail="Slash" Motion="J" EffectRes="EGO_RedShoes_Atk" Script="hod_final_redshoes_3" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="8" Type="Standby" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="8" Type="Standby" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9903203">
+    <Name>회복</Name>
+    <Artwork>RedShoes_Desire</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Slash" Motion="S" EffectRes="EGO_RedShoes_Atk" Script="hod_final_redshoes_4" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Slash" Motion="H" EffectRes="EGO_RedShoes_Atk" Script="hod_final_redshoes_4" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Slash" Motion="S" EffectRes="EGO_RedShoes_Atk" Script="hod_final_redshoes_4" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9903204">
+    <Name>필살기</Name>
+    <Artwork>RedShoes_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="S1" EffectRes="EGO_RedShoes_Atk" Script="hod_final_redshoes_5" ActionScript="hodfinal_redshoes_s1" Desc=""/>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="S2" EffectRes="EGO_RedShoes_Atk" Script="hod_final_redshoes_5" ActionScript="hodfinal_redshoes_s2" Desc=""/>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="S2" EffectRes="EGO_RedShoes_Atk" Script="hod_final_redshoes_5" ActionScript="hodfinal_redshoes_s3" Desc=""/>
+      <Behaviour Min="2" Dice="2" Type="Atk" Detail="Slash" Motion="S5" EffectRes="EGO_RedShoes_Atk" Script="hod_final_redshoes_6" ActionScript="hodfinal_redshoes_s4" Desc=""/>
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="9903211">
+    <Name>구두 핏빛 욕망</Name>
+    <Artwork>RedShoes_Kirakira</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="EGO_RedShoes_Atk" Script="bleeding2atk" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="EGO_RedShoes_Atk" Script="bleeding2atk" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9903212">
+    <Name>구두 강공</Name>
+    <Artwork>RedShoes_Kirakira</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="9" Type="Atk" Detail="Slash" Motion="H" EffectRes="EGO_RedShoes_Atk" Script="bleeding4atk" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="5" Type="Def" Detail="Guard" Motion="G" EffectRes="EGO_RedShoes_Atk" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="5" Type="Def" Detail="Guard" Motion="G" EffectRes="EGO_RedShoes_Atk" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  
+  
+  <!-- 거미 봉오리 페이즈 -->
+  <Card ID="9903301">
+    <Name>울부짖음</Name>
+    <Artwork>SpiderBud_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Special" Cost="2" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="12" Dice="12" Type="Atk" Detail="Hit" Motion="J" EffectRes="EGO_SpiderBud_J" Script="spiderbudcryatk" ActionScript="hodfinal_spiderbud_s1" Desc=""/>
+      <Behaviour Min="5" Dice="5" Type="Atk" Detail="Hit" Motion="S1" EffectRes="EGO_SpiderBud_S1" Script="spiderbudcryatk2" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>50</Priority>
+  </Card>
+  <Card ID="9903302">
+    <Name>반격</Name>
+    <Artwork>SpiderBud_Cocoon</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="9" Type="Standby" Detail="Slash" Motion="H" EffectRes="EGO_SpiderBud_H" Script="weak2pw" ActionScript="" Desc=""/>
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Slash" Motion="H" EffectRes="EGO_SpiderBud_H" Script="disarm2pw" ActionScript="" Desc=""/>
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Slash" Motion="H" EffectRes="EGO_SpiderBud_H" Script="weak2pw" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9903311">
+    <Name>가는 거미줄</Name>
+    <Artwork>SpiderBud_BabyAtk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="binding1pw" ActionScript="" Desc=""/>
+      <Behaviour Min="4" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="binding1pw" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="binding3atk" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9903312">
+    <Name>따끔한 이빨</Name>
+    <Artwork>SpiderBud_BabyAtk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="disarm1atk" ActionScript="" Desc=""/>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="disarm1atk" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  
+  <!-- 흑조 페이즈 -->
+  <Card ID="9903511">
+    <Name>버둥거림</Name>
+    <Artwork>BlackSwan_Family</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="J" EffectRes="BlackSwan_Atk" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="S2" EffectRes="BlackSwan_Atk" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9903512">
+    <Name>웅크리기</Name>
+    <Artwork>BlackSwan_Family</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="5" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Hit" Motion="J" EffectRes="BlackSwan_Atk" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9903513">
+    <Name>구역질</Name>
+    <Artwork>BlackSwan_Atk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="S2" EffectRes="BlackSwan_Atk" Script="weak1atk" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="BlackSwan_Atk" Script="weak1atk" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="S2" EffectRes="BlackSwan_Atk" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9903514">
+    <Name>낡은 양산</Name>
+    <Artwork>BlackSwan_Umbrella</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="8" Type="Def" Detail="Guard" Motion="S1" EffectRes="" Script="hod_final_blackswan_1" ActionScript="" Desc=""/>
+      <Behaviour Min="8" Dice="8" Type="Def" Detail="Guard" Motion="S1" EffectRes="" Script="hod_final_blackswan_1" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>51</Priority>
+  </Card>
+  <Card ID="9903515">
+    <Name>메스꺼운 현실</Name>
+    <Artwork>BlackSwan_Feather</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="S2" EffectRes="BlackSwan_Atk" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="5" Dice="12" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="BlackSwan_Atk" Script="hod_final_blackswan_2" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>50</Priority>
+  </Card>
+  <Card ID="9903516">
+    <Name>BlackSwan_EGO</Name>
+    <Artwork>BlackSwan_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarArea" Cost="0" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="12" Dice="12" Type="Atk" Detail="Hit" Motion="S" EffectRes="" Script="hod_final_blackswan_3" ActionScript="hodfinal_blackswan_s1" Desc=""/>
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="9903521">
+    <Name>허울 뿐인 공격</Name>
+    <Artwork>BlackSwan_Sub_Atk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="BlackSwan_Atk" Script="hod_final_blackswan_4" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9903522">
+    <Name>녹색 오물</Name>
+    <Artwork>BlackSwan_Sub_Atk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="BlackSwan_Atk" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="6" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="BlackSwan_Atk" Script="weak1atk" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+
+  <!-- 래티씨아 -->
+  <Card ID="9903411">
+    <Name>선물이야~</Name>
+    <Artwork>Laetitia_Present</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="1"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="7" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="final_latitia_atk_heart_1" ActionScript="" Desc="" />
+      <Behaviour Min="8" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="weak1pw" ActionScript="" Desc="" />
+      <Behaviour Min="8" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="weak1pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>120</Priority>
+  </Card>
+  <Card ID="9903412">
+    <Name>아프지마!</Name>
+    <Artwork>Laetitia_Present</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script>final_latitia_heal</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="weak1pw" ActionScript="" Desc="" />
+      <Behaviour Min="8" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="weak1pw" ActionScript="" Desc="" />
+      <Behaviour Min="8" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="weak1pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9903413">
+    <Name>재밌게 놀자!</Name>
+    <Artwork>Laetitia_Present</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script>final_latitia_buf</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="weak1pw" ActionScript="" Desc="" />
+      <Behaviour Min="8" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="weak1pw" ActionScript="" Desc="" />
+      <Behaviour Min="8" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="weak1pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9903414">
+    <Name>필살기</Name>
+    <Artwork>Laetitia_EGO</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="FarArea" Cost="0" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="13" Dice="13" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="final_latitia_ego" ActionScript="hodboss_latitia_ego" Desc="" />
+    </BehaviourList>
+    <Priority>150</Priority>
+  </Card>
+  <Card ID="9903415">
+    <Name>선물이야~</Name>
+    <Artwork>Laetitia_Present</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="final_latitia_atk_heart_1" ActionScript="" Desc="" />
+      <Behaviour Min="8" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="weak1pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>120</Priority>
+  </Card>
+  <!-- 래티씨아 : 분홍인간 -->
+  <Card ID="9903421">
+    <Name>하트 부여1</Name>
+    <Artwork>Laetitia_HeartAtk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="6" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="final_latitia_atk_heart_1" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9903422">
+    <Name>하트 부여2</Name>
+    <Artwork>Laetitia_HeartAtk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="final_latitia_atk_heart_1" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="final_latitia_atk_heart_1" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="final_latitia_atk_heart_1" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9903423">
+    <Name>자폭</Name>
+    <Artwork>Laetitia_Friend</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="10" Dice="10" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="final_latitia_pink_kaboom" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <!-- 래티씨아 : 친구 -->
+  <Card ID="9903431">
+    <Name>내려찍기</Name>
+    <Artwork>Laetitia_FriendAtk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="" Script="bleeding2atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="" Script="disarm3atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9903432">
+    <Name>연속 찌르기</Name>
+    <Artwork>Laetitia_FriendAtk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="latitia_friend_vul" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="4" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="bleeding2atk" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="4" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="bleeding2atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9903433">
+    <Name>하트 소멸!</Name>
+    <Artwork>Laetitia_FriendAtk</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="10" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_latitia_remove_heart" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <!-- 래티씨아 : 하트-->
+  <Card ID="9903451">
+    <Name>하트</Name>
+    <Artwork>Laetitia_HeartGift</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script>final_latitia_heart</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="10" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9903452">
+    <Name>하트</Name>
+    <Artwork>Laetitia_HeartGift</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="2"/>
+    <Script>final_latitia_heart</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="10" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+</DiceCardXmlRoot>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- 1페이즈 -->
+  <Card ID="703411">
+    <Name>개머리1</Name>
+    <Artwork>Bremen_Dog</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>bremen_doghead1</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Blue_Bremen_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="7" Dice="10" Type="Atk" Detail="Slash" Motion="Z" EffectRes="Blue_Bremen_Z" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="9" Type="Standby" Detail="Guard" Motion="G" EffectRes="Blue_Bremen_G" Script="bremen_doghead1pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703412">
+    <Name>개머리2</Name>
+    <Artwork>Bremen_Dog</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="Z" EffectRes="Blue_Bremen_Z" Script="bremen_doghead2atk" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="Z" EffectRes="Blue_Bremen_Z" Script="bremen_doghead2atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703413">
+    <Name>닭머리1</Name>
+    <Artwork>Bremen_Chicken</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>bremen_chickenhead1</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Standby" Detail="Penetrate" Motion="F" EffectRes="" Script="bremen_chickenhead1pw" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Standby" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703414">
+    <Name>닭머리2</Name>
+    <Artwork>Bremen_Chicken</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>bremen_chickenhead2</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703415">
+    <Name>당나귀머리1</Name>
+    <Artwork>Bremen_Donki</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="12" Dice="12" Type="Atk" Detail="Hit" Motion="J" EffectRes="Blue_Bremen_J" Script="bremen_donkeyhead1atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Standby" Detail="Hit" Motion="H" EffectRes="Blue_Bremen_H" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Standby" Detail="Hit" Motion="H" EffectRes="Blue_Bremen_H" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703416">
+    <Name>당나귀머리2</Name>
+    <Artwork>Bremen_Donki</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Hit" Motion="J" EffectRes="Blue_Bremen_J" Script="bremen_donkeyhead2atk" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Hit" Motion="J" EffectRes="Blue_Bremen_J" Script="bremen_donkeyhead2atk" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Hit" Motion="J" EffectRes="Blue_Bremen_J" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <!-- 1페이즈 -->
+  <Card ID="703421">
+    <Name>힘줄의 소리</Name>
+    <Artwork>Bremen_Strong</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="5" Dice="7" Type="Atk" Detail="Hit" Motion="J" EffectRes="Blue_Bremen_J" Script="ally2strength1atk" Desc="[적중] 무작위 아군 2명에게 다음 막에 힘 1 부여" />
+      <Behaviour Min="5" Dice="7" Type="Atk" Detail="Slash" Motion="Z" EffectRes="Blue_Bremen_Z" Script="ally2recover3atk" Desc="[적중] 무작위 아군 2명의 체력 3 회복" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703422">
+    <Name>잊을 수 없는 선율</Name>
+    <Artwork>Bremen_Strong</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>ally2strength1thisRound</Script>
+    <ScriptDesc>[전투 시작] 무작위 아군 2명에게 힘 1 부여</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="7" Type="Atk" Detail="Slash" Motion="Z" EffectRes="Blue_Bremen_Z" Script="" Desc="" />
+      <Behaviour Min="4" Dice="5" Type="Def" Detail="Guard" Motion="G" EffectRes="Blue_Bremen_G" Script="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="Blue_Bremen_J" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703423">
+    <Name>음악의 성지</Name>
+    <Artwork>Bremen_Strong</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>enemy1weak1thisRound</Script>
+    <ScriptDesc>[전투 시작] 무작위 적 1명에게 허약 1 부여</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Hit" Motion="Z" EffectRes="Blue_Bremen_Z" Script="" Desc="" />
+      <Behaviour Min="8" Dice="12" Type="Atk" Detail="Hit" Motion="H" EffectRes="Blue_Bremen_H" Script="" Desc="" />
+      <Behaviour Min="3" Dice="5" Type="Def" Detail="Guard" Motion="G" EffectRes="Blue_Bremen_G" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703424">
+    <Name>폭발하는 선율</Name>
+    <Artwork>Bremen_Strong</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>enemy2weak1thisRound</Script>
+    <ScriptDesc>[전투 시작] 무작위 적 2명에게 허약 1 부여</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="9" Dice="18" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="bremen_special_atk" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703425">
+    <Name>합주</Name>
+    <Artwork>Bremen_Sing</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>bremen_boom</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="bremen_special_atk" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="bremen_special_atk" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="bremen_special_atk" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703426">
+    <Name>절정의 합창</Name>
+    <Artwork>Bremen_Strong</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection="Team"/>
+    <Script>bremen_chorus</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="10" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="bremen_chorus_atk" ActionScript="BremenAreaAtk" Desc="" />
+      <Behaviour Min="5" Dice="10" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="bremen_chorus_atk" ActionScript="BremenAreaAtk" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+
+  <!--2차 브레멘-->
+  <Card ID="707401">
+    <Name>불길한 소리</Name>
+    <Artwork>Bremen_Strong</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <!--적중 다음 막에 속박 2, 허약 1부여-->
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="TwistBremen_J" Script="bremen_binding2weak1atk" ActionScript="" Desc="" />
+      <!--적중 다음 막에 속박 2, 허약 1부여-->
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="TwistBremen_J" Script="bremen_binding2weak1atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="707402">
+    <Name>협주</Name>
+    <Artwork>Bremen_Sing</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <!--아군 지정 가능 전투 시작 대상이 아군이면 이번 막에 신속 2부여-->
+    <Script>bremen2_concert</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <!--합 승리 다음 막에 무작위 아군 2명에게 힘 1 부여-->
+      <Behaviour Min="4" Dice="10" Type="Standby" Detail="Hit" Motion="H" EffectRes="TwistBremen_J" Script="bremen_ally2strength1pw" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="10" Type="Standby" Detail="Hit" Motion="H" EffectRes="TwistBremen_J" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="707403">
+    <Name>화려한 음율</Name>
+    <Artwork>Bremen_Sing</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <!--적중 다음 막에 허약 1 부여-->
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="TwistBremen_Z" Script="weak1atk" ActionScript="" Desc="" />
+      <!--적중 다음 막에 허약 1 부여-->
+      <Behaviour Min="4" Dice="10" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="TwistBremen_Z" Script="weak1atk" ActionScript="" Desc="" />
+      <!--적중 무작위 아군 2명 체력 5 회복-->
+      <Behaviour Min="5" Dice="12" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="TwistBremen_Z" Script="bremen_ally2recover5atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="707404">
+    <Name>음악 치료</Name>
+    <Artwork>Bremen_Strong</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <!--아군 지정 가능 전투 시작 대상이 아군이면 체력 20회복-->
+    <Script>bremen2_musictherapy</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <!--합 승리 다음 막에 체력이 가장 낮은 아군에게 보호 2 부여-->
+      <Behaviour Min="5" Dice="11" Type="Standby" Detail="Hit" Motion="H" EffectRes="TwistBremen_J" Script="bremen2_ally2protectionpw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="707405">
+    <Name>화음</Name>
+    <Artwork>TwistBremen1</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <!--아군 지정 가능-->
+    <Script>bremen2_canselectfriend</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <!--대상이 아군이면 아군 전체 힘 1부여, 체력 20회복-->
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Hit" Motion="H" EffectRes="TwistBremen_J" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Hit" Motion="H" EffectRes="TwistBremen_J" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+
+
+</DiceCardXmlRoot>

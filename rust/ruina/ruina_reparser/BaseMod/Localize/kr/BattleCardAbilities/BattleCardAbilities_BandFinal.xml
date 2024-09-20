@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- 잔향 상층 -->
+  <!-- 아르갈리아 뒤틀림-->
+  <BattleCardAbility ID="resonanceControl"> <!-- 공명 조절 -->
+    <Desc>[전투 시작] 이번 막 동안 공명 지속능력의 조건이 '대상의 진동이 4 이상'으로 변경된다</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="nullifyPowerAtk">
+    <Desc>[적중] 대상은 다음 막 동안 위력의 효과를 받지 않는다.</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="vibrateDmg">
+    <Desc>[적중] 대상의 진동 수 만큼 피해를 줌</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="powerUp1thisRound">
+    <Desc>[전투 시작] 이번 막 동안 모든 공격 주사위의 위력 +1</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="debufHalfOnUse">
+    <Desc>[사용시] 자신에게 걸려 있는 상태이상의 수치가 절반으로 감소(소수점 이하 올림)</Desc>
+  </BattleCardAbility>
+  
+  <!-- 플루토 뒤틀림 -->
+  <BattleCardAbility ID="Pluto_UC_Protect">
+    <Desc>공격 적중시 다음 막 시작에 대상의 손에 '부당한 계약서: 보호'를 추가한다.</Desc>
+    <Desc>'부당한 계약서: 보호'는 한 장만 보유할 수 있다</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="Pluto_UC_Atk">
+    <Desc>공격 적중시 다음 막 시작에 대상의 손에 '부당한 계약서: 공격'을 추가한다.</Desc>
+    <Desc>'부당한 계약서: 공격'은 한 장만 보유할 수 있다</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="Pluto_UC_Light">
+    <Desc>공격 적중시 다음 막 시작에 대상의 손에 '부당한 계약서: 빛'을 추가한다.</Desc>
+    <Desc>'부당한 계약서: 빛'은 한 장만 보유할 수 있다</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="UC_Protect">
+    <Desc>막 종료시 이 책장이 손에 있으면 손에서 다른 책장을 무작위로 한 장 버리고 버린 책장의 비용만큼 다음 막에 보호 부여.</Desc>
+    <Desc>[장착시 발동] 소멸한다</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="UC_Atk">
+    <Desc>막 종료시 이 책장이 손에 있으면 덱의 맨 위에 이 책장을 넣고 다음 막 동안 공격으로 주는 피해량이 1 증가.</Desc>
+    <Desc>[장착시 발동] 소멸한다</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="UC_Light">
+    <Desc>막 종료시 이 책장이 손에 있으면 빛을 1 회복하고 '족쇄' 책장 1장을 손에 추가한 후에 그 '족쇄' 책장을 버린다.</Desc>
+    <Desc>[장착시 발동] 소멸한다</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="shackles">
+    <Desc>[장착시 발동] 소멸한다</Desc>
+  </BattleCardAbility>
+  
+  
+  <!-- 사서 추가 카드 -->
+  <!-- 공용1 -->
+  <BattleCardAbility ID="unitePower">
+    <Desc>[결속 책장]</Desc>
+    <Desc>[전투 시작] 이번 막 동안 다른 모든 아군들에게 '[결속 책장]을 사용하는 동안 모든 주사위의 위력 1 증가(중복 불가)'를 부여</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="uniteAttack">
+    <Desc>[결속 책장]</Desc>
+    <Desc>[전투 시작] 이번 막 동안 다른 모든 아군들에게 '[결속 책장]을 사용할 때 그 책장에 참격 주사위(4-8)를 추가(중복 불가)'를 부여</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="uniteDefense">
+    <Desc>[결속 책장]</Desc>
+    <Desc>[전투 시작] 이번 막 동안 다른 모든 아군들에게 '[결속 책장]을 사용할 때 그 책장에 방어 주사위(6-9)를 앞에 추가(중복 불가)'를 부여</Desc>
+  </BattleCardAbility>
+
+  <!-- 전용 -->
+  <BattleCardAbility ID="argaliaDistortedArea">
+    <Desc>3번째 막부터 사용 가능.</Desc>
+    <Desc>[사용시] 손에 '대단원' 책장 추가</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="argaliaDistortedDice1">
+    <Desc></Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="argaliaDistortedDice2">
+    <Desc>이전 주사위를 적중시켰다면 피해량 50% 증가</Desc>
+  </BattleCardAbility>
+  
+  <BattleCardAbility ID="plutoArea">
+    <Desc>3번째 막부터 사용 가능.</Desc>
+    <Desc>이 책장은 사용 후에 소멸하고 4막이 지나면 손으로 돌아온다.</Desc>
+  </BattleCardAbility>
+  
+  <BattleCardAbility ID="elenaNewArea">
+    <Desc>3번째 막부터 사용 가능.</Desc>
+    <Desc>이 책장은 사용 후에 소멸하고 4막이 지나면 손으로 돌아온다.
+</Desc>
+    <Desc>이번 무대 동안 자신의 체력을 20 이상 회복했으면 이 책장의 비용 2 감소</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="elenaNewAreaDice">
+    <Desc>[적중] 체력 3 회복</Desc>
+  </BattleCardAbility>
+  
+
+  <BattleCardAbility ID="jaeheonArea">
+    <Desc>3번째 막부터 사용 가능.</Desc>
+    <Desc>이 책장은 사용 후에 소멸하고 4막이 지나면 손으로 돌아온다.
+</Desc>
+    <Desc>[사용시] '인형사의 실'을 가진 모든 아군의 체력 및 흐트러짐 저항 20 회복</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="jaeheonAreaDice">
+    <Desc>[적중] 다음 막에 속박 1 부여</Desc>
+  </BattleCardAbility>
+  
+  <BattleCardAbility ID="oswaldArea">
+    <Desc>3번째 막부터 사용 가능.</Desc>
+    <Desc>이 책장은 사용 후에 소멸하고 4막이 지나면 손으로 돌아온다.
+</Desc>
+    <Desc>[사용시] 대상에게 다음 막에 취약 2, 무장해제 2, 허약 2, 보호 2, 흐트러짐 보호 2 중 무작위 하나를 부여</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="oswald_break8areaatk">
+    <Desc>[적중] 대상에게 흐트러짐 피해 8</Desc>
+  </BattleCardAbility>
+  
+  <BattleCardAbility ID="bremenArea">
+    <Desc>3번째 막부터 사용 가능.</Desc>
+    <Desc>이 책장은 사용 후에 소멸하고 4막이 지나면 손으로 돌아온다.
+</Desc>
+    <Desc>[사용시] 모든 적들에게 이번 막에 취약 2 부여</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="bremen_chorus_atk">
+    <Desc>[적중] 다음 막에 마비 1 부여</Desc>
+  </BattleCardAbility>
+  
+  
+  <BattleCardAbility ID="eileenArea">
+    <Desc>3번째 막부터 사용 가능.</Desc>
+    <Desc>이 책장은 사용 후에 소멸하고 4막이 지나면 손으로 돌아온다.
+</Desc>
+    <Desc>한 번이라도 공격이 적중했다면, 막 종료에 모든 아군의 빛 1 회복</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="philipSpecial">
+    <Desc>[사용시] 감정 단계가 3 이상이면 다음 막 시작에 '작열하는 절망' 책장을 손에 추가하고 모든 적에게 화상 1 부여.</Desc>
+    <Desc>'작열하는 절망'은 막 종료에 소멸한다</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="philipArea">
+    <Desc>막 종료에 소멸한다</Desc>
+  </BattleCardAbility>
+  
+  <!-- 공용2 -->
+  <BattleCardAbility ID="resistance1atk">
+    <Desc>[적중] 저항이 2 이하면 저항 1을 얻음</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="costDownAndPowerUp">
+    <Desc>이 책장이 손에 있으면, 상대의 공격 주사위와의 합에서 패배할 때 마다 이 책장의 비용 1 감소.</Desc>
+    <Desc>[전투 시작] 이번 막 동안 모든 공격 주사위의 위력 +1.</Desc>
+    <Desc>[사용시] 책장을 1장 뽑음</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="nextCostDown">
+    <Desc>[사용시] 책장을 1장 뽑음. 빛 1 회복. 다음 막 동안 모든 책장의 비용 1 감소</Desc>
+  </BattleCardAbility>
+  
+</BattleCardAbilityDescRoot>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GroupName>Molar Office</GroupName>
+  <Character ID="Olga">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">으… 속이 너무 울렁이는데.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">부탁받은 일이기도 하니… 적당히 힘내볼까.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">굳이 나까지 나서야 하나? 레인, 미카. 알아서 해줘.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">뭐… 이렇다 할 것도 없네. 책이나 챙기자고.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">묘가 부탁한 일이라서 긴장했는데… 이렇게 간단할 줄이야.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">…너무 몸만 앞으로 나갔나. 미련했네.</BattleDialog>
+      <BattleDialog ID="DEATH_1">내가 죽으면, 남은 레인과 미카는…</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH" />
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">귀찮게 구네… 빨리 처리하고 가자고.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">미안, 미안~ 알아서 잘 피하지 그랬어.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">얼마 안 남은 것 같고… 뭐, 큰 문제는 없네.</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">힘내라는 한마디 정도는 해줄 걸 그랬나…</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_1">저 녀석만 두고 가기에는 불안한데… 뭐, 됐나.</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_2">둘 다 죽어버린 마당에 나 혼자서 해나가기도 무리였지.</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_3">…미카, 레인. 그동안 수고 많았다.</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_4">…자기 잘난 네가 이렇게 허망하게 간다고?</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_5">네가 이렇게 죽어버리면…</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Mika">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">낯선 곳은 언제나 무섭네요…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">걱정되기는 합니다만… 잘 풀릴 거라고 믿습니다.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">우리가 어쩌다 이런 꼴을…</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">목적은 달성한 것 같네요. 고생 많으셨습니다.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">어서 책을 회수한 뒤에 이곳을 나가는 게 좋겠어요.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">대체… 무엇이 잘못된 거지…?</BattleDialog>
+      <BattleDialog ID="DEATH_1">이대로 끝내고 싶지 않아… 이럴 순 없어.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH" />
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">저희 쪽도 사정이 있어서…</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">…수고하셨습니다.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">작전은 순조로운 것 같습니다. 이대로만 가죠!</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">나 혼자 살아 나간다고 해도… 이렇게 잘 받아주는 곳도 없겠지.</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_1">그렇게 우리를 챙겨주더니… 왜 본인 몸간수는 제대로 못 하는데!</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_2">…대장? 이런 곳에 드러눕는 거 아니야. …일어나줘.</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Rain">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">하아… 미카는 괜찮지만, 누님은 믿을 수가 없습니다.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">미카. 우리가 나서서 처리해야겠네…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">도서관이라는 곳이 꽤 화려하고… 크네요. 책도 많고…</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">좋은 경험이었습니다.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">…무서운 것들이 많단 말입니다. 서둘러 나갑시다.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">도움이 되지 못해 죄송합니다…</BattleDialog>
+      <BattleDialog ID="DEATH_1">…역시 나는 못해내는 건가.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH" />
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">이 정도쯤은 어렵지도 않죠.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">아직 이상 없습니다. 마저 처리하죠.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">조금이라도 실수하면 저기 누워있는 건… 나였겠지.</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">…제가 다 부족한 탓이겠죠.</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_1">제가 누누이 말했잖습니까. 누님은 너무 어설프기만 하다고…</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_2">혼자서 똑똑하고 냉정한 척은 다 하더니… 이 꼴이 대체 뭐냐고.</BattleDialog>
+    </Type>
+  </Character>
+</BattleDialogRoot>

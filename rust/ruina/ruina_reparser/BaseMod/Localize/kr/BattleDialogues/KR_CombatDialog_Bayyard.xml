@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GroupName>Bayyard</GroupName>
+  <Character ID="Named">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">이곳이 도서관인가 보군… 조심하게.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">빠르게 치고 나가도록!</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">야생의 숨결을 그 누가 막을 수 있겠는가!</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">더 강한 이가 아니라면 무릎을 꿇지 않을 테니!</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">하하하! 나쁘지 않았군.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">앞으로 이들을… 누가 이끌어줄 수 있을까…</BattleDialog>
+      <BattleDialog ID="DEATH_1">고개 숙여야 할 곳은 잘 알고 있어야 함을…</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">적의 기세에 밀리지 말도록!</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">물러서지 않는 것이 중요하지.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">굳세게 믿고 나아가야 한다.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">하하! 그 친구가 겁준 것치고는… 간단하네!</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">끝까지 방심해서는 안 된다. 알겠나!</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">결국 막지 못했구나!</BattleDialog>
+    </Type>
+  </Character>
+
+  <Character ID="Bayyard">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">수가 그리 많지 않습니다!</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">먼저 나서서 처리하겠습니다!</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">도서관이라… 명성만큼 만만한 곳은 아닌 것 같네요.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">뭐, 이런 일은 많이 해결해봤으니까…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">괜찮겠죠. 준비합시다!</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">좋습니다. 돌아갑시다!</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">이 정도에 굽히지는 않죠!</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">돌아가는 길에 한 잔 어떱니까?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">그나저나 어떤 책을 얻을 수 있었던 겁니까?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">정보가 적혀있는 책이라… 도움이 되었으면 좋겠군요.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">…약함을 인정하는 것도 중요합니다.</BattleDialog>
+      <BattleDialog ID="DEATH_1">젠장… 제 역량이 부족했습니다…</BattleDialog>
+      <BattleDialog ID="DEATH_2">저는 신경 쓰지 마십쇼…</BattleDialog>
+      <BattleDialog ID="DEATH_3">이렇게 끝날 줄이야…</BattleDialog>
+      <BattleDialog ID="DEATH_4">최선은 다했으니… 후회는 없습니다.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">물러나지 않습니다!</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">이게 무슨 꼴이랍니까.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">상황이 난처해졌군…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">…그래도 여기서 포기할 수는 없겠죠.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">아직 끝나지 않았습니다.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">하하! 좋은 느낌입니다!</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">생각보다 까다로운 의뢰는 아니겠네요!</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">지금이 밀어붙일 때입니다!</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">결국 쓰러지는군요!</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">빈틈이 훤히 보입니다!</BattleDialog>
+    </Type>
+  </Character>
+  
+</BattleDialogRoot>

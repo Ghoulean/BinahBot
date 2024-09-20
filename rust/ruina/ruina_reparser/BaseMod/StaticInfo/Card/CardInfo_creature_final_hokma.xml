@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- 백야 -->
+  <Card ID="9909111">
+    <Name>가드</Name>
+    <Artwork>WhiteNight_White</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>WhiteNight_Guard</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9909112">
+    <Name>부름</Name>
+    <Artwork>WhiteNight_Apostle</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script>WhiteNight_Call</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="7" Type="Atk" Detail="Hit" Motion="F" EffectRes="EGO_WhiteNight_FarAtk" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="9909113">
+    <Name>일반 광역</Name>
+    <Artwork>WhiteNight_Red</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection="Team"/>
+    <Script>WhiteNight_ReviveApostle</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="7" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="break4areaatk" ActionScript="WhiteNight_ReviveArea" Desc="" />
+      <Behaviour Min="7" Dice="7" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="break4areaatk" ActionScript="WhiteNight_ReviveArea" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="9909114">
+    <Name>부름 광역</Name>
+    <Artwork>WhiteNight_Apostle</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarArea" Cost="0" Affection="Team"/>
+    <Script>WhiteNight_AreaCall</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="66" Dice="66" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="WhiteNight_OnlyBreak" ActionScript="WhiteNight_BreakArea" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="9909115">
+    <Name>필살 광역(에고용)</Name>
+    <Artwork>WhiteNight_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="6" Type="Atk" Detail="Penetrate" Motion="S3" EffectRes="" Script="" ActionScript="WhiteNight_AuthorityArea" Desc="" />
+      <Behaviour Min="6" Dice="6" Type="Atk" Detail="Penetrate" Motion="S3" EffectRes="" Script="" ActionScript="WhiteNight_AuthorityArea" Desc="" />
+      <Behaviour Min="6" Dice="6" Type="Atk" Detail="Penetrate" Motion="S3" EffectRes="" Script="" ActionScript="WhiteNight_AuthorityArea" Desc="" />
+      <Behaviour Min="66" Dice="66" Type="Atk" Detail="Hit" Motion="S3" EffectRes="" Script="" ActionScript="WhiteNight_AuthorityAreaLast" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="9909116">
+    <Name>축복</Name>
+    <Artwork>WhiteNight_Bless</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script>WhiteNight_Bless</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="1" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>30</Priority>
+  </Card>
+  <!-- 특수 -->
+  <Card ID="9909999">
+    <Name>참회</Name>
+    <Artwork>WhiteNight_Confess</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarArea" Cost="0" Affection="Team"/>
+    <Script>WhiteNight_Confess</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="666" Dice="666" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="WhiteNight_ConfessArea" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <!-- 호위 사도-->
+  <Card ID="9909121">
+    <Name>올려베기</Name>
+    <Artwork>WhiteNight_Sub_Guard</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="12" Type="Atk" Detail="Slash" Motion="H" EffectRes="Apostle_H" Script="vulnerable4atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9909122">
+    <Name>내려베기</Name>
+    <Artwork>WhiteNight_Sub_Guard</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="Apostle_J" Script="bleeding2atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="Apostle_J" Script="bleeding2atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Slash" Motion="J" EffectRes="Apostle_J" Script="bleeding2atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9909123">
+    <Name>참수</Name>
+    <Artwork>WhiteNight_Guard</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="3"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="10" Type="Atk" Detail="Hit" Motion="H" EffectRes="Apostle_H" Script="WhiteNight_DestroyNextDiceAtk" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="Apostle_J" Script="sealTargetAtk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="9909124">
+    <Name>백야 보호</Name>
+    <Artwork>WhiteNight_Guard</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script>WhiteNight_Endurance3</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="Apostle_J" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="Apostle_J" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9909125">
+    <Name>가드</Name>
+    <Artwork>WhiteNight_Sub_Guard</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="J" EffectRes="Apostle_J" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <!-- 낫 사도 -->
+  <Card ID="9909131">
+    <Name>올려베기</Name>
+    <Artwork>WhiteNight_Sub_Sythe</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Slash" Motion="H" EffectRes="Apostle_H" Script="vulnerable4atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9909132">
+    <Name>내려베기</Name>
+    <Artwork>WhiteNight_Sub_Sythe</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Slash" Motion="J" EffectRes="Apostle_J" Script="bleeding2atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="J" EffectRes="Apostle_J" Script="bleeding2atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Slash" Motion="J" EffectRes="Apostle_J" Script="bleeding2atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9909133">
+    <Name>평타</Name>
+    <Artwork>WhiteNight_Sub_Sythe</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="Apostle_J" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="J" EffectRes="Apostle_J" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9909134">
+    <Name>가드</Name>
+    <Artwork>WhiteNight_Sub_Sythe</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Slash" Motion="J" EffectRes="Apostle_J" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <!-- 지팡이 사도 -->
+  <Card ID="9909141">
+    <Name>무장해제 원거리</Name>
+    <Artwork>WhiteNight_Sub_Wand</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Far" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="disarm2atk" ActionScript="Apostle_StaffFarAtk" Desc="" />
+      <Behaviour Min="3" Dice="9" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="disarm2atk" ActionScript="Apostle_StaffFarAtk" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="" ActionScript="Apostle_StaffFarAtk" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9909142">
+    <Name>허약 원거리</Name>
+    <Artwork>WhiteNight_Sub_Wand</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Far" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="10" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="weak3atk" ActionScript="Apostle_StaffFarAtk" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9909143">
+    <Name>평타</Name>
+    <Artwork>WhiteNight_Sub_Wand</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Far" Cost="1"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="break2atk" ActionScript="Apostle_StaffFarAtk" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="break2atk" ActionScript="Apostle_StaffFarAtk" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9909144">
+    <Name>가드</Name>
+    <Artwork>WhiteNight_Sub_Wand</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script>WhiteNight_Str1Random</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="weak2atk" ActionScript="Apostle_StaffFarAtk" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <!-- 창 사도 -->
+  <Card ID="9909151">
+    <Name>강한 꿰뚫기</Name>
+    <Artwork>WhiteNight_Sub_Spear</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script>WhiteNight_PowerUpBleed</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Apostle_Z" Script="WhiteNight_DestroyAllDice" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9909152">
+    <Name>꿰뚫기</Name>
+    <Artwork>WhiteNight_Sub_Spear</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script>WhiteNight_DmgUpBleed</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Apostle_Z" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Apostle_Z" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9909153">
+    <Name>강한 가드</Name>
+    <Artwork>WhiteNight_Sub_Spear</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Apostle_Z" Script="WhiteNight_Power3Debuf" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9909154">
+    <Name>평타</Name>
+    <Artwork>WhiteNight_Sub_Spear</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Apostle_Z" Script="WhiteNight_Power2Debuf" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Apostle_Z" Script="WhiteNight_Power2Debuf" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9909155">
+    <Name>약공격</Name>
+    <Artwork>WhiteNight_Sub_Spear</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Apostle_Z" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Apostle_Z" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+</DiceCardXmlRoot>

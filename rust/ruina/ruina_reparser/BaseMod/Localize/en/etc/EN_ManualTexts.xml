@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<localize xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<text id="ui_manual_title_1">The Invitation</text>
+	<text id="ui_manual_title_2">Reception</text>
+	<text id="ui_manual_title_3">The Library</text>
+	<text id="ui_manuals_subtitle_1_1">Sending Red Invitations</text>
+	<text id="ui_manuals_subtitle_1_2">Sending General Invitations</text>
+
+	<text id="ui_manuals_subtitle_2_1">Preparing for Reception</text>
+	<text id="ui_manuals_subtitle_2_2">Basics of Combat</text>
+
+	<text id="ui_manuals_subtitle_2_3">Reception Process</text>
+	<text id="ui_manuals_subtitle_2_4">Emotion and Abnormalities</text>
+	<text id="ui_manuals_subtitle_2_5">End of Reception</text>
+	<text id="ui_manuals_subtitle_2_6">Types of Pages</text>
+
+	<text id="ui_manuals_subtitle_3_1">Getting Pages</text>
+	<text id="ui_manuals_subtitle_3_2">Gearing Up Librarians</text>
+	<text id="ui_manuals_subtitle_3_3">The Library’s Growth</text>
+	<text id="ui_manuals_subtitle_3_4">Examining the Story</text>
+
+	<text id="ui_manuals_subsubtitle_1_1_1">Choosing Guests</text>
+	<text id="ui_manuals_subsubtitle_1_1_2">Inputting Books Ⅰ</text>
+	<text id="ui_manuals_subsubtitle_1_1_3">Inputting Books Ⅱ</text>
+	<text id="ui_manuals_subsubtitle_1_1_4">Sending your Invitation</text>
+	<text id="ui_manuals_subsubtitle_1_2_1">Sending General Invitations</text>
+	<text id="ui_manuals_subsubtitle_2_2_1">What are Combat Pages?</text>
+	<text id="ui_manuals_subsubtitle_2_3_1">Rolling Speed Dice</text>
+	<text id="ui_manuals_subsubtitle_2_3_2">Selecting Combat Pages</text>
+	<text id="ui_manuals_subsubtitle_2_3_3">Commencing Combat</text>
+	<text id="ui_manuals_subsubtitle_2_3_4">Rolling Dice</text>
+	<text id="ui_manuals_subsubtitle_2_3_5">One-sided Attacks</text>
+	<text id="ui_manuals_subsubtitle_2_3_6">Clashing Ⅰ</text>
+	<text id="ui_manuals_subsubtitle_2_3_7">Clashing Ⅱ</text>
+	<text id="ui_manuals_subsubtitle_2_3_8">Stagger</text>
+	<text id="ui_manuals_subsubtitle_2_3_9">Resolving Books</text>
+	<text id="ui_manuals_subsubtitle_2_3_10">Resistances</text>
+	<text id="ui_manuals_subsubtitle_2_4_1">Heightening Emotions Ⅰ</text>
+	<text id="ui_manuals_subsubtitle_2_4_2">Heightening Emotions Ⅱ</text>
+	<text id="ui_manuals_subsubtitle_2_4_3">Team Emotion Level</text>
+	<text id="ui_manuals_subsubtitle_2_4_4">Abnormality Pages</text>
+
+	<text id="ui_manuals_subsubtitle_2_5_1">Scene after Scene</text>
+	<text id="ui_manuals_subsubtitle_2_5_2">The Stageplay</text>
+	<text id="ui_manuals_subsubtitle_2_5_3">The Finale</text>
+
+	<text id="ui_manuals_subsubtitle_2_6_1">Melee</text>
+	<text id="ui_manuals_subsubtitle_2_6_2">Ranged</text>
+	<text id="ui_manuals_subsubtitle_2_6_3">Counter</text>
+	<text id="ui_manuals_subsubtitle_2_6_4">Mass Attack</text>
+	<text id="ui_manuals_subsubtitle_2_6_5">Properties of a Mass Attack</text>
+	<text id="ui_manuals_subsubtitle_2_6_6">Mass - Individual</text>
+	<text id="ui_manuals_subsubtitle_2_6_7">Mass - Summation</text>
+
+	<!--추가-->
+	<text id="ui_manuals_subsubtitle_2_6_1_1">Melee Page Icon</text>
+	<text id="ui_manuals_subsubtitle_2_6_1_2">- The more common type of Combat Page.
+- When a Melee page clashes against a Ranged page, its Offensive dice cannot damage the Ranged opponent immediately even if it wins in a clash against their Offensive die.
+However, the Melee die will be retained upon winning a clash and moved to the end of the dice queue for reuse.</text>
+
+	<text id="ui_manuals_subsubtitle_2_6_2_1">Ranged Page Icon</text>
+	<text id="ui_manuals_subsubtitle_2_6_2_2">- Ranged pages will *always* be played before Melee, regardless of Speed.
+- Less common Combat Pages that perform attacks at a distance.
+- Even if the Offensive die of a Ranged page loses in a clash against the Offensive die of a Melee page, the Ranged user will take no immediate damage.
+- However, the opponent’s Melee die will be retained in this case and moved to the end of their dice queue for reuse.</text>
+
+	<text id="ui_manuals_subsubtitle_2_6_3_1">Counter Dice</text>
+	<text id="ui_manuals_subsubtitle_2_6_3_2">Counter dice are displayed in yellow.
+These dice will be saved until an enemy attempts a one-sided attack.
+If a Counter die wins in a clash, it will be recycled if there are dice left on the opponent’s Combat Page.</text>
+	<text id="ui_manuals_subsubtitle_2_6_4_1">Mass Attack Page Icon</text>
+	<text id="ui_manuals_subsubtitle_2_6_4_2">The icon on the &#60;color=#ff5622ff&#62;‘Combat Page’&#60;/color&#62; indicates that it is a Mass Attack page.
+- When you select a target with a Mass Attack page,
+it will automatically target a random Speed die for every other enemy.</text>
+
+	<text id="ui_manuals_subsubtitle_2_6_5_1">Mass Attack pages will *always* be played before Melee and Ranged pages, regardless of Speed.
+The dice rolls of the Mass Attack page are compared with the rolls of Combat Pages on the targeted Speed dice, and the targets that roll lower than the Mass Attack will take damage and have their dice be destroyed.</text>
+
+	<text id="ui_manuals_subsubtitle_2_6_6_1">Two types of Mass Attack pages exist: &#60;color=#ff5622ff&#62;‘Individual’&#60;/color&#62;, and &#60;color=#ff5622ff&#62;‘Summation’&#60;/color&#62;. &#60;color=#ff5622ff&#62;‘Individual’&#60;/color&#62; Mass Attacks are compared against the roll of each individual die on the targeted Speed dice’s Combat Page in sequence (Excluding Counter Dice).</text>
+	<text id="ui_manuals_subsubtitle_2_6_7_1">&#60;color=#ff5622ff&#62;‘Summation’&#60;/color&#62; Mass Attacks are compared against the sum of dice rolls on the targeted Speed dice’s Combat Page. (Excluding Counter Dice)</text>
+
+	<text id="ui_manuals_subsubtitle_3_1_1">Burning Books Ⅰ</text>
+	<text id="ui_manuals_subsubtitle_3_1_2">Burning Books Ⅱ</text>
+	<text id="ui_manuals_subsubtitle_3_1_3">Spoils of Burning</text>
+	<text id="ui_manuals_subsubtitle_3_1_4">Page Types</text>
+	<text id="ui_manuals_subsubtitle_3_1_5">Page Grades</text>
+	<text id="ui_manuals_subsubtitle_3_2_1">Library UI Info</text>
+	<text id="ui_manuals_subsubtitle_3_2_2">Character UI Info</text>
+	<text id="ui_manuals_subsubtitle_3_2_3">Equipping Key Pages</text>
+	<text id="ui_manuals_subsubtitle_3_2_4">Setting Up Combat Pages</text>
+	<text id="ui_manuals_subsubtitle_3_2_5">Equipping Battle Symbols</text>
+	<text id="ui_manuals_subsubtitle_3_2_6">Librarian Customization</text>
+	<text id="ui_manuals_subsubtitle_3_2_7">Passive Transfer Ⅰ</text>
+	<text id="ui_manuals_subsubtitle_3_2_8">Passive Transfer Ⅱ</text>
+	<text id="ui_manuals_subsubtitle_3_3_1">Raising Floor Realization</text>
+	<text id="ui_manuals_subsubtitle_3_3_2">Abnormality Battles</text>
+	<text id="ui_manuals_subsubtitle_3_3_3">Exalting The Library</text>
+	<text id="ui_manuals_subsubtitle_3_3_4">Opening New Floors</text>
+	<text id="ui_manuals_subsubtitle_3_4_1">Scenes of Patron Librarians</text>
+	<text id="ui_manuals_subsubtitle_3_4_2">Watching Main Story Episodes</text>
+	<text id="ui_manuals_subsubtitle_3_4_3">Reading Pages and Books</text>
+
+	<!-- Invitation-related Manual Sections -->
+	<text id="ui_manuals_subsubtitle_1_1_1_1">Step 1: From the Invitation menu, select the guests you’d like to invite by their logo (or ‘?’ if you have not received them yet).</text>
+	<text id="ui_manuals_subsubtitle_1_1_1_4">The reception begins by sending an ‘Invitation’ to your dear guests.
+Take the following steps (1-5 across the following pages) to send a ‘Red Invitation’ that will advance the plot.</text>
+	<text id="ui_manuals_subsubtitle_1_1_2_1">Step 2: From the enlarged menu, click on the icon of the episode you’d like to invite guests from.</text>
+	<text id="ui_manuals_subsubtitle_1_1_2_2">Step 3: Once you have selected an episode, the list of books required will be shown on the Invitation.
+Click on the slots on the list.</text>
+	<text id="ui_manuals_subsubtitle_1_1_3_1">Step 4: Choose the needed books for the ‘Books of the Day’.</text>
+	<text id="ui_manuals_subsubtitle_1_1_4_1">Step 5: Press ‘Send Invitation’ to prepare and finalize the invitation.</text>
+	<text id="ui_manuals_subsubtitle_1_1_4_2">Step 6: Click on the gold button to send out the Invitation to your expected guests.</text>
+	<text id="ui_manuals_subsubtitle_1_1_4_3">The details of your guests will not be available when you invite them for the first time.
+
+After you’ve battled them once, you can view their combat-related information.</text>
+	<text id="ui_manuals_subsubtitle_1_2_1_1">General Invitations are sent to unimportant guests who won’t lead the plot.
+However, they can be resources to help grow the Library.
+
+Take the following steps (1-2 below) to send a general Invitation.</text>
+	<text id="ui_manuals_subsubtitle_1_2_1_2">Step 1: Choose *any* books you’d to register as your ‘Books of the Day’ by clicking on an empty ‘Register Book’ slot.
+(Can be any amount/grade.)
+Note: Putting in a combination of books that is used for a Red Invitation (story characters) will invite the matching guests instead.</text>
+	<text id="ui_manuals_subsubtitle_1_2_1_3">Step 2: Press ‘Send’ to invite the guests.</text>
+	<text id="ui_manuals_subsubtitle_1_2_1_4">In the case of General Invitations, the types of guests that take interest will depend on the value of the books you register.</text>
+
+
+	<text id="ui_manuals_subsubtitle_2_2_1_1">Combat Pages and their dice are the main components of the reception.</text>
+	<text id="ui_manuals_subsubtitle_2_2_1_2">This text describes the ability of the page, usually &#60;color=#ff5622ff&#62;activated upon use&#60;/color&#62;.</text>
+	<!--띄어쓰기 중요-->
+	<text id="ui_manuals_subsubtitle_2_2_1_3">In combat, &#60;color=#ff5622ff&#62;3 types of Offensive dice&#60;/color&#62; exist, each corresponding to a different damage type.
+  
+This icon represents the ‘Slash’ damage type; when an Offensive die with this icon is played, a Slash-type attack will be performed.
+	
+Likewise, playing an Offensive die with the ‘Pierce’ icon will perform a Pierce-type attack.
+	
+Lastly, playing an Offensive die with the ‘Blunt’ icon will perform a Blunt-type attack.</text>
+
+	<text id="ui_manuals_subsubtitle_2_3_1_1">When a new Scene begins, press the Spacebar to roll Speed dice.
+(Or you can click the nifty logo button at the center-top of the screen.)
+
+The number of Combat Pages a character can use each Scene depends on &#60;color=#ff5622ff&#62;the number of Speed dice they have&#60;/color&#62;.
+
+Characters with higher Speed rolls:
+- Act first.
+- Can redirect enemies with lower Speed &#60;color=#ff5622ff&#62;to target them instead&#60;/color&#62;.</text>
+  
+  <text id="ui_manuals_subsubtitle_2_3_1_1_pad">When a new Scene begins, press [4] to roll Speed dice.
+(Or you can click the nifty logo button at the center-top of the screen.)
+
+The number of Combat Pages a character can use each Scene depends on &#60;color=#ff5622ff&#62;the number of Speed dice they have&#60;/color&#62;.
+
+Characters with higher Speed rolls:
+- Act first.
+- Can redirect enemies with lower Speed &#60;color=#ff5622ff&#62;to target them instead&#60;/color&#62;.</text>
+  
+	<text id="ui_manuals_subsubtitle_2_3_2_1">#3. Click on the Dice of the guest you want the librarian to target using the selected page.
+
+Mousing over the enemy’s dice will also show you what moves they are planning to utilize.</text>
+	<text id="ui_manuals_subsubtitle_2_3_2_2">#1. Click on the librarian’s Speed dice.
+Also, you can right click on a glowing Speed die to cancel the page you chose.</text>
+	<text id="ui_manuals_subsubtitle_2_3_2_3">#2. From their hand of Combat Pages, choose one to use.</text>
+	<text id="ui_manuals_subsubtitle_2_3_2_4" xsi:nil="true"/>
+	<text id="ui_manuals_subsubtitle_2_3_2_5">When a librarian uses a page, &#60;color=#ff5622ff&#62;‘Light’ equal to the its Cost&#60;/color&#62; is used.
+Light is restored by 1 at the start of each Scene.</text>
+	<text id="ui_manuals_subsubtitle_2_3_3_1">Clicking on the target check buttons will give you an overview of the targets for the guests and librarians.
+(From left: Red - Guests’ Targets; Yellow - Clashes; Green - Librarians’ Targets.)</text>
+	<text id="ui_manuals_subsubtitle_2_3_3_2">Click the ‘Begin Scene’ button
+or press Spacebar to initiate combat.</text>
+  <text id="ui_manuals_subsubtitle_2_3_3_2_pad">Click the ‘Begin Scene’ button
+or press [[4]] to initiate combat.</text>
+	<text id="ui_manuals_subsubtitle_2_3_3_3">You can right click on a glowing Speed die to &#60;color=#ff5622ff&#62;cancel the page you chose&#60;/color&#62;.</text>
+  <text id="ui_manuals_subsubtitle_2_3_3_3_pad"></text>
+  <!--<text id="ui_manuals_subsubtitle_2_3_3_3_pad">[[2]]를 누르면 기존에 &#60;color=#ff5622ff&#62;선택한 책장을 취소&#60;/color&#62;할 수 있습니다.</text>-->
+	<text id="ui_manuals_subsubtitle_2_3_3_4">Click here to Toggle Quick Mode ON/OFF.
+When Quick Mode is OFF, dice will be rolled manually.</text>
+	<text id="ui_manuals_subsubtitle_2_3_4_1">When the combat phase begins, each character will approach their targets for action.
+Their movement speed depends on their Speed rolls.
+
+Characters will begin their action once they arrive at their targets.</text>
+	<text id="ui_manuals_subsubtitle_2_3_4_2">Characters will perform their actions using the dice of their Combat Pages.
+Depending on the dice types, the character will either attack or defend.
+
+The results of each action are determined based on dice rolls.</text>
+	<text id="ui_manuals_subsubtitle_2_3_4_3">When the rolls have been determined, characters will either deal damage or block their opponent’s attack based on the roll.
+Given &#60;color=#ff5622ff&#62;whether or not the target has dice to respond&#60;/color&#62; to another’s action, things will play out differently.</text>
+
+	<text id="ui_manuals_subsubtitle_2_3_7_1">Block Dice</text>
+	<text id="ui_manuals_subsubtitle_2_3_7_2">&lt;Winning a clash vs. Offensive dice&gt;
+Completely blocks the damage.
+Deals stagger damage to the attacker by the difference in value.
+
+&lt;Losing a clash vs. Offensive dice&gt;
+Mitigates incoming damage by the roll value.
+
+&lt;Winning a clash vs. Defensive dice&gt;
+Deals stagger damage equal to the roll value.</text>
+	<text id="ui_manuals_subsubtitle_2_3_7_3">Evade Dice</text>
+	<text id="ui_manuals_subsubtitle_2_3_7_4">&lt;Winning a clash vs. Offensive dice&gt;
+Completely negates damage.
+The Evade die is retained.
+
+&lt;Drawing a clash vs. Offensive dice&gt;
+Completely negates damage.
+The Evade die is lost.
+
+&lt;Winning a clash vs. Defensive dice&gt;
+The character recovers stagger resist.</text>
+	<text id="ui_manuals_subsubtitle_2_3_8_1">A character may inflict or receive two types of damage:
+&lt;Physical&gt; damage and &lt;Stagger&gt; damage.
+
+Attacks with Stagger damage will reduce the target’s Stagger Resist (yellow gauge) on hit.
+
+When Stagger Resist hits 0, the character falls into a ‘Staggered’ state.
+(This is indicated by broken Speed dice.)</text>
+	<text id="ui_manuals_subsubtitle_2_3_8_2">A &#60;color=#ff5622ff&#62;Staggered&#60;/color&#62; character
+- Will receive Fatal damage from all forms of attack.
+- Cannot act for the rest of the current and next Scene.
+- Cannot restore Light at the beginning of the next Scene.
+- Cannot draw pages at the beginning of the next Scene.
+
+A character restores 1 Light after staggering an opponent.</text>
+	<text id="ui_manuals_subsubtitle_2_3_9_1">Taking physical damage will decrease the character’s HP, indicated by the red gauge.
+
+When the HP of a librarian or a guest is brought down to 0, they will die.</text>
+	<text id="ui_manuals_subsubtitle_2_3_9_2">Guests who &#60;color=#ff5622ff&#62;meet their demise&#60;/color&#62; in the Library will be resolved into &#60;color=#ff5622ff&#62;books&#60;/color&#62;.
+
+The higher the guest’s ‘Emotion Level’ was, the more likely they are to yield books in greater quantity or quality upon death.
+
+Even if a librarian dies during combat, they will rise again once the reception is over.</text>
+	<text id="ui_manuals_subsubtitle_2_3_10_1">Damage Resistance</text>
+	<text id="ui_manuals_subsubtitle_2_3_10_2">Stagger Resistance</text>
+	<text id="ui_manuals_subsubtitle_2_3_10_3">Fatal: Damage x2
+
+Weak: Damage x1.5
+
+Normal: Same damage
+
+Endured: Damage x0.5
+
+Ineffective:
+Damage x0.25</text>
+	<text id="ui_manuals_subsubtitle_2_3_10_4">Each character (and Key Page) has different resistances to the physical and Stagger damage dealt by each type of attack.
+
+You can deal extra damage by attacking with damage types the opponent is weak to, denoted by &#60;color=#ff5622ff&#62;"Fatal"&#60;/color&#62; and &#60;color=#ff5622ff&#62;"Weak"&#60;/color&#62;.
+On the contrary, attacking with damage types whose resistance is set to &#60;color=#ff5622ff&#62;"Endured"&#60;/color&#62; or &#60;color=#ff5622ff&#62;"Ineffective"&#60;/color&#62; will cause less damage.
+
+Use resistances to your advantage in receptions.</text>
+	<text id="ui_manuals_subsubtitle_2_4_1_1">As the battle progresses, the emotional tension of the librarians and guests will be heightened.</text>
+	<text id="ui_manuals_subsubtitle_2_4_1_2">Positive Emotion Points (Blue)
+- Gained upon winning a clash or having advantages in battle
+(E.g: Defeating an enemy)
+
+Negative Emotion Points (Red)
+- Gained upon losing a clash or suffering disadvantages in battle
+(E.g: Losing an ally)</text>
+	<text id="ui_manuals_subsubtitle_2_4_1_3">When the Emotion gauge is completely filled, the character’s Emotion Level will rise.
+
+When a character’s Emotion Level rises, they:
+- Gain advantages, such as increased Max Light capacity.
+- Fully restore Light.
+
+A librarian’s Max Emotion Level depends on their floor’s Realization Level.</text>
+	<text id="ui_manuals_subsubtitle_2_4_2_1">As the Emotion Levels of characters rise, the overall emotion of the teams they belong to will be heightened.
+
+When your team’s Emotion Level goes up, you may choose an Abnormality page to use at the beginning of the next Scene.</text>
+	<text id="ui_manuals_subsubtitle_2_4_2_2">There are two types of Abnormality pages: Awakening (Blue), and Breakdown (Red).
+
+Awakening Pages typically consist of purely beneficial effects for the user.
+Breakdown Pages offer powerful effects that come with drawbacks.
+
+Each floor offers a different set of Abnormality pages to choose from, and the likelihood of each type of page being presented depends on the ratio of Positive and Negative Emotion Points that the team has built up.</text>
+	<text id="ui_manuals_subsubtitle_2_5_1_1">When all characters have finished their actions, the Scene will conclude, and a subsequent Scene will begin.
+
+This cycle will continue until the Act is over, either as a curtain call or a cut.</text>
+	<text id="ui_manuals_subsubtitle_2_5_1_2">A curtain call for the Act will occur when all guests have been booked.</text>
+	<text id="ui_manuals_subsubtitle_2_5_1_3">Alternatively, the Act is cut if all your librarians die.</text>
+	<text id="ui_manuals_subsubtitle_2_5_2_1">Certain receptions consist of multiple Acts of battle in succession.
+
+In this case, at the end of an Act, you will return to the reception preparation phase and get ready for the next Act.
+
+HP and Abnormality pages will persist between Acts.
+Status effects and Stagger Resist will be reset.
+
+
+If there are no floors left available to receive guests when there are still Acts remaining, the reception will prematurely conclude.</text>
+	<text id="ui_manuals_subsubtitle_2_5_3_1">If the reception ends in your loss, the guests will take the books of the day.</text>
+	<text id="ui_manuals_subsubtitle_2_5_3_2">Librarians who participated in a reception will get the following benefits.</text>
+	<text id="ui_manuals_subsubtitle_2_5_3_3">
+- They may obtain ‘Battle Symbols’ (minor stat-boosting cosmetics) for fulfilling certain conditions.</text>
+	<text id="ui_manuals_subsubtitle_2_5_3_4">You can see the books resolved from the reception here.</text>
+	<text id="ui_manuals_subsubtitle_2_5_3_5">Press this button to return to the Library lobby, and plan your next move.</text>
+	<text id="ui_manuals_subsubtitle_3_1_1_1">You can acquire pages (equipment and cards) by burning books earned through reception.</text>
+	<text id="ui_manuals_subsubtitle_3_1_1_2">Step 1: Click on the ‘Burn Books’ tab.</text>
+	<text id="ui_manuals_subsubtitle_3_1_2_1">Step 3: Press the ‘Burn Books’ button.</text>
+	<text id="ui_manuals_subsubtitle_3_1_2_2">Step 2: Select the books to burn from the list.</text>
+	<text id="ui_manuals_subsubtitle_3_1_2_3">Each book has a pool of pages to yield upon burning, and each page has a set amount of copies that can drop.
+
+The list of remaining rewards will reset automatically upon redeeming all pages from the book’s pool. (Except Key Pages)
+Alternatively, you can manually refill the pool by pressing the ‘Reset Rewards’ button.</text>
+	<text id="ui_manuals_subsubtitle_3_1_3_1">When you burn books on a floor, you’ll see a lovely animation in that floor’s color, and you may randomly obtain pages of that book.
+
+Burning a book yields different pages each time, based on chance.</text>
+	<text id="ui_manuals_subsubtitle_3_1_4_1">There are two types of pages you may acquire from books: ‘Key Pages’, and ‘Combat Pages’.
+
+Key pages constitute a librarian’s physique; they serve as equipment.
+Combat Pages are the cards and techniques used by librarians in battle.</text>
+	<text id="ui_manuals_subsubtitle_3_1_5_1">The rarity of a page ranges from &lt;Paperback&gt;, &lt;Hardcover&gt;, &lt;Limited&gt;, to &lt;Objet d’art&gt;.
+
+Pages of higher grades are more powerful, although rarer to acquire when burning books.
+Also, Key pages have a set limit of how many can be owned at once, which depends on rarity.</text>
+	<text id="ui_manuals_subsubtitle_3_2_1_1">The Library’s current grade.</text>
+	<text id="ui_manuals_subsubtitle_3_2_1_2">Moves to the selected menu tab.</text>
+	<text id="ui_manuals_subsubtitle_3_2_1_3">Views floor information.</text>
+	<text id="ui_manuals_subsubtitle_3_2_1_4">Check the librarians’ state here.</text>
+	<text id="ui_manuals_subsubtitle_3_2_1_5">List of Assignments on the current floor.</text>
+	<text id="ui_manuals_subsubtitle_3_2_1_6">List of Abnormality pages on the current floor.</text>
+	<text id="ui_manuals_subsubtitle_3_2_2_1">Choose what you’d like to configure here.</text>
+	<text id="ui_manuals_subsubtitle_3_2_2_2">Shows the list of librarians on the selected floor.</text>
+	<text id="ui_manuals_subsubtitle_3_2_2_3">Shows the information of the selected librarian.</text>
+	<text id="ui_manuals_subsubtitle_3_2_2_4">Your librarian’s current Key page
+You can click here to change the Key page.</text>
+	<text id="ui_manuals_subsubtitle_3_2_2_5">List of passive abilities on the equipped Key page
+You can click here to adjust its passive abilities.</text>
+	<text id="ui_manuals_subsubtitle_3_2_2_6">List of Combat Pages (deck) for the current Key page
+You can click here to begin editing them.</text>
+	<text id="ui_manuals_subsubtitle_3_2_3_1">You can check your list of favorite Key pages or those currently equipped by other librarians here.</text>
+	<text id="ui_manuals_subsubtitle_3_2_3_2">By clicking on a Key page and selecting ‘Equip’, you can assign the Key page to the librarian.</text>
+	<text id="ui_manuals_subsubtitle_3_2_3_3">View the Key pages of a particular grade.</text>
+	<text id="ui_manuals_subsubtitle_3_2_3_4">You can compare the info of the currently equipped Key page and the selected Key page.</text>
+	<text id="ui_manuals_subsubtitle_3_2_3_5">Unequips the current Key page.</text>
+	<text id="ui_manuals_subsubtitle_3_2_4_1">Removes all Combat Pages from the deck.</text>
+	<text id="ui_manuals_subsubtitle_3_2_4_2">Left click on a Combat Page to remove it from the selected slot.</text>
+	<text id="ui_manuals_subsubtitle_3_2_4_3">Empty slots will be automatically filled with random basic pages in battle.</text>
+	<text id="ui_manuals_subsubtitle_3_2_4_4">Shows pages that meet the selected criteria.</text>
+	<text id="ui_manuals_subsubtitle_3_2_4_5">Left click to add the selected Combat Page to an empty slot.</text>
+	<text id="ui_manuals_subsubtitle_3_2_4_6">There is usually a limit to how many of each page you can put in a deck.</text>
+	<text id="ui_manuals_subsubtitle_3_2_4_7">Save or load Combat Page presets here.</text>
+	<text id="ui_manuals_subsubtitle_3_2_5_1">Click to unequip the Battle Symbol on that region.</text>
+	<text id="ui_manuals_subsubtitle_3_2_5_2">List of Battle Symbols the librarian has earned, with the equipped on top.</text>
+	<text id="ui_manuals_subsubtitle_3_2_5_3">Click a placard to swap Battle Symbols.</text>
+	<text id="ui_manuals_subsubtitle_3_2_5_4">Button for librarian customization.</text>
+	<text id="ui_manuals_subsubtitle_3_2_5_5">You can check the list of Battle Symbols for a particular region by clicking on the Battle Symbol’s slot.</text>
+	<text id="ui_manuals_subsubtitle_3_2_5_6">You can press the eye button next to a slot
+to configure the visibility of the Battle Symbol.</text>
+	<text id="ui_manuals_subsubtitle_3_2_6_1">In this customization menu, you can edit your librarian’s name, title, appearance, body size, and dialogue.
+Please enjoy creating your nuggets, and remember to save before leaving the screen.</text>
+	<text id="ui_manuals_subsubtitle_3_2_6_2">Randomize.</text>
+	<text id="ui_manuals_subsubtitle_3_2_6_3">Revert to default.</text>
+	<text id="ui_manuals_subsubtitle_3_2_6_4">Start configuring the selected aspects.</text>
+	<text id="ui_manuals_subsubtitle_3_2_6_5">Save the current changes.</text>
+	<text id="ui_manuals_subsubtitle_3_2_6_6">Close without saving changes.</text>
+	<text id="ui_manuals_subsubtitle_3_2_7_1">Through Passive Attribution, you can slot the passive abilities of one Key page into another.</text>
+	<text id="ui_manuals_subsubtitle_3_2_7_2">Simply click on the list of passive abilities to open the passive attribution pop-up menu.</text>
+	<text id="ui_manuals_subsubtitle_3_2_7_3">You can check the list of Key pages that possess the passive abilities of other Key pages from attribution (known as Enhanced pages), 
+and see a list of Key pages that are currently attributed to others.</text>
+	<text id="ui_manuals_subsubtitle_3_2_8_1">Step 1: Click on a Key page to attribute it to the current Key page.</text>
+	<text id="ui_manuals_subsubtitle_3_2_8_2">Step 2: From the list of attributed Key pages, select a passive ability you’d like to use.</text>
+	<text id="ui_manuals_subsubtitle_3_2_8_3">Each passive ability has a cost, and Key pages have a cost threshold along with a max quantity that limits how many passive abilities can be equipped at the same time.
+Also, no more than one of the same passive ability can be equipped at once.</text>
+	<text id="ui_manuals_subsubtitle_3_3_1_1">By completing all the Assignments of a level, you can raise the Realization Level of the floor.</text>
+	<text id="ui_manuals_subsubtitle_3_3_1_2">A red notification (!) will be shown on floors whose Realization Level can be raised.</text>
+	<text id="ui_manuals_subsubtitle_3_3_1_3">To raise the Realization Level of a floor, you must clear the Abnormality battle of the current level.
+
+Click on the notification.
+Then fight the Abnormality.</text>
+	<text id="ui_manuals_subsubtitle_3_3_2_1">In an Abnormality battle, you must suppress the Abnormality that was resting within its book.
+These are unique fights that will take multiple attempts, and require unique strategies.
+
+After completing an Abnormality battle…
+- The Realization Level of the floor rises.
+- New Abnormality pages are unlocked.
+- New librarians may awaken (at certain levels).
+- New Assignments will be given.</text>
+	<text id="ui_manuals_subsubtitle_3_3_3_1">Raising the Realization Level of each floor will increase the Library’s overall presence as a threat.
+When the Library’s current presence reaches the maximum, it will be exalted to a higher grade.</text>
+	<text id="ui_manuals_subsubtitle_3_3_3_2">The ‘Library Grade’ is the current hazard level of ‘The Library’ as perceived by the City.
+
+You can invite more guests as the Library’s grade is exalted to higher levels.
+Also, it may allow you to open up additional floors.</text>
+	<text id="ui_manuals_subsubtitle_3_3_4_1">There are ten floors to the Library in total.
+However, because the Library is still incomplete, the floors are at first dormant, their librarians sleeping within.</text>
+	<text id="ui_manuals_subsubtitle_3_3_4_2">Progress through the story or raise the Library’s grade to unlock new floors.
+
+When a new floor is unlocked, its Patron Librarian will awaken, and you may use that floor for reception.</text>
+	<text id="ui_manuals_subsubtitle_3_4_1_1">In the Credenza, you can read and review various story contents.
+Press each tab to switch to the list of stories you’d like to see.</text>
+	<text id="ui_manuals_subsubtitle_3_4_1_2">Rewatch the episodes of the stories of your Patron Librarians.</text>
+	<text id="ui_manuals_subsubtitle_3_4_1_3">Check the episodes of brief interactions between Patron Librarians.</text>
+	<text id="ui_manuals_subsubtitle_3_4_2_1">Click on a group of guests and then click on an episode.</text>
+	<text id="ui_manuals_subsubtitle_3_4_2_2">You can watch the pre- and post-battle story segments for a group of guests.</text>
+	<text id="ui_manuals_subsubtitle_3_4_3_1">Select the Story Chapter and guest group.</text>
+	<text id="ui_manuals_subsubtitle_3_4_3_2">Select the page whose story you’d like to read.</text>
+	<text id="ui_manuals_subsubtitle_3_4_3_3">Read the story of the selected page here.</text>
+	<text id="ui_manuals_back">Return</text>
+
+	<!--Battle-->
+	<!--2_battlepage -> type1-->
+	<text id="ui_manuals_subsubtitle_2_2_2">Dice Abilities</text>
+	<text id="ui_manuals_subsubtitle_2_2_2_1">The ability of an action die, written on its right, may activate &#60;color=#ff5622ff&#62;when the die is played&#60;/color&#62; based on its condition.
+Most abilities activate when the attack &#60;color=#ff5622ff&#62;hits&#60;/color&#62; the target or the die &#60;color=#ff5622ff&#62;wins in a clash against an opposing die&#60;/color&#62;.</text>
+
+	<!--2_battleapge -> type2-->
+	<text id="ui_manuals_subsubtitle_2_2_3">Light</text>
+	<text id="ui_manuals_subsubtitle_2_2_3_1">During battle, using &#60;color=#ff5622ff&#62;‘Combat Pages’&#60;/color&#62; needs a resource called ‘Light’.
+    The amount of Light a character currently has is indicated by the number of yellow icons above them.</text>
+
+	<!--2_emotion -> 에고-->
+	<text id="ui_manuals_subsubtitle_2_4_5">E.G.O</text>
+	<text id="ui_manuals_subsubtitle_2_4_5_1">
+    - If your team’s overall Emotion Level reaches 3, an E.G.O page may be chosen.
+    - The selected E.G.O pages are placed in a separate ‘hand’ that all librarians can access.
+    (A special button will appear to facilitate viewing this communal hand.)
+    - Once used, the E.G.O page needs to be recharged by accumulating Emotion Points before it can be used again.</text>
+
+	<text id="ui_manuals_subsubtitle_2_4_4_1">As the Emotion Levels of characters rise, the overall Emotion Level of the teams they belong to will be heightened as well.
+When your team’s Emotion Level goes up, you may choose an Abnormality page to use at the beginning of the next Scene.</text>
+	<text id="ui_manuals_subsubtitle_2_3_3_5">Auto-selecting Combat Pages</text>
+
+	<text id="ui_manuals_subsubtitle_2_1_1">Preparing for Reception 1</text>
+	<text id="ui_manuals_subsubtitle_2_1_2">Preparing for Reception 2</text>
+
+	<text id="ui_manuals_subsubtitle_2_4_3_1">There are two types of Abnormality pages: &#60;color=#ff5622ff&#62;Awakening (Blue)&#60;/color&#62;, and &#60;color=#ff5622ff&#62;Breakdown (Red)&#60;/color&#62;.
+
+Awakening Pages typically consist of purely beneficial effects for the user.
+Breakdown Pages offer powerful effects that come with &#60;color=#ff5622ff&#62;drawbacks&#60;/color&#62;.
+
+Each floor offers a different set of Abnormality pages to choose from, and the likelihood of each type of page being presented depends on the &#60;color=#ff5622ff&#62;ratio of Positive and Negative Emotion Points&#60;/color&#62; that the team has built up.</text>
+	<!-- Reception-related Manual Sections -->
+	<text id="ui_manuals_subsubtitle_2_1_2_1">Step 1: Select a floor to use for the reception.</text>
+	<text id="ui_manuals_subsubtitle_2_1_1_1">You can view a librarian’s info by selecting them.</text>
+	<text id="ui_manuals_subsubtitle_2_1_1_4">You can view a guest’s info by selecting them.</text>
+	<text id="ui_manuals_subsubtitle_2_1_2_2">Step 2: Start the reception by pressing the ‘Begin Stageplay’ button.</text>
+	<text id="ui_manuals_subsubtitle_2_1_2_3">This indicates the number of floors that may be used during reception.
+Running out of floors means that the reception will end.</text>
+	<text id="ui_manuals_subsubtitle_2_1_2_4">Number of Battles Remaining</text>
+	<text id="ui_manuals_subsubtitle_2_1_1_2">You can swap the selected librarian’s Key page for another by clicking here.</text>
+	<text id="ui_manuals_subsubtitle_2_1_2_5">Cancel the reception and return to the Library screen without losing books.</text>
+	<text id="ui_manuals_subsubtitle_2_1_1_3">You can change the list of Combat Pages the librarian will use by clicking here.</text>
+
+
+	<text id="ui_manuals_subsubtitle_2_3_5_1">When only one of the two opposing characters has dice to play, a &#60;color=#ff5622ff&#62;‘one-sided attack’&#60;/color&#62; occurs.
+This happens when a character targets an enemy that isn’t targeting them back.
+
+Only Offensive dice are played in one-sided attacks. The Defensive dice will be retained until the Scene ends or an enemy attempts a one-sided attack.</text>
+
+	<text id="ui_manuals_subsubtitle_2_3_6_1">When both characters in an engagement have dice to play, a &#60;color=#ff5622ff&#62;‘clash’&#60;/color&#62; occurs.
+This usually occurs when the Speed dice of two characters target each other.
+(Retained Defensive dice or Counter dice may also cause a clash)
+
+In a clash, the results of actions are determined by comparing their rolls. &#60;color=#ff5622ff&#62;Offensive dice&#60;/color&#62; can only deal damage equal to the roll by winning the clash. Interactions between &#60;color=#ff5622ff&#62;Defensive dice&#60;/color&#62; follow the rules on the next page (Clashing Ⅱ).</text>
+
+
+
+</localize>

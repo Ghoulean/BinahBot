@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- 합체버전 -->
+  <Card ID="508001">
+    <Name>깊은 슬픔</Name>
+    <Artwork>Crying1</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="FarAreaEach" Cost="5" Affection ="Team" />
+    <Script>cryingChildArea</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="cryingChildAreaDice" ActionScript="cryingchild_eyelaser" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="cryingChildAreaDice" ActionScript="cryingchild_eyelaser" Desc="" />
+      <Behaviour Min="8" Dice="12" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="cryingChildAreaDice" ActionScript="cryingchild_eyelaser" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <Priority>2</Priority>
+  </Card>
+  <Card ID="508002">
+    <Name>슬픔의 상처</Name>
+    <Artwork>Crying2</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Far" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="CryingChild_FarAtk" Script="" ActionScript="cryingchild_chestlaser" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="CryingChild_FarAtk" Script="" ActionScript="cryingchild_chestlaser" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="CryingChild_FarAtk" Script="" ActionScript="cryingchild_chestlaser" Desc="" />
+      <Behaviour Min="2" Dice="5" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="508003">
+    <Name>뒤틀린 환영</Name>
+    <Artwork>Crying3</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="" Script="burn2atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="" Script="burn2atk" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="4" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="" Script="burn3atk" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="5" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="508004">
+    <Name>지나간 환영</Name>
+    <Artwork>Crying4</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="powerDown1target" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="powerDown1target" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="burn3atk" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="5" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="508005">
+    <Name>구속</Name>
+    <Artwork>Crying5</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="8" Dice="12" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="weakDisarmBinding2atk" ActionScript="cryingchild_restriction" Desc="" />
+      <Behaviour Min="2" Dice="5" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="5" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+  <!-- 아이들 -->
+  <Card ID="508006">
+    <Name>속삭임</Name>
+    <Artwork>Crying6</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="5" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Slash" Motion="Z" EffectRes="" Script="binding1atk" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="4" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="508007">
+    <Name>날개짓</Name>
+    <Artwork>Crying7</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="4" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="weak1atk" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="4" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="bleeding2atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="508008">
+    <Name>괴롭히기</Name>
+    <Artwork>Crying8</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="disarm1atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="weak1atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="weak1atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+
+  <Card ID="508010">
+    <Name>타오르는 일격</Name>
+    <Artwork>Wedge7</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>OnlyPage</Option>
+    <Keyword>onlypage_philip_Keyword</Keyword>
+    <Spec Range="Near" Cost="4" />
+    <Script>philipEgo</Script>
+    <ScriptDesc>[전용 전투 책장] 감정 단계가 3 이상일 때만 사용가능</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="13" Dice="28" Type="Atk" Detail="Hit" Motion="Z" EffectRes="PhilipEgo_Special" Script="burn10atk" Desc="[적중] 화상 10 부여" />
+      
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <Priority>0</Priority>
+    <SortPriority>1</SortPriority>
+  </Card>
+  <Card ID="508011">
+    <Name>맹렬한 돌진</Name>
+    <Artwork>Wedge9</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="7" Dice="12" Type="Atk" Detail="Slash" Motion="Z" EffectRes="PhilipEgo_Z" Script="burn3atk" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <Priority>0</Priority>
+  </Card>
+</DiceCardXmlRoot>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Card ID="702301">
+    <Name>망치</Name>
+    <Artwork>Roland4Phase_Finn</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>protection2</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="S6" EffectRes="BlackSilence_4th_Hammer_S6" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="702302">
+    <Name>메이스, 도끼</Name>
+    <Artwork>Roland4Phase_Salvador</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>otherAlly2protection2</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="7" Dice="18" Type="Atk" Detail="Hit" Motion="S5" EffectRes="BlackSilence_4th_MaceAxe_S5" Script="burn3atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="702303">
+    <Name>단검</Name>
+    <Artwork>Roland4Phase_Walter</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>black_4th_lance</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="upgradeNext1pw" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S4" EffectRes="BlackSilence_4th_ShortSword_S4" Script="black_4th_dagger_atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S4" EffectRes="BlackSilence_4th_ShortSword_S4" Script="black_4th_dagger_atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="702304">
+    <Name>건틀릿, 리볼버</Name>
+    <Artwork>Roland4Phase_Tomerry</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>tomerry2</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="S3" EffectRes="BlackSilence_4th_Gauntlet_S3" Script="black_4th_gaunlet_atk2" ActionScript="dawnAction" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="S3" EffectRes="BlackSilence_4th_Gauntlet_S3" Script="black_4th_gaunlet_atk2" ActionScript="dawnAction" Desc="" />
+      <Behaviour Min="3" Dice="9" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="BlackSilence_4th_Revolver_S1" Script="black_4th_gaunlet_atk1" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Standby" Detail="Slash" Motion="S3" EffectRes="BlackSilence_4th_Gauntlet_S3" Script="black_4th_gaunlet_atk2" ActionScript="dawnAction" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="702305">
+    <Name>랜스</Name>
+    <Artwork>Roland4Phase_Xiao</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>shyaoSelfBurn</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Penetrate" Motion="S11" EffectRes="BlackSilence_4th_Lance_S11" Script="burn3atk" ActionScript="" Desc="" />
+      <Behaviour Min="7" Dice="9" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="black_4th_lance_pw" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Penetrate" Motion="S11" EffectRes="BlackSilence_4th_Lance_S11" Script="burn3atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="burn2pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="702306">
+    <Name>태도</Name>
+    <Artwork>Roland4Phase_Yujin</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="14" Type="Atk" Detail="Slash" Motion="S2" EffectRes="BlackSilence_4th_LongSword_S2" Script="spiderBudEgoDice" ActionScript="dawnAction" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Slash" Motion="S2" EffectRes="BlackSilence_4th_LongSword_S2" Script="weak1atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="black_4th_lance_pw" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="black_4th_lance_pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="702307">
+    <Name>쌍검, 샷건</Name>
+    <Artwork>Roland4Phase_Olivier</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="10" Type="Atk" Detail="Hit" Motion="S8" EffectRes="BlackSilence_4th_Shotgun_S8" Script="black_4th_dualblade_atk2" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="strength1pw" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Slash" Motion="S9" EffectRes="BlackSilence_4th_DualWield1_S9" Script="black_4th_dualblade_atk1" ActionScript="dawnAction" Desc="" />
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Slash" Motion="S10" EffectRes="BlackSilence_4th_DualWield2_S10" Script="black_4th_dualblade_atk1" ActionScript="dawnAction" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="702308">
+    <Name>대검</Name>
+    <Artwork>Roland4Phase_PurpleTear</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="13" Dice="17" Type="Atk" Detail="Hit" Motion="S7" EffectRes="BlackSilence_4th_GreatSword_S7" Script="powerDownNext2pwTarget" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Def" Detail="Guard" Motion="G" EffectRes="powerDownNext2pwTarget" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="powerDownNext2pwTarget" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="9" Type="Standby" Detail="Hit" Motion="S7" EffectRes="BlackSilence_4th_GreatSword_S7" Script="black_4th_bfsword_atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="702309">
+    <Name>샷건</Name>
+    <Artwork>Roland4Phase_Argalia</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Far" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="10" Type="Atk" Detail="Hit" Motion="S8" EffectRes="BlackSilence_4th_Shotgun_S8" Script="black_4th_shotgun_atk" ActionScript="" Desc="" />
+      <Behaviour Min="7" Dice="10" Type="Atk" Detail="Hit" Motion="S8" EffectRes="BlackSilence_4th_Shotgun_S8" Script="black_4th_shotgun_atk" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="paralysis2pw" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="702310">
+    <Name>듀란달 강공격</Name>
+    <Artwork>Roland3Phase_RolandLonely</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>black_4th_durandalstrong</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="13" Type="Atk" Detail="Hit" Motion="J2" EffectRes="BS4DurandalDown_J2" Script="powerUpNext2pw" ActionScript="dawnAction" Desc="" />
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="BS4DurandalUp_J" Script="black_4th_bfsword_pw" ActionScript="dawnAction" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Slash" Motion="J2" EffectRes="BS4DurandalDown_J2" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="damage3pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="702311">
+    <Name>듀란달 공격</Name>
+    <Artwork>Roland3Phase_RolandLonely</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>black_4th_durandal</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="BS4DurandalPene_Z" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="H" EffectRes="BS4DurandalHit_H" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="BS4DurandalPene_Z" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="702312">
+    <Name>듀란달 약공격</Name>
+    <Artwork>Roland3Phase_RolandLonely</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>black_4th_durandalweak</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="BS4DurandalUp_J" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="BS4DurandalPene_Z" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="BS4DurandalHit_H" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="702313">
+    <Name>광역 공격</Name>
+    <Artwork>Roland3Phase_RolandFury</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection="Team"/>
+    <Script>black_4th_area</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="12" Type="Atk" Detail="Slash" Motion="N" EffectRes="" Script="black_4th_area_atk" ActionScript="BlackSilence_4th_Area" Desc="" />
+      <Behaviour Min="7" Dice="11" Type="Atk" Detail="Slash" Motion="N" EffectRes="" Script="black_4th_area_atk" ActionScript="BlackSilence_4th_Area" Desc="" />
+      <Behaviour Min="6" Dice="7" Type="Atk" Detail="Slash" Motion="N" EffectRes="" Script="black_4th_area_atk" ActionScript="BlackSilence_4th_Area_Add" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="702314">
+    <Name>울부짖기 광역</Name>
+    <Artwork>Roland3Phase_RolandFury</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="12" Dice="16" Type="Atk" Detail="Hit" Motion="S12" EffectRes="" Script="black_4th_areastrong_atk" ActionScript="BlackSilence_4th_Area_Strong" Desc="" />
+      <Behaviour Min="12" Dice="12" Type="Atk" Detail="Hit" Motion="S12" EffectRes="" Script="black_4th_areastrong_atk" ActionScript="BlackSilence_4th_Area_Strong_Last" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="702315">
+    <Name>공격</Name>
+    <Artwork>Roland4Phase_Shout</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="BS4DurandalUp_J" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="clockEgoDice" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Hit" Motion="J2" EffectRes="BS4DurandalDown_J2" Script="damage5atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Standby" Detail="Penetrate" Motion="Z" EffectRes="BS4DurandalPene_Z" Script="black_4th_hammer_atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="702316">
+    <Name>반격 가드</Name>
+    <Artwork>Roland4Phase_Shout</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="10" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="Seven_Fleche" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="9" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+
+  <Card ID="702320">
+    <Name>잔상</Name>
+    <Artwork>Roland3Phase_MixAura</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Instance" Cost="0"/>
+    <Script>black_4th_afterimage</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="702321">
+    <Name>학습</Name>
+    <Artwork>Pinocchio_Learn</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script>pinocchio</Script>
+    <ScriptDesc>[합 시작시] 모든 주사위가 제거됨. 대상 책장의 주사위들을 얻음</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="16" Dice="16" Type="Atk" Detail="Hit" Motion="H" EffectRes="1_1" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+</DiceCardXmlRoot>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Card ID="703311">
+    <Name>약한 가드</Name>
+    <Artwork>Greta_Cut</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="Greta_G" Script="greta_weakGuardPw" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="Greta_G" Script="greta_weakGuardPw" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="Greta_G" Script="greta_weakGuardCounterPw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="703312">
+    <Name>강한 가드</Name>
+    <Artwork>Greta_Cut</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>greta_strongGuard</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="Greta_G" Script="greta_strongGuardPw" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="Greta_G" Script="greta_strongGuardPw" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="Greta_G" Script="greta_strongGuardPw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="703313">
+    <Name>기절시키기</Name>
+    <Artwork>Greta_Salt</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>greta_stun</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="Z" EffectRes="Greta_Z" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="8" Dice="17" Type="Atk" Detail="Hit" Motion="Z" EffectRes="Greta_Z" Script="greta_stunAtk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="Greta_G" Script="greta_stunPw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="703314">
+    <Name>양념 치기</Name>
+    <Artwork>Greta_Salt</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="Greta_H" Script="greta_seasoningAtk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="Greta_H" Script="greta_seasoningAtk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Hit" Motion="H" EffectRes="Greta_H" Script="greta_seasoningAtk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="703315">
+    <Name>토막 내기1</Name>
+    <Artwork>Greta_Cut</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="Greta_J" Script="bleeding1atk" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="Greta_J" Script="bleeding1atk" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="Greta_J" Script="bleeding1atk" ActionScript="" Desc="" />
+      </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="703316">
+    <Name>토막 내기2</Name>
+    <Artwork>Greta_Cut</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>greta_cut2</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="Greta_J" Script="greta_cut2Atk" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="Greta_J" Script="greta_cut2Atk" ActionScript="" Desc="" />
+        </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="703317">
+    <Name>맛보기</Name>
+    <Artwork>Greta_Taste</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="Greta_H" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="7" Dice="16" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="greta_tasteAtk" ActionScript="Greta_Bite" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Greta_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="9" Type="Standby" Detail="Guard" Motion="G" EffectRes="Greta_G" Script="greta_tastePw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="703318">
+    <Name>맛보기 돌진</Name>
+    <Artwork>Greta_Taste</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>greta_trample</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="greta_trampleAtk" ActionScript="Greta_Bite" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="Greta_G" Script="greta_tramplePw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="703319">
+    <Name>잡아오기</Name>
+    <Artwork>Greta_Catch</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Far" Cost="0" />
+    <Script>greta_catch</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="1" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="" ActionScript="Greta_HammerThrow" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="703310">
+    <Name>식사</Name>
+    <Artwork>Greta_Eat</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>greta_meal</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="100" Dice="100" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="greta_mealAtk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  
+  
+  <!--                          뒤틀림                         -->
+  <Card ID="707301">
+    <Name>머리 내려치기</Name>
+    <Artwork>TwistGreta1</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>addRecoverHp2Atkalldice</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="9" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="bleeding2pw" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="707302">
+    <Name>꼬리치기</Name>
+    <Artwork>TwistGreta2</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>addRecoverHp2Atkalldice</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="bleeding2pw" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="707303">
+    <Name>사냥의 시간</Name>
+    <Artwork>Greta_Eat</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>addRecoverHp2Atkalldice</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="paralysis1pw" ActionScript="" Desc="" />
+      <Behaviour Min="7" Dice="10" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="bleeding3pw" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="9" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="707304">
+    <Name>꼬리 회축</Name>
+    <Artwork>TwistGreta2</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>addRecoverHp2Atkalldice</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="8" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="bleeding2pw" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="10" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="paralysis2pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="707305">
+    <Name>태클 마운트</Name>
+    <Artwork>TwistGreta3</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>addRecoverHp3Atkalldice</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="11" Dice="15" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="greta_destroyDice" ActionScript="TwistGreta_BiteS2" Desc="" />
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Slash" Motion="S3" EffectRes="" Script="greta_dmgUpbybleedingbufatk" ActionScript="TwistGreta_BiteS3" Desc="" />
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="greta_dmgUpbybleedingbufatk" ActionScript="TwistGreta_BiteS4" Desc="" />
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="S5" EffectRes="" Script="greta_dmgUpbybleedingbufatk" ActionScript="TwistGreta_BiteS5" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+
+</DiceCardXmlRoot>

@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GroupName>Normal Enemies</GroupName>
+  <Character ID="Stray_Dogs">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">どっからこんなザコどもばっか集めたんだ？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">アニキの命令だし、しゃあねぇな。やるしか。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">どれ、ちょっと身体ほぐしてみっか。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">つべこべ言わず掛かってこいよ。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">アニキの言ってた本を探す。いいな？</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">こんな紙クズのために大騒ぎしたってか？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">早く帰って休みてぇな。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">こんな簡単だとか。呆れたぜ……。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">はぁ、その足で立ってられるのが不思議だよ。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">楽しくもねぇし、二度とやりたくねぇな。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">はっ……！気分クッソ最低だな。</BattleDialog>
+      <BattleDialog ID="DEATH_1">クソッ……こんな風に死にたくはなかったんだがなぁ。</BattleDialog>
+      <BattleDialog ID="DEATH_2">この……生意気な……！</BattleDialog>
+      <BattleDialog ID="DEATH_3">ああやって攻撃するとか反則だろ！畜生……チクショウ！</BattleDialog>
+      <BattleDialog ID="DEATH_4">俺が一番の馬鹿だったか……。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">お前が死んだらアニキにまた説教食らうんだって！</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">全員気を付けろっつってんだろ！畜生、余計面倒じゃねぇか。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">……そうだな、俺さえ生き残ればそれで良いんだ。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">別に、あんな弱っちいヤツ１人くらい失せても勝てる……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">これでサヨナラとか、ちょっと寂しいなぁ。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">ザコかよ。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">もうぶっ倒れたのか、つまんねぇな。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">そうやってしゃしゃり出て来っからぶっ倒されんだよ。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">もうおねむの時間ですかぁ？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">あははは！お前らも見るんだったな、さっきくたばったやつの顔！</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="lulu_friend1">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">まっかせて～！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">あいつらそんな強いって？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">ハンマー１発食らっとく？</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">よ～いしょっと！疲れたけど結構やりがいはあったよ！</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">よし。こんくらいのやつらなんて朝飯前だって！</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">あれ、拾っとけば良いんでしょ？</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">え……死んじゃうの……？</BattleDialog>
+      <BattleDialog ID="DEATH_1">何これ……ほんと情けないな……。</BattleDialog>
+      <BattleDialog ID="DEATH_2">ムカつく……このまま死ねるか！</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">もっと頑張ら……ないと。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">どうすれば……この状況を乗り越えられるんだろう……？</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">あんな風になりたくない……。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">よし、他の奴らも片付けちゃおう！</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">やっほぃ！さっきのどうだった？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">ホント、片付けやすいやつだねぇ！</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="lulu_friend2">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">つまんなさそうなやつばっかだね？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">串刺しにしてやる！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">力になれるなら！</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">他の本も持って帰れたりする？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">よゆ～よゆ～。こんくらい楽勝！</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">ちょっとギリギリだったね……ふぅ！</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">ごめん、最後まで手伝えなくて……。</BattleDialog>
+      <BattleDialog ID="DEATH_1">どうして……こんな場所に来たんだろう？</BattleDialog>
+      <BattleDialog ID="DEATH_2">大丈夫だと思ったのに……。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">少し……怖くなってきた。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">気、気にしない……よ、うん……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">……みんな一緒に勝てると思ったのに。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">うぅ、クソ野郎が。思ってたより強いじゃん！</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">つまんないやつ。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">結構いい感じじゃ？もっと来な！</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Yun_Fixer2">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">先に攻撃できた方が多分有利だよね？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">ここに入れるくらいの根性くらいはあるんだってばぁ～。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">猫探しよりは楽しそうだよね？</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">もっと強いやつが来れば1分も耐えられなかっただろうね？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">そんな、私たちにも勝てなかったの？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">こいつらも、まだまだだよねぇ～。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">……行くなって言ったの。聞いておけばよかったかな……。</BattleDialog>
+      <BattleDialog ID="DEATH_1">もっと高いところに行きたかったのに。</BattleDialog>
+      <BattleDialog ID="DEATH_2">悔しい……悔しくて耐えられない。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">うそ……でしょ……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">こんな怖い場所だったとか……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">今でも逃げたほうがいいんじゃない？</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">ふん、弱っちいねぇ！</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">隙はっけ～ん、失礼！</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">まぁ……偶然だったけどね！</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Yun_Fixer1">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">うぅ……大口叩いたけど、やっぱちょっとアレだと思うんだけど……。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">いやぁ、図書館ってこんなに大きいのか……？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">思ってたより強そうだけど……勝てるか？</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">簡単な仕事もこなせないって思うだなんて、みんな心配性だな。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">ビビって損した……こんな簡単に終わるとか！</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">これだけ本があれば……たんまり報酬が貰えそうだなぁ！</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">……俺が……どう……どうしてこんな目に。</BattleDialog>
+      <BattleDialog ID="DEATH_1">結局、俺は上に登れなかったのか。</BattleDialog>
+      <BattleDialog ID="DEATH_2">もう目を開ける力も、意地もない。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">段々危なくなってる気が……するんだが……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">……今の見たか？本……が……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">こんな簡単に終わるとか……信じられねぇ。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">そんなんでお宝とやらが守れるのか？あはは！</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">俺の相手にもならなかったじゃねぇか！</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">こっちも遊びでこんな事やってるわけじゃないんだ。</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Yun_Office">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">代表ってホントに来るの……？あーもう……。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">時間だけ稼ごう……。まともに相手するには怖いし。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">いつまで私たちが相手しなきゃいけないの……？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">先陣切るのって私苦手なんですよぉ……。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">でもすぐ行くって言ってたし……頑張って耐えよう……。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">何だよ、代表が来る前に終わっちゃったじゃん。楽勝！</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">持ってくもん持って帰れば良いんでしょ？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">ここで本になったとか、ホント情けない人ばっかだなぁ！</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">ま、まさかこの前はもっと強いやつだったとかないよね……？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">これで帰っていいの？</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">……今度はうまく……行くと思ったのに。</BattleDialog>
+      <BattleDialog ID="DEATH_1">死にたくない……まだ生きたいのに……。</BattleDialog>
+      <BattleDialog ID="DEATH_2">やられたなんて……情けない……。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">ためらってるわけにはいかないし……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">身体が弱いなら、せめて目が早くなきゃ……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">大事な仲間が……どうしたらいいの……？</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">恨みはない。ごめんなさい。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">……よし、次はどうやって片付けようか？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">上手く行けばこっちが勝ちそうじゃない……？</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Zwei_Members">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">「あなたの盾」ツヴァイ。ただいまより開始いたします。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">これくらいなら耐えられます。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">自信があるなら掛かってきてください。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">引き下がるような弱気な真似はしません……。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">こんな雰囲気は……いつ味わっても恐ろしいものです。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">任務が完了しましたので、本だけ回収して素早く復帰しましょう。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">難しくはない任務でした</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">お疲れさまでした。この程度なら十分ですよね？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">復帰後に整理しなきゃいけないものが山積みですね……。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">以上、任務が完了します。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">こんな終わりのために、ここまで這い上がってきたわけじゃないのに……。</BattleDialog>
+      <BattleDialog ID="DEATH_1">死にたくない、逃げたい……。</BattleDialog>
+      <BattleDialog ID="DEATH_2">……最後まで、誇りは失いません。</BattleDialog>
+      <BattleDialog ID="DEATH_3">私では……力不足だったみたいですね。</BattleDialog>
+      <BattleDialog ID="DEATH_4">任務を完遂できませんでした。……申し訳ございません。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">今は任務に集中すべきです。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">……しばし黙祷を。お疲れさまです。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">1人……やられました。でも、まだやらないと……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">悲しんでる余裕なんて無いけど……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">戦闘は続行しないといけませんからね……。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">許しは乞いません。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">なにはともあれ、お疲れさまでした</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">もう少し、慎重になるべきです。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">ただ、任務を果たすのみです。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">私の分の仕事は十分こなせたようですね。</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Zwei_Member_Gray">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">「あなたの盾」ツヴァイ。任されたものを守り抜くため、ただいまより任務実行いたします。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">少し震えますが……大丈夫です。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">防御は回避ではありません。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">任務が完了しましたので、本だけ回収して素早く復帰しましょう。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">難しくはない任務でした</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">お疲れさまでした。この程度なら十分ですよね？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">復帰後に整理しなきゃいけないものが山積みですね……。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">以上、任務が完了します。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">こんな終わりのために、ここまで這い上がってきたわけじゃないのに……。</BattleDialog>
+      <BattleDialog ID="DEATH_1">死にたくない、逃げたい……。</BattleDialog>
+      <BattleDialog ID="DEATH_2">……最後まで、誇りは失いません。</BattleDialog>
+      <BattleDialog ID="DEATH_3">私では……力不足だったみたいですね。</BattleDialog>
+      <BattleDialog ID="DEATH_4">任務を完遂できませんでした。……申し訳ございません。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">今は任務に集中すべきです。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">……しばし黙祷を。お疲れさまです。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">1人……やられました。でも、まだやらないと……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">悲しんでる余裕なんて無いけど……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">戦闘は続行しないといけませんからね……。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">許しは乞いません。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">なにはともあれ、お疲れさまでした</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">もう少し、慎重になるべきです。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">ただ、任務を果たすのみです。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">私の分の仕事は十分こなせたようですね。</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Zwei_Member_Yellow">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">「あなたの盾」ツヴァイ。ただいま出動します！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">上手くいくと思います！皆さん頑張りましょう。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">図書館ってほんとに不思議な場所ですね。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">任務が完了しましたので、本だけ回収して素早く復帰しましょう。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">難しくはない任務でした</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">お疲れさまでした。この程度なら十分ですよね？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">復帰後に整理しなきゃいけないものが山積みですね……。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">以上、任務が完了します。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">こんな終わりのために、ここまで這い上がってきたわけじゃないのに……。</BattleDialog>
+      <BattleDialog ID="DEATH_1">死にたくない、逃げたい……。</BattleDialog>
+      <BattleDialog ID="DEATH_2">……最後まで、誇りは失いません。</BattleDialog>
+      <BattleDialog ID="DEATH_3">私では……力不足だったみたいですね。</BattleDialog>
+      <BattleDialog ID="DEATH_4">任務を完遂できませんでした。……申し訳ございません。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">今は任務に集中すべきです。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">……しばし黙祷を。お疲れさまです。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">1人……やられました。でも、まだやらないと……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">悲しんでる余裕なんて無いけど……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">戦闘は続行しないといけませんからね……。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">許しは乞いません。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">なにはともあれ、お疲れさまでした</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">もう少し、慎重になるべきです。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">ただ、任務を果たすのみです。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">私の分の仕事は十分こなせたようですね。</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Zwei_Member_Orange">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">「あなたの盾」ツヴァイ……今より真剣に戦闘を開始いたします。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">ここ、怪しい箇所が1つ2つではないですね……。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">まだ大丈夫です……。何とか耐えられます。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">任務が完了しましたので、本だけ回収して素早く復帰しましょう。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">難しくはない任務でした</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">お疲れさまでした。この程度なら十分ですよね？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">復帰後に整理しなきゃいけないものが山積みですね……。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">以上、任務が完了します。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">こんな終わりのために、ここまで這い上がってきたわけじゃないのに……。</BattleDialog>
+      <BattleDialog ID="DEATH_1">死にたくない、逃げたい……。</BattleDialog>
+      <BattleDialog ID="DEATH_2">……最後まで、誇りは失いません。</BattleDialog>
+      <BattleDialog ID="DEATH_3">私では……力不足だったみたいですね。</BattleDialog>
+      <BattleDialog ID="DEATH_4">任務を完遂できませんでした。……申し訳ございません。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">今は任務に集中すべきです。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">……しばし黙祷を。お疲れさまです。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">1人……やられました。でも、まだやらないと……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">悲しんでる余裕なんて無いけど……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">戦闘は続行しないといけませんからね……。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">許しは乞いません。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">なにはともあれ、お疲れさまでした</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">もう少し、慎重になるべきです。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">ただ、任務を果たすのみです。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">私の分の仕事は十分こなせたようですね。</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Hook_Office">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">これで刺されたら痛いだろうなぁ……一発どう？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">す～っごい怖くて武器落とすところだったな！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">まともに立ってられんのか？まさか震えてなんかないよな？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">一発だけ食らってみろよ、気分すっきりすると思うぜ。もちろん俺がな！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">あいつどうやって殴るかな……。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">えぇ～この後にもっと強いやつ出てくるんだろ？冗談やめろよ～。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">本とかあんま興味ないけど……。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">あっきれたぁ。まだ始まったばっかなのにもう終わりか？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">ページでも破けばスッキリするか？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">こんな場所って知ってれば最初から来てねぇよ。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">こんな場所で……負けるわけには……！</BattleDialog>
+      <BattleDialog ID="DEATH_1">ははっ！や……やられた。</BattleDialog>
+      <BattleDialog ID="DEATH_2">痛いのは……嫌なのに。畜生……。</BattleDialog>
+      <BattleDialog ID="DEATH_3">強い……じゃねぇか。</BattleDialog>
+      <BattleDialog ID="DEATH_4">油断してたこっちが悪いって分かってるけど。でも、でも……。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">ん？今誰か死んだ？惜しいなぁ！</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">やっぱそうなるわなぁ～。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">はぁ。そんくらいで……逆にスゲーよ。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">誰だよこいつ？</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">よし、これでもっと武器がブンブン振り回せるなぁ！</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">ははっ！あのビビってる姿、お前らにも見せたかったなぁ。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">一発くらい、食らったフリでもした方が良かったか？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">そこは避けないと～。まぁ、もう殺られてるし、しゃあないかぁ。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">水風船かよ……またちょっとしか触ってねぇのに。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">つまんねぇなぁ～。もっと強いやつでもいないのか？</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Pierre_freinds">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">うぅ……もうちょっと軽く殴れよ。痛いのは苦手だ。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">何だこれは？ふむ、材料みたいには見えるが……。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">これでまっぷたつにすれば、お前の中からどんな中身が出てくるか気になるなぁ？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">怖気づいた子豚ばっかり集まってるな。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">今朝は３杯しか食べてないから……よだれが……。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">こんな弱い材料じゃ肉も硬いだろうな。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">あ～早く帰って熱々の肉でも食べたいな。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">絵に描いた餅みたいな戦いだったな……。お腹すいた……。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">裏路地の材料とはまた違った感じだな。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">戦いの後には一口かじって元気だすんだけどなぁ……。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">うっ……俺が……逆に殺られるなんて。</BattleDialog>
+      <BattleDialog ID="DEATH_1">こんなやつらに負けるだとか……ほんっと情けないな。</BattleDialog>
+      <BattleDialog ID="DEATH_2">本になるのか……気分悪いし、嫌な気分だな。</BattleDialog>
+      <BattleDialog ID="DEATH_3">は……！俺もまだまだか……。</BattleDialog>
+      <BattleDialog ID="DEATH_4">あいつらを切り刻めなくなったのはちょっと、悔しいなぁ。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">あいつが殺られたか。悲しくはないけど。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">残念。お前もいい材料だったのに。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">味方だろうがなんだろうが材料に手を出せるのは俺だけだ！</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">そう１発でぶっ倒れるとか。情けない。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">やわっこいやつらは不味いからな。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">肉にしろ、人間にしろ、１つぐらい弱点があるもんだ。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">材料の急所が見れないなら、むしろ手痛いしっぺ返しを食らうだろうな。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">次会うときにはもっと垢抜けた肉になってると良いな。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">これは……ブヨブヨし過ぎだな。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">もうちょっと下拵えしたかったけど……残念。</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Staff_Fixer">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">心配せずとも、相手は非常に弱く見えますし……。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">空気がこんな恐ろしい分には楽しめませんね……。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">そういうわけですので、よろしくお願いします。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">ピッタリ合わせて頂きます。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">無謀なことはしません。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">良い戦いでした。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">物品を正当な手段で手に入れられてよかったですね。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">戦闘は無事終了しましたが、気を引き締めましょう。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">結局私たちが勝ちましたが、そちらもお疲れさまでした。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">経験としては悪くなかったです。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">私が力不足だったせいです……申し訳ありません。</BattleDialog>
+      <BattleDialog ID="DEATH_1">私の実力を過信しすぎました……。</BattleDialog>
+      <BattleDialog ID="DEATH_2">私、判断を誤っていましたね。</BattleDialog>
+      <BattleDialog ID="DEATH_3">自分のこと、とても情けなく思います……。</BattleDialog>
+      <BattleDialog ID="DEATH_4">このまま……何が足りなかったのも分からないまま。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">私たちだけでもなんとかなるんでしょうか……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">取り乱してしまいそうです……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">こんな状況を……どうすれば……？</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">そんな……私たちには力不足だったんですかね……？</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">……すみません。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">誰にも負けたくありません……！</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">まだ油断してはいけませんよね。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">このペースでゆっくりやれば、必ず勝てるはずです。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">そこまで難しい仕事ではなかったですね。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">残り少ないですし、もう少し頑張りましょうか。</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Third_Rate_Fixer">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">うぅん、面倒くさいし……適当にやろ～よぉ。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">これ以外にも色々あるし……さっさと済ませよ～。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">こんなやつらはこっちで防がないと……めんどくさ。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">こっちにも色々と事情があるからね～、始めようか。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">今日に限ってやる気出ないなぁ……まぁ、仕事は……まともにやるから。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">まあまあ……良くも悪くもない戦いだったかなぁ。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">帰ればまた仕事だろうなぁ。はぁ……めんど。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">別の依頼に比べたら、これくらいは簡単だよなぁ～。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">本何個か持って帰ろっか。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">本はこっちで有効活用するね。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">恥っず……こんな場所で死ぬとか……。</BattleDialog>
+      <BattleDialog ID="DEATH_1">さよならでも言ってくるんだったな。</BattleDialog>
+      <BattleDialog ID="DEATH_2">必死に生きてきたのに……こん畜生が……。</BattleDialog>
+      <BattleDialog ID="DEATH_3">今までの努力が水の泡……か。</BattleDialog>
+      <BattleDialog ID="DEATH_4">これで終わりか……。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">まぁ……君もよくやってきたよ。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">……段々雰囲気ヤバくなってない？</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">別に驚きはしないな。悲しくも。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">敵を倒すのが先だから……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">もう何度も見てきたしね。別に何とも。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">だから引き下がれって～、お互いめんどいでしょ……。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">逃げられる隙は作ったのに……ざまぁ。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">別に何も、弱すぎるし。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">こいつ……体力だけは良いみたいだな……。疲れたよ～。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">後どんだけ残ってるんだよ。ふぅ……めんどくさ。</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="AX">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">この斧で突き刺す感じがほんっと良いんだよなぁ～。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">あんなハナタレから何を奪おうってんだ。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">この斧を受け止めるのも難しいんじゃ？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">ひよっ子なんかはズシズシやっちまおうぜぇ～。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">悪い雰囲気じゃねぇなぁ～、血の匂いもするし。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">なんか勝った気がしないなぁ。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">お前ら本当にあのヤバい奴らなんだよな？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">こんなスッキリ勝てたし、なんだか歌いたくなってきたなぁ！</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">もしかして、本を寄付する慈善団体……とかじゃないよな？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">本になったあいつらにはちょっと申し訳ねぇけど、どうしろって！</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">この……何だよこのザマは……！</BattleDialog>
+      <BattleDialog ID="DEATH_1">こんなはずない……きっと卑怯な手を使ったんだ……！</BattleDialog>
+      <BattleDialog ID="DEATH_2">嘘だ……。ま、負けるわけなんて無いのに……。</BattleDialog>
+      <BattleDialog ID="DEATH_3">あんな奴らに殺られたって？これは夢だ……。</BattleDialog>
+      <BattleDialog ID="DEATH_4">あいつら全員バラバラにするまで死ねねぇよ！！！</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">あのクソ野郎どもが……同じ目に遭わせてやるからな。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">ア、アニキ……誰が殺した。誰が殺したんだよ！</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">友だちが去ってくのはちょ～っと寂しいかな。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">こっちが代わりに殴られたりもできないし、まぁ。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">もっと早く片付けられたら……。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">こんな実力で喧嘩売ったって？こっちが恥ずかしくなるよ。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">そんなへなちょこが何かを守れるとでも？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">やっぱりズッシリ１発キメるのが最高だなぁ。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">紙ペラみたいにぶっ飛んでったのか？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">厄介連中をぶっ潰すのは造作もねぇことだな。</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Hook+Pierre_Hook">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">こいつも良いもん持ってるじゃねぇか！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">俺たち、中々気が合いそうだよなぁ？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">これで刺されたら痛いだろうなぁ……。一緒に殴るか？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">お前もぶっ刺すの好きなのか？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">あん？俺も肉になれるって？斬新だなおい！</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">いやぁ～、息がピッタリ合う仲間とやるとこんな簡単に終わっちゃうかぁ。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">23区の路地かぁ……お前らの考え、凄く気に入ったぜ！</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">うちの組員以外にもこんな相性がいい人がいるなんて……不思議だなぁ！？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">ページを引き裂けば気が収まるかなぁ？一緒にちぎるか！</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">こんな場所で……負けるわけには……！</BattleDialog>
+      <BattleDialog ID="DEATH_1">ははっ！や……やられた。</BattleDialog>
+      <BattleDialog ID="DEATH_2">痛いのは……嫌なのに。畜生……。</BattleDialog>
+      <BattleDialog ID="DEATH_3">強い……じゃねぇか。</BattleDialog>
+      <BattleDialog ID="DEATH_4">油断してたこっちが悪いって分かってるけど。でも、でも……。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">えぇ……いい人だと思ったけど、身体ブヨブヨじゃねぇか！</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">見掛け倒しかぁ……ざんね～ん。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">体つきは結構悪くなかったんだけどな。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">期待の分だけ失望も大きいってか～。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">まぁ、ある意味うちとは全く関係ないやつじゃん？</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">ホント息ぴったりだったな！ハイタッチ？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">一緒に引き裂こうぜ！本でもなんでも。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">肉の解体かぁ……やってみたくはあるな！</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Hook+Pierre_Pierre">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">出会ったのは偶然だけど……結構気が合う気がするな？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">さっさと終わらせようか、一緒に。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">お前もこんなのが好きか？結構いい趣味してるな。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">なんだか一掃できそうな気がするんだけど。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">お前からも、美味しそうな臭いがするんだ。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">鈎事務所って言ったか……いい名前だな。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">今日の戦いは申し分なかったな。若いってのになかなかやるな。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">まだ足りないなぁ……新しい材料でも探しに行くか？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">何が何でも、もっと引きちぎらないと気が収まらないな。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">うっ……俺が……逆に殺られるなんて。</BattleDialog>
+      <BattleDialog ID="DEATH_1">こんなやつらに負けるだとか……ほんっと情けないな。</BattleDialog>
+      <BattleDialog ID="DEATH_2">本になるのか……気分悪いし、嫌な気分だな。</BattleDialog>
+      <BattleDialog ID="DEATH_3">は……！俺もまだまだか……。</BattleDialog>
+      <BattleDialog ID="DEATH_4">あいつらを切り刻めなくなったのはちょっと、悔しいなぁ。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">あいつが死んだか。気に入ってたんだけどね……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">あぁ……久々に相性がいい人を見つけられたと思ったのに……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">惜しいけど、こんなやつらにやられるくらいには弱いってことだな。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">心配するな、俺が皆殺しにするから。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">得物がものすごく強そうな仲間だったのに。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">久々の協業か……これ、結構楽しいな。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">次は俺も巨大なフックみたいなのでも使ってみるかな。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">こんな波長が合うとは思わなかったんだけどな。</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Fixers_Staff">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">あんな柄の悪い方と一緒じゃないとダメなんですか？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">邪魔だけはしないでください。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">はぁ……ほんと非常識な方ですね。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">そんな強がってるだけなのに、上手く戦えるんですか？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">あっちは気にしないことにしましょう。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">互いの相性がそこまで悪いわけではなかったですね。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">こちらで持ってくべきものは、私で勝手に持っていきますので。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">よくやってくれました、でも、もう二度と会わないようにしましょう。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">最後まで……まあいいです。もう二度と会いませんし。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">私が力不足だったせいです……申し訳ありません。</BattleDialog>
+      <BattleDialog ID="DEATH_1">私の実力を過信しすぎました……。</BattleDialog>
+      <BattleDialog ID="DEATH_2">私、判断を誤っていましたね。</BattleDialog>
+      <BattleDialog ID="DEATH_3">自分が恥ずかしくて仕方ありません……。</BattleDialog>
+      <BattleDialog ID="DEATH_4">このまま……何が足りなかったのも分からないまま。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">余裕こいてたというのに、そんな風になるとは思ってました。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">何ですか……？口を動かすよりも役に立ってくださいよ！</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">やはり、緊張の糸を緩めてはいけませんね……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">大丈夫です。私一人でも……何とかできます……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">あんなフラフラ動き回ってたのに……。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">誰かさんがグズグズしてなければもっと早くに終わったでしょうね。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">こんな早く片付けられるのにどうしてそんなノロノロ動くんですか？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">はぁ……メンバーがあの調子ですので私１人頑張ります。</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Fixers_Third">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">相手ばっか素人かと思ったんだけど……こっちにも素人がいるんだな！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">はぁ、まったく。そっちよりは上手くやれてるし、戦いに集中してくださいね～。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">そんな固く生きてちゃ人生つまんないよぉ～。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">ふつーにそれぞれの動いた方が良いんじゃ？全然合わないじゃん。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">はぁ……頭痛い。まぁ適当にやろうって、ね？</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">まあまあ……良くも悪くもない戦いだったかな。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">まぁ……それなりに息は合ってた気がするな。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">二度とお会いしたくないです、せんせ～。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">僕のおかげで勝てたってのに～その様子じゃ全然分かってないな。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">恥っず……こんな場所で死ぬとか……。</BattleDialog>
+      <BattleDialog ID="DEATH_1">さよならでも言ってくるんだったな。</BattleDialog>
+      <BattleDialog ID="DEATH_2">必死に生きてきたのに……こん畜生が……。</BattleDialog>
+      <BattleDialog ID="DEATH_3">今までの努力が水の泡か。</BattleDialog>
+      <BattleDialog ID="DEATH_4">これで終わりか……。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">原理原則ばっか守ってるからそうなるんだよ～。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">別に、誰が死のうと気にならないし。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">口から先に生まれてきたんだろ、お前。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">僕が全部片付けられるから。心配しないで～。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">まぁ……お前も結構上手くやってくれたけどな。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">横からキャンキャンうっさいなぁ……まぁ確かに上手いけど。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">余裕があればこんなに強くなれるってことだよ～。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">卑怯じゃないよ。あいつよりもう少し頭が良かったってだけ。</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="AX+Dogs_AX">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">一緒に叩き切られたくないならグズグズするなよぉ、わんちゃんたち～。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">これが刺さったら痛いだろうな……試してみる？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">困ったときは助け合い～っていうのに、どうしてそんな顔してるんだ？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">頑張れよ？ぶっ殺されたくはないだろ。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">まぁ、犬もそこそこ良い実力だったなぁ～。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">最後までこっちのことが気に入らないみたいだなぁ？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">これでよし。こっちはこっちで必要なものだけ持っていけばいいしな。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">こっちが助けてやったから勝ったんだろ、もうちょっと良い顔しろよ。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">この……何だよこのザマは……！</BattleDialog>
+      <BattleDialog ID="DEATH_1">こんなはずない……きっと卑怯な手を使ったんだ……！</BattleDialog>
+      <BattleDialog ID="DEATH_2">嘘だ……。ま、負けるわけなんて無いのに……。</BattleDialog>
+      <BattleDialog ID="DEATH_3">あんなガキに殺られたって？これは夢だ……。</BattleDialog>
+      <BattleDialog ID="DEATH_4">あいつら全員バラバラにするまで死ねねぇよ！！！</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">あのクソ野郎どもが……同じ目に遭わせてやるからな。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_1">ア、アニキ……誰が殺した。誰が殺したんだよ！</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_2">友だちが去ってくのはちょ～っと寂しいかな。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_3">こっちが代わりに殴られたりもできないし、まぁ。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_4">もっと早く片付けられたら……。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_5">こんなすぐぶっ倒れるやつだなんて知らなかったなぁ！</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_6">可哀想なやつばっかだな。こんくらいでポックリ逝くとか。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_7">はぁ……助けない方がマシだったかもな。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_8">逃げようか？今さら逃げるには遅すぎたか……？</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_9">まあなぁ～、あいつはああやって死ぬと思ってたし。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">このままじゃ俺１人でみんな片付きそうだな、わんちゃ～ん。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">ほれ見ろ！ブツブツ言ってる奴らよりぶっ殺せてるじゃんか。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">もう完全に俺ばっかやってるじゃんか～。</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="AX+Dogs_Dogs">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">あんなイカれたやつらが味方とか……ホンット最悪だ。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">確かここにアニキたちがいるって言ってたよな……。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">ずる賢いやつだ。身体じゃなくて武器を使うだとか。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">あんなやつらなんかいなくたって、十分勝てるしな。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">アニキたちをどこにやった？答えろ！！！</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">はっ、大したことないやつらが。アニキ！今行きます。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">助けてもらうのはこれが最後だ。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">こんな弱っちいくせに、何をしようってんだ。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">あのガキどもはどこまでいってもうるさいなぁ。休ませろよ、口。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">はっ……！気分クッソ最低だな。</BattleDialog>
+      <BattleDialog ID="DEATH_1">クソッ……こんな風に死にたくはなかったんだがなぁ。</BattleDialog>
+      <BattleDialog ID="DEATH_2">この……生意気な……！</BattleDialog>
+      <BattleDialog ID="DEATH_3">ああやって攻撃するとか反則だろ！畜生……チクショウ！</BattleDialog>
+      <BattleDialog ID="DEATH_4">俺が一番の馬鹿だったか……。</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">はぁ……あの役にも立たない野郎が……。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_1">あんな弱ぇやつが何で来たんだよ？</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_2">結局、口先ばっかのやつだったな。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_3">くたばるヤツが先に逝くってだけだ。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_4">どうせ邪魔だったし。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_5">お前が死ねばまたアニキに説教食らうかもしれないんだよ！</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_6">みんな気をつけろ！クソッ、余計面倒なことになったじぇねぇか。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_7">……そうだ、俺さえ殺られなきゃいいんだ。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_8">別に。あんな弱っちいやつなしでも勝てる……。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_9">これでサヨナラとか、ちょっと寂しいなぁ。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">変なやつらに任せるくらいなら早く俺が片付けちまおうか。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">偉そうに自慢してるやつの話をまともに聞いちゃ駄目だ。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">あの役にすら立たねぇヤツが……１人で戦ってるみたいなもんだな。</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+</BattleDialogRoot>

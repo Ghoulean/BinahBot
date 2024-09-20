@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Card ID="706001">
+    <Name>발톱-일반공격</Name>
+    <Artwork>Claw1</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Special" Cost="2" />
+    <Script>ClawEffect</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="11" Type="Atk" Detail="Slash" Motion="Z" EffectRes="FX_Mon_Claw_Piercing" Script="" ActionScript="theclaw_teleportAtk" Desc="???" />
+      <Behaviour Min="7" Dice="10" Type="Atk" Detail="Hit" Motion="Z" EffectRes="FX_Mon_Claw_Piercing" Script="immuneDestory" ActionScript="theclaw_teleportAtk" Desc="???" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>-1</Priority>
+  </Card>
+  <Card ID="706002">
+    <Name>발톱-강공격</Name>
+    <Artwork>Claw1</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Special" Cost="2" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="9" Dice="18" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="damage3atk" ActionScript="theclaw_strongpiercingAtk" Desc="???" />
+      <Behaviour Min="5" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="706003">
+    <Name>발톱-돌진공격(주황)</Name>
+    <Artwork>Claw2</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Special" Cost="3" />
+    <Script>clawOrangeSerum</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="18" Dice="27" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="" ActionScript="theclaw_chargeAtk" Desc="???" />
+      <Behaviour Min="5" Dice="9" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="706004">
+    <Name>발톱-필살(파랑)</Name>
+    <Artwork>Claw4</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Special" Cost="4" />
+    <Script>clawBlueSerum</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="30" Dice="30" Type="Atk" Detail="Slash" Motion="Z" EffectRes="" Script="" ActionScript="theclaw_ultimateAtk" Desc="???" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="706005">
+    <Name>(모든색)</Name>
+    <Artwork>Claw3</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="4" />
+    <Script>clawAllSerum</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>      
+      <Behaviour Min="8" Dice="14" Type="Atk" Detail="Slash" Motion="Z" EffectRes="" Script="" ActionScript="theclaw_struggleAtk" Desc="???" />
+      <Behaviour Min="8" Dice="14" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="immuneDestory" ActionScript="theclaw_struggleAtk" Desc="???" />
+      <Behaviour Min="8" Dice="14" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="immuneDestory" ActionScript="theclaw_struggleAtk" Desc="???" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="706006">
+    <Name>발톱-(초록)</Name>
+    <Artwork>Claw5</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script>recoverNextRound</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="9" Dice="16" Type="Atk" Detail="Slash" Motion="Z" EffectRes="FX_Mon_Claw_Piercing" Script="" ActionScript="" Desc="???" />
+      <Behaviour Min="5" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="706011">
+    <Name>선</Name>
+    <Artwork>Arbiter1</Artwork>
+    <Rarity>Rare</Rarity>
+    <Option>OnlyPage</Option>
+    <Keyword>onlypage_hana_Keyword</Keyword>
+    <Spec Range="Far" Cost="2" />
+    <Script>negatePower</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="10" Type="Atk" Detail="Slash" Motion="J" EffectRes="TheHead_FarAtk3" Script="forbidReuseDice" ActionScript="thehead_faratk3" Desc="???" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Hit" Motion="J" EffectRes="TheHead_FarAtk3" Script="" ActionScript="thehead_faratk3" Desc="???" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="706012">
+    <Name>선2</Name>
+    <Artwork>Arbiter2</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Far" Cost="2" />
+    <Script>negatePower</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="11" Dice="16" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="TheHead_FarAtk2" Script="forbidReuseDice" ActionScript="thehead_faratk2" Desc="???" />
+      <Behaviour Min="5" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="706013">
+    <Name>선3</Name>
+    <Artwork>Arbiter2</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Far" Cost="3" />
+    <Script>negatePower</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="15" Dice="20" Type="Atk" Detail="Hit" Motion="Z" EffectRes="TheHead_FarAtk1" Script="forbidReuseDice" ActionScript="thehead_faratk1" Desc="???" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="706014">
+    <Name>충격파</Name>
+    <Artwork>Arbiter3</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarArea" Cost="5" Affection ="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="27" Dice="30" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="gloriaDice" ActionScript="thehead_shockwaveAtk" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="706015">
+    <Name>새장</Name>
+    <Artwork>Arbiter1</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Far" Cost="4" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Slash" Motion="H" EffectRes="TheHead_FarAtk3" Script="" ActionScript="thehead_faratk3" Desc="" />
+      <Behaviour Min="8" Dice="13" Type="Atk" Detail="Hit" Motion="Z" EffectRes="TheHead_FarAtk1" Script="sealTargetAtk" ActionScript="thehead_faratk1" Desc="???" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <!-- 약화 롤랑 -->
+  <Card ID="706101">
+    <Name>롤랑-랜스</Name>
+    <TextId>702001</TextId>
+    <Artwork>Roland1</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Option>NoInventory</Option>
+    <Spec Range="Near" Cost="2" />
+    <Script>cardPowerDown2target</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="BlackSilence_Z" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="BlackSilence_Z" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="706102">
+    <Name>롤랑-대검</Name>
+    <TextId>702002</TextId>
+    <Artwork>Roland2</Artwork>
+    <Rarity>Rare</Rarity>
+    <Option>NoInventory</Option>
+    <Spec Range="Near" Cost="4" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="10" Dice="20" Type="Atk" Detail="Hit" Motion="S10" EffectRes="FX_PC_RolRang_Greatsword" Script="clockEgoDice" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="706103">
+    <Name>롤랑-메이스도끼</Name>
+    <TextId>702003</TextId>
+    <Artwork>Roland3</Artwork>
+    <Rarity>Common</Rarity>
+    <Option>NoInventory</Option>
+    <Spec Range="Near" Cost="0" />
+    <Script>rolandDrawUtil</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="S8" EffectRes="BlackSilence_Axe" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="S9" EffectRes="BlackSilence_Mace" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="706104">
+    <Name>롤랑-망치</Name>
+    <TextId>702004</TextId>
+    <Artwork>Roland4</Artwork>
+    <Rarity>Common</Rarity>
+    <Option>NoInventory</Option>
+    <Spec Range="Near" Cost="1" />
+    <Script>energy3AndDraw1</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="BlackSilence_H" Script="recoverBreak5atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="706105">
+    <Name>롤랑-태도</Name>
+    <TextId>702005</TextId>
+    <Artwork>Roland5</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Option>NoInventory</Option>
+    <Spec Range="Near" Cost="2" />
+    <Script>energy3AndDraw1</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="13" Type="Atk" Detail="Slash" Motion="S4" EffectRes="" Script="damage3atk" ActionScript="BlackSilence_LongSword" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="706106">
+    <Name>롤랑-건틀릿단검</Name>
+    <TextId>702006</TextId>
+    <Artwork>Roland6</Artwork>
+    <Rarity>Common</Rarity>
+    <Option>NoInventory</Option>
+    <Spec Range="Near" Cost="0" />
+    <Script>fixedCost</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S5" EffectRes="BlackSilence_Gauntlet1" Script="" ActionScript="BlackSilence_Gauntlet1" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S6" EffectRes="BlackSilence_Gauntlet2" Script="" ActionScript="BlackSilence_Gauntlet2" Desc="" />
+      <Behaviour Min="2" Dice="6" Type="Atk" Detail="Slash" Motion="S7" EffectRes="" Script="bleeding2atk" ActionScript="BlackSilence_ShortSword" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="706107">
+    <Name>롤랑-쌍검</Name>
+    <TextId>702007</TextId>
+    <Artwork>Roland7</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Option>NoInventory</Option>
+    <Spec Range="Near" Cost="3" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Slash" Motion="J" EffectRes="BlackSilence_J" Script="" ActionScript="BlackSilence_DualWield1" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Slash" Motion="S15" EffectRes="BlackSilence_J" Script="" ActionScript="BlackSilence_DualWield2" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Slash" Motion="J" EffectRes="BlackSilence_J" Script="" ActionScript="BlackSilence_DualWield1" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="706108">
+    <Name>롤랑-샷건리볼버</Name>
+    <TextId>702008</TextId>
+    <Artwork>Roland8</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Option>NoInventory</Option>
+    <Spec Range="Far" Cost="2" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="BlackSilence_Revolver" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="BlackSilence_Revolver" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="11" Type="Atk" Detail="Hit" Motion="S11" EffectRes="BlackSilence_Shotgun" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="706109">
+    <Name>롤랑-듀랜달</Name>
+    <TextId>702009</TextId>
+    <Artwork>Roland9</Artwork>
+    <Rarity>Rare</Rarity>
+    <Option>NoInventory</Option>
+    <Spec Range="Near" Cost="2" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Slash" Motion="S12" EffectRes="FX_PC_RolRang_Slash_Down" Script="strength1atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="S13" EffectRes="FX_PC_RolRang_Slash_UP" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="706110">
+    <Name>롤랑-필살</Name>
+    <TextId>702010</TextId>
+    <Artwork>Roland10</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>Personal</Option>
+    <Spec Range="Near" Cost="3" />
+    <Script>blackSilenceSpecial</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="15" Dice="20" Type="Atk" Detail="Slash" Motion="S12" EffectRes="FX_PC_RolRang_Slash_Down" Script="blackSilenceSpecialDice" ActionScript="BlackSilence_SpecialDurandal" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="706201">
+    <Name>자물쇠</Name>
+    <Artwork>BinahCard1</Artwork>
+    <Rarity>Rare</Rarity>
+    <Option>NoInventory</Option>
+    <Spec Range="Far" Cost="3" />
+    <Script>energy1</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="9" Dice="20" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="forbidCardAtk" ActionScript="Binah_Lock_Up" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="S1" EffectRes="FX_PC_BinahUP_ATK1" Script="binding2atk" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="706202">
+    <Name>요정</Name>
+    <Artwork>BinahCard2</Artwork>
+    <Rarity>Common</Rarity>
+    <Option>NoInventory</Option>
+    <Spec Range="Far" Cost="0" />
+    <Script>energy1</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Slash" Motion="S2" EffectRes="FX_PC_BinahUP_ATK1" Script="fairy1atk" ActionScript="" Desc="적중: 요정 부여" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="S2" EffectRes="FX_PC_BinahUP_ATK1" Script="fairy1atk" ActionScript="" Desc="적중: 요정 부여" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+    <PriorityScript>energyRecover1</PriorityScript>
+  </Card>
+
+  <Card ID="706203">
+    <Name>충격파</Name>
+    <Artwork>BinahCard3</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>NoInventory</Option>
+    <Spec Range="FarAreaEach" Cost="5" Affection="Team" />
+    <Script>binahArea</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="10" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="binahShockwaveDice1" ActionScript="Binah_Shockwave_Up" Desc="" />
+      <Behaviour Min="7" Dice="9" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="binahShockwaveDice1" ActionScript="Binah_Shockwave_Up" Desc="" />
+      <Behaviour Min="7" Dice="9" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="binahShockwaveDice2" ActionScript="Binah_Shockwave_Up" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+
+  <Card ID="706204">
+    <Name>기둥</Name>
+    <Artwork>BinahCard4</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Option>NoInventory</Option>
+    <Spec Range="Far" Cost="3" />
+    <Script>fairy3atkCard</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="12" Type="Atk" Detail="Slash" Motion="S3" EffectRes="FX_PC_BinahUP_ATK4" Script="forbidReuseDice" ActionScript="Binah_Pillar_Up" Desc="" />
+      <Behaviour Min="7" Dice="11" Type="Atk" Detail="Slash" Motion="S2" EffectRes="FX_PC_BinahUP_ATK1" Script="binding1atk" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="706205">
+    <Name>사슬</Name>
+    <Artwork>BinahCard5</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Option>NoInventory</Option>
+    <Spec Range="Far" Cost="2" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="9" Dice="16" Type="Atk" Detail="Hit" Motion="Z" EffectRes="FX_PC_BinahUP_ATK2" Script="sealTargetAtk" ActionScript="Binah_Chain_Up" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+</DiceCardXmlRoot>

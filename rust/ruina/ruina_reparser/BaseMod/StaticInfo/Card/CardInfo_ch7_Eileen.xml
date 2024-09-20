@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Card ID="703201">
+    <Name>생각톱니: 가속</Name>
+    <Artwork>Eileen1</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Far" Cost="0" />
+    <Script>drawCard</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703202">
+    <Name>생각톱니: 설파</Name>
+    <Artwork>Eileen2</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Far" Cost="1" />
+    <Script>drawCard</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="11" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Standby" Detail="Hit" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>2</Priority>
+  </Card>
+  
+  <Card ID="703203">
+    <Name>생각톱니: 전파</Name>
+    <Artwork>Eileen3</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Far" Cost="2" />
+    <Script>drawCard</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="10" Type="Standby" Detail="Slash" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>1</Priority>
+  </Card>
+
+  <!--힘부여-->
+  <Card ID="703204">
+    <Name>고기톱니: 강화</Name>
+    <Artwork>Eileen4</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Far" Cost="0" />
+    <Script>elieenalliespower2</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>200</Priority>
+  </Card>
+
+  <!--체력회복-->
+  <Card ID="703205">
+    <Name>고기톱니: 고무</Name>
+    <Artwork>Eileen5</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Far" Cost="0" />
+    <Script>elieenallieshp10</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="11" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>200</Priority>
+  </Card>
+
+  <!--신속 부여-->
+  <Card ID="703206">
+    <Name>고기톱니: 가속</Name>
+    <Artwork>Eileen6</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Far" Cost="0" />
+    <Script>elieenalliesquickness2</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="9" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>200</Priority>
+  </Card>
+
+  <!--세뇌-->
+  <Card ID="703207">
+    <Name>생각톱니: 세뇌</Name>
+    <Artwork>Eileen7</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarArea" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="10" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="eileen_Text" ActionScript="Eileen_FarArea" Desc="" />
+      <Behaviour Min="14" Dice="20" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="eileen_Stun" ActionScript="Eileen_FarArea_Second" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>250</Priority>
+  </Card>
+
+  <Card ID="703299">
+    <Name>에일린 생각 톱니: 예지 스킬</Name>
+    <Artwork>Eileen1</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Far" Cost="0" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="5" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  
+  
+  
+  
+  <!--뒤틀림 모두 원거리--> 
+  <Card ID="707201">
+    <Name>생각 톱니: 예지</Name>
+    <Artwork>Eileen1</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Far" Cost="0" />
+    <!--사용시 연기 1을 얻음-->
+    <Script>smokeSelf1</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <!--적중시 연기 2 부여-->
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="smoke2atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="707202">
+    <Name>생각톱니: 연소</Name>
+    <Artwork>Eileen1</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Far" Cost="0" />
+    <!--사용시 연기 1을 얻음-->
+    <Script>smokeSelf1</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <!--적중시 연기 1 부여-->
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="smoke1atk" ActionScript="" Desc="" />
+      <!--적중시: 대상에게 화상이 있다면, 부여된 연기만큼 연기를 부여-->
+      <Behaviour Min="6" Dice="11" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="smokeatkbyburnbuf" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="707203">
+    <Name>생각톱니: 연기 범람</Name>
+    <Artwork>TwistEileen1</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Far" Cost="0" />
+    <!--사용시 대상의 연기가 5이상이라면, 공격 주사위에 연기 부여 +2-->
+    <Script>smoke2addatk</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <!--적중시 연기 2 부여-->
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="smoke2atk" ActionScript="" Desc="" />
+      <!--적중시 연기 2 부여-->
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="smoke2atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="707204">
+    <Name>생각톱니: 연기 순환</Name>
+    <Artwork>Eileen6</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Far" Cost="0" />
+    <!--사용시 연기 2를 얻음-->
+    <Script>smokeSelf2</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <!--적중: 대상에게 연기가 있다면 연기 / 2만큼 피해량 증가-->
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="dmgupbysmokebuf" ActionScript="" Desc="" />
+      <!--적중: 대상에게 연기가 있다면 연기 / 2만큼 피해량 증가-->
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="dmgupbysmokebuf" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="707205">
+    <Name>생각톱니: 부여</Name>
+    <Artwork>Eileen3</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Far" Cost="0" />
+   <!--사용시 연기가 5이상이라면, 다음 막 아군 한 명에게 신속 2, 힘 2부여-->
+    <Script>strength2quickness2friendbytargetsmoke</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  
+  <Card ID="707206">
+    <Name>생각 톱니: 강림</Name>
+    <Artwork>TwistEileen2</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarArea" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <!--[합산] [적중] 다음 막에 행동 불가 부여 , 연기 5부여, 연출 필요-->
+      <Behaviour Min="16" Dice="22" Type="Atk" Detail="Hit" Motion="S3" EffectRes="" Script="smoke5atkandStun" ActionScript="TwistEileen_FarArea" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>200</Priority>
+  </Card>
+
+
+
+
+
+</DiceCardXmlRoot>

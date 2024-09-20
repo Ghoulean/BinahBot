@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<StageXmlRoot>
+  <!-- ch2 일반 전투 -->
+  <Stage id="100001">
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>11003</Unit>
+      <Unit>11004</Unit>
+      <Unit>11004</Unit>
+    </Wave>
+    <FloorNum>2</FloorNum>
+    <Invitation Combine="BookValue">
+      <Value>2</Value>
+      <Num>1</Num>
+    </Invitation>
+    <Chapter>2</Chapter>
+  </Stage>
+  
+  
+  <Stage id="100002">
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>11002</Unit>
+      <Unit>11002</Unit>
+      <Unit>11002</Unit>
+    </Wave>
+    <FloorNum>2</FloorNum>
+    <Invitation Combine="BookValue">
+      <Value>2</Value>
+      <Num>2</Num>
+    </Invitation>
+    <Chapter>2</Chapter>
+  </Stage>
+  <Stage id="100003">
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>11002</Unit>
+      <Unit>11003</Unit>
+      <Unit>11004</Unit>
+    </Wave>
+    <FloorNum>2</FloorNum>
+    <Invitation Combine="BookValue">
+      <Value>1.5</Value>
+      <Num>3</Num>
+    </Invitation>
+    <Chapter>2</Chapter>
+  </Stage>
+
+  <!-- ch3 일반 전투 -->
+  <Stage id="100004">
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>21007</Unit>
+      <Unit>21008</Unit>
+      <Unit>21007</Unit>
+    </Wave>
+    <FloorNum>2</FloorNum>
+    <Invitation Combine="BookValue">
+      <Value>3</Value>
+      <Num>1</Num>
+    </Invitation>
+    <Chapter>3</Chapter>
+  </Stage>
+
+  <Stage id="100005">
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>21009</Unit>
+      <Unit>21010</Unit>
+      <Unit>21009</Unit>
+    </Wave>
+    <FloorNum>2</FloorNum>
+    <Invitation Combine="BookValue">
+      <Value>2.5</Value>
+      <Num>2</Num>
+    </Invitation>
+    <Chapter>3</Chapter>
+  </Stage>
+
+  <Stage id="100006">
+    <Wave>
+      <Formation>5</Formation>
+      <Unit>21007</Unit>
+      <Unit>21010</Unit>
+      <Unit>21009</Unit>
+    </Wave>
+    <FloorNum>2</FloorNum>
+    <Invitation Combine="BookValue">
+      <Value>2.5</Value>
+      <Num>3</Num>
+    </Invitation>
+    <Chapter>3</Chapter>
+  </Stage>
+
+  <Stage id="100007">
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>21011</Unit>
+      <Unit>21005</Unit>
+      <Unit>21005</Unit>
+    </Wave>
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>21011</Unit>
+      <Unit>21005</Unit>
+      <Unit>21005</Unit>
+    </Wave>
+    <FloorNum>3</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>220013</Book>
+      <Book>220014</Book>
+      <Book>220015</Book>
+    </Invitation>
+    <Chapter>3</Chapter>
+    <invitationtype>true</invitationtype>
+  </Stage>
+
+  <Stage id="100008">
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>21011</Unit>
+      <Unit>21011</Unit>
+      <Unit>21011</Unit>
+    </Wave>
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>21012</Unit>
+      <Unit>21011</Unit>
+      <Unit>21011</Unit>
+    </Wave>
+    <FloorNum>3</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>220009</Book>
+      <Book>220010</Book>
+      <Book>220011</Book>
+    </Invitation>
+    <Chapter>3</Chapter>
+    <invitationtype>true</invitationtype>
+  </Stage>
+
+  <!-- ch4 일반 전투 -->
+  <Stage id="100009">
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>31003</Unit>
+      <Unit>31003</Unit>
+      <Unit>31003</Unit>
+    </Wave>
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>31002</Unit>
+      <Unit>31003</Unit>
+      <Unit>31003</Unit>
+    </Wave>
+    <FloorNum>2</FloorNum>
+    <Invitation Combine="BookValue">
+      <Value>4</Value>
+      <Num>1</Num>
+
+    </Invitation>
+    <Chapter>4</Chapter>
+    <invitationtype>true</invitationtype>
+  </Stage>
+
+  <Stage id="100010">
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>31004</Unit>
+      <Unit>31004</Unit>
+      <Unit>31004</Unit>
+    </Wave>
+
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookValue">
+      <Value>4</Value>
+      <Num>2</Num>
+    </Invitation>
+
+    <Chapter>4</Chapter>
+    <invitationtype>true</invitationtype>
+  </Stage>
+ 
+
+  <!-- ch5 세븐협회 -->
+  <Stage id="100011">
+    <Wave>
+      <Formation>9</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>43002</Unit>
+      <Unit>43002</Unit>
+      <Unit>43002</Unit>
+      <Unit>43002</Unit>
+    </Wave>
+    <Wave>
+      <Formation>9</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>43001</Unit>
+      <Unit>43002</Unit>
+      <Unit>43002</Unit>
+      <Unit>43002</Unit>
+    </Wave>
+    <FloorNum>2</FloorNum>
+    <Invitation Combine="BookValue">
+      <Value>5</Value>
+      <Num>1</Num>
+
+    </Invitation>
+    <Chapter>5</Chapter>
+    <invitationtype>true</invitationtype>
+  </Stage>
+
+  <!--ch5 검계-->
+  <Stage id="100012">
+    <Wave>
+      <Formation>9</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>43003</Unit>
+      <Unit>43004</Unit>
+      <Unit>43004</Unit>
+      <Unit>43004</Unit>
+    </Wave>
+    
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookValue">
+      <Value>5</Value>
+      <Num>2</Num>
+
+    </Invitation>
+    <Chapter>5</Chapter>
+    <invitationtype>true</invitationtype>
+  </Stage>
+
+  <!--매우 강한 1급 해결사-->
+  <Stage id="100013">
+    <Wave>
+      <Formation>1</Formation>
+      <AvailableUnit>1</AvailableUnit>
+      <Unit>43005</Unit>
+    </Wave>
+    
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookValue">
+      <Value>6</Value>
+      <Num>1</Num>
+
+    </Invitation>
+
+    <Chapter>6</Chapter>
+    <invitationtype>true</invitationtype>
+  </Stage>
+
+  <!-- ch 4 J사 -->
+  <Stage id="100014">
+    <Wave>
+      <Formation>41</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>34001</Unit>
+      <Unit>34002</Unit>
+      <Unit>34002</Unit>
+      <Unit>34002</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookValue">
+      <Value>4</Value>
+      <Num>3</Num>
+
+    </Invitation>
+    <Chapter>4</Chapter>
+    <invitationtype>true</invitationtype>
+  </Stage>
+
+ <!-- ch 6 밤의 송곳 -->
+  <Stage id="100015">
+    <Wave>
+      <Formation>41</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>52001</Unit>
+      <Unit>52002</Unit>
+      <Unit>52002</Unit>
+      <Unit>52002</Unit>
+      <Unit>52002</Unit>
+    </Wave>
+
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookValue">
+      <Value>6</Value>
+      <Num>2</Num>
+    </Invitation>
+
+    <Chapter>6</Chapter>
+    <invitationtype>true</invitationtype>
+  </Stage>
+
+  <!-- ch 6 우제트 -->
+  <Stage id="100016">
+    <Wave>
+      <Formation>41</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>53001</Unit>
+      <Unit>53001</Unit>
+      <Unit>53001</Unit>
+      <Unit>53001</Unit>
+      <Unit>53001</Unit>
+    </Wave>
+
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookValue">
+      <Value>6</Value>
+      <Num>3</Num>
+    </Invitation>
+
+    <Chapter>6</Chapter>
+    <invitationtype>true</invitationtype>
+  </Stage>
+
+  <!-- ch 6 미래생명 -->
+  <Stage id="100017">
+    <Wave>
+      <Formation>41</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>54001</Unit>
+      <Unit>54002</Unit>
+      <Unit>54002</Unit>
+      <Unit>54002</Unit>
+      <Unit>54002</Unit>
+    </Wave>
+
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookValue">
+      <Value>7</Value>
+      <Num>1</Num>
+    </Invitation>
+
+    <Chapter>6</Chapter>
+    <invitationtype>true</invitationtype>
+  </Stage>
+
+  <!-- ch 6 공방소속 -->
+  <Stage id="100018">
+    <Wave>
+      <Formation>41</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>55001</Unit>
+      <Unit>55002</Unit>
+      <Unit>55002</Unit>
+      <Unit>55002</Unit>
+      <Unit>55002</Unit>
+    </Wave>
+
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookValue">
+      <Value>7</Value>
+      <Num>2</Num>
+    </Invitation>
+
+    <Chapter>6</Chapter>
+    <invitationtype>true</invitationtype>
+  </Stage>
+
+  <!-- ch 6 베이야드 -->
+  <Stage id="100019">
+    <Wave>
+      <Formation>41</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>56001</Unit>
+      <Unit>56002</Unit>
+      <Unit>56002</Unit>
+      <Unit>56002</Unit>
+      <Unit>56002</Unit>
+    </Wave>
+
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookValue">
+      <Value>7</Value>
+      <Num>3</Num>
+    </Invitation>
+
+    <Chapter>6</Chapter>
+    <invitationtype>true</invitationtype>
+  </Stage>
+
+</StageXmlRoot>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SceneEffect xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Dialogue ID="0">
+    <Bg Src="ch1_backstreet" />
+    <Filter Src="Continue" />
+    <Bgm Src="ch1_BackStreet" Effect="On" PrevBgm="Off" />
+    <CharacterList>
+      <Character Name="해결사1" Face="none" Pos="R1" Emotion="ANNOY" Telling="false">
+        <Active Effect="NORMAL" Ratio="0" />
+      </Character>
+      <Character Name="해결사2" Face="none" Pos="C" Emotion="NONE" Telling="false">
+        <Active Effect="NORMAL" Ratio="0" />
+      </Character>
+      <Character Name="핀" Face="soonjin" Pos="L1" Emotion="NONE" Telling="false">
+        <Active Effect="NORMAL" Ratio="0" />
+      </Character>
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="9">
+    <Bg Src="None" />
+    <Filter Src="Continue" />
+    <Bgm Src="None" Effect="None" PrevBgm="Continue" />
+    <CharacterList>
+      <Character Name="핀" Face="quaere" Pos="L1" Emotion="QUESTION" Telling="false" />
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="16">
+    <Bg Src="ch1_library_inside" />
+    <Filter Src="1" />
+    <Bgm Src="Lobby" Effect="FadeIn" PrevBgm="FadeOut" />
+    <CharacterList>
+      <Character Name="해결사1" Face="none" Pos="C" Emotion="NONE" Telling="false">
+        <Deactive Effect="NORMAL" Ratio="0" />
+      </Character>
+      <Character Name="해결사2" Face="none" Pos="C" Emotion="NONE" Telling="false">
+        <Deactive Effect="NORMAL" Ratio="0" />
+      </Character>
+      <Character Name="롤랑" Face="nomal" Body="nomal" Pos="L2" Emotion="NONE" Telling="false">
+        <Active Effect="NORMAL" Ratio="0" />
+      </Character>
+      <Character Name="앤젤라" Face="normal" Body="nomal" Pos="R2" Emotion="NONE" Telling="false">
+        <Active Effect="NORMAL" Ratio="0" />
+      </Character>
+      <Character Name="핀" Face="none" Pos="C" Emotion="NONE" Telling="false">
+        <Deactive Effect="NORMAL" Ratio="0" />
+      </Character>
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="17">
+    <Bg Src="None" />
+    <Filter Src="1" />
+    <Bgm Src="None" Effect="None" PrevBgm="None" />
+    <CharacterList>
+      <Character Name="롤랑" Face="sigh" Body="nomal" Pos="L2" Emotion="NONE" Telling="false" />
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="20">
+    <Bg Src="None" />
+    <Filter Src="1" />
+    <Bgm Src="None" Effect="None" PrevBgm="None" />
+    <CharacterList>
+      <Character Name="앤젤라" Face="sigh" Body="nomal" Pos="R2" Emotion="NONE" Telling="false" />
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="21">
+    <Bg Src="None" />
+    <Filter Src="1" />
+    <Bgm Src="None" Effect="None" PrevBgm="None" />
+    <CharacterList>
+      <Character Name="롤랑" Face="nomal" Body="nomal" Pos="L2" Emotion="NONE" Telling="false" />
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <CG Src="ch1_backstreet" />
+  <storyBranch>None</storyBranch>
+</SceneEffect>

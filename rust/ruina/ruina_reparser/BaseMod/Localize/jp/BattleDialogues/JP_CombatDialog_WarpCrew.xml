@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GroupName>WarpCrew</GroupName>
+  <Character ID="Rose">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">２人とも集中しろ。時間はそう多くないんだ。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">お喋りしないでしっかり構えるように。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">そろそろ疲れてきた、素早く片付けて帰るぞ。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">帰って報告するものが多い、急いで回収するように。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">残業確定か……みんな今日だけ頑張ろうか。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">舐めて掛かったのは私か……情けないな。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">今は動け。死まで共にする必要もない。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">平常心を取り戻すように。揺らいではお前もやられるだろう。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">……状況が悪くなるほど、更に前に踏み込む。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">退勤まで後少しだな。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">一気に息の根を止めてやる。</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Sen">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">ローズが集中しろってよ。俺たちも準備しようか、新入り。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">いつも通り片付けようか。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">後輩……思ってたより余裕だな。怖がってもおかしくはないのに。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">もしかして、帰ってまた列車の整備か？だりぃなぁ……。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">こんな任務くらい簡単だよ。いつも片付けてるし。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">クソッ……だから別に入りたくなかったのに……。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">惜しいけど……大げさに騒いでも良いことはないしな。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">適度に悲しまないと。今は落ち着かないと駄目な状況だからな。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">都市悪夢も思ってたよりかわいいもんだな。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">余裕だよ。こんな乗客を何度相手したと思ってるんだよ。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">それでも悟りを得ようとして修練してた乗客よりはまだマシだな？</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Lesti">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">わぁ、外で見たのよりも凄く広いですね！？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">あんな強そうに見えるやつが本当に列車にいたんですか？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">これが終わったら一緒にピリ辛もつ鍋食べに行くんですよね？</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">やっぱり頼れる先輩のおかげでパパっと片付きましたね～。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">この本も持って……あの本も持って……帰りましょうか？</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">これからやっと新しい人生が始まると思ったのに……。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">こんな状況でも耐えなきゃ駄目なんですよね……でも……せ、先輩が……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">もう慣れたと思ったのに……。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">んっふふ～毎日やってきたことですからね！</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">これくらいは簡単にやれますよ！</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">ここにいる人たちも中々手強いですね……危なかったです。</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="WarpCrewUnit">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">もしかして追加勤務？ちょっと休ませてくれ……。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">やっとこさあの肉の塊を処理してきたら……ホント疲れるなぁ……。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">仕事しましょう、しごと！命令を受けたら頑張ってこなさないと。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">でも、あの塊よりはまだマシに見えるけど？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">あいつらは気持ち悪かったよな……でも残業は嫌だよ。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_5">どうしようもないよ。どうせやるべきことなんだしブツブツ言うな。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">状況は片付いたみたいだけど……退勤しても良いんだよね？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">あーだこーだやったとはいえ……W社が崩壊するのは防げたみたいだ……。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">この本が別のやつの手に入ったときのことを想像してみろ。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">職場を失うところだった……。それでも無事に本を回収できて良かったよ。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">一体どんな特異点ならこんな本を抽出できるんだろう？</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">この仕事が失敗すれば……W社の秘密が……。</BattleDialog>
+      <BattleDialog ID="DEATH_1">死にたくない……巣に入って要員になったばかりなのに……。</BattleDialog>
+      <BattleDialog ID="DEATH_2">成功しなきゃ……秘密が漏れるのに……。</BattleDialog>
+      <BattleDialog ID="DEATH_3">マニュアル通りやったのに……最後まで……マニュアル通りに……。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">……残ったみんなで頑張らないとね。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">こんな仕事……早く辞めたい……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">要員たちにはよくあることだ。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">今日も同僚を何人も失ってきたけど……まだ慣れないなぁ。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">列車の整理も、こんな作業も……似たようなもんだよ。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">これくらい、さっきの化け物に比べたら楽だよ。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">列車に居る乗客って思えば楽だね。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">死ねばああなるのか……もっと気を引き締めないと。</BattleDialog>
+    </Type>
+  </Character>
+</BattleDialogRoot>

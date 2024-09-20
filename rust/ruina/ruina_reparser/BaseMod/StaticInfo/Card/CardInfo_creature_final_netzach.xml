@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Card ID="9904101">
+    <Name>평타</Name>
+    <Artwork>UniverseZogak_Echo</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="weak1atk" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="disarm1atk" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="7" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="vulnerable2atk" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9904102">
+    <Name>꿰뚫기1</Name>
+    <Artwork>UniverseZogak_Tentacle</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="final_netzach_universe1" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9904103">
+    <Name>꿰뚫기2</Name>
+    <Artwork>UniverseZogak_Tentacle</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="final_netzach_universe1" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9904104">
+    <Name>광역 이계 너머의 메아리 </Name>
+    <Artwork>UniverseZogak_EGO</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="8" Type="Atk" Detail="Hit" Motion="S3" EffectRes="" Script="final_netzach_universe2" ActionScript="netzachboss_universe_echo" Desc=""/>
+      <Behaviour Min="8" Dice="8" Type="Atk" Detail="Hit" Motion="S3" EffectRes="" Script="final_netzach_universe2" ActionScript="netzachboss_universe_echo" Desc=""/>
+      <Behaviour Min="8" Dice="8" Type="Atk" Detail="Hit" Motion="S3" EffectRes="" Script="final_netzach_universe3" ActionScript="netzachboss_universe_echo" Desc=""/>
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="9904105">
+    <Name>깨달음</Name>
+    <Artwork>UniverseZogak_Sing</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>universe_enlightenment</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="6" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="6" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9904201">
+    <Name>은하수의 아이 광역공격 1</Name>
+    <Artwork>ChildofGalaxy_Tear</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarArea" Affection="Team" Cost="0" />
+    <Script>final_netzach_galaxy_1</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="15" Dice="15" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="final_netzach_galaxy1" ActionScript="netzachboss_galaxy_cry" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9904202">
+    <Name>은하수의 아이 광역공격 2</Name>
+    <Artwork>ChildofGalaxy_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Affection="All" Cost="0" />
+    <Script>final_netzach_galaxy_2</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="" ActionScript="netzachboss_galaxy_farewell" Desc=""/>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="" ActionScript="netzachboss_galaxy_farewell" Desc=""/>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="" ActionScript="netzachboss_galaxy_farewell" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9904203">
+    <Name>은하수의 아이 친구 : 기다림</Name>
+    <Artwork>ChildofGalaxy_Token</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>energy1</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9904204">
+    <Name>은하수의 아이 친구 : 쏟아지는 별</Name>
+    <Artwork>ChildofGalaxy_Friend</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9904205">
+    <Name>은하수의 아이 친구 : 일렁임</Name>
+    <Artwork>ChildofGalaxy_Friend</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="11" Type="Def" Detail="Evasion" Motion="G" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="vulnerable2atk" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9904301">
+    <Name>포큐버스 머리가 터질 시간</Name>
+    <Artwork>Porccubus_Happy</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="final_netzach_porccubus2" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="final_netzach_porccubus1" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="final_netzach_porccubus1" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9904302">
+    <Name>포큐버스 싱글벙글</Name>
+    <Artwork>Porccubus_Thorn</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="final_netzach_porccubus2" ActionScript="" Desc=""/>
+      <Behaviour Min="1" Dice="6" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9904303">
+    <Name>포큐버스 신뢰놀이</Name>
+    <Artwork>Porccubus_Happy</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_netzach_porccubus2" ActionScript="" Desc=""/>
+      <Behaviour Min="1" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="1" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9904304">
+    <Name>포큐버스 필살기</Name>
+    <Artwork>Porccubus_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>final_netzach_porccubus_pilsal</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="final_netzach_porccubus3" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="final_netzach_porccubus4" ActionScript="netzachboss_porccubus_pilsal" Desc=""/>
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="9904305">
+    <Name>포큐버스 쾌감</Name>
+    <Artwork>Porccubus_Boom</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="3" />
+    <Script>final_netzach_porccubus_pleasure</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="10" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="1" Dice="10" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="1" Dice="10" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9904501">
+    <Name>오케스트라 1페 광역1</Name>
+    <Artwork>SilentOrchestra_EGO</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="FarArea" Cost="0" Affection="Passive"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="6" Type="Atk" Detail="Penetrate" Motion="S" EffectRes="" Script="final_netzach_orchestra_1st" ActionScript="netzachboss_orchestra_movement_1" Desc=""/>
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="9904502">
+    <Name>오케스트라 1페 광역2</Name>
+    <Artwork>SilentOrchestra_EGO</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection="Team"/>
+    <Script>final_netzach_orchestra1_2nd</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Penetrate" Motion="S" EffectRes="" Script="final_netzach_orchestra2_2nd" ActionScript="netzachboss_orchestra_movement_2" Desc=""/>
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Penetrate" Motion="S" EffectRes="" Script="final_netzach_orchestra2_2nd" ActionScript="netzachboss_orchestra_movement_2" Desc=""/>
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="9904503">
+    <Name>오케스트라 1페 광역3</Name>
+    <Artwork>SilentOrchestra_EGO</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="FarArea" Cost="0" Affection="Passive"/>
+    <Script>final_netzach_orchestra1_3rd</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="8" Type="Atk" Detail="Hit" Motion="S" EffectRes="" Script="final_netzach_orchestra1_3rd" ActionScript="netzachboss_orchestra_movement_3" Desc=""/>
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="9904504">
+    <Name>오케스트라 1페 광역4</Name>
+    <Artwork>SilentOrchestra_EGO</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection="Team"/>
+    <Script>final_netzach_orchestra1_4th</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Penetrate" Motion="S" EffectRes="" Script="" ActionScript="netzachboss_orchestra_movement_4" Desc=""/>
+      <Behaviour Min="2" Dice="4" Type="Atk" Detail="Penetrate" Motion="S" EffectRes="" Script="" ActionScript="netzachboss_orchestra_movement_4" Desc=""/>
+      <Behaviour Min="2" Dice="4" Type="Atk" Detail="Penetrate" Motion="S" EffectRes="" Script="" ActionScript="netzachboss_orchestra_movement_4" Desc=""/>
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="9904505">
+    <Name>오케스트라 1페 광역5</Name>
+    <Artwork>SilentOrchestra_Finale</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="FarArea" Cost="0" Affection="Team"/>
+    <Script>final_netzach_orchestra1_5th</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="12" Dice="12" Type="Atk" Detail="Hit" Motion="S" EffectRes="" Script="final_netzach_orchestra1_5th_1" ActionScript="netzachboss_orchestra_movement_5" Desc=""/>
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  
+  <Card ID="9904506">
+    <Name>오케스트라 6페 평타</Name>
+    <Artwork>SilentOrchestra_Music</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Slash" Motion="S2" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Slash" Motion="S2" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9904507">
+    <Name>오케스트라 6페 강공격</Name>
+    <Artwork>SilentOrchestra_Music</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="H" EffectRes="EGO_Orchestra_Atk" Script="final_netzach_orchestra2_7_1" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="5" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="final_netzach_orchestra2_7_2" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="5" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="final_netzach_orchestra2_7_2" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9904508">
+    <Name>오케스트라 6페 가드</Name>
+    <Artwork>SilentOrchestra_Music</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="4" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="6" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="final_netzach_orchestra2_7_2" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9904509">
+    <Name>오케스트라 6페 코러스 약공격</Name>
+    <Artwork>SilentOrchestra_Music</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="final_netzach_chorus_1" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="5" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9904510">
+    <Name>오케스트라 6페 코러스 침묵의 선율</Name>
+    <Artwork>SilentOrchestra_Music</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Far" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="4" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="final_netzach_chorus_2" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9904511">
+    <Name>오케스트라 6페 코러스 파괴의 선율</Name>
+    <Artwork>SilentOrchestra_Music</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Far" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="final_netzach_chorus_3" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="4" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="final_netzach_chorus_4" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9904512">
+    <Name>오케스트라 6페 코러스 단절의 선율</Name>
+    <Artwork>SilentOrchestra_Music</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Far" Cost="2"/>
+    <Script>final_netzach_orchestra2_oneside</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="final_netzach_chorus_5" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9904513">
+    <Name>오케스트라 6페 코러스 고통의 선율</Name>
+    <Artwork>SilentOrchestra_Music</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Far" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="6" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="final_netzach_chorus_6" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="final_netzach_chorus_6" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9904514">
+    <Name>오케스트라 6페 광역5</Name>
+    <Artwork>SilentOrchestra_Finale</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="FarArea" Cost="0" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="12" Dice="12" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="final_netzach_orchestra2_5th_1" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>100</Priority> 
+  </Card>
+
+  <Card ID="9904515">
+    <Name>오케스트라 6페 커튼콜</Name>
+    <Artwork>SilentOrchestra_Finale</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>exhaust</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  
+
+  <Card ID="9904520">
+    <Name>오케스트라 열렬한 감동</Name>
+    <Artwork>SilentOrchestra_Affect</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="final_netzach_orchestra_affect" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="final_netzach_orchestra_affect" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="final_netzach_orchestra_affect" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>999</Priority>
+  </Card>
+
+                                                 
+
+  <!-- 알리우네 : 본체 -->
+  <Card ID="9904411">
+    <Name>평타</Name>
+    <Artwork>Alriune_flower</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="alriune_debuf1atk_final" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="alriune_debuf1atk_final" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="alriune_debuf1atk_final" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>10</Priority>
+  </Card>
+  <Card ID="9904412">
+    <Name>아군 강화</Name>
+    <Artwork>Alriune_Bush</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="allystrength2atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="weak1pw" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="weak1pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9904413">
+    <Name>가드</Name>
+    <Artwork>Alriune_flower</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="alriune_healanddeal_final" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="5" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="alriune_healanddeal_final" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9904414">
+    <Name>타겟 지정</Name>
+    <Artwork>Alriune_Doll</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script>alriune_attackerbuf_final</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="1" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="5" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="5" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="9904415">
+    <Name>광역 공격</Name>
+    <Artwork>Alriune_EGO</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="alriune_ego_bdmg1" ActionScript="netzachboss_alriune_first" Desc="" />
+      <Behaviour Min="8" Dice="8" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="alriune_ego_bdmg2" ActionScript="netzachboss_alriune_second" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+
+  <!-- 알리우네 : 잡몹 -->
+  <Card ID="9904421">
+    <Name>평타</Name>
+    <Artwork>Alriune_Doll</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="alriune_debuf1atk" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="7" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="alriune_debuf1atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9904422">
+    <Name>찌르기</Name>
+    <Artwork>Alriune_Doll</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="alriune_resistweak_final" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9904423">
+    <Name>올려치기</Name>
+    <Artwork>Alriune_Doll</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="stun1atk" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+</DiceCardXmlRoot>

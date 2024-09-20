@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Card ID="1100001">
+    <Name>학습</Name>
+    <Artwork>Pinocchio_Learn</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script>pinocchio</Script>
+    <ScriptDesc>[합 시작시] 모든 주사위가 제거됨. 대상 책장의 주사위들을 얻음</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="6" Type="Atk" Detail="Hit" Motion="H" EffectRes="1_1" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1100002">
+    <Name>학습</Name>
+    <Artwork>Pinocchio_Learn</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="2" />
+    <Script>pinocchio</Script>
+    <ScriptDesc>[합 시작시] 모든 주사위가 제거됨. 대상 책장의 주사위들을 얻음</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="6" Type="Atk" Detail="Hit" Motion="F" EffectRes="1_1" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1100003">
+    <Name>성냥불</Name>
+    <Artwork>ScorchedGirl_Ashes</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script>burningGirl</Script>
+    <ScriptDesc>[사용시] 자신에게 불씨 버프를 부여.</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="H" EffectRes="1_1" Script="" Desc=""/>
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1100004">
+    <Name>성냥불</Name>
+    <Artwork>ScorchedGirl_Ashes</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="1" />
+    <Script>burningGirl</Script>
+    <ScriptDesc>[사용시] 자신에게 불씨 버프를 부여.</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="F" EffectRes="1_1" Script="" Desc=""/>
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1100005">
+    <Name>의뢰</Name>
+    <Artwork>Matan_Request</Artwork>
+    <Rarity>Rare</Rarity>
+    <Option>ExhaustOnUse</Option>
+    <Spec Range="FarAreaEach" Cost="1" Affection="All"/>
+    <Script>freischutz</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="11" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="freischutz" ActionScript="yesodboss_freischutz_2ndbullet" Desc=""/>
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1100006">
+    <Name>반복되는 연주</Name>
+    <Option>ExhaustOnUse</Option>
+    <Artwork>SilentOrchestra_Music</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="FarAreaEach" Cost="3"  Affection="Team"/>
+    <Script>orchestra_emotion</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="1" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1100007">
+    <Name>증오의 여왕</Name>
+    <Artwork>NihilClown_Card</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>magicalgirl_emotion</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="1" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1100008">
+    <Name>탐욕의 왕</Name>
+    <Artwork>NihilClown_Card</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>magicalgirl_emotion</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="1" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1100009">
+    <Name>절망의 기사</Name>
+    <Artwork>NihilClown_Card</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>magicalgirl_emotion</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="1" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1100010">
+    <Name>분노의 시종</Name>
+    <Artwork>NihilClown_Card</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>magicalgirl_emotion</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="1" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1100011">
+    <Name>공허</Name>
+    <Artwork>NihilClown_Nihil</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Option>ExhaustOnUse</Option>
+    <Spec Range="Near" Cost="3"/>
+    <Script>magicalgirl_emotion_nihil</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1100012">
+    <Name>침묵</Name>
+    <Artwork>Clock_Kill</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Instance" Cost="0"/>
+    <Script>silence_emotion_silence</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="5" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1100013">
+    <Name>신속</Name>
+    <Artwork>Clock_Time</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Instance" Cost="0"/>
+    <Script>silence_emotion_haste</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="5" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1100014">
+    <Name>망각</Name>
+    <Artwork>Ozma_forgotten</Artwork>
+    <Rarity>Rare</Rarity>
+    <Option>ExhaustOnUse</Option>
+    <Spec Range="Instance" Cost="3"/>
+    <Script>ozma_forgotten</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1100015">
+    <Name>에메랄드</Name>
+    <Artwork>Oz_Emerald</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Instance" Cost="5"/>
+    <Script>oz_emerald</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1100016">
+    <Name>마술</Name>
+    <Artwork>Oz_Control</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Instance" Cost="4"/>
+    <Script>oz_control</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1100017">
+    <Name>작은 부리</Name>
+    <Artwork>ApocalypseBird_SmallPeak</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Instance" Cost="0"/>
+    <Script>emotion_small_beak</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1100018">
+    <Name>순교</Name>
+    <Artwork>BlueStar_martyrdom</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Instance" Cost="0"/>
+    <Script>emotion_martyr</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1100019">
+    <Name>축복</Name>
+    <Artwork>WhiteNight_Bless</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Instance" Cost="2"/>
+    <Script>emotion_bless</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1100020">
+    <Name>강화된 축복</Name>
+    <Artwork>WhiteNight_Bless</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Instance" Cost="2"/>
+    <Script>emotion_bless_upgraded</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="1100021">
+    <Name>공격 주사위 복사용</Name>
+    <Artwork>Shi7</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="BlackSilenceL_J" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1100022">
+    <Name>방어 주사위 복사용</Name>
+    <Artwork>Shi7</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="6" Dice="9" Type="Def" Detail="Guard" Motion="G" EffectRes="BlackSilence_G" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+
+  <Card ID="1100023">
+    <Name>용기가 생기는 물약</Name>
+    <Artwork>House_LionAtk</Artwork>
+    <Rarity>Rare</Rarity>
+    <Option>Personal</Option>
+    <Option>ExhaustOnUse</Option>
+    <Spec Range="Instance" Cost="0" />
+    <Script>Wizard_potion</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="1100024">
+    <Name>톱밥이 든 주머니</Name>
+    <Artwork>Scarecrow_Rake</Artwork>
+    <Rarity>Rare</Rarity>
+    <Option>Personal</Option>
+    <Option>ExhaustOnUse</Option>
+    <Spec Range="Instance" Cost="0" />
+    <Script>Wizard_poket</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="1100025">
+    <Name>납으로 만든 심장</Name>
+    <Artwork>LumberJack_Heart</Artwork>
+    <Rarity>Rare</Rarity>
+    <Option>Personal</Option>
+    <Option>ExhaustOnUse</Option>
+    <Spec Range="Instance" Cost="0" />
+    <Script>Wizard_heart</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="1100026">
+    <Name>돌아갈 수 없는 집</Name>
+    <Artwork>House_Atk</Artwork>
+    <Rarity>Rare</Rarity>
+    <Option>Personal</Option>
+    <Option>ExhaustOnUse</Option>
+    <Spec Range="Instance" Cost="0" />
+    <Script>Wizard_home</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="1100027">
+    <Name>변이</Name>
+    <Artwork>Ozma_forgotten</Artwork>
+    <Rarity>Rare</Rarity>
+    <Option>Personal</Option>
+    <Option>ExhaustOnUse</Option>
+    <Spec Range="Instance" Cost="0" />
+    <Script>Wizard_change</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+</DiceCardXmlRoot>

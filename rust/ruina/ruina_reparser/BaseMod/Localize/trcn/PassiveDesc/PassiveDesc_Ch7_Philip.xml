@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <PassiveDesc ID="1301011">
+    <Name>變幻莫測</Name>
+    <Desc>每一幕開始時移除手中的書頁並將意圖使用的書頁置入手中
+自身的書頁費用為0</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1301012">
+    <Name>熾熱之刃</Name>
+    <Desc>若自身處於“過熱”狀態，則擊中目標時對其施加1層“燒傷”，被擊中時對攻擊方施加1層“燒傷”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1301013">
+    <Name>熾熱之刃</Name>
+    <Desc>若自身處於“過熱”狀態，則擊中目標時對其施加1層“燒傷”，被擊中時對攻擊方施加1層“燒傷”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1301014">
+    <Name>爆炎之刃</Name>
+    <Desc>擊中目標時對其施加1層“燒傷”
+被擊中時對攻擊方施加1層“燒傷”</Desc>
+  </PassiveDesc>
+
+  <!--공용-->
+  <PassiveDesc ID="1301015">
+    <Name>冷卻之心</Name>
+    <Desc>免疫“燒傷”傷害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1301016">
+    <Name>殘火之刃</Name>
+    <Desc>使用書頁施加“燒傷”時層數+1</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1301017">
+    <Name>神采奕奕</Name>
+    <Desc>情感等級提升時對所有角色施加3層“燒傷”(包括自身)
+使自身的所有骰子威力+(當前情感等級/2 向下取整)</Desc>
+  </PassiveDesc>
+    <PassiveDesc ID="1301018">
+    <Name>過熱</Name>
+    <Desc>每一幕開始時若自身至少擁有15層“燒傷”，則進入“過熱”狀態
+(過熱: 混亂攻擊抗性減弱，傷害提升)</Desc>
+  </PassiveDesc>
+
+  <!--1페이즈에 나옴-->
+  <PassiveDesc ID="1301019">
+    <Name>心潮澎湃</Name>
+    <Desc>體力無法低於60%
+若陷入混亂，則下一幕開始時進入下一階段
+階段轉換時改變自身的攻擊抗性並移除所有負面狀態</Desc>
+  </PassiveDesc>
+  <!--2페이즈에 나옴-->
+  <PassiveDesc ID="1301030">
+    <Name>消逝之心</Name>
+    <Desc>每有1名“不言之子”死亡，便在下一幕中使自身的所有骰子威力-1</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1301032">
+    <Name>湧動之心</Name>
+    <Desc>體力無法低於30%
+若陷入混亂，則下一幕開始時進入下一階段
+階段轉換時改變自身的攻擊抗性並移除所有負面狀態</Desc>
+  </PassiveDesc>
+  
+  <PassiveDesc ID="1301021">
+    <Name>火熱之心</Name>
+    <Desc>承受“燒傷”傷害時傷害減半
+生成後每一幕開始時獲得1層“強壯”與“忍耐”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1301022">
+    <Name>過熱</Name>
+    <Desc>每一幕開始時若自身至少擁有15層“燒傷”，則進入“過熱”狀態
+(過熱: 混亂攻擊抗性減弱，傷害提升)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1301023">
+    <Name>爆燃</Name>
+    <Desc>若自身處於“過熱”狀態，則獲得3層“易損”，使用特殊書頁且擊中目標時對其施加1層“燒傷”</Desc>
+  </PassiveDesc>
+
+  <!--뒤틀림-->
+  <PassiveDesc ID="1401011">
+    <Name>火種</Name>
+    <Desc>使所有我方角色的第1顆“進攻型”骰子獲得額外效果“[命中時] 對目標施加1層‘燒傷’”
+若自身死亡，則所有友方角色被擊中時將獲得1層“燒傷”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1401012">
+    <Name>過熱</Name>
+    <Desc>每一幕開始時若自身至少擁有10層“燒傷”，則進入“過熱”狀態</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1401014">
+    <Name>焦灼死灰</Name>
+    <Desc>每3幕使用1張特殊書頁“焦灼死灰”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1401017">
+    <Name>自我束縛</Name>
+    <Desc>若對1名至少擁有3層“拘禁”的目標造成傷害，則下一幕中使其陷入“眩暈”</Desc>
+  </PassiveDesc>
+</PassiveDescRoot>

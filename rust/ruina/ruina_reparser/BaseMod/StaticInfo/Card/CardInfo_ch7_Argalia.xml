@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+  <!-- 아르갈리아 1페 -->
+  <Card ID="703001">
+    <Name>전주</Name>
+    <Artwork>Argalia2</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="7" Type="Atk" Detail="Slash" Motion="J" EffectRes="Argalia2_J" Script="argaliaVibrateUp3" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="Argalia2_H" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703002">
+    <Name>독주</Name>
+    <Artwork>Argalia2_1</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="Argalia2_J" Script="argaliaVibrateDown2" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Hit" Motion="H" EffectRes="Argalia2_H" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703003">
+    <Name>불협화음</Name>
+    <Artwork>Argalia2_3</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="Argalia2_H" Script="argaliaLoseDice" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="Argalia2_J" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703004">
+    <Name>낫 베기</Name>
+    <Artwork>Argalia2_1</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="4" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="Argalia2_H" Script="damage2atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="4" Type="Atk" Detail="Hit" Motion="J" EffectRes="Argalia2_J" Script="damage2atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="5" Type="Atk" Detail="Slash" Motion="H" EffectRes="Argalia2_H" Script="" ActionScript="argaliaDawnAction" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703005">
+    <Name>불안정한 선율</Name>
+    <Artwork>Argalia2_1</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="13" Type="Atk" Detail="Slash" Motion="H" EffectRes="Argalia2_H" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="J" EffectRes="Argalia2_J" Script="argaliaStrengthPl" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <!-- 아르갈리아 2페 용 -->
+  <Card ID="703011">
+    <Name>연격</Name>
+    <Artwork>Argalia2_1</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Slash" Motion="H" EffectRes="Argalia2_H" Script="paralysis1atk" ActionScript="argaliaDawnAction" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Hit" Motion="J" EffectRes="Argalia2_J" Script="" ActionScript="argaliaDawnAction" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Hit" Motion="H" EffectRes="Argalia2_H" Script="" ActionScript="argaliaDawnAction" Desc="" />
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Slash" Motion="J" EffectRes="Argalia2_J" Script="" ActionScript="argaliaDawnAction" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703012">
+    <Name>푸른 궤적</Name>
+    <Artwork>Argalia1</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>negatePower</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="17" Type="Atk" Detail="Slash" Motion="J" EffectRes="FX_Mon_Argalia_Slash_Up" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <!-- 아르갈리아 마무리 -->
+  <Card ID="703021">
+    <Name>최후의 선율</Name>
+    <Artwork>Argalia5</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="10" Type="Atk" Detail="Slash" Motion="J" EffectRes="FX_Mon_Argalia_Slash_Up" Script="forbidReuseDice" ActionScript="" Desc="" />
+      <Behaviour Min="8" Dice="14" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="Argalia2_J" Script="repeat3" ActionScript="argaliaRandomAction" Desc="" />
+      <Behaviour Min="8" Dice="14" Type="Atk" Detail="Slash" Motion="H" EffectRes="Argalia2_H" Script="repeat4" ActionScript="argaliaRandomAction" Desc="" />
+      <Behaviour Min="8" Dice="14" Type="Atk" Detail="Hit" Motion="H" EffectRes="Argalia2_H" Script="repeat4" ActionScript="argaliaRandomAction" Desc="" />
+      <Behaviour Min="8" Dice="16" Type="Def" Detail="Guard" Motion="G" EffectRes="Argalia_G" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+  <!-- 공명 카드 -->
+  <Card ID="703031">
+    <Name>공명</Name>
+    <Artwork>Argalia2_2</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>vibrateActivate</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Argalia_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Slash" Motion="S1" EffectRes="FX_Mon_Argalia_Slash_H" Script="damage3atk" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="7" Type="Atk" Detail="Hit" Motion="S3" EffectRes="FX_Mon_Argalia_Slash_Down" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+</DiceCardXmlRoot>

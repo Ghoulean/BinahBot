@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GroupName>Pierre's Meat Pies</GroupName>
+  <Character ID="Pierre">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">질질 끌면 본연의 씹는 맛이 없어질 거라고!</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">너희는 무슨 맛이 날까? 조금만 잘라봐도 돼?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">거기, 너! 아까 지나갈 때 좋은 냄새가 났어.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">이런 책들만 가득 있다니! 씹는 맛도 없을걸!</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">흠… 좋은 요리법이라도 적혀있으려나~?</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">하…! 내가… 재료가 될 생각은… 한 번도 해본 적 없는데 말이야.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">잭… 이럴 순 없는 거야. 조심했어야지. 나와 함께 해주겠다고 약속했잖니.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">너~어무 약해 빠졌잖아! 이런 건 맛도 없겠어.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">에잉, 이렇게 책이 되어버리다니…</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">이렇게 변해버리기 전에 포라도 뜰 걸 그랬어!</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">…어차피 혼자서 8인의 셰프가 될 생각은 없었어. 차라리 깔끔… 하네.</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Jack">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">…인간인 건 맞지? 아니면 아닌 대로 새로운 재료가 되겠지만.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">피에르의 목표를 위한 일이니까.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">상처는 많이 나지 않게… 최상의 품질을 유지해야 하니까.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">이겨서 다행이야, 피에르. 챙길 건 챙기고 돌아가도록 할까?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">좋은 책을 얻는다면 8인의 셰프 눈에 드는 건 정말 시간 문제겠지?</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">미안해, 피에르… 내가 조금 더 강했어야… 하는데.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">…나와 함께 한 약속은 어떻게 되는 거야.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">이 녀석을 파이로 만들었다면 무슨 맛일까…</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">칼로 베는 맛이 뒷골목의 재료들과는 차원이 달라.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">피에르 말대로 너한테서 좋은 향이 났는데. 아쉽다.</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">어차피 널 도와주지 못한다면, 이 편이 더 나을지도 모르지.</BattleDialog>
+    </Type>
+  </Character>
+</BattleDialogRoot>

@@ -1,0 +1,1480 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!-- 불타버린 소녀 -->
+  <PassiveDesc ID="105010">
+    <Name>Corrosion</Name>
+    <Desc>Moves to the next phase after HP drops to 1.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305510">
+    <Name>Corrosion</Name>
+    <Desc>Moves to the next phase after HP drops to 0.</Desc>
+  </PassiveDesc>
+
+  <!-- 불타버린 소녀 -->
+  <PassiveDesc ID="105111">
+    <Name>Rekindled Flame</Name>
+    <Desc>Lose 25% of Max HP and get Staggered when an ally dies.</Desc>
+  </PassiveDesc>
+  <!-- 불타버린 소녀 -->
+  <PassiveDesc ID="105112">
+    <Name>Ashes</Name>
+    <Desc>Lose 1 Light upon getting Staggered.</Desc>
+  </PassiveDesc>
+
+  <!-- 테디 -->
+  <PassiveDesc ID="105211">
+    <Name>Affection</Name>
+    <Desc>Whenever the character uses a page, its target is inflicted with 1 Affection.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="105212">
+    <Name>Nostalgic Embrace of the Old Days</Name>
+    <Desc>If a librarian has 4 or more stacks of Affection, uses a powerful Combat Page.</Desc>
+  </PassiveDesc>
+
+  <!-- 요정 -->
+  <PassiveDesc ID="105311">
+    <Name>Momentary Satiation</Name>
+    <Desc>If an ally has 20 or less HP, consume it at the start of the Scene to recover 20 HP and gain 2 Strength.</Desc>
+  </PassiveDesc>
+  <!-- 요정 -->
+  <PassiveDesc ID="105312">
+    <Name>Ravenousness</Name>
+    <Desc>After taking 40 total damage during battle, consume the ally with the lowest HP at the start of the Scene and recover 40 HP. Permanently gain 2 Strength for each ally defeated this way.</Desc>
+  </PassiveDesc>
+  <!-- 요정 -->
+  <PassiveDesc ID="105313">
+    <Name>Ravening Hunger</Name>
+    <Desc>If HP goes down to 50% or lower, restore Light to full at the start of the next Scene and add 3 powerful Combat Pages to hand.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="105314">
+    <Name>Fresh Meat</Name>
+    <Desc>At the start of the Scene, give the 'Fresh Meat' status to a random librarian.</Desc>
+  </PassiveDesc>
+  <!-- 요정 -->
+  <PassiveDesc ID="105321">
+    <Name>Care</Name>
+    <Desc>At the start of each Scene, restore 10 HP.</Desc>
+  </PassiveDesc>
+
+
+  <!-- 여왕벌 -->
+  <PassiveDesc ID="105411">
+    <Name>Pronatalism</Name>
+    <Desc>If there are 2 or fewer Worker Bees alive at the start of the Scene, inflict 2 Spores on all librarians.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="105412">
+    <Name>Metamorphosis</Name>
+    <Desc>If a librarian dies while under the influence of Spores, spawn a Worker Bee next Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="105413">
+    <Name>Pheromones</Name>
+    <Desc>Uses pages that boost the aggression and loyalty of all allies every 3 Scenes.</Desc>
+  </PassiveDesc>
+  <!-- 일벌-->
+  <PassiveDesc ID="105421">
+    <Name>Loyalty</Name>
+    <Desc>Target the last foe Angela attacked in the previous Scene.</Desc>
+  </PassiveDesc>
+
+  <!-- 백설 -->
+  <PassiveDesc ID="105511">
+    <Name>Walls of Vines</Name>
+    <Desc>Cannot be attacked until 5 Walls of Vines have been defeated.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="105512">
+    <Name>An Apple Deep in the Forest</Name>
+    <Desc>After all 5 Walls of Vines have been taken down, resistances change for 2 Scenes. Afterwards, they return to normal.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="105513">
+    <Name>Strangling Vines</Name>
+    <Desc>Creates a field of vines that spreads over 3 Scenes. Librarians standing on the vines are inflicted with Bind. The amount of Bind increases with the width of the vine field.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="105514">
+    <Name>Where’s My Prince?</Name>
+    <Desc>When the field of vines grows to the maximum width, uses a powerful mass attack page that Scene.</Desc>
+  </PassiveDesc>
+
+  <!-- 백설 -->
+  <PassiveDesc ID="105521">
+    <Name>Withering</Name>
+    <Desc>Suppression is complete when Angela has been handled.</Desc>
+  </PassiveDesc>
+
+
+  <!-- 예소드 층 앤젤라 보스전 패시브 -->
+  <PassiveDesc ID="205010">
+    <Name>Corrosion</Name>
+    <Desc>Moves to the next phase after HP drops to 1.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205111">
+    <Name>Metallic Ringing</Name>
+    <Desc>Inflict 2 Bind and Paralysis on a successful Blunt attack</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205112">
+    <Name>Violence</Name>
+    <Desc>Restore 1 Light upon defeating an enemy and gain 2 Strength next Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205113">
+    <Name>Fear</Name>
+    <Desc>All dice lose 4 Power when the character has status effects.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205114">
+    <Name>Ends, Begins, Ends</Name>
+    <Desc>After Fear is activated 2 times, uses a powerful single-target Combat Page.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205211">
+    <Name>Fully Charged!</Name>
+    <Desc>Uses a Mass Attack page if the character has 4 or more Light. If the character has not used the Mass Attack page for 3 Scenes, change its Cost to 0 and use it.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205212">
+    <Name>Repetitive Pattern-Recognition Mk2</Name>
+    <Desc>After dealing 10 or higher total damage with a Combat Page, restore 1 Light.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205221">
+    <Name>Repetitive Pattern-Recognition</Name>
+    <Desc>After dealing 10 or higher total damage in a Scene, restore 1 Light.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205311">
+    <Name>Please Work Harder!</Name>
+    <Desc>At the start of the Scene, if one or more allies are alive, gain 4 Protection, and recover 10 HP for the ally with the lowest HP.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205312">
+    <Name>Let’s Make Music!</Name>
+    <Desc>On the Scene 'I CRAVE that Melody!' is activated, uses a page that buffs allies.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205313">
+    <Name>Harmony of Despair</Name>
+    <Desc>While the Singing Machine is playing music, uses a powerful Combat Page</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205321">
+    <Name>The Machine that Sings</Name>
+    <Desc>Cannot be targeted. Does not act. Takes no damage.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205322">
+    <Name>Begin Performance</Name>
+    <Desc>If a character is inside the machine at the start of the Scene after 'I CRAVE that Melody!' was activated, activates 'Performance' for the Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205323">
+    <Name>Performance</Name>
+    <Desc>At the start of the Scene, the character inside the machine takes damage equal to 30% of their Max HP. While the music is playing, all characters gain 5 Strength and all Stagger damage resistances change to "Fatal".</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205331">
+    <Name>I CRAVE that Melody!</Name>
+    <Desc>Starting with the third Scene: every four Scenes, inflict 5 Bind to self, gain an extra Speed die, and use a different set of Combat Pages.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205332">
+    <Name>Music Addiction</Name>
+    <Desc>If no one is inside Singing Machine by the end of the Scene 'I CRAVE that Melody!' was activated, the Addicted Employee with the lowest HP enters the machine.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205411">
+    <Name>Hand of Salvation</Name>
+    <Desc>Targets the enemy with the least HP. Prioritizes targets with Sealed dice.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205412">
+    <Name>Anguish</Name>
+    <Desc>Dice gain Power depending on the target's HP. (75%~50% HP: Power +1; 50% or lower: Power +2) </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205413">
+    <Name>Tranquility</Name>
+    <Desc>If all of a character's Speed dice are Sealed by this character's page effects, they become Staggered.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205414">
+    <Name>Lamentation</Name>
+    <Desc>If there's a Staggered enemy at the start of the Scene, uses a special Combat Page</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205415">
+    <Name>Eternal Rest</Name>
+    <Desc>Uses a Mass Attack page every 3 Scenes</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205421">
+    <Name>Futile Fluttering</Name>
+    <Desc>Targets the enemy with the least HP; suppressed when Angela moves to the next phase.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205511">
+    <Name>Seven Bullets</Name>
+    <Desc>Stagger Resist does not fall below 1. If Angela's Stagger Resist reaches 1, lose 50 HP and recover all Stagger Resist next Scene, and change behavior.</Desc>
+  </PassiveDesc>
+
+
+  <!-- 호드 층 앤젤라 보스전 패시브 -->
+  <PassiveDesc ID="305111">
+    <Name>Expressions</Name>
+    <Desc>The number of Speed dice is determimed based on the number of librarians that are alive. Uses different Combat Pages based on the face made at the moment of rolling the Speed dice.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305112">
+    <Name>Put a Bigger Smile on your Face</Name>
+    <Desc>Dice gain differing amounts of Power depending on the current expression; happier expressions indicate less Power. The Combat Pages Angela uses have additional effects that depend on her current expression.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305113">
+    <Name>Wavering Feelings</Name>
+    <Desc>Uses a powerful Combat Page every 3 Scenes.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305211">
+    <Name>Attracted</Name>
+    <Desc>Prioritizes targets with Bleed.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305212">
+    <Name>Massive Axe</Name>
+    <Desc>Inflicts 1 'Profound Wound' on hit. If target has 5 stacks of Profound Wound, deal damage equal to 25% of their Max HP and remove all stacks of Profound Wound.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305213">
+    <Name>Glitter</Name>
+    <Desc>If an enemy has 3 or more Bleed at the start of the Scene, uses a powerful Combat Page. Once used, the page is not used again for the next 2 Scenes.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305221">
+    <Name>Speedy</Name>
+    <Desc>Speed Dice Slot +1</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305311">
+    <Name>The Hunt Begins</Name>
+    <Desc>Become active and target foes for two Scenes after an ally dies. Targets foes that have killed an ally.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305312">
+    <Name>Alertness</Name>
+    <Desc>Every 2 Scenes, give 4 Protection to other allies.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305321">
+    <Name>Dinnertime!</Name>
+    <Desc>Targets foes with the 'Cocoon' status</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305411">
+    <Name>I’ll Give You a Gift!</Name>
+    <Desc>Prioritizes the target with the least amount of 'Gifts' in hand</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305412">
+    <Name>Funny Prank</Name>
+    <Desc>Adds a 'Gift' to every librarian's hand every 2 Scenes. Gives an additional 'Gift' for every two Wee Witch’s Friends that have died.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305413">
+    <Name>Huuuuge~ Gift!!</Name>
+    <Desc>If all Gift-wrapped Friends are defeated, uses a Mass Attack page next Scene. Afterwards, that page is used every 3 Scenes.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305414">
+    <Name>Will You Play With Me?</Name>
+    <Desc>Block dice lose Power by 4x the number of 'Gifts' in the opponent's hand</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305415">
+    <Name>Being Lonely is Sad</Name>
+    <Desc>If all other allies have died, all resistances change to "Fatal"</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305421">
+    <Name>Gi…ft…</Name>
+    <Desc>Prioritizes the target with the most amount of 'Gifts' in hand</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305422">
+    <Name>BOOM!</Name>
+    <Desc>On the third Scene, uses a powerful Combat Page that deals significant damage and gives three copies of 'Gift' to its target before causing the user to self-destruct. The character dies after using that page.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305423">
+    <Name>Here Comes a Surprise Present</Name>
+    <Desc>If this character dies, a Wee Witch’s Friend is spawned next Scene. If the character is killed before it can self-destruct using the special Combat Page, the Friend is spawned with 80% HP.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305431">
+    <Name>Gi…ft…</Name>
+    <Desc>Prioritizes the target with the most amount of 'Gifts' in hand</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305432">
+    <Name>Gimme That Gift!</Name>
+    <Desc>Offensive dice gain Power equal to the number of 'Gifts' in the target's hand</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305511">
+    <Name>Clothing of Nettle</Name>
+    <Desc>Starting with Scene 2, summon a Brother at the start of each Scene. Does not activate if there are already 5 allies alive.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305512">
+    <Name>Family to Protect</Name>
+    <Desc>If four Brothers are alive at the start of the Scene, uses a Mass Attack page</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305513">
+    <Name>Broken Dream</Name>
+    <Desc>If four Brothers have died at the start of the Scene, uses a Mass Attack page</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305521">
+    <Name>First Brother</Name>
+    <Desc>While this character is alive, Angela gains a Speed die</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305531">
+    <Name>Second Brother</Name>
+    <Desc>While this character is alive, Angela's Speed values increase by 3</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305541">
+    <Name>Third Brother</Name>
+    <Desc>While this character is alive, Angela uses a Combat Page that reflects attacks</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305551">
+    <Name>Fourth Brother</Name>
+    <Desc>While this character is alive, Angela's attacks deal "Fatal" damage regardless of resistances</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305561">
+    <Name>Fifth Brother</Name>
+    <Desc>While this character is alive, Angela uses a Combat Page that inflicts 5 Bleed and Fragile</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305571">
+    <Name>Sixth Brother</Name>
+    <Desc>If this character dies, Angela becomes Staggered</Desc>
+  </PassiveDesc>
+
+  <!-- 우주 속의 조각-->
+  <PassiveDesc ID="405111">
+    <Name>Tentacles</Name>
+    <Desc>Upon a successful Pierce attack, reduces target's Max Stagger Resist by 5%. (Stacks up to 10 times)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405112">
+    <Name>Echoes</Name>
+    <Desc>Starting with the third Scene, uses the Combat Page 'Echoes from the Beyond' every 2 Scenes</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405113">
+    <Name>Incomprehensible</Name>
+    <Desc>Deal double Stagger damage with attacks</Desc>
+  </PassiveDesc>
+
+  <!-- 은하수의 아이 -->
+  <PassiveDesc ID="405211">
+    <Name>Universe of Two</Name>
+    <Desc>After all other allies have died, lose HP and become Staggered. Becomes targetable afterwards.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405212">
+    <Name>Parting Tears</Name>
+    <Desc>At the start of the Scene, if an ally is in suspended animation, switch to Crying mode; if not, switch to Healing mode. If the character is in Crying mode at the start of a Scene, uses a Mass Attack page.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405213">
+    <Name>Pebble</Name>
+    <Desc>If the character is in Healing mode at the start of the Scene, restore the HP of all other allies by 10% of their max HP, and take no action.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405221">
+    <Name>Don’t Leave Me</Name>
+    <Desc>HP does not go below 1; upon taking lethal damage, enter a state of suspended animation for the next 2 Scenes. Recover 70% of Max HP when waking up from the status. If all allies excluding Angela have 1 HP at the start of the Scene, die.</Desc>
+  </PassiveDesc>
+
+  <!-- 포큐버스 -->
+  <PassiveDesc ID="405311">
+    <Name>Unbearable Pleasure</Name>
+    <Desc>At the start of each Scene, characters restore 1 Light for each page of 'Pleasure' in their hand. On hit, if the target has three pages of 'Pleasure', deal 20 damage and exhaust those pages.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405312">
+    <Name>Time for the Head to Burst</Name>
+    <Desc>Uses a Mass Attack page if a librarian has 2 or more copies of 'Pleasure'. Once used, the page is not used again for the next Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405313">
+    <Name>Thorns Granting Happiness</Name>
+    <Desc>On hit, give the target 2 Positive Emotion Coins.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405314">
+    <Name>Fluttering</Name>
+    <Desc>Take no damage from Ranged pages.</Desc>
+  </PassiveDesc>
+
+  <!-- 알리우네 -->
+  <PassiveDesc ID="405415">
+    <Name>Doll Fashioned from Earth</Name>
+    <Desc>Takes no damage from Burn or Bleed.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405412">
+    <Name>Blossoming Fragrance</Name>
+    <Desc>This character's attacks only deal Stagger damage to librarians. If a librarian becomes Staggered, they are instantly killed, and 'One Who Emerged from the Earth' is spawned next Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405411">
+    <Name>Breathless Atonement</Name>
+    <Desc>This character only takes damage from the librarian with the 'Laurel Wreath' status.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405413">
+    <Name>Unwithering Flower</Name>
+    <Desc>Starting with Scene 2, a petal blooms behind Angela at the start of each Scene. If three petals have accumulated at the start of a Scene, remove all of them and use a Mass Attack page.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405414">
+    <Name>Tears of Petals</Name>
+    <Desc>Upon becoming Staggered, lose 40 HP and remove all petals at the start of the next Scene. In addition, all librarians recover 50% of their max Stagger Resist.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405421">
+    <Name>To the Earth Whence I Come…</Name>
+    <Desc>This character dies upon becoming Staggered.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405423">
+    <Name>Doll Fashioned from Earth</Name>
+    <Desc>Takes no damage from Burn or Bleed.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405422">
+    <Name>Blossoming Fragrance</Name>
+    <Desc>This character's attacks only deal Stagger damage to librarians. If a librarian becomes Staggered, they are instantly killed, and 'One Who Emerged from the Earth' is spawned next Scene.</Desc>
+  </PassiveDesc>
+
+
+  <!-- 고케 -->
+  <PassiveDesc ID="405511">
+    <Name>The World’s Most Beautiful Performance</Name>
+    <Desc>The battle lasts 5 Scenes; progresses to the next phase on Scene 6. Uses unique Combat Pages each Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405512">
+    <Name>Ensemble</Name>
+    <Desc>At the start of the Scene, gain Power equal to the number of other allies who can act</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405521">
+    <Name>Silent Performance</Name>
+    <Desc>Does not use Combat Pages. Upon becoming Staggered, become Immobilized for the duration of the phase.</Desc>
+  </PassiveDesc>
+
+
+  <PassiveDesc ID="405611">
+    <Name>The World’s Most Beautiful Performance</Name>
+    <Desc>Follows a unique pattern of behavior that cycles every 6 Scenes. Resistances and the amount of Speed dice change every Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405612">
+    <Name>Ever-repeating Performance</Name>
+    <Desc>After using the Combat Page 'Curtain Call', recover the HP of all allies. The healing diminishes with every repeat.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405613">
+    <Name>Fervent Adoration</Name>
+    <Desc>Staggered librarians are given the 'Fervent Adoration' status.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405614">
+    <Name>Ensemble</Name>
+    <Desc>At the start of the Scene, gain Power equal to the number of other allies who can act</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405621">
+    <Name>Silent Climax</Name>
+    <Desc>Does not act during the fifth and sixth measures of the cycle</Desc>
+  </PassiveDesc>
+
+
+  <!-- 증오의 여왕 -->
+  <PassiveDesc ID="505101">
+    <Name>Adverse Change</Name>
+    <Desc>
+      When the Hysteria gauge is filled, transform. The Hysteria gauge rises upon losing clashes or being attacked by marked characters, and decreases upon winning clashes or attacking marked characters. The screen pinkens from left to right as the gauge fills.
+      At the end of the Scene, restore all Light and draw 2 pages.
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505102">
+    <Name>In the Name of Hate</Name>
+    <Desc>Uses a page that leaves a "mark" on the target every 2 Scenes. All resistances on the marked character change to "Weak", and the character will be primarily targeted by Roland.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505103">
+    <Name>Arcana Slave</Name>
+    <Desc>Uses a Mass Attack page that targets all librarians every 4 Scenes. Each individual librarian can negate the attack if the sum of all dice rolls on the page played by them is equal to or higher than the mass attack's dice roll.</Desc>
+  </PassiveDesc>
+
+  <!-- 절망의 기사 본체-->
+  <PassiveDesc ID="505211">
+    <Name>Loyal Protection</Name>
+    <Desc>Cannot be targeted. Does not act.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505212">
+    <Name>Sorrow</Name>
+    <Desc>Give Tears to a random sword every 3 Scenes. If the character is Staggered, activates the Scene after.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505213">
+    <Name>Despair</Name>
+    <Desc>When a sword with Tears takes lethal damage, falls into Despair next Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505214">
+    <Name>Blessing of Despair</Name>
+    <Desc>When the character falls into Despair, all swords fully recover HP and Stagger Resist, and use special Combat Pages.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505215">
+    <Name>A Broken Heart</Name>
+    <Desc>If all swords impale the character in Despair state, become Staggered and targetable next Scene.</Desc>
+  </PassiveDesc>
+  <!-- 절망의 기사 칼 -->
+  <PassiveDesc ID="505221">
+    <Name>Tears</Name>
+    <Desc>Gain a Speed die, use special pages, and change resistances while under the effect of Tears.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505222">
+    <Name>Respite</Name>
+    <Desc>Enter a state of suspension upon taking lethal damage. Revives after two Scenes.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505223">
+    <Name>Sword that Pierces Despair</Name>
+    <Desc>If this fails to deal any damage to its target while in Despair state, the sword will impale Roland, dealing damage to him.</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="505311">
+    <Name>Flicking Desire</Name>
+    <Desc>If HP falls to 50% or lower, transform into the King of Greed next Scene. HP does not go below 50% before transformation.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505312">
+    <Name>The Road of Gold</Name>
+    <Desc>Every 3 Scenes, creates Brilliant Bliss and becomes untargetable, but does not act. The following Scene, uses a special Combat Page against all librarians.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505313">
+    <Name>Narcissism</Name>
+    <Desc>If three or fewer librarians manage to negate the attack of the special Combat Page, gain 3 Strength and Haste next Scene. (If two or less librarians are alive, one or no librarians negating the page will activate this effect)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505314">
+    <Name>Momentary Bliss</Name>
+    <Desc>If all librarians successfully negate the attack of the special Combat Page, Roland becomes Staggered next Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505321">
+    <Name>The King of Greed</Name>
+    <Desc>Uses a different set of Combat Pages. On a successful hit, deal bonus damage equal to stacks of Bleed on the target.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505322">
+    <Name>The Road of the King</Name>
+    <Desc>Every 3 Scenes, creates Brilliant Bliss and becomes untargetable, but does not act. The following Scene, uses a special Combat Page against a single target.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505323">
+    <Name>Voracity</Name>
+    <Desc>If a librarian fails to negate any one of the special Combat Page's attacks, deal 15 damage to all librarians and recover 25 HP.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505324">
+    <Name>A Moment’s Bliss</Name>
+    <Desc>If a librarian successfully negates all attacks of the special Combat Page, Roland becomes Staggered next Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505331">
+    <Name>Brilliant Bliss</Name>
+    <Desc>Exists for one Scene. Gives special Combat Pages to the librarian that defeats it.</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="505411">
+    <Name>Today’s Play</Name>
+    <Desc>Only Roland can defeat the Hermit. The battle proceeds to the next phase when the Hermit is defeated.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505412">
+    <Name>Blind Rage</Name>
+    <Desc>Prioritizes attacking Hermit’s Staves. If no Hermit’s Staff is present, attacks the Hermit.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505413">
+    <Name>Sinners of the Otherworlds!</Name>
+    <Desc>While one or more Hermit's Staves are present, after taking 30 total damage, uses a Mass Attack page, 'EMBODIMENTS OF EVIL!!!!' on the following Scene. The total damage counter is reset afterwards.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505414">
+    <Name>Boiling Anger</Name>
+    <Desc>When Roland starts attacking the Hermit, uses a Mass Attack page, 'EMBODIMENTS OF EVIL!!!!'. The page is used every 2 Scenes after.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505421">
+    <Name>The Exploited</Name>
+    <Desc>HP does not fall below 30 from a librarian's attacks. If the character's HP is at 30 or lower at the end of a Scene, recovers 50% of Max HP next Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505422">
+    <Name>Dear Companion</Name>
+    <Desc>Gains +5 Power when clashing against Roland. Takes no damage from Burn, Bleed, or Erosion.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505423">
+    <Name>Visitor from Another World</Name>
+    <Desc>While one or more Hermit’s Staves are present, uses a Mass Attack page every 2 Scenes.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505424">
+    <Name>When Two Realms Meet</Name>
+    <Desc>
+      Changes behavior when all Hermit’s Staves are defeated. On the first Scene of the new cycle, attacks Roland.
+      After attacking Roland again on the second Scene, again on the second Scene, uses a Mass Attack page that summons more Hermit’s Staves.
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505431">
+    <Name>Hermit’s Staff</Name>
+    <Desc>Attacks Roland.</Desc>
+  </PassiveDesc>
+
+  <!-- Nihil -->
+  <PassiveDesc ID="505500">
+    <Name>All Returns to Nil</Name>
+    <Desc>Has unique modes of behavior that cycle in the following order: Nihil -> Greed -> Hate -> Despair -> Wrath. Each mode features different passive abilities and Combat Pages.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505501">
+    <Name>Pointless Endeavor</Name>
+    <Desc>Takes no Stagger damage outside of 'Wrath' mode. Takes no damage from Bleed, Burn, Erosion. This character's Speed dice cannot be Sealed.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505502">
+    <Name>Worthless Greed</Name>
+    <Desc>
+      Combat Pages used against this character lose 5 Power unless the 'Magical Girl of Happiness' is the user.
+      Each time this character loses a clash, a random ally gains the Combat Page 'Fragment of Bliss'. Uses a Mass Attack page 'The Road of Gold' on the second Scene.
+      If all allies negate the attack of 'The Road of Gold', loses 50 HP and shifts to 'Hate' mode next Scene.
+      If any ally is hit, deal 10 damage to all librarians and restore 20 HP.
+      On a successful hit, deals bonus damage equal to the amount of Bleed on the target.
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505503">
+    <Name>Pointless Hate</Name>
+    <Desc>
+      Combat Pages used against this character lose 5 Power unless the 'Magical Girl of Love' is the user.
+      After winning 10 total clashes, uses a Mass Attack page 'Arcana Slave' on the next Scene.
+      If the Magical Girl of Love uses 'Arcana Slave!', loses 50 HP and shifts to 'Despair' mode next Scene.
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505504">
+    <Name>Meaningless Despair</Name>
+    <Desc>
+      Combat Pages used against this character lose 5 Power unless the 'Magical Girl of Justice' is the user.
+      If all dice on a Combat Page this character uses lose or draw in a clash, that page will be locked out starting with the next Scene.
+      If all three pages are locked out, loses 50 HP and shifts to 'Wrath' mode next Scene.
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505505">
+    <Name>Senseless Wrath</Name>
+    <Desc>
+      Combat Pages used against this character lose 5 Power unless the 'Magical Girl of Courage' is the user.
+      Uses a Mass Attack page every 2 Scenes. Upon becoming Staggered, loses 50 HP and shifts to 'Nihil' mode.
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505511">
+    <Name>Petrified Hate</Name>
+    <Desc>
+      The Magical Girl of Love will stand in for the librarian that breaks this statue at the start of the next Scene.
+      If a Magical Girl breaks the statue, the librarian with the lowest current HP will be replaced instead.
+      Magical Girls possess special Key pages with unique stats, passive abilities and Combat Pages.
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505521">
+    <Name>Ossified Despair</Name>
+    <Desc>
+      The Magical Girl of Justice will stand in for the librarian that breaks this statue at the start of the next Scene.
+      If a Magical Girl breaks the statue, the librarian with the lowest current HP will be replaced instead.
+      Magical Girls possess special Key pages with unique stats, passive abilities and Combat Pages.
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505531">
+    <Name>Fossilized Greed</Name>
+    <Desc>
+      The Magical Girl of Happiness will stand in for the librarian that breaks this statue at the start of the next Scene.
+      If a Magical Girl breaks the statue, the librarian with the lowest current HP will be replaced instead.
+      Magical Girls possess special Key pages with unique stats, passive abilities and Combat Pages.
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505541">
+    <Name>Lapidified Wrath</Name>
+    <Desc>
+      The Magical Girl of Courage will stand in for the librarian that breaks this statue at the start of the next Scene.
+      If a Magical Girl breaks the statue, the librarian with the lowest current HP will be replaced instead.
+      Magical Girls possess special Key pages with unique stats, passive abilities and Combat Pages.
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505561">
+    <Name>Sword without an Owner</Name>
+    <Desc>Targets any character other than the Magical Girl of Justice.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505600">
+    <Name>A Real Magical Girl</Name>
+    <Desc>At the start of the Scene, draw 3 pages and fully restore Light.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505611">
+    <Name>Love!</Name>
+    <Desc>Uses a set of unique Combat Pages. After winning 10 clashes in total, the Cost of 'Arcana Slave!' is reduced to 0. (Cost is reset upon using the page)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505621">
+    <Name>Justice!</Name>
+    <Desc>Uses a set of unique Combat Pages.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505631">
+    <Name>Happiness!</Name>
+    <Desc>Uses a set of unique Combat Pages.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505641">
+    <Name>Courage!</Name>
+    <Desc>Uses a set of unique Combat Pages.</Desc>
+  </PassiveDesc>
+
+  <!-- 게부라 최종 -->
+  <!-- 용병 -->
+  <PassiveDesc ID="605111">
+    <Name>End of the Nightmare</Name>
+    <Desc>The battle progresses to the next phase if Mercenary Roland finishes off the Wolf; the battle is lost if he dies before the Wolf does.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605112">
+    <Name>Vengefulness</Name>
+    <Desc>At 50% HP or lower, gain 1 Strength each Scene. (Does not activate during Rage or Astray Rage)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605113">
+    <Name>No Hesitation</Name>
+    <Desc>Uses 'Strike Without Hesitation' every 2 Scenes, targeting all characters.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605114">
+    <Name>Rage</Name>
+    <Desc>When the Rage meter is filled, enters a state of rage. The Rage meter rises upon taking damage from the Wolf, and decreases upon dealing damage to the Wolf. The screen becomes redder as the Rage meter fills. (Rage: Lasts 2 Scenes. Gain +2 Strength each Scene, and use Mass Attack pages.)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605115">
+    <Name>Fury with No Outlet</Name>
+    <Desc>If a librarian lands a killing blow on the Wolf, enters an 'Astray Rage' state, then recovers 50% of Max HP and fully recovers Stagger Resist. (Astray Rage: Permanently persists. Gain +4 Strength each Scene, and use Mass Attack pages.)</Desc>
+  </PassiveDesc>
+  <!-- 용병 전투 늑대 -->
+  <PassiveDesc ID="605120">
+    <Name>Sharp Claws</Name>
+    <Desc>Inflict 1 Scars to target on hit. Deal bonus damage equal to stacks of Scars on target. Dice gain +2 Power against targets with 4 or more Scars.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605121">
+    <Name>Roaring Wolf</Name>
+    <Desc>While HP is higher than 50%, uses a Mass Attack page, 'Howl', every 4 Scenes.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605122">
+    <Name>Howling Nightmare</Name>
+    <Desc>When HP falls to 50% or lower, gains 2 Speed dice and uses 'Howl' every 2 Scenes.</Desc>
+  </PassiveDesc>
+
+  <!-- 커다랗고 나쁠 늑대 -->
+  <PassiveDesc ID="605211">
+    <Name>The Role of the Wolf</Name>
+    <Desc>On combat start, swallows a random assistant librarian. If the swallowed librarian escapes or gets digested, swallows another librarian after 2 Scenes.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605212">
+    <Name>Hour of Poetic Justice</Name>
+    <Desc>After swallowing a librarian, temporarily double Max Stagger Resist and fully recover it; then all Stagger damage resistances change to "Fatal" for the next Scene. The number of Speed dice change, and different Combat Pages will be used. If Wolf Roland is Staggered within the Scene, expel the captive librarian.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605213">
+    <Name>Sheep’s Skin</Name>
+    <Desc>The librarian that was swallowed loses 25% of their Max HP upon being expelled and becomes Staggered.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605214">
+    <Name>Instincts</Name>
+    <Desc>If Wolf Roland does not get Staggered after the Scene it swallows a librarian, the librarian is killed.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605215">
+    <Name>Destined to be the Big Bad Wolf</Name>
+    <Desc>If two librarians have been consumed and digested, transform. Also transforms if HP is at 50% or lower at the start of a Scene. HP does not fall below 50% before transforming.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605221">
+    <Name>Transform</Name>
+    <Desc>Upon transforming, Max Stagger Resist increases, and Stagger Resist is recovered to full.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605222">
+    <Name>Into the Dark</Name>
+    <Desc>After the character loses 25% or more of the HP it had at the point of transformation, gain the 'Skulking in the Shadows' status for the next 2 Scenes.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605223">
+    <Name>Shadowy Lurker</Name>
+    <Desc>While the character has the 'Skulking in the Shadows' status, librarians other than the ones targeted by the character cannot target it.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605224">
+    <Name>Weariness</Name>
+    <Desc>After 'Skulking in the Shadows' wears off, uses a Mass Attack page, 'Howl'; all Stagger damage resistances change to "Fatal" for the Scene.</Desc>
+  </PassiveDesc>
+
+  <!-- 웃시산 -->
+  <PassiveDesc ID="605301">
+    <Name>In Search of Corpses</Name>
+    <Desc>Uses Combat Pages other than 'Horrid Screech' and 'Vomit' indiscriminately. Recovers 30% of current HP upon defeating an ally.</Desc>
+  </PassiveDesc>
+    <PassiveDesc ID="605302">
+    <Name>Melted Corpses</Name>
+    <Desc>Each time the character loses more than 25% of the Max. HP (62/87/112), 'Melting Corpses' is spawned at the start of the next Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605311">
+    <Name>Dividing</Name>
+    <Desc>Divides into corpses when HP drops to 0. If all corpses are defeated within 3 Scenes, the battle progresses to the next phase. Otherwise, the character revives as Stage 1. (Upon revival, it will recover HP by the sum of the HP all remaining Melting Corpses had.)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605312">
+    <Name>Growing Mass</Name>
+    <Desc>Transforms to Stage 2 upon fully recovering HP.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605321">
+    <Name>Divisible Yet Addable</Name>
+    <Desc>Transforms back to Stage 1 when HP drops to 0. Transforms to Stage 3 upon fully recovering HP.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605322">
+    <Name>Terrifying Laughter</Name>
+    <Desc>At the start of the Scene, gain 1 Strength. Uses 'Horrid Screech' every 2 Scenes.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605331">
+    <Name>Division</Name>
+    <Desc>Transforms back to Stage 2 when HP drops to 0.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605332">
+    <Name>Putrid Vomit</Name>
+    <Desc>At the start of the Scene, gain 2 Strength. Uses 'Vomit' every 2 Scenes.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605341">
+    <Name>Rot</Name>
+    <Desc>Upon taking a hit, deal 8 damage to the librarian that attacked it and inflict 1 Fragile to them.</Desc>
+  </PassiveDesc>
+
+  <!-- 노스페라투 -->
+  <PassiveDesc ID="605411">
+    <Name>Fear of Water</Name>
+    <Desc>If the character has less than 5 Blood, gain Strength proportional to the amount of Blood missing. (Up to 3)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605412">
+    <Name>Thirst</Name>
+    <Desc>If the character has 2 or less Blood, uses a special Combat Page. (Has a 2 Scene cooldown.)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605413">
+    <Name>Banquet of Blood</Name>
+    <Desc>
+      If the character has 5 or more Blood, uses a Mass Attack page: 'Banquet of Blood'. (Has a 3 Scene cooldown.)
+      If the character did not use the page for the first 4 Scenes of the phase, it will be used on the 5th Scene.
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605414">
+    <Name>Shapeshifting</Name>
+    <Desc>
+      If HP falls to 50% or lower, shapeshift next Scene. HP does not go below 50% before this.
+      Upon shapeshifting, defeat all Sanguine Bats and gain 5 Blood.
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605431">
+    <Name>Shapeshifting</Name>
+    <Desc>Upon shapeshifting, defeat all Sanguine Bats and gain 5 Blood.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605432">
+    <Name>Fear of Water</Name>
+    <Desc>If the character has less than 5 Blood, gain Strength proportional to the amount of Blood missing. (Up to 3)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605433">
+    <Name>Flowing Blood</Name>
+    <Desc>At the start of the Scene, lose 1 Blood.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605434">
+    <Name>Unbearable Drought</Name>
+    <Desc>If the character has 2 or less Blood, uses a special Combat Page. (Has a 2 Scene cooldown.)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605435">
+    <Name>Lust for Blood</Name>
+    <Desc>
+      If the character has 0 Blood, uses a Mass Attack page: 'Lust for Blood'. (Has a 3 Scene cooldown.)
+      If the character did not use the page for 3 Scenes after shapeshifting, it will be used on the 4th Scene.
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605421">
+    <Name>Fear of Water</Name>
+    <Desc>If the character has 1 or less Blood, gain 2 Strength.</Desc>
+  </PassiveDesc>
+
+
+  <!-- 아무것도 없는 -->
+  <PassiveDesc ID="605511">
+    <Name>Shell</Name>
+    <Desc>Every 2 Scenes, uses the Combat Page 'Wear Shell' on a random assistant librarian.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605512">
+    <Name>Evolving</Name>
+    <Desc>If HP reaches 0, morphs into its second form at the start of the next Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605521">
+    <Name>Still Evolving</Name>
+    <Desc>After 2 Scenes pass, evolve into the third form. The HP of the third form depends on the amount of HP this current form has left at the moment of evolution. (Min. 70% of Max. HP)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605522">
+    <Name>Regenerative</Name>
+    <Desc>At the start of the Scene, recover 50% of Max. HP.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605531">
+    <Name>Hardness</Name>
+    <Desc>Ignores instances of damage that would deal 10 or less.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605532">
+    <Name>Regenerative</Name>
+    <Desc>If the character took 80 or less damage within a Scene, recovers 10% of Max. HP at the end of the Scene.</Desc>
+  </PassiveDesc>
+
+  <!-- Chesed -->
+  <!-- 헤세드 보스전-->
+  <!-- 허수아비-->
+  <PassiveDesc ID="705111">
+    <Name>Bountiful Crop</Name>
+    <Desc>Prioritizes the target with the most copies of 'Wisdom' in hand. Dice gain Power equal to the number of 'Wisdoms' in target's hand.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705112">
+    <Name>Harvest</Name>
+    <Desc>Uses a powerful Combat Page every 3 Scenes.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705121">
+    <Name>Gleaning Sagacity</Name>
+    <Desc>Every 3 Scenes, gains an additional Speed die and uses the page 'Harvest Wisdom', which absorbs the target's Combat Page and recovers the user's HP on hit. If the target has no Combat Pages left to absorb, deals bonus damage (5~20) instead.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705122">
+    <Name>Tranquility of the Wise</Name>
+    <Desc>If 'Harvest Wisdom' clashes against 'Wisdom', the harvester (user) takes 20 Stagger damage at the end of the engagement, and gains 3 Feeble and Bind next Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705123">
+    <Name>Cerebral Endeavor</Name>
+    <Desc>After absorbing a page that isn't 'Wisdom' with 'Harvest Wisdom', gain Strength and Endurance equal to the number of pages absorbed, and use one of the absorbed pages.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705124">
+    <Name>Straw for Brains</Name>
+    <Desc>At the start of the Scene, all librarians who own no pages become Staggered.</Desc>
+  </PassiveDesc>
+
+  <!-- 나무꾼 -->
+  <PassiveDesc ID="705211">
+    <Name>Dense Forest</Name>
+    <Desc>All librarians restore Light to max for the duration of the phase.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705212">
+    <Name>Still Not Enough</Name>
+    <Desc>
+      Each Scene, targets the character with the most Light.
+      When attacking, all dice gain Power equal to the amount of Light the target has.
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705213">
+    <Name>A Warm Heart</Name>
+    <Desc>At the start of the Scene, restore Light equal to the amount of Warm Hearts. Lose 1 stack of Warm Heart at the end of the Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705214">
+    <Name>I Want a Heart</Name>
+    <Desc>At the start of the Scene, if the amount of Warm Hearts is 0, target the Tree with the lowest HP.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705215">
+    <Name>Pulsing Ticker</Name>
+    <Desc>Upon defeating another character, recover 20% of Max HP and gain 3 stacks of Warm Heart.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705216">
+    <Name>Empty Chest</Name>
+    <Desc>
+      If the character has no Warm Heart for 2 Scenes, becomes Staggered at the start of the next Scene.
+      Cull a Tree with the lowest HP when recovering from Stagger.
+    </Desc>
+  </PassiveDesc>
+
+  <!-- 집으로 가는 길-->
+  <PassiveDesc ID="705311">
+    <Name>On the Way Home</Name>
+    <Desc>Spawns the 'Home' when the phase starts, and uses a Mass Attack page that applies 'Yellow Brick Road' to the 'Home' and two librarians.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705312">
+    <Name>Friends! Let’s Go Home~!</Name>
+    <Desc>On the second Scene, uses the Combat Page 'Friends! Let’s Go Home~!' targeting the 'Home' and the librarians with 'Yellow Brick Road'. 
+If the Combat Page hits 'Home', the battle is lost.
+The attack on the 'Home' is canceled if all librarians with 'Yellow Brick Road' win the clash against 'Friends! Let’s Go Home~!'.</Desc>  </PassiveDesc>
+  <PassiveDesc ID="705313">
+    <Name>You… Gosh Darned Wizard…!</Name>
+    <Desc>
+      After the character's attack towards 'Home' has been canceled twice, all resistances change to "Fatal", and uses a powerful Mass Attack the following Scene.
+      If any librarian is hit by the attack, the 'Home' is spawned next Scene.
+      If no librarian is damaged by the attack, the character becomes Staggered next Scene, and the 'Home' is spawned the Scene after the Stagger.
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705321">
+    <Name>Courageous</Name>
+    <Desc>Is immune to all types of damage until 'The Road Home' dies.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705322">
+    <Name>Cowardly</Name>
+    <Desc>Once 'The Road Home' dies, all resistances change to "Fatal", and Max HP is reduced. The number of Speed dice and Combat Pages also change.</Desc>
+  </PassiveDesc>
+
+  <!-- 오즈마-->
+  <!-- 오즈마-->
+  <PassiveDesc ID="705411">
+    <Name>Revive</Name>
+    <Desc>On the first Scene, uses Combat Pages that awaken all Jacks and inflict Oblivion on a librarian. Afterwards, follows a unique pattern of behavior that cycles every 4 Scenes.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705412">
+    <Name>Agony of the Deprived</Name>
+    <Desc>After a librarian with Oblivion is restored from the status, all resistances of this character change to "Fatal" at the start of the next Scene, and uses a Mass Attack page. Repeats the pattern afterwards.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705413">
+    <Name>Grief of the Deprived</Name>
+    <Desc>After 2 cycles have passed, all Stagger damage resistances of this character change to "Fatal" at the start of the next Scene, and uses an extremely powerful Mass Attack page.</Desc>
+  </PassiveDesc>
+  <!--잭-->
+  <PassiveDesc ID="705421">
+    <Name>Stolen Power</Name>
+    <Desc>Uses the Combat Pages of the librarian with Oblivion.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705422">
+    <Name>Who’s the Real Deal?</Name>
+    <Desc>
+      Only one of the Jacks that awaken is real; the rest are fakes.
+      Whenever a librarian with Oblivion hits the real Jack, it gives back a Combat Page that was stolen from them.
+      The screen blinks when the real Jack is hit.
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705423">
+    <Name>Steal or be Stolen</Name>
+    <Desc>
+      After the librarian with Oblivion hits the real Jack 9 times, all Jacks die.
+      If the condition isn't fulfilled within 3 Scenes of Oblivion being applied, the librarian with the status is turned into a pumpkin next Scene.
+      Afterwards, the real Jack transforms into 'Jack Revived', and permanently uses the Key page and Combat Pages of the librarian that had Oblivion.
+    </Desc>
+  </PassiveDesc>
+
+
+  <!-- 거짓을 말하는 어른-->
+  <!-- 마법사 공통-->
+  <PassiveDesc ID="705510">
+    <Name>The Wizard's Trial</Name>
+    <Desc>
+      Five phases play out in a set order. If all five phases have been passed, proceed to the 'Anger' phase.
+      Is immune to Stagger damage before The Road Home's phase starts. Is immune to physical damage before the Anger phase starts.
+    </Desc>
+  </PassiveDesc>
+  <!-- 마법사 1막-->
+  <PassiveDesc ID="705511">
+    <Name>The Trial Commences</Name>
+    <Desc>
+      When the phase begins, dead librarians come back to life with full HP.
+      Add 5 special Combat Pages to the hands of all librarians. The following phases can be overcome using their special powers.
+    </Desc>
+  </PassiveDesc>
+  <!-- 마법사 2막-->
+  <PassiveDesc ID="705512">
+    <Name>Show Me Your Warm Heart</Name>
+    <Desc>
+      Limits the amount of Light of all librarians other than the one with the Woodsman's status.
+      If all 'Emerald Crystals' are destroyed within 2 Scenes, proceed to the Scarecrow's phase next Scene.
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705513">
+    <Name>How Hollow a Heart</Name>
+    <Desc>If the 'Emerald Crystals' are not destroyed within 2 Scenes, a Mass Attack page is used before proceeding to the Scarecrow's phase.</Desc>
+  </PassiveDesc>
+  <!-- 마법사 3막-->
+  <PassiveDesc ID="705514">
+    <Name>Show Me Your Wisdom</Name>
+    <Desc>
+      Turn all librarians other than the one with the Scarecrow's status into 'Shining Statues'.
+      A copy of 'Wisdom' and 4 special Combat Pages are added to the Scarecrow librarian's hand.
+      Proceed to the Cat's phase next Scene.
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705515">
+    <Name>What Worthless Wisdom</Name>
+    <Desc>If the librarians aren't restored to their true forms by the end of the Scene, reduce the number of Speed dice of the Scarecrow librarian to 1.</Desc>
+  </PassiveDesc>
+  <!-- 마법사 3막-->
+  <PassiveDesc ID="705516">
+    <Name>Show Me Your Courage</Name>
+    <Desc>
+      Inflict all librarians with 10 Feeble, Disarm, and Fragile for 2 Scenes.
+      If all 'Scowling Faces' are defeated, proceed to The Road Home's phase the following Scene.
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705517">
+    <Name>Twas Certain of Catly Cowardice</Name>
+    <Desc>If a librarian other than the one with the Cat's status gets hit, the Cat librarian is inflicted with 5 Feeble, Disarm, and Fragile until the end of battle.</Desc>
+  </PassiveDesc>
+  <!-- 마법사 4막-->
+  <PassiveDesc ID="705518">
+    <Name>What Could You Do?</Name>
+    <Desc>Upon becoming Staggered, proceed to the Anger phase the following Scene.</Desc>
+  </PassiveDesc>
+  <!-- 마법사 4막-->
+  <PassiveDesc ID="705519">
+    <Name>Anger</Name>
+    <Desc>If the character's HP reaches 0 or is transformed into a different being, the battle is won.</Desc>
+  </PassiveDesc>
+  <!-- 마법사 2막 수정-->
+  <PassiveDesc ID="705521">
+    <Name>Crystal Containing Light</Name>
+    <Desc>Deals 8 physical and Stagger damage to the attacker. When destroyed, the 1-Light capacity limit is lifted from a librarian.</Desc>
+  </PassiveDesc>
+  <!-- 마법사 2막 당나귀-->
+  <PassiveDesc ID="705531">
+    <Name>Shattering Emerald</Name>
+    <Desc>If not restored to their true form until the end of the Scene, take damage equal to 80% of current HP.</Desc>
+  </PassiveDesc>
+
+
+  <!-- Binah 비나 최종전 -->
+  <!-- 큰새 -->
+  <PassiveDesc ID="805111">
+    <Name>A Lamp that Burns Forever</Name>
+    <Desc>Starting with the first Scene, inflicts a random assistant librarian with 'Enchanted' every 3 Scenes. More librarians are affected with subsequent occurrences (1-2-2-3).</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805112">
+    <Name>Darkness</Name>
+    <Desc>Starting with the third Scene, uses the Combat Page 'Darkness' every 3 Scenes.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805113">
+    <Name>Sleepy Eyes</Name>
+    <Desc>Each time an ally is defeated, permanently gain 5 Feeble and Disarm. When all allies die, all Stagger damage resistances change to "Fatal".</Desc>
+  </PassiveDesc>
+
+  <!-- 작은새 -->
+  <PassiveDesc ID="805211">
+    <Name>Misdeeds Not Allowed!</Name>
+    <Desc>Offensive dice gain +50 Power when clashing against Offensive dice</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805212">
+    <Name>They Must Be Punished!</Name>
+    <Desc>If the character takes damage, inflicts 'Punishee' on the attacker. Enters Punishment mode next Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805213">
+    <Name>Punishment!</Name>
+    <Desc>
+      In Punishment mode, the number of Speed dice increases to 5 for one Scene, and uses a special Combat Page against the character that attacked him last.
+      Also, all Stagger damage resistances change to "Fatal".
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805221">
+    <Name>To Protect…</Name>
+    <Desc>When Roland is not in Punishment mode, gain Vigilance every 2 Scenes, and switch between attack and defense modes each Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805222">
+    <Name>Chase Away…</Name>
+    <Desc>When Roland is in Punishment mode, enter attack mode for the Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805223">
+    <Name>Forest Keeper</Name>
+    <Desc>Prioritizes targeting Staggered characters. Speed is fixed at specific values each Scene. Offensive dice gain +2 Power against targets with slower Speed.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805224">
+    <Name>Roost</Name>
+    <Desc>HP does not go below 1. When HP drops to 1, go into a dormant state, and awaken in 3 Scenes with full HP and Stagger Resist.</Desc>
+  </PassiveDesc>
+
+  <!-- 긴새 -->
+  <PassiveDesc ID="805311">
+    <Name>Tattered Bandages</Name>
+    <Desc>Takes no damage from Bleed, Burn, or Fairy.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805312">
+    <Name>Mark of Sin</Name>
+    <Desc>At the start of the battle, gain 10 Marks of Sin. On hit, transfer a stack of Mark of Sin to the target. All dice gain Power equal to the amount of Marks of Sin the target has.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805313">
+    <Name>Unjust Scale</Name>
+    <Desc>Starting with Scene 1, all characters gain 1 Mark of Sin at the start of each Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805314">
+    <Name>Judgement</Name>
+    <Desc>If a character has 5 or more Marks of Sin at the start of the Scene, uses a special Combat Page: ‘Judgement’, on them.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805315">
+    <Name>Ceaseless Judgement</Name>
+    <Desc>If three or more characters have 3+ Marks of Sin at the start of the Scene, uses a Mass attack page: ‘Ceaseless Judgement’.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805316">
+    <Name>Overflowing Misdeeds</Name>
+    <Desc>After using 'Judgement' or 'Ceaseless Judgement', lose 25% of Max. Stagger Resist.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805321">
+    <Name>Piercing Shriek</Name>
+    <Desc>After taking an attack, uses the Combat Page 'Piercing Shriek' next Scene.</Desc>
+  </PassiveDesc>
+
+  <!-- 종말새 -->
+  <PassiveDesc ID="805511">
+    <Name>The Monster in the Black Forest</Name>
+    <Desc>Uses 3 out of 8 possible patterns over 3 Scenes.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805512">
+    <Name>The Three Birds</Name>
+    <Desc>
+      Every two Scenes, switch the active egg effect for Apocalypse Bird.
+      The Apocalypse Bird's eggs cycle in the following order: Big Eyes -&gt; Small Beak -&gt; Long Arms -&gt; (Repeat).
+      Roland's resistances change depending on the currently active egg effect.
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805521">
+    <Name>Cracking Eggs</Name>
+    <Desc>If Staggered while the Apocalypse Bird's egg effect is active, the character will lose HP, and the currently active egg effect will be permanently expired.
+At the start of the next Scene, recover from Stagger, purge all status ailments, and gain 2 Strength and Endurance.
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805513">
+    <Name>Eternal Peace</Name>
+    <Desc>HP does not go below 75%.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805514">
+    <Name>Eternal Tranquility</Name>
+    <Desc>HP does not go below 50%.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805515">
+    <Name>Eternal Silence</Name>
+    <Desc>HP does not go below 25%.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805516">
+    <Name>Big Bird’s Recollection</Name>
+    <Desc>Uses designated Combat Pages. This pattern will not be used once Big Eyes' effect expires.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805517">
+    <Name>Judgement Bird’s Remembrance</Name>
+    <Desc>Uses designated Combat Pages. This pattern will not be used once Long Arms' effect expires.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805518">
+    <Name>Punishing Bird’s Recalling</Name>
+    <Desc>Uses designated Combat Pages. This pattern will not be used once Small Beak's effect expires.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805519">
+    <Name>Apocalypse Bird</Name>
+    <Desc>Uses designated Combat Pages.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805520">
+    <Name>Apocalypse Bird</Name>
+    <Desc>Uses designated Combat Pages.</Desc>
+  </PassiveDesc>
+
+
+
+  <!-- 백야-->
+  <PassiveDesc ID="9055111">
+    <Name>Prophet</Name>
+    <Desc>Untargetable. HP and Stagger Resist do not fall below 1. Prevents Burn, Bleed, or Erosion. </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="9055112">
+    <Name>Place Your Trust in Me</Name>
+    <Desc>At the start of the Scene, uses the Combat Page 'Baptism' for the number of dead Apostles.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="9055113">
+    <Name>From the End of the World</Name>
+    <Desc>Proceeds to the next phase after 12 Apostles have been defeated.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="9055121">
+    <Name>The time has come.</Name>
+    <Desc>Uses the Combat Page 'Rise and Serve Me' on the first Scene. Starting with the third Scene, uses the Combat Page 'I am thy Saviour' every 3 Scenes.</Desc> <!-- Waiting for confirmation from Yumi on this one -->
+  </PassiveDesc>
+  <PassiveDesc ID="9055122">
+    <Name>Rise, my servants. Rise and serve me.</Name>
+    <Desc>Summons 2 Guardian Apostles on the second Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="9055131">
+    <Name>Why art thou in fear?</Name>
+    <Desc>All librarians are Staggered on the first Scene. Uses the Combat Page 'Do Not Deny Me'.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="9055132">
+    <Name>I am with thee.</Name>
+    <Desc>Summons 2 Guardian Apostles on the second Scene. Apply '???' to the Patron Librarian.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="9055133">
+    <Name>???</Name>
+    <Desc>Remove all Combat Pages from the Patron Librarian, and give him special Combat Pages.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="905500">
+    <Name>Undying</Name>
+    <Desc>HP does not fall below 1.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="905501">
+    <Name>Suspended</Name>
+    <Desc>Becomes indefinitely Staggered if HP falls to 2 or lower. Can only recover from Stagger when Paradise Lost uses a Combat Page that 'resurrects' the Apostle.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="905502">
+    <Name>I will Follow Thee</Name>
+    <Desc>Offensive dice gain +2 Power against librarians afflicted with 'Revelation'.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="905521">
+    <Name>Guardian</Name>
+    <Desc>At the start of the Scene, give 5 Protection and Stagger Protection to Paradise Lost.
+If this character is Suspended, Angela's resistances will change to "Fatal" next Scene; the character will not give her Protection or Stagger Protection until it recovers from the Suspended state.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="905522">
+    <Name>I Shall Preserve Thee</Name>
+    <Desc>Prioritizes targeting librarians that attacked Paradise Lost in the previous Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="905523">
+    <Name>The Reborn</Name>
+    <Desc>Has the same resistances as the Key page of a certain librarian.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="905531">
+    <Name>Scythe Apostle</Name>
+    <Desc>Prioritizes targeting the librarian with the lowest HP.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="905551">
+    <Name>Spear Apostle</Name>
+    <Desc>Prioritizes targeting librarians with status ailments.</Desc>
+  </PassiveDesc>
+
+  <!-- 케테르 완전개방-->
+  <!-- 플레이어블 앤젤라 -->
+  <PassiveDesc ID="1005011">
+    <Name>Facing the Past</Name>
+    <Desc>The battle is lost if this character is defeated.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005012">
+    <Name>Angela</Name>
+    <Desc>Has a unique Key page and Combat Pages that cannot be replaced or swapped. Cannot attribute passive abilities.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005013">
+    <Name>Director of her Role’s Namesake</Name>
+    <Desc>Draw 2 additional pages at the start of the Act. At the start of the Scene, restore 1 Light and draw 1 page.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005014">
+    <Name>The Seed of Light</Name>
+    <Desc>The Emotions of all allies build up twice as fast.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005015">
+    <Name>???</Name>
+    <Desc>Gain E.G.O pages whenever the battle progresses to the next phase. After using 9 unique E.G.O pages, gain a special E.G.O page.</Desc>
+  </PassiveDesc>
+
+
+  <!-- this isn't a beach, it's a bloodbath -->
+  <PassiveDesc ID="1005111">
+    <Name>Refracting</Name>
+    <Desc>At the start of each Scene, exhaust all pages in hand and deck; add new pages to hand. Their Cost becomes 0.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005112">
+    <Name>Scars</Name>
+    <Desc>Take 1-5 less damage from Slash attacks.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005113">
+    <Name>Blood</Name>
+    <Desc>Block Dice Power +3</Desc>
+  </PassiveDesc>
+
+  <!-- heart -->
+  <PassiveDesc ID="1005211">
+    <Name>Palpitating</Name>
+    <Desc>At the start of each Scene, exhaust all pages in hand and deck; add new pages to hand. Their Cost becomes 0.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005212">
+    <Name>Pulsating Motion</Name>
+    <Desc>Goes on the offensive every 4 Scenes.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005213">
+    <Name>Pneumonic Rally</Name>
+    <Desc>After going on the offensive, spawn Lungs of Craving and lose 30 HP until there are 4 other allies at the end of the Scene. If Staggered, the Lungs are spawned when the character recovers from Stagger.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005214">
+    <Name>Aspiration Pneumonia</Name>
+    <Desc>Becomes Staggered after 8 or more allies have been defeated.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005215">
+    <Name>Scattered Wishes</Name>
+    <Desc>When Staggered, the amount of 'Hankering' and the character's pattern of behavior are reset.</Desc>
+  </PassiveDesc>
+
+  <!-- lung -->
+  <PassiveDesc ID="1005221">
+    <Name>Craving</Name>
+    <Desc>Possesses a unique effect that relates to Aspiration's 'Hankering'.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005222">
+    <Name>Fervent Beats</Name>
+    <Desc>If there are two or fewer allied units excluding Aspiration, lose the 'Craving' effect and gain the 'Fervent Beats' status.</Desc>
+  </PassiveDesc>
+
+  <!-- 피노키오 앤젤라-->
+  <PassiveDesc ID="1005311">
+    <Name>Mirroring</Name>
+    <Desc>Copies the Patron Librarian's deck. At the start of each Scene, exhaust all pages in hand and deck; add new pages to hand. Their Cost becomes 0. (Ignores 'A Song of Lies')</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005312">
+    <Name>Liar</Name>
+    <Desc>Starting with the third Scene: every 3 Scenes, inflicts 10 Bind to self and uses 1~2 pages that contain false information (referred to as "Lies").</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005313">
+    <Name>Caught Long-nosed</Name>
+    <Desc>When a page containing a Lie clashes against 'Lying is Bad!', all dice on the page lose 8 Power.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005314">
+    <Name>Joyous Fible-fable</Name>
+    <Desc>When a page containing a Lie does not clash against 'Lying is Bad!', all dice on the page gain 8 Power.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005315">
+    <Name>Why is it Bad?</Name>
+    <Desc>After the Lie has been sniffed out, all allies are inflicted with 4 Feeble and Disarm next Scene and all Stagger damage resistances change to "Fatal" for the next Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005316">
+    <Name>Lalala~</Name>
+    <Desc>If the Lie isn't busted, all allies gain 4 Strength and Endurance next Scene.</Desc>
+  </PassiveDesc>
+
+  <!-- 피노키오 잡-->
+  <PassiveDesc ID="1005321">
+    <Name>A Song of Lies</Name>
+    <Desc>Copies the first Assistant Librarian's deck.
+While this character is alive, randomize the Costs of all Combat Pages whose original Cost is 3 or less in all characters' hands at the start of each Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005322">
+    <Name>A Song in Backward</Name>
+    <Desc>Copies the second Assistant Librarian's deck.
+While this character is alive, all allies also copy the status effects of the librarians they copied decks from.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005323">
+    <Name>A Song for All</Name>
+    <Desc>Copies the third Assistant Librarian's deck.
+While this character is alive, all allies gain 2 Strength or 2 Endurance at the start of each Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005324">
+    <Name>A Song of Curiosity</Name>
+    <Desc>Copies the fourth Assistant Librarian's deck.
+While this character is alive, all librarians shuffle their hand into the draw pile and draw 3 pages at the start of each Scene.</Desc>
+  </PassiveDesc>
+
+
+  <!-- 눈의 여왕 -->
+  <PassiveDesc ID="1005411">
+    <Name>Biting Wind</Name>
+    <Desc>At the start of the Scene, all librarians lose HP equal to 5% of their Max HP.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005412">
+    <Name>Reticent Frigidity</Name>
+    <Desc>Takes no damage from attacks until all Prisons of Ice are destroyed. Takes no damage from Burn or Bleed.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005413">
+    <Name>Frost Column</Name>
+    <Desc>Gains Speed dice and Light capacity based on the number of destroyed Prisons of Ice. If two or more Prisons have been destroyed, a melee Combat Page is added to this character's deck.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005414">
+    <Name>Those who know the Cruelty of Winter and the Aroma of Roses</Name>
+    <Desc>After all Prisons of Ice have been destroyed, all librarians recover 50% of their Max HP at the start of the next Scene. The Snow Queen will use a Mass Attack page the same Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005415">
+    <Name>Coldhearted</Name>
+    <Desc>Immune to Immobilization.</Desc>
+  </PassiveDesc>
+
+  <!-- 눈의 여왕 : 얼음 -->
+  <PassiveDesc ID="1005421">
+    <Name>Kai and Gerda</Name>
+    <Desc>If this character's HP drops to 0, an imprisoned librarian is freed next Scene.</Desc>
+  </PassiveDesc>
+
+
+  <!-- 아무 말 없는 소녀 -->
+  <PassiveDesc ID="1005512">
+    <Name>Shimmering</Name>
+    <Desc>At the start of each Scene, exhaust all pages in hand and deck; add new pages to hand. Their Cost becomes 0.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005511">
+    <Name>…</Name>
+    <Desc>The battle proceeds to the next phase when both the Nail and the Hammer are defeated.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005513">
+    <Name>Status Immunity</Name>
+    <Desc>Takes no damage from status ailments.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005514">
+    <Name>Grin</Name>
+    <Desc>Immune to Immobilization.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005515">
+    <Name>Leer</Name>
+    <Desc>When hit, reduce incoming damage by the Cost of 'Guilt' the attacker has.</Desc>
+  </PassiveDesc>
+
+
+
+  <!-- 아무 말 없는 소녀 : 못 손 -->
+  <PassiveDesc ID="1005521">
+    <Name>Nail</Name>
+    <Desc>Fully restores Light every Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005522">
+    <Name>Guilt</Name>
+    <Desc>Dice gain Power by the page's Cost.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005523">
+    <Name>A Gap in the Mind</Name>
+    <Desc>On hit, a page with the highest Cost in the target's hand is inflicted with 'Cost Down'.</Desc>
+  </PassiveDesc>
+
+  <!-- 아무 말 없는 소녀 : 망치 손 -->
+  <PassiveDesc ID="1005531">
+    <Name>Hammer</Name>
+    <Desc>Fully restores Light on odd-numbered Scenes.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005532">
+    <Name>A Crack in the Mind</Name>
+    <Desc>On hit, a page with the highest Cost in the target's hand is inflicted with 'Cost Up'.</Desc>
+  </PassiveDesc>
+
+  <!-- 아무 말 없는 소녀 : 검은 손 - 공격 -->
+  <PassiveDesc ID="1005541">
+    <Name>Shimmering</Name>
+    <Desc>At the start of each Scene, exhaust all pages in hand and deck; add new pages to hand. Their Cost becomes 0.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005542">
+    <Name>Blossoming Desires</Name>
+    <Desc>When hit, gain +10 Power for all dice next Scene.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005543">
+    <Name>Black Feathers</Name>
+    <Desc>Takes half as much damage from status ailments.</Desc>
+  </PassiveDesc>
+
+  <!-- 아무 말 없는 소녀 : 검은 손 - 반격 -->
+  <PassiveDesc ID="1005551">
+    <Name>Shimmering</Name>
+    <Desc>At the start of each Scene, exhaust all pages in hand and deck; add new pages to hand. Their Cost becomes 0.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005552">
+    <Name>Crushing Instincts</Name>
+    <Desc>Dice gain Power equal to the current Cost of 'Guilt' the target has (If target has no Guilt, no Power is gained)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005553">
+    <Name>Black Feathers</Name>
+    <Desc>Takes half as much damage from status ailments.</Desc>
+  </PassiveDesc>
+</PassiveDescRoot>

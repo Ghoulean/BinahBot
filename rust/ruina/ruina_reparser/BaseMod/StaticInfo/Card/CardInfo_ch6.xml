@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Card ID="601001">
+    <Name>감정의 격동</Name>
+    <Artwork>Liu2_1</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="3" />
+    <Script>liuUnique</Script>
+    <ScriptDesc>[사용시] 감정 단계 2 마다 이 책장의 모든 주사위 위력 +1</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="LiuSection2Unit_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="LiuSection2Unit_H" Script="burn2atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="9" Type="Atk" Detail="Slash" Motion="H" EffectRes="LiuSection2Unit_H" Script="burn1atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="LiuSection2Unit_G" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+	  <PriorityScript>emotion2</PriorityScript>
+  </Card>
+
+  <Card ID="601002">
+    <Name>내면의 열혈</Name>
+    <Artwork>Liu2_2</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script>gainPositive1</Script>
+		<ScriptDesc>[사용시] 긍정 감정 1 누적</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="9" Type="Def" Detail="Guard" Motion="G" EffectRes="LiuSection2Unit_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Slash" Motion="Z" EffectRes="LiuSection2Unit_Z" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="601003">
+    <Name>검의 흐름</Name>
+    <Artwork>Liu2_3</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script>costDown1emotion3</Script>
+    <ScriptDesc>감정 단계가 3이상일 경우 이 책장의 비용 -1</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="LiuSection2Unit_H" Script="burn2atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="LiuSection2Unit_H" Script="burn1atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="601004">
+    <Name>견고한 수비</Name>
+    <Artwork>Liu2_4</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="3" />
+		<Script>drawCard</Script>
+    <ScriptDesc/>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="8" Dice="17" Type="Def" Detail="Guard" Motion="G" EffectRes="LiuSection2Unit_G" Script="drawCard1pw" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="LiuSection2Unit_H" Script="burn2atk" ActionScript="" Desc="[적중] 화상 2 부여" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="601005">
+    <Name>속검</Name>
+    <Artwork>Liu2_5</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script/>
+    <ScriptDesc/>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="6" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="LiuSection2Unit_Z" Script="quickness1atk" ActionScript="" Desc="[적중] 다음 막에 신속 1을 얻음" />
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="LiuSection2Unit_Z" Script="quickness1atk" ActionScript="" Desc="[적중] 다음 막에 신속 1을 얻음" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="601006">
+    <Name>몰아치기</Name>
+    <Artwork>Liu2_6</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script>dmgUp1thisRound</Script>
+    <ScriptDesc>[전투 시작] 이번 막 동안 모든 공격 주사위 피해량 +1</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="LiuSection2Unit_H" Script="powerDown2targetDfn" ActionScript="" Desc="대상의 현재 수비 주사위 위력 -2" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="LiuSection2Unit_Z" Script="burn1atk" ActionScript="" Desc="화상 부여" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="601007">
+    <Name>정면 돌파</Name>
+    <Artwork>Liu2_7</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>energy1</Script>
+    <ScriptDesc>[사용시] 빛 1 회복</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="7" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="LiuSection2Unit_J" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="1" Dice="2" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="LiuSection2Unit_J" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+  </Card>
+	
+	<Card ID="601008">
+		<Name>휘몰아치기</Name>
+		<Artwork>Liu2_8</Artwork>
+		<Rarity>Unique</Rarity>
+		<Option>OnlyPage</Option>
+    <Option>ExhaustOnUse</Option>
+		<Spec Range="Near" Cost="4" />
+		<Script>lowelonly</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="8" Dice="20" Type="Atk" Detail="Slash" Motion="J" EffectRes="LiuSection2_Lowell_AreaAtk" Script="lowelDice" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>6</Chapter>
+		<Priority>2</Priority>
+    <SortPriority>1</SortPriority>
+	</Card>
+
+	<Card ID="601009">
+		<Name>철산고</Name>
+		<Artwork>Liu2_9</Artwork>
+		<Rarity>Unique</Rarity>
+		<Option>OnlyPage</Option>
+    <Keyword>onlypage_chulsan_Keyword</Keyword>
+		<Spec Range="Near" Cost="3" />
+		<Script></Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="5" Dice="6" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Liu2_Z_MC" Script="" ActionScript="" Desc="" />
+		  <Behaviour Min="8" Dice="21" Type="Atk" Detail="Hit" Motion="S1" EffectRes="Liu2_S1_MC" Script="liuBurnDice" ActionScript="" Desc="[적중] 화상 1 부여. 감정 단계 1당 부여하는 화상 수치 1 증가" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Penetrate" Motion="Z" EffectRes="Liu2_Z_MC" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>6</Chapter>
+		<Priority>0</Priority>
+		<PriorityScript>emotion2</PriorityScript>
+    <SortPriority>1</SortPriority>
+	</Card>
+
+	<Card ID="601010">
+		<Name>질풍각</Name>
+		<Artwork>Liu2_10</Artwork>
+		<Rarity>Rare</Rarity>
+		<Spec Range="Near" Cost="2" />
+		<Script></Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="7" Dice="13" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Liu2_Z_MC" Script="drawCard1atk" ActionScript="" Desc="[적중] 책장을  1장 뽑음" />
+		  <Behaviour Min="2" Dice="6" Type="Standby" Detail="Penetrate" Motion="Z" EffectRes="Liu2_Z_MC" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>6</Chapter>
+		<Priority>0</Priority>
+	</Card>
+	
+  <Card ID="601011">
+		<Name>올려차기</Name>
+		<Artwork>Liu2_11</Artwork>
+		<Rarity>Common</Rarity>
+		<Spec Range="Near" Cost="1" />
+		<Script></Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="5" Dice="10" Type="Atk" Detail="Hit" Motion="J" EffectRes="Liu2_J" Script="drawCard1atk" ActionScript="" Desc="[적중] 책장을 1장 뽑음" />
+		</BehaviourList>
+		<Chapter>6</Chapter>
+		<Priority>0</Priority>
+	</Card>
+
+	<Card ID="601012">
+		<Name>철벽</Name>
+		<Artwork>Liu2_12</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Near" Cost="2" />
+		<Script>endurance1emotion</Script>
+		<ScriptDesc>[사용시] 다음 막에 인내 1를 얻음. 감정 단계가 3 이상이면 대신 2를 얻음</ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="5" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Liu2_G" Script="" ActionScript="" Desc="" />
+		  <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Liu2_G" Script="" ActionScript="" Desc="" />
+		  <Behaviour Min="2" Dice="6" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="Liu2_J" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>6</Chapter>
+		<Priority>0</Priority>
+	</Card>
+	
+  <Card ID="601013">
+		<Name>전면전</Name>
+		<Artwork>Liu2_13</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Near" Cost="1" />
+		<Script>gainPositive1</Script>
+		<ScriptDesc>[사용시] 긍정 감정 1 누적</ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="4" Dice="9" Type="Def" Detail="Guard" Motion="G" EffectRes="Liu2_G" Script="" ActionScript="" Desc="" />
+		  <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="Liu2_H" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>6</Chapter>
+		<Priority>0</Priority>
+	</Card>
+	
+  <Card ID="601014">
+		<Name>휘몰아치기-일격</Name>
+		<Artwork>Liu2_8</Artwork>
+		<Rarity>Unique</Rarity>
+		<Spec Range="FarAreaEach" Cost="1" Affection ="Team"/>
+		<Script>lowelCreated</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="8" Dice="20" Type="Atk" Detail="Slash" Motion="S2" EffectRes="" Script="lowelDice" ActionScript="lowell_areaatk" Desc="" />
+		</BehaviourList>
+		<Chapter>6</Chapter>
+		<Priority>10</Priority>
+	</Card>
+  
+  <Card ID="602001">
+		<Name>장전</Name>
+		<Artwork>Thumb1</Artwork>
+		<Rarity>Common</Rarity>
+    <Option>OnlyPage</Option>
+    <Keyword>onlypage_thumb</Keyword>
+		<Spec Range="Near" Cost="1" />
+		<Script>AddBullet1AndDraw</Script>
+		<ScriptDesc>[사용시] 손에 무작위 탄환을 1장 추가</ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Thumb_Z" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="Thumb_H" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>6</Chapter>
+		<Priority>0</Priority>
+    <SortPriority>1</SortPriority>
+	</Card>
+  <Card ID="602002">
+		<Name>총검술</Name>
+		<Artwork>Thumb2</Artwork>
+		<Rarity>Uncommon</Rarity>
+    <Option>OnlyPage</Option>
+    <Keyword>onlypage_thumb</Keyword>
+		<Spec Range="Near" Cost="2" />
+		<Script>AddBullet2</Script>
+		<ScriptDesc>[사용시] 손에 무작위 탄환을 2장 추가</ScriptDesc>
+		<BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="Thumb_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="7" Type="Atk" Detail="Hit" Motion="J" EffectRes="Thumb_J" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Thumb_Z" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>6</Chapter>
+		<Priority>0</Priority>
+    <SortPriority>1</SortPriority>
+	</Card>
+	<Card ID="602003">
+		<Name>견제 사격</Name>
+		<Artwork>Thumb3</Artwork>
+		<Rarity>Common</Rarity>
+    <Option>OnlyPage</Option>
+    <Keyword>onlypage_thumb</Keyword>
+		<Spec Range="Far" Cost="1" />
+		<Script>discard1</Script>
+		<ScriptDesc>[사용시] 비용이 가장 낮은 책장 1장을 버린다</ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="bleeding1atk" ActionScript="thumbReload" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>6</Chapter>
+		<Priority>0</Priority>
+    <PriorityScript>thumbRange</PriorityScript>
+    <SortPriority>1</SortPriority>
+	</Card>
+	<Card ID="602004">
+		<Name>충격탄</Name>
+		<Artwork>Thumb4</Artwork>
+		<Rarity>Uncommon</Rarity>
+    <Option>OnlyPage</Option>
+    <Keyword>onlypage_thumb</Keyword>
+		<Spec Range="Far" Cost="2" />
+    <Script>discard2draw1</Script>
+    <ScriptDesc>[사용시] 비용이 가장 낮은 책장 1장을 버린다</ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="5" Dice="10" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="break3atk" ActionScript="thumbReload" Desc="" />
+      <Behaviour Min="5" Dice="7" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>6</Chapter>
+		<Priority>0</Priority>
+    <PriorityScript>thumbRange</PriorityScript>
+    <SortPriority>1</SortPriority>
+	</Card>
+	<Card ID="602005">
+		<Name>기습 사격 더미</Name>
+		<Artwork>Thumb5</Artwork>
+		<Rarity>Uncommon</Rarity>
+    <Option>OnlyPage</Option>
+    <Keyword>onlypage_thumb</Keyword>
+		<Spec Range="Far" Cost="1" />
+		<Script></Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="4" Dice="9" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="" ActionScript="thumbReload" Desc="" />
+      <!--
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="F" EffectRes="Liu2_G" Script="" ActionScript="" Desc="" />
+      -->
+		</BehaviourList>
+		<Chapter>6</Chapter>
+		<Priority>0</Priority>
+    <SortPriority>1</SortPriority>
+	</Card>
+	<Card ID="602006">
+		<Name>화력집중</Name>
+		<Artwork>Thumb6</Artwork>
+		<Rarity>Rare</Rarity>
+    <Option>OnlyPage</Option>
+    <Keyword>onlypage_thumb</Keyword>
+		<Spec Range="Far" Cost="3" />
+    <Script>discard4bullet</Script>
+    <ScriptDesc>[사용시] 비용이 가장 낮은 책장 2장을 버리고 책장을 1장 뽑는다</ScriptDesc>
+		<BehaviourList>
+      <Behaviour Min="7" Dice="17" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="vulnerable1atk" ActionScript="thumbReload" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>6</Chapter>
+		<Priority>0</Priority>
+    <SortPriority>1</SortPriority>
+	</Card>
+	<Card ID="602007">
+		<Name>방어 자세</Name>
+		<Artwork>Thumb7</Artwork>
+		<Rarity>Common</Rarity>
+		<Spec Range="Near" Cost="1" />
+		<Script></Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="3" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Thumb_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="Thumb_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Slash" Motion="J" EffectRes="Thumb_J" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>6</Chapter>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="602008">
+		<Name>강철 너클</Name>
+		<Artwork>Thumb8</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Near" Cost="2" />
+		<Script>drawCard</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="Thumb_H" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="J" EffectRes="Thumb_J" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="6" Type="Standby" Detail="Slash" Motion="J" EffectRes="Thumb_J" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>6</Chapter>
+		<Priority>0</Priority>
+	</Card>
+
+	<Card ID="602009">
+		<Name>즉결심판</Name>
+		<Artwork>Thumb9</Artwork>
+		<Rarity>Uncommon</Rarity>
+    <Category>Thumb</Category>
+    <Option>OnlyPage</Option>
+    <Keyword>onlypage_thumb2</Keyword>
+		<Spec Range="Near" Cost="2" />
+    <Script>discard1</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Slash" Motion="J" EffectRes="Thumb_J" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="10" Type="Atk" Detail="Penetrate" Motion="S1" MotionDefault="Z" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>6</Chapter>
+		<Priority>0</Priority>
+    <SortPriority>1</SortPriority>
+	</Card>
+	<Card ID="602010">
+		<Name>단죄</Name>
+		<Artwork>Thumb10</Artwork>
+		<Rarity>Unique</Rarity>
+    <Option>OnlyPage</Option>
+    <Keyword>onlypage_boris</Keyword>
+		<Spec Range="Near" Cost="4" />
+		<Script>negatePower</Script>
+		<ScriptDesc>이 책장은 위력의 효과를 받지 않는다 [합 시작시] 대상의 책장은 위력의 효과를 받지 않는다</ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="2" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="Thumb_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Thumb_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Slash" Motion="J" EffectRes="Thumb_J" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="S1" EffectRes="Boris_S1" Script="repeat3" ActionScript="borisAction" Desc="" />
+		</BehaviourList>
+		<Chapter>6</Chapter>
+		<Priority>1</Priority>
+    <SortPriority>1</SortPriority>
+	</Card>
+	<Card ID="602011">
+		<Name>규율</Name>
+		<Artwork>Thumb11</Artwork>
+		<Rarity>Unique</Rarity>
+		<Spec Range="Near" Cost="3" />
+		<Script>dmgUpFriend3</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+      <Behaviour Min="5" Dice="11" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Thumb_Z" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="10" Type="Atk" Detail="Slash" Motion="J" EffectRes="Thumb_J" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="Thumb_G" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>6</Chapter>
+		<Priority>1</Priority>
+	</Card>
+  <Card ID="602012">
+    <Name>계급과 존중</Name>
+    <Artwork>Thumb12</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script>energy2</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="Thumb_J" Script="bleeding2atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+	<Card ID="602020">
+		<Name>철갑 탄환</Name>
+		<Artwork>Thumb20</Artwork>
+		<Rarity>Common</Rarity>
+		<Spec Range="Far" Cost="0" />
+		<Script>thumbBullet1</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>6</Chapter>
+		<Priority>-1</Priority>
+	</Card>
+	<Card ID="602021">
+		<Name>빙결 탄환</Name>
+		<Artwork>Thumb21</Artwork>
+		<Rarity>Common</Rarity>
+		<Spec Range="Far" Cost="0" />
+		<Script>thumbBullet2</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>6</Chapter>
+		<Priority>-1</Priority>
+	</Card>
+	<Card ID="602022">
+		<Name>화염 탄환</Name>
+		<Artwork>Thumb22</Artwork>
+		<Rarity>Common</Rarity>
+		<Spec Range="Far" Cost="0" />
+		<Script>thumbBullet3</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Chapter>6</Chapter>
+    <Priority>-1</Priority>
+	</Card>
+  
+  <!-- 지팡이 -->
+  <Card ID="603001">
+    <Name>에너지 광선</Name>
+    <Artwork>Cane1</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>OnlyPage</Option>
+    <Keyword>onlypage_nemo</Keyword>
+    <Spec Range="Far" Cost="4" />
+    <Script>chargeDestroyDesc</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="13" Dice="21" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="Nemo_Laser" Script="chargeDestroy" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+    <SortPriority>2</SortPriority>
+  </Card>
+  <Card ID="603002">
+    <Name>충격 흡수</Name>
+    <Artwork>Cane2</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script>warpCharge6</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="9" Type="Def" Detail="Guard" Motion="G" EffectRes="Bada_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="Bada_J" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="603003">
+    <Name>기회입니다!</Name>
+    <Artwork>Cane3</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script>warpCharge5</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="charge2pw" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="Nemo_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="Nemo_H" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+  </Card>
+	<Card ID="603004">
+    <Name>파괴 연타</Name>
+    <Artwork>Cane4</Artwork>
+    <Rarity>Rare</Rarity>
+    <Option>OnlyPage</Option>
+    <Keyword>onlypage_bada</Keyword>
+    <Spec Range="Near" Cost="3" />
+    <Script>badaCardRemake</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Bada_Z" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="Bada_H" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="" ActionScript="BadaAtk" Desc="" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+    <SortPriority>2</SortPriority>
+  </Card>
+  <Card ID="603005">
+    <Name>준비합시다!</Name>
+    <Artwork>Cane5</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script>chargeProtection</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Nemo_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Nemo_Z" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+    <PriorityScript>dontUseFirstRound</PriorityScript>
+  </Card>
+  <Card ID="603006">
+    <Name>에너지 방패</Name>
+    <Artwork>Cane6</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script>warpCharge3</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="4" Type="Def" Detail="Guard" Motion="G" EffectRes="Nemo_G" Script="charge2pl" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="Nemo_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Nemo_Z" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="603007">
+    <Name>에너지 전환</Name>
+    <Artwork>Cane7</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script>chargeEnergy</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="Nemo_H" Script="drawCard1atk" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Slash" Motion="J" EffectRes="Nemo_J" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+    <PriorityScript>caneEnergy</PriorityScript>
+  </Card>
+  <Card ID="603008">
+    <Name>으스스한 일격</Name>
+    <Artwork>Cane8</Artwork>
+    <Rarity>Rare</Rarity>
+    <Option>OnlyPage</Option>
+    <Keyword>onlypage_martina</Keyword>
+    <Spec Range="Near" Cost="2" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="13" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="Nemo_Z" Script="breakChargeRemake" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="Nemo_G" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>1</Priority>
+  </Card>
+
+  <Card ID="604001">
+    <Name>증기</Name>
+    <Artwork>Gear1</Artwork>
+    <Rarity>Rare</Rarity>
+    <Category>Smoke2</Category>
+    <Spec Range="Near" Cost="3" />
+    <Script>smokeSelf4draw</Script>
+    <ScriptDesc>[사용시] 연기 4를 얻음. 카드 뽑음</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="9" Dice="19" Type="Atk" Detail="Slash" Motion="S2" MotionDefault="H" EffectRes="" Script="smoke3atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="604002">
+    <Name>방어 명령</Name>
+    <Artwork>Gear2</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script>smokeSelf4</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="Gears_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="Gears_J" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="604003">
+    <Name>자동 돌격</Name>
+    <Artwork>Gear3</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Category>Smoke2</Category>
+    <Spec Range="Near" Cost="2" />
+    <Script>smokeSelf2</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="S2" MotionDefault="H" EffectRes="Gears_H" Script="smoke2atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Gears_Z" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="604004">
+    <Name>기습 명령</Name>
+    <Artwork>Gear4</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script>smokePowerUp</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="6" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Gears_Z" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="Gears_J" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="604005">
+    <Name>톱니가 이끄는 대로</Name>
+    <Artwork>Gear5</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script>energySmoke2</Script>
+    <ScriptDesc>[사용시] 빛 2 회복</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="Gears_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Gears_Z" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+    <PriorityScript>energyRecover1</PriorityScript>
+  </Card>
+
+  <Card ID="604021">
+    <Name>푸른 궤적</Name>
+    <Artwork>Argalia1</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="3" />
+    <Script>nullifyPower</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="13" Type="Atk" Detail="Slash" Motion="S5" EffectRes="Argalia_S5" Script="argaliaDice" ActionScript="argalia_atk" Desc="" />
+      <Behaviour Min="5" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="Argalia_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="Argalia_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="Argalia_G" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="604022">
+    <Name>전주</Name>
+    <Artwork>Argalia2</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Slash" Motion="H" EffectRes="Argalia_H" Script="argaliaBuf" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="H" EffectRes="Argalia_H" Script="argaliaBuf" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="604023">
+    <Name>기다림 더미</Name>
+    <Artwork>Argalia3</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="Argalia_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="Argalia_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="Argalia_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="Argalia_G" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="604024">
+    <Name>정찰</Name>
+    <Artwork>Argalia4</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="Argalia_H" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="Argalia_H" Script="bleeding4atk" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="Argalia_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="Argalia_G" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>6</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="604025">
+    <Name>난무</Name>
+    <Artwork>Argalia5</Artwork>
+    <Rarity>Unique</Rarity>
+		<Spec Range="FarAreaEach" Cost="3" Affection ="Team"/>
+		<Script></Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+      <Behaviour Min="8" Dice="8" Type="Atk" Detail="Slash" Motion="S3" EffectRes="" Script="" ActionScript="argalia_area" Desc="" />
+      <Behaviour Min="7" Dice="7" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="" ActionScript="argalia_area" Desc="" />
+      <Behaviour Min="5" Dice="5" Type="Atk" Detail="Slash" Motion="S3" EffectRes="" Script="" ActionScript="argalia_area" Desc="" />
+      <Behaviour Min="3" Dice="4" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="" ActionScript="argalia_area" Desc="" />
+		</BehaviourList>
+		<Chapter>6</Chapter>
+		<Priority>10</Priority>
+  </Card>
+</DiceCardXmlRoot>

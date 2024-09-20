@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GroupName>Sword</GroupName>
+  <Character ID="kimsatgat">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">Light the lanterns and open the path.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">It is as though a moat of boiling water surrounds this place… We will breach their defense at all cost.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">Remember the essentials. Wield your sword with no hesitation.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">The passengers of a boat join forces to rescue each other when it sinks. We ought to help each other in times of need. We shall meet them again.</BattleDialog>      <!-- 同舟相救 -->
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">One error among a thousand thoughts… It is my mistake.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">Knives are broken, and arrows are spent… We’re losing our ground.</BattleDialog>      <!-- 刀折矢盡 -->
+      <BattleDialog ID="COLLEAGUE_DEATH_1">…I see a dark cloud casting over the skies. It seems as if it will rain soon.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">A waning moon gleams over the rooftop… I am sorry.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">With too many thoughts in one’s head, a mistake is destined to happen.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">How foolish of you. Shrewdness can be poison in excess.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">An old steed knows well where to go.</BattleDialog>
+    </Type>
+  </Character>
+
+  <Character ID="sword">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">Whether there is boiling water or searing fire… We can’t afford to wait and see.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">I suppose anyone’s death is fair game here.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">If you sit like a foolish duck, you’ll lose the battle.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">I believe we’ll make it with no trouble.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">This’ll be like all the knife fights before.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">I’ll let the Rusted Chains know of this.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">We are with them in the same boat… It’s only right that we help them.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">I feel more listless than usual today…</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">The fault is mine…</BattleDialog>
+      <BattleDialog ID="DEATH_1">Shameful… To miss a chance like this…</BattleDialog>
+      <BattleDialog ID="DEATH_2">In the end, the edge of this blade… claimed my life.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">We put ourselves in a real pickle…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">I ought to think for my own life first.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">Your rough and fitful journey comes to an end here; I hope you might rest in peace.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">Must’ve gotten exhausted after fighting for so long.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">All that cautiousness made you too stiff to dodge a sword.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">You should’ve fared better against slashing from this sword.</BattleDialog>
+    </Type>
+  </Character>
+</BattleDialogRoot>

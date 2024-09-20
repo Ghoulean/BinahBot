@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- 말쿠트 층 최종전 [99][01~10][001~999] -->
+  <!-- 불타버린 소녀 페이즈 -->
+  <Card ID="9901101">
+    <Name>돌진 베기</Name>
+    <Artwork>ScorchedGirl_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarArea" Cost="4" Affection="Team" />
+    <Script>final_scorchedgirl_fourthfire_self</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="60" Dice="60" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="final_scorchedgirl_fourthfire" ActionScript="malkuthboss_scorched" Desc=""/>
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="9901102">
+    <Name>평타</Name>
+    <Artwork>ScorchedGirl_Atk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="" Script="burn2atk" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9901103">
+    <Name>회피 평타</Name>
+    <Artwork>ScorchedGirl_Ashes</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="1" Dice="6" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="" Script="burn1atk" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9901104">
+    <Name>강공격</Name>
+    <Artwork>ScorchedGirl_Walk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="" Script="burn4atk" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+
+  <!-- 테디 -->
+  <Card ID="9901201">
+    <Name>애정표현</Name>
+    <Artwork>HappyTeddyBear_Memory</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="vulnerable1atk" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="6" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="vulnerable1atk" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9901202">
+    <Name>소심한 애정표현</Name>
+    <Artwork>HappyTeddyBear_Lonely</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="disarm1atk" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="4" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="4" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9901203">
+    <Name>거친 애정표현</Name>
+    <Artwork>HappyTeddyBear_Hug</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="6" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9901204">
+    <Name>포옹</Name>
+    <Artwork>HappyTeddyBear_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="60" Dice="60" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="teddybreakBoss" ActionScript="teddyEgo" Desc="[적중] 대상을 흐트러짐 상태로 만듬"/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <!-- 요정 -->
+  <Card ID="9901301">
+    <Name>휴식</Name>
+    <Artwork>FairyCarnival_Care</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9901302">
+    <Name>굷주린 날개짓</Name>
+    <Artwork>FairyCarnival_QueenAtk</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="bleeding1atk" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="bleeding1atk" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="bleeding1atk" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9901303">
+    <Name>포식</Name>
+    <Artwork>FairyCarnival_QueenAtk</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="recoverHp6atk" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9901304">
+    <Name>광포한 굶주림</Name>
+    <Artwork>FairyCarnival_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Slash" Motion="S3" EffectRes="" Script="finalfairycontinuousatk" ActionScript="fairy_ego" Desc=""/>
+      <Behaviour Min="5" Dice="5" Type="Atk" Detail="Slash" Motion="S2" EffectRes="FX_IllusionCard_1_M_FairyTrail3" Script="bleeding3atk" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>10</Priority>
+  </Card>
+  <Card ID="9901305">
+    <Name>날개짓</Name>
+    <Artwork>FairyCarnival_Gluttony</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="7" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="" Script="bleeding1atk" ActionScript="" Desc=""/>
+      <Behaviour Min="5" Dice="5" Type="Def" Detail="Evasion" Motion="H" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9901306">
+    <Name>날개짓</Name>
+    <Artwork>FairyCarnival_Gluttony</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="" Script="recoverHp3atk" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="" Script="recoverHp3atk" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <!-- 여왕벌 -->
+  <Card ID="9901401">
+    <Name>호전성 강화</Name>
+    <Artwork>QueenBee_Funga</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="final_queenbee_spore_win_parrying" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_queenbee_quick_strength" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>1000</Priority>
+  </Card>
+  <Card ID="9901402">
+    <Name>공격1</Name>
+    <Artwork>QueenBee_Loyalty</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_queenbee_spore_win_parrying" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_queenbee_spore_win_parrying" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="final_queenbee_spore_win_parrying" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9901403">
+    <Name>공격2</Name>
+    <Artwork>QueenBee_Loyalty</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="final_queenbee_spore_win_parrying" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_queenbee_spore_win_parrying" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9901404">
+    <Name>충성심 강화</Name>
+    <Artwork>QueenBee_Funga</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="final_queenbee_endurance" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9901405">
+    <Name>필살기</Name>
+    <Artwork>QueenBee_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Far" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="12" Dice="22" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="final_queenbee_super" ActionScript="angela_super_queenbee" Desc="" />
+    </BehaviourList>
+    <Priority>2000</Priority>
+  </Card>
+
+  <!-- 여왕벌 : 일벌 -->
+  <Card ID="9901406">
+    <Name>영양소 조달</Name>
+    <Artwork>QueenBee_NormalAtk</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="final_queenbee_heal_queen" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9901407">
+    <Name>호위</Name>
+    <Artwork>QueenBee_NormalAtk</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="final_queenbee_spore_atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="final_queenbee_paralyze" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="final_queenbee_spore_atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9901408">
+    <Name>유충 나르기</Name>
+    <Artwork>QueenBee_Bee</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_queenbee_spore_atk3" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9901409">
+    <Name>성장 촉진</Name>
+    <Artwork>QueenBee_Bee</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="3" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_queenbee_spore_boom" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_queenbee_spore_boom" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_queenbee_spore_boom" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+
+
+  <!-- 백설 페이즈 -->
+  <Card ID="9901501">
+    <Name>백설 일반 광역 녹색줄기</Name>
+    <Artwork>SnowWhite_malice</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection ="Passive"/>
+    <Script>malkuthboss_emeraldstem</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="malkuthboss_emeraldstem" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>50</Priority>
+  </Card>
+  <Card ID="9901502">
+    <Name>백설 일반 원거리</Name>
+    <Artwork>SnowWhite_Vine</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="malkuthboss_whitesnow_far1" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="malkuthboss_whitesnow_far2" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9901503">
+    <Name>백설 일반 원거리</Name>
+    <Artwork>SnowWhite_Vine</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="4" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="malkuthboss_whitesnow_far1" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="4" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="malkuthboss_whitesnow_far1" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="4" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="malkuthboss_whitesnow_far3" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9901504">
+    <Name>백설 원거리 방어</Name>
+    <Artwork>SnowWhite_Thorn</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="4" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="weak1pw" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="4" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="weak1pw" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="4" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="weak1pw" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>45</Priority>
+  </Card>
+  <Card ID="9901505">
+    <Name>백설 필살 광역</Name>
+    <Artwork>SnowWhite_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection ="Team"/>
+    <Script>snowwhiteArea</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="snowwhiteAreaDice" ActionScript="malkuthboss_whitesnow_strongvine" Desc=""/>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="snowwhiteAreaDice" ActionScript="malkuthboss_whitesnow_strongvine" Desc=""/>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="snowwhiteAreaDice" ActionScript="malkuthboss_whitesnow_strongvine" Desc=""/>
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="9901506">
+    <Name>덩굴 원거리 방어</Name>
+    <Artwork>SnowWhite_Defence</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="4" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="damage3pw" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="4" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="damage3pw" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+
+  <!-- 예소드 보스전 : 9902101 ~ 9902599 -->
+  <!-- 1페 -->
+  <Card ID="9902101">
+    <Name>1-1</Name>
+    <Artwork>ForsakenMurderer_Tie</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="12" Type="Atk" Detail="Hit" Motion="J" EffectRes="EGO_Murderer_Atk" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>10</Priority>
+  </Card>
+  <Card ID="9902102">
+    <Name>1-2</Name>
+    <Artwork>ForsakenMurderer_Metal</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="11" Type="Atk" Detail="Hit" Motion="H" EffectRes="EGO_Murderer_Atk" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="7" Dice="11" Type="Atk" Detail="Hit" Motion="Z" EffectRes="EGO_Murderer_Atk" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="7" Dice="10" Type="Atk" Detail="Hit" Motion="H" EffectRes="EGO_Murderer_Atk" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>10</Priority>
+  </Card>
+  <Card ID="9902103">
+    <Name>1-3</Name>
+    <Artwork>ForsakenMurderer_EGO</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>yesod_final_murderer_metal</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="9" Dice="12" Type="Atk" Detail="Hit" Motion="S1" EffectRes="EGO_Murderer_Atk" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="9" Dice="12" Type="Atk" Detail="Hit" Motion="S2" EffectRes="EGO_Murderer_Atk" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="10" Dice="12" Type="Atk" Detail="Hit" Motion="S3" EffectRes="EGO_Murderer_Atk" Script="yesod_final_murderer_break" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  
+  
+  <!-- 2페 -->
+  <Card ID="9902201">
+    <Name>2-1 충전mk2</Name>
+    <Artwork>LittleHelper_Clean</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Slash" Motion="J" EffectRes="EGO_Helper_Atk" Script="energy1atk" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Slash" Motion="Z" EffectRes="EGO_Helper_Atk" Script="energy1atk" ActionScript="" Desc=""/>
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Slash" Motion="J" EffectRes="EGO_Helper_Atk" Script="energy1atk" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9902202">
+    <Name>2-2 휴식mk2</Name>
+    <Artwork>LittleHelper_Rest</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>yesod_final_helper_rest</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="5" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="5" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="5" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9902203">
+    <Name>2-3 청소mk2</Name>
+    <Artwork>LittleHelper_Pattern</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script>yesod_final_helper_clean</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="11" Type="Atk" Detail="Slash" Motion="Z" EffectRes="EGO_Helper_Atk" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9902204">
+    <Name>2-4 광역돌진</Name>
+    <Artwork>LittleHelper_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="4" Affection="Team" />
+    <Script>yesod_final_helper_break</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="6" Type="Atk" Detail="Slash" Motion="S1" EffectRes="EGO_Helper_Atk" Script="yesod_final_helper_bleed" ActionScript="yesodboss_helper" Desc=""/>
+      <Behaviour Min="6" Dice="6" Type="Atk" Detail="Slash" Motion="S2" EffectRes="EGO_Helper_Atk" Script="yesod_final_helper_bleed" ActionScript="yesodboss_helper" Desc=""/>
+      <Behaviour Min="6" Dice="6" Type="Atk" Detail="Slash" Motion="S1" EffectRes="EGO_Helper_Atk" Script="yesod_final_helper_bleed" ActionScript="yesodboss_helper" Desc=""/>
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+
+  <Card ID="9902205">
+    <Name>충전</Name>
+    <Artwork>LittleHelper_Clean</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script>yesod_final_helper_rest</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="2" Dice="5" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="2" Dice="5" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="2" Dice="5" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9902206">
+    <Name>청소</Name>
+    <Artwork>LittleHelper_Pattern</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="9" Dice="9" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9902207">
+    <Name>휴식</Name>
+    <Artwork>LittleHelper_Rest</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="1" Dice="4" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+  
+  <!-- 3페 -->
+  <Card ID="9902301">
+    <Name>3-1 연삭</Name>
+    <Artwork>SingingMachine_Atk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="2" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="yesod_final_singing_lastpoweruppl" Desc="" />
+      <Behaviour Min="2" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="yesod_final_singing_lastpoweruppl" Desc="" />
+      <Behaviour Min="3" Dice="4" Type="Atk" Detail="Slash" Motion="H" EffectRes="EGO_SingingMachine_Atk" Script="bleeding1atk" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9902302">
+    <Name>3-2 작은 연주</Name>
+    <Artwork>SingingMachine_Music</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Slash" Motion="H" EffectRes="EGO_SingingMachine_Atk" Script="yesod_final_singing_littleplay" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9902303">
+    <Name>3-3 노래를 만듭시다</Name>
+    <Artwork>SingingMachine_Rhythm</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="0" />
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="F" EffectRes="EGO_SingingMachine_Atk" Script="yesod_final_singing_allystrengthatk" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>50</Priority>
+  </Card>
+
+  <Card ID="9902304">
+    <Name>3-4 절망의 하모니</Name>
+    <Artwork>SingingMachine_EGO</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>yesod_final_singing_despairharmony</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="FX_Mon_Sing_S" Script="yesod_final_singing_despairharmony" ActionScript="yesodboss_singing_despair_harmony" Desc="" />
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="FX_Mon_Sing_S" Script="yesod_final_singing_despairharmony" ActionScript="yesodboss_singing_despair_harmony" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Slash" Motion="S1" EffectRes="FX_Mon_Sing_S2" Script="yesod_final_singing_despairharmony2" ActionScript="yesodboss_singing_despair_harmony2" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>100</Priority>
+  </Card>
+
+  <Card ID="9902305">
+    <Name>3-5 부들거리는 몸짓</Name>
+    <Artwork>SingingMachine_Atk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="weak1pl" Desc="" />
+      <Behaviour Min="2" Dice="4" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="disarm1pl" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9902306">
+    <Name>3-6 떨리는 일격</Name>
+    <Artwork>SingingMachine_Atk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="yesod_final_singing_binding3onesideatk" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9902307">
+    <Name>3-7 아름다운 소리를 들어봐</Name>
+    <Artwork>SingingMachine_Rhythm</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script>yesod_final_singing_nondmgbreak</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="2" Dice="4" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>100</Priority>
+  </Card>
+
+  <Card ID="9902308">
+    <Name>3-8 노래를 원해</Name>
+    <Artwork>SingingMachine_Music</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="1" Dice="5" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="" Script="yesod_final_singing_setrecital" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>99</Priority>
+  </Card>
+
+  <!-- 4페 -->
+  <Card ID="9902401">
+    <Name>고요함</Name>
+    <Artwork>Butterfly_Casket</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Far" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S" EffectRes="" Script="yesod_final_butterfly_for_effect" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+
+  <Card ID="9902402">
+    <Name>인도하는 손길</Name>
+    <Artwork>Butterfly_White</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="2" />
+    <Script>butterfly_1st</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="yesod_final_butterfly_seal" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+
+  <Card ID="9902403">
+    <Name>안락함 속으로</Name>
+    <Artwork>Butterfly_White</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="1" />
+    <Script>butterfly_2nd</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="yesod_final_butterfly_seal_only" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="yesod_final_butterfly_seal_only" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+
+  <Card ID="9902404">
+    <Name>애도</Name>
+    <Artwork>Butterfly_Fly</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script>butterfly_3rd</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Hit" Motion="S" EffectRes="" Script="yesod_final_butterfly_dmg_to_brk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Hit" Motion="S" EffectRes="" Script="yesod_final_butterfly_dmg_to_brk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="9902405">
+    <Name>쌍권총 발사</Name>
+    <Artwork>Butterfly_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection="Team"/>
+    <Script>yesod_final_butterfly_ego</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="3" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="yesod_final_butterfly_ego_brk" ActionScript="yesodboss_butterfly_ego_white" Desc="" />
+      <Behaviour Min="1" Dice="3" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="yesod_final_butterfly_ego_dmg" ActionScript="yesodboss_butterfly_ego_black" Desc="" />
+    </BehaviourList>
+    <Priority>2000</Priority>
+  </Card>
+
+  <Card ID="9902411">
+    <Name>평온</Name>
+    <Artwork>Butterfly_FlyAtk</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="4" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="butterfly_brkdmg" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="4" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="butterfly_brkdmg" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="4" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="butterfly_brkdmg" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9902412">
+    <Name>분노로부터의 해방</Name>
+    <Artwork>Butterfly_FlyAtk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="weak5atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9902413">
+    <Name>고통으로부터의 해방</Name>
+    <Artwork>Butterfly_FlyAtk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="disarm5atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9902414">
+    <Name>집중로부터의 해방</Name>
+    <Artwork>Butterfly_FlyAtk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="6" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="1" Dice="5" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="1" Dice="5" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="binding5atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <!-- 5페 -->
+  <Card ID="9902501">
+    <Name>5-1 원거리</Name>
+    <Artwork>Matan_Request</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="1" />
+    <Script>yesod_final_freischutz_bullet1</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="EGO_Freischutz_NormalFarAtk" Script="yesod_final_freischutz_faratk" ActionScript="yesodboss_freischutz_faratk" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9902502">
+    <Name>5-2 2번째 탄 광역</Name>
+    <Artwork>Matan_Request</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="FarArea" Cost="1" Affection="Passive"/>
+    <Script>yesod_final_freischutz_bullet2</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="10" Dice="12" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="yesod_final_freischutz_paralysis" ActionScript="yesodboss_freischutz_2ndbullet" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>10</Priority>
+  </Card>
+
+  <Card ID="9902503">
+    <Name>5-3 3번째 탄 광역</Name>
+    <Artwork>Matan_Flame</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="FarAreaEach" Cost="1" Affection="Passive"/>
+    <Script>yesod_final_freischutz_bullet3</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="yesod_final_freischutz_weak" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="yesod_final_freischutz_weak" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>10</Priority>
+  </Card>
+
+  <Card ID="9902504">
+    <Name>5-4 4번째 탄 광역</Name>
+    <Artwork>Matan_Flame</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="FarArea" Cost="1" Affection="Passive"/>
+    <Script>yesod_final_freischutz_bullet4</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="11" Dice="11" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="yesod_final_freischutz_vulnerable" ActionScript="yesodboss_freischutz_5thbullet" Desc="" />
+        </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>10</Priority>
+  </Card>
+
+  <Card ID="9902505">
+    <Name>5-5 큰불꽃 광역</Name>
+    <Artwork>Matan_EGO</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="FarArea" Cost="1" Affection="Passive" />
+    <Script>yesod_final_freischutz_bullet6</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="13" Dice="13" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="yesod_final_freischutz_burn" ActionScript="yesodboss_freischutz_6thbullet" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>10</Priority>
+  </Card>
+
+  <Card ID="9902506">
+    <Name>5-6 범람하는 탄환 </Name>
+    <Artwork>Matan_EGO</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="FarAreaEach" Cost="1" Affection="Passive"/>
+    <Script>yesod_final_freischutz_bullet5</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="yesod_final_freischutz_break" ActionScript="yesodboss_freischutz_5thbullet" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="yesod_final_freischutz_break" ActionScript="yesodboss_freischutz_5thbullet" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="yesod_final_freischutz_break" ActionScript="yesodboss_freischutz_5thbullet" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>10</Priority>
+  </Card>
+
+  <Card ID="9902507">
+    <Name>5-7 원거리</Name>
+    <Artwork>Matan_Seven</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="FarArea" Cost="6" Affection="Passive"/>
+    <Script>yesod_final_freischutz_bullet7</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="50" Dice="50" Type="Atk" Detail="Penetrate" Motion="S" EffectRes="" Script="" ActionScript="yesodboss_freischutz_7thbullet" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <!-- 9902501과 동일. 타게팅 조건만 다름. 윗줄에서 제일 체력이 적은 캐릭터 대상지정-->
+  <Card ID="9902508">
+    <Name>5-1 원거리</Name>
+    <Artwork>Matan_Request</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="1" />
+    <Script>yesod_final_freischutz_bullet1</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="EGO_Freischutz_NormalFarAtk" Script="yesod_final_freischutz_faratk" ActionScript="yesodboss_freischutz_faratk" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <!-- 9902501과 동일. 타게팅 조건만 다름. 아랫줄에서 제일 체력이 적은 캐릭터 대상지정-->
+  <Card ID="9902509">
+    <Name>5-1 원거리</Name>
+    <Artwork>Matan_Request</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="1" />
+    <Script>yesod_final_freischutz_bullet1</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="EGO_Freischutz_NormalFarAtk" Script="yesod_final_freischutz_faratk" ActionScript="yesodboss_freischutz_faratk" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <!-- 9902501과 동일. 타게팅 조건만 다름. 체력이 가장 낮은 캐릭터 대상지정-->
+  <Card ID="9902510">
+    <Name>5-1 원거리</Name>
+    <Artwork>Matan_Request</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="1" />
+    <Script>yesod_final_freischutz_bullet1</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="EGO_Freischutz_NormalFarAtk" Script="yesod_final_freischutz_faratk" ActionScript="yesodboss_freischutz_faratk" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <!-- 9902501과 동일. 타게팅 조건만 다름. 체력이 두번째로 가장 낮은 캐릭터 대상지정-->
+  <Card ID="9902511">
+    <Name>5-1 원거리</Name>
+    <Artwork>Matan_Request</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="1" />
+    <Script>yesod_final_freischutz_bullet1</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="EGO_Freischutz_NormalFarAtk" Script="yesod_final_freischutz_faratk" ActionScript="yesodboss_freischutz_faratk" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+</DiceCardXmlRoot>
