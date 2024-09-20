@@ -11,6 +11,8 @@ jobs:
           name: Set up Cargo Lambda
           command: >-
             CI=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" &&
+            (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> ~/.profile &&
+            eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" &&
             brew tap cargo-lambda/cargo-lambda &&
             brew install cargo-lambda
       - checkout
