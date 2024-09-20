@@ -3,6 +3,7 @@ jobs:
   build-and-test:
     docker:
       - image: cimg/rust:1.81.0-node
+    working_directory: ~/BinahBot
     steps:
       - checkout
       - add_ssh_keys:
@@ -17,27 +18,27 @@ jobs:
             git clone git@github.com:Ghoulean/BinahBotConfig.git ~/BinahBotConfig
       - run:
           name: Copy CDK env to the respective location
-          command: cp ~/BinahBotConfig/cdk.env ~/ruina-cdk
+          command: cp ~/BinahBotConfig/cdk.env ~/BinahBot/ruina-cdk
       - run:
           name: Copy channel configuration to the respective location
-          command: cp ~/BinahBotConfig/channel_config.toml ~/rust/binah_bot/binah_bot_spoiler/src/channel_config.toml
+          command: cp ~/BinahBotConfig/channel_config.toml ~/BinahBot/rust/binah_bot/binah_bot_spoiler/src/channel_config.toml
       - run:
           name: cargo build BinahBot
-          command: cd ~/rust/binah_bot && cargo bb
+          command: cd ~/BinahBot/rust/binah_bot && cargo bb
       - run:
           name: cargo build Thumbnail Lambda
-          command: cd ~/rust/thumbnail && cargo bb
+          command: cd ~/BinahBot/rust/thumbnail && cargo bb
       - run:
           name: cdk build
-          command: cd ~/ruina-cdk && npm run build
+          command: cd ~/BinahBot/ruina-cdk && npm run build
       - run:
           name: Onetime setup build
-          command: cd ~/ruina-discord-bot-onetime-setup && npm run build
+          command: cd ~/BinahBot/ruina-discord-bot-onetime-setup && npm run build
       - run:
           name: Run all tests
-          command: cd ~/rust && cargo test --all-targets
+          command: cd ~/BinahBot/rust && cargo test --all-targets
       - persist_to_workspace:
-          root: .
+          root: ~/BinahBot
           paths:
             - ruina-cdk
             - ruina-discord-bot-onetime-setup
