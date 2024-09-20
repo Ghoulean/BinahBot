@@ -11,6 +11,8 @@ jobs:
           fingerprints:
             - "SHA256:jL0sv9h2M5JzXUxPtOvH/VeYCxY6wZPVXt8v9I+QYD4"
       - run:
+          command: ssh-keyscan github.com >> ~/.ssh/known_hosts
+      - run:
           name: Clone BinahBotConfig repository
           command: >-
             GIT_SSH_COMMAND='ssh -i ~/.ssh/id_rsa_fingerprint'
