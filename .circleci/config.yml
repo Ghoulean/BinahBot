@@ -1,10 +1,16 @@
 version: 2.1
+orbs:
+  python: circleci/python@2.1.1
 jobs:
   build-and-test:
     docker:
       - image: cimg/rust:1.81.0-node
+    executor: python/default
     working_directory: ~/BinahBot
     steps:
+      - run:
+          name: Set up Cargo Lambda
+          command: pip3 install cargo-lambda
       - checkout
       - add_ssh_keys:
           fingerprints:
