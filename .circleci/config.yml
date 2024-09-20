@@ -10,7 +10,7 @@ jobs:
     steps:
       - run:
           name: Set up Cargo Lambda
-          command: pip3 install cargo-lambda
+          command: pip install cargo-lambda
       - checkout
       - add_ssh_keys:
           fingerprints:
