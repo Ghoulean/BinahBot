@@ -52,8 +52,7 @@ jobs:
       # Replace this with steps to deploy to users
       - run:
           name: deploy
-          command: cargo --version
-          command: node --version
+          command: cargo --version; node --version
 workflows:
   deploy-to-prod:
     jobs:
