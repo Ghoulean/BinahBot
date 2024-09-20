@@ -10,8 +10,8 @@ jobs:
       - run:
           name: Set up Cargo Lambda
           command: >-
-            CI=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-            brew tap cargo-lambda/cargo-lambda
+            CI=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" &&
+            brew tap cargo-lambda/cargo-lambda &&
             brew install cargo-lambda
       - checkout
       - add_ssh_keys:
