@@ -97,7 +97,7 @@ jobs:
           name: deploy
           command: cd /tmp/workspace/ruina-cdk && npm run cdk deploy -- --profile=CircleCIWebIdentityProfile
 workflows:
-  deploy-to-prod:
+  on-push:
     jobs:
       - prebuild
       - test:
