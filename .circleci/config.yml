@@ -31,6 +31,9 @@ jobs:
           name: Copy channel configuration to the respective location
           command: cp ~/BinahBotConfig/channel_config.toml ~/BinahBot/rust/binah_bot/binah_bot_spoiler/src/channel_config.toml
       - run:
+          name: Generate env for onetime setup
+          command: (echo APPLICATION_ID=$APPLICATION_ID; echo BOT_AUTH_TOKEN=$BOT_AUTH_TOKEN) > ~/BinahBot/ruina-discord-bot-onetime-setup/.env
+      - run:
           name: cargo build BinahBot
           command: cd ~/BinahBot/rust/binah_bot && cargo bb
       - run:
@@ -62,14 +65,19 @@ jobs:
           name: Ensure commands for BinahBot are up to date
           command: cd /tmp/workspace/ruina-discord-bot-onetime-setup && npm run discord:write    
   deploy-to-aws:
-    # This is an example deploy job, not actually used by the workflow
+    environment:
+      AWS_REGION: us-east-1
     docker:
       - image: cimg/rust:1.81.0-node
     steps:
-      # Replace this with steps to deploy to users
+      - attach_workspace:
+          at: /tmp/workspace
+      - aws-cli/setup:
+          profile_name: CircleCIWebIdentityProfile
+          role_arn: $AWS_CICD_ROLE_ARN
       - run:
           name: deploy
-          command: cargo --version; node --version
+          command: cd /tmp/workspace/ruina-cdk && npm run cdk deploy -- --profile=CircleCIWebIdentityProfile
 workflows:
   deploy-to-prod:
     jobs:
@@ -79,6 +87,7 @@ workflows:
             branches:
               only:
                 - main
+                - circleci-project-setup
           requires:
             - build-and-test
       - deploy-to-aws:
@@ -86,6 +95,7 @@ workflows:
             branches:
               only:
                 - main
+                - circleci-project-setup
           requires:
             - build-and-test
 
