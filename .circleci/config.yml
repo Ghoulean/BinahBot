@@ -87,7 +87,6 @@ workflows:
             branches:
               only:
                 - main
-                - circleci-project-setup
           requires:
             - build-and-test
       - deploy-to-aws:
@@ -95,7 +94,6 @@ workflows:
             branches:
               only:
                 - main
-                - circleci-project-setup
           requires:
             - build-and-test
 
