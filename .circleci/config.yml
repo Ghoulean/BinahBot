@@ -108,7 +108,6 @@ workflows:
             branches:
               only:
                 - main
-                - circleci-project-setup
           requires:
             - prebuild
       - onetime-setup:
