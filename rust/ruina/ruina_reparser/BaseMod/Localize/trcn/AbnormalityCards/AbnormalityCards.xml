@@ -1,0 +1,2230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbnormalityCardsRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sephirah SephirahType="Malkuth">
+    <AbnormalityCard ID="ScorchedGirl_Walk">
+      <Abnormality>焦化少女</Abnormality>
+      <CardName>腳步</CardName>
+      <AbilityDesc>[影響所有司書]
+若某司書的體力不高於20%，則該司書與攻擊目標觸發戰鬥時將造成“自身體力上限x30%”的傷害(至多36點)並對其施加1~3層“燒傷”，隨後死亡。</AbilityDesc>
+      <FlaborText>我來找你了，和我一起化成灰吧。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">如果我即將燃盡，那你也隨我一起吧。</Dialogue>
+        <Dialogue ID="2">孤身一人死去是很悲哀的事……你懂我的意思吧？</Dialogue>
+        <Dialogue ID="3">將要化成灰的人，請再等一下，我這就來……</Dialogue>
+        <Dialogue ID="4">一步，又一步……燒焦了。</Dialogue>
+        <Dialogue ID="5">燒焦了的我，又能做些什麼呢？</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="ScorchedGirl_Atk">
+      <Abnormality>焦化少女</Abnormality>
+      <CardName>餘燼</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書被擊中時將對攻擊方施加1~3層“燒傷”並有40%的機率在下一幕中賦予自身的“進攻型”骰子額外效果“[命中時] 對目標施加1層[燒傷]”(不可疊加)</AbilityDesc>
+      <FlaborText>焦黑的身體象徵著少女支離破碎的希望，永恆的火焰卻寄託著對愛的強烈渴望。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">要將所有明亮之物，統統燒毀……</Dialogue>
+        <Dialogue ID="2">我很清楚，燒焦的身體再也變不回來了。</Dialogue>
+        <Dialogue ID="3">我害怕變成灰……但我不想熄滅火焰。</Dialogue>
+        <Dialogue ID="4">火焰，讓我感到幸福，溫暖……</Dialogue>
+        <Dialogue ID="5">總有一天，我會化為灰燼，自由地飄散，飛翔……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="ScorchedGirl_Ashes">
+      <Abnormality>焦化少女</Abnormality>
+      <CardName>殘光</CardName>
+      <AbilityDesc>[選擇一名司書]
+應用該異想體書頁後，該司書後續使用的2張書頁及其攜帶的所有同名書頁將被賦予“火柴標記”。(無法對裝備書頁生效) 
+該司書使用“火柴書頁”時將獲得1層“火苗”，每層“火苗”將使“火柴書頁”的第1顆骰子最大值+1。
+若“火苗”層數不低於4，則使用“火柴書頁”時有25%的概率爆炸並對自身造成“第1顆骰子最大值”的傷害。
+</AbilityDesc>
+      <FlaborText>她從不輕易表露內心的情感，就像一枚不知何時才會引爆的定時炸彈。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">一步……一步……燒成……焦黑……</Dialogue>
+        <Dialogue ID="2">下一根火柴……會映出什麼？</Dialogue>
+        <Dialogue ID="3">最後一根火柴熄滅後，您也會離我而去的吧？</Dialogue>
+        <Dialogue ID="4">這些火柴，是我生命中唯一的希望……</Dialogue>
+        <Dialogue ID="5">流星落下，就是有人去了天堂。那會是誰的星星……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="HappyTeddyBear_Hug">
+      <Abnormality>快樂泰迪</Abnormality>
+      <CardName>思念的擁抱</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書拼點勝利時有20%的機率追加“自身骰子點數”的混亂傷害。
+對同一目標每取得一次拼點勝利，該效果的觸發機率便+5%
+(攻擊其他角色時重置此機率)</AbilityDesc>
+      <FlaborText>泰迪正緊緊抱著某人。泰迪非常喜歡擁抱。但，似乎有些不對勁。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">我們來抱抱吧？這樣你會好過些的。</Dialogue>
+        <Dialogue ID="2">大家都喜歡抱抱，對不對？</Dialogue>
+        <Dialogue ID="3">快來感受一下，這份暖暖的心意吧。</Dialogue>
+        <Dialogue ID="4">沒關係的，請不要害怕。我只是，想要好好抱抱你。</Dialogue>
+        <Dialogue ID="5">累了嗎？快來我懷裡休息一下吧。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="HappyTeddyBear_Memory">
+      <Abnormality>快樂泰迪</Abnormality>
+      <CardName>幸福的記憶</CardName>
+      <AbilityDesc>[選擇一名司書]
+隨機從該司書手中選擇1張當前費用最高的書頁，其攜帶的所有同名書頁將被賦予“幸福標記”。(無法對裝備書頁生效)
+“幸福書頁”每被該司書使用一次，其費用便一同-1</AbilityDesc>
+      <FlaborText>但泰迪再也不想失去它的主人了。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">為什麼離開我？我們明明那麼親密……</Dialogue>
+        <Dialogue ID="2">不要離開我好不好，我們再來抱一抱吧，你一定會回心轉意的。</Dialogue>
+        <Dialogue ID="3">又要說再見了，我好難過哦……</Dialogue>
+        <Dialogue ID="4">為什麼丟下我，為什麼又要說再見？</Dialogue>
+        <Dialogue ID="5">是我抱得太用力了，讓你討厭了嗎？</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="HappyTeddyBear_Lonely">
+      <Abnormality>快樂泰迪</Abnormality>
+      <CardName>表達愛意</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書拼點時自身的骰子威力+1~2
+單方面攻擊時自身的骰子威力-1~2</AbilityDesc>
+      <FlaborText>它的記憶始於溫暖的懷抱。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">你來找我玩啦，我好開心呀。</Dialogue>
+        <Dialogue ID="2">你真親切呢？我們再來一次吧，嗯？</Dialogue>
+        <Dialogue ID="3">願意和這樣的我一起玩，好感動……</Dialogue>
+        <Dialogue ID="4">來吧，我會溫柔地抱住你，讓你感受暖暖的愛意。</Dialogue>
+        <Dialogue ID="5">沒關係的，不要怕，只是緊緊抱一下喲？</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="FairyCarnival_Care">
+      <Abnormality>精靈盛宴</Abnormality>
+      <CardName>精靈的呵護</CardName>
+          <AbilityDesc>[選擇一名司書]
+3幕之內，每一幕結束時為該司書恢復15%的體力。(至多18點)
+效果結束前若該司書累計被擊中3次，則追加承受“自身體力上限x25%”的傷害並移除該效果。(至多30點)</AbilityDesc>
+      <FlaborText>精靈會保護職員們。在她們的悉心照料下，一切都會變得安寧祥和。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">不用擔心！我們會好好照顧你的。</Dialogue>
+        <Dialogue ID="2">別害怕，我們是來保護你的。</Dialogue>
+        <Dialogue ID="3">精靈們都是聖潔的化身，要對自己有信心喲。</Dialogue>
+        <Dialogue ID="4">待人友善，熱愛自然的你，理應受到我們的關懷。</Dialogue>
+        <Dialogue ID="5">呐，你很特別哦。而其他人就需要回顧人生，好好反省一下啦。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="FairyCarnival_Gluttony">
+      <Abnormality>精靈盛宴</Abnormality>
+      <CardName>貪食</CardName>
+        <AbilityDesc>[選擇一名司書]
+該司書擊中當幕已損失體力的目標時傷害+1~3並恢復2~5點體力。</AbilityDesc>
+      <FlaborText>說到底，這些精靈不過是一群嗜食生肉的怪物罷了，所謂的“呵護”也僅僅是為了保持食物的新鮮。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">我們為什麼要守在你身邊？當然是為了保護你呀！</Dialogue>
+        <Dialogue ID="2">請盡情享受精靈們的關懷吧。</Dialogue>
+        <Dialogue ID="3">像你這麼善良的人，可不能死在別人嘴裡。</Dialogue>
+        <Dialogue ID="4">只要你不幹壞事，我們就不會傷害你喲。</Dialogue>
+        <Dialogue ID="5">你在懷疑我們？真是壞心眼呐……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="FairyCarnival_QueenAtk">
+      <Abnormality>精靈盛宴</Abnormality>
+      <CardName>獵食</CardName>
+      <AbilityDesc>[選擇一名司書]
+這一幕開始時對除該司書外的其餘司書造成10點傷害。
+該司書將恢復“傷害總值”的體力並獲得3層“強壯”與“迅捷”。</AbilityDesc>
+      <FlaborText>他的內臟和眼球遭到不明生物啃食，受損嚴重。此外，我們察覺到精靈們的嘴角沾有某人的血肉。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">精靈的數量，就是這樣減少的……朕也無可奈何。</Dialogue>
+        <Dialogue ID="2">受了傷，肉就不再好吃了！</Dialogue>
+        <Dialogue ID="3">朕想吃新鮮的肉，爛掉的肉毫無營養。</Dialogue>
+        <Dialogue ID="4">肉要新鮮才好，趁熱吃吧？</Dialogue>
+        <Dialogue ID="5">滿是傷疤的爛肉，真難吃……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="QueenBee_Funga">
+      <Abnormality>蜂后</Abnormality>
+      <CardName>孢子</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書被擊中時將對攻擊方施加1~3層“燒傷”並在下一幕中對其施加1~3層“流血”。</AbilityDesc>
+      <FlaborText>研究表明，孢子內含有能在宿主體內孵化的蜂卵。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">工蜂死後，只要培育新的工蜂填補空缺即可……</Dialogue>
+        <Dialogue ID="2">為了復興王國……我需要更多工蜂……</Dialogue>
+        <Dialogue ID="3">這裡的工蜂都到哪裡去了？</Dialogue>
+        <Dialogue ID="4">趁你還有機會，好好享受那片青空吧。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="QueenBee_Bee">
+      <Abnormality>蜂后</Abnormality>
+      <CardName>工蜂</CardName>
+      <AbilityDesc>[選擇一名司書]
+每一幕中透過直接攻擊對該司書造成最多傷害的來賓將被標記為“威脅”。
+未應用該異想體書頁的司書擊中“威脅”時將追加2~4點傷害。</AbilityDesc>
+      <FlaborText>工蜂只表現出兩種行為模式: 為蜂后提供營養素，擴大蜂群數量。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">我的工蜂們，是時候行動了。</Dialogue>
+        <Dialogue ID="2">翅膀，前足，下顎……能動的部位都動起來，趕在他們奪走蜂蜜之前！</Dialogue>
+        <Dialogue ID="3">現在正是忙碌的時刻，動作再快一點！</Dialogue>
+        <Dialogue ID="4">又有誰會記得，那些為王國而死的工蜂呢……？</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="QueenBee_Loyalty">
+      <Abnormality>蜂后</Abnormality>
+      <CardName>忠誠</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書每承受5點傷害(包括直接攻擊傷害與負面狀態傷害)，便在下一幕中使所有司書獲得1層“強壯”。</AbilityDesc>
+      <FlaborText>蜜蜂的忠誠是一種自然本能，一旦找到激發這種本能的方法，那麼許多事物都將改變。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">快為我獻上更多蜜來。</Dialogue>
+        <Dialogue ID="2">我即是王國，王國即是我。對我忠誠即是對王國忠誠。</Dialogue>
+        <Dialogue ID="3">哪怕翅膀被撕碎，只要腿還能動，就必須全力工作。</Dialogue>
+        <Dialogue ID="4">“為女王獻身”只是一句空話，你必須活下去，繼續保護我。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="SnowWhite_Vine">
+      <Abnormality>白雪公主的蘋果</Abnormality>
+      <CardName>絞殺藤</CardName>
+      <AbilityDesc>[選擇一名司書]
+[僅限本舞臺]
+每一幕開始時隨機對1名來賓施加6層“束縛”。
+該司書以突刺骰子攻擊該來賓時威力+1~2</AbilityDesc>
+      <FlaborText>了無生機的藤蔓從蘋果中蔓生而出，縱使全數乾枯，也從未停止生長。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">在那無比漫長的時光中，唯有腐爛的屍體陪伴在身旁……</Dialogue>
+        <Dialogue ID="2">乾枯的藤蔓，與蘋果緊緊相依。</Dialogue>
+        <Dialogue ID="3">我多想絞死那些，因我而獲得幸福的人們。</Dialogue>
+        <Dialogue ID="4">那些咬過蘋果的人們，也像白雪公主一樣沉沉睡去，可是再也沒能醒來。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="SnowWhite_Thorn">
+      <Abnormality>白雪公主的蘋果</Abnormality>
+      <CardName>毒刺屏障</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書被擊中時將對攻擊方造成1次“毒刺傷害”(2~8點傷害)並施加1~3層“束縛”。
+若一次性施加3層“束縛”，則為該司書恢復“毒刺傷害值”的體力。</AbilityDesc>
+      <FlaborText>被白雪公主咬過一口便遺棄在爛泥中的蘋果，永遠得不到幸福。那顆蘋果在孤獨與憎惡之中，日復一日地等待著腐爛……</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">美麗的蘋果，被遺棄在寂靜的森林之中。噢，美麗的蘋果……</Dialogue>
+        <Dialogue ID="2">腐爛之物圍繞著那顆蘋果，它無法回歸土壤。</Dialogue>
+        <Dialogue ID="3">那顆被遺棄在爛泥中的蘋果，永遠——無法——幸福。</Dialogue>
+        <Dialogue ID="4">帶刺的藤蔓，從傷透的心中蔓生而出。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="SnowWhite_malice">
+      <Abnormality>白雪公主的蘋果</Abnormality>
+      <CardName>惡意</CardName>
+      <AbilityDesc>[選擇一名司書]
+對所有來賓造成5~30點傷害，該司書的體力越低則傷害越高。</AbilityDesc>
+      <FlaborText>伴隨那與生俱來的惡意，花朵綻放之時，所有生命都將消亡。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">誕生自憤怒與詛咒的我，卻給他人帶去了幸福。</Dialogue>
+        <Dialogue ID="2">充滿死氣的藤蔓仍在不停生長。</Dialogue>
+        <Dialogue ID="3">淹沒在恐怖的憤怒與復仇欲中……強忍著孤獨長大。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+  </Sephirah>
+  <Sephirah SephirahType="Yesod">
+    <AbnormalityCard ID="ForsakenMurderer_Tie">
+      <Abnormality>被遺棄的殺人魔</Abnormality>
+      <CardName>受縛的憤怒</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書的打擊骰子威力+1~3
+速度固定為1點。</AbilityDesc>
+      <FlaborText>即使全身遭到束縛，他仍比任何人都要自由。這還遠遠無法阻止他施暴。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">就算綁住俺的身體……俺照樣能動彈。</Dialogue>
+        <Dialogue ID="2">放開俺……憑什麼綁著俺！</Dialogue>
+        <Dialogue ID="3">別用那種眼神盯著俺，可憐的傢伙是你們才對……</Dialogue>
+        <Dialogue ID="4">這東西綁不住俺！！！</Dialogue>
+        <Dialogue ID="5">就算被綁成這副鳥樣，你們也照樣會怕俺。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="ForsakenMurderer_Metal">
+      <Abnormality>被遺棄的殺人魔</Abnormality>
+      <CardName>鐵塊的回聲</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書以打擊骰子擊中目標時將在下一幕中對其施加1層“束縛”與“麻痺”。(無法對群體攻擊書頁生效)</AbilityDesc>
+      <FlaborText>腦袋……鐵塊……大腦上的褶皺……變光滑了……</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">俺的腦袋又在嗡嗡響了，又吵又鬧的……鐵塊，敲擊聲……</Dialogue>
+        <Dialogue ID="2">感覺就像，腦袋變成了冰冷的鐵塊。</Dialogue>
+        <Dialogue ID="3">俺的腦袋，真的變成鐵塊了？</Dialogue>
+        <Dialogue ID="4">腦袋一碰，就會響起清脆的聲音。</Dialogue>
+        <Dialogue ID="5">大腦變成鐵塊的話，上面的褶皺也會消失吧。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="ForsakenMurderer_Violence">
+      <Abnormality>被遺棄的殺人魔</Abnormality>
+      <CardName>極端暴力</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書的所有骰子最小值-1，最大值+3</AbilityDesc>
+      <FlaborText>最可憐的明明是你們，道貌岸然的偽君子，死在俺手裡的小人。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">不要以為，把俺綁起來，就萬事大吉了……</Dialogue>
+        <Dialogue ID="2">……</Dialogue>
+        <Dialogue ID="3">結束了……開始了……又結束了……又開始了……</Dialogue>
+        <Dialogue ID="4">腦袋一碰，就會嗡嗡亂響。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="LittleHelper_Rest">
+      <Abnormality>小幫手</Abnormality>
+      <CardName>充電</CardName>
+      <AbilityDesc>[選擇一名司書]
+每一幕開始時若該司書的光芒全滿，則獲得1~2層“迅捷”且擊中目標時傷害+2~7</AbilityDesc>
+      <FlaborText>機械臂上本應配備的清潔用具被全部替換成極度鋒利的切割工具。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">嗶啵……嗶……電量不足……</Dialogue>
+        <Dialogue ID="2">需要……充電……正在前往最近的插座……</Dialogue>
+        <Dialogue ID="3">請手動關閉電源……小幫手的電源將在數秒後自動關閉……</Dialogue>
+        <Dialogue ID="4">切換為充電狀態，暫時無法接收命令。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="LittleHelper_Pattern">
+      <Abnormality>小幫手</Abnormality>
+      <CardName>反覆識別功能</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書每取得3次拼點勝利，便恢復1點光芒並在下一幕中獲得1~2層“迅捷”。</AbilityDesc>
+      <FlaborText>在初次被送至新家的那天，我給了那些人他們期盼已久的禮物。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">清潔完畢後，人們總會稱讚小幫手！</Dialogue>
+        <Dialogue ID="2">識別到高分貝稱讚，小幫手將繼續清潔工作。</Dialogue>
+        <Dialogue ID="3">嗶嗶~嗶！模式切換完畢。</Dialogue>
+        <Dialogue ID="4">小幫手喜歡人們的高分貝稱讚！</Dialogue>
+        <Dialogue ID="5">一切歸功於小幫手出色的學習回饋系統。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="LittleHelper_Clean">
+      <Abnormality>小幫手</Abnormality>
+      <CardName>清潔</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書的速度每高於目標1點，便使自身的“進攻型”骰子威力+1(至多+3)</AbilityDesc>
+      <FlaborText>它會將壞情緒識別為環境髒亂的信號，並立刻進入全面清潔模式。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">小幫手是可以為您代勞任何事情的幫手機器人！</Dialogue>
+        <Dialogue ID="2">需要幫忙嗎？小幫手可以為您做任何事情。</Dialogue>
+        <Dialogue ID="3">檢測到污染，開始清潔工作。</Dialogue>
+        <Dialogue ID="4">嗶嗶嗶~嘀。發現污染對象！啟動清潔模式。</Dialogue>
+        <Dialogue ID="5">小幫手內建的上百種工具為您解決一切煩惱！</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="SingingMachine_Music">
+      <Abnormality>歌唱機</Abnormality>
+      <CardName>音樂</CardName>
+      <AbilityDesc>[影響所有角色]
+所有角色擊中目標時傷害+4~8，被擊中時將追加承受4~8點混亂傷害。
+某司書擊殺來賓時將恢復15點體力與混亂抗性。</AbilityDesc>		
+      <FlaborText>此乃，旋律。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">由一個活人製造出的旋律是最美妙的。</Dialogue>
+        <Dialogue ID="2">想不想聽聽美妙的音樂呢？你知道該怎麼做的。</Dialogue>
+        <Dialogue ID="3">沒關係的，他肯定願意成為一件好樂器。</Dialogue>
+        <Dialogue ID="4">人人都有音樂天賦。</Dialogue>
+        <Dialogue ID="5">勇敢的人呐，快來靠近我呀，和我一起演奏吧。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="SingingMachine_Rhythm">
+      <Abnormality>歌唱機</Abnormality>
+      <CardName>旋律</CardName>
+      <AbilityDesc>[選擇一名司書]
+每一幕開始時該司書將獲得1層“節奏”。
+擁有“節奏”的角色擊中目標時有25%的機率在下一幕中隨機對1名角色施加1層“節奏”。
+(節奏: 獲得1層“強壯”，被擊中時將追加承受2~5點混亂傷害，持續1幕)</AbilityDesc>
+      <FlaborText>這世上再也沒有比“人”更加動聽的旋律了。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">大家都想再聽我唱歌呢。</Dialogue>
+        <Dialogue ID="2">各種各樣的聲音混合在一起，就形成了音樂。</Dialogue>
+        <Dialogue ID="3">你和我都想成為樂器呀……</Dialogue>
+        <Dialogue ID="4">如果人人都願意獻出自身，那一定可以產生更加甜美的音色。</Dialogue>
+        <Dialogue ID="5">其他旋律再也傳不進你耳朵裡啦。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="SingingMachine_Atk">
+      <Abnormality>歌唱機</Abnormality>
+      <CardName>成癮</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書的“進攻型”骰子威力+1~3
+“防禦型”骰子點數固定為1點。</AbilityDesc>
+      <FlaborText>藝術原本就是惡魔自絕望與苦痛中施捨的禮物，不要停止演奏，直到你的身體已如碎肉一般破爛不堪。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">其他音樂對我而言，不過是吵鬧的噪音罷了……</Dialogue>
+        <Dialogue ID="2">指引我的腳步……用那歌聲照亮我的前路！</Dialogue>
+        <Dialogue ID="3">嘻嘻嘻……嘻……我該怎麼辦？我能怎麼辦？嘻嘻……</Dialogue>
+        <Dialogue ID="4">倘若這段旋律能永遠響徹，那我便將得到亙古不滅的幸福……</Dialogue>
+        <Dialogue ID="5">沒錯！就是這……就是這激昂的曲調！！</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Butterfly_White">
+      <Abnormality>亡蝶葬儀</Abnormality>
+      <CardName>安息</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書擊中當前體力最低的來賓時傷害+2~7，混亂傷害+2~5</AbilityDesc>
+      <FlaborText>人死後會化作有著小小翅膀的美妙存在，著實荒謬。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">永恆的長眠……願你安息。</Dialogue>
+        <Dialogue ID="2">我相信，人死後會化作有著小小翅膀的美妙存在。</Dialogue>
+        <Dialogue ID="3">請不要再折磨自己了，我會幫你解脫。</Dialogue>
+        <Dialogue ID="4">帶著得來的一切，滿懷希望地回歸安息之所。</Dialogue>
+        <Dialogue ID="5">死亡再可怕，會比這現實更可怕嗎？死後唯有解脫。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Butterfly_Fly">
+      <Abnormality>亡蝶葬儀</Abnormality>
+      <CardName>哀悼</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書擊中擁有負面狀態的來賓時傷害+2~7
+每一幕開始時若該司書擁有負面狀態，則獲得1~2層“強壯”。</AbilityDesc>
+      <FlaborText>身負重擔的悼念者，
+前來此地救贖眾生。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">向那些深陷悲傷的可憐靈魂……致以深切的哀悼。</Dialogue>
+        <Dialogue ID="2">向逝者寄託哀思，向生者致以哀悼。</Dialogue>
+        <Dialogue ID="3">悲傷的淚水，只是無謂地浸透翅膀。</Dialogue>
+        <Dialogue ID="4">葬禮只消肅穆，無需招搖。</Dialogue>
+        <Dialogue ID="5">這裡連一朵像樣的鮮花都不曾擁有。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Butterfly_Casket">
+      <Abnormality>亡蝶葬儀</Abnormality>
+      <CardName>棺柩</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書擊中體力不高於50%的來賓時將在下一幕中封印其1顆速度骰子。(每一幕至多觸發2次，無法對群體攻擊書頁生效)</AbilityDesc>
+      <FlaborText>背負棺柩的他，只為悼念無處可去的職員，但這遠不足以安撫那些無辜的替罪羔羊。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">這具棺柩，承載著空洞的信仰，只為悼念那無家可歸之人……</Dialogue>
+        <Dialogue ID="2">人死後會前往何方？</Dialogue>
+        <Dialogue ID="3">你承受不了，這些蝴蝶的份量。</Dialogue>
+        <Dialogue ID="4">連這巨大的棺柩，都不足以撫慰那些無辜的犧牲者。</Dialogue>
+        <Dialogue ID="5">輕柔地拍動翅膀，靜候那終將到來的永眠。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Matan_Request">
+      <Abnormality>魔彈射手</Abnormality>
+      <CardName>委託</CardName>
+      <AbilityDesc>[選擇一名司書]
+應用該異想體書頁後，該司書擊中的第1名來賓將被標記為“委託目標”。
+該司書擊中“委託目標”時傷害+3~5
+若該司書擊殺“委託目標”，則恢復所有混亂抗性並使該來賓轉化的書籍數x2
+“委託目標”死亡後，該司書可將其餘來賓標記為“委託目標”。</AbilityDesc> 
+      <FlaborText>惡魔的子彈會穿透你指定的任何目標，直到永遠。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">有人稱其為正義的獵手。也有人，稱其為血腥的屠夫。</Dialogue>
+        <Dialogue ID="2">子彈總是不偏不倚地向前挺進。</Dialogue>
+        <Dialogue ID="3">隨意瞄準即可，槍口自會搜尋目標。</Dialogue>
+        <Dialogue ID="4">飛馳的子彈不分善惡。</Dialogue>
+        <Dialogue ID="5">他有時會幫助深陷困境的人們，亦或是與邪惡鬥爭。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Matan_Seven">
+      <Abnormality>魔彈射手</Abnormality>
+      <CardName>第七顆子彈</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書擊中目標時傷害+1~7
+該司書的“進攻型”骰子無論是否取得拼點勝利皆可對目標造成“骰子點數”的傷害。
+每當該司書使用第7張書頁時會隨機將1名來賓或司書指定為攻擊目標。(無法對群體攻擊書頁生效)</AbilityDesc>
+      <FlaborText>那惡魔開出一條幼稚的契約: 最後一顆子彈將穿透心愛之人的頭顱。射手聽罷，便將心愛的人們一一射殺。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">最後一顆子彈會穿透心愛之人的頭顱。</Dialogue>
+        <Dialogue ID="2">當真如此……這是能擊中任何人的魔彈，一切如你所言。</Dialogue>
+        <Dialogue ID="3">子彈會穿透你指定的任何目標，直到永遠。</Dialogue>
+        <Dialogue ID="4">讓那最後一顆子彈，永遠無法出現。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Matan_Flame">
+      <Abnormality>魔彈射手</Abnormality>
+      <CardName>黑焰</CardName>
+      <AbilityDesc>[選擇一名司書]
+[僅限本舞臺]
+所有角色的“耐性/抵抗”攻擊抗性將變為“脆弱/致命”
+每一幕開始時該司書將獲得1~2層“迅捷”與2~4層“強壯”。</AbilityDesc>
+      <FlaborText>射手察覺，那終日如影隨形的惡魔此刻竟已離他而去。他試著追尋原因，而後意識到自己的靈魂從一開始便已墮入地獄。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">惡魔窺覷著絕望。</Dialogue>
+        <Dialogue ID="2">我的靈魂徐徐燃燒，而後墮入地獄。</Dialogue>
+        <Dialogue ID="3">察覺到眼前空無一物的那一瞬間，靈魂便已隨之死去。</Dialogue>
+        <Dialogue ID="4">絕望的心無法焚毀，只是冰冷地燃燒。</Dialogue>
+        <Dialogue ID="5">絕望永遠伴我左右，不離不棄。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+  </Sephirah>
+  <Sephirah SephirahType="Hod">
+    <AbnormalityCard ID="ShyLookToday_Face">
+      <Abnormality>今天也很害羞</Abnormality>
+      <CardName>今日的表情</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書的骰子威力將取決於當前表情。(最小-2，最大+2)</AbilityDesc>
+      <FlaborText>某一天，又是一個陽光明媚的好日子，我就像很久以前小心翼翼地晾乾衣服那樣，晾起了自己的臉皮。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">因為害羞，我很怕羞……</Dialogue>
+        <Dialogue ID="2">悲傷的神情與這座都市格格不入。</Dialogue>
+        <Dialogue ID="3">要更加清晰地表達你自己……這一點非常重要。</Dialogue>
+        <Dialogue ID="4">你知道，應該擺出什麼樣的表情嗎？</Dialogue>
+        <Dialogue ID="5">你也像我一樣開懷大笑吧，來嘛，這有什麼難的？</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="ShyLookToday_Shy">
+      <Abnormality>今天也很害羞</Abnormality>
+      <CardName>害羞</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書的招架骰子威力+1~2
+反震傷害+2~7</AbilityDesc>
+      <FlaborText>不要窺探她隱藏在臉皮後的真實容貌，這不會有什麼好結果的。巨大的臉皮之後是她僅有的私人空間，確保她的隱私不受侵犯是都市留給她的最後一項特權。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">我很害羞，只是害羞罷了……</Dialogue>
+        <Dialogue ID="2">對不起，時間一長自然會習慣的……</Dialogue>
+        <Dialogue ID="3">我這麼做，也許只是為了保護自己。</Dialogue>
+        <Dialogue ID="4">有時，難以言喻的情感會如潮水一般湧上心頭。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="ShyLookToday_Normalface">
+      <Abnormality>今天也很害羞</Abnormality>
+      <CardName>社交距離</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書使用的書頁中每有1顆“防禦型”骰子，便使自身當前書頁的招架骰子威力+1</AbilityDesc>
+      <FlaborText>也許是因為害羞才會執意藏起面容，當無法隱忍的情感湧上心頭之際，最好遮住你的臉。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">請不要向後窺探，這是最起碼的禮貌……</Dialogue>
+        <Dialogue ID="2">只要距離適當，彼此之間就不會有負擔。</Dialogue>
+        <Dialogue ID="3">你我之間有一條線，請你至少，不要越過這條線……</Dialogue>
+        <Dialogue ID="4">請不要再靠近了，別踏進我這裡……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="RedShoes_Kirakira">
+      <Abnormality>紅舞鞋</Abnormality>
+      <CardName>閃亮</CardName>
+      <AbilityDesc>[選擇一名司書]
+每一幕開始時所有來賓各有50%的機率陷入“著魔”狀態。
+“著魔”的來賓會優先將該司書指定為攻擊目標。
+“著魔”的來賓擊中任意司書時傷害+2~4
+該司書與“著魔”的來賓拼點時將使自身當前書頁的所有骰子威力+1~2</AbilityDesc>
+      <FlaborText>這雙鞋是無色的。
+不過很快就會染紅了。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">紅得太鮮豔了，會覺得刺眼嗎？</Dialogue>
+        <Dialogue ID="2">殺掉這個人……鞋子就是你的了。</Dialogue>
+        <Dialogue ID="3">沒關係，砍斷腳踝就能輕鬆摘下鞋子了。</Dialogue>
+        <Dialogue ID="4">想不想成為最美的人？</Dialogue>
+        <Dialogue ID="5">這份華麗，只有你配得上。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="RedShoes_Desire">
+      <Abnormality>紅舞鞋</Abnormality>
+      <CardName>血之渴望</CardName>
+      <AbilityDesc>[影響所有角色]
+所有角色施加“流血”時層數x2</AbilityDesc>
+      <FlaborText>我要砍斷你的狗腿，這輩子都別想跳舞。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">最受關注的人必須是我！</Dialogue>
+        <Dialogue ID="2">只有我能跳出優美的舞蹈……</Dialogue>
+        <Dialogue ID="3">我要讓你永遠無法起舞。</Dialogue>
+        <Dialogue ID="4">只要廢掉那雙腿，我就能成為主角吧？</Dialogue>
+        <Dialogue ID="5">讓我瞧瞧你的最後一支舞吧。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="RedShoes_Cut">
+      <Abnormality>紅舞鞋</Abnormality>
+      <CardName>利斧</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書的斬擊骰子威力+1~3
+該司書使用斬擊骰子時若未能擊中目標，則承受2~5點混亂傷害。(無法對群體攻擊書頁生效)</AbilityDesc>
+      <FlaborText>前輩突然換上舞鞋，頗為滿意地露出微笑。她的笑容有些奇怪，不……那根本不是在笑……</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">反覆磨利斧刃……一刀就能砍斷……</Dialogue>
+        <Dialogue ID="2">積蓄的欲望……壓抑的情感……全部……全部釋放出來！！！</Dialogue>
+        <Dialogue ID="3">猩紅的斧子……還有比這更美麗的事物嗎？</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="SpiderBud_Cocoon">
+      <Abnormality>蜘蛛巢</Abnormality>
+      <CardName>繭縛</CardName>
+      <AbilityDesc>[選擇一名司書]
+若該司書擲出最大值且擊中目標，則下一幕中對目標施加1~2層“麻痺”，“束縛”與“易損”。(無法對群體攻擊書頁生效)</AbilityDesc>
+      <FlaborText>沒有人自願取回繭中的屍體。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">是哪個不長眼的踩死了我的寶寶？</Dialogue>
+        <Dialogue ID="2">那個被裹在繭中的員工其實並沒有死，但不會有人知道的。</Dialogue>
+        <Dialogue ID="3">蜘蛛的毒液非常特別，它不會讓獵物立刻死去。</Dialogue>
+        <Dialogue ID="4">注意腳下，一旦出了岔子，就要當心頭頂。</Dialogue>
+        <Dialogue ID="5">沒人有膽子去解救他們。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="SpiderBud_BabyAtk">
+      <Abnormality>蜘蛛巢</Abnormality>
+      <CardName>進食</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書擊中處於“混亂”狀態的目標時將為所有司書恢復2~4點體力。(無法對群體攻擊書頁生效)</AbilityDesc>
+      <FlaborText>成為繭後，員工彼得被倒吊在收容單元的天花板上，為蜘蛛可愛的子女們獻上豐盛的一餐。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">感到歡喜吧，你會讓我的寶寶們更加幸福。</Dialogue>
+        <Dialogue ID="2">成長期的寶寶們總是饑腸轆轆。</Dialogue>
+        <Dialogue ID="3">進食，生存，天經地義。</Dialogue>
+        <Dialogue ID="4">食物充足，無所憂慮。</Dialogue>
+        <Dialogue ID="5">我們有了可口的食物……寶寶們，聚過來。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="SpiderBud_Dinner">
+      <Abnormality>蜘蛛巢</Abnormality>
+      <CardName>警戒</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書拼點時目標的骰子威力-1
+該司書拼點勝利時有50%的機率在下一幕中對目標施加1層“束縛”與“易損”。</AbilityDesc>
+      <FlaborText>為了饑腸轆轆的孩子們，於黑暗中覓食的眼瞳發出陣陣紅光。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">身處黑暗，也能看得一清二楚……</Dialogue>
+        <Dialogue ID="2">如果放跑了獵物，那就麻煩了。</Dialogue>
+        <Dialogue ID="3">視線一刻也不能移開，天知道他會對我的寶寶做些什麼……</Dialogue>
+        <Dialogue ID="4">這一次，我會死死盯著你……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Laetitia_Present">
+      <Abnormality>蕾蒂希婭</Abnormality>
+      <CardName>驚喜禮物</CardName>
+      <AbilityDesc>[選擇一名司書]
+應用該異想體書頁後，第1名與該司書拼點的來賓將被贈予1份“小小禮物”。
+擁有禮物的來賓與未應用該異想體書頁的司書拼點時有40%的機率承受2~7點傷害並在下一幕中獲得2層“流血”。
+擁有禮物的來賓死亡後，該司書可向其餘來賓贈予禮物。</AbilityDesc>
+      <FlaborText>如果遇見喜歡的人，她會把親手製作的禮物送給他們。但禮物的內容是絕對保密的！</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">打開禮物後，你會嚇一跳的哦！真的會跳起來喲？</Dialogue>
+        <Dialogue ID="2">禮物裡裝著什麼？這是秘密，告訴你就不好玩啦~</Dialogue>
+        <Dialogue ID="3">這是我親手製作的禮物，希望你能接受！</Dialogue>
+        <Dialogue ID="4">啊喔……我把小秘密說出來了。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Laetitia_HeartGift">
+      <Abnormality>蕾蒂希婭</Abnormality>
+      <CardName>奇趣惡作劇</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書使用書頁時第1顆骰子必定擲出最小值或最大值。
+若擲出最小值，則該司書將承受2~7點傷害。</AbilityDesc>
+      <FlaborText>小不點決定留下來，直到為每個人帶來歡聲和笑語！</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">來和我玩吧！和我的朋友一起哈哈大笑吧！</Dialogue>
+        <Dialogue ID="2">喜歡我的小小惡作劇嗎？很有意思吧？對吧對吧？就是那種表情！</Dialogue>
+        <Dialogue ID="3">這裡沒有笑聲……大家看起來都好難過哦。</Dialogue>
+        <Dialogue ID="4">希望我的小小惡作劇能讓大家綻放笑容！</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Laetitia_Friend">
+      <Abnormality>蕾蒂希婭</Abnormality>
+      <CardName>小夥伴</CardName>
+      <AbilityDesc>[選擇一名司書]
+每一幕開始時隨機為該司書手中的1張書頁賦予“夥伴標記”。(無法對裝備書頁生效且若手中已有標記則不生效)
+“夥伴書頁”中的所有骰子威力+2~4
+若“夥伴書頁”在2幕之內未被使用，則該書頁將被移出戰鬥並對該司書造成2~7點傷害。</AbilityDesc>
+      <FlaborText>小不點很傷心，她捨不得離開親愛的朋友們。小眼珠子咕嚕一轉，她想出了一個絕妙的主意！</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">不能就這麼丟下重要的朋友們……所以，我想出了一個絕妙的主意！</Dialogue>
+        <Dialogue ID="2">不用擔心~只有壞孩子才會讓朋友傷心難過。</Dialogue>
+        <Dialogue ID="3">朋友越多，這裡就會越熱鬧！</Dialogue>
+        <Dialogue ID="4">希望能在這裡交到許多朋友~</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+      <AbnormalityCard ID="BlackSwan_Feather">
+      <Abnormality>黑天鵝之夢</Abnormality>
+      <CardName>污穢</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書拼點勝利時將在下一幕中對所有來賓施加1層“束縛”，“易損”，“流血”與“麻痺”。(每一幕至多觸發2次)</AbilityDesc>
+      <FlaborText>艾麗莎痛苦地跪倒在地，也如旁人那般嘔吐不止……</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">徐徐水波劃過湖面，仿佛有一群天鵝剛剛起飛……</Dialogue>
+        <Dialogue ID="2">面對這醜惡的現實，內心的情感再也無法遏制地爆發了。</Dialogue>
+        <Dialogue ID="3">我也和其他人一樣，開始無法控制地嘔吐……</Dialogue>
+        <Dialogue ID="4">我的肺像被刺中數刀，汙物緊隨呼吸噴湧而出。</Dialogue>
+        <Dialogue ID="5">鮮血……與綠色污穢的混合……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="BlackSwan_Umbrella">
+      <Abnormality>黑天鵝之夢</Abnormality>
+      <CardName>破傘</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書的速度+2~3
+該司書被擊中時有30%的機率免受此次傷害並對攻擊方造成“此次傷害值x2”的混亂傷害。</AbilityDesc>
+      <FlaborText>心懷美夢的黑天鵝試圖透過蕁麻解除自身的詛咒，但如今的她只剩下那把珍愛的破傘。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">當黑天鵝從成為白天鵝的美夢中蘇醒時，會發生什麼呢？</Dialogue>
+        <Dialogue ID="2">留給我的，只有這把珍貴的陽傘……還有胸針……</Dialogue>
+        <Dialogue ID="3">陽光……太過刺眼，我只能縮在傘下。</Dialogue>
+        <Dialogue ID="4">我渴望著永不醒來的夢，但現實始終是那樣殘酷。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="BlackSwan_Family">
+      <Abnormality>黑天鵝之夢</Abnormality>
+      <CardName>親愛的家人</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書將獲得6層“蕁麻衣”，每一幕開始時獲得“蕁麻衣”層數的“守護”，每一幕結束時失去1層“蕁麻衣”。</AbilityDesc>
+      <FlaborText>艾麗莎動身尋找她的哥哥們。她期盼著用蕁麻衣解除家人的詛咒，與他們一同分享幸福的夢。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">雖然沒有值錢的東西能傳給他們，但他們人人懷揣著名為“勤奮”與“真誠”的珍貴寶石。</Dialogue>
+        <Dialogue ID="2">我一直堅信著……一定能讓大家幸福……</Dialogue>
+        <Dialogue ID="3">只要再努力一點……就能好起來……</Dialogue>
+        <Dialogue ID="4">我的家人，本該穿上蕁麻衣獲得自由……</Dialogue>
+        <Dialogue ID="5">我們也曾一同分享幸福的夢。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+  </Sephirah>
+  <Sephirah SephirahType="Netzach">
+    <AbnormalityCard ID="UniverseZogak_Echo">
+      <Abnormality>宇宙碎片</Abnormality>
+      <CardName>異界的迴響</CardName>
+      <AbilityDesc>[影響所有角色]
+對所有來賓造成5~10點混亂傷害。
+為所有司書恢復5~10點混亂抗性。</AbilityDesc>
+      <FlaborText>眼前響起了悅耳的歌聲，它正慢慢朝你靠近……</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">歌聲。製作。人類。歌聲。雙耳。聆聽。</Dialogue>
+        <Dialogue ID="2">歌聲。精神。集中。瞬間。看見。存在。</Dialogue>
+        <Dialogue ID="3">雙目。合攏。感覺。美麗。存在。幸福。理想。</Dialogue>
+        <Dialogue ID="4">理解。完美。瞬間。知曉。我們。知識。意義。傳達。</Dialogue>
+        <Dialogue ID="5">製作。一同。呼喚。歌聲。領悟。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="UniverseZogak_Tentacle">
+      <Abnormality>宇宙碎片</Abnormality>
+      <CardName>觸鬚</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書以突刺骰子擊中目標時將使其混亂抗性上限-5%(至多-50%，無法對群體攻擊書頁生效)</AbilityDesc>
+      <FlaborText>被觸鬚穿透的那一瞬間，今後的人生將再也無法激起你分毫的興趣……</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">否定。攻擊。用以。幫助。給予。</Dialogue>
+        <Dialogue ID="2">我們。知識。只是。給予。傳達。尚未。</Dialogue>
+        <Dialogue ID="3">人類。攻擊。我們。遵從。協同。攻擊。</Dialogue>
+        <Dialogue ID="4">攻擊。快速。穿透。</Dialogue>
+        <Dialogue ID="5">人類。攻擊。靈魂。消散。希望。毫無。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="UniverseZogak_Sing">
+      <Abnormality>宇宙碎片</Abnormality>
+      <CardName>無法理解</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書以單方面攻擊擊中目標時有50%的機率在下一幕中對其施加1層“虛弱”與“破綻”。(每一幕至多觸發3次，無法對群體攻擊書頁生效)
+每擊中1次便使觸發機率+10%</AbilityDesc>
+      <FlaborText>總而言之，那傢伙成功踏入了“宇宙碎片”的領域，但他的大腦顯然無法承受。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">理解。與你。一同。人類。與我。</Dialogue>
+        <Dialogue ID="2">希望。理解。與你。與我。學習。</Dialogue>
+        <Dialogue ID="3">講述。我之。故事。願你。理解。努力。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="ChildofGalaxy_Tear">
+      <Abnormality>銀河之子</Abnormality>
+      <CardName>淚水</CardName>
+       <AbilityDesc>[選擇一名司書]
+該司書的所有骰子威力+1
+該司書死亡時將使所有角色失去50%的現有體力。(至多60點)</AbilityDesc>
+      <FlaborText>耳畔傳來他的低語和呼吸……接著便是一片漆黑……就像我與他初見的那個夜晚……</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">和我一起，在銀河中漫步吧。</Dialogue>
+        <Dialogue ID="2">你也變成卵石吧，和我永不分離。</Dialogue>
+        <Dialogue ID="3">讓我們再度回到從前……就和那夜一樣。</Dialogue>
+        <Dialogue ID="4">能和你相遇，我很開心。</Dialogue>
+        <Dialogue ID="5">如果我又哭出來了，請幫我擦掉淚水吧。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="ChildofGalaxy_Friend">
+      <Abnormality>銀河之子</Abnormality>
+      <CardName>友誼之證</CardName>
+      <AbilityDesc>[影響所有司書]
+3幕之內，每一幕開始時為所有司書恢復10%的體力。(至多12點)</AbilityDesc>
+      <FlaborText>你手中的卵石閃耀著，搖曳著，顫動著。在那之後，它便化作整個銀河。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">請不要丟掉它，也不要把它交給別人……</Dialogue>
+        <Dialogue ID="2">這是友誼的證明，請好好珍惜……</Dialogue>
+        <Dialogue ID="3">只要帶上它，我就能永遠伴你左右。</Dialogue>
+        <Dialogue ID="4">無論何時都要陪在我身邊哦？請不要忘記我們的約定。</Dialogue>
+        <Dialogue ID="5">朋友受傷什麼的……真叫人傷心難過呐。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="ChildofGalaxy_Token">
+      <Abnormality>銀河之子</Abnormality>
+      <CardName>卵石</CardName>
+      <AbilityDesc>[選擇一名司書]
+每一幕開始時隨機為該司書手中的3張書頁賦予“卵石標記”。(無法對裝備書頁生效)
+使用“卵石書頁”時該司書將恢復3~7點體力。
+使用非“卵石書頁”時該司書將失去1~3點體力。</AbilityDesc>
+      <FlaborText>它真的有那麼好嗎？比起我呢？這是理所當然的？我什麼都知道，無論你做了什麼，無論你要前往何方。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">為什麼要去其他朋友那裡……比起我，你更喜歡他嗎？</Dialogue>
+        <Dialogue ID="2">我是多麼的珍視你……但你卻一點也不珍視我……</Dialogue>
+        <Dialogue ID="3">無論你前往何方，無論你要做什麼……我會一直注視著你的。</Dialogue>
+        <Dialogue ID="4">如果你不想留在我身邊，那我也不再需要你了。</Dialogue>
+        <Dialogue ID="5">再見。還有，以後請不要再來找我了。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Porccubus_Thorn">
+      <Abnormality>棘刺公車</Abnormality>
+      <CardName>棘刺</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書以突刺骰子擊中目標時將對其施加1層“快感”。(無法對群體攻擊書頁生效)
+若目標的“快感”層數不低於3，則對其造成2~7點傷害與混亂傷害並重置該層數。</AbilityDesc>
+      <FlaborText>最初只需要把刺輕輕戳進皮肉，而如今需要用全身瘋狂地摩擦才能獲得同等的刺激。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">好呀，人家會親熱地彎下腰~這樣你就可以摸摸人家啦~</Dialogue>
+        <Dialogue ID="2">一開始難免會覺得害怕，但試過幾次就好辦啦~</Dialogue>
+        <Dialogue ID="3">快到人家下面來，人家會幫你脫離苦海~</Dialogue>
+        <Dialogue ID="4">品嘗一小口天堂的滋味罷了，有什麼不好的呀~？</Dialogue>
+        <Dialogue ID="5">那些不知幸福為何物的傢伙，還真是可憐呢~</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Porccubus_Boom">
+      <Abnormality>棘刺公車</Abnormality>
+      <CardName>嗨爆</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書的所有骰子威力+1
+該司書的混亂抗性上限-50%</AbilityDesc>
+      <FlaborText>我的腦袋就要爆炸了，再見囉~</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">貪求常人無法承受的歡樂，遲早會崩潰的啦。</Dialogue>
+        <Dialogue ID="2">人家只是為你們送來臨終前的歡笑~</Dialogue>
+        <Dialogue ID="3">先從一根開始，往後想要越來越多。</Dialogue>
+        <Dialogue ID="4">幸福得就像腦袋要爆了一樣。</Dialogue>
+        <Dialogue ID="5">嘗過甜頭，就別想逃啦。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Porccubus_Happy">
+      <Abnormality>棘刺公車</Abnormality>
+      <CardName>笑粉</CardName>
+      <AbilityDesc>[影響所有司書]
+某司書被擊中時若未陷入混亂，則恢復2~4點混亂抗性。</AbilityDesc>
+      <FlaborText>如果棘刺上散落的粉末被世人所知，那麼人類恐怕將永遠陷入狂喜的泥淖中無法自拔。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">人家會往你的腦袋裡注滿幸福哦。</Dialogue>
+        <Dialogue ID="2">強忍不笑可是會生病的，來和人家一起歡笑吧？</Dialogue>
+        <Dialogue ID="3">笑多了會快樂哦~所以笑就是幸福，對不對？</Dialogue>
+        <Dialogue ID="4">如果所有人都聚在一起笑，那裡就會變成幸福的樂園吧？</Dialogue>
+        <Dialogue ID="5">來，和人家一起笑吧~把你的嘴角撕得大大的~</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>    
+    <AbnormalityCard ID="Alriune_flower">
+      <Abnormality>愛娜溫</Abnormality>
+      <CardName>花瓣</CardName>
+      <AbilityDesc>[選擇一名司書]
+若該司書已累計承受超出“自身體力上限x10%”的傷害，則恢復5~10點體力並對所有來賓造成4~8點混亂傷害。(觸發後重置承傷計數)</AbilityDesc>
+      <FlaborText>你曾對我說，要用花瓣代替淚水。“我們都是從塵土中走來的，請不要輕言我的結局。”你告訴過我，漫身的鮮花將化作最後的遺言。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">空洞的眼窩亦能看清一切。</Dialogue>
+        <Dialogue ID="2">與所有渴望“生”的事物，一同歸於塵土。</Dialogue>
+        <Dialogue ID="3">花朵肆意綻放，永不凋零。</Dialogue>
+        <Dialogue ID="4">裂隙之中……依然綻放著美麗的花朵。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Alriune_Bush">
+      <Abnormality>愛娜溫</Abnormality>
+      <CardName>秋日的消逝</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書被擊中時將對攻擊方施加1層“餘香”。
+(餘香: 每一幕開始時承受“餘香”層數的混亂傷害，隨後將“餘香”層數減半。)
+      </AbilityDesc>
+      <FlaborText>懷著歸於塵土的心願，將所有渴望“生”的事物一同帶入墳墓。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">我的贖罪，於冰冷的窒息中，迎來尾聲。</Dialogue>
+        <Dialogue ID="2">它被遺棄在黑暗的森林裡，身心交瘁。</Dialogue>
+        <Dialogue ID="3">生於塵土，欲復歸於塵土。</Dialogue>
+        <Dialogue ID="4">這並非我們的終局。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Alriune_Doll">
+      <Abnormality>愛娜溫</Abnormality>
+      <CardName>春日的起源</CardName>
+      <AbilityDesc>[選擇一名司書]
+每一幕開始時隨機使1名來賓獲得“花瓣”。
+1幕之內，若擁有“花瓣”的來賓被該司書擊中4次，則對所有角色造成3~7點混亂傷害且該司書將在下一幕中獲得“匿蹤”。
+(匿蹤: 這一幕開始時無法被指定為攻擊目標)
+      </AbilityDesc>
+      <FlaborText>永不凋零的鮮花，只是無可奈何地綻放。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">你能實現，我的願望嗎？</Dialogue>
+        <Dialogue ID="2">絕望始於永不凋零的花朵。</Dialogue>
+        <Dialogue ID="3">你的累累罪行，將在春日再次得到寬恕。</Dialogue>
+        <Dialogue ID="4">我們不過是在世間短暫停留。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="SilentOrchestra_Music">
+      <Abnormality>沉默樂團</Abnormality>
+      <CardName>返始詠歎調</CardName>
+      <AbilityDesc>[選擇一名司書]
+將1張3費“返始詠歎調”置入該司書手中。
+效果為“[佚亡] [戰鬥開始] 強制結束本幕且下一幕開始時恢復所有光芒並將體力與混亂抗性恢復至獲得本書頁時的數值”
+      </AbilityDesc>
+      <FlaborText>演出仍未謝幕。Da Capo。Da Capo al fine。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">最華麗的演出，於毀滅中拉開序幕。</Dialogue>
+        <Dialogue ID="2">孤身一人的樂團，為寂靜之地帶來新聲。</Dialogue>
+        <Dialogue ID="3">哪怕停下手頭的動作，旋律也會自你心中湧現。</Dialogue>
+        <Dialogue ID="4">令人目眩神迷的舞臺，即將再度呈現。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+ <AbnormalityCard ID="SilentOrchestra_Affect">
+      <Abnormality>沉默樂團</Abnormality>
+      <CardName>狂熱崇拜</CardName>
+      <AbilityDesc>[選擇一名司書]
+2幕之內，所有來賓指定攻擊目標時將不分敵我且擊中目標時傷害+2~4
+      </AbilityDesc>
+      <FlaborText>樂聲愈發高亢，將一切引向毀滅。待演奏家齊聚一堂，無人能夠聽見，但人人皆可聽聞的音樂就此上演。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">無人能夠聽見，但人人皆可聽聞的樂聲……</Dialogue>
+        <Dialogue ID="2">這首曲子，獻予即將入夢的聽眾。</Dialogue>
+        <Dialogue ID="3">旋律滲入音樂，音樂滲入人心。</Dialogue>
+        <Dialogue ID="4">不要封閉自我，睜開雙眼，欣賞這美妙的樂曲。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="SilentOrchestra_Finale">
+      <Abnormality>沉默樂團</Abnormality>
+      <CardName>閉幕曲</CardName>
+      <AbilityDesc>[選擇一名司書]
+若該司書使目標陷入混亂，則下一幕開始時使所有來賓失去1~6點光芒。
+      </AbilityDesc>
+      <FlaborText>這首樂章會穿透你的一切。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">音樂將貫穿你的靈魂。</Dialogue>
+        <Dialogue ID="2">雙腳站穩，獻上掌聲。</Dialogue>
+        <Dialogue ID="3">永不間斷的掌聲，激勵著指揮家再次舞動指揮棒。</Dialogue>
+        <Dialogue ID="4">動人的旋律於空蕩的舞臺中迴響。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+  </Sephirah>
+  <Sephirah SephirahType="Keter">
+    <AbnormalityCard ID="Bloodbath_Blood">
+      <Abnormality>血浴缸</Abnormality>
+      <CardName>鮮血</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書的“防禦型”骰子威力+1~2
+被擊中時所受混亂傷害+3~5</AbilityDesc>
+      <FlaborText>望向浴缸內部，你會莫名感到無法承受的憂鬱。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">他只是無法直面這悲慘的現實。</Dialogue>
+        <Dialogue ID="2">你能承受，這深切的絕望嗎？</Dialogue>
+        <Dialogue ID="3">快來，泡進這血池中。</Dialogue>
+        <Dialogue ID="4">放下一切，閉上雙眼，沒入無盡。</Dialogue>
+        <Dialogue ID="5">無論添入多少，缸中的鮮血都不曾溢出。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Bloodbath_Scar">
+      <Abnormality>血浴缸</Abnormality>
+      <CardName>疤痕</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書被斬擊骰子擊中時所受傷害-2~5
+被任意“進攻型”骰子擊中時有20%的機率免受此次傷害。</AbilityDesc>
+      <FlaborText>當我注視著她那傷痕累累的手腕時，我想起了我們的酒窖。那一夜，我把最後一瓶喝得精光。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">要想割開手腕，必須擁有強大的勇氣與意志。</Dialogue>
+        <Dialogue ID="2">請不要稱這些人愚蠢，你才是那最膽小的懦夫。</Dialogue>
+        <Dialogue ID="3">疤痕是失敗的印記，卻也並非一文不值。</Dialogue>
+        <Dialogue ID="4">輕柔地撫平這傷痛。</Dialogue>
+        <Dialogue ID="5">傷口的深度取決於那一瞬間的精神與意志。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Bloodbath_Hands">
+      <Abnormality>血浴缸</Abnormality>
+      <CardName>蒼白之手</CardName>
+      <AbilityDesc>[選擇一名司書]
+若該司書連續3次擊中同一目標，則追加3~10點混亂傷害並重置此計數。
+(攻擊其他角色時重置此計數，無法對群體攻擊書頁生效)</AbilityDesc>
+      <FlaborText>我觸碰到了冰冷而僵硬的手。
+——我曾深愛之人的手。
+      </FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">你，或者說，我們所愛之人的手，都在此處。</Dialogue>
+        <Dialogue ID="2">那滿懷希望向你伸出的手，你會去握住嗎？</Dialogue>
+        <Dialogue ID="3">想要牢牢抓住從指間流去的事物……</Dialogue>
+        <Dialogue ID="4">沒人會看向那些渴求幫助的手。</Dialogue>
+        <Dialogue ID="5">她一定在不住地發抖，仿佛想要甩落手中的刀刃。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="HeartofAspiration_Heart">
+      <Abnormality>渴望之心</Abnormality>
+      <CardName>脈動</CardName>
+       <AbilityDesc>[影響所有司書]
+每一幕結束時所有司書將在下一幕中獲得1~2層“強壯”，未使用“進攻型”骰子造成傷害的司書將承受“自身體力上限x25%”的傷害。(至多30點)</AbilityDesc>
+      <FlaborText>過度的渴望會使人發狂。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">過度的渴望，會使人發狂。</Dialogue>
+        <Dialogue ID="2">明明獲得了力量，卻沒有催生出欲望嗎？</Dialogue>
+        <Dialogue ID="3">獲得力量之人，必行正確之事。</Dialogue>
+        <Dialogue ID="4">沒錯，你能感受到心跳正在瘋狂加速。</Dialogue>
+        <Dialogue ID="5">我們都殷切地期盼著某物，所以理應互相幫助。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="HeartofAspiration_Doki">
+      <Abnormality>渴望之心</Abnormality>
+      <CardName>渴望</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書的速度+1~2
+體力上限+15%並恢復等量體力。</AbilityDesc>
+      <FlaborText>攜帶者的心率瞬間提升至2倍以上，並獲得了驚人的肌肉活力與力量。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">渴望著，期盼著，直到心臟應答的那一刻。</Dialogue>
+        <Dialogue ID="2">你不願直面那即將崩潰的結局嗎？</Dialogue>
+        <Dialogue ID="3">為我們期盼的一切賦予意義。</Dialogue>
+        <Dialogue ID="4">在這熾熱而激烈的脈動中，與我融為一體吧。</Dialogue>
+        <Dialogue ID="5">正如你渴望的那樣，心跳將會愈發猛烈。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="HeartofAspiration_Atk">
+      <Abnormality>渴望之心</Abnormality>
+      <CardName>劇烈搏動</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書將永久獲得4層“強壯”，“忍耐”，“迅捷”與“守護”且所有混亂攻擊抗性將變為“抵抗”。
+3幕之後，該司書將直接死亡。</AbilityDesc>
+      <FlaborText>一顆無主之心，即使與身體分離也從未停止跳動。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">沒錯，你能感受到心跳正在瘋狂加速。</Dialogue>
+        <Dialogue ID="2">盲目攝入的渴望，終有一日會撐破心臟。</Dialogue>
+        <Dialogue ID="3">在這熾熱而激烈的脈動中，與我融為一體吧。</Dialogue>
+        <Dialogue ID="4">明知終有一日會爆炸，我也甘願見到那結局。</Dialogue>
+        <Dialogue ID="5">正如你渴望的那樣，心跳將會愈發猛烈。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Pinocchio_Learn">
+      <Abnormality>皮諾丘</Abnormality>
+      <CardName>學習</CardName>
+      <AbilityDesc>[選擇一名司書]
+將1張2費“模仿學習”置入該司書手中。
+效果為“[拼點開始] 將本書頁的骰子替換為目標當前書頁中的骰子”
+切換舞臺時將1張“模仿學習”洗入牌組。</AbilityDesc>
+      <FlaborText>這傢伙只會跟在別人身後“學習”，而這就是問題所在。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">我今天也在努力學習，要向你展示一下嗎？</Dialogue>
+        <Dialogue ID="2">人們教我如何說話。</Dialogue>
+        <Dialogue ID="3">學習太慢了，乾脆模仿別人吧。</Dialogue>
+        <Dialogue ID="4">模仿別人並不難，這不需要動腦。</Dialogue>
+        <Dialogue ID="5">我明明學了不少東西，卻總是在原地踏步。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Pinocchio_Lie">
+      <Abnormality>皮諾丘</Abnormality>
+      <CardName>謊言</CardName>
+        <AbilityDesc>[選擇一名司書]
+每一幕開始時隨機調整該司書手中書頁的費用。(僅對初始費用為0~3費的書頁生效)</AbilityDesc>
+      <FlaborText>人人都在說謊，這有什麼不好的？</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">人們總是在說反話。</Dialogue>
+        <Dialogue ID="2">不是為了自己，而是為了全人類的那種謊言……</Dialogue>
+        <Dialogue ID="3">啦啦啦……我唱起了人人都在唱的謊言之歌。</Dialogue>
+        <Dialogue ID="4">就像人們教導的那樣，我顛倒著看待這個世界。</Dialogue>
+        <Dialogue ID="5">你們每個人都在撒謊，為什麼說撒謊是錯的？</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Pinocchio_Curious">
+      <Abnormality>皮諾丘</Abnormality>
+      <CardName>好奇</CardName>
+      <AbilityDesc>[選擇一名司書]
+每一幕開始時洗回該司書手中的書頁並抽取4張書頁。</AbilityDesc>
+      <FlaborText>我今天也在努力學習，要向你展示一下嗎？</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">我要多多學習，我還有很多想看，想瞭解的東西。</Dialogue>
+        <Dialogue ID="2">光是看看……就能全部學會嗎？</Dialogue>
+        <Dialogue ID="3">這也好奇……那也好奇……這又是什麼東西？</Dialogue>
+        <Dialogue ID="4">是生面孔呢……你從哪裡來的？</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="TheSnowQueen_Sord">
+      <Abnormality>冰雪女皇</Abnormality>
+      <CardName>淩劍</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書拼點勝利時有50%的機率在下一幕中對目標施加1~3層“束縛”。
+該司書擊中處於“束縛”狀態下的目標時將追加2~5點混亂傷害。</AbilityDesc>
+      <FlaborText>寒冷的冬林中，唯有一位女皇。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">銳利的劍鋒冰冷無比。</Dialogue>
+        <Dialogue ID="2">唯有溫暖的春日，方能使劍消融。</Dialogue>
+        <Dialogue ID="3">筆直延伸的劍鋒將指向何方。</Dialogue>
+        <Dialogue ID="4">在冰雪消融的溫暖中，這把劍也將一併融化。</Dialogue>
+        <Dialogue ID="5">被這把武器穿透心臟之時，你將短暫地忘卻自我。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="TheSnowQueen_Chu">
+      <Abnormality>冰雪女皇</Abnormality>
+      <CardName>親吻</CardName>
+      <AbilityDesc>[選擇一名司書]
+若該司書以1張戰鬥書頁至少取得2次拼點勝利，則對目標施加1層“霜淩”。
+每一幕結束時“霜淩”層數不低於3的來賓將在下一幕中陷入“眩暈”並重置該層數。
+      </AbilityDesc>
+      <FlaborText>冰雪女皇的吻冰封了他的內心，使他不再寒冷。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">唯有知曉玫瑰芬芳之人，方能了結這一切。</Dialogue>
+        <Dialogue ID="2">你一定是位胸懷熱心之人。</Dialogue>
+        <Dialogue ID="3">忘卻寒冷，失去記憶，直至最後……</Dialogue>
+        <Dialogue ID="4">不識寒冷的冰封之心，終有一日能夠融化嗎？</Dialogue>
+        <Dialogue ID="5">唯有內心堅強之人，方能拯救冰封之物。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="TheSnowQueen_Snow">
+      <Abnormality>冰雪女皇</Abnormality>
+      <CardName>雪暴</CardName>
+      <AbilityDesc>[選擇一名司書]
+這一幕中使除該司書外的其餘角色陷入“眩暈”。
+下一幕中對所有來賓施加6層“束縛”。</AbilityDesc>
+      <FlaborText>玫瑰盛開，雪宮崩塌。歡笑的人們不曾記得，在那有位沉睡的美人。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">我沉睡於此，無人知曉。</Dialogue>
+        <Dialogue ID="2">如若冰雪消去，我亦就此忘卻。</Dialogue>
+        <Dialogue ID="3">究竟是我在消融，還是春天即將到來……</Dialogue>
+        <Dialogue ID="4">玫瑰芬芳馥鬱，向世人宣告春日的到來。</Dialogue>
+        <Dialogue ID="5">他再也不願回想那刺骨嚴寒。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+        <AbnormalityCard ID="QuietKid_Hammer">
+      <Abnormality>噤默處子</Abnormality>
+      <CardName>釘與錘</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書以突刺骰子擊中目標時將對其施加1層“釘”。(無法對群體攻擊書頁生效)
+擁有“釘”的角色被打擊骰子擊中時將承受“‘釘’層數x5”的傷害並重置該層數。
+      </AbilityDesc>
+      <FlaborText>當她用錘敲入釘時，心中的裂痕將持續增大，最終支離破碎。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">在你心中，有能敲入釘子的縫隙嗎？</Dialogue>
+        <Dialogue ID="2">朝裂隙敲入釘子，裂隙就會成倍擴大。</Dialogue>
+        <Dialogue ID="3">內心的污穢，最好及時傾倒。</Dialogue>
+        <Dialogue ID="4">如果心靈出現裂痕，便已無可挽回。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="QuietKid_Eyeshine">
+      <Abnormality>噤默處子</Abnormality>
+      <CardName>目光</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書擊中目標時傷害x2
+該司書被擊中時所受傷害x2
+      </AbilityDesc>
+      <FlaborText>少女一言不發，只是用那深邃的雙眼洞察人們的心。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">……</Dialogue>
+        <Dialogue ID="2">…………</Dialogue>
+        <Dialogue ID="3">………………</Dialogue>
+        <Dialogue ID="4">究竟是什麼，令你瑟瑟發抖？</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="QuietKid_Guilty">
+      <Abnormality>噤默處子</Abnormality>
+      <CardName>負罪感</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書被擊中時所受混亂傷害-1~3
+該司書每承受1點傷害，便對攻擊方造成1點混亂傷害。
+      </AbilityDesc>
+      <FlaborText>然而，若是遇見心中懷有“負罪感”或“恐懼”的人，她便會取出藏在身後的釘與錘。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">帶著如此痛苦的記憶活到現在……可憐的朋友。</Dialogue>
+        <Dialogue ID="2">別想推卸責任，苦痛只能由自己承擔。</Dialogue>
+        <Dialogue ID="3">你只是，忙於逃避罷了？</Dialogue>
+        <Dialogue ID="4">喂，你看起來……非常害怕？</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+  </Sephirah>
+  <Sephirah SephirahType="Tiphereth">
+    <AbnormalityCard ID="QueenOfHatred_Laser">
+      <Abnormality>憎惡皇后</Abnormality>
+      <CardName>博愛</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書以“進攻型”骰子取得拼點勝利時將隨機為1名司書恢復3~5點體力。
+該司書以“防禦型”骰子取得拼點勝利時將隨機為1名司書恢復2~4點混亂抗性。</AbilityDesc>
+      <FlaborText>以愛與正義之名~魔法少女閃亮登場！</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">我來了，別擔心，你們安全啦！</Dialogue>
+        <Dialogue ID="2">請相信我，我會保護你們！</Dialogue>
+        <Dialogue ID="3">真正的魔法少女永遠不會退縮！</Dialogue>
+        <Dialogue ID="4">出事了要馬上告訴我哦？我會幫助大家。</Dialogue>
+        <Dialogue ID="5">一有危險就要大聲呼喚喔！</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="QueenOfHatred_Gun">
+      <Abnormality>憎惡皇后</Abnormality>
+      <CardName>正義</CardName>
+      <AbilityDesc>[選擇一名司書]
+每一幕中透過直接攻擊對司書方造成最多傷害的來賓將被標記為“壞蛋”。
+該司書擊中“壞蛋”時傷害+3~5</AbilityDesc>
+      <FlaborText>如果我與正義同在，就一定有人與邪惡同在。沒有壞蛋，我就失去了存在的意義。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">壞蛋終於現身了！大家小心！</Dialogue>
+        <Dialogue ID="2">不要怕，我來打敗這些壞蛋！</Dialogue>
+        <Dialogue ID="3">以愛與正義之名，魔法少女現身~！</Dialogue>
+        <Dialogue ID="4">破壞和平之人，定要繩之以法。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+     <AbnormalityCard ID="QueenOfHatred_Snake">
+      <Abnormality>憎惡皇后</Abnormality>
+      <CardName>憎惡</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書拼點失敗時將追加承受2~4點混亂傷害並在下一幕中獲得1層“強壯”(每一幕至多觸發2次)
+若1幕之內拼點失敗3次，則隨機使手中1張費用最高的書頁費用-1(每一幕至多觸發1次)</AbilityDesc>
+      <FlaborText>我發誓要用愛去對待世間萬物，然而最終只剩下一顆傷痕累累的，破碎的心。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">為什麼大家都那麼幸福？這樣我就沒有存在的理由了……</Dialogue>
+        <Dialogue ID="2">我被選中了，沒了我，這世界又有誰能守護？</Dialogue>
+        <Dialogue ID="3">我最終也沒能守住……</Dialogue>
+        <Dialogue ID="4">我討厭和平的世界……我……我好像，沒有必要存在了……</Dialogue>
+        <Dialogue ID="5">我有資格成為大家的英雄……我就是為此而生的……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+        <AbnormalityCard ID="KnightOfDespair_Gaho">
+      <Abnormality>絕望騎士</Abnormality>
+      <CardName>加護</CardName>
+      <AbilityDesc>[選擇一名司書]
+每一幕開始時若該司書在上一幕中承受直接攻擊傷害，則使承傷最多的攻擊抗性變為“耐性”。
+(物理攻擊抗性與混亂攻擊抗性單獨計算)</AbilityDesc>
+      <FlaborText>即使身陷桎梏，她依然狂熱地試圖守護他人，一如既往。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">那飽經風霜的騎士，如今只剩下空洞的自尊。</Dialogue>
+        <Dialogue ID="2">如果我仍有機會守護他人……</Dialogue>
+        <Dialogue ID="3">別擔心，這次我會全力守護你。</Dialogue>
+        <Dialogue ID="4">安心地，睡吧……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="KnightOfDespair_Sword">
+      <Abnormality>絕望騎士</Abnormality>
+      <CardName>淚劍</CardName>
+      <AbilityDesc>[選擇一名司書]
+若該司書以突刺骰子擲出最大值且擊中目標，則追加“目標體力上限x10%”的傷害。(至多12點，無法對群體攻擊書頁生效)
+      </AbilityDesc>
+      <FlaborText>若是再度被正義背叛，數十把利劍便將迷茫地四處飄蕩，最終指向無法守護之人。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">以淚水和絕望磨礪的劍鋒，永遠精準。</Dialogue>
+        <Dialogue ID="2">向這把以絕望與淚水磨就的利劍，宣誓。</Dialogue>
+        <Dialogue ID="3">忌用卑劣手段，不得心存憐憫……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="KnightOfDespair_Despair">
+      <Abnormality>絕望騎士</Abnormality>
+      <CardName>絕望</CardName>
+      <AbilityDesc>[影響所有司書]
+某司書死亡時將在下一幕中使所有司書獲得1~3層“強壯”與“迅捷”並對所有來賓施加2層“易損”。</AbilityDesc>
+      <FlaborText>越是與人傾訴，越會削其鋒芒。一如她的哀傷。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">無法承受的絕望，自眼眶與胸口滿溢而出……</Dialogue>
+        <Dialogue ID="2">這深不見底的絕望……於我有何意義？</Dialogue>
+        <Dialogue ID="3">我為何，註定要失去……為何……</Dialogue>
+        <Dialogue ID="4">無盡的絕望，再度盈滿胸膛……</Dialogue>
+        <Dialogue ID="5">我曾誓言守護，卻再三辜負他人……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+      <AbnormalityCard ID="Greed_Break">
+      <Abnormality>貪婪國王</Abnormality>
+      <CardName>放縱</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書使用書頁時若第1顆骰子取得拼點勝利，則有25%的機率摧毀目標當前書頁的所有骰子。</AbilityDesc>
+      <FlaborText>第一顆欲望之種源於對幸福的純粹嚮往。小小的種子不甘於現狀，逐漸變得又大又堅硬。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">小小的聲音於腦海中迴響，要我沉浸在追求幸福的貪欲之中……</Dialogue>
+        <Dialogue ID="2">花開之時貪戀蜜糖，又有什麼不好的？</Dialogue>
+        <Dialogue ID="3">起初，這純粹是對幸福的嚮往。</Dialogue>
+        <Dialogue ID="4">對幸福的渴望，永恆不變。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Greed_Protect">
+      <Abnormality>貪婪國王</Abnormality>
+      <CardName>幸福之路</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書每取得1次拼點勝利，便在下一幕中獲得1層“忍耐”。(每一幕至多觸發3次)</AbilityDesc>
+      <FlaborText>幸福化作癡迷，癡迷又化成貪婪，而貪婪則永遠凝結為金黃的琥珀。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">最終，純潔的欲望化作金色的琥珀，變得無比堅硬。</Dialogue>
+        <Dialogue ID="2">這份貪欲，必將永放光芒。</Dialogue>
+        <Dialogue ID="3">如此耀眼之物，為何要拒絕？</Dialogue>
+        <Dialogue ID="4">期盼著每個人都能幸福，我的幸福自然也包含在內……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Greed_Eat">
+      <Abnormality>貪婪國王</Abnormality>
+      <CardName>貪婪</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書拼點勝利時若點數高於目標4點，則追加3~7點傷害並為自身恢復2~5點體力。
+拼點失敗時若點數低於目標4點，則追加承受3~7點傷害並為目標恢復2~5點體力。</AbilityDesc>
+      <FlaborText>不再是魔法少女的女孩吃掉了許多東西。權力，金錢，名譽，以及其他形式的歡愉。她將目光所及的一切吞噬殆盡，如今只剩下本能的貪婪。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">寶石加劇了欲望的饑渴。</Dialogue>
+        <Dialogue ID="2">然而欲望想要永生，渴求那深邃的永恆。</Dialogue>
+        <Dialogue ID="3">我的籃子很大，怎麼也裝不滿。</Dialogue>
+        <Dialogue ID="4">四周已然空無一物，唯有發自心底的貪婪。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+        <AbnormalityCard ID="Angry_Angry">
+      <Abnormality>憤怒侍從</Abnormality>
+      <CardName>憤怒</CardName>
+      <AbilityDesc>[選擇一名司書]
+應用該異想體書頁後，該司書將處於“憤怒”狀態，無法控制且指定攻擊目標時不分敵我。
+每一幕開始時該司書將獲得2層“強壯”，額外恢復2點光芒並額外抽取2張書頁。</AbilityDesc>
+      <FlaborText>侍從摒棄了信念，意圖全心全意地信任某人，然卻遭到背叛。如今的她被自己的憤怒所驅使。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">呃呃呃！！！</Dialogue>
+        <Dialogue ID="2">呃呃呃……啊啊啊！！！</Dialogue>
+        <Dialogue ID="3">啊啊啊啊！！！！！</Dialogue>
+        <Dialogue ID="4">異界的罪人！！！邪惡的化身！！！</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+<AbnormalityCard ID="Angry_Friend">
+      <Abnormality>憤怒侍從</Abnormality>
+      <CardName>朋友</CardName>
+      <AbilityDesc>[選擇一名司書]
+應用該異想體書頁後，該司書擊中的第1名來賓將被標記為“朋友”。
+若該司書擊殺“朋友”，則為所有司書恢復3點光芒及10點體力與混亂抗性。
+“朋友”死亡後，該司書可將其餘來賓標記為“朋友”。</AbilityDesc>
+      <FlaborText>儘管憤怒侍從比任何人都注重正義與均衡，卻仍與她們的敵人“隱士”分享學識，暗中成為了朋友。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">請呼喚我……請呼喚我的名字……</Dialogue>
+        <Dialogue ID="2">朋友……我的朋友……互相依賴的朋友……</Dialogue>
+        <Dialogue ID="3">我們……是真正的朋友。對不對？</Dialogue>
+        <Dialogue ID="4">比任何人都珍貴的羈絆，就這麼……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Angry_Poison">
+      <Abnormality>憤怒侍從</Abnormality>
+      <CardName>毒液</CardName>
+      <AbilityDesc>[影響所有來賓]
+對所有來賓施加5層“腐蝕”。
+每一幕開始時所有來賓將被額外施加自身“腐蝕”層數的“束縛”。
+(腐蝕: 每一幕開始時承受“腐蝕”層數的傷害，隨後將該層數-1。被擊中時將追加承受“腐蝕”層數的傷害與混亂傷害。)</AbilityDesc>
+      <FlaborText>終於，在那相遇之日，隱士帶領一眾手下毀滅了侍從的世界。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">均衡崩壞，正義消亡……</Dialogue>
+        <Dialogue ID="2">所以我失敗了。被心愛的朋友所擊潰。</Dialogue>
+        <Dialogue ID="3">利用與被利用的存在。這便是我們。</Dialogue>
+        <Dialogue ID="4">曾經發生過同樣的事……我為他推翻了一切……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="NihilClown_Card">
+      <Abnormality>虛無弄臣</Abnormality>
+      <CardName>魔法少女</CardName>
+      <AbilityDesc>[選擇一名司書]
+每一幕開始時隨機為該司書手中1張費用最高的書頁賦予“魔法少女標記”。(僅標記0~4費書頁)
+若“魔法少女書頁”累計取得4次拼點失敗，則自下一幕起該司書將免疫所有負面狀態並在每一幕開始時獲得5層“守護”。
+該效果觸發後，該司書拼點失敗或被擊中時將在下一幕中對目標施加1層“腐蝕”與“易損”(每一幕至多觸發2次)</AbilityDesc>
+      <FlaborText>弄臣沿著每個人來時的路往回走，卻發現路的盡頭總會出現自己。也不知是她們合在一起變成了弄臣，還是弄臣正逐漸變成她們了呢。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">究竟是你們成就了我，還是我成就了你們。</Dialogue>
+        <Dialogue ID="2">我長得像所有人，所有人合在一起也長得像我。</Dialogue>
+        <Dialogue ID="3">慢慢追溯，你來時的路吧。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="NihilClown_Nihil">
+      <Abnormality>虛無弄臣</Abnormality>
+      <CardName>空虛</CardName>
+      <AbilityDesc>[選擇一名司書]
+將1張3費“萬物歸虛”置入該司書手中。
+效果為“[使用時] 將手中的所有書頁移出戰鬥
+自下一幕起自身將永久獲得‘移出書頁數’的[強壯]與[忍耐]”
+      </AbilityDesc>
+      <FlaborText>沉思的弄臣。可悲的小丑。它甚至沒有那隻指明方向的勇敢小狗，只是毫無意義地邁出步伐。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">哪一條才是正確的路。我該去往何處？</Dialogue>
+        <Dialogue ID="2">前方究竟是懸崖還是深渠，我一無所知。</Dialogue>
+        <Dialogue ID="3">為我指明方向的，那隻聰明的小狗，你在哪裡？</Dialogue>
+        <Dialogue ID="4">心靈空虛，思想空虛。越是如此，恐懼便會消失。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="NihilClown_fusion">
+      <Abnormality>虛無弄臣</Abnormality>
+      <CardName>虛無</CardName>
+      <AbilityDesc>[選擇一名司書]
+該異想體書頁僅可對同時應用“貪婪”，“憎惡”，“絕望”與“憤怒”這4張異想體書頁的司書生效。
+移除“貪婪”，“憎惡”與“憤怒”的負面效果。
+每一幕開始時對除該司書外的所有角色施加5層“虛弱”，“破綻”與“束縛”。
+      </AbilityDesc>
+      <FlaborText>決定相信自己的直覺後，弄臣邊走邊說出了在這條路上遇見的每一個人的名字。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">愚昧指引前路，除此再無他物。</Dialogue>
+        <Dialogue ID="2">被感官的欲望蒙蔽雙眼，一腳墜下懸崖。</Dialogue>
+        <Dialogue ID="3">倘若無法找到正確的方法，即便心煩意亂，也要相信自己的直覺！</Dialogue>
+        <Dialogue ID="4">所有人的苦痛，融為一體。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+  </Sephirah>
+<Sephirah SephirahType="Gebura">
+    <AbnormalityCard ID="Redhood_Hunt">
+      <Abnormality>小紅帽雇傭兵</Abnormality>
+      <CardName>獵物</CardName>
+      <AbilityDesc>[選擇一名司書]
+應用該異想體書頁後，該司書擊中的第1名來賓將被標記為“獵物”。
+該司書擊中“獵物”時傷害+2~6</AbilityDesc>
+      <FlaborText>那頭狼的慘死，是我生命中唯一喜愛的事。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">在狩獵這塊我可是行家，那種獵物手到擒來。</Dialogue>
+        <Dialogue ID="2">別眨眼，盯緊那畜生的每一個舉動。</Dialogue>
+        <Dialogue ID="3">一旦定下目標，就要與之拼殺到底，永不言棄。</Dialogue>
+        <Dialogue ID="4">死死盯住你的獵物，抱著必殺無疑的決心踏出腳步。</Dialogue>
+        <Dialogue ID="5">你要是委託我，那我可以考慮幫忙。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Redhood_Revenge">
+      <Abnormality>小紅帽雇傭兵</Abnormality>
+      <CardName>復仇</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書每承受5點傷害(包括直接攻擊傷害與負面狀態傷害)，便在下一幕中獲得1層“強壯”。(至多2層)</AbilityDesc>
+      <FlaborText>我們之間不會有任何一方勝出，更談不上慶祝。我只想用比前一回更殘忍，更痛苦的手段撕爛那頭狗雜種。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">這陣子我一直在磨刀，不為別的，只為斬下那畜生的頭。</Dialogue>
+        <Dialogue ID="2">把那頭陰險的雜種留給我。</Dialogue>
+        <Dialogue ID="3">我要把那雜種的腦袋掛在床頭，如此才能安心地睡個好覺。</Dialogue>
+        <Dialogue ID="4">所有傷痛都是為了更好地瞭解對手。現在，是時候償債了。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Redhood_RedScar">
+      <Abnormality>小紅帽雇傭兵</Abnormality>
+      <CardName>傷疤</CardName>
+      <AbilityDesc>[選擇一名司書]
+每一幕開始時若該司書的體力不高於50%/35%/25%，則獲得1/2/4層“強壯”。</AbilityDesc>
+      <FlaborText>15歲時，磨斧頭取代了採野花，成為我生命中習以為常的一部分。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">這並非倖存者的勳章，而是求生意志的證明。</Dialogue>
+        <Dialogue ID="2">傷疤越多，求生的意志就越是強大。</Dialogue>
+        <Dialogue ID="3">可別以此為榮，每一道傷疤都在訴說你的無能。</Dialogue>
+        <Dialogue ID="4">……這些傷疤讓我毛骨悚然，牙齒打顫。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+   <AbnormalityCard ID="BigBadWolf_Claw">
+      <Abnormality>大壞狼</Abnormality>
+      <CardName>兇殘利爪</CardName>
+      <AbilityDesc>[選擇一名司書]
+若該司書已累計承受超出“自身體力上限x25%”的傷害，則下一幕中自身將無法被指定為攻擊目標且無法改變來賓的攻擊目標。
+在此狀態下，該司書將獲得2層“強壯”且擊中目標時將在下一幕中對其施加1層“流血”。(觸發後重置承傷計數)</AbilityDesc>
+      <FlaborText>很久以前，這對利爪曾破開無數生物的肚囊，將其內臟一一撕裂。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">我的爪子又大又利，能讓我更好地扮演天生的角色……</Dialogue>
+        <Dialogue ID="2">因為狼是壞事做盡，且理應受到懲罰的存在……</Dialogue>
+        <Dialogue ID="3">兇暴的爪子會突入皮肉，將其撕碎……</Dialogue>
+        <Dialogue ID="4">要想撕裂內臟，沒有什麼能比這對爪子更好……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="BigBadWolf_Eat">
+      <Abnormality>大壞狼</Abnormality>
+      <CardName>掠食本能</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書拼點勝利時將使自身當前書頁的最後一顆骰子威力+1~2(無法對反擊骰子生效)
+若以該骰子擊中目標，則恢復3~7點體力。</AbilityDesc>
+      <FlaborText>好久沒吃到，如此鮮美的肉了。從那時起，想要自律變得越來越難。不過沒關係，我是一頭又大又“壞”的狼。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">有股難聞的氣息……在呼喚著我……</Dialogue>
+        <Dialogue ID="2">正如黑暗填滿新月，我的胃也要被填滿……</Dialogue>
+        <Dialogue ID="3">你們讓我……口水直流……</Dialogue>
+        <Dialogue ID="4">只要填飽肚子……我就滿足了……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="BigBadWolf_Change">
+      <Abnormality>大壞狼</Abnormality>
+      <CardName>狼的角色</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書的反擊骰子威力+1~2
+以反擊骰子取得拼點勝利時將在下一幕中對目標施加1~2層“易損”。(每一幕至多觸發3次)</AbilityDesc>
+      <FlaborText>狼做壞事時絕不能越界，狼理應受到懲罰，狼永遠是壞榜樣……</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">沒關係……誰叫我是一頭又大又壞的狼……</Dialogue>
+        <Dialogue ID="2">既然人們都這麼稱呼我，那我就該是這樣的存在……古老的童話絕不會錯……</Dialogue>
+        <Dialogue ID="3">狼不需要名字，只要依照生來被賦予的角色，苟且偷生就好。</Dialogue>
+        <Dialogue ID="4">沒人願意接近這頭可怕的狼……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+      <AbnormalityCard ID="Mountain_Eat">
+      <Abnormality>微笑的屍山</Abnormality>
+      <CardName>死屍吸收</CardName>
+      <AbilityDesc>[選擇一名司書]
+[僅限本舞臺]
+該司書擊殺來賓時將恢復20%的體力。(至多20點)
+每一幕開始時該司書在本舞臺中每恢復10%的體力，便獲得1層“強壯”。(至多3層)
+      </AbilityDesc>
+      <FlaborText>它唯一想要的，就是浸泡在鮮血中的人肉。一聞到血腥便會狂奔而來。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">肉……好吃的……日……歐……</Dialogue>
+        <Dialogue ID="2">味道……是在……這邊嗎……</Dialogue>
+        <Dialogue ID="3">還……不夠……繼續……吃……咳……</Dialogue>
+        <Dialogue ID="4">身體，變大……就能……更強……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Mountain_Shout">
+      <Abnormality>微笑的屍山</Abnormality>
+      <CardName>屍體在笑</CardName>
+      <AbilityDesc>[選擇一名司書]
+若該司書的體力不高於50%，則被擊中時將對所有來賓造成2~5點混亂傷害並在下一幕中對其施加1層“易損”。(每一幕至多觸發3次)</AbilityDesc>
+      <FlaborText>一座屍山。那些死屍面帶微笑，成為互相分享殘肢的一個整體。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">咕嚕嚕……咕嚕……嗝……</Dialogue>
+        <Dialogue ID="2">互相……幫助……變成手……腳……</Dialogue>
+        <Dialogue ID="3">大家……笑臉……好……幸福……</Dialogue>
+        <Dialogue ID="4">一起……來……幫忙……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Mountain_Vomit">
+      <Abnormality>微笑的屍山</Abnormality>
+      <CardName>屍山</CardName>
+      <AbilityDesc>[選擇一名司書]
+直接擊殺除該司書外的其餘司書。
+每擊殺1名司書，該司書便將永久獲得1層“強壯”，“守護”與“迅捷”且光芒上限與每一幕光芒恢復量+1
+      </AbilityDesc>
+      <FlaborText>屍體越多，它的體型就越是龐大。而且永不滿足。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">必須……重新……合為……一體……</Dialogue>
+        <Dialogue ID="2">要趕快……回去……咳……</Dialogue>
+        <Dialogue ID="3">這樣……不行……危……險……</Dialogue>
+        <Dialogue ID="4">不要離開……再聚回來……我們……是一體的……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Nosferatu_BloodHope">
+      <Abnormality>諾斯費拉圖</Abnormality>
+      <CardName>恐水症</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書擊中目標時將在下一幕中獲得1層“吸血”並對目標施加1層“流血”。(無法對群體攻擊書頁生效)</AbilityDesc>
+      <FlaborText>他們彷徨著。像在尋找什麼，卻又不明白自己究竟想要什麼。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">血……我要血！！！</Dialogue>
+        <Dialogue ID="2">所有欲望都被允許的夜晚……無盡的血染之夜。</Dialogue>
+        <Dialogue ID="3">無可比擬的鮮血！賜予我永生的福祉！</Dialogue>
+        <Dialogue ID="4">死亡將與諸位共舞！被吞噬的命運人人平等！</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Nosferatu_Wine">
+      <Abnormality>諾斯費拉圖</Abnormality>
+      <CardName>紅酒</CardName>
+      <AbilityDesc>[選擇一名司書]
+若該司書擊殺處於“流血”狀態的來賓，則為所有司書恢復10點體力且下一幕開始時該司書將獲得最大層數的“吸血”。</AbilityDesc>
+      <FlaborText>雖維持著人類的身姿，但只要有一滴血就會化為兇暴的怪物，度過狂亂的一夜。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">啊……忍受饑渴的痛苦絕非美妙之事。</Dialogue>
+        <Dialogue ID="2">午休為時尚早……來盡情享樂吧？</Dialogue>
+        <Dialogue ID="3">舍去虛幻的希望，忘卻人類的皮囊……</Dialogue>
+        <Dialogue ID="4">如饑似渴，一飲而盡。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Nosferatu_Vampire">
+      <Abnormality>諾斯費拉圖</Abnormality>
+      <CardName>吸血</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書擊中處於“流血”狀態下的目標時傷害+2~4並恢復2~5點體力。(無法對群體攻擊書頁生效)</AbilityDesc>
+      <FlaborText>……饑渴，永不滿足。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">死亡將與諸位共舞！被吞噬的命運也是公平的！</Dialogue>
+        <Dialogue ID="2">愉悅的用餐時間到！縱情享受被瘋狂染化的腥紅之夜！</Dialogue>
+        <Dialogue ID="3">這份饑渴無從擺脫！</Dialogue>
+        <Dialogue ID="4">全部撕碎，直至最後一滴！</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="NothingThere_Goodbye">
+      <Abnormality>一無所有</Abnormality>
+      <CardName>Good Bye</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書在每一幕中使用的最後1顆骰子最終點數x2。
+      </AbilityDesc>
+      <FlaborText>一旦證實它能直立行走，那麼你們只有一件事可做。端正姿勢，雙手合十，向信仰的神明祈禱，而後靜觀其變吧。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">嘰噫……嘔窩……嘰噫嘔……救我！！！</Dialogue>
+        <Dialogue ID="2">呦仁……滋哎……嗎！？有人在嗎！！！</Dialogue>
+        <Dialogue ID="3">窩哦……哺……兮……兮昂……我不想死……</Dialogue>
+        <Dialogue ID="4">你好。你好。尼……豪。你好。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="NothingThere_Hello">
+      <Abnormality>一無所有</Abnormality>
+      <CardName> Hello?</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書在每一幕中使用的第1顆“進攻型”骰子將被賦予額外效果“[命中時] 恢復等同於傷害值的體力”。
+      </AbilityDesc>
+      <FlaborText>更恐怖的是，它正在模仿人類。照鏡子，喃喃自語，調整骨骼結構。無論哪種都像在模仿“我們”。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">咕哎……嗚。納葛……怪物……為甚莫……</Dialogue>
+        <Dialogue ID="2">……嘰噫！！！……嘰噫！！！救救我！</Dialogue>
+        <Dialogue ID="3">納……葛……咳啪的……怪嗚……怪物……</Dialogue>
+        <Dialogue ID="4">豪……尼……豪？尼……你好？</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="NothingThere_Skin">
+      <Abnormality>一無所有</Abnormality>
+      <CardName>軀殼</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書被擊中時將不再承受混亂傷害。</AbilityDesc>
+      <FlaborText>儘管擁有人類的相貌，但它絕不是人類。每隔一定時間，它便會吞噬與其互動的職員，然後披上他們的軀殼。在此過程中，它的骨骼和臟器將被扭成一團，呈現出極度怪誕的形狀。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">窩哦……哎……泥……我愛你……</Dialogue>
+        <Dialogue ID="2">想要……一具……軀殼……</Dialogue>
+        <Dialogue ID="3">兮液……兮液……謝謝。謝謝。</Dialogue>
+        <Dialogue ID="4">庫嗚……酷。酷。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+  </Sephirah>
+
+  <Sephirah SephirahType="Chesed">
+    <AbnormalityCard ID="ScareCrow_Wisdom">
+      <Abnormality>求知的稻草人</Abnormality>
+      <CardName>被扯出的智慧</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書每使用1張書頁，便從手中隨機丟棄1張書頁並恢復1點光芒。(無法對裝備書頁生效)</AbilityDesc>
+      <FlaborText>歸來之時，他的前額多了一道長長的疤痕。當被人問及是否痊癒時，他只答道覺得腦袋變輕了。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">智慧……我所缺乏的東西……快把智慧給我……</Dialogue>
+        <Dialogue ID="2">我的腦袋空空如也……只是一堆不起眼的稻草……</Dialogue>
+        <Dialogue ID="3">人們說話總是不經腦袋……我能讓那些腦子物盡其用……</Dialogue>
+        <Dialogue ID="4">成為一名智者……會是什麼樣的感覺……應該無所不知吧……？</Dialogue>
+        <Dialogue ID="5">如果能恢復原狀……我不介意把腦袋擰下來……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Scarecrow_Harvest">
+      <Abnormality>求知的稻草人</Abnormality>
+      <CardName>收割</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書擊中混亂抗性高於自身的目標時將恢復2~5點混亂抗性並追加2~4點混亂傷害。(無法對群體攻擊書頁生效)</AbilityDesc>
+      <FlaborText>它會對特定職員表現出攻擊性，並試圖奪走對方的大腦。這類職員在IQ測試中普遍成績優異。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">我好像，真的變聰明了……現在我什麼都知道了……</Dialogue>
+        <Dialogue ID="2">好……太好了……吃得越多，就會越聰明……對不對？</Dialogue>
+        <Dialogue ID="3">我變聰明了嗎……？也許我不單單是一堆稻草了……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Scarecrow_Rake">
+      <Abnormality>求知的稻草人</Abnormality>
+      <CardName>釘耙</CardName>
+      <AbilityDesc>[選擇一名司書]
+若該司書使目標陷入混亂，則從其手中隨機複製2張書頁並置入自身手中。
+複製的書頁費用-2並將在使用後移出戰鬥。
+(近戰角色僅複製近戰書頁/遠程角色僅複製遠程書頁，無法對擁有被動能力“變幻莫測”的角色生效)</AbilityDesc>
+      <FlaborText>本該耕耘田地的農具卻被用於破開大腦，我們當中有多少聰明才子慘死在這杆釘耙之下？</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">把你的智慧，給我吧……</Dialogue>
+        <Dialogue ID="2">我也想，變得和其他人一樣聰明……</Dialogue>
+        <Dialogue ID="3">那引領人類前進的智慧……我好想要……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="LumberJack_Cut">
+      <Abnormality>熱心的樵夫</Abnormality>
+      <CardName>溫暖的心</CardName>
+      <AbilityDesc>[選擇一名司書]
+每一幕開始時若該司書的光芒數不低於3點，則使自身的“進攻型”骰子威力+1~2</AbilityDesc>
+      <FlaborText>一怒之下，它掄起斧頭砍穿了巫師的心臟。那顆心正溫暖而有力地跳動著。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">這就是……心跳的感覺……</Dialogue>
+        <Dialogue ID="2">心跳得越快……速度就會越快……</Dialogue>
+        <Dialogue ID="3">這個人越是熱心……我的動作就越是靈敏……</Dialogue>
+        <Dialogue ID="4">心真是個神奇的東西……我終於……可以笑了……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="LumberJack_Tree">
+      <Abnormality>熱心的樵夫</Abnormality>
+      <CardName>伐木</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書攻擊光芒數高於自身的目標時，目標每剩餘1點光芒，便使自身的“進攻型”骰子威力+1(至多+2)</AbilityDesc>
+      <FlaborText>在那擁有無數心臟的森林之中，無論怎麼砍伐，樹木依然青翠如常。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">砍倒了更多的樹……但這片森林……依舊蔥郁……</Dialogue>
+        <Dialogue ID="2">想變得溫暖……需要更強的……</Dialogue>
+        <Dialogue ID="3">隨手填滿這個空腔……卻還是……覺得冷……</Dialogue>
+        <Dialogue ID="4">為了砍倒更多的樹……要一刻不停地磨斧……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="LumberJack_Heart">
+      <Abnormality>熱心的樵夫</Abnormality>
+      <CardName>心臟</CardName>
+      <AbilityDesc>[選擇一名司書]
+若該司書在1幕之內至少造成15點傷害，則隨機使手中2張費用最高的書頁費用-1
+若擊殺目標，則效果改為“費用減為0”
+(減費的書頁將在使用後復原)</AbilityDesc>
+      <FlaborText>再多的心臟也無法填補空缺，那台曾是樵夫的機器不再劈砍樹木，而是採伐人類。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">需要……塞滿……空腔……</Dialogue>
+        <Dialogue ID="2">我不想再感受……那空虛寂寞的心……</Dialogue>
+        <Dialogue ID="3">鉛心……又硬……又冷……</Dialogue>
+        <Dialogue ID="4">懷抱空洞的心……獨自悲傷……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+   <AbnormalityCard ID="House_LionAtk">
+      <Abnormality>歸家的路途</Abnormality>
+      <CardName>勇氣</CardName>
+      <AbilityDesc>[選擇一名司書]
+每一幕開始時該司書將獲得“存活司書數-2”層的“強壯”與“守護”。
+(若舞臺中已無其餘司書存活則改為獲得1層“虛弱”與“易損”)</AbilityDesc>
+      <FlaborText>今後能一直跟著你喵？這樣我就有勇氣撕碎他們……</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">朋友呀，有你在，我什麼也不怕！</Dialogue>
+        <Dialogue ID="2">大家聚在一起走的路~跳起舞來走的路！</Dialogue>
+        <Dialogue ID="3">朋友呀，朋友們啊~！不要猶豫啦！</Dialogue>
+        <Dialogue ID="4">沒有什麼能阻擋我們！</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="House_BigHouse">
+      <Abnormality>歸家的路途</Abnormality>
+      <CardName>家</CardName>
+      <AbilityDesc>[影響所有司書]
+每一幕開始時根據當前存活司書數隨機為3/2/2/1/1名來賓賦予數字。
+某司書按數字順序攻擊對應來賓時將使自身的“進攻型”骰子傷害+3</AbilityDesc>
+      <FlaborText>就這樣，我開始了無盡的冒險，再也無法返家。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">別再阻撓我們了！快讓我回家！</Dialogue>
+        <Dialogue ID="2">啊~是那個傢伙！那個壞巫師！</Dialogue>
+        <Dialogue ID="3">那個壞巫師，竟然把我的朋友們……！</Dialogue>
+        <Dialogue ID="4">朋友啊，朋友們呐。一起回家吧？</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="House_Home">
+      <Abnormality>歸家的路途</Abnormality>
+      <CardName>同行之路</CardName>
+      <AbilityDesc>[選擇一名司書]
+若某司書保護該司書免受攻擊(轉移攻擊目標)，則使其當前書頁的所有骰子威力+1~2
+      </AbilityDesc>
+      <FlaborText>一同出發吧。美麗的世界。夢的世界……</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">我明明在睡午覺……但突然之間……</Dialogue>
+        <Dialogue ID="2">呼喲~大家一起走吧~</Dialogue>
+        <Dialogue ID="3">跳起舞來，一起回家吧！</Dialogue>
+        <Dialogue ID="4">這條路的盡頭，會有無比美麗的……夢的世界。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Ozma_Boom">
+      <Abnormality>奧茲瑪</Abnormality>
+      <CardName>舊日之力</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書的所有書頁費用+1且所有骰子威力+3~4
+      </AbilityDesc>
+      <FlaborText>奧茲瑪舉起削南瓜的小刀，不顧一切地衝向巫師的所在地。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">吾名奧茲瑪……被何人奪走了一切……</Dialogue>
+        <Dialogue ID="2">不想再過著被掠奪的人生……</Dialogue>
+        <Dialogue ID="3">爾等也來親歷這般感受吧……遺忘一切……失去之痛……</Dialogue>
+        <Dialogue ID="4">這一次，輪到吾來掠奪了……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Ozma_forgotten">
+      <Abnormality>奧茲瑪</Abnormality>
+      <CardName>遺忘</CardName>
+      <AbilityDesc>[選擇一名司書]
+將1張3費“遺忘”置入該司書手中。
+效果為“[佚亡] [裝備時] 這一幕中使自身陷入[眩暈]並無法行動且無法被指定為攻擊目標
+這一幕結束時恢復40%的體力(至多48點)與所有光芒”
+      </AbilityDesc>
+      <FlaborText>不是有一位既善良又美麗的人，正用難以置信的表情看著自己嗎？</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">為何更易相信他人……為何……</Dialogue>
+        <Dialogue ID="2">畏懼至此……不願觸摸臉龐……</Dialogue>
+        <Dialogue ID="3">此種人生，僅是一息尚存……</Dialogue>
+        <Dialogue ID="4">被遺忘在地下……為何只得如此……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Ozma_Immortal">
+      <Abnormality>奧茲瑪</Abnormality>
+      <CardName>生命之粉</CardName>
+      <AbilityDesc>[影響所有司書]
+所有司書承受致死傷害時將免受此次傷害並恢復20%的體力。(至多24點)
+(每名司書整場接待至多觸發1次)
+      </AbilityDesc>
+      <FlaborText>最後撒上自己心愛的肉桂粉，將南瓜緊緊擁入懷中。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">如今，在吾身側……空餘這些稚子。</Dialogue>
+        <Dialogue ID="2">嗚呼……賜予汝新生吧。</Dialogue>
+        <Dialogue ID="3">不要再讓吾孤單，常回來吧……</Dialogue>
+        <Dialogue ID="4">不要……不要再奪去吾的一切……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Oz_Emerald">
+      <Abnormality>說謊的大人</Abnormality>
+      <CardName>翡翠</CardName>
+      <AbilityDesc>[選擇一名司書]
+將1張5費的“翡翠”置入該司書手中。
+效果為“[裝備時] 指定1名敵方角色並隨機摧毀其即將使用的2張書頁
+這一幕中該角色每被擊中1次便為攻擊方恢復1點光芒(同一攻擊方至多觸發2次)”
+切換舞臺時將1張“翡翠”洗入牌組。
+      </AbilityDesc>
+      <FlaborText>奧茲想到一個奇妙的主意，那翡翠般的眼眸似乎愈發閃耀。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">翡翠般的道路依然閃爍著美麗的光芒。</Dialogue>
+        <Dialogue ID="2">那可憐的孩子……眼神與我相仿的孩子。</Dialogue>
+        <Dialogue ID="3">沿著這條路來，或許就能找到想要的東西。</Dialogue>
+        <Dialogue ID="4">我將實現你們的願望。你們想要什麼？</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Oz_Gift">
+      <Abnormality>說謊的大人</Abnormality>
+      <CardName>虛假的禮物</CardName>
+      <AbilityDesc>[影響所有司書]
+將5張裝備書頁“激發勇氣的藥水”，“裝有鋸末的布袋”，“用鉛製成的心臟”，“永遠回不去的家”與“催生變異的粉末”置入E.G.O書頁列表。
+切換舞臺時將上述5張“虛假禮物書頁”置入E.G.O書頁列表。</AbilityDesc>
+      <FlaborText>可憐的奧茲瑪。也許她並不知道，說謊的大人不會無緣無故靠近她。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">到我這來，我會幫你忘掉所有煩惱和憂愁。</Dialogue>
+        <Dialogue ID="2">你就是台機器，不是嗎？機器是不需要心的。</Dialogue>
+        <Dialogue ID="3">喝下這能激發勇氣的藥水吧，你將變得比任何人都要勇猛。</Dialogue>
+        <Dialogue ID="4">穿上這雙鞋再上路吧，朝著你心念的故鄉。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Oz_Control">
+      <Abnormality>說謊的大人</Abnormality>
+      <CardName>巫術</CardName>
+      <AbilityDesc>[選擇一名司書]
+將1張4費“巫術”置入該司書手中。
+效果為“[裝備時] 使手中的所有書頁費用減為0(使用後復原)”
+切換舞臺時將1張“巫術”洗入牌組。
+      </AbilityDesc>
+      <FlaborText>不久之後，奧茲便被人們稱為“大巫師”。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">可憐的稻草啊。賜予你無所不知，無所不曉的智慧。</Dialogue>
+        <Dialogue ID="2">冰冷的樵夫啊。賜予你寬宏大量，慈悲為懷的愛心。</Dialogue>
+        <Dialogue ID="3">膽小的獅子啊。賜予你勇往直前，無所畏懼的勇氣。</Dialogue>
+        <Dialogue ID="4">最後，彷徨的路途啊。我將送你歸家。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+  </Sephirah>
+
+  <Sephirah SephirahType="Binah">
+    <AbnormalityCard ID="Bigbird_Eye">
+      <Abnormality>大鳥</Abnormality>
+      <CardName>監視之眼</CardName>
+      <AbilityDesc>[選擇一名司書]
+應用該異想體書頁後，該司書將恢復所有光芒。
+每一幕開始時該司書將額外恢復1點光芒，隨機1名司書將無法恢復光芒。
+      </AbilityDesc>
+      <FlaborText>鳥兒的眼睛總是閃閃發光，像夜空中的繁星那般璀璨。但為了守護森林，它將眼睛贈予了大鳥。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">每拯救一隻動物，便會多出一顆眼睛。</Dialogue>
+        <Dialogue ID="2">為了這裡的安全，一定要仔細檢查。</Dialogue>
+        <Dialogue ID="3">一隻都不能漏掉……</Dialogue>
+        <Dialogue ID="4">別擔心，有我來替你守護……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Bigbird_Lamp">
+      <Abnormality>大鳥</Abnormality>
+      <CardName>永燃燈</CardName>
+      <AbilityDesc>[選擇一名司書]
+被該司書指定為攻擊目標的來賓也會將攻擊目標轉變為該司書。(無視其速度)
+      </AbilityDesc>
+      <FlaborText>只要我先殺掉動物，就不會有動物被怪獸殺掉了呀！</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">我來救你們了，快跟著我的燈光走。</Dialogue>
+        <Dialogue ID="2">以我的毛毛為代價……換取永不熄滅的光芒。</Dialogue>
+        <Dialogue ID="3">到我這裡來，我會幫助你的。</Dialogue>
+        <Dialogue ID="4">照亮前方，看清需要我拯救的生靈。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Bigbird_Save">
+      <Abnormality>大鳥</Abnormality>
+      <CardName>救贖</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書與速度高於自身的目標拼點時將使自身當前書頁的所有骰子威力+1
+若目標體力不高於25%，則拼點勝利時將摧毀其當前書頁的所有骰子。
+      </AbilityDesc>
+      <FlaborText>對這隻鳥而言，死亡本身即是救贖。 </FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">只要殺光它們，就不會再有動物死在怪物手裡！</Dialogue>
+        <Dialogue ID="2">危險！森林裡有隻可怕的大怪獸！</Dialogue>
+        <Dialogue ID="3">那孩子有危險，我要去救他！</Dialogue>
+        <Dialogue ID="4">為了那些可憐無助之人……我必須站出來。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="SmallBird_Punishment">
+      <Abnormality>懲戒鳥</Abnormality>
+      <CardName>懲戒</CardName>
+      <AbilityDesc>[選擇一名司書]
+若該司書承受傷害，則下一幕中自身使用的第1張書頁的第1顆骰子威力+2~4 (無法對裝備書頁生效)
+      </AbilityDesc>
+      <FlaborText>一定是因為沒人懲罰那些幹壞事的人。只要有人來扮演這個角色，世上就再也不會發生壞事了。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">只要我來施加懲罰，壞人就會消失的吧？</Dialogue>
+        <Dialogue ID="2">毋須寬恕，你幹壞事了。</Dialogue>
+        <Dialogue ID="3">沒錯！就是因為世上沒有懲罰壞人的人，所以才會變成這樣的。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="SmallBird_Beak">
+      <Abnormality>懲戒鳥</Abnormality>
+      <CardName>責罰之喙</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書每有一幕未承受傷害，便使自身的“進攻型”骰子傷害+1(至多+10)
+(被擊中時重置此計數)
+      </AbilityDesc>
+      <FlaborText>很久以前人們就犯下累累罪行。即使他們明知這是錯的，卻為何還要執意這麼做呢？</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">明知不對卻執意要做，這究竟是為什麼？</Dialogue>
+        <Dialogue ID="2">我要教訓你。不許再幹壞事了。</Dialogue>
+        <Dialogue ID="3">別再幹壞事了啦！</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Smallbird_Fly">
+      <Abnormality>懲戒鳥</Abnormality>
+      <CardName>小小振翅</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書的閃避骰子威力+1~2
+以閃避骰子取得拼點勝利時將使自身當前書頁的下一顆“進攻型”骰子威力+1~2
+      </AbilityDesc>
+      <FlaborText>這是一隻懲罰惡徒，罪犯以及一切不敬之人的自信小小鳥。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">我離開了森林，再也沒有回去。</Dialogue>
+        <Dialogue ID="2">奮力飛翔吧，願這世界更加美好。</Dialogue>
+        <Dialogue ID="3">撲騰的小翅膀說不定能改變世界！</Dialogue>
+        <Dialogue ID="4">心兒怦怦直跳，我要加倍努力才行。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+        <AbnormalityCard ID="LongBird_Sin">
+      <Abnormality>審判鳥</Abnormality>
+      <CardName>罪孽的分量</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書每擲出一次最小值，便承受2~7點傷害並在下一幕中獲得1~2層“強壯”與“忍耐”。
+      </AbilityDesc>
+      <FlaborText>它的天秤永遠不會忽略任何罪孽的分量。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">我來衡量你的罪孽。</Dialogue>
+        <Dialogue ID="2">從不忽略任何罪孽的重量。</Dialogue>
+        <Dialogue ID="3">按罪孽輕重執行懲罰。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+   <AbnormalityCard ID="LongBird_Scale">
+      <Abnormality>審判鳥</Abnormality>
+      <CardName>歪斜的天秤</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書擊中體力最高的來賓時將為體力最低的司書恢復2~8點體力。(每一幕至多觸發3次，無法對群體攻擊書頁生效)
+      </AbilityDesc>
+      <FlaborText>而今，高鳥只剩下那架不公正的天秤，但它的審判仍未停止。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">這架天秤總會得出明確的結果，能夠嚴正判決。</Dialogue>
+        <Dialogue ID="2">我的主觀意識可能會影響判決的公正。</Dialogue>
+        <Dialogue ID="3">如果天秤不偏向任何一邊……那可不行。</Dialogue>
+        <Dialogue ID="4">也許直到惡人全部消失的那一刻，這架天秤才終能停止。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="LongBird_Judgement">
+      <Abnormality>審判鳥</Abnormality>
+      <CardName>審判</CardName>
+      <AbilityDesc>[影響所有角色]
+每一幕開始時所有角色各有50%的機率獲得1層“罪孽”
+若某角色的“罪孽”層數達到5，則立即承受“自身體力上限x10%”的傷害並重置該層數。
+所有角色擊中目標時將向其轉移1層“罪孽”。(每張書頁至多轉移1層)
+      </AbilityDesc>
+      <FlaborText>“但是，如果天秤不偏向任何一邊，那該怎麼辦呀？”高鳥聽後很擔心，於是它舉起了一架“無論何時都能作出明確判決”的歪斜天秤。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">高舉天秤之時，我願施予罪人永生。</Dialogue>
+        <Dialogue ID="2">一定要做出明辨善惡的公正判決……</Dialogue>
+        <Dialogue ID="3">為了守護森林而高舉天秤。給予罪人永恆的審判。</Dialogue>
+        <Dialogue ID="4">為能審判森林中的所有怪獸……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+<AbnormalityCard ID="ApocalypseBird_BigEye">
+      <Abnormality>終末鳥</Abnormality>
+      <CardName>巨目</CardName>
+      <AbilityDesc>[選擇一名司書]
+每一幕開始時對所有來賓施加“魅惑”。
+被“魅惑”的來賓會優先將該司書指定為攻擊目標。
+被“魅惑”的來賓擊中任意司書時傷害+2~4
+該司書與被“魅惑”的來賓拼點時將使自身當前書頁的所有骰子威力+1~2，拼點勝利時將恢復2~5點體力與混亂抗性。</AbilityDesc>
+      <FlaborText>巨目遮蔽了光線。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">囚禁光亮。</Dialogue>
+        <Dialogue ID="2">解脫吧，在面對莫大的恐怖之前。</Dialogue>
+        <Dialogue ID="3">沒入安息，一勞永逸。</Dialogue>
+        <Dialogue ID="4">我們必須監視森林，快去搜尋入侵者。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="ApocalypseBird_SmallPeak">
+      <Abnormality>終末鳥</Abnormality>
+      <CardName>小喙</CardName>
+      <AbilityDesc>[選擇一名司書]
+將1張0費“小喙”置入該司書手中。
+效果為“[裝備時] 承受‘自身體力上限x5%’的傷害並恢復1點光芒”
+(裝備後回到手中)
+      </AbilityDesc>
+      <FlaborText>小喙竊竊私語。
+喋喋不休……</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">竊竊私語。喋喋不休……</Dialogue>
+        <Dialogue ID="2">我們的罪業縱然受到了懲罰，但罪孽的根源必將再度滋長。</Dialogue>
+        <Dialogue ID="3">正因如此，唯有懲戒方能剷除罪惡的萌芽。</Dialogue>
+        <Dialogue ID="4">用小而倔強的喙去懲罰他們吧。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+        <AbnormalityCard ID="ApocalypseBird_LongArm">
+      <Abnormality>終末鳥</Abnormality>
+      <CardName>長臂</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書將免疫負面狀態傷害。
+(燒傷，流血，妖靈，罪孽)
+      </AbilityDesc>
+      <FlaborText>長臂掩藏了時間。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">掩藏時間。</Dialogue>
+        <Dialogue ID="2">哪怕將你定罪，罪孽仍會再度堆積，無窮無盡。</Dialogue>
+        <Dialogue ID="3">自此以後，審判高臺再無公平之日。</Dialogue>
+        <Dialogue ID="4">用公正的天秤來評判誰更邪惡。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="ApocalypseBird_Apocalypse">
+      <Abnormality>終末鳥</Abnormality>
+      <CardName>大怪獸</CardName>
+      <AbilityDesc>[選擇一名司書]
+該異想體書頁僅可對同時應用“巨目”，“小喙”與“長臂”這3張異想體書頁的司書生效。
+該司書拼點時及被單方面攻擊時將使目標當前書頁的所有骰子最小值與最大值-3且不受威力增減效果影響。
+每一幕結束時該司書將恢復所有光芒並對除自身外的其餘角色造成15點傷害。</AbilityDesc>
+      <FlaborText>大鳥那能夠看清數百里外的眼睛，高鳥那能夠審判任何罪孽的天秤，小鳥那能夠吞噬一切生物的巨口合為一體的那天，災難降臨了這片森林。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">不能讓壞人奪走所有珍貴之物。</Dialogue>
+        <Dialogue ID="2">如果能吞噬周遭的一切……</Dialogue>
+        <Dialogue ID="3">為了守護更多的人，我們才會合為一體。</Dialogue>
+        <Dialogue ID="4">必須儘快找到。不能讓怪獸在這裡亂竄……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="ApocalypseBird_Gate">
+      <Abnormality>終末鳥</Abnormality>
+      <CardName>森林的守望者</CardName>
+      <AbilityDesc>[選擇一名司書]
+所有司書將永久獲得1層“迅捷”。
+若5名司書各應用1張異想體書頁，則額外獲得1~2層“強壯”與“忍耐”。
+      </AbilityDesc>
+      <FlaborText>它們決定代替大家成為森林的守望者。比誰都熱愛這片森林的它們，想要守護森林裡的動物，維持森林的和平。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">為了守護比任何人都熱愛的這個地方。</Dialogue>
+        <Dialogue ID="2">希冀著一個弱小生靈也能安心生活的世界。</Dialogue>
+        <Dialogue ID="3">能夠守護這個地方的，只有我們了。</Dialogue>
+        <Dialogue ID="4">我們要代替它們，成為守望者，守護生命。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+<AbnormalityCard ID="ApocalypseBird_Atk">
+      <Abnormality>終末鳥</Abnormality>
+      <CardName>和平</CardName>
+      <AbilityDesc>[選擇一名司書]
+應用該異想體書頁後，該司書擊中的第1名來賓將被標記為“入侵者”。(持續2幕，無法對群體攻擊書頁生效)
+“入侵者”擊中目標時傷害與混亂傷害-2~4，被擊中時將追加承受1~2點傷害。
+“入侵者”效果移除後，該司書可將其餘來賓標記為“入侵者”。
+      </AbilityDesc>
+      <FlaborText>鳥兒在森林中徘徊，四處張望著尋找那頭怪獸。但那裡已經什麼都沒有了，沒有動物，沒有日月，也沒有怪獸。只剩下那隻鳥留在一片“黑森林”之中。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">忍受恐懼之人，終將邁入和平……</Dialogue>
+        <Dialogue ID="2">我絕不會讓任何事物加害於你。</Dialogue>
+        <Dialogue ID="3">到了最後，諸如恐怖之物也將不復存在。</Dialogue>
+        <Dialogue ID="4">森林，又恢復了往日的安靜平和。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+  </Sephirah>
+
+  <Sephirah SephirahType="Hokma">
+    <AbnormalityCard ID="Bloodytree_Wing">
+      <Abnormality>滲透天堂</Abnormality>
+      <CardName>萎縮的血翼</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書造成反震傷害時將追加一半於招架骰子點數的傷害。
+      </AbilityDesc>
+      <FlaborText>一旦它意識到你的關注已被切斷，便會展開翅膀。宛若一位天使，它的翅膀將伸向天空，繼而遮蔽太陽。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">在所有人的關注與視線中……終於結出果實，展翅翱翔。</Dialogue>
+        <Dialogue ID="2">那展開翅膀之人，獻出了一切……</Dialogue>
+        <Dialogue ID="3">若有一日再度睜開雙眼，能否在那視線中看到結果？</Dialogue>
+        <Dialogue ID="4">別來這裡……這裡只有一棵滿是尖刺的樹。這並非你的安息之所……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Bloodytree_Gaze">
+      <Abnormality>滲透天堂</Abnormality>
+      <CardName>他人的視線</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書單方面攻擊擊中目標時傷害+2~4
+拼點時招架骰子威力+1~3，擊中目標時傷害-3~6
+      </AbilityDesc>
+      <FlaborText>所謂視線正是如此。關注。無形之連接。完全集中。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">你只需閉上雙眼。沒錯，就是那樣……</Dialogue>
+        <Dialogue ID="2">無法目視之物，亦無法觸及。</Dialogue>
+        <Dialogue ID="3">遙不可及的欲望終將膨脹……如同踏上荊棘叢生之路。</Dialogue>
+        <Dialogue ID="4">一旦它進入你的視野……便會重回這陰暗幽邃的地下。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Bloodytree_Forcus">
+      <Abnormality>滲透天堂</Abnormality>
+      <CardName>關注與集中</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書造成或承受反震傷害時傷害x2
+      </AbilityDesc>
+      <FlaborText>不要轉移視線，一直盯著它，將它收容在你的視線之中。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">如此驚人的景象，你不會想要眨眼的。</Dialogue>
+        <Dialogue ID="2">一直盯著它……冷靜……只要看著它就不會死……</Dialogue>
+        <Dialogue ID="3">將它收容在你的視線之中……</Dialogue>
+        <Dialogue ID="4">你凝視著我……我亦凝視著你……</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+        <AbnormalityCard ID="Clock_Time">
+      <Abnormality>沉默的代價</Abnormality>
+      <CardName>時間</CardName>
+      <AbilityDesc>[影響所有司書]
+所有司書的所有骰子威力+1~2
+每一幕的戰前準備階段僅有30秒。
+      </AbilityDesc>
+      <FlaborText>時流若生，生逝如時。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">所謂時間不足，僅是無謂牢騷。</Dialogue>
+        <Dialogue ID="2">明日可至，亦可不至。</Dialogue>
+        <Dialogue ID="3">汝遺失之時，吾成倍奉予。</Dialogue>
+        <Dialogue ID="4">時間給予公平，命運催生不公。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Clock_Thirteen">
+      <Abnormality>沉默的代價</Abnormality>
+      <CardName>第十三聲鐘響</CardName>
+      <AbilityDesc>[選擇一名司書]
+每當該司書使用第13張書頁時將使其中的所有骰子威力+1~2並賦予“進攻型”骰子額外效果“[命中時] 追加‘目標體力上限x(骰子點數)%’的傷害” (無法對裝備書頁生效)
+      </AbilityDesc>
+      <FlaborText>吾知曉絕對的孤獨。分享沉默，應得果報。待到原主歸來之時，汝當償付代價。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">災難般的鐘聲再度響徹。</Dialogue>
+        <Dialogue ID="2">鐘聲鳴響，悲鳴打破沉默……</Dialogue>
+        <Dialogue ID="3">終末之聲徐徐響起，然則無人得以聽聞。</Dialogue>
+        <Dialogue ID="4">吾分享沉默，汝償付代價。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Clock_Kill">
+      <Abnormality>沉默的代價</Abnormality>
+      <CardName>沉默</CardName>
+      <AbilityDesc>[選擇一名司書]
+將1張0費“沉默”與1張0費“加速”置入該司書手中。
+效果分別為“[裝備時] 承受‘自身體力上限x15%’的傷害並使除自身外的所有角色速度-5”
+“[裝備時] 承受‘自身體力上限x10%’的傷害並使自身速度+5”</AbilityDesc>
+      <FlaborText>時而產生時間停止的錯覺，時而出現刹那般的沉默。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">沉默，不止帶來和平。</Dialogue>
+        <Dialogue ID="2">刹那般的沉默，時間宛若靜止。</Dialogue>
+        <Dialogue ID="3">時間停止，沉默隨之降臨。何來二者有別之說。</Dialogue>
+        <Dialogue ID="4">縱使萬物靜止，靈魂亦無法消亡。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="BlueStar_martyrdom">
+      <Abnormality>碧藍新星</Abnormality>
+      <CardName>殉教</CardName>
+      <AbilityDesc>[選擇一名司書]
+將1張0費“殉教”置入該司書手中。
+效果為“[裝備時] 這一幕中擊中目標時將追加4~6點混亂傷害並對自身造成1~3點傷害”</AbilityDesc>
+      <FlaborText>讓我們化作星辰再會吧。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">在那遙遠宇宙的彼端，一同沉浸于永恆的幸福之中吧。</Dialogue>
+        <Dialogue ID="2">與生俱來，無法違逆的本能，我們終有一日會回歸那個地方。</Dialogue>
+        <Dialogue ID="3">我們不會死去。只是動身前往那應去之地。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+        <AbnormalityCard ID="BlueStar_Atonement">
+      <Abnormality>碧藍新星</Abnormality>
+      <CardName>贖罪</CardName>
+      <AbilityDesc>[選擇一名司書]
+每一幕開始時若舞臺中存在處於“混亂”狀態的角色，則該角色將承受3~7點傷害並使所有司書獲得1層“強壯”。(不可疊加)</AbilityDesc>
+      <FlaborText>我們的“碧藍新星”是接納罪人的唯一之地，我們將在那裡洗去一切罪孽。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">捨棄骯髒的皮囊，迸發閃耀的光芒。</Dialogue>
+        <Dialogue ID="2">忘卻罪孽也無需煩躁不安。</Dialogue>
+        <Dialogue ID="3">我們終能回歸那裡，洗清所有罪惡。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+        <AbnormalityCard ID="BlueStar_Melody">
+      <Abnormality>碧藍新星</Abnormality>
+      <CardName>思念之聲</CardName>
+      <AbilityDesc>[影響所有司書]
+這一幕中所有司書擊中目標時混亂傷害+2~4
+(此後每3幕觸發1次)</AbilityDesc>
+      <FlaborText>冉冉升起的新星意味著全新的開始。你聽不見那悠揚的號聲嗎？</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">你聽到了嗎？你感受到我苦苦尋覓的思念之聲了嗎？</Dialogue>
+        <Dialogue ID="2">啊啊啊……終於……！終於呼喚我們了！！！</Dialogue>
+        <Dialogue ID="3">只有那聲呼喚，方能將我們引向接納罪人的唯一之地……！</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+        <AbnormalityCard ID="WhiteNight_Bless">
+      <Abnormality>白夜</Abnormality>
+      <CardName>洗禮</CardName>
+      <AbilityDesc>[選擇一名司書]
+將1張2費“洗禮”置入該司書手中。
+效果為“[裝備時] 指定1名友方角色並在這一幕中使其獲得1層‘忍耐’且恢復6點體力”
+(裝備後回到手中且每一幕至多使用1次)</AbilityDesc>
+      <FlaborText>“我將治癒你的一切疾病，使你重獲新生。”</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">我是來治病的。</Dialogue>
+        <Dialogue ID="2">相信我。唯有我能幫助你。</Dialogue>
+        <Dialogue ID="3">額上有傷，為何不治？</Dialogue>
+        <Dialogue ID="4">所有病痛，皆可治癒。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+        <AbnormalityCard ID="WhiteNight_Red">
+      <Abnormality>白夜</Abnormality>
+      <CardName>降臨</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書的光芒恢復量+1。
+若該司書已應用異想體書頁“洗禮”，則將其效果強化為“[裝備時] 指定1名友方角色並在這一幕中使其獲得2層‘忍耐’且恢復12點體力”</AbilityDesc>
+      <FlaborText>“我乃死，我乃生。我為暗，我亦為光。”</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">浸染罪孽之人。起身迎接我吧。</Dialogue>
+        <Dialogue ID="2">我以此副姿態現身，並非前來審判。</Dialogue>
+        <Dialogue ID="3">解除限制於此的桎梏，將所有人引向樂園。</Dialogue>
+        <Dialogue ID="4">我與你們同在，擺脫對可怕死亡的恐懼。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="WhiteNight_Confess">
+      <Abnormality>白夜</Abnormality>
+      <CardName>告解</CardName>
+      <AbilityDesc>[影響所有司書]
+為所有司書恢復所有混亂抗性並移除所有負面狀態。(包含“混亂”狀態)
+所有司書被擊中時所受混亂傷害-2</AbilityDesc>
+      <FlaborText>僅是承受苦難，便可洗刷一半罪孽。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">……</Dialogue>
+        <Dialogue ID="2">………</Dialogue>
+        <Dialogue ID="3">…………</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="WhiteNight_Guard">
+      <Abnormality>白夜</Abnormality>
+      <CardName>護衛</CardName>
+      <AbilityDesc>[選擇一名司書]
+該司書將無法被指定為攻擊目標。
+接待結束時每名來賓轉化的書籍數+1(若該司書已死亡則不生效)</AbilityDesc>
+      <FlaborText>您是神的兒子，您生來為王。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">歡呼吧，滿懷恩寵之人，我與你們同在。</Dialogue>
+        <Dialogue ID="2">將每個人引向樂園。</Dialogue>
+        <Dialogue ID="3">我與你們同在，擺脫對死亡的恐懼。</Dialogue>
+        <Dialogue ID="4">誰也不會離去，我們將一同沐浴在永恆的幸福之中。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="WhiteNight_White">
+      <Abnormality>白夜</Abnormality>
+      <CardName>權能</CardName>
+      <AbilityDesc>[選擇一名司書]
+每一幕開始時未應用該異想體書頁的司書將獲得2層“守護”。
+該司書與白夜“同化”期間將為友方司書賦予額外效果“被擊中時若所受傷害不高於3點，則免受此次傷害並恢復等量體力”。</AbilityDesc>
+      <FlaborText>不要驚惶，我是你的救主，我與你同在。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">安心吧，任何災禍都無法阻擋你們。</Dialogue>
+        <Dialogue ID="2">擺脫這墮落的肉體，何嘗不是救贖。</Dialogue>
+        <Dialogue ID="3">信奉我，便可永不墮入黑暗。</Dialogue>
+        <Dialogue ID="4">我為聖，你們亦為聖。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="WhiteNight_Apostle">
+      <Abnormality>白夜</Abnormality>
+      <CardName>使徒</CardName>
+      <AbilityDesc>[選擇一名司書]
+除該司書外的其餘司書擊中目標時傷害+2~7(若該司書已死亡則不生效)
+該司書累計使用12張“洗禮”後將為其餘司書賦予額外效果“所有骰子威力+1”。</AbilityDesc>
+      <FlaborText>我不是揀選了你們12個嗎。起來吧，我的僕從，迎接我的到來。</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">追求和平與神聖，否則便無法窺見我。</Dialogue>
+        <Dialogue ID="2">恒久不渝之人，方能繼續向前邁進。</Dialogue>
+        <Dialogue ID="3">接受我的恩典，我便可忘卻你們的罪孽。</Dialogue>
+        <Dialogue ID="4">服從我，享受無盡的歡呼與生命。</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+  </Sephirah>
+  
+  <Sephirah SephirahType="None">
+    <AbnormalityCard ID="Enemy_Fight">
+      <Abnormality></Abnormality>
+      <CardName>？？？</CardName>
+      <AbilityDesc>每一幕開始時獲得1層“強壯”</AbilityDesc>
+      <FlaborText></FlaborText>
+      <Dialogues>
+        <Dialogue ID="1"></Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+
+    <AbnormalityCard ID="Enemy_Gloom">
+      <Abnormality></Abnormality>
+      <CardName>？？？</CardName>
+      <AbilityDesc>每一幕開始時獲得1層“虛弱”與2層“忍耐”</AbilityDesc>
+      <FlaborText></FlaborText>
+      <Dialogues>
+        <Dialogue ID="1"></Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+
+    <AbnormalityCard ID="Enemy_Friend">
+      <Abnormality></Abnormality>
+      <CardName>？？？</CardName>
+      <AbilityDesc>每有1名友方角色被擊中，便在下一幕中獲得1層“強壯”。(至多2層)</AbilityDesc>
+      <FlaborText></FlaborText>
+      <Dialogues>
+        <Dialogue ID="1"></Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+    <AbnormalityCard ID="Enemy_Bind">
+      <Abnormality></Abnormality>
+      <CardName>？？？</CardName>
+      <AbilityDesc>每一幕開始時獲得1層“忍耐”</AbilityDesc>
+      <FlaborText></FlaborText>
+      <Dialogues>
+        <Dialogue ID="1"></Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+  </Sephirah>
+</AbnormalityCardsRoot>

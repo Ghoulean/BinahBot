@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GroupName>WarpCrew</GroupName>
+  <Character ID="Rose">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">你們幾個，都打起精神，時間所剩無幾。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">閒話到此為止，擺好架勢準備應戰。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">你們很累，這我明白，處理完畢後迅速返回。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">迅速回收，返回之後還有很多報告要寫。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">看來這次不得不加班……各位辛苦一天。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">到頭來我才是最弱的……真不像話。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">立刻反擊，沒理由和那傢伙一同赴死。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">沉住氣，此刻動搖只會害你一同喪命。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">……戰況越糟，就越要勇往直前。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">距離下班沒剩多久。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">一招制敵。</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Sen">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">蘿絲很專注呢，我們也做好準備吧，菜鳥！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">那就……按老規矩清掃吧？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">這個後輩……比想像中的還要淡定嘛，還以為她會嚇破膽呢。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">回去之後還要清掃列車？我的腰啊……</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">這種任務簡單得很，畢竟是經常處理的事情。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">該死的……所以我不想進來……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">雖然很遺憾……但這沒什麼特別的。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">悲傷也要適度，現在是必須冷靜的場合。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">都市夢魘嗎？比想像中的還要可笑。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">真是悠哉啊，對付這種乘客已經不是一次兩次了。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">即便如此，你們也總比那些得道修煉的乘客強上一點吧？</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Lesti">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">哇，裡面看起來，比外面寬敞多了誒！？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">聽說列車上也有和他們一樣強悍的傢伙？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">工作結束後，大家一起去吃肥腸火鍋怎麼樣？</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">多虧了可靠的前輩們，我們才能輕鬆處理好~</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">這本整理好了……那本也是……現在回去吧？</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">好不容易過上新生活的……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">我一定要克服危難……可是……前，前輩……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">我已經……習慣了……</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">嗯哼哼~這種事我每天都在做！</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">我可以輕鬆做到！</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">這裡的人也不弱……他們很危險。</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="WarpCrewUnit">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">又要加班？哎呦，讓我休息一下吧……</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">前腳剛處理完肉塊，後腳就被叫過來……我快累死了……</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">開始工作吧，趕緊工作！接到命令就該好好幹啊！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">這種事情總比清理肉塊要好吧？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">相比之下，那些肉塊更讓人反胃……即便如此，我還是討厭加班。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_5">還能怎麼辦呢？別再碎碎念了。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">好像清掃完畢了……可以下班了吧？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">不管怎麼說……我們好像救了W公司一命。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">這本書可不能落進別人手裡。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">差點丟了飯碗……幸好安全收回了書。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">能抽出這樣的書，這到底是什麼奇點？</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">一旦失敗……那W公司的秘密就會……</BattleDialog>
+      <BattleDialog ID="DEATH_1">我不要死……我才剛剛……進到巢……</BattleDialog>
+      <BattleDialog ID="DEATH_2">一定要成功……絕不能讓秘密……洩露出去……</BattleDialog>
+      <BattleDialog ID="DEATH_3">按照手冊上說的去做……奮戰到最後……嚴格遵照，手冊……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">我們要加油！</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">這種事……我只想快點結束……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">對清掃人員而言，這是常有的事。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">今天又失去了幾個同事……我還是習慣不了。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">不管是清掃列車還是加班晚歸，只要幹就對了。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">跟剛才那些怪物相比，這種傢伙簡單得很。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">把那些傢伙當成列車上的乘客，凡事就會好辦許多。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">人死後就會變成那樣嗎……這下更要繃緊神經了。</BattleDialog>
+    </Type>
+  </Character>
+</BattleDialogRoot>

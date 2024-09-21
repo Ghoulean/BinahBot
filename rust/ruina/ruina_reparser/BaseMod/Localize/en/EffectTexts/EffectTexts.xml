@@ -1,0 +1,1641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleEffectTextRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <effectTextList>
+    <BattleEffectText ID="OldLady_Lonely">
+      <Name>Solitude</Name>
+      <Desc>Reduce Speed by 2. Take 1-2 damage at the start of the Scene. (Does not stack)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedShoes_Kirakira">
+      <Name>Allure of The Red Shoes</Name>
+      <Desc>Prioritize attacking targets that used &lt;Glitter&gt;. Deal +2-4 damage.</Desc>
+    </BattleEffectText>
+    <!-- Deleted old Rhythm -->
+    <BattleEffectText ID="TheDreamingCurrent_Sea">
+      <Name>Rainbow Sea</Name>
+      <Desc>Reduce Speed by 3 for {0} Scene(s). Lose 10% of current HP and restore 1 Light at the start of the Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Bloodbath_Hands">
+      <Name>Pale Hands</Name>
+      <Desc>After the character is hit {0} times, 3-10 bonus Stagger damage is dealt.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="TheSnowQueen_Chu">
+      <Name>Ice Splinters</Name>
+      <Desc>Receiving {0} more Ice Splinters will render the character Immobilized for two Scenes.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HappyTeddyBear_Hug">
+      <Name>Teddy’s Love</Name>
+      <Desc>Upon losing a clash against a target that used &lt;Nostalgic Embrace of the Old Days&gt;, take Stagger damage equal to the dice value at a {0}% chance.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="TheDreamingCurrent_candy">
+      <Name>Candy</Name>
+      <Desc>Deals {0}% additional damage to targets that used &lt;Candy&gt;.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ChildofGalaxy_Token">
+      <Name>Pebble</Name>
+      <Desc>For {0} Scene(s), restore 10% of max HP at the start of the Scene. Take 20% of max HP as damage whenever an ally dies.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Stun">
+      <Name>Immobilized</Name>
+      <Desc>Cannot act for the duration of the Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Break">
+      <Name>Staggered</Name>
+      <Desc>Cannot act for the duration of the Scene. Page restock and Light restoration will not take place.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Burn">
+      <Name>Burn</Name>
+      <Desc>At the end of the Scene, take {0} damage and subtract 1/3rd of the Burn stack. (Rounds down)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Paralysis">
+      <Name>Paralyzed</Name>
+      <Desc>For the duration of the Scene, whenever the character plays any Combat Page, up to {0} random dice on it have their maximum roll value reduced by 3.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Bleeding">
+      <Name>Bleeding</Name>
+      <Desc>For the Scene, take {0} damage and subtract 1/3rd of the Bleed stack every time the character rolls an Offensive die. (Rounds up)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Vulnerable">
+      <Name>Fragile</Name>
+      <Desc>Take {0} additional damage from attacks this Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Weak">
+      <Name>Feeble</Name>
+      <Desc>Decrease the Power of Offensive dice by {0} for the duration of the Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Disarm">
+      <Name>Disarmed</Name>
+      <Desc>Decrease the Power of Defensive dice by {0} for the duration of the Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Binding">
+      <Name>Bound</Name>
+      <Desc>Reduce all Speed values by {0} for the duration of the Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Protection">
+      <Name>Protected</Name>
+      <Desc>Take {0} less damage from attacks this Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Strength">
+      <Name>Strengthened</Name>
+      <Desc>Increase the power of Offensive dice by {0} for the duration of the Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Endurance">
+      <Name>Enduring</Name>
+      <Desc>Increase the power of Defensive dice by {0} for the duration of the Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Quickness">
+      <Name>Haste</Name>
+      <Desc>Increase all Speed values by {0} for the duration of the Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Blurry">
+      <Name>Blurred</Name>
+      <Desc>This character cannot be targeted by the enemy as long as other targets without Blurred exist. Removed at the end of Scene.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Burn_Keyword">
+      <Name>Burn X</Name>
+      <Desc>At the end of the Scene, take X damage and subtract 1/3rd of the stack. (Rounds down)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Paralysis_Keyword">
+      <Name>Paralysis X</Name>
+      <Desc>For the Scene, up to X dice have their maximum roll value decreased by 3 when using pages.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Bleeding_Keyword">
+      <Name>Bleed X</Name>
+      <Desc>For the Scene, take X damage and subtract 1/3rd of the stack every time an Offensive die rolls. (Rounds up)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Vulnerable_Keyword">
+      <Name>Fragile X</Name>
+      <Desc>Take X additional damage from attacks for the Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Weak_Keyword">
+      <Name>Feeble X</Name>
+      <Desc>Offensive dice lose X Power for the Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Disarm_Keyword">
+      <Name>Disarm X</Name>
+      <Desc>Defensive dice lose X Power for the Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Binding_Keyword">
+      <Name>Bound X</Name>
+      <Desc>Lower all Speed values by X for the Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Protection_Keyword">
+      <Name>Protection X</Name>
+      <Desc>Take X less damage from attacks for the Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Strength_Keyword">
+      <Name>Strength X</Name>
+      <Desc>Offensive dice gain +X Power for the Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Endurance_Keyword">
+      <Name>Endurance X</Name>
+      <Desc>Defensive dice gain +X Power for the Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Quickness_Keyword">
+      <Name>Haste X</Name>
+      <Desc>Boost all Speed dice values by X for the Scene.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="bstart_Keyword">
+      <Name>Combat Start</Name>
+      <Desc>Activates when the combat phase of a Scene begins and before characters approach targets.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_Keyword">
+      <Name>Exclusive Page</Name>
+      <Desc>Can only be used with specific Key pages.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="counter_Keyword">
+      <Name>Counter</Name>
+      <Desc>Die is only played upon receiving a one-sided attack (Does not apply when both characters use a Combat Page and the opponent has more dice)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="FairyFestival_Recovery">
+      <Name>Prepared Meat</Name>
+      <Desc>At 1 HP, they will be consumed by the Fairy Queen.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="SpiderBud_Cocoon">
+      <Name>Cocoon</Name>
+      <Desc>Targeted by the Spiderlings.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Philip_Attack">
+      <Name>Searing Sword</Name>
+      <Desc>On a successful hit, inflict 4 Burn to target.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Philip_Defense">
+      <Name>Feather Shield</Name>
+      <Desc>After taking a hit, inflict 2 Burn to attacker. Take -5 damage from attacks.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Philip_Strong">
+      <Name>Blazing Strike</Name>
+      <Desc>Gain +2 Speed dice this Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Philip_Ready">
+      <Name>Readying Blazing Strike</Name>
+      <Desc>Will use Blazing Strike in {0} Scenes.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="QueenOfHatred_Sign">
+      <Name>Villain</Name>
+      <Desc>Become the target of the Queen of Hatred.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="QueenOfHatred_Hatred">
+      <Name>Hated</Name>
+      <Desc>Become the target of *all* of the Queen of Hatred's pages.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="KnightOfDespair_Blessing">
+      <Name>Tears</Name>
+      <Desc>Gain a Speed die. Use special Combat Pages. Resistances change.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Gaho">
+      <Name>Blessing</Name>
+      <Desc>Resistances against the type of damage that dealt the most on the previous Scene are changed to "Endured" for this Scene. (Applies separately for physical and Stagger damage)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ability/BloodBath_Hand">
+      <Name>Pale Hands</Name>
+      <Desc>Will take 3-10 bonus Stagger damage on every third hit from the librarian with the Abnormality page 'Pale Hands'.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SweepersSkill">
+      <Name>Persistent</Name>
+      <Desc>Upon taking lethal damage, 80% chance to revive with some HP. This chance is halved each time the character revives.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="SlashPowerUp">
+      <Name>Slash Power-Up</Name>
+      <Desc>Slash dice gain +{0} Power for this Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="PenetratePowerUp">
+      <Name>Pierce Power-Up</Name>
+      <Desc>Pierce dice gain +{0} Power for this Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HitPowerUp">
+      <Name>Blunt Power-Up</Name>
+      <Desc>Blunt dice gain +{0} Power for this Scene.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Queenbee_Spore">
+      <Name>Spores</Name>
+      <Desc>At the start of the Scene, take {0} damage and halve the stack. (Rounds down)
+Take {0} damage every time the character rolls an Offensive die.
+If the character dies with this ailment, a Worker Bee is spawned next Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Queenbee_Punish">
+      <Name>Retribution</Name>
+      <Desc>Take +2-4 damage from librarians without the Abnormality page 'Worker Bee'.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Snowwhite_Vine">
+      <Name>Vines</Name>
+      <Desc>When a librarian with the Abnormality page 'Vines' attacks this character, their Pierce dice gain +1-2 Power.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Burning_Match">
+      <Name>Blazing</Name>
+      <Desc>Gain a Speed die; Dice Power +2; lose 5% of Max HP every time the character rolls a die.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="TeddyLove">
+      <Name>Affection</Name>
+      <Desc>All dice of an opponent attacking this character gain Power equal to the stacks of this effect.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="FairyMeat">
+      <Name>Fresh Meat</Name>
+      <Desc>'Wingbeat' gains +2 Power against this character and recovers 10 HP on hit.</Desc>
+    </BattleEffectText>
+
+    <!--
+    <BattleEffectText ID="ego_Keyword">
+      <Name>E.G.O</Name>
+      <Desc>E.G.O pages can be used by any librarian.</Desc>
+    </BattleEffectText>
+    -->
+    <BattleEffectText ID="AreaCard_Keyword">
+      <Name>Mass Attack</Name>
+      <Desc>Targets every enemy. A successful hit destroys the target's Combat Page or action dice.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="AreaDiceAll_Keyword">
+      <Name>Summation</Name>
+      <Desc>If the attack is &gt; than the sum of dice rolls on target's Combat Page, they take damage, and their page is destroyed.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="AreaDiceEach_Keyword">
+      <Name>Individual</Name>
+      <Desc>If the dice roll is larger than the target's current die, they take damage, and the die is destroyed.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="FairyMeal">
+      <Name>Ravenousness</Name>
+      <Desc>Current damage total: {0}.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="OnlyOne_Keyword">
+      <Name>Singleton</Name>
+      <Desc>A character is 'Singleton' if their Combat Bookshelf does not have any duplicate pages.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="RedHood_Angry">
+      <Name>Rage</Name>
+      <Desc>Lasts 2 Scenes. Gain +2 Strength each Scene, and use Mass Attack pages.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedHood_Rage">
+      <Name>Astray Rage</Name>
+      <Desc>Permanently persists. Gain +5 Strength and Haste each Scene, and use Mass Attack pages.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedHood_Hunt">
+      <Name>Prey</Name>
+      <Desc>Take +2-6 damage from attacks done by the librarian with the Abnormality page 'Prey'.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="WarpCharge">
+      <Name>Charge</Name>
+      <Desc>Affects the properties of certain Combat Pages. 10 Charges can be stored at once.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Lumberjack_Heart">
+      <Name>Warm Heart</Name>
+      <Desc>The max. roll value of all dice is raised by +{0}.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="GalaxyBoy_Stone">
+      <Name>A Token of Friendship</Name>
+      <Desc>At the start of the Scene, restore 10% of Max HP.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Smoke">
+      <Name>Smoke</Name>
+      <Desc>Take {0}% more damage. Can stack up to 10. Dice Power +1 if the character has 9+ Smoke. Lose 1 Smoke at the end of the Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Smoke_buf">
+      <Name>Smoke</Name>
+      <Desc>Deal {0}% more damage. Can stack up to 10. Dice Power +1 if the character has 9+ Smoke. Lose 1 Smoke at the end of the Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Smoke_Keyword">
+      <Name>Smoke</Name>
+      <Desc>Amplifies damage taken. At 9+ Smoke, all dice gain +1 Power. Stacks up to 10. -1 Smoke at the end of each Scene.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Butterfly_Seal">
+      <Name>Sealed</Name>
+      <Desc>{0} Speed dice become unusable. Leftmost dice is sealed first.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Freischutz_Bullet">
+      <Name>Magic Bullet</Name>
+      <Desc>Every 7th Melee or Ranged page targets random characters, including allies.</Desc>
+      <!--<Desc>The count rises each time the character uses a page. The seventh page gains 3-7 Power; the page has a 30% chance to target random characters including allies.</Desc>-->
+    </BattleEffectText>
+
+    <BattleEffectText ID="CB_BigBadWolf_Stealth">
+      <Name>Skulking in the Shadows</Name>
+      <Desc>Librarians who are not targeted by the Wolf cannot act.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wolf_Claw">
+      <Name>Claws of Savagery</Name>
+      <Desc>Gain +2 Strength for this Scene; cannot be targeted; cannot clash against enemies; inflict 1 Bleed next Scene for every successful hit.</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="Crying_Weak">
+      <Name>Manifested Mind</Name>
+      <Desc>All resistances change to "Fatal".</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="BurningGirl_Burn">
+      <Name>Cinder</Name>
+      <Desc>Offensive dice gain “[On Hit] Inflict 1 Burn”.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BurningGirl_Ember">
+      <Name>Ember</Name>
+      <Desc>Max. roll value of the first die of pages with 'Matchlight' increases by 1 for each stack. The die inflicts Burn equal to the stacks of Ember on hit. If there are 4 or more stacks of Ember, explode after rolling the first die with a 25% chance, inflicting damage equal to the max. roll value to self.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SingingMachine_Rhythm">
+      <Name>Rhythm</Name>
+      <Desc>While this effect is active, gain 1 Strength at the start of the Scene, and take +2-5 Stagger damage from attacks. Lose 1 Rhythm at the end of the Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Porccubus_Happy">
+      <Name>Thrill</Name>
+      <Desc>If upon taking a hit Thrill reaches 3 stacks, take 2-7 damage and Stagger damage, and lose this status.</Desc>
+    </BattleEffectText>
+
+		<BattleEffectText ID="onlypage_yujin_Keyword">
+			<Name>Yujin’s Exclusive Page</Name>
+			<Desc>Can only be set in the deck of Yujin’s Key page.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="onlypage_sweeper_Keyword">
+			<Name>Sweepers’ Exclusive Page</Name>
+			<Desc>Can only be set in the decks of Sweepers’ Key pages.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="onlypage_warp_Keyword">
+			<Name>Rose, Lesti, and Sen’s Exclusive Page</Name>
+			<Desc>Can only be set in the decks of Rose, Lesti, and Sen’s Key pages.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="onlypage_philip_Keyword">
+			<Name>Unstable Crying Children’s Exclusive Page</Name>
+			<Desc>Can only be set in the deck of Unstable Page of the Crying Children.</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="onlypage_lowel_Keyword">
+			<Name>Lowell’s Exclusive Page</Name>
+			<Desc>Can only be set in the deck of Lowell’s Key page.</Desc>
+		</BattleEffectText>
+    <BattleEffectText ID="onlypage_chulsan_Keyword">
+      <Name>Cecil and Mei’s Exclusive Page</Name>
+      <Desc>Can only be set in the decks of Cecil and Mei’s Key pages.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="HodFinal_CopiousBleeding">
+      <Name>Profound Wound</Name>
+      <Desc>If upon taking a hit Profound Wound reaches 5 stacks, take damage equal to 25% of Max HP.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="CardBuf_Latitia_Heart">
+      <Name>Laetitia’s Gift</Name>
+      <Desc>Explodes in {0} Scene(s)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Latitia_Heart">
+      <Name>Pit-a-pat</Name>
+      <Desc>Gain a stack every time a 'Gift' page explodes. At 3 stacks, the character is killed, and a Wee Witch’s Friend is spawned next Scene.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Latitia_Gift">
+      <Name>Giftee</Name>
+      <Desc>If the character clashes against an opponent other than the one that gave the Gift, take 2-7 damage at the start of the clash and 2 Bleed next Scene at a 40% chance.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BlackSwan_Nettle">
+      <Name>Nettle Clothing</Name>
+      <Desc>At the start of the Scene, gain Protection equal to the amount of this status effect. A stack is lost upon taking a hit.</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="HodFinal_BlackSwanDeadBro">
+      <Name>Disappeared Family</Name>
+      <Desc>If the amount of this status is 4 or higher at the start of the Scene, use a special Combat Page.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Laetitia_Gift_Keyword">
+      <Name>Small Gift</Name>
+      <Desc>A weak 1-Cost Combat Page. Enemies prioritize using it over other pages. Exhausts on use.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_thumb">
+      <Name>The Thumb’s Exclusive Page</Name>
+      <Desc>Can only be set in the decks of Thumb Members. (Soldato, Kalo, Katriel, and Denis’s Key pages)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_thumb2">
+      <Name>Kalo, Katriel, and Denis’s Exclusive Page</Name>
+      <Desc>Can only be set in the decks of Kalo, Katriel, and Denis’s Key pages.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_boris">
+      <Name>Boris’ Exclusive Page</Name>
+      <Desc>Can only be set in the deck of Boris’ Key page.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="bullet_keyword">
+      <Name>Ammunition</Name>
+      <Desc>When used or discarded, gives bonus effects to Ranged Combat Pages.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="DmgUp">
+      <Name>Damage Up</Name>
+      <Desc>All Offensive dice the character plays deal +{0} damage for the Scene.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Universe_DecreaseMaxBp">
+      <Name>Penetrated Boundary</Name>
+      <Desc>Max Stagger Resist decreased by {0}%.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Universe_Enlightenment">
+      <Name>Uncontainable Knowledge</Name>
+      <Desc>Max Stagger Resist decreased by 50% because of 'Enlightenment' in hand.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Alriune_Attacker">
+      <Name>Laurel Wreath of Atonement</Name>
+      <Desc>Only this character can damage Alriune (and someone wielding its power).</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Alriune_Debuf">
+      <Name>Aroma</Name>
+      <Desc>At the start of the Scene, take {0} Stagger damage and halve the stack. (Rounds down)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ResistWeakBP">
+      <Name>Stagger Resistance Down</Name>
+      <Desc>All Stagger damage resistances change to "Fatal" for this Scene.</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="Orchestra_Enthusiastic">
+      <Name>Fervent Adoration</Name>
+      <Desc>Uncontrollable. Upon becoming Staggered, this status is removed, and the character recovers from Stagger next Scene.
+	  Only takes Stagger damage from sane librarians; only takes physical damage from other librarians with this status. Takes no damage from the Abnormality's attacks (Excluding the Finale)</Desc>
+    </BattleEffectText>
+	<BattleEffectText ID="PowerUpOrchestraEgo">
+      <Name>Pianissimo</Name>
+      <Desc>Angela gains +2 Power in a clash against this character.</Desc>
+	</BattleEffectText>
+    <BattleEffectText ID="AllPowerUp">
+      <Name>Power Up</Name>
+      <Desc>Dice Power +{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="DecreaseSpeedTo1">
+      <Name>Fixed Speed: 1</Name>
+      <Desc>Speed is fixed at 1 for this Scene.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Alriune_Flower">
+      <Name>Petal</Name>
+      <Desc>If the character takes 4 hits from the librarian with the Abnormality page 'Spring’s Genesis', all characters take 3-7 Stagger damage, and the character becomes untargetable next Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="NoTargeting">
+      <Name>Untargetable</Name>
+      <Desc>This character cannot be targeted.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Orchestra_Affect">
+      <Name>Fervent Adoration</Name>
+      <Desc>Targets random characters, including allies. Deals +2-4 damage with attacks.</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="TakeBreakDamage2">
+      <Name>Stagger Vulnerable</Name>
+      <Desc>Take +2 Stagger damage from attacks for this Scene.</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="onlypage_nemo">
+      <Name>Nemo’s Exclusive Page</Name>
+      <Desc>Can only be set in the deck of Nemo’s Key page.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_bada">
+      <Name>Bada’s Exclusive Page</Name>
+      <Desc>Can only be set in the deck of Bada’s Key page.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_martina">
+      <Name>Martina's Exclusive Page</Name>
+      <Desc>Can only be set in the deck of Martina's Key page.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="NullifyPower">
+      <Name>Nullify Power</Name>
+      <Desc>Unaffected by Power-related effects for this Scene.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Alriune_Petal">
+      <Name>Petal</Name>
+      <Desc>When three petals bloom, a Mass Attack page will be used that Scene.</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="BigBird_Charm">
+      <Name>Enchanted</Name>
+      <Desc>Uncontrollable. Speed is fixed at 1. Uses ‘Dazzled’, targeting Big Bird.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BigBird_Eye">
+      <Name>Stared At</Name>
+      <Desc>For {0} Scenes, can only target the character that inflicted this status.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BigBird_Sleep">
+      <Name>Asleep</Name>
+      <Desc>Becomes Staggered for this Scene.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Lumberjack_Cut">
+      <Name>A Warm Heart</Name>
+      <Desc>Boost Offensive dice Power by 1-2 if the character has 3 or more Light at the start of the combat phase.</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="SnowQueen_Debuf">
+      <Name>Chill</Name>
+      <Desc>1 Chill is lost at the start of each Scene.
+At the start of the Scene, if the character has 4 or more Chill, gain 2 Bind and Feeble.
+If the character has 6 or more Chill, become Immobilized, and remove all Chill from self at the start of the next Scene.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Vibrate">
+      <Name>Vibration</Name>
+      <Desc>???</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="BloodyTree_Emotion_Damage">
+      <Name>Lean, Bloody Wings</Name>
+      <Desc>When this character engages in combat, all characters except themself, the target, and the librarian with the Abnormality page ‘Lean, Bloody Wings’ take 1-10 damage.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SnowQueen_Emotion_Shard">
+      <Name>Ice Splinter</Name>
+      <Desc>If the stack is 3 or higher at the end of the Scene, the character becomes Immobilized for the next Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SnowQueen_Emotion_Stun">
+      <Name>Frozen</Name>
+      <Desc>Cannot act for this Scene. If it's your enemy, they gain 6 Bind next Scene.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="HokmaFirstCounter">
+      <Name>Dormant</Name>
+      <Desc>Will awaken in {0} Scene(s).If a Heaven's Thorn or the Burrowing Heaven is Staggered, this does not go down.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HokmaFirstCounter2">
+      <Name>Dormant</Name>
+      <Desc>A Thorn will awaken or spawn in {0} Scene(s). If the Burrowing Heaven is Staggered, this does not go down.</Desc>
+    </BattleEffectText>
+	
+    
+     <BattleEffectText ID="Mountain_WeakResist">
+      <Name>Stagger Resistance Down</Name>
+      <Desc>All Stagger damage resistances change to "Fatal" for this Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Target">
+      <Name>Yellow Brick Road</Name>
+      <Desc>Targeted by The Road Home and Scaredy Cat.
+Scaredy Cat gains +5 Power when attacking this character.
+If all attacks of 'Friends! Let’s Go Home~!' fail to hit the target with this status, The Road Home's last attack is canceled.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Coward_Strength">
+      <Name>Courage</Name>
+      <Desc>Gains Strength equal to the amount of times The Road Home was attacked this Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Super_Cancel">
+      <Name>Home that Cannot be Reached</Name>
+      <Desc>The counter goes up whenever the page targeting the 'Home' is canceled.
+If this reaches 3, a powerful Combat Page is used the following Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Emotion_Target">
+      <Name>Stepping Stone</Name>
+      <Desc>The librarian with the Abnormality page deals 3 more damage whenever they attack a target in the right order.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Emotion_Protected">
+      <Name>A Road Walked Together</Name>
+      <Desc>If an ally intercepts an attack that initially targeted this character, their page gains 1-2 Power</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="DangoCreature_Emotion_Healed">
+      <Name>Division</Name>
+      <Desc>The total amount of HP recovered this Act.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="IndexRelease">
+      <Name>Blade Unlocked</Name>
+      <Desc>Dice Power +1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="IndexReleaseCount">
+      <Name>Unlocking</Name>
+      <Desc>Number of unique Combat Pages used this Act: {0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="IndexOnlyCardCount">
+      <Name>Mass Attack Timer</Name>
+      <Desc>Uses a Mass Attack every 4 Scenes; if no other Proxies are present, uses it every 2 Scenes. (Will be used in {0} Scenes)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="IndexReleaseCard2_Keyword">
+      <Name>Unlock-Ⅱ</Name>
+      <Desc>Combat Page with Slash (2-6), Pierce (1-3) dice; ‘[On Use] Exhaust this page and add 'Unlock-Ⅲ' to hand’</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="IndexReleaseCard3_Keyword">
+      <Name>Unlock-Ⅲ</Name>
+      <Desc>Combat Page with Slash (3-7), Pierce (2-4) dice; ‘[On Use] Restore 1 Light and draw 1 page’</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="onlypage_esther_Keyword">
+      <Name>Esther’s Exclusive Page</Name>
+			<Desc>Can only be set in the deck of Esther’s Key page.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_hubert_Keyword">
+      <Name>Hubert’s Exclusive Page</Name>
+			<Desc>Can only be set in the deck of Hubert’s Key page.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_gloria_Keyword">
+      <Name>Gloria’s Exclusive Page</Name>
+			<Desc>Can only be set in the deck of Gloria’s Key page.</Desc>
+    </BattleEffectText>
+    
+       <BattleEffectText ID="Decay">
+      <Name>Erosion</Name>
+      <Desc>At the end of the Scene, take {0} damage and lose 1 stack of Erosion. When taking a hit, take bonus damage and Stagger damage equal to the amount of this status.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ServantOfWrath_Wand">
+      <Name>Cane</Name>
+      <Desc>When Combat Page 'You Shall Fall…!' is used against this character, all dice on that page gain Power proportional to the amount of this status.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Nihil_Hatred">
+      <Name>Villain</Name>
+      <Desc>While the character has this effect, gain 3 Fragile at the start of the Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nihil_Meaningless">
+      <Name>Void</Name>
+      <Desc>While the character has this effect, gain 7 Feeble, Disarm, and Fragile at the start of the Scene</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Angry_Angry">
+      <Name>Wrath</Name>
+      <Desc>Uncontrollable; targets random characters including allies. At the start of the Scene, gain 2 Strength, restore 2 Light, and draw 2 more pages. (The drawback is nullified if the conditions for a certain Abnormality page are fulfilled.)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Angry_Friend">
+      <Name>Companion</Name>
+      <Desc>If a librarian with the corresponding Abnormality page defeats this character, all librarians restore 3 Light and recover 10 HP and Stagger Resist, and a new 'Companion' can be set.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nihil_MagicalPower">
+      <Name>Magical Girls</Name>
+      <Desc>While all four Magical Girl pages are in hand, the librarian gains 1-2 Strength each Scene, and is not affected by Feeble, Disarm, or Bind.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nihil_Nihil">
+      <Name>Nihil</Name>
+      <Desc>Inflict 5 Feeble, Disarm, and Bind on all other characters at the start of the Scene. The downsides of Abnormality pages 'Greed', 'Hate', and 'Wrath' are nullified in the following ways:
+Greed: Only the librarian can activate the effect.
+Hate: No longer take bonus Stagger damage upon losing a clash.
+Wrath: Regain control of the librarian.</Desc>
+    </BattleEffectText>
+     <BattleEffectText ID="onlypage_chun_Keyword">
+      <Name>Chun’s Exclusive Page</Name>
+      <Desc>Can only be set in the deck of Chun’s Key page.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="CardBuf_burnUp_Keyword">
+      <Name>Furious Fire Rending the Skies</Name>
+      <Desc>While this page is being used, inflict twice as much Burn using Combat Pages.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BurnSpread_Keyword">
+      <Name>Force of a Wildfire</Name>
+      <Desc>If this character becomes Staggered within the next {0} Scenes, all of their allies are inflicted with Burn equal to half of the amount of Burn this character had at the start of the next Scene. (Rounds down)</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="Silence_StopTime">
+      <Name>Silence</Name>
+      <Desc>The time constraint for the setup phase does not apply for this Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Silence_TraceCount">
+      <Name>Cumulating Time</Name>
+      <Desc>The number of Remnants of Time defeated so far.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Silence_TimeOut">
+      <Name>Unstoppable Time</Name>
+      <Desc>The special pattern will occur in {0} Scenes.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Silence_PowerClash">
+      <Name>Flown Time</Name>
+      <Desc>Gains +3 Power in a *clash*.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Silence_PowerAtk">
+      <Name>Flown Time</Name>
+      <Desc>Gains +3 Power in a *one-sided attack*.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="SmallBird_Punishment">
+      <Name>Punisher</Name>
+      <Desc>The first die of the first Combat Page played this Scene will gain +2-4 Power.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Smallbird_Beak">
+      <Name>Punishing Beak</Name>
+      <Desc>Damage +{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Clock_Thirteen">
+      <Name>The Thirteenth Toll</Name>
+      <Desc>Pages used: {0}
+Every 13th page gains +1-2 Power.
+Dice on the page gain: ‘[On Hit] Deal bonus damage equal to (Dice value)% of target's Max HP’.</Desc>
+    </BattleEffectText>
+  
+    <BattleEffectText ID="RedMist">
+      <Name>Red Mist</Name>
+      <Desc>Dice Power +{0}. Can stack up to 5.</Desc>
+    </BattleEffectText>
+
+<BattleEffectText ID="onlypage_redmist_Keyword">
+      <Name>The Red Mist’s Exclusive Page</Name>
+      <Desc>Can only be set in the deck of The Red Mist’s Key page.</Desc>
+    </BattleEffectText>
+
+<BattleEffectText ID="BinahFairy">
+      <Name>Fairy</Name>
+      <Desc>Take {0} damage every time the character rolls a die. At the end of the Scene, take {0} damage and halve the Fairy stack. (Rounds down)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedMistEgoReady">
+      <Name>Manifesting E.G.O</Name>
+      <Desc>Will manifest E.G.O in {0} Scene(s)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedMistEgo">
+      <Name>E.G.O Manifested</Name>
+      <Desc>Can use 'Great Split: Horizontal'. Dice Power +2. Take Stagger damage if the character fails to deal 40+ damage every Scene.
+This effect is disabled upon becoming Staggered.</Desc>
+    </BattleEffectText>
+
+<BattleEffectText ID="Fairy_Keyword">
+      <Name>Fairy X</Name>
+      <Desc>Take X damage every time a die rolls. At the end of the Scene, take X damage and halve the stack. (Rounds down)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Sin_Abnormality">
+      <Name>Sin</Name>
+      <Desc>If the amount of Sin exceeds a certain threshold at the start of the Scene, Judgement Bird will use a special Combat Page. Sin can be transferred to allies by attacking and damaging them. (Once per page)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Sin_AbnormalityCard">
+      <Name>Sin</Name>
+      <Desc>If the amount of Sin reaches 5 or greater, take damage equal to 10% of Max. HP, and remove all stacks. Sin can be transferred to another character by attacking and damaging them. (Once per page)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_rhino_Keyword">
+      <Name>The Rhino Team’s Exclusive page</Name>
+      <Desc>Can only be set in the decks of the Rhino and Maxim’s Key pages.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_reindeer_Keyword">
+      <Name>The Reindeer Team’s Exclusive page</Name>
+      <Desc>Can only be set in the decks of the Reindeer and Rudolph’s Key pages.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_myo_Keyword">
+      <Name>Myo’s Exclusive page</Name>
+      <Desc>Can only be set in the deck of Myo’s Key page.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_maxim_Keyword">
+      <Name>Maxim’s Exclusive page</Name>
+      <Desc>Can only be set in the deck of Maxim’s Key page.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_rudolph_Keyword">
+      <Name>Rudolph’s Exclusive page</Name>
+      <Desc>Can only be set in the deck of Rudolph’s Key page.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_nicolai_Keyword">
+      <Name>Nikolai’s Exclusive page</Name>
+      <Desc>Can only be set in the deck of Nikolai’s Key page.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="WarpChargeR">
+      <Name>Charge+</Name>
+      <Desc>Affects the properties of certain Combat Pages. 20 Charges can be stored at once.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="NicolaiTarget">
+      <Name>Mark</Name>
+      <Desc>Take 50% more damage and Stagger damage from attacks.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="MyoBerserk">
+      <Name>Savage Mode</Name>
+      <Desc>Dice Power +1</Desc>
+    </BattleEffectText>
+
+	  
+   <!-- 게부라 최종전 -->
+    <BattleEffectText ID="RedHoodFinal_Berserk">
+      <Name>Rage</Name>
+      <Desc>Lasts 2 Scenes. Gain 2 Strength each Scene, and use Mass Attack pages.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedHoodFinal_Rage">
+      <Name>Astray Rage</Name>
+      <Desc>Permanently persists. Gain 4 Strength each Scene, and use Mass Attack pages.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedHoodFinal_Mark">
+      <Name>Mark of the Hunt</Name>
+      <Desc>Take 50% more damage from the Mercenary's attacks.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedHoodFinal_Scar">
+      <Name>Scars</Name>
+      <Desc>At the start of the Scene, gain Bleed equal to the amount of Scars. If the amount is 6 or higher at the start of the Scene, take damage equal to 20% of Max. HP and remove all stacks. When attacked by the Wolf, take bonus damage equal to the current amount of Scars. The Wolf's dice gain +2 Power against targets with 4 or more Scars.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nothing_Skin">
+      <Name>Shell</Name>
+      <Desc>For the Scene, copy all resistances and Combat Pages of the character that was defeated on the previous Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nothing_Fear">
+      <Name>Terror</Name>
+      <Desc>If the character has 3 or more copies of 'Terror' in hand at the start of the Scene, take 10 damage and Stagger damage for every copy in hand, and become Immobilized for the Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nothing_Mimic">
+      <Name>Imitation</Name>
+      <Desc>Affects the properties of certain Combat Pages. Can stack up to 10. 1 Imitation is lost at the end of each Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nosferatu_Blood">
+      <Name>Blood</Name>
+      <Desc>Uses different Combat Pages depending on the amount of Blood. 1 Blood is lost whenever the character sustains damage greater than 5% of Max. HP.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nosferatu_Blight">
+      <Name>Fear of Water</Name>
+      <Desc>Lasts for 2 Scenes. At the start of the Scene, lose 5% of Max. HP and gain 1 Strength, 1 Haste, and 5 Bleed. If the character is at 50% HP or lower, become uncontrollable and attack allies at a 25% chance.</Desc>
+    </BattleEffectText>
+  
+    <!-- text changed -->
+    <BattleEffectText ID="egoChange_Keyword">
+      <Name>Synchronize</Name> <!-- 同化 -->
+      <Desc>Replace Combat Pages with unique ones. Deck and hand return to normal once status is disabled. Cannot be used with other Synchronize E.G.O or E.G.O Manifestation.</Desc>
+    </BattleEffectText>
+    
+    <!-- purple tear -->
+    <BattleEffectText ID="onlypage_purpleTear_Keyword">
+      <Name>The Purple Tear’s Exclusive Page</Name>
+      <Desc>Can only be set in the deck of The Purple Tear’s Key page.</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="StanceChange_Keyword">
+      <Name>Change Stance</Name>
+      <Desc>Remove all pages from deck and hand, and replace the deck with one built for the new stance. Afterwards, draw until the number of pages in hand equals the amount prior to changing stance.</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="StanceSlash">
+      <Name>Slashing Stance</Name>
+      <Desc>Slash Dice Power +2. Deal 50% additional damage with attacks.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="StancePenetrate">
+      <Name>Piercing Stance</Name>
+      <Desc>Pierce Dice Power +2. When inflicting status ailments using Combat Pages, apply twice as many stacks.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="StanceHit">
+      <Name>Blunting Stance</Name>
+      <Desc>Blunt Dice Power +2. Deal 50% additional Stagger damage with attacks.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="StanceDefense">
+      <Name>Guarding Stance</Name> <!-- don't need to equal to '방어' of '방어 주사위' -->
+      <Desc>Defensive Dice Power +2. Remove all status ailments.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="DefensePowerUp">
+      <Name>Defense Power-up</Name>
+      <Desc>Defensive dice gain +{0} Power for this Scene</Desc>
+    </BattleEffectText>
+
+    <!-- Chesed Boss -->
+    <BattleEffectText ID="Lumberjack_Heart_Final">
+      <Name>Warm Heart</Name>
+      <Desc>At the start of the Scene, restore Light by the amount of 'Warm Hearts'. (Has no base Light regen) 1 Warm Heart is lost at the end of each Scene. Can stack up to 3.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Lumberjack_Meat_Final">
+      <Name>Heart Fragments</Name>
+      <Desc>Increases the Power of certain Combat Pages Roland plays.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Lumberjack_Piece_Final">
+      <Name>Pieces of Mind</Name>
+      <Desc>If the amount of this status reaches 4, gain 1 Warm Heart next Scene, and remove 4 stacks of this. 1 Piece of Mind is lost at the end of each Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Super_Cancel_Final">
+      <Name>Home that Cannot Be Reached</Name>
+      <Desc>The counter goes up whenever the page targeting the 'Home' is canceled.
+If this reaches 2, a powerful Combat Page is used the following Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Coward_Final">
+      <Name>Cowardice</Name>
+      <Desc>Gains Feeble equal to the amount of times The Road Home was attacked this Scene.</Desc>
+    </BattleEffectText>
+    
+    <!-- Ozma -->
+    <BattleEffectText ID="Ozma_Oblivion">
+      <Name>Oblivion</Name>
+      <Desc>All Combat Pages change to unique ones. On hit, regain a random Combat Page from the original deck. Pages remaining: {0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_AwakenPumpkin_Strength">
+      <Name>Jack of the South</Name>
+      <Desc>Gain 2 Strength each Scene</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_AwakenPumpkin_Endurance">
+      <Name>Jack of the West</Name>
+      <Desc>Gain 2 Endurance each Scene</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_AwakenPumpkin_Quickness">
+      <Name>Jack of the North</Name>
+      <Desc>Gain 2 Haste each Scene</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_AwakenPumpkin_BreakDmg">
+      <Name>Jack of the East</Name>
+      <Desc>Deals +3 Stagger damage with attacks</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_LibrarianToPumpkin">
+      <Name>Lost Memories</Name>
+      <Desc>All Combat Pages change to unique ones. All stats change. Other passive abilities of this character will not activate.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_PumpkinToLibrarian">
+      <Name>Perfect Jack</Name>
+      <Desc>Uses the Key page and Combat Pages of the librarian that turned into a pumpkin. Gains 2 Strength, 2 Endurance, 2 Haste, and a buff that increases Stagger damage by 3 every Scene.</Desc>
+    </BattleEffectText>
+
+    <!-- Wizard -->
+    <BattleEffectText ID="Wizard_Lumberjack">
+      <Name>Warm-hearted Woodsman</Name>
+      <Desc>After dealing 30 or more damage to enemies in a single Scene during this character's phase, fully restore Light of all allies including self.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Scarecrow">
+      <Name>Scarecrow Searching for Wisdom</Name>
+      <Desc>When this character's phase starts, add a copy of 'Wisdom' and 4 special Combat Pages to hand, and increase the number of Speed dice to 5.
+If failed to restore all librarians to their original forms by the end of the phase, reduce the number of Speed dice to 1.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Lion">
+      <Name>Scaredy Cat</Name>
+      <Desc>When this character's phase starts, a copy of 'Courage' is added to hand. The number of Speed dice is increased to 5.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_WaybackHome">
+      <Name>The Road Home</Name>
+      <Desc>Add 4 special Combat Pages to hand.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Ozma">
+      <Name>Ozma</Name>
+      <Desc>Add a copy of 'Pumpkify' and 3 special Combat Pages to hand.
+The Cost of 'Pumpkify' is reduced to 0 when this character's phase starts, and one Speed die becomes the fastest.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Scarecrow_Debuf">
+      <Name>Silk Sack of Sawdust</Name>
+      <Desc>The number of Speed dice is reduced to 1.</Desc>
+    </BattleEffectText>
+
+    <!-- Wizard -->
+    <BattleEffectText ID="Wizard_Lumberjack_Original">
+      <Name>Warm-hearted Woodsman</Name>
+      <Desc>Must be restored to their original form.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Lion_Original">
+      <Name>Scaredy Cat</Name>
+      <Desc>Must be restored to their original form.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_WaybackHome_Original">
+      <Name>The Road Home</Name>
+      <Desc>Must be restored to their original form.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Ozma_Original">
+      <Name>Ozma</Name>
+      <Desc>Must be restored to their original form.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Wizard_Lumberjack_LightOfF">
+      <Name>Heart of Lead</Name>
+      <Desc>Start with less Light, and the maximum Light capacity is reduced.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Scarecrow_Fail">
+      <Name>Silk Sack of Sawdust</Name>
+      <Desc>The number of Speed dice is reduced to 1 until the end of the battle.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Lion_Courage">
+      <Name>Courage</Name>
+      <Desc>Purge all Feeble, Disarm, and Fragile from self. Gain 10 Strength and 5 Haste.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Lion_Coward">
+      <Name>Cowardice</Name>
+      <Desc>5 Feeble, Disarm, and Fragile is applied to self every Scene until the end of the battle.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Ozma_Support">
+      <Name>Helping Jack</Name>
+      <Desc>Offensive dice gain +2 Power for this Scene.</Desc>
+    </BattleEffectText>
+
+    <!-- 환상체카드 -->
+    <BattleEffectText ID="Ozma_revive">
+      <Name>Powder of Life</Name>
+      <Desc>Can revive from the effect of the Abnormality page 'Powder of Life'</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_potion">
+      <Name>Liquid Courage</Name>
+      <Desc>Deal +6 damage with attacks; take +3 damage from attacks</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_poket">
+      <Name>Silk Sack of Sawdust</Name>
+      <Desc>On clash win, recover 8 Stagger Resist; on clash lose, take 4 Stagger damage</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_heart">
+      <Name>Heart of Lead</Name>
+      <Desc>Every Scene, lose 5 HP and restore 1 additional Light</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_home">
+      <Name>Home that Cannot Be Reached</Name>
+      <Desc>On clash lose, deal 4 Stagger damage to self and add +2 Power to the next die</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_change">
+      <Name>Transformation</Name>
+      <Desc>Upon a successful attack in a clash, destroy the opponent's next die at a 50% chance; upon taking a hit in a clash, destroy the next die of self at a 50% chance.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_emerald">
+      <Name>Emerald</Name>
+      <Desc>Any character that hits this restores 1 Light for this Scene. (Up to 2 per character)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_xiao_Keyword">
+      <Name>Xiao’s Exclusive Page</Name>
+      <Desc>Can only be set in the deck of Xiao’s Key page.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_chunMiris_Keyword">
+      <Name>Chun and Miris’ Exclusive Page</Name>
+      <Desc>Can only be set in the decks of Chun and Miris’ Key pages.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BreakProtection_Keyword">
+      <Name>Stagger Protection X</Name>
+      <Desc>Take X less Stagger damage from attacks for the Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BreakProtection">
+      <Name>Stagger Protection</Name>
+      <Desc>Take {0} less Stagger damage from attacks this Scene.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="NullifyPowerReady">
+      <Name>Pú Láo</Name>
+      <Desc>The effect of Pú Láo will activate in {0} Scene(s), nullifying changes to dice Power</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="BurnDown">
+      <Name>Burn Damage Shield</Name>
+      <Desc>Take 10 less damage from Burn for the Scene</Desc>
+    </BattleEffectText>
+
+    <!-- Binah Final Stuff -->
+    <BattleEffectText ID="Sin_Abnormality_Final">
+      <Name>Mark of Sin</Name>
+      <Desc>If the amount of 'Marks of Sin' exceeds a certain threshold at the start of the Scene, Roland will use a special Combat Page. A Mark of Sin can be transferred to another character (excluding Roland) by attacking and damaging them. (Once per page)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SmallBird_Punish_Final">
+      <Name>Punishee</Name>
+      <Desc>Take +8 damage from Roland's attacks.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SmallBird_Vigil_Final">
+      <Name>Vigilance</Name>
+      <Desc>Gains Strength equal to the amount of times allies with lower Speed were attacked this Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Final_BigBird_Charm">
+      <Name>Enchanted</Name>
+      <Desc>Lasts {0} Scene(s). Uncontrollable. Speed is fixed at 1. Uses a special Combat Page, targeting Roland. Takes no physical damage when hit by allies. Removed when the character is Staggered.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Final_BigBird_Darkness">
+      <Name>Darkness</Name>
+      <Desc>Unaffected by Power-related effects for {0} Scenes</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Final_BigBird_Darkness_Keyword">
+      <Name>Darkness</Name>
+      <Desc>A status that lasts for 2 Scenes, nullifying Power-related effects.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="ApocalypseBird_Sin">
+      <Name>Heavy Guilt</Name>
+      <Desc>Take {0} additional Stagger damage when hit. If the amount is 5 or greater at the end of the Scene, take 10% of Max. HP as damage and remove all stacks.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ApocalypseBird_Charm">
+      <Name>Horrified</Name>
+      <Desc>All resistances change to "Fatal". At the start of the Scene, gain 4 Paralysis.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ApocalypseBird_BigEye">
+      <Name>Apocalypse Bird’s Egg - Big Eyes</Name>
+      <Desc>Unaffected by Power-related effects.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ApocalypseBird_LongArm">
+      <Name>Apocalypse Bird’s Egg - Long Arms</Name>
+      <Desc>Is immune to status ailments while this effect is active. At the start of the Scene, purge all status ailments.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ApocalypseBird_SmallBeak">
+      <Name>Apocalypse Bird’s Egg - Small Beak</Name>
+      <Desc>The cost of 2 random pages in the librarian's hand rise by 1 for the Scene</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="ApocalypseBird_Apocalypse">
+      <Name>The Beast</Name>
+      <Desc>The dice of characters targeted by/attacking this character are unaffected by Power gain or loss. Said dice have their min and max values lowered by 3.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ApocalypseBird_Peace">
+      <Name>Intruder</Name>
+      <Desc>Lasts {0} Scene(s). All attacks done by this character deal 2-4 less physical and Stagger damage. Take 1-2 bonus damage when hit.</Desc>
+    </BattleEffectText>
+  
+    <BattleEffectText ID="onlypage_yan_Keyword">
+      <Name>얀샋ㄷ요무’s Exclusive Page</Name>
+			<Desc>Can only be set in the deck of 얀샋ㄷ요무’s Key page.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="YanArea_Ready">
+      <Name>Distorted Blade</Name>
+      <Desc>Will use Distorted Blade in {0} Scenes.</Desc>
+    </BattleEffectText>
+
+    <!-- 백야 전투 -->
+    <BattleEffectText ID="WhiteNight_Hokma">
+      <Name>True Salvation</Name>
+      <Desc>If the Patron Librarian dies, all librarians die with him.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="PlagueDoctor_Bless">
+      <Name>Blessing</Name>
+      <Desc>I shall heal you, curing you of all disease and injury you possess.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_Awe">
+      <Name>Reverence</Name>
+      <Desc>At the end of the Scene, take {0} Stagger damage, and lose 1 stack of this status.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_ApostlePowerUp">
+      <Name>Revelation</Name>
+      <Desc>Offensive dice of Apostles gain +2 Power when engaging a character with this status.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_BeApostle">
+      <Name>Calling</Name>
+      <Desc>This character will die at the end of the Scene; a Guardian Apostle will be spawned when this happens.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_SuspendedAnimation">
+      <Name>Suspended</Name>
+      <Desc>If HP drops to 2 or lower, will be Staggered until resurrected.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_Protection">
+      <Name>Crown of Thorns</Name>
+      <Desc>Gain a permanent 100 Protection and 100 Stagger Protection for this battle.</Desc> <!-- Need dev confirmation here -->
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_WeakResist">
+      <Name>Unguarded</Name>
+      <Desc>All resistances change to "Fatal".</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Emotion_PlagueDoctor_Blessed">
+      <Name>Blessed</Name>
+      <Desc>Has been Baptized this Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Emotion_PlagueDoctor_Bless_Stack">
+      <Name>Baptist</Name>
+      <Desc>Used 'Baptism' {0} time(s) this reception. (Counts up to 12 times)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Emotion_BlueStar_MartyrBuf">
+      <Name>Martyr</Name>
+      <Desc>On a successful attack this Scene, deal 4-6 bonus Stagger damage but take 1-3 damage.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Emotion_BlueStar_SoundBuf_Cool">
+      <Name>A Nostalgic Sound</Name>
+      <Desc>The effect of the Abnormality page 'A Nostalgic Sound' (denoted by the status effect 'I Can Hear the Sound of the Star!') will activate in {0} Scenes.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Emotion_BlueStar_SoundBuf">
+      <Name>I Can Hear the Sound of the Star!</Name>
+      <Desc>Deal +2-4 Stagger damage with attacks this Scene.</Desc>
+    </BattleEffectText>
+
+
+    <!-- hana -->
+    <BattleEffectText ID="onlypage_hana_Keyword">
+      <Name>Mirinae, Harold, and Olivier’s Exclusive Page</Name>
+      <Desc>Can only be set in the decks of Mirinae, Harold, and Olivier’s Key pages.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="HanaPassive1">
+      <Name>Geon</Name>
+      <Desc>Gain 1 Strength, and deal 2 more damage and Stagger damage with attacks this Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HanaPassive2">
+      <Name>Gon</Name>
+      <Desc>Gain 1 Endurance, and take 30% less damage and Stagger damage from attacks this Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HanaPassive3">
+      <Name>Gam</Name>
+      <Desc>Restore 1 Light.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HanaPassive4">
+      <Name>Ri</Name>
+      <Desc>Draw 1 page.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="HanaSpecialCard1">
+      <Name>Bonus Effect</Name>
+      <Desc>Geon - ‘On Use: All dice on this page gain +1 Power’</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HanaSpecialCard2">
+      <Name>Bonus Effect</Name>
+      <Desc>Gon - ‘Combat Start: Gain 2 Protection and Stagger Protection’</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HanaSpecialCard3">
+      <Name>Bonus Effect</Name>
+      <Desc>Gam - ‘On Use: Restore 1 Light’
+Ri - ‘On Use: Draw 2 pages’</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="BlackSilenceSpecial">
+      <Name>Furioso</Name>
+      <Desc>Number of The Black Silence’s Combat Pages used: {0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BlackSilenceCardCount">
+      <Name>The Black Silence</Name>
+      <Desc>When the amount of this status is 2, all dice on the next played Combat Page will gain +2 Power.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="RolandAndOlivier">
+      <Name>Duel</Name>
+      <Desc>Gain bonus Max HP and Max Stagger Resist.</Desc>
+    </BattleEffectText>
+
+    <!--세븐 협회-->
+    <BattleEffectText ID="DanteGraspInformation">
+      <Name>Information Assessment</Name>
+      <Desc>{0} is changed to "Normal" for this Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="DanteWeakPointDetection">
+      <Name>Exposed Weakness</Name>
+      <Desc>A "Weak" resistance is changed to "Fatal" for this Act.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Engard_Keyword">
+      <Name>En Garde</Name>
+      <Desc>A 2-Cost Combat Page with a Slash (6-10) die; 'Exhausts on use; [On Use] Give 1 Strength to target and self next Scene'</Desc>
+    </BattleEffectText>
+
+    <!-- sword -->
+    <BattleEffectText ID="Giveuptheflesh_Keyword">
+      <Name>To Claim Their Bones</Name>
+      <Desc>A 5-Cost Combat Page with a Slash (14-23) Counter; 'Exhausts on use; [On Hit] Inflict 5 Paralysis and 3 Bleed; cannot hold 2 at once'</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_kim">
+      <Name>Bamboo-hatted’s Exclusive Page</Name>
+      <Desc>Can only be set in the deck of Bamboo-hatted Kim’s Key page.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Vibrate_Re">
+      <Name>Vibration</Name>
+      <Desc>Can be stacked up to 7</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_argalia_Keyword">
+      <Name>Argalia’s Exclusive Page</Name>
+      <Desc>Can only be set in the deck of Argalia’s Key page.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_elena_Keyword">
+      <Name>Elena’s Exclusive Page</Name>
+      <Desc>Can only be set in the deck of Elena’s Key page.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_pluto_Keyword">
+      <Name>Pluto’s Exclusive Page</Name>
+      <Desc>Can only be set in the deck of Pluto’s Key page.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_philip2_Keyword">
+      <Name>Philip’s Exclusive Page</Name>
+      <Desc>Can only be set in the deck of Philip’s Key page.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_tanya_Keyword">
+      <Name>Tanya’s Exclusive Page</Name>
+      <Desc>Can only be set in the deck of Tanya’s Key page.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Librarian_PuppetThread">
+      <Name>Puppeteer’s Strings</Name>
+      <Desc>At the start of the Scene, gain 1 Strength or Endurance. HP cannot go below 1. If HP reaches 1 or the ally with the passive ability 'Puppet Strings' is not present, this status is removed at the end of the Scene.</Desc>
+    </BattleEffectText>
+
+
+    
+    <BattleEffectText ID="HeavySmoke">
+      <Name>Suffocating Haze</Name>
+      <Desc>Can stack up to 3. The character is inflicted with a random status ailment (Bleed, Paralysis, Feeble, Disarm, Bind, or Fragile) for each stack of Suffocating Haze at the start of the next Scene, losing all Suffocating Haze.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HeavySmoke_buf">
+      <Name>Suffocating Haze</Name>
+      <Desc>Can stack up to 3. The character is inflicted with a random status ailment (Bleed, Paralysis, Feeble, Disarm, Bind, or Fragile) for each stack of Suffocating Haze at the start of the next Scene, losing all Suffocating Haze.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HeavySmoke_Keyword">
+      <Name>Suffocating Haze</Name>
+      <Desc>Stacks up to 3. Character receives a random ailment (Bleed, Paralysis, Feeble, Disarm, Bind, or Fragile) for each stack of this effect at the start of next Scene. Loses all stacks.</Desc>
+    </BattleEffectText>
+
+    <!--검은침묵 3페이즈-->
+   <BattleEffectText ID="SpiritLink">
+      <Name>Soul Link</Name>
+      <Desc>Stagger Resist does not go below 1.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BlackEnergy">
+      <Name>Dark Presence</Name>
+      <Desc>Lasts 1 Scene. Dice Power +1 when engaging Angelica.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteEnergy">
+      <Name>Ashen Presence</Name>
+      <Desc>Lasts 1 Scene. Dice Power +1 when engaging Roland.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BlackMark">
+      <Name>Dark Mark</Name>
+      <Desc>Targeted by Roland. Roland's Offensive dice gain +3 Power against this character.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BlackFrantic">
+      <Name>Rampaging</Name>
+      <Desc>At the start of the Scene, lose 50% of current Stagger Resist (Only once). Gain 2 Strength and Haste every Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteLoss">
+      <Name>Grief-stricken</Name>
+      <Desc>Inflicted with 3 Bind, Paralysis, and Fragile every Scene.</Desc>
+    </BattleEffectText>
+
+    <!--검은침묵 4페이즈-->
+    <BattleEffectText ID="Roland_4th_Lie">
+      <Name>Lies</Name>
+      <Desc>Randomize the Costs of all Combat Pages whose original Cost is 3 or less.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_Weapon">
+      <Name>Weapon Break</Name>
+      <Desc>Ignores Roland's Scar effects. Offensive dice gain +1 Power against Roland.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_DmgReduction_Hit">
+      <Name>Scars - Bruises</Name>
+      <Desc>Take 2-5 less damage from Blunt attacks. When hit by a Blunt attack, 25% chance to reduce incoming damage to 0.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_DmgReduction_Penetrate">
+      <Name>Scars - Punctures</Name>
+      <Desc>Take 2-5 less damage from Pierce attacks. When hit by a Pierce attack, 25% chance to reduce incoming damage to 0.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_DmgReduction_Slash">
+      <Name>Scars - Cuts</Name>
+      <Desc>Take 2-5 less damage from Slash attacks. When hit by a Slash attack, 25% chance to reduce incoming damage to 0.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_Blood">
+      <Name>Blood</Name>
+      <Desc>Defensive dice gain 1-2 Power this Scene. If a Defensive die loses in a clash, take 3-6 Stagger damage.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_Gaze">
+      <Name>Leer</Name>
+      <Desc>Gain 1 Strength this Scene. If an Offensive die fails to deal damage, take 3-6 Stagger damage. Strength gain increases by 1 whenever this effect activates.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_Curiosity">
+      <Name>Curiosity</Name>
+      <Desc>For this Scene, on hit, shuffle two random pages in target's hand back into their deck.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_Kiss">
+      <Name>Kiss</Name>
+      <Desc>Prioritizes targeting librarians with Bind. For this Scene, on clash win, inflict Ice Splinter to the opponent. At the end of the Scene, characters with 3 or more Ice Splinters become Immobilized for the next Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_NonTargetable">
+      <Name>Ready to Act</Name>
+      <Desc>For {0} Scenes, does not act, cannot be targeted, and cannot take damage from status ailments. When the character resumes action after {0} Scenes, all status ailments are purged.</Desc>
+    </BattleEffectText>
+
+
+  <!--Distorted Philip-->    
+   <BattleEffectText ID="Arrest">
+     <Name>Restraint</Name>
+     <Desc>This status is not lost at the end of the Scene. If Philip hits a character with 3 or more stacks of this status, they're Immobilized for the next Scene.</Desc>
+   </BattleEffectText>
+   <BattleEffectText ID="Arrest_buf">
+     <Name>Restraint</Name>
+     <Desc>This status is not lost at the end of the Scene.</Desc>
+   </BattleEffectText>
+   <BattleEffectText ID="Arrest_Keyword">
+     <Name>Restraint</Name>
+     <Desc>This status is not lost at the end of the Scene.</Desc>
+   </BattleEffectText>
+
+
+    <!--잔향악단 중층-->
+    <BattleEffectText ID="Tanya_Killed">
+      <Name>Violent Sandstorm</Name>
+      <Desc>For the duration of the Act, deal +3 damage with attacks.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Jaeheon_Killed">
+      <Name>Unbound Flesh</Name>
+      <Desc>For the duration of the Act, gain 1-3 Haste at the start of the Scene, and all dice gain +1 Power.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Jaeheon_String">
+      <Name>Puppet Strings</Name>
+      <Desc>{0} Speed dice with the lowest Speed become uncontrollable, targeting allies for attacks. (Can stack up to 3) Removed if Jae-heon dies.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Oswald_String">
+      <Name>Red Strings</Name>
+      <Desc>In {0} Scenes, if two or more characters have this status, they die, and Mx. Bunny is spawned. If a librarian has this status, they gain 10 Haste at the start of the Scene. Removed if Oswald or Jae-heon dies.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Oswald_Vulnerable">
+      <Name>Vulnerability</Name>
+      <Desc>All resistances change to "Fatal" for this Scene.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="RolandWeak">
+      <Name>Weary</Name>
+      <Desc>Roland's Combat Pages are weakened.</Desc>
+    </BattleEffectText>
+
+    <!-- added -->
+    <BattleEffectText ID="DeadInBattle">
+      <Name>Incapacitated</Name>
+      <Desc>Cannot participate in battle this Act</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="ClawCounter">
+      <Name>Nullifier</Name>
+      <Desc>Can block an attack whose dice value is 30 or greater once</Desc>
+    </BattleEffectText>
+
+
+    <!-- 케테르 완전 개방 전투-->
+    <!-- 심장 -->
+    <BattleEffectText ID="KeterFinal_Eager">
+      <Name>Hankering</Name>
+      <Desc>While this character is on the offensive, gain Strength equal to the amount of this status. The amount of Hankering is reset when this character is Staggered or when the Scene in which Aspiration goes on the offensive ends.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_FerventBeats">
+      <Name>Fervent Beats</Name>
+      <Desc>The character dies in {0} Scenes. At the start of each Scene, gain 4 Strength, Endurance, Haste, and Protection.
+Stagger damage resistances change to "Ineffective".
+When Aspiration is not on the offensive, this character uses special Combat Pages.
+When this effect activates, the 'Craving' effect is removed.
+This effect is removed when Aspiration's offensive move is over.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_Lung1">
+      <Name>Craving - The Faith</Name>
+      <Desc>At the start of the Scene, gain Strength and Endurance equal to half the amount of 'Hankering' Aspiration has (rounded up).</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_Lung2">
+      <Name>Craving - The Pain</Name>
+      <Desc>Whenever an ally is defeated, give 4 Hankering to Aspiration.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_Lung3">
+      <Name>Craving - The Effort</Name>
+      <Desc>On hit, give 1 Hankering to Aspiration. If the character fails to deal any damage by the end of the Scene, Aspiration loses 2 Hankering.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_Lung4">
+      <Name>Craving - The Wait</Name>
+      <Desc>At the end of the Scene, give 3 Hankering to Aspiration.</Desc>
+    </BattleEffectText>
+
+    <!-- 피노키오 -->
+    <BattleEffectText ID="KeterFinal_FailLying">
+      <Name>Why is it Bad?</Name>
+      <Desc>The lie has been busted. Inflicted with 4 Feeble and Disarm, and Stagger damage resistance are changed to "Fatal".</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SuccessLying">
+      <Name>Lalala~</Name>
+      <Desc>The lie hasn't been caught. Gain 4 Strength and Endurance.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_ChangeCostAll">
+      <Name>A Song of Lies</Name>
+      <Desc>At the start of the Scene, the Costs of all Combat Pages whose original Cost is 3 or less in all characters' hands are randomized.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_ChangeLibrarianHands">
+      <Name>A Song of Curiosity</Name>
+      <Desc>At the start of the Scene, all librarians shuffle all Combat Pages into the draw pile and then draw 3.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_DoubleEmotion">
+      <Name>Seed of Light</Name>
+      <Desc>Emotion heightens twice as fast this Act.</Desc>
+    </BattleEffectText>
+
+    <!-- 아무 말 없는 소녀 -->
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Nail">
+      <Name>Nails</Name>
+      <Desc>Take {0} additional damage from Hammer. Lose 1 Nail at the end of the Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Gaze_Attack">
+      <Name>Anxiety</Name>
+      <Desc>For this Scene, any dice played in engagements involving this character are unaffected by Power gain or loss. Deal +1~2 damage with attacks. If the character fails to deal any damage with Offensive dice this scene, take 15 Stagger damage.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Gaze_Defense">
+      <Name>Fright</Name>
+      <Desc>For this Scene, any dice played in engagements involving this character are unaffected by Power gain or loss. Deal +1~2 Stagger damage on a deflect. If the character fails to deal any deflect damage with Block dice this scene, take 15 Stagger damage.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Gaze_Attacked">
+      <Name>Self-reproach</Name>
+      <Desc>For this Scene, any dice played in engagements involving this character are unaffected by Power gain or loss. Take 1~2 less Stagger damage from attacks. If the character does not receive any damage this Scene, take 15 Stagger damage.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Light">
+      <Name>Faint Glimmer</Name>
+      <Desc>If you don't use 9 unique E.G.O pages until the end of this phase……</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Hand_Target">
+      <Name>Target Affixed</Name>
+      <Desc>This character's attacks cannot be redirected.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="KeterFinal_Light">
+      <Name>A Warm Light</Name>
+      <Desc>You feel the strength to take a step forward.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_Cogito">
+      <Name>The Final Fragment of Light</Name>
+      <Desc>A new E.G.O page can be used!</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="KeterFinal_Angela_Ego">
+      <Name>Fragments of Light</Name>
+      <Desc>Number of unique E.G.O pages used: {0}</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="CardBuf_KeterFinal_SilenceGirl_CostDown">
+      <Name>Cost Down</Name>
+      <Desc>Cost -{0}, Page Dice Power -{0}. Resets when discarded or used.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="CardBuf_KeterFinal_SilenceGirl_CostUp">
+      <Name>Cost Up</Name>
+      <Desc>Cost +{0}, Page Dice Power +{0}. Resets when discarded or used.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SilenceGirl_BlackHand_Attacked">
+      <Name>Conviction</Name>
+      <Desc>Dice Power +10</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Sin_Ready">
+      <Name>Impending Break</Name>
+      <Desc>In {0} Scenes, uses a powerful Combat Page against characters with Guilt. The attack is delayed for a Scene if this character is Staggered.</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="QuietKid_Hammer_Buf">
+      <Name>Nails</Name> <!-- used in '못과 망치' -->
+      <Desc>When hit by a Blunt attack, the character takes 5 damage for every stack of this status, which is then removed.</Desc>
+    </BattleEffectText>
+
+    <!-- 환상체 책장: 열망-->
+    <BattleEffectText ID="HeartofAspiration_Heart">
+      <Name>Aspiration</Name>
+      <Desc>Increase Max HP by 15%. (Current HP increases accordingly) Gain 1-2 Speed.</Desc>
+    </BattleEffectText>
+    <!-- 황상체 책장: 그리웠던 옛날의 포옹-->
+    <BattleEffectText ID="Teddy_Head">
+      <Name>Nostalgic Embrace of the Old Days</Name>
+      <Desc>Upon winning a clash, deal bonus Stagger damage equal to the dice value at a 20% chance. Clashing against the same target multiple times will increase the likelihood.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="oneinch_penetrate">
+      <Name>Pinpoint Breakthrough</Name>
+      <Desc>A 2-Cost Combat Page with Blunt (5-10), Pierce (15-24) dice; ‘[On Use] Exhaust this page; cannot hold 2 at once'</Desc>
+    </BattleEffectText>
+
+    <!-- New May 16th -->
+    <BattleEffectText ID="ExhaustOnUse_Keyword">
+      <Name>Single-use</Name>
+      <Desc>Page is exhausted on use. Exhausted pages are removed from play until the end of the Act.</Desc>
+    </BattleEffectText>
+
+    <!-- If you don't need this keyword, you can remove it.  -->
+    <BattleEffectText ID="Exhaust_Keyword">
+      <Name>Exhaust</Name>
+      <Desc>Page will be removed from play for this Act.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Instant_Keyword">
+      <Name>On Play</Name>
+      <Desc>Page's effect immediately takes place when slotted on a Speed die.</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="Freischutz_Request">
+      <Name>Requested Target</Name>
+      <Desc>Take +3-5 damage from the character with the Abnormality page 'Request'.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="CardBuf_NihilClown_Card">
+      <Name>Meaningless Struggle</Name>
+      <Desc>Gain 1 'Step Toward Futility' upon losing a clash using the page with this symbol.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Buf_NihilClown_Card">
+      <Name>Steps Toward Futility</Name>
+      <Desc>When this reaches 4, gain 'Pointless' next Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="NihilClown_Card">
+      <Name>Pointless</Name>
+      <Desc>Gain 5 Protection each Scene. Become immune to status ailments.
+When hit, the attacker is inflicted with 1 Erosion and Fragile next Scene. (Twice per Scene)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nosferatu_BloodHope">
+      <Name>Blood</Name>
+      <Desc>3 stacks of Blood are lost at the end of each Scene.
+At 0 Blood: Lose 4-8 Stagger Resist at the start of the Scene. 
+At 1+ Blood: When rolling an Offensive die, lose 2-7 HP, and boost damage by 3-7.
+At 15+ Blood: Gain 2 Strength. The amount of Blood is reset at the start of the next Scene.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ApocalypseBird_BigEyeEffect">
+      <Name>Enchanted by Big Bird</Name>
+      <Desc>Targets the character with the Abnormality page &lt;'Big Eyes'&gt;. Deals +2-4 damage with attacks.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Matan_Flame">
+      <Name>Dark Flame</Name>
+      <Desc>The "Endured/Ineffective" resistances of the Key Page change to "Weak/Fatal".</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_bayyard">
+      <Name>Bayard’s Exclusive Page</Name>
+      <Desc>Can only be set in the deck of Bayard’s Key page.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_cor">
+      <Name>Yae’s Exclusive Page</Name>
+      <Desc>Can only be set in the deck of Yae’s Key page.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_awl">
+      <Name>Allen’s Exclusive Page</Name>
+      <Desc>Can only be set in the deck of Allen’s Key page.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_usett">
+      <Name>The Udjat’s Exclusive Page</Name>
+      <Desc>Can only be set in the deck of an Udjat’s Key Page.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_mirae">
+      <Name>Irina’s Exclusive Page</Name>
+      <Desc>Can only be set in the deck of Irina’s Key Page.</Desc>
+    </BattleEffectText>
+
+    
+  </effectTextList>
+</BattleEffectTextRoot>

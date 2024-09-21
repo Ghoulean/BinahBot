@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GroupName>RustyChainGroup</GroupName>
+  <Character ID="Jikan">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">各自適当に上手くやれよ。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">しょっぱなから逃げるわけじゃないだろうな？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">今回の仕事も失敗したら、皆黒雲会に首を飛ばされるだろうな……。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">剣契の助けなんか要らなさそうだな？</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">コレはないだろ…あいつらが…卑怯な手を……。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">クソッ……隊長はどうしてあんなやつを組み込んだんだ？</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">これだから怖がりなやつらは微妙なんだけどな……。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">ちゃんとやれよ？俺１人で全部片付けてるだろ。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">死ね！！！ははっ！情けねぇな。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">こんなので疾病級なのか……。</BattleDialog>
+    </Type>
+  </Character>
+
+  <Character ID="RustyChainGroup">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">黒雲会が何だからってこんなことまで……。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">弱点を握るためだからあまり文句言うな。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">ジカンの言う通り、今回の仕事に失敗すればうちの組織も安全では無くなるだろうな。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">おい！全員しっかりしろよ。ブツクサ言ってる場合か？</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">弱っちい奴らだな。気張る必要もなかったよ。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_0">こんなことだけで黒雲会の弱点を握れるって？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_0">だるいな……帰るか。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">死にたくない……悔しい……。</BattleDialog>
+      <BattleDialog ID="DEATH_0">一体どんだけ強いんだよ……？</BattleDialog>
+      <BattleDialog ID="DEATH_0">やっぱり舐めて掛かるんじゃなかったよ……。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">面倒になったな。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">まともに戦えるやつは居ないのか？</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">いっそ黒雲会と正面からぶつかる方が楽だったかもな。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">思ったより早く終わりそうだな。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">終わりがないな……いつ終わるんだ？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">結構しぶとく耐えたが…結局ただの青二才だったな。</BattleDialog>
+    </Type>
+  </Character>
+
+</BattleDialogRoot>

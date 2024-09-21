@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <PassiveDesc ID="1303011">
+    <Name>Shimmering</Name>
+    <Desc>At the start of each Scene, exhaust all pages in hand and deck; add new pages to hand. Their Cost becomes 0.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1303012">
+    <Name>Rough-and-Ready</Name>
+    <Desc>HP does not go below 30%. If HP drops to 40% or lower, proceeds to the next phase.</Desc>
+  </PassiveDesc>
+  
+  <!--2페이즈에 나옴-->
+  <PassiveDesc ID="1303013">
+    <Name>Feast and Furious</Name>
+    <Desc>When the phase begins, defeat all Fresh Meats and recover HP based on the amount the Meats had. Also, gain 1 Strength.</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="1303014">
+    <Name>Regenerative Cells</Name>
+    <Desc>At the start of the act, gain 20 Resilience. Every 5 Scenes, purge all status ailments on self and gain 10 Resilience.</Desc>
+  </PassiveDesc>
+   <PassiveDesc ID="1303015">
+    <Name>Sharkskin</Name>
+    <Desc>Gain 3 Protection each Scene. Take +3 additional damage from attacks while afflicted with Bleed.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1303016">
+    <Name>Unstoppable Viciousness</Name>
+    <Desc>Cannot be Staggered. When Stagger Resist falls to 0, loses 100 HP instead and gains 1 Strength next Scene.</Desc>
+  </PassiveDesc>
+
+   <!--뒤틀림-->
+  <PassiveDesc ID="1403011">
+    <Name>Knight in Shining Denticles</Name>
+    <Desc>While alive, all other allies gain 1 Protection and Stagger Protection.</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="1403012">
+    <Name>Garde Perdue</Name> <!-- Get it? Like Pain Perdu :) -->
+    <Desc>Upon death, all allies are inflicted with 5 Fragile next Scene.</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="1403013">
+    <Name>Add Salt to Injury</Name>
+    <Desc>If the target has 5 or more Bleed, the first die this character plays in the engagement inflicts 1 Fragile on hit.</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="1403014">
+    <Name>Dermal Regeneration</Name>
+    <Desc>If the character was not hit by any attacks for a Scene, recover 10 HP and gain 1 Strength.</Desc>
+  </PassiveDesc>
+
+</PassiveDescRoot>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- 잔향 상층 -->
+  <BattleCardAbility ID="forbidrecovery2atk">
+    <Desc>[命中時]下一幕中對目標施加2層[禁療]</Desc>
+  </BattleCardAbility>  
+  <!-- 아르갈리아 뒤틀림-->
+  <BattleCardAbility ID="resonanceControl"> <!-- 공명 조절 -->
+    <Desc>[戰鬥開始]這一幕中將[心靈共振]的觸發條件臨時改為[目標震顫層數不低於4]</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="nullifyPowerAtk">
+    <Desc>[命中時]下一幕中對目標施加[威力無效]</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="vibrateDmg">
+    <Desc>[命中時]目標每有1層[震顫]便追加1點傷害</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="powerUp1thisRound">
+    <Desc>[戰鬥開始]這一幕中使自身的進攻型骰子威力+1</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="debufHalfOnUse">
+    <Desc>[使用時]將自身的負面狀態層數減半(向上取整)</Desc>
+  </BattleCardAbility>
+  
+  <!-- 플루토 뒤틀림 -->
+  <BattleCardAbility ID="Pluto_UC_Protect">
+    <Desc>若擊中目標則下一幕開始時將1張[非正當合約: 保護]置入其手中</Desc>
+    <Desc>[非正當合約: 保護]至多可持有1張</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="Pluto_UC_Atk">
+    <Desc>若擊中目標則下一幕開始時將1張[非正當合約: 攻擊]置入其手中</Desc>
+    <Desc>[非正當合約: 攻擊]至多可持有1張</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="Pluto_UC_Light">
+    <Desc>若擊中目標則下一幕開始時將1張[非正當合約: 光明]置入其手中</Desc>
+    <Desc>[非正當合約: 光明]至多可持有1張</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="UC_Protect">
+    <Desc>這一幕結束時若持有本書頁則隨機丟棄另1張書頁並在下一幕中使自身獲得X層[守護](X=丟棄書頁費用)</Desc>
+    <Desc>[裝備時]將本書頁移出戰鬥</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="UC_Atk">
+    <Desc>這一幕結束時若持有本書頁則將本書頁置於牌組頂並在下一幕中使自身的進攻型骰子傷害+1</Desc>
+    <Desc>[裝備時]將本書頁移出戰鬥</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="UC_Light">
+    <Desc>這一幕結束時若持有本書頁則恢復1點光芒並將1張[鐐銬]洗入牌組</Desc>
+    <Desc>[裝備時]將本書頁移出戰鬥</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="shackles">
+    <Desc>[裝備時]將本書頁移出戰鬥</Desc>
+  </BattleCardAbility>
+  
+  
+  <!-- 사서 추가 카드 -->
+  <!-- 공용1 -->
+  <BattleCardAbility ID="unitePower">
+    <Desc>[聯合書頁]</Desc>
+    <Desc>[戰鬥開始]這一幕中所有友方角色使用[聯合書頁]時將獲得骰子威力+1(不可疊加)</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="uniteAttack">
+    <Desc>[聯合書頁]</Desc>
+    <Desc>[戰鬥開始]這一幕中所有友方角色使用[聯合書頁]時將獲得1顆斬擊骰子(4~8)(置於書頁末尾且不可疊加)</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="uniteDefense">
+    <Desc>[聯合書頁]</Desc>
+    <Desc>[戰鬥開始]這一幕中所有友方角色使用[聯合書頁]時將獲得1顆招架骰子(6~9)(置於書頁開頭且不可疊加)</Desc>
+  </BattleCardAbility>
+
+  <!-- 전용 -->
+  <BattleCardAbility ID="argaliaDistortedArea">
+    <Desc>本書頁無法在前兩幕中使用</Desc>
+    <Desc>[使用時]將1張[落幕終曲]置入手中</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="argaliaDistortedDice1">
+  </BattleCardAbility>
+  <BattleCardAbility ID="argaliaDistortedDice2">
+    <Desc>若上一顆骰子至少擊中1名敵方角色則使本骰子傷害+50%</Desc>
+  </BattleCardAbility>
+  
+  <BattleCardAbility ID="plutoArea">
+    <Desc>本書頁無法在前兩幕中使用</Desc>
+    <Desc>本書頁將在使用後移出戰鬥並在4幕後回到手中</Desc>
+  </BattleCardAbility>
+  
+  <BattleCardAbility ID="elenaNewArea">
+    <Desc>本書頁無法在前兩幕中使用</Desc>
+    <Desc>本書頁將在使用後移出戰鬥並在4幕後回到手中</Desc>
+    <Desc>若在本舞臺中至少恢復20點體力則使本書頁費用-2</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="elenaNewAreaDice">
+    <Desc>[命中時]恢復3點體力</Desc>
+  </BattleCardAbility>
+  
+
+  <BattleCardAbility ID="jaeheonArea">
+    <Desc>本書頁無法在前兩幕中使用</Desc>
+    <Desc>本書頁將在使用後移出戰鬥並在4幕後回到手中</Desc>
+    <Desc>[使用時]為擁有[傀儡線]的友方角色恢復20點體力與混亂抗性</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="jaeheonAreaDice">
+    <Desc>[命中時]下一幕中對目標施加1層[束縛]</Desc>
+  </BattleCardAbility>
+  
+  <BattleCardAbility ID="oswaldArea">
+    <Desc>本書頁無法在前兩幕中使用</Desc>
+    <Desc>本書頁將在使用後移出戰鬥並在4幕後回到手中</Desc>
+    <Desc>[使用時]下一幕中使所有敵方角色隨機獲得2層[易損]/[破綻]/[虛弱]/[守護]/[振奮]</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="oswald_break8areaatk">
+    <Desc>[命中時]追加8點混亂傷害</Desc>
+  </BattleCardAbility>
+  
+  <BattleCardAbility ID="bremenArea">
+    <Desc>本書頁無法在前兩幕中使用</Desc>
+    <Desc>本書頁將在使用後移出戰鬥並在4幕後回到手中</Desc>
+    <Desc>[使用時]這一幕中對所有敵方角色施加2層[易損]</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="bremen_chorus_atk">
+    <Desc>[命中時]下一幕中對目標施加1層[麻痺]</Desc>
+  </BattleCardAbility>
+  
+  
+  <BattleCardAbility ID="eileenArea">
+    <Desc>本書頁無法在前兩幕中使用</Desc>
+    <Desc>本書頁將在使用後移出戰鬥並在4幕後回到手中</Desc>
+    <Desc>若至少擊中1名敵方角色則為所有我方角色恢復1點光芒</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="philipSpecial">
+    <Desc>[使用時]若自身情感等級達到3級則將1張僅限下一幕使用的5費[焦灼死灰]置入手中並在下一幕中對所有敵方角色施加1層[燒傷]</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="philipArea">
+    <Desc>本書頁僅限這一幕使用</Desc>
+  </BattleCardAbility>
+  
+  <!-- 공용2 -->
+  <BattleCardAbility ID="resistance1atk">
+    <Desc>[命中時]若自身[抵禦]層數不高於2則獲得1層[抵禦]</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="costDownAndPowerUp">
+    <Desc>持有本書頁時每與進攻型骰子取得1次拼點失敗便使本書頁費用-1</Desc>
+    <Desc>[戰鬥開始]這一幕中使自身的進攻型骰子威力+1</Desc>
+    <Desc>[使用時]抽取1張書頁</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="nextCostDown">
+    <Desc>[使用時]抽取1張書頁並恢復1點光芒
+僅限下一幕使手中的書頁費用-1</Desc>
+  </BattleCardAbility>
+  
+</BattleCardAbilityDescRoot>

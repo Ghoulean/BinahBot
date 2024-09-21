@@ -1,0 +1,1566 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!-- 불타버린 소녀 -->
+  <PassiveDesc ID="105010">
+    <Name>侵蚀</Name>
+    <Desc>每一幕开始时若体力为1，则进入下一阶段</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305510">
+    <Name>侵蚀</Name>
+    <Desc>每一幕开始时若体力为1，则进入下一阶段</Desc>
+  </PassiveDesc>
+  
+  <!-- 불타버린 소녀 -->
+  <PassiveDesc ID="105111">
+    <Name>回燃的火花</Name>
+    <Desc>若友方角色死亡，则失去25%的体力并陷入混乱</Desc>
+  </PassiveDesc>
+  <!-- 불타버린 소녀 -->
+  <PassiveDesc ID="105112">
+    <Name>灰烬</Name>
+    <Desc>若陷入混乱，则失去1点光芒</Desc>
+  </PassiveDesc>
+
+  <!-- 테디 -->
+  <PassiveDesc ID="105211">
+    <Name>爱意</Name>
+    <Desc>使用书页时对目标施加1层“爱意”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="105212">
+    <Name>思念的拥抱</Name>
+    <Desc>每一幕开始时若某司书的“爱意”层数达到4，则使用1张特殊书页“思念的拥抱”</Desc>
+  </PassiveDesc>
+
+  <!-- 요정 -->
+  <PassiveDesc ID="105311">
+    <Name>片刻的饕足</Name>
+    <Desc>每一幕开始时吞噬1名体力不高于20的友方角色，恢复20点体力并在这一幕中获得2层“强壮”</Desc>
+  </PassiveDesc>
+  <!-- 요정 -->
+  <PassiveDesc ID="105312">
+    <Name>饥饿</Name>
+    <Desc>每承受40点伤害，便在下一幕开始时吞噬1名体力最低的友方角色并恢复40点体力
+以此方式吞噬友方角色后自身将永久获得2层“强壮”</Desc>
+  </PassiveDesc>
+  <!-- 요정 -->
+  <PassiveDesc ID="105313">
+    <Name>饥饿狂暴</Name>
+    <Desc>每一幕开始时若体力不高于50%，则恢复所有光芒并将3张特殊书页“饥饿狂暴”置入手中</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="105314">
+    <Name>鲜肉</Name>
+    <Desc>每一幕开始时随机对1名司书施加“鲜肉”标记</Desc>
+  </PassiveDesc>
+  <!-- 요정 -->
+  <PassiveDesc ID="105321">
+    <Name>呵护</Name>
+    <Desc>每一幕开始时恢复10点体力</Desc>
+  </PassiveDesc>
+
+
+  <!-- 여왕벌 -->
+  <PassiveDesc ID="105411">
+    <Name>扩张</Name>
+    <Desc>每一幕开始时若“工蜂”数量不足3只，则对所有司书施加2层“孢子”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="105412">
+    <Name>变态</Name>
+    <Desc>拥有“孢子”的司书死亡后将在下一幕中生成1只“工蜂”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="105413">
+    <Name>信息素</Name>
+    <Desc>每3幕使用1张强化所有友方角色的特殊书页“好战性强化”</Desc>
+  </PassiveDesc>
+  <!-- 일벌-->
+  <PassiveDesc ID="105421">
+    <Name>忠诚</Name>
+    <Desc>优先将上一幕中“安吉拉”最后击中的1名司书指定为攻击目标</Desc>
+  </PassiveDesc>
+
+  <!-- 백설 -->
+  <PassiveDesc ID="105511">
+    <Name>藤蔓壁垒</Name>
+    <Desc>在5道“藤蔓壁垒”被摧毁前无法被指定为攻击目标</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="105512">
+    <Name>林中苹果</Name>
+    <Desc>若舞台中不存在“藤蔓壁垒”，则自身的混乱攻击抗性将变为“致命”
+2幕之后重新生成5道“藤蔓壁垒”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="105513">
+    <Name>绞杀藤</Name>
+    <Desc>舞台中的藤蔓将在3幕之内不断延伸，身处藤蔓中的司书将根据延伸范围被施加数层“束缚”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="105514">
+    <Name>君在何方？</Name>
+    <Desc>每一幕开始时若藤蔓已延伸至最大，则使用1张以所有司书为目标的群体攻击书页“破碎的生灵”</Desc>
+  </PassiveDesc>
+
+  <!-- 백설 -->
+  <PassiveDesc ID="105521">
+    <Name>枯萎</Name>
+    <Desc>“安吉拉”被镇压时自身将被一同镇压</Desc>
+  </PassiveDesc>
+
+
+  <!-- 예소드 층 앤젤라 보스전 패시브 -->
+  <PassiveDesc ID="205010">
+    <Name>侵蚀</Name>
+    <Desc>每一幕开始时若体力为1，则进入下一阶段</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205111">
+    <Name>铁块的回声</Name>
+    <Desc>以打击骰子击中目标时将在下一幕中对其施加2层“束缚”与“麻痹”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205112">
+    <Name>极端暴力</Name>
+    <Desc>击杀目标时恢复1点光芒并在下一幕中使自身获得2层“强壮”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205113">
+    <Name>恐惧</Name>
+    <Desc>拥有负面状态时自身的所有骰子威力-4</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205114">
+    <Name>结束，开始，结束</Name>
+    <Desc>若被动能力“恐惧”已累计触发2次，则下一幕中使用2张特殊书页“结束……开始……结束”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205211">
+    <Name>最大充能！</Name>
+    <Desc>若光芒不低于4点，则使用1张群体攻击书页“限制器解除”
+若连续3幕未使用群体攻击书页，则使该书页的费用减为0</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205212">
+    <Name>反复识别功能Mk2</Name>
+    <Desc>若以1张书页至少造成10点伤害，则恢复1点光芒</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205221">
+    <Name>反复识别功能</Name>
+    <Desc>1幕之内若至少造成10点伤害，则恢复1点光芒</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205311">
+    <Name>振奋人心</Name>
+    <Desc>每一幕开始时若舞台中存在友方角色，则使自身获得4层“守护”并为体力最低的友方角色恢复10点体力
+(联奏: 效果触发时随机对1名友方角色造成6点混乱伤害并在下一幕中使其获得1层“强壮”与“破绽”)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205312">
+    <Name>乐曲创作</Name>
+    <Desc>被动能力“我渴望那段旋律！”生效时使用2张强化所有友方角色的特殊书页“乐曲创作”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205313">
+    <Name>绝望和弦</Name>
+    <Desc>“演奏”期间使用1张特殊书页“绝望和弦”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205321">
+    <Name>会唱歌的机器</Name>
+    <Desc>无法被指定为攻击目标
+无法行动
+免疫所有伤害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205322">
+    <Name>开始演奏</Name>
+    <Desc>被动能力“我渴望那段旋律！”生效后，若有角色进入歌唱机，则开始“演奏”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205323">
+    <Name>演奏</Name>
+    <Desc>每一幕开始时使“歌唱机”内的角色失去30%的体力
+“演奏”期间，所有角色的混乱攻击抗性将变为“致命”并获得5层“强壮”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205331">
+    <Name>我渴望那段旋律！</Name>
+    <Desc>自第3幕起，每4幕临时获得1颗速度骰子并使用2张特殊书页，此时额外获得5层“束缚”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205332">
+    <Name>音乐成瘾</Name>
+    <Desc>“我渴望那段旋律！”生效后，若歌唱机内没有角色，则体力最低的“着魔的职员”将跳入歌唱机</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205411">
+    <Name>救赎之手</Name>
+    <Desc>优先将体力最低的司书指定为攻击目标
+若舞台中存在被“封印”的速度骰子，则转而将其指定为攻击目标</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205412">
+    <Name>悲痛</Name>
+    <Desc>根据目标的现有体力提高自身骰子威力
+(50%~75%: 威力+1/ 低于50%: 威力+2)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205413">
+    <Name>安宁祥和</Name>
+    <Desc>若自身的速度骰子皆被“封印”，则陷入混乱</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205414">
+    <Name>沉痛哀悼</Name>
+    <Desc>每一幕开始时若舞台中存在处于“混乱”状态的司书，则使用1张特殊书页“沉痛哀悼”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205415">
+    <Name>安息之所</Name>
+    <Desc>每3幕使用1张群体攻击书页“安息之所”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="205421">
+    <Name>徒劳振翅</Name>
+    <Desc>优先将体力最低的司书指定为攻击目标
+“安吉拉”进入下一阶段时自身将被镇压</Desc>
+  </PassiveDesc>
+   <PassiveDesc ID="205511">
+    <Name>魔弹</Name>
+    <Desc>混乱抗性无法低于1
+若混乱抗性减至1，则下一幕开始时失去50点体力，恢复所有混乱抗性并改变攻击模式</Desc>
+  </PassiveDesc>
+
+
+  <!-- 호드 층 앤젤라 보스전 패시브 -->
+  <PassiveDesc ID="305111">
+    <Name>神情</Name>
+    <Desc>速度骰子数取决于存活司书数
+骰子点数取决于下令战斗时的表情</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305112">
+    <Name>大大的笑脸</Name>
+    <Desc>每一幕中使用的战斗书页取决于掷出速度点数时的表情</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305113">
+    <Name>情感激荡</Name>
+    <Desc>每3幕使用1张特殊书页“情感激荡”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305211">
+    <Name>鲜血吸引</Name>
+    <Desc>优先将处于“流血”状态的司书指定为攻击目标</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305212">
+    <Name>巨斧</Name>
+    <Desc>击中目标时将对其施加1层“深度创伤”
+若“深度创伤”层数达到5则使目标失去25%的体力并重置该层数</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305213">
+    <Name>闪亮</Name>
+    <Desc>每一幕开始时若某司书至少拥有3层“流血”，则对其使用1张特殊书页“无法忍受！！！”
+该特殊书页每3幕至多使用1张</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305221">
+    <Name>很快的鞋</Name>
+    <Desc>速度骰子+1</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305311">
+    <Name>开始狩猎</Name>
+    <Desc>“小蜘蛛”死亡后，自身可在下2幕中行动并被指定为攻击目标
+优先将上一名击杀“小蜘蛛”的司书指定为攻击目标</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305312">
+    <Name>警戒</Name>
+    <Desc>每2幕使所有“小蜘蛛”获得4层“守护”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305321">
+    <Name>开饭喽！</Name>
+    <Desc>优先将处于“茧缚”状态下的司书指定为攻击目标</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305411">
+    <Name>礼物送给你！</Name>
+    <Desc>优先将手中“礼物”数最少的司书指定为攻击目标</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305412">
+    <Name>奇趣恶作剧</Name>
+    <Desc>每2幕向所有司书手中各置入1张“礼物”
+每有2名“小魔女的朋友”死亡，便额外置入1张“礼物”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305413">
+    <Name>超~级~大礼物！！</Name>
+    <Desc>若“惊喜礼盒”被全部镇压，则使用1张群体攻击书页“超~级~大礼物！！”
+此后每3幕使用1张群体攻击书页</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305414">
+    <Name>想和我玩吗？</Name>
+    <Desc>目标手中每有1张“礼物”，便使自身的招架骰子威力-4</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305415">
+    <Name>一个人好寂寞哦</Name>
+    <Desc>若友方角色全部死亡，则自身的所有攻击抗性将变为“致命”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305421">
+    <Name>哩…呜…</Name>
+    <Desc>优先将手中“礼物”数最多的司书指定为攻击目标</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305422">
+    <Name>砰！</Name>
+    <Desc>若已累计存活3幕，则使用1张能在命中时将3张“礼物”置入目标手中的“自爆书页”
+该书页使用完毕后自身将直接死亡</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305423">
+    <Name>惊喜登场！</Name>
+    <Desc>自身死亡后将在下一幕中生成1只“小魔女的朋友”
+若在使用“自爆书页”前被镇压，则使生成的“小魔女的朋友”失去20%的体力</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305431">
+    <Name>哩…呜…</Name>
+    <Desc>优先将手中“礼物”数最多的司书指定为攻击目标</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305432">
+    <Name>交粗来！</Name>
+    <Desc>目标手中每有1张“礼物”，便使自身的“进攻型”骰子威力+1</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305511">
+    <Name>荨麻衣</Name>
+    <Desc>自第2幕起，每一幕开始时召唤1位“哥哥”
+若舞台中已有4名“哥哥”，则不触发此效果</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305512">
+    <Name>守护家人</Name>
+    <Desc>每一幕开始时若有4名“哥哥”存活，则使用1张群体攻击书页“天鹅绝唱”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305513">
+    <Name>破碎之梦</Name>
+    <Desc>每一幕开始时若累计已有4名“哥哥”死亡，则使用1张群体攻击书页“天鹅绝唱”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305521">
+    <Name>大哥</Name>
+    <Desc>若自身存活，则使“安吉拉”额外获得1颗速度骰子</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305531">
+    <Name>二哥</Name>
+    <Desc>若自身存活，则使“安吉拉”速度+3</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305541">
+    <Name>三哥</Name>
+    <Desc>若自身存活，则“安吉拉”可使用能在拼点胜利时反弹伤害的特殊书页“旧伞”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305551">
+    <Name>四哥</Name>
+    <Desc>若自身存活，则“安吉拉”击中目标时伤害x2并无视其攻击抗性</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305561">
+    <Name>五哥</Name>
+    <Desc>若自身存活，则“安吉拉”可使用能在命中时施加5层“流血”与“易损”的特殊书页“恶浊现实”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="305571">
+    <Name>六哥</Name>
+    <Desc>若自身死亡，则使“安吉拉”陷入混乱</Desc>
+  </PassiveDesc>
+
+  <!-- 우주 속의 조각-->
+  <PassiveDesc ID="405111">
+    <Name>触须</Name>
+    <Desc>以突刺骰子击中目标时将使其混乱抗性上限-5%(同一目标至多触发10次)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405112">
+    <Name>回响</Name>
+    <Desc>自第3幕起，每2幕使用1张群体攻击书页“异界的回响”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405113">
+    <Name>无法理解</Name>
+    <Desc>击中目标时混乱伤害x2
+造成反震伤害时混乱伤害x2</Desc>
+  </PassiveDesc>
+
+  <!-- 은하수의 아이 -->
+  <PassiveDesc ID="405211">
+    <Name>两个人的小小宇宙</Name>
+    <Desc>若友方角色全部死亡，则自身将失去一定体力并永久陷入混乱且可被指定为攻击目标</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405212">
+    <Name>永恒的告别</Name>
+    <Desc>每一幕开始时若有友方角色处于“假死”状态，则转变为“哭泣形态”，否则维持“疗愈形态”
+每一幕开始时若自身处于“哭泣形态”，则使用1张群体攻击书页“永恒的告别”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405213">
+    <Name>卵石</Name>
+    <Desc>每一幕开始时若自身处于“疗愈形态”，则为所有友方角色恢复10%的体力</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405221">
+    <Name>不要离开我</Name>
+    <Desc>承受致死伤害时将陷入“假死”，保留1点体力并在下2幕中陷入混乱，2幕之后恢复70%的体力
+每一幕开始时若除“安吉拉”外的所有友方角色体力均为1点，则自身将直接死亡</Desc>
+  </PassiveDesc>
+
+  <!-- 포큐버스 -->
+  <PassiveDesc ID="405311">
+    <Name>难以忍受的快感</Name>
+    <Desc>每一幕开始时为所有司书恢复光芒，恢复量等同于各司书手中的“快感”数
+若某司书所持“快感”数达到3，则追加20点伤害并将其手中的“快感”移出战斗</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405312">
+    <Name>小脑瓜要爆炸喽</Name>
+    <Desc>每一幕开始时若某司书持有2张“快感”，则使用1张特殊书页“小脑瓜要爆炸喽”
+该特殊书页每2幕至多使用1张</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405313">
+    <Name>欢乐棘刺</Name>
+    <Desc>击中目标时使其获得2点“正面情感”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405314">
+    <Name>清音柔体</Name>
+    <Desc>无法被远程战斗书页伤害</Desc>
+  </PassiveDesc>
+
+  <!-- 알리우네 -->
+  <PassiveDesc ID="405415">
+    <Name>土制人偶</Name>
+    <Desc>免疫“烧伤”与“流血”伤害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405412">
+    <Name>馨香气息</Name>
+    <Desc>击中目标时仅造成混乱伤害
+本场战斗中陷入混乱的司书将直接死亡并在下一幕中生成1名“生于尘土之人”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405411">
+    <Name>窒息的赎罪</Name>
+    <Desc>只有获得“赎罪之冠”的司书可对“安吉拉”造成伤害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405413">
+    <Name>不凋花</Name>
+    <Desc>自第2幕起，每一幕开始时获得1层“花瓣”，若“花瓣”层数达到3，则使用1张群体攻击书页“恍惚的终局”并重置该层数</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405414">
+    <Name>花之泪</Name>
+    <Desc>若陷入混乱，则失去40点体力并在下一幕开始时重置“花瓣”层数，随后为所有司书恢复50%的混乱抗性</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405421">
+    <Name>归于…尘土…</Name>
+    <Desc>若陷入混乱，则直接死亡</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405423">
+    <Name>土制人偶</Name>
+    <Desc>免疫“烧伤”与“流血”伤害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405422">
+    <Name>馨香气息</Name>
+    <Desc>击中目标时仅造成混乱伤害
+本场战斗中陷入混乱的司书将直接死亡并在下一幕中生成1名“生于尘土之人”</Desc>
+  </PassiveDesc>
+
+
+
+  <!-- 고케 -->
+  <PassiveDesc ID="405511">
+    <Name>此世最美的演出</Name>
+    <Desc>本阶段仅持续5幕，第6幕开始时进入下一阶段
+每一幕使用不同特殊书页</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405512">
+    <Name>合奏</Name>
+    <Desc>舞台中每有1名未陷入“眩晕”的友方角色，便使自身的所有骰子威力+1</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405521">
+    <Name>静谧的演奏</Name>
+    <Desc>无法使用战斗书页
+若陷入混乱，则永久陷入“眩晕”</Desc>
+  </PassiveDesc>
+
+
+  <PassiveDesc ID="405611">
+    <Name>此世最美的演出</Name>
+    <Desc>以6幕为一行动周期，反复执行同一攻击模式
+每一幕开始时自身的所有攻击抗性与速度骰子数皆会改变</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405612">
+    <Name>返始咏叹调</Name>
+    <Desc>使用战斗书页“谢幕”后，为除自身外的所有友方角色恢复大量体力
+恢复量与触发次数成反比</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405613">
+    <Name>狂热崇拜</Name>
+    <Desc>本场战斗中陷入混乱的司书将获得“狂热崇拜”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405614">
+    <Name>合奏</Name>
+    <Desc>场上每有1名未陷入“眩晕”的友方角色，便使自身的所有骰子威力+1</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="405621">
+    <Name>沉默的高潮</Name>
+    <Desc>在行动周期的第5幕及第6幕中陷入“眩晕”</Desc>
+  </PassiveDesc>
+  
+  
+    <!-- 증오의 여왕 -->
+  <PassiveDesc ID="505101">
+    <Name>逆变</Name>
+    <Desc>每一幕结束时恢复所有光芒并抽取2张书页
+当歇斯底里计量表充满时自身将转变形态
+拼点失败/被拥有“标记”的司书击中时将提升计量表数值
+拼点胜利/击中拥有“标记”的司书时将降低计量表数值
+计量表越趋于充满，画面便愈加猩红
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505102">
+    <Name>以憎之名</Name>
+    <Desc>每2幕使用1张“标记书页”
+优先将被“标记”的司书指定为攻击目标
+被“标记”司书的所有攻击抗性将变为“脆弱”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505103">
+    <Name>魔法之力</Name>
+    <Desc>每4幕使用1张群体攻击书页“魔法之力”</Desc>
+  </PassiveDesc>
+
+  <!-- 절망의 기사 본체-->
+  <PassiveDesc ID="505211">
+    <Name>庇护</Name>
+    <Desc>无法被指定为攻击目标
+无法行动</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505212">
+    <Name>悲恸</Name>
+    <Desc>每3幕为1把“遗忘骑士之剑”赋予“泪滴”
+若陷入混乱，则延后一幕赋予</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505213">
+    <Name>绝望</Name>
+    <Desc>若处于“泪滴”状态的“遗忘骑士之剑”承受致死伤害，则自身将在下一幕中陷入“绝望”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505214">
+    <Name>绝望的加护</Name>
+    <Desc>陷入“绝望”时3把“遗忘骑士之剑”将恢复所有体力与混乱抗性并使用1张特殊书页</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505215">
+    <Name>破碎的心</Name>
+    <Desc>若3把“遗忘骑士之剑”全部刺入自身，则自身将在下一幕中陷入混乱并可被指定为攻击目标</Desc>
+  </PassiveDesc>
+  <!-- 절망의 기사 칼 -->
+  <PassiveDesc ID="505221">
+    <Name>泪滴</Name>
+    <Desc>处于“泪滴”状态时将额外获得1颗速度骰子，改变所有攻击抗性并使用2张特殊书页</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505222">
+    <Name>暂息</Name>
+    <Desc>承受致死伤害时将陷入“假死”并在2幕之后复活</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505223">
+    <Name>刺穿绝望之剑</Name>
+    <Desc>当“罗兰”处于“绝望”状态时若自身未对司书造成伤害，则刺入“罗兰”并对其造成20点伤害</Desc>
+  </PassiveDesc>
+  
+    <PassiveDesc ID="505310">
+    <Name>金色琥珀</Name>
+    <Desc>无法行动
+若在这一幕中承受致死伤害便以“魔法少女”的形态苏醒
+否则以“贪婪国王”的形态苏醒</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505311">
+    <Name>闪烁的欲望</Name>
+    <Desc>若体力已减至50%，则下一幕开始时变身为“贪婪国王”
+变身前体力无法低于50%</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505312">
+    <Name>闪金之路</Name>
+    <Desc>每3幕生成4颗“闪耀的幸福”，此时自身将无法被指定为攻击目标且无法行动
+下一幕中使用1张以所有司书为目标的群体攻击书页“闪金之路”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505313">
+    <Name>自我陶醉</Name>
+    <Desc>若成功抵御群体攻击书页的司书不足4名，则下一幕中使自身获得3层“强壮”与“迅捷”
+(若存活司书数不足3名，则判定条件改为2)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505314">
+    <Name>刹那的幸福</Name>
+    <Desc>若群体攻击书页未击中任何司书，则下一幕中使自身陷入混乱</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505321">
+    <Name>贪婪国王</Name>
+    <Desc>更换手中的战斗书页，击中目标时追加等同于目标“流血”层数的伤害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505322">
+    <Name>暴君之路</Name>
+    <Desc>每3幕生成4颗“闪耀的幸福”，此时自身将无法被指定为攻击目标且无法行动
+下一幕中对标记的1名司书使用2张特殊书页“暴君之路”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505323">
+    <Name>暴食</Name>
+    <Desc>若特殊书页的攻击全部击中，则对所有司书造成15点伤害并为自身恢复25点体力</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505324">
+    <Name>刹那的幸福</Name>
+    <Desc>若特殊书页的攻击全部未击中，则下一幕中使自身陷入混乱</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505331">
+    <Name>闪耀的幸福</Name>
+    <Desc>仅存活1幕，若被司书破坏，则将1张特殊书页“幸福的碎片”置入其手中</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="505411">
+    <Name>今日的演剧</Name>
+    <Desc>只有“罗兰”可打倒“青林隐士”
+若“青林隐士”被打倒，则进入下一阶段</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505412">
+    <Name>盲眼怒火</Name>
+    <Desc>优先将“隐士之杖”指定为攻击目标
+若舞台中不存在“隐士之杖”，则将“青林隐士”指定为攻击目标</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505413">
+    <Name>异界的罪人！</Name>
+    <Desc>若舞台中存在“隐士之杖”且自身已累计承受30点伤害，则下一幕中使用群体攻击书页“邪恶的化身！！！”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505414">
+    <Name>怒火中烧</Name>
+    <Desc>若所有“隐士之杖”皆被摧毁，则下一幕中使用群体攻击书页“邪恶的化身！！！”
+此后每2幕使用1张“邪恶的化身！！！”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505421">
+    <Name>被利用之人</Name>
+    <Desc>司书的攻击无法使该角色的体力低于30点
+每一幕结束时若体力不高于30点，则恢复50%的体力</Desc>  
+  </PassiveDesc>
+  <PassiveDesc ID="505422">
+    <Name>亲爱的朋友</Name>
+    <Desc>与“罗兰”拼点时自身的所有骰子威力+5
+免疫“烧伤”，“流血”与“腐蚀”伤害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505423">
+    <Name>异界的访客</Name>
+    <Desc>若舞台中存在“隐士之杖”，则每2幕使用1张群体攻击书页“老实待着”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505424">
+    <Name>两个世界的相遇</Name>
+    <Desc>若舞台中不存在“隐士之杖”，则优先将“罗兰”指定为攻击目标
+2幕之后使用可在下一幕中生成3根“隐士之杖”的群体攻击书页“起来吧！”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505431">
+    <Name>隐士之杖</Name>
+    <Desc>优先将“愤怒侍从”指定为攻击目标</Desc>
+  </PassiveDesc>
+
+  <!-- Nihil -->
+  <PassiveDesc ID="505500">
+    <Name>万物皆虚</Name>
+    <Desc>按“虚无”-“贪婪”-“憎恶”-“绝望”-“愤怒”的顺序依次转变形态
+形态转变时被动能力与战斗书页也将一并更换</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505501">
+    <Name>无谓之举</Name>
+    <Desc>在转变为“愤怒”形态前免疫包括“反震”伤害在内的一切混乱伤害
+免疫“烧伤”，“流血”伤害与“封印”效果</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505502">
+    <Name>无谓的贪婪</Name>
+    <Desc>除“幸福之魔法少女”外，被其余角色攻击时将使其当前书页的所有骰子威力-5
+拼点失败时随机向1名司书手中置入1张“幸福的碎片”并在下一幕使用群体攻击书页“暴君之路”
+若“暴君之路”未击中任何司书，则自身将失去50点体力并在下一幕中转变为“憎恶”形态
+若“暴君之路”至少击中1名司书，则对所有司书造成10点伤害并为自身恢复20点体力
+击中目标时追加等同于目标“流血”层数的伤害
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505503">
+    <Name>无谓的憎恶</Name>
+    <Desc>除“博爱之魔法少女”外，被其余角色攻击时将使其当前书页的所有骰子威力-5
+若累计取得10次拼点胜利，则下一幕中使用群体攻击书页“魔法之力！！！”
+若“博爱之魔法少女”成功使用“魔法之力！”，则自身将失去50点体力并在下一幕中转变为“绝望”形态
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505504">
+    <Name>无谓的绝望</Name>
+    <Desc>除“正义之魔法少女”外，被其余角色攻击时将使其当前书页的所有骰子威力-5
+若自身使用的战斗书页中的骰子皆未造成伤害，则该书页将被封印并无法使用
+若3张战斗书页皆被封印，则自身将失去50点体力并在下一幕中转变为“愤怒”形态
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505505">
+    <Name>无谓的愤怒</Name>
+    <Desc>除“勇气之魔法少女”外，被其余角色攻击时将使其当前书页的所有骰子威力-5
+每2幕使用群体攻击书页，若陷入混乱则失去50点体力并在混乱状态解除时转变为“虚无”形态
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505511">
+    <Name>凝固的憎恶</Name>
+    <Desc>击碎该石像的司书将在下一幕开始时变身为“博爱之魔法少女”
+若被任意“魔法少女”击碎，则下一幕开始时使体力最低的司书变身为“博爱之魔法少女”
+变身“魔法少女”时属性值，战斗书页，核心书页及被动能力也将一并更换
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505521">
+    <Name>凝固的绝望</Name>
+    <Desc>击碎该石像的司书将在下一幕开始时变身为“正义之魔法少女”
+若被任意“魔法少女”击碎，则下一幕开始时使体力最低的司书变身为“正义之魔法少女”
+变身“魔法少女”时属性值，战斗书页，核心书页及被动能力也将一并更换
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505531">
+    <Name>凝固的贪婪</Name>
+    <Desc>击碎该石像的司书将在下一幕开始时变身为“幸福之魔法少女”
+若被任意“魔法少女”击碎，则下一幕开始时使体力最低的司书变身为“幸福之魔法少女”
+变身“魔法少女”时属性值，战斗书页，核心书页及被动能力也将一并更换
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505541">
+    <Name>凝固的愤怒</Name>
+    <Desc>击碎该石像的司书将在下一幕开始时变身为“勇气之魔法少女”
+若被任意“魔法少女”击碎，则下一幕开始时使体力最低的司书变身为“勇气之魔法少女”
+变身“魔法少女”时属性值，战斗书页，核心书页及被动能力也将一并更换
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505561">
+    <Name>无主之剑</Name>
+    <Desc>无法将“正义之魔法少女”指定为攻击目标</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505600">
+    <Name>魔法少女</Name>
+    <Desc>每一幕开始时抽取3张书页并恢复所有光芒</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505611">
+    <Name>博爱！</Name>
+    <Desc>使用特殊核心书页与战斗书页
+累计取得10次拼点胜利时将使“魔法之力！”的费用减为0
+(使用后重置)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505621">
+    <Name>正义！</Name>
+    <Desc>使用特殊核心书页与战斗书页</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505631">
+    <Name>幸福！</Name>
+    <Desc>使用特殊核心书页与战斗书页</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="505641">
+    <Name>勇气！</Name>
+    <Desc>使用特殊核心书页与战斗书页</Desc>
+  </PassiveDesc>
+	
+  <!-- 게부라 최종 -->
+  <!-- 용병 -->
+  <PassiveDesc ID="605111">
+    <Name>噩梦的尽头</Name>
+    <Desc>若“罗兰”亲手击杀“大坏狼”，则进入下一阶段
+若“罗兰”死亡时“大坏狼”依然存活，则司书方输掉战斗</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605112">
+    <Name>复仇之心</Name>
+    <Desc>每一幕开始时若体力不高于50%，则获得1层“强壮”(若“暴怒”或“无处宣泄的怒火”已激活则不生效)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605113">
+    <Name>决然一击</Name>
+    <Desc>每2幕使用群体攻击书页“决然一击”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605114">
+    <Name>暴怒</Name>
+    <Desc>当愤怒计量表充满时自身将获得“暴怒”效果
+被“大坏狼”击中时将提升愤怒值
+击中“大坏狼”时将降低愤怒值
+计量表越趋于充满，画面便愈加猩红
+(暴怒: 2幕之内，每一幕开始时获得2层“强壮”并使用群体攻击书页)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605115">
+    <Name>无处宣泄的怒火</Name>
+    <Desc>司书击杀“大坏狼”时自身将获得“无处宣泄的怒火”效果并恢复50%的体力与所有混乱抗性
+(无处宣泄的怒火: 每一幕开始时获得4层“强壮”并使用群体攻击书页)</Desc>
+  </PassiveDesc>
+  <!-- 용병 전투 늑대 -->
+  <PassiveDesc ID="605120">
+    <Name>开膛之爪</Name>
+    <Desc>击中目标时将对其施加1层“创痕”
+目标每有1层“创痕”，则被自身击中时所受伤害+1
+攻击“创痕”层数不低于4的角色时自身的所有骰子威力+2</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605121">
+    <Name>咆哮</Name>
+    <Desc>若体力高于50%，则每4幕使用1张群体攻击书页“咆哮”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605122">
+    <Name>嗥叫的噩梦</Name>
+    <Desc>若体力不高于50%，则速度骰子+2且每2幕使用1张群体攻击书页“咆哮”</Desc>
+  </PassiveDesc>
+
+	<!-- 커다랗고 나쁠 늑대 -->
+  <!-- 605120 그대로 쓰기 때문에 이 패시브는 제거 -->
+  <!--<PassiveDesc ID="605211">
+    <Name>开膛之爪</Name>
+    <Desc>击中目标时将对其施加1层“创痕”
+目标每有1层“创痕”，则被自身击中时所受伤害+1
+攻击“创痕”层数不低于4的角色时自身的所有骰子威力+2</Desc>
+  </PassiveDesc-->>
+  <!-- 바로 위의 605211 제거했으므로 아래부터 다시 605211 시작-->
+  <PassiveDesc ID="605211">
+    <Name>狼的角色</Name>
+    <Desc>进入本阶段时随机生吞1名助理司书
+若该司书被生吞击杀或被吐出，则2幕后再次随机生吞1名助理司书</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605212">
+    <Name>惩恶扬善</Name>
+    <Desc>生吞司书后，自身的混乱攻击抗性将变为“致命”且混乱抗性上限x2
+速度骰子数与所用战斗书页也将一并改变
+若陷入混乱，则吐出肚内的司书</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605213">
+    <Name>羊皮</Name>
+    <Desc>被吐出的司书将失去25%的体力并陷入混乱</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605214">
+    <Name>本能</Name>
+    <Desc>生吞司书后，若自身未陷入混乱，则下一幕开始时直接击杀肚内的司书</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605215">
+    <Name>注定成为又大又坏的狼</Name>
+    <Desc>每一幕开始时若已有2名司书被生吞击杀或自身体力已减至50%，则转变为更加强大的形态
+形态转变前体力无法低于50%</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605221">
+    <Name>转变</Name>
+    <Desc>形态转变时提高混乱抗性上限并恢复所有混乱抗性</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605222">
+    <Name>遁入黑暗</Name>
+    <Desc>若在1幕之内承受超出“自身体力上限x25%”的伤害，则自身将在下2幕中进入“潜狼”状态</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605223">
+    <Name>暗影伏击</Name>
+    <Desc>处于“潜狼”状态时未被自身指定为攻击目标的司书将无法行动</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605224">
+    <Name>虚脱</Name>
+    <Desc>“潜狼”状态解除时将使用1张群体攻击书页“咆哮”且自身的混乱攻击抗性将变为“致命”</Desc>
+  </PassiveDesc>
+
+	<!-- 웃시산 -->
+ <PassiveDesc ID="605301">
+    <Name>寻找死尸</Name>
+    <Desc>指定攻击目标时不分敌我(“惨叫”与“呕吐”除外)
+击杀友方角色时恢复30%的体力</Desc>
+  </PassiveDesc>
+    <PassiveDesc ID="605302">
+    <Name>溶解的死尸</Name>
+    <Desc>每失去25%的体力(62/87/112)，便在下一幕中生成1滩“溶解的死尸”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605311">
+    <Name>分裂</Name>
+    <Desc>在第1形态承受致死伤害时分裂为4滩“溶解的死尸”
+若死尸在3幕之内被全部镇压，则进入下一阶段
+若未被全部镇压，则自身将恢复为第1形态 
+(复活时的体力等同于所有“溶解的死尸”的剩余体力之和)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605312">
+    <Name>融合</Name>
+    <Desc>体力恢复至上限时转变为第2形态</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605321">
+    <Name>分裂与融合</Name>
+    <Desc>承受致死伤害时转变为第1形态
+体力恢复至上限时转变为第3形态</Desc>
+  </PassiveDesc>  
+  <PassiveDesc ID="605322">
+    <Name>惨叫</Name>
+    <Desc>每一幕开始时获得1层“强壮”
+每2幕使用1张群体攻击书页“惨叫”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605331">
+    <Name>分裂</Name>
+    <Desc>承受致死伤害时转变为第2形态</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605332">
+    <Name>呕吐</Name>
+    <Desc>每一幕开始时获得2层“强壮”
+每3幕使用1张群体攻击书页“呕吐”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605341">
+    <Name>腐烂</Name>
+    <Desc>若被司书击中，则对其造成8点伤害并在下一幕中对其施加1层“易损”</Desc>
+  </PassiveDesc>
+	
+	<!-- 노스페라투 -->
+  <PassiveDesc ID="605411">
+    <Name>恐水症</Name>
+    <Desc>每一幕开始时若“鲜血”层数不高于4，则获得数层“强壮”(至多3层)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605412">
+    <Name>干渴</Name>
+    <Desc>若“鲜血”层数不高于2，则每2幕使用1张特殊书页“干渴”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605413">
+    <Name>血宴</Name>
+    <Desc>若“鲜血”层数不低于5，则使用1张群体攻击书页“血宴”
+战斗开始后若4幕之内未使用“血宴”，则自第5幕起每3幕使用1张“血宴”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605414">
+    <Name>变身</Name>
+    <Desc>若体力减至50%，则当幕免疫所有伤害并在下一幕中变身
+变身时击杀所有“血蝙蝠”并获得5层“鲜血”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605431">
+    <Name>变身</Name>
+    <Desc>变身时击杀所有“血蝙蝠”并获得5层“鲜血”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605432">
+    <Name>恐水症</Name>
+    <Desc>每一幕开始时若“鲜血”层数不高于4，则获得数层“强壮”(至多3层)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605433">
+    <Name>流淌的鲜血</Name>
+    <Desc>每一幕开始时失去1层“鲜血”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605434">
+    <Name>无法忍受的饥渴</Name>
+    <Desc>若“鲜血”层数不高于2，则每2幕使用“无法忍受的饥渴”</Desc>
+  </PassiveDesc>	
+  <PassiveDesc ID="605435">
+    <Name>极度渴血</Name>
+    <Desc>若“鲜血”层数为0，则使用1张群体攻击书页“极度渴血”
+变身后若3幕之内未使用“极度渴血”，则自第4幕起每3幕使用“极度渴血”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605421">
+    <Name>恐水症</Name>
+    <Desc>每一幕开始时若“鲜血”层数不高于1，则获得2层“强壮”</Desc>
+  </PassiveDesc>
+
+	
+	<!-- 아무것도 없는 -->
+ <PassiveDesc ID="605511">
+    <Name>躯壳</Name>
+    <Desc>每2幕随机对1名助理司书使用1张特殊书页“披上躯壳”
+(若助理司书全部死亡，则改为对指定司书使用)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605512">
+    <Name>进化</Name>
+    <Desc>承受致死伤害时将在下一幕中进入第2阶段</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605521">
+    <Name>进化</Name>
+    <Desc>2幕后进入第3阶段，第3阶段的体力取决于第2阶段结束时的剩余体力百分比(至少70%)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605522">
+    <Name>再生</Name>
+    <Desc>每一幕开始时恢复50%的体力</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605531">
+    <Name>坚硬</Name>
+    <Desc>被击中时若所受伤害不高于5点，则免受此次伤害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="605532">
+    <Name>再生</Name>
+    <Desc>每一幕结束时若当幕总承伤值不足80点，则恢复10%的体力</Desc>
+  </PassiveDesc>
+  
+  
+    <!-- 헤세드 보스전-->
+  <!-- 허수아비-->
+  <PassiveDesc ID="705111">
+    <Name>收获</Name>
+    <Desc>优先将手中“智慧”数最多的司书指定为攻击目标
+触发战斗时目标手中每有1张“智慧”便使自身的所有骰子威力+1</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705112">
+    <Name>丰收</Name>
+    <Desc>每3幕使用1张特殊书页“丰收”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705121">
+    <Name>收割智慧</Name>
+    <Desc>每3幕临时获得1颗速度骰子并使用2张能在命中时恢复体力并夺取目标手中书页的特殊书页“收割智慧”
+若目标手中已无书页可夺取，则追加5~20点伤害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705122">
+    <Name>索得智慧的宁静</Name>
+    <Desc>使用“收割智慧”与“智慧”拼点时，自身将承受20点混乱伤害并在下一幕中获得3层“虚弱”与“束缚”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705123">
+    <Name>索求智慧的挣扎</Name>
+    <Desc>使用“收割智慧”夺取非“智慧”书页后，自身将在下一幕中获得等同于吸取书页数的“强壮”与“忍耐”并使用1张被吸取的书页</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705124">
+    <Name>脑袋空空</Name>
+    <Desc>每一幕开始时手中没有书页的司书将陷入混乱</Desc>
+  </PassiveDesc>
+  
+  <!-- 나무꾼 -->
+  <PassiveDesc ID="705211">
+    <Name>葱郁之森</Name>
+    <Desc>每一幕开始时为所有司书恢复所有光芒</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705212">
+    <Name>远远不够</Name>
+    <Desc>优先将光芒上限最高的司书指定为攻击目标
+触发战斗时目标每剩余1点光芒便使自身的所有骰子威力+1</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705213">
+    <Name>温暖的心</Name>
+    <Desc>每一幕开始时恢复等同于自身“温暖的心”层数的光芒
+每一幕结束时失去1层“温暖的心”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705214">
+    <Name>想要一颗心</Name>
+    <Desc>每一幕开始时若自身“温暖的心”层数为0，则优先将体力最低的“树木”指定为攻击目标</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705215">
+    <Name>暴跳之心</Name>
+    <Desc>击杀目标时恢复20%的体力并获得3层“温暖的心”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705216">
+    <Name>空洞之心</Name>
+    <Desc>若自身“温暖的心”层数连续2幕为0，则陷入混乱
+解除混乱时若场上仍有“树木”，则直接击杀体力最低的“树木”</Desc>
+  </PassiveDesc>
+
+  <!-- 집으로 가는 길-->
+  <PassiveDesc ID="705311">
+    <Name>归家的路途</Name>
+    <Desc>战斗开始时生成“家”并使用1张能对2名司书与“家”施加“黄砖路”的群体攻击书页“我们一起走吧……”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705312">
+    <Name>朋友呀！一起回家吧~！</Name>
+    <Desc>第2幕中对处于“黄砖路”状态的角色各使用1张特殊书页“朋友呀！一起回家吧~！”
+若该书页未击中任何处于“黄砖路”状态的司书，则其第3次攻击将被“打断”。
+若第3次攻击未被“打断”且成功击中“家”，则司书方输掉战斗</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705313">
+    <Name>你这个……坏巫师……！</Name>
+    <Desc>若特殊书页“朋友呀！一起回家吧~！”的第3次攻击累计被“打断”2次，则下一幕开始时自身的所有攻击抗性将变为“致命”并使用1张群体攻击书页“你这个……坏巫师！”
+若该书页至少击中1名司书，则下一幕开始时重新生成“家”
+若未击中任何司书，则自身将陷入混乱并延后一幕生成“家”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705321">
+    <Name>勇气</Name>
+    <Desc>在“罗兰”被镇压前，自身的所有攻击抗性均为“免疫”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705322">
+    <Name>胆小</Name>
+    <Desc>若“罗兰”被镇压，则自身将被一同镇压</Desc>
+  </PassiveDesc>
+  
+  <!-- 오즈마-->
+      <!-- 오즈마-->
+  <PassiveDesc ID="705411">
+   <Name>复生</Name>
+   <Desc>第1幕中使用1张能唤醒所有“杰克”的群体攻击书页“生命的粉末”
+及1张能对特定司书施加“遗忘”的特殊书页“消逝的记忆”
+此后每4幕各使用1张</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705412">
+  <Name>被掠夺之人的苦痛</Name>
+  <Desc>“遗忘司书”被复原后，下一幕开始时自身的混乱攻击抗性将变为“致命”并使用1张群体攻击书页“被掠夺之人的苦痛”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705413">
+  <Name>被掠夺之人的悲怆</Name>
+  <Desc>若被动能力“复生”已累计触发2次，则下一幕开始时自身的混乱攻击抗性将变为“致命”并使用1张群体攻击书页“被掠夺之人的悲怆”</Desc>
+</PassiveDesc>
+  <!--잭-->
+    <PassiveDesc ID="705421">
+    <Name>夺来的力量</Name>
+    <Desc>夺走并使用“遗忘司书”的卡组</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="705422">
+    <Name>哪个是真的？</Name>
+    <Desc>苏醒的“杰克”中只有1个“真杰克”
+“真杰克”被“遗忘司书”击中时将随机归还1张书页
+“真杰克”被击中时画面将会闪烁</Desc>
+  </PassiveDesc>
+   <PassiveDesc ID="705423">
+  <Name>夺还是被夺</Name>
+  <Desc>若“遗忘司书”累计击中“真杰克”9次，则所有“杰克”将直接死亡
+若“遗忘司书”在3幕之内未能击中“真杰克”9次，则下一幕开始时该司书将变成“南瓜”
+此后“真杰克”将转变为“复生的杰克”并永久使用该“南瓜司书”的核心书页与卡组</Desc>
+  </PassiveDesc>
+
+  
+  <!-- 거짓을 말하는 어른-->
+  <!-- 마법사 공통-->
+    <PassiveDesc ID="705510">
+    <Name>巫师的试炼</Name>
+    <Desc>按“樵夫”-“稻草人”-“狮子”-“归家”-“暴怒”的顺序发起试炼
+在进入“归家试炼”前无法陷入混乱
+在进入“暴怒试炼”前体力无法减少</Desc>
+  </PassiveDesc>
+  <!-- 마법사 1막-->
+  <PassiveDesc ID="705511">
+    <Name>试炼开始</Name>
+    <Desc>这一幕开始时复活死去的司书并为其恢复所有体力与混乱抗性
+向每名司书手中各置入5张特殊书页</Desc>
+  </PassiveDesc>
+  <!-- 마법사 2막-->
+  <PassiveDesc ID="705512">
+    <Name>展现你的热心</Name>
+    <Desc>除获得“热心的樵夫”之力的司书外，将其余司书的光芒上限减为3
+2幕之内若“翡翠水晶”被全部摧毁，则下一幕开始时进入“稻草人试炼”</Desc>
+  </PassiveDesc>
+    <PassiveDesc ID="705513">
+    <Name>空荡荡的胸腔</Name>
+    <Desc>2幕之内若“翡翠水晶”未被全部摧毁，则下一幕开始时使用1张群体攻击书页“大错特错！”并进入“稻草人试炼”</Desc>
+  </PassiveDesc>
+    <!-- 마법사 3막-->
+  <PassiveDesc ID="705514">
+    <Name>展现你的智慧</Name>
+    <Desc>除获得“求知的稻草人”之力的司书外，将其余司书转变为“闪耀的雕像”
+将1张“智慧”与4张特殊书页置入获得“求知的稻草人”之力的司书手中
+下一幕开始时进入“狮子试炼”</Desc>
+  </PassiveDesc>
+    <PassiveDesc ID="705515">
+    <Name>不值一提的智慧</Name>
+    <Desc>这一幕结束时若有司书未被复原，则获得“求知的稻草人”之力的司书的速度骰子将被减为1颗</Desc>
+  </PassiveDesc>
+      <!-- 마법사 3막-->
+  <PassiveDesc ID="705516">
+    <Name>展现你的勇气</Name>
+    <Desc>2幕之内对所有司书施加10层“虚弱”，“破绽”与“易损”
+若“怒视的面庞”被全部镇压，则下一幕开始时进入“归家试炼”</Desc>
+  </PassiveDesc>
+    <PassiveDesc ID="705517">
+    <Name>果真是个胆小鬼</Name>
+    <Desc>若未获得“胆小的猫咪”之力的司书死亡，则获得“胆小的猫咪”之力的司书将永久获得5层“虚弱”，“破绽”与“易损”</Desc>
+  </PassiveDesc>
+   <!-- 마법사 4막-->
+  <PassiveDesc ID="705518">
+    <Name>尔等能奈我何？</Name>
+    <Desc>若陷入混乱，则下一幕开始时进入“暴怒试炼”</Desc>
+  </PassiveDesc>
+    <!-- 마법사 4막-->
+  <PassiveDesc ID="705519">
+    <Name>暴怒</Name>
+    <Desc>若承受致死伤害或转变为其他存在，则司书方赢得胜利</Desc>
+  </PassiveDesc>
+  <!-- 마법사 2막 수정-->
+  <PassiveDesc ID="705521">
+    <Name>光耀水晶</Name>
+    <Desc>被击中时对攻击方造成3点伤害与混乱伤害
+被摧毁时解除1点光芒上限限制</Desc>
+  </PassiveDesc>
+  <!-- 마법사 2막 당나귀-->
+    <PassiveDesc ID="705531">
+    <Name>破碎翡翠</Name>
+    <Desc>这一幕结束时若雕像内的角色未被复原，则使其失去80%的体力</Desc>
+  </PassiveDesc>
+
+  <!-- 비나 최종전 -->
+  <!-- 큰새 -->
+  <PassiveDesc ID="805111">
+    <Name>永不熄灭的明灯</Name>
+    <Desc>自第1幕起，每3幕随机对1名助理司书施加“魅惑”
+被施加“魅惑”的人数将逐渐增加(1，2，2，3)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805112">
+    <Name>黑暗</Name>
+    <Desc>自第3幕起，每3幕使用1张特殊书页“黑暗”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805113">
+    <Name>睡眼惺忪</Name>
+    <Desc>友方角色死亡时，自身将永久获得5层“虚弱”与“破绽”
+若舞台中已无友方角色存活，则自身的混乱攻击抗性将变为“致命”</Desc>
+  </PassiveDesc>
+  
+  <!-- 작은새 -->
+  <PassiveDesc ID="805211">
+    <Name>不许干坏事！</Name>
+    <Desc>与“进攻型”骰子拼点时自身的“进攻型”骰子威力+50</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805212">
+    <Name>必须施以惩罚！</Name>
+    <Desc>被击中时对攻击方施加“惩戒”且下一幕中自身将进入“惩戒”状态</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805213">
+    <Name>惩戒！</Name>
+    <Desc>若自身处于“惩戒”状态，则速度骰子数将增至5颗并对最后攻击自身的司书使用1张特殊书页“惩戒！！”
+在此状态下，自身的混乱攻击抗性将变为“致命”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805221">
+    <Name>守护……</Name>
+    <Desc>若“罗兰”未处于“惩戒”状态，则每2幕进入“警戒”状态
+每一幕开始时切换为进攻模式或防御模式</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805222">
+    <Name>赶出去……</Name>
+    <Desc>若“罗兰”处于“惩戒”状态，则自身将切换为进攻模式</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805223">
+    <Name>守林鸟</Name>
+    <Desc>优先将处于“混乱”状态的司书指定为攻击目标
+每一幕开始时速度骰子值固定
+若速度高于目标，则使自身的“进攻型”骰子威力+2</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805224">
+    <Name>暂息</Name>
+    <Desc>承受致死伤害时将陷入“假死”，保留1点体力并在下3幕中陷入混乱，3幕之后恢复所有体力与混乱抗性</Desc>
+  </PassiveDesc>
+  
+  <!-- 긴새 -->
+  <PassiveDesc ID="805311">
+    <Name>飘摇的绷带</Name>
+    <Desc>免疫负面状态伤害。(烧伤，流血，妖灵)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805312">
+    <Name>罪痕</Name>
+    <Desc>战斗开始时获得10层“罪痕”
+击中目标时向其转移1层“罪痕”
+目标每有1层“罪痕”便使自身的所有骰子威力+1</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805313">
+    <Name>不公正的天秤</Name>
+    <Desc>自第1幕起，每一幕开始时对所有角色施加1层“罪痕”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805314">
+    <Name>审判</Name>
+    <Desc>每一幕开始时若存在“罪痕”层数不低于5的角色，则对其使用1张特殊书页“审判”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805315">
+    <Name>永恒的审判</Name>
+    <Desc>每一幕开始时若舞台中至少存在3名“罪痕”层数不低于3的角色，则使用1张群体攻击书页“永恒的审判”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805316">
+    <Name>恶贯满盈</Name>
+    <Desc>使用“审判”或“永恒的审判”后，自身将失去25%的混乱抗性</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805321">
+    <Name>凄惨悲鸣</Name>
+    <Desc>若承受伤害，则下一幕中使用1张特殊书页“凄惨悲鸣”</Desc>
+  </PassiveDesc>
+
+  <!-- 종말새 -->
+  <PassiveDesc ID="805511">
+    <Name>黑森林的大怪兽</Name>
+    <Desc>从8种行动模式中随机选取3种，分3幕使用</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805512">
+    <Name>三鸟</Name>
+    <Desc>每2幕切换“终末鸟之卵”效果
+“终末鸟之卵”将按“巨目”-“小喙”-“长臂”的顺序依次切换
+“罗兰”的攻击抗性取决于当前生效的“终末鸟之卵”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805521">
+    <Name>破碎之卵</Name>
+    <Desc>若在“终末鸟之卵”生效时陷入混乱，则失去一定体力且该“终末鸟之卵”效果将被永久移除
+下一幕开始时解除混乱状态，移除自身的负面状态并获得2层“强壮”与“忍耐”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805513">
+    <Name>永远的和平</Name>
+    <Desc>体力无法低于75%</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805514">
+    <Name>永远的和平…</Name>
+    <Desc>体力无法低于50%</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805515">
+    <Name>永远的和平……</Name>
+    <Desc>体力无法低于25%</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805516">
+    <Name>大鸟的记忆</Name>
+    <Desc>使用特殊书页
+若“巨目”效果已被移除，则无法使用此行动模式</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805517">
+    <Name>审判鸟的记忆</Name>
+    <Desc>使用特殊书页
+若“长臂”效果已被移除，则无法使用此行动模式</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805518">
+    <Name>惩戒鸟的记忆</Name>
+    <Desc>使用特殊书页
+若“小喙”效果已被移除，则无法使用此行动模式</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805519">
+    <Name>终末鸟</Name>
+    <Desc>使用特殊书页</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="805520">
+    <Name>终末鸟</Name>
+    <Desc>使用特殊书页</Desc>
+  </PassiveDesc>
+
+ 
+  <!-- 백야-->
+  <PassiveDesc ID="9055111">
+    <Name>先知</Name>
+    <Desc>无法被指定为攻击目标
+体力与混乱抗性无法低于1
+免疫“烧伤”，“流血”与“腐蚀”伤害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="9055112">
+    <Name>相信我</Name>
+    <Desc>每一幕开始每有1名“使徒”死亡，便使用1张特殊书页“圣洗”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="9055113">
+    <Name>在那世界的尽头</Name>
+    <Desc>累计12名“使徒”死亡后进入下一阶段</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="9055121">
+    <Name>时机已然成熟</Name>
+    <Desc>第1幕中对2名助理司书各使用1张特殊书页“起身迎接我吧”
+自第3幕起每3幕使用1张特殊书页“我是你的救主”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="9055122">
+    <Name>我的仆从，起身迎接我</Name>
+    <Desc>第2幕中召唤2名“护卫使徒”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="9055131">
+    <Name>为何不安？</Name>
+    <Desc>第1幕中使所有司书陷入混乱
+使用战斗书页“不要否认我的存在”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="9055132">
+    <Name>我与你同在</Name>
+    <Desc>第2幕中召唤2名“护卫使徒”
+对指定司书施加“？？？”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="9055133">
+    <Name>？？？</Name>
+    <Desc>将指定司书的卡组替换为特殊卡组</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="905500">
+    <Name>不死</Name>
+    <Desc>体力无法低于1</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="905501">
+    <Name>假死</Name>
+    <Desc>若体力不高于2，则被唤醒前将持续处于“混乱”状态</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="905502">
+    <Name>我将跟从您</Name>
+    <Desc>若目标处于“启示”状态则使自身的“进攻型”骰子威力+2</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="905503">
+    <Name>免疫</Name>
+    <Desc>免疫“烧伤”，“流血”与“腐蚀”伤害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="905521">
+    <Name>护卫使徒</Name>
+    <Desc>每一幕开始时使“安吉拉”获得5层“守护”与“振奋”
+若自身处于“假死”状态，则下一幕中“安吉拉”的所有攻击抗性将变为“致命”
+自身被唤醒前无法对“安吉拉”施加“守护”与“振奋”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="905522">
+    <Name>我必保全他的命</Name>
+    <Desc>优先将最后一名击中“安吉拉”的司书指定为攻击目标</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="905523">
+    <Name>重获新生</Name>
+    <Desc>获得特定司书的核心书页攻击抗性</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="905531">
+    <Name>镰刀使徒</Name>
+    <Desc>优先将体力最低的司书指定为攻击目标</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="905551">
+    <Name>长枪使徒</Name>
+    <Desc>优先将拥有负面状态的司书指定为攻击目标</Desc>
+  </PassiveDesc>
+
+  <!-- 케테르 완전개방-->
+  <!-- 플레이어블 앤젤라 -->
+  <PassiveDesc ID="1005011">
+    <Name>直面过去</Name>
+    <Desc>若该角色死亡则司书方输掉战斗</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005012">
+    <Name>安吉拉</Name>
+    <Desc>核心书页与战斗书页无法更改且无法转移被动能力</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005013">
+    <Name>图书馆-馆长</Name>
+    <Desc>开启舞台时额外抽取2张书页
+每一幕开始时额外恢复1点光芒并额外抽取1张书页</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005014">
+    <Name>光之种</Name>
+    <Desc>所有我方角色将获得双倍情感点数</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005015">
+    <Name>？？？</Name>
+    <Desc>阶段转换时可获得E.G.O书页
+累计使用9张不同E.G.O书页后可获得特殊E.G.O书页</Desc>
+  </PassiveDesc>
+
+
+  <!-- 피의 욕조 -->
+  <PassiveDesc ID="1005111">
+    <Name>血浴缸</Name>
+    <Desc>每一幕开始时移除手中的书页并将意图使用的书页置入手中
+自身的书页费用为0</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005112">
+    <Name>疤痕</Name>
+    <Desc>被斩击骰子击中时所受伤害-1~5</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005113">
+    <Name>鲜血</Name>
+    <Desc>“防御型”骰子威力+3</Desc>
+  </PassiveDesc>
+
+  <!-- 심장-->
+  <PassiveDesc ID="1005211">
+    <Name>渴望之心</Name>
+    <Desc>每一幕开始时移除手中的书页并将意图使用的书页置入手中
+自身的书页费用为0</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005212">
+    <Name>脉动</Name>
+    <Desc>每4幕发起1次攻击</Desc>
+  </PassiveDesc>
+   <PassiveDesc ID="1005213">
+    <Name>心之召唤</Name>
+    <Desc>攻击结束后生成数个体力不满的“渴望之肺”直至其数量达到上限
+若陷入混乱，则延后一幕生成</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="1005214">
+    <Name>消逝之愿</Name>
+    <Desc>若累计有8名友方角色死亡，则陷入混乱</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005215">
+    <Name>四散之愿</Name>
+    <Desc>若陷入混乱，则“渴望”层数与行动模式将被重置</Desc>
+  </PassiveDesc>
+
+  <!-- 폐 -->
+  <PassiveDesc ID="1005221">
+    <Name>渴望-？？？</Name>
+    <Desc>获得与“渴望”相关的固有状态效果</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005222">
+    <Name>剧烈搏动</Name>
+    <Desc>若舞台中“渴望之肺”的数量不足3个，则“渴望”效果将被替换为“剧烈搏动”</Desc>
+  </PassiveDesc>
+
+  <!-- 피노키오 앤젤라-->
+  <PassiveDesc ID="1005311">
+    <Name>匹诺曹</Name>
+    <Desc>复制并使用指定司书的卡组
+每一幕开始时移除手中的书页并将意图使用的书页置入手中
+自身的书页费用为0</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005312">
+    <Name>谎言</Name>
+    <Desc>自第3幕起，每3幕获得10层“束缚”并使用1~2张标有错误信息的“谎言书页”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005313">
+    <Name>谎言揭穿</Name>
+    <Desc>使用“谎言书页”与“说谎不好！”拼点时自身的所有骰子威力-8</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005314">
+    <Name>撒谎超开心</Name>
+    <Desc>使用“谎言书页”与其他书页拼点时自身的所有骰子威力+8</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005315">
+    <Name>有啥不好的？</Name>
+    <Desc>若谎言被揭穿，则下一幕中所有我方角色将获得4层“虚弱”与“破绽”且所有混乱攻击抗性变为“致命”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005316">
+    <Name>啦啦啦~</Name>
+    <Desc>若谎言未被揭穿，则下一幕中所有我方角色将获得4层“强壮”与“忍耐”</Desc>
+  </PassiveDesc>
+
+  <!-- 피노키오 잡-->
+  <PassiveDesc ID="1005321">
+    <Name>全都是假话的歌谣</Name>
+    <Desc>复制并使用第1名助理司书的卡组
+若自身存活，则每一幕开始时随机调整所有角色手中书页的费用(仅对初始费用为0~3费的书页生效)
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005322">
+    <Name>谣歌的唱来过倒颠</Name>
+    <Desc>复制并使用第2名助理司书的卡组
+若自身存活，则所有我方角色将获得复制对象的状态效果
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005323">
+    <Name>为了全人类的歌谣</Name>
+    <Desc>复制并使用第3名助理司书的卡组
+若自身存活，则每一幕开始时所有我方角色将随机获得2层“强壮”或“忍耐”
+    </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005324">
+    <Name>好奇心满满的歌谣</Name>
+    <Desc>复制并使用第4名助理司书的卡组
+若自身存活，则每一幕开始时所有司书将洗回手中的书页并抽取3张书页
+    </Desc>
+  </PassiveDesc>
+
+
+  <!-- 눈의 여왕 -->
+  <PassiveDesc ID="1005411">
+    <Name>刺骨寒霜</Name>
+    <Desc>每一幕开始时使所有司书失去5%的体力</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005412">
+    <Name>孤傲的严寒</Name>
+    <Desc>在所有“冰狱”被摧毁前免疫所有伤害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005413">
+    <Name>霜冻</Name>
+    <Desc>速度骰子数及光芒上限与被摧毁的“冰狱”数成正比
+若被摧毁的“冰狱”数达到2，则开始使用近战书页</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005414">
+    <Name>深谙严冬残酷与玫瑰芬芳之人</Name>
+    <Desc>若“冰狱”被全部摧毁，则下一幕开始时所有司书将恢复50%的体力且“霜雕”将使用1张群体攻击书页“雪暴”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005415">
+    <Name>冷酷</Name>
+    <Desc>免疫“眩晕”</Desc>
+  </PassiveDesc>
+
+  <!-- 눈의 여왕 : 얼음 -->
+  <PassiveDesc ID="1005421">
+    <Name>加伊与格尔达</Name>
+    <Desc>承受致死伤害后，下一幕开始时唤醒1名受困的司书</Desc>
+  </PassiveDesc>
+
+
+  <!-- 아무 말 없는 소녀 -->
+  <PassiveDesc ID="1005512">
+    <Name>噤默处子</Name>
+    <Desc>每一幕开始时移除手中的书页并将意图使用的书页置入手中
+自身的书页费用为0</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005511">
+    <Name>……</Name>
+    <Desc>“钉”与“锤”被镇压后进入下一阶段</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005513">
+    <Name>状态免疫</Name>
+    <Desc>免疫负面状态的伤害</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005514">
+    <Name>诡笑</Name>
+    <Desc>免疫“眩晕”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005515">
+    <Name>目光</Name>
+    <Desc>被击中时，攻击方手中的“负罪感”每有1点费用便使本次伤害-1</Desc>
+  </PassiveDesc>
+
+
+  <!-- 아무 말 없는 소녀 : 못 손 -->
+  <PassiveDesc ID="1005521">
+    <Name>钉</Name>
+    <Desc>每一幕开始时恢复所有光芒</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005522">
+    <Name>负罪感</Name>
+    <Desc>使用的书页每有1点费用便使其中的所有骰子威力+1</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005523">
+    <Name>心之缝隙</Name>
+    <Desc>击中目标时随机使其手中1张费用最高的书页获得“费用降低”效果</Desc>
+  </PassiveDesc>
+
+  <!-- 아무 말 없는 소녀 : 망치 손 -->
+  <PassiveDesc ID="1005531">
+    <Name>锤</Name>
+    <Desc>每2幕恢复所有光芒</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005532">
+    <Name>心之裂痕</Name>
+    <Desc>击中目标时随机使其手中1张费用最高的书页获得“费用提升”效果</Desc>
+  </PassiveDesc>
+
+  <!-- 아무 말 없는 소녀 : 검은 손 - 공격 -->
+  <PassiveDesc ID="1005541">
+    <Name>噤默处子</Name>
+    <Desc>每一幕开始时移除手中的书页并将意图使用的书页置入手中
+自身的书页费用为0</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005542">
+    <Name>绽放之欲</Name>
+    <Desc>若被击中，则下一幕中使自身的所有骰子威力+10</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005543">
+    <Name>黑羽</Name>
+    <Desc>承受负面状态伤害时伤害减半</Desc>
+  </PassiveDesc>
+
+  <!-- 아무 말 없는 소녀 : 검은 손 - 반격 -->
+  <PassiveDesc ID="1005551">
+    <Name>噤默处子</Name>
+    <Desc>每一幕开始时移除手中的书页并将意图使用的书页置入手中
+自身的书页费用为0</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005552">
+    <Name>被压抑的本能</Name>
+    <Desc>目标手中的“负罪感”每有1点费用便使自身当前书页的所有骰子威力+1
+若连续3幕未被击中，则使用强力战斗书页。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1005553">
+    <Name>黑羽</Name>
+    <Desc>承受负面状态伤害时伤害减半</Desc>
+  </PassiveDesc>
+</PassiveDescRoot>

@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- 용병-->
+  <Card ID="9906101">
+    <Name>숨고르기</Name>
+    <Artwork>Redhood_Revenge</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="redhood_upgradeallpw" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J"  EffectRes="" Script="redhood_recoverhp6pw" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="redhood_recoverbp6pw" ActionScript="" Desc="" />
+    </BehaviourList>
+  </Card>
+  <Card ID="9906102">
+    <Name>사냥감 포착</Name>
+    <Artwork>Redhood_Hunt</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="final_gebura_redhood_target" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+  </Card>
+  <Card ID="9906103">
+    <Name>야수사냥</Name>
+    <Artwork>Redhood_Hunt</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="powerUpNext2pw" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="redhood_disarm5atk" ActionScript="" Desc="" />
+    </BehaviourList>
+  </Card>
+  <Card ID="9906104">
+    <Name>총</Name>
+    <Artwork>RedHood_Gun</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Far" Cost="2" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="11" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="EGO_RedHood_FarAtk" Script="final_gebura_redhood_faratk" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Slash" Motion="F" EffectRes="EGO_RedHood_FarAtk" Script="final_gebura_redhood_target" ActionScript="" Desc="" />
+    </BehaviourList>
+  </Card>
+  <Card ID="9906105">
+    <Name>칼던지기 광역</Name>
+    <Artwork>Redhood_RedScar</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection="All"/>
+    <Script>redhood_far1</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="10" Dice="10" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="redhood_powerup" ActionScript="redhood_throwknives" Desc="" />
+    </BehaviourList>
+    <Priority>101</Priority>
+  </Card>
+  <Card ID="9906106">
+    <Name>난사</Name>
+    <Artwork>Redhood_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection="All" />
+    <Script>redhood_far2</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="" ActionScript="redhood_blindlyfire" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S3" EffectRes="" Script="" ActionScript="redhood_blindlyfire" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="" ActionScript="redhood_blindlyfire" Desc="" />
+    </BehaviourList>
+    <Priority>102</Priority>
+  </Card>
+  <!-- 용병전투 늑대 -->
+  <Card ID="9906111">
+    <Name>흉포한 송곳니</Name>
+    <Artwork>Wolf_Scratch</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="RedHoodWolf_Bite" Script="redhood_wolfbleed2" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="strength1pw" ActionScript="" Desc="" />
+    </BehaviourList>
+  </Card>
+  <Card ID="9906112">
+    <Name>섬뜩한 발톱</Name>
+    <Artwork>Wolf_Scratch</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="binding3atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="strength1pw" ActionScript="" Desc="" />
+    </BehaviourList>
+  </Card>
+  <Card ID="9906113">
+    <Name>피로 물든 사냥</Name>
+    <Artwork>Wolf_Scratch</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="bleeding4atk" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="bleeding4atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="bleeding4atk" ActionScript="" Desc="" />
+    </BehaviourList>
+  </Card>
+  <Card ID="9906114">
+    <Name>울부짖기</Name>
+    <Artwork>Wolf_Howl</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarArea" Cost="3" Affection="All" />
+    <Script>redhood_far3</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="11" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="final_gebura_redhood_wolfareaatk" ActionScript="redhood_wolfhowling" Desc="" />
+    </BehaviourList>
+    <Priority>101</Priority>
+  </Card>
+  
+  <!-- 커다랗고 나쁠 늑대 -->
+  <Card ID="9906201">
+    <Name>가드 카드</Name>
+    <Artwork>BigBadWolf_Change</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="binding3atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9906202">
+    <Name>평타 카드</Name>
+    <Artwork>BigBadWolf_Change</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9906203">
+    <Name>강한 공격</Name>
+    <Artwork>BigBadWolf_Eat</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="final_gebura_bigbadwolf_scar1atk_nr" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="final_gebura_bigbadwolf_scar1atk_nr" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="final_gebura_bigbadwolf_scar1atk_nr" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9906204">
+    <Name>반격 카드</Name>
+    <Artwork>BigBadWolf_Eat</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Standby" Detail="Slash" Motion="J" EffectRes="" Script="strength1pw" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Slash" Motion="J" EffectRes="" Script="strength1pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>50</Priority>
+  </Card>
+
+  <Card ID="9906211">
+    <Name>변신후 할퀴기</Name>
+    <Artwork>BigBadWolf_Claw</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="bleeding1atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="bleeding1atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="strength1pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9906212">
+    <Name>변신후 물기</Name>
+    <Artwork>BigBadWolf_Claw</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="final_gebura_bigbadwolf_targetPowerDown2pw" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="final_gebura_bigbadwolf_recoverHp10atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="final_gebura_bigbadwolf_strengthThisRound1pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9906213">
+    <Name>변신후 강한공격</Name>
+    <Artwork>BigBadWolf_Claw</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="final_gebura_bigbadwolf_scar1atk" ActionScript="" Desc="" />
+      <Behaviour Min="7" Dice="12" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="final_gebura_bigbadwolf_scar3atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9906214">
+    <Name>은신 카드</Name>
+    <Artwork>BigBadWolf_Howl</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="" Script="bigbadwolf_recoverhp10atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>102</Priority>
+  </Card>
+  <Card ID="9906215">
+    <Name>단일 울음소리</Name>
+    <Artwork>BigBadWolf_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Special" Cost="0"/>
+    <Script>final_gebura_bigbadwolf_cryingself</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="11" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="final_gebura_bigbadwolf_crying" ActionScript="geburafinal_bigbadwolf_s1" Desc="" />
+    </BehaviourList>
+    <Priority>101</Priority>
+  </Card>
+  <Card ID="9906216">
+    <Name>변신 후 울음소리 광역</Name>
+    <Artwork>BigBadWolf_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarArea" Cost="0" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="15" Dice="15" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="bigbadwolf_howlingatk" ActionScript="bigbadwolf_wolfhowling" Desc="" />
+    </BehaviourList>
+    <Priority>90</Priority>
+  </Card>
+
+  <!-- 웃시산 -->
+  <Card ID="9906301">
+    <Name>웃시산 평타 시체먹기 </Name>
+    <Artwork>Mountain_Eat</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_gebura_mountain_1" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_gebura_mountain_1" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9906302">
+    <Name>웃시산 강한 시체먹기 </Name>
+    <Artwork>Mountain_Vomit</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="10" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="final_gebura_mountain_2" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_gebura_mountain_3" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9906303">
+    <Name>웃시산 괴성 지르기</Name>
+    <Artwork>Mountain_Shout</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="mountain2" ActionScript="mountain_shout" Desc="" />
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="mountain3" ActionScript="mountain_shout" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="9906304">
+    <Name>웃시산 구역질</Name>
+    <Artwork>Mountain_EGO</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="FarArea" Cost="0" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="15" Dice="15" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="mountain4" ActionScript="mountain_vomit" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="9906305">
+    <Name>웃시산 몸통 내려찍기</Name>
+    <Artwork>Mountain_Vomit</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script>final_gebura_mountain_self1</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="final_gebura_mountain_4" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="final_gebura_mountain_4" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9906311">
+    <Name>웃시산 잡몹 비명 소리</Name>
+    <Artwork>Mountain_Corpse</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Far" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="final_gebura_mountain_5" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="final_gebura_mountain_5" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+	
+	
+	<!-- 노스페라투 -->
+	<Card ID="9906411">
+		<Name>고결한 휴식</Name>
+		<Artwork>Nosferatu_Vampire</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Far" Cost="0"/>
+		<Script></Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="3" Dice="7" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="7" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Priority>10</Priority>
+	</Card>
+	<Card ID="9906412">
+		<Name>품위 있는 식사</Name>
+		<Artwork>Nosferatu_Vampire</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Far" Cost="1"/>
+		<Script>final_nosferatu_blood1</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="final_nosferatu_atk" ActionScript="" Desc="" />
+			<Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="final_nosferatu_atk" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="7" Type="Standby" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="9906413">
+		<Name>선홍빛 양식</Name>
+		<Artwork>Nosferatu_Vampire</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Far" Cost="2"/>
+		<Script>final_nosferatu_buf</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="4" Dice="6" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="6" Dice="12" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="final_nosferatu_powerdown" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="final_nosferatu_atk" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="9906414">
+		<Name>갈증</Name>
+		<Artwork>Nosferatu_Vampire</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Far" Cost="2"/>
+		<Script>final_nosferatu_special</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="7" Dice="11" Type="Atk" Detail="Slash" Motion="F" EffectRes="" Script="final_nosferatu_special_1st" ActionScript="" Desc="" />
+			<Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="final_nosferatu_special_2nd" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="final_nosferatu_special_2nd" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="8" Type="Standby" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Priority>50</Priority>
+	</Card>
+	<Card ID="9906415">
+		<Name>피의 연회</Name>
+		<Artwork>Nosferatu_EGO</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="FarArea" Cost="0" Affection="Team"/>
+		<Script>final_nosferatu_area</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="12" Dice="16" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="final_nosferatu_area" ActionScript="geburafinal_nosperatu_area" Desc="" />
+		</BehaviourList>
+		<Priority>100</Priority>
+	</Card>
+	
+	<!-- 노스페라투 : 박쥐 -->
+	<Card ID="9906421">
+		<Name>흡혈</Name>
+		<Artwork>Nosferatu_Wine</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Near" Cost="1"/>
+		<Script>final_nosferatu_bat_power</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="6" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_nosferatu_bat_blood" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="9906422">
+		<Name>따끔</Name>
+		<Artwork>Nosferatu_Wine</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Near" Cost="2"/>
+		<Script>final_nosferatu_bat_power</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_nosferatu_bat_bleed" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_nosferatu_bat_bleed" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="9906423">
+		<Name>갈증</Name>
+		<Artwork>Nosferatu_Wine</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Near" Cost="0"/>
+		<Script>final_nosferatu_bat_power</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="5" Dice="10" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_nosferatu_bat_debuf" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Priority>10</Priority>
+	</Card>
+
+	<!-- 노스페라투 : 변신 -->
+	<Card ID="9906431">
+		<Name>섬뜩한 기운</Name>
+		<Artwork>Nosferatu_BloodHope</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Near" Cost="0"/>
+		<Script></Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="3" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="weak1pw" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="weak1pw" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Priority>10</Priority>
+	</Card>
+	<Card ID="9906432">
+		<Name>무자비한 손길</Name>
+		<Artwork>Nosferatu_BloodHope</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Near" Cost="0"/>
+		<Script>final_nosferatu_monster_blood1lose</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="3" Dice="9" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="final_nosferatu_monster_atk" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="final_nosferatu_monster_atk" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Priority>10</Priority>
+	</Card>
+	<Card ID="9906433">
+		<Name>격한 손짓</Name>
+		<Artwork>Nosferatu_BloodHope</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Near" Cost="1"/>
+		<Script>final_nosferatu_monster_blood2lose</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="3" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="final_nosferatu_monster_powerdown" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="final_nosferatu_monster_powerdown" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="9" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="final_nosferatu_monster_strong" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Standby" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="9906434">
+		<Name>참을 수 없는 갈증</Name>
+		<Artwork>Nosferatu_BloodHope</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Near" Cost="2"/>
+		<Script></Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="7" Dice="11" Type="Atk" Detail="Slash" Motion="S2" EffectRes="" Script="final_nosferatu_monster_special_1st" ActionScript="" Desc="" />
+			<Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="" Script="final_nosferatu_monster_special_2nd" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="" Script="final_nosferatu_monster_special_2nd" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="" Script="final_nosferatu_monster_special_2nd" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Priority>50</Priority>
+	</Card>
+	<Card ID="9906435">
+		<Name>피의 갈망</Name>
+		<Artwork>Nosferatu_EGO</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="FarArea" Cost="0" Affection="Team"/>
+		<Script>final_nosferatu_monster_area</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="17" Dice="22" Type="Atk" Detail="Slash" Motion="S2" EffectRes="" Script="final_nosferatu_monster_area" ActionScript="geburafinal_nosperatu_monster_area" Desc="" />
+		</BehaviourList>
+		<Priority>100</Priority>
+	</Card>
+  
+  <!-- 아무것도 없는 -->
+  <Card ID="9906501">
+    <Name>없뭉 1단계 평타1</Name>
+    <Artwork>NothingThere_Skin</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="disarm1atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="disarm1atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="disarm1atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9906502">
+    <Name>없뭉 1단계 평타2</Name>
+    <Artwork>NothingThere_Skin</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="5" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="10" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="final_gebura_nothing_fear" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9906503">
+    <Name>없뭉 1단계 평타3</Name>
+    <Artwork>NothingThere_Skin</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="final_gebura_nothing_fear" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="weak2atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9906504">
+    <Name>없뭉 1단계 허물 뒤집어쓰기</Name>
+    <Artwork>NothingThere_Love</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="12" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="final_gebura_nothing_skin" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>50</Priority>
+  </Card>
+  <Card ID="9906505">
+    <Name>없뭉 1단계 공포</Name>
+    <Artwork>NothingThere_Love</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="3"/>
+    <Script>nothing_fear</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="1" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>50</Priority>
+  </Card>
+
+  <Card ID="9906511">
+    <Name>없뭉 2단계 반격</Name>
+    <Artwork>NothingThere_Skin</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="final_gebura_nothing_cocoon" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="final_gebura_nothing_cocoon" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="final_gebura_nothing_cocoon" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9906521">
+    <Name>없뭉 3단계 약한공격</Name>
+    <Artwork>NothingThere_Goodbye</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="final_gebura_nothing_mimic1pw" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="final_gebura_nothing_mimic1pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9906522">
+    <Name>없뭉 3단계 평타1</Name>
+    <Artwork>NothingThere_Goodbye</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script>final_gebura_nothing_power1costCharge</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="" Script="final_gebura_nothing_break8atk" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="" Script="final_gebura_nothing_break8atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="final_gebura_nothing_strength1pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9906523">
+    <Name>없뭉 3단계 평타2</Name>
+    <Artwork>NothingThere_Goodbye</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="final_gebura_nothing_mimic1pl" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="" Script="final_gebura_nothing_mimic1pl" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="final_gebura_nothing_mimic1pl" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="final_gebura_nothing_strength1pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9906524">
+    <Name>없뭉 3단계 헬로우</Name>
+    <Artwork>NothingThere_Hello</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="4"/>
+    <Script>final_gebura_nothing_power2costCharge</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="10" Dice="15" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="final_gebura_nothing_hello" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9906525">
+    <Name>없뭉 3단계 굿바이</Name>
+    <Artwork>NothingThere_EGO</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="6"/>
+    <Script>final_gebura_nothing_dmg10costCharge</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="20" Dice="40" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="final_gebura_nothing_goodbye" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+</DiceCardXmlRoot>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- 집으로 가는 길 : 집으로 가는 길 -->
+  <Card ID="970321">
+    <Name>우리 모두 가보자</Name>
+    <Artwork>House_Atk</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection="Passive"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="" ActionScript="waybackhome_1st" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="" ActionScript="waybackhome_2nd" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="" ActionScript="waybackhome_3rd" Desc="" />
+    </BehaviourList>
+    <Priority>30</Priority>
+  </Card>
+
+  <Card ID="970322">
+    <Name>친구야 가보자~</Name>
+    <Artwork>House_Home</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="4" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="waybackhome_atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>50</Priority>
+  </Card>
+
+  <Card ID="970323">
+    <Name>이..이..못된 마법사 놈아!!!</Name>
+    <Artwork>House_BigHouse</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarArea" Cost="0" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="10" Dice="10" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="waybackhome_super" ActionScript="waybackhome_super" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+
+  <Card ID="970324">
+    <Name>회피</Name>
+    <Artwork>House_Home</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>10</Priority>
+  </Card>
+
+  <!-- 집으로 가는 길 : 겁쟁이 사자 -->
+  <Card ID="970331">
+    <Name>할퀴기1</Name>
+    <Artwork>House_LionAtk</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>10</Priority>
+  </Card>
+
+  <Card ID="970332">
+    <Name>할퀴기2</Name>
+    <Artwork>House_LionAtk</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="3"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>10</Priority>
+  </Card>
+
+  <Card ID="970333">
+    <Name>회피</Name>
+    <Artwork>House_LionAtk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="11" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="4" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>10</Priority>
+  </Card>
+
+  <Card ID="970334">
+    <Name>원거리 공격</Name>
+    <Artwork>House_LionPosion</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="4" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="waybackhome_vulnerable2atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="waybackhome_vulnerable3atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="waybackhome_vulnerable4atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="waybackhome_cowardlion_far" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+
+  <Card ID="970335">
+    <Name>오들오들</Name>
+    <Artwork>House_Cat</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="1" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="waybackhome_coward" ActionScript="" Desc="" />
+      <Behaviour Min="1" Dice="1" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="waybackhome_coward" ActionScript="" Desc="" />
+      <Behaviour Min="1" Dice="1" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="waybackhome_coward" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>300</Priority>
+  </Card>
+  
+  <!-- 오즈마 -->
+  <Card ID="970411">
+    <Name>호박소환</Name>
+    <Artwork>Ozma_Immortal</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="FarArea" Cost="0" Affection="Team"/>
+    <Script>ozma_summon_pumpkin</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="15" Dice="15" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="" ActionScript="ozma_areaatk" Desc="" />
+    </BehaviourList>
+    <Priority>110</Priority>
+  </Card>
+  <Card ID="970412">
+    <Name>망각 부여</Name>
+    <Artwork>Ozma_forgotten</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>ozma_oblivion</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="5" Type="Atk" Detail="Penetrate" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="970413">
+    <Name>근거리1 아군지원</Name>
+    <Artwork>Ozma_forgotten</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="ozma_p3b3atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="970414">
+    <Name>근거리2 사서방해</Name>
+    <Artwork>Ozma_forgotten</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>    
+  </Card>
+  <Card ID="970415">
+    <Name>발악 광역</Name>
+    <Artwork>Ozma_Boom</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="ozma_weak2atk_thisround" ActionScript="ozma_areaatk" Desc="" />
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="ozma_weak1atk_thisround" ActionScript="ozma_areaatk" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="ozma_weak1atk_thisround" ActionScript="ozma_areaatk" Desc="" />
+    </BehaviourList>
+    <Priority>150</Priority>
+  </Card>
+  <Card ID="970416">
+    <Name>광폭화 광역</Name>
+    <Artwork>Ozma_Boom</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarArea" Cost="0" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="30" Dice="30" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="" ActionScript="ozma_areaatk" Desc="" />
+    </BehaviourList>
+    <Priority>150</Priority>
+  </Card>
+  <Card ID="970421">
+    <Name>망각</Name>
+    <Artwork>Ozma_Immortal</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="1" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="1" Dice="1" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="1" Dice="1" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="970422">
+    <Name>공격 망각</Name>
+    <Artwork>Ozma_Immortal</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+        </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  
+  
+</DiceCardXmlRoot>  

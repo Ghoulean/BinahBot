@@ -1,0 +1,1756 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleEffectTextRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <effectTextList>
+    <BattleEffectText ID="OldLady_Lonely">
+      <Name>孤獨</Name>
+      <Desc>速度-2
+每一幕開始時承受1~2點傷害。(不可疊加)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedShoes_Kirakira">
+      <Name>著魔</Name>
+      <Desc>優先將應用異想體書頁-“閃亮”的司書指定為攻擊目標
+擊中任意司書時傷害+2~4</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="TheDreamingCurrent_Sea">
+      <Name>虹色洋流</Name>
+      <Desc>{0}幕之內，速度-3
+每一幕開始時失去10%的現有體力並恢復1點光芒。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Bloodbath_Hands">
+      <Name>蒼白之手</Name>
+      <Desc>被應用異想體書頁-“蒼白之手”的司書連續擊中3次時將追加承受3~10點混亂傷害並重置該計數。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="TheSnowQueen_Chu">
+      <Name>親吻</Name>
+      <Desc>每一幕結束時若“霜片”層數大於2，則該角色將在下一幕中陷入“眩暈”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HappyTeddyBear_Hug">
+      <Name>思念的擁抱</Name>
+      <Desc>被應用異想體書頁-“思念的擁抱”的司書攻擊時若拼點失敗，則有{0}%的機率對該角色造成等同於對方骰子點數的混亂傷害。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="TheDreamingCurrent_candy">
+      <Name>糖果</Name>
+      <Desc>被應用異想體書頁-“糖果”的司書擊中時所受傷害+{0}%</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ChildofGalaxy_Token">
+      <Name>卵石</Name>
+      <Desc>{0}幕之內，每一幕開始時恢復10%的體力。
+一名友方角色死亡時失去20%的體力。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Stun">
+      <Name>眩暈</Name>
+      <Desc>這一幕中無法使用書頁。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Break">
+      <Name>混亂</Name>
+      <Desc>這一幕中無法行動且無法抽取書頁與恢復光芒。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Burn">
+      <Name>燒傷</Name>
+      <Desc>每一幕結束時承受{0}點傷害，隨後將該層數減至2/3(向下取整)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Paralysis">
+      <Name>麻痺</Name>
+      <Desc>這一幕中每次使用戰鬥書頁時至多{0}枚骰子最大值-3</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Bleeding">
+      <Name>流血</Name>
+      <Desc>這一幕中每投擲一顆“進攻型”骰子便承受{0}點傷害並將該層數減至2/3(向上取整)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Vulnerable">
+      <Name>易損</Name>
+      <Desc>這一幕中被擊中時所受傷害+{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Weak">
+      <Name>虛弱</Name>
+      <Desc>這一幕中“進攻型”骰子威力-{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Disarm">
+      <Name>破綻</Name>
+      <Desc>這一幕中“防禦型”骰子威力-{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Binding">
+      <Name>束縛</Name>
+      <Desc>這一幕中速度-{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Protection">
+      <Name>守護</Name>
+      <Desc>這一幕中被擊中時所受傷害-{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Strength">
+      <Name>強壯</Name>
+      <Desc>這一幕中“進攻型”骰子威力+{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Endurance">
+      <Name>忍耐</Name>
+      <Desc>這一幕中“防禦型”骰子威力+{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Quickness">
+      <Name>迅捷</Name>
+      <Desc>這一幕中速度+{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Blurry">
+      <Name>匿蹤</Name>
+      <Desc>這一幕開始時無法被指定為攻擊目標。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Burn_Keyword">
+      <Name>燒傷 X</Name>
+      <Desc>每一幕結束時承受X點傷害，隨後將該層數減至2/3(向下取整)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Paralysis_Keyword">
+      <Name>麻痺 X</Name>
+      <Desc>這一幕中每次使用戰鬥書頁時至多X顆骰子最大值-3</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Bleeding_Keyword">
+      <Name>流血 X</Name>
+      <Desc>這一幕中每投擲一顆“進攻型”骰子便承受X點傷害並將該層數減至2/3(向上取整)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Vulnerable_Keyword">
+      <Name>易損 X</Name>
+      <Desc>這一幕中被擊中時所受傷害+X</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Weak_Keyword">
+      <Name>虛弱 X</Name>
+      <Desc>這一幕中“進攻型”骰子威力-X </Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Disarm_Keyword">
+      <Name>破綻 X</Name>
+      <Desc>這一幕中“防禦型”骰子威力-X</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Binding_Keyword">
+      <Name>束縛 X</Name>
+      <Desc>這一幕中速度-X</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Protection_Keyword">
+      <Name>守護 X</Name>
+      <Desc>這一幕中被擊中時所受傷害-X</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Strength_Keyword">
+      <Name>強壯 X</Name>
+      <Desc>這一幕中“進攻型”骰子威力+X</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Endurance_Keyword">
+      <Name>忍耐 X</Name>
+      <Desc>這一幕中“防禦型”骰子威力+X</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Quickness_Keyword">
+      <Name>迅捷 X</Name>
+      <Desc>這一幕中速度+X</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="bstart_Keyword">
+      <Name>戰鬥開始</Name>
+      <Desc>下令戰鬥時發動，在所有角色執行移動/攻擊動作前即可生效。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_Keyword">
+      <Name>專用戰鬥書頁</Name>
+      <Desc>僅限裝備特定核心書頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="counter_Keyword">
+      <Name>反擊</Name>
+      <Desc>僅限被1整張書頁單方面攻擊時方可使用。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="FairyFestival_Recovery">
+      <Name>儲備糧食</Name>
+      <Desc>體力為1時將被“精靈女王”吞噬。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="SpiderBud_Cocoon">
+      <Name>繭縛</Name>
+      <Desc>已成為“小蜘蛛”的攻擊目標。</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="Philip_Attack">
+      <Name>熾熱之刃</Name>
+      <Desc>擊中目標時將對其施加4層“燒傷”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Philip_Defense">
+      <Name>鳳翎之盾</Name>
+      <Desc>被擊中時所受傷害-5並對攻擊方施加2層“燒傷”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Philip_Ready">
+      <Name>爆炎一擊倒計時</Name>
+      <Desc>{0}幕之後使用特殊書頁-“爆炎一擊”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Philip_Strong">
+      <Name>爆炎一擊</Name>
+      <Desc>速度+2</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="QueenOfHatred_Sign">
+      <Name>壞蛋</Name>
+      <Desc>已成為“憎惡女王”的攻擊目標。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="QueenOfHatred_Hatred">
+      <Name>憎惡</Name>
+      <Desc>將承受“憎惡女王”的全部火力。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="KnightOfDespair_Blessing">
+      <Name>淚滴</Name>
+      <Desc>速度骰子+1
+所有攻擊抗性已改變並使用特殊書頁。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Gaho">
+      <Name>加護</Name>
+      <Desc>上一幕中承傷最多的攻擊抗性已變為“耐性”。
+(物理攻擊抗性與混亂攻擊抗性單獨計算)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ability/BloodBath_Hand">
+      <Name>蒼白之手</Name>
+      <Desc>被應用異想體書頁-“蒼白之手”的司書連續擊中3次時將追加承受3~10點混亂傷害並重置該計數。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SweepersSkill">
+      <Name>堅韌</Name>
+      <Desc>承受致死傷害時有80%的機率復活並恢復一定體力。該效果每觸發一次，復活機率便會減半。</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="SlashPowerUp">
+      <Name>斬擊骰子威力提升</Name>
+      <Desc>這一幕中斬擊骰子威力+{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="PenetratePowerUp">
+      <Name>突刺骰子威力提升</Name>
+      <Desc>這一幕中突刺骰子威力+{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HitPowerUp">
+      <Name>打擊骰子威力提升</Name>
+      <Desc>這一幕中打擊骰子威力+{0}</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="Queenbee_Spore">
+      <Name>孢子</Name>
+      <Desc>每一幕開始時承受{0}點傷害，隨後將該層數減半。(向下取整)
+這一幕中每投擲一顆“進攻型”骰子便承受{0}點傷害。
+若死亡，則下一幕中生成1隻敵對“工蜂”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Queenbee_Punish">
+      <Name>威脅</Name>
+      <Desc>被未應用異想體書頁-“工蜂”的司書擊中時將追加承受2~4點傷害。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Snowwhite_Vine">
+      <Name>絞殺藤</Name>
+      <Desc>被應用異想體書頁-“絞殺藤”的司書攻擊時對方的突刺骰子威力+1~2</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Burning_Match">
+      <Name>燃燒</Name>
+      <Desc>速度骰子+1
+所有骰子威力+2
+每投擲一顆骰子便失去5%的體力。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="TeddyLove">
+      <Name>愛意</Name>
+      <Desc>被“安潔拉”攻擊時對方的所有骰子威力+(自身“愛意”層數)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="FairyMeat">
+      <Name>鮮肉</Name>
+      <Desc>被“安潔拉”攻擊時對方的所有骰子威力+2且每被擊中一次便使其恢復10點體力。</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="FairyMeal">
+      <Name>饑餓</Name>
+      <Desc>已累計承受{0}點傷害。</Desc>
+    </BattleEffectText>
+
+    <!--
+    <BattleEffectText ID="ego_Keyword">
+      <Name>E.G.O書頁</Name>
+      <Desc>E.G.O書頁可由任意司書使用並可在累積足夠情感點數後再次使用。</Desc>
+    </BattleEffectText>
+    -->
+    <BattleEffectText ID="AreaCard_Keyword">
+      <Name>群體攻擊書頁</Name>
+      <Desc>以所有敵方角色的任意1顆速度骰子為目標發起攻擊。命中時可摧毀目標的書頁或骰子。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="AreaDiceAll_Keyword">
+      <Name>清算</Name>
+      <Desc>若骰子點數大於目標的所有骰子點數之和，則摧毀其書頁並造成傷害。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="AreaDiceEach_Keyword">
+      <Name>交鋒</Name>
+      <Desc>若骰子點數大於目標的骰子點數，則摧毀其骰子並造成傷害。</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="OnlyOne_Keyword">
+      <Name>獨一</Name>
+      <Desc>牌組中的9張書頁互不重名。(若戰鬥中臨時獲得多張同名書頁則會破壞此狀態)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="RedHood_Angry">
+      <Name>暴怒</Name>
+      <Desc>2幕之內每一幕開始時獲得2層“強壯”並使用群體攻擊書頁。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedHood_Rage">
+      <Name>無處宣洩的怒火</Name>
+      <Desc>每一幕開始時獲得5層“強壯”與“迅捷”並使用群體攻擊書頁。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedHood_Hunt">
+      <Name>獵物</Name>
+      <Desc>被應用異想體書頁-“獵物”的司書擊中時所受傷害+2~6</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="WarpCharge">
+      <Name>充能</Name>
+      <Desc>特定書頁可消耗“充能”層數進行強化，至多擁有10層“充能”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Lumberjack_Heart">
+      <Name>溫暖的心</Name>
+      <Desc>所有骰子最大值+{0}</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="GalaxyBoy_Stone">
+      <Name>友誼之證</Name>
+      <Desc>每一幕開始時恢復10%的體力。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Smoke">
+      <Name>煙氣</Name>
+      <Desc>被擊中時所受傷害+{0}%
+若“煙氣”層數不低於9則所有骰子威力+1，至多擁有10層“煙氣”且每一幕結束時層數-1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Smoke_buf">
+      <Name>煙氣</Name>
+      <Desc>擊中目標時傷害+{0}%
+若“煙氣”層數不低於9則所有骰子威力+1，至多擁有10層“煙氣”且每一幕結束時層數-1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Smoke_Keyword">
+      <Name>煙氣</Name>
+      <Desc>被擊中時根據煙氣層數承受額外傷害，若層數不低於9則所有骰子威力+1，每一幕結束時層數-1</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Butterfly_Seal">
+      <Name>封印</Name>
+      <Desc>這一幕中{0}顆速度骰子無法使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Freischutz_Bullet">
+      <Name>魔彈</Name>
+      <Desc>每當該司書使用第7張書頁時會隨機將1名來賓或司書指定為攻擊目標。(無法對群體攻擊書頁生效)</Desc>
+      <!--<Desc>每使用一張書頁，便使“進攻型”骰子傷害量+1
+使用第7張書頁時有50%的機率轉而將另一名來賓或司書指定為攻擊目標。</Desc>-->
+    </BattleEffectText>
+
+    <BattleEffectText ID="CB_BigBadWolf_Stealth">
+      <Name>潛狼</Name>
+      <Desc>未被該角色指定為攻擊目標的司書將無法行動。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wolf_Claw">
+      <Name>兇殘利爪</Name>
+      <Desc>這一幕中獲得2層“強壯”。
+無法被來賓指定為攻擊目標且無法改變來賓的攻擊目標。
+擊中目標時將在下一幕中對其施加1層“流血”。</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="Crying_Weak">
+      <Name>暴露之心</Name>
+      <Desc>所有攻擊抗性已變為“致命”。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="BurningGirl_Burn">
+      <Name>餘燼</Name>
+      <Desc>這一幕中“進攻型”骰子獲得額外效果“[命中時]對目標施加1層[燒傷]”</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BurningGirl_Ember">
+      <Name>火苗</Name>
+      <Desc>每有1層“火苗”便使“火柴書頁”的第1顆骰子最大值+1
+以該骰子擊中目標時將對其施加等同於“火苗”層數的“燒傷”。
+若“火苗”層數大於3，則使用“火柴書頁”時有25%的機率爆炸並對該角色造成等同於“第1顆骰子最大值”的傷害。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SingingMachine_Rhythm">
+      <Name>節奏</Name>
+      <Desc>每一幕開始時獲得1層“強壯”，被擊中時將追加承受2~5點混亂傷害。
+每一幕結束時失去1層“節奏”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Porccubus_Happy">
+      <Name>快感</Name>
+      <Desc>“快感”層數達到3時將承受2~7點傷害與混亂傷害，隨後重置該層數。</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="onlypage_yujin_Keyword">
+      <Name>柳真專用戰鬥書頁</Name>
+      <Desc>僅限裝備柳真之頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_sweeper_Keyword">
+      <Name>清道夫專用戰鬥書頁</Name>
+      <Desc>僅限裝備清道夫系核心書頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_warp_Keyword">
+      <Name>蘿絲、森、萊斯蒂專用戰鬥書頁</Name>
+      <Desc>僅限裝備蘿絲、森、萊斯蒂之頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_philip_Keyword">
+      <Name>哭泣之子專用戰鬥書頁</Name>
+      <Desc>僅限裝備不穩定的泣子之頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_lowel_Keyword">
+      <Name>羅威爾專用戰鬥書頁</Name>
+      <Desc>僅限裝備羅威爾之頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_chulsan_Keyword">
+      <Name>塞希爾、梅專用戰鬥書頁</Name>
+      <Desc>僅限裝備塞希爾、梅之頁的角色使用。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="HodFinal_CopiousBleeding">
+      <Name>深度創傷</Name>
+      <Desc>“深度創傷”層數達到5時將承受“自身體力上限x25%”的傷害並重置該層數。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="CardBuf_Latitia_Heart">
+      <Name>蕾蒂希婭的小小禮物</Name>
+      <Desc>{0}幕後會爆炸哦！</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Latitia_Heart">
+      <Name>心跳加速</Name>
+      <Desc>“禮物”在手中爆炸時將使“心跳加速”層數+1
+“心跳加速”層數達到3時該角色將直接死亡並在下一幕中生成1隻敵對的“小魔女的朋友”。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Latitia_Gift">
+      <Name>小小禮物</Name>
+      <Desc>與未應用異想體書頁-“驚喜禮物”的司書拼點時有40%的機率承受2~7點傷害並在下一幕中獲得2層“流血”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BlackSwan_Nettle">
+      <Name>蕁麻衣</Name>
+      <Desc>每一幕開始時獲得等同於“蕁麻衣”層數的“守護”。
+每一幕結束時失去1層“蕁麻衣”。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="HodFinal_BlackSwanDeadBro">
+      <Name>消逝的家人</Name>
+      <Desc>每一幕開始時若計數達到4則使用1張特殊書頁並重置該計數。</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="Laetitia_Gift_Keyword">
+      <Name>禮物</Name>
+      <Desc>[佚亡] 1費戰鬥書頁 招架(1~2) 會優先使用。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_thumb">
+      <Name>拇指專用戰鬥書頁</Name>
+      <Desc>僅限裝備卡洛、卡特麗爾、丹尼斯、拇指士兵之頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_boris">
+      <Name>鮑里斯專用戰鬥書頁</Name>
+      <Desc>僅限裝備鮑里斯之頁的角色使用。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="bullet_keyword">
+      <Name>子彈書頁</Name>
+      <Desc>被使用或丟棄時可為當幕後續使用的遠程書頁賦予額外效果。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="DmgUp">
+      <Name>傷害強化</Name>
+      <Desc>這一幕中“進攻型”骰子傷害+{0}</Desc>
+    </BattleEffectText>
+
+    <!-- 아직 안 쓰는 중-->
+    <BattleEffectText ID="Kalo">
+      <Name>厚積薄發</Name>
+      <Desc>每投擲1顆骰子便使計數+1
+計數達到2時將使下一顆“進攻型”骰子威力+1並重置該計數。
+自第4幕起效果改為所有“進攻型”骰子威力+1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BulletStack">
+      <Name>裝彈</Name>
+      <Desc>每命中一次便使計數+1
+計數達到3時隨機將1張子彈書頁置入手中並重置該計數。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Universe_DecreaseMaxBp">
+      <Name>境界之刺</Name>
+      <Desc>混亂抗性上限已-{0}%</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Universe_Enlightenment">
+      <Name>無法承受的智慧</Name>
+      <Desc>因手中持有“頓悟”，混亂抗性上限-50%</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Alriune_Attacker">
+      <Name>贖罪之冠</Name>
+      <Desc>該角色可對“愛娜溫”造成傷害。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Alriune_Debuf">
+      <Name>餘香</Name>
+      <Desc>每一幕開始時承受{0}點混亂傷害，隨後將該層數減半。(向下取整)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ResistWeakBP">
+      <Name>心靈的裂痕</Name>
+      <Desc>所有混亂攻擊抗性已變為“致命”。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Orchestra_Enthusiastic">
+      <Name>狂熱崇拜</Name>
+      <Desc>已失去控制且免疫來自異想體的傷害。(不免疫特殊書頁-“終章”的傷害)
+若陷入混亂則下一幕開始時解除此狀態。被同處於“狂熱崇拜”狀態的司書擊中時該角色將只承受物理傷害，被神智正常的司書擊中時該角色將只承受混亂傷害。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="AllPowerUp">
+      <Name>威力增強</Name>
+      <Desc>這一幕中所有骰子威力+{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="DecreaseSpeedTo1">
+      <Name>速度鎖定</Name>
+      <Desc>這一幕中速度固定為1點。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Alriune_Flower">
+      <Name>花瓣</Name>
+      <Desc>若在這一幕中被應用異想體書頁-“春日的起源”的司書擊中4次，則對所有角色造成3~7點混亂傷害且該司書將在下一幕中獲得“匿蹤”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="NoTargeting">
+      <Name>匿蹤</Name>
+      <Desc>這一幕開始時無法被指定為攻擊目標。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Orchestra_Affect">
+      <Name>狂熱崇拜</Name>
+      <Desc>這一幕中指定攻擊目標時將不分敵我且擊中目標時傷害+2~4</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="TakeBreakDamage2">
+      <Name>追加混亂傷害</Name>
+      <Desc>該角色被擊中時將追加承受2點混亂傷害。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_nemo">
+      <Name>尼莫專用戰鬥書頁</Name>
+      <Desc>僅限裝備尼莫之頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_bada">
+      <Name>巴達專用戰鬥書頁</Name>
+      <Desc>僅限裝備巴達之頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_martina">
+      <Name>瑪蒂娜專用戰鬥書頁</Name>
+      <Desc>僅限裝備瑪蒂娜之頁的角色使用。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="NullifyPower">
+      <Name>威力無效</Name>
+      <Desc>這一幕中該角色的骰子不受威力增減效果影響。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Alriune_Petal">
+      <Name>花瓣</Name>
+      <Desc>每一幕開始時若“花瓣”數達到3，則使用1張群體攻擊書頁並重置該計數。</Desc>
+    </BattleEffectText>
+    
+
+   <BattleEffectText ID="Lumberjack_Cut">
+     <Name>溫暖的心</Name>
+     <Desc>若光芒數大於2點，則使“進攻型”骰子威力+1~2</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Vibrate">
+      <Name>震顫</Name>
+      <Desc>？？？</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="BigBird_Charm">
+      <Name>被魅惑</Name>
+      <Desc>已失去控制，速度固定為1點並對“大鳥”使用“勾魂”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BigBird_Eye">
+      <Name>巡視</Name>
+      <Desc>{0}幕之內只可將施加該狀態的角色指定為攻擊目標。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BigBird_Sleep">
+      <Name>安眠</Name>
+      <Desc>這一幕……zzzZZZ</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="SnowQueen_Debuf">
+      <Name>寒氣</Name>
+      <Desc>每一幕開始時失去1層“寒氣”。
+每一幕開始時若“寒氣”層數不低於4，則獲得2層“束縛”與“虛弱”。
+若“寒氣”層數不低於6，則陷入“眩暈”並在下一幕開始時重置該層數。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="BloodyTree_Emotion_Damage">
+      <Name>萎縮的血翼</Name>
+      <Desc>造成反震傷害時將追加一半於招架骰子點數的傷害。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SnowQueen_Emotion_Shard">
+      <Name>霜淩</Name>
+      <Desc>每一幕結束時若“霜淩”層數不低於3，則下一幕中陷入“眩暈”並重置該層數。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SnowQueen_Emotion_Stun">
+      <Name>雪暴</Name>
+      <Desc>這一幕中陷入“眩暈”。
+若該角色為來賓則下一幕中獲得6層“束縛”。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="HokmaFirstCounter">
+      <Name>沉眠</Name>
+      <Desc>{0}幕後蘇醒。
+若“天堂之刺”或“滲透天堂”處於“混亂”狀態，該計數便不會減少。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HokmaFirstCounter2">
+      <Name>沉眠</Name>
+      <Desc>{0}幕後生成1根“天堂之刺”。
+若“滲透天堂”處於“混亂”狀態，該計數便不會減少。</Desc>
+    </BattleEffectText>
+	
+    
+    <BattleEffectText ID="Mountain_WeakResist">
+      <Name>崩潰</Name>
+      <Desc>所有混亂攻擊抗性已變為“致命”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Target">
+      <Name>黃磚路</Name>
+      <Desc>已成為“歸家的路途”與“膽小的獅子”的攻擊目標。
+被“膽小的獅子”攻擊時對方的所有骰子威力+5
+若“歸家的路途”的特殊書頁“朋友呀！一起回家吧~！”未擊中任何擁有該狀態的司書，則其第3次攻擊將被“打斷”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Coward_Strength">
+      <Name>勇氣</Name>
+      <Desc>這一幕中“歸家的路途”每被擊中1次，“膽小的獅子”便獲得1層“強壯”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Super_Cancel">
+      <Name>回不去的家</Name>
+      <Desc>若以“家”為目標的攻擊累計被“打斷”3次，則下一幕開始時使用群體攻擊書頁並重置該計數。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Emotion_Target">
+      <Name>回家吧</Name>
+      <Desc>司書按1-2-3的順序攻擊對應來賓時將使其“進攻型”骰子傷害+3</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Emotion_Protected">
+      <Name>同行之路</Name>
+      <Desc>若某司書保護該司書免受攻擊(轉移攻擊目標)，則使其當前使用的所有骰子威力+1~2</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="DangoCreature_Emotion_Healed">
+      <Name>分裂</Name>
+      <Desc>該角色在本舞臺中的體力恢復總量。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="IndexRelease">
+      <Name>劍刃解放</Name>
+      <Desc>所有骰子威力+1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="IndexReleaseCount">
+      <Name>解禁中……</Name>
+      <Desc>已累計使用{0}張不同書頁</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="IndexOnlyCardCount">
+      <Name>專用戰鬥書頁倒計時</Name>
+      <Desc>每4幕使用專用戰鬥書頁，若舞臺中已無其他代行者，則改為每2幕使用。
+({0}幕後使用)</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="IndexReleaseCard2_Keyword">
+      <Name>劍刃解放-Ⅱ</Name>
+      <Desc>[佚亡] 0費戰鬥書頁 斬擊(2~6) 突刺(1~3) 使用時將1張0費“劍刃解放-Ⅲ”置入手中。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="IndexReleaseCard3_Keyword">
+      <Name>劍刃解放-Ⅲ</Name>
+      <Desc>0費戰鬥書頁 斬擊(3~7) 突刺(2~4) 使用時恢復1點光芒並抽取1張書頁。</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="onlypage_esther_Keyword">
+      <Name>以斯帖專用戰鬥書頁</Name>
+      <Desc>僅限裝備以斯帖之頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_hubert_Keyword">
+      <Name>休伯特專用戰鬥書頁</Name>
+      <Desc>僅限裝備休伯特之頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_gloria_Keyword">
+      <Name>格洛麗亞專用戰鬥書頁</Name>
+      <Desc>僅限裝備格洛麗亞之頁的角色使用。</Desc>
+    </BattleEffectText>
+
+    
+    <BattleEffectText ID="Decay">
+      <Name>腐蝕</Name>
+      <Desc>每一幕開始時承受{0}點傷害，隨後將該層數-1
+被擊中時將追加承受等同於“腐蝕”層數的傷害與混亂傷害。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ServantOfWrath_Wand">
+      <Name>手杖</Name>
+      <Desc>被“青林隱士”的特殊書頁“汝終將崩潰……！”攻擊時該書頁的骰子威力將獲得3倍於“手杖”層數的提升。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Nihil_Hatred">
+      <Name>壞蛋</Name>
+      <Desc>每一幕開始時獲得3層“易損”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nihil_Meaningless">
+      <Name>虛無</Name>
+      <Desc>每一幕開始時獲得7層“虛弱”，“破綻”與“易損”。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Angry_Angry">
+      <Name>憤怒</Name>
+      <Desc>該角色已失去控制且指定攻擊目標時不分敵我。
+每一幕開始時獲得2層“強壯”，額外恢復2點光芒並額外抽取2張書頁。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Angry_Friend">
+      <Name>朋友</Name>
+      <Desc>被應用異想體書頁-“朋友”的司書擊殺時所有司書將恢復3點光芒及10點體力與混亂抗性。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nihil_MagicalPower">
+      <Name>魔法少女</Name>
+      <Desc>若4張“魔法少女書頁”皆在手中，則免疫“虛弱”，“破綻”與“束縛”且每一幕開始時獲得2層“強壯”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nihil_Nihil">
+      <Name>虛無</Name>
+      <Desc>移除異想體書頁“貪婪”，“憎惡”與“憤怒”的負面效果。
+每一幕開始時對除該司書外的所有角色施加5層“虛弱”，“破綻”與“束縛”。
+“貪婪”- 效果僅對自身生效。
+“憎惡”- 拼點失敗時不再追加承受混亂傷害。
+“憤怒”- 可控制處於“憤怒”狀態下的司書。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_chun_Keyword">
+      <Name>椿專用戰鬥書頁</Name>
+      <Desc>僅限裝備椿之頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="CardBuf_burnUp_Keyword">
+      <Name>烽火連天</Name>
+      <Desc>這一幕中使用本書頁施加“燒傷”時層數x2</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BurnSpread_Keyword">
+      <Name>星火</Name>
+      <Desc>若在{0}幕之內陷入混亂，則對所有友方角色施加X層“燒傷”。
+(X: 該角色“燒傷”層數的一半)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Silence_StopTime">
+      <Name>沉默</Name>
+      <Desc>時間限制已被解除，但代價是什麼？</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Silence_TraceCount">
+      <Name>積累的時間</Name>
+      <Desc>已被摧毀的“時間的痕跡”數。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Silence_TimeOut">
+      <Name>無法停止的時間</Name>
+      <Desc>{0}幕後使用特殊書頁。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Silence_PowerClash">
+      <Name>滴答……滴答……</Name>
+      <Desc>拼點時骰子威力+3</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Silence_PowerAtk">
+      <Name>滴答……滴答……</Name>
+      <Desc>單方面攻擊時骰子威力+3</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="SmallBird_Punishment">
+      <Name>懲戒！</Name>
+      <Desc>這一幕中使用的第1張書頁的第1顆骰子威力+2~4</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Smallbird_Beak">
+      <Name>責罰之喙</Name>
+      <Desc>這一幕中“進攻型”骰子傷害+{0}
+(被擊中時重置該計數)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Clock_Thirteen">
+      <Name>第十三聲鐘響</Name>
+      <Desc>已累計使用{0}張書頁。
+使用第13張書頁時將使其中的所有骰子威力+1~2並賦予“進攻型”骰子額外效果“[命中時] 追加‘目標體力上限x(骰子點數)%’的傷害”。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="RedMist">
+      <Name>血霧</Name>
+      <Desc>所有骰子威力+{0}(至多+5)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_redmist_Keyword">
+      <Name>殷紅迷霧專用戰鬥書頁</Name>
+      <Desc>僅限裝備殷紅迷霧之頁的角色使用。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="BinahFairy">
+      <Name>妖靈</Name>
+      <Desc>這一幕中每投擲一顆骰子便承受{0}點傷害。
+每一幕結束時承受{0}點傷害，隨後將該層數減半。(向下取整)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedMistEgoReady">
+      <Name>E.G.O展現</Name>
+      <Desc>{0}幕後展現E.G.O</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedMistEgo">
+      <Name>E.G.O展現</Name>
+      <Desc>所有骰子威力+2
+可使用殷紅迷霧固有E.G.O“血霧彌漫”與“屍橫遍野”。
+每一幕中隨機1類攻擊抗性將變為“一般”，其餘攻擊抗性將變為“耐性”。
+擊殺敵方角色時獲得1層“血霧”，每有1層“血霧”便使自身的所有骰子威力+1(至多+5)
+若每一幕透過直接攻擊造成的傷害總量不高於40點，則失去40%的混亂抗性。
+陷入混亂時解除“E.G.O展現”狀態。</Desc>
+    </BattleEffectText>
+    
+  <BattleEffectText ID="Fairy_Keyword">
+      <Name>妖靈 X</Name>
+      <Desc>這一幕中每投擲一顆骰子便承受X點傷害。每一幕結束時承受X點傷害，隨後將該層數減半(向下取整)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Sin_Abnormality">
+      <Name>罪孽</Name>
+      <Desc>若“罪孽”層數達到某一數值，則“審判鳥”將使用特殊書頁。
+若擊中友方角色，則向其轉移1層“罪孽”。(每張書頁至多轉移1層)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Sin_AbnormalityCard">
+      <Name>罪孽</Name>
+      <Desc>每一幕開始時若“罪孽”層數不低於5，則承受“自身體力上限x10%”的傷害並重置該層數。
+擊中目標時向其轉移1層“罪孽”。(每張書頁至多轉移1層)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_rabbit_Keyword">
+      <Name>兔子專用戰鬥書頁</Name>
+      <Desc>僅限裝備兔子、繆之頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_rhino_Keyword">
+      <Name>犀牛專用戰鬥書頁</Name>
+      <Desc>僅限裝備犀牛、馬克西姆之頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_reindeer_Keyword">
+      <Name>馴鹿專用戰鬥書頁</Name>
+      <Desc>僅限裝備馴鹿、魯道夫之頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_myo_Keyword">
+      <Name>繆專用戰鬥書頁</Name>
+      <Desc>僅限裝備繆之頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_maxim_Keyword">
+      <Name>馬克西姆專用戰鬥書頁</Name>
+      <Desc>僅限裝備馬克西姆之頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_rudolph_Keyword">
+      <Name>魯道夫專用戰鬥書頁</Name>
+      <Desc>僅限裝備魯道夫之頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_nicolai_Keyword">
+      <Name>尼可萊專用戰鬥書頁</Name>
+      <Desc>僅限裝備尼可萊之頁的角色使用。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="WarpChargeR">
+      <Name>充能PLUS</Name>
+      <Desc>特定書頁可消耗“充能”層數進行強化，至多擁有20層“充能”。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="NicolaiTarget">
+      <Name>集火</Name>
+      <Desc>被擊中時所受傷害與混亂傷害+50%</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="MyoBerserk">
+      <Name>殺人兔</Name>
+      <Desc>所有骰子威力+1</Desc>
+    </BattleEffectText>
+
+	  
+   <!-- 게부라 최종전 -->
+    <BattleEffectText ID="RedHoodFinal_Berserk">
+      <Name>暴怒</Name>
+      <Desc>2幕之內每一幕開始時獲得2層“強壯”並使用群體攻擊書頁。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedHoodFinal_Rage">
+      <Name>無處宣洩的怒火</Name>
+      <Desc>每一幕開始時獲得4層“強壯”並使用群體攻擊書頁。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedHoodFinal_Mark">
+      <Name>獵殺標記</Name>
+      <Desc>被“羅蘭”擊中時所受傷害+50%</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedHoodFinal_Scar">
+      <Name>創痕</Name>
+      <Desc>每一幕開始時獲得等同於“創痕”層數的“流血”。
+每有1層“創痕”，則被狼擊中時所受傷害+1
+若層數不低於4，則被狼攻擊時對方的所有骰子威力+2
+若層數不低於6，則失去20%的體力並重置該層數。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nothing_Skin">
+      <Name>軀殼</Name>
+      <Desc>獲得上一幕中被擊殺司書的攻擊抗性並使用其攜帶的書頁。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nothing_Fear">
+      <Name>恐懼</Name>
+      <Desc>每一幕開始時若所持“恐懼”數不低於3，則陷入“眩暈”且手中每有1張“恐懼”便失去10點體力與混亂抗性。
+隨後將“恐懼”洗入牌組。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nothing_Mimic">
+      <Name>模仿</Name>
+      <Desc>特定書頁可消耗“模仿”層數進行強化，至多擁有10層“模仿”，每一幕結束時層數-1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nosferatu_Blood">
+      <Name>鮮血</Name>
+      <Desc>所用書頁取決於“鮮血”層數。
+每失去5%的體力便使“鮮血”層數-1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nosferatu_Blight">
+      <Name>恐水症</Name>
+      <Desc>2幕之內每一幕開始時失去5%的體力並獲得1層“強壯”，“迅捷”與5層“流血”。
+若體力不高於50%，則有25%的機率失去控制並攻擊友方角色。</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="egoChange_Keyword">
+      <Name>同化</Name> <!-- 同化 -->
+      <Desc>以特定牌組替換當前牌組，同化解除後復原。不可與其他同化書頁或E.G.O展現同時使用。</Desc>
+    </BattleEffectText>
+
+    <!-- purple tear -->
+    <BattleEffectText ID="onlypage_purpleTear_Keyword">
+      <Name>堇紫淚滴專用戰鬥書頁</Name>
+      <Desc>僅限裝備堇紫淚滴之頁的角色使用。</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="StanceChange_Keyword">
+      <Name>架勢切換</Name>
+      <Desc>以設置在特定架勢中的牌組替換當前牌組。重複抽取書頁直至與先前手中書頁數相等。</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="StanceSlash">
+      <Name>斬擊架勢</Name>
+      <Desc>斬擊骰子威力+2
+擊中目標時傷害+50%</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="StancePenetrate">
+      <Name>突刺架勢</Name>
+      <Desc>突刺骰子威力+2
+使用書頁施加負面狀態時層數翻倍。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="StanceHit">
+      <Name>打擊架勢</Name>
+      <Desc>打擊骰子威力+2
+擊中目標時混亂傷害+50%</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="StanceDefense">
+      <Name>防禦架勢</Name> <!-- don't need to equal to '방어' of '방어 주사위' -->
+      <Desc>“防禦型”骰子威力+2
+免疫所有負面狀態。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="DefensePowerUp">
+      <Name>防禦強化</Name>
+      <Desc>這一幕中“防禦型”骰子威力+{0}</Desc>
+    </BattleEffectText>
+
+    <!-- Chesed Boss -->
+    <BattleEffectText ID="Lumberjack_Heart_Final">
+      <Name>溫暖的心</Name>
+      <Desc>每一幕開始時恢復等同於“溫暖的心”層數的光芒。
+每一幕結束時失去1層“溫暖的心”且至多擁有3層。
+基礎光芒恢復暫時失效。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Lumberjack_Meat_Final">
+      <Name>心之碎片</Name>
+      <Desc>每有1層“心之碎片”便使“羅蘭”的特定書頁威力+1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Lumberjack_Piece_Final">
+      <Name>心之碎片</Name>
+      <Desc>若層數達到4，則下一幕開始時獲得1層“溫暖的心”並重置該層數。
+每一幕結束時失去1層“心之碎片”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Super_Cancel_Final">
+      <Name>永遠回不去的家</Name>
+      <Desc>若以“家”為目標的攻擊累計被“打斷”2次，則下一幕開始時使用群體攻擊書頁。</Desc>    
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Coward_Final">
+      <Name>膽小</Name>
+      <Desc>這一幕中“羅蘭”每被擊中1次，“膽小的獅子”便獲得1層“虛弱”。</Desc>
+    </BattleEffectText>
+    <!-- Ozma -->
+    <BattleEffectText ID="Ozma_Oblivion">
+      <Name>遺忘</Name>
+      <Desc>使用特殊書頁，擊中“真傑克”時隨機奪回1張書頁。
+(還剩{0}張書頁需要奪回。)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_AwakenPumpkin_Strength">
+      <Name>南方的傑克</Name>
+      <Desc>每一幕開始時獲得2層“強壯”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_AwakenPumpkin_Endurance">
+      <Name>西方的傑克</Name>
+      <Desc>每一幕開始時獲得2層“忍耐”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_AwakenPumpkin_Quickness">
+      <Name>北方的傑克</Name>
+      <Desc>每一幕開始時獲得1層“迅捷”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_AwakenPumpkin_BreakDmg">
+      <Name>東方的傑克</Name>
+      <Desc>擊中目標時混亂傷害+3</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_LibrarianToPumpkin">
+      <Name>丟失的記憶</Name>
+      <Desc>被動能力無法生效。
+使用特殊書頁。
+屬性值全部改變。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_PumpkinToLibrarian">
+      <Name>復生的傑克</Name>
+      <Desc>複製並使用“南瓜司書”的核心書頁與牌組。
+每一幕開始時獲得2層“強壯”，“忍耐”與1層“迅捷”且擊中目標時混亂傷害+3</Desc>
+    </BattleEffectText>
+
+    <!-- Wizard -->
+    <BattleEffectText ID="Wizard_Lumberjack">
+      <Name>熱心的樵夫</Name>
+      <Desc>若在“樵夫試煉”中1幕之內至少造成30點傷害，則為所有司書恢復所有光芒。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Scarecrow">
+      <Name>求知的稻草人</Name>
+      <Desc>進入“稻草人試煉”時將獲得1張“智慧”與4張特殊書頁且速度骰子增至5顆。
+“稻草人試煉”結束時若有司書未被復原，則速度骰子將永久減至1顆。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Lion">
+      <Name>膽小的獅子</Name>
+      <Desc>將在進入“獅子試煉”時獲得1張“勇氣”且速度骰子增至5顆。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_WaybackHome">
+      <Name>歸家的路途</Name>
+      <Desc>將4張特殊書頁置入手中。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Ozma">
+      <Name>奧茲瑪</Name>
+      <Desc>將“神奇粉末”與3張特殊書頁置入手中。
+“暴怒試煉”中“神奇粉末”的費用將減為0且該角色的1顆速度骰子值將被設為“無限大”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Scarecrow_Debuf">
+      <Name>拙劣的智慧</Name>
+      <Desc>速度骰子數減至1顆。</Desc>
+    </BattleEffectText>
+    
+        <!-- Wizard -->
+    <BattleEffectText ID="Wizard_Lumberjack_Original">
+      <Name>熱心的樵夫</Name>
+      <Desc>必須讓他們恢復原樣。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Lion_Original">
+      <Name>膽小的獅子</Name>
+      <Desc>必須讓他們恢復原樣。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_WaybackHome_Original">
+      <Name>歸家的路途</Name>
+      <Desc>必須讓他們恢復原樣。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Ozma_Original">
+      <Name>奧茲瑪</Name>
+      <Desc>必須讓他們恢復原樣。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Wizard_Lumberjack_LightOfF">
+      <Name>用鉛製成的心臟</Name>
+      <Desc>基礎光芒恢復與光芒上限減少。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Scarecrow_Fail">
+      <Name>裝有鋸末的布袋</Name>
+      <Desc>速度骰子數減至1顆。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Lion_Courage">
+      <Name>勇氣</Name>
+      <Desc>免疫“虛弱”，“破綻”與“易損”並獲得10層“強壯”與5層“迅捷”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Lion_Coward">
+      <Name>懦夫</Name>
+      <Desc>每一幕開始時獲得5層“虛弱”，“破綻”與“易損”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Ozma_Support">
+      <Name>傑克的幫助</Name>
+      <Desc>這一幕中“進攻型”骰子威力+2</Desc>
+    </BattleEffectText>
+    
+    <!-- 환상체카드 -->
+    <BattleEffectText ID="Ozma_revive">
+      <Name>生命的粉末</Name>
+      <Desc>承受致死傷害時將無視此次傷害並恢復“自身體力上限x20%”的體力。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_potion">
+      <Name>激發勇氣的藥水</Name>
+      <Desc>擊中目標時傷害+6
+被擊中時所受傷害+3</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_poket">
+      <Name>裝有鋸末的布袋</Name>
+      <Desc>拼點勝利時恢復8點混亂抗性。
+拼點失敗時失去4點混亂抗性。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_heart">
+      <Name>用鉛製成的心臟</Name>
+      <Desc>每一幕開始時額外恢復1點光芒並失去5點體力。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_home">
+      <Name>永遠回不去的家</Name>
+      <Desc>拼點失敗時失去4點混亂抗性並使自身當前書頁的下一顆骰子威力+2</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_change">
+      <Name>催生變異的粉末</Name>
+      <Desc>擊中目標時有50%的機率摧毀其當前書頁的下一顆骰子。
+被擊中時有50%的機率摧毀自身當前書頁的下一顆骰子。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_emerald">
+      <Name>翡翠</Name>
+      <Desc>這一幕中該角色每被擊中1次，攻擊方便恢復1點光芒。(同一攻擊方至多觸發2次)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_xiao_Keyword">
+      <Name>邵專用戰鬥書頁</Name>
+      <Desc>僅限裝備邵之頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_chunMiris_Keyword">
+      <Name>椿、米里斯專用戰鬥書頁</Name>
+      <Desc>僅限裝備椿、米里斯之頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BreakProtection_Keyword">
+      <Name>振奮 X</Name>
+      <Desc>這一幕中被擊中時所受混亂傷害-X</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BreakProtection">
+      <Name>振奮</Name>
+      <Desc>這一幕中被擊中時所受混亂傷害-{0}</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="NullifyPowerReady">
+      <Name>蒲牢鳴鍾</Name>
+      <Desc>{0}幕後生效，所有角色的骰子不受威力增減效果影響。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="BurnDown">
+      <Name>燒傷傷害減少</Name>
+      <Desc>所受“燒傷”傷害-10</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="Sin_Abnormality_Final">
+      <Name>罪痕</Name>
+      <Desc>若“罪痕”層數達到某一數值，則“羅蘭”將使用特殊書頁。
+若擊中除“羅蘭”外的其餘角色，則向其轉移1層“罪痕”(每張書頁至多轉移1層)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SmallBird_Punish_Final">
+      <Name>懲戒</Name>
+      <Desc>被“羅蘭”擊中時所受傷害+8</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SmallBird_Vigil_Final">
+      <Name>警戒</Name>
+      <Desc>這一幕中速度低於該角色的友方角色每被擊中1次，該角色便獲得1層“強壯”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Final_BigBird_Charm">
+      <Name>被魅惑</Name>
+      <Desc>{0}幕之內失去控制，速度固定為1點並對“羅蘭”使用“勾魂”。
+被友方角色擊中時僅承受混亂傷害。
+若陷入混亂則移除此狀態。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Final_BigBird_Darkness">
+      <Name>黑暗</Name>
+      <Desc>{0}幕之內該角色的骰子不受威力增減效果影響。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Final_BigBird_Darkness_Keyword">
+      <Name>黑暗</Name>
+      <Desc>2幕之內該角色的所有骰子不受威力增減效果影響</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="ApocalypseBird_Sin">
+      <Name>罪痕</Name>
+      <Desc>被擊中時所受混亂傷害+{0}
+每一幕結束時若“罪痕”層數不低於5，則承受“自身體力上限x10%”的傷害並重置該層數。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ApocalypseBird_Charm">
+      <Name>恐懼</Name>
+      <Desc>所有攻擊抗性已變為“致命”。
+每一幕開始時獲得4層“麻痺”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ApocalypseBird_BigEye">
+      <Name>巨目</Name>
+      <Desc>骰子不受威力增減效果影響。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ApocalypseBird_LongArm">
+      <Name>長臂</Name>
+      <Desc>免疫負面狀態。
+每一幕開始時移除所有負面狀態。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ApocalypseBird_SmallBeak">
+      <Name>小喙</Name>
+      <Desc>從所有司書手中各隨機選擇2張書頁並使其費用+1(持續1幕)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="ApocalypseBird_Apocalypse">
+      <Name>怪獸</Name>
+      <Desc>該角色拼點時及被單方面攻擊時將使目標當前書頁的所有骰子最小值與最大值-3且不受威力增減效果影響。
+每一幕結束時該角色將恢復所有光芒並對除自身外的所有角色造成15點傷害。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ApocalypseBird_Peace">
+      <Name>入侵者</Name>
+      <Desc>{0}幕之內，該角色擊中目標時傷害與混亂傷害-2~4
+被擊中時將追加承受1~2點傷害。</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="onlypage_yan_Keyword">
+      <Name>su.3fm u;6專用戰鬥書頁</Name>
+      <Desc>僅限裝備su.3fm u;6之頁的角色使用。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="YanArea_Ready">
+      <Name>扭曲之刃</Name>
+      <Desc>{0}幕之後使用特殊書頁-“扭曲之刃”。</Desc>
+    </BattleEffectText>
+
+    <!-- 백야 전투 -->
+    <BattleEffectText ID="WhiteNight_Hokma">
+      <Name>真正的救贖</Name>
+      <Desc>指定司書死亡後，其餘司書將隨其自盡。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="PlagueDoctor_Bless">
+      <Name>祝福</Name>
+      <Desc>我將治癒你的一切疾病，使你重獲新生。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_Awe">
+      <Name>敬畏</Name>
+      <Desc>每一幕結束時承受{0}點混亂傷害，隨後將該層數-1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_ApostlePowerUp">
+      <Name>啟示</Name>
+      <Desc>被“使徒”攻擊時對方的“進攻型”骰子威力+2</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_BeApostle">
+      <Name>召喚</Name>
+      <Desc>這一幕結束時該角色將直接死亡並生成1名敵對“護衛使徒”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_SuspendedAnimation">
+      <Name>假死</Name>
+      <Desc>若體力不高於2，則被喚醒前將持續處於“混亂”狀態。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_Protection">
+      <Name>荊棘之冠</Name>
+      <Desc>永久獲得100層“守護”與“振奮”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_WeakResist">
+      <Name>失去護衛</Name>
+      <Desc>該角色的所有攻擊抗性已變為“致命”</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Emotion_PlagueDoctor_Blessed">
+      <Name>祝福</Name>
+      <Desc>這一幕該角色已受洗。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Emotion_PlagueDoctor_Bless_Stack">
+      <Name>洗禮</Name>
+      <Desc>已累計使用{0}張“洗禮”(至多12張)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Emotion_BlueStar_MartyrBuf">
+      <Name>殉教</Name>
+      <Desc>這一幕中擊中目標時將追加4~6點混亂傷害並對自身造成1~3點傷害。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Emotion_BlueStar_SoundBuf_Cool">
+      <Name>思念之聲</Name>
+      <Desc>{0}幕後獲得“我聽見星之聲了！！！”效果。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Emotion_BlueStar_SoundBuf">
+      <Name>我聽見星之聲了！！！</Name>
+      <Desc>這一幕中擊中目標時混亂傷害+2~4</Desc>
+    </BattleEffectText>
+
+<!-- hana -->
+    <BattleEffectText ID="onlypage_hana_Keyword">
+      <Name>美里奈、哈羅德、奧利維耶專用戰鬥書頁</Name>
+      <Desc>僅限裝備美里奈、哈羅德、奧利維耶之頁的角色使用。</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="HanaPassive1">
+      <Name>乾</Name>
+      <Desc>這一幕中使自身獲得1層“強壯”且擊中目標時傷害與混亂傷害+2</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HanaPassive2">
+      <Name>坤</Name>
+      <Desc>這一幕中使自身獲得1層“忍耐”且被擊中時所受傷害與混亂傷害-30%</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HanaPassive3">
+      <Name>坎</Name>
+      <Desc>恢復1點光芒。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HanaPassive4">
+      <Name>離</Name>
+      <Desc>抽取1張書頁。</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="HanaSpecialCard1">
+      <Name>額外效果</Name>
+      <Desc>乾 - [使用時] 使本書頁的所有骰子威力+1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HanaSpecialCard2">
+      <Name>額外效果</Name>
+      <Desc>坤 - [戰鬥開始] 這一幕中使自身獲得2層“守護”與“振奮”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HanaSpecialCard3">
+      <Name>額外效果</Name>
+      <Desc>坎 - [使用時] 恢復1點光芒。
+離 - [使用時] 抽取2張書頁。</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="BlackSilenceSpecial">
+      <Name>Furioso</Name>
+      <Desc>已使用{0}種不同的漆黑噤默書頁。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BlackSilenceCardCount">
+      <Name>漆黑噤默</Name>
+      <Desc>計數達到2時將使下一張書頁中的所有骰子威力+2並重置該計數。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="RolandAndOlivier">
+      <Name>決鬥</Name>
+      <Desc>體力上限與混亂抗性上限大幅提升。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="DanteGraspInformation">
+      <Name>情報掌控</Name>
+      <Desc>這一幕中“{0}”已變為“一般”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="DanteWeakPointDetection">
+      <Name>要害識破</Name>
+      <Desc>本舞臺中某一“脆弱”攻擊抗性已變為“致命”。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Engard_Keyword">
+      <Name>起勢動作</Name>
+      <Desc>[佚亡] 2費戰鬥書頁 斬擊(6~10) 使用時將在下一幕中使雙方獲得1層“強壯”。</Desc>
+    </BattleEffectText>
+
+    <!-- sword -->
+    <BattleEffectText ID="Giveuptheflesh_Keyword">
+      <Name>斷汝筋骨</Name>
+      <Desc>[佚亡] 5費戰鬥書頁 斬擊反擊(14~23) 至多持有1張 命中時將在下一幕中對目標施加5層“麻痺”與3層“流血”。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_kim">
+      <Name>金笠專用戰鬥書頁</Name>
+      <Desc>僅限裝備金笠之頁的角色使用。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="egoTeam_Keyword">
+      <Name>E.G.O書頁</Name>
+      <Desc>可由任意司書使用並可在累積{0}點情感點數後再次使用。(按司書人數成比增加)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="egoPersonal_Keyword">
+      <Name>固有E.G.O.</Name>
+      <Desc>可在累積{0}點情感點數後再次使用。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Vibrate_Re">
+      <Name>震顫</Name>
+      <Desc>至多擁有7層。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_argalia_Keyword">
+      <Name>阿爾加利亞專用戰鬥書頁</Name>
+      <Desc>僅限裝備阿爾加利亞之頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_elena_Keyword">
+      <Name>伊蓮娜專用戰鬥書頁</Name>
+      <Desc>僅限裝備伊蓮娜之頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_pluto_Keyword">
+      <Name>普魯托專用戰鬥書頁</Name>
+      <Desc>僅限裝備普魯托之頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_philip2_Keyword">
+      <Name>菲利普專用戰鬥書頁</Name>
+      <Desc>僅限裝備菲利普之頁的角色使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_tanya_Keyword">
+      <Name>塔尼婭專用戰鬥書頁</Name>
+      <Desc>僅限裝備塔尼婭之頁的角色使用。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Librarian_PuppetThread">
+      <Name>傀儡線</Name>
+      <Desc>每一幕開始時獲得1層“強壯”或“忍耐”。
+體力無法低於1
+若體力已減至1或擁有被動能力“傀儡線”的友方角色已死亡，則當幕結束時移除此狀態。</Desc>
+    </BattleEffectText>
+
+    <!--검은침묵 3페이즈-->
+    <BattleEffectText ID="SpiritLink">
+      <Name>靈魂連接</Name>
+      <Desc>該角色無法陷入“混亂”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BlackEnergy">
+      <Name>黑色氣息</Name>
+      <Desc>持續1幕，攻擊“安潔麗卡”時自身的所有骰子威力+1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteEnergy">
+      <Name>白色氣息</Name>
+      <Desc>持續1幕，攻擊“羅蘭”時自身的所有骰子威力+1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BlackMark">
+      <Name>標記</Name>
+      <Desc>已成為“羅蘭”的攻擊目標。
+被“羅蘭”攻擊時對方的“進攻型”骰子威力+3</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BlackFrantic">
+      <Name>狂亂</Name>
+      <Desc>失去50%的混亂抗性。(至多觸發1次)
+每一幕開始時獲得2層“強壯”與“迅捷”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteLoss">
+      <Name>喪失</Name>
+      <Desc>每一幕開始時獲得3層“束縛”，“麻痺”與“易損”。</Desc>
+    </BattleEffectText>
+
+    <!--검은침묵 4페이즈-->
+    <BattleEffectText ID="Roland_4th_Lie">
+      <Name>謊言</Name>
+      <Desc>每一幕開始時隨機調整手中書頁的費用。(僅調整0~3費書頁)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_Weapon">
+      <Name>摧毀武器</Name>
+      <Desc>無視“羅蘭”的“疤痕”效果。
+攻擊“羅蘭”時自身的“進攻型”骰子威力+1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_DmgReduction_Hit">
+      <Name>疤痕-打擊</Name>
+      <Desc>被打擊骰子擊中時所受傷害-2~5
+被任意“進攻型”骰子擊中時有25%的機率免受此次傷害。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_DmgReduction_Penetrate">
+      <Name>疤痕-突刺</Name>
+      <Desc>被突刺骰子擊中時所受傷害-2~5
+被任意“進攻型”骰子擊中時有25%的機率免受此次傷害。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_DmgReduction_Slash">
+      <Name>疤痕-斬擊</Name>
+      <Desc>被斬擊骰子擊中時所受傷害-2~5
+被任意“進攻型”骰子擊中時有25%的機率免受此次傷害。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_Blood">
+      <Name>鮮血</Name>
+      <Desc>“防禦型”骰子威力+1~2
+使用“防禦型”骰子時若未能取得拼點勝利，則失去3~6點混亂抗性。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_Gaze">
+      <Name>目光</Name>
+      <Desc>每一幕開始時獲得1層“強壯”。
+使用“進攻型”骰子時若未能造成傷害，則失去3~6點混亂抗性。
+該效果每觸發1次，便可額外獲得1層“強壯”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_Curiosity">
+      <Name>好奇</Name>
+      <Desc>擊中目標時隨機將其手中的2張書頁洗回牌組。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_Kiss">
+      <Name>親吻</Name>
+      <Desc>優先將處於“束縛”狀態下的司書指定為攻擊目標。
+拼點勝利時對目標施加1層“霜淩”。
+每一幕結束時“霜淩”層數不低於3的角色將在下一幕中陷入“眩暈”並重置該層數。</Desc>
+    </BattleEffectText>
+        <BattleEffectText ID="Roland_4th_NonTargetable">
+      <Name>屠殺準備</Name>
+      <Desc>{0}幕之內無法行動，無法被指定為攻擊目標，免疫來自負面狀態的傷害。
+{0}幕後開始行動並移除自身所有負面狀態。</Desc>
+    </BattleEffectText>
+
+    <!--잔향악단 중층-->
+    <BattleEffectText ID="Tanya_Killed">
+      <Name>風沙肆虐</Name>
+      <Desc>“進攻型”骰子傷害+3</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Jaeheon_Killed">
+      <Name>肉身解放</Name>
+      <Desc>所有骰子威力+1
+每一幕開始時獲得1~3層“迅捷”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Jaeheon_String">
+      <Name>操縱</Name>
+      <Desc>速度最低的{0}顆骰子已失去控制並攻擊友方角色。(至多3顆) 
+若“在憲”死亡則移除此狀態。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Oswald_String">
+      <Name>紅線</Name>
+      <Desc>{0}幕後，若舞臺中至少存在2名擁有此狀態的角色，則自身將直接死亡並生成1隻“兔子先生”。
+若司書擁有此狀態，則每一幕開始時獲得10層“迅捷”。
+若“奧斯瓦爾德”或“在憲”死亡則移除此狀態。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Oswald_Vulnerable">
+      <Name>抗性粉碎</Name>
+      <Desc>所有攻擊抗性已變為“致命”。</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="HeavySmoke">
+      <Name>濃煙</Name>
+      <Desc>至多擁有3層，下一幕中隨機獲得1層負面狀態。
+每一幕結束時失去所有層數。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HeavySmoke_buf">
+      <Name>濃煙</Name>
+      <Desc>至多擁有3層，下一幕中隨機獲得1層負面狀態。
+每一幕結束時失去所有層數。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HeavySmoke_Keyword">
+      <Name>濃煙</Name>
+      <Desc>至多擁有3層，下一幕中隨機獲得1層負面狀態。每一幕結束時失去所有層數。</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="Arrest">
+      <Name>拘禁</Name>
+      <Desc>每一幕結束時層數不會移除。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Arrest_buf">
+      <Name>拘禁</Name>
+      <Desc>每一幕結束時層數不會移除。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Arrest_Keyword">
+      <Name>拘禁</Name>
+      <Desc>每一幕結束時層數不會移除。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="RolandWeak">
+      <Name>疲勞</Name>
+      <Desc>“羅蘭”的專用戰鬥書頁已被大幅削弱。</Desc>
+    </BattleEffectText>
+
+    <!-- added -->
+    <BattleEffectText ID="DeadInBattle">
+      <Name>無法戰鬥</Name>
+      <Desc>該角色本舞臺無法參戰。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="ClawCounter">
+      <Name>無效化</Name>
+      <Desc>若目標的骰子點數不低於30則直接將其摧毀。</Desc>
+    </BattleEffectText>
+
+
+    <!-- 케테르 완전 개방 전투-->
+    <!-- 심장 -->
+    <BattleEffectText ID="KeterFinal_Eager">
+      <Name>渴望</Name>
+      <Desc>該角色攻擊時將獲得等同於“渴望”層數的“強壯”。
+若陷入混亂，則重置該層數。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_FerventBeats">
+      <Name>劇烈搏動</Name>
+      <Desc>{0}幕後直接死亡，每一幕開始時獲得4層“強壯”，“忍耐”，“迅捷”與“守護”。
+所有混亂攻擊抗性變為“抵抗”。
+若“熱望”未發起攻擊，則使用特殊書頁。
+該效果激活時將移除“渴望”效果。
+若“熱望”停止攻擊，則該效果將被移除。
+      </Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_Lung1">
+      <Name>渴望-信任</Name>
+      <Desc>每一幕開始時“熱望”每有2層“渴望”便使自身獲得1層“強壯”與“忍耐”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_Lung2">
+      <Name>渴望-痛苦</Name>
+      <Desc>若友方角色死亡，則使“熱望”獲得4層“渴望”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_Lung3">
+      <Name>渴望-努力</Name>
+      <Desc>擊中目標時使“熱望”獲得1層“渴望”。每一幕結束時若當幕未造成傷害，則使“熱望”失去2層“渴望”</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_Lung4">
+      <Name>渴望-等候</Name>
+      <Desc>每一幕結束時使“熱望”獲得3層“渴望”。</Desc>
+    </BattleEffectText>
+
+    <!-- 피노키오 -->
+    <BattleEffectText ID="KeterFinal_FailLying">
+      <Name>有什麼不好？</Name>
+      <Desc>謊言已被揭穿。
+獲得4層“虛弱”與“破綻”且所有混亂攻擊抗性變為“致命”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SuccessLying">
+      <Name>啦啦啦~</Name>
+      <Desc>謊言未被揭穿。
+獲得4層“強壯”與“忍耐”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_ChangeCostAll">
+      <Name>全都是假話的歌謠</Name>
+      <Desc>每一幕開始時隨機調整所有角色手中書頁的費用(僅調整0~3費書頁)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_ChangeLibrarianHands">
+      <Name>好奇心滿滿的歌謠</Name>
+      <Desc>每一幕開始時所有司書將洗回手中的書頁並抽取3張書頁</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_DoubleEmotion">
+      <Name>光之種</Name>
+      <Desc>可獲得雙倍情感點數。</Desc>
+    </BattleEffectText>
+
+    <!-- 아무 말 없는 소녀 -->
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Nail">
+      <Name>釘</Name>
+      <Desc>被“錘”擊中時所受混亂傷害+{0}
+每一幕結束時層數-1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Gaze_Attack">
+      <Name>不安</Name>
+      <Desc>這一幕中該角色進入戰鬥時雙方的所有骰子將不受威力增減效果影響。
+“進攻型”骰子傷害+1~2
+這一幕結束時若未使用“進攻型”骰子造成傷害，則失去15點混亂抗性。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Gaze_Defense">
+      <Name>恐懼</Name>
+      <Desc>這一幕中該角色進入戰鬥時雙方的所有骰子將不受威力增減效果影響。
+反震傷害+1~2
+這一幕結束時若未使用招架骰子造成反震傷害，則失去15點混亂抗性。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Gaze_Attacked">
+      <Name>自責</Name>
+      <Desc>這一幕中該角色進入戰鬥時雙方的所有骰子將不受威力增減效果影響。
+被擊中時所受混亂傷害-1~2
+這一幕結束時若未被擊中，則失去15點混亂抗性。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Light">
+      <Name>微弱之光</Name>
+      <Desc>若本階段結束前未能使用9張E.G.O書頁……</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Hand_Target">
+      <Name>攻擊目標無法改變</Name>
+      <Desc>該角色的攻擊目標無法被其他司書改變。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="KeterFinal_Light">
+      <Name>溫暖之光</Name>
+      <Desc>你感受到前進的力量……</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_Cogito">
+      <Name>最後一塊光之碎片</Name>
+      <Desc>可使用新的E.G.O書頁。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="KeterFinal_Angela_Ego">
+      <Name>光之碎片</Name>
+      <Desc>已累計使用{0}張不同E.G.O書頁。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="CardBuf_KeterFinal_SilenceGirl_CostDown">
+      <Name>費用降低</Name>
+      <Desc>該書頁的費用-{0}
+所有骰子威力-{0}
+使用或丟棄後移除該效果。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="CardBuf_KeterFinal_SilenceGirl_CostUp">
+      <Name>費用提升</Name>
+      <Desc>該書頁的費用+{0}
+所有骰子威力+{0}
+使用或丟棄後移除該效果。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="QuietKid_Hammer_Buf">
+      <Name>釘</Name> <!-- used in '못과 망치' -->
+      <Desc>若被打擊骰子擊中，則承受“‘釘’層數x5”的傷害並重置該層數。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="KeterFinal_SilenceGirl_BlackHand_Attacked">
+      <Name>定罪</Name>
+      <Desc>該角色的所有骰子威力+10</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Sin_Ready">
+      <Name>支離破碎</Name>
+      <Desc>
+        {0}幕後對持有“負罪感”的角色使用強力戰鬥書頁。
+        若陷入混亂，則延後一幕使用。
+      </Desc>
+    </BattleEffectText>
+
+    <!-- 환상체 책장: 열망-->
+    <BattleEffectText ID="HeartofAspiration_Heart">
+      <Name>渴望</Name>
+      <Desc>該司書的速度+1~2。體力上限+15%並恢復等量體力。</Desc>
+    </BattleEffectText>
+    <!-- 황상체 책장: 그리웠던 옛날의 포옹-->
+    <BattleEffectText ID="Teddy_Head">
+      <Name>思念的擁抱</Name>
+      <Desc>該角色拼點勝利時有20%的機率追加等同於“自身骰子點數”的混亂傷害。
+對同一目標每取得一次拼點勝利，該效果的觸發機率便+5%
+(攻擊其他角色時重置此機率)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="ExhaustOnUse_Keyword">
+      <Name>佚亡</Name>
+      <Desc>使用後移出戰鬥，本舞臺中無法再次使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Exhaust_Keyword">
+      <Name>佚亡</Name>
+      <Desc>使用後移出戰鬥，同一舞臺中無法再次使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Instant_Keyword">
+      <Name>裝備時</Name>
+      <Desc>裝備於速度骰子中時立即生效。</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="Freischutz_Request">
+      <Name>委託目標</Name>
+      <Desc>被應用異想體書頁-“委託”的司書擊中時所受傷害+3~5</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="CardBuf_NihilClown_Card">
+      <Name>徒勞無功</Name>
+      <Desc>若本書頁拼點失敗，則獲得1層“虛無之意”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Buf_NihilClown_Card">
+      <Name>虛無之意</Name>
+      <Desc>該層數達到4後，自下一幕起該角色將獲得“毫無意義”。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="NihilClown_Card">
+      <Name>毫無意義</Name>
+      <Desc>每一幕開始時獲得5層“守護”。
+免疫所有負面狀態。
+該角色拼點失敗或被擊中時將在下一幕中對目標施加1層“腐蝕”與“易損”(每一幕至多觸發2次)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Nosferatu_BloodHope">
+      <Name>吸血</Name>
+      <Desc>每一幕結束時層數-3
+層數為0: 這一幕開始時失去4~8點混亂抗性。
+層數不低於1: 投擲“進攻型”骰子時失去2~7點體力且擊中目標時傷害+3~7
+層數不低於15: 這一幕中獲得2層“強壯”，下一幕開始時失去所有“吸血”層數。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="ApocalypseBird_BigEyeEffect">
+      <Name>被魅惑</Name>
+      <Desc>優先將應用異想體書頁-“巨目”的司書指定為攻擊目標。
+擊中任意司書時傷害+2~4</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="PowerUpOrchestraEgo">
+      <Name>指揮家的節奏</Name>
+      <Desc>被“安潔拉”攻擊時對方的所有骰子威力+2</Desc>
+    </BattleEffectText>
+
+   <BattleEffectText ID="Matan_Flame">
+      <Name>黑焰</Name>
+      <Desc>該角色的耐性/抵抗攻擊抗性已變為脆弱/致命。</Desc>
+    </BattleEffectText>
+
+   <BattleEffectText ID="onlypage_usett">
+      <Name>瓦吉特專用戰鬥書頁</Name>
+      <Desc>僅限裝備瓦吉特之頁的角色使用。</Desc>
+    </BattleEffectText>
+
+   <BattleEffectText ID="onlypage_mirae">
+      <Name>伊里納專用戰鬥書頁</Name>
+      <Desc>僅限裝備伊里納之頁的角色使用。</Desc>
+    </BattleEffectText>
+
+   <BattleEffectText ID="onlypage_bayyard">
+      <Name>巴亞爾專用戰鬥書頁</Name>
+      <Desc>僅限裝備巴亞爾之頁的角色使用。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_cor">
+      <Name>八重專用戰鬥書頁</Name>
+      <Desc>僅限裝備八重之頁的角色使用。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_awl">
+      <Name>艾蘭專用戰鬥書頁</Name>
+      <Desc>僅限裝備艾蘭之頁的角色使用。</Desc>
+    </BattleEffectText>
+
+  </effectTextList>
+</BattleEffectTextRoot>

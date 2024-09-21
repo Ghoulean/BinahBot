@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Card ID="703111">
+    <Name>약공격</Name>
+    <Artwork>CryPhilip_Parry</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>10</Priority>
+  </Card>
+  
+  <Card ID="703112">
+    <Name>부딪히는 감정</Name>
+    <Artwork>CryPhilip_Parry</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="philip_emotion_pw" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="philip_emotion_pw" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="philip_emotion_pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>10</Priority>
+  </Card>
+
+  <Card ID="703113">
+    <Name>절망의 낙인</Name>
+    <Artwork>CryPhilip_Atk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="philip_stigma_atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="philip_stigma_atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>10</Priority>
+  </Card>
+
+  <Card ID="703114">
+    <Name>이글거리는 열기</Name>
+    <Artwork>CryPhilip_Atk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="philip_heat_atk1" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="philip_heat_atk2" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="philip_emotion_pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>10</Priority>
+  </Card>
+
+  <Card ID="703115">
+    <Name>맹렬한 기세</Name>
+    <Artwork>CryPhilip_Phase2</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>philip_vigor</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="philip_vigor_pw" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Slash" Motion="J" EffectRes="" Script="philip_vigor_atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Slash" Motion="J" EffectRes="" Script="philip_vigor_atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>10</Priority>
+  </Card>
+
+  <Card ID="703116">
+    <Name>타들어가는 용기</Name>
+    <Artwork>CryPhilip_Phase2</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="philip_courage_atk" ActionScript="dawnAction" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="philip_courage_atk" ActionScript="dawnAction" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="philip_courage_atk" ActionScript="dawnAction" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>10</Priority>
+  </Card>
+
+  <Card ID="703117">
+    <Name>구속</Name>
+    <Artwork>Crying5</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="8" Dice="10" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="philip_restrict_atk" ActionScript="philip_restriction" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="philip_restrict_pw" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>10</Priority>
+  </Card>
+
+  <Card ID="703118">
+    <Name>꿰뚫는 슬픔</Name>
+    <Artwork>Crying1</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Far" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="Philip_Laser" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="Philip_Laser" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="Philip_Laser" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>10</Priority>
+  </Card>
+
+  <Card ID="703119">
+    <Name>다시 타오르는 일격</Name>
+    <Artwork>CryPhilip_Strong</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="12" Dice="20" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="FX_Mon_Pilip_SPATK" Script="philip_bamboospear_atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>10</Priority>
+  </Card>
+
+  <Card ID="703110">
+    <Name>작열하는 절망</Name>
+    <Artwork>CryPhilip_FarArea</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="" ActionScript="PhilipAreaAtk" Desc="" />
+      <Behaviour Min="8" Dice="14" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="philip_area_atk" ActionScript="PhilipAreaAtk" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>10</Priority>
+  </Card>
+
+
+  <!-- 잡몹 -->
+  <Card ID="703121">
+    <Name>속삭임</Name>
+    <Artwork>Crying6</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="3"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>10</Priority>
+  </Card>
+  <Card ID="703122">
+    <Name>날개짓</Name>
+    <Artwork>Crying7</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="philip_baby_atk1" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703123">
+    <Name>괴롭히기</Name>
+    <Artwork>Crying8</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="philip_baby_atk3" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="philip_baby_atk1" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+
+  <!--2차 필립 뒤틀림-->
+  <Card ID="707101">
+    <Name>뒤틀린 용기</Name>
+    <Artwork>Crying3</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>philip_negative1atk</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="philip_vigor_atk2" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="philip_vigor_atk2" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="philip_vigor_atk2" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="707102">
+    <Name>타오르는 일격</Name>
+    <Artwork>CryPhilip_Strong</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>philip_negative1atk</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="9" Dice="14" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="burn6atk" ActionScript="TwistPhilip_BurnAtk" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="707103">
+    <Name>구속</Name>
+    <Artwork>Crying5</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>philip_negative1atk</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="philip_weak1binding1disarm1atk" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="philip_arrest1atk" ActionScript="twistphilip_restriction" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="707104">
+    <Name>슬픔의 상처</Name>
+    <Artwork>Crying2</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script>philip_powerup2bytargetburn8</Script>
+    <ScriptDesc></ScriptDesc> 
+    <BehaviourList>
+      <Behaviour Min="4" Dice="9" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="TwistPhilip_Laser" Script="philip_vigor_atk2" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="TwistPhilip_Laser" Script="philip_vigor_atk2" ActionScript="" Desc="" />
+      <Behaviour Min="8" Dice="10" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="TwistPhilip_Laser" Script="philip_vigor_atk2" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="707105">
+    <Name>작열하는 절망</Name>
+    <Artwork>TwistPhilip1</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarArea" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="14" Dice="20" Type="Atk" Detail="Penetrate" Motion="S5" EffectRes="" Script="philip_areaburn10atk" ActionScript="TwistPhilip_AreaBurnDespair" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>200</Priority>
+  </Card>
+</DiceCardXmlRoot>

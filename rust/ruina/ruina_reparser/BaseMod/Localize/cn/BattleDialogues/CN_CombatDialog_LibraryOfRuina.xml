@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GroupName>LibraryOfRuina</GroupName>
+  <Character ID="Roland">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">放松放松~最好不要把事情搞得太复杂哈。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">嗯，到目前为止，事情进展得还算顺利。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">好吧，好吧。不要太心急，保持冷静。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">呃，我没道理会这么紧张……</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">在无尽的恐惧中颤栗吧……！呵，不知怎么的，就是想说几句很酷很混蛋的话。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_5">我们双方都有非做不可的理由。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_6">别着急，慢慢来。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_7">我会做自己力所能及的事，你们也只管尽到各自的责任。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_8">那好，放手一搏吧！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_9">你的攻势，我三两下就能化解吧？</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">打得这么凶，浑身的肌肉都绷成一团了！肩膀好酸……</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">要办的事都办妥了，我们慢慢走回去吧。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">呼咻……刚才好险啊……得亏处理得还算顺利，不然可就丢脸丢到奶奶家啦。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">希望伟大的馆长大姐能认可我们的努力~呃……她没在偷听吧？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">这算得了什么……小事一桩啦~</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">我……居然会被逼成这样……？……丢人啦，丢人……</BattleDialog>
+      <BattleDialog ID="DEATH_1">一时大意了吗……不像话呀，真不像话……~</BattleDialog>
+      <BattleDialog ID="DEATH_2">还没帮上忙就被打趴了，心里真不是滋味……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">没办法啦，一码归一码。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">在都市活得久了，自然会变得麻木不仁。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">大家不要动摇，我们早晚要习惯这一切。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">要顾好自己的身体</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">这么奋力地厮杀……真是个可怜的家伙。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_1">无论情况多么危急，都不能激动哟。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">越是这种时候，越要沉着冷静地判断。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">咻，刚才差点就要挨揍了，我的小心脏现在还在狂跳不止。</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">还记得“心热脑不热”的原则吗？那小子和我，都只是在各司其职而已。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_1">我为你朋友的事感到遗憾。但那小子只是做了他该做的事……作为一名收尾人，你应该明白这些道理吧？</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Malkuth">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">初次见面，请多关照！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">运气必然会站在我们这边，我们一定能赢！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">别紧张，照我们平时训练的那样做，相信我们会赢的!</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">我已做好万全的准备，这种程度的敌人吓不倒我！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">我对这次的工作很有信心，来，一起加油吧！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_5">我有很好的预感！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_6">相信大家一定能渡过难关。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_7">各位，请相信我，听我指挥！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_8">像这样挥出去……哇哇哇！啊……！咻，差点摔倒……</BattleDialog>
+      <BattleDialog ID="START_BATTLE_9">大家都打起精神，好不好？</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">我们赢了，赢了！我做到啦，我有帮到大家，对不对！？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">我会做我力所能及的事！</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">虽然说不上高兴……但取胜也是很重要的事！</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">大家辛苦了！工作完成得相当出色！</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">快拿上书一起回去吧！</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">我以为我能做到，可我，还差得很远……</BattleDialog>
+      <BattleDialog ID="DEATH_1">是我太急于求成了……吗？</BattleDialog>
+      <BattleDialog ID="DEATH_2">我不想止步于此……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">不要责怪自己，我相信你已经尽力了。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">大家不要动摇！越是这种时候越要打起精神。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">大家都冷静些，要不要试试深呼吸？吸气……呼气……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">我真的，有做好吗……？</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">我会连你那份一起努力的，请好好休息。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">哇，你们看到了吗……？我做到啦！</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">好！如果这些来宾只有这种程度，那我可以从容应对。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">对方漏洞百出，击败他们易如反掌！</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">我们的胜利只是时间问题！</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">很好，进展顺利！不过现在还不是高兴的时候。</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Yesod">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">我们只是在履行自己的职责。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">鲁莽行事只会受到伤害。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">我不想浪费时间，速战速决吧。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">越是这种情况，越要退一步判断。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">既然踏进了这里，想必已经做好觉悟了吧？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_5">既然别无选择，那就放手一搏。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_6">急着挥舞武器，反会错失对手的破绽。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_7">战斗不需要无谓的挑衅。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_8">迅速思考，迅速行动，这两点至关重要。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_9">全力以赴，但不宜操之过急。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">这种胜利，不值得欢喜。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">尽管心情并不顺畅……无论如何，各位辛苦了。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">回收书籍后仔细总结经验，为下一场战斗做好准备。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">各位辛苦了，请迅速整理着装。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">各位，迅速打扫战场。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">不必同情我。</BattleDialog>
+      <BattleDialog ID="DEATH_1">各位专心战斗，确保万无一失。</BattleDialog>
+      <BattleDialog ID="DEATH_2">对此我负全责，是我疏忽大意。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">这在我们的意料之中。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">你也想死得更有价值吧？</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">有人倒下，但我们必须迎难而上。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">当务之急是迅速解决战斗。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">我不想再目睹更多的死亡。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">我讨厌对死亡逐渐漠然的自己。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">……我必须接受这一事实。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">你应当做出更加准确的判断。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">击败你并不值得高兴。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">鲁莽行事难免会出纰漏。</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Netzach">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">我现在最想做的……只有撤退和睡觉。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">唉~希望他们能对我这种无精打采的对手宽容一点……</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">战场的压力和氛围……不太妙。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">真想待在后面打个盹儿……我知道现在不是时候。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">要拿出努力取胜的诚意才行。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_5">我不喜欢那种一定要拼出胜负的规则。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_6">我为什么还得管这种鸟事……</BattleDialog>
+      <BattleDialog ID="START_BATTLE_7">唉……烦死了，快点结束的话能延长休息时间吗？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_8">既然接到了这样的任务……我会努力的。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_9">我会认真对待的……</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">这就够了吧？那我回去休息咯……</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">唉……赢了也不觉得高兴，不过你们辛苦了。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">那些书……收起来就好，等会儿再分类。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">为啥要整理的东西看起来变多了……</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">先把书堆到某个角落里……分类什么的以后再说。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">啊……最后总是这样空虚吗……</BattleDialog>
+      <BattleDialog ID="DEATH_1">不管结果如何，现在都能睡个好觉了……</BattleDialog>
+      <BattleDialog ID="DEATH_2">……没能帮上忙，不好意思。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">战况好像变危险了，唉……要撤吗？</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">不要太勉强了。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">我明白，你也不想落得这幅下场。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">说不定你比我更想活下去，所以才会这么拼命吧……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">你也不想就此了结吧。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">……需要我做的都做完了吧？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">不管我看起来如何，其实都有在努力战斗啦……</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">只要对方放松警惕，那应该会好办许多。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">他们会来这里，一定有着自己的目的。而现在，我们将他们的梦想碾成了齑粉。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">这种事以后还要反复做多少次……烦死了……</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Hod">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">调整心态，振作起来，我们一定会赢。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">虽然我还有待提高……但我会全心全意接待各位。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">虽然很紧张……但我会尽力而为！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">我要上了……！希望各位能认真对待这场战斗。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">只要小心谨慎，就不会有问题……但愿如此……</BattleDialog>
+      <BattleDialog ID="START_BATTLE_5">大家的状态都很好，我也要加把劲……</BattleDialog>
+      <BattleDialog ID="START_BATTLE_6">冷静分析对手的弱点，好好想想……</BattleDialog>
+      <BattleDialog ID="START_BATTLE_7">没关系，我能躲开他们的攻击……我可以做到。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_8">因为大家都在，这次我也可以鼓起勇气。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_9">拜托了，千万不要出事……</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">没有大碍顺利完成了工作，真是万幸。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">很高兴能和大家共度难关。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">感谢大家陪我坚持到最后！</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">下一次，我会努力做得更好。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">赢了……！大家做得好，谢谢你们！</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_5">只要有所帮助，我会很开心。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">……结果，我只能给大家添麻烦吗……我，只是想……</BattleDialog>
+      <BattleDialog ID="DEATH_1">身体动不了，我该怎么办……</BattleDialog>
+      <BattleDialog ID="DEATH_2">我明明这么努力，可为什么……为什么结局总是这样……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">今后该怎么办，我越来越迷茫……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">我……帮不了你……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">我本该做得更好。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">绝不能让其他司书动摇……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">我不会让你白白牺牲……</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">为了尽到自己的职责，我别无选择。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">抱歉，你一定不想就这样结束……</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">每个人都在竭尽全力。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">但愿能平安完成工作，没有人牺牲……</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">……你吃了不少苦，愿你安息。</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Tiphereth">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">战斗开始了，都给人家打起精神！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">我们这边应该没有只会站着挨打的白痴吧？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">动作这么慢，就凭你也敢做我们的对手？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">作战计划还要定到什么时候啊？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">恐惧只会让人一事无成！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_5">不要怕，挺胸，抬头！你可以做到。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_6">一鼓作气，上吧！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_7">如果我倒下了，那谁来收拾这烂摊子？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_8">相信我们！你不是一个人在战斗。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_9">休想轻易过我这关！</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">我们的胜利是理所当然的，不可能连这点小事都办不成吧？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">是是是，我知道大家都累坏了！但在躺下之前能把书先整理好吗？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">谢谢大家，做得好。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">看到没，事实胜于雄辩。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">可笑，这就是你们那点三脚猫功夫所能撑到的极限了？</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">我的动作……被，识破了……</BattleDialog>
+      <BattleDialog ID="DEATH_1">再这样下去，我身后的那些家伙，他们会……</BattleDialog>
+      <BattleDialog ID="DEATH_2">……对不起，我没能帮上忙。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">现在不是气馁的时候，都给我振作起来啊！</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">我受够了……我不会再让你们为所欲为。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">没问题的……我们还能继续战斗。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">再这样下去大家都会死……得想想办法。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">别以为这样就能吓倒我……我一定要赢……</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">呼……收拾掉一个，下一个是谁？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">好啊，照这势头，我们一定能顺利收工。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">鲁莽的白痴，就凭这点本事还敢踏上战场？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">我才不会拖大家的后腿。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">接招！你再嚣张啊！！</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Gebura">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">大家伙准备好了没？咱们好好揍他们一顿。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">感受对手的气息，跟上节奏——都给我记清楚了。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">这身子的力量大不如前了哈……还是不大适应。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">懦夫才会临阵退缩。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">别老想着蛮干，当心给人抓到破绽。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_5">站起来，过去的伤痛与苦难造就了今天的我们。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_6">合力给他们当头一棒。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_7">这可不是什么傻得冒泡的游戏，你说对吧？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_8">找准要害，一击必中。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">这次也顺利解决了，大家伙辛苦了。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">技能，经验，结果……这是我们的完胜。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">我开始渐渐适应这具身体了。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">战斗结束……走了，打个盹儿去。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">即使获得了胜利，也永远不要认为任何一方的牺牲是理所应当的。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">我可真是……以前可没这么弱。</BattleDialog>
+      <BattleDialog ID="DEATH_1">扫兴……真没辙。</BattleDialog>
+      <BattleDialog ID="DEATH_2">妈的，我可不想就这样退场……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">就算有人不幸阵亡也别停手。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">沉住气，别因为咱这儿有人阵亡就自乱阵脚。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">等一切结束之后再去悲伤吧。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">可别白白浪费那家伙的牺牲哈，对吧？</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">要复仇，更要压制愤怒。保持冷静。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">虽然比起以前差了不少，但足够了。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">技巧不够就用头脑顶。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">就这点儿能耐还跟我斗？净扯淡。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">肆意泄愤只会自取灭亡。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">半点儿疏忽大意就会让你丢掉性命。</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Chesed">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">我们要是志同道合就好了~</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">大家一起努力，平安地结束招待吧~</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">别泄气~你一定能做得很棒。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">可别勉强自己~</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">片刻的犹豫将令人失去一切。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_5">调整呼吸，保持镇定，如何？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_6">我不愿见到任何性命终结于此。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_7">总有些时候，你需要为了守护什么而鼓起勇气。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_8">如果你选择不做退让，那么我们唯有一战。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_9">如果这场战斗存在什么意义的话……</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">这不是非常棒吗？各位辛苦了~</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">来一杯香浓的咖啡吧，如何~？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">平安落幕，这是我的荣幸~</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">非常感谢你能够坚持到最后~</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">收起这些书就结束了吧？那么回去吧~</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">这大概，就是我的极限了吧……</BattleDialog>
+      <BattleDialog ID="DEATH_1">果然……对我来说还是太勉强了？</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">谁都想尽早结束这种斗争。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">我们要尽力减少任何损失……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">不要再做无谓的牺牲了。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">不要慌，相信我，我们做得到。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">没关系，让我们带着那个司书的份继续努力吧。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">真是悠闲呢~让我们慢慢完成招待吧。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">再晚一步的话，退场的人就会是我了吧？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">把那种能力和力量浪费在战斗上着实令人叹息。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">尽管这令人心生悲痛，但我更不愿见到己方人手出现折损呢。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">或许我逐渐习惯了这份工作。</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Hokma">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">谨从信念而行。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">力量之上……乃必胜之信念。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">相信自己。必将达成的前提万分重要。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">欺人毋自欺，应忠于本心。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">前行吧。踏上不归路。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_5">困于生，活于是。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_6">行万事之意，终归是一致的。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_7">状若终末，然则复始。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_8">寻回平常心。尔后，睁开双眼。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_9">废寝行事，意义何在。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">切忌自满。谦逊守位。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">你相信这场战斗有明确的利益么。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">你认为这只会带来黯淡的损害么。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">……看来结束了，把书籍收拾下吧。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">已经无法停止了。我们已经迈出了第一步。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">接受后果，应收敛心绪……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">归根结蒂，毫无意义。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">何至于此？对此仅存无尽疑问。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">进无可进，仍进无止境。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">没有人能熟练地……考虑到一切可能性。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">空凭蛮力，鲁莽至极。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">各行分内之事。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">至少，愿你安息。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">无尽傲慢与欲望的恶果……</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">有什么理由吗。只是想早日了却这些事。</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Binah">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">开始吧。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">今日繁星依旧，不可胜数。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">一同共事虽难能可贵，但不必勉强。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">行事匆忙，必显破绽。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">沉着。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_5">没有不可逾越之物。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_6">重在决心。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_7">只将你们送去，并不合我心意。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_8">先顾好你们自己。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_9">无论敌我，都需克服相同的试炼。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">出色。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">辛苦了。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">回去歇息吧。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">你将为我带来何种记忆，我很好奇。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">将那安息之人，送去他该去的地方罢。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">或许仍然力不从心，坚持至此已属不易。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">纵使劫难在所难免，心灵依旧不得崩溃。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">没有人会斥责你。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">对你而言依然凶险。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">唯有置身黑暗，方能窥见繁星……</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">自觉能够躲开？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">死亡伴随着解脱。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">气息渐消。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">愿你沉入永寂。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">所剩无几。</BattleDialog>
+    </Type>
+  </Character>
+</BattleDialogRoot>

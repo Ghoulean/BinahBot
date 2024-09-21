@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SceneEffect xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Dialogue ID="0">
+    <Bg Src="ch8_Keter_1" />
+    <Filter Src="Fadein" />
+    <Bgm Src="keter_bgm_0" Effect="FadeIn" PrevBgm="Continue" />
+    <CharacterList />
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="6">
+    <Bg Src="검은화면" />
+    <Filter Src="Continue" />
+    <Bgm Src="None" Effect="None" PrevBgm="Continue" />
+    <CharacterList />
+    <BgChangeState>Fade</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="7">
+    <Bg Src="검은화면" />
+    <Filter Src="Continue" />
+    <Bgm Src="None" Effect="None" PrevBgm="Continue" />
+    <CharacterList />
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="8">
+    <Bg Src="None" />
+    <Filter Src="Black_fadein" />
+    <Bgm Src="None" Effect="None" PrevBgm="FadeOut" />
+    <CharacterList />
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="10">
+    <Bg Src="ch8_Keter_0" />
+    <Filter Src="BloomAndPillarOfLight" />
+    <Bgm Src="WindBgm" Effect="FadeIn" PrevBgm="FadeOut" />
+    <CharacterList>
+      <Character Name="앤젤라" Face="angry" Body="nomal" Pos="R2" Emotion="NONE" Telling="false">
+        <Active Effect="NORMAL" Ratio="0" />
+      </Character>
+      <Character Name="Voice_1_1" Face="nomal" Body="nomal" Pos="L2" Emotion="NONE" Telling="false">
+        <Active Effect="NORMAL" Ratio="0" />
+      </Character>
+    </CharacterList>
+    <EffectSound>ch7_VoiceZzang_2</EffectSound>
+    <BgChangeState>Broken</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="13">
+    <Bg Src="None" />
+    <Filter Src="Continue" />
+    <Bgm Src="None" Effect="None" PrevBgm="Continue" />
+    <CharacterList>
+      <Character Name="Voice_1_1" Face="smile" Body="nomal" Pos="L2" Emotion="NONE" Telling="false" />
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="17">
+    <Bg Src="None" />
+    <Filter Src="Continue" />
+    <Bgm Src="None" Effect="None" PrevBgm="Continue" />
+    <CharacterList>
+      <Character Name="앤젤라" Face="sigh" Body="nomal" Pos="R2" Emotion="NONE" Telling="false" />
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="18">
+    <Bg Src="None" />
+    <Filter Src="Continue" />
+    <Bgm Src="None" Effect="None" PrevBgm="Continue" />
+    <CharacterList>
+      <Character Name="Voice_1_1" Face="jjing" Body="nomal" Pos="L2" Emotion="NONE" Telling="false" />
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="20">
+    <Bg Src="None" />
+    <Filter Src="Continue" />
+    <Bgm Src="None" Effect="None" PrevBgm="Continue" />
+    <CharacterList>
+      <Character Name="앤젤라" Face="angry" Body="nomal" Pos="R2" Emotion="NONE" Telling="false" />
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="21">
+    <Bg Src="None" />
+    <Filter Src="Continue" />
+    <Bgm Src="None" Effect="None" PrevBgm="Continue" />
+    <CharacterList>
+      <Character Name="Voice_1_1" Face="smile" Body="nomal" Pos="L2" Emotion="NONE" Telling="false" />
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <CG Src="ch8_Keter_6" />
+  <storyBranch>None</storyBranch>
+</SceneEffect>

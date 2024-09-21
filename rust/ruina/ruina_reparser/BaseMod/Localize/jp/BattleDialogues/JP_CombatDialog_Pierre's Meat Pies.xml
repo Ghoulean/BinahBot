@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GroupName>Pierre's Meat Pies</GroupName>
+  <Character ID="Pierre">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">あらあら、やりすぎると本来の食感を損なっちゃうでしょう！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">うわぁぁぁぉ～あなたからはどんな味がするのかしら？ちょっと切り取ってもいい？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">そこ、あなた！さっきすれ違ったとき凄くいい匂いがしたの。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">チッ、こんな本ばっかとか！噛みごたえすらないじゃない！</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">うーん……いえ、いいえ。こんなものも新鮮な材料にならないかしら？</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">は……！私が……食材になるなんて……考えたことなかったのに。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">ジャック……。そんなのってないわ、気をつけてよ。私と一緒に夢を叶えるって約束したじゃない。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">あなた弱すぎ～！こんなんじゃ美味しくなさそうね。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">あ～ん、本になっちゃうだなんて……。本でステーキでも作ってみる？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">本になる前でも活け造りにするんだったわ！</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">……どうせ１人で「8人のシェフ」になるつもりはなかったわ。いっそ……こうなるのが……。</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Jack">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">……人間なんだよな？そうじゃなくても新しい材料にするだけの話だ。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">ピエールの目標のためだ。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">傷はなるべく付けずに……最高の品質を保つように。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">勝ててよかった、ピエール。持ってけるもんは全部持って帰ることにするか。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">良い本が手に入るなら「8人のシェフ」の目に適うのも時間の問題だろうね？</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">ごめん、ピエール……。俺がもっと強かったら……。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">……俺と一緒にした約束はどうなるんだよ。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">こいつをパイにしたらどんな味なんだろうな……。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">切るときの手応えが裏路地の食材とは別次元だな。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">ピエールの言う通り、お前からいい匂いがしたってのに。残念だな。</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">どうせお前を手伝えないなら、こうなった方が良いのかもな。</BattleDialog>
+    </Type>
+  </Character>
+</BattleDialogRoot>

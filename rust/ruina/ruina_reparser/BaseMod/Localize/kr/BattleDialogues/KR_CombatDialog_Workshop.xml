@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GroupName>Workshop</GroupName>
+  <Character ID="Named">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">실험해 볼 준비는 됐어?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">적정 압력… 좋아. 연기 농도… 적당해!</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">요새 몸이 좀 뻐근했는데… 잘 됐어!</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">와우~! 이번 신작은 대박일 것 같아!</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">안 그래도 궁금한 게 많은 참이었어. 책은 어디 있지?</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">완전히 실패해버렸네…</BattleDialog>
+      <BattleDialog ID="DEATH_1">안 돼… 이제서야 알아내나… 싶었는데…</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">아슬아슬할수록 짜릿해지지!</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">이제 못쓰겠지? 이 부품은 내가 좀 빌릴게!</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">걱정하지 마! 다음에는 실패하지 않을 것 같으니까!</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">이런 기술은 처음이야! 어떻게 한 거야?</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">너희 재밌다! 다른 거 보여줄 건 없어?</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">좋아. 얼마 안 남았네?</BattleDialog>
+    </Type>
+  </Character>
+
+  <Character ID="Workshop">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">네, 문제없습니다! 바로 가죠.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">어디서 써본 적은 없는데… 괜찮겠죠?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">상대 쪽도 무난한 것 같네요!</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">문제없는지만 확인하면 바로 납품할 수 있겠어요.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">어디 보자… 제대로 채웠나?</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">고생하셨습니다! 들어갈까요?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">쓸 만한데요? 돌아가서 납품해도 되겠어요!</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">여기서 무슨 책을 얻을 수 있을까요?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">여러 정보를 얻을 수 있다면 좋겠는데…</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">이왕이면 다른 조직에 관련한 정보면 좋겠네요.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">이런… 어딘가 잘못 만들었나…</BattleDialog>
+      <BattleDialog ID="DEATH_1">그럴 리가 없어… 어디가 잘못된 거지…?</BattleDialog>
+      <BattleDialog ID="DEATH_2">아니야… 난 틀리지 않았어!</BattleDialog>
+      <BattleDialog ID="DEATH_3">…실패하지 않길 바랐는데.</BattleDialog>
+      <BattleDialog ID="DEATH_4">이대로 끝내고 싶지 않아…</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">어디 보자… 휘두를 때 좀 무거웠나.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">여긴 다른 부품을 찾아야 걸요…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">어디가 문제인지 알겠나요?</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">딱히 무기에는 큰 문제가 없는 것 같아요.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">빨리 끝내는 데 집중하죠~</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">좋은 무기를 제대로 다룰 줄 모르네요…</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">공부가 좀 되겠는데요?</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">얼마나 큰 비밀을 감춰두고 있길래!</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">마저 마무리해 볼까요?</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">역시 내 선택은 틀리지 않았어!</BattleDialog>
+    </Type>
+  </Character>
+  
+</BattleDialogRoot>

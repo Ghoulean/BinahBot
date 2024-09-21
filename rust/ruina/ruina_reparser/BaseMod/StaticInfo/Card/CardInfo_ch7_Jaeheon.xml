@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- 푸른 잔향 1차 재헌(인형사) 전투 책장 목록-->  
+  <Card ID="703701">
+    <Name>표적 부여</Name>
+    <Artwork>Jaeheon_Dollstring</Artwork>
+    <Rarity>Rare</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="Near" Cost="0" />
+    <Script>Jaeheon_Mark</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703702">
+    <Name>반격 방어</Name>
+    <Artwork>Jaeheon_Atk</Artwork>
+    <Rarity>Common</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="Jaeheon_Weak1PwTr" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="Jaeheon_Disarm1PwTr" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703703">
+    <Name>공격1</Name>
+    <Artwork>Jaeheon_Atk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="10" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="10" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="9" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703704">
+    <Name>공격2</Name>
+    <Artwork>Jaeheon_Atk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="10" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="break5atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="weak1pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="703705">
+    <Name>인형실1</Name>
+    <Artwork>Puppet2</Artwork>
+    <Rarity>Unique</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Hit" Motion="H" EffectRes="" Script="Jaeheon_Dt1ND" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Standby" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703706">
+    <Name>인형실2</Name>
+    <Artwork>Puppet2</Artwork>
+    <Rarity>Unique</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="9" Type="Standby" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Standby" Detail="Penetrate" Motion="Z" EffectRes="" Script="Jaeheon_Dt1FD" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703707">
+    <Name>인형실3</Name>
+    <Artwork>Puppet2</Artwork>
+    <Rarity>Unique</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Standby" Detail="Hit" Motion="H" EffectRes="" Script="Jaeheon_Dt1HD" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703708">
+    <Name>인형실4</Name>
+    <Artwork>Puppet2</Artwork>
+    <Rarity>Unique</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Standby" Detail="Hit" Motion="H" EffectRes="" Script="Jaeheon_Dt1AD" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703709">
+    <Name>광역 공격</Name>
+    <Artwork>Jaeheon_Strong</Artwork>
+    <Rarity>Unique</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="FarAreaEach" Cost="0" Affection="Team"/>
+    <Script>Jaeheon_AreaDt</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="10" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="Jaeheon_AreaBind" ActionScript="JaeheonAreaAtk" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="Jaeheon_AreaBind" ActionScript="JaeheonAreaAtk" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <!-- 인형들 -->
+  <Card ID="703710">
+    <Name>기기긱</Name>
+    <Artwork>Puppet5</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script>energy2</Script>
+    <ScriptDesc>[사용시] 빛 2 회복</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="Shi_G" Script="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="H" EffectRes="Puppet1_Z" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703711">
+    <Name>삐그덕</Name>
+    <Artwork>Puppet6</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="Puppet1_H" Script="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="Shi_G" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>1</Priority>
+  </Card>
+  <Card ID="703712">
+    <Name>꼭두각시</Name>
+    <Artwork>Puppet2</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="3" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="Z" EffectRes="Puppet1_Z" Script="disarm1atk" Desc="[적중] 다음 막에 무장해제 1 부여" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703713">
+    <Name>자동 이동</Name>
+    <Artwork>Puppet1</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="3"/>
+    <Script>quickness2</Script>
+    <ScriptDesc>[사용시] 다음 막에 신속 2를 얻음</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="powerUpNext2pw" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="Puppet1_H" Script="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Standby" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>1</Priority>
+  </Card>
+  <Card ID="703714">
+    <Name>인형 방패</Name>
+    <Artwork>Puppet7</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>energy1</Script>
+    <ScriptDesc>[사용시] 빛 1 회복</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="Shi_G" Script="" Desc="" />
+      <Behaviour Min="2" Dice="4" Type="Atk" Detail="Hit" Motion="Z" EffectRes="Puppet1_Z" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703715">
+    <Name>억압당한 육체</Name>
+    <Artwork>Puppet3</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="3"/>
+    <Script>drawCard</Script>
+    <ScriptDesc>[사용시] 책장을 1장 뽑음</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="Shi_G" Script="" Desc="" />
+      <Behaviour Min="4" Dice="9" Type="Atk" Detail="Hit" Motion="H" EffectRes="Puppet1_H" Script="powerDown3targetDfn" Desc="대상의 현재 수비 주사위 위력 -3" />
+      <Behaviour Min="4" Dice="9" Type="Atk" Detail="Hit" Motion="Z" EffectRes="Puppet1_Z" Script="break3atk" Desc="[적중] 대상에게 흐트러짐 피해 3" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>1</Priority>
+  </Card>
+  <Card ID="703716">
+    <Name>묵직한 일격</Name>
+    <Artwork>Puppet4</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="3"/>
+    <Script>drawCard</Script>
+    <ScriptDesc>[사용시] 책장을 1장 뽑음</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Shi_G" Script="" Desc="" />
+      <Behaviour Min="5" Dice="16" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="weakDisarmBinding1atk" Desc="[적중] 다음 막에 허약 1, 무장해제 1, 속박 1 부여" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>1</Priority>
+  </Card>
+  <Card ID="703717">
+    <Name>늙은 소년 공방</Name>
+    <Artwork>Jaeheon_Angelica</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>AngelicaPuppet_OldBoy</Script>
+    <ScriptDesc>[사용시] 빛 3 회복. 책장을 1장 뽑음</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Def" Detail="Guard" Motion="G" EffectRes="Shi_G" Script="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>1</Priority>
+  </Card>
+  <Card ID="703718">
+    <Name>느티나무 공방</Name>
+    <Artwork>Jaeheon_Angelica</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script>AngelicaPuppet_Zelkova</Script>
+    <ScriptDesc>[사용시] 빛 1 회복. 책장을 1장 뽑음</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>1</Priority>
+  </Card>
+  <Card ID="703719">
+    <Name>휠스 인더스트리</Name>
+    <Artwork>Jaeheon_Angelica</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="4"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="15" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="AngelicaPuppet_Wheels" Desc="[합 승리] 대상의 다음 주사위 파괴" />
+      <Behaviour Min="5" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Puppet1_J" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>1</Priority>
+  </Card>
+  <Card ID="703720">
+    <Name>보통 인형 특수카드</Name>
+    <Artwork>Jaeheon_Dollstring</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>1</Priority>
+  </Card>
+  <Card ID="703721">
+    <Name>빠른 인형 특수카드</Name>
+    <Artwork>Jaeheon_Dollstring</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>QuickPuppet_Special</Script>
+    <ScriptDesc>속도가 5 이상일 때 이 책장의 모든 주사위 위력 +1</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>1</Priority>
+  </Card>
+  <Card ID="703722">
+    <Name>무거운 인형 특수카드</Name>
+    <Artwork>Jaeheon_Dollstring</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Hit" Motion="E" EffectRes="" Script="paralysis3atk" Desc="[적중] 다음 막에 마비 3 부여" />
+      <Behaviour Min="4" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>1</Priority>
+  </Card>
+  <Card ID="703723">
+    <Name>안젤리카 인형 특수카드</Name>
+    <Artwork>Jaeheon_Dollstring</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>AngelicaPuppet_Special</Script>
+    <ScriptDesc>속도가 5 이상일 때 이 책장의 모든 주사위 위력 +2</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="break4atk" Desc="[적중] 대상에게 흐트러짐 피해 4" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="break4atk" Desc="[적중] 대상에게 흐트러짐 피해 4" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="Puppet1_J" Script="break4atk" Desc="[적중] 대상에게 흐트러짐 피해 4" />
+      <Behaviour Min="4" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>1</Priority>
+  </Card>
+
+</DiceCardXmlRoot>

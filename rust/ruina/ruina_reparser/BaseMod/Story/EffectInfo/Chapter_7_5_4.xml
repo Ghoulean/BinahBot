@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SceneEffect xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Dialogue ID="0">
+    <Bg Src="ch1_library_inside" />
+    <Filter Src="Continue" />
+    <Bgm Src="ch3_Prologue" Effect="On" PrevBgm="Off" />
+    <CharacterList>
+      <Character Name="앤젤라" Face="normal" Body="nomal" Pos="R2" Emotion="NONE" Telling="false">
+        <Active Effect="NORMAL" Ratio="0" />
+      </Character>
+      <Character Name="롤랑_3" Face="none" Body="nomal 4" Pos="L1" Emotion="NONE" Telling="false">
+        <Active Effect="NORMAL" Ratio="0" />
+      </Character>
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="3">
+    <Bg Src="ch7_Black_End_2_1" />
+    <Filter Src="Continue" />
+    <Bgm Src="None" Effect="None" PrevBgm="Continue" />
+    <CharacterList>
+      <Character Name="롤랑_3" Face="none" Body="nomal 3" Pos="C" Emotion="NONE" Telling="false">
+        <Deactive Effect="NORMAL" Ratio="0" />
+      </Character>
+      <Character Name="앤젤라" Face="angry" Body="nomal" Pos="C" Emotion="NONE" Telling="false">
+        <Deactive Effect="NORMAL" Ratio="0" />
+      </Character>
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="6">
+    <Bg Src="검은화면" />
+    <Filter Src="Continue" />
+    <Bgm Src="None" Effect="None" PrevBgm="Continue" />
+    <CharacterList />
+    <EffectSound>ch7_bookRoland</EffectSound>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="7">
+    <Bg Src="검은화면" />
+    <Filter Src="Continue" />
+    <Bgm Src="None" Effect="None" PrevBgm="FadeOut" />
+    <CharacterList />
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="14">
+    <Bg Src="ch7_Black_End_2_2" />
+    <Filter Src="Continue" />
+    <Bgm Src="ch1_AngelaIntro" Effect="FadeIn" PrevBgm="FadeOut" />
+    <CharacterList />
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="33">
+    <Bg Src="검은화면" />
+    <Filter Src="Continue" />
+    <Bgm Src="None" Effect="None" PrevBgm="Continue" />
+    <CharacterList />
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="39">
+    <Bg Src="검은화면" />
+    <Filter Src="Continue" />
+    <Bgm Src="CH7_NewBlue_LibraryLightOn" Effect="None" PrevBgm="FadeOut" />
+    <CharacterList />
+    <BgChangeState>Fade</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="44">
+    <Bg Src="ch7_Black_End_2_3" />
+    <Filter Src="Continue" />
+    <Bgm Src="CH7_NewBlue_LibraryLightOn" Effect="FadeIn" PrevBgm="FadeOut" />
+    <CharacterList />
+    <EffectSound>ch8_YesodWalk</EffectSound>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="55">
+    <Bg Src="검은화면" />
+    <Filter Src="Continue" />
+    <Bgm Src="Bgm3" Effect="FadeIn" PrevBgm="FadeOut" />
+    <CharacterList />
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="57">
+    <Bg Src="None" />
+    <Filter Src="Continue" />
+    <Bgm Src="None" Effect="None" PrevBgm="FadeOut" />
+    <CharacterList />
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <CG Src="ch7_Black_1" />
+  <storyBranch>None</storyBranch>
+</SceneEffect>

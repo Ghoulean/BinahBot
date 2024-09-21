@@ -1,0 +1,1672 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleEffectTextRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <effectTextList>
+    <BattleEffectText ID="OldLady_Lonely">
+      <Name>고독</Name>
+      <Desc>속도가 2 감소한다. 막 시작시 피해를 1-2 받는다.(중첩 불가)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedShoes_Kirakira">
+      <Name>빨간 구두의 매혹</Name>
+      <Desc>&lt;반짝임&gt; 책장을 사용한 대상을 공격한다. 피해량이 2-4 증가한다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="TheDreamingCurrent_Sea">
+      <Name>무지개빛 바다</Name>
+      <Desc>{0}막 동안 속도가 3 감소한다. 막 시작시 현재 체력의 10%를 잃고 빛을 1 회복한다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Bloodbath_Hands">
+      <Name>창백한 손</Name>
+      <Desc>이 캐릭터에게 공격이 {0}번 적중하면 흐트러짐 피해 3-10을 추가로 준다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="TheSnowQueen_Chu">
+      <Name>얼음 조각</Name>
+      <Desc>앞으로 얼음 조각을 {0}번 더 받으면 다음 2막 동안 행동불가 상태가 된다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HappyTeddyBear_Hug">
+      <Name>테디의 애정</Name>
+      <Desc>&lt;그리웠던 옛날의 포옹&gt; 책장을 사용한 대상에게 합 패배 시 {0}% 확률로 주사위 값만큼 흐트러짐 피해를 받는다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="TheDreamingCurrent_candy">
+      <Name>사탕</Name>
+      <Desc>&lt;사탕&gt; 책장을 사용한 대상에게 입는 피해가 {0}% 증가한다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ChildofGalaxy_Token">
+      <Name>조약돌</Name>
+      <Desc>{0}막 동안 막 시작시 체력을 10% 회복한다. 다른 아군이 사망할 때 마다 체력을 '최대 체력의 20%'만큼 잃는다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Stun">
+      <Name>행동 불가</Name>
+      <Desc>이번 막 동안 행동할 수 없다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Break">
+      <Name>흐트러짐</Name>
+      <Desc>이번 막 동안 행동할 수 없다. 책장과 빛이 회복되지 않는다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Burn">
+      <Name>화상</Name>
+      <Desc>막 종료시 피해 {0}를 받고 화상 수치가 2/3로 감소한다.(소수점 이하 버림)</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="Bleeding">
+      <Name>출혈</Name>
+      <Desc>이번 막 동안 공격 주사위를 굴릴 때 마다 피해 {0}를 받고 출혈 수치가 2/3로 감소한다.(소수점 이하 올림)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Vulnerable">
+      <Name>취약</Name>
+      <Desc>이번 막 동안 받는 피해량 {0} 증가</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Weak">
+      <Name>허약</Name>
+      <Desc>이번 막 동안 공격 주사위의 위력 -{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Disarm">
+      <Name>무장 해제</Name>
+      <Desc>이번 막 동안 수비 주사위의 위력 -{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Binding">
+      <Name>속박</Name>
+      <Desc>이번 막에 모든 속도의 값이 {0}만큼 감소</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Protection">
+      <Name>보호</Name>
+      <Desc>이번 막 동안 받는 피해량 {0} 감소</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Strength">
+      <Name>힘</Name>
+      <Desc>이번 막 동안 공격 주사위의 위력+{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Endurance">
+      <Name>인내</Name>
+      <Desc>이번 막 동안 수비 주사위의 위력+{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Quickness">
+      <Name>신속</Name>
+      <Desc>이번 막에 모든 속도의 값이 {0}만큼 증가</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Blurry">
+      <Name>흐릿함</Name>
+      <Desc>흐릿함이 없는 다른 대상이 있을 경우, 이 캐릭터를 대상으로 지정할 수 없다. 막 종료시 제거됨</Desc>
+    </BattleEffectText>
+
+
+
+    <BattleEffectText ID="Burn_Keyword">
+      <Name>화상 X</Name>
+      <Desc>막 종료시 피해 X를 받고 화상 수치가 2/3로 감소한다.(소수점 이하 버림)</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="Bleeding_Keyword">
+      <Name>출혈 X</Name>
+      <Desc>한 막 동안 공격 주사위를 굴릴 때 마다 피해 X를 받고 출혈 수치가 2/3로 감소한다.(소수점 이하 올림)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Vulnerable_Keyword">
+      <Name>취약 X</Name>
+      <Desc>한 막 동안 받는 피해량 X 증가</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Weak_Keyword">
+      <Name>허약 X</Name>
+      <Desc>한 막 동안 공격 주사위의 위력 -X</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Disarm_Keyword">
+      <Name>무장해제 X</Name>
+      <Desc>한 막 동안 수비 주사위의 위력 -X</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Binding_Keyword">
+      <Name>속박 X</Name>
+      <Desc>한 막에 모든 속도의 값이 X만큼 감소</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Protection_Keyword">
+      <Name>보호 X</Name>
+      <Desc>한 막 동안 받는 피해량 X 감소</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Strength_Keyword">
+      <Name>힘 X</Name>
+      <Desc>한 막 동안 공격 주사위의 위력 +X</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Endurance_Keyword">
+      <Name>인내 X</Name>
+      <Desc>한 막 동안 수비 주사위의 위력+X</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Quickness_Keyword">
+      <Name>신속 X</Name>
+      <Desc>한 막 동안 모든 속도의 값이 X만큼 증가</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="bstart_Keyword">
+      <Name>전투 시작</Name>
+      <Desc>전투가 시작될 때 발동. 캐릭터들이 공격 대상에게 움직이기 전에 발동된다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_Keyword">
+      <Name>전용 전투 책장</Name>
+      <Desc>특정 핵심 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="counter_Keyword">
+      <Name>반격</Name>
+      <Desc>일방 공격을 받을 때에만 사용되는 주사위(전투 책장으로 합을 시작했을 때는 제외)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="FairyFestival_Recovery">
+      <Name>준비된 고기</Name>
+      <Desc>이 효과가 있을 때 체력이 1이 되면 여왕에게 잡아먹힘</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="SpiderBud_Cocoon">
+      <Name>고치</Name>
+      <Desc>아기 거미의 표적이 됨</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Philip_Attack">
+      <Name>이글거리는 검</Name>
+      <Desc>공격 적중시 대상에게 화상 4 부여.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Philip_Defense">
+      <Name>깃털 방패</Name>
+      <Desc>피격시 공격자에게 화상 2 부여. 공격으로 받는 피해 5 감소.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Philip_Ready">
+      <Name>타오르는 일격 준비</Name>
+      <Desc>{0} 막 후에 타오르는 일격 사용.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Philip_Strong">
+      <Name>타오르는 일격</Name>
+      <Desc>이번 막에 속도 주사위 +2</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="QueenOfHatred_Sign">
+      <Name>악당</Name>
+      <Desc>증오의 여왕의 표적이 됨</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="QueenOfHatred_Hatred">
+      <Name>증오</Name>
+      <Desc>증오의 여왕이 사용하는 모든 전투 책장의 표적이 됨</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="KnightOfDespair_Blessing">
+      <Name>눈물</Name>
+      <Desc>속도 주사위 1개 증가. 특수 전투 책장 사용. 내성 정보 변경.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Gaho">
+      <Name>가호</Name>
+      <Desc>이전 막에 자신에게 가장 많은 피해를 준 속성의 내성이 이번 막동안 견딤으로 변경됨. (피해, 흐트러짐 피해는 각각 따로 적용)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ability/BloodBath_Hand">
+      <Name>창백한 손</Name>
+      <Desc>공격이 이 캐릭터에게 3번 적중할 때마다 흐트러짐 피해 3-10을 추가로 줌</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SweepersSkill">
+      <Name>끈질김</Name>
+      <Desc>체력이 0이 되는 피해를 받을 때, 80%의 확률로 일부 체력을 가진 상태로 부활. 이 효과는 발동할 때 마다 다음 부활 확률이 절반으로 감소.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="SlashPowerUp">
+      <Name>참격 위력 증가</Name>
+      <Desc>이번 막 동안 참격 위력 +{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="PenetratePowerUp">
+      <Name>관통 위력 증가</Name>
+      <Desc>이번 막 동안 관통 위력 +{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HitPowerUp">
+      <Name>타격 위력 증가</Name>
+      <Desc>이번 막 동안 타격 위력 +{0}</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Queenbee_Spore">
+      <Name>포자</Name>
+      <Desc>
+        막 시작시 {0} 피해를 입고 수치가 반으로 감소.(소수점 버림)
+        이번 막 동안 공격 주사위를 굴릴 때 마다 피해 {0}.
+        이 효과를 가진 상태에서 사망 시 다음 막에 일벌 1마리 소환
+      </Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Queenbee_Punish">
+      <Name>응징</Name>
+      <Desc>'일벌' 환상체 책장을 선택하지 않은 사서가 이 캐릭터를 공격 시 피해량 2-4 증가</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Snowwhite_Vine">
+      <Name>덩굴</Name>
+      <Desc>'덩굴' 환상체 책장을 고른 사서가 이 캐릭터를 관통 주사위로 공격 시 위력 1-2 증가</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Burning_Match">
+      <Name>타오름</Name>
+      <Desc>속도 주사위 +1, 모든 주사위 위력 +2, 주사위를 굴릴 때마다 최대 체력의 5%만큼 체력 감소</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="TeddyLove">
+      <Name>애정</Name>
+      <Desc>이 대상을 공격할 때 현재 수치만큼 공격자의 위력 증가</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="FairyMeat">
+      <Name>신선한 고기</Name>
+      <Desc>이 대상을 공격할 때 공격자의 위력 +2, 공격 적중 시 체력 10 회복</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="FairyMeal">
+      <Name>굶주림</Name>
+      <Desc>현재 누적 피해량 {0}</Desc>
+    </BattleEffectText>
+<!--
+    <BattleEffectText ID="ego_Keyword">
+      <Name>E.G.O.</Name>
+      <Desc>E.G.O.는 모든 사서가 공유하여 사용 가능.</Desc>
+    </BattleEffectText>
+    -->
+    <BattleEffectText ID="AreaCard_Keyword">
+      <Name>광역 공격 책장</Name>
+      <Desc>전투 시작시에 모든 적의 속도 주사위 하나를 대상으로 하여 공격한다. 공격 성공시 대상의 책장이나 주사위를 파괴한다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="AreaDiceAll_Keyword">
+      <Name>합산</Name>
+      <Desc>광역 공격에서 주사위 값이 대상의 모든 주사위 값의 합보다 크면 피해를 주고 대상 책장을 파괴한다</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="AreaDiceEach_Keyword">
+      <Name>개별</Name>
+      <Desc>광역 공격에서 대상 주사위의 값이 이 주사위보다 낮으면 피해를 주고 대상 주사위를 파괴한다</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="OnlyOne_Keyword">
+      <Name>유일</Name>
+      <Desc>현재 자신이 가지고 있는 모든 전투 책장들이 서로 다른 책장들로 구성되어 있다면 '유일'상태가 된다.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="RedHood_Angry">
+      <Name>분노</Name>
+      <Desc>2막동안 지속. 매 막마다 힘 +2, 광역 공격 책장 사용</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedHood_Rage">
+      <Name>갈 곳 잃은 분노</Name>
+      <Desc>영구적으로 지속. 매 막마다 힘+5, 신속+5, 광역 공격 책장 사용</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedHood_Hunt">
+      <Name>사냥감</Name>
+      <Desc>사냥감 책장을 사용한 사서가 공격 시 피해량 2-6 증가</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="Lumberjack_Heart">
+      <Name>따뜻한 마음</Name>
+      <Desc>모든 주사위 최댓값 +{0}</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="WarpCharge">
+      <Name>충전</Name>
+      <Desc>충전 수치에 따라서 특정 전투 책장의 능력이 상승. 최대 10까지 얻을 수 있음.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="GalaxyBoy_Stone">
+      <Name>친구의 증표</Name>
+      <Desc>막 시작시 최대 체력의 10%만큼 체력 회복</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Smoke">
+      <Name>연기</Name>
+      <Desc>받는 피해량 {0}%증가. 최대 10까지 얻을 수 있음. 연기 수치가 9 이상이면 모든 주사위 위력 +1. 막 종료시 연기 수치 1 감소.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Smoke_buf">
+      <Name>연기</Name>
+      <Desc>공격으로 주는 피해량 {0}%증가. 최대 10까지 얻을 수 있음. 연기 수치가 9 이상이면 모든 주사위 위력 +1. 막 종료시 연기 수치 1 감소.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Smoke_Keyword">
+      <Name>연기</Name>
+      <Desc>연기 수치에 비례하여 받는 피해량 증가. 연기 수치가 9 이상이면 모든 주사위 위력 +1. 최대 10까지 얻을 수 있음. 막 종료시 연기 수치 1 감소.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Butterfly_Seal">
+      <Name>봉인</Name>
+      <Desc>속도 주사위 {0}개 사용 불가. 앞에 있는 속도 주사위부터 판정.</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="CB_BigBadWolf_Stealth">
+      <Name>그림자</Name>
+      <Desc>늑대가 사용할 전투 책장의 대상이 아닌 사서는 행동 불가</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wolf_Claw">
+      <Name>흉악한 발톱</Name>
+      <Desc>이번 막동안 힘 +2, 적에게 타겟으로 지정되지 않음, 적에게 합을 걸 수 없음, 공격 주사위가 적중할 때마다 다음 막에 출혈 1 부여.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Crying_Weak">
+      <Name>드러난 마음</Name>
+      <Desc>모든 내성이 '취약'이 됨</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="BurningGirl_Burn">
+      <Name>잔불</Name>
+      <Desc>공격 주사위에 "[적중] 화상 1 부여" 효과를 추가</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BurningGirl_Ember">
+      <Name>불씨</Name>
+      <Desc>불씨가 부여된 책장의 첫번째 주사위의 최댓값이 불씨 수치만큼 증가. 해당 주사위 적중 시 불씨 수치만큼 화상을 부여함. 불씨가 4 이상이면 25% 확률로 해당 주사위 굴림 후 주사위 최댓값만큼 피해를 받음.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SingingMachine_Rhythm">
+      <Name>리듬</Name>
+      <Desc>이 효과가 있는 동안 막 시작 시 힘을 1 얻고, 피격 시 흐트러짐 피해 2-5를 추가로 받음. 막 종료 시 1 감소</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Porccubus_Happy">
+      <Name>쾌감</Name>
+      <Desc>피격 시 쾌감이 3가 되면 2-7의 피해와 흐트러짐 피해를 받고 효과가 사라짐</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_yujin_Keyword">
+      <Name>유진 전용 전투 책장</Name>
+      <Desc>유진의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_sweeper_Keyword">
+      <Name>청소부 전용 전투 책장</Name>
+      <Desc>청소부들의 핵심 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_warp_Keyword">
+      <Name>로즈, 레스티, 센 전용 전투 책장</Name>
+      <Desc>로즈, 레스티, 센의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_philip_Keyword">
+      <Name>불안정한 우는 아이 전용 전투 책장</Name>
+      <Desc>불안정한 우는 아이의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_lowel_Keyword">
+      <Name>로웰 전용 전투 책장</Name>
+      <Desc>로웰의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_chulsan_Keyword">
+      <Name>세실, 메이 전용 전투 책장</Name>
+      <Desc>세실, 메이의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="HodFinal_CopiousBleeding">
+      <Name>깊은 상처</Name>
+      <Desc>수치가 5 이상이 되면 최대 체력 25%의 피해를 받음</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="CardBuf_Latitia_Heart">
+      <Name>래티씨아의 선물</Name>
+      <Desc>{0} 막이 지난 후 폭발</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Latitia_Heart">
+      <Name>두근두근</Name>
+      <Desc>선물 책장이 폭발할 때마다 +1. 수치가 3이 되면 이 캐릭터를 처치하고 다음 막에 꼬마 마녀의 친구 1마리를 생성함</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Latitia_Gift">
+      <Name>선물</Name>
+      <Desc>선물을 준 캐릭터가 아닌 대상과 합을 하면 합 시작 시 40% 확률로 2-7의 피해를 받고 다음 막에 출혈을 2 얻음</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BlackSwan_Nettle">
+      <Name>쐐기옷</Name>
+      <Desc>매 막 시작 시 이 효과의 수치만큼 보호를 얻음. 수치가 0이 되면 이 효과는 사라짐. 막 종료시 쐐기옷이 1 감소한다</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="HodFinal_BlackSwanDeadBro">
+      <Name>사라진 가족</Name>
+      <Desc>막 시작시 이 수치가 4 이상이면 특수 전투 책장 사용</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Laetitia_Gift_Keyword">
+      <Name>작은 선물</Name>
+      <Desc>비용 1의 약한 전투 책장. 손에 있으면 우선적으로 사용한다. 사용시 소멸.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_thumb">
+      <Name>엄지 전용 전투 책장</Name>
+      <Desc>엄지 조직원, 칼로, 카트리엘, 데니스의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_thumb2">
+      <Name>칼로, 카트리엘, 데니스 전투 책장</Name>
+      <Desc>칼로, 카트리엘, 데니스의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_boris">
+      <Name>보리스 전용전투 책장</Name>
+      <Desc>보리스의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="bullet_keyword">
+      <Name>탄환</Name>
+      <Desc>버리거나 사용했을 경우, 원거리 전투 책장에 추가 효과를 부여한다</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="DmgUp">
+      <Name>피해량 증가</Name>
+      <Desc>이번 막 동안 공격 주사위의 피해량 +{0}</Desc>
+    </BattleEffectText>
+
+    <!-- 아직 안 쓰는 중-->
+    <BattleEffectText ID="Kalo">
+      <Name></Name>
+      <Desc>공격 주사위를 굴릴 때 마다 증가. 이 수치가 2일 때, 다음 공격 주사위의 위력 +1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BulletStack">
+      <Name>장전</Name>
+      <Desc>공격이 적중할 때 마다 증가. 이 수치가 3이 되었을 때 손에 무작위 탄환을 추가</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Universe_DecreaseMaxBp">
+      <Name>꿰뚫린 경계</Name>
+      <Desc>최대 흐트러짐 {0}% 감소</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Universe_Enlightenment">
+      <Name>담을 수 없는 지혜</Name>
+      <Desc>손에 '깨달음'이 있으면 최대 흐트러짐 50% 감소</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Alriune_Attacker">
+      <Name>속죄의 월계관</Name>
+      <Desc>이 캐릭터만 알리우네나 알리우네의 힘을 쓰는 캐릭터에게 피해를 줄 수 있다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Alriune_Debuf">
+      <Name>잔향</Name>
+      <Desc>막 시작시 {0} 흐트러짐 피해를 입고 잔향 수치가 반으로 감소한다. (소수점 버림)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ResistWeakBP">
+      <Name>흐트러짐 내성 감소</Name>
+      <Desc>이번 막 동안 모든 흐트러짐 내성이 취약으로 변경</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Orchestra_Enthusiastic">
+      <Name>열렬한 감동</Name>
+      <Desc>조작 불가. 흐트러짐 상태가 되면 다음 막 시작 시 해제 및 흐트러짐 상태 회복. 일반 사서가 공격 시 흐트러짐 피해만, 열렬한 감동이 있는 사서가 공격 시 체력 피해만 받음. 환상체의 공격으로 피해를 받지 않음 (피날레 제외)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="AllPowerUp">
+      <Name>위력 증가</Name>
+      <Desc>모든 주사위 위력 {0} 증가</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="DecreaseSpeedTo1">
+      <Name>속도 고정 1</Name>
+      <Desc>이번 막 동안 속도 주사위 값 1로 고정</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Alriune_Flower">
+      <Name>꽃잎</Name>
+      <Desc>'봄의 탄생' 책장을 선택한 캐릭터의 공격이 이 캐릭터에게 4회 이상 적중하면, 모든 캐릭터에게 흐트러짐 피해 3-7를 주고, 다음 막에 대상 지정 불가능 효과를 얻는다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="NoTargeting">
+      <Name>대상 지정 불가능</Name>
+      <Desc>이 캐릭터를 대상으로 지정할 수 없음</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Orchestra_Affect">
+      <Name>열렬한 감동</Name>
+      <Desc>이 효과가 있는동안 피아식별 없이 공격 대상을 정하고, 피해량이 2-4 증가한다.</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="TakeBreakDamage2">
+      <Name>흐트러짐 추가 피해</Name>
+      <Desc>피격시 흐트러짐 추가 피해 2</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="PowerUpOrchestraEgo">
+      <Name>피아니시모</Name>
+      <Desc>앤젤라와 합 진행시 앤젤라의 위력 +2</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_nemo">
+      <Name>네모 전용 전투 책장</Name>
+      <Desc>네모의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_bada">
+      <Name>바다 전용 전투 책장</Name>
+      <Desc>바다의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_martina">
+      <Name>마르티나 전용 전투 책장</Name>
+      <Desc>마르티나의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="NullifyPower">
+      <Name>위력 무효화</Name>
+      <Desc>이번 막 동안 위력의 효과를 받지 않는다</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="BigBird_Charm">
+      <Name>현혹</Name>
+      <Desc>조작 불가. 속도 1 고정. '이끌림' 전투 책장 사용. 큰 새를 대상으로 지정</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BigBird_Eye">
+      <Name>주시</Name>
+      <Desc>{0}막 동안 이 효과를 부여한 대상만 지정 가능</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="BigBird_Sleep">
+      <Name>수면</Name>
+      <Desc>이번 막동안 흐트러짐 상태가 됨</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Alriune_Petal">
+      <Name>꽃잎</Name>
+      <Desc>3장이 되면 해당 막에 광역 공격 책장을 사용함</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SnowQueen_Debuf">
+      <Name>한기</Name>
+      <Desc>
+        막 시작 시 값이 1 감소한다.
+        막 시작 시 이 수치가 4 이상이면 이번 막동안 속박 2, 허약 2를 얻는다.
+        6 이상이면 이번 막동안 행동 불가 상태가 되고, 다음 막 시작 시 수치가 초기화된다.
+      </Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="BloodyTree_Emotion_Damage">
+      <Name>앙상한 핏빛 날개</Name>
+      <Desc>교전 시 본인, 교전 대상, 환상체 책장 보유 캐릭터를 제외한 모든 캐릭터가 피해를 1-10 받는다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SnowQueen_Emotion_Shard">
+      <Name>얼음 조각</Name>
+      <Desc>막 종료 시 이 수치가 3 이상이면 다음 막 동안 행동불가 상태가 된다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SnowQueen_Emotion_Stun">
+      <Name>빙결</Name>
+      <Desc>이번 막동안 행동 불가. 적 캐릭터인 경우 다음 막에 속박 6을 얻는다.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="HokmaFirstCounter">
+      <Name>깨어남</Name>
+      <Desc>{0}막 뒤에 깨어난다. 천국의 가시나 파고드는 천국이 흐트러짐 상태가 되면 이 수치가 감소하지 않는다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HokmaFirstCounter2">
+      <Name>깨어남</Name>
+      <Desc>{0}막 뒤에 가시 하나가 깨어나거나 소환된다. 파고드는 천국이 흐트러짐 상태가 되면 이 수치가 감소하지 않는다.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Lumberjack_Cut">
+      <Name>따뜻한 마음</Name>
+      <Desc>막 시작 시 빛을 3 이상 보유하고 있으면 공격 주사위의 위력이 1-2 증가한다.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Mountain_WeakResist">
+      <Name>흐트러짐 내성 감소</Name>
+      <Desc>이번 막 동안 모든 흐트러짐 내성이 취약으로 변경</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Target">
+      <Name>벽돌길</Name>
+      <Desc>집으로 가는 길과 겁쟁이 사자의 타겟이 됨
+겁쟁이 사자가 이 캐릭터를 공격할 때 사자의 위력 +5
+이 효과를 가진 대상에게 사용한 '친구야! 집으로 가보자~!' 책장의 공격이 전부 적중하지 못하면 집으로 가는 길의 마지막 공격이 취소됨</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Coward_Strength">
+      <Name>용기</Name>
+      <Desc>이번 막에 집으로 가는 길이 공격을 받을 때마다 힘을 얻음</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Super_Cancel">
+      <Name>돌아갈 수 없는 집</Name>
+      <Desc>
+        '집'을 타겟으로 하는 책장이 취소된 횟수
+        3회가 되면 다음 막에 강한 공격 책장을 사용함
+      </Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Emotion_Target">
+      <Name>집으로 가는 길</Name>
+      <Desc>적힌 순서대로 대상을 공격할 때마다 피해량이 2 증가한다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Emotion_Protected">
+      <Name>함께 가는 길</Name>
+      <Desc>이 캐릭터가 받을 공격을 다른 아군이 합으로 가져가면 해당 책장의 위력 1-2 증가</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="DangoCreature_Emotion_Healed">
+      <Name>분열</Name>
+      <Desc>이번 무대에서 회복한 체력의 총량</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="IndexRelease">
+      <Name>해금</Name>
+      <Desc>모든 주사위 위력 +1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="IndexReleaseCount">
+      <Name>해금중</Name>
+      <Desc>이번 무대에서 사용한 서로 다른 전투 책장의 종류 수 : {0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="IndexOnlyCardCount">
+      <Name>전용 책장 사용</Name>
+      <Desc>4 막 마다 전용 책장을 사용하고, 다른 검지 대행자가 없으면 2막 마다 사용한다. ({0} 막 후에 사용)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="IndexReleaseCard2_Keyword">
+      <Name>해금-Ⅱ</Name>
+      <Desc>참격(2-6), 관통(1-3) 주사위와 '사용시: 해금-Ⅲ을 손에 추가하고 소멸한다' 능력을 가진 전투 책장</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="IndexReleaseCard3_Keyword">
+      <Name>해금-Ⅲ</Name>
+      <Desc>참격(3-7), 관통(2-4) 주사위와 '사용시: 빛 1회복. 책장을 1장 뽑는다' 능력을 가진 전투 책장</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_esther_Keyword">
+      <Name>에스더 전용 전투 책장</Name>
+      <Desc>에스더의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_hubert_Keyword">
+      <Name>휴버트 전용 전투 책장</Name>
+      <Desc>휴버트의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_gloria_Keyword">
+      <Name>글로리아 전용 전투 책장</Name>
+      <Desc>글로리아의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="Decay">
+      <Name>부식</Name>
+      <Desc>막 종료시 피해 {0}를 받고 부식 수치가 1 감소한다.(소수점 이하 버림) 피격 시 부식 수치만큼 물리, 흐트러짐 추가 피해를 받는다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ServantOfWrath_Wand">
+      <Name>지팡이</Name>
+      <Desc>'너는 무너질 것이다..!' 책장의 공격을 받을 때 해당 책장의 위력이 이 수치에 비례하여 증가한다.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Nihil_Hatred">
+      <Name>악당</Name>
+      <Desc>이 효과가 있는 동안 막 시작 시 취약 3을 얻음</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nihil_Meaningless">
+      <Name>허무</Name>
+      <Desc>이 효과가 있는 동안 막 시작 시 허약, 무장해제, 취약 7을 얻음</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Angry_Angry">
+      <Name>분노</Name>
+      <Desc>이 캐릭터는 조종할 수 없다. 대신 피아 식별 없이 무작위 대상을 공격한다. 매 막마다 힘 2를 얻고, 빛을 2씩 회복하고, 책장을 2장 추가로 뽑는다. (허무 환상체 책장의 조건을 만족한 경우 패널티가 사라진다.)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Angry_Friend">
+      <Name>벗</Name>
+      <Desc>'벗' 환상체 책장을 선택한 사서가 이 캐릭터를 처치하면, 모든 사서의 빛, 체력, 흐트러짐이 3/10/10만큼 회복되고, 이 효과의 대상이 초기화 된다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nihil_MagicalPower">
+      <Name>마법소녀</Name>
+      <Desc>모든 마법소녀 책장 4장이 손 패에 있으면, 허약, 무장해제, 속박의 효과를 받지 않고, 매 막마다 힘을 1-2 얻는다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nihil_Nihil">
+      <Name>허무</Name>
+      <Desc>
+        자신을 제외한 모든 캐릭터에게 매 막 시작 시 허약, 무장해제, 속박 5를 부여한다. '탐욕', '증오', '분노'책장의 패널티가 아래와 같이 사라진다.
+        '탐욕': 자신에게만 효과가 적용된다.
+        '증오': 합 패배 시 흐트러짐 피해를 받지 않는다.
+        '분노': 이 캐릭터를 조종할 수 있다.
+      </Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_chun_Keyword">
+      <Name>춘의 전용 전투 책장</Name>
+      <Desc>춘의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="CardBuf_burnUp_Keyword">
+      <Name>화광충천</Name>
+      <Desc>이 책장을 사용하는 동안 전투 책장으로 화상을 부여할 때, 부여하는 화상 수치 2배</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BurnSpread_Keyword">
+      <Name>요원지화</Name>
+      <Desc>이 캐릭터가 {0} 막 안에 흐트러짐 상태가 되면, 다른 아군들에게 이 캐릭터가 가진 화상 수치의 절반만큼 화상 부여</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="RedMist">
+      <Name>붉은안개</Name>
+      <Desc>모든 주사위 위력 +{0}. 최대 5까지 얻을 수 있음.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Silence_StopTime">
+      <Name>침묵</Name>
+      <Desc>이번 막 동안 전투 책장 장착 시의 제한 시간이 사라진다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Silence_TraceCount">
+      <Name>쌓이는 시간</Name>
+      <Desc>처치한 시간의 흔적의 수</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Silence_TimeOut">
+      <Name>멈출 수 없는 시간</Name>
+      <Desc>{0}막 뒤 특수 패턴 등장</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Silence_PowerClash">
+      <Name>흘러간 시간</Name>
+      <Desc>합 진행 시 위력 +3</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Silence_PowerAtk">
+      <Name>흘러간 시간</Name>
+      <Desc>일방 공격 시 위력 +3</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="SmallBird_Punishment">
+      <Name>징벌</Name>
+      <Desc>이번 막에 사용하는 첫번째 책장의 첫번째 주사위의 위력이 2-4 증가한다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Smallbird_Beak">
+      <Name>처벌하는 부리</Name>
+      <Desc>피해량 +{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Clock_Thirteen">
+      <Name>13번째 종소리</Name>
+      <Desc>
+        사용한 책장의 수: {0}
+        13번째 사용하는  책장의 주사위의 위력 1-2 증가
+        해당 주사위에 '[적중] (이 주사위의 값)%만큼 체력 비례 피해를 추가로 줌' 효과를 추가한다.
+      </Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_redmist_Keyword">
+      <Name>붉은안개 전용 책장</Name>
+      <Desc>붉은안개의 핵심 책장에만 장착가능</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="BinahFairy">
+      <Name>요정</Name>
+      <Desc>주사위를 굴릴 때 마다 피해 {0}를 받는다. 막 종료시 피해 {0}를 받고 요정 수치가 절반으로 감소한다.(소수점 이하 버림)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedMistEgoReady">
+      <Name>E.G.O 발현</Name>
+      <Desc>{0} 막 후에 E.G.O 발현</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedMistEgo">
+      <Name>E.G.O 발현</Name>
+      <Desc>
+        '대절단-가로' 사용 가능. 모든 주사위 위력 2 증가. 매 막 마다 40의 피해를 입히지 못하면 흐트러짐 피해를 받는다.
+        흐트러짐 상태가 되면 'E.G.O 발현' 상태가 해제된다.
+      </Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Fairy_Keyword">
+      <Name>요정 X</Name>
+      <Desc>주사위를 굴릴 때 마다 피해 X를 받는다. 막 종료시 피해 X를 받고 요정 수치가 절반으로 감소한다.(소수점 이하 버림)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Sin_Abnormality">
+      <Name>죄</Name>
+      <Desc>막 시작 시 죄 수치가 일정 수치 이상이면 심판 새가 특수 책장을 사용한다. 아군을 공격하여 피해를 주면 죄를 옮길 수 있다. (책장 당 1회)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Sin_AbnormalityCard">
+      <Name>죄</Name>
+      <Desc>죄가 5 이상이 되면 막 시작 시 최대 체력의 10%만큼 피해를 받고, 수치가 초기화된다. 다른 캐릭터에게 피해를 주면 죄를 옮길 수 있다. (책장 당 1회)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_rhino_Keyword">
+      <Name>코뿔소팀 전용 책장</Name>
+      <Desc>코뿔소팀, 막심의 핵심 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_reindeer_Keyword">
+      <Name>순록팀 전용 책장</Name>
+      <Desc>순록팀, 루돌프의 핵심 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_myo_Keyword">
+      <Name>묘 전용 책장</Name>
+      <Desc>묘의 핵심 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_maxim_Keyword">
+      <Name>막심 전용 책장</Name>
+      <Desc>막심의 핵심 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_rudolph_Keyword">
+      <Name>루돌프 전용 책장</Name>
+      <Desc>루돌프의 핵심 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_nicolai_Keyword">
+      <Name>니콜라이 전용 책장</Name>
+      <Desc>니콜라이의 핵심 책장에만 장착가능</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="WarpChargeR">
+      <Name>충전+</Name>
+      <Desc>충전 수치에 따라서 특정 전투 책장의 능력이 상승. 최대 20까지 얻을 수 있음.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="NicolaiTarget">
+      <Name>표적</Name>
+      <Desc>공격으로 받는 피해량과 받는 흐트러짐 피해량 50% 증가</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="MyoBerserk">
+      <Name>광폭화</Name>
+      <Desc>모든 주사위 위력 +1</Desc>
+    </BattleEffectText>
+
+    <!-- 게부라 최종전 -->
+    <BattleEffectText ID="RedHoodFinal_Berserk">
+      <Name>분노</Name>
+      <Desc>2막동안 지속. 매 막마다 힘 +2, 광역 공격 책장 사용</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedHoodFinal_Rage">
+      <Name>갈 곳 잃은 분노</Name>
+      <Desc>영구적으로 지속. 매 막마다 힘+4, 광역 공격 책장 사용</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedHoodFinal_Mark">
+      <Name>징표</Name>
+      <Desc>용병이 이 효과를 가진 대상을 공격할 때 피해량 50% 증가</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedHoodFinal_Scar">
+      <Name>상처</Name>
+      <Desc>막 시작시 이 효과의 수치만큼 출혈을 얻음. 막 시작 시 수치가 6 이상이면 최대 체력의 20%에 해당하는 피해를 받고 효과 제거. 늑대가 이 효과를 가진 캐릭터 공격시 수치만큼 피해량 증가. 수치가 4 이상이면 늑대의 주사위 위력 +2</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nothing_Skin">
+      <Name>껍데기</Name>
+      <Desc>이번 막동안 모든 내성과 사용하는 책장이 이전 막에 처치한 대상의 것으로 변경된다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nothing_Fear">
+      <Name>공포</Name>
+      <Desc>막 시작 시 공포가 3장 이상 손에 있으면 (손에 있는 공포 책장의 수 x 10)만큼 체력, 흐트러짐 피해를 받고, 해당 막동안 행동 불가 상태가 된다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nothing_Mimic">
+      <Name>모방</Name>
+      <Desc>모방 수치에 따라서 특정 전투 책장의 능력이 상승. 최대 10까지 얻을 수 있음. 막 종료 시 1씩 감소.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nosferatu_Blood">
+      <Name>피</Name>
+      <Desc>피 수치에 따라서 사용하는 책장이 달라진다. 체력을 최대 체력의 5%만큼 잃을 때마다 수치가 1 감소한다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nosferatu_Blight">
+      <Name>난수병</Name>
+      <Desc>2막동안 유지. 이 효과가 있는동안 막 시작 시 최대 체력의 5%만큼 체력을 잃고, 힘1, 신속1, 출혈5를 얻는다. 막 시작 시 체력이 최대 체력의 50% 이하인 경우 25% 확률로 통제 불능 상태가 되어 아군을 공격한다.</Desc>
+    </BattleEffectText>
+
+
+    <!-- text changed -->
+    <BattleEffectText ID="egoChange_Keyword">
+      <Name>동화</Name>
+      <!-- 同化 -->
+      <Desc>덱과 손에 있는 책장이 교체된다. 동화가 해제되면 이전의 덱과 손패로 돌아온다. 다른 동화나 E.G.O 발현과는 동시에 사용 불가</Desc>
+    </BattleEffectText>
+
+    <!-- purple tear -->
+    <BattleEffectText ID="onlypage_purpleTear_Keyword">
+      <Name>보라눈물 전용 책장</Name>
+      <Desc>보라눈물의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="StanceChange_Keyword">
+      <Name>자세 변경</Name>
+      <Desc>손과 덱에 있는 모든 전투 책장을 없애고 해당 자세에 설정된 덱으로 교체한다. 그 후 교체하기 전의 손패의 수와 같아지도록 책장을 뽑는다.</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="StanceSlash">
+      <Name>참격 자세</Name>
+      <Desc>참격 위력 +2. 공격으로 주는 피해량 50% 증가.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="StancePenetrate">
+      <Name>관통 자세</Name>
+      <Desc>관통 위력 +2. 전투 책장으로 상태이상을 부여할 때, 부여하는 수치 2배.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="StanceHit">
+      <Name>타격 자세</Name>
+      <Desc>타격 위력 +2. 공격으로 주는 흐트러짐 피해량 50% 증가.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="StanceDefense">
+      <Name>방어 자세</Name>
+      <!-- don't need to equal to '방어' of '방어 주사위' -->
+      <Desc>수비 위력 +2. 모든 상태이상 해제.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="DefensePowerUp">
+      <Name>수비 위력 증가</Name>
+      <Desc>이번 막 동안 수비 위력 +{0}</Desc>
+    </BattleEffectText>
+
+    <!-- Chesed Boss -->
+    <BattleEffectText ID="Lumberjack_Heart_Final">
+      <Name>따뜻한 마음</Name>
+      <Desc>막 시작 시 따뜻한 마음 수치만큼 빛을 회복한다.(기본 빛 회복 x) 막 종료 시 수치가 1 감소한다. 최대 3까지 증가한다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Lumberjack_Meat_Final">
+      <Name>심장 파편</Name>
+      <Desc>롤랑의 특정 전투 책장의 위력을 증가시킨다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Lumberjack_Piece_Final">
+      <Name>마음의 조각</Name>
+      <Desc>이 수치가 4가 되면 다음 막 시작 시 따뜻한 마음을 1 얻고, 수치가 4 감소한다. 막 종료 시 수치가 1 감소한다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Super_Cancel_Final">
+      <Name>돌아갈 수 없는 집</Name>
+      <Desc>'집'을 타겟으로 하는 책장이 취소된 횟수. 2회가 되면 다음 막에 강한 공격 책장을 사용함</Desc>    
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Coward_Final">
+      <Name>겁</Name>
+      <Desc>이번 막에 집으로 가는 길이 공격을 받을 때마다 허약을 얻음</Desc>
+    </BattleEffectText>
+    <!-- Ozma -->
+    <BattleEffectText ID="Ozma_Oblivion">
+      <Name>망각</Name>
+      <Desc>모든 전투 책장이 특수 책장으로 변경됨. 공격 적중시 1장의 무작위 책장이 원래 책장으로 돌아옴. 남은 책장 수 {0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_AwakenPumpkin_Strength">
+      <Name>남쪽의 잭</Name>
+      <Desc>막 시작 시 힘 2를 얻음</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_AwakenPumpkin_Endurance">
+      <Name>서쪽의 잭</Name>
+      <Desc>막 시작 시 인내 2를 얻음</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_AwakenPumpkin_Quickness">
+      <Name>북쪽의 잭</Name>
+      <Desc>막 시작 시 신속 2을 얻음</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_AwakenPumpkin_BreakDmg">
+      <Name>동쪽의 잭</Name>
+      <Desc>주는 흐트러짐 피해량 +3</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_LibrarianToPumpkin">
+      <Name>잃어버린 기억</Name>
+      <Desc>모든 전투 책장이 특수 책장으로 변경됨. 모든 능력치가 변경됨. 지속능력이 발동하지 않음.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_PumpkinToLibrarian">
+      <Name>완전한 잭</Name>
+      <Desc>호박이 된 사서의 핵심 책장, 덱을 사용. 매 막마다 힘/인내/신속 2, 흐트러짐 피해량 +3 효과를 얻음.</Desc>
+    </BattleEffectText>
+
+    <!-- Wizard -->
+    <BattleEffectText ID="Wizard_Lumberjack">
+      <Name>따뜻한 마음의 나무꾼</Name>
+      <Desc>자신의 페이즈 때 한 막에 피해를 30 이상 주면 다음 막 시작 시 자신을 포함한 모든 사서의 빛을 최대로 회복시킨다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Scarecrow">
+      <Name>지혜를 구하는 허수아비</Name>
+      <Desc>자신의 페이즈가 되면 손에 지혜 책장과 4장의 특수 책장을 얻고 속도 주사위가 5개로 증가한다.
+자신의 페이즈 막 종료 시 모든 사서를 원래대로 되돌리지 못했다면 속도 주사위가 1개로 감소한다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Lion">
+      <Name>겁쟁이 사자</Name>
+      <Desc>자신의 페이즈가 되면 손에 용기 책장 1장을 얻는다.. 속도주사위가 5개로 증가한다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_WaybackHome">
+      <Name>집으로 가는 길</Name>
+      <Desc>손에 특수 전투 책장 4장을 얻는다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Ozma">
+      <Name>오즈마</Name>
+      <Desc>손에 변이 책장과 특수 전투 책장 3장을 얻는다. 
+자신의 페이즈가 되면 변이 책장의 비용이 0이 되고, 속도 주사위 1개가 가장 빠른 주사위가 된다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Scarecrow_Debuf">
+      <Name>형편없는 지혜</Name>
+      <Desc>속도 주사위가 1개로 감소한다.</Desc>
+    </BattleEffectText>
+    
+        <!-- Wizard -->
+    <BattleEffectText ID="Wizard_Lumberjack_Original">
+      <Name>따뜻한 마음의 나무꾼</Name>
+      <Desc>원래의 모습으로 되돌려야 한다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Lion_Original">
+      <Name>겁쟁이 사자</Name>
+      <Desc>원래의 모습으로 되돌려야 한다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_WaybackHome_Original">
+      <Name>집으로 가는 길</Name>
+      <Desc>원래의 모습으로 되돌려야 한다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Ozma_Original">
+      <Name>오즈마</Name>
+      <Desc>원래의 모습으로 되돌려야 한다.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Wizard_Lumberjack_LightOfF">
+      <Name>납으로 만든 심장</Name>
+      <Desc>초기 빛, 최대 빛이 감소한다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Scarecrow_Fail">
+      <Name>톱밥이 든 주머니</Name>
+      <Desc>전투 종료 시까지 속도주사위가 1개로 감소한다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Lion_Courage">
+      <Name>용기</Name>
+      <Desc>자신에게 걸린 허약, 무장해제, 취약 모두 해제. 힘 10, 신속 5를 얻음</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Lion_Coward">
+      <Name>겁</Name>
+      <Desc>전투 종료 시까지 매 막마다 허약, 무장해제, 취약 5를 얻음</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Ozma_Support">
+      <Name>도와주는 잭</Name>
+      <Desc>이번 막동안 모든 공격 주사위 위력 +2</Desc>
+    </BattleEffectText>
+    
+    <!-- 환상체카드 -->
+    <BattleEffectText ID="Ozma_revive">
+      <Name>생명의 가루</Name>
+      <Desc>'생명의 가루' 환상체 책장의 효과 발동 가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_potion">
+      <Name>용기가 생기는 물약</Name>
+      <Desc> 공격으로 주는 피해 +6, 공격으로 받는 피해 +3.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_poket">
+      <Name>톱밥이 든 주머니</Name>
+      <Desc>합 승리 시 흐트러짐 저항 회복 8, 합 패배 시 자신에게 흐트러짐 피해 4.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_heart">
+      <Name>납으로 만든 심장</Name>
+      <Desc>매 막마다 빛 1 추가 회복, 체력을 5 잃는다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_home">
+      <Name>돌아갈 수 없는 집</Name>
+      <Desc>합 패배 시 자신에게 흐트러짐 피해 4, 다음 주사위 위력 +2. </Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_change">
+      <Name>변이</Name>
+      <Desc>합에서 공격 적중 시 50% 확률로 대상의 다음 주사위 파괴. 합에서 자신이 피격 당할 때 50%의 확률로 자신의 다음 주사위 파괴.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_emerald">
+      <Name>에메랄드</Name>
+      <Desc>이번 막 동안 이 캐릭터에게 공격을 적중시키면 빛 1 회복.(캐릭터 당 최대 2번)</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="onlypage_xiao_Keyword">
+      <Name>샤오 전용 전투 책장</Name>
+      <Desc>샤오의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_chunMiris_Keyword">
+      <Name>춘, 미리스 전용 전투 책장</Name>
+      <Desc>춘, 미리스 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BreakProtection_Keyword">
+      <Name>흐트러짐 보호 X</Name>
+      <Desc>한 막 동안 공격으로 받는 흐트러짐 피해량 X 감소</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BreakProtection">
+      <Name>흐트러짐 보호</Name>
+      <Desc>이번 막 동안 공격으로 받는 흐트러짐 피해량 {0} 감소</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="NullifyPowerReady">
+      <Name>포뢰</Name>
+      <Desc>{0} 막 후에 포뢰 능력이 발동하여 모든 캐릭터가 위력의 효과를 받을 수 없음</Desc>
+    </BattleEffectText>
+  
+    <BattleEffectText ID="BurnDown">
+      <Name>화상 피해 감소</Name>
+      <Desc>화상에 의해 받는 피해량이 10 감소</Desc>
+    </BattleEffectText>
+
+    
+    <BattleEffectText ID="Sin_Abnormality_Final">
+      <Name>죄의 흔적</Name>
+      <Desc>막 시작 시 이 수치가 일정 수치 이상이면 롤랑이 특수 책장을 사용한다. 롤랑을 제외한 캐릭터를 공격하여 피해를 주면 죄를 옮길 수 있다. (책장 당 1회)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SmallBird_Punish_Final">
+      <Name>징벌</Name>
+      <Desc>롤랑이 이 대상을 공격할 때 피해량 + 8</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SmallBird_Vigil_Final">
+      <Name>경계</Name>
+      <Desc>자신보다 속도가 낮은 아군이 공격을 받을 때마다 이번 막에 힘 1을 얻는다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Final_BigBird_Charm">
+      <Name>현혹</Name>
+      <Desc>{0}막 지속. 조작 불가. 속도 1 고정. 큰 새에게 특수 전투 책장 사용. 아군에게 피격 시 체력 피해를 받지 않음. 흐트러짐 상태가 되면 효과가 제거됨.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Final_BigBird_Darkness">
+      <Name>암흑</Name>
+      <Desc>{0}막 동안 위력의 영향을 받지 않음</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Final_BigBird_Darkness_Keyword">
+      <Name>암흑</Name>
+      <Desc>2막 동안 위력의 영향을 받지 않음</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="ApocalypseBird_Sin">
+      <Name>무거운 죄</Name>
+      <Desc>피격시 받는 흐트러짐 피해 {0} 증가. 막 종료시 수치가 5 이상이면 최대 체력의 10%에 해당하는 피해를 입고 효과 제거.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ApocalypseBird_Charm">
+      <Name>두려움</Name>
+      <Desc>모든 내성 취약. 막 시작시 마비 4를 얻음</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ApocalypseBird_BigEye">
+      <Name>종말새의 알 - 큰 눈</Name>
+      <Desc>위력의 효과를 받지 않음</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ApocalypseBird_LongArm">
+      <Name>종말새의 알 - 긴 팔</Name>
+      <Desc>이 효과가 지속되는 동안 상태이상에 면역. 막 시작시 모든 상태이상 제거.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ApocalypseBird_SmallBeak">
+      <Name>종말새의 알 - 작은 부리</Name>
+      <Desc>1막 동안 사서의 손에 있는 무작위 전투 책장 2장의 비용 +1</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="ApocalypseBird_Apocalypse">
+      <Name>괴수</Name>
+      <Desc>이 캐릭터가 공격하거나, 이 캐릭터를 공격하는 대상은 모든 주사위의 최솟값, 최댓값이 3 감소하고, 위력의 영향을 받지 않는다. </Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ApocalypseBird_Peace">
+      <Name>침입자</Name>
+      <Desc>{0}막 지속. 이 캐릭터에게 공격으로 받는 모든 피해, 흐트러짐 피해 2-4 감소. 이 캐릭터를 다른 캐릭터가 공격할 때 1-2의 추가 피해를 줌</Desc>
+    </BattleEffectText>
+  
+    <BattleEffectText ID="onlypage_yan_Keyword">
+      <Name>enlxmfflsdis 전용 전투 책장</Name>
+      <Desc>enlxmfflsdis의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="YanArea_Ready">
+      <Name>뒤틀린 검</Name>
+      <Desc>{0} 막 후에 뒤틀린 검 사용.</Desc>
+    </BattleEffectText>
+
+    <!-- 백야 전투 -->
+    <BattleEffectText ID="WhiteNight_Hokma">
+      <Name>진정한 구원</Name>
+      <Desc>지정 사서 사망 시 모든 사서가 함께 사망한다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="PlagueDoctor_Bless">
+      <Name>축복</Name>
+      <Desc>내가 너의 모든 질병을 고쳐 너를 낫게 하리라.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_Awe">
+      <Name>경외</Name>
+      <Desc>막 종료시 {0}의 흐트러짐 피해를 받고 수치 1 감소.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_ApostlePowerUp">
+      <Name>계시</Name>
+      <Desc>사도가 이 효과를 가진 캐릭터와 교전 시 공격 주사위 위력 +2</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_BeApostle">
+      <Name>부름</Name>
+      <Desc>막 종료 시 이 캐릭터는 사망하고, 호위 사도 1명이 생성된다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_SuspendedAnimation">
+      <Name>가사</Name>
+      <Desc>체력이 2 이하가 되면 부활 전까지 흐트러짐 상태가 됨</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_Protection">
+      <Name>가시관</Name>
+      <Desc>이번 전투동안 보호 100, 흐트러짐 피해 감소 100을 영구적으로 얻음</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_WeakResist">
+      <Name>사라진 호위</Name>
+      <Desc>모든 내성 취약</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Emotion_PlagueDoctor_Blessed">
+      <Name>축복</Name>
+      <Desc>이번 막에 세례를 받음</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Emotion_PlagueDoctor_Bless_Stack">
+      <Name>세례</Name>
+      <Desc>이번 접대에서 세례 책장 {0}번 사용 (최대 12)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Emotion_BlueStar_MartyrBuf">
+      <Name>순교</Name>
+      <Desc>이번 막동안 공격 적중 시 자신에게 피해 1-3, 대상에게 흐트러짐 피해 4-6</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Emotion_BlueStar_SoundBuf_Cool">
+      <Name>그리운 소리</Name>
+      <Desc>{0}막이 지난 후 "별의 소리가 들려! " 효과를 얻음</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Emotion_BlueStar_SoundBuf">
+      <Name>별의 소리가 들려!</Name>
+      <Desc>이번 막에 흐트러짐 피해량 2-4 증가</Desc>
+    </BattleEffectText>
+
+    <!-- hana -->
+    <BattleEffectText ID="onlypage_hana_Keyword">
+      <Name>미리내, 해롤드, 올리비에 전용 전투 책장</Name>
+      <Desc>미리내, 해롤드, 올리비에의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="HanaPassive1">
+      <Name>건</Name>
+      <Desc>힘 1을 얻고 이번 막 동안 공격으로 주는 피해량과 흐트러짐 피해량 2 증가</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HanaPassive2">
+      <Name>곤</Name>
+      <Desc>인내 1을 얻고 이번 막 동안 공격으로 받는 피해량과 흐트러짐 피해량 30% 감소</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HanaPassive3">
+      <Name>감</Name>
+      <Desc>빛 1 회복</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HanaPassive4">
+      <Name>이</Name>
+      <Desc>책장을 1장 뽑음</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="HanaSpecialCard1">
+      <Name>추가 능력</Name>
+      <Desc>건 - '사용시: 이 책장의 모든 주사위 위력 +1'</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HanaSpecialCard2">
+      <Name>추가 능력</Name>
+      <Desc>곤 - '전투 시작: 보호 2와 흐트러짐 보호 2를 얻는다'</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HanaSpecialCard3">
+      <Name>추가 능력</Name>
+      <Desc>감 - '사용시: 빛 1 회복'
+이 - '사용시: 책장을 2장 뽑는다'</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="BlackSilenceSpecial">
+      <Name>Furioso</Name>
+      <Desc>현재 사용한 검은침묵의 책장 종류 수 : {0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BlackSilenceCardCount">
+      <Name>검은침묵</Name>
+      <Desc>이 수치가 2일 때 다음에 사용하는 책장의 모든 주사위 위력 +2</Desc>
+    </BattleEffectText>
+    
+    <!-- text changed -->
+    <BattleEffectText ID="Paralysis_Keyword">
+      <Name>마비 X</Name>
+      <Desc>한 막 동안 책장 사용시 그 책장의 주사위를 최대 {0}개까지 선택하여 최댓값 -3</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Paralysis">
+      <Name>마비</Name>
+      <Desc>이번 막 동안 책장 사용시 그 책장의 주사위를 최대 {0}개까지 선택하여 최댓값 -3</Desc>
+    </BattleEffectText>
+  
+    <BattleEffectText ID="RolandAndOlivier">
+      <Name>결투</Name>
+      <Desc>최대 체력과 최대 흐트러짐 저항 증가</Desc>
+    </BattleEffectText>
+    
+    <!-- seven association -->
+    <BattleEffectText ID="DanteGraspInformation">
+      <Name>정보 파악</Name>
+      <Desc>이번 막 동안 {0}이 '보통'으로 변경</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="DanteWeakPointDetection">
+      <Name>약점 간파</Name>
+      <Desc>이번 무대 동안 '약점' 내성 중 하나가 '취약'으로 변경</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="Engard_Keyword">
+      <Name>앙가드</Name>
+      <Desc>비용이 2인 참격(6-10)주사위와 '사용 후에 소멸한다. 사용시: 다음 막 자신과 상대에게 힘 1씩 부여' 능력을 가진 전투 책장</Desc>
+    </BattleEffectText>
+
+    <!-- sword -->
+    <BattleEffectText ID="Giveuptheflesh_Keyword">
+      <Name>골단</Name>
+      <Desc>비용이 5인 반격 주사위(참격, 14-23)주사위와 '사용 후에 소멸한다. 적중: 다음막 마비 5부여, 출혈 3부여. 이 책장은 1장만 보유 가능.' 능력을 가진 전투 책장</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_kim">
+      <Name>김삿갓 전용 전투 책장</Name>
+      <Desc>김삿갓의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="egoTeam_Keyword">
+      <Name>E.G.O.</Name>
+      <Desc>모든 사서가 공유하여 사용 가능. 사용시 팀의 감정을 {0}만큼 누적해야 재사용 가능(사서 수에 비례하여 증가)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="egoPersonal_Keyword">
+      <Name>고유 E.G.O.</Name>
+      <Desc>사용시 개인의 감정을 {0}만큼 누적해야 재사용 가능</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Vibrate_Re">
+      <Name>진동</Name>
+      <Desc>최대 7까지 증가할 수 있다</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_argalia_Keyword">
+      <Name>아르갈리아 전용 전투 책장</Name>
+      <Desc>아르갈리아의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_elena_Keyword">
+      <Name>엘레나 전용 전투 책장</Name>
+      <Desc>엘레나의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_pluto_Keyword">
+      <Name>플루토 전용 전투 책장</Name>
+      <Desc>플루토의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_philip2_Keyword">
+      <Name>필립 전용 전투 책장</Name>
+      <Desc>필립의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_tanya_Keyword">
+      <Name>타냐 전용 전투 책장</Name>
+      <Desc>타냐의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Librarian_PuppetThread">
+      <Name>인형사의 실</Name>
+      <Desc>막 시작시 힘이나 인내 1을 얻는다. 체력이 1 아래로 내려가지 않는다. 체력이 1이 되거나 '인형실' 지속능력을 가진 아군이 없으면 막 종료에 제거된다.</Desc>
+    </BattleEffectText>
+
+    <!--검은침묵 3페이즈-->
+    <BattleEffectText ID="SpiritLink">
+      <Name>영혼 연결</Name>
+      <Desc>이 효과가 있는동안 흐트러짐 저항이 1 아래로 내려가지 않음.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BlackEnergy">
+      <Name>검은 기운</Name>
+      <Desc>1막 지속. 안젤리카와 교전시 모든 주사위 위력 +1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteEnergy">
+      <Name>하얀 기운</Name>
+      <Desc>1막 지속. 롤랑과 교전시 모든 주사위 위력 +1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BlackMark">
+      <Name>징표</Name>
+      <Desc>롤랑의 공격 대상이 됨. 롤랑이 이 캐릭터를 공격할 때 공격 주사위 위력 +3</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BlackFrantic">
+      <Name>광란</Name>
+      <Desc>막 시작시 현재 흐트러짐 50% 감소 (1회 한정). 매 막마다 힘 2, 신속 2를 얻음</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteLoss">
+      <Name>상실</Name>
+      <Desc>매 막마다 속박 3, 마비 3, 취약 3을 얻음</Desc>
+    </BattleEffectText>
+
+
+    <!--20210316 TODO : 검은침묵 2페이즈 -->
+    <BattleEffectText ID="HeavySmoke">
+      <Name>독한 연기</Name>
+      <Desc>최대 3까지 얻을 수 있음, 수치에 비례하여 다음 막에 부정적인 효과(출혈, 마비, 허약, 무장 해제, 속박, 취약)중 하나 부여, 막 종료시 소모됨</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HeavySmoke_buf">
+      <Name>독한 연기</Name>
+      <Desc>최대 3까지 얻을 수 있음, 수치에 비례하여 다음 막에 부정적인 효과(출혈, 마비, 허약, 무장 해제, 속박, 취약)중 하나 부여, 막 종료시 소모됨</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HeavySmoke_Keyword">
+      <Name>독한 연기</Name>
+      <Desc>최대 3까지 얻을 수 있음, 수치에 비례하여 다음 막에 부정적인 효과(출혈, 마비, 허약, 무장 해제, 속박, 취약)중 하나 부여, 막 종료시 소모됨</Desc>
+    </BattleEffectText>
+
+
+
+
+    <!--20210316 TODO : 검은침묵 2페이즈-->
+    <BattleEffectText ID="Arrest">
+      <Name>구속</Name>
+      <Desc>막 종료 시 스택이 사라지지않는다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Arrest_buf">
+      <Name>구속</Name>
+      <Desc>막 종료 시 스택이 사라지지않는다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Arrest_Keyword">
+      <Name>구속</Name>
+      <Desc>막 종료 시 스택이 사라지지않는다.</Desc>
+    </BattleEffectText>
+    
+    
+    <!--검은침묵 4페이즈-->
+    <BattleEffectText ID="Roland_4th_Lie">
+      <Name>거짓말</Name>
+      <Desc>손패에 있는 원래 비용이 3 이하인 책장의 비용이 무작위로 변경된다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_Weapon">
+      <Name>무기 파괴</Name>
+      <Desc>롤랑의 흉터 효과를 무시한다. 롤랑을 공격할 때 공격 주사위 위력 +1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_DmgReduction_Hit">
+      <Name>흉터 - 타격</Name>
+      <Desc>타격으로 받는 피해 2~5 감소. 피격 시 20% 확률로 해당 피해 무시.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_DmgReduction_Penetrate">
+      <Name>흉터 - 관통</Name>
+      <Desc>관통으로 받는 피해 2~5 감소. 피격 시 20% 확률로 해당 피해 무시.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_DmgReduction_Slash">
+      <Name>흉터 - 참격</Name>
+      <Desc>참격으로 받는 피해 2~5 감소. 피격 시 20% 확률로 해당 피해 무시.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_Blood">
+      <Name>피</Name>
+      <Desc>이번 막에 수비 주사위 위력이 1~2 증가한다. 수비 주사위의 합 패배 시 흐트러짐 피해 3-6를 받는다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_Gaze">
+      <Name>눈빛</Name>
+      <Desc>이번 막에 힘을 1 얻는다. 이 효과가 적용될 때마다 얻는 힘이 1씩 증가한다. 공격 주사위로 피해를 주지 못하면 흐트러짐 피해 3-6를 받는다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_Curiosity">
+      <Name>호기심</Name>
+      <Desc>이번 막에 공격 적중 시 대상의 손에 있는 무작위 책장 2장을 덱으로 돌려보낸다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_Kiss">
+      <Name>입맞춤</Name>
+      <Desc>속박이 부여된 사서를 대상으로 지정. 이번 막에 합에서 승리할 때마다 대상에게 얼음 조각을 부여한다. 막 종료 시 얼음 조각이 3 이상인 캐릭터는 다음 막 동안 행동불가 상태가 된다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_NonTargetable">
+      <Name>행동 준비</Name>
+      <Desc> {0}막 동안 대상 지정 불가, 행동하지 않음, 상태이상으로 인한 피해를 받지 않음. {0}막 뒤 행동을 시작할 때 부여된 상태이상을 전부 제거함.</Desc>
+    </BattleEffectText>
+
+    <!--잔향악단 중층-->
+    <BattleEffectText ID="Tanya_Killed">
+      <Name>몰아치는 모래 바람</Name>
+      <Desc>이번 무대동안 피해량 +3</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Jaeheon_Killed">
+      <Name>해방된 육체</Name>
+      <Desc>이번 무대동안 막 시작 시 신속 1-3을 얻고, 모든 주사위 위력 +1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Jaeheon_String">
+      <Name>인형실</Name>
+      <Desc>사서의 가장 낮은 속도 주사위 {0}개가 통제 불능, 아군 공격 상태가 됨.(최대 3) 재헌 사망 시 제거됨.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Oswald_String">
+      <Name>붉은 실</Name>
+      <Desc>{0}막 뒤 이 효과를 가진 캐릭터가 2명 이상 있으면 해당 캐릭터들이 사망하고, 토끼씨 1마리를 생성함. 사서에게 이 효과가 있으면 막 시작 시 신속 10을 얻음. 오스왈드 또는 재헌 사망 시 제거됨.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Oswald_Vulnerable">
+      <Name>내성 약화</Name>
+      <Desc>이번 막동안 모든 내성이 취약으로 변경됨</Desc>
+    </BattleEffectText>
+    
+    <!-- -->
+    <BattleEffectText ID="RolandWeak">
+      <Name>피로</Name>
+      <Desc>롤랑의 전투 책장들 약화</Desc>
+    </BattleEffectText>
+
+    <!-- added -->
+    <BattleEffectText ID="DeadInBattle">
+      <Name>전투불능</Name>
+      <Desc>이번 무대에서 제외됨</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="ClawCounter">
+      <Name>무력화</Name>
+      <Desc>주사위 값이 30 이상인 공격을 한 번 막음</Desc>
+    </BattleEffectText>
+    
+    
+    <!-- 케테르 완전 개방 전투-->
+    <!-- 심장 -->
+    <BattleEffectText ID="KeterFinal_Eager">
+      <Name>염원</Name>
+      <Desc>이 캐릭터가 공격 행동을 시작하는 막동안 이 수치만큼 힘을 얻는다. 흐트러짐 상태가 되거나 행동하는 막 종료 시 열망 수치가 초기화된다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_FerventBeats">
+      <Name>몰아치는 박동</Name>
+      <Desc>{0}막 뒤 사망한다. 막 시작시 힘 4, 인내 4, 신속 4, 보호 4를 얻는다.
+모든 흐트러짐 피해 저항이 '내성'이 된다.
+열망이 공격 행동을 하지 않는 막이면 특수 전투 책장을 사용한다.
+이 효과가 활성화되면 기존의 '갈망' 효과는 제거된다.
+열망이 공격 행동을 종료하면 이 효과가 제거된다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_Lung1">
+      <Name>갈망 - 믿음</Name>
+      <Desc>막 시작시 열망의 '염원' 수치의 절반만큼 힘과 인내를 얻는다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_Lung2">
+      <Name>갈망 - 고통</Name>
+      <Desc>아군이 사망하면 열망에게 '염원'을 4 부여한다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_Lung3">
+      <Name>갈망 - 노력</Name>
+      <Desc>공격 적중시 열망에게 '염원'을 1 부여한다. 한 막동안 피해를 주지 못했으면 막 종료시 열망의 '염원'이 2 감소한다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_Lung4">
+      <Name>갈망 - 기다림</Name>
+      <Desc>막 종료시 열망에게 '염원'을 3 부여한다.</Desc>
+    </BattleEffectText>
+    
+    <!-- 피노키오 -->
+    <BattleEffectText ID="KeterFinal_FailLying">
+      <Name>왜 나쁘다는 거죠?</Name>
+      <Desc>거짓말이 들통났다. 허약 4, 무장해제 4를 얻고, 흐트러짐 내성이 취약으로 변경된다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SuccessLying">
+      <Name>랄랄라~</Name>
+      <Desc>거짓말이 들통나지 않았다. 힘 4, 인내 4를 얻는다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_ChangeCostAll">
+      <Name>거짓의 노래</Name>
+      <Desc>막 시작 시 모든 캐릭터의 손에 있는 원래 비용 3 이하인 책장의 비용이 무작위로 변경된다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_ChangeLibrarianHands">
+      <Name>호기심의 노래</Name>
+      <Desc>막 시작 시 모든 사서가 전투 책장을 뽑을 책장 더미에 섞고 3장을 다시 뽑는다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_DoubleEmotion">
+      <Name>빛의 씨앗</Name>
+      <Desc>이번 무대동안 감정이 2배 빠르게 고조된다.</Desc>
+    </BattleEffectText>
+    
+    <!-- 아무 말 없는 소녀 -->
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Nail">
+      <Name>못</Name>
+      <Desc>망치에게 받는 흐트러짐 피해 {0} 증가. 막 종료시 못 수치가 1 감소한다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Gaze_Attack">
+      <Name>불안</Name>
+      <Desc>이번 막동안 이 캐릭터가 교전할 때 서로가 위력의 효과를 받지 않는다.
+피해량 1-2 증가. 이번 막에 공격 주사위로 피해를 주지 못하면 흐트러짐 피해 15</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Gaze_Defense">
+      <Name>두려움</Name>
+      <Desc>이번 막동안 이 캐릭터가 교전할 때 서로가 위력의 효과를 받지 않는다.
+반동 피해량 1-2 증가. 이번 막에 방어 주사위로 반동 피해를 주지 못하면 흐트러짐 피해 15</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Gaze_Attacked">
+      <Name>자책</Name>
+      <Desc>이번 막동안 이 캐릭터가 교전할 때 서로가 위력의 효과를 받지 않는다.
+받는 흐트러짐 피해량 1-2 감소. 이번 막에 피해를 받지 못하면 흐트러짐 피해 15</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Light">
+      <Name>미약한 빛</Name>
+      <Desc>이번 페이즈가 종료될 때까지 서로 다른 EGO 책장을 9장 사용하지 않으면....</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Hand_Target">
+      <Name>공격 대상 변경 불가</Name>
+      <Desc>이 캐릭터의 공격 대상을 변경할 수 없다.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="KeterFinal_Light">
+      <Name>따스한 빛</Name>
+      <Desc>앞으로 나아갈 수 있는 힘이 느껴진다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_Cogito">
+      <Name>마지막 빛의 조각</Name>
+      <Desc>새로운 EGO 책장을 사용할 수 있다.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="KeterFinal_Angela_Ego">
+      <Name>빛의 조각</Name>
+      <Desc>현재 사용한 EGO 책장 종류 수 : {0}</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="CardBuf_KeterFinal_SilenceGirl_CostDown">
+      <Name>비용 감소</Name>
+      <Desc>이 책장의 비용 -{0}, 위력 -{0}. 버리거나 사용 시 초기화</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="CardBuf_KeterFinal_SilenceGirl_CostUp">
+      <Name>비용 증가</Name>
+      <Desc>이 책장의 비용 +{0}, 위력 +{0}. 버리거나 사용 시 초기화</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SilenceGirl_BlackHand_Attacked">
+      <Name>단죄</Name>
+      <Desc>모든 주사위 위력 +10</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="QuietKid_Hammer_Buf">
+      <Name>못</Name> <!-- used in '못과 망치' -->
+      <Desc>타격에 공격당할 경우 이 수치 1당 5의 피해를 받고 이 효과 제거</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Sin_Ready">
+      <Name>산산조각</Name>
+      <Desc>{0}막 뒤 죄책감을 가진 대상에게 강력한 공격 책장 사용. 흐트러짐 상태가 되면 1막이 지연된다.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="oneinch_penetrate">
+      <Name>일점 돌파</Name>
+      <Desc>타격 (5 - 10), 관통 (15 ~ 24) 주사위와 '사용시: 소멸, 이 책장은 1장만 보유 가능'능력을 가진 전투 책장</Desc>
+    </BattleEffectText>
+    <!-- 환상체 책장: 열망-->
+    <BattleEffectText ID="HeartofAspiration_Heart">
+      <Name>열망</Name>
+      <Desc>최대 체력이 15% 증가한다(현재 체력도 포함). 속도가 1-2 증가한다.</Desc>
+    </BattleEffectText>
+    <!-- 황상체 책장: 그리웠던 옛날의 포옹-->
+    <BattleEffectText ID="Teddy_Head">
+      <Name>그리웠던 옛날의 포옹</Name>
+      <Desc>합 승리시 20%의 확률로 대상에게 주사위값만큼 흐트러짐 피해를 준다. 동일한 대상과 합을 할 수록 확률이 증가한다.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="ExhaustOnUse_Keyword">
+      <Name>일회성</Name>
+      <Desc>사용하면 소멸한다. 소멸한 책장은 이번 무대 동안 제외된다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Exhaust_Keyword">
+      <Name>소멸</Name>
+      <Desc>이번 무대 동안 제외된다</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Instant_Keyword">
+      <Name>장착시 발동</Name>
+      <Desc>속도 주사위에 장착할 때 바로 발동한다</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_bayyard">
+      <Name>바야르 전용 전투 책장</Name>
+      <Desc>바야르의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_cor">
+      <Name>야에 전용 전투 책장</Name>
+      <Desc>야에의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_awl">
+      <Name>알란 전용 전투 책장</Name>
+      <Desc>알란의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_usett">
+      <Name>우제트 전용 전투 책장</Name>
+      <Desc>우제트의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_mirae">
+      <Name>이리나 전용 전투 책장</Name>
+      <Desc>이리나의 책장에만 장착가능</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Freischutz_Request">
+      <Name>의뢰 대상</Name>
+      <Desc>'의뢰' 환상체 책장을 선택한 사서에게 받는 피해량 3-5 증가.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="CardBuf_NihilClown_Card">
+      <Name>부질 없는 짓</Name>
+      <Desc>이 효과가 붙은 책장으로 합에서 패배하면 허무로의 의지가 1 증가한다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Buf_NihilClown_Card">
+      <Name>허무로의 의지</Name>
+      <Desc>이 수치가 4가 되면 다음 막에 '무의미' 효과를 얻는다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="NihilClown_Card">
+      <Name>무의미</Name>
+      <Desc>매 막마다 보호 5를 얻는다. 상태이상이 부여되지 않는다.
+합 패배 시, 피격 시 대상에게 다음 막에 부식, 취약 1을 부여한다. (막 당 최대 2)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nosferatu_BloodHope">
+      <Name>피</Name>
+      <Desc>막 종료 시 수치가 3 감소한다.
+피가 0 일 때: 막 시작 시 흐트러짐이 4-8 감소한다. 
+피가 1 이상 일 때: 공격 주사위 굴림 시 체력을 2-7 소모하고, 피해량이 3-7 증가한다.
+피가 15 이상 일 때: 해당 막동안 힘을 2 얻는다. 다음 막 시작 시 피 수치가 초기화된다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ApocalypseBird_BigEyeEffect">
+      <Name>큰 새의 현혹</Name>
+      <Desc>&lt;큰 눈&gt; 책장을 사용한 대상을 공격한다. 피해량이 2-4 증가한다.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Matan_Flame">
+      <Name>흑염</Name>
+      <Desc>핵심 책장의 견딤/내성 속성이 약점/취약으로 변경된다.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Freischutz_Bullet">
+      <Name>일곱번째 탄환</Name>
+      <Desc>일곱번째 사용하는 근거리, 원거리 책장의 대상이 아군을 포함한 무작위 대상으로 결정된다.</Desc>
+      <!--<Desc>The count rises each time the character uses a page. The seventh page gains 3-7 Power; the page has a 30% chance to target random characters including allies.</Desc>-->
+    </BattleEffectText>
+  </effectTextList>  
+</BattleEffectTextRoot>

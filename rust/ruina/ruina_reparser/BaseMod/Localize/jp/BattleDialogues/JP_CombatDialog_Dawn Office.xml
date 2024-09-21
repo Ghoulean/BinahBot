@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GroupName>Dawn Office</GroupName>
+  <Character ID="Salvador">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">みすみす逃すだなんて思わないでくれ。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">思ったより身体が柔い子達が多いみたいだな。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">老いた身体にはそれに見合った経験が蓄積されてるということだ。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">君達の勇気に深い敬意を表す。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">この子達、今日に限ってコンディションが相当良くなかった模様だな。</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">ユナ君、今までご苦労さま。事務所の心配はせずにゆっくり休め。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_1">余生に未練はないが……残ったあの子が心残りだな。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_2">やれやれ……フィリップ君、無理せず撤退した方がいいだろうな。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_3">……この齢で、また悲しみを感じるな。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_4">まだ無理だったんだろうな……。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">皆と運命を共にする必要はないだろう。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">君も随分疲れたのか、段々と攻撃が単調になっていったしな。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">勝利は目前だ。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">敵の動きを見れば、次の手が見えるだろう。</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Yuna">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">弱そうに見えても都市疾病なんでしょ……気をつけましょう。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">フィリップは無理せず適当に後ろで援護に回っても大丈夫だから。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">相手が攻撃を始める前に私たちから動きましょう。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">順調に終わりましたね。フィリップも怖がってたけど、結構上手くやってくれましたし。</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">フィリップと事務所は私が責任持ってなんとかしますから……おやすみなさい、師匠。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_1">あいつ１人でも上手くやってかないといけないのに……。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_2">……適当な時を見繕って逃げて。状況がそこまでよくないから。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_3">不利な状況でも最後まで抗ってみせる……。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_4">大丈夫、後のことは気にしないで逃げて。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">全部、私が足りなかったせいだろうな。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">実力は結構悪くないけど、上手く扱えないみたいね。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">前後を見通すことで勝敗が左右されることもあるんです。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">この程度じゃ相手にもならないですよ。</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Philip">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">こんなんじゃ皆さんの手を煩わせるだけなのに……。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">ずっと先輩の後ろに隠れてるわけにはいかないよ。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">僕の能力で……少なくとも足止めくらいはできますよね。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">僕たちも傷を負いましたけど……結果が一番大事ですよね。</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">……勝ったとしても、これに何の意味があるんでしょうか。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_1">僕が……力足らずですみません。でもこれ以上は……。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_2">こんなに怖がりじゃなんにもできないだろうに……。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">いや……駄目……。これは予想していなかったよ。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">こんな状況で耐えられるわけないよ……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">こんな危ないって知ってたら入ってこなかったでしょう……。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">僕がお役に立てたようでなによりです。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">こういうときは躊躇せずに攻撃するのが正解ですよね……？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">僕が前に出なきゃ何も変わらない。</BattleDialog>
+    </Type>
+  </Character>
+</BattleDialogRoot>

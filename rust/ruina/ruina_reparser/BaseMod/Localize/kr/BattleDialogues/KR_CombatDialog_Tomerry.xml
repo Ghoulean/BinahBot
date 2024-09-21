@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GroupName>Tomerry</GroupName>
+  <Character ID="Tomerry">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">책을 가지고 오면 상을 준다고 했어요. 어떤 상일까!</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">우리 마을보다 더 넓은 것 같아요… 엄마같이 작은 사람들도 많고…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">착한 아이는 무슨 일이든 군말없이 하는 거예요!</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">여기 있는 책들을 잔뜩 들고가면 분명 기뻐해 주시겠죠?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">엄마 뿐만 아니라 이번에는 아빠의 칭찬까지 받을 수 있을 것 같아요!</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">…허전해. 내가 사라진 느낌이야. 슬퍼… 눈물이 날 것 같아...</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">마을을 괴롭히는 나쁜 녀석들보다 더 강한 것 같아요…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">제 친구들이… 많이 아파하고 있어요… 어떡하죠…?</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">앗… 어, 엄마가 벌을 주실지도 몰라요…</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">마을 사람들과 평화를 지키러 왔답니다!</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">이렇게 열심히 하면… 엄마가 칭찬을 해주시겠죠? 신난다…</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">같이 노는 게 좋아요? 저도 너무 좋고 재밌어요!</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Tomerry_Phase2">
+    <Type ID="START_BATTLE" />
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">혼자서는 외로워서 견딜 수 없어… 나는 어디로 갔어?</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">…어디있어. 나 너무 무서워… 곁으로 와줘. 토미… 토미.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">… …</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">사랑의 힘을 모르겠다면… 이해하도록 해.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">나를 괴롭힌 벌이야.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">…사랑하는 엄마를 위해서.</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="LoveTownPeople">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">때리고 또… 때리느… ㄴ 거시야…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">척처하고… 별종이 저… 버서 해치어보자…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">나쁘… 니들에겐 따끄만… 벌이 피료하지…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">모드를… 위… 해서 나 힘낼게…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">아픈 건 싫은데…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_5">모드의 도우미… 될 거야…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_6">무리하지 마라고 어… ㅁ마가 그래서…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_7">사랑은 조… ㅎ은 거야…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_8">갠차나… 우리의 사랑이라며는… 다 이길 수 이어...</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">상 바드러 가느 거야…</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">이버네는 어떠… ㄴ상을 주시까… 나도 토머리처럼 거대한…</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">누구에게도… 지지 안아…</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">이게 바로 사라… ㅇ의 히미야…</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">끈끄난 사랑의 히믈 무시하지 마…</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">주고 시… ㅍ지 아나…</BattleDialog>
+      <BattleDialog ID="DEATH_1">사랑하는 마을 주미들가 하…ㅁ께 하고파…</BattleDialog>
+      <BattleDialog ID="DEATH_2">다… ㅇ해버려… ㅅ어…</BattleDialog>
+      <BattleDialog ID="DEATH_3">무서어요… 사… ㄹ려주세요…</BattleDialog>
+      <BattleDialog ID="DEATH_4">잘모… ㅅ해… ㅅ어요… 아프로 안그러… ㄹ게요…</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">혼자 나마버릴거 같아…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">괴로히느건 시러…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">함께 사랑을 알며느 조을텐데…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">우리 주미… 드를 괴로히지 마세요… 제발…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">도… 도망쳐야 하느거 아냐…?</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">또… ㄱ같이 때려주느 거야…</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">개차나… 저정… 도느 마… ㅈ지 않아…</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">저 적은… 내가 스러트렸어…</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">우리라며 해내… ㄹ수 이어…</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">아지… ㄱ 더 싸우 수 있어…</BattleDialog>
+    </Type>
+  </Character>
+</BattleDialogRoot>

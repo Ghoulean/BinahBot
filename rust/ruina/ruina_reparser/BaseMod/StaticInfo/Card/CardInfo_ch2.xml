@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Card ID="200001">
+    <Name>막치기</Name>
+    <Artwork>ch2_1</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="1" Dice="5" Type="Atk" Detail="Hit" Motion="Z" EffectRes="ch2_Z" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="200002">
+    <Name>연속 방어</Name>
+    <Artwork>ch2_2</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="1" Dice="5" Type="Def" Detail="Guard" Motion="G" EffectRes="ch2_G" Script="" Desc="" />
+      <Behaviour Min="3" Dice="5" Type="Def" Detail="Guard" Motion="G" EffectRes="ch2_G" Script="" Desc="" />
+			<Behaviour Min="1" Dice="4" Type="Atk" Detail="Hit" Motion="J" EffectRes="ch2_J" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="200003">
+    <Name>연속 타격</Name>
+    <Artwork>ch2_3</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="1" Dice="6" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="ch2_Z" Script="upgradeNext1pw" Desc="[합 승리] 자신의 다음 주사위 강화" />
+      <Behaviour Min="1" Dice="2" Type="Atk" Detail="Hit" Motion="J" EffectRes="ch2_J" Script="upgradeNext1pw" Desc="[합 승리] 자신의 다음 주사위 강화" />
+      <Behaviour Min="1" Dice="2" Type="Atk" Detail="Hit" Motion="J" EffectRes="ch2_J" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="200004">
+    <Name>속공</Name>
+    <Artwork>ch2_4</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script>quickness2</Script>
+    <ScriptDesc>[사용시] 신속 2를 얻음</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="3" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="ch2_Z" Script="" Desc="" />
+      <Behaviour Min="2" Dice="3" Type="Atk" Detail="Hit" Motion="H" EffectRes="ch2_H" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="200005">
+    <Name>강타</Name>
+    <Artwork>ch2_5</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="3" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="5" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="ch2_H" Script="" Desc="" />
+      <Behaviour Min="3" Dice="4" Type="Atk" Detail="Hit" Motion="J" EffectRes="ch2_J" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="201001">
+    <Name>싱싱하게</Name>
+    <Artwork>Pierr4</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="4" Type="Atk" Detail="Slash" Motion="H" EffectRes="Pierr_H" Script="" Desc="" />
+      <Behaviour Min="1" Dice="12" Type="Def" Detail="Evasion" Motion="E" EffectRes="ch2_E" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="201002">
+    <Name>재료 손질</Name>
+    <Artwork>Pierr5</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="1" Dice="6" Type="Atk" Detail="Hit" Motion="J" EffectRes="Pierr_J" Script="paralysis1atk" Desc="[적중] 마비 1 부여" />
+      <Behaviour Min="1" Dice="4" Type="Def" Detail="Evasion" Motion="E" EffectRes="ch2_E" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="201003">
+    <Name>무엇이든 요리할 수 있지</Name>
+    <Artwork>Pierr2</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="1" Dice="6" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Pierr_Every_Z" Script="" Desc="" />
+      <Behaviour Min="4" Dice="4" Type="Atk" Detail="Slash" Motion="H" EffectRes="Pierr_Every_H" Script="recoverHp4atk" Desc="[적중] hp 4 회복" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="201004">
+    <Name>요리 준비</Name>
+    <Artwork>Pierr7</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="5" Type="Def" Detail="Guard" Motion="G" EffectRes="ch2_G" Script="" Desc="" />
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Pierr_Z" Script="bleeding2atk_pierre" Desc="[적중] 출혈 2 부여" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="201005">
+    <Name>재료 사냥</Name>
+    <Artwork>Pierr6</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="2" Dice="6" Type="Atk" Detail="Slash" Motion="H" EffectRes="Pierr_H" Script="binding2atk" Desc="[적중] 속박 2 부여" />
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Hit" Motion="J" EffectRes="Pierr_J" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="201006">
+    <Name>잔혹함</Name>
+    <Artwork>Pierr3</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="2" Dice="6" Type="Atk" Detail="Hit" Motion="J" EffectRes="Pierr_J" Script="pierre" Desc="[적중] 대상의 출혈 수만큼 체력 회복" />
+      <Behaviour Min="2" Dice="3" Type="Def" Detail="Guard" Motion="G" EffectRes="ch2_G" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="201007">
+    <Name>갈증</Name>
+    <Artwork>Pierr1</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="4" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Pierr_Z" Script="bleeding1atk_pierre" Desc="[적중] 출혈 1 부여" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="202001">
+    <Name>쳐내기</Name>
+    <Artwork>Street6</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="4" Type="Def" Detail="Guard" Motion="G" EffectRes="ch2_G" Script="" Desc="" />
+      <Behaviour Min="1" Dice="4" Type="Atk" Detail="Hit" Motion="J" EffectRes="Street_Mas_J" Script="paralysis1atk" Desc="[적중] 마비 1 부여" />
+      <Behaviour Min="1" Dice="4" Type="Atk" Detail="Slash" Motion="H" EffectRes="Street_Mas_H" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="202002">
+    <Name>마음가짐</Name>
+    <Artwork>Street7</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="2" Dice="4" Type="Def" Detail="Guard" Motion="G" EffectRes="ch2_G" Script="endurance1pw" Desc="[합 승리] 인내 1을 얻음" />
+      <Behaviour Min="2" Dice="6" Type="Atk" Detail="Slash" Motion="Z" EffectRes="Street_Mas_Z" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="202003">
+    <Name>불태우기</Name>
+    <Artwork>Street9</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="H" EffectRes="Street_Fire_H" Script="ruru2" Desc="[적중] 화상 3 부여. 자신에게 피해 3" />
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="J" EffectRes="Street_Fire_J" Script="ruru2" Desc="[적중] 화상 3 부여. 자신에게 피해 3" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="202004">
+    <Name>불빠따 맛 좀 봐</Name>
+    <Artwork>Street8</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="4" Type="Def" Detail="Guard" Motion="G" EffectRes="ch2_G" Script="" Desc="" />
+      <Behaviour Min="1" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="ch2_E" Script="upgradeNext1pw" Desc="[합 승리] 자신의 다음 주사위 강화" />
+      <Behaviour Min="3" Dice="3" Type="Atk" Detail="Hit" Motion="J" EffectRes="Street_Fire_J" Script="burn2atk" Desc="[적중] 화상 2 부여" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="202005">
+    <Name>업무처리</Name>
+    <Artwork>Street3</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="1" Dice="6" Type="Atk" Detail="Slash" Motion="Z" EffectRes="Street_San_Z" Script="upgradeNext1pw" Desc="[합 승리] 자신의 다음 주사위 강화" />
+      <Behaviour Min="2" Dice="3" Type="Atk" Detail="Slash" Motion="H" EffectRes="Street_San_H" Script="upgradeNext1pw" Desc="[합 승리] 자신의 다음 주사위 강화" />
+      <Behaviour Min="2" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="ch2_G" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="202006">
+    <Name>고요한 밤</Name>
+    <Artwork>Street1</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script>endurance2</Script>
+    <ScriptDesc>[사용시] 인내 2를 얻음</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="ch2_E" Script="" Desc="" />
+      <Behaviour Min="1" Dice="3" Type="Atk" Detail="Slash" Motion="J" EffectRes="Street_San_J" Script="" Desc="" />
+      <Behaviour Min="1" Dice="3" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Street_San_Z" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="202007">
+    <Name>연속공격</Name>
+    <Artwork>Street4</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="3" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="1" Dice="5" Type="Atk" Detail="Hit" Motion="J" EffectRes="Street_J" Script="" Desc="" />
+      <Behaviour Min="2" Dice="6" Type="Atk" Detail="Slash" Motion="H" EffectRes="Street_H" Script="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Slash" Motion="J" EffectRes="Street_J" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="202008">
+    <Name>재빠른 발걸음</Name>
+    <Artwork>Street5</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="2" Dice="3" Type="Atk" Detail="Slash" Motion="J" EffectRes="Street_J" Script="" Desc="" />
+      <Behaviour Min="1" Dice="6" Type="Def" Detail="Evasion" Motion="E" EffectRes="ch2_E" Script="recoverHp2dfn" Desc="[방어시] hp 2 회복" />
+      <Behaviour Min="1" Dice="4" Type="Def" Detail="Evasion" Motion="E" EffectRes="ch2_E" Script="recoverHp2dfn" Desc="[방어시] hp 2 회복" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="202009">
+    <Name>자료수집</Name>
+    <Artwork>Street2</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="2" Dice="6" Type="Atk" Detail="Slash" Motion="Z" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="202010">
+    <Name>불태우기</Name>
+    <Artwork>Street9</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="H" EffectRes="Street_Fire_H" Script="ruru2" Desc="[적중] 화상 3 부여. 자신에게 피해 3" />
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="J" EffectRes="Street_Fire_J" Script="ruru2" Desc="[적중] 화상 3 부여. 자신에게 피해 3" />
+      <Behaviour Min="4" Dice="4" Type="Def" Detail="Guard" Motion="G" EffectRes="ch2_G" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="202011">
+    <Name>불빠따 맛 좀 봐</Name>
+    <Artwork>Street8</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="5" Type="Def" Detail="Guard" Motion="G" EffectRes="ch2_G" Script="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="ch2_E" Script="upgradeNext1pw" Desc="[합 승리] 자신의 다음 주사위 강화" />
+      <Behaviour Min="3" Dice="4" Type="Atk" Detail="Hit" Motion="J" EffectRes="Street_Fire_J" Script="burn2atk" Desc="[적중] 화상 2 부여" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="202012">
+    <Name>마음가짐</Name>
+    <Artwork>Street10</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="1" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="ch2_G" Script="endurance1pw" Desc="[합 승리] 인내 1을 얻음" />
+      <Behaviour Min="4" Dice="5" Type="Atk" Detail="Hit" Motion="J" EffectRes="Street_Fire_J" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>2</Chapter>
+    <Priority>0</Priority>
+  </Card>
+</DiceCardXmlRoot>

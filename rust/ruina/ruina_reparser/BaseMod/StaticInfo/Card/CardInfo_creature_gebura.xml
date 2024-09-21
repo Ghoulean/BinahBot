@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Card ID="960301">
+    <Name>웃시산 평타 시체먹기 </Name>
+    <Artwork>Mountain_Eat</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="mountain1" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="mountain1" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="960302">
+    <Name>웃시산 괴성 지르기</Name>
+    <Artwork>Mountain_Shout</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="mountain2" ActionScript="mountain_shout" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="mountain3" ActionScript="mountain_shout" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="960303">
+    <Name>웃시산 구역질</Name>
+    <Artwork>Mountain_Vomit</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="FarArea" Cost="0" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="10" Dice="12" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="mountain4" ActionScript="mountain_vomit" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+  <Card ID="960304">
+    <Name>웃시산 몸통 내려찍기</Name>
+    <Artwork>Mountain_Eat</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="mountain5" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="960311">
+    <Name>웃시산 잡몹 비명 소리</Name>
+    <Artwork>Mountain_Corpse</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Far" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="6" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="mountain6" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="4" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="mountain6" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+	<!-- 노스페라투 -->
+	<Card ID="960411">
+		<Name>고결한 휴식</Name>
+		<Artwork>Nosferatu_Vampire</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Far" Cost="0"/>
+		<Script></Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="nosferatu_guard" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="nosferatu_guard" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Priority>10</Priority>
+	</Card>
+	<Card ID="960412">
+		<Name>품위 있는 식사</Name>
+		<Artwork>Nosferatu_Vampire</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Far" Cost="1"/>
+		<Script>nosferatu_blood1</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="nosferatu_atk" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="nosferatu_atk" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="960413">
+		<Name>선홍빛 양식</Name>
+		<Artwork>Nosferatu_Vampire</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Far" Cost="2"/>
+		<Script>nosferatu_buf</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="4" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="6" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="nosferatu_powerdown" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="nosferatu_atk" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="960414">
+		<Name>갈증</Name>
+		<Artwork>Nosferatu_Vampire</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Far" Cost="2"/>
+		<Script>nosferatu_special</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="6" Dice="8" Type="Atk" Detail="Slash" Motion="Z" EffectRes="" Script="nosferatu_special_1st" ActionScript="" Desc="" />
+			<Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="nosferatu_special_2nd" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="nosferatu_special_2nd" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Priority>50</Priority>
+	</Card>
+	<Card ID="960415">
+		<Name>피의 연회</Name>
+		<Artwork>Nosferatu_Wine</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="FarArea" Cost="0" Affection="Team"/>
+		<Script>nosferatu_area</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="12" Dice="16" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="nosferatu_area" ActionScript="geburafinal_nosperatu_area" Desc="" />
+		</BehaviourList>
+		<Priority>100</Priority>
+	</Card>
+	
+	<!-- 노스페라투 : 박쥐 -->
+	<Card ID="960421">
+		<Name>흡혈</Name>
+		<Artwork>Nosferatu_Vampire</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Near" Cost="1"/>
+		<Script>nosferatu_bat_power</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="3" Dice="7" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="7" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="5" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="nosferatu_bat_blood" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="960422">
+		<Name>따끔</Name>
+		<Artwork>Nosferatu_Vampire</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Near" Cost="2"/>
+		<Script>nosferatu_bat_power</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="3" Dice="5" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="nosferatu_bat_bleed" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="5" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="nosferatu_bat_bleed" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="960423">
+		<Name>갈증</Name>
+		<Artwork>Nosferatu_Vampire</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Near" Cost="0"/>
+		<Script>nosferatu_bat_power</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="2" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="nosferatu_bat_debuf" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Priority>10</Priority>
+	</Card>
+
+	<!-- 노스페라투 : 변신 -->
+	<Card ID="960431">
+		<Name>섬뜩한 기운</Name>
+		<Artwork>Nosferatu_BloodHope</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Near" Cost="0"/>
+		<Script></Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="3" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="nosferatu_monster_evade" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="nosferatu_monster_evade" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Priority>10</Priority>
+	</Card>
+	<Card ID="960432">
+		<Name>무자비한 손길</Name>
+		<Artwork>Nosferatu_BloodHope</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Near" Cost="0"/>
+		<Script>nosferatu_monster_blood1lose</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="3" Dice="9" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="nosferatu_monster_atk" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="nosferatu_monster_atk" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Priority>10</Priority>
+	</Card>
+	<Card ID="960433">
+		<Name>격한 손짓</Name>
+		<Artwork>Nosferatu_BloodHope</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Near" Cost="1"/>
+		<Script>nosferatu_monster_blood2lose</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="nosferatu_monster_powerdown" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="nosferatu_monster_powerdown" ActionScript="" Desc="" />
+			<Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="nosferatu_monster_strong" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Standby" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Priority>0</Priority>
+	</Card>
+	<Card ID="960434">
+		<Name>참을 수 없는 갈증</Name>
+		<Artwork>Nosferatu_BloodHope</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="Near" Cost="2"/>
+		<Script></Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="7" Dice="11" Type="Atk" Detail="Slash" Motion="J2" EffectRes="" Script="nosferatu_monster_special_1st" ActionScript="" Desc="" />
+			<Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="Z2" EffectRes="" Script="nosferatu_monster_special_2nd" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z2" EffectRes="" Script="nosferatu_monster_special_2nd" ActionScript="" Desc="" />
+			<Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z2" EffectRes="" Script="nosferatu_monster_special_2nd" ActionScript="" Desc="" />
+		</BehaviourList>
+		<Priority>50</Priority>
+	</Card>
+	<Card ID="960435">
+		<Name>피의 갈망</Name>
+		<Artwork>Nosferatu_Wine</Artwork>
+		<Rarity>Uncommon</Rarity>
+		<Spec Range="FarArea" Cost="0" Affection="Team"/>
+		<Script>nosferatu_monster_area</Script>
+		<ScriptDesc></ScriptDesc>
+		<BehaviourList>
+			<Behaviour Min="17" Dice="22" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="nosferatu_monster_area" ActionScript="nosperatu_monster_area" Desc="" />
+		</BehaviourList>
+		<Priority>100</Priority>
+	</Card>
+</DiceCardXmlRoot>

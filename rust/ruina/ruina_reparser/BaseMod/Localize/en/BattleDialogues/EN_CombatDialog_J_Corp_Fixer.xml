@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GroupName>JCorpFixer</GroupName>
+  <Character ID="hanahuda">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">Don’t get cocky about a lucky streak. The fall will hurt.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">Are you all ready?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">They seem like entertaining opponents.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">That was pretty basic. Still… I’ve got decent rewards out of it.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">How did I get cornered…?</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">This round is a total flop…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">The die is cast. There’s no forfeiting now…</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">Well, I’m not saying no to a table of chumps.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">We’ll just keep pushing on like this.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">Let’s raise the bet, shall we?</BattleDialog>
+    </Type>
+  </Character>
+
+  <Character ID="JCorpFixer">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">If winning and losing had no consequences… what fun would life be?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">Demonstrating your skills after careful preparation? Not my type!</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">Let’s get this going~! The game will be over if you don’t jump in right now!</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">Looks like the winner of this game is… us! Right?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">This was a successful round! Isn’t that right, Hanafuda?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">A fair reward for a fair game, I like this!</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">They got us good…</BattleDialog>
+      <BattleDialog ID="DEATH_1">That’s how they felt when they struggled to call…</BattleDialog>
+      <BattleDialog ID="DEATH_2">A fair price for a fair game… I’ll accept this.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">…No. The one who has the last laugh… will be me.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">It said I’d lose a precious workmate… It was true.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">It’s not over ‘til it’s over.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">My, it’s a Gokō~! Try and top this hand!</BattleDialog> <!-- 오광(五光) -->
+      <BattleDialog ID="KILLS_OPPONENT_1">Fufu… This is going to be a breeze.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">Isn’t this too simple? I’m about to yawn!</BattleDialog>
+    </Type>
+  </Character>
+  
+  
+</BattleDialogRoot>

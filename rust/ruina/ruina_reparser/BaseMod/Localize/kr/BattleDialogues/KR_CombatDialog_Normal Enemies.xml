@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GroupName>Normal Enemies</GroupName>
+  <Character ID="Stray_Dogs">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">어디서 이런 떨거지들만 모아놨어?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">형님 명령이니 별 수 있나. 해보는 수 밖에.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">어디, 몸 좀 풀어보자고.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">까다롭게 굴지 말고 빨리 덤비기나 해.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">형님께서 말씀 해주신 책을 찾는다. 알겠나?</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">이딴 종이 쪼가리를 위해 그 난리를 쳤다고?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">얼른 돌아가서 쉬고 싶군.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">이렇게나 쉬운 일이라니. 한심할 정도인데…</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">그 다리로 서있는 게 더 신기할 정도라니까.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">즐겁지도 않았고, 두 번 보지도 말자고.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">하…! 기분 뭣 같네…</BattleDialog>
+      <BattleDialog ID="DEATH_1">썅… 이렇게 죽고 싶지 않았는데.</BattleDialog>
+      <BattleDialog ID="DEATH_2">이런… 건방떨지 말라고…!</BattleDialog>
+      <BattleDialog ID="DEATH_3">저렇게 공격하는 건 반칙이잖아! 젠장… 젠장!</BattleDialog>
+      <BattleDialog ID="DEATH_4">내가 가장 멍청한 녀석이었군…</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">네가 죽으면 형님께 또 한소리 들을지도 모른다고!</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">다들 조심하라고! 제길, 일이 더 어렵게 됐잖아.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">…그래, 나만 안 뒈지면 그만이지.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">됐어, 저런 연약한 놈 없이도 이길 수 있어…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">이렇게 보내려니 좀 씁쓸한데.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">나약한 놈들 같으니라고.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">재미없게 픽 쓰러져버리긴.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">주제를 모르고 덤비니 그렇게 발리는 거다.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">벌써 자리 깔고 누웠냐?</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">하하! 너희도 봤어야 해, 방금 쓰러진 놈의 표정을!</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="lulu_friend1">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">나에게 맡겨만 주시라~</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">저 놈들이 그렇게 강하단 말이지?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">뜨거운 망치 맛 좀 볼래?</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">읏~차! 힘들었지만 꽤 할만 했어!</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">좋았어. 이 정도 놈들이야 껌이지!</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">저것들, 주워담으면 되는 거지?</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">나… 이렇게 죽어버리는 거야…?</BattleDialog>
+      <BattleDialog ID="DEATH_1">이게 뭐야… 정말 꼴사나워…</BattleDialog>
+      <BattleDialog ID="DEATH_2">짜증나… 이대로 죽을 수는 없다고!</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">내가 더 힘내야… 해.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">어떻게 해야… 이 상황을 해결할 수 있는 거지…?</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">난 저렇게 되고 싶지 않아…</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">좋아, 다른 놈들도 빨리 처리해 버리자고!</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">야호! 방금 어땠어?</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">참 처리하기 쉬운 놈들이네!</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="lulu_friend2">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">멀끔하니, 어째 따분한 녀석들만 있는 거 같은데?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">제대로 찔러 주겠어!</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">힘이 되어줄 수 있다면야!</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">다른 책도 가져갈 수 있는 걸까?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">여유, 여유~ 이런 일쯤이야 만만하지!</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">조금 간당간당하긴 했어… 휴!</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">미안하다. 끝까지 도와줄 수 없어서…</BattleDialog>
+      <BattleDialog ID="DEATH_1">난… 대체 뭐 때문에 이 곳에 들어온 거지?</BattleDialog>
+      <BattleDialog ID="DEATH_2">나정도면 괜찮다고 생각했는데…</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">조금… 무서워졌어.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">신경쓰지 않을 거야… 나는…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">…다같이 이길 수 있을 거라고 생각했는데.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">어후, 망할 놈들. 생각보다 강하잖아!</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">유치한 놈이었어.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">느낌 좋은데? 다른 놈들도 얼른 덤비라고!</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Yun_Fixer2">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">먼저 공격하는 것이 아무래도 유리하겠지?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">나름 이 곳에 들어올 정도의 깡은 있다고~</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">고양이 찾기보다는 재미있을 것 같지 않아?</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">더 강한 녀석들이 왔다면 1분 버티기도 힘들겠는데?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">설마 우리도 이기지 못 한 거야?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">아직 한참은 부족한 녀석들이었구만~</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">…가지말라고 말렸는데. 들을 걸 그랬나…</BattleDialog>
+      <BattleDialog ID="DEATH_1">더 높은 곳으로 올라가고 싶었는데.</BattleDialog>
+      <BattleDialog ID="DEATH_2">분해… 분해서 참을 수가 없어.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">거짓말… 이지… 진짜.. 죽었어?</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">이렇게 무서운 곳일줄은…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">지금이라도 도망치는 편이 나을까?</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">흥, 만만한 녀석들이네!</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">빈틈 발견~ 실례할게!</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">뭐… 얻어걸리긴 했지만!</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Yun_Fixer1">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">으… 큰소리 치긴 했지만 역시 좀 아닌 거 같은데…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">이야, 도서관이라는 게 이렇게 큰 거였나…?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">생각보다 강해보이는데… 이길 수 있겠지?</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">간단한 일도 못 해낼 거라고 생각하다니, 다들 걱정도 많군.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">괜히 떨었네… 이렇게 쉽게 끝날 일을!</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">이만큼의 책이라면… 정말 큰 보수를 받을 수 있을 지도 모르겠어!</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">…내가.. 왜.. 왜 이런 꼴을 당해야..</BattleDialog>
+      <BattleDialog ID="DEATH_1">결국 나는 올라갈 수 없었던 거네.</BattleDialog>
+      <BattleDialog ID="DEATH_2">이제 눈을 뜰 힘도, 의지도 없어.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">점점 더 위험해지는 느낌인데…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">…방금 너희들도 봤어? 책… 이…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">이렇게 쉽게 끝나다니… 믿어지지 않아.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">그래서야 그 보물들을 잘 지킬 수 있겠어? 하하!</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">내 상대도 안되는 녀석들이었잖아!</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">우리도 장난으로 이런 일을 하는 게 아니라고.</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Yun_Office">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">대표님이 오시긴 하는 거야…? 에이씨…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">시간만 좀 끌고 있자고… 제대로 덤비기에는 무서우니까.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">언제까지 우리들이 상대해줘야 하는 거지…?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">먼저 앞장 서는 건 내 체질이 아니라고오…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">그래도 곧 와주신다고 했으니까… 먼저 힘내고 있자…</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">뭐야, 대표님이 오시기 전에 끝나버렸잖아. 쉽네!</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">우리는 챙길 것만 챙기고 나가면 되는 거지?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">이곳에서 책이 된 사람들도 참 한심하네!</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">서, 설마 이 앞에 더 강한 게 있는 건 아니지…?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">이제 돌아가도 되는 거야?</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">…이번에는 할 수 있을 줄… 알았는데.</BattleDialog>
+      <BattleDialog ID="DEATH_1">죽고 싶지 않아… 난 살고 싶다고…</BattleDialog>
+      <BattleDialog ID="DEATH_2">내가 당했다고? …한심해.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">망설이고 있을 여유는 없으려나…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">몸이 약하면 눈치라도 빨랐어야지…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">소중한 동료가 갔어… 난 어떻게 해야 해?</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">악감정은 없어. 미안해.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">…자, 다음 녀석은 어떻게 처리하지?</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">잘만 하면 우리가 이길 수도 있을 것 같은데…?</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Zwei_Members">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">‘당신의 방패’ 츠바이. 지금 바로 시작하겠습니다.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">이 정도쯤은 버텨낼 수 있습니다.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">자신 있으시면 한 번 뚫어보십쇼.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">절대 물러서지 않겠습니다…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">이런 분위기는… 언제 느껴도 무섭기만 합니다.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">저희들은 책만 챙긴 후 빠르게 복귀하도록 하죠.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">어렵지 않은 임무였습니다.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">수고하셨습니다. 이 정도면 충분한 듯 하죠?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">복귀 후 정리할 것들이 산더미겠군요…</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">이상, 임무를 마치겠습니다.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">이런 끝을 위해 아득바득 기어올라온 게 아닌데…</BattleDialog>
+      <BattleDialog ID="DEATH_1">죽고싶지 않아, 도망가고 싶어…</BattleDialog>
+      <BattleDialog ID="DEATH_2">…끝까지, 품위를 잃지 않겠습니다.</BattleDialog>
+      <BattleDialog ID="DEATH_3">저로서는… 역부족이었군요.</BattleDialog>
+      <BattleDialog ID="DEATH_4">임무를 다 마치지 못 했습니다. …죄송합니다.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">지금은 임무에 집중해야 합니다.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">…잠시 묵념하고 가겠습니다. 수고하셨습니다.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">한 명이… 죽었습니다. 그래도 계속 해야만…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">슬퍼할 여유는 없지만… …</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">전투를 계속 이어가야만 하니까요…</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">용서 해주지 않으셔도 괜찮습니다.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">아무쪼록, 고생 많으셨습니다.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">조금 더 신중하실 필요가 있습니다.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">그저 임무였을 뿐입니다.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">제 몫은 충분히 한 것 같군요.</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Zwei_Member_Gray">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">‘당신의 방패’ 츠바이. 주어진 것을 지켜내기 위해 시작하겠습니다.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">조금 떨리지만… 괜찮습니다.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">방어하는 것은 회피가 아닙니다.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">저희들은 책만 챙긴 후 빠르게 복귀하도록 하죠.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">어렵지 않은 임무였습니다.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">수고하셨습니다. 이 정도면 충분한 듯 하죠?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">복귀 후 정리할 것들이 산더미겠군요…</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">이상, 임무를 마치겠습니다.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">이런 끝을 위해 아득바득 기어올라온 게 아닌데…</BattleDialog>
+      <BattleDialog ID="DEATH_1">죽고싶지 않아, 도망가고 싶어…</BattleDialog>
+      <BattleDialog ID="DEATH_2">…끝까지, 품위를 잃지 않겠습니다.</BattleDialog>
+      <BattleDialog ID="DEATH_3">저로서는… 역부족이었군요.</BattleDialog>
+      <BattleDialog ID="DEATH_4">임무를 다 마치지 못 했습니다. …죄송합니다.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">지금은 임무에 집중해야 합니다.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">…잠시 묵념하고 가겠습니다. 수고하셨습니다.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">한 명이… 죽었습니다. 그래도 계속 해야만…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">슬퍼할 여유는 없지만… …</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">전투를 계속 이어가야만 하니까요…</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">용서 해주지 않으셔도 괜찮습니다.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">아무쪼록, 고생 많으셨습니다.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">조금 더 신중하실 필요가 있습니다.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">그저 임무였을 뿐입니다.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">제 몫은 충분히 한 것 같군요.</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Zwei_Member_Yellow">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">‘당신의 방패’ 츠바이. 지금 출동하겠습니다!</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">잘 해낼 수 있을 겁니다! 다들 힘내십쇼.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">도서관은 참 신기한 곳이군요.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">저희들은 책만 챙긴 후 빠르게 복귀하도록 하죠.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">어렵지 않은 임무였습니다.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">수고하셨습니다. 이 정도면 충분한 듯 하죠?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">복귀 후 정리할 것들이 산더미겠군요…</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">이상, 임무를 마치겠습니다.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">이런 끝을 위해 아득바득 기어올라온 게 아닌데…</BattleDialog>
+      <BattleDialog ID="DEATH_1">죽고싶지 않아, 도망가고 싶어…</BattleDialog>
+      <BattleDialog ID="DEATH_2">…끝까지, 품위를 잃지 않겠습니다.</BattleDialog>
+      <BattleDialog ID="DEATH_3">저로서는… 역부족이었군요.</BattleDialog>
+      <BattleDialog ID="DEATH_4">임무를 다 마치지 못 했습니다. …죄송합니다.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">지금은 임무에 집중해야 합니다.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">…잠시 묵념하고 가겠습니다. 수고하셨습니다.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">한 명이… 죽었습니다. 그래도 계속 해야만…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">슬퍼할 여유는 없지만… …</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">전투를 계속 이어가야만 하니까요…</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">용서 해주지 않으셔도 괜찮습니다.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">아무쪼록, 고생 많으셨습니다.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">조금 더 신중하실 필요가 있습니다.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">그저 임무였을 뿐입니다.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">제 몫은 충분히 한 것 같군요.</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Zwei_Member_Orange">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">‘당신의 방패’ 츠바이... 지금부터 진지하게 전투에 임하겠습니다.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">이곳, 수상한 게 한두가지가 아닙니다…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">아직까지는 괜찮습니다... 제대로 버틸 수 있습니다.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">저희들은 책만 챙긴 후 빠르게 복귀하도록 하죠.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">어렵지 않은 임무였습니다.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">수고하셨습니다. 이 정도면 충분한 듯 하죠?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">복귀 후 정리할 것들이 산더미겠군요…</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">이상, 임무를 마치겠습니다.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">이런 끝을 위해 아득바득 기어올라온 게 아닌데…</BattleDialog>
+      <BattleDialog ID="DEATH_1">죽고싶지 않아, 도망가고 싶어…</BattleDialog>
+      <BattleDialog ID="DEATH_2">…끝까지, 품위를 잃지 않겠습니다.</BattleDialog>
+      <BattleDialog ID="DEATH_3">저로서는… 역부족이었군요.</BattleDialog>
+      <BattleDialog ID="DEATH_4">임무를 다 마치지 못 했습니다. …죄송합니다.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">지금은 임무에 집중해야 합니다.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">…잠시 묵념하고 가겠습니다. 수고하셨습니다.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">한 명이… 죽었습니다. 그래도 계속 해야만…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">슬퍼할 여유는 없지만… …</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">전투를 계속 이어가야만 하니까요…</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">용서 해주지 않으셔도 괜찮습니다.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">아무쪼록, 고생 많으셨습니다.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">조금 더 신중하실 필요가 있습니다.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">그저 임무였을 뿐입니다.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">제 몫은 충분히 한 것 같군요.</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Hook_Office">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">이걸로 찍히면 아프겠지… 맞아볼래?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">너~무 무서워서 무기 떨어뜨릴 뻔 했다!</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">제대로 서 있을 수 있니? 떨고 있는 거 아니지?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">한 대만 맞아봐, 기분이 나아질 거야. 물론 내가!</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">저 놈을 어떻게 때려본담…</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">에이~ 진짜 죽여야 하는 놈은 따로 있는 거지? 장난 치지마~</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">책 같은 건 밟아도 별로 흥미가 없는데…</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">어이가 없어서 원. 아직 시작도 안했는데 끝났다고?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">책장을 찢어줘야 속이 좀 풀릴까?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">이런 곳이었다면 오지도 않았어.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">이런 곳에서… 질 수는 없는데…!</BattleDialog>
+      <BattleDialog ID="DEATH_1">하하! 하… 한 방 먹었네.</BattleDialog>
+      <BattleDialog ID="DEATH_2">아픈 건… 질색인데. 젠장…</BattleDialog>
+      <BattleDialog ID="DEATH_3">강한 녀석들… 이었잖아.</BattleDialog>
+      <BattleDialog ID="DEATH_4">방심한 내 잘못이야. 하지만, 하지만…</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">응? 방금 누가 죽었어? 아쉽네!</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">내가 너 그렇게 죽을 줄 알았다~</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">얼씨구. 겨우 그정도 가지고… 감탄스럽다.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">나랑은 상관 없는 놈이잖아?</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">좋아. 더 크게 몸을 휘두를 수 있겠군!</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">하하! 방금 무서워서 벌벌 떠는 꼴을 봤어야 했는데.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">한대 맞아주는 척이라도 했을 걸 그랬나?</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">거기 피하셨어야죠~ 뭐, 이미 뒈진 거 어쩌겠어.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">물풍선인줄 알았네… 나 아직 건들여보기 밖에 안했거든?</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">시시해~ 재미없어. 더 괜찮은 놈 없어?</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Pierre_freinds">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">아이씨... 좀만 살살 쳐줘라. 아픈 건 별로니깐.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">이것들은 뭐야? 흠, 재료들처럼 생기긴 했는데…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">이걸로 내려치면 네 안에서 어떤 것이 나올지 궁금하지 않아?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">잔뜩 겁 먹은 새끼 돼지들만 모여있군.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">오늘 아침을 세그릇밖에 안 먹었더니… 침이 고이는군.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">이런 나약한 재료들은 고기도 질길 거야.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">아, 어서 돌아가서 뜨끈한 고기를 먹고 싶군.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">그림의 떡 같은 전투였어… 배가 고프네.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">뒷골목의 재료들과는 색다른 느낌이었어.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">전투 후에는 한 입 뜯고 기운을 내는 건데 말이야…</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">윽… 내가… 역으로 당할 줄은…</BattleDialog>
+      <BattleDialog ID="DEATH_1">이런 놈들에게 지다니… 진짜 쪽팔리네.</BattleDialog>
+      <BattleDialog ID="DEATH_2">책이 된다라… 찝찝하고 기분이 정말 더러운데.</BattleDialog>
+      <BattleDialog ID="DEATH_3">허…! 나도 아직 멀었잖아…</BattleDialog>
+      <BattleDialog ID="DEATH_4">네 녀석들을 썰어볼 기회가 없어진 건 좀 억울하군…</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">저 녀석이 죽었군. 슬프진 않지만.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">유감이야. 너도 멋진 재료였을텐데.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">내 편이고 뭐고 간에 재료를 건들 수 있는 건 나야!</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">그거 한 방에 나가떨어지다니. 한심해.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">물렁한 녀석들은 맛이 없지.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">고기든, 사람새끼든 약점이 하나씩은 있는 법.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">재료의 급소를 보지 못하면 되려 버둥이는 앞발에 맞게 될 거야.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">다음에 만날 때에는 더 세련된 고기로서 만나자고.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">이런… 너무 물러터진 재료였군.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">좀 더 손질해주고 싶었는데… 아쉽군.</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Staff_Fixer">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">걱정할 것 없습니다. 상대는 매우 약해보이니…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">이런 무시무시한 분위기는 즐길 수 없군요…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">일이 이렇게 되었으니, 잘 부탁드립니다.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">정확하게 맞춰드리겠습니다.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">무모한 짓은 하지 않습니다.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">좋은 전투였습니다.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">정당하게 얻어낼 수 있는 물건이라 좋군요.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">전투는 끝났지만 혹시 모르니 조심합시다.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">결과야 저희가 이겼지만, 그쪽도 수고 하셨습니다.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">나쁘지 않은 경험이었습니다.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">제 힘이 부족한 탓입니다… 죄송합니다.</BattleDialog>
+      <BattleDialog ID="DEATH_1">적의 실력을 너무 얕봤습니다…</BattleDialog>
+      <BattleDialog ID="DEATH_2">제 판단이 완전히 틀렸군요.</BattleDialog>
+      <BattleDialog ID="DEATH_3">제 자신이 너무 창피스럽습니다…</BattleDialog>
+      <BattleDialog ID="DEATH_4">아직… 부족한 자신의 실력도 알지도 못하고.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">저희만으로도 해낼 수 있을까요…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">혼란스럽습니다…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">이런 상황을… 대처하는 방법은?</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">이럴 수가… 우리에게는 역부족이었던 것일까요…?</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">…미안합니다.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">누구에게도 지고싶지 않습니다…!</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">아직 방심해서는 안 되는 것이겠죠.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">이런 식으로 천천히 해나가면 분명 이길 수 있습니다.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">별로 어려운 일은 아니었군요.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">얼마 남지 않았으니 조금만 더 힘내보죠.</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Third_Rate_Fixer">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">끄응, 귀찮은데… 적당히 하자고~</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">이것 말고도 해야 할 일이 많아서… 후딱 하자~</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">이런 놈들은 우리가 막아야겠지… 귀찮아.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">우리 사정이 좀 급해서~ 시작하자.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">오늘따라 더 축축 처지네… 뭐, 일은… 제대로 해볼게.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">그럭저럭… 좋지도 나쁘지도 않은 전투였어.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">돌아가면 또 비슷한 일을 받겠지. 하아… 귀찮아.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">다른 의뢰들에 비하면 이정도는 간단하지…~</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">책 같은 거 대충 품에 몇 개 안고 가자고.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">책은 우리가 유용한 곳에 쓰도록 할게.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">쪽팔리게… 이런 곳에서 죽어야 하는 건가…</BattleDialog>
+      <BattleDialog ID="DEATH_1">마지막 인사라도 하고 올 걸 그랬어.</BattleDialog>
+      <BattleDialog ID="DEATH_2">열심히 살아왔는데… 빌어먹을…</BattleDialog>
+      <BattleDialog ID="DEATH_3">그동안의 노력이 물거품이 되었구나.</BattleDialog>
+      <BattleDialog ID="DEATH_4">이렇게 마무리되는 건가…</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">뭐… 너도 꽤나 잘 해줬고 말이지.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">…분위기가 점점 위험해지는 것 같지?</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">그렇게 놀랍진 않네. 슬프지도.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">적을 무찌르는 게 우선이니까…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">이미 빈번하게 봐왔던 일들이라 그런가. 담담하네.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">진작에 물러나지 그랬어. 서로 귀찮게…</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">튈 시간을 줘도 버티더니… 꼴 좋네.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">너무 약해서 별로 놀랄 일도 없어.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">이 녀석… 더럽게 체력만 좋아서는… 힘들었잖아…~</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">얼마나 더 남은 거야…? 휴… 성가시고만.</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="AX">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">이 도끼로 찍는 맛이 참 좋거든~</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">저런 코흘리개들에게 뭘 뺏어올 게 있다고.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">내 도끼를 받아내는 것도 힘들어 보이는데?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">애송이같은 건 쭉쭉 격파해 보자고~</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">피냄새가 나는 게 분위기 나쁘지 않고만~</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">별로 이겼다는 맛도 안 나는구만.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">너희들 정말 그 대단한 놈들이 맞는 거지?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">시원하게 이기니 노래가 절로 나오네!</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">혹시 책 나눔 봉사단체… 뭐, 이런 건 아니지?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">책이 된 녀석들에게는 조금 미안하지만. 어쩌겠어!</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">에이씨… 이게 뭔 꼴이야…!</BattleDialog>
+      <BattleDialog ID="DEATH_1">이럴 순 없어… 분명 비겁한 수법을 쓴거라고…!</BattleDialog>
+      <BattleDialog ID="DEATH_2">아니야… 내가, 내가 질 리가 없잖아…</BattleDialog>
+      <BattleDialog ID="DEATH_3">저런 놈에게 당했다고? 이건 꿈이어야 해…</BattleDialog>
+      <BattleDialog ID="DEATH_4">저 녀석들을 다 아작내기 전까지는 못 죽어!!!</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">저 미친 것들이… 다 똑같이 털릴 줄 알아.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">혀, 형님… 누가 죽였어. 누가 죽였냐고!</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">친구가 떠나가는 건 좀~ 섭섭하네.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">내가 대신 맞아줄 수도 없는 노릇이었으니 원.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">내가 좀 더 빨리 처리했더라면…</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">이딴 실력으로 시비를 걸었어? 내가 다 부끄럽구만.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">그렇게 비실비실해서 뭔가를 지키기나 하겠냐?</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">역시 묵직하게 한 방 날리는 게 최고군.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">종잇장처럼 훅 날라가버린 거야?</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">성가신 녀석들 쳐부수는 것도 무난한 것 같네.</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Hook+Pierre_Hook">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">이 녀석도 멋있는 걸 들고 있잖아?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">우리 왠지 잘 통할 것 같지 않아, 친구?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">이걸로 찍히면 아프겠지… 같이 때려볼래?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">너도 찍어 누르는 거 좋아해?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">흠? 나도 고기가 될 수 있나? 신박한데!</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">이야, 이거 맘이 아주 딱딱 맞는 친구랑 하니 일이 잘 풀리잖아?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">23구 골목이라… 마인드가 참 마음에 드는 구만!</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">우리 조직원 말고도 이렇게 잘 맞는 사람이 있었다니… 신기한걸?!</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">책장을 찢어줘야 속이 좀 풀릴까? 같이 찢어보자!</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">이런 곳에서… 질 수는 없는데…!</BattleDialog>
+      <BattleDialog ID="DEATH_1">하하! 하… 한 방 먹었네.</BattleDialog>
+      <BattleDialog ID="DEATH_2">아픈 건… 질색인데. 젠장…</BattleDialog>
+      <BattleDialog ID="DEATH_3">강한 녀석들… 이었잖아.</BattleDialog>
+      <BattleDialog ID="DEATH_4">방심하고 있었던 내 잘못이야. 하지만, 하지만…</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">에잉… 괜찮은 사람인 줄 알았는데, 완전 물몸이었네!</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">겉보기만 세보였던 걸까… 아쉽구만~</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">맷집은 꽤나 좋아보였는데 말이야.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">기대했던만큼 실망한다는 건가~</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">뭐, 어떻게 보면 나랑 상관 없는 놈이잖아?</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">죽이 척척 맞았어! 하이파이브라도?</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">같이 찢어버리자고! 책이든 뭐든 간에.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">고기를 해체한다라… 해보고 싶긴 하네!</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Hook+Pierre_Pierre">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">우연히 만났지만… 왠지 죽이 잘 맞을 거 같은데?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">같이 후딱 끝내버리자고.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">너도 이런 거 좋아하나? 꽤나 멋진 취미를 가지고 있군.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">왠지 죄다 쓸어버릴 수 있을 것 같은 느낌인데.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">너한테도 맛있는 냄새가 나는군?</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">갈고리 사무소라고 했나… 이름도 마음에 드는군.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">오늘 전투는 만족스러웠다. 어린 녀석인데도 꽤 하는 친구야.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">아직 부족한데… 새로운 재료나 구하러 가볼까?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">무엇이든 간에 더 찢어주지 않으면 속이 덜 풀리겠어.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">윽… 내가… 역으로 당할 줄은…</BattleDialog>
+      <BattleDialog ID="DEATH_1">이런 놈들에게 지다니… 진짜 쪽팔리네.</BattleDialog>
+      <BattleDialog ID="DEATH_2">책이 된다라… 찝찝하고 기분이 정말 더러운데.</BattleDialog>
+      <BattleDialog ID="DEATH_3">허…! 나도 아직 멀었잖아…</BattleDialog>
+      <BattleDialog ID="DEATH_4">네 녀석들을 썰어볼 기회가 없어진 건 좀 억울하군…</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">저 녀석이 죽었군. 그래도 마음에 들었는데 말이지…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">아… 오랜만에 잘 맞는 사람을 만났다고 생각했는데.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">아쉽지만, 이런 녀석들에게 당할 정도로 약하다는 거니까.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">걱정 말아라. 내가 전부 죽여줄 테니.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">들고 있는 무기가 참 강해보이는 친구였는데 말이지.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">오랜만에 다른 누군가와 협업이라… 이거, 완전 신나는군.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">다음에는 나도 커다란 갈고리 같은 걸 써볼까.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">합이 이렇게 잘 맞을 줄은 몰랐는데.</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Fixers_Staff">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">저런 불량한 분과 꼭 함께 해야하는 것인가요?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">방해하지만 마십쇼.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">하아… 정말 몰상식한 분 입니다.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">허세만 가득한 사람이 잘 싸울 수나 있답니까?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">저쪽은 신경쓰지 않는 걸로 하겠습니다.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">서로의 합이 그리 나쁜 것 만도 아니었습니다.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">제가 가져가야 할 건, 제가 알아서 찾아가도록 하겠습니다.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">잘 해주셨지만, 두 번 다시 만나지는 말자고요.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">끝까지… 됐습니다. 이제 안 볼 얼굴일 테니.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">제 힘이 부족한 탓입니다… 죄송합니다.</BattleDialog>
+      <BattleDialog ID="DEATH_1">적의 실력을 너무 얕봤습니다…</BattleDialog>
+      <BattleDialog ID="DEATH_2">제 판단이 완전히 틀렸군요.</BattleDialog>
+      <BattleDialog ID="DEATH_3">제 자신이 너무 창피스럽습니다…</BattleDialog>
+      <BattleDialog ID="DEATH_4">아직… 한심한 자신의 실력도 알지도 못하고.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">여유만만이시더니, 그렇게 될 줄 알았습니다.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">뭡니까…? 입을 놀렸으면 도움이라도 되셨어야죠!</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">역시 긴장의 끈을 놓치면 안됩니다…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">괜찮습니다. 저 혼자서도… 할 수 있을 겁니다…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">그렇게 설렁설렁 움직이시더니…</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">저 인간이 늦장 부리지만 않았다면 더 빨리 끝냈을 겁니다.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">이렇게 빨리 처리할 수 있는 걸 왜 느릿느릿하게 움직입니까?</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">하아… 같은 팀원이 저 모양이니 제가 더 힘내겠습니다.</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Fixers_Third">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">상대쪽만 샌님인줄 알았더니… 우리 쪽도 샌님이 있네!</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">허, 참. 그쪽 보다는 잘 하고 있으니 전투에나 집중하십쇼~</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">그렇게 딱딱하게만 살면 인생 재미 없어~</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">그냥 알아서 각자 갈 길가면 안 돼? 너무 안 맞잖아.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">아이고… 골치야. 그냥 대충 하자고, 응?</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">그럭저럭… 좋지도 나쁘지도 않은 전투였달까.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">뭐… 나름 합은 잘 맞았던 것 같네.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">두 번 다시는 보지 말자고 선생님~</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">나 덕분에 이길 수 있었던건데~ 전혀 모르는 눈치네.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">쪽팔리게… 이런 곳에서 죽어야 하는 건가…</BattleDialog>
+      <BattleDialog ID="DEATH_1">마지막 인사라도 하고 올 걸 그랬어.</BattleDialog>
+      <BattleDialog ID="DEATH_2">열심히 살아왔는데… 빌어먹을…</BattleDialog>
+      <BattleDialog ID="DEATH_3">그동안의 노력은 물거품이 되었구나.</BattleDialog>
+      <BattleDialog ID="DEATH_4">이렇게 마무리되는 건가…</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">원리원칙만 챙기다가 그렇게 되는 거야~</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">딱히, 누가 죽든 난 신경 안 쓰니까.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">입만 살아있는 건 네 녀석이니까.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">내가 다 처리할 수 있으니까, 걱정 마~</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">뭐… 너도 꽤나 잘 해줬고 말이지.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">옆에서 왱알왱알 진짜 시끄럽네… 어련히 잘하는데.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">여유를 가질 수 있어야 이렇게 강해질 수 있는 거라고~</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">비겁한 방법이 아냐. 네 녀석보다 머리가 조금 더 똑똑할 뿐.</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="AX+Dogs_AX">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">같이 찍히고 싶지 않으면 꿍얼대지 마, 개 친구들~</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">이걸로 찍히면 아프겠지… 맞아볼래?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">다~ 서로 돕자고 하는 짓인데 표정이 왜 그모양일까?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">알아서들 잘 해라? 뒈지고 싶진 않잖아.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">뭐, 개들도 괜찮은 실력이 있는 놈들이었어~</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">끝까지 우리가 마음에 안 드는 모양이던데?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">됐어. 우리는 우리 챙길 것만 가지고 나가면 되는 거지.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">우리가 도와줘서 이겼는데, 이제 얼굴 좀 피지?</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">에이씨… 이게 뭔 꼴이야…!</BattleDialog>
+      <BattleDialog ID="DEATH_1">이럴 순 없어… 분명 비겁한 수법을 쓴거라고…!</BattleDialog>
+      <BattleDialog ID="DEATH_2">아니야… 내가, 내가 질 리가 없잖아…</BattleDialog>
+      <BattleDialog ID="DEATH_3">저런 꼬맹이에게 당했다고? 이건 꿈이어야 해…</BattleDialog>
+      <BattleDialog ID="DEATH_4">저 녀석들을 다 아작내기 전까지는 못 죽어!!!</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">저 미친 것들이… 다 똑같이 털릴 줄 알아.</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_1">혀, 형님… 누가 죽였어. 누가 죽였냐고!</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_2">친구가 떠나가는 건 좀~ 섭섭하네.</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_3">내가 대신 맞아줄 수도 없는 노릇이었으니 원.</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_4">내가 좀 더 빨리 처리했더라면…</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_5">이렇게 픽 쓰러지는 놈인지는 몰랐는데!</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_6">안쓰러운 새끼들이고만. 이정도로 훅 가다니~</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_7">하아… 도움을 안 받으니만 못 했어.</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_8">도망칠까? 지금 도망치기에는 너무 늦었나…?</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_9">그래~ 쟤는 저렇게 죽을 줄 알았어.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">이러다 내가 다 처리하겠어 개친구~</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">봐라! 투덜거리는 새끼들보다 훨씬 더 잘 조지잖아.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">완전 나 혼자 줘패고 있네~</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="AX+Dogs_Dogs">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">저런 미친 놈들이 내 편이라니… 정말 뭣같군.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">이곳에 분명 형님들이 있다고 했지…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">얌체 같은 녀석들이군. 몸이 아니라 무기를 사용한다니.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">저런 새끼들 없이도 충분히 이길 수 있으니까.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">형님들 어디 갔는지 알고 있지? 대답해!!!</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">허, 별 것도 아닌 놈들이. 형님들! 지금 가겠습니다.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">도움을 받는 건 이번 일이 마지막일 것이다.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">이런 연약한 놈들인 주제에, 뭘 하겠다는 건지.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">저 새끼들은 끝까지 말이 많아. 주둥이 좀 쉬라고.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">하…! 기분 뭣 같네…</BattleDialog>
+      <BattleDialog ID="DEATH_1">썅… 이렇게 죽고 싶지 않았는데.</BattleDialog>
+      <BattleDialog ID="DEATH_2">이런… 건방떨지 말라고…!</BattleDialog>
+      <BattleDialog ID="DEATH_3">저렇게 공격하는 건 반칙이잖아! 젠장… 젠장!</BattleDialog>
+      <BattleDialog ID="DEATH_4">내가 가장 멍청한 녀석이었군…</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">하아… 저 도움도 안 되는 녀석…</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_1">저런 약한 놈은 왜 들어온 거야?</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_2">결국 입만 잘난 새끼인거네.</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_3">뒈질 놈 먼저 가는 거지.</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_4">어차피 걸리적거리는 놈이었어.</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_5">네가 죽으면 형님께 또 한소리 들을지도 모른다고!</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_6">다들 조심하라고! 제길, 일이 더 어렵게 됐잖아.</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_7">…그래, 나만 안 뒈지면 그만이지.</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_8">됐어, 저런 연약한 놈 없이도 이길 수 있어…</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_9">이렇게 보내려니 좀 씁쓸한데.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">이상한 놈들에게 맡기느니 내가 빨리 처리해버려야지.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">잘난 척하는 새끼의 말을 믿어선 안 돼.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">저 도움도 안 되는 놈들… 혼자 싸우는 느낌이네.</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+</BattleDialogRoot>

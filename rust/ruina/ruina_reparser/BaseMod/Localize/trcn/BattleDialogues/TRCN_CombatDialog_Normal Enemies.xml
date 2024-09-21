@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GroupName>Normal Enemies</GroupName>
+  <Character ID="Stray_Dogs">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">這幫遜咖都是從哪來的？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">既然是大哥的命令，那能有什麼辦法？只能照做了。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">來吧，我們好好熱個身。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">別虛張聲勢了，快來跟我打一場。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">找到大哥要的書，大夥都聽懂了嗎？</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">打了那麼久，到頭來就是為了幾張破紙？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">真想回去休息啊。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">這麼簡單的差事，媽的白期待了……</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">哈，憑那瘦弱的身體，你們是怎麼活到現在的？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">煩死了，我再也不想來第二次了。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">啊……！心裡，真不是滋味……</BattleDialog>
+      <BattleDialog ID="DEATH_1">呃……我不想就這麼死掉……</BattleDialog>
+      <BattleDialog ID="DEATH_2">你，你們……別太囂張……！</BattleDialog>
+      <BattleDialog ID="DEATH_3">那樣打人不是耍賴嗎！？他媽的……幹！</BattleDialog>
+      <BattleDialog ID="DEATH_4">我真是個，白癡……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">你要是死在這裡，回去我們鐵定會挨大哥的罵！</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">大夥小心！媽的，情況不妙。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">……啊，只要死的不是我就好。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">少了那個弱雞，我們照樣能贏……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">親眼送走我的弟兄，鼻子難免會一酸。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">一群廢物。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">這就倒下了，真沒勁。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">不知天高地厚的東西，你的下場就該是這樣。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">這就躺下了？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">哈哈！你們真該看看那傢伙的表情！</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="lulu_friend1">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">都包在我身上~</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">這些傢伙，真的有你說的那麼厲害？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">想不想挨揍？</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">嗯~哈！雖然累得半死，好歹是成功了呢！</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">好耶，揍扁這些廢物易如反掌。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">把那些東西撿起來就行了吧？</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">我……就這樣死掉了嗎……？</BattleDialog>
+      <BattleDialog ID="DEATH_1">這算什麼呀……真該死……</BattleDialog>
+      <BattleDialog ID="DEATH_2">煩透了……我不能就這麼，死掉……！</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">我要加倍努力才行……呵。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">這可怎麼辦……我們還應付得了吧？</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">我不想變成那樣……</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">好咧，要儘快把剩下的一起收拾掉！</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">呀吼！剛才那下如何？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">你還真是個廢物啊！</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="lulu_friend2">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">他們看起來傻乎乎的，怎麼老是派這些無聊的傢伙來跟我們打？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">我要給你好好來上幾刀！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">只要能幫上忙……！</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">其他書也能摸走嗎？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">簡單，太簡單了~你們真的超級弱欸~</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">贏得稍微有點勉強……呼！</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">抱歉，我沒辦法，幫到底了……</BattleDialog>
+      <BattleDialog ID="DEATH_1">我……究竟，為什麼要來這裡……？</BattleDialog>
+      <BattleDialog ID="DEATH_2">我還以為能搞定的……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">我有點……慌……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">我不會在這種事上分心的……我……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">……本來以為大家都能贏的。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">哦吼，該死的小不點，比我想像中的要強上一點點嘛。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">真是個幼稚的傢伙。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">感覺不錯嘛？其他人也要動作快！</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Yun_Fixer2">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">先下手為強，對吧？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">我或許只是個無名小卒，但我有和你們一戰的勇氣哦~</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">至少，這比找貓有趣多了吧？</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">如果有更強的傢伙過來，你們恐怕連1分鐘都撐不到喲？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">哇靠，連我們都打不過？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">你們還差得遠呢~</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">……真不該過來的，我早該聽他的勸……</BattleDialog>
+      <BattleDialog ID="DEATH_1">我還想，再往上爬……</BattleDialog>
+      <BattleDialog ID="DEATH_2">可……惡……氣死我了……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">不……不會吧……你，真，真的……死了？</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">沒想到圖書館這麼可怕……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">現在逃跑，也許還來得及？</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">哈！這太簡單了！</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">有破綻~失禮了！</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">哈……碰巧打中了！</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Yun_Fixer">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">唔……雖然挺想互嗆幾聲，但這樣好像不太好……</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">哎呀，原來圖書館有這麼大嗎……？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">他們看起來比預想中的要強……不過我們還是能贏的，對吧？</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">這差事再簡單不過，大家太高估對手了！</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">白緊張了……很容易就能搞定嘛！</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">有了這些書……說不定能換到一大筆錢！</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">我……為……為什麼……會遇上這種事……</BattleDialog>
+      <BattleDialog ID="DEATH_1">結果，我還是沒能，爬上去……</BattleDialog>
+      <BattleDialog ID="DEATH_2">我再也沒有精力，睜開眼睛了……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">不妙，情況對我們越來越不利了……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">……你，你們剛才看到了嗎？那個人……書……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">人這麼容易就死了……難以置信……</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">你們那副鳥樣能把寶物守護好嗎？哈哈！</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">你也配做我的對手！？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">沒點實力可當不成收尾人喲。</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Yun_Office">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">代表人還沒來嗎……？這該死的……</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">能拖多久是多久……我可不想跟他們正面交手。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">我們要一直打到什麼時候……？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">我這種性格，可不適合衝在前頭啊……</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">他們很快就會趕過來的……總之先加油吧……</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">什麼嘛，在代表人出面之前就解決了，真簡單啊!</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">只要把書拿走就行了嗎？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">在這種地方變成書也太不像話了！</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">呃，前面該不會還有更強的對手吧……？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">現在可以回去了嗎？</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">……我以為這次能搞定的……沒想到……</BattleDialog>
+      <BattleDialog ID="DEATH_1">我不要死……我還想活下去……</BattleDialog>
+      <BattleDialog ID="DEATH_2">我被耍了嗎……真不像話……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">沒時間猶豫了……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">如果不夠強壯，就該磨練速度……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">死了一位好同事……我該怎麼辦……？</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">我沒有惡意，對，對不起……</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">……好，可是，下一個該怎麼辦？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">如果發揮得好，我覺得我們能贏……？</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Zwei_Members">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">“您的盾牌”-Zwei，現在開始執行任務。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">這種水準的打鬥，我應付得了。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">你有信心打破我的防禦？那不妨一試。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">我不會後退的。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">這種氣氛……無論何時都會覺得恐怖。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">任務完成，拿上書立刻返回總部。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">任務並不艱巨。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">各位辛苦了，這樣就夠了吧？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">回去之後，還有堆積如山的文件需要整理……</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">以上，任務完成。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">我辛辛苦苦爬到這一步，可不是為了，這種結局……</BattleDialog>
+      <BattleDialog ID="DEATH_1">不，我不想死，讓我離開這裡……</BattleDialog>
+      <BattleDialog ID="DEATH_2">……直到最後一刻，我也不會拋下自己的尊嚴……</BattleDialog>
+      <BattleDialog ID="DEATH_3">對我來說……果真是力不從心呐……</BattleDialog>
+      <BattleDialog ID="DEATH_4">還沒能完成任務……抱歉了……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">我們必須把注意力集中在任務上。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">……為逝者默哀片刻，願你安息。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">有人……死了，即便如此，我們還要繼續戰鬥。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">會有時間哀悼的……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">我們必須接著打……</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">可以的話，請不要恨我。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">無論怎樣，你辛苦了。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">對上我，你應該更謹慎點。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">這只是我的任務罷了。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">我的任務已經完成了。</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Zwei_Member_Gray">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">“您的盾牌”-Zwei，為了守護賦予我們的一切，現在開始執行任務。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">雖然有點緊張……不過沒關係。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">防禦不能和逃避劃上等號。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">任務完成，拿上書立刻返回總部。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">任務並不艱巨。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">各位辛苦了，這樣就夠了吧？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">回去之後，還有堆積如山的文件需要整理……</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">以上，任務完成。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">我辛辛苦苦爬到這一步，可不是為了，這種結局……</BattleDialog>
+      <BattleDialog ID="DEATH_1">不，我不想死，讓我離開這裡……</BattleDialog>
+      <BattleDialog ID="DEATH_2">……直到最後一刻，我也不會拋下自己的尊嚴……</BattleDialog>
+      <BattleDialog ID="DEATH_3">對我來說……果真是力不從心呐……</BattleDialog>
+      <BattleDialog ID="DEATH_4">還沒能完成任務……抱歉了……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">我們必須把注意力集中在任務上。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">……為逝者默哀片刻，願你安息。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">有人……死了，即便如此，我們還要繼續戰鬥。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">會有時間哀悼的……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">我們必須接著打……</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">可以的話，請不要恨我。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">無論怎樣，你辛苦了。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">對上我，你應該更謹慎點。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">這只是我的任務罷了。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">我的任務已經完成了。</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Zwei_Member_Yellow">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">“您的盾牌”-Zwei，準備出擊！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">我們一定能做好！大家加油啊！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">圖書館可真是個奇妙的地方。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">任務完成，拿上書立刻返回總部。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">任務並不艱巨。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">各位辛苦了，這樣就夠了吧？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">回去之後，還有堆積如山的文件需要整理……</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">以上，任務完成。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">我辛辛苦苦爬到這一步，可不是為了，這種結局……</BattleDialog>
+      <BattleDialog ID="DEATH_1">不，我不想死，讓我離開這裡……</BattleDialog>
+      <BattleDialog ID="DEATH_2">……直到最後一刻，我也不會拋下自己的尊嚴……</BattleDialog>
+      <BattleDialog ID="DEATH_3">對我來說……果真是力不從心呐……</BattleDialog>
+      <BattleDialog ID="DEATH_4">還沒能完成任務……抱歉了……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">我們必須把注意力集中在任務上。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">……為逝者默哀片刻，願你安息。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">有人……死了，即便如此，我們還要繼續戰鬥。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">會有時間哀悼的……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">我們必須接著打……</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">可以的話，請不要恨我。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">無論怎樣，你辛苦了。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">對上我，你應該更謹慎點。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">這只是我的任務罷了。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">我的任務已經完成了。</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Zwei_Member_Orange">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">“您的盾牌”-Zwei……準備作戰。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">這裡有不少可疑之處……</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">狀態良好，我還能堅持下去。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">任務完成，拿上書立刻返回總部。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">任務並不艱巨。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">各位辛苦了，這樣就夠了吧？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">回去之後，還有堆積如山的文件需要整理……</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">以上，任務完成。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">我辛辛苦苦爬到這一步，可不是為了，這種結局……</BattleDialog>
+      <BattleDialog ID="DEATH_1">不，我不想死，讓我離開這裡……</BattleDialog>
+      <BattleDialog ID="DEATH_2">……直到最後一刻，我也不會拋下自己的尊嚴……</BattleDialog>
+      <BattleDialog ID="DEATH_3">對我來說……果真是力不從心呐……</BattleDialog>
+      <BattleDialog ID="DEATH_4">還沒能完成任務……抱歉了……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">我們必須把注意力集中在任務上。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">……為逝者默哀片刻，願你安息。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">有人……死了，即便如此，我們還要繼續戰鬥。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">會有時間哀悼的……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">我們必須接著打……</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">可以的話，請不要恨我。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">無論怎樣，你辛苦了。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">對上我，你應該更謹慎點。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">這只是我的任務罷了。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">我的任務已經完成了。</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Hook_Office">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">這東西，被打到可是會很痛的喲……要不要嘗嘗看？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">他們好~好可怕呀~我的武器都差點拿不穩了~</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">你還站得穩嗎？該不會怕得發抖了吧？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">只要挨上一拳，心情就會變舒暢的。當然是指我揍你啦。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">該怎麼砍呢……</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">拜託~別開玩笑了~真正要殺的另有其人吧？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">這種書，哪怕撕碎了踩在腳底，也不會有什麼成就感的……</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">真讓人哭笑不得，這麼快就結束了？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">撕爛這些書，心情就會好點了吧？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">早知道是這樣的地方，我當初就不跟過來了。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">我怎麼能，輸在……這種地方……！</BattleDialog>
+      <BattleDialog ID="DEATH_1">哈哈！哈……挨了一拳……</BattleDialog>
+      <BattleDialog ID="DEATH_2">痛死我了……這種感覺，真討厭，靠……</BattleDialog>
+      <BattleDialog ID="DEATH_3">這些傢伙，強得離譜啊……</BattleDialog>
+      <BattleDialog ID="DEATH_4">疏忽大意是我的錯，可是，可是……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">嗯？剛才是誰死了？真丟臉。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">我就知道你會死~</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">哎呦，你就這麼點本事嗎……可真叫人“呸”服啊。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">幹嘛要難過呢？反正那人跟我沒什麼關係。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">棒極了，這下我的動作幅度就能更大啦！</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">哈哈！我剛才假裝嚇破膽的樣子很好玩吧！？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">這麼弱，早知道就先讓你幾招了。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">你應該能躲開吧~啥？這就翹辮子了？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">一碰就爆……不知道的還以為你是小水球呢？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">沒意思~真沒意思，就沒有更能打的了嗎？</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Pierre_freinds">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">哎呀……別緊張，我下刀很輕的，不會痛哦。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">這些都是什麼鬼？唔，雖然長得像食材……</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">從這些人的肚子裡能掏出什麼餡呢？你們就不好奇嗎？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">到處都是嚇壞了的兩腳羊。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">今天早上我只吃了三碗……現在口水都要流下來了。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">弱小的食材往往不好嚼。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">哎~真想快點回去吃熱騰騰的鮮肉大餐！</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">真是一場鮮美的戰鬥……咻，餓了……</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">口感和後巷的食材完全不一樣。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">狩獵結束後，要趕緊吃口肉打起精神……</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">呃……沒想到……我反而被……</BattleDialog>
+      <BattleDialog ID="DEATH_1">輸給這些肉塊……太丟臉了……</BattleDialog>
+      <BattleDialog ID="DEATH_2">要變成書了……真不好受……</BattleDialog>
+      <BattleDialog ID="DEATH_3">呵……！我也還差得遠吧……</BattleDialog>
+      <BattleDialog ID="DEATH_4">再也沒機會和你們切磋了，有點難過……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">那個傢伙死了，不過我沒什麼感覺。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">有點可惜，你本來可以成為很棒的食材。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">不管你是不是我的同夥，反正我一定要吃到肉!</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">居然一碰就倒，真不像話。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">弱小的傢伙，味道通常不會很好。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">不管是肉還是人，總歸會有自己的弱點。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">看準肉的要害，免得被它的小爪子抓到。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">下一次，請派更精緻的肉來招待我吧。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">這肉質……實在是太軟了。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">本來想再幫你雕幾朵花的……真可惜。</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Staff_Fixer">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">不用擔心，對手看起來很弱……</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">這種恐怖的氣氛，我可享受不來……</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">事已至此，請多指教。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">我會好好配合大家。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">千萬不要魯莽行事。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">真是一場激烈的戰鬥。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">這些東西是我們憑實力贏來的，感覺真棒。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">戰鬥已經結束了，但以防萬一，大家還是要小心。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">結果雖然是我方得勝，但你們也辛苦啦。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">真是一段不錯的經歷。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">我的力量，還遠遠不夠……抱歉……</BattleDialog>
+      <BattleDialog ID="DEATH_1">我太小看對手的實力了……</BattleDialog>
+      <BattleDialog ID="DEATH_2">我的判斷，錯得一塌糊塗……</BattleDialog>
+      <BattleDialog ID="DEATH_3">我真不像話……</BattleDialog>
+      <BattleDialog ID="DEATH_4">我……我到現在還不清楚，自己的實力究竟如何……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">我們能搞定吧……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">我現在，非常混亂……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">這種情況……我該怎麼應對……？</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">怎麼會這樣……難道我們的力量還不夠……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">……抱歉。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">我不想輸給任何人……！</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">現在還不能放鬆警惕。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">像這樣慢慢來，我們一定能贏。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">這並不是什麼難事。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">沒剩幾個了，再加把勁。</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Third_Rate_Fixer">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">哼，真麻煩……打兩下意思意思就好了吧~</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">除了這件事以外，我還有很多工作要幹……麻煩動作快點。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">我們要對付這些小傢伙呀……真麻煩。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">我們還要趕時間辦正事呢~快點開始吧。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">今天真是提不起精神……什麼？工作啊……會好好幹的。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">這場戰鬥……馬馬虎虎吧，還算能看~</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">回去之後又會接到類似的委託吧，唉……煩死人了。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">和其他委託相比，這也太簡單了……~</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">真麻煩……快走吧，書什麼的，隨便拿幾本就好。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">我們會好好利用這些書。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">真是丟臉，我難道要死在這種地方，嗎……</BattleDialog>
+      <BattleDialog ID="DEATH_1">早知道，應該好好跟大家道別的……</BattleDialog>
+      <BattleDialog ID="DEATH_2">我一直都在努力活下去……該死的……</BattleDialog>
+      <BattleDialog ID="DEATH_3">這段時間的努力……全都白費了……</BattleDialog>
+      <BattleDialog ID="DEATH_4">就這樣，結束了嗎……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">唔……你表現得很好。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">……情況好像越來越危險了？</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">我沒那麼驚訝，也沒那麼悲傷。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">打倒敵人才是最重要的……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">對這種事情早就司空見慣了，我還真是個冷漠的傢伙呢。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">既然互相看不順眼，那你早該退場了……</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">我可是給過你好好表現的機會了……說真的，你還蠻不錯的。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">你太弱了，這沒什麼好驚訝的。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">這傢伙，這麼快就體力不支了……辛苦啦……~</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">還剩幾個……？呼，真麻煩……</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="AX">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">這把斧頭很美味喲～</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">竟然要從這些廢物手裡搶東西。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">我的斧子可沒那麼好接哦？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">一口氣砍翻這些小鬼吧！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">空氣中彌漫著血腥，這種感覺真棒。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">這就贏了，沒什麼感覺。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">你們真的是一群了不起的傢伙？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">贏得這麼爽快，情不自禁地想要高歌一曲了~</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">他們大概是某種分享書籍的志願組織……好像不太可能哦？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">儘管有點對不起那些變成書的傢伙，不過還能怎麼辦呢！？</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">哎……怎麼會這樣……！</BattleDialog>
+      <BattleDialog ID="DEATH_1">我不能就這麼……他們一定用了卑鄙的手段！</BattleDialog>
+      <BattleDialog ID="DEATH_2">不可能……我怎麼會輸……</BattleDialog>
+      <BattleDialog ID="DEATH_3">被一群書呆子砍翻了？這一定是在，做夢……</BattleDialog>
+      <BattleDialog ID="DEATH_4">我怎麼能死，我還沒殺光他們！！！</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">那些瘋子……小心別死了……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">啊，大、大哥……是誰殺的？是誰殺的！？</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">同伴就這麼走了～有點難過。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">我總不能替你挨打。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">要是我的動作能再快一點……</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">就這麼點本事還敢說大話？我都覺得不好意思了。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">嘁，一群病懨懨的傢伙，能守住什麼？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">這種攻擊方式果然有奇效。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">這些司書真的就像紙一樣，一下子就消失了嗎？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">砍翻這些討人厭的小鬼並不是什麼難事。</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Hook+Pierre_Hook">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">這小傢伙的武器，看起來也挺帥氣的。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">我們應該挺合得來吧，朋友？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">這玩意，被砍到的話會很痛喔……我們一起上吧？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">喲，你也喜歡砍人？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">嗯？我也能成為食材？哈，這話倒是新鮮！</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">哎呀，能跟這位投緣的朋友一起共事，我們哪還需要擔心會出問題呢？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">23號巷嗎……正合我意！</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">沒想到除了我們事務所的同事外，還能有這麼投緣的人……神奇吧！？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">撕爛這些書，心情就會好點了吧？來，我們一起撕個痛快！</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">我怎麼能，輸在……這種地方……！</BattleDialog>
+      <BattleDialog ID="DEATH_1">哈哈！哈……挨了一拳……</BattleDialog>
+      <BattleDialog ID="DEATH_2">疼死我了……這種感覺，真討厭，操……</BattleDialog>
+      <BattleDialog ID="DEATH_3">這些傢伙，強得離譜啊……</BattleDialog>
+      <BattleDialog ID="DEATH_4">疏忽大意是我的錯，可是，可是……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">唉……我還以為那是個不錯的傢伙呢，沒想到也是外強中乾。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">難道僅僅是外表看起來強悍嗎？……太遺憾了。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">那個人看起來還挺像那麼一回事的。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">因為期望太大，所以失望才會這麼大嗎？</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">哎呦喂，反正那個人跟我沒有多少關係。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">我們配合得很好！來擊個掌吧？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">不管是書還是什麼別的東西，一起撕碎他們吧！</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">把肉拍散……我也想試試！</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Hook+Pierre_Pierre">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">這傢伙雖然是偶然間碰上的……但總感覺我們會很合得來？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">我們強強聯手，很快就能解決戰鬥吧？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">你也喜歡幹這個？你的興趣愛好真的很讚哦。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">不知怎麼的~總感覺能把他們統統殺光。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">你身上也有好香的味道欸！？</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">是叫“吊鉤事務所”嗎……名字也很合我意呢。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">這趟狩獵我滿意得很，這傢伙雖然還年輕，但本事可真不小。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">還不夠……我們一起去搞點新食材吧？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">無論什麼都行，再不讓我撕些東西，我的心就要裂開了。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">呃……沒想到……我反而被……</BattleDialog>
+      <BattleDialog ID="DEATH_1">輸給這些肉塊……太丟臉了……</BattleDialog>
+      <BattleDialog ID="DEATH_2">要變成書了……真不好受……</BattleDialog>
+      <BattleDialog ID="DEATH_3">呵……！我也還差得遠吧……</BattleDialog>
+      <BattleDialog ID="DEATH_4">再也沒機會和你們切磋了，有點難過……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">這就死了啊，不過我對那傢伙還挺滿意的……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">啊……我還以為久違地碰上了投緣的人呢。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">雖然很遺憾，但這傢伙實在是太弱了。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">別擔心，我會殺光他們。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">這傢伙的武器看起來很厲害。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">好久沒跟其他人合作了……我好興奮呐。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">下次我也試試用吊鉤把人掛起來吧？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">沒想到我們會這麼合拍。</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Fixers_Staff">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">難道我非得跟那種混混組隊嗎？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">請，不要妨礙我。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">唉……真是個無知的傢伙。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">你吹牛倒是挺有一套，但要是真的打起架來呢？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">我就不搭理那邊了。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">我們之間的配合，也不算太糟。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">我要的東西，我自己會去找。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">幹得不錯，但我們最好不要再見面了。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">我們都堅持到了最後……算了，以後不會再見面的。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">我的力量，還遠遠不夠……抱歉……</BattleDialog>
+      <BattleDialog ID="DEATH_1">我太小看對手的實力了……</BattleDialog>
+      <BattleDialog ID="DEATH_2">我的判斷，錯得一塌糊塗……</BattleDialog>
+      <BattleDialog ID="DEATH_3">我真不像話……</BattleDialog>
+      <BattleDialog ID="DEATH_4">我……我到現在還不清楚，自己的實力究竟如何……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">這就是自由散漫的後果，我早知道會變成這樣。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">搞什麼……？話說得漂亮，結果一點忙都幫不上！</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">果然不能放鬆警惕……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">沒關係，只靠我自己……也可以做到……</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">如果一直像你那樣拖拖拉拉……</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">如果不是某人一直在拖延時間，這會結束得更快。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">你明明能很快處理好，那為什麼還要拖拖拉拉的？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">唉……既然我的隊友是那種態度，那我要再加把勁才行。</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Fixers_Third">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">我還以為只有對面是書呆子呢……沒想到我們這邊也有一個！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">呵，真是的，我辦事可比你強上百倍，請專心戰鬥喲~</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">一直像你那樣呆板地活著，人生可就沒有樂趣了，朋友~</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">就不能不跟這傢伙組隊嗎？真麻煩。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">哎呦，真麻煩。那就組個隊意思意思吧，嗯？</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">跟你合作……馬馬虎虎吧，還算能看~</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">什麼嘛……我們好像挺合得來喲？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">那就不要再見面了吧~</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">多虧了我，我們才能贏~你好像完全沒有意識到嘛。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">真是丟臉，我難道要死在這種地方，嗎……</BattleDialog>
+      <BattleDialog ID="DEATH_1">早知道，應該好好跟大家道別的……</BattleDialog>
+      <BattleDialog ID="DEATH_2">我一直都在努力活下去……該死的……</BattleDialog>
+      <BattleDialog ID="DEATH_3">這段時間的努力……全都白費了……</BattleDialog>
+      <BattleDialog ID="DEATH_4">就這樣，結束了嗎……</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">循規蹈矩的下場就是這樣~</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">沒什麼，不管誰死，我都不在乎~</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">你這小傢伙，也只會耍耍嘴皮子囉。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">我都能處理好，你就放心吧~</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_4">唔……你也表現得很好嘛。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">吵吵鬧鬧惹人心煩的傢伙……還蠻不錯的。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">只有從容不迫，才能變得如此強大~</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">這可不是什麼卑劣的手段，我只是稍微比你機靈了點~</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="AX+Dogs_AX">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">小狗狗，不想被砍斷腿就別在這裡學狗叫～</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">砍一下會很疼吧……要不要試試？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">哎～相逢便是緣，互相幫個忙吧，為什麼要擺出那種表情？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">你不想找死吧？那自己看著辦囉。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">哈，小狗狗也挺有能耐的。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">到頭來我們都挺看不慣對方嘛。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">罷了，我們拿走自己的那份就好。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">正因為有我幫忙，我們才能贏哦，現在能別擺出那副臭臉了吧？</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">哎……怎麼會這樣……！</BattleDialog>
+      <BattleDialog ID="DEATH_1">我不能就這麼……他們一定用了卑鄙的手段！</BattleDialog>
+      <BattleDialog ID="DEATH_2">不可能……我怎麼會輸……</BattleDialog>
+      <BattleDialog ID="DEATH_3">被一群書呆子砍翻了？這一定是在，做夢……</BattleDialog>
+      <BattleDialog ID="DEATH_4">我怎麼能死，我還沒殺光他們！！！</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">那些瘋子……小心別死了……</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_1">啊，大、大哥……是誰殺的？是誰殺的！？</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_2">同伴就這麼走了～有點難過。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_3">我總不能替你挨打。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_4">要是我動作能再快一點……</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_5">這就倒下了？真是出乎意料。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_6">可憐的傢伙，這麼快就歸西了～</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_7">唉……幫不上忙的狗東西。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_8">喲，想跑？現在才跑是不是太晚了點？</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_9">呵呵～我就知道他會死。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">再這樣下去，我可要把風頭全搶光了喲，小狗狗？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">看到沒？我比某些只知道狂吠的傢伙強多了。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">根本是只有我一個人在出力嘛～</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="AX+Dogs_Dogs">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">那種瘋子竟然會站在我這邊……葫蘆裡賣的什麼藥？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">大哥他們一定來過這裡……</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">這個不要臉的東西，居然會用斧頭。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">沒有那種瘋子，我照樣會贏。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">喂，你！你知道我們大哥去了哪裡吧！？說話啊！！！</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">哈，一幫沒用的廢物。大哥！小弟我這就來。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">合作什麼的，這是最後一次，我從來都不需要你的幫助。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">你這弱雞，還想幹架嗎！？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">那個瘋子打完了還在廢話，就不能省點口水嗎？</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">啊……！心裡，真不是滋味……</BattleDialog>
+      <BattleDialog ID="DEATH_1">呃……我不想就這麼死掉……</BattleDialog>
+      <BattleDialog ID="DEATH_2">你，你們……別他媽太囂張……！</BattleDialog>
+      <BattleDialog ID="DEATH_3">那樣打人不是耍賴嗎！？他媽的……幹！</BattleDialog>
+      <BattleDialog ID="DEATH_4">我真是個，白癡……</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">唉……幫不上忙的東西……</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_1">這麼弱的傢伙，是怎麼進來的……？</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_2">到頭來這傢伙只會耍嘴皮子。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_3">趕緊死了滾吧。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_4">無所謂，反正是個礙事的傢伙。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_5">你要是死在這裡，回去我們鐵定會挨大哥的罵！</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_6">大夥小心！媽的，情況不妙。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_7">……啊，只要死的不是我就好。</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_8">少了那個弱雞，我們照樣能贏……</BattleDialog>
+      <BattleDialog ID="SPECIAL_EVENT_9">親眼送走我的弟兄，鼻子難免會一酸。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">與其交給那種瘋子，不如讓我儘快收拾掉。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">不能相信那些自以為是的傢伙。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">那些傢伙根本幫不上忙……感覺就像我一個人在戰鬥。</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+</BattleDialogRoot>

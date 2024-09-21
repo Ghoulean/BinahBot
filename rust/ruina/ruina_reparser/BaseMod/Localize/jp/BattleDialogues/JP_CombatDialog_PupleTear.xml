@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GroupName>PupleTear</GroupName>
+  <Character ID="PupleTear">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">どれどれ……お手並み拝見といくかね？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">図書館がどれだけ成長したのか楽しみだな。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">まだ余裕はあるから、ゆっくり始めるとするか。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">期待して来たのにまだなのか……。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">面白くはあったよ。でも……まだ遠いみたいだね。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">あぁ……段々と着実に強くなってるね。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">まだちゃんと、自分のことが把握できてないみたいだね？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">ふむ、期待してたのよりは弱いね。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">これほどまで私の攻撃を防げるだなんて素晴らしいね。でも惜しいことになっちゃったか。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">また会うならもっと準備しないとね？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">それでも結構やれるんだね。ここまで追いやられるのは久しぶりだよ。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_5">あらぁ、そんな大言壮語してたのに……本当にここまでなのかい？</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="PupleTear_MeetBinah">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">まぁ……あなたがここに居ても不思議じゃないか。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">もう何度も会ったし……。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">あんな存在が居たとしても、結局変わりはないか。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">はは……本当に興味深いね……。</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">今度は違うと思ってたよ。</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="PupleTear_MeetGebura">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">カーリーと同じ存在というにもなんだよね。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">昔の教えを覚えてるのか……試してみるか？</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">カーリー。お前が教えを乞うたやつと戦うのは、流石にちょっとやりづらかったみたいだな。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">それなりによく覚えてるみたいだね……。</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">やっぱりあの時代の力とは違うか……。</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="PupleTear_MeetRoland">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">そのまま何も言うな。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">それなりに上手くやってけてるな。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">これがお前たちのベストかぁ？</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">……うん。これくらいならお前を送った価値があるな。</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">あんたもホンット……随分弱ったねぇ。</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Binah_MeetPupleTear">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">ああ。そして私もまた、お前を識っているのさ。</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">矢張り……驚か不るを得ないな。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">…</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">お前たちが耐えるには力量が足りなかっただけ。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">大丈夫だよ。安心してお睡り。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">然れども却々長い事耐えてくれたな。</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Gebura_MeetPupleTear">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">……要らないことは言わない。</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">…</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">……強い。そして私と似た……。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">もっと耐えられるよな？</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">……特色だからって、そう違いはない。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">焦るな。失敗に繋がるだけだ。</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Roland_MeetPupleTear">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">……はぁ。</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">……心配して訪ねてきたなら余計な世話だったな。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">…</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">……落ち込むな。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">このまま押していこう。</BattleDialog>
+    </Type>
+  </Character>
+</BattleDialogRoot>

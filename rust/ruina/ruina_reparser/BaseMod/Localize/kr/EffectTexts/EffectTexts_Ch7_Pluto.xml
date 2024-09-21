@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleEffectTextRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <effectTextList>
+    <BattleEffectText ID="Pluto_Contracted_1">
+      <Name>계약: 자유</Name>
+      <Desc>막 시작시 원래 비용이 3 이하인 책장의 비용이 0~3의 값 중 무작위로 변함. 이번 막에 비용이 {0}인 전투 책장을 사용했다면 막 종료시 체력이 25% 감소.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Pluto_Contracted_2">
+      <Name>계약: 증폭</Name>
+      <Desc>비용이 {0}(막 시작시 0~3중 무작위로 결정)인 전투 책장의 위력이 3 증가한다. 그 외의 전투 책장은 위력이 3 감소한다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Pluto_Contracted_3">
+      <Name>계약: 신속</Name>
+      <Desc>막 시작시 신속 3을 얻는다. 이번 막에 진행한 일방 공격의 횟수만큼 다음 막에 허약, 무장 해제를 얻는다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Pluto_Contracted_4">
+      <Name>계약: 힘</Name>
+      <Desc>막 시작시 힘 2를 얻는다. 반격을 제외하고 원래 공격 주사위가 2개 이상인 전투 책장을 사용하면 다음 막에 흐트러짐.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Pluto_Contracted_5">
+      <Name>계약: 빛</Name>
+      <Desc>막 시작시 빛을 최대로 회복한다. 막 종료시 남아있는 빛에 비례하여 체력 피해를 입는다. (피해량: 최대체력의 (남은 빛×10)%</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Pluto_Barrier">
+      <Name>봉인의 결계</Name>
+      <Desc>행동 불가. 사서가 공격 가능. 흐트러짐 상태가 되면 이 상태가 해제된다.</Desc>
+    </BattleEffectText>
+
+    <!-- 플루토 뒤틀림-->
+    <BattleEffectText ID="UnfairProtect">
+      <Name>부당계약: 보호</Name>
+      <Desc>이 캐릭터는 '부당한 계약: 보호'를 가지고 있다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="UnfairAtk">
+      <Name>부당계약: 공격</Name>
+      <Desc>이 캐릭터는 '부당한 계약: 공격'을 가지고 있다.</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="UnfairLight">
+      <Name>부당계약: 빛</Name>
+      <Desc>이 캐릭터는 '부당한 계약: 빛'을 가지고 있다.</Desc>
+    </BattleEffectText>
+
+  </effectTextList>
+</BattleEffectTextRoot>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- 푸른 잔향 1차 오스왈드 전투 책장 목록-->  
+  <Card ID="703501">
+    <Name>평타 즐겁게 놀아봅시다~</Name>
+    <Artwork>Oswald_Show</Artwork>
+    <Rarity>Common</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="H" EffectRes="Oswald_H" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="H" EffectRes="Oswald_H" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703502">
+    <Name>가드 깜짝 놀랄 거에요!?</Name>
+    <Artwork>Oswald_Atk</Artwork>
+    <Rarity>Rare</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Oswald_G" Script="oswald_recoverhp5pw" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Oswald_G" Script="oswald_recoverhp5pw" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Standby" Detail="Hit" Motion="S2" EffectRes="" Script="paralysis1atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703503">
+    <Name>회피 펑!~ 퍼펑!!</Name>
+    <Artwork>Oswald_Atk</Artwork>
+    <Rarity>Rare</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="Near" Cost="0" />
+    <Script>oswald_firstplquickendu</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="oswald_poweruplast1pw" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="oswald_poweruplast1pw" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Hit" Motion="Z" EffectRes="Oswald_Z" Script="oswald_seal1atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703504">
+    <Name>강공격 받아보세요~!</Name>
+    <Artwork>Oswald_Atk</Artwork>
+    <Rarity>Rare</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="Near" Cost="0" />
+    <Script>oswald_firstplstr</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="9" Dice="12" Type="Atk" Detail="Hit" Motion="J" EffectRes="Oswald_J" Script="oswald_destroyallatk" ActionScript="Oswald_StrongVert" Desc="" />
+      <Behaviour Min="6" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="Oswald_G" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703505">
+    <Name>원거리 공격 뛰어넘어볼까요?</Name>
+    <Artwork>Oswald_Atk</Artwork>
+    <Rarity>Rare</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="Far" Cost="0" />
+    <Script>oswald_allpl</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="F" EffectRes="FX_Mon_Oswarld_FireRing" Script="burn1atk" ActionScript="Oswald_FireRing" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="F" EffectRes="FX_Mon_Oswarld_FireRing" Script="burn1atk" ActionScript="Oswald_FireRing" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="F" EffectRes="FX_Mon_Oswarld_FireRing" Script="burn1atk" ActionScript="Oswald_FireRing" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703506">
+    <Name>현혹</Name>
+    <Artwork>Oswald_Attract</Artwork>
+    <Rarity>Unique</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="Far" Cost="0" />
+    <Script>oswald_daze</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="1" Type="Atk" Detail="Hit" Motion="S1" EffectRes="Oswald_Daze" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703507">
+    <Name>광역</Name>
+    <Artwork>Oswald_Strong</Artwork>
+    <Rarity>Unique</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="FarArea" Cost="0" Affection="Team"/>
+    <Script>oswald_area</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="20" Dice="20" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="oswald_break8areaatk" ActionScript="Oswald_AreaAtk" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <!-- 칼날씨-->
+  <Card ID="703511">
+    <Name>가벼운 투척</Name>
+    <Artwork>Oswald_Show</Artwork>
+    <Rarity>Common</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="Far" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="OswaldBlade_F" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="OswaldBlade_F" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703512">
+    <Name>X자 베기</Name>
+    <Artwork>Oswald_Show</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="" Script="bleeding2atk" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="" Script="bleeding2atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703513">
+    <Name>단두대</Name>
+    <Artwork>Oswald_Show</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="12" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="oswald_destroy1dice" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Standby" Detail="Slash" Motion="J" EffectRes="" Script="bleeding1atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703514">
+    <Name>연속 칼 던지기</Name>
+    <Artwork>Oswald_Show</Artwork>
+    <Rarity>Rare</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="Far" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="OswaldBlade_F" Script="oswald_power1bleed1pw" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="OswaldBlade_F" Script="oswald_power1bleed1pw" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="OswaldBlade_F" Script="oswald_power1bleed1pw" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="OswaldBlade_F" Script="oswald_str1quick1atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <!-- 인어씨-->
+  <Card ID="703521">
+    <Name>회복 격려의 아리아</Name>
+    <Artwork>Oswald_Show</Artwork>
+    <Rarity>Common</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="Near" Cost="0"/>
+    <Script>oswald_aria_recover</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="10" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703522">
+    <Name>보호 부여 보호의 아리아</Name>
+    <Artwork>Oswald_Show</Artwork>
+    <Rarity>Common</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="Far" Cost="0"/>
+    <Script>oswald_aria_protection</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Hit" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703523">
+    <Name>힘 부여 용기의 아리아</Name>
+    <Artwork>Oswald_Show</Artwork>
+    <Rarity>Common</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="Far" Cost="0"/>
+    <Script>oswald_aria_strength</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Hit" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703524">
+    <Name>소름 끼치는 목소리</Name>
+    <Artwork>Oswald_Show</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="Far" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="oswald_break8atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Hit" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703525">
+    <Name>광역 공격</Name>
+    <Artwork>Oswald_Show</Artwork>
+    <Rarity>Rare</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="FarAreaEach" Cost="0" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="oswald_break4areaatk" ActionScript="OswaldMermaid_AreaAtk" Desc="" />
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="oswald_break4areaatk" ActionScript="OswaldMermaid_AreaAtk" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="703526">
+    <Name>소름 끼치는 목소리(브레멘전투용)</Name>
+    <Artwork>Oswald_Show</Artwork>
+    <Rarity>Common</Rarity>
+    <Keyword></Keyword>
+    <Spec Range="Far" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="oswald_break8atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Hit" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+</DiceCardXmlRoot>

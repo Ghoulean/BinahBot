@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GroupName>Pierre's Meat Pies</GroupName>
+  <Character ID="Pierre">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">Oh my, ingredients end up getting overly tender if we drag on too much!</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">Woooow~ I wonder how you guys taste? Can I cut a chunk off of you?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">Hey, you there! You smelled so nice when I passed by you just before.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">Tsk, all I got were books! These don’t even look chewy!</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">Hmm… No, no. Maybe we can make brand new ingredients out of these?</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">Hah…! I never thought… I’d be an ingredient… myself once in my life.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">Jack… You can’t leave me like this. You should’ve been careful. You promised to be with me.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">Waaay to weak, aren’t you! I bet the taste won’t be any good, either.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">Meh, you can’t just turn into a book. Should I try making book steak or something?</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">I should’ve flaked a few slices off you if I knew you’d turn into something like this!</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">…I wasn’t planning to join ‘The Eight Chefs’ alone anyway. It’s… better off this way.</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Jack">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">…You guys are humans, right? Even if you aren’t, we welcome new ingredients.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">It’s for the sake of Pierre’s goal…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">Careful not to bruise ‘em too much… Gotta keep the ingredients in top quality.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">Thank goodness we won, Pierre. Let’s take the stuff and go back, shall we?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">If we happen to find a good book here, we’ll grab the attention of ‘The Eight Chefs’ in no time, right?</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">Sorry, Pierre… I should have been… stronger…</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">…What about the promise you made with me.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">What would a pie made out of this guy taste like…?</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">Chopping you feels way different from the usual ingredients we find in the Backstreets.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">You smelled nice just like Pierre said. What a shame.</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">If I can’t help you any longer, then it might be better off for me to follow you there.</BattleDialog>
+    </Type>
+  </Character>
+</BattleDialogRoot>

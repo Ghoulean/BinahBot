@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GroupName>RustyChainGroup</GroupName>
+  <Character ID="Jikan">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">각자 알아서들 잘 해.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">벌써부터 내빼는 건 아니지?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">이번 일도 실패한다면 모두 흑운회에게 목이 날아갈 테니…</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">검계의 도움 따위 필요 없겠는데?</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">이건 아니야… 저녀석들이… 비겁한 수를…</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">젠장… 대장은 왜 저런 놈을 붙여준 거야?</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">이래서 겁 많은 새끼들은 별로인데…</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">똑바로 안 해? 나 혼자 다 처리하고 있잖아.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">죽어!!! 하하! 물러터졌네.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">이런 것들도 질병급이나 된다고…</BattleDialog>
+    </Type>
+  </Character>
+
+  <Character ID="RustyChainGroup">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">흑운회가 뭐라고 우리가 이런 일까지…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">약점 잡는 거라니까 너무 불평하지 마.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">지칸 말대로 이번 일에 실패하면 우리 조직도 안전하진 못할 거야.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">야! 다들 정신이나 차려. 불평할 때야?</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">약해 빠진 녀석들이네. 힘 들일 필요도 없었어.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_0">고작 이런 걸로 흑운회의 약점을 잡을 수 있다고?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_0">뻐근하네… 돌아가자.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">죽고 싶지 않아… 억울하다고…</BattleDialog>
+      <BattleDialog ID="DEATH_0">대체 얼마나 센 놈들인 거지…?</BattleDialog>
+      <BattleDialog ID="DEATH_0">역시 얕잡아 보고 들어오는 게 아니었어…</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">일이 더 귀찮아졌어.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">제대로 하는 새끼는 없는 거야?</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">차라리 흑운회와 정면으로 부닥치는 게 더 편했을 텐데.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">생각보다 빨리 끝나겠는데.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">끝이 없네… 언제 끝나는 거야?</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">꽤 끈질기게 버텼지만… 결국 애송이였을 뿐이지.</BattleDialog>
+    </Type>
+  </Character>
+
+</BattleDialogRoot>

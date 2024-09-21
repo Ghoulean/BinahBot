@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EmotionCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ 
+  <!-- 허수아비 -->
+  <EmotionCard ID="1">
+    <Name>ScareCrow_Wisdom</Name>
+    <State>Negative</State>
+    <Sephirah>Chesed</Sephirah>
+    <Level>2</Level>
+    <EmotionLevel>1</EmotionLevel>
+    <EmotionRate>-2</EmotionRate>
+    
+    <TargetType>SelectOne</TargetType>
+    <Script>scarecrow1</Script>
+  </EmotionCard>
+  
+  <EmotionCard ID="2">
+    <Name>Scarecrow_Harvest</Name>
+    <State>Positive</State>
+    <Sephirah>Chesed</Sephirah>
+    <Level>2</Level>
+    <EmotionLevel>1</EmotionLevel>
+    <EmotionRate>1</EmotionRate>
+    
+    <TargetType>SelectOne</TargetType>
+    <Script>scarecrow2</Script>
+  </EmotionCard>
+  
+  <EmotionCard ID="3">
+    <Name>Scarecrow_Rake</Name>
+    <State>Positive</State>
+    <Sephirah>Chesed</Sephirah>
+    <Level>2</Level>
+    <EmotionLevel>1</EmotionLevel>
+    <EmotionRate>3</EmotionRate>
+    
+    <TargetType>SelectOne</TargetType>
+    <Script>scarecrow3</Script>
+  </EmotionCard>
+
+  <!-- 나무꾼 -->
+  <EmotionCard ID="4">
+    <Name>LumberJack_Cut</Name>
+    <State>Negative</State>
+    <Sephirah>Chesed</Sephirah>
+    <Level>3</Level>
+    <EmotionLevel>2</EmotionLevel>
+    <EmotionRate>-1</EmotionRate>
+    
+    <TargetType>SelectOne</TargetType>
+    <Script>lumberjack1</Script>
+  </EmotionCard>
+
+  <EmotionCard ID="5">
+    <Name>LumberJack_Heart</Name>
+    <State>Positive</State>
+    <Sephirah>Chesed</Sephirah>
+    <Level>3</Level>
+    <EmotionLevel>1</EmotionLevel>
+    <EmotionRate>2</EmotionRate>
+    
+    <TargetType>SelectOne</TargetType>
+    <Script>lumberjack2</Script>
+  </EmotionCard>
+
+  <EmotionCard ID="6">
+    <Name>LumberJack_Tree</Name>
+    <State>Negative</State>
+    <Sephirah>Chesed</Sephirah>
+    <Level>3</Level>
+    <EmotionLevel>1</EmotionLevel>
+    <EmotionRate>-1</EmotionRate>
+    
+    <TargetType>SelectOne</TargetType>
+    <Script>lumberjack3</Script>
+  </EmotionCard>
+
+  <EmotionCard ID="7">
+    <Name>House_LionAtk</Name>
+    <State>Negative</State>
+    <Sephirah>Chesed</Sephirah>
+    <Level>4</Level>
+    <EmotionLevel>1</EmotionLevel>
+    <EmotionRate>0</EmotionRate>
+
+    <TargetType>SelectOne</TargetType>
+    <Script>waybackhome1</Script>
+  </EmotionCard>
+
+  <EmotionCard ID="8">
+    <Name>House_BigHouse</Name>
+    <State>Positive</State>
+    <Sephirah>Chesed</Sephirah>
+    <Level>4</Level>
+    <EmotionLevel>2</EmotionLevel>
+    <EmotionRate>0</EmotionRate>
+
+    <TargetType>All</TargetType>
+    <Script>waybackhome2</Script>
+  </EmotionCard>
+
+  <EmotionCard ID="9">
+    <Name>House_Home</Name>
+    <State>Positive</State>
+    <Sephirah>Chesed</Sephirah>
+    <Level>4</Level>
+    <EmotionLevel>2</EmotionLevel>
+    <EmotionRate>1</EmotionRate>
+
+    <TargetType>SelectOne</TargetType>
+    <Script>waybackhome3</Script>
+  </EmotionCard>
+  
+  <EmotionCard ID="10">
+    <Name>Ozma_Boom</Name>
+    <State>Negative</State>
+    <Sephirah>Chesed</Sephirah>
+    <Level>5</Level>
+    <EmotionLevel>2</EmotionLevel>
+    <EmotionRate>-2</EmotionRate>
+
+    <TargetType>SelectOne</TargetType>
+    <Script>ozma1</Script>
+  </EmotionCard>
+  
+  <EmotionCard ID="11">
+    <Name>Ozma_forgotten</Name>
+    <State>Negative</State>
+    <Sephirah>Chesed</Sephirah>
+    <Level>5</Level>
+    <EmotionLevel>2</EmotionLevel>
+    <EmotionRate>0</EmotionRate>
+
+    <TargetType>SelectOne</TargetType>
+    <Script>ozma2</Script>
+  </EmotionCard>
+  
+  <EmotionCard ID="12">
+    <Name>Ozma_Immortal</Name>
+    <State>Negative</State>
+    <Sephirah>Chesed</Sephirah>
+    <Level>5</Level>
+    <EmotionLevel>3</EmotionLevel>
+    <EmotionRate>0</EmotionRate>
+
+    <TargetType>All</TargetType>
+    <Script>ozma3</Script>
+  </EmotionCard>
+
+  <EmotionCard ID="13">
+    <Name>Oz_Emerald</Name>
+    <State>Positive</State>
+    <Sephirah>Chesed</Sephirah>
+    <Level>6</Level>
+    <EmotionLevel>2</EmotionLevel>
+    <EmotionRate>2</EmotionRate>
+
+    <TargetType>SelectOne</TargetType>
+    <Script>wizard1</Script>
+  </EmotionCard>
+
+  <EmotionCard ID="14">
+    <Name>Oz_Gift</Name>
+    <State>Negative</State>
+    <Sephirah>Chesed</Sephirah>
+    <Level>6</Level>
+    <EmotionLevel>3</EmotionLevel>
+    <EmotionRate>-1</EmotionRate>
+
+    <TargetType>SelectOne</TargetType>
+    <Script>wizard2</Script>
+  </EmotionCard>
+  <EmotionCard ID="15">
+    <Name>Oz_Control</Name>
+    <State>Positive</State>
+    <Sephirah>Chesed</Sephirah>
+    <Level>6</Level>
+    <EmotionLevel>3</EmotionLevel>
+    <EmotionRate>1</EmotionRate>
+
+    <TargetType>SelectOne</TargetType>
+    <Script>wizard3</Script>
+  </EmotionCard>
+</EmotionCardXmlRoot>

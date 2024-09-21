@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SceneEffect xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Dialogue ID="0">
+    <Bg Src="ch1_streetlight" />
+    <Filter Src="Continue" />
+    <Bgm Src="ch1_Calm1" Effect="On" PrevBgm="Off" />
+    <CharacterList>
+      <Character Name="산" Face="boon ham" Body="nomal" Pos="R1" Emotion="NONE" Telling="false">
+        <Active Effect="NORMAL" Ratio="0" />
+      </Character>
+      <Character Name="루루" Face="sorrow" Pos="L1" Emotion="NONE" Telling="false">
+        <Active Effect="NORMAL" Ratio="0" />
+      </Character>
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="1">
+    <Bg Src="None" />
+    <Filter Src="Continue" />
+    <Bgm Src="None" Effect="None" PrevBgm="Continue" />
+    <CharacterList>
+      <Character Name="루루" Face="sorrow" Pos="L1" Emotion="DOT" Telling="false" />
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="4">
+    <Bg Src="None" />
+    <Filter Src="1" />
+    <Bgm Src="None" Effect="None" PrevBgm="None" />
+    <CharacterList>
+      <Character Name="루루" Face="angry" Pos="L1" Emotion="ANNOY" Telling="false" />
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="7">
+    <Bg Src="None" />
+    <Filter Src="1" />
+    <Bgm Src="None" Effect="None" PrevBgm="None" />
+    <CharacterList>
+      <Character Name="루루" Face="sorrow" Pos="L1" Emotion="EXCLAIN" Telling="false" />
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="8">
+    <Bg Src="None" />
+    <Filter Src="1" />
+    <Bgm Src="None" Effect="None" PrevBgm="None" />
+    <CharacterList>
+      <Character Name="산" Face="nomal" Body="nomal" Pos="R1" Emotion="NONE" Telling="false" />
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="10">
+    <Bg Src="가로등" />
+    <Filter Src="1" />
+    <Bgm Src="ch2_Rain" Effect="FadeIn" PrevBgm="FadeOut" />
+    <CharacterList>
+      <Character Name="산" Face="big smile" Body="nomal" Pos="C" Emotion="NONE" Telling="false">
+        <Deactive Effect="NORMAL" Ratio="0" />
+      </Character>
+      <Character Name="루루" Face="angry" Pos="C" Emotion="NONE" Telling="false">
+        <Deactive Effect="NORMAL" Ratio="0" />
+      </Character>
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="15">
+    <Bg Src="None" />
+    <Filter Src="Continue" />
+    <Bgm Src="None" Effect="None" PrevBgm="Continue" />
+    <CharacterList />
+    <EffectSound>ch1_Buss</EffectSound>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="20">
+    <Bg Src="ch1_library_inside" />
+    <Filter Src="1" />
+    <Bgm Src="Lobby" Effect="FadeIn" PrevBgm="FadeOut" />
+    <CharacterList>
+      <Character Name="루루" Face="angry" Pos="C" Emotion="NONE" Telling="false">
+        <Deactive Effect="NORMAL" Ratio="0" />
+      </Character>
+      <Character Name="롤랑" Face="worry" Body="nomal" Pos="L2" Emotion="DOT" Telling="false">
+        <Active Effect="NORMAL" Ratio="0" />
+      </Character>
+      <Character Name="앤젤라" Face="normal" Body="nomal" Pos="R2" Emotion="NONE" Telling="false">
+        <Active Effect="NORMAL" Ratio="0" />
+      </Character>
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="22">
+    <Bg Src="None" />
+    <Filter Src="1" />
+    <Bgm Src="None" Effect="None" PrevBgm="None" />
+    <CharacterList>
+      <Character Name="롤랑" Face="sigh" Body="nomal" Pos="L2" Emotion="NONE" Telling="false" />
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="29">
+    <Bg Src="None" />
+    <Filter Src="1" />
+    <Bgm Src="None" Effect="None" PrevBgm="None" />
+    <CharacterList>
+      <Character Name="롤랑" Face="hogisim" Body="nomal" Pos="L2" Emotion="NONE" Telling="false" />
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="31">
+    <Bg Src="None" />
+    <Filter Src="1" />
+    <Bgm Src="None" Effect="None" PrevBgm="None" />
+    <CharacterList />
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="32">
+    <Bg Src="None" />
+    <Filter Src="1" />
+    <Bgm Src="None" Effect="None" PrevBgm="None" />
+    <CharacterList>
+      <Character Name="롤랑" Face="nomal" Body="nomal" Pos="L2" Emotion="NONE" Telling="false" />
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="33">
+    <Bg Src="ch1_library_entry2" />
+    <Filter Src="Blood_RIGHT" />
+    <Bgm Src="Bgm3" Effect="FadeIn" PrevBgm="FadeOut" />
+    <CharacterList>
+      <Character Name="앤젤라" Face="normal" Body="nomal" Pos="R2" Emotion="EXCLAIN" Telling="false">
+        <Active Effect="VIBE" Ratio="0.3257102" />
+      </Character>
+      <Character Name="롤랑" Face="angry" Body="nomal" Pos="C" Emotion="NONE" Telling="false">
+        <Deactive Effect="NORMAL" Ratio="0" />
+      </Character>
+      <Character Name="루루" Face="angry" Pos="L2" Emotion="NONE" Telling="false">
+        <Active Effect="NORMAL" Ratio="1" />
+      </Character>
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="35">
+    <Bg Src="None" />
+    <Filter Src="1" />
+    <Bgm Src="None" Effect="None" PrevBgm="None" />
+    <CharacterList>
+      <Character Name="앤젤라" Face="smile" Body="nomal" Pos="R2" Emotion="NONE" Telling="false" />
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <Dialogue ID="38">
+    <Bg Src="None" />
+    <Filter Src="1" />
+    <Bgm Src="None" Effect="None" PrevBgm="None" />
+    <CharacterList>
+      <Character Name="앤젤라" Face="sigh" Body="nomal" Pos="R2" Telling="false" />
+    </CharacterList>
+    <BgChangeState>Default</BgChangeState>
+  </Dialogue>
+  <CG Src="가로등" />
+  <storyBranch>None</storyBranch>
+</SceneEffect>

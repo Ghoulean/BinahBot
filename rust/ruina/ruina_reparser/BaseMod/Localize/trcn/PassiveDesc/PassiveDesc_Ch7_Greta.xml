@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <PassiveDesc ID="1303011">
+    <Name>變幻莫測</Name>
+    <Desc>每一幕開始時移除手中的書頁並將意圖使用的書頁置入手中
+自身的書頁費用為0</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1303012">
+    <Name>皮粗肉厚</Name>
+    <Desc>體力無法低於30%
+若體力低於40%，則進入下一階段</Desc>
+  </PassiveDesc>
+  
+  <!--2페이즈에 나옴-->
+  <PassiveDesc ID="1303013">
+    <Name>血怒</Name>
+    <Desc>階段轉換時吞噬所有“肉塊”並獲得1層“強壯”
+每吞噬1塊“肉塊”便恢復一定體力</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="1303014">
+    <Name>再生細胞</Name>
+    <Desc>開啟舞臺時獲得20層“抵禦”
+每5幕移除自身的所有負面狀態並獲得10層“抵禦”</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1303015">
+    <Name>鯊魚皮</Name>
+    <Desc>每一幕開始時獲得3層“守護”
+若自身處於“流血”狀態，則被擊中時所受傷害+3</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1303016">
+    <Name>殘虐無道</Name>
+    <Desc>無法陷入混亂
+若混亂抗性歸零，則承受100點傷害並在下一幕中獲得1層“強壯”</Desc>
+  </PassiveDesc>
+
+  <!--뒤틀림-->
+  <PassiveDesc ID="1403011">
+    <Name>庇護</Name>
+    <Desc>每一幕開始時使所有友方角色獲得1層“守護”與“振奮”</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="1403012">
+    <Name>消逝之盾</Name>
+    <Desc>若自身死亡，則下一幕中對所有友方角色施加5層“易損”</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="1403013">
+    <Name>瘡痍之痛</Name>
+    <Desc>若目標至少擁有5層“流血”，則使自身的第1顆“進攻型”骰子獲得額外效果“[命中時] 下一幕中對目標施加1層‘易損’”</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="1403014">
+    <Name>糙皮恢復</Name>
+    <Desc>每一幕結束時若自身未被擊中，則恢復10點體力並在下一幕中獲得1層“強壯”</Desc>
+  </PassiveDesc>
+
+</PassiveDescRoot>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <Card ID="1">
+    <Name>회피</Name>
+    <Artwork>Basic1</Artwork>
+    <Rarity>Common</Rarity>
+    <Option>Basic</Option>
+    <Spec Range="Near" Cost="0"/>
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="1" Dice="4" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />    </BehaviourList>
+    <Chapter>1</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="2">
+    <Name>가벼운 공격</Name>
+    <Artwork>Basic2</Artwork>
+    <Rarity>Common</Rarity>
+    <Option>Basic</Option>
+    <Spec Range="Near" Cost="1"/>
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="2" Dice="3" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Basic_Z" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="1" Dice="4" Type="Atk" Detail="Hit" Motion="J" EffectRes="Basic_J" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>1</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="3">
+    <Name>가벼운 방어</Name>
+    <Artwork>Basic3</Artwork>
+    <Rarity>Common</Rarity>
+    <Option>Basic</Option>
+    <Spec Range="Near" Cost="1"/>
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="1" Dice="5" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="3" Type="Def" Detail="Guard" Motion="G" EffectRes="Basic_G" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="1" Dice="2" Type="Atk" Detail="Slash" Motion="J" EffectRes="Basic_H" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>1</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="4">
+    <Name>공격과 수비</Name>
+    <Artwork>Basic4</Artwork>
+    <Rarity>Common</Rarity>
+    <Option>Basic</Option>
+    <Spec Range="Near" Cost="2" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="6" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>1</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="5">
+    <Name>집중공격</Name>
+    <Artwork>Basic5</Artwork>
+    <Rarity>Common</Rarity>
+    <Option>Basic</Option>
+    <Spec Range="Near" Cost="3" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Slash" Motion="J" EffectRes="Basic_J" Script="" Desc="" />
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Slash" Motion="H" EffectRes="Basic_H" Script="" Desc="" />
+      <Behaviour Min="1" Dice="3" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Basic_Z" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>1</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="11">
+    <Name>내장담기</Name>
+    <Artwork>Rats4</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="1" Dice="2" Type="Atk" Detail="Slash" Motion="J" EffectRes="Rats_J" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>1</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="12">
+    <Name>쥐의 생존법</Name>
+    <Artwork>Rats2</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="1" Dice="1" Type="Atk" Detail="Slash" Motion="Z" EffectRes="Rats_Z" Script="" Desc="" />
+      <Behaviour Min="1" Dice="2" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>1</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="13">
+    <Name>더러운 타격</Name>
+    <Artwork>Rats3</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="1" Dice="1" Type="Atk" Detail="Hit" Motion="J" EffectRes="Rats_Mangchi" Script="" Desc="" />
+      <Behaviour Min="1" Dice="2" Type="Def" Detail="Guard" Motion="G" EffectRes="Basic_G" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>1</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="14">
+    <Name>물어뜯기</Name>
+    <Artwork>Rats1</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="1" Dice="2" Type="Atk" Detail="Hit" Motion="Z" EffectRes="Rats_Z" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>1</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="15">
+    <Name>골목 돌파</Name>
+    <Artwork>Rats5</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="1" Dice="2" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="Rats_Z" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>1</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="16">
+    <Name>튀어</Name>
+    <Artwork>Rats6</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="1" Dice="3" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>1</Chapter>
+    <Priority>0</Priority>
+  </Card>
+</DiceCardXmlRoot>

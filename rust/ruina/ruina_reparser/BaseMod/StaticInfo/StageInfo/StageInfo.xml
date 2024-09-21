@@ -1,0 +1,1763 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<StageXmlRoot>
+  <Stage id="1">
+    <Wave>
+      <Unit>1</Unit>
+      <Unit>1</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookSpecial">
+    </Invitation>
+    <Story Condition="Start"></Story>
+    <Story Condition="End"></Story>
+  </Stage>
+  
+  <Stage id="2">
+    <Name>쥐</Name>
+    <Wave>
+      <Formation>2</Formation>
+      <Unit>3</Unit>  <!--피트-->
+      <Unit>1</Unit>
+      <Unit>2</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>31</Book>
+    </Invitation>
+    <Chapter>1</Chapter>
+    <StoryType>Rats</StoryType>
+    <Story Condition="Start">1_2_1</Story>
+    <Story Condition="End">1_2_2</Story>
+  </Stage>
+  
+  <Stage id="3">
+    <Name>윤 사무소-해결사들</Name>
+    <Wave>
+      <Formation>5</Formation>
+      <Unit>1003</Unit>
+      <Unit>1004</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>200001</Book> <!-- 쥐 -->
+    </Invitation>
+    <Chapter>1</Chapter>
+    <Condition>
+      <Stage>2</Stage>
+    </Condition>
+    <StoryType>YunsOffice</StoryType>
+    <Story Condition="Start">1_4_1</Story>
+    <Story Condition="End"></Story>
+  </Stage>
+
+  <Stage id="4">
+    <Name>윤 사무소-핀</Name>
+    <Wave>
+      <Formation>2</Formation>
+      <Unit>4</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>200002</Book> <!-- 9급 -->
+    </Invitation>
+    <Chapter>1</Chapter>
+    <Condition>
+      <Stage>3</Stage>
+    </Condition>
+    <StoryType>YunsOffice</StoryType>
+    <Story Condition="Start">1_4_2</Story>
+    <Story Condition="End">1_4_3</Story>
+  </Stage>
+
+  <Stage id="5">
+    <Name>윤 사무소-윤</Name>
+    <Wave>
+      <Formation>5</Formation>
+      <Unit>1001</Unit>
+      <Unit>1002</Unit>
+    </Wave>
+    <Wave>
+      <Formation>5</Formation>
+      <Unit>6</Unit> <!-- 윤 -->
+      <Unit>5</Unit>
+    </Wave>
+    <FloorNum>3</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>200004</Book><!-- 핀 -->
+      
+    </Invitation>
+    <Chapter>1</Chapter>
+    <Condition>
+      <Stage>4</Stage>
+    </Condition>
+      <StoryType>YunsOffice</StoryType>
+    <Story Condition="Start">1_4_4</Story>
+    <Story Condition="End">1_4_5</Story>
+  </Stage>
+
+  <Stage id="6">
+    <Name>철의 형제</Name>
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>7</Unit>
+      <Unit>8</Unit>
+      <Unit>9</Unit>
+    </Wave>
+    <FloorNum>2</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>200005</Book> <!-- 윤사무소 -->
+    </Invitation>
+    <Chapter>1</Chapter>
+    <Condition>
+      <Stage>5</Stage>
+    </Condition>
+    <StoryType>TheBrotherhoodofIron</StoryType>
+    <Story Condition="Start">1_3_1</Story>
+    <Story Condition="End">1_3_2</Story>
+  </Stage>
+
+  <Stage id="7">
+    <Name>갈고리 사무소</Name>
+    <Wave>
+      <Formation>5</Formation>
+      <Unit>11001</Unit>
+      <Unit>11001</Unit>
+    </Wave>
+    <Wave>
+      <Formation>2</Formation>
+      <Unit>11</Unit>
+      <Unit>10</Unit>
+      <Unit>12</Unit>
+    </Wave>
+    <FloorNum>3</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>200008</Book> <!-- 철의형제 -->
+    </Invitation>
+    <Chapter>1</Chapter>
+    <Condition>
+      <Stage>6</Stage>
+    </Condition>
+    <IsChapterLast>true</IsChapterLast>
+    <StoryType>HookOffice</StoryType>
+    <Story Condition="Start">1_5_1</Story>
+    <Story Condition="End">1_5_2</Story>
+  </Stage>
+
+  <Stage id="10001">
+    <Name>피에르의 고기파이</Name>
+    <Wave>
+      <Formation>5</Formation>
+      <Unit>10002</Unit>
+      <Unit>10001</Unit>
+    </Wave>
+    <FloorNum>2</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>200013</Book> <!-- 태인의 책 -->
+    </Invitation>
+    <Chapter>2</Chapter>
+    <Condition>
+      <Stage>7</Stage>
+    </Condition>
+    <StoryType>PierresMeatPies</StoryType>
+    <Story Condition="Start">2_2_1</Story>
+    <Story Condition="End">2_2_2</Story>
+  </Stage>
+
+  <Stage id="10002">
+    <Name>가로등 사무소</Name> <!--1차전 -->
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>10005</Unit>
+      <Unit>10003</Unit>
+      <Unit>10004</Unit>
+    </Wave>
+    <FloorNum>2</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>210001</Book> <!--피에르 -->
+      <Book>210002</Book><!--잭 -->
+    </Invitation>
+    <Chapter>2</Chapter>
+    <Condition>
+      <Stage>10001</Stage>
+    </Condition>
+    <StoryType>StreetlightOffice</StoryType>
+    <Story Condition="Start">2_3_1</Story>
+    <Story Condition="End">2_3_2</Story>
+  </Stage>
+
+  <Stage id="10003">
+    <Name>가로등 사무소</Name> <!--2차전 -->
+    <Wave>
+      <Formation>5</Formation>
+      <Unit>11005</Unit>
+      <Unit>11006</Unit>
+    </Wave>
+    <Wave>
+      <Formation>2</Formation>
+      <Unit>10006</Unit>
+      <Unit>11005</Unit>
+      <Unit>11006</Unit>
+    </Wave>
+    <FloorNum>3</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>210003</Book> <!--마스 -->
+    </Invitation>
+    <Chapter>2</Chapter>
+    <Condition>
+      <Stage>10002</Stage>
+    </Condition>
+    <IsChapterLast>true</IsChapterLast>
+    <StoryType>StreetlightOffice</StoryType>
+    <Story Condition="Start">2_3_3</Story>
+    <Story Condition="End">2_3_4</Story>
+  </Stage>
+
+  <Stage id="20001">
+    <Name>츠바이</Name> <!--1차전 -->
+    <Wave>
+      <Formation>4</Formation>
+      <Unit>21004</Unit>
+      <Unit>21002</Unit>
+      <Unit>21004</Unit>
+    </Wave>
+    <FloorNum>2</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>210003</Book>
+      <Book>210004</Book>
+    </Invitation>
+    <Chapter>3</Chapter>
+    <Condition>
+      <Stage>10003</Stage>
+    </Condition>
+    <StoryType>ZweiAssociation</StoryType>
+    <Story Condition="Start">3_2_1</Story>
+    <Story Condition="End"></Story>
+  </Stage>
+
+  <Stage id="20002">
+    <Name>츠바이</Name> <!--2차전 -->
+    <Wave>
+      <Formation>4</Formation>
+      <Unit>21004</Unit>
+      <Unit>21003</Unit>
+      <Unit>21004</Unit>
+    </Wave>
+    <Wave>
+      <Formation>4</Formation>
+      <Unit>20001</Unit>
+      <Unit>20002</Unit>
+      <Unit>21004</Unit>
+    </Wave>
+    <FloorNum>3</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>210004</Book>
+      <Book>210003</Book>
+      <Book>220003</Book>
+    </Invitation>
+    <Chapter>3</Chapter>
+    <Condition>
+      <Stage>20001</Stage>
+    </Condition>
+    <StoryType>ZweiAssociation</StoryType>
+    <Story Condition="Start">3_2_2</Story>
+    <Story Condition="End">3_2_3</Story>
+  </Stage>
+
+  <Stage id="20003">
+    <Name>츠바이</Name> <!-- 3차전 -->
+    <Wave>
+      <Formation>4</Formation>
+      <Unit>21001</Unit>
+      <Unit>21013</Unit>
+      <Unit>21013</Unit>
+    </Wave>
+    <Wave>
+      <Formation>2</Formation>
+      <Unit>20004</Unit> <!-- 월터 -->
+      <Unit>20003</Unit> <!-- 이사도라 -->
+      <Unit>21013</Unit>
+    </Wave>
+    <FloorNum>2</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>99999</Book> <!-- 뒤틀림 책 -->
+      <Book>220005</Book>
+      <Book>220002</Book>
+    </Invitation>
+    <Chapter>3</Chapter>
+    <Condition>
+      <Stage>20002</Stage>
+    </Condition>
+    <StoryType>ZweiAssociation</StoryType>
+    <Story Condition="Start">3_2_4</Story>
+    <Story Condition="End">3_2_5</Story>
+  </Stage>
+
+  <Stage id="20004">
+    <Name>어금니 사무소</Name>
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>20006</Unit>
+      <Unit>20005</Unit>
+      <Unit>20007</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>99999</Book>
+      <Book>99998</Book>
+      <Book>220007</Book>
+    </Invitation>
+    <Chapter>3</Chapter>
+    <Condition>
+      <Stage>20003</Stage>
+    </Condition>
+    <IsChapterLast>true</IsChapterLast>
+    <StoryType>MolarOffice</StoryType>
+    <Story Condition="Start">3_4_1</Story>
+    <Story Condition="End">3_4_2</Story>
+  </Stage>
+
+  <Stage id="20005">
+    <Name>버림받은 개</Name>
+    <Wave>
+      <Formation>4</Formation>
+      <Unit>21005</Unit>
+      <Unit>21005</Unit>
+      <Unit>21005</Unit>
+    </Wave>
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>20008</Unit>
+      <Unit>20009</Unit>
+      <Unit>20010</Unit>
+    </Wave>
+    <FloorNum>2</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>220007</Book>
+      <Book>220003</Book>
+    </Invitation>
+    <Chapter>3</Chapter>
+    <Condition>
+      <Stage>20003</Stage>
+    </Condition>
+    <IsChapterLast>true</IsChapterLast>
+    <StoryType>TheStrayDogs</StoryType>
+    <Story Condition="Start">3_3_1</Story>
+    <Story Condition="End">3_3_2</Story>
+  </Stage>
+
+  <Stage id="30001">
+    <Name>사육제</Name>
+    <Wave>
+      <Formation>4</Formation>
+      <Unit>30001</Unit>
+      <Unit>30002</Unit>
+      <Unit>30003</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>220013</Book>
+    </Invitation>
+    <Chapter>4</Chapter>
+    <Condition>
+      <Stage>20005</Stage>
+    </Condition>
+    <StoryType>TheCarnival</StoryType>
+    <Story Condition="Start">4_2_1</Story>
+    <Story Condition="End">4_2_2</Story>
+  </Stage>
+
+
+  <Stage id="30002">
+    <Name>마침표 사무소</Name>
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>30004</Unit>
+      <Unit>30005</Unit>
+      <Unit>30006</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>99999</Book> <!-- 뒤틀림 책 -->
+      <Book>220003</Book>
+    </Invitation>
+    <Chapter>4</Chapter>
+    <Condition>
+      <Stage>20005</Stage>
+    </Condition>
+    <StoryType>FullStopOffice</StoryType>
+    <Story Condition="Start">4_3_1</Story>
+    <Story Condition="End">4_3_2</Story>
+  </Stage>
+  
+  <Stage id="30003">
+    <Name>새벽 사무소</Name>
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>30007</Unit>
+      <Unit>30008</Unit>
+      <Unit>30009</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>220006</Book>
+      <Book>220007</Book>
+    </Invitation>
+    <Chapter>4</Chapter>
+    <Condition>
+      <Stage>20004</Stage>
+    </Condition>
+    <StoryType>DawnOffice</StoryType>
+    <Story Condition="Start">4_4_1</Story>
+    <Story Condition="End">4_4_2</Story>
+  </Stage>
+
+  <Stage id="30004">
+    <Name>시선 사무소</Name>
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>30010</Unit>
+      <Unit>30011</Unit>
+      <Unit>30012</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>220008</Book>
+      <Book>220009</Book>
+    </Invitation>
+    <Chapter>4</Chapter>
+    <Condition>
+      <Stage>20005</Stage>
+    </Condition>
+    <StoryType>GazeOffice</StoryType>
+    <Story Condition="Start">4_5_1</Story>
+    <Story Condition="End">4_5_2</Story>
+  </Stage>
+
+  <Stage id="30005">
+    <Name>사랑마을-토머리</Name>
+    <Wave>
+      <Formation>9</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>30013</Unit>
+      <Unit>30015</Unit>
+      <Unit>30014</Unit>
+      <Unit>30015</Unit>
+    </Wave>
+    <Wave>
+      <Formation>11</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>30016</Unit>
+      <Unit>30013</Unit>
+      <Unit>30014</Unit>
+      <Unit>30015</Unit>
+    </Wave>
+    <FloorNum>2</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>230010</Book>
+      <Book>230011</Book>
+      <Book>220009</Book>
+    </Invitation>
+    <Chapter>4</Chapter>
+    <Condition>
+      <Stage>30004</Stage>
+    </Condition>
+    <StoryType>Tomerry</StoryType>
+    <MapInfo>Tomerry</MapInfo>
+    <Story Condition="Start">4_6_1</Story>
+    <Story Condition="End">4_6_2</Story>
+  </Stage>
+
+  <Stage id="30006">
+    <Name>흑운회</Name>
+    <Wave>
+      <Formation>4</Formation>
+      <Unit>31001</Unit>
+      <Unit>31001</Unit>
+      <Unit>31001</Unit>
+    </Wave>
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>30018</Unit>
+      <Unit>30019</Unit>
+      <Unit>30020</Unit>
+    </Wave>
+    <FloorNum>2</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>230001</Book>
+      <Book>99998</Book>
+    </Invitation>
+    <Chapter>4</Chapter>
+    <Condition>
+      <Stage>30001</Stage>
+    </Condition>
+    <StoryType>KurokumoClan</StoryType>
+    <Story Condition="Start">4_7_1</Story>
+    <Story Condition="End">4_7_2</Story>
+  </Stage>
+
+
+  <Stage id="30007">
+    <Name>브레멘</Name>
+    <Wave>
+      <Formation>4</Formation>
+      <Unit>30021</Unit>
+      <Unit>30022</Unit>
+      <Unit>30023</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>230002</Book>
+      <Book>99999</Book>
+    </Invitation>
+    <Chapter>4</Chapter>
+    <Condition>
+      <Stage>30002</Stage>
+    </Condition>
+    <StoryType>TheMusiciansofBremen</StoryType>
+    <Story Condition="Start">4_8_1</Story>
+    <Story Condition="End">4_8_2</Story>
+  </Stage>
+
+  <Stage id="30008">
+    <Name>쐐기 사무소</Name>
+    <Wave>
+      <Formation>9</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>30024</Unit>
+      <Unit>30025</Unit>
+      <Unit>30026</Unit>
+      <Unit>30027</Unit>
+    </Wave>
+    <Wave>
+      <Formation>13</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>30028</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>230007</Book>
+      <Book>230008</Book>
+    </Invitation>
+    <Chapter>4</Chapter>
+    <Condition>
+      <Stage>30003</Stage>
+    </Condition>
+    <StoryType>WedgeOffice</StoryType>
+    <MapInfo>Philip1</MapInfo>
+    <MapInfo>Philip2</MapInfo>
+    <MapInfo>Philip3</MapInfo>
+    <Story Condition="Start">4_9_1</Story>
+    <Story Condition="End">4_9_2</Story>
+  </Stage>
+
+  <!--Chapter 5-->
+  <Stage id="40001">
+    <Name>시 협회</Name>
+    <Wave>
+      <Formation>9</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>41001</Unit>
+      <Unit>41001</Unit>
+      <Unit>41001</Unit>
+      <Unit>41001</Unit>
+    </Wave>
+    <Wave>
+      <Formation>9</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>40001</Unit>
+      <Unit>40002</Unit>
+      <Unit>40003</Unit>
+      <Unit>41001</Unit>
+    </Wave>
+    <FloorNum>2</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>230018</Book>
+      <Book>230002</Book>
+    </Invitation>
+    <Chapter>5</Chapter>
+    <Condition>
+      <Stage>30007</Stage>
+    </Condition>
+    <StoryType>ShiAssociation</StoryType>
+    <Story Condition="Start">5_2_1</Story>
+    <Story Condition="End">5_2_2</Story>
+  </Stage>
+
+  <Stage id="40002">
+    <Name>인형</Name>
+    <Wave>
+      <Formation>14</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>40007</Unit>
+      <Unit>40006</Unit>
+      <Unit>40006</Unit>
+      <Unit>40007</Unit>
+      <Unit>40006</Unit>
+    </Wave>
+    <Wave>
+      <Formation>14</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>40004</Unit>
+      <Unit>40004</Unit>
+      <Unit>40006</Unit>
+      <Unit>40007</Unit>
+      <Unit>40006</Unit>
+    </Wave>
+    <Wave>
+      <Formation>14</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>40005</Unit>
+      <Unit>40004</Unit>
+      <Unit>40004</Unit>
+      <Unit>40004</Unit>
+      <Unit>40004</Unit>
+    </Wave>
+    <FloorNum>3</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>230013</Book>
+    </Invitation>
+    <Chapter>5</Chapter>
+    <Condition>
+      <Stage>30005</Stage>
+    </Condition>
+    <StoryType>Puppeteer</StoryType>
+    <Story Condition="Start">5_3_1</Story>
+    <Story Condition="End">5_3_2</Story>
+  </Stage>
+
+  <Stage id="40003">
+    <Name>서커스</Name>
+    <Wave>
+      <Formation>15</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>40008</Unit>
+      <Unit>40011</Unit>
+      <Unit>40012</Unit>
+      <Unit>40013</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>230022</Book>
+      <Book>230023</Book>
+    </Invitation>
+    <Chapter>5</Chapter>
+    <Condition>
+      <Stage>30006</Stage>
+    </Condition>
+    <StoryType>TheEightOClockCircus</StoryType>
+    <MapInfo>Circus</MapInfo>
+    <Story Condition="Start">5_4_1</Story>
+    <Story Condition="End">5_4_2</Story>
+  </Stage>
+
+  <Stage id="40004">
+    <Name>청소부</Name>
+    <Wave>
+      <Formation>15</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>41002</Unit>
+      <Unit>41002</Unit>
+      <Unit>41002</Unit>
+      <Unit>41002</Unit>
+      <Unit>41002</Unit>
+    </Wave>
+    <Wave>
+      <Formation>14</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>41002</Unit>
+      <Unit>41002</Unit>
+      <Unit>41002</Unit>
+      <Unit>41002</Unit>
+      <Unit>41002</Unit>
+    </Wave>
+    <Wave>
+      <Formation>14</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>40015</Unit>
+      <Unit>40016</Unit>
+      <Unit>41002</Unit>
+      <Unit>41002</Unit>
+      <Unit>40017</Unit>
+    </Wave>
+    <FloorNum>2</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>230015</Book>
+      <Book>230014</Book>
+    </Invitation>
+    <Chapter>5</Chapter>
+    <Condition>
+      <Stage>30006</Stage>
+    </Condition>
+    <StoryType>Sweepers</StoryType>
+    <Story Condition="Start">5_5_1</Story>
+    <Story Condition="End">5_5_2</Story>
+  </Stage>
+
+  <Stage id="40005">
+    <Name>검지 수행자</Name>
+    <Wave>
+      <Formation>9</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <AggroScript>theIndex</AggroScript>
+      <Unit>40018</Unit>
+      <Unit>40018</Unit>
+      <Unit>40018</Unit>
+      <Unit>40018</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>240010</Book>
+    </Invitation>
+    <Chapter>5</Chapter>
+    <Condition>
+      <Stage>40004</Stage>
+    </Condition>
+    <StoryType>TheIndex</StoryType>
+    <Story Condition="Start">5_6_1</Story>
+    <Story Condition="End">5_6_2</Story>
+  </Stage>
+
+  <Stage id="40006">
+    <Name>워프정리요원</Name>
+    <Wave>
+      <Formation>9</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>40022</Unit>
+      <Unit>40022</Unit>
+      <Unit>40022</Unit>
+      <Unit>40022</Unit>
+    </Wave>
+	<Wave>
+      <Formation>9</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>40019</Unit>
+      <Unit>40020</Unit>
+      <Unit>40021</Unit>
+      <Unit>40022</Unit>
+    </Wave>
+    <FloorNum>2</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>240005</Book>
+    </Invitation>
+    <Chapter>5</Chapter>
+    <Condition>
+      <Stage>40002</Stage>
+    </Condition>
+    <StoryType>WarpCrew</StoryType>
+    <Story Condition="Start">5_7_1</Story>
+    <Story Condition="End">5_7_2</Story>
+  </Stage>
+
+  <Stage id="40007">
+    <Name>웃는 얼굴들</Name>
+    <Wave>
+      <Formation>9</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>40026</Unit>
+      <Unit>40026</Unit>
+      <Unit>40026</Unit>
+      <Unit>40026</Unit>
+    </Wave>
+    <Wave>
+      <Formation>9</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>40023</Unit>
+      <Unit>40024</Unit>
+      <Unit>40025</Unit>
+      <Unit>40026</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>240001</Book>
+      <Book>240002</Book>
+    </Invitation>
+    <Chapter>5</Chapter>
+    <Condition>
+      <Stage>40001</Stage>
+    </Condition>
+    <StoryType>SmilingFaces</StoryType>
+    <Story Condition="Start">5_8_1</Story>
+    <Story Condition="End">5_8_2</Story>
+  </Stage>
+
+  <Stage id="40008">
+    <Name>우는 아이</Name>
+    <Wave>
+      <Formation>23</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <AvailableUnit>5</AvailableUnit>
+      <ManagerScript>TheCrying</ManagerScript>
+      <Unit>42002</Unit>
+      <Unit>42003</Unit>
+      <Unit>42004</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>240008</Book>
+    </Invitation>
+    <Chapter>5</Chapter>
+    <Condition>
+      <Stage>40003</Stage>
+    </Condition>
+    <MapInfo>CryingChild</MapInfo>
+    <StoryType>CryingChild</StoryType>
+    <Story Condition="Start">5_9_1</Story>
+    <Story Condition="End">5_9_2</Story>
+  </Stage>
+
+
+  <Stage id="50001">
+    <Name>리우 2과</Name>
+    <Wave>
+      <Formation>21</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>50001</Unit>
+      <Unit>50001</Unit>
+      <Unit>50001</Unit>
+      <Unit>50001</Unit>
+      <Unit>50001</Unit>
+    </Wave>
+    <Wave>
+      <Formation>21</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>50001</Unit>
+      <Unit>50001</Unit>
+      <Unit>50001</Unit>
+      <Unit>50001</Unit>
+      <Unit>50001</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>240023</Book>
+    </Invitation>
+    <Chapter>6</Chapter>
+    <Condition>
+      <Stage>40008</Stage>
+    </Condition>
+    <StoryType>LiuAssociation2</StoryType>
+    <Story Condition="Start">6_2_1</Story>
+    <Story Condition="End">6_2_2</Story>
+  </Stage>
+
+
+  <Stage id="50002">
+    <Name>리우 2과 2</Name>
+    <Wave>
+      <Formation>21</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>50001</Unit>
+      <Unit>50001</Unit>
+      <Unit>50001</Unit>
+      <Unit>50001</Unit>
+      <Unit>50001</Unit>
+    </Wave>
+    <Wave>
+      <Formation>21</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>50002</Unit>
+      <Unit>50003</Unit>
+      <Unit>50004</Unit>
+      <Unit>50001</Unit>
+      <Unit>50001</Unit>
+    </Wave>
+    
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <!-- 우는 아이 책 -->
+      <Book>240023</Book>
+      <!-- 리우 협회의 책-->
+      <Book>250001</Book>
+
+    </Invitation>
+    <Chapter>6</Chapter>
+    <Condition>
+      <Stage>50001</Stage>
+    </Condition>
+    <StoryType>LiuAssociation2</StoryType>
+    <Story Condition="Start">6_2_3</Story>
+    <Story Condition="End">6_2_4</Story>
+  </Stage>
+
+  <Stage id="50003">
+    <Name>엄지</Name>
+    <Wave>
+      <Formation>21</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>50005</Unit>
+      <Unit>50005</Unit>
+      <Unit>50005</Unit>
+      <Unit>50005</Unit>
+    </Wave>
+    <Wave>
+      <Formation>9</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>50005</Unit>
+      <Unit>50005</Unit>
+      <Unit>50005</Unit>
+      <Unit>50005</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>240014</Book>
+    </Invitation>
+    <Chapter>6</Chapter>
+    <Condition>
+      <Stage>40005</Stage>
+    </Condition>
+    <StoryType>TheThumb</StoryType>
+    <Story Condition="Start">6_3_1</Story>
+    <Story Condition="End">6_3_2</Story>
+  </Stage>
+  
+  <Stage id="50004">
+    <Name>엄지</Name>
+    <Wave>
+      <Formation>9</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>50007</Unit>
+      <Unit>50105</Unit>
+      <Unit>50105</Unit>
+      <Unit>50105</Unit>
+    </Wave>
+    <Wave>
+      <Formation>9</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>50009</Unit>
+      <Unit>50105</Unit>
+      <Unit>50105</Unit>
+      <Unit>50105</Unit>
+    </Wave>
+    <Wave>
+      <Formation>9</Formation>
+      <AvailableUnit>4</AvailableUnit>
+      <Unit>50006</Unit>
+      <Unit>50105</Unit>
+      <Unit>50008</Unit>
+      <Unit>50105</Unit>
+    </Wave>
+    <FloorNum>2</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>250001</Book> <!-- 리우1 책 -->
+      <Book>250006</Book> <!-- 엄지 책 -->
+    </Invitation>
+    <Chapter>6</Chapter>
+    <Condition>
+      <Stage>50003</Stage>
+    </Condition>
+    <StoryType>TheThumb</StoryType>
+    <Story Condition="Start">6_3_3</Story>
+    <Story Condition="End">6_3_4</Story>
+  </Stage>
+  
+  <Stage id="50005">
+    <Name>지팡이 사무소</Name>
+    <Wave>
+      <Formation>3</Formation>
+      <AvailableUnit>3</AvailableUnit>
+      <Unit>50010</Unit>
+      <Unit>50011</Unit>
+      <Unit>50012</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <!--<Book>240015</Book>-->
+      <Book>240018</Book>
+    </Invitation>
+    <Chapter>6</Chapter>
+    <Condition>
+      <Stage>40006</Stage>
+    </Condition>
+    <StoryType>CaneOffice</StoryType>
+    <Story Condition="Start">6_4_1</Story>
+    <Story Condition="End">6_4_2</Story>
+  </Stage>
+
+  <Stage id="50006">
+    <Name>푸른 잔향</Name>
+    <!-- ver 1-->
+    <Wave>
+      <Formation>21</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>50014</Unit>
+      <Unit>50014</Unit>
+      <Unit>50014</Unit>
+      <Unit>50014</Unit>
+      <Unit>50014</Unit>
+    </Wave>
+    <Wave>
+      <Formation>21</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>50013</Unit>
+      <Unit>50014</Unit>
+      <Unit>50014</Unit>
+      <Unit>50014</Unit>
+      <Unit>50014</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <!--<Book>240015</Book>-->
+      <Book>240022</Book>
+      <Book>99999</Book>
+    </Invitation>
+    <Chapter>6</Chapter>
+    <Condition>
+      <Stage>40007</Stage>
+    </Condition>
+    <StoryType>TheBlueReverberation</StoryType>
+    <Story Condition="Start">6_5_1</Story>
+    <Story Condition="End">6_5_2</Story>
+  </Stage>
+
+  <Stage id="50007">
+    <Name>검지 2차</Name>
+    <!-- 감정 제외되어 있으니 주의-->
+    <Wave>
+      <Formation>21</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <AggroScript>theIndex</AggroScript>
+      <Unit>51001</Unit>
+      <Unit>51001</Unit>
+      <Unit>51001</Unit>
+      <Unit>51001</Unit>
+      <Unit>51001</Unit>
+    </Wave>
+    <Wave>
+      <Formation>21</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <AggroScript>theIndex</AggroScript>
+      <Unit>50015</Unit>
+      <Unit>50016</Unit>
+      <Unit>50017</Unit>
+      <Unit>51002</Unit>
+      <Unit>51002</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>250006</Book>
+      <Book>250007</Book>
+    </Invitation>
+    <Chapter>6</Chapter>
+    <Condition>
+      <Stage>50004</Stage>
+    </Condition>
+    <StoryType>TheIndex2</StoryType>
+    <Story Condition="Start">6_6_1</Story>
+    <Story Condition="End">6_6_2</Story>
+  </Stage>
+
+  <Stage id="50008">
+    <Name>리우 1과</Name>
+    <Wave>
+      <Formation>21</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>50019</Unit>
+      <Unit>50019</Unit>
+      <Unit>50019</Unit>
+      <Unit>50019</Unit>
+      <Unit>50019</Unit>
+    </Wave>
+    <Wave>
+      <Formation>21</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>50020</Unit>
+      <Unit>50021</Unit>
+      <Unit>50018</Unit>
+      <Unit>50019</Unit>
+      <Unit>50019</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>250003</Book>
+      <Book>250004</Book>
+      <Book>250005</Book>
+    </Invitation>
+    <Chapter>6</Chapter>
+    <Condition>
+      <Stage>50002</Stage>
+    </Condition>
+    <StoryType>LiuAssociation1</StoryType>
+    <Story Condition="Start">6_7_1</Story>
+    <Story Condition="End">6_7_2</Story>
+  </Stage>
+
+  <Stage id="50009">
+    <Name>붉은안개</Name>
+    <Wave>
+      <Formation>1</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <AggroScript>theRedMist</AggroScript>
+      <Unit>50022</Unit>
+    </Wave>
+    <FloorNum>3</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>99998</Book>
+    </Invitation>
+    <Chapter>6</Chapter>
+    <Condition>
+      <Stage>50006</Stage>
+    </Condition>
+    <StoryType>TheRedMist</StoryType>
+    <Story Condition="Start">6_8_1</Story>
+    <Story Condition="End">6_8_2</Story>
+  </Stage>
+
+  <Stage id="50010">
+    <Name>R사 1차</Name>
+    <Wave>
+      <Formation>21</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>50026</Unit>
+      <Unit>50103</Unit>
+      <Unit>50103</Unit>
+      <Unit>50103</Unit>
+      <Unit>50103</Unit>
+    </Wave>
+    <Wave>
+      <Formation>21</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>50025</Unit>
+      <Unit>50102</Unit>
+      <Unit>50102</Unit>
+      <Unit>50102</Unit>
+      <Unit>50102</Unit>
+    </Wave>
+    <Wave>
+      <Formation>21</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>50023</Unit>
+      <Unit>50024</Unit>
+      <Unit>50101</Unit>
+      <Unit>50101</Unit>
+      <Unit>50101</Unit>
+    </Wave>
+    <FloorNum>2</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>250012</Book>
+      <Book>240018</Book>
+    </Invitation>
+    <Chapter>6</Chapter>
+    <Condition>
+      <Stage>50005</Stage>
+    </Condition>
+    <StoryType>RCorp1</StoryType>
+    <Story Condition="Start">6_9_1</Story>
+    <Story Condition="End">6_9_2</Story>
+  </Stage>
+  <Stage id="50011">
+    <Name>R사 2차</Name>
+    <Wave>
+      <Formation>21</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>50030</Unit>
+      <Unit>50103</Unit>
+      <Unit>50103</Unit>
+      <Unit>50103</Unit>
+      <Unit>50103</Unit>
+    </Wave>
+    <Wave>
+      <Formation>21</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>50029</Unit>
+      <Unit>50102</Unit>
+      <Unit>50102</Unit>
+      <Unit>50102</Unit>
+      <Unit>50102</Unit>
+    </Wave>
+    <Wave>
+      <Formation>21</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>50028</Unit>
+      <Unit>50101</Unit>
+      <Unit>50101</Unit>
+      <Unit>50101</Unit>
+      <Unit>50101</Unit>
+    </Wave>
+    <Wave>
+      <Formation>1</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <FormationType>AscendingOrder</FormationType>
+      <Unit>50031</Unit>
+      <Unit>50032</Unit>
+      <Unit>50033</Unit>
+      <Unit>50034</Unit>
+    </Wave>
+    <FloorNum>2</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>250023</Book>
+      <Book>250024</Book>
+      <Book>250025</Book>
+    </Invitation>
+    <Chapter>6</Chapter>
+    <Condition>
+      <Stage>50010</Stage>
+    </Condition>
+    <StoryType>RCorp2</StoryType>
+    <Story Condition="Start">6_10_1</Story>
+    <Story Condition="End">6_10_2</Story>
+  </Stage>
+
+  <Stage id="50012">
+    <Name>보라 눈물</Name>
+    <Wave>
+      <Formation>1</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>50035</Unit>
+    </Wave>
+    <FloorNum>3</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>250022</Book>
+    </Invitation>
+    <Chapter>6</Chapter>
+    <Condition>
+      <Stage>50009</Stage>
+    </Condition>
+    <StoryType>ThePurpleTear</StoryType>
+    <Story Condition="Start">6_11_1</Story>
+    <Story Condition="End">6_11_2</Story>
+  </Stage>
+  
+  <Stage id="50013">
+    <Name>샤오</Name>
+    <Wave>
+      <Formation>5</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <FormationType>AscendingOrder</FormationType>
+      <Unit>50036</Unit>
+      <Unit>50037</Unit> 
+    </Wave>
+    <Wave>
+      <Formation>13</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>50038</Unit>
+    </Wave>
+    <FloorNum>2</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>250003</Book>
+      <Book>250021</Book>
+      <Book>250020</Book>
+    </Invitation>
+    <Chapter>6</Chapter>
+    <Condition>
+      <Stage>50008</Stage>
+    </Condition>
+    <MapInfo>Xiao</MapInfo>
+    <StoryType>Shyao</StoryType>
+    <Story Condition="Start">6_12_1</Story>
+    <Story Condition="End">6_12_2</Story>
+  </Stage>
+  
+  <Stage id="50014">
+    <Name>얀</Name>
+    <Wave>
+      <Formation>31</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <FormationType>AscendingOrder</FormationType>
+      <Unit>50051</Unit>
+      <Unit>50039</Unit>
+      <Unit>50040</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>250017</Book>
+      <Book>250018</Book>
+      <Book>250019</Book>
+    </Invitation>
+    <Chapter>6</Chapter>
+    <Condition>
+      <Stage>50007</Stage>
+    </Condition>
+    <MapInfo>Yan</MapInfo>
+    <StoryType>Yan</StoryType>
+    <Story Condition="Start">6_13_1</Story>
+    <Story Condition="End">6_13_2</Story>
+  </Stage>
+  
+  <Stage id="60001">
+    <Name>하나</Name>
+    <Wave>
+      <Formation>1</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>60001</Unit>
+      <Unit>60001</Unit>
+      <Unit>60001</Unit>
+      <Unit>60001</Unit>
+      <Unit>60001</Unit>
+    </Wave>
+    <Wave>
+      <Formation>1</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>60002</Unit>
+      <Unit>60003</Unit>
+      <Unit>60101</Unit>
+      <Unit>60101</Unit>
+      <Unit>60101</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>250034</Book>
+      <Book>250035</Book>
+      <Book>250037</Book>
+    </Invitation>
+    <Chapter>7</Chapter>
+    <Condition>
+      <Stage>50009</Stage>
+    </Condition>
+    <StoryType>HanaAssociation</StoryType>
+    <Story Condition="Start">7_2_1</Story>
+    <Story Condition="End">7_2_2</Story>
+  </Stage>
+  
+  <Stage id="60002">
+    <Name>올리비에</Name>
+    <Wave>
+      <Formation>1</Formation>
+      <AvailableUnit>1</AvailableUnit>
+      <Unit>60004</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+      <Book>260002</Book>
+      <Book>260003</Book>
+    </Invitation>
+    <Chapter>7</Chapter>
+    <Condition>
+      <Stage>60001</Stage>
+    </Condition>
+    <FloorOnly>Keter</FloorOnly>
+    <StoryType>HanaAssociation</StoryType>
+    <Story Condition="Start">7_3_1</Story>
+    <Story Condition="End">7_3_2</Story>
+  </Stage>
+
+  <!--필립-->
+  <Stage id="70001">
+    <Name>말쿠트</Name>
+    <Wave>
+      <Formation>1</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>1301011</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Chapter>7</Chapter>
+    <Condition>
+      <Stage>60001</Stage>
+    </Condition>
+    <FloorOnly>Malkuth</FloorOnly>
+    <StoryType>TheBlueReverberationPrimarySep</StoryType>
+
+    <RewardItems Type="Equip">260006</RewardItems>
+
+    <RewardItems Type="Card">704008</RewardItems>
+  </Stage>
+
+  <!--에일린-->
+  <Stage id="70002">
+    <Name>예소드</Name>
+    <Wave>
+      <Formation>34</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>1302011</Unit>
+       
+      <Unit>1302021</Unit>
+      <Unit>1302021</Unit>
+      <Unit>1302021</Unit>
+      <Unit>1302021</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Chapter>7</Chapter>
+    <Condition>
+      <Stage>60001</Stage>
+    </Condition>
+    <FloorOnly>Yesod</FloorOnly>
+    <StoryType>TheBlueReverberationPrimarySep</StoryType>
+
+    <RewardItems Type="Equip">260007</RewardItems>
+
+    <RewardItems Type="Card">704003</RewardItems>
+    <RewardItems Type="Card">704003</RewardItems>
+    <RewardItems Type="Card">704003</RewardItems>
+  </Stage>
+
+  <!--그레타-->
+  <Stage id="70003">
+    <Name>호드</Name>
+    <Wave>
+      <Formation>29</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>1303011</Unit>
+
+      <Unit>1303021</Unit>
+      <Unit>1303021</Unit>
+      <Unit>1303021</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Chapter>7</Chapter>
+    <Condition>
+      <Stage>60001</Stage>
+    </Condition>
+    <FloorOnly>Hod</FloorOnly>
+    <StoryType>TheBlueReverberationPrimarySep</StoryType>
+
+    <RewardItems Type="Equip">260008</RewardItems>
+
+    <RewardItems Type="Card">704002</RewardItems>
+    <RewardItems Type="Card">704002</RewardItems>
+    <RewardItems Type="Card">704002</RewardItems>
+  </Stage>
+
+  <!--브레멘-->
+  <Stage id="70004">
+    <Name>네짜흐</Name>
+    <Wave>
+      <Formation>24</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>1304011</Unit>
+
+      <Unit>1304031</Unit>
+      <Unit>1304021</Unit>
+      <Unit>50014</Unit>
+      <Unit>1304021</Unit>
+
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Chapter>7</Chapter>
+    <Condition>
+      <Stage>60001</Stage>
+    </Condition>
+    <FloorOnly>Netzach</FloorOnly>
+    <StoryType>TheBlueReverberationPrimarySep</StoryType>
+
+    <RewardItems Type="Equip">260009</RewardItems>
+
+    <RewardItems Type="Card">704010</RewardItems>
+
+    <RewardItems Type="Card">704018</RewardItems>
+    <RewardItems Type="Card">704018</RewardItems>
+    <RewardItems Type="Card">704018</RewardItems>
+  </Stage>
+
+  <Stage id="70005">
+    <Name>Tiphereth</Name>
+    <Wave>
+      <Formation>35</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>1305011</Unit>
+      <Unit>1305021</Unit>
+      <Unit>1305031</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Chapter>7</Chapter>
+    <Condition>
+      <Stage>60002</Stage>
+    </Condition>
+    <FloorOnly>Tiphereth</FloorOnly>
+    <StoryType>TheBlueReverberationPrimarySep</StoryType>
+
+    <RewardItems Type="Equip">260010</RewardItems>
+
+    <RewardItems Type="Card">704005</RewardItems>
+  </Stage>
+
+  <Stage id="70006">
+    <Name>Gebura</Name>
+    <Wave>
+      <Formation>1</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>1306011</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Chapter>7</Chapter>
+    <Condition>
+      <Stage>60001</Stage>
+    </Condition>
+    <FloorOnly>Gebura</FloorOnly>
+    <StoryType>TheBlueReverberationPrimarySep</StoryType>
+
+    <RewardItems Type="Equip">260011</RewardItems>
+
+    <RewardItems Type="Card">704009</RewardItems>
+
+    <RewardItems Type="Card">704016</RewardItems>
+    <RewardItems Type="Card">704016</RewardItems>
+    <RewardItems Type="Card">704016</RewardItems>
+  </Stage>
+
+  <Stage id="70007">
+    <Name>Chesed</Name>
+    <Wave>
+      <Formation>34</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>1307011</Unit>      
+      <Unit>1307041</Unit>
+      <Unit>1307051</Unit>
+      <Unit>1307021</Unit>
+      <Unit>1307031</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Chapter>7</Chapter>
+    <Condition>
+      <Stage>60002</Stage>
+    </Condition>
+    <FloorOnly>Chesed</FloorOnly>
+    <StoryType>TheBlueReverberationPrimarySep</StoryType>
+
+    <RewardItems Type="Equip">260012</RewardItems>
+
+    <RewardItems Type="Card">704006</RewardItems>
+    <RewardItems Type="Card">704006</RewardItems>
+    <RewardItems Type="Card">704006</RewardItems>
+  </Stage>
+
+  <Stage id="70008">
+    <Name>Binah</Name>
+    <Wave>
+      <Formation>5</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>1308011</Unit>
+      <Unit>1308021</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Chapter>7</Chapter>
+    <Condition>
+      <Stage>60001</Stage>
+    </Condition>
+    <FloorOnly>Binah</FloorOnly>
+    <StoryType>TheBlueReverberationPrimarySep</StoryType>
+
+    <RewardItems Type="Equip">260013</RewardItems>
+
+    <RewardItems Type="Card">704007</RewardItems>
+
+    <RewardItems Type="Card">704015</RewardItems>
+    <RewardItems Type="Card">704015</RewardItems>
+    <RewardItems Type="Card">704015</RewardItems>
+  </Stage>
+
+  <Stage id="70009">
+    <Name>Hokma</Name>
+    <Wave>
+      <Formation>34</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>1309011</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Chapter>7</Chapter>
+    <Condition>
+      <Stage>60001</Stage>
+    </Condition>
+    <FloorOnly>Hokma</FloorOnly>
+    <StoryType>TheBlueReverberationPrimarySep</StoryType>
+    
+    <RewardItems Type="Equip">260014</RewardItems>
+
+    <RewardItems Type="Card">704004</RewardItems>
+    <RewardItems Type="Card">704004</RewardItems>
+    <RewardItems Type="Card">704004</RewardItems>
+  </Stage>
+
+  <Stage id="70010">
+    <Name>케테르</Name>
+    <Wave>
+      <Formation>1</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>1310011</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Chapter>7</Chapter>
+    <Condition>
+      <Stage>60001</Stage>
+    </Condition>
+    <FloorOnly>Keter</FloorOnly>
+    <StoryType>TheBlueReverberationPrimarySep</StoryType>
+    <Story Condition="End">7_4_12</Story>
+
+    <RewardItems Type="Equip">260005</RewardItems>
+
+    <RewardItems Type="Card">704001</RewardItems>
+    
+    <RewardItems Type="Card">704011</RewardItems>
+    <RewardItems Type="Card">704011</RewardItems>
+    <RewardItems Type="Card">704011</RewardItems>
+    
+    <RewardItems Type="Card">704012</RewardItems>
+    <RewardItems Type="Card">704012</RewardItems>
+    <RewardItems Type="Card">704012</RewardItems>
+    
+    <RewardItems Type="Card">704013</RewardItems>
+    <RewardItems Type="Card">704014</RewardItems>
+  </Stage>
+
+  <Stage id="60003">
+    <Name>Black_Silence</Name>
+    <Wave>
+      <Formation>1</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <ManagerScript>BlackSilence</ManagerScript>
+      <Unit>60005</Unit>
+    </Wave>
+    <FloorNum>3</FloorNum>
+    <Invitation Combine="BookRecipe">
+    </Invitation>
+    <Chapter>7</Chapter>
+    <Condition>
+      <Stage>60007</Stage>
+    </Condition>
+    <ExceptFloor>Keter</ExceptFloor>
+    
+    <MapInfo>BlackSilence2</MapInfo>
+    <MapInfo>BlackSilence3</MapInfo>
+    <MapInfo>BlackSilence4</MapInfo>
+    <StoryType>BlackSilence</StoryType>
+    <Story Condition="Start">7_5_1</Story>
+    <Story Condition="End">7_5_2</Story>
+  </Stage>
+
+  <!--뒤틀린 하층 테스트용--> 
+  <Stage id="60004">
+    <Name>잔향악단 뒤틀림 전투</Name>
+    <Wave>
+      <Formation>37</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <ManagerScript>TwistedReverberationBand</ManagerScript>
+      <Unit>1401011</Unit>
+      <Unit>1402011</Unit>
+      <Unit>1403011</Unit>
+      <Unit>1404011</Unit>
+    </Wave>
+    <Wave>
+      <Formation>38</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <ManagerScript>TwistedReverberationBand_Middle</ManagerScript>
+      <FormationType>AscendingOrder</FormationType>
+      <Unit>1405011</Unit>
+      <Unit>1406011</Unit>
+      <Unit>1407011</Unit>
+    </Wave>
+    <Wave>
+      <Formation>39</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <ManagerScript>TwistedReverberationBand</ManagerScript>
+      <FormationType>AscendingOrder</FormationType>
+      <Unit>1410011</Unit>
+      <Unit>1409011</Unit>
+      <Unit>1408011</Unit>
+    </Wave>
+    <ExceptFloor>Keter</ExceptFloor>
+    
+
+    <FloorNum>5</FloorNum>
+    <Invitation Combine="BookRecipe">
+    </Invitation>
+    <Chapter>7</Chapter>
+    <Condition>
+      <Stage>60007</Stage>
+    </Condition>
+    <MapInfo>ReverberationBand1</MapInfo>
+    <MapInfo>ReverberationBand2</MapInfo>
+    <MapInfo>ReverberationBand3</MapInfo>
+    <MapInfo>ReverberationBand4</MapInfo>
+    <StoryType>TwistedBlue</StoryType>
+    <!-- 7 6 1 ui에서 따로처리// 초대장,서고에서 보기위함으로 다시넣음-->
+    <Story Condition="Start">7_6_1</Story> 
+    <Story Condition="End">7_6_2</Story>
+  </Stage>
+
+  <Stage id="60005">
+    <Name>뒤틀려버린 중층</Name>
+    <Wave>
+      <Formation>36</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <ManagerScript>TwistedReverberationBand</ManagerScript>
+      <Unit>1401011</Unit>
+    </Wave>
+    <FloorNum>3</FloorNum>
+    <Chapter>7</Chapter>
+    <Condition>
+      <Stage>610000</Stage>
+    </Condition>
+    <MapInfo>ReverberationBand2</MapInfo>
+    <StoryType>TheBlueReverberationPrimarySep</StoryType>
+    <Story Condition="Start"></Story>
+    <Story Condition="End"></Story>
+  </Stage>
+
+  <Stage id="60006">
+    <Name>뒤틀려버린 상층</Name>
+    <Wave>
+      <Formation>36</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <ManagerScript>TwistedReverberationBand</ManagerScript>
+      <Unit>1410011</Unit>
+      <Unit>1409011</Unit>
+      <Unit>1408011</Unit>
+    </Wave>
+    <FloorNum>3</FloorNum>
+    <Chapter>7</Chapter>
+    <Condition>
+      <Stage>60007</Stage>
+    </Condition>
+    <MapInfo>ReverberationBand3</MapInfo>
+    <MapInfo>ReverberationBand4</MapInfo>
+    <!--<StoryType>TheBlueReverberationPrimarySep</StoryType>-->
+    <Story Condition="Start"></Story>
+    <Story Condition="End"></Story>
+  </Stage>
+
+  <Stage id="60007">
+    <Name>창작에는 끝이 없다</Name>
+    <!--<ManagerScript>EnemyTeamStageManager_FinalFinal</ManagerScript>-->
+    <Wave>
+      <Formation>5</Formation>
+      <AvailableUnit>5</AvailableUnit>
+      <FormationType>AscendingOrder</FormationType>
+      <ManagerScript>FinalFinal</ManagerScript>
+      <Unit>80001</Unit>
+      <Unit>80002</Unit>
+    </Wave>
+    <FloorNum>1</FloorNum>
+    <Invitation Combine="BookRecipe">
+    </Invitation>
+    <Chapter>7</Chapter>
+    <Condition>
+      <Stage>60007</Stage>
+    </Condition>
+    
+    <FloorOnly>Keter</FloorOnly>
+    <StoryType>Final</StoryType>
+    <Story Condition="Start">7_7_1</Story>
+    <Story Condition="End">7_7_2</Story>
+  </Stage>
+  
+  <!--잔향악단 1차 초대장 UI에서 보여주기 위한 더미 데이터 전투 x, 전체 클리어시 해당 클리어 카운트 처리 O-->
+  <Stage id="610000">
+    <Name>푸른잔향 1차</Name>
+    <Wave>
+      <Formation>31</Formation>
+      <AvailableUnit>46</AvailableUnit>
+      <FormationType>AscendingOrder</FormationType>
+      <Unit>1310011</Unit>
+
+    </Wave>
+    <FloorNum>10</FloorNum>
+    <Invitation Combine="BookRecipe">
+    </Invitation>
+    <Chapter>7</Chapter>
+
+    <Condition>
+      <Stage>60002</Stage>
+    </Condition>
+    <MapInfo>Yan</MapInfo>
+    <StoryType>TheBlueReverberationPrimary</StoryType>
+    <Story Condition="Start">7_4_1</Story>
+    <Story Condition="End">7_4_12</Story>
+  </Stage>
+
+</StageXmlRoot>

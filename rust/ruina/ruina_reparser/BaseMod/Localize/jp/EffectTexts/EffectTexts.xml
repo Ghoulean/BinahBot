@@ -1,0 +1,1619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleEffectTextRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <effectTextList>
+    <BattleEffectText ID="OldLady_Lonely">
+      <Name>孤独</Name>
+      <Desc>速度が2減少する。幕の開始時、ダメージを1-2受ける。(重複不可)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedShoes_Kirakira">
+      <Name>赤い靴の魅了</Name>
+      <Desc>&lt;艶やか&gt; のページを使用した対象を攻撃する。ダメージ量が2-4増加する。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="TheDreamingCurrent_Sea">
+      <Name>虹色の海</Name>
+      <Desc>{0}幕の間、速度が3減少する。幕の開始時、現在の体力の10%を失い、光を1回復する。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Bloodbath_Hands">
+      <Name>青ざめた手</Name>
+      <Desc>これ以降{0}回 マッチで負けた場合、次のマッチにてダイスを振る時、相手に混乱ダメージを2-10与える。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="TheSnowQueen_Chu">
+      <Name>氷の欠片</Name>
+      <Desc>これ以降、氷の欠片を{0}回追加で受けると、次の2幕の間行動不能状態になる。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HappyTeddyBear_Hug">
+      <Name>テディの愛情</Name>
+      <Desc>&lt;懐かしいあの日の抱擁&gt;のページを使用した対象にマッチで負けた時、{0}%の確率でダイスの値だけ混乱ダメージを受ける。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="TheDreamingCurrent_candy">
+      <Name>キャンディー</Name>
+      <Desc>&lt;キャンディー&gt;のページを使用した対象に与えられるダメージが{0}%増加する。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ChildofGalaxy_Token">
+      <Name>小石</Name>
+      <Desc>{0}幕の間、幕開始時に体力を10%回復する。他の味方が死亡するたびに体力を「最大体力の20%」失う。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Stun">
+      <Name>行動不能</Name>
+      <Desc>今回の幕の間、行動できない。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Break">
+      <Name>混乱</Name>
+      <Desc>今回の幕の間、行動できない。ページと光が回復しない。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Burn">
+      <Name>火傷</Name>
+      <Desc>幕の終了時、{0}ダメージを受けて数値が2/3に減少(小数点以下切り捨て)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Paralysis">
+      <Name>麻痺</Name>
+      <Desc>今回の幕の間、ページ使用時にそのページのダイスを最大{0}つまで選択し、最大値を-3</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Bleeding">
+      <Name>出血</Name>
+      <Desc>今回の幕の間、攻撃ダイスを振るたびにダメージ{0}を受け、数値が2/3に減少する。(小数点以下繰り上げ)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Vulnerable">
+      <Name>脆弱</Name>
+      <Desc>今回の幕の間、攻撃によって受けるダメージ量が{0}増加</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Weak">
+      <Name>虚弱</Name>
+      <Desc>今回の幕の間、攻撃ダイスの威力 -{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Disarm">
+      <Name>武装解除</Name>
+      <Desc>今回の幕の間、守備ダイスの威力 -{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Binding">
+      <Name>束縛</Name>
+      <Desc>今回の幕において、速度の値が{0}減少。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Protection">
+      <Name>保護</Name>
+      <Desc>今回の幕の間、攻撃によって受けるダメージ量が{0}減少</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Strength">
+      <Name>パワー</Name>
+      <Desc>今回の幕の間、攻撃ダイスの威力+{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Endurance">
+      <Name>忍耐</Name>
+      <Desc>今回の幕の間、守備ダイスの威力+{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Quickness">
+      <Name>クイック</Name>
+      <Desc>今回の幕において、速度の値が{0}増加。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Blurry">
+      <Name>朦朧</Name>
+      <Desc>朦朧ではない他の対象がいる場合、このキャラクターを相手に選べない。幕の終了時に解除される。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Burn_Keyword">
+      <Name>火傷 X</Name>
+      <Desc>幕の終了時、Xダメージを受けて数値が2/3に減少(小数点以下切り捨て)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Paralysis_Keyword">
+      <Name>麻痺 X</Name>
+      <Desc>1幕の間、ページ使用時にこのページのダイスを最大Xつまで選択し、最大値を-3</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Bleeding_Keyword">
+      <Name>出血 X</Name>
+      <Desc>1幕の間、攻撃ダイスを振るたびにXダメージを受け、値が2/3に減少(小数点以下繰り上げ)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Vulnerable_Keyword">
+      <Name>脆弱 X</Name>
+      <Desc>1幕の間、攻撃によって受けるダメージ量が X 増加</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Weak_Keyword">
+      <Name>虚弱 X</Name>
+      <Desc>1幕の間、攻撃ダイスの威力 -X</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Disarm_Keyword">
+      <Name>武装解除 X</Name>
+      <Desc>1幕の間、守備ダイスの威力 -X</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Binding_Keyword">
+      <Name>束縛 X</Name>
+      <Desc>幕の間、すべての速度の値がXだけ減少</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Protection_Keyword">
+      <Name>保護 X</Name>
+      <Desc>1幕の間、攻撃によって受けるダメージ量が X 減少</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Strength_Keyword">
+      <Name>パワー X</Name>
+      <Desc>1幕の間、攻撃ダイスの威力 +X</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Endurance_Keyword">
+      <Name>忍耐 X</Name>
+      <Desc>1幕の間、守備ダイスの威力+X</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Quickness_Keyword">
+      <Name>クイック X</Name>
+      <Desc>幕の間、すべての速度の値がX増加</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="bstart_Keyword">
+      <Name>戦闘開始</Name>
+      <Desc>戦闘が始まったときに発動。キャラクターが攻撃対象に近づく前に発動する。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_Keyword">
+      <Name>専用バトルページ</Name>
+      <Desc>特定コアページのみ装着可能</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="counter_Keyword">
+      <Name>反撃</Name>
+      <Desc>一方攻撃を受けるときだけに使われるダイス(バトルページでマッチを開始したときは除外)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="FairyFestival_Recovery">
+      <Name>用意された肉</Name>
+      <Desc>体力が1になると女王に喰われる</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="SpiderBud_Cocoon">
+      <Name>繭</Name>
+      <Desc>仔蜘蛛のターゲットになる</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Philip_Attack">
+      <Name>ギラギラ燃える剣</Name>
+      <Desc>攻撃的中時、相手に火傷4を付与</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Philip_Defense">
+      <Name>羽の盾</Name>
+      <Desc>被ダメージ時、攻撃者に火傷2を付与。攻撃で受けるダメージを5減少</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Philip_Strong">
+      <Name>燃えたぎる一撃</Name>
+      <Desc>今回の幕にて速度ダイス +2</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Philip_Ready">
+      <Name>燃えたぎる一撃準備</Name>
+      <Desc>{0}幕後に燃えたぎる一撃を使用</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="QueenOfHatred_Sign">
+      <Name>悪者</Name>
+      <Desc>全ての攻撃属性に脆弱な状態になる。憎しみの女王が使用するページの内1枚のターゲットになる。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="QueenOfHatred_Hatred">
+      <Name>憎悪</Name>
+      <Desc>全ての攻撃に脆弱な状態になる。憎しみの女王の使用する全てのページのターゲットになる。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="KnightOfDespair_Blessing">
+      <Name>涙</Name>
+      <Desc>速度ダイスが１つ増加。特殊戦闘ページを使用。耐性情報変更。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Gaho">
+      <Name>加護</Name>
+      <Desc>前の幕にて、自分に最もダメージを与えた属性の耐性が今回の幕の間、抵抗に変更される。(ダメージ・混乱ダメージ個別に適応される)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BurningGirl_Ember">
+	      <Name>火種</Name>
+      <Desc>火種が付与されページの最初のダイスの最大値が火種の値だけ増加。ダイスによる攻撃が的中したとき、火種の数だけ火傷を付与する。火種が4以上なら25%の確率でダイスを振った後、ダイスの最大値だけダメージを受ける。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ability/BloodBath_Hand">
+      <Name>青ざめた手</Name>
+      <Desc>このキャラクターに攻撃が3回的中する度に混乱ダメージを追加で3-10与える</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SweepersSkill">
+      <Name>しつこさ</Name>
+      <Desc>体力が0になるダメージを受けた場合、80%の確率で体力を一部残して復活。この効果が発動するたび、復活する確率が半分に減少する。</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="SlashPowerUp">
+      <Name>斬撃威力増加</Name>
+      <Desc>今回の幕の間、斬撃威力 +{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="PenetratePowerUp">
+      <Name>貫通威力増加</Name>
+      <Desc>今回の幕の間、貫通威力 +{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HitPowerUp">
+      <Name>打撃威力増加</Name>
+      <Desc>今回の幕の間、打撃威力 +{0}</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="Queenbee_Spore">
+      <Name>胞子</Name>
+      <Desc>幕の開始時、{0}ダメージを受けて数値が半分に減少。(小数点切り捨て)
+今回の幕の間、攻撃ダイスを振るたびに{0}ダメージ。
+この効果を持った状態で死亡時、次の幕に働き蜂を1匹召喚
+      </Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Queenbee_Punish">
+      <Name>懲罰</Name>
+      <Desc>「働き蜂」の幻想体ページを選択しなかった司書がこのキャラクターを攻撃する場合、ダメージ量2-4 増加</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Snowwhite_Vine">
+      <Name>蔓</Name>
+      <Desc>「蔓」幻想体ページを選択した司書がこのキャラクターを貫通ダイスで攻撃する場合、威力2-4 増加</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Burning_Match">
+      <Name>炎上</Name>
+      <Desc>速度ダイス +1, 全ダイスの威力 +2, ダイスを転がすたびに最大体力の5%だけ体力が減少</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="TeddyLove">
+      <Name>愛情</Name>
+      <Desc>この対象を攻撃するとき、現在の値だけ攻撃者の威力を増加。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="FairyMeat">
+      <Name>新鮮な肉</Name>
+      <Desc>「羽ばたき」キャラクターがこの対象を攻撃するとき威力+2、攻撃的中時に体力を10回復</Desc>
+    </BattleEffectText>
+<!--
+    <BattleEffectText ID="ego_Keyword">
+      <Name>E.G.O</Name>
+      <Desc>E.G.Oは全ての司書が共有して使用可能。</Desc>
+    </BattleEffectText>
+    -->
+    <BattleEffectText ID="AreaCard_Keyword">
+      <Name>広域攻撃ページ</Name>
+      <Desc>戦闘開始時に全ての敵のそれぞれの速度ダイス1つを対象に攻撃。相手が攻撃を1回でも防いだ場合、相手はそのページを再び使用することが出来る。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="AreaDiceAll_Keyword">
+      <Name>合算</Name>
+      <Desc>広域攻撃にて、相手のダイスの値の合計よりこのダイスの方が大きければダメージを与える。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="AreaDiceEach_Keyword">
+      <Name>個別</Name>
+      <Desc>広域攻撃にて、相手のダイスの値がこのダイスよりも低ければダメージを与える。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="FairyMeal">
+      <Name>飢え</Name>
+      <Desc>現在の累計ダメージ{0}</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="OnlyOne_Keyword">
+      <Name>唯一</Name>
+      <Desc>現在、自分が持っている全てのバトルページが異なるページで構成されている場合、「唯一」状態になる。</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="RedHood_Angry">
+      <Name>怒り</Name>
+      <Desc>2幕の間持続。毎幕ごとにパワー +2, 広域攻撃ページを使用</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedHood_Rage">
+      <Name>行き場を失った怒り</Name>
+      <Desc>永久的に持続。毎幕ごとにパワー+5, クイック+5, 広域攻撃ページを使用</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedHood_Hunt">
+      <Name>獲物</Name>
+      <Desc>獲物ページを使用した司書が攻撃時ダメージ2-6増加</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="WarpCharge">
+      <Name>充電</Name>
+      <Desc>充電の数値によって特定バトルページの能力が上昇。最大10まで獲得可能</Desc>
+    </BattleEffectText>
+  
+
+    <BattleEffectText ID="Lumberjack_Heart">
+      <Name>暖かい心</Name>
+      <Desc>全ダイスの最大値 +{0}</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="GalaxyBoy_Stone">	
+      <Name>友達の証</Name>	
+      <Desc>幕の開始時、体力を最大値の10%分回復</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Smoke">
+      <Name>煙</Name>
+      <Desc>受けるダメージ量{0}%増加。最大10まで得ることが出来る。煙の数値が9以上ならすべてのダイス威力+1。幕の終了時に煙の数値が1減少。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Smoke_buf">
+      <Name>煙</Name>
+      <Desc>攻撃で与えるダメージ量{0}%増加。最大10まで得ることが出来る。煙の数値が9以上ならすべてのダイス威力+1。幕の終了時に煙の数値が1減少。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Smoke_Keyword">
+      <Name>煙</Name>
+      <Desc>煙の数値に比例して受けるダメージ量が増加。煙の数値が9以上ならすべてのダイス威力+1。最大10まで得ることが出来る。幕の終了時に煙の数値が1減少。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Butterfly_Seal">
+      <Name>封印</Name>
+      <Desc>速度ダイス{0}つが使用不可に。前方の速度ダイスから判定。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Freischutz_Bullet">
+      <Name>絶望の弾丸</Name>
+      <Desc>7つ目に使用する近接、遠距離ページの対象が味方を含めたランダムに決定される。</Desc>
+      <!-- <Desc>ページを使用するたびに増加。7番目の弾丸のページの威力が3-7増加。該当するページを使用したとき、30%の確率で味方を含めたランダムな対象を攻撃する。</Desc> -->
+    </BattleEffectText>
+
+    <BattleEffectText ID="CB_BigBadWolf_Stealth">
+      <Name>影</Name>
+      <Desc>狼が使用するバトルページの対象でない司書は行動不能</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wolf_Claw">
+      <Name>凶悪な爪</Name>
+      <Desc>今回の幕の間パワー+2、敵にターゲティングされない、敵にマッチを挑めない、攻撃ダイスが的中するたびに次の幕に出血1を付与。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Crying_Weak">
+      <Name>剥き出しの心</Name>
+      <Desc>全ての耐性が「脆弱」になる</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="BurningGirl_Burn">
+      <Name>残り火</Name>
+      <Desc>攻撃ダイスに「[的中] 火傷1 付与」効果を追加</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BurningGirl_Embe">
+      <Name>火種</Name>
+      <Desc>火種が付与された最初のダイスの最大値が火種の数値だけ増加。該当するダイスが的中したとき、火種の数だけ火傷を付与。火種が4以上なら25%の確率で該当するダイスを転がした後、ダイスの最大値だけダメージを受ける。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SingingMachine_Rhythm">
+      <Name>リズム</Name>
+      <Desc>この効果がある間、幕の開始時にパワー1を得る。被ダメージ時に混乱ダメージ2-5を追加で受ける。幕の終了時に1減少。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Porccubus_Happy">
+      <Name>快感</Name>
+      <Desc>被ダメージ時、快感が5になれば2-7ダメージと混乱ダメージを受けて効果が消える</Desc>
+    </BattleEffectText>
+
+		<BattleEffectText ID="onlypage_yujin_Keyword">
+			<Name>ユジン専用バトルページ</Name>
+			<Desc>ユジンのページにのみ装着可能</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="onlypage_sweeper_Keyword">
+			<Name>掃除屋専用バトルページ</Name>
+			<Desc>掃除屋のページにのみ装着可能</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="onlypage_warp_Keyword">
+			<Name>ローズ, レスティ, セン専用バトルページ</Name>
+			<Desc>ローズ, レスティ, センのページにのみ装着可能</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="onlypage_philip_Keyword">
+			<Name>不安定な泣く子専用バトルページ</Name>
+			<Desc>不安定な泣く子のページにのみ装着可能</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="onlypage_lowel_Keyword">
+			<Name>ロウェル専用バトルページ</Name>
+			<Desc>ロウェルのページにのみ装着可能</Desc>
+		</BattleEffectText>
+		<BattleEffectText ID="onlypage_chulsan_Keyword">
+			<Name>セシル, メイ専用バトルページ</Name>
+			<Desc>セシル, メイのページにのみ装着可能</Desc>
+		</BattleEffectText>
+
+    <BattleEffectText ID="HodFinal_CopiousBleeding">
+      <Name>深い傷</Name>
+      <Desc>数値が5以上になれば25%のダメージを受ける</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="CardBuf_Latitia_Heart">
+      <Name>レティシアのプレゼント</Name>
+      <Desc>{0}幕後に爆発</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Latitia_Heart">
+      <Name>ドキドキ</Name>
+      <Desc>プレゼントのページが爆発するたびに+1。数値が3になればこのキャラクターを倒し、次の幕にちび魔女の友だち1匹を生成する</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Latitia_Gift">
+      <Name>プレゼント</Name>
+      <Desc>プレゼントをあげたキャラクター以外の相手とマッチすると、マッチ開始時に40%の確率で2-7のダメージを受け、次の幕に出血2を得る</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BlackSwan_Nettle">
+      <Name>イラクサの服</Name>
+      <Desc>毎幕開始時、この効果の数値だけ保護を得る。数値が0になればこの効果は消える。イラクサの服が1減少する。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="HodFinal_BlackSwanDeadBro">
+      <Name>消えた家族</Name>
+      <Desc>幕の開始時、この値が4以上なら特殊バトルページを使用</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Laetitia_Gift_Keyword">
+      <Name>小さなプレゼント</Name>
+      <Desc>コスト1の弱いバトルページ。手元にある場合、優先的に使用される。使用時に消滅。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="bullet_keyword">
+      <Name>弾丸</Name>
+      <Desc>捨てるか使用したとき、遠距離バトルページに追加効果を付与する</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="DmgUp">
+      <Name>ダメージ量増加</Name>
+      <Desc>今回の幕の間、攻撃ダイスのダメージ量 +{0}</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Universe_DecreaseMaxBp">
+      <Name>貫かれた境界</Name>
+      <Desc>最大混乱抵抗値が{0}%減少</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Universe_Enlightenment">
+      <Name>容れられない知恵</Name>
+      <Desc>手元に「悟り」があれば、最大混乱抵抗値が50%減少</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Alriune_Attacker">
+      <Name>贖罪の月桂冠</Name>
+      <Desc>このキャラクターのみ、アルリウネやアルリウネの力を使うキャラクターにダメージを与えられる。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Alriune_Debuf">
+      <Name>残香</Name>
+      <Desc>幕の開始時、混乱ダメージを{0}受けて残香の数値が半分に減少する。(小数点切り捨て)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ResistWeakBP">
+      <Name>混乱耐性減少</Name>
+      <Desc>今回の幕の間、全ての混乱耐性が脆弱に変更</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Orchestra_Enthusiastic">
+      <Name>熱烈な感動</Name>
+      <Desc>操作不能。混乱状態になると次の幕の開始時に解除及び混乱状態を回復。一般司書が攻撃したときには混乱ダメージだけ、熱烈な感動状態の司書が攻撃したときは体力ダメージのみを受ける。幻想体の攻撃でダメージを受けない(フィナーレを除く)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="AllPowerUp">
+      <Name>威力増加</Name>
+      <Desc>全ダイスの威力を{0}増加</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="DecreaseSpeedTo1">
+      <Name>速度固定1</Name>
+      <Desc>今回の幕の間、速度ダイスの値を1に固定</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Alriune_Flower">
+      <Name>花びら</Name>
+      <Desc>「春の誕生」ページを選んだキャラクターの攻撃がこのキャラクターに4回以上的中すれば、すべてのキャラクターに混乱ダメージ3-7を与え、次の幕にターゲット不能効果を得る。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="NoTargeting">
+      <Name>ターゲット指定不可能</Name>
+      <Desc>このキャラクターを相手に指定できない</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Orchestra_Affect">
+      <Name>熱烈な感動</Name>
+      <Desc>この効果がある間、敵味方区別なしに相手を決定され、ダメージ量が2-4増加する。</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="TakeBreakDamage2">
+      <Name>今回の幕の間、受ける混乱ダメージ量が2増加</Name>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_thumb">
+      <Name>親指専用バトルページ</Name>
+      <Desc>親指 構成員, カーロ, カトリエル, デニスのページにのみ装着可能</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_thumb2">
+      <Name>カーロ, カトリエル, デニス専用バトルページ</Name>
+      <Desc>カーロ, カトリエル, デニスのページにのみ装着可能</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_boris">
+      <Name>ボリス専用バトルページ</Name>
+      <Desc>ボリスのページにのみ装着可能</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_nemo">
+      <Name>ネモ専用バトルページ</Name>
+      <Desc>ネモのページのみに装着可能</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_bada">
+      <Name>バダ専用バトルページ</Name>
+      <Desc>バダのページのみに装着可能</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_martina">
+      <Name>マルティナ専用バトルページ</Name>
+      <Desc>マルティナのページにのみ装着可能</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="NullifyPower">
+      <Name>威力無効化</Name>
+      <Desc>今回の幕の間、威力の影響を受けない</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Alriune_Petal">
+      <Name>花びら</Name>
+      <Desc>3枚になれば、該当する幕に広域攻撃ページを使用する</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Lumberjack_Cut">
+      <Name>暖かい心</Name>
+      <Desc>戦闘開始時、光を3以上持っていれば斬撃ダイスの威力が1-2増加する</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="Vibrate">
+      <Name>振動</Name>
+      <Desc>???</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="BigBird_Charm">
+      <Name>魅了</Name>
+      <Desc>操作不能。速度1固定。「導き」バトルページを使用。大鳥を相手に指定。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BigBird_Eye">
+      <Name>凝視</Name>
+      <Desc>{0}幕の間、この効果を付与した相手のみターゲットに指定可能</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BigBird_Sleep">
+      <Name>睡眠</Name>
+      <Desc>今回の幕の間、混乱状態になる。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="SnowQueen_Debuf">
+      <Name>寒気</Name>
+      <Desc>幕の開始時、値が1減少する。
+幕の開始時、この数値が4以上なら今回の幕の間束縛2, 虚弱2を得る。
+6以上なら今回の幕は行動不能状態になり、次の幕の開始時に値が初期化される。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="BloodyTree_Emotion_Damage">
+      <Name>か細い深紅の翼</Name>
+      <Desc>マッチ時に本人、相手、幻想体ページ保有キャラクターを除くすべてのキャラクターが1-10ダメージを受ける。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SnowQueen_Emotion_Shard">
+      <Name>氷の欠片</Name>
+      <Desc>幕の終了時、この数値が3以上なら次の幕の間は行動不能になる。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SnowQueen_Emotion_Stun">
+      <Name>氷結</Name>
+      <Desc>今回の幕の間は行動不能。敵キャラクターの場合、次の幕に束縛6を得る。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HokmaFirstCounter">
+      <Name>目覚め</Name>
+      <Desc>{0}幕後に目覚める。天国のトゲや喰い込む天国が混乱状態になれば、この値は減少しない。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HokmaFirstCounter2">
+      <Name>目覚め</Name>
+      <Desc>{0}幕後に、トゲ1つが目覚めるか召喚される。喰い込む天国が混乱状態になれば、この値は減少しない。</Desc>
+    </BattleEffectText>
+    
+     <BattleEffectText ID="Mountain_WeakResist">
+      <Name>混乱耐性減少</Name>
+      <Desc>今回の幕の間、全ての混乱耐性が脆弱に変更</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Target">
+      <Name>レンガの道</Name>
+      <Desc>帰り道と臆病な猫のターゲットになる
+臆病な猫がこのキャラクターを攻撃するとき、獅子の威力+5
+この効果を持つ相手に使用した「みんな！家に帰ろう～！」ページの攻撃が全て的中しなければ、帰り道の最後の攻撃がキャンセルされる</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Coward_Strength">
+      <Name>勇気</Name>
+      <Desc>今回の幕、帰り道が攻撃を受けるたびにパワーを得る。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Super_Cancel">
+      <Name>帰れない家</Name>
+      <Desc>「家」をターゲットにするページがキャンセルされた回数が
+3回になれば、次の幕にて強い攻撃ページを使用</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Emotion_Target">
+      <Name>帰り道</Name>
+      <Desc>書かれたとおりに相手を攻撃するたびにダメージ量が2増加する。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Emotion_Protected">
+      <Name>一緒に行く道</Name>
+      <Desc>このキャラクターが受ける攻撃を、他の味方がマッチで負担すれば該当するページの威力が1-2増加</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="DangoCreature_Emotion_Healed">
+      <Name>分裂</Name>
+      <Desc>今回の舞台で回復した体力の総量</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="IndexRelease">
+      <Name>解禁</Name>
+      <Desc>全ダイスの威力+1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="IndexReleaseCount">
+      <Name>解禁</Name>
+      <Desc>今回の舞台にて使用した異なるバトルページの数：{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="IndexOnlyCardCount">
+      <Name>専用ページ使用</Name>
+      <Desc>4幕ごとに専用ページを使用する。他に代行者が居なければ2幕ごとに使用する。({0}幕後に使用)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="IndexReleaseCard2_Keyword">
+      <Name>解禁-Ⅱ</Name>
+      <Desc>斬撃(2-6), 貫通(1-3)ダイスと「使用時：解禁-Ⅲを手元に追加して消滅する」能力を持つバトルページ</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="IndexReleaseCard3_Keyword">
+      <Name>解禁-Ⅲ</Name>
+      <Desc>斬撃(3-7), 貫通(2-4)ダイスと「使用時：光を1回復。ページを1枚引く。」能力を持つバトルページ</Desc>
+    </BattleEffectText>
+
+  <BattleEffectText ID="onlypage_esther_Keyword">
+      <Name>エスター専用バトルページ</Name>
+      <Desc>エスターのページにのみ装着可能</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_hubert_Keyword">
+      <Name>ヒューバート専用バトルページ</Name>
+      <Desc>ヒューバートのページにのみ装着可能</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_gloria_Keyword">
+      <Name>グローリア専用バトルページ</Name>
+      <Desc>グローリアのページにのみ装着可能</Desc>
+    </BattleEffectText>
+    
+       <BattleEffectText ID="Decay">
+      <Name>腐食</Name>
+      <Desc>幕の終了時、{0}ダメージを受けて数値が1減少する。(被ダメージ時、腐食の数だけ物理・混乱追加ダメージを受ける。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ServantOfWrath_Wand">
+      <Name>杖</Name>
+      <Desc>「汝は崩れるであろう…！」ページの攻撃を受けるとき、該当するページの威力がこの値に比例して増加する。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Nihil_Hatred">
+      <Name>悪者</Name>
+      <Desc>この効果がある間、幕の開始時に脆弱3を得る</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nihil_Meaningless">
+      <Name>虚無</Name>
+      <Desc>この効果がある間、幕の開始時に虚弱、武装解除、脆弱7を得る</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Angry_Angry">
+      <Name>憤怒</Name>
+      <Desc>このキャラクターは操作できない。その代わり、敵味方区別なくランダムにターゲットを攻撃する。毎幕ごとにパワー2を得て、光を2ずつ回復し、ページを2枚追加で引く。(虚無幻想体ページの条件を満たした場合、ペナルティが消える。)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Angry_Friend">
+      <Name>友</Name>
+      <Desc>「友」幻想体ページを使用した司書がこのキャラクターを倒せば、全ての司書の光、体力、混乱抵抗値がそれぞれ3/10/10回復し、この効果の対象が初期化される。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nihil_MagicalPower">
+      <Name>魔法少女</Name>
+      <Desc>全ての魔法少女ページ4枚が手元にあれば、虚弱、武装解除、束縛の効果を受けず、毎幕ごとにパワーを1-2得る。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nihil_Nihil">
+      <Name>虚無</Name>
+      <Desc>自分以外の全てのキャラクターに毎幕開始時に虚弱、武装解除、束縛5を付与する。「貪欲」「憎悪」「憤怒」ページのペナルティが以下の通りに消える。
+「貪欲」：自分にのみ効果が適用される。
+「憎悪」：マッチ敗北時、混乱ダメージを受けない。
+「憤怒」：このキャラクターが操作できるようになる。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_chun_Keyword">
+      <Name>チュンの専用バトルページ</Name>
+      <Desc>チュンのページにのみ装着可能</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="CardBuf_burnUp_Keyword">
+      <Name>火光衝天</Name>
+      <Desc>このページを使用する間、バトルページで付与する火傷の値が2倍になる</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BurnSpread_Keyword">
+      <Name>燎原之火</Name>
+      <Desc>このキャラクターが{0}幕以内に混乱状態になった場合、他の味方にこのキャラクターの持つ火傷の数値の半分だけ火傷を付与する。</Desc>
+    </BattleEffectText>
+    
+        <BattleEffectText ID="Silence_StopTime">
+      <Name>沈黙</Name>
+      <Desc>今回の幕の間、バトルページ装着時の時間制限が撤去される。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Silence_TraceCount">
+      <Name>積もる時間</Name>
+      <Desc>倒した時間の痕跡の数</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Silence_TimeOut">
+      <Name>止められぬ時間</Name>
+      <Desc>{0}幕後に特殊パターン出現</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Silence_PowerClash">
+      <Name>流れた時間</Name>
+      <Desc>マッチ進行時、威力+3</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Silence_PowerAtk">
+      <Name>流れた時間</Name>
+      <Desc>一方攻撃時、威力+3</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="SmallBird_Punishment">
+      <Name>懲罰</Name>
+      <Desc>今回の幕に使用する最初のページの最初のダイスの威力が2-4増加する。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Smallbird_Beak">
+      <Name>処罰するくちばし</Name>
+      <Desc>ダメージ量+{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Clock_Thirteen">
+      <Name>13番目の鐘の音</Name>
+      <Desc>使用したページの数：{0}
+13番目に使用するページのダイス威力を1-2増加
+該当するダイスに「[的中] (このダイスの値)%分、最大体力に比例したダメージを追加で与える」効果を追加する。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="RedMist">
+      <Name>赤い霧</Name>
+      <Desc>全ダイスの威力+{0}。最大で5まで得られる。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_redmist_Keyword">
+      <Name>赤い霧 専用バトルページ</Name>
+      <Desc>赤い霧のページにのみ装着可能</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="BinahFairy">
+      <Name>妖精</Name>
+      <Desc>ダイスを振るたびに{0}ダメージを受ける。幕の終了時に{0}ダメージを受け、妖精の数値が半分に減少する。(小数点以下切り捨て)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedMistEgoReady">
+      <Name>E.G.O発現</Name>
+      <Desc>{0}幕後にE.G.Oを発現</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedMistEgo">
+      <Name>E.G.O発現</Name>
+      <Desc>「大切断-横」が使用可能に。全ダイス威力が2増加。毎幕ごとに40ダメージ以上与えられない場合、混乱ダメージを受ける。
+混乱状態になると「E.G.O発現」状態が解除される。</Desc>
+    </BattleEffectText>
+  
+    <BattleEffectText ID="Fairy_Keyword">
+      <Name>妖精 X</Name>
+      <Desc>ダイスを振るたびにXダメージを受ける。幕の終了時にXダメージを受け、妖精の数値が半分に減少する。(小数点以下切り捨て)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Sin_Abnormality">
+      <Name>罪</Name>
+      <Desc>幕の開始時、罪の数値が一定以上なら審判鳥が特殊ページを使用する。味方を攻撃してダメージを与えれば罪をなすりつけることが出来る。(ページごとに1回)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Sin_AbnormalityCard">
+      <Name>罪</Name>
+      <Desc>罪が5以上になったとき、幕の開始時に体力最大値の10%分ダメージを受け、値が初期化する。他のキャラクターにダメージを与えれば罪をなすりつけることが出来る。(ページごとに1回)</Desc>
+    </BattleEffectText>
+  
+    <BattleEffectText ID="onlypage_rhino_Keyword">
+      <Name>サイチーム専用 バトルページ</Name>
+      <Desc>サイチーム, マキシムのページにのみ装着可能</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_reindeer_Keyword">
+      <Name>トナカイチーム 専用バトルページ</Name>
+      <Desc>トナカイチーム, ルドルフのページにのみ装着可能</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_myo_Keyword">
+      <Name>ミョ 専用バトルページ</Name>
+      <Desc>ミョのページにのみ装着可能</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_maxim_Keyword">
+      <Name>マキシム 専用バトルページ</Name>
+      <Desc>マキシムのページにのみ装着可能</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_rudolph_Keyword">
+      <Name>ルドルフ 専用バトルページ</Name>
+      <Desc>ルドルフのページにのみ装着可能</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_nicolai_Keyword">
+      <Name>ニコライ 専用バトルページ</Name>
+      <Desc>ニコライのページにのみ装着可能</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="WarpChargeR">
+      <Name>充電+</Name>
+      <Desc>充電の数値によって特定のバトルページの能力が上昇。最大20まで獲得可能。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="NicolaiTarget">
+      <Name>標的</Name>
+      <Desc>攻撃で受けるダメージ・混乱ダメージ量が50%増加</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="MyoBerserk">
+      <Name>凶暴化</Name>
+      <Desc>全ダイスの威力+1</Desc>
+    </BattleEffectText>
+	  
+    <!-- 게부라 최종전 -->
+    <BattleEffectText ID="RedHoodFinal_Berserk">
+      <Name>怒り</Name>
+      <Desc>2幕の間持続。毎幕ごとにパワー +2, 広域攻撃ページを使用</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedHoodFinal_Rage">
+      <Name>行き場を失った怒り</Name>
+      <Desc>永久的に持続。毎幕ごとにパワー+5, クイック+5, 広域攻撃ページを使用</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedHoodFinal_Mark">
+      <Name>標的</Name>
+      <Desc>ローランがこの効果を持つ相手を攻撃するとき、ダメージ量が50%増加</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="RedHoodFinal_Scar">
+      <Name>傷</Name>
+      <Desc>幕の開始時、この効果の数値だけ出血を得る。幕の開始時に値が6以上なら体力最大値の20%に当たるダメージを受けて効果が消える。狼がこの効果を持つキャラクターを攻撃したとき、数値分ダメージ量が増加。数値が4以上なら狼のダイス威力 +2</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nothing_Skin">
+      <Name>皮</Name>
+      <Desc>今回の幕の間、全ての耐性と使用するページが前の幕に倒した相手のものに変更される。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nothing_Fear">
+      <Name>恐怖</Name>
+      <Desc>幕の開始時、恐怖が3枚以上手元にあれば(手元にある恐怖ページの数 x 10)だけ体力・混乱ダメージを受けて該当する幕の間、行動不能状態になる。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nothing_Mimic">
+      <Name>模倣</Name>
+      <Desc>模倣の数値によって特定のバトルページの能力が上昇。最大10まで得ることが出来る。幕の終了時、1ずつ減少。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nosferatu_Blood">
+      <Name>血</Name>
+      <Desc>血の数値によって使用するページが変わる。体力を最大値の5%分失うたび、数値が1減少する。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Nosferatu_Blight">
+      <Name>恐水病</Name>
+      <Desc>2幕の間持続。この効果がある間、幕の開始時に体力最大値の5%分失い、パワー1、クイック1、出血6を得る。幕の開始時、体力が最大値の50%以下の場合は25%の確率で制御不能状態になり、味方を攻撃する。</Desc>
+    </BattleEffectText>
+    
+    
+<!-- text changed -->
+    <BattleEffectText ID="egoChange_Keyword">
+      <Name>同化</Name> <!-- 同化 -->
+      <Desc>デッキと手元にあるページが入れ替わる。同化が解除されると以前のデッキと手札に戻る。他の同化やE.G.O発現とは同時に使用不可</Desc>
+    </BattleEffectText>
+    
+    <!-- purple tear -->
+    <BattleEffectText ID="onlypage_purpleTear_Keyword">
+      <Name>紫の涙 専用ページ</Name>
+      <Desc>紫の涙のページにのみ装着可能</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="StanceChange_Keyword">
+      <Name>体勢変更</Name>
+      <Desc>手元とデッキにある全てのバトルページを無くし、該当する体勢に設定されたデッキに入れ替わるする。その後、入れ替わる前の手札の枚数分ページを引く。</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="StanceSlash">
+      <Name>斬撃体勢</Name>
+      <Desc>斬撃威力 +2。攻撃で与えるダメージ量が50%増加。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="StancePenetrate">
+      <Name>貫通体勢</Name>
+      <Desc>貫通威力 +2。バトルページで付与する状態異常の数値が2倍になる。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="StanceHit">
+      <Name>打撃体勢</Name>
+      <Desc>打撃威力 +2。攻撃で与える混乱ダメージ量が50%増加。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="StanceDefense">
+      <Name>防御体勢</Name> <!-- don't need to equal to '방어' of '방어 주사위' -->
+      <Desc>守備威力 +2。全ての状態異常を解除。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="DefensePowerUp">
+      <Name>守備威力増加</Name>
+      <Desc>今回の幕の間、守備威力 +{0}</Desc>
+    </BattleEffectText>
+
+    <!-- Chesed Boss -->
+    <BattleEffectText ID="Lumberjack_Heart_Final">
+      <Name>暖かい心</Name>
+      <Desc>幕の開始時、暖かい心の数値だけ光を回復する。(通常の光回復は無効) 幕の終了時、数値が1減少する。最大3まで増加する。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Lumberjack_Meat_Final">
+      <Name>心臓の破片</Name>
+      <Desc>ローランの特定バトルページの威力を増加する。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Lumberjack_Piece_Final">
+      <Name>心の欠片</Name>
+      <Desc>この数値が4になれば次の幕の開始時、暖かい心を1得て数値が4減少する。幕の終了時、数値が1減少する。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Super_Cancel_Final">
+      <Name>帰れない家</Name>
+      <Desc>「家」をターゲットにするページがキャンセルされた回数。2になると、次の幕に強い攻撃ページを使用。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WayBackHome_Coward_Final">
+      <Name>怯え</Name>
+      <Desc>今回の幕、帰り道が攻撃を受けるたびに虚弱を得る</Desc>
+    </BattleEffectText>
+    <!-- Ozma -->
+    <BattleEffectText ID="Ozma_Oblivion">
+      <Name>忘却</Name>
+      <Desc>全てのバトルページが特殊ページに入れ替わる。攻撃的中時、1枚のページがランダムに戻ってくる。残りページ数 {0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_AwakenPumpkin_Strength">
+      <Name>南のジャック</Name>
+      <Desc>幕の開始時、パワー1を得る</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_AwakenPumpkin_Endurance">
+      <Name>西のジャック</Name>
+      <Desc>幕の開始時、忍耐1を得る</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_AwakenPumpkin_Quickness">
+      <Name>北のジャック</Name>
+      <Desc>幕の開始時、クイック2を得る</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_AwakenPumpkin_BreakDmg">
+      <Name>東のジャック</Name>
+      <Desc>与える混乱ダメージ量 +3</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_LibrarianToPumpkin">
+      <Name>喪った記憶</Name>
+      <Desc>全てのバトルページが特殊ページに入れ替わる。全ての能力値が入れ替わる。パッシブが発動しない。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Ozma_PumpkinToLibrarian">
+      <Name>完全なジャック</Name>
+      <Desc>カボチャになった司書のコアページ、デッキを使用する。毎幕ごとにパワー、クイック、忍耐2, 混乱ダメージ量 +3の効果を得る。</Desc>
+    </BattleEffectText>
+
+    <!-- Wizard -->
+    <BattleEffectText ID="Wizard_Lumberjack">
+      <Name>暖かい心の木こり</Name>
+      <Desc>自分のフェーズのとき、1幕にダメージを30以上与えた次の幕の開始時、自分を含めた全ての司書の光を最大まで回復する。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Scarecrow">
+      <Name>知恵を求める案山子</Name>
+      <Desc>自分のフェーズになったとき、手元に知恵のページと4枚の特殊バトルページを得て速度ダイスが5つに増える。
+自分のフェーズの幕が終了したとき、全ての司書を元に戻せなかった場合、速度ダイスが1つに減少する。
+      </Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Lion">
+      <Name>臆病なライオン</Name>
+      <Desc>自分のフェーズになったとき、手元に勇気のページを1枚追加。速度ダイスが5つに増加する。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_WaybackHome">
+      <Name>帰り道</Name>
+      <Desc>手元に特殊バトルページ4枚を追加。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Ozma">
+      <Name>オズマ</Name>
+      <Desc>手元に変異ページと特殊バトルページ3枚を得る。
+自分のフェーズになったとき、変異ページのコストが0になり、速度ダイス1つが最速になる。
+      </Desc>
+    </BattleEffectText>
+
+    <!-- Wizard -->
+    <BattleEffectText ID="Wizard_Lumberjack_Original">
+      <Name>暖かい心の木こり</Name>
+      <Desc>元の姿に戻さなければならない。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Lion_Original">
+      <Name>臆病なライオン</Name>
+      <Desc>元の姿に戻さなければならない。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_WaybackHome_Original">
+      <Name>帰り道</Name>
+      <Desc>元の姿に戻さなければならない。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Ozma_Original">
+      <Name>オズマ</Name>
+      <Desc>元の姿に戻さなければならない。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Wizard_Lumberjack_LightOfF">
+      <Name>鉛の心臓</Name>
+      <Desc>光の初期値、最大値が減少する。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Scarecrow_Fail">
+      <Name>おがくずの詰まった袋</Name>
+      <Desc>戦闘終了時まで、速度ダイスが1つに減少する。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Lion_Courage">
+      <Name>勇気</Name>
+      <Desc>自分に掛かった虚弱、武装解除、脆弱を全て解除。パワー、クイックを5得る。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Lion_Coward">
+      <Name>怯え</Name>
+      <Desc>戦闘終了時まで、毎幕ごとに虚弱、武装解除、脆弱5を得る</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_Ozma_Support">
+      <Name>手を貸すジャック</Name>
+      <Desc>今回の幕の間、全ての攻撃ダイスの威力 +2</Desc>
+    </BattleEffectText>
+
+    <!-- 환상체카드 -->
+    <BattleEffectText ID="Ozma_revive">
+      <Name>生命の粉</Name>
+      <Desc>「生命の粉」幻想体ページの効果発動が可能</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_potion">
+      <Name>勇気が湧く水薬</Name>
+      <Desc>攻撃で与えるダメージ +6, 攻撃で受けるダメージ +3</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_poket">
+      <Name>おがくずの詰まった袋</Name>
+      <Desc>マッチ勝利時に混乱抵抗値を8回復、マッチ敗北時に混乱ダメージを4受ける。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_heart">
+      <Name>鉛の心臓</Name>
+      <Desc>毎幕ごとに光を1追加で回復、体力を5失う</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_home">
+      <Name>帰れない家</Name>
+      <Desc>マッチ敗北時、自分に4混乱ダメージ。次のダイス威力 +2</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_change">
+      <Name>変異</Name>
+      <Desc>マッチにて攻撃的中時、50%の確率で相手の次のダイスを破壊。マッチでダメージを受けると、50%の確率で自分の次のダイスを破壊。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Wizard_emerald">
+      <Name>エメラルド</Name>
+      <Desc>今回の幕の間、このキャラクターに攻撃を的中させると光を1回復。(キャラクターごとに最大2回)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_xiao_Keyword">
+      <Name>シャオ専用バトルページ</Name>
+      <Desc>シャオのページにのみ装着可能</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_chunMiris_Keyword">
+      <Name>チュン、ミリス専用バトルページ</Name>
+      <Desc>チュン、ミリスのページにのみ装着可能</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BreakProtection_Keyword">
+      <Name>混乱保護 X</Name>
+      <Desc>1幕の間、攻撃で受ける混乱ダメージ量を X 減少</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BreakProtection">
+      <Name>混乱保護</Name>
+      <Desc>今回の幕の間、攻撃で受ける混乱ダメージ量を{0}減少</Desc>
+    </BattleEffectText>
+  
+    <BattleEffectText ID="NullifyPowerReady">
+      <Name>蒲牢</Name>
+      <Desc>{0}幕後に蒲牢が発動し、全てのキャラクターが威力の効果を受けない</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Sin_Abnormality_Final">
+      <Name>罪の痕跡</Name>
+      <Desc>幕の開始時、この数値が一定以上ならローランが特殊ページを使用する。ローラン以外のキャラクターを攻撃しダメージを与えることで罪をなすりつけることが出来る。(ページごと1回)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SmallBird_Punish_Final">
+      <Name>懲罰</Name>
+      <Desc>ローランがこの対象を攻撃するときにダメージ量+8</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="SmallBird_Vigil_Final">
+      <Name>警戒</Name>
+      <Desc>自分より速度が低い味方の味方が攻撃を受けるたび、今回の幕にてパワーを1得る。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Final_BigBird_Charm">
+      <Name>眩惑</Name>
+      <Desc>{0}幕継続。操作不能。速度1固定。大鳥に特殊バトルページ使用。味方に当たった場合ダメージを受けない。混乱状態になった場合は効果が除去される。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Final_BigBird_Darkness">
+      <Name>暗黒</Name>
+      <Desc>{0}幕の間、威力の影響を受けない。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="ApocalypseBird_Sin">
+      <Name>重い罪</Name>
+      <Desc>被ダメージに受ける混乱ダメージが{0}増加。幕の終了時、数値が5以上なら体力最大値の10%に該当するダメージを受けて効果を除去する。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ApocalypseBird_Charm">
+      <Name>恐れ</Name>
+      <Desc>全ての耐性が脆弱になる。幕の開始時に麻痺4を得る</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ApocalypseBird_BigEye">
+      <Name>大きな目</Name>
+      <Desc>威力の効果を受けない</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ApocalypseBird_LongArm">
+      <Name>長い腕</Name>
+      <Desc>この効果が続く間、状態異常に対して免疫。幕の開始時に全ての状態を除去。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ApocalypseBird_SmallBeak">
+      <Name>小さなくちばし</Name>
+      <Desc>1幕の間、司書の手元にあるランダムなバトルページ2枚のコスト+1</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="ApocalypseBird_Apocalypse">
+      <Name>怪獣</Name>
+      <Desc>1幕でダメージを15与えるたびに相手の光を1吸収し、次の幕にて自分以外の全てのキャラクターに麻痺1を付与(幕ごとに最大3回)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="ApocalypseBird_Peace">
+      <Name>侵入者</Name>
+      <Desc>{0}幕持続。このキャラクターから受けるダメージ、混乱ダメージが2-4減少。このキャラクターを他のキャラクターが攻撃する場合に1-2の追加ダメージを与える</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_yan_Keyword">
+      <Name>,D@;Q7Y専用バトルページ</Name>
+			<Desc>,D@;Q7Yのページにのみ装着可能</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="YanArea_Ready">
+      <Name>ねじれた剣</Name>
+      <Desc>{0}幕後にねじれた剣を使用</Desc>
+    </BattleEffectText>
+
+    <!-- 백야 전투 -->
+    <BattleEffectText ID="WhiteNight_Hokma">
+      <Name>真の救済</Name>
+      <Desc>指定司書が死亡したとき、全ての司書が共に死亡する。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="PlagueDoctor_Bless">
+      <Name>祝福</Name>
+      <Desc>私があなたのあらゆる疫病を治し、あなたを癒しましょう。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_Awe">
+      <Name>畏敬</Name>
+      <Desc>幕の終了時、{0}の混乱ダメージを受けて数値が1減少。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_ApostlePowerUp">
+      <Name>啓示</Name>
+      <Desc>使徒がこの効果を持つキャラクターとマッチ時、攻撃ダイスの威力+2</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_BeApostle">
+      <Name>召命</Name>
+      <Desc>幕の終了時にこのキャラクターは死亡し、護衛使徒1名が生成される。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_SuspendedAnimation">
+      <Name>仮死</Name>
+      <Desc>体力が2以下になると、復活するまで混乱状態になる。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_Protection">
+      <Name>茨の冠</Name>
+      <Desc>今回の戦闘の間保護100、混乱保護100を永久的に得る。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteNight_WeakResist">
+      <Name>消えた護衛</Name>
+      <Desc>全ての耐性に脆弱</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Emotion_PlagueDoctor_Blessed">
+      <Name>祝福</Name>
+      <Desc>今回の幕に洗礼を受ける</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Emotion_PlagueDoctor_Bless_Stack">
+      <Name>洗礼</Name>
+      <Desc>今回の接待にて洗礼ページを{0}回使用(最大12)</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Emotion_BlueStar_MartyrBuf">
+      <Name>殉教</Name>
+      <Desc>今回の幕の間、攻撃的中時にダメージ2を受け、相手には混乱ダメージ2-4を与える</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Emotion_BlueStar_SoundBuf_Cool">
+      <Name>懐かしい音</Name>
+      <Desc>{0}幕が過ぎた後、「星の音が聞こえるよ！」効果を得る</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Emotion_BlueStar_SoundBuf">
+      <Name>星の音が聞こえるよ！</Name>
+      <Desc>今回の幕、混乱ダメージ量が2-4増加</Desc>
+    </BattleEffectText>
+
+
+    <!-- hana -->
+    <BattleEffectText ID="onlypage_hana_Keyword">
+      <Name>ミリネ、ハロルド、オリヴィエ専用バトルページ</Name>
+      <Desc>ミリネ、ハロルド、オリヴィエのページにのみ装着可能</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="HanaPassive1">
+      <Name>乾</Name>
+      <Desc>パワーを1得て、今回の幕の間与えるダメージ・混乱ダメージが2増加</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HanaPassive2">
+      <Name>坤</Name>
+      <Desc>忍耐1を得て、今回の幕の間攻撃で受けるダメージ・混乱ダメージが30%減少</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HanaPassive3">
+      <Name> 坎</Name>
+      <Desc>光を1回復</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HanaPassive4">
+      <Name>離</Name>
+      <Desc>ページを1枚引く</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="HanaSpecialCard1">
+      <Name>追加能力</Name>
+      <Desc>乾 - 「使用時：このページの全ダイスの威力+1」</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HanaSpecialCard2">
+      <Name>追加能力</Name>
+      <Desc>坤 - 「戦闘開始：保護2と混乱保護2を得る」</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HanaSpecialCard3">
+      <Name>追加能力</Name>
+      <Desc>坎 - 「使用時：光を1回復」
+離 - 「使用時：ページを2枚引く」
+      </Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="BlackSilenceSpecial">
+      <Name>Furioso</Name>
+      <Desc>現在使用した黒い沈黙のページ種類 計：{0}</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BlackSilenceCardCount">
+      <Name>黒い沈黙</Name>
+      <Desc>この数値が2のとき、次に使用するページの全ダイスの威力+3</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="RolandAndOlivier">
+      <Name>決闘</Name>
+      <Desc>体力と混乱抵抗値の最大値を増加</Desc>
+    </BattleEffectText>
+    
+    <!-- seven -->
+    <BattleEffectText ID="DanteGraspInformation">
+      <Name>情報把握</Name>
+      <Desc>今回の幕の間、{0}が「普通」に変更</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="DanteWeakPointDetection">
+      <Name>弱点看破</Name>
+      <Desc>今回の舞台の間、「弱点」耐性の1つが「脆弱」に変更</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Engard_Keyword">
+      <Name>アン・ガルド</Name>
+      <Desc>斬撃(6-10)ダイスと「使用後に消滅する。使用時：次の幕に自分と相手にパワーを1ずつ付与する」能力を持つバトルページ</Desc>
+    </BattleEffectText>
+
+    <!-- sword -->
+    <BattleEffectText ID="Giveuptheflesh_Keyword">
+      <Name>骨断</Name>
+      <Desc>コストが5の反撃ダイス(斬撃, 14-23)と「使用後に消滅する。的中：次の幕に麻痺5, 出血3を付与。このページは1枚のみ保有可能。」能力を持つバトルページ</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="onlypage_kim">
+      <Name>キムサッガッ専用バトルページ</Name>
+      <Desc>キムサッガッのページにのみ装着可能</Desc>
+    </BattleEffectText>
+    
+    <BattleEffectText ID="Vibrate_Re">
+      <Name>振動</Name>
+      <Desc>最大7まで増加する</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_argalia_Keyword">
+      <Name>アルガリア専用バトルページ</Name>
+      <Desc>アルガリアのページにのみ装着可能</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_elena_Keyword">
+      <Name>エレナ専用バトルページ</Name>
+      <Desc>エレナのページにのみ装着可能</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_pluto_Keyword">
+      <Name>プルート専用バトルページ</Name>
+      <Desc>プルートのページにのみ装着可能</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_philip2_Keyword">
+      <Name>フィリップ専用バトルページ</Name>
+      <Desc>フィリップのページにのみ装着可能</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="onlypage_tanya_Keyword">
+      <Name>ターニャ専用バトルページ</Name>
+      <Desc>ターニャのページにのみ装着可能</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Librarian_PuppetThread">
+      <Name>人形師の糸</Name>
+      <Desc>幕の開始時にパワーか忍耐のうち1つを1得る。体力が1以下にならない。体力が1になるかこのパッシブを持つ味方が居なければ幕の終了時「人形師の糸」が取り除かれる。</Desc>
+    </BattleEffectText>
+
+
+    <!--검은침묵 3페이즈-->
+    <BattleEffectText ID="SpiritLink">
+      <Name>魂の繋がり</Name>
+      <Desc>この効果がある間、混乱抵抗値が1以下にならない。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BlackEnergy">
+      <Name>黒い気</Name>
+      <Desc>1幕の間持続. アンジェリカとマッチ時、全ダイス威力 +1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteEnergy">
+      <Name>白い気</Name>
+      <Desc>1幕の間持続. ローランとマッチ時、全ダイス威力 +1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BlackMark">
+      <Name>証</Name>
+      <Desc>ローランの攻撃対象になる。ローランがこのキャラクターを攻撃するとき、攻撃ダイスの威力+3</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="BlackFrantic">
+      <Name>狂乱</Name>
+      <Desc>幕の開始時、混乱抵抗値が50%減少(1回のみ)。毎幕ごとにパワー、クイックを2ずつ得る</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="WhiteLoss">
+      <Name>喪失</Name>
+      <Desc>毎幕ごとに束縛、麻痺、脆弱を3ずつ得る</Desc>
+    </BattleEffectText>
+
+    <!--검은침묵 4페이즈-->
+    <BattleEffectText ID="Roland_4th_Lie">
+      <Name>嘘</Name>
+      <Desc>手元にある本来のコストが3以下のページがランダムに変わる。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_Weapon">
+      <Name>武器破壊</Name>
+      <Desc>ローランの傷跡効果を無視する。ローランを攻撃するときに攻撃ダイスの威力+1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_DmgReduction_Hit">
+      <Name>傷跡 - 打撃</Name>
+      <Desc>打撃で受けるダメージが2～5減少。25%の確率で該当属性のダメージを無効化。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_DmgReduction_Penetrate">
+      <Name>傷跡 - 貫通</Name>
+      <Desc>貫通で受けるダメージが2～5減少。25%の確率で該当属性のダメージを無効化。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_DmgReduction_Slash">
+      <Name>傷跡 - 斬撃</Name>
+      <Desc>斬撃で受けるダメージが2～5減少。25%の確率で該当属性のダメージを無効化。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_Blood">
+      <Name>血</Name>
+      <Desc>今回の幕に守備ダイスの威力が1～2増加する。守備ダイスのマッチ敗北時、混乱ダメージを3-6受ける。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_Gaze">
+      <Name>眼差し</Name>
+      <Desc>今回の幕にてパワーを1得る。攻撃ダイスでダメージを与えられなかった場合、混乱ダメージを3-6受ける。この効果が発動するたびに得る力が1ずつ増加する。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_Curiosity">
+      <Name>好奇心</Name>
+      <Desc>今回の幕に攻撃が的中した場合、相手の手元にあるランダムなページ2枚をデッキに戻す。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_Kiss">
+      <Name>口づけ</Name>
+      <Desc>束縛の付与された司書を相手に指定。今回の幕にてマッチで勝利するたびに相手に氷の欠片を付与する。幕の終了時、氷の欠片が3以上あるキャラクターは次の幕の間行動不能状態になる。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Roland_4th_NonTargetable">
+      <Name>行動準備</Name>
+      <Desc>{0}幕の間ターゲットに指定できない。行動しない。状態異常によるダメージを受けない。{0}幕後に行動を開始するとき、付与された状態異常をすべて取り除く</Desc>
+    </BattleEffectText>
+
+    <!--잔향악단 중층-->
+    <BattleEffectText ID="Tanya_Killed">
+      <Name>押し寄せる砂風</Name>
+      <Desc>今回の舞台の間ダメージ量+3</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Jaeheon_Killed">
+      <Name>開放された肉体</Name>
+      <Desc>今回の舞台の間、幕の開始時クイックを1-3を得る。全ダイス威力+1</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Jaeheon_String">
+      <Name>操り糸</Name>
+      <Desc>司書の1番低い速度ダイス{0}つが制御不能、味方攻撃状態になる(最大3) ゼホンが死亡時に取り除かれる。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Oswald_String">
+      <Name>紅い糸</Name>
+      <Desc>{0}幕後に、この効果を持つキャラクターが2名以上いる場合、該当するキャラクターが死亡してうさぎさんが1体生成される。司書にこの効果がある場合、幕の開始時にクイック10を得る。オズワルド、またはゼホンが死亡時に取り除かれる。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Oswald_Vulnerable">
+      <Name>耐性弱化</Name>
+      <Desc>今回の幕の間、全ての耐性が脆弱になる</Desc>
+    </BattleEffectText>
+
+    <!--20210316 TODO : 검은침묵 2페이즈 -->
+    <BattleEffectText ID="HeavySmoke">
+      <Name>どぎつい煙</Name>
+      <Desc>最大3まで得られる。値に比例して次の幕にネガティブな効果(出血、麻痺、虚弱、武装解除、束縛、脆弱)の内1種を付与。幕の終了時に消耗する。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HeavySmoke_buf">
+      <Name>どぎつい煙</Name>
+      <Desc>最大3まで得られる。値に比例して次の幕にネガティブな効果(出血、麻痺、虚弱、武装解除、束縛、脆弱)の内1種を付与。幕の終了時に消耗する。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="HeavySmoke_Keyword">
+      <Name>どぎつい煙</Name>
+      <Desc>最大3まで得られる。値に比例して次の幕にネガティブな効果(出血、麻痺、虚弱、武装解除、束縛、脆弱)の内1種を付与。幕の終了時に消耗する。</Desc>
+    </BattleEffectText>
+
+    <!--20210316 TODO : 검은침묵 2페이즈-->
+    <BattleEffectText ID="Arrest">
+      <Name>拘束</Name>
+      <Desc>幕の終了時に拘束の値が下がらない。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Arrest_buf">
+      <Name>拘束</Name>
+      <Desc>幕の終了時に拘束の値が下がらない。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Arrest_Keyword">
+      <Name>拘束</Name>
+      <Desc>幕の終了時に拘束の値が下がらない。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="RolandWeak">
+      <Name>疲労</Name>
+      <Desc>ローランのバトルページを弱体化</Desc>
+    </BattleEffectText>
+
+    <!-- added -->
+    <BattleEffectText ID="DeadInBattle">
+      <Name>戦闘不能</Name>
+      <Desc>今回の舞台にて除外される</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="ClawCounter">
+      <Name>無力化</Name>
+      <Desc>ダイス値が30以上の攻撃を1回無効にする</Desc>
+    </BattleEffectText>
+
+
+    <!-- 케테르 완전 개방 전투-->
+    <!-- 심장 -->
+    <BattleEffectText ID="KeterFinal_Eager">
+      <Name>念願</Name>
+      <Desc>このキャラクターが攻撃を開始する幕の間、この数値だけパワーを得る。混乱状態になったり攻撃する幕が終了した場合、熱望の数値が初期化される。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_FerventBeats">
+      <Name>押し寄せる鼓動</Name>
+      <Desc>{0}幕後に死亡する。幕の開始時、パワー・忍耐・クイック・保護4を得る。
+全ての混乱耐性が「耐性」になる。
+熱望が攻撃をしない幕なら特殊バトルページを使用する。
+この効果が活性化した場合、既存の「渇望」効果は無効になる。
+熱望が攻撃を終了すればこの効果が取り除かれる。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_Lung1">
+      <Name>渇望 - 信心</Name>
+      <Desc>幕の開始時、熱望の「念願」値の半分だけパワーと忍耐を得る。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_Lung2">
+      <Name>渇望 - 苦痛</Name>
+      <Desc>味方が死亡した場合、熱望に「念願」を4付与する。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_Lung3">
+      <Name>渇望 - 努力</Name>
+      <Desc>攻撃的中時、熱望に「念願」を1付与する。1幕の間ダメージを与えられなかった場合、幕の終了時に熱望の「念願」が2減少する。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_Lung4">
+      <Name>渇望 - 待望</Name>
+      <Desc>幕の終了時、熱望に「念願」を3付与する。</Desc>
+    </BattleEffectText>
+
+    <!-- 피노키오 -->
+    <BattleEffectText ID="KeterFinal_FailLying">
+      <Name>どうして悪いんですか？</Name>
+      <Desc>嘘がバレた。虚弱・武装解除4を得て混乱耐性が脆弱になる。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SuccessLying">
+      <Name>ラララ～</Name>
+      <Desc>嘘がバレなかった。パワー・忍耐4を得る。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_ChangeCostAll">
+      <Name>嘘の歌</Name>
+      <Desc>幕の開始時、全てのキャラクター手元にある本来のコストが3以下のページのコストがランダムに変わる。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_ChangeLibrarianHands">
+      <Name>好奇心の歌</Name>
+      <Desc>幕の開始時、全ての司書がバトルページを山札に混ぜ、ページ3枚を引き直す。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_DoubleEmotion">
+      <Name>光の種</Name>
+      <Desc>今回の舞台の間、感情の高まる速度が2倍になる。</Desc>
+    </BattleEffectText>
+
+    <!-- 아무 말 없는 소녀 -->
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Nail">
+      <Name>釘</Name>
+      <Desc>金槌に受けた混乱ダメージが{0}増加。幕の終了時、釘の値が1減少する。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Gaze_Attack">
+      <Name>不安</Name>
+      <Desc>今回の幕の間、このキャラクターがマッチするときは互いに威力の効果を得ない。ダメージ量が1-2増加。今回の幕、攻撃ダイスでダメージを与えられなかった場合、15混乱ダメージ</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Gaze_Defense">
+      <Name>恐れ</Name>
+      <Desc>今回の幕の間、このキャラクターがマッチするときは互いに威力の効果を得ない。カウンターのダメージ量が1-2増加。今回の幕に防御ダイスでダメージを与えられなかった場合、15混乱ダメージ</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Gaze_Attacked">
+      <Name>自責</Name>
+      <Desc>今回の幕の間、このキャラクターがマッチするときは互いに威力の効果を得ない。受ける混乱ダメージ量が1-2減少。今回の幕にダメージを受け無かった場合、15混乱ダメージ</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Light">
+      <Name>微かな光</Name>
+      <Desc>今回のフェーズが終わるまで、E.G.Oページを計9枚使用しなければ……。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Hand_Target">
+      <Name>攻撃対象変更不能</Name>
+      <Desc>このキャラクターの攻撃ターゲットを変更することが出来ない。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="KeterFinal_Light">
+      <Name>暖かな光</Name>
+      <Desc>前へ歩み出せる力を感じる。</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_Cogito">
+      <Name>最後の光の欠片</Name>
+      <Desc>新しいE.G.Oページを使用することが出来る。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="KeterFinal_Angela_Ego">
+      <Name>光の欠片</Name>
+      <Desc>使用したE.G.Oページの数：計{0}</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="CardBuf_KeterFinal_SilenceGirl_CostDown">
+      <Name>コスト減少</Name>
+      <Desc>手元からコストの1番高いページの内1枚に付与。このページのコスト-{0}・威力-{0}。捨てるか使用時に初期化</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="CardBuf_KeterFinal_SilenceGirl_CostUp">
+      <Name>コスト増加</Name>
+      <Desc>手元からコストの1番低いページの内1枚に付与。このページのコスト+{0}・威力+{0}。捨てるか使用時に初期化</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="KeterFinal_SilenceGirl_BlackHand_Attacked">
+      <Name>断罪</Name>
+      <Desc>全ダイスの威力+10</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="QuietKid_Hammer_Buf">
+      <Name>釘</Name>
+      <!-- used in '못과 망치' -->
+      <Desc>打撃攻撃を受ける場合、この値1につき5ダメージを受けて効果が取り除かれる。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="KeterFinal_SilenceGirl_Sin_Ready">
+      <Name>粉々</Name>
+      <Desc>{0}幕後、罪悪感を持つ相手に強力な攻撃ページを使用。混乱状態になると1幕遅れて発動する。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="oneinch_penetrate">
+      <Name>一点突破</Name>
+      <Desc>打撃(5 - 10), 貫通(15 ~ 24) ダイスと「使用時：消滅。このページは1枚のみ保有可能」能力を持つバトルページ</Desc>
+    </BattleEffectText>
+
+    <!-- 황상체 책장: 그리웠던 옛날의 포옹-->
+    <BattleEffectText ID="Teddy_Head">
+      <Name>懐かしいあの日の抱擁</Name>
+      <Desc>マッチ勝利時、20%の確率で相手にダイスの数だけ混乱ダメージを与える。同じ相手とマッチする度に確率が増加する</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="HeartofAspiration_Heart">
+      <Name>熱望</Name>
+      <Desc>体力の最大値が15%増加する(現体力を含む)。速度が1-2増加する。</Desc>
+    </BattleEffectText>
+
+        <BattleEffectText ID="Freischutz_Request">
+      <Name>依頼対象</Name>
+      <Desc>「依頼」幻想体ページを選んだ司書に受けるダメージ量が3-5増加。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="NihilClown_Card">
+      <Name>虚無への意思</Name>
+      <Desc>毎幕ごとに保護5を得る。状態異常が付与されない。
+マッチ敗北時・被ダメージ時、相手に次の幕にて腐食・脆弱1を付与する。(幕ごとに最大2)</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Nosferatu_BloodHope">
+      <Name>血</Name>
+      <Desc>幕の終了時、数値が3減少する。
+血が0のとき：幕の開始時、混乱抵抗値が4-8減少する。
+血が1以上のとき：攻撃ダイスを振るたびに体力を2-7消耗し、ダメージ量が3-7増加する。
+血が15以上のとき：該当する幕の間、パワーを2得る。次の幕の開始時、血の数値が初期化される。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="ApocalypseBird_BigEyeEffect">
+      <Name>大鳥の眩惑</Name>
+      <Desc>&lt;大きな目&gt; ページを使用した相手を攻撃する。ダメージ量が2-4増加する。</Desc>
+    </BattleEffectText>
+
+
+    <BattleEffectText ID="onlypage_usett">
+      <Name>ウアジェト専用バトルページ</Name>
+      <Desc>ウアジェトのページにのみ装着可能</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_mirae">
+      <Name>イリーナ専用バトルページ</Name>
+      <Desc>イリーナのページにのみ装着可能</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_bayyard">
+      <Name>バヤール専用バトルページ</Name>
+      <Desc>バヤールのページにのみ装着可能</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_cor">
+      <Name>ヤエ専用バトルページ</Name>
+      <Desc>ヤエのページにのみ装着可能</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="onlypage_awl">
+      <Name>アラン専用バトルページ</Name>
+      <Desc>アランのページにのみ装着可能</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Matan_Flame">
+      <Name>黒化</Name>
+      <Desc>コアページの抵抗/耐性属性が弱点/脆弱に変更される。</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="ExhaustOnUse_Keyword">
+      <Name>使い捨て</Name>
+      <Desc>使用すると消滅する。消滅したページは今回の舞台の間、除外される。</Desc>
+    </BattleEffectText>
+
+    <!-- If you don't need this keyword, you can remove it.  -->
+    <BattleEffectText ID="Exhaust_Keyword">
+      <Name>消滅</Name>
+      <Desc>今回の舞台の間、除外される</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="Instant_Keyword">
+      <Name>装着時発動</Name>
+      <Desc>速度ダイスに装着したとき、即時発動する</Desc>
+    </BattleEffectText>
+
+  </effectTextList>
+</BattleEffectTextRoot>

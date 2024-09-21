@@ -1,0 +1,1072 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Card ID="910001">
+    <Name>성냥 파이어</Name>
+    <Artwork>ScorchedGirl_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Spec Range="FarArea" Cost="5" Affection="Team"/>
+    <Script>schorchedArea</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="12" Dice="40" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="schorchedAreaDice" ActionScript="malkuthboss_scorched" Desc=""/>
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_ScorchedGirl</SkinChange>
+    <MapChange>ScorchedGirl</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910002">
+    <Name>테디 펀치</Name>
+    <Artwork>HappyTeddyBear_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Spec Range="Near" Cost="3" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="12" Dice="25" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="teddyEgo" ActionScript="teddyEgo" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_Teddy</SkinChange>
+    <MapChange>Teddy</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910003">
+    <Name>요정 찌르기</Name>
+    <Artwork>FairyCarnival_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Spec Range="Near" Cost="4" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="S3" EffectRes="" Script="fairy_ego" ActionScript="fairy_ego" Desc="최소값이 아니면 이 주사위 재사용(최대 5회)" />
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Slash" Motion="S2" EffectRes="FX_IllusionCard_1_M_FairyTrail3" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_Fairy</SkinChange>
+    <MapChange>FairyFestival</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910004">
+    <Name>여왕벌 찌르기</Name>
+    <Artwork>QueenBee_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Spec Range="Far" Cost="3" />
+    <Script>egoDummy</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="9" Dice="32" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="vulnerable5atk" ActionScript="angela_super_queenbee" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_QueenBee</SkinChange>
+    <MapChange>Queenbee</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910005">
+    <Name>백설 무언가</Name>
+    <Artwork>SnowWhite_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Spec Range="FarAreaEach" Cost="5" Affection ="Team"/>
+    <Script>snowwhiteArea</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="9" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="" Script="snowwhiteAreaDice" ActionScript="malkuthboss_whitesnow_strongvine" Desc=""/>
+      <Behaviour Min="3" Dice="9" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="" Script="snowwhiteAreaDice" ActionScript="malkuthboss_whitesnow_strongvine" Desc=""/>
+      <Behaviour Min="3" Dice="10" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="" Script="snowwhiteAreaDice" ActionScript="malkuthboss_whitesnow_strongvine" Desc=""/>
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_SnowWhite</SkinChange>
+    <MapChange>SnowWhite</MapChange>
+    <Priority>0</Priority>
+  </Card>
+
+  <!-- 예소드 -->
+  <Card ID="910011"> <!-- 9902103 참조 -->
+    <Name>버려진 살인마 쾅</Name>
+    <Artwork>ForsakenMurderer_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Spec Range="Near" Cost="5"/>
+    <Script>murderEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Hit" Motion="S1" EffectRes="EGO_Murderer_Atk" Script="murderDice1" ActionScript="" Desc=""/>
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Hit" Motion="S2" EffectRes="EGO_Murderer_Atk" Script="murderDice1" ActionScript="" Desc=""/>
+      <Behaviour Min="9" Dice="19" Type="Atk" Detail="Hit" Motion="S3" EffectRes="EGO_Murderer_Atk" Script="murderDice2" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_Murderer</SkinChange>
+    <MapChange>Murderer</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="910012"> <!-- 9902204 참조 -->
+    <Name>무엇 광역</Name>
+    <Artwork>LittleHelper_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Spec Range="FarAreaEach" Cost="5" Affection="Team" />
+    <Script>helperEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="7" Type="Atk" Detail="Slash" Motion="S1" EffectRes="EGO_Helper_Atk" Script="helperDice" ActionScript="yesodboss_helper" Desc=""/>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="S2" EffectRes="EGO_Helper_Atk" Script="helperDice" ActionScript="yesodboss_helper" Desc=""/>
+      <Behaviour Min="4" Dice="9" Type="Atk" Detail="Slash" Motion="S1" EffectRes="EGO_Helper_Atk" Script="helperDice" ActionScript="yesodboss_helper" Desc=""/>
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_Helper</SkinChange>
+    <MapChange>AnythingCanHelp</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="910013"> <!-- 9902304 참조 -->
+    <Name>노래 하모니</Name>
+    <Artwork>SingingMachine_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Spec Range="Near" Cost="5"/>
+    <Script>singingMachineEgo</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="FX_Mon_Sing_S" Script="singingMachineDice" ActionScript="yesodboss_singing_despair_harmony" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="FX_Mon_Sing_S" Script="singingMachineDice" ActionScript="yesodboss_singing_despair_harmony" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="S1" EffectRes="FX_Mon_Sing_S2" Script="" ActionScript="yesodboss_singing_despair_harmony2" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_SingingMachine</SkinChange>
+    <MapChange>SingingMachine</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="910014"> <!-- 9902304 참조 -->
+    <Name>죽나장 총 발사</Name>
+    <Artwork>Butterfly_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Spec Range="Far" Cost="4" />
+    <Script>buterflyEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="6" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="buterflyDice" ActionScript="butterflyAction" Desc=""/>
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_Butterfly</SkinChange>
+    <MapChange>Butterfly</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="910015"> <!-- -->
+    <Name>마탄 동화</Name>
+    <Artwork>Matan_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Option>EgoChange</Option>
+    <Keyword>egoChange_Keyword</Keyword>
+    <Spec Range="Near" Cost="1" />
+    <Script>freischutzEgo2</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+<!-- 호드 -->
+  <Card ID="910016"> <!-- 9903106 -->
+    <Name>표정</Name>
+    <Artwork>ShyLookToday_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Spec Range="Near" Cost="3"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="18" Dice="30" Type="Def" Detail="Guard" Motion="S1" EffectRes="EGO_ShyLookToday_SG" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Hit" Motion="S2" EffectRes="EGO_ShyLookToday_S2" Script="shyLookEgoDice" ActionScript="" Desc=""/>
+      <Behaviour Min="5" Dice="10" Type="Standby" Detail="Guard" Motion="G" EffectRes="EGO_ShyLookToday_SG" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_ShyLookToday</SkinChange>
+    <MapChange>ShyLookToday_FINAL</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910017"> <!-- 9903204 -->
+    <Name>빨간구두</Name>
+    <Artwork>RedShoes_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Spec Range="Near" Cost="5"/>
+    <Script>redshoesEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="10" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="redshoesEgoDice1" ActionScript="hodfinal_redshoes_s1" Desc=""/>
+      <Behaviour Min="3" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="redshoesEgoDice1" ActionScript="hodfinal_redshoes_s2" Desc=""/>
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="redshoesEgoDice2" ActionScript="hodfinal_redshoes_s4" Desc=""/>
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_RedShoes</SkinChange>
+    <MapChange>RedShoes</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910018"> <!-- 9903301 -->
+    <Name>거미 봉오리</Name>
+    <Artwork>SpiderBud_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Spec Range="Special" Cost="4" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="9" Dice="25" Type="Atk" Detail="Hit" Motion="J" EffectRes="EGO_SpiderBud_J" Script="spiderBudEgoDice" ActionScript="hodfinal_spiderbud_s1" Desc=""/>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="S1" EffectRes="EGO_SpiderBud_S1" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_SpiderBud</SkinChange>
+    <MapChange>SpiderBud</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910019"> <!-- 9903414 -->
+    <Name>래티시아</Name>
+    <Artwork>Laetitia_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Spec Range="FarAreaEach" Cost="5" Affection="Team"/>
+    <Script>latitiaAreaEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="18" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="latitiaEgoDice" ActionScript="hodboss_latitia_ego" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_Latitia</SkinChange>
+    <MapChange>Latitia</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910020"> <!-- 9903516 -->
+    <Name>흑조</Name>
+    <Artwork>BlackSwan_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Spec Range="FarAreaEach" Cost="6" Affection="Team"/>
+    <Script>blackSwanAreaEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="S" EffectRes="" Script="blackSwanEgoDice1" ActionScript="hodfinal_blackswan_s1" Desc=""/>
+      <Behaviour Min="9" Dice="18" Type="Atk" Detail="Hit" Motion="S" EffectRes="" Script="blackSwanEgoDice2" ActionScript="hodfinal_blackswan_s1" Desc=""/>
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_BlackSwan</SkinChange>
+    <MapChange>BlackSwan</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="910117">
+    <Name>래티 특수 선물</Name>
+    <Artwork>Laetitia_HeartGift</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>ExhaustOnUse</Option>
+    <Spec Range="Near" Cost="1"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="2" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <Priority>10</Priority>
+  </Card>
+  
+  <Card ID="910021"> <!-- 9904104 -->
+    <Name>우주 속의 조각</Name>
+    <Artwork>UniverseZogak_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="Far" Cost="4"/>
+    <!--<Spec Range="FarAreaEach" Cost="0" Affection="Team"/>-->
+    <Script>cardPowerDown4target</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="S3" EffectRes="" Script="universeDice" ActionScript="universeEgo" Desc=""/>
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="S3" EffectRes="" Script="universeDice" ActionScript="universeEgo" Desc=""/>
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="S3" EffectRes="" Script="universeDice" ActionScript="universeEgo" Desc=""/>
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_UniverseFragment</SkinChange>
+    <MapChange>UniverseFragment</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="910022"> <!-- 9904202 -->
+    <Name>은하수의 아이</Name>
+    <Artwork>ChildofGalaxy_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Keyword>AreaCard_Keyword</Keyword>
+    <Spec Range="FarAreaEach" Cost="6" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="S4" EffectRes="" Script="galaxyEgoDice" ActionScript="netzachboss_galaxy_farewell" Desc=""/>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="galaxyEgoDice" ActionScript="netzachboss_galaxy_farewell" Desc=""/>
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="galaxyEgoDice" ActionScript="netzachboss_galaxy_farewell" Desc=""/>
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_GalaxyChild</SkinChange>
+    <MapChange>GalaxyChild_FINAL</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="910023"> <!-- 9904304 -->
+    <Name>포큐버스</Name>
+    <Artwork>Porccubus_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="Near" Cost="4"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="15" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="porccubusEgoDice" ActionScript="" Desc=""/>
+      <Behaviour Min="2" Dice="5" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="porccubusEgoDice2" ActionScript="netzachboss_porccubus_pilsal" Desc=""/>
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_Porccubus</SkinChange>
+    <MapChange>Porccubus_FINAL</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="910024"> <!-- 9904415 -->
+    <Name>알리우네</Name>
+    <Artwork>Alriune_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Keyword>AreaCard_Keyword</Keyword>
+    <Spec Range="FarAreaEach" Cost="5" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="aliuneEgoDice" ActionScript="netzachboss_alriune_first" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="aliuneEgoDice" ActionScript="netzachboss_alriune_first" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="aliuneEgoDice" ActionScript="netzachboss_alriune_second" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_Alriune</SkinChange>
+    <MapChange>Alriune</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="910025"> <!-- 9904504 -->
+    <Name>고요한 오케스트라</Name>
+    <Artwork>SilentOrchestra_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Keyword>AreaCard_Keyword</Keyword>
+    <Spec Range="FarAreaEach" Cost="6" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="S" EffectRes="" Script="orchestraEgoDice1" ActionScript="netzachboss_orchestra_movement_1" Desc="" />
+      <Behaviour Min="4" Dice="9" Type="Atk" Detail="Hit" Motion="S" EffectRes="" Script="orchestraEgoDice2" ActionScript="netzachboss_orchestra_movement_2" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Hit" Motion="S" EffectRes="" Script="orchestraEgoDice3" ActionScript="netzachboss_orchestra_movement_5" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_Orchestra</SkinChange>
+    <MapChange>Orchestra</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="910026"> <!-- 9905105 -->
+    <Name>증여</Name>
+    <Artwork>QueenOfHatred_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Keyword>AreaCard_Keyword</Keyword>
+    <Spec Range="FarArea" Affection="Team" Cost="5" />
+    <Script>hateEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="22" Dice="33" Type="Atk" Detail="Hit" Motion="F" EffectRes="" Script="hateEgoDice" ActionScript="qohLaser2" Desc=""/>
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_Hatred_Human</SkinChange>
+    <MapChange>QueenOfHatred_FINAL</MapChange>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="910027"> <!-- 따로 만들어야 함-->
+    <Name>절기</Name>
+    <Artwork>KnightOfDespair_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Spec Range="Far" Cost="4" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="DespairFinal_FatalSword_FarAtk" Script="despairEgoDice" ActionScript="" Desc="" />
+      <Behaviour Min="10" Dice="18" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="DespairFinal_FatalSword_FarAtk" Script="despairEgoDice" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_Despair</SkinChange>
+    <MapChange>KnightOfDespair</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="910028"> <!-- 9905305 참조 -->
+    <Name>탐왕 툭툭</Name>
+    <Artwork>Greed_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Keyword>AreaCard_Keyword</Keyword>
+    <Spec Range="FarAreaEach" Cost="5" Affection="Team"/>
+    <Script>greedEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="15" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="greedEgoDice" ActionScript="kingofgreed_reason_areaatk" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_Greed_Reason</SkinChange>
+    <MapChange>KingOfGreed</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="910029"> <!-- 9905305 참조 -->
+    <Name>분노 시종</Name>
+    <Artwork>Angry_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Keyword>AreaCard_Keyword</Keyword>
+    <Spec Range="FarAreaEach" Cost="4" Affection="All"/>
+    <Script>wrathEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="9" Dice="15" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="" ActionScript="servantofwrath_1st" Desc="" />
+      <Behaviour Min="9" Dice="15" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="" ActionScript="servantofwrath_1st" Desc="" />
+      <Behaviour Min="9" Dice="15" Type="Atk" Detail="Hit" Motion="S3" EffectRes="" Script="" ActionScript="servantofwrath_1st" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_Wrath</SkinChange>
+    <MapChange>ServantOfWrath</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  
+  
+  <Card ID="910030"> <!-- 9905501 참조-->
+    <Name>허무 광대</Name>
+    <Artwork>Nihil_EGo</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Keyword>AreaCard_Keyword</Keyword>
+    <Spec Range="FarArea" Cost="3" Affection="Team"/>
+    <Script>voidEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="16" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="voidEgoDice" ActionScript="nihil_nihilism" Desc=""/>
+    </BehaviourList>
+    <SkinChange>EGO_Nihil</SkinChange>
+    <MapChange>ClownOfNihil</MapChange>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="910031">
+    <Name>용병 동화</Name>
+    <Artwork>Redhood_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Option>EgoChange</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Keyword>egoChange_Keyword</Keyword>
+    <Spec Range="Near" Cost="1"/>
+    <Script>redHoodEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <!--
+    <SkinChange>EGO_Orchestra</SkinChange>
+    <MapChange>RedHood</MapChange>
+    -->
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910032">
+    <Name>늑대 공격</Name>
+    <Artwork>BigBadWolf_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="Near" Cost="5" />
+    <Script>wolfEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="9" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="wolfEgoDice1" ActionScript="geburafinal_bigbadwolf_s1" Desc=""/>
+      <Behaviour Min="5" Dice="11" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="wolfEgoDice2" ActionScript="geburafinal_bigbadwolf_s1" Desc=""/>
+    </BehaviourList>
+    <SkinChange>EGO_WolfNormal</SkinChange>
+    <MapChange>BigBadWolf</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910033">
+    <Name>웃시산 광역</Name>
+    <Artwork>Mountain_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Keyword>AreaCard_Keyword</Keyword>
+    <Spec Range="FarAreaEach" Cost="4" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="14" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="mountainEgoDice" ActionScript="mountain_vomit" Desc=""/>
+    </BehaviourList>
+    <SkinChange>EGO_Mountain</SkinChange>
+    <MapChange>Mountain</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910034">
+    <Name>노스페라투 광역</Name>
+    <Artwork>Nosferatu_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Keyword>AreaCard_Keyword</Keyword>
+    <Spec Range="FarArea" Cost="5" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="17" Dice="28" Type="Atk" Detail="Slash" Motion="S2" EffectRes="" Script="nosferatuEgoDice" ActionScript="nosperatu_monster_area" Desc=""/>
+    </BehaviourList>
+    <SkinChange>EGO_Nosferatu</SkinChange>
+    <MapChange>Nosferatu</MapChange>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="910035">
+    <Name>아무없 공격</Name>
+    <Artwork>NothingThere_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="Near" Cost="5"/>
+    <Script>nothingEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="19" Dice="35" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="nothingEgoDice" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <SkinChange>EGO_NothingLv3</SkinChange>
+    <MapChange>Nothing</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="910036">
+    <Name>허수아비</Name>
+    <Artwork>ScareCrow_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="Far" Cost="4"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="15" Dice="25" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="scarecrowEgoDice" ActionScript="scarecrow_ego_final" Desc=""/>
+      <Behaviour Min="4" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <SkinChange>EGO_Scarecrow</SkinChange>
+    <MapChange>Scarecrow</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910037">
+    <Name>나무꾼</Name> <!-- 9907215 -->
+    <Artwork>LumberJack_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="Near" Cost="5"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="11" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="lumberjackEgoDice1" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="lumberjackEgoDice1" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="lumberjackEgoDice1" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="6" Type="Atk" Detail="Hit" Motion="S3" EffectRes="" Script="bleeding3atk" ActionScript="lumberjack_ego_final" Desc="" />
+    </BehaviourList>
+    <SkinChange>EGO_Lumberjack</SkinChange>
+    <SkinHeight>360</SkinHeight>
+    <MapChange>Lumberjack</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910038">
+    <Name>집으로 가는 길</Name>
+    <Artwork>House_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="FarAreaEach" Cost="5" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="18" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="homeEgo" ActionScript="waybackhome_super_final" Desc="" />
+    </BehaviourList>
+    <SkinChange>EGO_WayBackHome</SkinChange>
+    <MapChange>WayBackHome</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910039">
+    <Name>오즈마</Name>
+    <Artwork>Ozma_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="FarAreaEach" Cost="5" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="10" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="ozmaEgoDice" ActionScript="ozma_areaatk" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="ozmaEgoDice" ActionScript="ozma_areaatk" Desc="" />
+    </BehaviourList>
+    <SkinChange>EGO_Ozma</SkinChange>
+    <MapChange>Ozma</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910040">
+    <Name>마법사</Name> <!-- 9907517 -->
+    <Artwork>Oz_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="FarAreaEach" Cost="7" Affection="Team"/>
+    <Script>wizardEgoDice</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="cryingChildAreaDice" ActionScript="wizard_crystal_area_atk" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="cryingChildAreaDice" ActionScript="wizard_crystal_area_atk" Desc="" />
+    </BehaviourList>
+    <SkinChange>EGO_Wizard</SkinChange>
+    <SkinHeight>500</SkinHeight>
+    <MapChange>Wizard</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="910041">
+    <Name>큰 새</Name>
+    <Artwork>BigBird_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="FarAreaEach" Cost="3" Affection="Team"/>
+    <Script>bigBirdEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="14" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="" ActionScript="Final_BigBird_Darkness" Desc="" />
+    </BehaviourList>
+    <SkinChange>EGO_BigBird</SkinChange>
+    <MapChange>BigBird</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910042">
+    <Name>긴 새</Name>
+    <Artwork>LongBird_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="Near" Cost="3" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="15" Dice="25" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="longBirdEgo" ActionScript="longbirdEgo" Desc="" />
+    </BehaviourList>
+    <SkinChange>EGO_LongBird</SkinChange>
+    <MapChange>LongBird</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910043">
+    <Name>작은 새</Name>
+    <Artwork>SmallBird_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="Near" Cost="4" />
+    <Script>smallBirdEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="10" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="7" Dice="10" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="" ActionScript="smallbird_ego" Desc="" />
+    </BehaviourList>
+    <SkinChange>EGO_SmallBird</SkinChange>
+    <MapChange>SmallBird_Final</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910044">
+    <Name>종말새 레이저</Name>
+    <Artwork>ApocalypseBird_EGO_Laser</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="FarAreaEach" Cost="5" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="bossBirdFirstEgoDice" ActionScript="Final_ApcBird_LaserArea" Desc="" />
+      <Behaviour Min="5" Dice="12" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="bossBirdFirstEgoDice" ActionScript="Final_ApcBird_LaserArea" Desc="" />
+    </BehaviourList>
+    <SkinChange>EGO_ApocalypseBird</SkinChange>
+    <SkinHeight>500</SkinHeight>
+    <MapChange>ApocalypseBird</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910045">
+    <Name>종말새 내려찍기</Name>
+    <Artwork>ApocalypseBird_EGO_Hit</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="FarArea" Cost="5" Affection="Team"/>
+    <Script>bossBirdSecondEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="20" Dice="25" Type="Atk" Detail="Hit" Motion="S5" EffectRes="" Script="bossBirdSecondEgoDice" ActionScript="Final_ApcBird_PutDownArea" Desc="" />
+    </BehaviourList>
+    <SkinChange>EGO_ApocalypseBird</SkinChange>
+    <SkinHeight>500</SkinHeight>
+    <MapChange>ApocalypseBird</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910046">
+    <Name>파천</Name>
+    <Artwork>Bloodytree_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="Far" Cost="3" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="14" Dice="25" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="bloodyTreeEgoDice" ActionScript="bloodyTreeAtk" Desc="" />
+    </BehaviourList>
+    <SkinChange>EGO_BloodyTree</SkinChange>
+    <MapChange>HokmaFirst</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910047">
+    <Name>침묵의 대가</Name>
+    <Artwork>Clock_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="Near" Cost="3" />
+    <Script>clockEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="12" Dice="20" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="clockEgoDice" ActionScript="clockAtk" Desc="" />
+    </BehaviourList>
+    <SkinChange>EGO_ThePriceOfSilence</SkinChange>
+    <MapChange>ThePriceOfSilence</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910048">
+    <Name>푸른별</Name>
+    <Artwork>BlueStar_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="FarArea" Cost="6" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="25" Dice="35" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="blueStarEgoDiceRemake" ActionScript="bluestar_area" Desc="" />
+    </BehaviourList>
+    <SkinChange>EGO_BlueStar</SkinChange>
+    <MapChange>BlueStar</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910049">
+    <Name>단악수선</Name>
+    <Artwork>WhiteNight_Confess_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="FarAreaEach" Cost="5" Affection="Team"/>
+    <Script>oneBadManyGoodEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="16" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="cryingChildAreaDice" ActionScript="oneBadManyGoodEgo" Desc="" />
+    </BehaviourList>
+    <SkinChange>EGO_OneBadManyGood</SkinChange>
+    <MapChange>WhiteNight</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910050">
+    <Name>백야</Name>
+    <Artwork>WhiteNight_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Option>EgoChange</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Keyword>egoChange_Keyword</Keyword>
+    <Spec Range="Near" Cost="6" />
+    <Script>whiteNightEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="16" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc=""/>
+      <Behaviour Min="6" Dice="16" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <!--
+    <SkinChange>EGO_WhiteNight</SkinChange>
+    <MapChange>WhiteNight</MapChange>
+    -->
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="910006">
+    <Name>피목욕</Name>
+    <Artwork>Bloodbath_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="FarArea" Cost="5" Affection="Team"/>
+    <Script>bloodEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="19" Dice="27" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="voidEgoDice" ActionScript="finalbloodbath_areaAtk" Desc="" />
+    </BehaviourList>
+    <SkinChange>EGO_BloodBath</SkinChange>
+    <MapChange>BloodBath_FINAL</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910007">
+    <Name>심장</Name>
+    <Artwork>HeartofAspiration_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="FarArea" Cost="5" Affection="Team"/>
+    <Script>heartEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="24" Dice="39" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="voidEgoDice" ActionScript="finalheart_areaAtk" Desc="" />
+    </BehaviourList>
+    <SkinChange>EGO_HeartOfAspiration</SkinChange>
+    <MapChange>HeartOfAspiration_FINAL</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="910008">
+    <Name>피노키오</Name>
+    <Artwork>Pinocchio_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="Near" Cost="1" />
+    <Script>pinochioego</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="19" Dice="27" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="damage5atk" ActionScript="finalpinocchio_specialAtk" Desc="" />
+    </BehaviourList>
+    <SkinChange>EGO_Pinocchio</SkinChange>
+    <MapChange>Pinocchio_FINAL</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="910009">
+    <Name>눈여</Name>
+    <Artwork>TheSnowQueen_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="FarAreaEach" Cost="6" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="12" Type="Atk" Detail="Hit" Motion="N" EffectRes="" Script="snowqueenEgoDice" ActionScript="final_snowqueen_1st" Desc="" />
+      <Behaviour Min="8" Dice="13" Type="Atk" Detail="Hit" Motion="N" EffectRes="" Script="snowqueenEgoDice" ActionScript="final_snowqueen_2nd" Desc="" />
+    </BehaviourList>
+    <SkinChange>EGO_SnowQueen</SkinChange>
+    <MapChange>SnowQueen</MapChange>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="910010">
+    <Name>아없</Name>
+    <Artwork>QuietKid_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EGO</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="Near" Cost="6" />
+    <Script>silentEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="13" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="" ActionScript="final_silencegirl_hammer_a_nail1" Desc="" />
+      <Behaviour Min="8" Dice="13" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="" ActionScript="final_silencegirl_hammer_a_nail2" Desc="" />
+      <Behaviour Min="8" Dice="13" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="" ActionScript="final_silencegirl_hammer_a_nail4" Desc="" />
+      <!--<Behaviour Min="7" Dice="12" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" ActionScript="" Desc="" />-->
+    </BehaviourList>
+    <SkinChange>EGO_SilentGirl</SkinChange>
+    <MapChange>SilentGirl_Final</MapChange>
+    <Priority>0</Priority>
+  </Card>
+  
+
+
+  <!-- 동화용-->
+  <!-- 마탄-->
+  <Card ID="920001">
+    <Name>동화 해제</Name>
+    <Artwork>Matan_EGO_gray</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>cancelChangeEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="920002">
+    <Name>마탄 - 범람하는 탄환9902506</Name>
+    <Artwork>Matan_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="5" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="" ActionScript="yesodboss_freischutz_5thbullet" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="" ActionScript="yesodboss_freischutz_5thbullet" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="rudolphDice" ActionScript="yesodboss_freischutz_5thbullet" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <!--<MapChange>Orchestra</MapChange>-->
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="920003">
+    <Name>마탄-마법의 탄환9902501</Name>
+    <Artwork>Matan_Request</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script>energy1</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="10" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="EGO_Freischutz_NormalFarAtk" Script="" ActionScript="yesodboss_freischutz_faratk" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <!--<MapChange>Orchestra</MapChange>-->
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="920004">
+    <Name>마탄-침묵의 탄환9902505</Name>
+    <Artwork>Matan_Seven</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="18" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="matanEgoDice1" ActionScript="yesodboss_freischutz_6thbullet" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <!--<MapChange>Orchestra</MapChange>-->
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="920005">
+    <Name>마탄-필연적인 탄환9902502</Name>
+    <Artwork>Matan_Flame</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="FarAreaEach" Cost="3" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="cryingChildAreaDice" ActionScript="yesodboss_freischutz_2ndbullet" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="cryingChildAreaDice" ActionScript="yesodboss_freischutz_2ndbullet" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <!--<MapChange>Orchestra</MapChange>-->
+    <Priority>0</Priority>
+  </Card>
+  
+  <!-- 용병 -->
+  <Card ID="920101">
+    <Name>동화 해제</Name>
+    <Artwork>Redhood_EGO_gray</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>cancelChangeEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="920102">
+    <Name>용병-망설임 없는 일격9906105</Name>
+    <Artwork>Redhood_Revenge</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarArea" Cost="4" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="15" Dice="25" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="voidEgoDice" ActionScript="redhoodEgoKnives" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <!--<MapChange>Orchestra</MapChange>-->
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="920103">
+    <Name>용병-난사9906106</Name>
+    <Artwork>Redhood_RedScar</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="4" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="cryingChildAreaDice" ActionScript="redhoodEgoGun" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S3" EffectRes="" Script="cryingChildAreaDice" ActionScript="redhoodEgoGun" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="" Script="cryingChildAreaDice" ActionScript="redhoodEgoGun" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <!--<MapChange>Orchestra</MapChange>-->
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="920104">
+    <Name>용병-야수사냥-9906103</Name>
+    <Artwork>Redhood_Hunt</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script>energy2</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="powerUpNext2pw" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <!--<MapChange>Orchestra</MapChange>-->
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="920105">
+    <Name>용병-파열탄</Name>
+    <Artwork>RedHood_Gun</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="1"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="EGO_RedHood_FarAtk" Script="powerDownNext2pwTarget" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="F" EffectRes="EGO_RedHood_FarAtk" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <!--<MapChange>Orchestra</MapChange>-->
+    <Priority>0</Priority>
+  </Card>
+
+  
+</DiceCardXmlRoot>

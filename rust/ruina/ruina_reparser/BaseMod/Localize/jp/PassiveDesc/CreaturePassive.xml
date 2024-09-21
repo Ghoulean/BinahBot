@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <PassiveDesc ID="1001011">
+    <Name>傷跡</Name>
+    <Desc>斬撃によるダメージが1-5減少</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1001012">
+    <Name>血</Name>
+    <Desc>速度3 減少。防御ダイスの最大値+3</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1002021">
+    <Name>熱望</Name>
+    <Desc>1幕の間、ダメージを与えられなければ体力4 減少</Desc>
+  </PassiveDesc>
+  <!-- 피노키오 : 거짓말쟁이 -->
+  <PassiveDesc ID="1003011">
+    <Name>真似する</Name>
+    <Desc>指定司書のデッキをコピーして使用する。幕ごとに光を最大値まで回復する</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1003012">
+    <Name>嘘</Name>
+    <Desc>2～3幕ごとに間違った情報が表示された嘘のページを使用する</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1003014">
+    <Name>バレた嘘</Name>
+    <Desc>嘘の間、「嘘は良くないよ！」とマッチ進行時にダイスの威力 -4</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1003015">
+    <Name>楽しい嘘</Name>
+    <Desc>嘘の間、「嘘は良くないよ！」とマッチを進行しなければダイスの威力 +4</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1003016">
+    <Name>どうして悪いんですか？</Name>
+    <Desc>嘘がバレたとき、次の幕の間全てのピノキオが虚弱2と武装解除2を得て、混乱耐性が弱点に変更される</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1003018">
+    <Name>ラララ～</Name>
+    <Desc>嘘がバレないとき、次の幕に全てのピノキオがパワー4、忍耐4を得る</Desc>
+  </PassiveDesc>
+  <!-- 피노키오 : 호기심쟁이 -->
+  <PassiveDesc ID="1003021">
+    <Name>真似する</Name>
+    <Desc>最初の司書補のデッキをコピーして使用する</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1003023">
+    <Name>逆さまになった歌</Name>
+    <Desc>このキャラクターが生きている間、毎幕ごとに司書の手元にあるページのコストがランダムに変更される(コストが4のページは除外)</Desc>
+  </PassiveDesc>
+  <!-- 피노키오 : 따라쟁이 -->
+  <PassiveDesc ID="1003031">
+    <Name>真似する</Name>
+    <Desc>2人目の司書補のデッキをコピーして使用する</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1003033">
+    <Name>みんなのための歌</Name>
+    <Desc>このキャラクターが生きている間、幕が開始するたびに全てのピノキオがパワー +2、忍耐 +2のどちらかの効果を得る</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="101011">
+    <Name>消えゆく火花</Name>
+    <Desc>味方が死亡したとき全体力の50%が減少、混乱状態になる</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="101012">
+    <Name>灰の山</Name>
+    <Desc>混乱状態になった場合、光を全て失う。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="102011">
+    <Name>愛情</Name>
+    <Desc>マッチの進行時、懐かしいあの日の抱擁のコストを1減少</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="201011">
+    <Name>怒り</Name>
+    <Desc>攻撃が的中したとき、混乱ダメージ量2倍</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="201012">
+    <Name>恐怖</Name>
+    <Desc>状態異常に掛かっている場合、全ダイスの威力 -4</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="202011">
+    <Name>パターン反復認識</Name>
+    <Desc>1幕の間、10以上のダメージを与えた場合に光1 回復</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="301011">
+    <Name>表情</Name>
+    <Desc>マッチ時、表情によってダイスの威力が変化</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="302021">
+    <Name>導き</Name>
+    <Desc>出血のある相手を優先的にターゲットする</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="401011">
+    <Name>理解不能</Name>
+    <Desc>全ての混乱ダメージを2倍にする</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="402011">
+    <Name>小石</Name>
+    <Desc>幕の開始時、最大体力の10%を回復。体力が1の場合は発動しない</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="402012">
+    <Name>いかないで</Name>
+    <Desc>体力が1未満にならず、混乱状態になる。2幕後、味方の残体力だけ自分の体力を回復する。幕の開始時、全ての味方の体力が1の場合は死亡する。</Desc>
+  </PassiveDesc>
+
+  <!-- 요정 -->
+  <PassiveDesc ID="103011">
+    <Name>つかの間の満腹</Name>
+    <Desc>幕の開始時に体力が1の用意された肉を喰い、その幕の間脆弱、虚弱、武装解除10を得る</Desc>
+  </PassiveDesc>
+  <!-- 요정 -->
+  <PassiveDesc ID="103012">
+    <Name>狂暴な飢え</Name>
+    <Desc>体力が25%のとき、味方が生きていれば全ての味方を始末。味方がいない場合、幕の終了時にパワーを30得る</Desc>
+  </PassiveDesc>
+  <!-- 요정 -->
+  <PassiveDesc ID="103021">
+    <Name>飢え</Name>
+    <Desc>幕の終了時、体力が50%以下なら体力6減少およびパワー2を得る</Desc>
+  </PassiveDesc>
+  <!-- 요정 -->
+  <PassiveDesc ID="103022">
+    <Name>世話</Name>
+    <Desc>幕の開始時、体力を10回復, 女王が死ぬまで体力が1以下に減少しない</Desc>
+  </PassiveDesc>
+
+  <!-- 거미봉오리 -->
+  <PassiveDesc ID="303011">
+    <Name>追跡</Name>
+    <Desc>味方を倒した敵を攻撃ターゲットに指定</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="303012">
+    <Name>狩りの開始</Name>
+    <Desc>味方が死亡した2幕の間、行動可能・ターゲット指定可能</Desc>
+  </PassiveDesc>
+  <!-- 거미봉오리 -->
+  <PassiveDesc ID="303021">
+    <Name>ごはんだ！</Name>
+    <Desc>繭状態の敵を攻撃ターゲットに指定</Desc>
+  </PassiveDesc>
+
+  <!-- 포큐버스 -->
+  <PassiveDesc ID="403011">
+    <Name>幸せを与えるトゲ</Name>
+    <Desc>攻撃が的中したとき、被ダメージ者のポジティブエモーションを2溜める。</Desc>
+  </PassiveDesc>
+  <!-- 포큐버스 -->
+  <PassiveDesc ID="403012">
+    <Name>ひらひら</Name>
+    <Desc>遠距離カードによるダメージを受けない</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="403013">
+    <Name>耐えられない快楽</Name>
+    <Desc>幕の開始時、快感カードの数だけ相手の光を回復させる。攻撃が的中したとき、相手に快感カードが3枚あれば20ダメージを与えてカードを消滅させる</Desc>
+  </PassiveDesc>
+
+	<!-- 노래하는 기계 -->
+	<PassiveDesc ID="203011">
+		<Name>歌う機械</Name>
+		<Desc>相手に選択できない。行動しない。ダメージを受けない。</Desc>
+	</PassiveDesc>
+	<PassiveDesc ID="203012">
+		<Name>演奏</Name>
+		<Desc>歌が無いと！が発動した次の幕に機械の中にいる相手に演奏する。演奏対象は最大体力の30%ダメージを受け、この幕の間は戦闘から除外される。演奏が発動した幕はすべてのキャラクターの被ダメージ量が5増加し、混乱への耐性が脆弱に変わる。</Desc>
+	</PassiveDesc>
+  <PassiveDesc ID="203021">
+    <Name>歌が欲しい！</Name>
+    <Desc>3幕から4幕ごとに速度ダイスが1増加し、使用するバトルページを変更する。この状態で混乱状態になると次の幕の開始時、機械の中に入る。</Desc>
+  </PassiveDesc>
+
+
+  <!-- 증오의 여왕 -->
+  <PassiveDesc ID="501011">
+    <Name>豹変</Name>
+    <Desc>ヒステリックゲージが満たされると他の形態へと変身する。ヒステリックゲージはマッチ敗北/マークされた相手にダメージを受けたとき増加し、マッチ勝利/マークされた相手にダメージを与えたときに減少する。ヒステリックゲージが上昇するにつれて背景が赤く変化する。
+    幕の終了時、光を最大まで回復してページを2枚ずつ引く。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="501012">
+    <Name>憎悪の名の下に</Name>
+    <Desc>2幕ごとに相手に標的を付与するページを使用する。標的が付与された相手は全ての耐性が「弱点」になり、幻想体の攻撃対象となる。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="501013">
+    <Name>アルカナ・スレイヴ</Name>
+    <Desc>4幕ごとに全ての司書を対象にする広域攻撃ページを使用する。変身状態の場合、次の幕にて混乱状態になる。</Desc>
+  </PassiveDesc>
+
+  <!-- 절망의 기사 본체-->
+  <PassiveDesc ID="502011">
+    <Name>守護</Name>
+    <Desc>行動不能。ターゲットにできない。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="502012">
+    <Name>哀しみ</Name>
+    <Desc>3幕ごとに任意の剣1つに涙を付与。混乱状態になったときは次の幕に発動。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="502013">
+    <Name>絶望</Name>
+    <Desc>涙を付与された剣が致命的なダメージを受けた場合、絶望状態になる</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="502014">
+    <Name>絶望の加護</Name>
+    <Desc>絶望状態のとき、全ての剣が体力と混乱抵抗値を最大まで回復。全ての剣は特殊バトルページを使用。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="502015">
+    <Name>壊れた心</Name>
+    <Desc>絶望状態で全ての剣が自分に刺さったとき、次の幕に混乱状態になりターゲット選択が可能になる。</Desc>
+  </PassiveDesc>
+  <!-- 절망의 기사 칼 -->
+  <PassiveDesc ID="502021">
+    <Name>涙</Name>
+    <Desc>涙の効果があるとき、速度ダイスが1つ増加。加護専用ページを使用。耐性情報が変更</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="502022">
+    <Name>休息</Name>
+    <Desc>致命的なダメージを受けた場合、仮死状態になる。2幕後に復活。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="502023">
+    <Name>絶望を突き刺す剣</Name>
+    <Desc>絶望状態でダメージを与えることが出来なかった場合、絶望の騎士にダメージを与えて刺さる。</Desc>
+  </PassiveDesc>
+
+  <!-- 여왕벌 -->
+  <PassiveDesc ID="104011">
+    <Name>胞子</Name>
+    <Desc>前の幕に攻撃を受けた場合、幕の開始時すべての司書に胞子1を付与</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="104012">
+    <Name>個体数拡張</Name>
+    <Desc>生きている働き蜂が2匹以下の場合、幕が始まる度すべての司書に胞子2を付与</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="104013">
+    <Name>変態</Name>
+    <Desc>胞子を持った司書が死亡した場合、次の幕に働き蜂を1匹召喚</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="104014">
+    <Name>フェロモン</Name>
+    <Desc>3幕ごとに自分を含めた全ての味方の好戦性を強化させるページを使用</Desc>
+  </PassiveDesc>
+  <!-- 일벌-->
+  <PassiveDesc ID="104021">
+    <Name>忠誠心</Name>
+    <Desc>前の幕にて女王蜂を最後に攻撃した相手を攻撃する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="104022">
+    <Name>死の抱擁</Name>
+    <Desc>女王蜂の体力が20%以下になったとき、女王蜂を攻撃。</Desc>
+  </PassiveDesc>
+
+  <!-- 붉은 두건의 용병 : 용병-->
+  <PassiveDesc ID="601011">
+    <Name>悪夢の終わり</Name>
+    <Desc>直接狼を倒した場合は戦闘勝利、狼より先に死んだ場合は戦闘敗北</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="601012">
+    <Name>揺るぎない一撃</Name>
+    <Desc>2～3幕ごとに全てのキャラクターを対象に揺るぎない一撃を使用</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="601013">
+    <Name>怒り</Name>
+    <Desc>怒りゲージが満たされると怒り状態になる。怒りゲージは狼からダメージを受けると上昇し、狼にダメージを与えると減少する。怒りゲージが上昇するにつれて背景が赤くなる。(怒り: 2幕の間持続。毎幕ごとにパワー +2, 広域攻撃ページを使用)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="601014">
+    <Name>行き場を失った怒り</Name>
+    <Desc>司書が狼を倒したときは強化された怒り状態になり、最大体力と混乱耐性が強化される。以降、体力を最大値の50%、混乱抵抗値を最大まで回復する。(行き場を失った怒り: 永久的に持続。毎幕ごとにパワー+5, クイック+5, 広域攻撃ページを使用)</Desc>
+  </PassiveDesc>
+  <!-- 붉은 두건의 용병 : 늑대 -->
+  <PassiveDesc ID="601021">
+    <Name>咆哮</Name>
+    <Desc>3～4幕ごとに全てのキャラクターを対象にする咆哮を使用。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="601022">
+    <Name>哭き吠える悪夢</Name>
+    <Desc>体力が50%以下になったとき、速度ダイス +1, 毎幕ごとに咆哮を使用。</Desc>
+  </PassiveDesc>
+
+  <!-- 허수아비 -->
+  <PassiveDesc ID="701011">
+    <Name>収穫</Name>
+    <Desc>3幕ごと速度ダイス+1。的中時に相手のページを吸収し、体力を回復する知恵の収穫ページを使用。的中時、吸収するページがない場合は追加ダメージ(5~20)を与える。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="701012">
+    <Name>知恵を得た安らぎ</Name>
+    <Desc>知恵の収穫とマッチをした場合、マッチ終了時に混乱ダメージを20受け、次の幕に虚弱、束縛3を得る。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="701013">
+    <Name>知恵を求める身震い</Name>
+    <Desc>知恵の収穫で知恵ではないページを吸収した場合、次の幕に吸収したページ分だけパワーと忍耐を得て、吸収したページの内の１つを使用する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="701014">
+    <Name>すっからかんの頭</Name>
+    <Desc>幕の開始時、ページを持っていない司書を全て混乱状態にする。</Desc>
+  </PassiveDesc>
+
+  <!-- 나무꾼 -->
+  <PassiveDesc ID="702011">
+    <Name>鬱蒼とした森</Name>
+    <Desc>幕の開始時、暖かい心があれば全ての司書の光を最大まで回復する </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="702012">
+    <Name>まだ 足りない</Name>
+    <Desc>幕の開始時、光が1番多く残っているキャラクターを攻撃対象に選ぶ。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="702013">
+    <Name>心 欲しい</Name>
+    <Desc>攻撃時、相手の残った光だけ全ダイスの威力が増加する</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="702014">
+    <Name>弾む心臓</Name>
+    <Desc>他のキャラクターを倒した場合、体力を最大値の20%だけ回復し、暖かい心3を得る。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="702015">
+    <Name>空っぽの心</Name>
+    <Desc>幕の開始時、暖かい心が零なら混乱状態になる。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="702021">
+    <Name>心臓</Name>
+    <Desc>幕の開始時に暖かい心が0の場合、木こりがこのキャラクターを倒す。</Desc>
+  </PassiveDesc>
+
+  <!-- 죽나장 -->
+  <PassiveDesc ID="204011">
+    <Name>救いの手</Name>
+    <Desc>現在の体力が1番低い敵を攻撃。速度ダイスが封印された敵がいる場合、該当する敵を優先して攻撃。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="204012">
+    <Name>平穏</Name>
+    <Desc>この幻想体のページ効果で全ての速度ダイスが封印されれば混乱状態になる。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="204013">
+    <Name>哀悼</Name>
+    <Desc>幕の開始時、混乱状態の敵がいれば広域攻撃ページを使用</Desc>
+  </PassiveDesc>
+  <!-- 죽나장 나비-->
+  <PassiveDesc ID="204021">
+    <Name>無駄な羽ばたき</Name>
+    <Desc>現在の体力が1番低い敵を攻撃、死んだ蝶たちの葬儀を制圧したときに同時に制圧される。</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="602011">
+    <Name>狼の役割</Name>
+    <Desc>2ターン毎に相手を食べるバトルページを使用。食べられた司書は次の幕の間、戦闘から除外される。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="602012">
+    <Name>勧善懲悪の時間</Name>
+    <Desc>司書を食べると次の1幕の間、混乱耐性が脆弱になる。該当する幕に混乱状態になれば、食べた司書に最大体力の25％だけダメージを与えて吐き出す。外に出てきた司書は混乱状態になる。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="602013">
+    <Name>大きくて悪くなる狼だから</Name>
+    <Desc>司書を食べた次の幕に混乱状態にならなければ、その次の幕が開始したときに該当する司書を倒して強い形態へと変身。幕の開始時に体力が50%以下の場合にも変身する。変身前、最大体力が30%以下に減少しない</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="602021">
+    <Name>変身</Name>
+    <Desc>変身したとき、混乱抵抗値が増加。混乱抵抗値を最大まで回復する</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="602022">
+    <Name>闇の中へ</Name>
+    <Desc>変身直後、体力の25%だけダメージを受けるたびに次の2幕の間「影」状態になる</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="602023">
+    <Name>影</Name>
+    <Desc>影状態の間、このキャラクターが選んだ司書以外がこのキャラクターを対象に選ぶことが出来ない。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="602024">
+    <Name>脱力</Name>
+    <Desc>影状態が解除されると1幕の間、混乱耐性が脆弱に変更される。</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="503010">
+    <Name>黄金色の琥珀</Name>
+    <Desc>行動しない。今回の幕に体力が0になれば魔法少女状態で目覚める。そうならなければ貪欲の王状態で目覚める。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503011">
+    <Name>ちらつく欲望</Name>
+    <Desc>体力が50%以下になれば次の幕に貪欲の王に変身。変身する前は体力が50%以下にならない。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503012">
+    <Name>黄金の道</Name>
+    <Desc>3幕ごとにきらめく幸せを生成し、ターゲット・行動不能状態になる。次の幕にすべての司書を相手にする特殊バトルページを使用。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503013">
+    <Name>自己陶酔</Name>
+    <Desc>3名以下の司書が特殊バトルページの攻撃を防いだ場合、次の幕にパワー3、クイック3を得る(生き残った司書が2名以下なら1名で判定)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503014">
+    <Name>刹那の幸せ</Name>
+    <Desc>全ての司書が特殊バトルページの攻撃を防いだ場合、次の幕に混乱状態になる。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503021">
+    <Name>貪欲の王</Name>
+    <Desc>使用するバトルページ変更。攻撃的中時、相手の出血値だけダメージ量増加</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503022">
+    <Name>黄金の道</Name>
+    <Desc>3幕ごとにきらめく幸せを生成し、ターゲット指定および行動不能状態になる。次の幕にて司書1名を相手にする特殊バトルページ2枚を使用。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503023">
+    <Name>暴食</Name>
+    <Desc>司書が特殊バトルページの攻撃を1回でも防げなかった場合、全ての司書に15ダメージを与え、体力を25回復</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503024">
+    <Name>刹那の幸せ</Name>
+    <Desc>司書が特殊バトルページの攻撃を全て防いだ場合、混乱状態になる</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503031">
+    <Name>きらめく幸せ</Name>
+    <Desc>1幕の間だけ存在。自分を倒した司書に特殊バトルページを与える</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="304011">
+    <Name>プレゼントをあげるよ！</Name>
+    <Desc>手札にプレゼントのページの数が1番少ない相手を優先的に攻撃</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="304012">
+    <Name>遊んでくれるの？</Name>
+    <Desc>相手のプレゼントのページ数x4だけ防御ダイスの威力減少</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="304013">
+    <Name>1人は寂しいよ</Name>
+    <Desc>自分を除いた全ての味方が死亡したとき、全てのダメージ・混乱耐性が脆弱状態に変わる</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="304021">
+    <Name>プレ…ゼント…</Name>
+    <Desc>手札にプレゼントのページの数が1番多い相手を優先的に攻撃</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="304022">
+    <Name>どっかーん！</Name>
+    <Desc>3幕になれば相手にプレゼントのページを3枚追加し、強いダメージを与える自爆ページを使用。該当するページを使用した後、このキャラクターは死亡する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="304023">
+    <Name>サプライズプレゼントの登場</Name>
+    <Desc>このキャラクターが死亡すれば、ちび魔女の友だち1匹が次の幕に生まれる。自爆ページで死亡する前にこのキャラクターを倒す場合、体力が80%の状態の友だちが生まれる。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="304031">
+    <Name>プレ…ゼント…</Name>
+    <Desc>手札にプレゼントのページが1番多い相手を優先的に攻撃</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="304032">
+    <Name>プレゼントをよこして！</Name>
+    <Desc>相手の手札のプレゼントのページの枚数だけ、攻撃ダイスの威力が増加</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="404015">
+    <Name>土で作られた人形</Name>
+    <Desc>出血、火傷効果でダメージを受けない。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="404012">
+    <Name>立ち籠める香り</Name>
+    <Desc>このキャラクターは司書に混乱ダメージのみを与える。今回の戦闘にて司書が混乱状態になれば、該当する司書は死亡し、次の幕の開始時に「土から生まれた者」が1名召喚される。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="404011">
+    <Name>息を切らした贖罪</Name>
+    <Desc>このキャラクターは今回の戦闘の間「月桂冠」効果を持つ司書のみにダメージを受ける。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="404013">
+    <Name>枯れない花</Name>
+    <Desc>2幕目から本体の後ろに花びらを1枚ずつ生成する。花びらが3枚になれば幕の開始時、すべての花びらを消して広域攻撃ページを使用する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="404014">
+    <Name>花びらの涙</Name>
+    <Desc>混乱状態になれば、次の幕の開始時に花びらが全て消滅し、体力が40減少する。また、全ての司書の混乱抵抗値を最大値の50%回復する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="404021">
+    <Name>太初の土へ…</Name>
+    <Desc>このキャラクターは混乱状態になると死亡する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="404023">
+    <Name>土で作られた人形</Name>
+    <Desc>出血、火傷効果でダメージを受けない。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="404022">
+    <Name>立ち籠める香り</Name>
+    <Desc>このキャラクターは司書に混乱ダメージのみを与える。今回の戦闘にて司書が混乱状態になれば、該当する司書は死亡し、次の幕の開始時に「土から生まれた者」が1名召喚される。</Desc>
+  </PassiveDesc>
+  
+  <PassiveDesc ID="801011">
+    <Name>監視する瞳</Name>
+    <Desc>司書は大鳥のターゲットを変更できない</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="801012">
+    <Name>永遠に消えないランプ</Name>
+    <Desc>1幕目から3幕ごとに「眩惑」ページを付与。眩惑状態の司書がいる場合、魅了中ではない全司書の手元に「鳥籠」ページを追加</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="801021">
+    <Name>眠る瞳</Name>
+    <Desc>このキャラクターを倒した司書の手札に、大鳥を混乱状態にするページを追加</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="801022">
+    <Name>追従</Name>
+    <Desc>眩惑状態の司書を相手に指定しない。</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="901011">
+    <Name>過不足ない集中</Name>
+    <Desc>目覚めているトゲが無ければ活動を開始する。活動開始した幕に広域攻撃ページを使用する</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="901012">
+    <Name>古き神へ向かう翼</Name>
+    <Desc>このキャラクターが行動可能な状態の場合、幕の開始時にすべての司書に虚弱10を付与する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="901013">
+    <Name>君の視線の中で</Name>
+    <Desc>カウンターで受ける混乱ダメージが2倍になる。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="901014">
+    <Name>認識の内へ</Name>
+    <Desc>このキャラクターが活動を始めた幕から3幕間生き残っている場合、次の幕から開始時にトゲを2幕周期で召喚する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="901021">
+    <Name>目を離すな</Name>
+    <Desc>司書が別のキャラクターとマッチしたとき、該当する司書以外全員に最大体力の40%分ダメージを与える。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="901022">
+    <Name>見えない繋がりの紐</Name>
+    <Desc>マッチ時、今回の戦闘にて該当する司書が自分にバトルページを使用した回数だけ次の幕に虚弱を付与する</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="901023">
+    <Name>君の視線の中で</Name>
+    <Desc>カウンターで受ける混乱ダメージが2倍になる。</Desc>
+  </PassiveDesc>
+
+
+  <PassiveDesc ID="1004011">
+    <Name>身を切る寒風</Name>
+    <Desc>幕の開始時、全ての司書の体力が最大値の5%分減少。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1004012">
+    <Name>孤高の冷気</Name>
+    <Desc>氷の檻を全て破壊するまで、攻撃によるダメージを受けない。出血、火傷効果でダメージを受けない。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1004013">
+    <Name>霜柱</Name>
+    <Desc>破壊された氷の檻の数に比例し、このキャラクターの速度ダイスの個数と光の上限が増加する。破壊された氷の檻の数が2つ以上なら、近接攻撃ページがこのキャラクターのデッキに追加される。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1004014">
+    <Name>冬の厳しさと薔薇の芳しさを識る者たち</Name>
+    <Desc>氷の檻を全て破壊すれば、次の幕で全ての司書が体力を最大値の50%分回復する。該当する幕にて、雪の女王は広域攻撃ページを使用する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1004021">
+    <Name>カイとゲルダ</Name>
+    <Desc>このキャラクターの体力が0になれば、次の幕の開始時に閉じ込められていた司書が目覚める。</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="603011">
+    <Name>死体を探して</Name>
+    <Desc>「喰い尽くす」ページを味方に優先的に使用。味方を倒したとき、現体力の30%を回復</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="603012">
+    <Name>溶け落ちた死体</Name>
+    <Desc>体力を最大値の25%分(62/87/112)失うたび、次の幕の開始時に「溶け落ちた死体」1匹を生成する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="603111">
+    <Name>分裂</Name>
+    <Desc>体力が0になると死体に分離する。3幕以内に全ての死体を倒すと戦闘に勝利。失敗した場合、第1形態に復活。(ただし、復活したときの体力は「溶けて落ちた死体」の体力の合計分回復する。)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="603112">
+    <Name>生成</Name>
+    <Desc>体力を最大まで回復したとき、第2形態へと変化。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="603211">
+    <Name>分裂と生成</Name>
+    <Desc>体力0になると第1形態に変化。体力を最大まで回復したとき、第3形態へと変化。</Desc>
+  </PassiveDesc>  
+  <PassiveDesc ID="603212">
+    <Name>おぞましい笑い声</Name>
+    <Desc>幕の開始時、パワーを1得る。2幕ごとに「おぞましい悲鳴」を使用する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="603311">
+    <Name>分裂</Name>
+    <Desc>体力が0になれば第2形態へと変化。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="603312">
+    <Name>おぞましい吐き気</Name>
+    <Desc>幕の開始時、パワー2を得る。2幕ごとに「吐き気」を使用する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="603021">
+    <Name>腐敗</Name>
+    <Desc>被ダメージ時、自分を攻撃した司書に8のダメージを与えて脆弱1を付与する。</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="703021">
+    <Name>一緒に行こうよ…</Name>
+    <Desc>戦闘開始時、1幕目に「家」を生成して「レンガの道」効果を付与する広域攻撃ページを使用する。</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="703022">
+    <Name>みんな！家に帰ろう～！</Name>
+    <Desc>2幕目に「レンガの道」効果を持つ司書と「家」を対象に「みんな！家に帰ろう～！」ページを使用する。
+該当する攻撃が「家」に的中すると戦闘敗北。
+「レンガの道」効果を持つ全ての司書が該当するページとのマッチで勝利すると、「家」対象にする攻撃をキャンセルできる。</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="703023">
+    <Name>この…魔法使いめ…！</Name>
+    <Desc>このキャラクターが「家」をターゲットにする攻撃を2回防ぐと次の幕に広域攻撃ページ(この…魔法使いめ！)を使用する。
+該当する攻撃を全ての司書が防いだ場合、次の幕にて混乱状態になる。
+そうでない場合、次の幕に家を生成して以前のパターンを反復する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="703031">
+    <Name>勇気</Name>
+    <Desc>帰り道が死亡するまで全ての耐性が免疫になる</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="703032">
+    <Name>臆病者</Name>
+    <Desc>帰り道が死亡すれば全ての耐性が脆弱になり、体力の最大値が減少。速度ダイスの値と使用するカードも変更される。</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="504011">
+    <Name>今日の演劇</Name>
+    <Desc>憤怒の従者のみが隠者を倒すことが出来る。隠者を倒せば幻想体バトルが完了。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504012">
+    <Name>目の眩む憤怒</Name>
+    <Desc>隠者の棒きれが生きている場合、隠者の棒きれを攻撃する。隠者の棒きれが全て死亡した場合、隠者を攻撃する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504013">
+    <Name>異界の罪人ども！</Name>
+    <Desc>隠者の棒きれが生きている場合、自分が受けたダメージが合計で30以上なら次の幕の開始時、広域攻撃ページの「悪の化身どもめ!!!」を使用し、合計を初期化する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504014">
+    <Name>湧き上がる憤怒</Name>
+    <Desc>隠者を攻撃するパターンを開始したとき、広域攻撃ページの「悪の化身どもめ!!!」を使用する。これ以降、2幕ごとに広域攻撃ページを使用する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504021">
+    <Name>利用される者</Name>
+    <Desc>司書の攻撃では体力が30以下に減少しない。幕の終了時、体力が30以下のときは次の幕にて体力を最大値の50%だけ回復する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504022">
+    <Name>愛する友</Name>
+    <Desc>憤怒の従者とマッチを進行するとき威力+5。火傷、出血、腐食の効果でダメージを受けない。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504023">
+    <Name>異界の訪問者</Name>
+    <Desc>隠者の棒きれが生きている場合、2幕ごとに広域攻撃ページ「留まれ」を使用する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504024">
+    <Name>2つの世界の出逢い</Name>
+    <Desc>隠者の棒きれが全て死ねばパターンが変更される。変更時の最初の幕に憤怒の従者を攻撃する。
+これ以降、2幕目に憤怒の従者攻撃した後、隠者の棒きれ召喚する広域攻撃ページ「目覚めよ！」を使用する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504031">
+    <Name>隠者の棒きれ</Name>
+    <Desc>憤怒の従者を攻撃する。</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="902011">
+    <Name>流れる時間</Name>
+    <Desc>ターゲット不能。バトルページの装備に30秒の時間制限が設けられる。30秒が経過すれば即戦闘を開始する。幕の開始時、自分以外の味方に「マッチ進行時に威力+3」または「一方攻撃時に威力+3」する効果を付与する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="902012">
+    <Name>積もる時間</Name>
+    <Desc>幕の開始時「時間の痕跡」1名を生成する。既に4つの「時間の痕跡」がある場合、最も体力が少ない個体を倒して全て司書に該当キャラクターの残体力分ダメージを与える。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="902013">
+    <Name>止められぬ時間</Name>
+    <Desc>12幕以内に倒した「時間の痕跡」が12体になれば、次の幕に混乱状態になる。倒された「時間の痕跡」の数が12体未満なら13幕目に広域ページを使用する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="902014">
+    <Name>沈黙の対価</Name>
+    <Desc>幕の開始時、全ての司書の手元に「沈黙」ページを1枚追加する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="902021">
+    <Name>貴方の時間</Name>
+    <Desc>特定司書の速度ダイスの個数、速度数、耐性情報をコピーする。今回の幕にて使用した司書のバトルページを次の幕に使用する。</Desc>
+  </PassiveDesc>
+
+
+  <PassiveDesc ID="802011">
+    <Name>悪いことは駄目！</Name>
+    <Desc>攻撃ダイスとマッチ進行時、威力+50</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="802012">
+    <Name>懲罰！</Name>
+    <Desc>今回の幕にてダメージを受けた場合、次の幕にて最後に自分を攻撃した相手に「懲罰！」ページを使用する。(ターゲット変更不能)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="802013">
+    <Name>揺れる鳥籠</Name>
+    <Desc>「懲罰！」ページが「森番の錠前」ページとマッチするたびに鳥籠の鎖1つを破壊する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="802021">
+    <Name>森番</Name>
+    <Desc>混乱状態になった対象を優先的にターゲットとして指定する。自分の速度が相手より高いとき、攻撃ダイスの威力+2</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="802022">
+    <Name>奪われた錠前</Name>
+    <Desc>このキャラクターを倒した司書の手元に「森番の錠前」のページを追加する</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="803011">
+    <Name>不公正な秤</Name>
+    <Desc>1幕目から、幕の開始時に審判鳥を除いた全てのキャラクターが罪を1ずつ得る。味方を攻撃してダメージを与えれば罪をなすりつけることが出来る。(ページごとに1回)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="803012">
+    <Name>罪の重さ</Name>
+    <Desc>相手の罪の数値だけ威力が増加する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="803013">
+    <Name>審判</Name>
+    <Desc>幕の開始時、罪が5以上のキャラクターがいれば該当するキャラクターに「審判」ページを使用する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="803014">
+    <Name>止まらない審判</Name>
+    <Desc>幕の開始時、罪が3以上のキャラクターが3名以上居れば広域攻撃ページ「止まらない審判」を使用する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="803015">
+    <Name>あふれる悪事</Name>
+    <Desc>「審判」「止まらない審判」ページを使用すると、混乱抵抗値が最大値の25%分減少する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="803021">
+    <Name>怖いよ！こわいよ！</Name>
+    <Desc>このキャラクターの攻撃が的中すれば、相手に罪を1なすりつける。(ページごとに1回)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="803022">
+    <Name>つんざく悲鳴</Name>
+    <Desc>攻撃を受ければ次の幕に「つんざく悲鳴」ページを使用する。</Desc>
+  </PassiveDesc>
+	
+  <PassiveDesc ID="604011">
+    <Name>恐水病</Name>
+    <Desc>血が5未満のとき、血の数値に反比例してパワーを得る(最大3)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="604012">
+    <Name>渇き</Name>
+    <Desc>血が2以下のとき、「渇き」ページを使用する。(クールタイム2幕)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="604013">
+    <Name>血の宴</Name>
+    <Desc>血が5以上のとき、広域攻撃ページ「血の宴」を使用する。
+戦闘開始後、4幕の間このページを使用しなかった場合は5幕目に使用する。(クールタイム 3幕)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="604014">
+    <Name>変身</Name>
+    <Desc>体力が最大値の50%になると該当する幕の間体力が減少せず、次の幕の開始時に変身する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="604031">
+    <Name>恐水病</Name>
+    <Desc>血が1以下のとき、パワー2を得る。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="604032">
+    <Name>流れる血</Name>
+    <Desc>幕の開始ごとに血を1失う</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="604033">
+    <Name>耐え難い渇き</Name>
+    <Desc>血が2以下のとき、「耐え難い渇き」ページを使用する。(クールタイム 2幕)</Desc>
+  </PassiveDesc>	
+  <PassiveDesc ID="604034">
+    <Name>血の渇望</Name>
+    <Desc>血が0のとき、広域攻撃ページ「血の渇望」を使用する。
+変身以降、3幕の間このページを使用しなかった場合は4幕目に使用する。(クールタイム 3幕)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="604021">
+    <Name>恐水病</Name>
+    <Desc>血が5未満のとき、血の数値に反比例してパワーを得る(最大3)</Desc>
+  </PassiveDesc>
+  
+  
+  <!-- 오즈마-->
+  <PassiveDesc ID="704011">
+   <Name>蘇生</Name>
+   <Desc>1幕目に全てのジャックを目覚めさせるページと、特定の司書に忘却を付与するページを使用。これ以降、4幕周期にパターンを進行する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704012">
+  <Name>奪われた者の苦痛</Name>
+  <Desc>忘却を付与された司書を元に戻すと、幕の開始時に全ての耐性が脆弱になり、広域攻撃ページを使用する。
+これ以降パターンを反復する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704013">
+  <Name>奪われた者の哀しみ</Name>
+  <Desc>パターンを2回繰り返した後、幕の開始時に全ての耐性が脆弱になり、非常に強い広域攻撃ページを使用。</Desc>
+</PassiveDesc>
+  <!--잭-->
+    <PassiveDesc ID="704021">
+    <Name>奪った力</Name>
+    <Desc>忘却が付与された司書(忘却司書)のバトルページを使用</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704022">
+    <Name>本物は誰？</Name>
+    <Desc>目覚めたジャックの内１つだけが本物のジャックで、残りは偽物のジャックだ。
+本物のジャックに忘却が付与された司書(忘却司書)の攻撃が的中するたびバトルページ１つが戻る。
+本物のジャックは被ダメージ時に画面が点滅する。</Desc>
+  </PassiveDesc>
+   <PassiveDesc ID="704023">
+  <Name>奪ったり奪われたり</Name>
+  <Desc>忘却司書の攻撃が、本物のジャックに9回的中すれば全てのジャックが死亡する。
+忘却状態になった幕から3幕以内にこの条件を満たせなかった場合、次の幕の開始時に司書をカボチャにする。
+これ以降、本物のジャックが生き還ったジャックに変わり、忘却司書のデッキとコアページを永久的に使用する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704024">
+    <Name>南の破片</Name>
+    <Desc>毎幕ごとにパワー2を得る</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704025">
+    <Name>西の破片</Name>
+    <Desc>毎幕ごとに忍耐2を得る</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704026">
+    <Name>北の破片</Name>
+    <Desc>毎幕ごとにクイック1を得る</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704027">
+    <Name>東の破片</Name>
+    <Desc>毎幕ごとに混乱ダメージ量 +3効果を得る</Desc>
+  </PassiveDesc>
+  <!--되살아난 잭-->
+  <PassiveDesc ID="704031">
+    <Name>全部俺のだ！</Name>
+    <Desc>かぼちゃになった司書のコアページ、デッキを使用する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704032">
+    <Name>完全なジャック</Name>
+    <Desc>毎幕ごとにパワー、忍耐2, クイック1, 混乱ダメージ量 +3 効果を得る</Desc>
+  </PassiveDesc>
+  <!--기억을 잃은 호박-->
+  <PassiveDesc ID="704041">
+    <Name>喪った記憶</Name>
+    <Desc>全てのバトルページが特殊ページに変更される。すべての能力値が入れ替わる。パッシブが発動しない。</Desc>
+  </PassiveDesc>
+
+  <!--푸른별의 제단-->
+  <PassiveDesc ID="903011">
+    <Name>神聖？</Name>
+    <Desc>ターゲット指定不可。状態異常が付与されない</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="903012">
+    <Name>星の音</Name>
+    <Desc>3幕目から3幕周期で蒼い星の祭壇が広域攻撃ページを使用</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="903013">
+    <Name>星の懐へ</Name>
+    <Desc>混乱状態のキャラクターが居るとき該当するキャラクターが即死し、体力が最大値の10%分減少する</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="903014">
+    <Name>希望の蒼い光</Name>
+    <Desc>「星の懐へ」効果で信徒が死亡した場合、全ての司書の混乱状態が回復し、すべての信徒が混乱ダメージを受ける</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="903015">
+    <Name>絶望の蒼い光</Name>
+    <Desc>「星の懐へ」効果で司書が死亡した場合、全ての司書が混乱ダメージを受け、すべての信徒が混乱抵抗値を回復する</Desc>
+  </PassiveDesc>
+
+  <!--푸른별의 신도-->
+  <PassiveDesc ID="903021">
+    <Name>星の音が聞こえるよ！！</Name>
+    <Desc>蒼い星の祭壇が広域攻撃ページを使用する幕に特殊バトルページを使用。ただし、混乱抵抗値が最大値の40%以下の場合は自爆ページを使用する。</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="903022">
+    <Name>殉教者たち</Name>
+    <Desc>幕の開始時、生き残っている信者の数が4名未満なら信徒1名が生成される。</Desc>
+  </PassiveDesc>
+</PassiveDescRoot>

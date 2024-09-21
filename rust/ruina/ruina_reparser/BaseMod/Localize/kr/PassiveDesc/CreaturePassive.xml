@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PassiveDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- 피의욕조 -->
+  <PassiveDesc ID="1001011">
+    <Name>흉터</Name>
+    <Desc>참격에 의해 받는 피해가 1-5 감소</Desc>
+  </PassiveDesc>
+  <!-- 피의욕조 -->
+  <PassiveDesc ID="1001012">
+    <Name>피</Name>
+    <Desc>속도 3 감소. 방어 주사위의 최댓값 +3</Desc>
+  </PassiveDesc>
+  <!-- 열망하는 심장 -->
+  <PassiveDesc ID="1002021">
+    <Name>열망</Name>
+    <Desc>한 막동안 피해를 주지 못했으면 체력 4 감소</Desc>
+  </PassiveDesc>
+  <!-- 피노키오 : 거짓말쟁이 -->
+  <PassiveDesc ID="1003011">
+    <Name>따라하기</Name>
+    <Desc>지정 사서의 덱을 복사하여 사용한다. 매 막마다 빛을 최대로 회복한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1003012">
+    <Name>거짓말</Name>
+    <Desc>2~3막마다 잘못된 정보로 표시되는 거짓말 책장을 사용한다.</Desc>
+  </PassiveDesc>
+  <!--<PassiveDesc ID="1003013">
+    <Name>패시브3</Name>
+    <Desc>막 시작시 임의의 사서 한 명에게 '거짓말은 나빠!' 전투 책장을 준다.</Desc>
+  </PassiveDesc>-->
+  <PassiveDesc ID="1003014">
+    <Name>들통난 거짓말</Name>
+    <Desc>거짓말 중 '거짓말은 나빠!'와 합 진행 시 주사위 위력 -4</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1003015">
+    <Name>즐거운 거짓말</Name>
+    <Desc>거짓말 중 '거짓말은 나빠!'와 합 진행을 하지 않으면 주사위 위력 +4</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1003016">
+    <Name>왜 나쁘다는 거죠?</Name>
+    <Desc>거짓말이 들통난 경우 다음 막동안 모든 피노키오가 허약 2와 무장해제 2를 얻고, 흐트러짐 내성이 "약점"으로 변경됨</Desc>
+  </PassiveDesc>
+  <!--<PassiveDesc ID="1003017">
+    <Name>패시브7</Name>
+    <Desc>거짓말이 들통난 경우 모든 캐릭터에게 허약 2, 무장해제 2 부여</Desc>
+  </PassiveDesc>-->
+  <PassiveDesc ID="1003018">
+    <Name>랄랄라~</Name>
+    <Desc>거짓말이 들통나지 않은 경우 다음 막에 모든 피노키오가 힘 4, 인내 4를 얻음</Desc>
+  </PassiveDesc>
+  <!-- 피노키오 : 호기심쟁이 -->
+  <PassiveDesc ID="1003021">
+    <Name>따라하기</Name>
+    <Desc>첫번째 보조 사서의 덱을 복사하여 사용한다.</Desc>
+  </PassiveDesc>
+  <!--<PassiveDesc ID="1003022">
+    <Name>패시브2</Name>
+    <Desc>2막마다 '학습' 전투 책장을 사용한다.</Desc>
+  </PassiveDesc>-->
+  <PassiveDesc ID="1003023">
+    <Name>거꾸로 된 노래</Name>
+    <Desc>이 캐릭터가 살아있는동안 매 막마다 모든 사서의 손 패에 있는 책장 비용이 무작위로 변경된다. (비용이 4인 책장은 제외)</Desc>
+  </PassiveDesc>
+  <!-- 피노키오 : 따라쟁이 -->
+  <PassiveDesc ID="1003031">
+    <Name>따라하기</Name>
+    <Desc>두번째 보조 사서의 덱을 복사하여 사용한다.</Desc>
+  </PassiveDesc>
+  <!--<PassiveDesc ID="1003032">
+    <Name>패시브2</Name>
+    <Desc>3막부터 2막마다 학습 카드를 사용한다.</Desc>
+  </PassiveDesc>-->
+  <PassiveDesc ID="1003033">
+    <Name>모두를 위한 노래</Name>
+    <Desc>이 캐릭터가 살아있는동안 매 막 시작 시마다 모든 피노키오가 힘+2, 인내 +2 중 하나의 효과를 얻는다.</Desc>
+  </PassiveDesc>
+
+  <!-- 불타버린 소녀 -->
+  <PassiveDesc ID="101011">
+    <Name>꺼져가는 불꽃</Name>
+    <Desc>아군 사망시 전체 체력의 50% 감소, 흐트러짐 상태가 됨</Desc>
+  </PassiveDesc>
+  <!-- 불타버린 소녀 -->
+  <PassiveDesc ID="101012">
+    <Name>잿더미</Name>
+    <Desc>흐트러짐 상태가 되면 모든 빛을 잃음</Desc>
+  </PassiveDesc>
+  <!-- 테디 -->
+  <PassiveDesc ID="102011">
+    <Name>애정</Name>
+    <Desc>합 진행 시 그리웠던 옛날의 포옹의 비용 1 감소</Desc>
+  </PassiveDesc>
+  <!-- 버려진 살인마 -->
+  <PassiveDesc ID="201011">
+    <Name>분노</Name>
+    <Desc>공격 적중 시 흐트러짐 피해량 2배</Desc>
+  </PassiveDesc>
+  <!-- 버려진 살인마 -->
+  <PassiveDesc ID="201012">
+    <Name>두려움</Name>
+    <Desc>상태이상 중일 때 모든 주사위의 위력 -4</Desc>
+  </PassiveDesc>
+  <!-- 무엇이든 -->
+  <PassiveDesc ID="202011">
+    <Name>패턴 반복 인식</Name>
+    <Desc>한 막동안 10 이상의 피해를 입힌 경우 빛 1 회복</Desc>
+  </PassiveDesc>
+  <!-- 수오표 -->
+  <PassiveDesc ID="301011">
+    <Name>표정</Name>
+    <Desc>교전 시 표정에 따라 주사위 위력 변화</Desc>
+  </PassiveDesc>
+  <!-- 빨간구두 -->
+  <PassiveDesc ID="302021">
+    <Name>이끌림</Name>
+    <Desc>출혈이 있는 대상 우선 지정</Desc>
+  </PassiveDesc>
+  <!-- 우주속의조각 -->
+  <PassiveDesc ID="401011">
+    <Name>이해불능</Name>
+    <Desc>모든 흐트러짐 피해를 2배로 가함</Desc>
+  </PassiveDesc>
+  <!-- 은하수 -->
+  <PassiveDesc ID="402011">
+    <Name>조약돌</Name>
+    <Desc>막 시작시 최대 체력의 10% 회복. 체력이 1일 때는 발동하지 않음</Desc>
+  </PassiveDesc>
+  <!-- 은하수 -->
+  <PassiveDesc ID="402012">
+    <Name>나를 떠나지마</Name>
+    <Desc>체력이 1 아래로 내려가지 않고 흐트러짐 상태가 됨. 2막 뒤 아군의 현재 체력만큼 체력 회복. 막 시작 시 모든 아군의 체력이 1이면 사망.</Desc>
+  </PassiveDesc>
+  <!-- 은하수 -->
+  <PassiveDesc ID="402013">
+    <Name>이별의 눈물</Name>
+    <Desc>막 시작시 체력이 1인 아군(자신 포함)이 있으면 모든 캐릭터가 최대 체력의 10%를 잃음.</Desc>
+  </PassiveDesc>
+
+  <!-- 요정 -->
+  <PassiveDesc ID="103011">
+    <Name>잠깐의 배부름</Name>
+    <Desc>막 시작 시 준비된 고기 효과를 가진 아군의 체력이 1이면 잡아먹음. 해당 막 동안 취약, 허약, 무장해제 10을 얻음</Desc>
+  </PassiveDesc>
+  <!-- 요정 -->
+  <PassiveDesc ID="103012">
+    <Name>광포한 굶주림</Name>
+    <Desc>체력이 25% 이하일 때 아군이 살아있으면 모든 아군 처치. 아군이 없는 상태이면 막 종료 시 힘 30을 얻음</Desc>
+  </PassiveDesc>
+  <!-- 요정 -->
+  <PassiveDesc ID="103021">
+    <Name>굶주림</Name>
+    <Desc>막 종료 시 체력이 50% 이하면 체력 6 감소 및 힘 2 얻음</Desc>
+  </PassiveDesc>
+  <!-- 요정 -->
+  <PassiveDesc ID="103022">
+    <Name>보살핌</Name>
+    <Desc>막 시작 시 체력 10 회복, 여왕이 죽기 전까지 체력이 1 이하로 감소하지 않음</Desc>
+  </PassiveDesc>
+
+  <!-- 거미봉오리 -->
+  <PassiveDesc ID="303011">
+    <Name>추적</Name>
+    <Desc>아군을 처치한 적을 공격 대상으로 지정</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="303012">
+    <Name>사냥 시작</Name>
+    <Desc>아군 사망시 2막 동안 행동 가능 및 대상 지정 가능</Desc>
+  </PassiveDesc>
+  <!-- 거미봉오리 -->
+  <PassiveDesc ID="303021">
+    <Name>밥이다!</Name>
+    <Desc>고치 상태인 적을 공격 대상으로 지정</Desc>
+  </PassiveDesc>
+
+  <!-- 포큐버스 -->
+  <PassiveDesc ID="403011">
+    <Name>행복을 주는 가시</Name>
+    <Desc>공격 적중 시 피격자의 긍정 감정 2 누적.</Desc>
+  </PassiveDesc>
+  <!-- 포큐버스 -->
+  <PassiveDesc ID="403012">
+    <Name>하늘하늘</Name>
+    <Desc>원거리 책장에 의한 피해를 받지 않음</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="403013">
+    <Name>견딜 수 없는 쾌락</Name>
+    <Desc>막 시작 시 쾌감 책장의 수만큼 대상의 빛을 회복시킴. 공격 적중 시 대상에게 쾌감 책장가 3장 있으면 피해를 20 주고 책장을 소멸시킴.</Desc>
+  </PassiveDesc>
+
+  <!-- 노래하는 기계 -->
+  <PassiveDesc ID="203011">
+    <Name>노래하는 기계</Name>
+    <Desc>대상으로 지정할 수 없음. 행동하지 않음. 피해를 받지 않음.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="203012">
+    <Name>연주</Name>
+    <Desc>노래가 필요해!가 발동한 다음 막에 기계 안에 있는 대상으로 연주를 함. 연주 대상은 최대 체력의 30%만큼 피해를 받고, 해당 막동안 전투에서 제외됨. 연주가 발동한 막에는 모든 캐릭터가 힘 5를 얻고, 흐트러짐 내성이 취약으로 변경됨. </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="203021">
+    <Name>노래가 필요해!</Name>
+    <Desc>3막부터 4막마다 속도 주사위가 1개 증가하고 사용하는 전투 책장을 변경함. 이 상태에서 흐트러짐이 되면 다음 막 시작 시 기계로 들어감.</Desc>
+  </PassiveDesc>
+
+  <!-- 증오의 여왕 -->
+  <PassiveDesc ID="501011">
+    <Name>역변</Name>
+    <Desc>히스테릭 게이지가 가득 차면 다른 형태로 변신한다. 히스테릭 게이지는 합 패배/ 표식을 가진 대상에게 피격 시 증가하며, 합 승리/ 표식을 가진 대상에게 피해를 줄 때 감소한다. 히스테릭 게이지가 오를수록 배경이 붉게 변한다. 막 종료시 빛을 최대로 회복하고 책장을 2장씩 뽑는다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="501012">
+    <Name>증오의 이름으로</Name>
+    <Desc>2막마다 대상에게 표식을 부여하는 책장을 사용한다. 표식이 부여된 대상은 모든 내성이 "약점"으로 변경되고, 환상체의 공격 대상이 된다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="501013">
+    <Name>아르카나 슬레이브</Name>
+    <Desc>4막마다 모든 사서를 대상으로 하는 광역 공격 책장을 사용한다. 변신 상태일 경우 다음 막에 흐트러짐 상태가 된다.</Desc>
+  </PassiveDesc>
+
+  <!-- 절망의 기사 본체-->
+  <PassiveDesc ID="502011">
+    <Name>수호</Name>
+    <Desc>행동 불가. 대상 지정 불가.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="502012">
+    <Name>슬픔</Name>
+    <Desc>3막마다 임의의 검 1개에게 눈물 부여. 흐트러짐 상태가 되었을 때는 다음 막에 발동.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="502013">
+    <Name>절망</Name>
+    <Desc>눈물을 부여받은 검이 치명적인 피해를 받으면 다음 막에 절망 상태가 됨</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="502014">
+    <Name>절망의 가호</Name>
+    <Desc>절망 상태 시 모든 검이 체력과 흐트러짐을 최대치로 회복. 모든 검은 특수 전투 책장을 사용.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="502015">
+    <Name>부서진 마음</Name>
+    <Desc>절망 상태에서 모든 칼이 자신에게 꽂힌 경우 다음 막 동안 흐트러짐 상태가 되고 대상 지정이 가능해짐.</Desc>
+  </PassiveDesc>
+  <!-- 절망의 기사 칼 -->
+  <PassiveDesc ID="502021">
+    <Name>눈물</Name>
+    <Desc>눈물 효과가 있는 동안 속도 주사위 1개 증가. 가호 전용 책장 사용. 내성 정보 변경</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="502022">
+    <Name>휴식</Name>
+    <Desc>치명적인 피해를 받으면 가사상태에 들어감. 2막 뒤 부활</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="502023">
+    <Name>절망을 찌르는 검</Name>
+    <Desc>절망 상태에서 피해를 주지 못할 경우 절망의 기사에게 피해를 주고 꽂힘</Desc>
+  </PassiveDesc>
+
+  <!-- 여왕벌 -->
+  <PassiveDesc ID="104011">
+    <Name>포자</Name>
+    <Desc>이전 막에 공격을 받은 경우 이번 막 시작 시 모든 사서에게 포자 1 부여</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="104012">
+    <Name>개체 수 확장</Name>
+    <Desc>살아있는 일벌의 수가 2마리 이하인 경우 막 시작 시 마다 모든 사서에게 포자 2 부여 </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="104013">
+    <Name>변태</Name>
+    <Desc>포자를 가진 사서가 사망할 경우 다음 막에 일벌 1마리 소환</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="104014">
+    <Name>페로몬</Name>
+    <Desc>3막마다 일벌의 호전성과 충성심을 강화시키는 책장 사용</Desc>
+  </PassiveDesc>
+  <!-- 일벌-->
+  <PassiveDesc ID="104021">
+    <Name>충성심</Name>
+    <Desc>이전 막에 여왕벌을 마지막으로 공격한 대상을 공격함</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="104022">
+    <Name>죽음의 포옹</Name>
+    <Desc>여왕벌의 체력이 20% 이하가 되면 여왕벌을 공격</Desc>
+  </PassiveDesc>
+
+  <!-- 붉은 두건의 용병 : 용병-->
+  <PassiveDesc ID="601011">
+    <Name>악몽의 끝</Name>
+    <Desc>직접 늑대 처치 시 전투 승리, 늑대보다 먼저 사망 시 전투 패배</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="601012">
+    <Name>망설임 없는 일격</Name>
+    <Desc>2~3막마다 모든 캐릭터를 대상으로 망설임 없는 일격 사용</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="601013">
+    <Name>분노</Name>
+    <Desc>분노 게이지가 가득 차면 분노 상태가 된다. 분노 게이지는 늑대로부터 피해를 받으면 상승하고, 늑대에게 피해를 주면 감소한다. 분노 게이지가 상승할 수록 배경이 붉어진다. 분노: 2막동안 지속. 매 막마다 힘 +2, 광역 공격 책장 사용</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="601014">
+    <Name>갈 곳 잃은 분노</Name>
+    <Desc>사서가 늑대를 처치한 경우 갈 곳 잃은 분노 상태가 되고, 최대 체력과 흐트러짐 내성이 강화된다. 이후 체력을 최대 체력의 50%만큼, 흐트러짐을 최대로 회복한다. 갈 곳 잃은 분노: 영구적으로 지속. 매 막마다 힘+5, 신속+5, 광역 공격 책장 사용</Desc>
+  </PassiveDesc>
+  <!-- 붉은 두건의 용병 : 늑대 -->
+  <PassiveDesc ID="601021">
+    <Name>포효</Name>
+    <Desc>3~4막마다 모든 캐릭터를 대상으로 하는 포효 사용</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="601022">
+    <Name>울부짖는 악몽</Name>
+    <Desc>체력이 50% 이하가 되면 속도 주사위 +1, 매 막마다 포효 사용.</Desc>
+  </PassiveDesc>
+
+  <!-- 허수아비 -->
+  <PassiveDesc ID="701011">
+    <Name>수확</Name>
+    <Desc>3막마다 속도 주사위 +1, 적중 시 대상의 책장을 흡수하고 체력을 회복하는 지혜 수확 책장 사용. 적중 시 흡수할 책장이 없는 경우 추가 피해(5~20)를 준다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="701012">
+    <Name>지혜를 얻은 평온함</Name>
+    <Desc>지혜 수확이 지혜와 합을 한 경우, 교전 종료 시 흐트러짐 피해 20을 받고, 다음 막에 허약, 속박 3을 얻는다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="701013">
+    <Name>지혜를 구하는 몸부림</Name>
+    <Desc>지혜 수확으로 지혜가 아닌 책장을 흡수한 경우, 다음 막에 흡수한 책장 수만큼 힘, 인내을 얻고, 흡수한 책장 중 1장을 사용한다</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="701014">
+    <Name>텅 빈 머리</Name>
+    <Desc>막 시작 시 보유한 책장이 없는 사서를 모두 흐트러짐 상태로 만든다.</Desc>
+  </PassiveDesc>
+
+  <!-- 나무꾼 -->
+  <PassiveDesc ID="702011">
+    <Name>울창한 숲</Name>
+    <Desc>막 시작 시 따뜻한 마음이 있으면 모든 사서의 빛을 최대로 회복시킨다. </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="702012">
+    <Name>아직 부족하다</Name>
+    <Desc>막 시작 시 빛이 가장 많이 남은 캐릭터를 공격 대상으로 삼는다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="702013">
+    <Name>마음 필요하다</Name>
+    <Desc>공격 시 대상의 남은 빛 만큼 모든 주사위 위력이 증가한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="702014">
+    <Name>펄떡이는 심장</Name>
+    <Desc>다른 캐릭터를 처치하면 체력을 최대 체력의 20%만큼 회복하고, 따뜻한 마음 3을 얻는다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="702015">
+    <Name>텅 빈 마음</Name>
+    <Desc>막 시작 시 따뜻한 마음이 0이면 흐트러짐 상태가 된다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="702021">
+    <Name>심장</Name>
+    <Desc>막 시작 시 따뜻한 마음이 0인 경우 나무꾼이 이 캐릭터를 처치한다.</Desc>
+  </PassiveDesc>
+
+  <!-- 죽나장 -->
+  <PassiveDesc ID="204011">
+    <Name>구원의 손</Name>
+    <Desc>현재 체력이 가장 낮은 적 공격. 속도 주사위가 봉인된 적이 있을 경우 해당 적 우선 공격.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="204012">
+    <Name>평온</Name>
+    <Desc>이 환상체의 책장 효과로 모든 속도주사위가 봉인되면 흐트러짐 상태가 됨.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="204013">
+    <Name>애도</Name>
+    <Desc>막 시작 시 흐트러짐 상태인 적이 있으면 광역 공격 책장 사용</Desc>
+  </PassiveDesc>
+  <!-- 죽나장 나비-->
+  <PassiveDesc ID="204021">
+    <Name>부질없는 날갯짓</Name>
+    <Desc>현재 체력이 가장 낮은 적 공격, 죽은 나비들의 장례 제압 시 동시에 제압됨.</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="602011">
+    <Name>늑대의 역할</Name>
+    <Desc>2막 마다 대상을 잡아먹는 전투 책장 사용. 잡아먹힌 사서는 다음 막동안 전투에서 제외됨.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="602012">
+    <Name>권선징악의 시간</Name>
+    <Desc>사서를 잡아먹으면 다음 1막동안 흐트러짐 내성이 취약으로 변경됨. 해당 막에 흐트러짐 상태가 되면 잡아먹은 사서에게 최대 체력의 25%만큼의 피해를 주고 토해냄. 밖으로 나온 사서는 흐트러짐 상태가 됨.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="602013">
+    <Name>커다랗고 나쁠 늑대니까</Name>
+    <Desc>사서를 잡아먹은 다음 막에 흐트러짐 상태가 되지 않으면 그 다음 막 시작 시 해당 사서를 처치하고 강한 형태로 변신. 막 시작 시 체력이 50% 이하인 경우에도 변신함. 변신 전 체력이 최대 체력의 30% 이하로 감소하지 않음</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="602021">
+    <Name>변신</Name>
+    <Desc>변신 시 최대 흐트러짐 저항 증가. 흐트러짐 저항 최대로 회복</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="602022">
+    <Name>어둠 속으로</Name>
+    <Desc>변신 직후 체력의 25%만큼 피해를 받을 때마다 다음 2막동안 그림자 상태가 됨</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="602023">
+    <Name>그림자</Name>
+    <Desc>그림자 상태동안에는 이 캐릭터가 지정한 사서 외 다른 사서가 이 캐릭터를 대상으로 지정할 수 없음.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="602024">
+    <Name>탈진</Name>
+    <Desc>그림자 상태에서 벗어나면 1막동안 흐트러짐 내성이 취약으로 변경됨.</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="503010">
+    <Name>황금빛 호박</Name>
+    <Desc>행동하지 않음. 이번 막에 체력이 0이 되면 마법소녀 상태로 깨어남. 그렇지 못하면 탐욕의 왕 상태로 깨어남.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503011">
+    <Name>날름거리는 욕망</Name>
+    <Desc>체력이 50% 이하가 되면 다음 막에 탐욕의 왕으로 변신. 변신 전 체력이 50% 아래로 내려가지 않음.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503012">
+    <Name>황금의 길</Name>
+    <Desc>3막마다 반짝이는 행복을 생성하고, 대상 지정 및 행동불가 상태가 됨. 다음 막에 모든 사서를 대상으로 하는 특수 전투 책장 사용.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503013">
+    <Name>자아도취</Name>
+    <Desc>3명 이하의 사서가 특수 전투 책장의 공격을 막은 경우 다음 막에 힘3, 신속 3을 얻음 (생존 사서가 2명 이하이면 1명으로 판정)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503014">
+    <Name>찰나의 행복</Name>
+    <Desc>모든 사서가 특수 전투 책장의 공격을 막은 경우 다음 막에 흐트러짐 상태가 됨</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503021">
+    <Name>탐욕의 왕</Name>
+    <Desc>사용하는 전투 책장 변경. 공격 적중시 대상의 출혈 스택만큼 피해량 증가</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503022">
+    <Name>황금의 길</Name>
+    <Desc>3막마다 반짝이는 행복을 생성하고, 대상 지정 및 행동불가 상태가 됨. 다음 막에 사서 1명을 대상으로 하는 특수 전투 책장 2장 사용.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503023">
+    <Name>폭식</Name>
+    <Desc>사서가 특수 전투 책장의 공격을 한번이라도 막지 못한 경우 모든 사서에게 15의 피해를 주고 체력 25 회복</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503024">
+    <Name>찰나의 행복</Name>
+    <Desc>사서가 특수 전투 책장의 공격을 전부 막은 경우 흐트러짐 상태가 됨</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="503031">
+    <Name>반짝이는 행복</Name>
+    <Desc>1막동안 존재. 자신을 처치한 사서에게 특수 전투 책장을 줌</Desc>
+  </PassiveDesc>
+
+  <!-- 래티씨아 : 패시브 보여주는 용으로 패시브 구현 필요함 + id 확인 필요함-->
+  <PassiveDesc ID="304011">
+    <Name>선물을 줄거야!</Name>
+    <Desc>손 패에 선물 책장이 가장 적은 대상 우선 공격</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="304012">
+    <Name>놀아주는거야?</Name>
+    <Desc>대상의 선물 책장 수 x 4만큼 방어 주사위 위력 감소</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="304013">
+    <Name>혼자는 쓸쓸해</Name>
+    <Desc>자신을 제외한 모든 아군이 사망하면 모든 피해, 흐트러짐 내성이 취약 상태로 변경</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="304021">
+    <Name>선...물...</Name>
+    <Desc>손 패에 선물 책장이 가장 많은 대상 우선 공격</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="304022">
+    <Name>펑!</Name>
+    <Desc>3막이 되면 대상에게 선물 책장 3장을 추가하고 강한 피해를 주는 자폭 책장을 사용. 해당 책장을 사용한 후 이 캐릭터는 사망함.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="304023">
+    <Name>깜짝 선물 등장</Name>
+    <Desc>이 캐릭터가 사망하면 꼬마 마녀의 친구 1마리가 다음 막에 생성됨. 자폭 책장으로 사망하기 전에 이 캐릭터를 처치할 경우, 체력이 80%인 상태로 친구가 생성됨.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="304031">
+    <Name>선...물...</Name>
+    <Desc>손 패에 선물 책장이 가장 많은 대상 우선 공격</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="304032">
+    <Name>선물을 내놔!</Name>
+    <Desc>대상의 손패의 선물 책장 수만큼 공격 주사위 위력 증가</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="404015">
+    <Name>흙으로 만든 인형</Name>
+    <Desc>출혈, 화상 효과로 피해를 받지 않는다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="404012">
+    <Name>피어나는 향기</Name>
+    <Desc>이 캐릭터의 공격은 사서에게 흐트러짐 피해만을 준다. 이번 전투에서 사서가 흐트러짐 상태가 되면, 해당 사서는 즉시 사망하고, 다음 막 시작 시 '흙에서 태어난 자'가 1명 소환된다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="404011">
+    <Name>숨가쁜 속죄</Name>
+    <Desc>이 캐릭터는 이번 전투동안 '월계관' 효과를 가진 사서에게만 피해를 받는다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="404013">
+    <Name>시들지 않는 꽃</Name>
+    <Desc>2막부터 막 시작 시 본체 뒤에 꽃잎을 1장씩 생성한다. 꽃잎이 3장이 되면 막 시작 시 모든 꽃잎을 없애고 광역 공격 책장을 사용한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="404014">
+    <Name>꽃잎 눈물</Name>
+    <Desc>흐트러짐 상태가 되면 다음 막 시작 시 꽃잎이 전부 소멸하고 체력이 40 감소한다. 또한 모든 사서의 흐트러짐 저항을 최댓값의 50%만큼 회복시킨다. </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="404021">
+    <Name>태초의 흙으로...</Name>
+    <Desc>이 캐릭터는 흐트러짐 상태가 되면 사망한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="404023">
+    <Name>흙으로 만든 인형</Name>
+    <Desc>출혈, 화상 효과로 피해를 받지 않는다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="404022">
+    <Name>피어나는 향기</Name>
+    <Desc>이 캐릭터의 공격은 사서에게 흐트러짐 피해만을 준다. 이번 전투에서 사서가 흐트러짐 상태가 되면, 해당 사서는 즉시 사망하고, 다음 막 시작 시 '흙에서 태어난 자'가 1명 소환된다.</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="801011">
+    <Name>감시하는 눈동자</Name>
+    <Desc>큰 새가 지정한 대상을 사서가 변경시킬 수 없음</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="801012">
+    <Name>영원히 꺼지지 않는 램프</Name>
+    <Desc>1막부터 3막마다 '현혹' 책장 사용. 현혹 상태인 사서가 있을 때, 매혹 중이 아닌 모든 사서의 손에 '새장' 책장 추가</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="801021">
+    <Name>잠드는 눈동자</Name>
+    <Desc>이 캐릭터를 처치한 사서의 손 패에 큰 새를 흐트러짐 상태로 만드는 책장을 추가</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="801022">
+    <Name>추종</Name>
+    <Desc>현혹 상태인 사서를 대상으로 지정하지 않음</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="901011">
+    <Name>오롯한 집중</Name>
+    <Desc>깨어있는 가시가 없으면 활동을 시작한다. 활동을 시작한 막에 광역 공격 책장을 사용한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="901012">
+    <Name>오래된 신을 향한 날개</Name>
+    <Desc>이 캐릭터가 행동 가능한 상태일 때 막 시작 시 모든 사서에게 허약 10을 부여한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="901013">
+    <Name>너의 시선 속에서</Name>
+    <Desc>반동 시 흐트러짐 피해를 2배로 받는다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="901014">
+    <Name>인식의 안으로</Name>
+    <Desc>이 캐릭터가 활동한 막부터 3막동안 살아있는 경우, 다음 막부터 막 시작 시 가시를 3막 주기로 소환한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="901021">
+    <Name>눈을 떼지 마</Name>
+    <Desc>사서가 다른 캐릭터와 교전 시 해당 사서를 제외한 모든 사서에게 최대 체력의 40%만큼 피해를 준다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="901022">
+    <Name>보이지 않는 연결의 끈</Name>
+    <Desc>교전 시 이번 전투에서 해당 사서가 자신에게 전투 책장을 사용한 횟수만큼 다음 막에 허약을 부여한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="901023">
+    <Name>너의 시선 속에서</Name>
+    <Desc>반동 시 흐트러짐 피해를 2배로 받는다.</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="1004011">
+    <Name>칼바람</Name>
+    <Desc>막 시작 시 모든 사서의 체력이 최대 체력의 5%만큼 감소</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1004012">
+    <Name>고고한 냉기</Name>
+    <Desc>얼음 감옥을 모두 부술 때까지 피격 시 데미지를 받지 않음. 출혈, 화상 효과로 피해를 받지 않음.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1004013">
+    <Name>서릿발</Name>
+    <Desc>부서진 얼음 감옥의 수에 비례하여 이 캐릭터의 속도 주사위 개수와 최대 빛이 증가한다. 부서진 얼음 감옥의 수가 2개 이상이면 근거리 공격 책장이 이 캐릭터의 덱에 추가된다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1004014">
+    <Name>겨울의 혹독함과 장미의 향긋함을 아는 자들</Name>
+    <Desc>얼음 감옥을 모두 부수면 다음 막 시작 시 모든 사서가 체력을 최대 체력의 50%만큼 회복한다. 해당 막에 눈의 여왕은 광역 공격 책장을 사용한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="1004021">
+    <Name>카이와 겔다</Name>
+    <Desc>이 캐릭터의 체력이 0이 되면 다음 막 시작 시 갇혀있던 사서가 깨어난다.</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="603011">
+    <Name>시체를 찾아서</Name>
+    <Desc>'먹어치우기' 책장을 아군에게 우선 사용. 아군 처치 시 현재 체력의 30% 회복</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="603012">
+    <Name>녹아내린 시체</Name>
+    <Desc>최대 체력의 25%(62/87/112)만큼 체력을 잃을 때마다 다음 막 시작 시 '녹아내린 시체' 1마리를 생성함.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="603111">
+    <Name>분열</Name>
+    <Desc>체력이 0이 되면 시체들로 분리됨. 3막 이내에 모든 시체 처치 시 전투 승리. 처치 실패 시 1단계 형태로 부활. (단, 부활 시 체력은 남은 시체의 체력의 합만큼 회복함.)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="603112">
+    <Name>생성</Name>
+    <Desc>체력을 최대로 회복하면 2단계 형태로 변함.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="603211">
+    <Name>분열과 생성</Name>
+    <Desc>체력이 0이 되면 1단계 형태로 변함. 체력을 최대로 회복하면 3단계 형태로 변함.</Desc>
+  </PassiveDesc>  
+  <PassiveDesc ID="603212">
+    <Name>끔찍한 웃음 소리</Name>
+    <Desc>막 시작 시 힘을 1 얻는다. 2막마다 '끔찍한 비명'을 사용한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="603311">
+    <Name>분열</Name>
+    <Desc>체력이 0이 되면 2단계 형태로 변함.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="603312">
+    <Name>역겨운 구역질</Name>
+    <Desc>막 시작 시 힘을 2 얻는다. 2막마다 '구역질'을 사용한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="603021">
+    <Name>부패</Name>
+    <Desc>피격 시 자신을 공격한 사서에게 8의 피해를 주고 취약 1을 부여한다.</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="703021">
+    <Name>우리 모두 가보자...</Name>
+    <Desc>전투 시작 시 1막에 '집'을 생성하고, '벽돌길' 효과를 부여하는 광역 공격 책장을 사용한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="703022">
+    <Name>이..마법사 놈...!</Name>
+    <Desc>이 캐릭터가 '집'을 대상으로 하는 공격을 2회 취소시키면 다음 막에 광역 공격 책장('이...마법사 놈이!')을 사용한다. 
+해당 공격을 모든 사서가 막은 경우 다음 막에 흐트러짐 상태가 된다. 
+그렇지 않으면 다음 막에 집을 생성하고, 이전 패턴을 반복한다.</Desc>
+  </PassiveDesc>
+    <PassiveDesc ID="703023">
+    <Name>친구야! 집으로 가보자~!</Name>
+    <Desc>2막에 '벽돌길' 효과를 가진 사서와 '집'을 대상으로 '친구야! 집으로 가보자~!' 책장을 사용한다. 
+해당 책장의 공격이 '집'에 적중하면 전투 패배.
+'벽돌길' 효과를 가진 모든 사서가 해당 책장과의 합에서 승리하면, '집'을 대상으로 하는 공격을 취소시킬 수 있다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="703031">
+    <Name>용기</Name>
+    <Desc>집으로 가는 길이 사망하기 전까지 모든 내성 면역</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="703032">
+    <Name>겁쟁이</Name>
+    <Desc>집으로 가는 길이 사망하면 모든 내성이 취약이 되고, 최대 체력이 감소함. 속도 주사위의 값과 사용하는 책장도 변경됨.</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="504011">
+    <Name>오늘의 연극</Name>
+    <Desc>분노의 시종만이 은자를 처치할 수 있다. 은자를 처치하면 환상체 전투 완료. </Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504012">
+    <Name>눈 먼 분노</Name>
+    <Desc>은자의 막대가 살아있는 경우 은자의 막대를 공격한다. 은자의 막대가 전부 사망한 경우 은자를 공격한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504013">
+    <Name>이계의 죄인들!</Name>
+    <Desc>은자의 막대가 살아있을 때, 자신이 누적으로 받은 피해가 30 이상이면 다음 막 시작 시 광역 공격 책장 '악의 화신들아!!!'를 사용하고 누적 피해량을 초기화한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504014">
+    <Name>끓어넘치는 분노</Name>
+    <Desc>은자를 공격하는 패턴 시작 시 광역 공격 책장 '악의 화신들아!!!'를 사용한다. 이후 2막마다 광역 공격 책장을 사용한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504021">
+    <Name>이용되는 이</Name>
+    <Desc>사서의 공격으로는 체력이 30 이하로 감소하지 않는다. 막 종료 시 체력이 30 이하인 경우 다음 막에 최대 체력의 50%만큼 체력을 회복한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504022">
+    <Name>사랑하는 벗</Name>
+    <Desc>분노의 시종과 합 진행 시 위력 +5. 화상, 출혈, 부식의 효과로 피해를 받지 않는다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504023">
+    <Name>이계의 방문자</Name>
+    <Desc>목각인형이 살아있을 때 2막마다 광역 공격 책장 '가만히 있거라'를 사용한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504024">
+    <Name>두 세계의 만남</Name>
+    <Desc>은자의 막대가 모두 죽으면 패턴이 변경된다. 패턴 변경 시 첫번째 막에 분노의 시종을 공격한다. 
+이후 두번째 막에 분노의 시종을 공격한 다음 은자의 막대를 소환하는 광역 공격 책장 '일어나거라!'를 사용한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="504031">
+    <Name>은자의 막대</Name>
+    <Desc>분노의 시종을 공격한다.</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="902011">
+    <Name>흐르는 시간</Name>
+    <Desc>대상 지정 불가. 전투 책장을 장착할 때 30초 제한이 생긴다. 30초가 경과하면 즉시 전투를 시작한다. 막 시작 시 자신을 제외한 아군에게 '합 진행 시 위력 +3' 또는 '일방 공격 시 위력 +3' 효과를 부여한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="902012">
+    <Name>쌓이는 시간</Name>
+    <Desc>막 시작 시 '시간의 흔적' 1명을 생성한다. 이미 4개의 '시간의 흔적'이 있으면 가장 체력이 낮은 개체를 처치하고, 모든 사서에게 해당 캐릭터의 현재 체력만큼 피해를 준다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="902013">
+    <Name>멈출 수 없는 시간</Name>
+    <Desc>12막 이내에 처치 당한 '시간의 흔적'이 12명이 되면 다음 막에 흐트러짐 상태가 된다. 처치 당한 '시간의 흔적'의 수가 12개가 되지 않으면 13막에 광역 공격 책장을 사용한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="902014">
+    <Name>침묵의 대가</Name>
+    <Desc>막 시작 시 모든 사서의 손에 '침묵' 책장 1장을 추가한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="902021">
+    <Name>당신의 시간</Name>
+    <Desc>특정 사서의 속도 주사위 개수, 속도 값, 내성 정보를 복사한다. 이번 막에 사용한 사서의 전투 책장을 다음 막에 사용한다.</Desc>
+  </PassiveDesc>
+
+
+  <PassiveDesc ID="802011">
+    <Name>나쁜 짓은 안돼!</Name>
+    <Desc>공격 주사위와 합 진행 시 위력 +50</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="802012">
+    <Name>징벌!</Name>
+    <Desc>이번 막에 피해를 받았다면 다음 막에 가장 마지막으로 자신을 공격한 대상에게 '징벌!' 책장을 사용한다. (타겟팅 변경 불가)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="802013">
+    <Name>흔들리는 새장</Name>
+    <Desc>'징벌!' 책장이 '숲지기의 자물쇠' 책장과 합을 할 때마다 새장의 사슬 1개를 파괴한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="802021">
+    <Name>숲지기</Name>
+    <Desc>흐트러짐 상태가 된 대상을 우선 타겟팅한다. 내 속도가 상대보다 높을 때 공격 주사위의 위력 +2</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="802022">
+    <Name>빼앗긴 자물쇠</Name>
+    <Desc>이 캐릭터를 처치한 사서의 손에 '숲지기의 자물쇠' 책장을 추가한다.</Desc>
+  </PassiveDesc>
+
+  <PassiveDesc ID="803011">
+    <Name>불공정한 저울</Name>
+    <Desc>1막부터 막 시작 시 심판 새를 제외한 모든 캐릭터가 죄를 1씩 얻는다. 아군을 공격하여 피해를 주면 죄를 옮길 수 있다. (책장 당 1회)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="803012">
+    <Name>죄의 무게</Name>
+    <Desc>대상의 죄 수치만큼 위력이 증가한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="803013">
+    <Name>심판</Name>
+    <Desc>막 시작 시 죄가 5 이상인 캐릭터가 있으면 해당 캐릭터에게 '심판' 책장을 사용한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="803014">
+    <Name>멈추지 않는 심판</Name>
+    <Desc>막 시작 시 죄가 3 이상인 캐릭터가 3명 이상 있으면 광역 공격 책장 '멈추지 않는 심판'을 사용한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="803015">
+    <Name>넘치는 악행</Name>
+    <Desc>'심판', '멈추지 않는 심판' 책장을 사용한 후 흐트러짐 저항이 최대 흐트러짐 저항의 20%만큼 감소한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="803021">
+    <Name>무서워! 무서워!</Name>
+    <Desc>이 캐릭터의 공격이 적중하면 대상에게 죄를 1 옮긴다. (책장 당 1회)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="803022">
+    <Name>찢어지는 비명</Name>
+    <Desc>공격을 받으면 다음 막에 '찢어지는 비명' 책장을 사용한다.</Desc>
+  </PassiveDesc>
+	
+  <PassiveDesc ID="604011">
+    <Name>난수병</Name>
+    <Desc>피가 5 미만일 때, 피 수치에 반비례하여 힘을 얻음 (최대 3)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="604012">
+    <Name>갈증</Name>
+    <Desc>피가 2 이하일 때 '갈증' 책장을 사용한다. (쿨타임 2막)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="604013">
+    <Name>피의 연회</Name>
+    <Desc>피가 5 이상일 때 광역 공격 책장 '피의 연회'를 사용한다.
+전투 시작 후 4막동안 이 책장을 사용하지 않았다면 5막 시작 시 사용한다. (쿨타임 3막)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="604014">
+    <Name>변신</Name>
+    <Desc>체력이 최대 체력의 50%가 되면 해당 막동안 체력이 감소하지 않고, 다음 막 시작 시 변신한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="604031">
+    <Name>난수병</Name>
+    <Desc>피가 5 미만일 때, 피 수치에 반비례하여 힘을 얻음 (최대 3)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="604032">
+    <Name>흐르는 피</Name>
+    <Desc>막 시작 시마다 피를 1 잃음</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="604033">
+    <Name>참을 수 없는 갈증</Name>
+    <Desc>피가 2 이하일 때 '참을 수 없는 갈증' 책장을 사용한다. (쿨타임 2막)</Desc>
+  </PassiveDesc>	
+  <PassiveDesc ID="604034">
+    <Name>피의 갈망</Name>
+    <Desc>피가 0 일 때 광역 공격 책장 '피의 갈망' 책장을 사용한다.
+변신 이후 3막동안 이 책장을 사용하지 않았다면 4막 시작 시 사용한다. (쿨타임 3막)</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="604021">
+    <Name>난수병</Name>
+    <Desc>피가 1 이하일 때 힘 2를 얻는다.</Desc>
+  </PassiveDesc>
+
+  <!-- 오즈마-->
+  <PassiveDesc ID="704011">
+   <Name>되살리기</Name>
+   <Desc>1막에 모든 잭을 깨우는 책장과 특정 사서에게 망각을 부여하는 책장 사용. 이후 4막에 걸쳐 패턴을 진행한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704012">
+  <Name>빼앗긴 자의 고통</Name>
+  <Desc>망각이 부여된 사서를 원래대로 되돌리면 다음 막 시작 시 모든 내성이 취약이 된다. 이후 패턴을 반복함.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704013">
+  <Name>빼앗긴 자의 슬픔</Name>
+  <Desc>패턴을 2번 반복하면 다음 막 시작 시 흐트러짐 내성이 취약이 되고, 매우 강한 광역 공격 책장을 사용함.</Desc>
+</PassiveDesc>
+  <!--잭-->
+    <PassiveDesc ID="704021">
+    <Name>빼앗은 힘</Name>
+    <Desc>망각이 부여된 사서(망각 사서)의 전투 책장 사용</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704022">
+    <Name>진짜는 누구?</Name>
+    <Desc>깨어난 잭 중 1개만 진짜 잭이고, 나머지는 가짜 잭이다. 
+진짜 잭에게 망각이 부여된 사서(망각 사서)의 공격이 적중할 때마다 빼앗긴 전투 책장 1개를 돌려준다.
+진짜 잭은 피격 시 화면이 깜박인다.</Desc>
+  </PassiveDesc>
+   <PassiveDesc ID="704023">
+  <Name>빼앗거나 빼앗기거나</Name>
+  <Desc>망각 사서의 공격이 진짜 잭에게 9번 적중하면 모든 잭이 사망한다. 
+망각 상태가 된 막부터 3막 안에 이를 만족하지 못하면, 다음 막 시작 시 망각 사서를 호박으로 만든다. 
+이후 진짜 잭이 되살아난 잭으로 바뀌어 망각 사서의 덱과 핵심 책장을 영구적으로 사용한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704024">
+    <Name>남쪽의 파편</Name>
+    <Desc>매 막마다 힘 2를 얻음</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704025">
+    <Name>서쪽의 파편</Name>
+    <Desc>매 막마다 인내 2를 얻음</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704026">
+    <Name>북쪽의 파편</Name>
+    <Desc>매 막마다 신속 1을 얻음</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704027">
+    <Name>동쪽의 파편</Name>
+    <Desc>매 막마다 흐트러짐 피해량 +3 효과를 얻음</Desc>
+  </PassiveDesc>
+  <!--되살아난 잭-->
+  <PassiveDesc ID="704031">
+    <Name>전부 다 내거!</Name>
+    <Desc>호박이 된 사서의 핵심 책장, 덱을 사용한다.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="704032">
+    <Name>완전한 잭</Name>
+    <Desc>매 막마다 힘, 인내 2, 신속 1, 흐트러짐 피해량 +3 효과를 얻음</Desc>
+  </PassiveDesc>
+  <!--기억을 잃은 호박-->
+  <PassiveDesc ID="704041">
+    <Name>잃어버린 기억</Name>
+    <Desc>모든 전투 책장이 특수 책장으로 변경된다. 모든 능력치가 변경된다. 지속능력이 발동하지 않는다.</Desc>
+  </PassiveDesc>
+
+  <!--푸른별의 제단-->
+  <PassiveDesc ID="903011">
+    <Name>신성함?</Name>
+    <Desc>대상 지정 불가. 상태이상이 부여되지 않음</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="903012">
+    <Name>별의 소리</Name>
+    <Desc>3막부터 3막을 주기로 푸른별의 제단이 광역 공격 책장 사용</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="903013">
+    <Name>별의 품 속으로</Name>
+    <Desc>흐트러짐 상태인 캐릭터가 있으면 해당 캐릭터를 처치하고 체력이 최대 체력의 10%만큼 감소함</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="903014">
+    <Name>희망의 푸른 빛</Name>
+    <Desc>'별의 품 속으로' 효과로 신도가 사망한 경우, 모든 사서의 흐트러짐 저항이 회복되고, 모든 신도가 흐트러짐 피해를 받음</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="903015">
+    <Name>절망의 푸른 빛</Name>
+    <Desc>'별의 품 속으로' 효과로 사서가 사망한 경우, 모든 사서가 흐트러짐 피해를 받고, 모든 신도가 흐트러짐 저항을 회복함</Desc>
+  </PassiveDesc>
+
+  <!--푸른별의 신도-->
+  <PassiveDesc ID="903021">
+    <Name>별의 소리가 들려!!</Name>
+    <Desc>푸른별의 제단이 광역 공격 책장을 사용하는 막에 특수 전투 책장을 사용함. 단, 흐트러짐 저항이 최댓값의 40% 이하인 경우 자폭 책장을 사용함.</Desc>
+  </PassiveDesc>
+  <PassiveDesc ID="903022">
+    <Name>순교자들</Name>
+    <Desc>막 시작 시 살아있는 신도의 수가 4명 미만이면 신도 1명이 생성된다.</Desc>
+  </PassiveDesc>
+</PassiveDescRoot>

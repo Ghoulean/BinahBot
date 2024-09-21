@@ -1,0 +1,1051 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- 플레이어블 앤젤라 -->
+  <Card ID="9910001">
+    <Name>수줍음 카드</Name>
+    <Artwork>ShyLookToday_Shy</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>angela_guard</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="break3pw" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="break3pw" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910002">
+    <Name>은하수 반짝이</Name>
+    <Artwork>ChildofGalaxy_Friend</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script>angela_galaxy</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="5" Dice="10" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="4" Dice="9" Type="Atk" Detail="Hit" Motion="H" EffectRes="FX_PC_Angela_ATK3" Script="vulnerable2atk" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910003">
+    <Name>파천 찌르기</Name>
+    <Artwork>Bloodytree_Wing</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script>angela_heaven</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="FX_PC_Angela_ATK2" Script="bleeding1atk" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="FX_PC_Angela_ATK2" Script="bleeding1atk" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="FX_PC_Angela_ATK2" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910004">
+    <Name>테디 펀치</Name>
+    <Artwork>HappyTeddyBear_Hug</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="3" />
+    <Script>angela_teddy</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="8" Dice="10" Type="Atk" Detail="Slash" Motion="J" EffectRes="FX_PC_Angela_ATK1" Script="yanOnly2Dice" Desc="" />
+      <Behaviour Min="4" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="FX_PC_Angela_ATK1" Script="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Standby" Detail="Slash" Motion="J" EffectRes="FX_PC_Angela_ATK1" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910005">
+    <Name>죽나장 원거리</Name>
+    <Artwork>Butterfly_White</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Far" Cost="4" />
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="10" Dice="15" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="FX_PC_Angela_Shot" Script="bloodyTreeEgoDice" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <!-- 피의 욕조 -->
+  <Card ID="9910101">
+    <Name>가드</Name>
+    <Artwork>Bloodbath_Scar</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="paralysis1pw" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="paralysis1pw" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910102">
+    <Name>죽창 마비</Name>
+    <Artwork>Bloodbath_Blood</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="7" Dice="12" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="final_bloodbath_bamboo_atk" Desc="" />
+      <Behaviour Min="6" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="paralysis1pw" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910103">
+    <Name>3타 공격</Name>
+    <Artwork>Bloodbath_Hands</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>final_bloodbath_combo</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="7" Dice="10" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="yanOnly2Dice" Desc="" />
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910104">
+    <Name>자해 공격</Name>
+    <Artwork>Bloodbath_Scar</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>final_bloodbath_suicide</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Standby" Detail="Hit" Motion="Z" EffectRes="" Script="break5atk" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Standby" Detail="Hit" Motion="Z" EffectRes="" Script="break5atk" Desc="" />
+      <Behaviour Min="5" Dice="7" Type="Standby" Detail="Hit" Motion="Z" EffectRes="" Script="break5atk" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910105">
+    <Name>광역 공격</Name>
+    <Artwork>Bloodbath_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarArea" Cost="0" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="25" Dice="25" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="final_bloodbath_area_atk" ActionScript="finalbloodbath_areaAtk" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910106">
+    <Name>우울 부여</Name>
+    <Artwork>Bloodbath_Blood</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>final_bloodbath_givedepress</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="final_bloodbath_givedepress_atk" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="final_bloodbath_givedepress_atk" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910107">
+    <Name>우울</Name>
+    <Artwork>Bloodbath_Blood</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="3" />
+    <Script>final_bloodbath_depress</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="1" Dice="1" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9910108">
+    <Name>자해 공격</Name>
+    <Artwork>Bloodbath_Scar</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>final_bloodbath_suicide</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="6" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="final_bloodbath_suicide_pl" Desc="" />
+      <Behaviour Min="6" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="final_bloodbath_suicide_pl" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="final_bloodbath_suicide_pl" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9910110">
+    <Name>3타 공격</Name>
+    <Artwork>Bloodbath_Hands</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>final_bloodbath_combo</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="5" Dice="7" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="9" Dice="15" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="paralysis2atk" Desc="" />
+      <Behaviour Min="4" Dice="9" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910111">
+    <Name>3타 공격</Name>
+    <Artwork>Bloodbath_Hands</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>final_bloodbath_combo</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="5" Dice="10" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="upgradeNext1pw" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="Z" EffectRes="" Script="downgradeNext1pw" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <!-- 열망하는 심장 -->
+  <Card ID="9910201">
+    <Name>방어</Name>
+    <Artwork>HeartofAspiration_Doki</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="20" Dice="20" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="final_heart_addbreakdmg" Desc="" />
+      <Behaviour Min="20" Dice="20" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="final_heart_addbreakdmg" Desc="" />
+      <Behaviour Min="20" Dice="20" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="final_heart_addbreakdmg" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910202">
+    <Name>일반 공격</Name>
+    <Artwork>HeartofAspiration_Heart</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="2" Dice="4" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="final_heart_hp20" Desc="" />
+      <Behaviour Min="2" Dice="4" Type="Atk" Detail="Slash" Motion="Z" EffectRes="" Script="final_heart_hp20" Desc="" />
+      <Behaviour Min="2" Dice="4" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="final_heart_hp20" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910203">
+    <Name>죽창</Name>
+    <Artwork>HeartofAspiration_Heart</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="5" Dice="5" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_heart_hp30bleed10" ActionScript="finalheart_piercingAtk" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910204">
+    <Name>광역</Name>
+    <Artwork>HeartofAspiration_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarArea" Cost="0" Affection="Team"/>
+    <Script>final_heart_eager</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="15" Dice="15" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="final_heart_areabuf" ActionScript="finalheart_areaAtk" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+  <!-- 폐 -->
+  <Card ID="9910211">
+    <Name>가드</Name>
+    <Artwork>HeartofAspiration_Doki</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="jaeheon_string_pw" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910212">
+    <Name>공격</Name>
+    <Artwork>HeartofAspiration_Atk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="" Script="bleeding2atk" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="" Script="bleeding2atk" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910213">
+    <Name>연타</Name>
+    <Artwork>HeartofAspiration_Atk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>negatePower</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910214">
+    <Name>열망부여</Name>
+    <Artwork>HeartofAspiration_Heart</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>final_heart_eagerdown_nodmg</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="final_heart_eager1atk" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="final_heart_eager1atk" Desc="" />
+      <Behaviour Min="4" Dice="5" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="final_heart_eager1atk" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910215">
+    <Name>대기</Name>
+    <Artwork>HeartofAspiration_Atk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Chapter>0</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+  <!-- 피노키오 페이즈-->
+  <Card ID="9910301">
+    <Name>거짓 간파</Name>
+    <Artwork>Pinocchio_Lie</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>final_detection_lie</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="1" Dice="1" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+  </Card>
+  <Card ID="9910302">
+    <Name>학습</Name>
+    <Artwork>Pinocchio_Learn</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>pinocchio</Script>
+    <ScriptDesc>[합 시작시] 모든 주사위가 상대 카드의 주사위로 교체된다</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="16" Dice="16" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="" Desc="" />
+    </BehaviourList>
+    <Priority>150</Priority>
+  </Card>
+  <Card ID="9910303">
+    <Name>오류제거</Name>
+    <Artwork>Pinocchio_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script>final_remove_error</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="50" Dice="50" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="final_exhaust_target_card" ActionScript="finalpinocchio_specialAtk" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+
+  <!--눈의 여왕 -->
+  <Card ID="9910401">
+    <Name>얼음 조각 - 원거리1</Name>
+    <Artwork>TheSnowQueen_Chu</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="final_snowqueen_far" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="final_snowqueen_far" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>10</Priority>
+  </Card>
+  <Card ID="9910402">
+    <Name>첫번째 입맞춤 - 원거리2 </Name>
+    <Artwork>TheSnowQueen_Chu</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Far" Cost="2"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="final_snowqueen_debuf3atk" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910403">
+    <Name>두번째 입맞춤 - 근거리 평타</Name>
+    <Artwork>TheSnowQueen_Sord</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="final_snowqueen_debuf1atk" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="final_snowqueen_debuf1atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="final_snowqueen_debuf2pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9910404">
+    <Name>싸늘한 눈빛 - 자기 강화</Name>
+    <Artwork>TheSnowQueen_Snow</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script>angela_galaxy</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="7" Dice="12" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="strength2pw" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="final_snowqueen_debuf2pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9910405">
+    <Name>세번째 입맞춤 - 강공격</Name>
+    <Artwork>TheSnowQueen_Sord</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="3"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="11" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="final_snowqueen_debuf3atk" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="final_snowqueen_debuf2pw" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="final_snowqueen_dmgbydebuf" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9910406">
+    <Name>눈보라 - 광역기</Name>
+    <Artwork>TheSnowQueen_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="10" Dice="12" Type="Atk" Detail="Hit" Motion="N" EffectRes="" Script="final_snowqueen_debuf4atk_area" ActionScript="final_snowqueen_1st" Desc="" />
+      <Behaviour Min="12" Dice="15" Type="Atk" Detail="Hit" Motion="N" EffectRes="" Script="final_snowqueen_debuf4atk_area" ActionScript="final_snowqueen_2nd" Desc="" />
+    </BehaviourList>
+    <Priority>100</Priority>
+  </Card>
+
+  <!--눈의 여왕 : 얼음-->
+  <Card ID="9910411">
+    <Name>원거리 방어1</Name>
+    <Artwork>TheSnowQueen_Chu</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Def" Detail="Guard" Motion="N" EffectRes="" Script="Seven_Fleche" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="N" EffectRes="" Script="Seven_Fleche" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="N" EffectRes="" Script="Seven_Fleche" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9910412">
+    <Name>원거리 방어2</Name>
+    <Artwork>TheSnowQueen_Chu</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Far" Cost="2"/>
+    <!--<Script>final_snowqueen_child_counter</Script>-->
+    <!-- 작동하지 않지만 난이도 문제가 있어서 일단 냅둠 -->
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="8" Type="Def" Detail="Guard" Motion="N" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  
+  <!-- 아무 말도 없는 소녀 : 못 손 -->
+  <Card ID="9910511">
+    <Name></Name>
+    <Artwork>QuietKid_Volt</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="3"/>
+    <Script>final_silencegirl_nail_costdown</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="SilenceGirl_Hand_E" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_silencegirl_nail_nail_atk" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="5" Type="Standby" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_silencegirl_nail_nail_counter" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910512">
+    <Name></Name>
+    <Artwork>QuietKid_Volt</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="3"/>
+    <Script>final_silencegirl_nail_costdown</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="SilenceGirl_Hand_E" Script="final_silencegirl_nail_costup_pw" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_silencegirl_nail_costup_pw" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_silencegirl_nail_costup_atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910513">
+    <Name></Name>
+    <Artwork>QuietKid_Volt</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="3"/>
+    <Script>final_silencegirl_nail_costdown</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_silencegirl_nail_double_atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_silencegirl_nail_double_atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910514">
+    <Name></Name>
+    <Artwork>QuietKid_Volt</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="3"/>
+    <Script>final_silencegirl_nail_costdown</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_silencegirl_nail_triple_atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_silencegirl_nail_triple_atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="final_silencegirl_nail_triple_atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <!-- 아무 말도 없는 소녀 : 망치 손 -->
+  <Card ID="9910521">
+    <Name></Name>
+    <Artwork>QuietKid_HammerAtk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1"/>
+    <Script>final_silencegirl_hammer_costup</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="SilenceGirl_Hand_G" Script="final_silencegirl_hammer_costdown_pw" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="SilenceGirl_Hand_Atk" Script="final_silencegirl_hammer_costdown_atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="SilenceGirl_Hand_G" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910522">
+    <Name></Name>
+    <Artwork>QuietKid_HammerAtk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script>final_silencegirl_hammer_costup</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="15" Type="Atk" Detail="Hit" Motion="J" EffectRes="SilenceGirl_Hand_Atk" Script="final_silencegirl_hammer_destroy_atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="SilenceGirl_Hand_G" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910523">
+    <Name></Name>
+    <Artwork>QuietKid_HammerAtk</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2"/>
+    <Script>final_silencegirl_hammer_costup</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="SilenceGirl_Hand_Atk" Script="final_silencegirl_hammer_break_pw1" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Hit" Motion="J" EffectRes="SilenceGirl_Hand_Atk" Script="final_silencegirl_hammer_break_pw2" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="SilenceGirl_Hand_Atk" Script="final_silencegirl_hammer_break_atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910524">
+    <Name></Name>
+    <Artwork>QuietKid_HammerLight</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>final_silencegirl_hammer_power_by_light</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="12" Dice="12" Type="Atk" Detail="Hit" Motion="J" EffectRes="SilenceGirl_Hand_Strong" Script="final_silencegirl_hammer_powerbylight_atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="SilenceGirl_Hand_G" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910525">
+    <Name></Name>
+    <Artwork>QuietKid_HammerLight</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>final_silencegirl_hammer_reiteration_by_light</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="SilenceGirl_Hand_Strong" Script="final_silencegirl_hammer_reiteratebylight_atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="SilenceGirl_Hand_G" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910526">
+    <Name></Name>
+    <Artwork>QuietKid_HammerLight</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>final_silencegirl_hammer_protection_by_light</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="SilenceGirl_Hand_Guard" Script="final_silencegirl_hammer_protectionbylight_pw" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="SilenceGirl_Hand_Guard" Script="final_silencegirl_hammer_protectionbylight_pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <!-- 아무 말도 없는 소녀 -->
+  <Card ID="9910501">
+    <Name></Name>
+    <Artwork>QuietKid_Guilty</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script>final_silencegirl_gaze_of_attack</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="final_silencegirl_gaze_of_attack_atk1" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="final_silencegirl_gaze_of_attack_atk1" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Penetrate" Motion="F" EffectRes="" Script="final_silencegirl_gaze_of_attack_atk2" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Standby" Detail="Evasion" Motion="E" EffectRes="" Script="final_silencegirl_gaze_of_attack_pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910502">
+    <Name></Name>
+    <Artwork>QuietKid_Guilty</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script>final_silencegirl_gaze_of_defense</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="10" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="final_silencegirl_gaze_of_defense_pw1" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="final_silencegirl_gaze_of_defense_atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="final_silencegirl_gaze_of_defense_atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Standby" Detail="Evasion" Motion="E" EffectRes="" Script="final_silencegirl_gaze_of_defense_pw2" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910503">
+    <Name></Name>
+    <Artwork>QuietKid_Guilty</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Far" Cost="0"/>
+    <Script>final_silencegirl_gaze_of_attacked</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="final_silencegirl_gaze_of_attacked_atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="final_silencegirl_gaze_of_attacked_pw" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="F" EffectRes="" Script="final_silencegirl_gaze_of_attacked_atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Evasion" Motion="E" EffectRes="" Script="final_silencegirl_gaze_of_attacked_pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910504">
+    <Name></Name>
+    <Artwork>QuietKid_Hammer</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>final_silencegirl_hammer_a_nail</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="6" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="6" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="" ActionScript="final_silencegirl_hammer_a_nail1" Desc="" />
+      <Behaviour Min="6" Dice="6" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="" ActionScript="final_silencegirl_hammer_a_nail2" Desc="" />
+      <Behaviour Min="6" Dice="6" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="" ActionScript="final_silencegirl_hammer_a_nail3" Desc="" />
+      <Behaviour Min="6" Dice="6" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="" ActionScript="final_silencegirl_hammer_a_nail4" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910505">
+    <Name></Name>
+    <Artwork>QuietKid_Eyeshine</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="9"/>
+    <Script>final_silencegirl_guilty</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="1" Type="Def" Detail="Evasion" Motion="E" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910506">
+    <Name>아없소 3페 광역기</Name>
+    <Artwork>QuietKid_EGO</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection="Team"/>
+    <Script>final_silencegirl_area</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="100" Dice="100" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="" ActionScript="SilentGirl_Area_Phase3" Desc="" />
+      <Behaviour Min="100" Dice="100" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="" ActionScript="SilentGirl_Area_Phase3" Desc="" />
+      <Behaviour Min="100" Dice="100" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="" ActionScript="SilentGirl_Area_Phase3" Desc="" />
+      <Behaviour Min="100" Dice="100" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="" ActionScript="SilentGirl_Area_Phase3" Desc="" />
+      <Behaviour Min="100" Dice="100" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="" Script="" ActionScript="SilentGirl_Area_Phase3" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <!-- 아무 말도 없는 소녀 : 검은 손 -->
+  <Card ID="9910531">
+    <Name></Name>
+    <Artwork>QuietKid_BlackHand</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="final_silencegirl_blackhand_atk1_pl1" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="7" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="final_silencegirl_blackhand_atk1_pw1" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="final_silencegirl_blackhand_atk1_pl2" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="final_silencegirl_blackhand_atk1_pw2" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910532">
+    <Name></Name>
+    <Artwork>QuietKid_BlackHand</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="final_silencegirl_blackhand_atk2_pw1" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="6" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="final_silencegirl_blackhand_atk2_pw2" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="paralysis1pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910533">
+    <Name></Name>
+    <Artwork>QuietKid_BlackHand</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="final_silencegirl_blackhand_break_atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="final_silencegirl_blackhand_break_atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="final_silencegirl_blackhand_break_atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910534">
+    <Name></Name>
+    <Artwork>QuietKid_BlackHand</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>final_silencegirl_blackhand_dmgup</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="7" Dice="10" Type="Atk" Detail="Hit" Motion="S2" EffectRes="" Script="final_silencegirl_blackhand_grasp_pwpl" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="6" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="final_silencegirl_blackhand_grasp_atk" ActionScript="final_silencegirl_blackhand_grasp" Desc="" />
+      <Behaviour Min="6" Dice="6" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="final_silencegirl_blackhand_grasp_atk" ActionScript="final_silencegirl_blackhand_grasp" Desc="" />
+      <Behaviour Min="6" Dice="6" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="final_silencegirl_blackhand_grasp_atk" ActionScript="final_silencegirl_blackhand_grasp_last" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910535">
+    <Name></Name>
+    <Artwork>QuietKid_BlackHand</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>final_silencegirl_blackhand_dmgup</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="8" Dice="10" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="final_silencegirl_blackhand_costup1_atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="final_silencegirl_blackhand_costup1_pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910536">
+    <Name></Name>
+    <Artwork>QuietKid_BlackHand</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script>final_silencegirl_blackhand_dmgup</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="13" Type="Atk" Detail="Hit" Motion="J" EffectRes="" Script="final_silencegirl_blackhand_costup2_atk" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="final_silencegirl_blackhand_costup2_pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910537">
+    <Name></Name>
+    <Artwork>QuietKid_BlackHand</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Standby" Detail="Slash" Motion="J" EffectRes="" Script="final_silencegirl_blackhand_counteratk_pw1" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Standby" Detail="Slash" Motion="J" EffectRes="" Script="final_silencegirl_blackhand_counteratk_pl" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="final_silencegirl_blackhand_counteratk_pw2" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910538">
+    <Name></Name>
+    <Artwork>QuietKid_BlackHand</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="0"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="final_silencegirl_blackhand_counterdef_pw1" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="final_silencegirl_blackhand_counterdef_pl" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="6" Type="Standby" Detail="Guard" Motion="G" EffectRes="" Script="final_silencegirl_blackhand_counterdef_pw2" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+  
+  <!-- 플레이어블 앤젤라2 -->
+  <Card ID="9910011">
+    <Name>똑바로 설 수 있는 의지</Name>
+    <Artwork>Angela_EGO_1</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EgoPersonal</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="FarArea" Cost="5" Affection="Team"/>
+    <Script>schorchedArea</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="12" Dice="40" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="schorchedAreaDice" ActionScript="malkuthboss_scorched" Desc=""/>
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_ScorchedGirl</SkinChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910012">
+    <Name>분별할 수 있는 이성</Name>
+    <Artwork>Angela_EGO_2</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EgoPersonal</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="Near" Cost="5"/>
+    <Script>murderEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Hit" Motion="S1" EffectRes="EGO_Murderer_Atk" Script="murderDice1" ActionScript="" Desc=""/>
+      <Behaviour Min="6" Dice="8" Type="Atk" Detail="Hit" Motion="S2" EffectRes="EGO_Murderer_Atk" Script="murderDice1" ActionScript="" Desc=""/>
+      <Behaviour Min="9" Dice="19" Type="Atk" Detail="Hit" Motion="S3" EffectRes="EGO_Murderer_Atk" Script="murderDice2" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_Murderer</SkinChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910013">
+    <Name>더 나은 존재가 될 수 있다는 희망</Name>
+    <Artwork>Angela_EGO_3</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EgoPersonal</Option>
+    <Spec Range="Special" Cost="4" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="9" Dice="25" Type="Atk" Detail="Hit" Motion="J" EffectRes="EGO_SpiderBud_J" Script="spiderBudEgoDice" ActionScript="hodfinal_spiderbud_s1" Desc=""/>
+      <Behaviour Min="5" Dice="8" Type="Atk" Detail="Hit" Motion="S1" EffectRes="EGO_SpiderBud_S1" Script="" ActionScript="" Desc=""/>
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_SpiderBud</SkinChange>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="9910014">
+    <Name>삶을 이어나갈 것이라는 용기</Name>
+    <Artwork>Angela_EGO_4</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EgoPersonal</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Keyword>AreaCard_Keyword</Keyword>
+    <Spec Range="FarAreaEach" Cost="6" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="S" EffectRes="" Script="orchestraEgoDice1" ActionScript="netzachboss_orchestra_movement_1" Desc="" />
+      <Behaviour Min="4" Dice="9" Type="Atk" Detail="Hit" Motion="S" EffectRes="" Script="orchestraEgoDice2" ActionScript="netzachboss_orchestra_movement_2" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Hit" Motion="S" EffectRes="" Script="orchestraEgoDice3" ActionScript="netzachboss_orchestra_movement_5" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_Orchestra</SkinChange>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="9910015">
+    <Name>존재의 의미에 대한 기대</Name>
+    <Artwork>Angela_EGO_5</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EgoPersonal</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Keyword>AreaCard_Keyword</Keyword>
+    <Spec Range="FarAreaEach" Cost="5" Affection="Team"/>
+    <Script>greedEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="15" Type="Atk" Detail="Hit" Motion="H" EffectRes="" Script="greedEgoDice" ActionScript="kingofgreed_reason_areaatk" Desc="" />
+    </BehaviourList>
+    <Chapter>5</Chapter>
+    <SkinChange>EGO_Greed_Reason</SkinChange>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9910016">
+    <Name>지켜내는 용기</Name>
+    <Artwork>Angela_EGO_6</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EgoPersonal</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Keyword>AreaCard_Keyword</Keyword>
+    <Spec Range="FarArea" Cost="5" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="17" Dice="28" Type="Atk" Detail="Slash" Motion="S2" EffectRes="" Script="nosferatuEgoDice" ActionScript="geburafinal_nosperatu_monster_area" Desc=""/>
+    </BehaviourList>
+    <SkinChange>EGO_Nosferatu</SkinChange>
+    <MapChange>Nosferatu</MapChange>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9910017">
+    <Name>기꺼이 믿으며 맡길 수 있는 상대</Name>
+    <Artwork>Angela_EGO_7</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EgoPersonal</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="FarAreaEach" Cost="5" Affection="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="5" Dice="10" Type="Atk" Detail="Slash" Motion="S1" EffectRes="" Script="ozmaEgoDice" ActionScript="ozma_areaatk" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Hit" Motion="S1" EffectRes="" Script="ozmaEgoDice" ActionScript="ozma_areaatk" Desc="" />
+    </BehaviourList>
+    <SkinChange>EGO_Ozma</SkinChange>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9910018">
+    <Name>굴레를 끊어내며 공포에 직면하는 눈</Name>
+    <Artwork>Angela_EGO_8</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EgoPersonal</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="FarArea" Cost="5" Affection="Team"/>
+    <Script>bossBirdSecondEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="20" Dice="25" Type="Atk" Detail="Hit" Motion="S5" EffectRes="" Script="bossBirdSecondEgoDice" ActionScript="Final_ApcBird_PutDownArea" Desc="" />
+    </BehaviourList>
+    <SkinChange>EGO_ApocalypseBird</SkinChange>
+    <SkinHeight>500</SkinHeight>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9910019">
+    <Name>과거를 받아들이며, 미래를 창조하는 눈</Name>
+    <Artwork>Angela_EGO_9</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EgoPersonal</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="FarAreaEach" Cost="5" Affection="Team"/>
+    <Script>oneBadManyGoodEgo</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="8" Dice="16" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="cryingChildAreaDice" ActionScript="oneBadManyGoodEgo" Desc="" />
+    </BehaviourList>
+    <SkinChange>EGO_OneBadManyGood</SkinChange>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9910020">
+    <Name>이름 안정했는데</Name>
+    <Artwork>Angela_EGO_0</Artwork>
+    <Rarity>Unique</Rarity>
+    <Option>EgoPersonal</Option>
+    <Keyword>ego_Keyword</Keyword>
+    <Spec Range="Instance" Cost="9" />
+    <Script>angela_final_ego</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+
+  <Card ID="9910021">
+    <Name>생각하는 나</Name>
+    <Artwork>Angela_EGO_10</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarArea" Cost="0" Affection="Team"/>
+    <Script>angela_final_card</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="999" Dice="999" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="cryingChildAreaDice" ActionScript="SilentGirl_Angela_Cogito" Desc="" />
+    </BehaviourList>
+    <Priority>0</Priority>
+  </Card>
+</DiceCardXmlRoot>

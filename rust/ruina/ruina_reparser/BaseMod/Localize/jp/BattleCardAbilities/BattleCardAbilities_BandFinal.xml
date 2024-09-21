@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- 잔향 상층 -->
+  <!-- 아르갈리아 뒤틀림-->
+  <BattleCardAbility ID="resonanceControl"> <!-- 공명 조절 -->
+    <Desc>[戦闘開始] 今回の幕の間、共鳴パッシブの条件が「相手の振動が4以上」に変更される</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="nullifyPowerAtk">
+    <Desc>[的中] 相手は次の幕の間、威力の効果を得ない。</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="vibrateDmg">
+    <Desc>[的中] 相手の振動だけダメージを与える</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="powerUp1thisRound">
+    <Desc>[戦闘開始] 今回の幕の間、全攻撃ダイスの威力+1</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="debufHalfOnUse">
+    <Desc>[的中] 自分に掛かっている状態異常の値が半分に減少する(小数点以下繰り上げ)</Desc>
+  </BattleCardAbility>
+  
+  <!-- 플루토 뒤틀림 -->
+  <BattleCardAbility ID="Pluto_UC_Protect">
+    <Desc>攻撃的中時、次の幕の始まりに相手の手元へ「不当な契約書：保護」を追加する。</Desc>
+    <Desc>「不当な契約書：保護」は1枚のみ保有可能</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="Pluto_UC_Atk">
+    <Desc>攻撃的中時、次の幕の始まりに相手の手元へ「不当な契約書：攻撃」を追加する。</Desc>
+    <Desc>「不当な契約書：攻撃」は1枚のみ保有可能</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="Pluto_UC_Light">
+    <Desc>攻撃的中時、次の幕の始まりに相手の手元へ「不当な契約書：光」を追加する。</Desc>
+    <Desc>「不当な契約書：光」は1枚のみ保有可能</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="UC_Protect">
+    <Desc>幕の終了時、このページが手元にあれば手元からランダムにページを1枚捨て、捨てたページのコストだけ次の幕に保護を付与。</Desc>
+    <Desc>[装着時発動] 消滅する</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="UC_Atk">
+    <Desc>幕の終了時、このページが手元にあればデッキの1番上にこのページを入れ、次の幕の間攻撃で与えるダメージ量が1増加。</Desc>
+    <Desc>[装着時発動] 消滅する</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="UC_Light">
+    <Desc>幕の終了時、このページが手元にあれば光を1回復し、「足枷」ページ1枚を手元に追加してから「足枷」ページを捨てる。</Desc>
+    <Desc>[装着時発動] 消滅する</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="shackles">
+    <Desc>[装着時発動] 消滅する</Desc>
+  </BattleCardAbility>
+  
+  
+  <!-- 사서 추가 카드 -->
+  <!-- 공용1 -->
+  <BattleCardAbility ID="unitePower">
+    <Desc>[結束ページ]</Desc>
+    <Desc>[戦闘開始] 今回の幕の間、他の味方全員に「結束ページ」を使用する間、全ダイス威力が1増加(重複しない)」を付与</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="uniteAttack">
+    <Desc>[結束ページ]</Desc>
+    <Desc>[戦闘開始] 今回の幕の間、他の味方全員に「[結束ページ]を使用するとき、そのページに斬撃ダイス(4-8)を追加(重複しない)」を付与</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="uniteDefense">
+    <Desc>[結束ページ]</Desc>
+    <Desc>[戦闘開始] 今回の幕の間、他の味方全員に「結束ページ」を使用するとき、そのページに防御ダイス(6-9)を最初に追加(重複しない)」を付与</Desc>
+  </BattleCardAbility>
+
+  <!-- 전용 -->
+  <BattleCardAbility ID="argaliaDistortedArea">
+    <Desc>3幕目から使用可能。</Desc>
+    <Desc>[使用時] 手元に「大団円」ページを追加</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="argaliaDistortedDice1">
+  </BattleCardAbility>
+  <BattleCardAbility ID="argaliaDistortedDice2">
+    <Desc>前のダイスを的中させた場合、ダメージ量50%増加</Desc>
+  </BattleCardAbility>
+  
+  <BattleCardAbility ID="plutoArea">
+    <Desc>3幕目から使用可能。</Desc>
+    <Desc>このページは使用後に消滅し、4幕が過ぎると手元に戻る。</Desc>
+  </BattleCardAbility>
+  
+  <BattleCardAbility ID="elenaNewArea">
+    <Desc>3幕目から使用可能。</Desc>
+    <Desc>このページは使用後に消滅し、4幕が過ぎると手元に戻る。
+</Desc>
+    <Desc>今回の舞台の間、自分の体力を20以上回復した場合はこのページのコストを2減少</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="elenaNewAreaDice">
+    <Desc>[的中] 体力を3回復</Desc>
+  </BattleCardAbility>
+  
+
+  <BattleCardAbility ID="jaeheonArea">
+    <Desc>3幕目から使用可能。</Desc>
+    <Desc>このページは使用後に消滅し、4幕が過ぎると手元に戻る。
+</Desc>
+    <Desc>[使用時] 「人形師の糸」を持つ全ての味方の体力・混乱抵抗値を20回復</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="jaeheonAreaDice">
+    <Desc>[的中] 次の幕に束縛を1付与</Desc>
+  </BattleCardAbility>
+  
+  <BattleCardAbility ID="oswaldArea">
+    <Desc>3幕目から使用可能。</Desc>
+    <Desc>このページは使用後に消滅し、4幕が過ぎると手元に戻る。
+</Desc>
+    <Desc>[使用時] 相手に次の幕にて脆弱、武装解除、虚弱、保護、混乱保護のうちどれか1種をランダムに2付与</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="oswald_break8areaatk">
+    <Desc>[的中] 相手に8混乱ダメージ</Desc>
+  </BattleCardAbility>
+  
+  <BattleCardAbility ID="bremenArea">
+    <Desc>3幕目から使用可能。</Desc>
+    <Desc>このページは使用後に消滅し、4幕が過ぎると手元に戻る。
+</Desc>
+    <Desc>[使用時] 全ての敵に今回の幕にて脆弱2を付与</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="bremen_chorus_atk">
+    <Desc>[的中] 次の幕に麻痺1を付与</Desc>
+  </BattleCardAbility>
+  
+  
+  <BattleCardAbility ID="eileenArea">
+    <Desc>3幕目から使用可能。</Desc>
+    <Desc>このページは使用後に消滅し、4幕が過ぎると手元に戻る。
+</Desc>
+    <Desc>1回でも攻撃が的中した場合、幕の終了時に全ての味方の光を1回復</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="philipSpecial">
+    <Desc>[使用時] 感情レベルが3以上なら、次の幕の開始時に「灼熱の絶望」ページを手元に追加し、全ての敵に火傷を1付与。</Desc>
+    <Desc>「灼熱の絶望」が幕の終了時に消滅する</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="philipArea">
+    <Desc>幕の終了時に消滅する</Desc>
+  </BattleCardAbility>
+  
+  <!-- 공용2 -->
+  <BattleCardAbility ID="resistance1atk">
+    <Desc>[的中] 抵抗が2以下なら抵抗1を得る</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="costDownAndPowerUp">
+    <Desc>このページが手元にあれば、相手の攻撃ダイスのマッチにて敗北するたびにこのページのコストが1減少。</Desc>
+    <Desc>[戦闘開始] 今回の幕の間、全攻撃ダイスの威力+1</Desc>
+    <Desc>[使用時] ページを1枚引く</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="nextCostDown">
+    <Desc>[使用時] ページを1枚引く。光を1回復。次の幕の間、全ページのコストを1減少</Desc>
+  </BattleCardAbility>
+  
+  <BattleCardAbility ID="forbidrecovery2atk">
+    <Desc>[的中] 次の幕に回復不能2を付与</Desc>
+  </BattleCardAbility>
+  
+</BattleCardAbilityDescRoot>

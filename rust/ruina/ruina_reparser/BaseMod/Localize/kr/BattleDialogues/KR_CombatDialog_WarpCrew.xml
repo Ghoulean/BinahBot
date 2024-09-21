@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GroupName>WarpCrew</GroupName>
+  <Character ID="Rose">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">둘 다 집중해. 시간이 많지 않아.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">잡담하지 말고 제대로 자세를 잡도록.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">슬슬 지치니 신속하게 처리하고 복귀한다.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">돌아가서 보고할 것이 많으니 서둘러서 회수해.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">야근 확정이군… 다들 오늘만 고생하자.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">얕보인 건 내 쪽이었나… 한심하군.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">지금은 움직여라. 죽음까지 함께 할 필요는 없으니.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">흔들렸다가는 너도 당할 것이다.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">…상황이 악화할수록 더 앞으로 나아간다.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">퇴근까지 얼마 안 남았군.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">단숨에 숨통을 끊어주지.</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Sen">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">로즈가 집중하란다. 우리도 준비하자, 신입.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">늘 하던 대로 정리하자고.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">후배… 생각보다 여유롭네. 무서워할 법도 한데.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">설마 돌아가서 열차 정리도 해야 하나? 피곤하다… 피곤해…</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">이런 임무야 간단하지. 항상 처리하는 일들이니.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">젠장… 이래서 별로 들어오고 싶지 않았는데…</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">안타깝지만… 유난 떨어서 좋을 건 없으니까.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">슬퍼도 적당히 해야지. 평정심부터 찾자고.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">생각보다 도시악몽도 우습군…</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">여유롭지. 이런 놈들을 상대한 게 한 두 번도 아니고.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">그래도 득도하겠다고 수련하던 승객들보다는 나은 것 같은데?</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Lesti">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">와, 밖에서 봤던 것보다 훨씬 넓어 보이는데요?!</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">정말 저런 강해 보이는 녀석들도 열차에 있었다구요?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">이 일이 끝나면 다 함께 곱창전골 먹으러 가는 거죠?</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">역시 든든한 선배님들 덕분에 손쉽게 처리할 수 있었네요~</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">이 책도 챙기고… 저 책도 챙기고… 이제 돌아갈까요?</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">이제 겨우 새롭게 살아가나 싶었는데…</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">이런 상황도 이겨내야 하는 거죠… 하지만… 서, 선배님이…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">이제 익숙하다고 생각했는데…</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">으흥흥~ 매일 해오던 일이니까요!</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">이 정도는 거뜬히 해낼 수 있죠!</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">여기 있는 사람들도 만만치 않게 강하네요… 위험했어요.</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="WarpCrewUnit">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">설마 추가 근무야? 좀 쉬게 해줘라…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">기껏 그 고깃덩어리들 처리하고 왔더니… 지친다, 지쳐…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">일합시다, 일! 명령을 받았으면 열심히 해야지.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">그래도 그 덩어리들보다 괜찮은 것 같은데?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">그것들은 역겨웠지… 그래도 야근은 싫다고.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_5">별수 있나. 어차피 해야 할 일인데…</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">상황은 정리된 것 같은데… 퇴근해도 되는 거지?</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">이러니저러니 해도… W사가 무너지는 건 막은 거 같네…</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">이 책이 다른 놈의 손에 들어가기라도 했다면…</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_3">직장을 잃을 뻔했지… 그래도 무사히 책을 회수해서 다행이네.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_4">대체 무슨 특이점이길래 이런 책을 뽑아낼 수 있는 거야?</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">이 일이 실패하면… W사의 비밀이…</BattleDialog>
+      <BattleDialog ID="DEATH_1">죽기 싫어… 이제 막 둥지에 들어와 요원이 되었는데…</BattleDialog>
+      <BattleDialog ID="DEATH_2">성공해야… 비밀이 새어나가는 걸 막을 수 있을 텐데…</BattleDialog>
+      <BattleDialog ID="DEATH_3">매뉴얼대로 했는데… 끝까지… 매뉴얼대로만…</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">…우리라도 힘내야 하지 않겠어.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">이런 일… 빨리 그만두고 싶어…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">요원들에게는 늘 있는 일이지.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">오늘도 동료를 여럿 잃고 왔지만… 아직 익숙하지 않네.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">열차 정리든 이런 잔업 처리든… 다 거기서 거기야.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">이 정도는 아까 그 괴물들에 비하면 간단하지.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">열차에 있는 승객들이라고 생각하면 편하네.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">죽으면 저렇게 된다는 건가… 더 긴장해야겠어.</BattleDialog>
+    </Type>
+  </Character>
+</BattleDialogRoot>

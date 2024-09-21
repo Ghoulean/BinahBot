@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<StageXmlRoot>
+  <!-- 케테르 -->
+  <Stage id="210001">
+    <Name>피의욕조</Name>
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>9100101</Unit>
+    </Wave>
+
+    <MapInfo>BloodBath</MapInfo>
+    <StageType>Creature</StageType>
+  </Stage>
+
+  <Stage id="210002">
+    <Name>열망하는 심장</Name>
+    <Wave>
+      <Formation>6</Formation>
+      <Unit>9100201</Unit>
+      <Unit>9100202</Unit>
+      <Unit>9100202</Unit>
+    </Wave>
+
+    <MapInfo>HeartOfAspiration</MapInfo>
+    <StageType>Creature</StageType>
+
+  </Stage>
+
+  <Stage id="210003">
+    <Name>피노키오</Name>
+    <Wave>
+      <Formation>6</Formation>
+      <Unit>9100301</Unit>
+      <Unit>9100302</Unit>
+      <Unit>9100303</Unit>
+    </Wave>
+
+    <MapInfo>Pinocchio</MapInfo>
+    <StageType>Creature</StageType>
+
+  </Stage>
+
+  <Stage id="210004">
+    <Name>눈의 여왕</Name>
+    <Wave>
+      <FormationType>AscendingOrder</FormationType>
+      <Formation>11</Formation> <!--임시 포메이션-->
+      <Unit>9100402</Unit>
+      <Unit>9100401</Unit>
+      <Unit>9100402</Unit>
+      <Unit>9100402</Unit>
+    </Wave>
+
+    <MapInfo>SnowQueen</MapInfo> <!--임시 리소스-->
+    <StageType>Creature</StageType>
+
+  </Stage>
+
+  
+  <!--start story 는 전투시작(전투준비전x)나오는 스토리-->
+  <!--케테르 처음 시작 스토리는 따로 하드코딩으로 처리-->
+  <Stage id="210005">
+    <Name>케테르 최종 - 피의 욕조</Name>
+    <Wave>
+      <Formation>40</Formation>
+      <ManagerScript>KeterFinal_BloodBath</ManagerScript>
+      <AvailableUnit>1</AvailableUnit>
+      <Unit>9100511</Unit>
+    </Wave>
+    <MapInfo>BloodBath_FINAL</MapInfo>
+    <StageType>Creature</StageType>
+    <FloorOnly>Keter</FloorOnly>
+    <Story Condition="Start">100_10_4</Story>
+    <!--<Story Condition="PrevBattle">100_10_2</Story>-->
+  </Stage>
+  <Stage id="210006">
+    <Name>케테르 최종 - 열망하는 심장</Name>
+    <Wave>
+      <Formation>40</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <ManagerScript>KeterFinal_Heart</ManagerScript>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>9100521</Unit>
+      <Unit>9100522</Unit>
+      <Unit>9100522</Unit>
+      <Unit>9100522</Unit>
+      <Unit>9100522</Unit>
+    </Wave>
+    <MapInfo>HeartOfAspiration_FINAL</MapInfo>
+    <FloorOnly>Keter</FloorOnly>
+    <StageType>Creature</StageType>
+    <Story Condition="PrevBattle">1000_6_2</Story>
+  </Stage>
+  <Stage id="210007">
+    <Name>케테르 최종 - 피노키오</Name>
+    <Wave>
+      <Formation>40</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <ManagerScript>KeterFinal_Pinocchio</ManagerScript>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>9100531</Unit>
+      <Unit>9100532</Unit>
+      <Unit>9100532</Unit>
+      <Unit>9100532</Unit>
+      <Unit>9100532</Unit>
+    </Wave>
+    <MapInfo>Pinocchio_FINAL</MapInfo>
+    <FloorOnly>Keter</FloorOnly>
+    <StageType>Creature</StageType>
+    <Story Condition="PrevBattle">1000_6_3</Story>
+  </Stage>
+  <Stage id="210008">
+    <Name>케테르 최종 - 눈의 여왕</Name>
+    <Wave>
+      <Formation>40</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <ManagerScript>KeterFinal_SnowQueen</ManagerScript>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>9100541</Unit>
+      <Unit>9100542</Unit>
+      <Unit>9100542</Unit>
+      <Unit>9100542</Unit>
+      <Unit>9100542</Unit>
+    </Wave>
+    <MapInfo>SnowQueen_Final</MapInfo>
+    <FloorOnly>Keter</FloorOnly>
+    <StageType>Creature</StageType>
+    <Story Condition="PrevBattle">1000_6_4</Story>
+  </Stage>
+  <Stage id="210009">
+    <Name>케테르 최종 - 아무말 없는 소녀</Name>
+    <Wave>
+      <Formation>40</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <ManagerScript>KeterFinal_SilentGirl</ManagerScript>
+      <AvailableUnit>5</AvailableUnit>
+      <Unit>9100551</Unit>
+      <Unit>9100552</Unit>
+      <Unit>9100552</Unit>
+      <Unit>9100553</Unit>
+      <Unit>9100553</Unit>
+    </Wave>
+    <MapInfo>SilentGirl_FINAL</MapInfo>
+    <StageType>Creature</StageType>
+    <FloorOnly>Keter</FloorOnly>
+    <Story Condition="PrevBattle">1000_6_5</Story>
+    <Story Condition="End">100_10_5</Story>
+  </Stage>
+
+  <!-- 말쿠트 -->
+  <Stage id="201001">
+    <Name>불타버린 소녀</Name>
+    <Wave>
+      <Formation>2</Formation>
+      <Unit>9010101</Unit>
+      <Unit>9010102</Unit>
+      <Unit>9010103</Unit>
+    </Wave>
+
+    <MapInfo>ScorchedGirl</MapInfo>
+    <StageType>Creature</StageType>
+
+  </Stage>
+
+  <Stage id="201002">
+    <Name>테디</Name>
+    <Wave>
+      <Formation>2</Formation>
+      <Unit>9010201</Unit>
+    </Wave>
+
+    <MapInfo>Teddy</MapInfo>
+    <StageType>Creature</StageType>
+
+  </Stage>
+
+  <Stage id="201003">
+    <Name>요정들의 축제</Name>
+    <Wave>
+      <Formation>9</Formation>
+      <Unit>9010302</Unit>
+      <Unit>9010302</Unit>
+      <Unit>9010302</Unit>
+      <Unit>9010301</Unit>
+    </Wave>
+
+    <MapInfo>FairyFestival</MapInfo>
+    <StageType>Creature</StageType>
+
+  </Stage>
+  
+  <Stage id="201004">
+    <Name>여왕벌</Name>
+    <Wave>
+      <Formation>19</Formation>
+      <Unit>9010402</Unit>
+      <Unit>9010402</Unit>
+      <Unit>9010401</Unit>
+      <Unit>9010402</Unit>
+      <Unit>9010402</Unit>
+    </Wave>
+
+    <MapInfo>Queenbee</MapInfo>
+    <StageType>Creature</StageType>
+
+  </Stage>
+  
+  <Stage id="201005">
+    <Name>앤젤라</Name>
+    <Wave>
+      <Formation>18</Formation>
+      <Unit>9010511</Unit>
+    </Wave>
+
+    <MapInfo>ScorchedGirl</MapInfo>
+    <StageType>Creature</StageType>
+    <Story Condition="Start">100_1_5</Story>
+  </Stage>
+
+  <!-- 예소드 -->
+  <Stage id="202001">
+    <Name>버려진 살인마</Name>
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>9020101</Unit>
+    </Wave>
+
+    <MapInfo>Murderer</MapInfo>
+    <StageType>Creature</StageType>
+
+  </Stage>
+
+  <Stage id="202002">
+    <Name>무엇이든 도와드립니다</Name>
+    <Wave>
+      <Formation>8</Formation>
+      <Unit>9020201</Unit>
+      <Unit>9020201</Unit>
+      <Unit>9020201</Unit>
+    </Wave>
+
+    <MapInfo>AnythingCanHelp</MapInfo>
+    <StageType>Creature</StageType>
+
+  </Stage>
+
+  <Stage id="202003">
+    <Name>노래하는 기계</Name>
+    <Wave>
+      <Formation>12</Formation>
+      <Unit>9020302</Unit>
+      <Unit>9020302</Unit>
+      <Unit>9020302</Unit>
+      <Unit>9020301</Unit>
+    </Wave>
+
+    <MapInfo>SingingMachine</MapInfo>
+    <StageType>Creature</StageType>
+  </Stage>
+
+  <Stage id="202004">
+    <Name>죽은 나비들의 장례</Name>
+    <Wave>
+      <Formation>22</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <Unit>9020401</Unit>
+      <Unit>9020402</Unit>
+      <Unit>9020403</Unit>
+      <Unit>9020402</Unit>
+      <Unit>9020403</Unit>
+    </Wave>
+
+    <MapInfo>Butterfly</MapInfo>
+    <StageType>Creature</StageType>
+  </Stage>
+
+  <Stage id="202005">
+    <Name>앤젤라</Name>
+    <Wave>
+      <Formation>18</Formation>
+      <Unit>9020511</Unit>
+    </Wave>
+    <MapInfo>Murderer</MapInfo>
+    <StageType>Creature</StageType>
+    <Story Condition="Start">100_2_5</Story>
+  </Stage>
+
+  <!-- 호드 -->
+  <Stage id="203001">
+    <Name>수줍은 오늘의 표정</Name>
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>9030101</Unit>
+    </Wave>
+
+    <MapInfo>ShyLookToday</MapInfo>
+    <StageType>Creature</StageType>
+
+  </Stage>
+
+  <Stage id="203002">
+    <Name>빨간 구두</Name>
+    <Wave>
+      <Formation>7</Formation>
+      <Unit>9030201</Unit>
+      <Unit>9030202</Unit>
+    </Wave>
+
+    <MapInfo>RedShoes</MapInfo>
+    <StageType>Creature</StageType>
+
+  </Stage>
+
+  <Stage id="203003">
+    <Name>거미봉오리</Name>
+    <Wave>
+      <Formation>10</Formation>
+      <Unit>9030302</Unit>
+      <Unit>9030302</Unit>
+      <Unit>9030302</Unit>
+      <Unit>9030302</Unit>
+      <Unit>9030301</Unit>
+    </Wave>
+
+    <MapInfo>SpiderBud</MapInfo>
+    <StageType>Creature</StageType>
+  </Stage>
+
+  <Stage id="202004">
+    <Name>레티씨아</Name>
+    <Wave>
+      <Formation>18</Formation>
+      <Unit>9030401</Unit>
+    </Wave>
+    <MapInfo>Latitia</MapInfo>
+    <StageType>Creature</StageType>
+  </Stage>
+
+  <Stage id="203005">
+    <Name>앤젤라</Name>
+    <Wave>
+      <Formation>18</Formation>
+      <ManagerScript>HodFinalBattle</ManagerScript>
+      <Unit>9030511</Unit>
+    </Wave>
+    <MapInfo>BlackSwan</MapInfo>
+    <StageType>Creature</StageType>
+    <Story Condition="Start">100_3_5</Story>
+  </Stage>
+
+  <Stage id="203004">
+    <Name>래티씨아</Name>
+    <Wave>
+      <FormationType>AscendingOrder</FormationType>
+      <Formation>24</Formation>
+      <Unit>9030401</Unit>
+      <Unit>9030402</Unit>
+      <Unit>9030402</Unit>
+      <Unit>9030402</Unit>
+      <Unit>9030402</Unit>
+    </Wave>
+
+    <MapInfo>Latitia</MapInfo>
+    <StageType>Creature</StageType>
+
+  </Stage>
+
+  <!-- 네짜흐 -->
+  <Stage id="204001">
+    <Name>우주속의조각</Name>
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>9040101</Unit>
+    </Wave>
+
+    <MapInfo>UniverseFragment</MapInfo>
+    <StageType>Creature</StageType>
+
+  </Stage>
+
+  <Stage id="204002">
+    <Name>은하수의 아이</Name>
+    <Wave>
+      <Formation>7</Formation>
+      <Unit>9040201</Unit>
+      <Unit>9040201</Unit>
+    </Wave>
+
+    <MapInfo>GalaxyChild</MapInfo>
+    <StageType>Creature</StageType>
+
+  </Stage>
+
+  <Stage id="204003">
+    <Name>포큐버스</Name>
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>9040301</Unit>
+    </Wave>
+
+    <MapInfo>Porccubus</MapInfo>
+    <StageType>Creature</StageType>
+
+  </Stage>
+
+  <Stage id="204004">
+    <Name>알리우네</Name>
+    <Wave>
+      <FormationType>AscendingOrder</FormationType>
+      <Formation>24</Formation> <!--포메이션 임시-->
+      <Unit>9040401</Unit>
+      <Unit>9040402</Unit>
+      <Unit>9040403</Unit>
+      <Unit>9040402</Unit>
+      <Unit>9040403</Unit>
+    </Wave>
+
+    <MapInfo>Alriune</MapInfo>
+    <StageType>Creature</StageType>
+  </Stage>
+  
+  <Stage id="204005">
+    <Name>네짜흐 층 앤젤라</Name>
+    <Wave>
+      <Formation>18</Formation>
+      <ManagerScript>NetzachFinalBattle</ManagerScript>
+      <Unit>9040551</Unit>
+    </Wave>
+    <MapInfo>Orchestra</MapInfo>
+    <StageType>Creature</StageType>
+    <Story Condition="Start">100_4_5</Story>
+  </Stage>
+  
+  <!-- 티페리트 -->
+  <Stage id="205001">
+    <Name>증오의 여왕</Name>
+    <Wave>
+      <Formation>3</Formation>
+      <Unit>9050101</Unit>
+    </Wave>
+
+    <MapInfo>QueenOfHatred</MapInfo>
+    <StageType>Creature</StageType>
+
+  </Stage>
+
+  <Stage id="205002">
+    <Name>절망의 기사</Name>
+    <Wave>
+      <Formation>16</Formation>
+      <Unit>9050201</Unit>
+      <Unit>9050202</Unit>
+      <Unit>9050202</Unit>
+      <Unit>9050202</Unit>
+    </Wave>
+
+    <MapInfo>KnightOfDespair</MapInfo>
+    <StageType>Creature</StageType>
+
+  </Stage>
+
+  <Stage id="205003">
+    <Name>탐욕의 왕</Name>
+    <Wave>
+      <Formation>18</Formation>
+      <ManagerScript>KingOfGreed</ManagerScript>
+      <Unit>9050301</Unit>
+    </Wave>
+    <MapInfo>KingOfGreed</MapInfo>
+    <StageType>Creature</StageType>
+  </Stage>
+
+  <Stage id="205004">
+    <Name>분노의 시종</Name>
+    <Wave>
+      <Formation>27</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <Unit>9050402</Unit>
+      <Unit>9050403</Unit>
+      <Unit>9050403</Unit>
+      <Unit>9050403</Unit>
+      <Unit>9050401</Unit>
+    </Wave>
+    <MapInfo>ServantOfWrath</MapInfo>
+    <StageType>Creature</StageType>
+  </Stage>
+
+  <Stage id="205005">
+    <Name>티페리트 층 앤젤라</Name>
+    <Wave>
+      <Formation>18</Formation>
+      <ManagerScript>TipherethFinal</ManagerScript>
+      <Unit>9050511</Unit>
+    </Wave>
+    <MapInfo>QueenOfHatred_FINAL</MapInfo>
+    <StageType>Creature</StageType>
+    <Story Condition="Start">100_5_5</Story>
+  </Stage>
+  
+
+  <!-- 게부라 -->
+  <Stage id="206001">
+    <Name>붉은 두건의 용병</Name>
+    <Wave>
+      <Formation>17</Formation>
+      <Unit>9060101</Unit>
+      <Unit>9060102</Unit>
+    </Wave>
+
+    <MapInfo>RedHood</MapInfo>
+    <StageType>Creature</StageType>
+  </Stage>
+
+  <Stage id="206002">
+    <Name>커다랗고 나쁠 늑대</Name>
+    <Wave>
+      <Formation>17</Formation>
+      <Unit>9060201</Unit>
+    </Wave>
+    <MapInfo>BigBadWolf</MapInfo>
+    <StageType>Creature</StageType>
+  </Stage>
+
+  <Stage id="206003">
+    <Name>게부라3</Name>
+    <Wave>
+      <Formation>18</Formation>
+      <ManagerScript>GeburaThird</ManagerScript>
+      <Unit>9060301</Unit>
+      <!--<Unit>9060304</Unit>
+      <Unit>9060304</Unit>
+      <Unit>9060305</Unit>
+      <Unit>9060305</Unit>-->
+    </Wave>
+    <MapInfo>Mountain</MapInfo>
+    <StageType>Creature</StageType>
+  </Stage>
+	
+	<Stage id="206004">
+		<Name>노스페라투</Name>
+		<Wave>
+			<Formation>30</Formation>
+			<FormationType>AscendingOrder</FormationType>
+			<Unit>9060401</Unit>
+			<Unit>9060402</Unit>
+			<Unit>9060402</Unit>
+			<Unit>9060402</Unit>
+      <Unit>9060402</Unit>
+		</Wave>
+		<MapInfo>Nosferatu</MapInfo>
+		<StageType>Creature</StageType>
+	</Stage>
+
+  <!-- 게부라 최종전 -->
+  <Stage id="206005">
+    <Name>게부라5</Name>
+    <Wave>
+      <Formation>18</Formation>
+      <ManagerScript>GeburaFinal</ManagerScript>
+      <Unit>9060511</Unit>
+      <Unit>9060512</Unit>
+    </Wave>
+    <MapInfo>RedHood</MapInfo>
+    <StageType>Creature</StageType>
+    <Story Condition="Start">100_6_5</Story>
+  </Stage>
+    
+  <!-- 헤세드 -->
+  <Stage id="207001">
+    <Name>지혜를 구하는 허수아비</Name>
+    <Wave>
+      <Formation>2</Formation>
+      <Unit>9070101</Unit>
+      <Unit>9070101</Unit>
+      <Unit>9070101</Unit>
+    </Wave>
+
+    <MapInfo>Scarecrow</MapInfo>
+    <StageType>Creature</StageType>
+
+  </Stage>
+  
+  <Stage id="207002">
+    <Name>나무꾼</Name>
+    <Wave>
+      <Formation>20</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <Unit>9070201</Unit>
+      <Unit>9070202</Unit>
+      <Unit>9070202</Unit>
+      <Unit>9070202</Unit>
+    </Wave>
+
+    <MapInfo>Lumberjack</MapInfo>
+    <StageType>Creature</StageType>
+  </Stage>
+
+  <Stage id="207003">
+    <Name>집으로 가는 길</Name>
+    <Wave>
+      <Formation>26</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <Unit>9070301</Unit>
+      <Unit>9070302</Unit>
+      <Unit>9070303</Unit>
+    </Wave>
+
+    <MapInfo>WayBackHome</MapInfo>
+    <StageType>Creature</StageType>
+  </Stage>
+
+  <Stage id="207004">
+    <Name>오즈마</Name>
+    <Wave>
+      <Formation>18</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <Unit>9070401</Unit>
+      <Unit>9070402</Unit>
+      <Unit>9070402</Unit>
+      <Unit>9070402</Unit>
+      <Unit>9070402</Unit>
+    </Wave>
+    <MapInfo>Ozma</MapInfo>
+    <StageType>Creature</StageType>
+  </Stage>
+
+  <!-- 헤세드 최종전 -->
+  <Stage id="207005">
+    <Name>헤세드5</Name>
+    <Wave>
+      <Formation>18</Formation>
+      <ManagerScript>ChesedFinal</ManagerScript>
+      <Unit>9070511</Unit>
+      <Unit>9070512</Unit>
+    </Wave>
+    <MapInfo>Scarecrow</MapInfo>
+    <StageType>Creature</StageType>
+    <Story Condition="Start">100_7_5</Story>
+  </Stage>
+
+  <!-- 비나 -->
+  <Stage id="208001">
+    <Name>큰 새</Name>
+    <Wave>
+      <Formation>2</Formation>
+      <Unit>9080101</Unit>
+      <Unit>9080102</Unit>
+      <Unit>9080102</Unit>
+    </Wave>
+
+    <MapInfo>BigBird</MapInfo>
+    <StageType>Creature</StageType>
+  </Stage>
+  
+  <Stage id="208002">
+    <Name>작은 새</Name>
+    <Wave>
+      <Formation>28</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <Unit>9080201</Unit>
+      <Unit>9080202</Unit>
+      <Unit>9080202</Unit>
+      <Unit>9080202</Unit>
+    </Wave>
+
+    <MapInfo>SmallBird</MapInfo>
+    <StageType>Creature</StageType>
+  </Stage>
+
+  <Stage id="208003">
+    <Name>긴 새</Name>
+    <Wave>
+      <Formation>29</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <Unit>9080301</Unit>
+      <Unit>9080302</Unit>
+      <Unit>9080302</Unit>
+      <Unit>9080302</Unit>
+    </Wave>
+
+    <MapInfo>LongBird</MapInfo>
+    <StageType>Creature</StageType>
+  </Stage>
+
+  <Stage id="208004">
+    <Name>비나 최종</Name>
+    <Wave>
+      <Formation>18</Formation>
+      <ManagerScript>BinahFinal</ManagerScript>
+      <FormationType>AscendingOrder</FormationType>
+      <Unit>9080511</Unit>
+      <Unit>9080512</Unit>
+      <Unit>9080512</Unit>
+      <Unit>9080512</Unit>
+      <Unit>9080512</Unit>
+    </Wave>
+    <MapInfo>BigBird</MapInfo>
+    <StageType>Creature</StageType>
+    <Story Condition="Start">100_8_5</Story>
+  </Stage>
+
+  <!-- 호크마 -->
+  <Stage id="209001">
+    <Name>파고드는 천국</Name>
+    <Wave>
+      <Formation>25</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <Unit>9090101</Unit>
+      <Unit>9090102</Unit>
+      <Unit>9090102</Unit>
+      <Unit>9090102</Unit>
+    </Wave>
+
+    <MapInfo>HokmaFirst</MapInfo>
+    <StageType>Creature</StageType>
+  </Stage>
+
+  <Stage id="209002">
+    <Name>침묵의 대가</Name>
+    <Wave>
+      <Formation>18</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <Unit>9090201</Unit>
+      <Unit>9090202</Unit>
+    </Wave>
+
+    <MapInfo>ThePriceOfSilence</MapInfo>
+    <StageType>Creature</StageType>
+
+  </Stage>
+  
+  <Stage id="209003">
+    <Name>푸른 별</Name>
+    <Wave>
+      <Formation>33</Formation>
+      <FormationType>AscendingOrder</FormationType>
+      <Unit>9090301</Unit>
+      <Unit>9090302</Unit>
+      <Unit>9090303</Unit>
+      <Unit>9090304</Unit>
+      <Unit>9090304</Unit>
+    </Wave>
+    <MapInfo>BlueStar</MapInfo>
+    <StageType>Creature</StageType>
+  </Stage>
+
+  <Stage id="209004">
+    <Name>백야</Name>
+    <Wave>
+      <Formation>32</Formation>
+      <ManagerScript>HokmaFinal</ManagerScript>
+      <FormationType>AscendingOrder</FormationType>
+      <Unit>9090511</Unit>
+      <Unit>9090513</Unit>
+      <Unit>9090513</Unit>
+      <Unit>9090513</Unit>
+      <Unit>9090513</Unit>
+    </Wave>
+    <MapInfo>WhiteNight</MapInfo>
+    <StageType>Creature</StageType>
+    <Story Condition="Start">100_9_5</Story>
+
+  </Stage>
+  
+</StageXmlRoot>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- 잔향 상층 -->
+  <BattleCardAbility ID="forbidrecovery2atk">
+    <Desc>[On Hit] Inflict 2 Antirecovery next Scene</Desc>
+  </BattleCardAbility>  
+  
+  <!-- 아르갈리아 뒤틀림-->
+  <BattleCardAbility ID="resonanceControl"> <!-- 공명 조절 -->
+    <Desc>[Combat Start] For this Scene, the passive ability 'Resonance' activates if target has 4+ Vibration</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="nullifyPowerAtk">
+    <Desc>[On Hit] Target's dice Power cannot be influenced by any effects next Scene</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="vibrateDmg">
+    <Desc>[On Hit] Deal bonus damage equal to target's Vibration</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="powerUp1thisRound">
+    <Desc>[Combat Start] Boost Offensive dice Power by +1 for this Scene</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="debufHalfOnUse">
+    <Desc>[On Use] Halve the amount of status ailments on self (Rounded up)</Desc>
+  </BattleCardAbility>
+  
+  <!-- 플루토 뒤틀림 -->
+  <BattleCardAbility ID="Pluto_UC_Protect">
+    <Desc>[On hit] Add 'Unjust Counterpart: Defense' to target's hand next Scene.</Desc>
+    <Desc>Only one copy of 'Unjust Counterpart: Defense' can be had at a time.</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="Pluto_UC_Atk">
+    <Desc>[On hit] Add 'Unjust Counterpart: Offense' to target's hand next Scene.</Desc>
+    <Desc>Only one copy of 'Unjust Counterpart: Offense' can be had at a time.</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="Pluto_UC_Light">
+    <Desc>[On hit] Add 'Unjust Counterpart: Light' to target's hand next Scene.</Desc>
+    <Desc>Only one copy of 'Unjust Counterpart: Light' can be had at a time.</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="UC_Protect">
+    <Desc>If this page is in hand at the end of the Scene, discard a random other page and gain Protection equal to its Cost next Scene</Desc>
+    <Desc>[On Play] Exhaust this page</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="UC_Atk">
+    <Desc>If this page is in hand at the end of the Scene, shuffle this on top of the deck, and boost outgoing damage by 1 for the next Scene</Desc>
+    <Desc>[On Play] Exhaust this page</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="UC_Light">
+    <Desc>If this page is in hand at the end of the Scene, restore 1 Light, then add a copy of 'Fetters' and discard it</Desc>
+    <Desc>[On Play] Exhaust this page</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="shackles">
+    <Desc>[On Play] Exhaust this page</Desc>
+  </BattleCardAbility>
+  
+  
+  <!-- 사서 추가 카드 -->
+  <!-- 공용1 -->
+  <BattleCardAbility ID="unitePower">
+    <Desc>[Unity]</Desc>
+    <Desc>[Combat Start] For this Scene, all other allies using a Unity page gain +1 Power for all dice (Cannot be stacked)</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="uniteAttack">
+    <Desc>[Unity]</Desc>
+    <Desc>[Combat Start] For this Scene, all other allies using a Unity page gain a Slash die (4-8) on the page (Cannot be stacked)</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="uniteDefense">
+    <Desc>[Unity]</Desc>
+    <Desc>[Combat Start] For this Scene, all other allies using a Unity page gain a Block die (6-9) that comes first (Cannot be stacked)</Desc>
+  </BattleCardAbility>
+
+  <!-- 전용 -->
+  <BattleCardAbility ID="argaliaDistortedArea">
+    <Desc>Usable on and after the third Scene</Desc>
+    <Desc>[On Use] Add a copy of 'Grand Finale' to hand</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="argaliaDistortedDice1">
+  </BattleCardAbility>
+  <BattleCardAbility ID="argaliaDistortedDice2">
+    <Desc>If the last die hit, this deals 50% more damage</Desc>
+  </BattleCardAbility>
+  
+  <BattleCardAbility ID="plutoArea">
+    <Desc>Usable on and after the third Scene</Desc>
+    <Desc>This page is exhausted on use and returns to hand after 4 Scenes</Desc>
+  </BattleCardAbility>
+  
+  <BattleCardAbility ID="elenaNewArea">
+    <Desc>Usable on and after the third Scene</Desc>
+    <Desc>This page is exhausted on use and returns to hand after 4 Scenes</Desc>
+    <Desc>If user has recovered 20+ HP this Act, this page's Cost is reduced by 2</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="elenaNewAreaDice">
+    <Desc>[On Hit] Recover 3 HP</Desc>
+  </BattleCardAbility>
+  
+
+  <BattleCardAbility ID="jaeheonArea">
+    <Desc>Usable on and after the third Scene</Desc>
+    <Desc>This page is exhausted on use and returns to hand after 4 Scenes</Desc>
+    <Desc>[On Use] All allies with 'Puppeteer’s Strings' recover 20 HP and Stagger Resist</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="jaeheonAreaDice">
+    <Desc>[On Hit] Inflict 1 Bind next Scene</Desc>
+  </BattleCardAbility>
+  
+  <BattleCardAbility ID="oswaldArea">
+    <Desc>Usable on and after the third Scene</Desc>
+    <Desc>This page is exhausted on use and returns to hand after 4 Scenes</Desc>
+    <Desc>[On Use] Inflict one of the following statuses to targets at random next Scene: 2 Fragile, 2 Disarm, 2 Feeble, 2 Protection, 2 Stagger Protection</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="oswald_break8areaatk">
+    <Desc>[On Hit] Deal 8 Stagger damage</Desc>
+  </BattleCardAbility>
+  
+  <BattleCardAbility ID="bremenArea">
+    <Desc>Usable on and after the third Scene</Desc>
+    <Desc>This page is exhausted on use and returns to hand after 4 Scenes</Desc>
+    <Desc>[On Use] Inflict 2 Fragile to all enemies this Scene</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="bremen_chorus_atk">
+    <Desc>[On Hit] Inflict 1 Paralysis next Scene</Desc>
+  </BattleCardAbility>
+  
+  
+  <BattleCardAbility ID="eileenArea">
+    <Desc>Usable on and after the third Scene</Desc>
+    <Desc>This page is exhausted on use and returns to hand after 4 Scenes</Desc>
+    <Desc>If the attack hit at least once, all other allies restore 1 Light at the end of the Scene</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="philipSpecial">
+    <Desc>[On Use] At Emotion Level 3+, add a copy of 'Scorching Desperation' to hand at the start of next Scene and inflict 1 Burn to all enemies</Desc>
+    <Desc>'Scorching Desperation' will exhaust at the end of the Scene</Desc>
+  </BattleCardAbility>
+
+  <BattleCardAbility ID="philipArea">
+    <Desc>Exhausts at the end of the Scene</Desc>
+  </BattleCardAbility>
+  
+  <!-- 공용2 -->
+  <BattleCardAbility ID="resistance1atk">
+    <Desc>[On Hit] If user has 2 or less Resilience, gain 1 Resilience</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="costDownAndPowerUp">
+    <Desc>While this page is in hand, its Cost is decreased for each clash lost against an Offensive die</Desc>
+    <Desc>[Combat Start] Boost Offensive dice Power by +1 for this Scene</Desc>
+    <Desc>[On Use] Draw 1 page</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="nextCostDown">
+    <Desc>[On Use] Draw 1 page; Restore 1 Light; reduce Cost of all pages by 1 for the next Scene</Desc>
+  </BattleCardAbility>
+  
+</BattleCardAbilityDescRoot>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GroupName>Rats</GroupName>
+  <Character ID="Pete">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">俺がずぶの素人にも勝てないってか？</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">お互い手加減は無しにしようか。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">別にテメェらが怖くはないな。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">これくらいなら捨て犬はもちろん、もっと高い組織も狙えるだろうな！</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">これ完全にボロ儲けだろ！</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">……クソッ。夢も叶わずに……終わるのか。</BattleDialog>
+      <BattleDialog ID="DEATH_1">結局、夢ばっかデカい馬鹿だったって感じだな……。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">最後まで戦ってくれないと困るんだよなぁ！</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">そんな弱っちい癖にやってけると思ったか？……雑魚が。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">クソッ……俺たち不利すぎるだろ！</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">思ってた通り弱すぎるなぁ。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">あいつにすら勝てないとか、将来「指」になる俺の名が廃るってもんだよなぁ。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">俺もこう見えてちったぁ脳ミソ絞って戦ってんだよ？</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="Lenny">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">はぁ……もう何時間も残ってないし早く終わらせるわよ。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">あぁ、来るなら早く始めろっての！</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">ネズミだからって舐めるんじゃないわよ。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">その小汚いネズミとやらにやられた気分はどう？</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">まぁ……入るときはちょっと怖かったけど、思ってたより弱かったわね。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">クソッ……付いてくんじゃなかった……。</BattleDialog>
+      <BattleDialog ID="DEATH_1">結局、人生どん底で這ったまま終わるとか……！</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">……チェッ。まあ期待してなかったし。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">足引っ張っぱらないで。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">あいつが死んでも別に気にしないから。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">凄いもんを守ってるって言う割に弱すぎない？</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">ぎりぎりだったけど……何とか勝った。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">ふん、弱点だらけね。救いようがないわ。</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+  <Character ID="MangChi">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">俺があいつの夢なんか叶えるためにこんなことまで……。</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">はぁ……いっそ内蔵をブチ抜いて集めた方がまだマシだろうな</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">俺も組織に入って楽に生きていきたいんだ。</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">俺らもやるときはやるって。これでちょっとは楽に過ごせそうだな。</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">内蔵拾いより良いんじゃないこれ……？悪くないな。</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">……なんも楽しめないまま終わるのか。</BattleDialog>
+      <BattleDialog ID="DEATH_1">こんなモヤモヤした結末はホント嫌いなんだけどな……。</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">おい……こいつどうなってるんだ……？これほんとに死んだわけじゃないよな？</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">だから無闇に割り込むなって言ったのに……。</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">普通に新しい死体を手に入れるほうがもっと早くて安全な気がするんだけど……。</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">いっちょ上がり！</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">ネズミより弱いやつなんか初めて見たよ。</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">ひぃっ……お、俺がさっき殺したん……だよね？</BattleDialog>
+    </Type>
+    <Type ID="ENCOUNTERS_OPPONENT" />
+  </Character>
+</BattleDialogRoot>
