@@ -2,7 +2,16 @@ version: 2.1
 orbs:
   aws-cli: circleci/aws-cli@5.1.0
 jobs:
-  build-and-test:
+  test:
+    docker:
+      - image: cimg/rust:1.81.0-node
+    working_directory: ~/BinahBot
+    steps:
+      - checkout
+      - run:
+          name: Run all tests
+          command: cd ~/BinahBot/rust && cargo test --all-targets
+  build:
     docker:
       - image: cimg/rust:1.81.0-node
     working_directory: ~/BinahBot
@@ -45,9 +54,6 @@ jobs:
       - run:
           name: Onetime setup build
           command: cd ~/BinahBot/ruina-discord-bot-onetime-setup && npm i && npm run build
-      - run:
-          name: Run all tests
-          command: cd ~/BinahBot/rust && cargo test --all-targets
       - persist_to_workspace:
           root: ~/BinahBot
           paths:
@@ -81,19 +87,27 @@ jobs:
 workflows:
   deploy-to-prod:
     jobs:
-      - build-and-test
+      - test
+      - build:
+          filters:
+            branches:
+              only:
+                - main
+                - circleci-project-setup
       - onetime-setup:
           filters:
             branches:
               only:
                 - main
           requires:
-            - build-and-test
+            - build
+            - test
       - deploy-to-aws:
           filters:
             branches:
               only:
                 - main
           requires:
-            - build-and-test
+            - build
+            - test
 
