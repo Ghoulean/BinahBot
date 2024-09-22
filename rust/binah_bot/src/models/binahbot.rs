@@ -50,8 +50,6 @@ pub struct Emojis {
 
 pub struct BinahBotEnvironment {
     pub discord_secrets: DiscordSecrets,
-    #[allow(dead_code)]
-    pub discord_client_id: String,
     pub s3_bucket_name: String,
     pub emojis: Emojis,
     pub locales: &'static StaticLoader,

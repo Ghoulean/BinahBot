@@ -106,7 +106,6 @@ async fn main() -> Result<(), lambda_http::Error> {
 
     let binahbot_env = BinahBotEnvironment {
         discord_secrets,
-        discord_client_id: env::var("CLIENT_ID").expect("no CLIENT_ID"),
         s3_bucket_name: env::var("S3_BUCKET_NAME").expect("no S3_BUCKET_NAME"),
         emojis: Emojis {
             slash: env::var("SLASH_EMOJI_ID").ok(),
@@ -197,7 +196,6 @@ pub mod test_utils {
                 public_key: "pub_key".to_string(),
                 bot_token: "bot_token".to_string(),
             },
-            discord_client_id: "id".to_string(),
             s3_bucket_name: "bucket_name".to_string(),
             emojis: Emojis {
                 slash: None,
