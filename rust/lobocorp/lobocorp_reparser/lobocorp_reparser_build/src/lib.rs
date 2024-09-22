@@ -25,5 +25,6 @@ pub fn build_reparser() -> String {
         write_localization_index(),
         write_encyclopedia_info(&encyclopedia, &equipment_list),
         write_abno_localizations(&abno_list, &encyclopedia),
-    ].join("\n")
+    ]
+    .join("\n")
 }

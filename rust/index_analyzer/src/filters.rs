@@ -4,13 +4,19 @@ use unicode_normalization::UnicodeNormalization;
 type Token = String;
 
 fn punctuation_filter(token: &Token) -> Token {
-    token.nfd()
+    token
+        .nfd()
         .filter(|x| !is_combining_mark(*x))
         .collect::<Token>()
         .to_lowercase()
         .replace("’s", "")
         .replace("'s", "")
-        .replace(&['(', ')', ',', '\"', '.', ';', ':', '\'', '?', '!', '’', '~', '…', '♣', '◆'][..], "")
+        .replace(
+            &[
+                '(', ')', ',', '\"', '.', ';', ':', '\'', '?', '!', '’', '~', '…', '♣', '◆',
+            ][..],
+            "",
+        )
         .replace("<color=red>♥</color>", "♥")
         .replace('Ⅰ', "I")
         .replace('Ⅱ', "II")
@@ -24,12 +30,12 @@ fn stopword_filter(token: &Token) -> bool {
 }
 
 pub fn filter(tokens: Vec<Token>) -> Vec<Token> {
-    tokens.iter().map(
-        punctuation_filter
-    ).filter(
-        stopword_filter
-    ).filter(|x| !x.is_empty() )
-    .collect()
+    tokens
+        .iter()
+        .map(punctuation_filter)
+        .filter(stopword_filter)
+        .filter(|x| !x.is_empty())
+        .collect()
 }
 
 #[cfg(test)]
@@ -62,12 +68,9 @@ mod tests {
         let input = vec![
             "Trim".to_string(),
             "The".to_string(),
-            "Ingredients".to_string()
+            "Ingredients".to_string(),
         ];
-        let expected = vec![
-            "trim".to_string(),
-            "ingredients".to_string()
-        ];
+        let expected = vec!["trim".to_string(), "ingredients".to_string()];
         assert_eq!(expected, filter(input));
     }
 }

@@ -18,7 +18,7 @@ pub struct Deck {
     pub author_name: String,
     pub description: Option<String>,
     pub deck_data: DeckData,
-    pub tiph_deck: Option<TiphDeck>
+    pub tiph_deck: Option<TiphDeck>,
 }
 
 #[derive(Debug)]

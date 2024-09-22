@@ -9,13 +9,13 @@ Populate `.env` with `CLIENT_ID="<Discord application id>"`. You may optionally 
 2. Set up an AWS profile
 3. `npm run build`
 4. `npm run cdk deploy -- --profile <your AWS profile name here>`
+    - If this fails, try bootstrapping your account: `npm run cdk bootstrap -- --profile <your AWS profile here>`. You should only need to do this once.
 
 The following instructions are for first-time setup after running the initial deployment:
 1. Go to AWS Secrets Manager and insert the following secret values, filling out each field accordingly:
 
 ```
 {
-    "authToken":"<DISCORD_AUTH_TOKEN_HERE>",
     "publicKey":"<DISCORD_PUBLIC_KEY_HERE>",
     "applicationId":"<DISCORD_APPLICATION_ID_HERE>",
     "botToken":"<DISCORD_BOT_TOKEN_HERE>"

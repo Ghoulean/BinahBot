@@ -4,6 +4,7 @@ use std::env;
 use std::error::Error;
 use std::io::Cursor;
 
+use aws_sdk_s3::primitives::ByteStream;
 use futures::stream;
 use futures::StreamExt;
 use image::GenericImage;
@@ -16,7 +17,6 @@ use lambda_runtime::LambdaEvent;
 use models::ThumbnailGeneratorEnvironment;
 use models::ThumbnailLambdaInput;
 use ruina::ruina_reparser::get_combat_page_by_id;
-use aws_sdk_s3::primitives::ByteStream;
 
 static NOT_FOUND_IMAGE_NAME: &str = "404_Not_Found";
 static BASE_COMBAT_PAGE_WIDTH: u32 = 410;
@@ -29,7 +29,11 @@ async fn function_handler(
     tracing::debug!("Rust function invoked");
 
     let thumbnail_key = format!("{}/{}.png", env.s3_directory, event.thumb_name);
-    let head_object_result = env.s3_client.as_ref().unwrap().head_object()
+    let head_object_result = env
+        .s3_client
+        .as_ref()
+        .unwrap()
+        .head_object()
         .bucket(&env.s3_bucket_name)
         .key(&thumbnail_key)
         .send()
@@ -42,32 +46,47 @@ async fn function_handler(
         return Ok(());
     }
 
-    let image_dirs = event.combat_pages.into_iter().map(|x| {
-        get_combat_page_by_id(&x)
-    }).map(|x| {
-        format!("{}.png", x.and_then(|y| y.artwork).unwrap_or(NOT_FOUND_IMAGE_NAME))
-    }).collect::<Vec<_>>();
+    let image_dirs = event
+        .combat_pages
+        .into_iter()
+        .map(|x| get_combat_page_by_id(&x))
+        .map(|x| {
+            format!(
+                "{}.png",
+                x.and_then(|y| y.artwork).unwrap_or(NOT_FOUND_IMAGE_NAME)
+            )
+        })
+        .collect::<Vec<_>>();
 
     tracing::info!("Grabbing images: {:?}", image_dirs);
 
     // todo: do not make redundant requests on duplicates
-    let get_object_data = stream::iter(image_dirs).map(|x| async {
-        env.s3_client.as_ref().unwrap().get_object()
-            .bucket(&env.s3_bucket_name)
-            .key(x)
-            .send()
-            .await
-            .expect("request failed")
-    }).buffered(9).map(|x| async {
-        x.body.collect().await.expect("couldn't get image data")
-    }).buffered(9).collect::<Vec<_>>().await;
+    let get_object_data = stream::iter(image_dirs)
+        .map(|x| async {
+            env.s3_client
+                .as_ref()
+                .unwrap()
+                .get_object()
+                .bucket(&env.s3_bucket_name)
+                .key(x)
+                .send()
+                .await
+                .expect("request failed")
+        })
+        .buffered(9)
+        .map(|x| async { x.body.collect().await.expect("couldn't get image data") })
+        .buffered(9)
+        .collect::<Vec<_>>()
+        .await;
 
-    let image_data = get_object_data.into_iter().map(|x| {
-        ImageReader::with_format(
-            std::io::Cursor::new(x.into_bytes()),
-            ImageFormat::Png
-        ).decode().expect("couldn't decode image")
-    }).collect::<Vec<_>>();
+    let image_data = get_object_data
+        .into_iter()
+        .map(|x| {
+            ImageReader::with_format(std::io::Cursor::new(x.into_bytes()), ImageFormat::Png)
+                .decode()
+                .expect("couldn't decode image")
+        })
+        .collect::<Vec<_>>();
 
     tracing::info!("Drawing canvas");
 
@@ -79,10 +98,14 @@ async fn function_handler(
             let resized = image.resize_exact(
                 BASE_COMBAT_PAGE_WIDTH,
                 BASE_COMBAT_PAGE_HEIGHT,
-                image::imageops::FilterType::Lanczos3
+                image::imageops::FilterType::Lanczos3,
             );
 
-            let _ = canvas.copy_from(&resized, j as u32 * BASE_COMBAT_PAGE_WIDTH, i as u32 * BASE_COMBAT_PAGE_HEIGHT);
+            let _ = canvas.copy_from(
+                &resized,
+                j as u32 * BASE_COMBAT_PAGE_WIDTH,
+                i as u32 * BASE_COMBAT_PAGE_HEIGHT,
+            );
         }
     }
 
@@ -93,7 +116,11 @@ async fn function_handler(
 
     tracing::info!("Putting to S3");
 
-    let _ = env.s3_client.as_ref().unwrap().put_object()
+    let _ = env
+        .s3_client
+        .as_ref()
+        .unwrap()
+        .put_object()
         .bucket(&env.s3_bucket_name)
         .key(&thumbnail_key)
         .body(ByteStream::from(bytes))
@@ -122,22 +149,23 @@ async fn main() -> Result<(), lambda_runtime::Error> {
     let env = ThumbnailGeneratorEnvironment {
         s3_bucket_name: env::var("S3_BUCKET_NAME").unwrap(),
         s3_directory: env::var("S3_DIRECTORY").unwrap(),
-        s3_client: Some(s3)
+        s3_client: Some(s3),
     };
     let env_ref = &env;
 
     tracing::debug!("Rust function setup complete");
 
-    run(service_fn(move |event: LambdaEvent<ThumbnailLambdaInput>| {
-        function_handler(event.payload, env_ref)
-    })).await
+    run(service_fn(
+        move |event: LambdaEvent<ThumbnailLambdaInput>| function_handler(event.payload, env_ref),
+    ))
+    .await
 }
 
 #[cfg(test)]
 mod tests {
+    use crate::function_handler;
     use crate::ThumbnailGeneratorEnvironment;
     use crate::ThumbnailLambdaInput;
-    use crate::function_handler;
 
     // todo: this test is broken. figure out how to run tests
     // using SSO crednetials provider
@@ -152,13 +180,19 @@ mod tests {
         let env = ThumbnailGeneratorEnvironment {
             s3_bucket_name: "".to_string(),
             s3_directory: "deck_thumbnails".to_string(),
-            s3_client: Some(s3)
+            s3_client: Some(s3),
         };
         let input = ThumbnailLambdaInput {
             combat_pages: vec![
-                "608014","608014","608014","608015","608015","608015","608009","608009","608004"
-            ].into_iter().map(|x| x.to_string()).collect::<Vec<_>>().try_into().unwrap(),
-            thumb_name: "turbo_nikolai_test".to_string()
+                "608014", "608014", "608014", "608015", "608015", "608015", "608009", "608009",
+                "608004",
+            ]
+            .into_iter()
+            .map(|x| x.to_string())
+            .collect::<Vec<_>>()
+            .try_into()
+            .unwrap(),
+            thumb_name: "turbo_nikolai_test".to_string(),
         };
 
         assert!(function_handler(input, &env).await.is_ok());

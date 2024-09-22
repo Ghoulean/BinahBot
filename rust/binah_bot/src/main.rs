@@ -4,6 +4,7 @@ mod deck;
 mod discord;
 mod lc;
 mod lor;
+mod macros;
 mod models;
 mod rollcalc_command;
 mod router;
@@ -16,13 +17,13 @@ use ed25519_dalek::{Signature, Verifier, VerifyingKey};
 use hex::FromHex;
 use http::HeaderMap;
 use lambda_http::{run, service_fn, tracing, Body, Request, Response};
-use ruina::ruina_common::game_objects::common::Chapter;
 use models::binahbot::BinahBotEnvironment;
 use models::binahbot::DiscordSecrets;
 use models::binahbot::Emojis;
 use models::discord::DiscordInteraction;
 use models::discord::DiscordInteractionValidationData;
 use router::get_response;
+use ruina::ruina_common::game_objects::common::Chapter;
 use secrets::get_discord_secrets;
 use std::env;
 use std::error::Error;
@@ -100,7 +101,8 @@ async fn main() -> Result<(), lambda_http::Error> {
     let ddb = aws_sdk_dynamodb::Client::new(&config);
     let lambda = aws_sdk_lambda::Client::new(&config);
     let http = reqwest::Client::new();
-    let discord_secrets = get_discord_secrets(&asm, &env::var("SECRETS_ID").expect("no SECRETS_ID")).await;
+    let discord_secrets =
+        get_discord_secrets(&asm, &env::var("SECRETS_ID").expect("no SECRETS_ID")).await;
 
     let binahbot_env = BinahBotEnvironment {
         discord_secrets,
@@ -137,12 +139,13 @@ async fn main() -> Result<(), lambda_http::Error> {
         },
         locales: &LOCALES,
         ddb_table_name: env::var("DECK_REPOSITORY_NAME").expect("no DECK_REPOSITORY_NAME"),
-        ddb_interaction_ttl_table_name: env::var("INTERACTION_TTL_NAME").expect("no INTERACTION_TTL_NAME"),
+        ddb_interaction_ttl_table_name: env::var("INTERACTION_TTL_NAME")
+            .expect("no INTERACTION_TTL_NAME"),
         thumbnail_lambda_name: env::var("THUMBNAIL_LAMBDA_ARN").expect("no THUMBNAIL_LAMBDA_ARN"),
         spoiler_config: &SPOILER_CONFIG,
         ddb_client: Some(ddb),
         lambda_client: Some(lambda),
-        reqwest_client: Some(http)
+        reqwest_client: Some(http),
     };
     let binahbot_env_ref = &binahbot_env;
 
@@ -192,7 +195,7 @@ pub mod test_utils {
                 application_id: "app_id".to_string(),
                 auth_token: "auth_token".to_string(),
                 public_key: "pub_key".to_string(),
-                bot_token: "bot_token".to_string()
+                bot_token: "bot_token".to_string(),
             },
             discord_client_id: "id".to_string(),
             s3_bucket_name: "bucket_name".to_string(),

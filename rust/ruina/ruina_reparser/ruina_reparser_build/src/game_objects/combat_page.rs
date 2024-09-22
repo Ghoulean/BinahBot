@@ -1,13 +1,14 @@
 use std::collections::HashMap;
 
 use roxmltree::{Document, Node};
-use ruina_common::game_objects::common::{Collectability, PageType};
 use ruina_common::game_objects::combat_page::{CombatRange, DieType};
+use ruina_common::game_objects::common::{Collectability, PageType};
 
 use crate::game_objects::common::CollectabilityMap;
 use crate::game_objects::common::ParserProps;
 use crate::serde::{
-    chapter_enum_serializer, display_serializer, get_rarity_from_str, serialize_option_2, str_array_serializer, string_literal_serializer
+    chapter_enum_serializer, display_serializer, get_rarity_from_str, serialize_option_2,
+    str_array_serializer, string_literal_serializer,
 };
 use crate::xml::get_nodes_text;
 use crate::xml::{get_nodes, get_unique_node, get_unique_node_text};
@@ -18,13 +19,16 @@ type CombatPageKey = String;
 type CombatPageValue = String;
 
 pub fn reserialize_combat_pages(parser_props: &ParserProps) -> String {
-    let combat_pages: HashMap<_, _> = parser_props.document_strings
+    let combat_pages: HashMap<_, _> = parser_props
+        .document_strings
         .iter()
-        .flat_map(|document_string| process_combat_page_file(
-            document_string.as_str(),
-            parser_props.collectability_map,
-            parser_props.chapter_map
-        ))
+        .flat_map(|document_string| {
+            process_combat_page_file(
+                document_string.as_str(),
+                parser_props.collectability_map,
+                parser_props.chapter_map,
+            )
+        })
         .collect();
 
     let mut builder = phf_codegen::Map::new();
@@ -60,7 +64,7 @@ fn parse_combat_page(
     let id = combat_node.attribute("ID").unwrap();
     let artwork = serialize_option_2(
         get_unique_node_text(combat_node, "Artwork"),
-        string_literal_serializer
+        string_literal_serializer,
     );
     let cost = get_unique_node(combat_node, "Spec")
         .unwrap()
@@ -76,30 +80,41 @@ fn parse_combat_page(
     let dice = parse_dice(get_unique_node(combat_node, "BehaviourList").unwrap());
     let keywords = str_array_serializer(&get_nodes_text(combat_node, "Keyword"));
     let options = str_array_serializer(&get_nodes_text(combat_node, "Option"));
-    let script_id =
-        serialize_option_2(
-            get_unique_node_text(combat_node, "Script").filter(|x| !x.is_empty()),
-            string_literal_serializer
-        );
+    let script_id = serialize_option_2(
+        get_unique_node_text(combat_node, "Script").filter(|x| !x.is_empty()),
+        string_literal_serializer,
+    );
     let skin_change = serialize_option_2(
         get_unique_node_text(combat_node, "SkinChange"),
-        string_literal_serializer
+        string_literal_serializer,
     );
     let map_change = serialize_option_2(
         get_unique_node_text(combat_node, "MapChange"),
-        string_literal_serializer
+        string_literal_serializer,
     );
     let chapter = serialize_option_2(
         from_chapter_map(&id, &PageType::CombatPage, chapter_map),
-        chapter_enum_serializer
+        chapter_enum_serializer,
     );
     let priority = serialize_option_2(
         get_unique_node_text(combat_node, "Priority"),
-        display_serializer
+        display_serializer,
     );
-    let is_collectable = collectability_map.collectable.combat_pages.iter().any(|x| x == id);
-    let is_obtainable = collectability_map.obtainable.combat_pages.iter().any(|x| x == id);
-    let is_enemy_only = collectability_map.enemy_only.combat_pages.iter().any(|x| x == id);
+    let is_collectable = collectability_map
+        .collectable
+        .combat_pages
+        .iter()
+        .any(|x| x == id);
+    let is_obtainable = collectability_map
+        .obtainable
+        .combat_pages
+        .iter()
+        .any(|x| x == id);
+    let is_enemy_only = collectability_map
+        .enemy_only
+        .combat_pages
+        .iter()
+        .any(|x| x == id);
 
     let collectability = if is_collectable {
         Collectability::Collectable
@@ -151,18 +166,14 @@ fn parse_die(die_node: Node) -> String {
     let die_type = get_die_type_from_strs(die_type, die_detail);
     let script = serialize_option_2(
         die_node.attribute("Script").filter(|x| !x.is_empty()),
-        string_literal_serializer
+        string_literal_serializer,
     );
-    let actionscript =
-        serialize_option_2(
-            die_node.attribute("ActionScript").filter(|x| !x.is_empty()),
-            string_literal_serializer
-        );
+    let actionscript = serialize_option_2(
+        die_node.attribute("ActionScript").filter(|x| !x.is_empty()),
+        string_literal_serializer,
+    );
     let motion = die_node.attribute("Motion").unwrap();
-    let effect_res = serialize_option_2(
-        die_node.attribute("EffectRes"),
-        string_literal_serializer
-    );
+    let effect_res = serialize_option_2(die_node.attribute("EffectRes"), string_literal_serializer);
 
     format!(
         "Die{{

@@ -12,10 +12,7 @@ fn main() {
     );
     let index_output = precompute_index();
 
-    let output = [
-        disambiguations_output,
-        index_output
-    ].join("\n");
+    let output = [disambiguations_output, index_output].join("\n");
 
     out_file.write_all(output.as_bytes()).unwrap();
     dbg!("[index] wrote artifacts");

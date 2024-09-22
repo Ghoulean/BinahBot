@@ -104,7 +104,7 @@ pub struct InteractionTtl {
     pub interaction_id: String,
     pub ttl: u64,
     pub token: String,
-    pub original_user_id: String
+    pub original_user_id: String,
 }
 
 impl From<&RuinaLocale> for BinahBotLocale {
@@ -164,7 +164,7 @@ impl From<&LobocorpLocale> for BinahBotLocale {
             LobocorpLocale::Japanese => BinahBotLocale::Japanese,
             LobocorpLocale::Chinese => BinahBotLocale::ChineseChina,
             LobocorpLocale::ChineseTraditional => BinahBotLocale::ChineseTaiwan,
-            _ => BinahBotLocale::Other
+            _ => BinahBotLocale::Other,
         }
     }
 }
@@ -205,10 +205,7 @@ impl From<&Rarity> for DiscordEmbedColors {
     }
 }
 
-pub fn get_dietype_emoji<'a>(
-    emojis: &'a Emojis,
-    die_type: &'a DieType,
-) -> String {
+pub fn get_dietype_emoji<'a>(emojis: &'a Emojis, die_type: &'a DieType) -> String {
     let emoji_match = match die_type {
         DieType::Slash => emojis.slash.as_ref(),
         DieType::Pierce => emojis.pierce.as_ref(),

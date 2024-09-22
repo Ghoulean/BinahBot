@@ -42,7 +42,9 @@ pub fn reserialize_abno_locales(document_strings: &HashMap<Locale, Vec<String>>)
     )
 }
 
-fn process_abno_locale_file(document_string: &str) -> HashMap<AbnoPageLocaleKey, AbnoPageLocaleValue> {
+fn process_abno_locale_file(
+    document_string: &str,
+) -> HashMap<AbnoPageLocaleKey, AbnoPageLocaleValue> {
     let doc: Box<Document> = Box::new(Document::parse(document_string).unwrap());
     let xml_root_node = get_unique_node(doc.root(), "AbnormalityCardsRoot").unwrap();
     let sephirah_list = get_nodes(xml_root_node, "Sephirah");

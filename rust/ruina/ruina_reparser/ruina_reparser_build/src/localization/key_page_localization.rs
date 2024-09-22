@@ -12,17 +12,20 @@ type KeyPageLocaleKey = String;
 type KeyPageLocaleValue = String;
 
 pub fn reserialize_key_page_locales(document_strings: &HashMap<Locale, Vec<String>>) -> String {
-    let key_pages: HashMap<Locale, HashMap<KeyPageLocaleKey, KeyPageLocaleValue>> = document_strings
-        .iter()
-        .map(|(x, y)| {
-            (
-                x.clone(),
-                y.iter()
-                    .flat_map(|document_string| process_key_page_locale_file(document_string.as_str()))
-                    .collect::<HashMap<_, _>>(),
-            )
-        })
-        .collect();
+    let key_pages: HashMap<Locale, HashMap<KeyPageLocaleKey, KeyPageLocaleValue>> =
+        document_strings
+            .iter()
+            .map(|(x, y)| {
+                (
+                    x.clone(),
+                    y.iter()
+                        .flat_map(|document_string| {
+                            process_key_page_locale_file(document_string.as_str())
+                        })
+                        .collect::<HashMap<_, _>>(),
+                )
+            })
+            .collect();
 
     let mut builder = phf_codegen::Map::new();
     for (locale, map) in key_pages {
@@ -43,7 +46,9 @@ pub fn reserialize_key_page_locales(document_strings: &HashMap<Locale, Vec<Strin
     )
 }
 
-fn process_key_page_locale_file(document_string: &str) -> HashMap<KeyPageLocaleKey, KeyPageLocaleValue> {
+fn process_key_page_locale_file(
+    document_string: &str,
+) -> HashMap<KeyPageLocaleKey, KeyPageLocaleValue> {
     let doc: Box<Document> = Box::new(Document::parse(document_string).unwrap());
     let xml_root_node = get_unique_node(doc.root(), "BookDescRoot").unwrap();
     let book_desc_list = get_unique_node(xml_root_node, "bookDescList").unwrap();

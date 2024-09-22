@@ -1,4 +1,3 @@
-
 #[derive(Debug)]
 pub struct EncyclopediaInfoLocalization<'a> {
     pub id: &'a str,

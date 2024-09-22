@@ -7,7 +7,9 @@ use ruina_common::game_objects::common::PageType;
 use crate::game_objects::common::CollectabilityMap;
 use crate::game_objects::common::ParserProps;
 use crate::serde::chapter_enum_serializer;
-use crate::serde::{display_serializer, get_rarity_from_str, rarity_enum_serializer, serialize_option_2};
+use crate::serde::{
+    display_serializer, get_rarity_from_str, rarity_enum_serializer, serialize_option_2,
+};
 use crate::xml::{get_nodes, get_unique_node, get_unique_node_text};
 
 use super::common::from_chapter_map;
@@ -17,13 +19,16 @@ type PassiveKey = String;
 type PassiveValue = String;
 
 pub fn reserialize_passives(parser_props: &ParserProps) -> String {
-    let passives: HashMap<_, _> = parser_props.document_strings
+    let passives: HashMap<_, _> = parser_props
+        .document_strings
         .iter()
-        .flat_map(|document_string| process_passive_file(
-            document_string.as_str(),
-            parser_props.collectability_map,
-            parser_props.chapter_map
-        ))
+        .flat_map(|document_string| {
+            process_passive_file(
+                document_string.as_str(),
+                parser_props.collectability_map,
+                parser_props.chapter_map,
+            )
+        })
         .collect();
 
     let mut builder = phf_codegen::Map::new();
@@ -57,25 +62,37 @@ fn parse_passive(
     chapter_map: &ChapterMap,
 ) -> (PassiveKey, PassiveValue) {
     let id = passive_node.attribute("ID").unwrap();
-    let cost = serialize_option_2(get_unique_node_text(passive_node, "Cost"), display_serializer);
+    let cost = serialize_option_2(
+        get_unique_node_text(passive_node, "Cost"),
+        display_serializer,
+    );
     let rarity = serialize_option_2(
         get_unique_node_text(passive_node, "Rarity").map(get_rarity_from_str),
-        rarity_enum_serializer
+        rarity_enum_serializer,
     );
-    let hidden =
-        serialize_option_2(
-            get_unique_node_text(passive_node, "IsHide").map(|x| x == "true"), display_serializer
-        );
-    let transferable =
-        serialize_option_2(get_unique_node_text(passive_node, "CanGivePassive").map(|x| x == "true"), display_serializer);
-    let inner_type = serialize_option_2(get_unique_node_text(passive_node, "InnerType"), display_serializer);
+    let hidden = serialize_option_2(
+        get_unique_node_text(passive_node, "IsHide").map(|x| x == "true"),
+        display_serializer,
+    );
+    let transferable = serialize_option_2(
+        get_unique_node_text(passive_node, "CanGivePassive").map(|x| x == "true"),
+        display_serializer,
+    );
+    let inner_type = serialize_option_2(
+        get_unique_node_text(passive_node, "InnerType"),
+        display_serializer,
+    );
 
     let chapter = serialize_option_2(
         from_chapter_map(&id, &PageType::Passive, chapter_map),
-        chapter_enum_serializer
+        chapter_enum_serializer,
     );
 
-    let is_collectable = collectability_map.collectable.passives.iter().any(|x| x == id);
+    let is_collectable = collectability_map
+        .collectable
+        .passives
+        .iter()
+        .any(|x| x == id);
 
     let collectability = if is_collectable {
         Collectability::Collectable

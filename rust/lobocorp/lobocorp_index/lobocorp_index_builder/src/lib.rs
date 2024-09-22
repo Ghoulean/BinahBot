@@ -32,24 +32,31 @@ pub fn write_index() -> String {
 }
 
 fn generate_index() -> HashMap<u32, HashMap<Ngram, Frequency>> {
-    get_all_encyclopedia_ids().iter().map(|x| {
-        (
-            **x,
-            analyze(&assemble_name(x))
-        )
-    }).collect()
+    get_all_encyclopedia_ids()
+        .iter()
+        .map(|x| (**x, analyze(&assemble_name(x))))
+        .collect()
 }
 
 fn assemble_name(id: &u32) -> String {
-    Locale::iter().map(|locale| {
-        let localization = get_abno_localization(id, &locale).expect(&format!("id={} not found", id));
-        format!("{} {} {}", localization.name, localization.other_names.join(" "), localization.code)
-    }).collect::<Vec<_>>().join(" ")
+    Locale::iter()
+        .map(|locale| {
+            let localization =
+                get_abno_localization(id, &locale).expect(&format!("id={} not found", id));
+            format!(
+                "{} {} {}",
+                localization.name,
+                localization.other_names.join(" "),
+                localization.code
+            )
+        })
+        .collect::<Vec<_>>()
+        .join(" ")
 }
 
 // todo: pull this out to index_analyzer?
 fn invert_index(
-    map: &HashMap<u32, HashMap<Ngram, Frequency>>
+    map: &HashMap<u32, HashMap<Ngram, Frequency>>,
 ) -> HashMap<Ngram, HashMap<u32, Frequency>> {
     let mut ret_val = HashMap::new();
 

@@ -3,7 +3,16 @@ use std::str::FromStr;
 use unic_langid::langid;
 use unic_langid::LanguageIdentifier;
 
-#[derive(Clone, Debug, Eq, Hash, PartialEq, strum_macros::Display, strum_macros::EnumIter, strum_macros::EnumString)]
+#[derive(
+    Clone,
+    Debug,
+    Eq,
+    Hash,
+    PartialEq,
+    strum_macros::Display,
+    strum_macros::EnumIter,
+    strum_macros::EnumString,
+)]
 pub enum Locale {
     #[strum(serialize = "kr")]
     Korean,
@@ -41,7 +50,7 @@ impl From<&LanguageIdentifier> for Locale {
             "ru-RU" => Locale::Russian,
             "zh-CN" => Locale::Chinese,
             "zh-TW" => Locale::ChineseTraditional,
-            _ => Locale::from_str(value.language.as_str()).unwrap_or(Locale::English)
+            _ => Locale::from_str(value.language.as_str()).unwrap_or(Locale::English),
         }
     }
 }

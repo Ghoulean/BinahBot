@@ -12,17 +12,20 @@ type CardEffectLocaleKey = String;
 type CardEffectLocaleValue = String;
 
 pub fn reserialize_card_effect_locales(document_strings: &HashMap<Locale, Vec<String>>) -> String {
-    let card_effect: HashMap<Locale, HashMap<CardEffectLocaleKey, CardEffectLocaleValue>> = document_strings
-        .iter()
-        .map(|(x, y)| {
-            (
-                x.clone(),
-                y.iter()
-                    .flat_map(|document_string| process_card_effect_locale_file(document_string.as_str()))
-                    .collect::<HashMap<_, _>>(),
-            )
-        })
-        .collect();
+    let card_effect: HashMap<Locale, HashMap<CardEffectLocaleKey, CardEffectLocaleValue>> =
+        document_strings
+            .iter()
+            .map(|(x, y)| {
+                (
+                    x.clone(),
+                    y.iter()
+                        .flat_map(|document_string| {
+                            process_card_effect_locale_file(document_string.as_str())
+                        })
+                        .collect::<HashMap<_, _>>(),
+                )
+            })
+            .collect();
 
     let mut builder = phf_codegen::Map::new();
     for (locale, map) in card_effect {
@@ -39,7 +42,9 @@ pub fn reserialize_card_effect_locales(document_strings: &HashMap<Locale, Vec<St
     format!("static CARD_EFFECT_LOCALES: phf::Map<&'static str, phf::Map<&str, CardEffectLocale<'_>>> = {};", builder.build())
 }
 
-fn process_card_effect_locale_file(document_string: &str) -> HashMap<CardEffectLocaleKey, CardEffectLocaleValue> {
+fn process_card_effect_locale_file(
+    document_string: &str,
+) -> HashMap<CardEffectLocaleKey, CardEffectLocaleValue> {
     let doc: Box<Document> = Box::new(Document::parse(document_string).unwrap());
     let xml_root_node = get_unique_node(doc.root(), "BattleCardAbilityDescRoot").unwrap();
     let card_effect_list = get_nodes(xml_root_node, "BattleCardAbility");

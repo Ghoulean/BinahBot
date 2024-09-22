@@ -12,6 +12,7 @@ use lobocorp::lobocorp_reparser::get_encyclopedia_info;
 use lobocorp::lobocorp_reparser::get_localization;
 use unic_langid::LanguageIdentifier;
 
+use crate::macros::cast_enum_variant;
 use crate::models::binahbot::BinahBotEnvironment;
 use crate::models::binahbot::BinahBotLocale;
 use crate::models::discord::ActionRowComponent;
@@ -59,29 +60,41 @@ pub enum Code {
 
 const SEPERATOR: &str = "#";
 
-pub fn lc_button(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -> Result<MessageResponse, ()> {
+pub fn lc_button(
+    interaction: &DiscordInteraction,
+    env: &BinahBotEnvironment,
+) -> Result<MessageResponse, ()> {
     tracing::info!("Lc button: interaction={:#?}", interaction);
 
-    let data = match interaction.data.as_ref().expect("no data") {
-        DiscordInteractionData::MessageComponent(x) => x,
-        _ => unreachable!()
-    };
+    let data = interaction
+        .data
+        .as_ref()
+        .and_then(|x| cast_enum_variant!(x, DiscordInteractionData::MessageComponent))
+        .unwrap();
     let custom_id = &data.custom_id;
     if !custom_id.starts_with(LC_BUTTON_PREFIX) {
         tracing::error!("custom id did not start with {}", LC_BUTTON_PREFIX);
         return Err(());
     };
-    let original_user_id = interaction.message.as_ref().and_then(|x| x.interaction_metadata.as_ref()).map(|x| &x.user.id);
-    let user_id = interaction.user.as_ref()
-        .map(|x| &x.id)
-        .unwrap_or_else(|| &interaction.member
+    let original_user_id = interaction
+        .message
+        .as_ref()
+        .and_then(|x| x.interaction_metadata.as_ref())
+        .map(|x| &x.user.id);
+    let user_id = interaction.user.as_ref().map(|x| &x.id).unwrap_or_else(|| {
+        &interaction
+            .member
             .as_ref()
             .and_then(|x| x.user.as_ref())
             .map(|x| &x.id)
             .unwrap()
-        );
+    });
     if original_user_id.is_some_and(|x| x != user_id) {
-        tracing::error!("interaction author differs: user_id={}; original_user_id={:?}", user_id, original_user_id);
+        tracing::error!(
+            "interaction author differs: user_id={}; original_user_id={:?}",
+            user_id,
+            original_user_id
+        );
         return Err(());
     };
 
@@ -92,64 +105,69 @@ pub fn lc_button(interaction: &DiscordInteraction, env: &BinahBotEnvironment) ->
     let embed = match (&code, &entry, &index) {
         (Code::Encyclopedia, EncyclopediaInfo::Normal(x), &ENCYCLOPEDIA_MAIN_PAGE_INDEX) => {
             transform_normal_info(&x, &locale, &binahbot_locale, env)
-        },
-        (Code::Encyclopedia, EncyclopediaInfo::Normal(x), &ENCYCLOPEDIA_MANAGERIAL_GUIDANCE_INDEX) => {
-            transform_normal_info_managerial_guidance(&x, &locale, &binahbot_locale, env)
-        },
+        }
+        (
+            Code::Encyclopedia,
+            EncyclopediaInfo::Normal(x),
+            &ENCYCLOPEDIA_MANAGERIAL_GUIDANCE_INDEX,
+        ) => transform_normal_info_managerial_guidance(&x, &locale, &binahbot_locale, env),
         (Code::Encyclopedia, EncyclopediaInfo::Tool(x), _) => {
             transform_tool_info(&x, &locale, &binahbot_locale, env)
-        },
+        }
         (Code::Encyclopedia, EncyclopediaInfo::DontTouchMe(x), _) => {
             transform_donttouchme(&x, &locale, &binahbot_locale, env)
-        },
-        (Code::Weapon, EncyclopediaInfo::Normal(x), _) => {
-            transform_weapon(
-                    &x.weapon.as_ref().expect("no weapon"),
-                    &locale,
-                    &binahbot_locale,
-                    env
-            )
-        },
-        (Code::Suit, EncyclopediaInfo::Normal(x), _) => {
-            transform_suit(
-                &x.suit.as_ref().expect("no suit"),
-                &locale,
-                &binahbot_locale,
-                env
-            )
-        },
-        (Code::Gift, EncyclopediaInfo::Normal(x), _) => {
-            transform_gift(
-                &x.gifts.get(index).expect("bad gift index"),
-                &locale,
-                &binahbot_locale,
-                env
-            )
-        },
+        }
+        (Code::Weapon, EncyclopediaInfo::Normal(x), _) => transform_weapon(
+            &x.weapon.as_ref().expect("no weapon"),
+            &locale,
+            &binahbot_locale,
+            env,
+        ),
+        (Code::Suit, EncyclopediaInfo::Normal(x), _) => transform_suit(
+            &x.suit.as_ref().expect("no suit"),
+            &locale,
+            &binahbot_locale,
+            env,
+        ),
+        (Code::Gift, EncyclopediaInfo::Normal(x), _) => transform_gift(
+            &x.gifts.get(index).expect("bad gift index"),
+            &locale,
+            &binahbot_locale,
+            env,
+        ),
         (Code::BreachingEntity, EncyclopediaInfo::Normal(x), _) => {
             let localization = get_abno_localization(&id, &locale).expect("no localization found");
             transform_breaching_entity(
-                &x.breaching_entities.get(index).expect("bad breaching entity index"),
-                &localization.breaching_entity_localizations.get(index).expect("bad breaching entity index"),
+                &x.breaching_entities
+                    .get(index)
+                    .expect("bad breaching entity index"),
+                &localization
+                    .breaching_entity_localizations
+                    .get(index)
+                    .expect("bad breaching entity index"),
                 &binahbot_locale,
-                env
+                env,
             )
-        },
-        (Code::BreachingEntity, EncyclopediaInfo::Tool(x), _) => { // yang
+        }
+        (Code::BreachingEntity, EncyclopediaInfo::Tool(x), _) => {
+            // yang
             let localization = get_abno_localization(&id, &locale).expect("no localization found");
             transform_breaching_entity(
-                &x.breaching_entities.get(index).expect("bad breaching entity index"),
-                &localization.breaching_entity_localizations.get(index).expect("bad breaching entity index"),
+                &x.breaching_entities
+                    .get(index)
+                    .expect("bad breaching entity index"),
+                &localization
+                    .breaching_entity_localizations
+                    .get(index)
+                    .expect("bad breaching entity index"),
                 &binahbot_locale,
-                env
+                env,
             )
-        },
+        }
         _ => panic!("encountered unexpected custom_id format"),
     };
 
-    let components = build_buttons(
-        id, &locale, &binahbot_locale, &(code, index), env
-    );
+    let components = build_buttons(id, &locale, &binahbot_locale, &(code, index), env);
 
     Ok(MessageResponse {
         r#type: DiscordInteractionResponseType::UpdateMessage,
@@ -168,7 +186,7 @@ pub fn build_buttons(
     abno_locale: &Locale,
     request_locale: &BinahBotLocale,
     current: &(Code, usize),
-    env: &BinahBotEnvironment
+    env: &BinahBotEnvironment,
 ) -> Vec<DiscordComponent> {
     let entry = get_encyclopedia_info(&id).expect("couldn't find entry");
     let locale_info = get_abno_localization(&id, abno_locale).expect("invalid id-locale pair");
@@ -178,8 +196,15 @@ pub fn build_buttons(
         r#type: DiscordComponentType::Button,
         style: ButtonStyle::Primary,
         label: Some(locale_info.name.to_string()),
-        custom_id: Some(build_custom_id(&Code::Encyclopedia, &id, abno_locale, &ENCYCLOPEDIA_MAIN_PAGE_INDEX)),
-        disabled: Some(current.0 == Code::Encyclopedia && current.1 == ENCYCLOPEDIA_MAIN_PAGE_INDEX),
+        custom_id: Some(build_custom_id(
+            &Code::Encyclopedia,
+            &id,
+            abno_locale,
+            &ENCYCLOPEDIA_MAIN_PAGE_INDEX,
+        )),
+        disabled: Some(
+            current.0 == Code::Encyclopedia && current.1 == ENCYCLOPEDIA_MAIN_PAGE_INDEX,
+        ),
     };
 
     let additional_buttons = match entry {
@@ -189,45 +214,61 @@ pub fn build_buttons(
             vec.push(ButtonComponent {
                 r#type: DiscordComponentType::Button,
                 style: ButtonStyle::Primary,
-                label: Some(env.locales.lookup(&lang_id, "managerial_guidance_button_label")),
-                custom_id: Some(build_custom_id(&Code::Encyclopedia, &id, abno_locale, &ENCYCLOPEDIA_MANAGERIAL_GUIDANCE_INDEX)),
-                disabled: Some(current.0 == Code::Encyclopedia && current.1 == ENCYCLOPEDIA_MANAGERIAL_GUIDANCE_INDEX),
+                label: Some(
+                    env.locales
+                        .lookup(&lang_id, "managerial_guidance_button_label"),
+                ),
+                custom_id: Some(build_custom_id(
+                    &Code::Encyclopedia,
+                    &id,
+                    abno_locale,
+                    &ENCYCLOPEDIA_MANAGERIAL_GUIDANCE_INDEX,
+                )),
+                disabled: Some(
+                    current.0 == Code::Encyclopedia
+                        && current.1 == ENCYCLOPEDIA_MANAGERIAL_GUIDANCE_INDEX,
+                ),
             });
 
             x.breaching_entities.iter().enumerate().for_each(|(i, _)| {
-                let breaching_locale = locale_info.breaching_entity_localizations.get(i).expect("couldn't get breaching entity locale");
-                let label = if i == 0 && x.is_breachable && breaching_locale.name == locale_info.name {
-                    env.locales.lookup(&lang_id, "breaching_button_label")
-                } else {
-                    env.locales.lookup_with_args(
-                        &lang_id,
-                        "breaching_child_button_label",
-                        &HashMap::from([
-                            ("name", FluentValue::from(breaching_locale.name)),
-                        ])
-                    )
-                };
+                let breaching_locale = locale_info
+                    .breaching_entity_localizations
+                    .get(i)
+                    .expect("couldn't get breaching entity locale");
+                let label =
+                    if i == 0 && x.is_breachable && breaching_locale.name == locale_info.name {
+                        env.locales.lookup(&lang_id, "breaching_button_label")
+                    } else {
+                        env.locales.lookup_with_args(
+                            &lang_id,
+                            "breaching_child_button_label",
+                            &HashMap::from([("name", FluentValue::from(breaching_locale.name))]),
+                        )
+                    };
 
                 vec.push(ButtonComponent {
                     r#type: DiscordComponentType::Button,
                     style: ButtonStyle::Primary,
                     label: Some(label),
-                    custom_id: Some(build_custom_id(&Code::BreachingEntity, &id, abno_locale, &i)),
+                    custom_id: Some(build_custom_id(
+                        &Code::BreachingEntity,
+                        &id,
+                        abno_locale,
+                        &i,
+                    )),
                     disabled: Some(current.0 == Code::BreachingEntity && current.1 == i),
                 })
             });
             x.weapon.as_ref().inspect(|x| {
-                let label = get_localization(&LocalizationKey(x.name_id, abno_locale.clone()))
-                    .map(|x| {
+                let label =
+                    get_localization(&LocalizationKey(x.name_id, abno_locale.clone())).map(|x| {
                         env.locales.lookup_with_args(
                             &lang_id,
                             "weapon_button_label",
-                            &HashMap::from([
-                                ("name", FluentValue::from(*x)),
-                            ])
+                            &HashMap::from([("name", FluentValue::from(*x))]),
                         )
                     });
-                
+
                 vec.push(ButtonComponent {
                     r#type: DiscordComponentType::Button,
                     style: ButtonStyle::Primary,
@@ -237,14 +278,12 @@ pub fn build_buttons(
                 });
             });
             x.suit.as_ref().inspect(|x| {
-                let label = get_localization(&LocalizationKey(x.name_id, abno_locale.clone()))
-                    .map(|x| {
+                let label =
+                    get_localization(&LocalizationKey(x.name_id, abno_locale.clone())).map(|x| {
                         env.locales.lookup_with_args(
                             &lang_id,
                             "suit_button_label",
-                            &HashMap::from([
-                                ("name", FluentValue::from(*x)),
-                            ])
+                            &HashMap::from([("name", FluentValue::from(*x))]),
                         )
                     });
 
@@ -257,14 +296,12 @@ pub fn build_buttons(
                 });
             });
             x.gifts.iter().enumerate().for_each(|(i, x)| {
-                let label = get_localization(&LocalizationKey(x.name_id, abno_locale.clone()))
-                    .map(|x| {
+                let label =
+                    get_localization(&LocalizationKey(x.name_id, abno_locale.clone())).map(|x| {
                         env.locales.lookup_with_args(
                             &lang_id,
                             "gift_button_label",
-                            &HashMap::from([
-                                ("name", FluentValue::from(*x)),
-                            ])
+                            &HashMap::from([("name", FluentValue::from(*x))]),
                         )
                     });
 
@@ -277,20 +314,27 @@ pub fn build_buttons(
                 })
             });
             vec
-        },
+        }
         EncyclopediaInfo::Tool(x) => {
             // Only Yang
-            x.breaching_entities.iter().enumerate().map(|(i, _)| {
-                ButtonComponent {
+            x.breaching_entities
+                .iter()
+                .enumerate()
+                .map(|(i, _)| ButtonComponent {
                     r#type: DiscordComponentType::Button,
                     style: ButtonStyle::Primary,
                     label: Some(env.locales.lookup(&lang_id, "breaching_button_label")),
-                    custom_id: Some(build_custom_id(&Code::BreachingEntity, &id, abno_locale, &i)),
+                    custom_id: Some(build_custom_id(
+                        &Code::BreachingEntity,
+                        &id,
+                        abno_locale,
+                        &i,
+                    )),
                     disabled: Some(current.0 == Code::BreachingEntity && current.1 == i),
-                }
-            }).collect::<Vec<_>>()
-        },
-        _ => vec![]
+                })
+                .collect::<Vec<_>>()
+        }
+        _ => vec![],
     };
 
     let delete_button = build_delete_button_component(&lang_id, env);
@@ -301,30 +345,46 @@ pub fn build_buttons(
         .map(|x| DiscordComponent::Button(x))
         .collect::<Vec<_>>();
 
-    all_buttons.chunks(5).map(|x| {
-        DiscordComponent::ActionRow(ActionRowComponent {
-            r#type: DiscordComponentType::ActionRow,
-            components: x.to_vec()
+    all_buttons
+        .chunks(5)
+        .map(|x| {
+            DiscordComponent::ActionRow(ActionRowComponent {
+                r#type: DiscordComponentType::ActionRow,
+                components: x.to_vec(),
+            })
         })
-    }).collect::<Vec<_>>()
+        .collect::<Vec<_>>()
 }
 
 fn parse_custom_id(custom_id: &str) -> (Code, u32, Locale, usize) {
-    let vec = custom_id.split(SEPERATOR)
-        .collect::<Vec<&str>>();
+    let vec = custom_id.split(SEPERATOR).collect::<Vec<&str>>();
     // discard lc# prefix
     (
-        vec.get(1).and_then(|x| Code::from_str(x).ok()).expect("couldn't get code"),
-        vec.get(2).and_then(|x| x.parse::<u32>().ok()).expect("couldn't get id"),
-        vec.get(3).and_then(|x| Locale::from_str(x).ok()).expect("couldn't get locale"),
-        vec.get(4).and_then(|x| x.parse::<usize>().ok()).expect("couldn't get index"),
+        vec.get(1)
+            .and_then(|x| Code::from_str(x).ok())
+            .expect("couldn't get code"),
+        vec.get(2)
+            .and_then(|x| x.parse::<u32>().ok())
+            .expect("couldn't get id"),
+        vec.get(3)
+            .and_then(|x| Locale::from_str(x).ok())
+            .expect("couldn't get locale"),
+        vec.get(4)
+            .and_then(|x| x.parse::<usize>().ok())
+            .expect("couldn't get index"),
     )
 }
 
 fn build_custom_id(code: &Code, id: &u32, locale: &Locale, index: &usize) -> String {
-    format!("{}{}#{}#{}#{}", LC_BUTTON_PREFIX, code.to_string(), id, locale.to_string(), index)
+    format!(
+        "{}{}#{}#{}#{}",
+        LC_BUTTON_PREFIX,
+        code.to_string(),
+        id,
+        locale.to_string(),
+        index
+    )
 }
-
 
 #[cfg(test)]
 mod tests {
@@ -339,28 +399,35 @@ mod tests {
     fn check_button_formatting() {
         let env = &build_mocked_binahbot_env();
         Locale::iter().for_each(|locale| {
-            get_all_encyclopedia_ids().iter().flat_map(|x| {
-                get_encyclopedia_info(x)    
-            }).map(|x| {
-                match x {
+            get_all_encyclopedia_ids()
+                .iter()
+                .flat_map(|x| get_encyclopedia_info(x))
+                .map(|x| match x {
                     EncyclopediaInfo::Normal(x) => &x.id,
                     EncyclopediaInfo::Tool(x) => &x.id,
-                    EncyclopediaInfo::DontTouchMe(x) => &x.id
-                }
-            }).map(|id| {
-                build_buttons(*id, &locale, &BinahBotLocale::EnglishUS, &(Code::Encyclopedia, 0), env)
-            }).for_each(|v| {
-                assert!(v.len() > 0);
-                for i in 0..v.len() - 1 {
-                    let action_row = v.get(i).unwrap();
-                    let action_row = match action_row {
-                        DiscordComponent::ActionRow(x) => x,
-                        DiscordComponent::Button(_) => unreachable!(),
-                    };
-                    assert_eq!(DiscordComponentType::ActionRow, action_row.r#type);
-                    assert_eq!(5, action_row.components.len());
-                }
-            })
+                    EncyclopediaInfo::DontTouchMe(x) => &x.id,
+                })
+                .map(|id| {
+                    build_buttons(
+                        *id,
+                        &locale,
+                        &BinahBotLocale::EnglishUS,
+                        &(Code::Encyclopedia, 0),
+                        env,
+                    )
+                })
+                .for_each(|v| {
+                    assert!(v.len() > 0);
+                    for i in 0..v.len() - 1 {
+                        let action_row = v.get(i).unwrap();
+                        let action_row = match action_row {
+                            DiscordComponent::ActionRow(x) => x,
+                            DiscordComponent::Button(_) => unreachable!(),
+                        };
+                        assert_eq!(DiscordComponentType::ActionRow, action_row.r#type);
+                        assert_eq!(5, action_row.components.len());
+                    }
+                })
         });
     }
 

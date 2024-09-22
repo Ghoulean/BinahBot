@@ -7,7 +7,8 @@ use ruina_common::game_objects::key_page::{KeyPageRange, Resistance};
 use crate::game_objects::common::CollectabilityMap;
 use crate::game_objects::common::ParserProps;
 use crate::serde::{
-    chapter_enum_serializer, get_rarity_from_str, serialize_option_2, str_array_serializer, string_literal_serializer
+    chapter_enum_serializer, get_rarity_from_str, serialize_option_2, str_array_serializer,
+    string_literal_serializer,
 };
 use crate::xml::get_nodes_text;
 use crate::xml::{get_nodes, get_unique_node, get_unique_node_text};
@@ -18,13 +19,16 @@ type KeyPageKey = String;
 type KeyPageValue = String;
 
 pub fn reserialize_key_pages(parser_props: &ParserProps) -> String {
-    let key_pages: HashMap<_, _> = parser_props.document_strings
+    let key_pages: HashMap<_, _> = parser_props
+        .document_strings
         .iter()
-        .flat_map(|document_string| process_key_page_file(
-            document_string.as_str(),
-            parser_props.collectability_map,
-            parser_props.chapter_map,
-        ))
+        .flat_map(|document_string| {
+            process_key_page_file(
+                document_string.as_str(),
+                parser_props.collectability_map,
+                parser_props.chapter_map,
+            )
+        })
         .collect();
 
     let mut builder = phf_codegen::Map::new();
@@ -58,28 +62,43 @@ fn parse_key_page(
     chapter_map: &ChapterMap,
 ) -> (KeyPageKey, KeyPageValue) {
     let id = key_node.attribute("ID").unwrap();
-    let text_id = serialize_option_2(get_unique_node_text(key_node, "TextId"), string_literal_serializer);
+    let text_id = serialize_option_2(
+        get_unique_node_text(key_node, "TextId"),
+        string_literal_serializer,
+    );
     let equip_effect_node = get_unique_node(key_node, "EquipEffect").unwrap();
-    let skin = serialize_option_2(get_unique_node_text(key_node, "CharacterSkin"), string_literal_serializer);
+    let skin = serialize_option_2(
+        get_unique_node_text(key_node, "CharacterSkin"),
+        string_literal_serializer,
+    );
     let hp = get_unique_node_text(equip_effect_node, "HP").unwrap();
     let stagger = get_unique_node_text(equip_effect_node, "Break").unwrap();
     let min_speed = get_unique_node_text(equip_effect_node, "SpeedMin").unwrap();
     let max_speed = get_unique_node_text(equip_effect_node, "Speed").unwrap();
-    let book_icon = serialize_option_2(get_unique_node_text(key_node, "BookIcon"), string_literal_serializer);
+    let book_icon = serialize_option_2(
+        get_unique_node_text(key_node, "BookIcon"),
+        string_literal_serializer,
+    );
     let rarity = get_rarity_from_str(get_unique_node_text(key_node, "Rarity").unwrap());
     let base_speed_die = get_unique_node_text(key_node, "SpeedDiceNum").unwrap_or("1");
     let starting_light = get_unique_node_text(key_node, "StartPlayPoint").unwrap_or("3");
     let base_light = get_unique_node_text(key_node, "MaxPlayPoint").unwrap_or("3");
     let range =
         get_key_page_range_from_str(get_unique_node_text(key_node, "RangeType").unwrap_or("Melee"));
-    let episode_id = serialize_option_2(get_unique_node_text(key_node, "Episode"), string_literal_serializer);
+    let episode_id = serialize_option_2(
+        get_unique_node_text(key_node, "Episode"),
+        string_literal_serializer,
+    );
     let passive_ids = str_array_serializer(&get_nodes_text(equip_effect_node, "Passive"));
     let options = str_array_serializer(&get_nodes_text(key_node, "Option"));
     let chapter = serialize_option_2(
         from_chapter_map(&id, &PageType::KeyPage, chapter_map),
-        chapter_enum_serializer
+        chapter_enum_serializer,
     );
-    let category = serialize_option_2(get_unique_node_text(key_node, "Category"), string_literal_serializer);
+    let category = serialize_option_2(
+        get_unique_node_text(key_node, "Category"),
+        string_literal_serializer,
+    );
     let only_card_ids = str_array_serializer(&get_nodes_text(equip_effect_node, "OnlyCard"));
 
     let hp_slash_resist = get_resistance_from_str(
@@ -101,8 +120,16 @@ fn parse_key_page(
         get_unique_node_text(equip_effect_node, "HBResist").unwrap_or("Normal"),
     );
 
-    let is_collectable = collectability_map.collectable.key_pages.iter().any(|x| x == id);
-    let is_enemy_only = collectability_map.enemy_only.key_pages.iter().any(|x| x == id);
+    let is_collectable = collectability_map
+        .collectable
+        .key_pages
+        .iter()
+        .any(|x| x == id);
+    let is_enemy_only = collectability_map
+        .enemy_only
+        .key_pages
+        .iter()
+        .any(|x| x == id);
 
     let collectability = if is_collectable {
         Collectability::Collectable

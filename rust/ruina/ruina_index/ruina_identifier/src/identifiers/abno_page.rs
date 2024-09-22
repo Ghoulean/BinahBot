@@ -1,8 +1,8 @@
 use ruina_common::game_objects::abno_page::AbnoPage;
 
+use crate::Identifier;
 use crate::PageType;
 use crate::TypedId;
-use crate::Identifier;
 
 impl Identifier for &AbnoPage<'_> {
     fn get_typed_id(&self) -> TypedId {

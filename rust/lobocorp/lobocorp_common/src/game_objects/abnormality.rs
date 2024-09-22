@@ -11,7 +11,7 @@ use super::equipment::Weapon;
 pub enum EncyclopediaInfo<'a> {
     Normal(NormalInfo<'a>),
     Tool(ToolInfo<'a>),
-    DontTouchMe(DontTouchMeInfo<'a>)
+    DontTouchMe(DontTouchMeInfo<'a>),
 }
 
 #[derive(Debug)]
@@ -59,7 +59,7 @@ pub struct BreachingEntity<'a> {
     pub speed: f64,
     pub defenses: Defenses,
     pub damage_type: DamageType,
-    pub risk_level: RiskLevel
+    pub risk_level: RiskLevel,
 }
 
 #[derive(Debug)]
@@ -72,18 +72,20 @@ pub struct WorkProbabilities {
 
 #[derive(Debug)]
 pub enum ToolType {
-    Equippable, SustainedUse, SingleUse
+    Equippable,
+    SustainedUse,
+    SingleUse,
 }
 
 impl TryFrom<&str> for ToolType {
     type Error = String;
-    
+
     fn try_from(value: &str) -> Result<Self, Self::Error> {
         Ok(match value.to_lowercase().trim() {
             "equip" => ToolType::Equippable,
             "channel" => ToolType::SustainedUse,
             "oneshot" => ToolType::SingleUse,
-            _ => return Err("invalid tool type".to_string())
+            _ => return Err("invalid tool type".to_string()),
         })
     }
 }

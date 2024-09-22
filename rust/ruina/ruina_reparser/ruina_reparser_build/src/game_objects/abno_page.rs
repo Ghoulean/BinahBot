@@ -12,7 +12,8 @@ type AbnoKey = String;
 type AbnoValue = String;
 
 pub fn reserialize_abno_pages(parser_props: &ParserProps) -> String {
-    let abnos: HashMap<_, _> = parser_props.document_strings
+    let abnos: HashMap<_, _> = parser_props
+        .document_strings
         .iter()
         .flat_map(|x| process_abno_page_file(x))
         .collect();
@@ -45,11 +46,11 @@ fn parse_abno_page(abno_node: Node) -> (AbnoKey, AbnoValue) {
     let artwork = internal_name;
     let tier = serialize_option_2(
         get_unique_node_text(abno_node, "EmotionLevel").map(|x| x.parse::<u8>().unwrap()),
-        display_serializer
+        display_serializer,
     );
     let bias = serialize_option_2(
         get_unique_node_text(abno_node, "EmotionRate").map(|x| x.parse::<i8>().unwrap()),
-        display_serializer
+        display_serializer,
     );
     let sephirah = get_floor_from_str(get_unique_node_text(abno_node, "Sephirah").unwrap());
     let abno = get_abno_from_str(internal_name);
@@ -60,7 +61,7 @@ fn parse_abno_page(abno_node: Node) -> (AbnoKey, AbnoValue) {
     (
         internal_name.to_string(),
         format!(
-    "AbnoPage {{
+            "AbnoPage {{
         id: \"{id}\",
         internal_name: \"{internal_name}\",
         script_id: \"{script_id }\",

@@ -66,12 +66,29 @@ pub struct EquipRequirement(pub EquipRequirementKey, pub i32);
 
 #[derive(Debug, Clone, PartialEq, strum_macros::Display)]
 pub enum EquipRequirementKey {
-    AgentLevel, Fortitude, Prudence, Temperance, Justice
+    AgentLevel,
+    Fortitude,
+    Prudence,
+    Temperance,
+    Justice,
 }
 
 #[derive(Debug, Clone, PartialEq, strum_macros::Display)]
 pub enum Slot {
-    Brooch, Cheek, Eye, Face, Hand1, Hand2, Hat, Helmet, LeftBack, Mouth1, Mouth2, Neckwear, RightBack, Special
+    Brooch,
+    Cheek,
+    Eye,
+    Face,
+    Hand1,
+    Hand2,
+    Hat,
+    Helmet,
+    LeftBack,
+    Mouth1,
+    Mouth2,
+    Neckwear,
+    RightBack,
+    Special,
 }
 
 #[derive(Debug, Clone)]
@@ -80,7 +97,7 @@ pub struct WeaponAttackSpeed(pub f64);
 #[derive(Debug, Clone)]
 pub enum WeaponDamageType {
     Of(DamageType),
-    All
+    All,
 }
 
 #[derive(Debug, Clone, PartialEq, strum_macros::Display)]
@@ -158,7 +175,7 @@ impl TryFrom<&str> for EquipRequirementKey {
             "w" => Ok(EquipRequirementKey::Prudence),
             "p" => Ok(EquipRequirementKey::Justice),
             "level" => Ok(EquipRequirementKey::AgentLevel),
-            _ => Err("invalid damage type".to_string())
+            _ => Err("invalid damage type".to_string()),
         }
     }
 }

@@ -10,7 +10,16 @@ use super::combat_page_locale::CombatPageLocale;
 use super::key_page_locale::KeyPageLocale;
 use super::passive_locale::PassiveLocale;
 
-#[derive(Clone, Debug, Eq, Hash, PartialEq, strum_macros::Display, strum_macros::EnumIter, strum_macros::EnumString)]
+#[derive(
+    Clone,
+    Debug,
+    Eq,
+    Hash,
+    PartialEq,
+    strum_macros::Display,
+    strum_macros::EnumIter,
+    strum_macros::EnumString,
+)]
 pub enum Locale {
     #[strum(serialize = "kr")]
     Korean,
@@ -31,7 +40,7 @@ impl From<&LanguageIdentifier> for Locale {
             "zh-TW" => Locale::TraditionalChinese,
             "ko" => Locale::Korean,
             "ja" => Locale::Japanese,
-            _ => Locale::from_str(value.language.as_str()).unwrap_or(Locale::English)
+            _ => Locale::from_str(value.language.as_str()).unwrap_or(Locale::English),
         }
     }
 }
@@ -67,5 +76,5 @@ pub enum PageLocale<'a> {
     CardEffect(&'a CardEffectLocale<'a>),
     CombatPage(&'a CombatPageLocale<'a>),
     KeyPage(&'a KeyPageLocale<'a>),
-    Passive(&'a PassiveLocale<'a>)
+    Passive(&'a PassiveLocale<'a>),
 }

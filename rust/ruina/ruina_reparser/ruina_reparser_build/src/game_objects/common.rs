@@ -4,9 +4,9 @@ use serde::Deserialize;
 
 #[derive(Debug, Deserialize)]
 pub struct CollectabilityMap {
-   pub collectable: CollectableMap,
-   pub obtainable: ObtainableMap,
-   pub enemy_only: EnemyOnlyMap,
+    pub collectable: CollectableMap,
+    pub obtainable: ObtainableMap,
+    pub enemy_only: EnemyOnlyMap,
 }
 
 #[derive(Debug, Deserialize)]
@@ -59,7 +59,7 @@ pub fn from_chapter_map<'a>(id: &str, pagetype: &PageType, map: &'a ChapterMap) 
             PageType::CombatPage => &x.combat_pages,
             PageType::KeyPage => &x.key_pages,
             PageType::Passive => &x.passives,
-            _ => panic!("not part of the chapter map")
+            _ => panic!("not part of the chapter map"),
         }
     };
     let vec = vec![
@@ -76,6 +76,6 @@ pub fn from_chapter_map<'a>(id: &str, pagetype: &PageType, map: &'a ChapterMap) 
         if f(scm).contains(&id.to_string()) {
             return ch;
         }
-    };
+    }
     None
 }

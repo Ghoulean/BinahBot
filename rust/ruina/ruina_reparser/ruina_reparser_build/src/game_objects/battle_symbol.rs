@@ -11,7 +11,8 @@ type BattleSymbolKey = String;
 type BattleSymbolValue = String;
 
 pub fn reserialize_battle_symbols(parser_props: &ParserProps) -> String {
-    let battle_symbols: HashMap<_, _> = parser_props.document_strings
+    let battle_symbols: HashMap<_, _> = parser_props
+        .document_strings
         .iter()
         .flat_map(|document_string| process_battle_symbol_file(document_string))
         .collect();
@@ -26,7 +27,9 @@ pub fn reserialize_battle_symbols(parser_props: &ParserProps) -> String {
     )
 }
 
-fn process_battle_symbol_file(document_string: &str) -> HashMap<BattleSymbolKey, BattleSymbolValue> {
+fn process_battle_symbol_file(
+    document_string: &str,
+) -> HashMap<BattleSymbolKey, BattleSymbolValue> {
     let doc: Box<Document> = Box::new(Document::parse(document_string).unwrap());
     let xml_root_node = get_unique_node(doc.root(), "GiftXmlRoot").unwrap();
     let battle_symbol_node_list = get_nodes(xml_root_node, "Gift");
@@ -45,7 +48,7 @@ fn parse_battle_symbol(battle_symbol_node: Node) -> (BattleSymbolKey, BattleSymb
 
     let resource = serialize_option_2(
         get_unique_node_text(battle_symbol_node, "Resource"),
-        string_literal_serializer
+        string_literal_serializer,
     );
     let slot = get_battle_symbol_slot_from_str(
         get_unique_node_text(battle_symbol_node, "Position").unwrap(),
@@ -55,7 +58,7 @@ fn parse_battle_symbol(battle_symbol_node: Node) -> (BattleSymbolKey, BattleSymb
         .unwrap_or(false);
     let count = serialize_option_2(
         get_unique_node_text(battle_symbol_node, "Count"),
-        display_serializer
+        display_serializer,
     );
 
     (

@@ -11,11 +11,11 @@ use ruina_common::localizations::common::Locale;
 use strum::IntoEnumIterator;
 use toml::from_str;
 
-use game_objects::common::CollectabilityMap;
-use game_objects::common::ParserProps;
 use game_objects::abno_page::reserialize_abno_pages;
 use game_objects::battle_symbol::reserialize_battle_symbols;
 use game_objects::combat_page::reserialize_combat_pages;
+use game_objects::common::CollectabilityMap;
+use game_objects::common::ParserProps;
 use game_objects::key_page::reserialize_key_pages;
 use game_objects::passive::reserialize_passives;
 use localization::abno_page_localization::reserialize_abno_locales;
@@ -26,14 +26,14 @@ use localization::key_page_localization::reserialize_key_page_locales;
 use localization::passive_localization::reserialize_passive_locales;
 use paths::get_locale_path;
 use paths::read_xml_files_in_dir;
+use paths::ABNO_LOCALIZE_DIR;
 use paths::ABNO_PAGE_PATH_STR;
-use paths::LOCALE_PAGE_PATHS;
-use paths::MOST_PATHS;
 use paths::BATTLE_SYMBOL_PATH_STR;
 use paths::COMBAT_PAGE_PATH_STR;
 use paths::KEY_PAGE_PATH_STR;
+use paths::LOCALE_PAGE_PATHS;
+use paths::MOST_PATHS;
 use paths::PASSIVE_PATH_STR;
-use paths::ABNO_LOCALIZE_DIR;
 
 mod game_objects;
 mod localization;
@@ -65,25 +65,51 @@ pub fn build_reparser() -> String {
     }
 
     let collectability_toml_str = include_str!("../data/collectability.toml");
-    let collectability_toml_map: CollectabilityMap = from_str(
-        collectability_toml_str
-    ).unwrap();
+    let collectability_toml_map: CollectabilityMap = from_str(collectability_toml_str).unwrap();
 
     let chapter_toml_str = include_str!("../data/chapter.toml");
-    let chapter_toml_map: ChapterMap = from_str(
-        chapter_toml_str
-    ).unwrap();
+    let chapter_toml_map: ChapterMap = from_str(chapter_toml_str).unwrap();
 
-    let abno_pages = reparse(ABNO_PAGE_PATH_STR, &collectability_toml_map, &chapter_toml_map, reserialize_abno_pages);
-    let battle_symbols = reparse(BATTLE_SYMBOL_PATH_STR, &collectability_toml_map, &chapter_toml_map, reserialize_battle_symbols);
-    let combat_pages = reparse(COMBAT_PAGE_PATH_STR, &collectability_toml_map, &chapter_toml_map, reserialize_combat_pages);
-    let key_pages = reparse(KEY_PAGE_PATH_STR, &collectability_toml_map, &chapter_toml_map, reserialize_key_pages);
-    let passives = reparse(PASSIVE_PATH_STR, &collectability_toml_map, &chapter_toml_map, reserialize_passives);
+    let abno_pages = reparse(
+        ABNO_PAGE_PATH_STR,
+        &collectability_toml_map,
+        &chapter_toml_map,
+        reserialize_abno_pages,
+    );
+    let battle_symbols = reparse(
+        BATTLE_SYMBOL_PATH_STR,
+        &collectability_toml_map,
+        &chapter_toml_map,
+        reserialize_battle_symbols,
+    );
+    let combat_pages = reparse(
+        COMBAT_PAGE_PATH_STR,
+        &collectability_toml_map,
+        &chapter_toml_map,
+        reserialize_combat_pages,
+    );
+    let key_pages = reparse(
+        KEY_PAGE_PATH_STR,
+        &collectability_toml_map,
+        &chapter_toml_map,
+        reserialize_key_pages,
+    );
+    let passives = reparse(
+        PASSIVE_PATH_STR,
+        &collectability_toml_map,
+        &chapter_toml_map,
+        reserialize_passives,
+    );
 
     let abno_page_locales = reparse_locale(ABNO_LOCALIZE_DIR, reserialize_abno_locales);
-    let battle_symbol_locales = reparse_locale(BATTLE_SYMBOL_LOCALIZE_DIR, reserialize_battle_symbol_locales);
-    let card_effect_locales = reparse_locale(CARD_EFFECT_LOCALIZE_DIR, reserialize_card_effect_locales);
-    let combat_page_locales = reparse_locale(COMBAT_PAGE_LOCALIZE_DIR, reserialize_combat_page_locales);
+    let battle_symbol_locales = reparse_locale(
+        BATTLE_SYMBOL_LOCALIZE_DIR,
+        reserialize_battle_symbol_locales,
+    );
+    let card_effect_locales =
+        reparse_locale(CARD_EFFECT_LOCALIZE_DIR, reserialize_card_effect_locales);
+    let combat_page_locales =
+        reparse_locale(COMBAT_PAGE_LOCALIZE_DIR, reserialize_combat_page_locales);
     let key_page_locales = reparse_locale(KEY_PAGE_LOCALIZE_DIR, reserialize_key_page_locales);
     let passive_locales = reparse_locale(PASSIVE_LOCALIZE_DIR, reserialize_passive_locales);
 
@@ -103,37 +129,38 @@ pub fn build_reparser() -> String {
     .join("\n")
 }
 
-fn reparse(path_str: &str, collectability_map: &CollectabilityMap, chapter_map: &ChapterMap, reserializer: fn(&ParserProps) -> String) -> String {
+fn reparse(
+    path_str: &str,
+    collectability_map: &CollectabilityMap,
+    chapter_map: &ChapterMap,
+    reserializer: fn(&ParserProps) -> String,
+) -> String {
     let parser_props = ParserProps {
         document_strings: read_xml_files_in_dir(&PathBuf::from(path_str))
             .into_iter()
-            .map(|x| {
-                x.1
-            })
+            .map(|x| x.1)
             .collect::<Vec<_>>(),
         collectability_map,
-        chapter_map
+        chapter_map,
     };
 
     reserializer(&parser_props)
 }
 
-fn reparse_locale(dir_str: &str, reserializer: fn(&HashMap<Locale, Vec<String>>) -> String) -> String {
+fn reparse_locale(
+    dir_str: &str,
+    reserializer: fn(&HashMap<Locale, Vec<String>>) -> String,
+) -> String {
     reserializer(
         &Locale::iter()
             .map(|x| {
                 let full_path = get_locale_path(&x).join(dir_str);
                 let vec = read_xml_files_in_dir(&full_path)
                     .into_iter()
-                    .map(|x| {
-                        x.1.clone()
-                    })
+                    .map(|x| x.1.clone())
                     .collect::<Vec<_>>();
-                (
-                    x.clone(),
-                    vec
-                )
+                (x.clone(), vec)
             })
-            .collect::<HashMap<_, _>>()
+            .collect::<HashMap<_, _>>(),
     )
 }

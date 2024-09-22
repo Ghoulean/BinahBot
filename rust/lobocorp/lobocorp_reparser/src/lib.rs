@@ -40,7 +40,10 @@ pub fn get_localization<'a>(key: &'a LocalizationKey<'a>) -> Option<&'a &'static
     LOCALIZATION_INDEX.get(&&format!("{}#{:?}", key.0, key.1))
 }
 
-pub fn get_abno_localization<'a>(id: &'a u32, locale: &'a Locale) -> Option<&'a EncyclopediaInfoLocalization<'a>> {
+pub fn get_abno_localization<'a>(
+    id: &'a u32,
+    locale: &'a Locale,
+) -> Option<&'a EncyclopediaInfoLocalization<'a>> {
     ABNO_LOCALIZATIONS.get(format!("{}#{:?}", id, locale).as_str())
 }
 
@@ -48,8 +51,8 @@ pub fn get_abno_localization<'a>(id: &'a u32, locale: &'a Locale) -> Option<&'a 
 mod tests {
     use std::collections::HashSet;
 
-    use strum::IntoEnumIterator;
     use lobocorp_common::localizations::common::Locale;
+    use strum::IntoEnumIterator;
 
     use super::*;
 
@@ -72,10 +75,17 @@ mod tests {
     #[test]
     fn sanity_whitenight_display_names() {
         let whitenight = get_abno_localization(&100015, &Locale::English).unwrap();
-        let names = whitenight.breaching_entity_localizations.into_iter().map(|x| {
-            x.name    
-        });
-        let expected = ["WhiteNight", "Scythe Apostle", "Guardian Apostle", "Staff Apostle", "Spear Apostle"];
+        let names = whitenight
+            .breaching_entity_localizations
+            .into_iter()
+            .map(|x| x.name);
+        let expected = [
+            "WhiteNight",
+            "Scythe Apostle",
+            "Guardian Apostle",
+            "Staff Apostle",
+            "Spear Apostle",
+        ];
         names.enumerate().for_each(|(i, x)| {
             assert_eq!(expected[i], x);
         });
@@ -86,7 +96,7 @@ mod tests {
         let censored = get_encyclopedia_info(&100056).unwrap();
         let censored = match censored {
             EncyclopediaInfo::Normal(x) => x,
-            _ => unreachable!()
+            _ => unreachable!(),
         };
         assert_eq!(2, censored.breaching_entities.len());
     }
@@ -96,7 +106,7 @@ mod tests {
         let nothing_there = get_encyclopedia_info(&100005).unwrap();
         let nothing_there = match nothing_there {
             EncyclopediaInfo::Normal(x) => x,
-            _ => unreachable!()
+            _ => unreachable!(),
         };
         // dog, egg, man
         assert_eq!(3, nothing_there.breaching_entities.len());
@@ -107,7 +117,7 @@ mod tests {
         let yang = get_encyclopedia_info(&300109).unwrap();
         let yang = match yang {
             EncyclopediaInfo::Tool(x) => x,
-            _ => unreachable!()
+            _ => unreachable!(),
         };
         assert_eq!(1, yang.breaching_entities.len());
     }
@@ -116,10 +126,10 @@ mod tests {
     fn sanity_shelter_has_all_guidances() {
         let shelter = get_abno_localization(&300006, &Locale::English).unwrap();
         shelter.managerial_guidances.iter().for_each(|x| {
-            assert!(!x.trim().is_empty());    
+            assert!(!x.trim().is_empty());
         });
         shelter.story.iter().for_each(|x| {
-            assert!(!x.trim().is_empty());    
+            assert!(!x.trim().is_empty());
         });
     }
 
@@ -149,23 +159,20 @@ mod tests {
     #[test]
     fn correct_breachability_display() {
         let non_breachable = [
-            100053, 100009, 100028, 100014, 100007, 100013, 100027,
-            100037, 100059, 100103, 100002, 100041, 100017, 100045
+            100053, 100009, 100028, 100014, 100007, 100013, 100027, 100037, 100059, 100103, 100002,
+            100041, 100017, 100045,
         ];
-        let breaching_no_defenses = [
-            100005, 100019
-        ];
+        let breaching_no_defenses = [100005, 100019];
         let breaching_with_defenses = [
-            100015, 100018, 100036, 100054, 100043, 100011, 100057,
-            100029, 100033, 100008, 100035, 100055, 100061, 100038,
-            100058, 100064, 100056, 100063, 100042
+            100015, 100018, 100036, 100054, 100043, 100011, 100057, 100029, 100033, 100008, 100035,
+            100055, 100061, 100038, 100058, 100064, 100056, 100063, 100042,
         ];
 
         non_breachable.iter().for_each(|x| {
             let encyclopedia_info = get_encyclopedia_info(&x).expect("invalid id");
             let info = match encyclopedia_info {
                 EncyclopediaInfo::Normal(x) => x,
-                _ => panic!()
+                _ => panic!(),
             };
             assert!(!info.is_breachable);
             assert!(info.defenses.is_none());
@@ -174,7 +181,7 @@ mod tests {
             let encyclopedia_info = get_encyclopedia_info(&x).expect("invalid id");
             let info = match encyclopedia_info {
                 EncyclopediaInfo::Normal(x) => x,
-                _ => panic!()
+                _ => panic!(),
             };
             assert!(info.is_breachable);
             assert!(info.defenses.is_none());
@@ -183,7 +190,7 @@ mod tests {
             let encyclopedia_info = get_encyclopedia_info(&x).expect("invalid id");
             let info = match encyclopedia_info {
                 EncyclopediaInfo::Normal(x) => x,
-                _ => panic!()
+                _ => panic!(),
             };
             assert!(info.is_breachable);
             assert!(info.defenses.is_some());
@@ -195,7 +202,7 @@ mod tests {
         let firebird = get_encyclopedia_info(&100061).expect("no firebird entry");
         let firebird = match firebird {
             EncyclopediaInfo::Normal(x) => x,
-            _ => panic!()
+            _ => panic!(),
         };
         let feather_of_honor = firebird.weapon.as_ref().expect("no firebird weapon");
         assert_eq!(None, feather_of_honor.cost);
@@ -204,7 +211,7 @@ mod tests {
         let wn = get_encyclopedia_info(&100015).expect("no whitenight entry");
         let wn = match wn {
             EncyclopediaInfo::Normal(x) => x,
-            _ => panic!()
+            _ => panic!(),
         };
         let paradise_lost = wn.weapon.as_ref().expect("no whitenight weapon");
         assert_eq!(None, paradise_lost.cost);
@@ -213,7 +220,7 @@ mod tests {
         let snow_queen = get_encyclopedia_info(&100102).expect("no snow queen entry");
         let snow_queen = match snow_queen {
             EncyclopediaInfo::Normal(x) => x,
-            _ => panic!()
+            _ => panic!(),
         };
         let kiss = snow_queen.gifts.get(0).expect("no snow queen gift");
         assert_eq!(None, kiss.obtain_probability);
@@ -222,7 +229,7 @@ mod tests {
         let bbw = get_encyclopedia_info(&100033).expect("no bigbadwolf entry");
         let bbw = match bbw {
             EncyclopediaInfo::Normal(x) => x,
-            _ => panic!()
+            _ => panic!(),
         };
         let sheepskin = bbw.gifts.get(1).expect("no bigbadwolf gift");
         assert_eq!(None, sheepskin.obtain_probability);
@@ -231,7 +238,7 @@ mod tests {
         let apobird = get_encyclopedia_info(&100038).expect("no apo bird entry");
         let apobird = match apobird {
             EncyclopediaInfo::Normal(x) => x,
-            _ => panic!()
+            _ => panic!(),
         };
         let wing = apobird.gifts.get(0).expect("no apo bird gift");
         assert_eq!(None, wing.obtain_probability);

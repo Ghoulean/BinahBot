@@ -69,7 +69,7 @@ pub struct DiscordInteraction {
     pub token: String,
     pub locale: Option<String>,
     pub guild_locale: Option<String>,
-    pub message: Option<DiscordMessage>
+    pub message: Option<DiscordMessage>,
 }
 
 #[derive(Serialize_repr, Deserialize_repr, PartialEq, Debug)]
@@ -106,7 +106,7 @@ pub struct DiscordApplicationCommandInteractionData {
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct DiscordMessageComponentInteractionData {
-    pub custom_id: String
+    pub custom_id: String,
 }
 
 #[derive(Serialize, Deserialize, Debug, PartialEq)]
@@ -122,7 +122,7 @@ pub struct DiscordInteractionOptions {
     pub name: String,
     pub name_localizations: Option<HashMap<String, String>>,
     pub value: DiscordInteractionOptionValue,
-    pub focused: Option<bool>
+    pub focused: Option<bool>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -140,7 +140,7 @@ pub enum DiscordInteractionResponse {
     Autocomplete(AutocompleteResponse),
     Ping(PingResponse),
     DeferredUpdateMessage(DeferredUpdateResponse),
-    UpdateMessage(MessageResponse)
+    UpdateMessage(MessageResponse),
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -177,7 +177,7 @@ pub enum DiscordComponent {
 pub struct ActionRowComponent {
     pub r#type: DiscordComponentType,
     // action row cannot contain another action row
-    pub components: Vec<DiscordComponent>
+    pub components: Vec<DiscordComponent>,
 }
 
 #[derive(Serialize_repr, Deserialize_repr, PartialEq, Clone, Debug)]
@@ -197,12 +197,12 @@ pub struct ButtonComponent {
     pub style: ButtonStyle,
     pub label: Option<String>,
     pub custom_id: Option<String>,
-    pub disabled: Option<bool>
+    pub disabled: Option<bool>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct AllowedMentions {
-    pub parse: Vec<String>
+    pub parse: Vec<String>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -228,7 +228,7 @@ pub struct DiscordUser {
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct DiscordGuildMember {
-    pub user: Option<DiscordUser>
+    pub user: Option<DiscordUser>,
 }
 
 #[derive(Serialize_repr, Deserialize_repr, PartialEq, Debug)]
@@ -250,12 +250,12 @@ pub enum DiscordMessageFlag {
     SuppressEmbeds = 4,
     EphemeralMessage = 64,
     #[allow(dead_code)]
-    SuppressNotifications = 4096
+    SuppressNotifications = 4096,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct DiscordMessage {
-    pub interaction_metadata: Option<DiscordInteractionMetadata>
+    pub interaction_metadata: Option<DiscordInteractionMetadata>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -264,7 +264,7 @@ pub struct DiscordInteractionMetadata {
     pub r#type: DiscordInteractionType,
     pub user: DiscordUser,
     pub original_response_message_id: Option<String>,
-    pub interacted_message_id: Option<String>
+    pub interacted_message_id: Option<String>,
 }
 
 #[cfg(test)]

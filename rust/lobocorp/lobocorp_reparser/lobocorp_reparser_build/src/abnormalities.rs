@@ -66,7 +66,7 @@ pub struct PartialDontTouchMeInfo {
 #[derive(Debug)]
 pub enum ObtainEquipmentNumber {
     Cost(i32),
-    Probability(f64)
+    Probability(f64),
 }
 
 #[derive(Debug)]
@@ -76,7 +76,7 @@ pub struct PartialBreachingEntity {
     pub speed: f64,
     pub defenses: Defenses,
     pub damage_type: DamageType,
-    pub risk_level: RiskLevel
+    pub risk_level: RiskLevel,
 }
 
 #[derive(Debug)]
@@ -88,13 +88,17 @@ pub struct PartialToolInfo {
 }
 
 pub fn load_encyclopedia(list: &[ListEntry]) -> HashMap<ListEntry, PartialEncyclopediaInfo> {
-    list.iter().map(|x| {
-        let stat_path = PathBuf::from(format!("{}{}.xml", BASE_CREATURE_DIR, x.stat));
-        let stat_str = fs::read_to_string(stat_path.as_path()).expect(&format!("cannot read {:?}", stat_path));
-        let doc: Document = Document::parse(&stat_str).expect(&format!("failed parsing {:?}", stat_path));
+    list.iter()
+        .map(|x| {
+            let stat_path = PathBuf::from(format!("{}{}.xml", BASE_CREATURE_DIR, x.stat));
+            let stat_str = fs::read_to_string(stat_path.as_path())
+                .expect(&format!("cannot read {:?}", stat_path));
+            let doc: Document =
+                Document::parse(&stat_str).expect(&format!("failed parsing {:?}", stat_path));
 
-        (x.clone(), parse(x.id, &doc))
-    }).collect()
+            (x.clone(), parse(x.id, &doc))
+        })
+        .collect()
 }
 
 fn parse(id: u32, doc: &Document) -> PartialEncyclopediaInfo {
@@ -105,7 +109,8 @@ fn parse(id: u32, doc: &Document) -> PartialEncyclopediaInfo {
 
     if id == 100024 {
         PartialEncyclopediaInfo::DontTouchMe(PartialDontTouchMeInfo {
-            risk: RiskLevel::Zayin, image: Some(id.to_string()),
+            risk: RiskLevel::Zayin,
+            image: Some(id.to_string()),
         })
     } else if is_tool {
         PartialEncyclopediaInfo::Tool(parse_tool_abno(id, doc))
@@ -122,43 +127,62 @@ fn parse_normal_abno(id: u32, doc: &Document) -> PartialNormalInfo {
         // Game files say riskLevel=1 but Lady Facing the Wall is a Teth
         RiskLevel::Teth
     } else {
-        get_unique_node_text(&stat_node, "riskLevel").ok()
+        get_unique_node_text(&stat_node, "riskLevel")
+            .ok()
             .and_then(|x| x.parse::<i32>().ok())
             .and_then(|x| RiskLevel::try_from(x).ok())
             .expect("couldn't get risk level")
     };
 
     let work_probabilities = WorkProbabilities {
-        instinct: find_unique_node_with_name_and_attribute(&stat_node, "workProb", "type", "R").ok()
+        instinct: find_unique_node_with_name_and_attribute(&stat_node, "workProb", "type", "R")
+            .ok()
             .map(|x| parse_work_probability(&x))
             .expect("couldn't parse instinct probabilities"),
-        insight: find_unique_node_with_name_and_attribute(&stat_node, "workProb", "type", "W").ok()
+        insight: find_unique_node_with_name_and_attribute(&stat_node, "workProb", "type", "W")
+            .ok()
             .map(|x| parse_work_probability(&x))
             .expect("couldn't parse insight probabilities"),
-        attachment: find_unique_node_with_name_and_attribute(&stat_node, "workProb", "type", "B").ok()
+        attachment: find_unique_node_with_name_and_attribute(&stat_node, "workProb", "type", "B")
+            .ok()
             .map(|x| parse_work_probability(&x))
             .expect("couldn't parse attachment probabilities"),
-        repression: find_unique_node_with_name_and_attribute(&stat_node, "workProb", "type", "P").ok()
+        repression: find_unique_node_with_name_and_attribute(&stat_node, "workProb", "type", "P")
+            .ok()
             .map(|x| parse_work_probability(&x))
             .expect("couldn't parse repression probabilities"),
     };
 
-    let qliphoth_counter = get_unique_node_text(&stat_node, "qliphoth").ok()
+    let qliphoth_counter = get_unique_node_text(&stat_node, "qliphoth")
+        .ok()
         .and_then(|x| x.parse::<i32>().ok());
 
-    let work_damage_node = get_unique_node(&stat_node, "workDamage").expect("couldn't find work damage node");
-    let work_damage_type = work_damage_node.attribute("type").and_then(|x| DamageType::try_from(x).ok()).expect("couldn't find work damage type");
+    let work_damage_node =
+        get_unique_node(&stat_node, "workDamage").expect("couldn't find work damage node");
+    let work_damage_type = work_damage_node
+        .attribute("type")
+        .and_then(|x| DamageType::try_from(x).ok())
+        .expect("couldn't find work damage type");
     let work_damage_range = DamageRange(
-        work_damage_node.attribute("min").and_then(|x| x.parse::<i32>().ok()).expect("couldn't find work damage min"),
-        work_damage_node.attribute("max").and_then(|x| x.parse::<i32>().ok()).expect("couldn't find work damage max"),
+        work_damage_node
+            .attribute("min")
+            .and_then(|x| x.parse::<i32>().ok())
+            .expect("couldn't find work damage min"),
+        work_damage_node
+            .attribute("max")
+            .and_then(|x| x.parse::<i32>().ok())
+            .expect("couldn't find work damage max"),
     );
 
-    let mut binding = get_unique_node(&stat_node, "feelingStateCubeBounds").ok()
+    let mut binding = get_unique_node(&stat_node, "feelingStateCubeBounds")
+        .ok()
         .map(|x| get_nodes(&x, "cube"))
         .expect("couldn't get happiness ranges")
         .iter()
         .map(|x| {
-            x.text().and_then(|y| y.parse::<i32>().ok()).expect("failed parsing happiness range")
+            x.text()
+                .and_then(|y| y.parse::<i32>().ok())
+                .expect("failed parsing happiness range")
         })
         .collect::<Vec<_>>();
     while binding.len() < 3 {
@@ -167,68 +191,103 @@ fn parse_normal_abno(id: u32, doc: &Document) -> PartialNormalInfo {
 
     let work_happiness_ranges: [i32; 3] = binding.try_into().expect("failed cast");
 
-    let work_speed = get_unique_node_text(&stat_node, "workSpeed").ok()
+    let work_speed = get_unique_node_text(&stat_node, "workSpeed")
+        .ok()
         .and_then(|x| x.parse::<f64>().ok())
         .expect("couldn't get work speed");
 
-    let work_cooldown = get_unique_node_text(&stat_node, "workCooltime").ok()
+    let work_cooldown = get_unique_node_text(&stat_node, "workCooltime")
+        .ok()
         .and_then(|x| x.parse::<i32>().ok())
         .expect("couldn't get work speed");
 
-    let max_probability_reduction_count = get_unique_node_text(&stat_node, "maxProbReductionCounter").ok()
-        .and_then(|x| x.parse::<i32>().ok())
-        .filter(|x| *x >= 0)
-        .unwrap_or(get_unique_node_text(&stat_node, "riskLevel").ok()
+    let max_probability_reduction_count =
+        get_unique_node_text(&stat_node, "maxProbReductionCounter")
+            .ok()
             .and_then(|x| x.parse::<i32>().ok())
-            .expect("couldn't get max probability_work_count")
-        );
+            .filter(|x| *x >= 0)
+            .unwrap_or(
+                get_unique_node_text(&stat_node, "riskLevel")
+                    .ok()
+                    .and_then(|x| x.parse::<i32>().ok())
+                    .expect("couldn't get max probability_work_count"),
+            );
 
     // missing escapable tag defaults to TRUE
     // missing OR equal to true => not (present AND not equal to true)
-    let is_breachable = !get_unique_node_text(&stat_node, "escapeable").is_ok_and(|x| x.to_lowercase().trim() != "true");
+    let is_breachable = !get_unique_node_text(&stat_node, "escapeable")
+        .is_ok_and(|x| x.to_lowercase().trim() != "true");
 
-    let defense_node = if is_breachable { get_unique_node(&stat_node, "defense") } else { Err("") };
-    let defenses = defense_node.map(|x| {
-        Defenses {
+    let defense_node = if is_breachable {
+        get_unique_node(&stat_node, "defense")
+    } else {
+        Err("")
+    };
+    let defenses = defense_node
+        .map(|x| Defenses {
             red: get_defense_val(&x, "R"),
             white: get_defense_val(&x, "W"),
             black: get_defense_val(&x, "B"),
             pale: get_defense_val(&x, "P"),
-        }
-    }).ok();
+        })
+        .ok();
 
-    let observation_level_bonuses: [StatBonus; 4] = get_nodes(&stat_node, "observeBonus").iter().map(|x| {
-        let stat = match x.attribute("type").expect("no type").to_lowercase().trim() {
-            "speed" => Stat::WorkSpeed,
-            "prob" => Stat::SuccessRate,
-            _ => unreachable!()
-        };
-        let val = x.text().and_then(|y| y.parse::<i32>().ok()).expect("no observation level value");
-        StatBonus(stat, val)
-    }).collect::<Vec<_>>().try_into().expect("failed cast");
+    let observation_level_bonuses: [StatBonus; 4] = get_nodes(&stat_node, "observeBonus")
+        .iter()
+        .map(|x| {
+            let stat = match x.attribute("type").expect("no type").to_lowercase().trim() {
+                "speed" => Stat::WorkSpeed,
+                "prob" => Stat::SuccessRate,
+                _ => unreachable!(),
+            };
+            let val = x
+                .text()
+                .and_then(|y| y.parse::<i32>().ok())
+                .expect("no observation level value");
+            StatBonus(stat, val)
+        })
+        .collect::<Vec<_>>()
+        .try_into()
+        .expect("failed cast");
 
-    let related_equipment = get_nodes(&stat_node, "equipment").iter().map(|x| {
-        let id = x.attribute("equipId").and_then(|x| x.parse::<u32>().ok()).expect("couldn't get equipment id");
-        let observation_level = x.attribute("level").and_then(|x| x.parse::<i32>().ok()).expect("couldn't get equipment level");
-        let obtain_number = x.attribute("cost")
-            .and_then(|x| x.parse::<i32>().ok())
-            .map(|x| ObtainEquipmentNumber::Cost(x))
-            .unwrap_or_else(|| {
-                x.attribute("prob")
-                    .and_then(|x| x.parse::<f64>().ok())
-                    .map(|x| ObtainEquipmentNumber::Probability(x))
-                    .expect("couldn't get equipment obtain number")
-                }
-            );
+    let related_equipment = get_nodes(&stat_node, "equipment")
+        .iter()
+        .map(|x| {
+            let id = x
+                .attribute("equipId")
+                .and_then(|x| x.parse::<u32>().ok())
+                .expect("couldn't get equipment id");
+            let observation_level = x
+                .attribute("level")
+                .and_then(|x| x.parse::<i32>().ok())
+                .expect("couldn't get equipment level");
+            let obtain_number = x
+                .attribute("cost")
+                .and_then(|x| x.parse::<i32>().ok())
+                .map(|x| ObtainEquipmentNumber::Cost(x))
+                .unwrap_or_else(|| {
+                    x.attribute("prob")
+                        .and_then(|x| x.parse::<f64>().ok())
+                        .map(|x| ObtainEquipmentNumber::Probability(x))
+                        .expect("couldn't get equipment obtain number")
+                });
 
-        PartialRelatedEquipmentInfo {
-            id, observation_level, obtain_number
-        }
-    }).collect::<Vec<_>>();
+            PartialRelatedEquipmentInfo {
+                id,
+                observation_level,
+                obtain_number,
+            }
+        })
+        .collect::<Vec<_>>();
 
-    let hp = get_unique_node_text(&stat_node, "hp").ok().and_then(|x| x.parse::<i32>().ok());
-    let speed = get_unique_node_text(&stat_node, "speed").ok().and_then(|x| x.parse::<f64>().ok());
-    let breaching_damage_type = get_unique_node(&stat_node, "specialDamage").ok()
+    let hp = get_unique_node_text(&stat_node, "hp")
+        .ok()
+        .and_then(|x| x.parse::<i32>().ok());
+    let speed = get_unique_node_text(&stat_node, "speed")
+        .ok()
+        .and_then(|x| x.parse::<f64>().ok());
+    let breaching_damage_type = get_unique_node(&stat_node, "specialDamage")
+        .ok()
         .and_then(|x| get_first_node(&x, "damage"))
         .and_then(|x| x.attribute("type"))
         .and_then(|x| DamageType::try_from(x).ok())
@@ -238,13 +297,11 @@ fn parse_normal_abno(id: u32, doc: &Document) -> PartialNormalInfo {
     // Nothing there
     if id == 100005 {
         let binding = get_nodes(&stat_node, "defense");
-        let defenses = binding.iter().map(|x| {
-            Defenses {
-                red: get_defense_val(&x, "R"),
-                white: get_defense_val(&x, "W"),
-                black: get_defense_val(&x, "B"),
-                pale: get_defense_val(&x, "P"),
-            }
+        let defenses = binding.iter().map(|x| Defenses {
+            red: get_defense_val(&x, "R"),
+            white: get_defense_val(&x, "W"),
+            black: get_defense_val(&x, "B"),
+            pale: get_defense_val(&x, "P"),
         });
         let hp = [2000, 2000, 2000].iter();
         let speed = [80.0, 0.0, 50.0].iter();
@@ -258,12 +315,13 @@ fn parse_normal_abno(id: u32, doc: &Document) -> PartialNormalInfo {
                 defenses: defenses,
                 damage_type: DamageType::Red,
                 risk_level: risk.clone(),
-            })            
+            })
         });
     } else if let (Some(hp), Some(speed), Some(defenses)) = (hp, speed, defenses.clone()) {
         breaching_entities.push(PartialBreachingEntity {
             id: id.to_string(),
-            hp, speed,
+            hp,
+            speed,
             defenses: defenses,
             damage_type: breaching_damage_type,
             risk_level: risk.clone(),
@@ -274,30 +332,52 @@ fn parse_normal_abno(id: u32, doc: &Document) -> PartialNormalInfo {
     if let Some(child_abno_stat) = child_abno_stat_id {
         // not apo bird -- apo bird is a top-level entry, not a child of small/long/big birds
         if child_abno_stat != "BossBird_stat" {
-            let child_stat_path = PathBuf::from(format!("{}{}.xml", CHILD_CREATURE_DIR, child_abno_stat));
-            let child_stat_str = fs::read_to_string(child_stat_path.as_path()).expect(&format!("cannot read {:?}", child_stat_path));
-            let doc: Document = Document::parse(&child_stat_str).expect(&format!("failed parsing {:?}", child_stat_path));
+            let child_stat_path =
+                PathBuf::from(format!("{}{}.xml", CHILD_CREATURE_DIR, child_abno_stat));
+            let child_stat_str = fs::read_to_string(child_stat_path.as_path())
+                .expect(&format!("cannot read {:?}", child_stat_path));
+            let doc: Document = Document::parse(&child_stat_str)
+                .expect(&format!("failed parsing {:?}", child_stat_path));
             let children = parse_child_abno(child_abno_stat, &doc);
             breaching_entities.extend(children);
         }
     };
-    if id == 100038 { // apo bird
+    if id == 100038 {
+        // apo bird
         let children = vec![
-            "BossGateWay_stat", "BigEgg_stat", "LongEgg_stat", "SmallEgg_stat"
-        ].into_iter().map(|x| {
+            "BossGateWay_stat",
+            "BigEgg_stat",
+            "LongEgg_stat",
+            "SmallEgg_stat",
+        ]
+        .into_iter()
+        .map(|x| {
             let path_buf = PathBuf::from(format!("{}{}.xml", BASE_CREATURE_DIR, x));
             let file_str = fs::read_to_string(path_buf.as_path()).expect("failed file read");
             parse_egg(&x, &Document::parse(&file_str).expect("failed parse"))
-        }).collect::<Vec<_>>();
+        })
+        .collect::<Vec<_>>();
         breaching_entities.extend(children);
     }
 
     let image = Some(id.to_string());
 
     PartialNormalInfo {
-        risk, work_probabilities, qliphoth_counter, work_damage_type, work_damage_range, work_happiness_ranges,
-        work_speed, work_cooldown, max_probability_reduction_count, is_breachable, defenses, observation_level_bonuses,
-        related_equipment, breaching_entities, image,
+        risk,
+        work_probabilities,
+        qliphoth_counter,
+        work_damage_type,
+        work_damage_range,
+        work_happiness_ranges,
+        work_speed,
+        work_cooldown,
+        max_probability_reduction_count,
+        is_breachable,
+        defenses,
+        observation_level_bonuses,
+        related_equipment,
+        breaching_entities,
+        image,
     }
 }
 
@@ -305,29 +385,39 @@ fn parse_tool_abno(id: u32, doc: &Document) -> PartialToolInfo {
     let creature_node = get_unique_node(&doc.root(), "creature").expect("couldn't find creature");
     let stat_node = get_unique_node(&creature_node, "stat").expect("couldn't find stat node");
 
-    let risk = get_unique_node_text(&stat_node, "riskLevel").ok()
+    let risk = get_unique_node_text(&stat_node, "riskLevel")
+        .ok()
         .and_then(|x| x.parse::<i32>().ok())
         .and_then(|x| RiskLevel::try_from(x).ok())
         .expect("couldn't get risk level");
 
-    let tool_type = get_unique_node_text(&stat_node, "kitType").ok()
+    let tool_type = get_unique_node_text(&stat_node, "kitType")
+        .ok()
         .and_then(|x| ToolType::try_from(x).ok())
         .expect("couldn't get tool type");
 
-    let breaching_entities = if id == 300109 { // Yang
-        let hp = get_unique_node_text(&stat_node, "hp").ok().and_then(|x| x.parse::<i32>().ok()).expect("yang has hp");
-        let speed = get_unique_node_text(&stat_node, "speed").ok().and_then(|x| x.parse::<f64>().ok()).expect("yang has speed");
+    let breaching_entities = if id == 300109 {
+        // Yang
+        let hp = get_unique_node_text(&stat_node, "hp")
+            .ok()
+            .and_then(|x| x.parse::<i32>().ok())
+            .expect("yang has hp");
+        let speed = get_unique_node_text(&stat_node, "speed")
+            .ok()
+            .and_then(|x| x.parse::<f64>().ok())
+            .expect("yang has speed");
 
         vec![PartialBreachingEntity {
             id: id.to_string(),
-            hp, speed,
+            hp,
+            speed,
             // Both defenses and damage type are "unspecified" in the in-game UI,
             // but here is their observed values
             defenses: Defenses {
                 red: Resistance(1.0),
                 white: Resistance(1.0),
                 black: Resistance(1.0),
-                pale: Resistance(1.0)
+                pale: Resistance(1.0),
             },
             damage_type: DamageType::White,
             // Technically doesn't have a risk level. This is taken from the English localization file.
@@ -340,7 +430,10 @@ fn parse_tool_abno(id: u32, doc: &Document) -> PartialToolInfo {
     let image = Some(id.to_string());
 
     PartialToolInfo {
-        risk, tool_type, image, breaching_entities
+        risk,
+        tool_type,
+        image,
+        breaching_entities,
     }
 }
 
@@ -348,63 +441,86 @@ fn parse_child_abno(id: &str, doc: &Document) -> Vec<PartialBreachingEntity> {
     let creature_node = get_unique_node(&doc.root(), "creature").expect("couldn't find creature");
     let stat_node = get_unique_node(&creature_node, "stat").expect("couldn't find stat node");
 
-    let hp = get_unique_node_text(&stat_node, "hp").ok()
+    let hp = get_unique_node_text(&stat_node, "hp")
+        .ok()
         .and_then(|x| x.parse::<i32>().ok())
         .expect("couldn't get hp");
 
-    let speed = get_unique_node_text(&stat_node, "speed").ok()
+    let speed = get_unique_node_text(&stat_node, "speed")
+        .ok()
         .and_then(|x| x.parse::<f64>().ok())
         .expect("couldn't get hp");
 
-    let damage_type = get_unique_node_text(&creature_node, "attackType").ok()
+    let damage_type = get_unique_node_text(&creature_node, "attackType")
+        .ok()
         .and_then(|x| parse_damage_type_for_children(x));
 
-    let risk_level = get_unique_node_text(&creature_node, "riskLevel").ok()
+    let risk_level = get_unique_node_text(&creature_node, "riskLevel")
+        .ok()
         .and_then(|x| RiskLevel::try_from(x).ok())
         .expect("couldn't get risk_level");
 
-    get_nodes(&stat_node, "defense").iter().map(|x| {
-        let defenses = Defenses {
-            red: get_defense_val(&x, "R"),
-            white: get_defense_val(&x, "W"),
-            black: get_defense_val(&x, "B"),
-            pale: get_defense_val(&x, "P"),
-        };
-        // hardcode apostle damage type
-        let damage_type = if id == "DeathAngelApostle_stat" {
-            let defense_id = x.attribute("id").and_then(|x| x.parse::<usize>().ok()).expect("couldn't get apostle id");
-            [DamageType::Red, DamageType::Pale, DamageType::White, DamageType::Black][defense_id - 1].clone()
-        } else {
-            damage_type.clone().unwrap()
-        };
-        let differentiated_id = if id == "DeathAngelApostle_stat" {
-            let defense_id = x.attribute("id").and_then(|x| x.parse::<usize>().ok()).expect("couldn't get apostle id");
-            format!("{}-{}", id, defense_id)
-        } else {
-            id.to_string()
-        };
-        PartialBreachingEntity {
-            hp, speed, defenses,
-            id: differentiated_id,
-            damage_type: damage_type,
-            risk_level: risk_level.clone()
-        }
-    }).collect()
+    get_nodes(&stat_node, "defense")
+        .iter()
+        .map(|x| {
+            let defenses = Defenses {
+                red: get_defense_val(&x, "R"),
+                white: get_defense_val(&x, "W"),
+                black: get_defense_val(&x, "B"),
+                pale: get_defense_val(&x, "P"),
+            };
+            // hardcode apostle damage type
+            let damage_type = if id == "DeathAngelApostle_stat" {
+                let defense_id = x
+                    .attribute("id")
+                    .and_then(|x| x.parse::<usize>().ok())
+                    .expect("couldn't get apostle id");
+                [
+                    DamageType::Red,
+                    DamageType::Pale,
+                    DamageType::White,
+                    DamageType::Black,
+                ][defense_id - 1]
+                    .clone()
+            } else {
+                damage_type.clone().unwrap()
+            };
+            let differentiated_id = if id == "DeathAngelApostle_stat" {
+                let defense_id = x
+                    .attribute("id")
+                    .and_then(|x| x.parse::<usize>().ok())
+                    .expect("couldn't get apostle id");
+                format!("{}-{}", id, defense_id)
+            } else {
+                id.to_string()
+            };
+            PartialBreachingEntity {
+                hp,
+                speed,
+                defenses,
+                id: differentiated_id,
+                damage_type: damage_type,
+                risk_level: risk_level.clone(),
+            }
+        })
+        .collect()
 }
 
 fn parse_egg(id: &str, doc: &Document) -> PartialBreachingEntity {
     let creature_node = get_unique_node(&doc.root(), "creature").expect("couldn't find creature");
     let stat_node = get_unique_node(&creature_node, "stat").expect("couldn't find stat node");
 
-    let hp = get_unique_node_text(&stat_node, "hp").ok()
+    let hp = get_unique_node_text(&stat_node, "hp")
+        .ok()
         .and_then(|x| x.parse::<i32>().ok())
         .expect("couldn't get hp");
 
-    let speed = get_unique_node_text(&stat_node, "speed").ok()
+    let speed = get_unique_node_text(&stat_node, "speed")
+        .ok()
         .and_then(|x| x.parse::<f64>().ok())
         .expect("couldn't get hp");
 
-    let defense_node = get_unique_node(&stat_node, "defense").expect("couldn't find stat node"); 
+    let defense_node = get_unique_node(&stat_node, "defense").expect("couldn't find stat node");
     let defenses = Defenses {
         red: get_defense_val(&defense_node, "R"),
         white: get_defense_val(&defense_node, "W"),
@@ -412,18 +528,25 @@ fn parse_egg(id: &str, doc: &Document) -> PartialBreachingEntity {
         pale: get_defense_val(&defense_node, "P"),
     };
 
-    let damage_type = get_unique_node(&creature_node, "workDamage").ok()
+    let damage_type = get_unique_node(&creature_node, "workDamage")
+        .ok()
         .and_then(|x| x.attribute("type"))
         .and_then(|x| DamageType::try_from(x).ok())
         .expect("couldn't get damage_type");
 
-    let risk_level = get_unique_node_text(&creature_node, "riskLevel").ok()
+    let risk_level = get_unique_node_text(&creature_node, "riskLevel")
+        .ok()
         .and_then(|x| x.parse::<i32>().ok())
         .and_then(|x| RiskLevel::try_from(x).ok())
         .expect("couldn't get risk_level");
 
     PartialBreachingEntity {
-        id: id.to_string(), hp, speed, defenses, damage_type, risk_level
+        id: id.to_string(),
+        hp,
+        speed,
+        defenses,
+        damage_type,
+        risk_level,
     }
 }
 
@@ -433,17 +556,21 @@ fn parse_damage_type_for_children(str: &str) -> Option<DamageType> {
         "red" => DamageType::Red,
         "white" => DamageType::White,
         "unknown" => return None,
-        _ => unreachable!()
+        _ => unreachable!(),
     })
 }
 
 fn parse_work_probability(node: &Node) -> [f64; 5] {
     let mut vec = vec![0.0; 5];
     get_nodes(node, "prob").iter().for_each(|x| {
-        let index = x.attribute("level").and_then(|x| x.parse::<usize>().ok())
+        let index = x
+            .attribute("level")
+            .and_then(|x| x.parse::<usize>().ok())
             .map(|x| x - 1)
             .expect("couldn't get probability index");
-        let val = x.text().and_then(|x| x.parse::<f64>().ok())
+        let val = x
+            .text()
+            .and_then(|x| x.parse::<f64>().ok())
             .expect("couldn't parse probability");
 
         vec[index] = val;

@@ -8,9 +8,18 @@ pub const BASE_CREATURE_DIR: &str = "./data/BaseCreatures/";
 pub const CHILD_CREATURE_DIR: &str = "./data/BaseCreatures/ChildCreatures/";
 
 pub fn get_localized_abno_file_path(locale: &Locale, abno_src: &str) -> PathBuf {
-    format!("./data/Language/{0}/creatures/{1}_{0}.xml", locale.to_string(), abno_src).into()
+    format!(
+        "./data/Language/{0}/creatures/{1}_{0}.xml",
+        locale.to_string(),
+        abno_src
+    )
+    .into()
 }
 
 pub fn get_localized_equipment_file_path(locale: &Locale) -> PathBuf {
-    format!("./data/Language/Localize/{0}/Equipment_{0}.xml", locale.to_string()).into()
+    format!(
+        "./data/Language/Localize/{0}/Equipment_{0}.xml",
+        locale.to_string()
+    )
+    .into()
 }

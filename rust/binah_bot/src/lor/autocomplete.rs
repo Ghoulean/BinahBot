@@ -5,12 +5,13 @@ use ruina::ruina_common::localizations::common::Locale;
 use unic_langid::LanguageIdentifier;
 
 use crate::lor::lookup::lookup;
+use crate::macros::cast_enum_variant;
 use crate::models::binahbot::BinahBotEnvironment;
 use crate::models::binahbot::BinahBotLocale;
 use crate::models::discord::AutocompleteResponse;
 use crate::models::discord::DiscordInteractionData;
-use crate::models::discord::DiscordInteractionOptions;
 use crate::models::discord::DiscordInteractionOptionValue;
+use crate::models::discord::DiscordInteractionOptions;
 use crate::models::discord::DiscordInteractionResponseAutocomplete;
 use crate::models::discord::DiscordInteractionResponseType;
 use crate::utils::get_binahbot_locale;
@@ -20,32 +21,35 @@ use crate::DiscordInteraction;
 
 static MAX_AUTOCOMPLETE_OPTIONS: usize = 10;
 
-pub fn lor_autocomplete(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -> AutocompleteResponse {
-    let binding = match interaction.data.as_ref().expect("no data") {
-        DiscordInteractionData::ApplicationCommand(x) => x,
-        _ => unreachable!()
-    };
-    let command_args = binding.options.as_ref().unwrap();
+pub fn lor_autocomplete(
+    interaction: &DiscordInteraction,
+    env: &BinahBotEnvironment,
+) -> AutocompleteResponse {
+    let command_args = interaction
+        .data
+        .as_ref()
+        .and_then(|x| cast_enum_variant!(x, DiscordInteractionData::ApplicationCommand))
+        .and_then(|x| x.options.as_ref())
+        .unwrap();
 
     tracing::info!("Lor autocomplete: command args: {:#?}", command_args);
 
     let binding = "".to_string();
-    let query = get_option_value("query", command_args).map(|x| match x {
-        DiscordInteractionOptionValue::String(y) => y,
-        _ => unreachable!()
-    }).unwrap_or(&binding);
+    let query = get_option_value("query", command_args)
+        .and_then(|x| cast_enum_variant!(x, DiscordInteractionOptionValue::String))
+        .unwrap_or(&binding);
 
     let binah_locale: BinahBotLocale = get_binahbot_locale(interaction);
 
-    let locale: Locale = get_option_value("locale", command_args).map(|x| match x {
-        DiscordInteractionOptionValue::String(y) => y,
-        _ => unreachable!()
-    }).and_then(|x| Locale::from_str(x.as_str()).ok()).unwrap_or(Locale::from(binah_locale.clone()));
+    let locale: Locale = get_option_value("locale", command_args)
+        .and_then(|x| cast_enum_variant!(x, DiscordInteractionOptionValue::String))
+        .and_then(|x| Locale::from_str(x.as_str()).ok())
+        .unwrap_or(Locale::from(binah_locale.clone()));
 
-    let all: bool = get_option_value("all", command_args).map(|x| match x {
-        DiscordInteractionOptionValue::Bool(y) => y.to_owned(),
-        _ => unreachable!()
-    }).unwrap_or(false);
+    let all: bool = get_option_value("all", command_args)
+        .and_then(|x| cast_enum_variant!(x, DiscordInteractionOptionValue::Bool))
+        .map(|x| x.to_owned())
+        .unwrap_or(false);
 
     let lang_id = LanguageIdentifier::from(&binah_locale);
 
@@ -58,7 +62,7 @@ pub fn lor_autocomplete(interaction: &DiscordInteraction, env: &BinahBotEnvironm
                 name: display_name,
                 name_localizations: None,
                 value: DiscordInteractionOptionValue::String(x.to_string()),
-                focused: None
+                focused: None,
             }
         })
         .collect();
@@ -89,13 +93,23 @@ mod tests {
         let interaction = build_discord_interaction(weight_of_sin_query.to_string(), true);
 
         let response = lor_autocomplete(&interaction, &build_mocked_binahbot_env());
-        let choices = response.data.as_ref().expect("no data field found")
-            .choices.as_ref().expect("no embeds found")
-            .iter().map(|x| x.name.clone()).collect::<Vec<_>>();
+        let choices = response
+            .data
+            .as_ref()
+            .expect("no data field found")
+            .choices
+            .as_ref()
+            .expect("no embeds found")
+            .iter()
+            .map(|x| x.name.clone())
+            .collect::<Vec<_>>();
 
         assert!(choices.len() <= MAX_AUTOCOMPLETE_OPTIONS);
-        assert!(choices.contains(&"\u{2068}The Weight of Sin\u{2069} (\u{2068}abno page\u{2069})".to_string()));
-        assert!(choices.contains(&"\u{2068}The Weight of Sin\u{2069} (\u{2068}passive\u{2069})".to_string()));
+        assert!(choices.contains(
+            &"\u{2068}The Weight of Sin\u{2069} (\u{2068}abno page\u{2069})".to_string()
+        ));
+        assert!(choices
+            .contains(&"\u{2068}The Weight of Sin\u{2069} (\u{2068}passive\u{2069})".to_string()));
     }
 
     #[test]
@@ -104,13 +118,21 @@ mod tests {
         let interaction = build_discord_interaction(xiao_query.to_string(), true);
 
         let response = lor_autocomplete(&interaction, &build_mocked_binahbot_env());
-        let choices = response.data.as_ref().expect("no data field found")
-            .choices.as_ref().expect("no embeds found")
-            .iter().map(|x| x.name.clone()).collect::<Vec<_>>();
+        let choices = response
+            .data
+            .as_ref()
+            .expect("no data field found")
+            .choices
+            .as_ref()
+            .expect("no embeds found")
+            .iter()
+            .map(|x| x.name.clone())
+            .collect::<Vec<_>>();
 
         assert!(choices.len() <= MAX_AUTOCOMPLETE_OPTIONS);
         assert!(choices.contains(&"\u{2068}Xiao\u{2069} (\u{2068}passive\u{2069})".to_string()));
-        assert!(choices.contains(&"\u{2068}Xiao’s Page\u{2069} (\u{2068}collectable\u{2069})".to_string()));
+        assert!(choices
+            .contains(&"\u{2068}Xiao’s Page\u{2069} (\u{2068}collectable\u{2069})".to_string()));
         assert!(choices.contains(&"Xiao’s Page".to_string()));
     }
 
@@ -120,15 +142,22 @@ mod tests {
         let interaction = build_discord_interaction(xiao_query.to_string(), false);
 
         let response = lor_autocomplete(&interaction, &build_mocked_binahbot_env());
-        let choices = response.data.as_ref().expect("no data field found")
-            .choices.as_ref().expect("no embeds found")
-            .iter().map(|x| x.name.clone()).collect::<Vec<_>>();
+        let choices = response
+            .data
+            .as_ref()
+            .expect("no data field found")
+            .choices
+            .as_ref()
+            .expect("no embeds found")
+            .iter()
+            .map(|x| x.name.clone())
+            .collect::<Vec<_>>();
 
         assert!(choices.len() <= MAX_AUTOCOMPLETE_OPTIONS);
         assert!(!choices.contains(&"\u{2068}Xiao\u{2069} (\u{2068}passive\u{2069})".to_string()));
-        assert!(choices.contains(&"\u{2068}Xiao’s Page\u{2069} (\u{2068}collectable\u{2069})".to_string()));
+        assert!(choices
+            .contains(&"\u{2068}Xiao’s Page\u{2069} (\u{2068}collectable\u{2069})".to_string()));
         assert!(!choices.contains(&"Xiao’s Page".to_string()));
-
     }
 
     fn build_discord_interaction(query_string: String, is_all: bool) -> DiscordInteraction {
@@ -136,21 +165,26 @@ mod tests {
             id: "id".to_string(),
             application_id: "app_id".to_string(),
             r#type: DiscordInteractionType::ApplicationCommandAutocomplete,
-            data: Some(DiscordInteractionData::ApplicationCommand(DiscordApplicationCommandInteractionData {
-                id: "id".to_string(),
-                name: "lor".to_string(),
-                options: Some(vec![DiscordInteractionOptions {
-                    name: "query".to_string(),
-                    name_localizations: None,
-                    value: DiscordInteractionOptionValue::String(query_string),
-                    focused: None
-                }, DiscordInteractionOptions {
-                    name: "all".to_string(),
-                    name_localizations: None,
-                    value: DiscordInteractionOptionValue::Bool(is_all),
-                    focused: None
-                }]),
-            })),
+            data: Some(DiscordInteractionData::ApplicationCommand(
+                DiscordApplicationCommandInteractionData {
+                    id: "id".to_string(),
+                    name: "lor".to_string(),
+                    options: Some(vec![
+                        DiscordInteractionOptions {
+                            name: "query".to_string(),
+                            name_localizations: None,
+                            value: DiscordInteractionOptionValue::String(query_string),
+                            focused: None,
+                        },
+                        DiscordInteractionOptions {
+                            name: "all".to_string(),
+                            name_localizations: None,
+                            value: DiscordInteractionOptionValue::Bool(is_all),
+                            focused: None,
+                        },
+                    ]),
+                },
+            )),
             channel_id: None,
             token: "token".to_string(),
             locale: None,

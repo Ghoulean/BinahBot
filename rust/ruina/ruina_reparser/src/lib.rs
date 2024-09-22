@@ -167,9 +167,7 @@ fn get_locales_by_identifier<T>(
         .map(|locale| {
             (
                 locale.clone(),
-                locale_mapping
-                    .get(locale.to_string().as_str())
-                    .unwrap(),
+                locale_mapping.get(locale.to_string().as_str()).unwrap(),
             )
         })
         .filter(|locale_map| locale_map.1.get(id).is_some())
@@ -289,5 +287,4 @@ mod tests {
 
         assert_eq!(result.values().len(), 0);
     }
-
 }

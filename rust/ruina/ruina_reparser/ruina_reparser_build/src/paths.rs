@@ -38,7 +38,7 @@ pub static MOST_PATHS: &[&str] = &[
     KR_LOCALE_PATH_STR,
     JP_LOCALE_PATH_STR,
     CN_LOCALE_PATH_STR,
-    TRCN_LOCALE_PATH_STR
+    TRCN_LOCALE_PATH_STR,
 ];
 
 pub static LOCALE_PAGE_PATHS: &[&str] = &[
@@ -47,7 +47,7 @@ pub static LOCALE_PAGE_PATHS: &[&str] = &[
     CARD_EFFECT_LOCALIZE_DIR,
     COMBAT_PAGE_LOCALIZE_DIR,
     KEY_PAGE_LOCALIZE_DIR,
-    PASSIVE_LOCALIZE_DIR
+    PASSIVE_LOCALIZE_DIR,
 ];
 
 pub fn get_locale_path(locale: &Locale) -> PathBuf {
@@ -56,7 +56,7 @@ pub fn get_locale_path(locale: &Locale) -> PathBuf {
         Locale::Korean => KR_LOCALE_PATH_STR,
         Locale::Japanese => JP_LOCALE_PATH_STR,
         Locale::Chinese => CN_LOCALE_PATH_STR,
-        Locale::TraditionalChinese => TRCN_LOCALE_PATH_STR
+        Locale::TraditionalChinese => TRCN_LOCALE_PATH_STR,
     };
     PathBuf::from(str)
 }

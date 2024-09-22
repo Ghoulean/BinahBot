@@ -15,7 +15,9 @@ pub fn reserialize_passive_locales(document_strings: &HashMap<Locale, Vec<String
             (
                 x.clone(),
                 y.iter()
-                    .flat_map(|document_string| process_passive_locale_file(document_string.as_str()))
+                    .flat_map(|document_string| {
+                        process_passive_locale_file(document_string.as_str())
+                    })
                     .collect::<HashMap<_, _>>(),
             )
         })
@@ -40,7 +42,9 @@ pub fn reserialize_passive_locales(document_strings: &HashMap<Locale, Vec<String
     )
 }
 
-fn process_passive_locale_file(document_string: &str) -> HashMap<PassiveLocaleKey, PassiveLocaleValue> {
+fn process_passive_locale_file(
+    document_string: &str,
+) -> HashMap<PassiveLocaleKey, PassiveLocaleValue> {
     let doc: Box<Document> = Box::new(Document::parse(document_string).unwrap());
     let xml_root_node = get_unique_node(doc.root(), "PassiveDescRoot").unwrap();
     let passives = get_nodes(xml_root_node, "PassiveDesc");

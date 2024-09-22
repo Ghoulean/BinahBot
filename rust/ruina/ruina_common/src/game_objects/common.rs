@@ -45,7 +45,7 @@ pub enum Chapter {
 pub enum Collectability {
     Collectable,
     Obtainable,
-    EnemyOnly
+    EnemyOnly,
 }
 
 #[derive(Clone, Eq, Hash, PartialEq, Debug, strum_macros::EnumIter)]
@@ -63,7 +63,7 @@ pub enum Page<'a> {
     BattleSymbol(&'a BattleSymbol<'a>),
     CombatPage(&'a CombatPage<'a>),
     KeyPage(&'a KeyPage<'a>),
-    Passive(&'a Passive<'a>)
+    Passive(&'a Passive<'a>),
 }
 
 impl fmt::Display for PageType {

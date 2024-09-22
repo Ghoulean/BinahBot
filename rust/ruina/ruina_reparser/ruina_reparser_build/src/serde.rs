@@ -26,10 +26,7 @@ pub fn _get_chapter_from_str(str: &str) -> Option<Chapter> {
     })
 }
 
-pub fn serialize_option_2<T>(
-    option: Option<T>,
-    serializer: fn(&T) -> String
-) -> String {
+pub fn serialize_option_2<T>(option: Option<T>, serializer: fn(&T) -> String) -> String {
     if option.is_some() {
         let serialized = serializer(option.as_ref().unwrap());
         format!("Some({serialized})")
@@ -39,8 +36,9 @@ pub fn serialize_option_2<T>(
 }
 
 // Numbers and boolean
-pub fn display_serializer<T>(x: &T) -> String 
-where T: fmt::Display,
+pub fn display_serializer<T>(x: &T) -> String
+where
+    T: fmt::Display,
 {
     x.to_string()
 }

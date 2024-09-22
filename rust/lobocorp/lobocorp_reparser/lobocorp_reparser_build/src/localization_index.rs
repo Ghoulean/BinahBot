@@ -12,7 +12,7 @@ use crate::xml::get_unique_node;
 
 #[derive(Debug, Eq, PartialEq, Hash)]
 struct OwnedLocalizationKey(pub String, pub Locale);
- 
+
 pub fn write_localization_index() -> String {
     let hm = build_localization_index();
     let mut builder = phf_codegen::Map::new();
@@ -31,10 +31,13 @@ fn build_localization_index() -> HashMap<OwnedLocalizationKey, String> {
 
     Locale::iter().for_each(|locale| {
         let path = get_localized_equipment_file_path(&locale);
-        let file_str = fs::read_to_string(path.as_path()).expect(&format!("cannot read {:?}", path));
-        let doc: Document = Document::parse(&file_str).expect(&format!("failed parsing {:?}", path));
+        let file_str =
+            fs::read_to_string(path.as_path()).expect(&format!("cannot read {:?}", path));
+        let doc: Document =
+            Document::parse(&file_str).expect(&format!("failed parsing {:?}", path));
 
-        let localize_root = get_unique_node(&doc.root(), "localize").expect("couldn't find localize");
+        let localize_root =
+            get_unique_node(&doc.root(), "localize").expect("couldn't find localize");
         get_nodes(&localize_root, "text").iter().for_each(|x| {
             let id = x.attribute("id").expect("no id");
 
@@ -44,7 +47,9 @@ fn build_localization_index() -> HashMap<OwnedLocalizationKey, String> {
             let binding = doc.input_text()[start..end].to_string();
 
             // todo: more comprehensive parsing
-            let text = binding.trim().replace("&#13;", "")
+            let text = binding
+                .trim()
+                .replace("&#13;", "")
                 .replace("&#10;", "\n")
                 .replace("&#34;", "\"")
                 .replace("&#60;", "<")
@@ -55,7 +60,8 @@ fn build_localization_index() -> HashMap<OwnedLocalizationKey, String> {
                 .replace("</i>", "*");
 
             let localization_key = OwnedLocalizationKey(id.to_string(), locale.clone());
-            hm.entry(localization_key).or_insert(format!("r#\"{}\"#", text));
+            hm.entry(localization_key)
+                .or_insert(format!("r#\"{}\"#", text));
         });
     });
 

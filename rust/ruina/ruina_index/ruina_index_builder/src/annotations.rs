@@ -1,5 +1,3 @@
-use std::collections::HashMap;
-use std::str::FromStr;
 use fluent_templates::Loader;
 use fluent_templates::StaticLoader;
 use ruina_common::game_objects::common::Chapter;
@@ -8,6 +6,8 @@ use ruina_common::game_objects::common::PageType;
 use ruina_common::localizations::common::Locale;
 use ruina_identifier::TypedId;
 use serde::Deserialize;
+use std::collections::HashMap;
+use std::str::FromStr;
 use strum::IntoEnumIterator;
 use toml::from_str;
 
@@ -27,7 +27,7 @@ fluent_templates::static_loader! {
 pub struct TomlData {
     pagetype: String,
     id: String,
-    localization_id: String
+    localization_id: String,
 }
 
 #[derive(strum_macros::EnumString)]
@@ -46,7 +46,7 @@ impl From<TomlPageType> for PageType {
             TomlPageType::BattleSymbol => PageType::BattleSymbol,
             TomlPageType::CombatPage => PageType::CombatPage,
             TomlPageType::KeyPage => PageType::KeyPage,
-            TomlPageType::Passive => PageType::Passive
+            TomlPageType::Passive => PageType::Passive,
         }
     }
 }
@@ -54,33 +54,62 @@ impl From<TomlPageType> for PageType {
 pub type AnnotationMapping<'a> = HashMap<TypedId, HashMap<Locale, String>>;
 
 pub fn precompute_annotations_map<'a>() -> AnnotationMapping<'a> {
-    let manual_annotation_toml_map: HashMap<String, Vec<TomlData>> = from_str(
-        include_str!("../data/manual/annotations.toml")
-    ).unwrap();
-    let manual_annotations_toml = manual_annotation_toml_map.get("entry").expect("couldn't find \"entry\" from toml");
+    let manual_annotation_toml_map: HashMap<String, Vec<TomlData>> =
+        from_str(include_str!("../data/manual/annotations.toml")).unwrap();
+    let manual_annotations_toml = manual_annotation_toml_map
+        .get("entry")
+        .expect("couldn't find \"entry\" from toml");
 
     parse_manual_mappings(&LOCALES, manual_annotations_toml)
 }
 
 pub fn precompute_disambiguations_map<'a>() -> AnnotationMapping<'a> {
-    let mut manual_disambiguation_toml_map: HashMap<String, Vec<TomlData>> = from_str(
-        include_str!("../data/manual/disambiguations.toml")
-    ).unwrap();
-    let manual_disambiguation_toml = manual_disambiguation_toml_map.remove("entry").take().expect("couldn't find \"entry\" from toml");
+    let mut manual_disambiguation_toml_map: HashMap<String, Vec<TomlData>> =
+        from_str(include_str!("../data/manual/disambiguations.toml")).unwrap();
+    let manual_disambiguation_toml = manual_disambiguation_toml_map
+        .remove("entry")
+        .take()
+        .expect("couldn't find \"entry\" from toml");
 
-    let collectable_heuristic = create_obtainability_heuristic(&LOCALES, &Collectability::Collectable, "availability_collectible");
-    let obtainable_heuristic = create_obtainability_heuristic(&LOCALES, &Collectability::Obtainable, "availability_obtainable");
-    let enemyonly_heuristic = create_obtainability_heuristic(&LOCALES, &Collectability::EnemyOnly, "availability_enemy");
+    let collectable_heuristic = create_obtainability_heuristic(
+        &LOCALES,
+        &Collectability::Collectable,
+        "availability_collectible",
+    );
+    let obtainable_heuristic = create_obtainability_heuristic(
+        &LOCALES,
+        &Collectability::Obtainable,
+        "availability_obtainable",
+    );
+    let enemyonly_heuristic =
+        create_obtainability_heuristic(&LOCALES, &Collectability::EnemyOnly, "availability_enemy");
 
     let canard_heuristic = create_chapter_heuristic(&LOCALES, &Chapter::Canard, "chapter_canard");
-    let um_heuristic = create_chapter_heuristic(&LOCALES, &Chapter::UrbanMyth, "chapter_urban_myth");
-    let ul_heuristic = create_chapter_heuristic(&LOCALES, &Chapter::UrbanLegend, "chapter_urban_legend");
-    let up_heuristic = create_chapter_heuristic(&LOCALES, &Chapter::UrbanPlague, "chapter_urban_plague");
-    let un_heuristic = create_chapter_heuristic(&LOCALES, &Chapter::UrbanNightmare, "chapter_urban_nightmare");
-    let sotc_heuristic = create_chapter_heuristic(&LOCALES, &Chapter::StarOfTheCity, "chapter_star_of_the_city");
-    let ic_heuristic = create_chapter_heuristic(&LOCALES, &Chapter::ImpuritasCivitatis, "chapter_impuritas_civitatis");
+    let um_heuristic =
+        create_chapter_heuristic(&LOCALES, &Chapter::UrbanMyth, "chapter_urban_myth");
+    let ul_heuristic =
+        create_chapter_heuristic(&LOCALES, &Chapter::UrbanLegend, "chapter_urban_legend");
+    let up_heuristic =
+        create_chapter_heuristic(&LOCALES, &Chapter::UrbanPlague, "chapter_urban_plague");
+    let un_heuristic = create_chapter_heuristic(
+        &LOCALES,
+        &Chapter::UrbanNightmare,
+        "chapter_urban_nightmare",
+    );
+    let sotc_heuristic = create_chapter_heuristic(
+        &LOCALES,
+        &Chapter::StarOfTheCity,
+        "chapter_star_of_the_city",
+    );
+    let ic_heuristic = create_chapter_heuristic(
+        &LOCALES,
+        &Chapter::ImpuritasCivitatis,
+        "chapter_impuritas_civitatis",
+    );
 
-    let pagetype_heuristics = PageType::iter().map(|x| create_pagetype_heuristic(&LOCALES, &x)).collect::<Vec<_>>();
+    let pagetype_heuristics = PageType::iter()
+        .map(|x| create_pagetype_heuristic(&LOCALES, &x))
+        .collect::<Vec<_>>();
 
     let manual_mappings = parse_manual_mappings(&LOCALES, &manual_disambiguation_toml);
 
@@ -89,7 +118,7 @@ pub fn precompute_disambiguations_map<'a>() -> AnnotationMapping<'a> {
     heuristics.extend(vec![
         collectable_heuristic,
         obtainable_heuristic,
-        enemyonly_heuristic
+        enemyonly_heuristic,
     ]);
     heuristics.extend(vec![
         canard_heuristic,
@@ -98,10 +127,13 @@ pub fn precompute_disambiguations_map<'a>() -> AnnotationMapping<'a> {
         up_heuristic,
         un_heuristic,
         sotc_heuristic,
-        ic_heuristic
+        ic_heuristic,
     ]);
 
-    let mut vec = heuristics.into_iter().map(|x| get_disambiguations_for_uniqueness_heuristic(x)).collect::<Vec<_>>();
+    let mut vec = heuristics
+        .into_iter()
+        .map(|x| get_disambiguations_for_uniqueness_heuristic(x))
+        .collect::<Vec<_>>();
     vec.insert(0, manual_mappings);
 
     merge_all(&vec)
@@ -113,12 +145,12 @@ pub fn write_to_string(annotation_mapping: &AnnotationMapping) -> String {
     for (typed_id, locale) in annotation_mapping.iter() {
         let mut locale_builder = phf_codegen::Map::new();
         for (locale, annotation) in locale.iter() {
-            locale_builder.entry(
-                format!("{}", locale),
-                &format!("\"{}\"", annotation)
-            );
+            locale_builder.entry(format!("{}", locale), &format!("\"{}\"", annotation));
         }
-        builder.entry(typed_id.to_string(), locale_builder.build().to_string().as_str());
+        builder.entry(
+            typed_id.to_string(),
+            locale_builder.build().to_string().as_str(),
+        );
     }
     format!(
         "phf::Map<&'static str, phf::Map<&'static str, &'static str>> = {};",
@@ -126,9 +158,12 @@ pub fn write_to_string(annotation_mapping: &AnnotationMapping) -> String {
     )
 }
 
-fn parse_manual_mappings<'a>(locales: &'static StaticLoader, toml_data: &'a [TomlData]) -> AnnotationMapping<'a> {
+fn parse_manual_mappings<'a>(
+    locales: &'static StaticLoader,
+    toml_data: &'a [TomlData],
+) -> AnnotationMapping<'a> {
     let mut map = HashMap::new();
-    
+
     toml_data.iter().for_each(|x| {
         let mut typed_id_map = HashMap::new();
 
@@ -138,10 +173,12 @@ fn parse_manual_mappings<'a>(locales: &'static StaticLoader, toml_data: &'a [Tom
 
         map.insert(
             TypedId(
-                PageType::from(TomlPageType::from_str(&x.pagetype).expect("bad pagetype found in toml")),
-                x.id.clone()
-            ), 
-            typed_id_map
+                PageType::from(
+                    TomlPageType::from_str(&x.pagetype).expect("bad pagetype found in toml"),
+                ),
+                x.id.clone(),
+            ),
+            typed_id_map,
         );
     });
 
@@ -164,7 +201,10 @@ fn merge_all<'a>(mappings: &'a [AnnotationMapping<'a>]) -> AnnotationMapping<'a>
 }
 
 // in case of collision, m1 > m2 priority
-fn merge<'a>(m1: &'a AnnotationMapping<'a>, m2: &'a AnnotationMapping<'a>) -> AnnotationMapping<'a> {
+fn merge<'a>(
+    m1: &'a AnnotationMapping<'a>,
+    m2: &'a AnnotationMapping<'a>,
+) -> AnnotationMapping<'a> {
     let mut ret_val = m1.clone();
 
     for (typed_id, map) in m2 {
@@ -206,7 +246,8 @@ mod tests {
 
         let xiao = TypedId(PageType::KeyPage, "250036".to_string());
 
-        assert!(disambiguation_map.get(&xiao)
+        assert!(disambiguation_map
+            .get(&xiao)
             .is_some_and(|x| x.get(&Locale::English).unwrap() == "collectable"));
     }
 
@@ -218,7 +259,11 @@ mod tests {
 
         assert_eq!(
             "obtainable",
-            disambiguation_map.get(&tao_tie).unwrap().get(&Locale::English).unwrap()
+            disambiguation_map
+                .get(&tao_tie)
+                .unwrap()
+                .get(&Locale::English)
+                .unwrap()
         );
     }
 
@@ -231,11 +276,19 @@ mod tests {
 
         assert_eq!(
             "EGO page",
-            disambiguation_map.get(&fourth_match_flame).unwrap().get(&Locale::English).unwrap()
+            disambiguation_map
+                .get(&fourth_match_flame)
+                .unwrap()
+                .get(&Locale::English)
+                .unwrap()
         );
         assert_eq!(
             "EGO page",
-            disambiguation_map.get(&sound_of_a_star).unwrap().get(&Locale::English).unwrap()
+            disambiguation_map
+                .get(&sound_of_a_star)
+                .unwrap()
+                .get(&Locale::English)
+                .unwrap()
         );
     }
 
@@ -248,12 +301,15 @@ mod tests {
 
         let your_shield_battle_symbol = TypedId(PageType::BattleSymbol, "YourShield".to_string());
 
-        assert!(disambiguation_map.get(&coffin)
+        assert!(disambiguation_map
+            .get(&coffin)
             .is_some_and(|x| x.get(&Locale::English).unwrap() == "abno page"));
-        assert!(disambiguation_map.get(&coffin_angela)
+        assert!(disambiguation_map
+            .get(&coffin_angela)
             .is_some_and(|x| x.get(&Locale::English).unwrap() == "combat page"));
 
-        assert!(disambiguation_map.get(&your_shield_battle_symbol)
+        assert!(disambiguation_map
+            .get(&your_shield_battle_symbol)
             .is_some_and(|x| x.get(&Locale::English).unwrap() == "battle symbol"));
     }
 
@@ -267,14 +323,18 @@ mod tests {
         let collectable = TypedId(PageType::CombatPage, "202009".to_string());
         let handling_work = TypedId(PageType::CombatPage, "301001".to_string());
 
-        assert!(disambiguation_map.get(&collectable)
+        assert!(disambiguation_map
+            .get(&collectable)
             .is_some_and(|x| x.get(&Locale::English).unwrap() == "collectable"));
-        assert!(disambiguation_map.get(&enemy_only)
+        assert!(disambiguation_map
+            .get(&enemy_only)
             .is_some_and(|x| x.get(&Locale::English).unwrap() == "enemy"));
 
-        assert!(disambiguation_map.get(&handling_work)
+        assert!(disambiguation_map
+            .get(&handling_work)
             .is_some_and(|x| x.get(&Locale::Korean).unwrap() == "collectable"));
-        assert!(disambiguation_map.get(&enemy_only)
+        assert!(disambiguation_map
+            .get(&enemy_only)
             .is_some_and(|x| x.get(&Locale::Korean).unwrap() == "enemy"));
     }
 }

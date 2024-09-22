@@ -8,9 +8,10 @@ static BASE_DISCORD_URL: &str = "https://discord.com/api/v10";
 pub async fn get_user(
     client: &reqwest::Client,
     bot_auth_token: &str,
-    user_id: &str
+    user_id: &str,
 ) -> Result<DiscordUser, Box<dyn Error + Send + Sync>> {
-    let response = client.get(&format!("{}{}{}", BASE_DISCORD_URL, "/users/", user_id))
+    let response = client
+        .get(&format!("{}{}{}", BASE_DISCORD_URL, "/users/", user_id))
         .header("Authorization", format!("Bot {}", bot_auth_token))
         .send()
         .await?
@@ -23,20 +24,17 @@ pub async fn get_user(
 }
 
 // todo: enum errors
-pub fn validate_deck(
-    deck_data: &DeckData
-) -> Result<(), &str> {
+pub fn validate_deck(deck_data: &DeckData) -> Result<(), &str> {
     for x in deck_data.combat_page_ids.as_ref().into_iter() {
         if x.is_none() {
             return Err("invalid_deck_error_message");
         }
-    };
+    }
     if deck_data.keypage_id.is_none() {
         return Err("invalid_deck_error_message");
     }
     Ok(())
 }
-
 
 #[cfg(test)]
 mod tests {

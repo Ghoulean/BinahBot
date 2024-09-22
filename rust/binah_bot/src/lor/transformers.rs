@@ -40,7 +40,12 @@ pub fn transform_abno_page(
     request_locale: &BinahBotLocale,
     env: &BinahBotEnvironment,
 ) -> DiscordEmbed {
-    tracing::info!("Transforming abno page with internal_name={}, card_locale={}, request_locale={}", internal_name, card_locale, request_locale);
+    tracing::info!(
+        "Transforming abno page with internal_name={}, card_locale={}, request_locale={}",
+        internal_name,
+        card_locale,
+        request_locale
+    );
 
     let page = get_abno_page_by_internal_name(internal_name).unwrap();
     let binding = get_abno_page_locales_by_internal_name(internal_name);
@@ -49,7 +54,11 @@ pub fn transform_abno_page(
 
     let abno_type_display = env.locales.lookup(
         &lang_id,
-        if page.is_positive { "abno_type_display_awakening" } else {"abno_type_display_breakdown"}
+        if page.is_positive {
+            "abno_type_display_awakening"
+        } else {
+            "abno_type_display_breakdown"
+        },
     );
     let embed_color = if page.is_positive {
         DiscordEmbedColors::AwakeningAbnoPage
@@ -59,12 +68,16 @@ pub fn transform_abno_page(
 
     let img_url = format!(
         "https://{0}.s3.amazonaws.com/{1}.png",
-        env.s3_bucket_name,
-        page.artwork
+        env.s3_bucket_name, page.artwork
     );
 
     DiscordEmbed {
-        title: Some(locale_page.map(|x| x.card_name).unwrap_or(internal_name).to_string()),
+        title: Some(
+            locale_page
+                .map(|x| x.card_name)
+                .unwrap_or(internal_name)
+                .to_string(),
+        ),
         description: None,
         color: Some(embed_color as i32),
         image: Some(DiscordEmbedImage { url: img_url }),
@@ -74,7 +87,10 @@ pub fn transform_abno_page(
             icon_url: None,
         }),
         author: None,
-        url: Some(format!("{}/abno_pages/{}/{}", TIPH_BASE_URL, page.sephirah, page.id)),
+        url: Some(format!(
+            "{}/abno_pages/{}/{}",
+            TIPH_BASE_URL, page.sephirah, page.id
+        )),
         fields: Some(vec![
             DiscordEmbedFields {
                 name: env.locales.lookup(&lang_id, "abno_flavor_text_header"),
@@ -114,9 +130,14 @@ pub fn transform_battle_symbol(
     internal_name: &str,
     card_locale: &Locale,
     request_locale: &BinahBotLocale,
-    env: &BinahBotEnvironment
+    env: &BinahBotEnvironment,
 ) -> DiscordEmbed {
-    tracing::info!("Transforming battle symbol with internal_name={}, card_locale={}, request_locale={}", internal_name, card_locale, request_locale);
+    tracing::info!(
+        "Transforming battle symbol with internal_name={}, card_locale={}, request_locale={}",
+        internal_name,
+        card_locale,
+        request_locale
+    );
 
     let page = get_battle_symbol_by_internal_name(internal_name).unwrap();
     let binding = get_battle_symbol_locales_by_internal_name(internal_name);
@@ -134,11 +155,17 @@ pub fn transform_battle_symbol(
         BattleSymbolSlot::Headwear3 => "Mask",
         BattleSymbolSlot::Headwear4 => "Helmet",
         // todo: remove None enum (just use optional)
-        _ => ""
+        _ => "",
     };
 
-    let image_name = page.resource.map(|x| { format!("{slot_url}_{x}_Front_Forward") }).unwrap_or(NOT_FOUND_IMAGE_NAME.to_string());
-    let url = format!("https://{0}.s3.amazonaws.com/battle_symbol/{image_name}.png", env.s3_bucket_name);
+    let image_name = page
+        .resource
+        .map(|x| format!("{slot_url}_{x}_Front_Forward"))
+        .unwrap_or(NOT_FOUND_IMAGE_NAME.to_string());
+    let url = format!(
+        "https://{0}.s3.amazonaws.com/battle_symbol/{image_name}.png",
+        env.s3_bucket_name
+    );
 
     let mut fields = vec![
         DiscordEmbedFields {
@@ -158,12 +185,16 @@ pub fn transform_battle_symbol(
             inline: Some(true),
         },
         DiscordEmbedFields {
-            name: env.locales.lookup(&lang_id, "battle_symbol_description_header"),
+            name: env
+                .locales
+                .lookup(&lang_id, "battle_symbol_description_header"),
             value: locale_page.description.unwrap_or("-").to_string(),
             inline: Some(false),
         },
         DiscordEmbedFields {
-            name: env.locales.lookup(&lang_id, "battle_symbol_acquire_condition_header"),
+            name: env
+                .locales
+                .lookup(&lang_id, "battle_symbol_acquire_condition_header"),
             value: locale_page.acquire_condition.unwrap_or("-").to_string(),
             inline: Some(false),
         },
@@ -172,7 +203,9 @@ pub fn transform_battle_symbol(
     if page.hidden {
         fields.push(DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "battle_symbol_hidden_header"),
-            value: env.locales.lookup(&lang_id, "battle_symbol_is_hidden_display"),
+            value: env
+                .locales
+                .lookup(&lang_id, "battle_symbol_is_hidden_display"),
             inline: Some(false),
         })
     }
@@ -204,9 +237,14 @@ pub fn transform_combat_page(
     id: &str,
     card_locale: &Locale,
     request_locale: &BinahBotLocale,
-    env: &BinahBotEnvironment
+    env: &BinahBotEnvironment,
 ) -> DiscordEmbed {
-    tracing::info!("Transforming combat page with id={}, card_locale={}, request_locale={}", id, card_locale, request_locale);
+    tracing::info!(
+        "Transforming combat page with id={}, card_locale={}, request_locale={}",
+        id,
+        card_locale,
+        request_locale
+    );
 
     let page = get_combat_page_by_id(id).unwrap();
     let binding = get_combat_page_locales_by_id(id);
@@ -217,7 +255,7 @@ pub fn transform_combat_page(
         &ParsedTypedId(PageType::CombatPage, id.to_string()),
         card_locale,
         &lang_id,
-        env
+        env,
     );
 
     let embed_color = DiscordEmbedColors::from(&page.rarity);
@@ -245,15 +283,25 @@ pub fn transform_combat_page(
         },
     ];
 
-    let page_desc = page.script_id.and_then(|x| {
-        get_card_effect_locales_by_id(x).get(card_locale).map(|y| y.desc.join("\n").to_string())
-    }).or(page_locale.as_ref().and_then(|x| x.card_effect).map(|x| x.to_string()));
+    let page_desc = page
+        .script_id
+        .and_then(|x| {
+            get_card_effect_locales_by_id(x)
+                .get(card_locale)
+                .map(|y| y.desc.join("\n").to_string())
+        })
+        .or(page_locale
+            .as_ref()
+            .and_then(|x| x.card_effect)
+            .map(|x| x.to_string()));
 
     if let Some(desc) = page_desc {
         fields.push(DiscordEmbedFields {
-            name: env.locales.lookup(&lang_id, "combat_page_description_header"),
+            name: env
+                .locales
+                .lookup(&lang_id, "combat_page_description_header"),
             value: desc,
-            inline: Some(true)
+            inline: Some(true),
         })
     }
 
@@ -284,9 +332,14 @@ pub fn transform_key_page(
     id: &str,
     card_locale: &Locale,
     request_locale: &BinahBotLocale,
-    env: &BinahBotEnvironment
+    env: &BinahBotEnvironment,
 ) -> DiscordEmbed {
-    tracing::info!("Transforming key page with id={}, card_locale={}, request_locale={}", id, card_locale, request_locale);
+    tracing::info!(
+        "Transforming key page with id={}, card_locale={}, request_locale={}",
+        id,
+        card_locale,
+        request_locale
+    );
 
     let page = get_key_page_by_id(id).unwrap();
     let lang_id = LanguageIdentifier::from(request_locale);
@@ -295,7 +348,7 @@ pub fn transform_key_page(
         &ParsedTypedId(PageType::KeyPage, id.to_string()),
         card_locale,
         &lang_id,
-        env
+        env,
     );
 
     let embed_color = DiscordEmbedColors::from(&page.rarity);
@@ -335,8 +388,7 @@ pub fn transform_key_page(
     ]);
     let url = format!(
         "https://{0}.s3.amazonaws.com/Sprite/{1}.png",
-        env.s3_bucket_name,
-        page.id
+        env.s3_bucket_name, page.id
     );
 
     let mut fields = vec![
@@ -361,7 +413,9 @@ pub fn transform_key_page(
             inline: Some(true),
         },
         DiscordEmbedFields {
-            name: env.locales.lookup(&lang_id, "key_page_stagger_resist_header"),
+            name: env
+                .locales
+                .lookup(&lang_id, "key_page_stagger_resist_header"),
             value: stagger_resists,
             inline: Some(true),
         },
@@ -386,9 +440,7 @@ pub fn transform_key_page(
             .map(|x| {
                 get_passive_locales_by_id(x)
                     .get(card_locale)
-                    .map(|y| {
-                        y.name.to_string()
-                    })
+                    .map(|y| y.name.to_string())
                     .unwrap_or(x.to_string())
             })
             .collect();
@@ -419,9 +471,14 @@ pub fn transform_passive(
     id: &str,
     card_locale: &Locale,
     request_locale: &BinahBotLocale,
-    env: &BinahBotEnvironment
+    env: &BinahBotEnvironment,
 ) -> DiscordEmbed {
-    tracing::info!("Transforming passive with id={}, card_locale={}, request_locale={}", id, card_locale, request_locale);
+    tracing::info!(
+        "Transforming passive with id={}, card_locale={}, request_locale={}",
+        id,
+        card_locale,
+        request_locale
+    );
 
     let page = get_passive_by_id(id).unwrap();
     let binding = get_passive_locales_by_id(id);
@@ -432,7 +489,7 @@ pub fn transform_passive(
         &ParsedTypedId(PageType::Passive, id.to_string()),
         card_locale,
         &lang_id,
-        env
+        env,
     );
 
     let embed_color = page
@@ -462,7 +519,9 @@ pub fn transform_passive(
     if page.transferable.is_some_and(|x| !x) {
         fields.push(DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "passive_transferable_header"),
-            value: env.locales.lookup(&lang_id, "passive_not_transferable_display"),
+            value: env
+                .locales
+                .lookup(&lang_id, "passive_not_transferable_display"),
             inline: Some(false),
         })
     }
@@ -487,26 +546,28 @@ fn format_dice(
     dice: &[Die],
     locale: &Locale,
     combat_page_locale: &Option<&&CombatPageLocale>,
-    emojis: &Emojis
+    emojis: &Emojis,
 ) -> String {
     let formatted_die = dice
         .iter()
         .enumerate()
         .map(|(i, die)| {
-            let binding = die.script
+            let binding = die
+                .script
                 .map(get_card_effect_locales_by_id)
                 .and_then(|x| x.get(locale).map(|y| y.desc))
                 .map(|x| x.join("\n"));
 
-            let desc = combat_page_locale.and_then(|x| {
-                if x.dice_description_override.len() > i {
-                    x.dice_description_override[i]
-                } else {
-                    None
-                }
-            }).or(
-                binding.as_deref()
-            ).unwrap_or("");
+            let desc = combat_page_locale
+                .and_then(|x| {
+                    if x.dice_description_override.len() > i {
+                        x.dice_description_override[i]
+                    } else {
+                        None
+                    }
+                })
+                .or(binding.as_deref())
+                .unwrap_or("");
 
             format!(
                 "{} {}-{} {}",
@@ -551,7 +612,10 @@ mod tests {
 
         let embed = transform_abno_page(internal_name, &card_locale, &request_locale, &env);
 
-        assert!(embed.url.expect("no url").contains("https://tiphereth.zasz.su/abno_pages/Binah/7"));
+        assert!(embed
+            .url
+            .expect("no url")
+            .contains("https://tiphereth.zasz.su/abno_pages/Binah/7"));
     }
 
     #[test]
@@ -562,7 +626,8 @@ mod tests {
         let binding = get_combat_page_locales_by_id("9901101");
         let fmf_locale = binding.get(&Locale::English);
 
-        let fmf_format_dice = format_dice(fmf_card.dice, &Locale::English, &fmf_locale, &env.emojis);
+        let fmf_format_dice =
+            format_dice(fmf_card.dice, &Locale::English, &fmf_locale, &env.emojis);
 
         assert!(fmf_format_dice.contains("[On Hit] Inflict 10 Burn"));
 
@@ -570,7 +635,12 @@ mod tests {
         let binding = get_combat_page_locales_by_id("9906215");
         let uncontrollable_instinct_locale = binding.get(&Locale::English);
 
-        let uncontrollable_instinct_format_dice = format_dice(uncontrollable_instinct_card.dice, &Locale::English, &uncontrollable_instinct_locale, &env.emojis);
+        let uncontrollable_instinct_format_dice = format_dice(
+            uncontrollable_instinct_card.dice,
+            &Locale::English,
+            &uncontrollable_instinct_locale,
+            &env.emojis,
+        );
 
         assert!(uncontrollable_instinct_format_dice.contains(
             "Roll this die 5 times without processing damage, then deal damage equal to the sum of rolls that would have won clashes or hit the target"
@@ -584,14 +654,24 @@ mod tests {
         let binding = get_combat_page_locales_by_id("9910108");
         let self_loathing_locale = binding.get(&Locale::English).unwrap();
 
-        let page_desc_header = env.locales.lookup(&langid!("en-US"), "combat_page_description_header");
-        let embed = transform_combat_page("9910108", &Locale::English, &BinahBotLocale::EnglishUS, &env);
+        let page_desc_header = env
+            .locales
+            .lookup(&langid!("en-US"), "combat_page_description_header");
+        let embed = transform_combat_page(
+            "9910108",
+            &Locale::English,
+            &BinahBotLocale::EnglishUS,
+            &env,
+        );
         let binding = embed.fields.unwrap();
-        let page_desc_field = binding.iter().find(|x| {
-           x.name == page_desc_header 
-        }).expect("couldn't find page description field");
+        let page_desc_field = binding
+            .iter()
+            .find(|x| x.name == page_desc_header)
+            .expect("couldn't find page description field");
 
-        assert_eq!(self_loathing_locale.card_effect.unwrap(), page_desc_field.value)
-        
+        assert_eq!(
+            self_loathing_locale.card_effect.unwrap(),
+            page_desc_field.value
+        )
     }
 }

@@ -11,18 +11,23 @@ use crate::{
 type BattleSymbolLocaleKey = String;
 type BattleSymbolLocaleValue = String;
 
-pub fn reserialize_battle_symbol_locales(document_strings: &HashMap<Locale, Vec<String>>) -> String {
-    let battle_symbols: HashMap<Locale, HashMap<BattleSymbolLocaleKey, BattleSymbolLocaleValue>> = document_strings
-        .iter()
-        .map(|(x, y)| {
-            (
-                x.clone(),
-                y.iter()
-                    .flat_map(|document_string| process_battle_symbol_locale_file(document_string.as_str()))
-                    .collect::<HashMap<_, _>>(),
-            )
-        })
-        .collect();
+pub fn reserialize_battle_symbol_locales(
+    document_strings: &HashMap<Locale, Vec<String>>,
+) -> String {
+    let battle_symbols: HashMap<Locale, HashMap<BattleSymbolLocaleKey, BattleSymbolLocaleValue>> =
+        document_strings
+            .iter()
+            .map(|(x, y)| {
+                (
+                    x.clone(),
+                    y.iter()
+                        .flat_map(|document_string| {
+                            process_battle_symbol_locale_file(document_string.as_str())
+                        })
+                        .collect::<HashMap<_, _>>(),
+                )
+            })
+            .collect();
 
     let mut builder = phf_codegen::Map::new();
     for (locale, map) in battle_symbols {
@@ -40,7 +45,9 @@ pub fn reserialize_battle_symbol_locales(document_strings: &HashMap<Locale, Vec<
     format!("static BATTLE_SYMBOL_LOCALES: phf::Map<&'static str, phf::Map<&str, BattleSymbolLocale<'_>>> = {};", builder.build())
 }
 
-fn process_battle_symbol_locale_file(document_string: &str) -> HashMap<BattleSymbolLocaleKey, BattleSymbolLocaleValue> {
+fn process_battle_symbol_locale_file(
+    document_string: &str,
+) -> HashMap<BattleSymbolLocaleKey, BattleSymbolLocaleValue> {
     let doc: Box<Document> = Box::new(Document::parse(document_string).unwrap());
     let xml_root_node = get_unique_node(doc.root(), "GiftTextRoot").unwrap();
     let battle_symbols = get_nodes(xml_root_node, "GiftText");
@@ -55,8 +62,14 @@ fn parse_battle_symbol_locale(node: Node) -> (BattleSymbolLocaleKey, BattleSymbo
     let id = node.attribute("ID").unwrap();
     let prefix = get_unique_node_text(node, "Prefix").unwrap();
     let postfix = get_unique_node_text(node, "Postfix").unwrap();
-    let description = serialize_option_2(get_unique_node_text(node, "Desc"), string_literal_serializer);
-    let acquire_condition = serialize_option_2(get_unique_node_text(node, "AcquireCondition"), string_literal_serializer);
+    let description = serialize_option_2(
+        get_unique_node_text(node, "Desc"),
+        string_literal_serializer,
+    );
+    let acquire_condition = serialize_option_2(
+        get_unique_node_text(node, "AcquireCondition"),
+        string_literal_serializer,
+    );
 
     (
         String::from(id),

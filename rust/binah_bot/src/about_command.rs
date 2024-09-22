@@ -3,6 +3,7 @@ use std::str::FromStr;
 use fluent_templates::Loader;
 use unic_langid::LanguageIdentifier;
 
+use crate::macros::cast_enum_variant;
 use crate::models::binahbot::BinahBotEnvironment;
 use crate::models::binahbot::BinahBotLocale;
 use crate::models::binahbot::DiscordEmbedColors;
@@ -23,13 +24,17 @@ use crate::models::discord::MessageResponse;
 use crate::utils::build_delete_button_component;
 use crate::utils::get_option_value;
 
-pub fn about_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -> MessageResponse {
+pub fn about_command(
+    interaction: &DiscordInteraction,
+    env: &BinahBotEnvironment,
+) -> MessageResponse {
     let binding = vec![];
-    let binding2 = match interaction.data.as_ref().expect("no data") {
-        DiscordInteractionData::ApplicationCommand(x) => x,
-        _ => unreachable!()
-    };
-    let command_args = binding2.options.as_ref().unwrap_or(&binding);
+    let command_args = interaction
+        .data
+        .as_ref()
+        .and_then(|x| cast_enum_variant!(x, DiscordInteractionData::ApplicationCommand))
+        .and_then(|x| x.options.as_ref())
+        .unwrap_or(&binding);
 
     tracing::info!("About command: command args: {:#?}", command_args);
 
@@ -41,22 +46,24 @@ pub fn about_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment
         .unwrap_or(BinahBotLocale::EnglishUS);
     let lang_id = LanguageIdentifier::from(&binah_locale);
 
-    let is_private = get_option_value("private", command_args).map(|x| match x {
-        DiscordInteractionOptionValue::Bool(y) => y,
-        _ => unreachable!()
-    }).is_some_and(|x| *x);
+    let is_private = get_option_value("private", command_args)
+        .and_then(|x| cast_enum_variant!(x, DiscordInteractionOptionValue::Bool))
+        .is_some_and(|x| *x);
 
     let flags = is_private.then_some(DiscordMessageFlag::EphemeralMessage as i32);
 
-    tracing::info!("binah_locale={:?}, lang_id={:?}, flags={:?}", binah_locale, lang_id, flags);
+    tracing::info!(
+        "binah_locale={:?}, lang_id={:?}, flags={:?}",
+        binah_locale,
+        lang_id,
+        flags
+    );
 
-    let fields = vec![
-        DiscordEmbedFields {
-            name: env.locales.lookup(&lang_id, "about_binahbot_github_header"),
-            value: "https://github.com/Ghoulean/BinahBot".to_string(),
-            inline: Some(true),
-        }
-    ];
+    let fields = vec![DiscordEmbedFields {
+        name: env.locales.lookup(&lang_id, "about_binahbot_github_header"),
+        value: "https://github.com/Ghoulean/BinahBot".to_string(),
+        inline: Some(true),
+    }];
 
     let embed = DiscordEmbed {
         title: Some(env.locales.lookup(&lang_id, "about_binahbot_header")),
@@ -74,12 +81,13 @@ pub fn about_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment
         fields: Some(fields),
     };
 
-    let components = (!is_private).then_some(vec![
-        DiscordComponent::ActionRow(ActionRowComponent {
+    let components =
+        (!is_private).then_some(vec![DiscordComponent::ActionRow(ActionRowComponent {
             r#type: DiscordComponentType::ActionRow,
-            components: vec![DiscordComponent::Button(build_delete_button_component(&lang_id, env))]
-        })
-    ]);
+            components: vec![DiscordComponent::Button(build_delete_button_component(
+                &lang_id, env,
+            ))],
+        })]);
 
     MessageResponse {
         r#type: DiscordInteractionResponseType::ChannelMessageWithSource,
@@ -88,7 +96,7 @@ pub fn about_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment
             content: None,
             embeds: Some(vec![embed]),
             flags: flags,
-            components: components
+            components: components,
         }),
     }
 }
@@ -110,16 +118,18 @@ mod tests {
             id: "id".to_string(),
             application_id: "app_id".to_string(),
             r#type: DiscordInteractionType::ApplicationCommand,
-            data: Some(DiscordInteractionData::ApplicationCommand(DiscordApplicationCommandInteractionData {
-                id: "id".to_string(),
-                name: "lor".to_string(),
-                options: Some(vec![DiscordInteractionOptions {
-                    name: "private".to_string(),
-                    name_localizations: None,
-                    value: DiscordInteractionOptionValue::Bool(false),
-                    focused: None,
-                }]),
-            })),
+            data: Some(DiscordInteractionData::ApplicationCommand(
+                DiscordApplicationCommandInteractionData {
+                    id: "id".to_string(),
+                    name: "lor".to_string(),
+                    options: Some(vec![DiscordInteractionOptions {
+                        name: "private".to_string(),
+                        name_localizations: None,
+                        value: DiscordInteractionOptionValue::Bool(false),
+                        focused: None,
+                    }]),
+                },
+            )),
             channel_id: None,
             token: "token".to_string(),
             locale: None,
