@@ -7,7 +7,7 @@ gebura = 게부라
 chesed = 헤세드
 binah = 비나
 hokma = 호크마
-keter = Roland
+keter = 롤랑
 
-crying_children = Philip
-distorted_yan = Yan
+crying_children = 필립
+distorted_yan = 얀
