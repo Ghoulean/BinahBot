@@ -20,7 +20,7 @@ jobs:
             git clone git@github.com:Ghoulean/BinahBotConfig.git ~/BinahBotConfig
       - run:
           name: Copy CDK env to the respective location
-          command: cp ~/BinahBotConfig/cdk.env ~/BinahBot/ruina-cdk
+          command: cp ~/BinahBotConfig/cdk.env ~/BinahBot/ruina-cdk/cdk.env
       - run:
           name: Copy channel configuration to the respective location
           command: cp ~/BinahBotConfig/channel_config.toml ~/BinahBot/rust/binah_bot/binah_bot_spoiler/src/channel_config.toml

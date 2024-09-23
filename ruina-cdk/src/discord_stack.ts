@@ -8,8 +8,6 @@ import {
 import { AttributeType, TableV2 } from "aws-cdk-lib/aws-dynamodb";
 import {
     Effect,
-    Policy,
-    PolicyDocument,
     PolicyStatement,
 } from "aws-cdk-lib/aws-iam";
 import * as lambda from "aws-cdk-lib/aws-lambda";
