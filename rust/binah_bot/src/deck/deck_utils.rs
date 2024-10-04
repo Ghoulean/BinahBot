@@ -5,6 +5,8 @@ use crate::models::discord::DiscordUser;
 
 static BASE_DISCORD_URL: &str = "https://discord.com/api/v10";
 
+pub struct DeckKey(pub String, pub String);
+
 pub async fn get_user(
     client: &reqwest::Client,
     bot_auth_token: &str,
@@ -34,6 +36,19 @@ pub fn validate_deck(deck_data: &DeckData) -> Result<(), &str> {
         return Err("invalid_deck_error_message");
     }
     Ok(())
+}
+
+pub fn parse_deck_name_option(name_option: &str) -> Result<DeckKey, ()> {
+    let mut split: Vec<_> = name_option.split('#').collect();
+    if split.len() >= 2 {
+        let split2 = split.split_off(1);
+        Ok(DeckKey(
+            split.first().unwrap().to_string(),
+            split2.join("#"),
+        ))
+    } else {
+        Err(())
+    }
 }
 
 #[cfg(test)]

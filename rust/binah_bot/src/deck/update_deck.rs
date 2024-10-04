@@ -42,12 +42,17 @@ pub async fn update_deck(
         .and_then(|x| x.options.as_ref())
         .unwrap();
 
+    let lang_id = LanguageIdentifier::from(&get_binahbot_locale(interaction));
+
     let deck_name = get_option_value("name", command_args)
         .and_then(|x| cast_enum_variant!(x, DiscordInteractionOptionValue::String))
         .unwrap();
+
     let deck_key = match parse_deck_name_option(deck_name) {
         Ok(x) => x,
-        Err(_) => panic!(),
+        Err(_) => {
+            return build_error_message_response(&lang_id, "deck_not_found_error_message", env)
+        }
     };
 
     let tiph_deck_option = get_option_value("deck", command_args)
@@ -73,15 +78,14 @@ pub async fn update_deck(
 
     let mut deck = match get_deck_result {
         Ok(x) => x,
-        // todo: early return MessageResponse
-        Err(_) => panic!(),
+        Err(_) => {
+            return build_error_message_response(&lang_id, "cant_parse_deck_error_message", env)
+        }
     };
 
     if description_option.is_some() {
         deck.description = description_option.cloned()
     }
-
-    let lang_id = LanguageIdentifier::from(&get_binahbot_locale(interaction));
 
     if let Some(tiph_deck) = tiph_deck_option {
         let deck_data_result = decode(
@@ -92,8 +96,9 @@ pub async fn update_deck(
 
         let deck_data = match deck_data_result {
             Ok(x) => x,
-            // todo: early return MessageResponse
-            Err(_) => panic!(),
+            Err(_) => {
+                return build_error_message_response(&lang_id, "cant_parse_deck_error_message", env)
+            }
         };
 
         if let Err(e) = validate_deck(&deck_data) {

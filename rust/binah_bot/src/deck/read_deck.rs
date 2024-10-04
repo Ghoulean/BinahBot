@@ -44,7 +44,7 @@ use crate::utils::build_error_message_response;
 use crate::utils::get_binahbot_locale;
 use crate::utils::get_option_value;
 
-struct DeckKey(String, String);
+use super::deck_utils::parse_deck_name_option;
 
 pub async fn read_deck(
     interaction: &DiscordInteraction,
@@ -121,20 +121,6 @@ pub async fn read_deck(
             // todo: check for error type
             build_error_message_response(&lang_id, "generic_error_message", env)
         }
-    }
-}
-
-// todo: move to utils
-fn parse_deck_name_option(name_option: &str) -> Result<DeckKey, ()> {
-    let mut split: Vec<_> = name_option.split('#').collect();
-    if split.len() >= 2 {
-        let split2 = split.split_off(1);
-        Ok(DeckKey(
-            split.first().unwrap().to_string(),
-            split2.join("#"),
-        ))
-    } else {
-        Err(())
     }
 }
 

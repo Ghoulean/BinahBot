@@ -20,7 +20,7 @@ use crate::utils::build_error_message_response;
 use crate::utils::get_binahbot_locale;
 use crate::utils::get_option_value;
 
-struct DeckKey((), String);
+use super::deck_utils::parse_deck_name_option;
 
 pub async fn delete_deck(
     interaction: &DiscordInteraction,
@@ -36,9 +36,14 @@ pub async fn delete_deck(
     let deck_name = get_option_value("name", command_args)
         .and_then(|x| cast_enum_variant!(x, DiscordInteractionOptionValue::String))
         .unwrap();
+
+    let lang_id = LanguageIdentifier::from(&get_binahbot_locale(interaction));
+
     let deck_key = match parse_deck_name_option(deck_name) {
         Ok(x) => x,
-        Err(_) => panic!(), // todo: handle this case
+        Err(_) => {
+            return build_error_message_response(&lang_id, "deck_not_found_error_message", env)
+        }
     };
     let author_id = &interaction
         .user
@@ -53,8 +58,6 @@ pub async fn delete_deck(
         author_id,
     )
     .await;
-
-    let lang_id = LanguageIdentifier::from(&get_binahbot_locale(interaction));
 
     match delete_deck_result {
         Ok(_) => MessageResponse {
@@ -85,16 +88,5 @@ pub async fn delete_deck(
             // todo: check for error type
             build_error_message_response(&lang_id, "generic_error_message", env)
         }
-    }
-}
-
-// todo: move to utils
-fn parse_deck_name_option(name_option: &str) -> Result<DeckKey, ()> {
-    let mut split: Vec<_> = name_option.split('#').collect();
-    if split.len() >= 2 {
-        let split2 = split.split_off(1);
-        Ok(DeckKey((), split2.join("#")))
-    } else {
-        Err(())
     }
 }

@@ -72,8 +72,9 @@ pub async fn create_deck(
 
     let deck_data = match deck_data_result {
         Ok(x) => x,
-        // todo: early return MessageResponse
-        Err(_) => panic!(),
+        Err(_) => {
+            return build_error_message_response(&lang_id, "cant_parse_deck_error_message", env)
+        }
     };
 
     if let Err(e) = validate_deck(&deck_data) {
