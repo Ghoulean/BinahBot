@@ -411,7 +411,7 @@ mod tests {
       ]";
         let format_narration_data = format_narration_data(&str);
         assert_eq!(4, format_narration_data.len());
-        assert_eq!("#0 turns their head away to avoid eye contact, and is met with a burning lamp.", format_narration_data.get(0).unwrap());
-        assert_eq!("It was a very good decision for #0 to face away from $0.", format_narration_data.get(3).unwrap());
+        assert_eq!("r\"#0 turns their head away to avoid eye contact, and is met with a burning lamp.\"", format_narration_data.get(0).unwrap());
+        assert_eq!("r\"It was a very good decision for #0 to face away from $0.\"", format_narration_data.get(3).unwrap());
     }
 }
