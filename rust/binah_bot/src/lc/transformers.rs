@@ -166,7 +166,7 @@ pub fn transform_normal_info_managerial_guidance(
         image: None,
         thumbnail: Some(DiscordEmbedThumbnail { url: thumbnail_url }),
         footer: Some(DiscordEmbedFooter {
-            text: entry.id.to_string(),
+            text: format!("{} | {}", entry.id_str, entry.id),
             icon_url: None,
         }),
         author: None,
@@ -240,7 +240,7 @@ pub fn transform_tool_info(
         image: Some(DiscordEmbedImage { url: image_url }),
         thumbnail: None,
         footer: Some(DiscordEmbedFooter {
-            text: entry.id.to_string(),
+            text: format!("{} | {}", entry.id_str, entry.id),
             icon_url: None,
         }),
         author: None,
@@ -280,7 +280,7 @@ pub fn transform_donttouchme(
         image: Some(DiscordEmbedImage { url: image_url }),
         thumbnail: None,
         footer: Some(DiscordEmbedFooter {
-            text: entry.id.to_string(),
+            text: format!("{} | {}", entry.id_str, entry.id),
             icon_url: None,
         }),
         author: None,
