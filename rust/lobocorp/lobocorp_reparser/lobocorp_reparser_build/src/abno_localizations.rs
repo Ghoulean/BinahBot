@@ -4,6 +4,7 @@ use std::iter;
 
 use lobocorp_common::localizations::common::Locale;
 use roxmltree::Document;
+use roxmltree::Node;
 use strum::IntoEnumIterator;
 
 use crate::abnormalities::PartialBreachingEntity;
@@ -21,6 +22,17 @@ use crate::xml::get_nodes;
 use crate::xml::get_nodes_text;
 use crate::xml::get_unique_node;
 use crate::xml::get_unique_node_text;
+
+#[derive(Clone, Debug, strum_macros::Display)]
+enum PartialNarrationType {
+    Move,
+    Start,
+    Death,
+    Panic,
+    Finish,
+    Mid(i32),
+    Special(String)
+}
 
 pub fn write_abno_localizations(
     list_entries: &[ListEntry],
@@ -103,7 +115,7 @@ fn build_localization(
         .rev()
         .skip(1)
         .rev()
-        .map(|x| format_story_data(x.trim()))
+        .map(|x| x.trim())
         .collect::<Vec<_>>();
     let code = get_unique_node_text(&collection_node, "codeNo")
         .map(|x| x.trim())
@@ -190,6 +202,10 @@ fn build_localization(
         .map(|x| write_vec(&x))
         .unwrap_or("[]".to_string());
 
+    let info_node = get_unique_node(&doc.root(), "info").expect("no info node");
+    let narration_entries = build_narration_entries(&info_node);
+    let narration_str = write_narration_entries(&narration_entries);
+
     format!(
         "EncyclopediaInfoLocalization {{
         id: \"{id}\",
@@ -200,8 +216,34 @@ fn build_localization(
         managerial_guidances: &{managerial_guidances},
         story: &{story},
         breaching_entity_localizations: &{breaching_entity_localizations},
+        narration_map: &{narration_str}
     }}"
     )
+}
+
+fn build_narration_entries(
+    info_node: &Node,
+) -> Vec<(PartialNarrationType, String)> {
+    let narration_nodes = get_nodes(&info_node, "narration");
+    narration_nodes.into_iter().flat_map(|x| {
+        let binding = "";
+        let inner_text = format_narration_data(x.text().unwrap_or(&binding));
+        let narration_type = PartialNarrationType::from(x.attribute("action").unwrap());
+        inner_text.into_iter().map(|x| {
+            (narration_type.clone(), x)
+        }).collect::<Vec<_>>()
+    }).collect()
+}
+
+fn write_narration_entries(narration_entries: &[(PartialNarrationType, String)]) -> String {
+    format!("[{}]", narration_entries.into_iter().map(|x| {
+        let narration_serder = match &x.0 {
+            PartialNarrationType::Mid(y) => format!("Mid({})", y),
+            PartialNarrationType::Special(y) => format!("Special(\"{}\")", y),
+            _ => x.0.to_string()
+        };
+        format!("(NarrationType::{}, {})", narration_serder, x.1)
+    }).collect::<Vec<_>>().join(","))
 }
 
 fn build_breaching_entity_localization(
@@ -243,8 +285,22 @@ fn format_story_data(s: &str) -> String {
         &s[(a + "{".len())..b]
     } else {
         s
-    };
+    }.trim();
 
+    wrap_raw_str(x)
+}
+
+fn format_narration_data(s: &str) -> Vec<String> {
+    if s.find("[").is_none() {
+        vec![format_story_data(s)]
+    } else {
+        s.split("{").flat_map(|x| {
+            x.find("}").map(|y| &x[..y]).map(|y| wrap_raw_str(y.trim()))
+        }).collect()
+    }
+}
+
+fn wrap_raw_str(x: &str) -> String {
     if !x.contains('\"') {
         format!("r\"{x}\"")
     } else if x.contains("##") {
@@ -256,10 +312,32 @@ fn format_story_data(s: &str) -> String {
     }
 }
 
+impl From<&str> for PartialNarrationType {
+    fn from(value: &str) -> Self {
+        match value {
+            "move" => PartialNarrationType::Move,
+            "start" => PartialNarrationType::Start,
+            "death" => PartialNarrationType::Death,
+            "panic" => PartialNarrationType::Panic,
+            "finish" => PartialNarrationType::Finish,
+            _ => {
+                if value.starts_with("mid") {
+                let num = (&value[("mid".len())..]).parse::<i32>().unwrap();
+                    PartialNarrationType::Mid(num)
+                } else {
+                    PartialNarrationType::Special(value.to_string())
+                }
+            }
+        }
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use roxmltree::Document;
     use roxmltree::NodeType;
+
+    use super::format_narration_data;
 
     #[test]
     fn sanity_xml_parsing() {
@@ -321,5 +399,19 @@ mod tests {
                 .len()
         );
         assert_eq!(Some("\n[ {Thanks to this shelter, the selected refugees were safely shielded from the ocean of endless screams and bloodshed.} ]\n"), doc.root().first_child().unwrap().last_child().unwrap().text());
+    }
+
+    #[test]
+    fn sanity_format_narration_data() {
+        let str = "      [
+      {#0 turns their head away to avoid eye contact, and is met with a burning lamp.},
+      {A dazzlingly bright lamp is held in front of #0, who turned away to avoid looking towards $0.},
+      {#0 sees $0 holding its illuminating lamp.},
+      {It was a very good decision for #0 to face away from $0.}
+      ]";
+        let format_narration_data = format_narration_data(&str);
+        assert_eq!(4, format_narration_data.len());
+        assert_eq!("#0 turns their head away to avoid eye contact, and is met with a burning lamp.", format_narration_data.get(0).unwrap());
+        assert_eq!("It was a very good decision for #0 to face away from $0.", format_narration_data.get(3).unwrap());
     }
 }

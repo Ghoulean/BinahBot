@@ -17,6 +17,7 @@ pub enum EncyclopediaInfo<'a> {
 #[derive(Debug)]
 pub struct NormalInfo<'a> {
     pub id: u32,
+    pub id_str: &'a str,
     pub risk: RiskLevel,
     pub work_probabilities: WorkProbabilities,
     pub qliphoth_counter: Option<i32>,
@@ -39,8 +40,10 @@ pub struct NormalInfo<'a> {
 #[derive(Debug)]
 pub struct ToolInfo<'a> {
     pub id: u32,
+    pub id_str: &'a str,
     pub risk: RiskLevel,
     pub tool_type: ToolType,
+    pub seconds_unlock: &'a [i32],
     pub breaching_entities: &'a [BreachingEntity<'a>],
     pub image: &'a str,
 }
@@ -48,6 +51,7 @@ pub struct ToolInfo<'a> {
 #[derive(Debug)]
 pub struct DontTouchMeInfo<'a> {
     pub id: u32,
+    pub id_str: &'a str,
     pub risk: RiskLevel,
     pub image: &'a str,
 }

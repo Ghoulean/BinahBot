@@ -83,6 +83,7 @@ pub struct PartialBreachingEntity {
 pub struct PartialToolInfo {
     pub risk: RiskLevel,
     pub tool_type: ToolType,
+    pub seconds_unlock: Vec<i32>,
     pub image: Option<String>,
     pub breaching_entities: Vec<PartialBreachingEntity>, // literally Yang only
 }
@@ -384,6 +385,7 @@ fn parse_normal_abno(id: u32, doc: &Document) -> PartialNormalInfo {
 fn parse_tool_abno(id: u32, doc: &Document) -> PartialToolInfo {
     let creature_node = get_unique_node(&doc.root(), "creature").expect("couldn't find creature");
     let stat_node = get_unique_node(&creature_node, "stat").expect("couldn't find stat node");
+    let observe_info_node = get_unique_node(&stat_node, "observeInfo").expect("couldn't find observeInfo node");
 
     let risk = get_unique_node_text(&stat_node, "riskLevel")
         .ok()
@@ -395,6 +397,13 @@ fn parse_tool_abno(id: u32, doc: &Document) -> PartialToolInfo {
         .ok()
         .and_then(|x| ToolType::try_from(x).ok())
         .expect("couldn't get tool type");
+
+    let mut seconds_unlock = observe_info_node.descendants()
+        .filter(|n| n.is_element() && n.has_tag_name("observeElement"))
+        .filter(|n| n.attribute("name").filter(|x| x.starts_with("care_")).is_some())
+        .map(|n| n.attribute("cost").and_then(|x| x.parse::<i32>().ok()).unwrap())
+        .collect::<Vec<_>>();
+    seconds_unlock.sort();
 
     let breaching_entities = if id == 300109 {
         // Yang
@@ -432,6 +441,7 @@ fn parse_tool_abno(id: u32, doc: &Document) -> PartialToolInfo {
     PartialToolInfo {
         risk,
         tool_type,
+        seconds_unlock,
         image,
         breaching_entities,
     }

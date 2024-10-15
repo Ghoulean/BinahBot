@@ -213,8 +213,11 @@ pub fn transform_tool_info(
         fields.push(DiscordEmbedFields {
             name: env.locales.lookup_with_args(
                 &lang_id,
-                "managerial_guidance_header",
-                &HashMap::from([("index", FluentValue::from(i + 1))]),
+                "managerial_guidance_seconds_header",
+                &HashMap::from([
+                    ("index", FluentValue::from(i + 1)),
+                    ("seconds", FluentValue::from(entry.seconds_unlock[i]))
+                ]),
             ),
             value: text,
             inline: Some(false),

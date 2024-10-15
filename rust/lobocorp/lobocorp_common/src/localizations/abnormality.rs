@@ -8,6 +8,7 @@ pub struct EncyclopediaInfoLocalization<'a> {
     pub managerial_guidances: &'a [&'a str],
     pub story: &'a [&'a str],
     pub breaching_entity_localizations: &'a [BreachingEntityLocalization<'a>],
+    pub narration_map: &'a [(NarrationType<'a>, &'a str)],
 }
 
 #[derive(Debug)]
@@ -15,4 +16,15 @@ pub struct BreachingEntityLocalization<'a> {
     pub id: &'a str,
     pub name: &'a str,
     pub code: Option<&'a str>,
+}
+
+#[derive(Debug)]
+pub enum NarrationType<'a> {
+    Move,
+    Start,
+    Death,
+    Panic,
+    Finish,
+    Mid(i32),
+    Special(&'a str)
 }

@@ -55,6 +55,7 @@ fn write_normal_info(
     partial_equipment: &AllEquipment,
 ) -> String {
     let id = list_entry.id;
+    let id_str = &list_entry.src;
     let risk = &partial_encyclopedia_info.risk;
     let work_prob_instinct = partial_encyclopedia_info.work_probabilities.instinct;
     let work_prob_insight = partial_encyclopedia_info.work_probabilities.insight;
@@ -160,6 +161,7 @@ fn write_normal_info(
     format!(
         "EncyclopediaInfo::Normal(NormalInfo {{
         id: {id},
+        id_str: \"{id_str}\",
         risk: RiskLevel::{risk:?},
         work_probabilities: WorkProbabilities {{
             instinct: {work_prob_instinct:?},
@@ -188,8 +190,17 @@ fn write_normal_info(
 
 fn write_tool_info(list_entry: &ListEntry, partial_encyclopedia_info: &PartialToolInfo) -> String {
     let id = list_entry.id;
+    let id_str = &list_entry.src;
     let risk = &partial_encyclopedia_info.risk;
     let tool_type = &partial_encyclopedia_info.tool_type;
+    let seconds_unlock = write_vec(
+        &partial_encyclopedia_info
+            .seconds_unlock
+            .iter()
+            .map(|x| format!("{}", x))
+            .collect::<Vec<_>>(),
+    );
+            
     let breaching_entities = write_vec(
         &partial_encyclopedia_info
             .breaching_entities
@@ -202,8 +213,10 @@ fn write_tool_info(list_entry: &ListEntry, partial_encyclopedia_info: &PartialTo
     format!(
         "EncyclopediaInfo::Tool(ToolInfo {{
         id: {id},
+        id_str: \"{id_str}\",
         risk: RiskLevel::{risk:?},
         tool_type: ToolType::{tool_type:?},
+        seconds_unlock: &{seconds_unlock},
         breaching_entities: &{breaching_entities},
         image: \"{image}\"
     }})"
@@ -215,12 +228,14 @@ fn write_donttouchme_info(
     partial_encyclopedia_info: &PartialDontTouchMeInfo,
 ) -> String {
     let id = list_entry.id;
+    let id_str = &list_entry.src;
     let risk = &partial_encyclopedia_info.risk;
     let image = partial_encyclopedia_info.image.as_ref().expect("no image");
 
     format!(
         "EncyclopediaInfo::DontTouchMe(DontTouchMeInfo {{
         id: {id},
+        id_str: \"{id_str}\",
         risk: RiskLevel::{risk:?},
         image: \"{image}\",
     }})"

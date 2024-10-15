@@ -23,6 +23,7 @@ use lobocorp_common::game_objects::equipment::WeaponDamageType;
 use lobocorp_common::game_objects::equipment::WeaponRange;
 use lobocorp_common::localizations::abnormality::BreachingEntityLocalization;
 use lobocorp_common::localizations::abnormality::EncyclopediaInfoLocalization;
+use lobocorp_common::localizations::abnormality::NarrationType;
 use lobocorp_common::localizations::common::Locale;
 use lobocorp_common::localizations::equipment::LocalizationKey;
 
@@ -123,7 +124,7 @@ mod tests {
     }
 
     #[test]
-    fn sanity_shelter_has_all_guidances() {
+    fn sanity_shelter_has_correct_guidances() {
         let shelter = get_abno_localization(&300006, &Locale::English).unwrap();
         shelter.managerial_guidances.iter().for_each(|x| {
             assert!(!x.trim().is_empty());
@@ -131,6 +132,13 @@ mod tests {
         shelter.story.iter().for_each(|x| {
             assert!(!x.trim().is_empty());
         });
+
+        let shelter2 = get_encyclopedia_info(&300006).unwrap();
+        let shelter2 = match shelter2 {
+            EncyclopediaInfo::Tool(x) => x,
+            _ => unreachable!(),
+        };
+        assert_eq!(&[10, 60, 120, 180, 180], &shelter2.seconds_unlock);
     }
 
     #[test]

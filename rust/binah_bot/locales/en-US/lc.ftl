@@ -2,7 +2,8 @@ encyclopedia_title_format = { $name } ({ $code })
 
 defenses_header = Defenses
 happiness_range_header = Enkephalin boxes
-managerial_guidance_header = Managerial guideline { $index }
+managerial_guidance_header = Managerial tips { $index }
+managerial_guidance_seconds_header = Managerial tips { $index } ({ $seconds } sec)
 observation_level_header = Observation levels
 qliphoth_counter_header = Qliphoth counter
 risk_level_header = Risk level
