@@ -117,7 +117,7 @@ pub fn transform_normal_info(
         image: Some(DiscordEmbedImage { url: image_url }),
         thumbnail: None,
         footer: Some(DiscordEmbedFooter {
-            text: entry.id.to_string(),
+            text: format!("{} | {}", entry.id_str, entry.id),
             icon_url: None,
         }),
         author: None,
