@@ -142,6 +142,22 @@ mod tests {
     }
 
     #[test]
+    fn sanity_nothing_there_has_all_story_data() {
+        let nothing_there = get_abno_localization(&100005, &Locale::English).unwrap();
+
+        let story4 = nothing_there.story.get(4).unwrap();
+
+        let substr1 = story4.find("Only employees Level 3 and higher are permitted to read this document.").expect("couldn't find substring 1");
+        let substr2 = story4.find("Just like how we observe Abnormalities as employees").expect("couldn't find substring 2");
+        let substr3 = story4.find("Employee 2: Oh, we just got an emergency notice. It says the last employee to work with \"Nothing There\" should get to the counselor's office immediately.").expect("couldn't find substring 3");
+        let substr4 = story4.find("And the many shells cried out one word, “Manager”.").expect("couldn't find substring 4");
+
+        assert!(substr1 < substr2);
+        assert!(substr2 < substr3);
+        assert!(substr3 < substr4);
+    }
+
+    #[test]
     #[ignore]
     fn sanity_all_child_abnos_have_name() {
         Locale::iter().for_each(|locale| {

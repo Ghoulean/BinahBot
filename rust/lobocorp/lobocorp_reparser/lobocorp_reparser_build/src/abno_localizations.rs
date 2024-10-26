@@ -135,20 +135,42 @@ fn build_localization(
             .map(|x| format_story_data(x.text().expect("no text")))
             .collect::<Vec<_>>(),
     );
-    let story = write_vec(
-        &get_nodes(&observe_node, "desc")
+
+    let mut story: Vec<Vec<(usize, String)>> = Vec::new();
+    get_nodes(&observe_node, "desc")
             .iter()
-            .map(|x| {
-                x.children()
-                    .filter(|y| y.is_text())
-                    .collect::<Vec<_>>()
-                    .last()
-                    .expect("no text nodes")
-                    .clone()
-            })
-            .map(|x| format_story_data(x.text().expect("no text")))
-            .collect::<Vec<_>>(),
-    );
+            .for_each(|x| {
+                let observation_level = x.attribute("openLevel").and_then(|y| y.parse::<usize>().ok());
+                if observation_level.is_none() {
+                    return;
+                }
+                let observation_level = observation_level.unwrap();
+                let id = x.attribute("id").and_then(|y| y.parse::<usize>().ok()).unwrap();
+                if story.len() < observation_level + 1 {
+                    story.resize(observation_level + 1, Vec::new());
+                }
+                let v = story.get_mut(observation_level).unwrap();
+
+                let inside_text = x.children()
+                        .filter(|y| y.is_text())
+                        .collect::<Vec<_>>()
+                        .last()
+                        .expect("no text nodes")
+                        .text()
+                        .clone()
+                        .expect("no text");
+                v.push((id, format_story_data2(inside_text)));
+            });
+    story.iter_mut().for_each(|v| {
+        v.sort_by(|a, b| a.0.cmp(&b.0));
+    });
+    let story = story.iter().map(|v| {
+        wrap_raw_str(&v.iter().map(|(_, t)| {
+            t.replace("\r", "").split("\n").map(|x| x.trim()).collect::<Vec<_>>().join(",")
+        }).collect::<Vec<_>>().join("\\n"))
+    })
+    .collect::<Vec<_>>();
+    let story = write_vec(&story);
 
     let breaching_entities = match partial_info {
         PartialEncyclopediaInfo::Normal(x) => Some(&x.breaching_entities),
@@ -288,6 +310,18 @@ fn format_story_data(s: &str) -> String {
     }.trim();
 
     wrap_raw_str(x)
+}
+
+fn format_story_data2(s: &str) -> String {
+    // todo: properly deal with lobocorp's custom serialization format beyond this even more broken hack
+    let start = s.find("{");
+    let end = s.rfind("}");
+
+    if let (Some(a), Some(b)) = (start, end) {
+        &s[(a + "{".len())..b]
+    } else {
+        s
+    }.trim().to_string()
 }
 
 fn format_narration_data(s: &str) -> Vec<String> {
