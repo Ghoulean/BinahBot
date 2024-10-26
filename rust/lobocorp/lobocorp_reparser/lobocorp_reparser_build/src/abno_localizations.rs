@@ -136,6 +136,7 @@ fn build_localization(
             .collect::<Vec<_>>(),
     );
 
+    // index: observation level. usize: id
     let mut story: Vec<Vec<(usize, String)>> = Vec::new();
     get_nodes(&observe_node, "desc")
             .iter()
@@ -165,9 +166,10 @@ fn build_localization(
         v.sort_by(|a, b| a.0.cmp(&b.0));
     });
     let story = story.iter().map(|v| {
-        wrap_raw_str(&v.iter().map(|(_, t)| {
-            t.replace("\r", "").split("\n").map(|x| x.trim()).collect::<Vec<_>>().join(",")
-        }).collect::<Vec<_>>().join("\\n"))
+        let str = &v.iter().map(|(_, t)| {
+            t.replace("\r", "").split("\n").map(|x| x.trim()).collect::<Vec<_>>().join("\n")
+        }).collect::<Vec<_>>().join("\n\n");
+        wrap_raw_str(&str)
     })
     .collect::<Vec<_>>();
     let story = write_vec(&story);
