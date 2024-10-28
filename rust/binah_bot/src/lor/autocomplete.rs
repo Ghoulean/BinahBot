@@ -44,14 +44,14 @@ pub fn lor_autocomplete(
     let locale: Locale = get_option_value("locale", command_args)
         .and_then(|x| cast_enum_variant!(x, DiscordInteractionOptionValue::String))
         .and_then(|x| Locale::from_str(x.as_str()).ok())
-        .unwrap_or(Locale::from(binah_locale.clone()));
+        .unwrap_or(Locale::from(binah_locale));
 
     let all: bool = get_option_value("all", command_args)
         .and_then(|x| cast_enum_variant!(x, DiscordInteractionOptionValue::Bool))
         .map(|x| x.to_owned())
         .unwrap_or(false);
 
-    let lang_id = LanguageIdentifier::from(&binah_locale);
+    let lang_id = LanguageIdentifier::from(&locale);
 
     let options: Vec<_> = lookup(query, &locale, all)
         .take(MAX_AUTOCOMPLETE_OPTIONS)

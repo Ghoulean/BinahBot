@@ -216,7 +216,7 @@ pub fn transform_tool_info(
                 "managerial_guidance_seconds_header",
                 &HashMap::from([
                     ("index", FluentValue::from(i + 1)),
-                    ("seconds", FluentValue::from(entry.seconds_unlock[i]))
+                    ("seconds", FluentValue::from(entry.seconds_unlock[i])),
                 ]),
             ),
             value: text,
