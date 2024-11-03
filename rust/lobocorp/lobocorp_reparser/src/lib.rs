@@ -222,6 +222,22 @@ mod tests {
     }
 
     #[test]
+    fn all_breachable_abnos_have_breachable_entity() {
+        get_all_encyclopedia_ids().iter().for_each(|id| {
+            let info = get_encyclopedia_info(&id).expect("no encyclopedia info");
+            match info {
+                EncyclopediaInfo::Normal(x) => {
+                    dbg!(x.id);
+                    if x.is_breachable {
+                        assert!(x.breaching_entities.len() > 0);
+                    }
+                },
+                _ => (),
+            };
+        });
+    }
+
+    #[test]
     fn special_obtain_equipment_have_correct_cost_and_observability() {
         let firebird = get_encyclopedia_info(&100061).expect("no firebird entry");
         let firebird = match firebird {

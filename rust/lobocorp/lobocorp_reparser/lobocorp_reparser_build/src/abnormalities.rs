@@ -220,9 +220,15 @@ fn parse_normal_abno(id: u32, doc: &Document) -> PartialNormalInfo {
         .is_ok_and(|x| x.to_lowercase().trim() != "true");
 
     let defense_node = if is_breachable {
-        get_unique_node(&stat_node, "defense")
+        // Schadenfreude, Silent Orchestra, Nothing Therehave multiple defenses
+        // These are exception cases. For Codex purposes, `get_unique_node`
+        // will fail, and the above will correctly appear with "unknown"
+        // defenses. 
+        // Note that we need to handle their breachable entity
+        // cases specially
+        get_unique_node(&stat_node, "defense").ok()
     } else {
-        Err("")
+        None
     };
     let defenses = defense_node
         .map(|x| Defenses {
@@ -230,8 +236,7 @@ fn parse_normal_abno(id: u32, doc: &Document) -> PartialNormalInfo {
             white: get_defense_val(&x, "W"),
             black: get_defense_val(&x, "B"),
             pale: get_defense_val(&x, "P"),
-        })
-        .ok();
+        });
 
     let observation_level_bonuses: [StatBonus; 4] = get_nodes(&stat_node, "observeBonus")
         .iter()
@@ -281,11 +286,13 @@ fn parse_normal_abno(id: u32, doc: &Document) -> PartialNormalInfo {
         })
         .collect::<Vec<_>>();
 
-    let hp = get_unique_node_text(&stat_node, "hp")
-        .ok()
+    // There may be multiple HP, speed, and defense nodes. e.g. All-Around Helper
+    // Just take the first.
+    let hp = get_first_node(&stat_node, "hp")
+        .and_then(|x| x.text())
         .and_then(|x| x.parse::<i32>().ok());
-    let speed = get_unique_node_text(&stat_node, "speed")
-        .ok()
+    let speed = get_first_node(&stat_node, "speed")
+        .and_then(|x| x.text())
         .and_then(|x| x.parse::<f64>().ok());
     let breaching_damage_type = get_unique_node(&stat_node, "specialDamage")
         .ok()
@@ -295,8 +302,8 @@ fn parse_normal_abno(id: u32, doc: &Document) -> PartialNormalInfo {
         .unwrap_or(work_damage_type.clone());
 
     let mut breaching_entities = Vec::new();
-    // Nothing there
-    if id == 100005 {
+    
+    if id == 100005 { // Nothing there
         let binding = get_nodes(&stat_node, "defense");
         let defenses = binding.iter().map(|x| Defenses {
             red: get_defense_val(&x, "R"),
@@ -318,6 +325,27 @@ fn parse_normal_abno(id: u32, doc: &Document) -> PartialNormalInfo {
                 risk_level: risk.clone(),
             })
         });
+    } else if id == 100049 || id == 100019 {
+        // Schadenfreude, Silent Orchestra
+        // These don't really have a separate "form" unlike Nothing There
+        // Just take the first "phase"(?) until I figure out something
+        // better for these fellers
+        
+        let defenses = get_first_node(&stat_node, "defense")
+            .map(|x| Defenses {
+                red: get_defense_val(&x, "R"),
+                white: get_defense_val(&x, "W"),
+                black: get_defense_val(&x, "B"),
+                pale: get_defense_val(&x, "P"),
+            });
+        breaching_entities.push(PartialBreachingEntity {
+            id: id.to_string(),
+            hp: hp.unwrap(),
+            speed: speed.unwrap(),
+            defenses: defenses.unwrap(),
+            damage_type: breaching_damage_type,
+            risk_level: risk.clone(),
+        })
     } else if let (Some(hp), Some(speed), Some(defenses)) = (hp, speed, defenses.clone()) {
         breaching_entities.push(PartialBreachingEntity {
             id: id.to_string(),
