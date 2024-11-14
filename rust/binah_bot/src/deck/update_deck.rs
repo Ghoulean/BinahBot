@@ -111,6 +111,7 @@ pub async fn update_deck(
             &deck_data.combat_page_ids,
         )
         .await;
+        deck.tiph_deck = Some(tiph_deck);
         deck.deck_data = deck_data;
     }
 
