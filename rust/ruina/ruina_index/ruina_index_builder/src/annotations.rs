@@ -64,6 +64,7 @@ pub fn precompute_annotations_map<'a>() -> AnnotationMapping<'a> {
 }
 
 pub fn precompute_disambiguations_map<'a>() -> AnnotationMapping<'a> {
+    // parsed id -> (locale -> disambiguation string)
     let mut manual_disambiguation_toml_map: HashMap<String, Vec<TomlData>> =
         from_str(include_str!("../data/manual/disambiguations.toml")).unwrap();
     let manual_disambiguation_toml = manual_disambiguation_toml_map
@@ -170,7 +171,7 @@ fn parse_manual_mappings<'a>(
         locales.locales().for_each(|y| {
             typed_id_map.insert(Locale::from(y), locales.lookup(y, &x.localization_id));
         });
-
+    
         map.insert(
             TypedId(
                 PageType::from(

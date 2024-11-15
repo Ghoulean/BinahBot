@@ -137,6 +137,32 @@ mod tests {
     }
 
     #[test]
+    fn sanity_should_keep_same_language_if_possible() {
+        let kizuna_extreme_fatigue_query = "kizuna/extreme fatigue";
+        let interaction = build_discord_interaction(kizuna_extreme_fatigue_query.to_string(), true);
+
+        let response = lor_autocomplete(&interaction, &build_mocked_binahbot_env());
+        let choices = response
+            .data
+            .as_ref()
+            .expect("no data field found")
+            .choices
+            .as_ref()
+            .expect("no embeds found")
+            .iter()
+            .map(|x| x.name.clone())
+            .collect::<Vec<_>>();
+
+        assert!(choices.len() <= MAX_AUTOCOMPLETE_OPTIONS);
+        dbg!(&choices);
+        assert!(choices.contains(
+            &"\u{2068}Kizuna/Extreme Fatigue\u{2069} (\u{2068}Yujin\u{2069})".to_string()
+        ));
+        assert!(choices
+            .contains(&"\u{2068}Kizuna/Extreme Fatigue\u{2069} (\u{2068}Shi fixer\u{2069})".to_string()));
+    }
+
+    #[test]
     fn sanity_not_all() {
         let xiao_query = "Xiao";
         let interaction = build_discord_interaction(xiao_query.to_string(), false);

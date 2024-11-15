@@ -152,6 +152,27 @@ mod tests {
     }
 
     #[test]
+    fn disambiguation_should_match_language() {
+        let disambiguation = get_disambiguation(
+            &ParsedTypedId(PageType::Passive, "241001".to_string()),
+            &Locale::English
+        ).unwrap();
+        assert_eq!(
+            "Yujin".to_string(),
+            disambiguation.to_string()
+        );
+
+        let disambiguation = get_disambiguation(
+            &ParsedTypedId(PageType::Passive, "241001".to_string()),
+            &Locale::Korean
+        ).unwrap();
+        assert_eq!(
+            "유진".to_string(),
+            disambiguation.to_string()
+        );
+    }
+
+    #[test]
     fn sanity_get_disambiguation() {
         assert!(get_disambiguation(
             &ParsedTypedId(PageType::CombatPage, "202002".to_string()),
