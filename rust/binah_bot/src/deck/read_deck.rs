@@ -151,15 +151,12 @@ async fn transform_deck(
     )
     .await;
 
-    let avatar_hash = user
-        .as_ref()
-        .map(|x| {
-            format!(
-                "https://cdn.discordapp.com/avatars/{0}/{1}.png",
-                &deck.author_id, &x.avatar
-            )
-        })
-        .ok();
+    let avatar_hash = user.as_ref().ok().and_then(|x| x.avatar.clone()).map(|x| {
+        format!(
+            "https://cdn.discordapp.com/avatars/{0}/{1}.png",
+            &deck.author_id, &x
+        )
+    });
 
     let author_name = user
         .map(|x| format!("@{}", &x.username))

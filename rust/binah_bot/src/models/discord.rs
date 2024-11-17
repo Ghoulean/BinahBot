@@ -223,7 +223,7 @@ pub struct DiscordInteractionResponseAutocomplete {
 pub struct DiscordUser {
     pub id: String,
     pub username: String,
-    pub avatar: String,
+    pub avatar: Option<String>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]

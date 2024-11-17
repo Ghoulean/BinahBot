@@ -158,8 +158,9 @@ mod tests {
         assert!(choices.contains(
             &"\u{2068}Kizuna/Extreme Fatigue\u{2069} (\u{2068}Yujin\u{2069})".to_string()
         ));
-        assert!(choices
-            .contains(&"\u{2068}Kizuna/Extreme Fatigue\u{2069} (\u{2068}Shi fixer\u{2069})".to_string()));
+        assert!(choices.contains(
+            &"\u{2068}Kizuna/Extreme Fatigue\u{2069} (\u{2068}Shi fixer\u{2069})".to_string()
+        ));
     }
 
     #[test]
@@ -218,7 +219,7 @@ mod tests {
             user: Some(DiscordUser {
                 id: "snowflake".to_string(),
                 username: "username".to_string(),
-                avatar: "hash".to_string(),
+                avatar: Some("hash".to_string()),
             }),
             member: None,
             message: None,

@@ -290,7 +290,7 @@ mod tests {
             user: Some(DiscordUser {
                 id: "snowflake".to_string(),
                 username: "username".to_string(),
-                avatar: "hash".to_string(),
+                avatar: Some("hash".to_string()),
             }),
             member: None,
             message: None,
