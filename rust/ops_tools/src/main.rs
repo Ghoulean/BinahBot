@@ -20,9 +20,10 @@ async fn main() {
         .await;
     let ddb = aws_sdk_dynamodb::Client::new(&config);
     let lambda = aws_sdk_lambda::Client::new(&config);
+    let s3 = aws_sdk_s3::Client::new(&config);
     let http = reqwest::Client::new();
 
-    let _ = app.exec(&ddb, &lambda, &http).await;
+    let _ = app.exec(&ddb, &lambda, &s3, &http).await;
 }
 
 #[cfg(test)]

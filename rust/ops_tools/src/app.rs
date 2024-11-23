@@ -1,5 +1,7 @@
+use std::fs;
 use std::fs::File;
 use std::io::BufReader;
+use std::io::Write;
 use std::path::PathBuf;
 
 use clap::ArgAction;
@@ -35,6 +37,12 @@ enum Command {
         ddb_table_name: String,
         thumbnail_function_name: String,
     },
+    DownloadAllFiles {
+        #[clap(long, short = 'n')]
+        bucket_name: String,
+        #[clap(long, short = 'd')]
+        destination_dir: PathBuf,
+    }
 }
 
 #[derive(Debug, Args)]
@@ -48,6 +56,7 @@ impl App {
         self,
         ddb_client: &aws_sdk_dynamodb::Client,
         lambda_client: &aws_sdk_lambda::Client,
+        s3_client: &aws_sdk_s3::Client,
         http_client: &reqwest::Client
     ) -> Result<(), ()> {
         match self.command {
@@ -97,6 +106,62 @@ impl App {
                 }
                 Ok(())
             }
+            Command::DownloadAllFiles { bucket_name, destination_dir } => {
+                let files = s3_client.list_objects_v2()
+                    .bucket(&bucket_name)
+                    .into_paginator()
+                    .send()
+                    .collect::<Vec<_>>()
+                    .await
+                    .into_iter()
+                    .filter_map(|x| {
+                        x.ok().and_then(|y| {
+                            y.contents
+                        })
+                    })
+                    .flat_map(|x| {
+                        x    
+                    })
+                    .flat_map(|x| {
+                        x.key
+                    })
+                    .collect::<Vec<_>>();
+
+                println!("got {} files", files.len());
+
+                for f in files {
+
+                    let target_file_destination = destination_dir.join(&f);
+                    let prefix = target_file_destination.parent().unwrap();
+                    fs::create_dir_all(prefix).unwrap();
+                    let file = File::create_new(target_file_destination);
+                    if file.is_err() {
+                        println!("skipping {}", &f);
+                        continue;
+                    }
+                    let mut file = file.unwrap();
+
+                    let mut object = s3_client.get_object()
+                        .bucket(&bucket_name)
+                        .key(&f)
+                        .send()
+                        .await
+                        .expect(&format!("failed trying to get {} (await)", &f));
+                    while let Some(bytes) = object.body.try_next().await.map_err(|err| {
+                        panic!("Failed to read from S3 download stream: {err:?}")
+                    })? {
+                        file.write_all(&bytes).map_err(|err| {
+                            panic!(
+                                "Failed to write from S3 download stream to local file: {err:?}"
+                            )
+                        })?;
+                    }
+
+                    println!("successfully downloaded {}", f)
+                }
+
+                Ok(())
+            },
         }
     }
 }
