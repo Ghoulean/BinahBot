@@ -203,11 +203,19 @@ fn calculate(min1: i32, max1: i32, min2: i32, max2: i32) -> DiceDistribution {
 
     let half: u128 = (overlap * overlap - overlap) / 2;
 
+    let total = (r1 * r2).try_into().unwrap();
+
     DiceDistribution(
-        (r1 * r2).try_into().unwrap(),
-        d1_autowin * overlap + d2_autolose * overlap + d1_autowin * d2_autolose + half,
-        d2_autowin * overlap + d1_autolose * overlap + d2_autowin * d1_autolose + half,
-        overlap,
+        total,
+        cmp::min(
+            d1_autowin * overlap + d2_autolose * overlap + d1_autowin * d2_autolose + half,
+            total,
+        ),
+        cmp::min(
+            d2_autowin * overlap + d1_autolose * overlap + d2_autowin * d1_autolose + half,
+            total,
+        ),
+        cmp::min(overlap, total),
     )
 }
 
@@ -234,6 +242,9 @@ mod tests {
 
         let result = calculate(2, 2, 2, 2);
         assert_eq!(DiceDistribution(1, 0, 0, 1), result);
+
+        let result = calculate(3, 5, 9, 12);
+        assert_eq!(DiceDistribution(12, 0, 12, 0), result);
     }
 
     #[test]
