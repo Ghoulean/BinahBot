@@ -104,6 +104,12 @@ pub fn get_page_locale<'a>(
 mod tests {
     use super::*;
     use ruina_common::game_objects::common::PageType;
+    use ruina_reparser::get_abno_page_localizations_by_locale;
+    use ruina_reparser::get_battle_symbol_localizations_by_locale;
+    use ruina_reparser::get_combat_page_localizations_by_locale;
+    use ruina_reparser::get_key_page_localizations_by_locale;
+    use ruina_reparser::get_passive_localizations_by_locale;
+    use strsim::levenshtein;
 
     #[test]
     fn sanity_query() {
@@ -179,5 +185,40 @@ mod tests {
             &Locale::English
         )
         .is_some());
+    }
+
+    fn load_benchmark_queries() -> Vec<String> {
+        let abno_pages = get_abno_page_localizations_by_locale(Locale::English).unwrap().values().map(|x| x.card_name.to_string());
+        let battle_symbols = get_battle_symbol_localizations_by_locale(Locale::English).unwrap().values().map(|x| format!("{} {}", x.prefix, x.postfix));
+        let combat_pages = get_combat_page_localizations_by_locale(Locale::English).unwrap().values().map(|x| x.name.to_string());
+        let key_pages = get_key_page_localizations_by_locale(Locale::English).unwrap().values().map(|x| x.name.to_string());
+        let passives = get_passive_localizations_by_locale(Locale::English).unwrap().values().map(|x| x.name.to_string());
+        abno_pages.chain(battle_symbols).chain(combat_pages).chain(key_pages).chain(passives).collect::<Vec<_>>()
+    }
+
+    #[test]
+    #[ignore]
+    fn benchmark_load() {
+        let _ = load_benchmark_queries();
+    }
+
+    #[test]
+    #[ignore]
+    fn benchmark_query() {
+        let all_page_names = load_benchmark_queries();
+        all_page_names.iter().for_each(|x| {
+            let _ = query(x);    
+        });
+    }
+
+    #[test]
+    #[ignore]
+    fn benchmark_levenshtein() {
+        let all_page_names = load_benchmark_queries();
+        all_page_names.iter().for_each(|x| {
+            let _ = all_page_names.iter().map(|y| {
+                (y, levenshtein(x, y))
+            }).max_by_key(|y| y.1);
+        });
     }
 }
