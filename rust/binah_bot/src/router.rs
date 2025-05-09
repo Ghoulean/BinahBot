@@ -2,6 +2,8 @@ use std::error::Error;
 use std::time::SystemTime;
 use std::time::UNIX_EPOCH;
 
+use unic_langid::langid;
+
 use crate::about_command::about_command;
 use crate::ddb::get_interaction_token;
 use crate::ddb::put_interaction_token;
@@ -21,15 +23,18 @@ use crate::lor::command::lor_command;
 use crate::macros::cast_enum_variant;
 use crate::models::binahbot::BinahBotEnvironment;
 use crate::models::binahbot::InteractionTtl;
+use crate::models::discord::AutocompleteResponse;
 use crate::models::discord::DeferredUpdateResponse;
 use crate::models::discord::DiscordInteraction;
 use crate::models::discord::DiscordInteractionData;
 use crate::models::discord::DiscordInteractionResponse;
+use crate::models::discord::DiscordInteractionResponseAutocomplete;
 use crate::models::discord::DiscordInteractionResponseType;
 use crate::models::discord::DiscordInteractionType;
 use crate::models::discord::PingResponse;
 use crate::rollcalc_command::rollcalc_command;
 use crate::utils::DELETE_BUTTON_CUSTOM_ID;
+use crate::utils::build_error_message_response;
 
 const ABOUT_COMMAND_NAME: &str = "about";
 const LC_COMMAND_NAME: &str = "lc";
@@ -87,7 +92,7 @@ async fn route(
                     }
                     ABOUT_COMMAND_NAME => about_command(discord_interaction, binahbot_env),
                     ROLLCALC_COMMAND_NAME => rollcalc_command(discord_interaction, binahbot_env),
-                    _ => unreachable!(),
+                    _ => build_error_message_response(&langid!("en-US"), "generic_error_message", binahbot_env),
                 },
             ))
         }
@@ -105,7 +110,12 @@ async fn route(
                         list_my_decks(discord_interaction, binahbot_env).await
                     }
                     LC_COMMAND_NAME => lc_autocomplete(discord_interaction, binahbot_env),
-                    _ => unreachable!(),
+                    _ => AutocompleteResponse {
+                        r#type: DiscordInteractionResponseType::ApplicationCommandAutocompleteResult,
+                        data: Some(DiscordInteractionResponseAutocomplete {
+                            choices: Some(Vec::new()),
+                        }),
+                    },
                 },
             ))
         }
@@ -129,7 +139,7 @@ async fn route(
             } else if custom_id.starts_with(LC_BUTTON_PREFIX) {
                 lc_button(&discord_interaction, binahbot_env)
             } else {
-                unreachable!()
+                panic!("unknown button with custom_id={} detected", custom_id)
             };
 
             match result {
@@ -141,7 +151,7 @@ async fn route(
                 )),
             }
         }
-        _ => unreachable!(),
+        _ => panic!("unknown interaction type={:?} detected", &discord_interaction.r#type),
     }
 }
 

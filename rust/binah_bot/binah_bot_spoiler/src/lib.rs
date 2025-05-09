@@ -10,7 +10,7 @@ pub fn build_spoiler_channel_hashmap() -> String {
             continue;
         }
         builder.entry(
-            format!("{}", key),
+            key.to_string(),
             &format!(
                 "Chapter::{}",
                 val.as_str().expect("couldn't get val as string")
