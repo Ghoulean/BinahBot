@@ -73,7 +73,7 @@ pub async fn list_deck(
                 .await
             }
         },
-        None => Vec::new(),
+        None => unreachable!(),
     };
 
     tracing::info!("Returning choices={:?}", choices);
@@ -122,10 +122,14 @@ pub async fn list_my_decks(
         focused
     );
     let choices = match focused {
-        Some("name") => {
-            get_choices_by_deck_name(deck_name_query, Some(author_id), None, &lang_id, env).await
+        Some(x) => match x {
+            "name" => {
+                get_choices_by_deck_name(deck_name_query, Some(author_id), None, &lang_id, env)
+                    .await
+            }
+            _ => Vec::new(),
         },
-        _ => Vec::new()
+        None => unreachable!(),
     };
 
     tracing::info!("Returning choices={:?}", choices);
