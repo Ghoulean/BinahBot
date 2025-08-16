@@ -1,42 +1,42 @@
-abno_type_display_awakening = Awakening
-abno_type_display_breakdown = Breakdown
-abno_flavor_text_header = Flavor text
-abno_effect_header = Effect
-abno_bias_header = Bias
-abno_type_header = Type
-abno_tier_header = Tier
-abno_floor_header = Floor
+abno_type_display_awakening = 각성
+abno_type_display_breakdown = 붕괴
+abno_flavor_text_header = 플레이버 텍스트
+abno_effect_header = 효과
+abno_bias_header = 비율
+abno_type_header = 유형
+abno_tier_header = 단계
+abno_floor_header = 층
 
-battle_symbol_slot_header = Slot
-battle_symbol_prefix_header = Prefix
-battle_symbol_postfix_header = Postfix
-battle_symbol_description_header = Description
-battle_symbol_acquire_condition_header = Acquire condition
-battle_symbol_hidden_header = Hidden
-battle_symbol_is_hidden_display = true
-battle_symbol_count_header = Count
+battle_symbol_slot_header = 착용 부위
+battle_symbol_prefix_header = 접두사
+battle_symbol_postfix_header = 접미사
+battle_symbol_description_header = 능력
+battle_symbol_acquire_condition_header = 획득 조건
+battle_symbol_hidden_header = 숨김
+battle_symbol_is_hidden_display = 참
+battle_symbol_count_header = 횟수
 
-combat_page_cost_header = Cost
-combat_page_range_header = Range
-combat_page_rarity_header = Rarity
-combat_page_description_header = Page description
-combat_page_dice_header = Dice
+combat_page_cost_header = 비용
+combat_page_range_header = 유형
+combat_page_rarity_header = 등급
+combat_page_description_header = 전투책장 능력
+combat_page_dice_header = 주사위
 
-key_page_hp_header = HP
-key_page_stagger_header = Stagger
-key_page_speed_header = Speed
-key_page_hp_resist_header = HP resist
-key_page_stagger_resist_header = Stagger resist
-key_page_rarity_header = Rarity
-key_page_base_light_header = Base light
-key_page_passives_header = Passives
+key_page_hp_header = 체력
+key_page_stagger_header = 흐트러짐 저항
+key_page_speed_header = 속도
+key_page_hp_resist_header = 피해 내성
+key_page_stagger_resist_header = 흐트러짐 내성
+key_page_rarity_header = 등급
+key_page_base_light_header = 기본 빛
+key_page_passives_header = 지속능력
 
-passive_cost_header = Cost
-passive_rarity_header = Rarity
-passive_description_header = Description
-passive_transferable_header = Transferable
-passive_not_transferable_display = false
+passive_cost_header = 코스트
+passive_rarity_header = 등급
+passive_description_header = 귀속
+passive_transferable_header = 귀속 가능
+passive_not_transferable_display = 불가능
 
-no_page_error_message = *No page found*
-spoiler_enforcement_message = Cannot display `card_id={ $card_id }` because its chapter is { $chapter }, but this channel only allows { $configured_chapter } and below
-deck_spoiler_enforcement_message = Cannot show `{ $deck_name }` because its chapter is { $chapter }, but this channel only allows { $configured_chapter } and below
+no_page_error_message = *페이지를 찾을 수 없습니다*
+spoiler_enforcement_message = 표시할 수 없습니다. "card_id={ $card_id }"의 막은 "{ $chapter }"이지만, 이 채널에서는 "{ $configured_chapter }" 이하의 막만 허용됩니다.
+deck_spoiler_enforcement_message ="{ $deck_name }"을(를) 표시할 수 없습니다. 해당 막은 "{ $chapter }"이지만, 이 채널에서는 "{ $configured_chapter }" 이하의 막만 허용됩니다.
