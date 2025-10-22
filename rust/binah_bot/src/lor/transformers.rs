@@ -300,14 +300,16 @@ pub fn transform_combat_page(
             .as_ref()
             .and_then(|x| x.card_effect)
             .map(|x| x.to_string()))
-        .map(|x| format!("{}{}", single_use_prefix, x));
+        .unwrap_or("".to_string());
+    let page_desc = format!("{}{}", single_use_prefix, page_desc);
+    let page_desc = page_desc.trim().to_string();
 
-    if let Some(desc) = page_desc {
+    if !page_desc.is_empty() {
         fields.push(DiscordEmbedFields {
             name: env
                 .locales
                 .lookup(&lang_id, "combat_page_description_header"),
-            value: desc,
+            value: page_desc,
             inline: Some(true),
         })
     }
