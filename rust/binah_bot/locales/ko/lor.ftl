@@ -40,3 +40,5 @@ passive_not_transferable_display = 불가능
 no_page_error_message = *페이지를 찾을 수 없습니다*
 spoiler_enforcement_message = 표시할 수 없습니다. "card_id={ $card_id }"의 막은 "{ $chapter }"이지만, 이 채널에서는 "{ $configured_chapter }" 이하의 막만 허용됩니다.
 deck_spoiler_enforcement_message ="{ $deck_name }"을(를) 표시할 수 없습니다. 해당 막은 "{ $chapter }"이지만, 이 채널에서는 "{ $configured_chapter }" 이하의 막만 허용됩니다.
+
+exhaust_on_use = 일회성

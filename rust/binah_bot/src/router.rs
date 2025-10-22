@@ -33,8 +33,8 @@ use crate::models::discord::DiscordInteractionResponseType;
 use crate::models::discord::DiscordInteractionType;
 use crate::models::discord::PingResponse;
 use crate::rollcalc_command::rollcalc_command;
-use crate::utils::DELETE_BUTTON_CUSTOM_ID;
 use crate::utils::build_error_message_response;
+use crate::utils::DELETE_BUTTON_CUSTOM_ID;
 
 const ABOUT_COMMAND_NAME: &str = "about";
 const LC_COMMAND_NAME: &str = "lc";
@@ -92,7 +92,11 @@ async fn route(
                     }
                     ABOUT_COMMAND_NAME => about_command(discord_interaction, binahbot_env),
                     ROLLCALC_COMMAND_NAME => rollcalc_command(discord_interaction, binahbot_env),
-                    _ => build_error_message_response(&langid!("en-US"), "generic_error_message", binahbot_env),
+                    _ => build_error_message_response(
+                        &langid!("en-US"),
+                        "generic_error_message",
+                        binahbot_env,
+                    ),
                 },
             ))
         }
@@ -111,7 +115,8 @@ async fn route(
                     }
                     LC_COMMAND_NAME => lc_autocomplete(discord_interaction, binahbot_env),
                     _ => AutocompleteResponse {
-                        r#type: DiscordInteractionResponseType::ApplicationCommandAutocompleteResult,
+                        r#type:
+                            DiscordInteractionResponseType::ApplicationCommandAutocompleteResult,
                         data: Some(DiscordInteractionResponseAutocomplete {
                             choices: Some(Vec::new()),
                         }),
@@ -151,7 +156,10 @@ async fn route(
                 )),
             }
         }
-        _ => panic!("unknown interaction type={:?} detected", &discord_interaction.r#type),
+        _ => panic!(
+            "unknown interaction type={:?} detected",
+            &discord_interaction.r#type
+        ),
     }
 }
 

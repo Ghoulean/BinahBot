@@ -1,0 +1,1 @@
+exhaust_on_use = 使い捨て

@@ -283,6 +283,12 @@ pub fn transform_combat_page(
         },
     ];
 
+    let single_use_prefix = if page.options.contains(&"ExhaustOnUse") {
+        format!("{}\n", env.locales.lookup(&lang_id, "exhaust_on_use"))
+    } else {
+        "".to_string()
+    };
+
     let page_desc = page
         .script_id
         .and_then(|x| {
@@ -293,7 +299,8 @@ pub fn transform_combat_page(
         .or(page_locale
             .as_ref()
             .and_then(|x| x.card_effect)
-            .map(|x| x.to_string()));
+            .map(|x| x.to_string()))
+        .map(|x| format!("{}{}", single_use_prefix, x));
 
     if let Some(desc) = page_desc {
         fields.push(DiscordEmbedFields {
@@ -673,5 +680,25 @@ mod tests {
             self_loathing_locale.card_effect.unwrap(),
             page_desc_field.value
         )
+    }
+
+    #[test]
+    fn exhaust_on_use() {
+        let env = build_mocked_binahbot_env();
+
+        let embed =
+            transform_combat_page("504001", &Locale::English, &BinahBotLocale::EnglishUS, &env);
+
+        let binding = embed.fields.unwrap();
+        let page_description = binding.iter().find(|y| y.name == "Page description");
+        assert!(page_description.is_some_and(|x| x.value.contains("Single-use")));
+
+        let embed =
+            transform_combat_page("504001", &Locale::Japanese, &BinahBotLocale::Japanese, &env);
+
+        let binding = embed.fields.unwrap();
+        // todo: update Japanese localization; it is currently falling back to the English localization
+        let page_description = binding.iter().find(|y| y.name == "Page description");
+        assert!(page_description.is_some_and(|x| x.value.contains("使い捨て")));
     }
 }
