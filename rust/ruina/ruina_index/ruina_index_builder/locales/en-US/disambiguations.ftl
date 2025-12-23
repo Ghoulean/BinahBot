@@ -37,5 +37,5 @@ desynchronize_little_red = Little Red
 magic_bullet_light_restore = light restore
 # magic_bullet_ego_page = EGO page # Superceded by "ego_page"
 
-head_fight = head fight
-head_fight_unused = head fight; unused
+head_fight = Head reception
+head_fight_unused = Head reception; unused

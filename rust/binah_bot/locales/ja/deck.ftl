@@ -1,7 +1,7 @@
 create_deck_success = Successfully created "{ $deck_name }"
-read_deck_keypage_header = Key page
-read_deck_combat_pages_header = Combat pages
-read_deck_passives_header = Passives
+read_deck_keypage_header = コアページ
+read_deck_combat_pages_header = バトルページ
+read_deck_passives_header = パッシブ
 read_deck_combat_page_count = { $page_name } x{ $count }
 list_deck_name_author = { $deck_name } ({ $author })
 update_deck_success = Successfully updated "{ $deck_name }"
