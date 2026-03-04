@@ -91,8 +91,8 @@ pub fn get_abno_page_localizations_by_locale(
 
 #[inline(always)]
 pub fn get_abno_page_locales_by_internal_name(
-    internal_name: &str,
-) -> HashMap<Locale, &AbnoPageLocale> {
+    internal_name: &'_ str,
+) -> HashMap<Locale, &'_ AbnoPageLocale<'_>> {
     get_locales_by_identifier(&ABNO_PAGE_LOCALES, internal_name)
 }
 
@@ -105,8 +105,8 @@ pub fn get_battle_symbol_localizations_by_locale(
 
 #[inline(always)]
 pub fn get_battle_symbol_locales_by_internal_name(
-    internal_name: &str,
-) -> HashMap<Locale, &BattleSymbolLocale> {
+    internal_name: &'_ str,
+) -> HashMap<Locale, &'_ BattleSymbolLocale<'_>> {
     get_locales_by_identifier(&BATTLE_SYMBOL_LOCALES, internal_name)
 }
 
@@ -118,7 +118,7 @@ pub fn get_card_effect_localizations_by_locale(
 }
 
 #[inline(always)]
-pub fn get_card_effect_locales_by_id(id: &str) -> HashMap<Locale, &CardEffectLocale> {
+pub fn get_card_effect_locales_by_id(id: &'_ str) -> HashMap<Locale, &'_ CardEffectLocale<'_>> {
     get_locales_by_identifier(&CARD_EFFECT_LOCALES, id)
 }
 
@@ -130,7 +130,7 @@ pub fn get_combat_page_localizations_by_locale(
 }
 
 #[inline(always)]
-pub fn get_combat_page_locales_by_id(id: &str) -> HashMap<Locale, &CombatPageLocale> {
+pub fn get_combat_page_locales_by_id(id: &'_ str) -> HashMap<Locale, &'_ CombatPageLocale<'_>> {
     get_locales_by_identifier(&COMBAT_PAGE_LOCALES, id)
 }
 
@@ -142,7 +142,7 @@ pub fn get_key_page_localizations_by_locale(
 }
 
 #[inline(always)]
-pub fn get_key_page_locales_by_text_id(text_id: &str) -> HashMap<Locale, &KeyPageLocale> {
+pub fn get_key_page_locales_by_text_id(text_id: &'_ str) -> HashMap<Locale, &'_ KeyPageLocale<'_>> {
     get_locales_by_identifier(&KEY_PAGE_LOCALES, text_id)
 }
 
@@ -154,7 +154,7 @@ pub fn get_passive_localizations_by_locale(
 }
 
 #[inline(always)]
-pub fn get_passive_locales_by_id(id: &str) -> HashMap<Locale, &PassiveLocale> {
+pub fn get_passive_locales_by_id(id: &'_ str) -> HashMap<Locale, &'_ PassiveLocale<'_>> {
     get_locales_by_identifier(&PASSIVE_LOCALES, id)
 }
 
@@ -177,6 +177,8 @@ fn get_locales_by_identifier<T>(
 
 #[cfg(test)]
 mod tests {
+    use std::collections::HashSet;
+
     use super::*;
 
     const NUM_LOCALES: usize = 5;
@@ -187,7 +189,7 @@ mod tests {
         assert_eq!(BATTLE_SYMBOLS.len(), 200);
         assert_eq!(COMBAT_PAGES.len(), 1613);
         assert_eq!(KEY_PAGES.len(), 625);
-        assert_eq!(PASSIVES.len(), 808);
+        assert_eq!(PASSIVES.len(), 808 + 193); // Explicitly mentioned in XML + implied via localization data
     }
 
     #[test]
@@ -278,6 +280,33 @@ mod tests {
                 assert!(locale_count == NUM_LOCALES || locale_count == 0);
             }
         });
+    }
+
+    #[test]
+    fn passive_locale_backmapping_exists() {
+        // Some passives in the game are not registered in the StaticInfo XML but still have all 5 localizations
+        // and are used in the game. Nothing There's "Hardness" passive is one such example
+        let english_localizations = get_passive_localizations_by_locale(Locale::English).unwrap()
+            .keys()
+            .map(|x| x.to_string())
+            .collect::<HashSet<_>>();
+
+        let passives_with_all_locales: HashSet<String> = Locale::iter().map(|locale| {
+            get_passive_localizations_by_locale(locale).unwrap().keys().map(|x| x.to_string()).collect::<HashSet<_>>()
+        }).fold(english_localizations, |acc, e| {
+            acc.intersection(&e).map(|x| x.clone()).collect::<HashSet<_>>()
+        });
+
+        let mut missing_passives = HashSet::new();
+
+        for passive_id in passives_with_all_locales {
+            let passive_id_retrieved = get_passive_by_id(&passive_id);
+            if passive_id_retrieved.is_none() {
+                missing_passives.insert(passive_id);
+            }
+        }
+        dbg!(&missing_passives);
+        assert!(missing_passives.is_empty());
     }
 
     #[test]

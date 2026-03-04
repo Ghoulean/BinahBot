@@ -26,6 +26,7 @@ struct TiphDeckDecode {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
+#[allow(dead_code)]
 struct TiphDeckEncode {
     status: String,
     url: String,

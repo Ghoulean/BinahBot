@@ -56,8 +56,7 @@ pub fn query(query: &str) -> Vec<ParsedTypedId> {
         .collect()
 }
 
-// todo: where to put this function?
-pub fn get_page(typed_id: &ParsedTypedId) -> Option<Page> {
+pub fn get_page(typed_id: &'_ ParsedTypedId) -> Option<Page<'_>> {
     match typed_id.0 {
         PageType::AbnoPage => get_abno_page_by_internal_name(&typed_id.1).map(Page::Abno),
         PageType::BattleSymbol => {
@@ -69,7 +68,6 @@ pub fn get_page(typed_id: &ParsedTypedId) -> Option<Page> {
     }
 }
 
-// todo: where to put this function?
 pub fn get_page_locale<'a>(
     page_type: &'a PageType,
     id: &'a str,

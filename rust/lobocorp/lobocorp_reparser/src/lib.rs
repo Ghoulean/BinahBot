@@ -33,7 +33,7 @@ pub fn get_all_encyclopedia_ids() -> Vec<&'static u32> {
     ENCYCLOPEDIA.keys().collect()
 }
 
-pub fn get_encyclopedia_info(id: &u32) -> Option<&EncyclopediaInfo> {
+pub fn get_encyclopedia_info(id: &'_ u32) -> Option<&'_ EncyclopediaInfo<'_>> {
     ENCYCLOPEDIA.get(id)
 }
 

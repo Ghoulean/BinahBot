@@ -50,10 +50,41 @@ fn process_passive_file(
     let xml_root_node = get_unique_node(doc.root(), "PassiveXmlRoot").unwrap();
     let passive_node_list = get_nodes(xml_root_node, "Passive");
 
-    passive_node_list
-        .into_iter()
-        .map(|x| parse_passive(x, collectability_map, chapter_map))
-        .collect()
+    // Manually adding these missing passives
+    let missing_passives = vec![
+        "505321", "605214", "805513", "505501", "305551", "705211", "605412", "805315", "9055121",
+        "605432", "705212", "605222", "905522", "505561", "505214", "305512", "9055113", "305511",
+        "9055122", "805213", "605411", "705112", "605115", "505212", "405611", "704024", "405621",
+        "705521", "505323", "505213", "605221", "605435", "705313", "805221", "805223", "605414",
+        "705121", "605413", "705124", "505311", "505531", "805512", "305521", "305541", "605120",
+        "505314", "705111", "704027", "605521", "704025", "105512", "805212", "805211", "705519",
+        "705514", "705321", "205421", "805520", "1005313", "805516", "705515", "805514", "605122",
+        "105312", "505215", "405521", "170335", "605311", "405613", "305513", "505504", "704032",
+        "505502", "805521", "105313", "705517", "505211", "605433", "605111", "705413", "405612",
+        "221003", "805515", "405511", "605421", "605301", "605212", "605434", "9055131", "705312",
+        "705322", "805312", "605211", "805321", "605112", "705513", "605322", "505521", "705516",
+        "705511", "221002", "605532", "905523", "605511", "505631", "705421", "605331", "1309022",
+        "605223", "705531", "505222", "105314", "705422", "705215", "105514", "605512", "705412",
+        "805224", "505505", "705411", "505103", "605114", "605224", "405512", "605302", "105112",
+        "905502", "705214", "605332", "9055133", "705213", "9055112", "605531", "605213", "705518",
+        "250522", "105513", "305510", "605522", "1005315", "1005314", "605312", "605121", "705122",
+        "705510", "805511", "805518", "305531", "705311", "805311", "805519", "505541", "805313",
+        "9055132", "505503", "505611", "305571", "170200", "505621", "505322", "705216", "505312",
+        "505223", "805316", "705123", "605341", "9055111", "505324", "505500", "605113", "605215",
+        "705423", "704026", "505221", "505313", "704031", "805222", "1005316", "405614", "805314",
+        "505641", "1309023", "221004", "505511", "605431", "805517", "605321", "505331", "705512",
+        "505600", "300001", "305561", "704041",
+    ];
+
+    let passives_in_xml = passive_node_list
+        .iter()
+        .map(|x| parse_passive(*x, collectability_map, chapter_map));
+
+    let missing_passives = missing_passives
+        .iter()
+        .map(|x| default_passive_settings(x, collectability_map, chapter_map));
+
+    passives_in_xml.chain(missing_passives).collect()
 }
 
 fn parse_passive(
@@ -110,6 +141,45 @@ fn parse_passive(
         hidden: {hidden},
         transferable: {transferable},
         inner_type: {inner_type},
+        collectability: Collectability::{collectability:?},
+        chapter: {chapter},
+    }}"
+        ),
+    )
+}
+
+fn default_passive_settings(
+    id: &str,
+    collectability_map: &CollectabilityMap,
+    chapter_map: &ChapterMap,
+) -> (PassiveKey, PassiveValue) {
+    let chapter = serialize_option_2(
+        from_chapter_map(&id, &PageType::Passive, chapter_map),
+        chapter_enum_serializer,
+    );
+
+    let is_collectable = collectability_map
+        .collectable
+        .passives
+        .iter()
+        .any(|x| x == id);
+
+    let collectability = if is_collectable {
+        Collectability::Collectable
+    } else {
+        Collectability::EnemyOnly
+    };
+
+    (
+        id.to_string(),
+        format!(
+            "Passive {{
+        id: \"{id}\",
+        cost: None,
+        rarity: None,
+        hidden: None,
+        transferable: None,
+        inner_type: None,
         collectability: Collectability::{collectability:?},
         chapter: {chapter},
     }}"
