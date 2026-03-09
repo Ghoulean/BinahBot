@@ -626,7 +626,7 @@ fn floor_to_locale_key(floor: &Floor) -> &'static str {
         Floor::Binah => "floor_display_binah",
         Floor::Hokma => "floor_display_hokma",
         Floor::Keter => "floor_display_keter",
-        Floor::None => "",
+        Floor::None => "floor_display_none",
     }
 }
 
@@ -672,7 +672,7 @@ fn battle_symbol_slot_to_locale_key(slot: &BattleSymbolSlot) -> &'static str {
         BattleSymbolSlot::Headwear2 => "battle_symbol_slot_display_headwear2",
         BattleSymbolSlot::Headwear3 => "battle_symbol_slot_display_headwear3",
         BattleSymbolSlot::Headwear4 => "battle_symbol_slot_display_headwear4",
-        BattleSymbolSlot::None => "",
+        BattleSymbolSlot::None => "battle_symbol_slot_display_none",
     }
 }
 

@@ -16,15 +16,16 @@ battle_symbol_hidden_header = 숨김
 battle_symbol_is_hidden_display = 참
 battle_symbol_count_header = 횟수
 
-battle_symbol_slot_display_eye = "Eye"
-battle_symbol_slot_display_nose = "Nose"
-battle_symbol_slot_display_cheek = "Cheek"
-battle_symbol_slot_display_mouth = "Mouth"
-battle_symbol_slot_display_ear = "Ear"
-battle_symbol_slot_display_headwear1 = "Hair Accessory"
-battle_symbol_slot_display_headwear2 = "Hood"
-battle_symbol_slot_display_headwear3 = "Mask"
-battle_symbol_slot_display_headwear4 = "Helmet"
+battle_symbol_slot_display_eye = Eye
+battle_symbol_slot_display_nose = Nose
+battle_symbol_slot_display_cheek = Cheek
+battle_symbol_slot_display_mouth = Mouth
+battle_symbol_slot_display_ear = Ear
+battle_symbol_slot_display_headwear1 = Hair Accessory
+battle_symbol_slot_display_headwear2 = Hood
+battle_symbol_slot_display_headwear3 = Mask
+battle_symbol_slot_display_headwear4 = Helmet
+battle_symbol_slot_display_none = 없음
 
 combat_page_cost_header = 비용
 combat_page_range_header = 유형
@@ -32,12 +33,12 @@ combat_page_rarity_header = 등급
 combat_page_description_header = 전투책장 능력
 combat_page_dice_header = 주사위
 
-combatrange_display_melee = Melee
-combatrange_display_ranged = Ranged
-combatrange_display_special = Special
-combatrange_display_onplay = On Play
-combatrange_display_massindividual = Mass Individual
-combatrange_display_masssummation = Mass Summation
+combatrange_display_melee = 근거리
+combatrange_display_ranged = 원거리
+combatrange_display_special = 특별
+combatrange_display_onplay = 장착 시 발동
+combatrange_display_massindividual = 광역 개별
+combatrange_display_masssummation = 광역 합산
 
 key_page_hp_header = 체력
 key_page_stagger_header = 흐트러짐 저항
@@ -64,6 +65,7 @@ floor_display_chesed = 헤세드
 floor_display_binah = 비나
 floor_display_hokma = 호크마
 floor_display_keter = 케테르
+floor_display_none = 없음
 
 resistance_display_fatal = 취약
 resistance_display_weak = 약점

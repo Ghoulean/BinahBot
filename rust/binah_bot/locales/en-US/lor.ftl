@@ -16,15 +16,16 @@ battle_symbol_hidden_header = Hidden
 battle_symbol_is_hidden_display = true
 battle_symbol_count_header = Count
 
-battle_symbol_slot_display_eye = "Eye"
-battle_symbol_slot_display_nose = "Nose"
-battle_symbol_slot_display_cheek = "Cheek"
-battle_symbol_slot_display_mouth = "Mouth"
-battle_symbol_slot_display_ear = "Ear"
-battle_symbol_slot_display_headwear1 = "Hair Accessory"
-battle_symbol_slot_display_headwear2 = "Hood"
-battle_symbol_slot_display_headwear3 = "Mask"
-battle_symbol_slot_display_headwear4 = "Helmet"
+battle_symbol_slot_display_eye = Eye
+battle_symbol_slot_display_nose = Nose
+battle_symbol_slot_display_cheek = Cheek
+battle_symbol_slot_display_mouth = Mouth
+battle_symbol_slot_display_ear = Ear
+battle_symbol_slot_display_headwear1 = Hair Accessory
+battle_symbol_slot_display_headwear2 = Hood
+battle_symbol_slot_display_headwear3 = Mask
+battle_symbol_slot_display_headwear4 = Helmet
+battle_symbol_slot_display_none = None
 
 combat_page_cost_header = Cost
 combat_page_range_header = Range
@@ -64,6 +65,7 @@ floor_display_chesed = Chesed
 floor_display_binah = Binah
 floor_display_hokma = Hokma
 floor_display_keter = Keter
+floor_display_none = None
 
 resistance_display_fatal = Fatal
 resistance_display_weak = Weak
@@ -75,7 +77,7 @@ resistance_display_immune = Immune
 rarity_display_paperback = Paperback
 rarity_display_hardcover = Hardcover
 rarity_display_limited = Limited
-rarity_display_objetdart = Object d'Art
+rarity_display_objetdart = Objet d'Art
 
 no_page_error_message = *No page found*
 spoiler_enforcement_message = Cannot display `card_id={ $card_id }` because its chapter is { $chapter }, but this channel only allows { $configured_chapter } and below
