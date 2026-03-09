@@ -2,9 +2,13 @@ use std::string::ToString;
 
 use fluent_templates::Loader;
 use ruina::ruina_common::game_objects::battle_symbol::BattleSymbolSlot;
+use ruina::ruina_common::game_objects::combat_page::CombatRange;
 use ruina::ruina_common::game_objects::combat_page::Die;
 use ruina::ruina_common::game_objects::combat_page::DieType;
+use ruina::ruina_common::game_objects::common::Floor;
 use ruina::ruina_common::game_objects::common::PageType;
+use ruina::ruina_common::game_objects::common::Rarity;
+use ruina::ruina_common::game_objects::key_page::Resistance;
 use ruina::ruina_common::localizations::combat_page_locale::CombatPageLocale;
 use ruina::ruina_common::localizations::common::Locale;
 use ruina::ruina_index::models::ParsedTypedId;
@@ -119,7 +123,9 @@ pub fn transform_abno_page(
             },
             DiscordEmbedFields {
                 name: env.locales.lookup(&lang_id, "abno_floor_header"),
-                value: page.sephirah.to_string(),
+                value: env
+                    .locales
+                    .lookup(&lang_id, floor_to_locale_key(&page.sephirah)),
                 inline: Some(true),
             },
         ]),
@@ -170,8 +176,9 @@ pub fn transform_battle_symbol(
     let mut fields = vec![
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "battle_symbol_slot_header"),
-            // TODO: slot -> localized name
-            value: format!("{}", page.slot),
+            value: env
+                .locales
+                .lookup(&lang_id, battle_symbol_slot_to_locale_key(&page.slot)),
             inline: Some(true),
         },
         DiscordEmbedFields {
@@ -273,12 +280,16 @@ pub fn transform_combat_page(
         },
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "combat_page_range_header"),
-            value: page.range.to_string(),
+            value: env
+                .locales
+                .lookup(&lang_id, combat_range_to_locale_key(&page.range)),
             inline: Some(true),
         },
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "combat_page_rarity_header"),
-            value: page.rarity.to_string(),
+            value: env
+                .locales
+                .lookup(&lang_id, rarity_to_locale_key(&page.rarity)),
             inline: Some(true),
         },
     ];
@@ -365,34 +376,46 @@ pub fn transform_key_page(
         format!(
             "{}: {}",
             get_dietype_emoji(&env.emojis, &DieType::Slash),
-            page.resists.hp_slash
+            env.locales
+                .lookup(&lang_id, resistance_to_locale_key(&page.resists.hp_slash))
         ),
         format!(
             "{}: {}",
             get_dietype_emoji(&env.emojis, &DieType::Pierce),
-            page.resists.hp_pierce
+            env.locales
+                .lookup(&lang_id, resistance_to_locale_key(&page.resists.hp_pierce))
         ),
         format!(
             "{}: {}",
             get_dietype_emoji(&env.emojis, &DieType::Blunt),
-            page.resists.hp_blunt
+            env.locales
+                .lookup(&lang_id, resistance_to_locale_key(&page.resists.hp_blunt))
         ),
     ]);
     let stagger_resists = format_to_indented_list(&[
         format!(
             "{}: {}",
             get_dietype_emoji(&env.emojis, &DieType::CSlash),
-            page.resists.stagger_slash
+            env.locales.lookup(
+                &lang_id,
+                resistance_to_locale_key(&page.resists.stagger_slash)
+            )
         ),
         format!(
             "{}: {}",
             get_dietype_emoji(&env.emojis, &DieType::CPierce),
-            page.resists.stagger_pierce
+            env.locales.lookup(
+                &lang_id,
+                resistance_to_locale_key(&page.resists.stagger_pierce)
+            )
         ),
         format!(
             "{}: {}",
             get_dietype_emoji(&env.emojis, &DieType::CBlunt),
-            page.resists.stagger_blunt
+            env.locales.lookup(
+                &lang_id,
+                resistance_to_locale_key(&page.resists.stagger_blunt)
+            )
         ),
     ]);
     let url = format!(
@@ -430,7 +453,9 @@ pub fn transform_key_page(
         },
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "key_page_rarity_header"),
-            value: page.rarity.to_string(),
+            value: env
+                .locales
+                .lookup(&lang_id, rarity_to_locale_key(&page.rarity)),
             inline: Some(true),
         },
     ];
@@ -513,10 +538,9 @@ pub fn transform_passive(
         },
         DiscordEmbedFields {
             name: env.locales.lookup(&lang_id, "passive_rarity_header"),
-            value: page
-                .rarity
-                .as_ref()
-                .map_or("-".to_string(), |x| x.to_string()),
+            value: page.rarity.as_ref().map_or("-".to_string(), |x| {
+                env.locales.lookup(&lang_id, rarity_to_locale_key(x))
+            }),
             inline: Some(true),
         },
         DiscordEmbedFields {
@@ -588,6 +612,68 @@ fn format_dice(
         })
         .collect::<Vec<_>>();
     format_to_indented_list(&formatted_die)
+}
+
+fn floor_to_locale_key(floor: &Floor) -> &'static str {
+    match floor {
+        Floor::Malkuth => "floor_display_malkuth",
+        Floor::Yesod => "floor_display_yesod",
+        Floor::Hod => "floor_display_hod",
+        Floor::Netzach => "floor_display_netzach",
+        Floor::Tiphereth => "floor_display_tiphereth",
+        Floor::Gebura => "floor_display_gebura",
+        Floor::Chesed => "floor_display_chesed",
+        Floor::Binah => "floor_display_binah",
+        Floor::Hokma => "floor_display_hokma",
+        Floor::Keter => "floor_display_keter",
+        Floor::None => "",
+    }
+}
+
+fn combat_range_to_locale_key(range: &CombatRange) -> &'static str {
+    match range {
+        CombatRange::Melee => "combatrange_display_melee",
+        CombatRange::Ranged => "combatrange_display_ranged",
+        CombatRange::Special => "combatrange_display_special",
+        CombatRange::OnPlay => "combatrange_display_onplay",
+        CombatRange::MassIndividual => "combatrange_display_massindividual",
+        CombatRange::MassSummation => "combatrange_display_masssummation",
+    }
+}
+
+fn resistance_to_locale_key(resistance: &Resistance) -> &'static str {
+    match resistance {
+        Resistance::Fatal => "resistance_display_fatal",
+        Resistance::Weak => "resistance_display_weak",
+        Resistance::Normal => "resistance_display_normal",
+        Resistance::Endured => "resistance_display_endured",
+        Resistance::Ineffective => "resistance_display_ineffective",
+        Resistance::Immune => "resistance_display_immune",
+    }
+}
+
+fn rarity_to_locale_key(rarity: &Rarity) -> &'static str {
+    match rarity {
+        Rarity::Paperback => "rarity_display_paperback",
+        Rarity::Hardcover => "rarity_display_hardcover",
+        Rarity::Limited => "rarity_display_limited",
+        Rarity::ObjetDArt => "rarity_display_objetdart",
+    }
+}
+
+fn battle_symbol_slot_to_locale_key(slot: &BattleSymbolSlot) -> &'static str {
+    match slot {
+        BattleSymbolSlot::Eye => "battle_symbol_slot_display_eye",
+        BattleSymbolSlot::Nose => "battle_symbol_slot_display_nose",
+        BattleSymbolSlot::Cheek => "battle_symbol_slot_display_cheek",
+        BattleSymbolSlot::Mouth => "battle_symbol_slot_display_mouth",
+        BattleSymbolSlot::Ear => "battle_symbol_slot_display_ear",
+        BattleSymbolSlot::Headwear1 => "battle_symbol_slot_display_headwear1",
+        BattleSymbolSlot::Headwear2 => "battle_symbol_slot_display_headwear2",
+        BattleSymbolSlot::Headwear3 => "battle_symbol_slot_display_headwear3",
+        BattleSymbolSlot::Headwear4 => "battle_symbol_slot_display_headwear4",
+        BattleSymbolSlot::None => "",
+    }
 }
 
 fn format_to_indented_list(v: &[String]) -> String {
