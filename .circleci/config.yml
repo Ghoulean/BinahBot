@@ -4,7 +4,7 @@ orbs:
 jobs:
   prebuild:
     docker:
-      - image: cimg/rust:1.81.0-node
+      - image: cimg/rust:1.93.0-node
     working_directory: ~/BinahBot
     steps:
       - checkout
@@ -35,7 +35,8 @@ jobs:
             - rust
   test:
     docker:
-      - image: cimg/rust:1.81.0-node
+      - image: cimg/rust:1.93.0-node
+    resource_class: large
     steps:
       - attach_workspace:
           at: /tmp/workspace
@@ -44,7 +45,7 @@ jobs:
           command: cd /tmp/workspace/rust && cargo test --all-targets
   build:
     docker:
-      - image: cimg/rust:1.81.0-node
+      - image: cimg/rust:1.93.0-node
     steps:
       - attach_workspace:
           at: /tmp/workspace
@@ -75,7 +76,7 @@ jobs:
             - rust/target/lambda/thumbnail/bootstrap.zip
   onetime-setup:
     docker:
-      - image: cimg/rust:1.81.0-node
+      - image: cimg/rust:1.93.0-node
     steps:
       - attach_workspace:
           at: /tmp/workspace
@@ -86,7 +87,7 @@ jobs:
     environment:
       AWS_REGION: us-east-1
     docker:
-      - image: cimg/rust:1.81.0-node
+      - image: cimg/rust:1.93.0-node
     steps:
       - attach_workspace:
           at: /tmp/workspace
