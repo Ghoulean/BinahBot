@@ -333,9 +333,9 @@ mod tests {
 
         assert!(disambiguation_map
             .get(&handling_work)
-            .is_some_and(|x| x.get(&Locale::Korean).unwrap() == "collectable"));
+            .is_some_and(|x| x.get(&Locale::Korean).unwrap() == "획득 가능"));
         assert!(disambiguation_map
             .get(&enemy_only)
-            .is_some_and(|x| x.get(&Locale::Korean).unwrap() == "enemy"));
+            .is_some_and(|x| x.get(&Locale::Korean).unwrap() == "적"));
     }
 }
