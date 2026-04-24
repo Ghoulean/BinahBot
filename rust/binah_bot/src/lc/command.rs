@@ -10,8 +10,11 @@ use crate::lc::transformers::transform_donttouchme;
 use crate::lc::transformers::transform_normal_info;
 use crate::lc::transformers::transform_tool_info;
 use crate::macros::cast_enum_variant;
+use unic_langid::LanguageIdentifier;
+
 use crate::models::binahbot::BinahBotEnvironment;
 use crate::models::binahbot::BinahBotLocale;
+use crate::models::binahbot::DiscordEmbedColors;
 use crate::models::discord::AllowedMentions;
 use crate::models::discord::DiscordEmbed;
 use crate::models::discord::DiscordInteraction;
@@ -48,9 +51,12 @@ pub fn lc_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -
                 .ok()
                 .or_else(|| lobocorp::lobocorp_index::query(x).first().copied())
         });
+    let lang_id = LanguageIdentifier::from(&binah_locale);
     let query = match query {
         Some(x) => x,
-        None => todo!(),
+        None => {
+            return no_match_found(&lang_id, env);
+        }
     };
 
     let entry = get_encyclopedia_info(&query).expect("couldn't find entry");
@@ -77,6 +83,29 @@ pub fn lc_command(interaction: &DiscordInteraction, env: &BinahBotEnvironment) -
             embeds: Some(vec![embed]),
             flags: flags,
             components: Some(components),
+        }),
+    }
+}
+
+fn no_match_found(lang_id: &LanguageIdentifier, env: &BinahBotEnvironment) -> MessageResponse {
+    MessageResponse {
+        r#type: DiscordInteractionResponseType::ChannelMessageWithSource,
+        data: Some(DiscordInteractionResponseMessage {
+            allowed_mentions: Some(AllowedMentions { parse: Vec::new() }),
+            content: None,
+            embeds: Some(vec![DiscordEmbed {
+                title: None,
+                description: Some(env.locales.lookup(lang_id, "no_abno_error_message")),
+                color: Some(DiscordEmbedColors::Default as i32),
+                image: None,
+                thumbnail: None,
+                footer: None,
+                author: None,
+                url: None,
+                fields: None,
+            }]),
+            flags: Some(DiscordMessageFlag::EphemeralMessage as i32),
+            components: None,
         }),
     }
 }

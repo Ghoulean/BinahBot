@@ -75,3 +75,4 @@ breaching_child_button_label = { $name }
 weapon_button_label = { $name } (무기)
 suit_button_label = { $name } (방어구)
 gift_button_label = { $name } (gift)
+no_abno_error_message = *Invalid abnormality provided*
