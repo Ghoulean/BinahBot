@@ -16,15 +16,16 @@ battle_symbol_hidden_header = 숨김
 battle_symbol_is_hidden_display = 참
 battle_symbol_count_header = 횟수
 
-battle_symbol_slot_display_eye = Eye
-battle_symbol_slot_display_nose = Nose
-battle_symbol_slot_display_cheek = Cheek
-battle_symbol_slot_display_mouth = Mouth
-battle_symbol_slot_display_ear = Ear
-battle_symbol_slot_display_headwear1 = Hair Accessory
-battle_symbol_slot_display_headwear2 = Hood
-battle_symbol_slot_display_headwear3 = Mask
-battle_symbol_slot_display_headwear4 = Helmet
+# Machine translated
+battle_symbol_slot_display_eye = 눈
+battle_symbol_slot_display_nose = 코
+battle_symbol_slot_display_cheek = 뺨
+battle_symbol_slot_display_mouth = 입
+battle_symbol_slot_display_ear = 귀
+battle_symbol_slot_display_headwear1 = 머리장식1
+battle_symbol_slot_display_headwear2 = 머리장식2
+battle_symbol_slot_display_headwear3 = 머리장식3
+battle_symbol_slot_display_headwear4 = 머리장식4
 battle_symbol_slot_display_none = 없음
 
 combat_page_cost_header = 비용

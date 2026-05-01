@@ -30,6 +30,7 @@ use crate::models::discord::DiscordComponentType;
 use crate::models::discord::DiscordEmbed;
 use crate::models::discord::DiscordEmbedAuthor;
 use crate::models::discord::DiscordEmbedFields;
+use crate::models::discord::DiscordEmbedFooter;
 use crate::models::discord::DiscordEmbedImage;
 use crate::models::discord::DiscordInteraction;
 use crate::models::discord::DiscordInteractionData;
@@ -253,7 +254,10 @@ async fn transform_deck(
             url: deck_preview_img,
         }),
         thumbnail: None,
-        footer: None,
+        footer: tiph_deck_url.as_ref().map(|url| DiscordEmbedFooter {
+            text: url.clone(),
+            icon_url: None,
+        }),
         author: Some(DiscordEmbedAuthor {
             name: author_name,
             url: None,

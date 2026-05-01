@@ -102,7 +102,7 @@ pub async fn update_deck(
         };
 
         if let Err(e) = validate_deck(&deck_data) {
-            return build_error_message_response(&lang_id, e, env);
+            return build_error_message_response(&lang_id, e.as_error_key(), env);
         }
 
         let _ = generate_thumbnail(

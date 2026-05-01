@@ -8,5 +8,7 @@ update_deck_success = Successfully updated "{ $deck_name }"
 delete_deck_success = Successfully deleted "{ $deck_name }"
 
 cant_parse_deck_error_message = Couldn't parse deck data. Are you passing in the deck code or URL from Tiph's Deck Editor? https://tiphereth.zasz.su/u/deck_editor/
-invalid_deck_error_message = Invalid deck code. Use Tiph's Deck Editor to create a valid deck code: https://tiphereth.zasz.su/u/deck_editor/
+invalid_deck_error_message = Invalid deck code. https://tiphereth.zasz.su/u/deck_editor/
+missing_combat_pages_error_message = Deck must have all 9 combat page slots filled. https://tiphereth.zasz.su/u/deck_editor/
+missing_keypage_error_message = Deck is missing a key page. https://tiphereth.zasz.su/u/deck_editor/
 deck_not_found_error_message = Couldn't get deck. Due to technical limitations, you must use the autocomplete in order to find user-submitted decks

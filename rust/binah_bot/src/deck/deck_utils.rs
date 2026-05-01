@@ -25,15 +25,26 @@ pub async fn get_user(
     Ok(user)
 }
 
-// todo: enum errors
-pub fn validate_deck(deck_data: &DeckData) -> Result<(), &str> {
-    for x in deck_data.combat_page_ids.as_ref().into_iter() {
-        if x.is_none() {
-            return Err("invalid_deck_error_message");
+pub enum DeckValidationError {
+    MissingCombatPages,
+    MissingKeypage,
+}
+
+impl DeckValidationError {
+    pub fn as_error_key(&self) -> &'static str {
+        match self {
+            DeckValidationError::MissingCombatPages => "missing_combat_pages_error_message",
+            DeckValidationError::MissingKeypage => "missing_keypage_error_message",
         }
     }
+}
+
+pub fn validate_deck(deck_data: &DeckData) -> Result<(), DeckValidationError> {
+    if !deck_data.combat_page_ids.iter().all(|x| x.is_some()) {
+        return Err(DeckValidationError::MissingCombatPages);
+    }
     if deck_data.keypage_id.is_none() {
-        return Err("invalid_deck_error_message");
+        return Err(DeckValidationError::MissingKeypage);
     }
     Ok(())
 }
@@ -55,14 +66,63 @@ pub fn parse_deck_name_option(name_option: &str) -> Result<DeckKey, ()> {
 mod tests {
     use super::*;
 
+    fn full_combat_pages() -> [Option<String>; 9] {
+        std::array::from_fn(|i| Some(i.to_string()))
+    }
+
     #[test]
-    fn should_err_on_invalid_deck() {
+    fn should_pass_on_valid_deck() {
+        let deck_data = DeckData {
+            keypage_id: Some("12".to_string()),
+            passive_ids: vec![],
+            combat_page_ids: full_combat_pages(),
+        };
+        assert!(validate_deck(&deck_data).is_ok());
+    }
+
+    #[test]
+    fn should_err_on_missing_combat_pages() {
         let deck_data = DeckData {
             keypage_id: Some("12".to_string()),
             passive_ids: vec![],
             combat_page_ids: [None, None, None, None, None, None, None, None, None],
         };
+        let err = validate_deck(&deck_data).unwrap_err();
+        assert_eq!(err.as_error_key(), "missing_combat_pages_error_message");
+    }
 
-        assert!(validate_deck(&deck_data).is_err());
+    #[test]
+    fn should_err_on_partially_filled_combat_pages() {
+        let mut pages = full_combat_pages();
+        pages[4] = None;
+        let deck_data = DeckData {
+            keypage_id: Some("12".to_string()),
+            passive_ids: vec![],
+            combat_page_ids: pages,
+        };
+        let err = validate_deck(&deck_data).unwrap_err();
+        assert_eq!(err.as_error_key(), "missing_combat_pages_error_message");
+    }
+
+    #[test]
+    fn should_err_on_missing_keypage() {
+        let deck_data = DeckData {
+            keypage_id: None,
+            passive_ids: vec![],
+            combat_page_ids: full_combat_pages(),
+        };
+        let err = validate_deck(&deck_data).unwrap_err();
+        assert_eq!(err.as_error_key(), "missing_keypage_error_message");
+    }
+
+    #[test]
+    fn should_err_on_missing_combat_pages_when_both_missing() {
+        let deck_data = DeckData {
+            keypage_id: None,
+            passive_ids: vec![],
+            combat_page_ids: [None, None, None, None, None, None, None, None, None],
+        };
+        let err = validate_deck(&deck_data).unwrap_err();
+        assert_eq!(err.as_error_key(), "missing_combat_pages_error_message");
     }
 }
