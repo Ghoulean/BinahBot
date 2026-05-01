@@ -774,19 +774,24 @@ mod tests {
     fn exhaust_on_use() {
         let env = build_mocked_binahbot_env();
 
+        let en_header = env
+            .locales
+            .lookup(&langid!("en-US"), "combat_page_description_header");
         let embed =
             transform_combat_page("504001", &Locale::English, &BinahBotLocale::EnglishUS, &env);
 
         let binding = embed.fields.unwrap();
-        let page_description = binding.iter().find(|y| y.name == "Page description");
+        let page_description = binding.iter().find(|y| y.name == en_header);
         assert!(page_description.is_some_and(|x| x.value.contains("Single-use")));
 
+        let ja_header = env
+            .locales
+            .lookup(&langid!("ja"), "combat_page_description_header");
         let embed =
             transform_combat_page("504001", &Locale::Japanese, &BinahBotLocale::Japanese, &env);
 
         let binding = embed.fields.unwrap();
-        // todo: update Japanese localization; it is currently falling back to the English localization
-        let page_description = binding.iter().find(|y| y.name == "Page description");
+        let page_description = binding.iter().find(|y| y.name == ja_header);
         assert!(page_description.is_some_and(|x| x.value.contains("使い捨て")));
     }
 }
