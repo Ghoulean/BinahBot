@@ -75,7 +75,7 @@ pub fn about_command(
         author: Some(DiscordEmbedAuthor {
             name: "ghoulean".to_string(),
             url: None,
-            icon_url: Some("https://cdn.discordapp.com/avatars/269925702571130880/9a755534741a4774a53b093f440845ba.png".to_string()),
+            icon_url: Some("https://cdn.discordapp.com/avatars/269925702571130880/2dd521a740c17ae791ef900d230d2687.png".to_string()),
         }),
         url: None,
         fields: Some(fields),
