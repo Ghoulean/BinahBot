@@ -256,6 +256,9 @@ pub enum DiscordMessageFlag {
 #[derive(Serialize, Deserialize, Debug)]
 pub struct DiscordMessage {
     pub interaction_metadata: Option<DiscordInteractionMetadata>,
+    pub flags: Option<i32>,
+    // kept as raw json so that unsupported component types can't break deserializing the whole interaction
+    pub components: Option<serde_json::Value>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]

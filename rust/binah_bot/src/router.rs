@@ -9,8 +9,13 @@ use crate::ddb::get_interaction_token;
 use crate::ddb::put_interaction_token;
 use crate::deck::create_deck::create_deck;
 use crate::deck::delete_deck::delete_deck;
-use crate::deck::list_deck::list_deck;
-use crate::deck::list_deck::list_my_decks;
+use crate::deck::list_deck_autocomplete::list_deck;
+use crate::deck::list_deck_autocomplete::list_my_decks;
+use crate::deck::list_decks::listdeck_command;
+use crate::deck::list_decks::listdeck_get_deck_button;
+use crate::deck::list_decks::listdeck_page_button;
+use crate::deck::list_decks::LISTDECK_GET_DECK_BUTTON_PREFIX;
+use crate::deck::list_decks::LISTDECK_PAGE_BUTTON_PREFIX;
 use crate::deck::read_deck::read_deck;
 use crate::deck::update_deck::update_deck;
 use crate::discord::delete_interaction;
@@ -43,7 +48,10 @@ const CREATE_DECK_COMMAND_NAME: &str = "createdeck";
 const READ_DECK_COMMAND_NAME: &str = "deck";
 const UPDATE_DECK_COMMAND_NAME: &str = "updatedeck";
 const DELETE_DECK_COMMAND_NAME: &str = "deletedeck";
+const LIST_DECK_COMMAND_NAME: &str = "listdecks";
 const ROLLCALC_COMMAND_NAME: &str = "rollcalc";
+
+const INTERACTION_TOKEN_TTL_SECONDS: u64 = 15 * 60;
 
 pub async fn get_response(
     discord_interaction: &DiscordInteraction,
@@ -90,6 +98,9 @@ async fn route(
                     DELETE_DECK_COMMAND_NAME => {
                         delete_deck(discord_interaction, binahbot_env).await
                     }
+                    LIST_DECK_COMMAND_NAME => {
+                        listdeck_command(discord_interaction, binahbot_env).await
+                    }
                     ABOUT_COMMAND_NAME => about_command(discord_interaction, binahbot_env),
                     ROLLCALC_COMMAND_NAME => rollcalc_command(discord_interaction, binahbot_env),
                     _ => build_error_message_response(
@@ -109,7 +120,9 @@ async fn route(
             Ok(DiscordInteractionResponse::Autocomplete(
                 match data.name.as_str() {
                     LOR_COMMAND_NAME => lor_autocomplete(discord_interaction, binahbot_env),
-                    READ_DECK_COMMAND_NAME => list_deck(discord_interaction, binahbot_env).await,
+                    READ_DECK_COMMAND_NAME | LIST_DECK_COMMAND_NAME => {
+                        list_deck(discord_interaction, binahbot_env).await
+                    }
                     UPDATE_DECK_COMMAND_NAME | DELETE_DECK_COMMAND_NAME => {
                         list_my_decks(discord_interaction, binahbot_env).await
                     }
@@ -143,6 +156,10 @@ async fn route(
                 ));
             } else if custom_id.starts_with(LC_BUTTON_PREFIX) {
                 lc_button(&discord_interaction, binahbot_env)
+            } else if custom_id.starts_with(LISTDECK_PAGE_BUTTON_PREFIX) {
+                listdeck_page_button(&discord_interaction, binahbot_env).await
+            } else if custom_id.starts_with(LISTDECK_GET_DECK_BUTTON_PREFIX) {
+                listdeck_get_deck_button(&discord_interaction, binahbot_env).await
             } else {
                 panic!("unknown button with custom_id={} detected", custom_id)
             };
@@ -181,7 +198,7 @@ async fn put_interaction_ttl(
     let interaction_ttl: InteractionTtl = InteractionTtl {
         interaction_id: discord_interaction.id.clone(),
         token: discord_interaction.token.clone(),
-        ttl: epoch_time,
+        ttl: epoch_time + INTERACTION_TOKEN_TTL_SECONDS,
         original_user_id: discord_interaction
             .user
             .as_ref()

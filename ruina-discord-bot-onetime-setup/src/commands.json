@@ -393,6 +393,72 @@
             ]
         },
         {
+            "name": "listdecks",
+            "names": {
+                "en-US": "listdecks"
+            },
+            "type": 1,
+            "integration_types": [0, 1],
+            "description": "Browse decks in the deck repository",
+            "descriptions": {
+                "en-US": "Browse decks in the deck repository"
+            },
+            "options": [
+                {
+                    "type": 3,
+                    "name": "name",
+                    "names": {
+                        "en-US": "name"
+                    },
+                    "description": "Search for decks with this name",
+                    "descriptions": {
+                        "en-US": "Search for decks with this name"
+                    },
+                    "required": false,
+                    "max_length": 100,
+                    "autocomplete": false
+                },
+                {
+                    "type": 6,
+                    "name": "author",
+                    "names": {
+                        "en-US": "author"
+                    },
+                    "description": "Only show decks by this author",
+                    "descriptions": {
+                        "en-US": "Only show decks by this author"
+                    },
+                    "required": false
+                },
+                {
+                    "type": 3,
+                    "name": "keypage",
+                    "names": {
+                        "en-US": "keypage"
+                    },
+                    "description": "Only show decks using this key page",
+                    "descriptions": {
+                        "en-US": "Only show decks using this key page"
+                    },
+                    "required": false,
+                    "max_length": 50,
+                    "autocomplete": true
+                },
+                {
+                    "type": 5,
+                    "name": "private",
+                    "names": {
+                        "en-US": "private"
+                    },
+                    "description": "Response will only be visible to you",
+                    "descriptions": {
+                        "en-US": "Response will only be visible to you"
+                    },
+                    "required": false
+                }
+            ]
+        },
+        {
             "name": "rollcalc",
             "names": {
                 "en-US": "rollcalc"

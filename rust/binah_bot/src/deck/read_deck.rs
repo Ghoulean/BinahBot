@@ -46,6 +46,7 @@ use crate::utils::get_binahbot_locale;
 use crate::utils::get_option_value;
 
 use super::deck_utils::parse_deck_name_option;
+use super::deck_utils::DeckKey;
 
 pub async fn read_deck(
     interaction: &DiscordInteraction,
@@ -75,14 +76,6 @@ pub async fn read_deck(
 
     let flags = is_private.then_some(DiscordMessageFlag::EphemeralMessage as i32);
 
-    let deck_result = get_deck(
-        env.ddb_client.as_ref().unwrap(),
-        &env.ddb_table_name,
-        &deck_key.1,
-        &deck_key.0,
-    )
-    .await;
-
     let components =
         (!is_private).then_some(vec![DiscordComponent::ActionRow(ActionRowComponent {
             r#type: DiscordComponentType::ActionRow,
@@ -91,38 +84,78 @@ pub async fn read_deck(
             ))],
         })]);
 
-    match deck_result {
-        Ok(x) => {
-            let max_spoiler_chapter = &interaction
-                .channel_id
-                .as_ref()
-                .and_then(|x| env.spoiler_config.get(&x));
-            let chapter = calculate_deck_chapter(&x.deck_data);
-            if let Some(max_spoiler_chapter) = max_spoiler_chapter {
-                if !is_private && chapter > **max_spoiler_chapter {
-                    return spoiler_found(&x.name, &chapter, max_spoiler_chapter, &lang_id, env);
-                }
-            };
-
-            let embed = transform_deck(&x, &request_locale, env)
-                .await
-                .expect("failed deck processing");
-            MessageResponse {
-                r#type: DiscordInteractionResponseType::ChannelMessageWithSource,
-                data: Some(DiscordInteractionResponseMessage {
-                    allowed_mentions: Some(AllowedMentions { parse: Vec::new() }),
-                    content: None,
-                    embeds: Some(vec![embed]),
-                    flags: flags,
-                    components: components,
-                }),
-            }
-        }
-        Err(_) => {
-            // todo: check for error type
+    match build_deck_embed(
+        &deck_key,
+        interaction.channel_id.as_ref(),
+        is_private,
+        &request_locale,
+        env,
+    )
+    .await
+    {
+        Ok(embed) => MessageResponse {
+            r#type: DiscordInteractionResponseType::ChannelMessageWithSource,
+            data: Some(DiscordInteractionResponseMessage {
+                allowed_mentions: Some(AllowedMentions { parse: Vec::new() }),
+                content: None,
+                embeds: Some(vec![embed]),
+                flags: flags,
+                components: components,
+            }),
+        },
+        Err(DeckEmbedError::NotFound) => {
             build_error_message_response(&lang_id, "generic_error_message", env)
         }
+        Err(DeckEmbedError::Spoiler(x)) => x,
     }
+}
+
+pub enum DeckEmbedError {
+    NotFound,
+    /// Holds the response explaining that the deck is past the channel's spoiler limit.
+    Spoiler(MessageResponse),
+}
+
+/// Builds the /deck embed for `deck_key`.
+pub async fn build_deck_embed(
+    deck_key: &DeckKey,
+    channel_id: Option<&String>,
+    is_private: bool,
+    request_locale: &BinahBotLocale,
+    env: &BinahBotEnvironment,
+) -> Result<DiscordEmbed, DeckEmbedError> {
+    let lang_id = LanguageIdentifier::from(request_locale);
+
+    let deck = get_deck(
+        env.ddb_client.as_ref().unwrap(),
+        &env.ddb_table_name,
+        &deck_key.1,
+        &deck_key.0,
+    )
+    .await
+    // todo: check for error type
+    .map_err(|e| {
+        tracing::error!("couldn't get deck: {:?}", e);
+        DeckEmbedError::NotFound
+    })?;
+
+    let max_spoiler_chapter = channel_id.and_then(|x| env.spoiler_config.get(x));
+    let chapter = calculate_deck_chapter(&deck.deck_data);
+    if let Some(max_spoiler_chapter) = max_spoiler_chapter {
+        if !is_private && chapter > *max_spoiler_chapter {
+            return Err(DeckEmbedError::Spoiler(spoiler_found(
+                &deck.name,
+                &chapter,
+                max_spoiler_chapter,
+                &lang_id,
+                env,
+            )));
+        }
+    };
+
+    Ok(transform_deck(&deck, request_locale, env)
+        .await
+        .expect("failed deck processing"))
 }
 
 async fn transform_deck(

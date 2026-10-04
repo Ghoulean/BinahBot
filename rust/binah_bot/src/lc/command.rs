@@ -9,8 +9,8 @@ use crate::lc::button::Code;
 use crate::lc::transformers::transform_donttouchme;
 use crate::lc::transformers::transform_normal_info;
 use crate::lc::transformers::transform_tool_info;
-use fluent_templates::Loader;
 use crate::macros::cast_enum_variant;
+use fluent_templates::Loader;
 use unic_langid::LanguageIdentifier;
 
 use crate::models::binahbot::BinahBotEnvironment;

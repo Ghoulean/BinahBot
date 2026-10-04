@@ -77,6 +77,16 @@ pub fn query<'a, T: core::cmp::Eq + std::hash::Hash, S: AsRef<str> + ?Sized>(
     query: &'a S,
     inverse_index: &'a HashMap<Ngram, HashMap<T, Frequency>>,
 ) -> Vec<&'a T> {
+    query_with_scores(query, inverse_index)
+        .into_iter()
+        .map(|(t, _)| t)
+        .collect()
+}
+
+pub fn query_with_scores<'a, T: core::cmp::Eq + std::hash::Hash, S: AsRef<str> + ?Sized>(
+    query: &'a S,
+    inverse_index: &'a HashMap<Ngram, HashMap<T, Frequency>>,
+) -> Vec<(&'a T, Frequency)> {
     let ngrams = analyze(query);
 
     let mut scorekeeper = HashMap::new();
@@ -92,10 +102,10 @@ pub fn query<'a, T: core::cmp::Eq + std::hash::Hash, S: AsRef<str> + ?Sized>(
         }
     });
 
-    let mut vec: Vec<_> = scorekeeper.iter().collect();
-    vec.sort_by(|a, b| b.1.partial_cmp(a.1).unwrap());
+    let mut vec: Vec<_> = scorekeeper.into_iter().collect();
+    vec.sort_by(|a, b| b.1.cmp(&a.1));
 
-    vec.into_iter().map(|(t, _)| *t).collect()
+    vec
 }
 
 fn tokenize(txt: &str) -> Vec<Token> {

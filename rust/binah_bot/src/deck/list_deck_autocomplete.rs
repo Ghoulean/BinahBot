@@ -3,16 +3,16 @@ use std::str::FromStr;
 
 use fluent_templates::fluent_bundle::FluentValue;
 use fluent_templates::Loader;
-use index_analyzer::generate_inverse_index;
 use ruina::ruina_common::game_objects::common::PageType;
 use ruina::ruina_common::localizations::common::Locale;
 use unic_langid::LanguageIdentifier;
 
-use crate::ddb::list_decks;
+use crate::deck::deck_search::search_race;
 use crate::macros::cast_enum_variant;
 use crate::models::binahbot::BinahBotEnvironment;
 use crate::models::binahbot::BinahBotLocale;
 use crate::models::deck::DeckMetadata;
+use crate::models::deck::DeckSearchParams;
 use crate::models::discord::AutocompleteResponse;
 use crate::models::discord::DiscordInteraction;
 use crate::models::discord::DiscordInteractionData;
@@ -173,22 +173,17 @@ async fn get_choices_by_deck_name(
     lang_id: &LanguageIdentifier,
     env: &BinahBotEnvironment,
 ) -> Vec<DiscordInteractionOptions> {
-    let decks = list_decks(
-        env.ddb_client.as_ref().expect("no ddb client"),
-        &env.ddb_table_name,
+    let search_params = DeckSearchParams::new(
+        query.map(|x| x.as_str()),
         author_id_option.map(|x| x.as_str()),
         keypage_option.map(|x| x.as_str()),
-    )
-    .await;
+    );
 
-    tracing::info!("got decks={:?}", decks);
-
-    let binding = &"".to_string();
-    let query = query.unwrap_or(binding).to_lowercase();
-
-    match decks {
-        Ok(results) => get_top_matches(&query, &results, 10)
-            .into_iter()
+    match search_race(&search_params, 0, env).await {
+        Ok(entry) => entry
+            .decks
+            .iter()
+            .take(10)
             .map(|x| {
                 let display_name = env.locales.lookup_with_args(
                     lang_id,
@@ -207,90 +202,13 @@ async fn get_choices_by_deck_name(
                 }
             })
             .collect::<Vec<_>>(),
-        Err(_) => Vec::new(),
+        Err(e) => {
+            tracing::error!("deck search failed: {:?}", e);
+            Vec::new()
+        }
     }
-}
-
-fn get_top_matches<'a>(
-    query: &'a str,
-    decks: &'a Vec<DeckMetadata>,
-    top: usize,
-) -> Vec<&'a DeckMetadata> {
-    let map: HashMap<usize, &String> = decks
-        .iter()
-        .enumerate()
-        .map(|(i, x)| (i, &x.name))
-        .collect();
-    let inverse_index = generate_inverse_index(&map);
-    let query_results = index_analyzer::query(query, &inverse_index);
-    query_results
-        .into_iter()
-        .take(top)
-        .map(move |i| &decks[*i])
-        .collect()
 }
 
 fn get_discord_option_value(deck: &DeckMetadata) -> String {
     format!("{}#{}", deck.author_id, deck.name)
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn sanity_get_top_matches() {
-        let decks = vec![
-            DeckMetadata {
-                name: "Turbo Nikolai".to_string(),
-                author_id: "1".to_string(),
-                author_name: "gh".to_string(),
-            },
-            DeckMetadata {
-                name: "Bore Kali to death with this one neat trick!".to_string(),
-                author_id: "2".to_string(),
-                author_name: "al".to_string(),
-            },
-            DeckMetadata {
-                name: "Op".to_string(),
-                author_id: "3".to_string(),
-                author_name: "ai".to_string(),
-            },
-            DeckMetadata {
-                name: "Crimson Claws".to_string(),
-                author_id: "4".to_string(),
-                author_name: "eb".to_string(),
-            },
-            DeckMetadata {
-                name: "TurboNikolai".to_string(),
-                author_id: "1".to_string(),
-                author_name: "gh".to_string(),
-            },
-        ];
-        let top = get_top_matches("turbo nikolai", &decks, 2)
-            .iter()
-            .map(|x| x.name.as_str())
-            .collect::<Vec<_>>();
-        dbg!(&top);
-        assert_eq!(2, top.len());
-        assert_eq!(Some(&"Turbo Nikolai"), top.get(0));
-        assert_eq!(Some(&"TurboNikolai"), top.get(1));
-
-        let top = get_top_matches("one neat trick", &decks, 1)
-            .iter()
-            .map(|x| x.name.as_str())
-            .collect::<Vec<_>>();
-        assert_eq!(1, top.len());
-        assert_eq!(
-            Some(&"Bore Kali to death with this one neat trick!"),
-            top.get(0)
-        );
-
-        let top = get_top_matches("CCCCCCCC", &decks, 10)
-            .iter()
-            .map(|x| x.name.as_str())
-            .collect::<Vec<_>>();
-        assert_eq!(1, top.len());
-        assert_eq!(Some(&"Crimson Claws"), top.get(0));
-    }
 }

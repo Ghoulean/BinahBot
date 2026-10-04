@@ -21,9 +21,40 @@ pub struct Deck {
     pub tiph_deck: Option<TiphDeck>,
 }
 
-#[derive(Debug)]
+#[derive(Clone, Debug, PartialEq)]
 pub struct DeckMetadata {
     pub name: String,
     pub author_id: String,
     pub author_name: String,
+}
+
+#[derive(Clone, Debug, PartialEq)]
+pub struct DeckSearchParams {
+    pub query: String,
+    pub author: Option<String>,
+    pub keypage: Option<String>,
+}
+
+impl DeckSearchParams {
+    pub fn new(query: Option<&str>, author: Option<&str>, keypage: Option<&str>) -> Self {
+        DeckSearchParams {
+            query: query.unwrap_or("").trim().to_lowercase(),
+            author: author.map(|x| x.to_string()),
+            keypage: keypage.map(|x| x.to_string()),
+        }
+    }
+}
+
+#[derive(Debug, PartialEq)]
+pub struct DeckSearchCacheEntry {
+    pub decks: Vec<DeckMetadata>,
+    pub result_count: usize,
+    pub ttl: u64,
+}
+
+#[derive(Debug, PartialEq)]
+pub struct ListDecksInteraction {
+    pub interaction_id: String,
+    pub search_params: DeckSearchParams,
+    pub ttl: u64,
 }

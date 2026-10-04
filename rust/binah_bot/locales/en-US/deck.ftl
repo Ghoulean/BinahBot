@@ -4,6 +4,10 @@ read_deck_combat_pages_header = Combat pages
 read_deck_passives_header = Passives
 read_deck_combat_page_count = { $page_name } x{ $count }
 list_deck_name_author = { $deck_name } ({ $author })
+list_deck_title = Decks
+list_deck_empty = No decks found
+list_deck_page_footer = Page { $page }
+list_deck_page_button = Page { $page }
 update_deck_success = Successfully updated "{ $deck_name }"
 delete_deck_success = Successfully deleted "{ $deck_name }"
 
