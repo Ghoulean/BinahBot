@@ -125,6 +125,11 @@ fn parse_key_page(
         .key_pages
         .iter()
         .any(|x| x == id);
+    let is_obtainable = collectability_map
+        .obtainable
+        .key_pages
+        .iter()
+        .any(|x| x == id);
     let is_enemy_only = collectability_map
         .enemy_only
         .key_pages
@@ -133,6 +138,8 @@ fn parse_key_page(
 
     let collectability = if is_collectable {
         Collectability::Collectable
+    } else if is_obtainable {
+        Collectability::Obtainable
     } else if is_enemy_only {
         Collectability::EnemyOnly
     } else {

@@ -124,9 +124,16 @@ fn parse_passive(
         .passives
         .iter()
         .any(|x| x == id);
+    let is_obtainable = collectability_map
+        .obtainable
+        .passives
+        .iter()
+        .any(|x| x == id);
 
     let collectability = if is_collectable {
         Collectability::Collectable
+    } else if is_obtainable {
+        Collectability::Obtainable
     } else {
         Collectability::EnemyOnly
     };
@@ -163,9 +170,16 @@ fn default_passive_settings(
         .passives
         .iter()
         .any(|x| x == id);
+    let is_obtainable = collectability_map
+        .obtainable
+        .passives
+        .iter()
+        .any(|x| x == id);
 
     let collectability = if is_collectable {
         Collectability::Collectable
+    } else if is_obtainable {
+        Collectability::Obtainable
     } else {
         Collectability::EnemyOnly
     };

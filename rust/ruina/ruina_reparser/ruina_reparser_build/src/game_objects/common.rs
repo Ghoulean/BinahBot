@@ -19,6 +19,8 @@ pub struct CollectableMap {
 #[derive(Debug, Deserialize)]
 pub struct ObtainableMap {
     pub combat_pages: Vec<String>,
+    pub key_pages: Vec<String>,
+    pub passives: Vec<String>,
 }
 
 #[derive(Debug, Deserialize)]
